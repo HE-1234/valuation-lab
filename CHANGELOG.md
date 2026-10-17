@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 19:49 UTC · Keep focus while switching renewed companies
+
+- Restored focus once to the renewed annual workspace's Company selector after its explicit selection event rebuilds the page, with automatic scrolling prevented.
+- Kept that restoration out of initial mounting, live edits, programmatic navigation, Load, Undo and other ordinary renders. Invalid saved-draft recovery keeps a usable selector and preserves the original bytes.
+- Preserved all visible markup, six themes, financial calculations, source data, annual paths, simulation, saved drafts, explicit unknowns and private access.
+- Recorded newly read W3C keyboard-interface and WHATWG focus-management guidance with exact scope and verification limits.
+
+Validation: all 691 tests pass, including five new regressions. Before/after DOM, displayed results and saved drafts are identical across 22 states, excluding save timestamps. All 14 generated workspace inputs are identical; nine static-preview pairs cover 320/390/1440px and all six themes, with all 16 paired rendered pages pixel-identical. Native browser, select-popup, touch and screen-reader behavior remain unverified. No launch restriction or sign-in gate was bypassed, and no publication or sharing change is included.
+
 ## 2026-10-17 · Renewed annual-research defaults
 
 - Fresh entry opens the reviewed annual research workspace for all 14 companies, with adjacent dossier conclusions and source/guidance/management links. The previous scalar Studio remains available and its saved drafts are preserved.

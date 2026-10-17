@@ -2,6 +2,37 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 19:49 UTC · Retain the renewed Company selector
+
+### Question and evidence
+
+After selecting another company in the renewed annual-research workspace, can keyboard interaction continue from the same control?
+
+The Company selector called a function that replaced the entire workspace, including the focused selector. Its handler did not restore focus. The minimal-DOM fixture reproduces the old element becoming detached and the active control becoming null. This is a source and handler finding, not a native-browser or screen-reader observation. The previous focus repair covered the separate scalar Studio's growth selectors, so it did not cover this new workspace.
+
+The annual editor already supplies a visible horizontal-scroll instruction, a named keyboard-focusable scroll region, native table headers and year-specific input names. This review did not justify adding another navigation control or changing its financial table.
+
+### New lessons read
+
+- [W3C WAI APG, Developing a Keyboard Interface](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/). Read Introduction, Fundamental Keyboard Navigation Conventions, Discernible and Predictable Keyboard Focus, Focus VS Selection, and Keyboard Navigation Between Components. Applied its focus-persistence and predictable-movement guidance when an active element is removed. Initial page focus remains unchanged. The guide marks parts of its focus section as unfinished; no claim of a complete accessibility standard is made.
+- [WHATWG HTML Standard, Focus management APIs](https://html.spec.whatwg.org/multipage/interaction.html#focus-management-apis). Read the activeElement and focus API descriptions, FocusOptions and the element focus algorithm. Applied preventScroll to retain the logical control without requesting a viewport move. The browser keeps responsibility for native focus indication; no focus-ring suppression or custom keyboard handling was introduced.
+
+Read on October 17, 2026. This is bounded written-source study. Linked demonstrations, native select menus and assistive technology were not operated; no video, course completion, user-testing result or accessibility-conformance claim is made.
+
+### One bounded change
+
+After the Company's existing change handler finishes selecting and rendering, focus its replacement selector once with automatic scrolling prevented. Keep this restoration inside that explicit event handler. Mounting, programmatic company changes, ordinary result updates, notes, Load, Undo and normalization do not gain a new focus call. Retained invalid-draft screens also contain the replacement selector, so the same control remains available when recovery information is shown.
+
+No visible markup, label, layout, theme, control order, source link, valuation, annual schedule, claims gate, model, simulation, source data or historical freeze changes. Live editing, saved drafts, explicit unknowns, original-case loading, Undo, separate Studio behavior and owner-private access remain unchanged.
+
+### Checks and limitations
+
+All 691 automated tests passed; the clean source baseline passed 686. Five new regressions cover repeated selection across all 14 companies, six malformed or unsupported saved-draft cases, exact recovery bytes, edits and explicit unknown claims across switches/reload, Load/Undo, session-only storage fallback and the absence of focus changes on unrelated renders. Four new tests fail against the previous handler; the unchanged-focus-scope test already passes. Focus assertions require one call to the attached replacement selector with preventScroll enabled.
+
+Before/after snapshots contain identical serialized DOM, displayed results and saved-draft content across 22 reviewed, malformed and edited states, excluding save timestamps. All 14 generated workspace HTML inputs are identical. Before documentation regeneration, the only changed file among 91 dist files is research-view.js; every stylesheet, model, simulation and financial-data file is unchanged.
+
+Nine paired static previews cover full pages at 320, 390 and 1440px plus the toolbar in all six themes at 320px. All 16 corresponding rendered pages are pixel-identical. The phone/desktop first pages and six-theme toolbar views were visually inspected. These document-renderer approximations substitute native controls, flatten responsive CSS and paginate the page; they do not verify native focus routing, select-menu cancellation, browser scrolling, touch, accessibility-tree or screen-reader behavior. The known browser-launch restriction and private sign-in gate were not retried or bypassed.
+
 ## 2026-10-17, 17:42 UTC · Keep focus on the path control that changed
 
 ### Question and evidence
