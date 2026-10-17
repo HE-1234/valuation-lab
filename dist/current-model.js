@@ -2,7 +2,7 @@ import {defaults,validateSnapshot,valueCompany,validDate} from './engine.js';
 import {genericProvenance,researchCaseFor,loadResearchedBaseCase,restoreDraftProvenance,isUntouchedGenericDraft} from './base-cases.js';
 import {currentClaimsEvidence} from './current-claims-gates.js';
 import {operatingIssues} from './current-operating.js';
-export {operatingProfileDefinition,operatingIssues,operatingAssumptions,FLEXIBLE_PROFILE_ID} from './current-operating.js';
+export {operatingProfileDefinition,operatingIssues,operatingAssumptions,independentGrowthProfile,FLEXIBLE_PROFILE_ID} from './current-operating.js';
 import {claimsDefaults,restoreClaims,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis} from './current-claims.js';
 export {claimsDefinition,claimsDefaults,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis,claimsSensitivity} from './current-claims.js';
 export {researchCaseFor,loadResearchedBaseCase,markDraftEdited,fetchBaseCases} from './base-cases.js';

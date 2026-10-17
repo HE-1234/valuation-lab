@@ -1,0 +1,62 @@
+/* Visible Monte Carlo controls, shared by scalar and explicit annual models. */
+.simulation-lab .mc-heading,.value-column .simulation-lab .mc-heading{display:flex;align-items:center;gap:12px;padding:10px 0}
+.simulation-lab .mc-heading h3,.value-column .simulation-lab .mc-heading h3{font-size:17px;font-weight:600;line-height:1.4;font-family:inherit;letter-spacing:0;margin:0;color:inherit}
+.simulation-lab .mc-count,.simulation-lab .mc-count b{display:inline;font-size:11px;letter-spacing:0;line-height:1.5;font-weight:400;color:inherit}
+.simulation-lab .mc-count{opacity:.8;white-space:normal;max-width:150px}
+.simulation-lab .mc-setup{min-width:0;margin:18px 0 12px;padding:17px 0 0;border-top:1px solid var(--line)}
+.value-column .simulation-lab .mc-setup{border-top-color:#ffffff30}
+.simulation-lab .mc-setup-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 12px}
+.simulation-lab .mc-setup-heading h4{font-size:14px;line-height:1.4;margin:0;font-weight:600;color:inherit}
+.simulation-lab .mc-setup-heading>span{font-size:10px;opacity:.7}
+.simulation-lab .mc-setup-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:5px;border:1px solid var(--line);border-radius:10px;background:var(--soft)}
+.simulation-lab .mc-setup-tabs button{min-width:0;min-height:44px;white-space:normal;font-size:12px;line-height:1.3;padding:8px 6px;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--muted)}
+.simulation-lab .mc-setup-tabs button[aria-selected=true]{border-color:var(--accent);background:var(--surface);color:var(--ink);font-weight:600}
+.simulation-lab .mc-setup-tabs button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.value-column .simulation-lab .mc-setup-tabs{background:#ffffff08;border-color:#ffffff30}
+.value-column .simulation-lab .mc-setup-tabs button{color:var(--stage-text)}
+.value-column .simulation-lab .mc-setup-tabs button[aria-selected=true]{background:#ffffff12;color:var(--signal);border-color:var(--signal)}
+.simulation-lab .mc-setup-panel{padding:17px 0 0;min-width:0}
+.simulation-lab [hidden]{display:none!important}
+.simulation-lab .mc-setup .mc-input-grid,.value-column .simulation-lab .mc-setup .mc-input-grid{display:block}
+.simulation-lab .mc-setup fieldset{display:block;border:0;margin:0;padding:0;min-width:0}
+.simulation-lab .mc-setup legend{font-size:13px;line-height:1.5;letter-spacing:0;font-weight:600;margin-bottom:12px;padding:0;color:inherit}
+.simulation-lab .mc-setup label{display:block;font-size:12px;line-height:1.5;font-weight:400;color:inherit;margin:0 0 12px;min-width:0}
+.simulation-lab .mc-setup select,.simulation-lab .mc-setup input{width:100%;max-width:100%;min-width:0;min-height:44px;margin:6px 0 0;padding:9px;font-size:16px;text-align:left;border:1px solid var(--control);background:var(--surface);color:var(--ink);border-radius:7px}
+.value-column .simulation-lab .mc-setup select,.value-column .simulation-lab .mc-setup input{border-color:#ffffff55;background:var(--stage);color:var(--stage-text)}
+.value-column .simulation-lab .mc-setup option{background:var(--stage);color:var(--stage-text)}
+.simulation-lab .mc-driver-parameters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px}
+.simulation-lab .mc-shape-preview{color:var(--accent);margin:6px 0}
+.value-column .simulation-lab .mc-shape-preview{color:var(--signal)}
+.simulation-lab .mc-shape-preview svg{display:block;width:100%;height:55px}
+.simulation-lab .mc-shape-preview p,.simulation-lab .mc-shape-note,.simulation-lab .mc-assumption-note,.simulation-lab .mc-setup .micro{font-size:12px;line-height:1.65;color:inherit;margin:8px 0 12px;opacity:.85}
+.simulation-lab .mc-assumption-note{padding-top:10px;border-top:1px solid var(--line)}
+.value-column .simulation-lab .mc-assumption-note{border-top-color:#ffffff26}
+.simulation-lab .mc-setup [id$="mc-error"]{opacity:1}
+.simulation-lab .mc-settings-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0}
+.simulation-lab [id$="mc-reset-distributions"]{font-size:12px;min-height:44px;text-align:left;margin:0}
+.simulation-lab .mc-run-progress{font-size:13px;padding:32px 0;min-height:120px;line-height:1.7;color:inherit}
+.simulation-lab .mc-chart-top,.value-column .simulation-lab .mc-chart-top{flex-wrap:wrap;row-gap:7px}
+.simulation-lab .mc-chart-top>span,.value-column .simulation-lab .mc-chart-top>span{font-size:10px;letter-spacing:0;line-height:1.5;max-width:none}
+.simulation-lab .mc-playback,.value-column .simulation-lab .mc-playback{margin-left:auto;flex-wrap:wrap;gap:5px;max-width:100%}
+.simulation-lab .mc-playback button,.value-column .simulation-lab .mc-playback button{font-size:12px;min-height:44px;white-space:normal;line-height:1.4;padding:8px 12px}
+.simulation-lab .mc-playback button:disabled{opacity:.7}
+.simulation-lab .mc-extra>summary{min-height:44px;font-size:12px}
+#research-simulation-root{grid-column:1/-1;min-width:0;margin-bottom:22px}
+#research-simulation-root .simulation-lab{margin:0;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+#research-simulation-root .mc-heading h3{font-size:20px}
+#research-simulation-root .mc-intro{display:block;font-size:12px;margin:4px 0 15px}
+#research-simulation-root .mc-stat-row{grid-template-columns:1fr}
+#research-simulation-root .mc-bridge-summary{padding:12px 0;font-size:12px;line-height:1.7}
+#research-simulation-root .mc-bridge-summary p{margin:7px 0}
+#research-simulation-root .mc-bridge-summary b{font-weight:600}
+#research-simulation-root .mc-svg-note{font-size:15px}
+#research-simulation-root .mc-axis-label{font-size:21px}
+#research-simulation-root .mc-marker-label{font-size:14px}
+#research-simulation-root .mc-inspector>span:last-child small{font-size:10px}
+@media(max-width:650px){.simulation-lab .mc-settings-row{grid-template-columns:1fr}.simulation-lab .mc-setup-heading>span{display:none}#research-simulation-root .simulation-lab{padding:16px}#research-simulation-root .mc-svg-note{font-size:23px}#research-simulation-root .mc-axis-label{font-size:35px}}
+@media(max-width:380px){.simulation-lab .mc-driver-parameters{grid-template-columns:1fr}.simulation-lab .mc-setup-tabs button{font-size:11px}.simulation-lab .mc-playback{width:100%;justify-content:flex-end}}
+@media(prefers-reduced-motion:reduce){.simulation-lab .mc-bin{animation:none!important;transition:none!important}}
+.simulation-lab .mc-output-choice{margin:0 0 14px;min-width:0}.simulation-lab .mc-output-choice label{font-size:12px;line-height:1.6;display:block}.simulation-lab .mc-output-choice select{display:block;width:100%;min-width:0;max-width:100%;min-height:44px;font-size:16px;margin-top:6px}.simulation-lab .mc-output-choice .micro{font-size:12px;line-height:1.6;margin:8px 0;color:var(--muted)}
+
+.simulation-lab [id$="mc-error"]:empty{display:none}.simulation-lab [id$="mc-error"]{color:var(--error)}
+.simulation-lab .mc-reset-actions{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px}.simulation-lab .mc-reset-actions button{min-height:44px;font-size:12px;text-align:left}

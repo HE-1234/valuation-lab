@@ -1,0 +1,2103 @@
+{
+  "asOf": "2026-10-17",
+  "status": "Consolidated evidence and treatments for integration; not a fully measured equity bridge or a blanket prohibition on valuation",
+  "rules": [
+    "Carrying, fair, principal and maximum-contingent amounts are distinct.",
+    "Recognized debt can be incorporated using a stated carrying/market convention; do not withhold directly verified corrections merely because other claims remain uncertain.",
+    "Guarantee maximum exposure is not automatically debt at face value. Probability/conditions and overlapping revenue or assets matter.",
+    "Operating lease expense, lease asset investment, lease debt and principal repayments must follow one consistent policy.",
+    "Keep SBC as an economic expense in operating FCFF; future cash funding can add noncash SBC and subtract net award-settlement cash. Existing outstanding claims and incremental future issuance require a consistent dilution policy, never simultaneous double charging.",
+    "Private customer-investment values, restricted equity and trade/strategic financing are not equivalent to liquid surplus cash.",
+    "Forecast financing shortfalls are not added to debt; cash reserves and financing assumptions are separate scenario constraints."
+  ],
+  "companies": [
+    {
+      "ticker": "AAPL",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-AAPL.html#judgment",
+      "sourceLedgerPath": "evidence-AAPL.html#sources",
+      "registers": {
+        "claims": {
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "balanceDate": "2026-06-27",
+          "cashAndEquivalents": 39544,
+          "currentMarketableSecurities": 22855,
+          "noncurrentMarketableSecurities": 84118,
+          "totalCashAndMarketableSecurities": 146517,
+          "appSnapshotCash": 62399,
+          "missingFromSnapshotCashNoncurrentSecurities": 84118,
+          "currentTermDebt": 11007,
+          "noncurrentTermDebt": 71340,
+          "termDebtExactSum": 82347,
+          "commercialPaper": 1997,
+          "debtExactSum": 84344,
+          "roundedNoteDebtWarning": "82.3bn note/tag is rounded; use exact balance-sheet components for the bridge.",
+          "coverShares": 14594.18,
+          "coverSharesDate": "2026-07-17",
+          "periodEndShares": 14608.963,
+          "YTDRepurchaseCash": 62094,
+          "YTDProgramSharesRepurchasedApprox": 215,
+          "YTDProgramRepurchaseCostApprox": 61800,
+          "YTDDividendCash": 11778,
+          "YTDEquityTaxWithholdingCash": 6462,
+          "YTDTermDebtRepayment": 8146,
+          "YTDCommercialPaperRepayment": 5911,
+          "unrecognizedEquityCompensation": 26700,
+          "unrecognizedEquityCompensationRecognitionYears": 2.7,
+          "purchaseObligationsOverOneYear": 27628,
+          "latestAnnualLeaseEvidence": {
+            "date": "2025-09-27",
+            "financeLeaseLiability": 1230,
+            "operatingLeaseLiability": 12490,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "status": "stale annual values; latest quarter did not refresh a complete lease table; do not label June2026 exact"
+          },
+          "policy": "Noncurrent securities are a candidate additional asset once, after restrictions/operating cash review. Lease and RSU treatment must match cash-flow definitions. Purchase commitments are not automatically debt. No zero-claims assertion.",
+          "manufacturingPurchaseObligations": 57000,
+          "manufacturingPurchaseObligationsNext12Months": 56200,
+          "otherPurchaseObligations": 29300,
+          "otherPurchaseObligationsNext12Months": 9200,
+          "purchaseScopeWarning": "The note9 over-one-year obligation schedule is not the total supplier commitment. MD&A manufacturing/other categories may overlap contractual schedules; do not sum all tables.",
+          "legalContingencies": "Issuer says no at-least-reasonably-possible material unaccrued loss identified for asserted claims; this is not absence of regulatory/business-model risk.",
+          "conditionalGlobalstarRedemption": {
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+            "sourceType": "counterparty primary SEC filing",
+            "agreementDate": "2026-04-13",
+            "publicationDate": "2026-07-31",
+            "expectedClose": "2027 conditional",
+            "description": "Amazon agreements contemplate services to Apple after Globalstar acquisition and redemption of certain Apple equity interests in Globalstar special-purpose entity.",
+            "redemptionProceeds": null,
+            "valuationTreatment": "No quantified add-on or assumed cash receipt; reconcile existing investment balance and closing conditions."
+          }
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "MSFT",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-MSFT.html#judgment",
+      "sourceLedgerPath": "evidence-MSFT.html#sources",
+      "registers": {
+        "claims": {
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "balanceDate": "2026-06-30",
+          "cashAndShortTermInvestments": 76843,
+          "longTermInvestmentsCarrying": 36348,
+          "financialDebtCarrying": 40294,
+          "debtFaceContractualPrincipal": 46136,
+          "financeLeaseLiabilities": 66594,
+          "operatingLeaseLiabilities": 21925,
+          "uncommencedLeaseCommitmentsUndiscounted": 329100,
+          "uncommencedStartYears": "FY2027–FY2033",
+          "uncommencedLeaseTermsYears": [
+            1,
+            20
+          ],
+          "allContractualLeasePaymentsIncludingUncommencedAndInterest": 443506,
+          "constructionCommitments": 34566,
+          "purchaseCommitments": 194060,
+          "coverShares": 7425.545491,
+          "periodEndShares": 7427,
+          "weightedDilutedShares": 7453,
+          "annualProgramRepurchaseCost": 16719,
+          "annualProgramRepurchasedSharesApprox": 36,
+          "annualCashflowRepurchaseIncludingWithholding": 22271,
+          "annualDividendDeclared": 27035,
+          "annualDividendCash": 26445,
+          "unrecognizedEquityCompensation": 24800,
+          "recognitionYearsApprox": 3,
+          "sharesAuthorizedForFutureGrant": 292,
+          "claimsPolicy": "Debt carrying value excludes lease liabilities. Do not deduct undiscounted commitments as if already recognized debt. Long-term investment carrying value is not guaranteed realizable value; any add-on must exclude operating cash flows already modeled. SBC remains an expense and dilution/cash replacement must be reconciled.",
+          "taxContingency": {
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+            "IRSProposedAdditionalTax": 28900,
+            "plusPenaltiesAndInterest": true,
+            "originalNoticeDate": "2023-09-26",
+            "currentStatusDate": "2026-06-30",
+            "status": "Disputed transfer-pricing assessment; company believes existing tax contingency allowances adequate; resolution/timing and incremental unreserved exposure uncertain.",
+            "modelTreatment": "Stress separately; do not deduct full demand as certain incremental debt or ignore; reconcile existing reserves to avoid duplicate deduction."
+          }
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "AMZN",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-AMZN.html#judgment",
+      "sourceLedgerPath": "evidence-AMZN.html#sources",
+      "registers": {
+        "claim_and_obligation_register": [
+          {
+            "id": "cash_and_current_marketables",
+            "amount": 122988,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "June balance, not October cash after subsequent funding",
+            "proposed_treatment": "Cash bridge starting point; reserve operating liquidity and bridge post-June uses before current-date value.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "debt_carrying",
+            "amount": 132224,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "3,330 current +128,894 noncurrent; debt face/discount basis differs",
+            "proposed_treatment": "Subtract carrying proxy consistently; fair-value sensitivity not priced.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "finance_leases",
+            "amount": 13451,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Contractual recognized lease debt",
+            "proposed_treatment": "Subtract if finance-lease asset/reinvestment treatment is consistent.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "operating_leases",
+            "amount": 96320,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Recognized liabilities; costs already in reported operating income",
+            "proposed_treatment": "Do not add to debt without capitalizing lease expense and invested capital consistently.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "uncommenced_leases_undiscounted",
+            "amount": 137214,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Future start dates; obligations include future service/assets",
+            "proposed_treatment": "Cash-flow/lease schedule stress, not blind additional present-value debt deduction.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "unconditional_purchase_obligations",
+            "amount": 130065,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Equipment/content/other future purchases; overlap with capex and costs possible",
+            "proposed_treatment": "Model within future reinvestment/operating costs, avoid double subtraction.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "Anthropic_preferred_carrying",
+            "amount": 92500,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Private, illiquid, valuation marks and ownership restrictions",
+            "proposed_treatment": "Nonoperating-asset scenarios separate from AWS FCFF; discount taxes/illiquidity/mark uncertainty.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "Anthropic_convertible_notes_fair_value",
+            "amount": 97900,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Level 3 convertible note value; ownership cap and IPO conversion/lockup",
+            "proposed_treatment": "Separate asset; not cash and not double count preferred. Stress equity marks and collection.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "OpenAI_preferred_June",
+            "amount": 28700,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Private equity, commercial collaboration, contingent economics",
+            "proposed_treatment": "Separate asset scenarios, not operating revenue.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "OpenAI_subsequent_funding",
+            "amount": 21300,
+            "unit": "USD millions",
+            "measurement_date": "2026-07-01/2026-07-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Paid after June 30 and before filing; exact payment date not stated",
+            "proposed_treatment": "For post-June bridge reduce cash and increase investment; do not add asset with no cash reduction.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "Anthropic_remaining_facility",
+            "amount": 15000,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Draw availability tied to compute-delivery milestones; financing instruments issued on draw",
+            "proposed_treatment": "Stress future cash commitments; do not treat as current debt or guaranteed AWS cash receipts.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "equity_method_other_investments",
+            "amount": 395,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Carrying value may not represent realizable value",
+            "proposed_treatment": "Review as additional nonoperating assets, no automatic full-value uplift.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "equity_warrants",
+            "amount": 4300,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Level 2/3, conditional exercise rights",
+            "proposed_treatment": "Separate asset and exercise-cash scenario; avoid double counting investments.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "Globalstar_pending_transaction",
+            "amount": 10900,
+            "unit": "USD millions",
+            "measurement_date": "2026-04-13",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Announced enterprise value including debt, not fixed final consideration. Election $90 cash or 0.3210 AMZNshare cappedat$90;cashfractionmax 40%;up to 110 m downward milestone adjustment;expected 2027 closing subjectapprovals/satellitemilestones.",
+            "proposed_treatment": "Schedule cash/stock funding and acquired assets on conditional closing; no automatic full enterprise-value debt deduction. Apple equity redemption agreements need separate cash review.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "other_nonmarketable_equity_residual",
+            "amount": 1100,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Approximate residual 122,300-92,500-28,700; rounded inputs",
+            "proposed_treatment": "No false precision; other investments require review. Not incremental to 122,300 total.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "SBC_and_unvested_awards",
+            "amount": 24800,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "Unrecognized compensation cost is future service expense, not same as option intrinsic liability",
+            "proposed_treatment": "Keep SBC in margins; model actual share issuance/dilution. Do not both deduct full compensation backlog and expense it.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "energy_derivative_assets_liabilities",
+            "amount": 572,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "conditionality": "705 assets less 133 liabilities; noncash marks fluctuate with energy prices",
+            "proposed_treatment": "Do not capitalize recurring mark gains as operating growth; classify once in operating or nonoperating treatment.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "recognized_other_financing_obligations",
+            "amount": 9315,
+            "amountIsApproximate": true,
+            "components": {
+              "currentExact": 415,
+              "noncurrentRounded": 8900
+            },
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "AMZN-2026Q2-10Q",
+            "source_publication_date": "2026-07-31",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+            "source_section": "Commitments table footnote1",
+            "conditionality": "Recognized fulfillment-network and data-center financing obligations; long-term disclosure rounded to8.9bn. Excludes interest and is distinct from finance-lease liabilities.",
+            "proposed_treatment": "Financing-like claim subject to consistent operating asset/cashflow policy. Reconcile this approximately9.315bn separately from funded debt and finance leases; do not use the11.070bn undiscounted including-interest payment total as face debt. Do not deduct future funding deficits.",
+            "status": "Verified disclosed obligation; bridge policy and post-June roll-forward required"
+          }
+        ]
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "GOOG",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-GOOG.html#judgment",
+      "sourceLedgerPath": "evidence-GOOG.html#sources",
+      "registers": {
+        "claim_and_obligation_register": [
+          {
+            "id": "cash_and_current_marketables",
+            "amount": 242474,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Includes 87,063 marketable equity, of which 80,000 restricted SpaceX; not all cash",
+            "proposed_treatment": "Split cash/debt securities from equity; avoid adding these equity positions again.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "additional_noncurrent_investments",
+            "amount": 145587,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "14,126 noncurrent marketable equity+131,461 nonmarketable; book values uncertain",
+            "proposed_treatment": "Separate scenario asset values with tax/illiquidity haircuts, not perpetuity operating earnings.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "debt_carrying",
+            "amount": 100164,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "1,999 current+98,165 noncurrent;101,085 face less 921 fees",
+            "proposed_treatment": "Subtract consistent debt proxy; August debt proceeds/uses need matched post-quarter bridge.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "finance_leases",
+            "amount": 2590,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Recognized debtlike lease liability",
+            "proposed_treatment": "Deduct consistently with financed-asset reinvestment accounting.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "operating_leases",
+            "amount": 18037,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Operating rent already affects EBIT",
+            "proposed_treatment": "Only capitalize/subtract if EBIT and invested capital adjusted together.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "uncommenced_leases",
+            "amount": 85200,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Undiscounted; commence 2026–2031,1–26 yearterms",
+            "proposed_treatment": "Schedule future fixed payments and assets; no blind debt deduction.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "short_term_capacity_lease",
+            "amount": 5800,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Noncancelable June agreement beginsQ3; related margin pressure",
+            "proposed_treatment": "Near-term operating-cost/cash forecast, not permanent margin benefit.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "preferred_liquidation_preference",
+            "amount": 19250,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "19.25 m preferred shares;6.25%;mandatoryconversionexpected 2029-05-15",
+            "proposed_treatment": "Use existing reviewed preferred conversion+cash-dividend/capped-call model OR separate preferred value; never both full liquidation deduction and full conversion dilution.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "preferred_book_value",
+            "amount": 18023,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Net issuance 19,034 less capped-call premium 1,011; not fair value",
+            "proposed_treatment": "Do not treat book value as settled liability valuation.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "preferred_conversion_share_range",
+            "amount": [
+              43.56275,
+              54.45825
+            ],
+            "unit": "millions common shares",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Common shares depend on future class-specific VWAP; stock dividends can add shares",
+            "proposed_treatment": "Preserve class-specific conversion and capped-call terms; scenario not current spot calibration.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "noncontrolling_interests_rounded",
+            "amount": 7100,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Includes 824 redeemableNCI",
+            "proposed_treatment": "Deduct minority share if operating cash flows include 100% consolidatedsub; exclude assets already separately valued.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "unused_ATM_authorization",
+            "amount": 40000,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Unsold atJune 30; authorization not cash raised",
+            "proposed_treatment": "No currentcash uplift or automaticdilution; financing scenario only.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "August_debt_event",
+            "amount": null,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-claims-Alphabet-August-10-senior-note-closing-8-K",
+            "conditionality": "Post-quarter note issuance verified in existing claim review; fresh current balance not available",
+            "proposed_treatment": "Keep June anchor or build matched proceeds/uses bridge; never deduct new debt while omitting cash.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "credit_backstop_notional",
+            "amount": 43785,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Maximum payment exposure under specified counterparty default scenarios, remaining terms up to 15 years; falls as counterparties pay. Lease takeover/sublease and termination rights may mitigate exposure.",
+            "proposed_treatment": "Stress expected losses and liquidity calls. Do not equate maximum notional with current debt or add a second deduction for already recorded derivative liabilities.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "deferred_tax_on_investment_marks",
+            "amount": 22819,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "All-items balance, not entirely attributable to separately valued assets",
+            "proposed_treatment": "Allocate taxes to realized asset scenarios rather than subtract all deferred taxes blindly.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "common_dilution",
+            "amount": 12230,
+            "unit": "millions common shares",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Period-end common count;not dilutedEPSdenominator;H1 buybackszero",
+            "proposed_treatment": "Start with period-endclassA+B+C economicallyequalcommon; modelfutureSBC/issuance/conversions explicitly.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "energy_infrastructure_guarantees",
+            "amount": 7600,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Maximum potential payments under financial guarantees, not expected loss.",
+            "proposed_treatment": "Conditional expected-loss and liquidity stress; account for mitigation and overlap.",
+            "status": "requires_explicit_model_policy"
+          },
+          {
+            "id": "equity_forward_funding_notional",
+            "amount": 20000,
+            "unit": "USD millions",
+            "measurement_date": "2026-06-30",
+            "source_id": "GOOG-2026Q2-10Q",
+            "conditionality": "Future note/equity funding tranches contingent on operating and financial milestones through 2030.",
+            "proposed_treatment": "Model contingent cash funding and assets acquired together; not automatic debt or free investment value.",
+            "status": "requires_explicit_model_policy"
+          }
+        ]
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "META",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-META.html#judgment",
+      "sourceLedgerPath": "evidence-META.html#sources",
+      "registers": {
+        "unresolvedObligationAssetRegister": [
+          {
+            "item": "State attorneys-general settlement",
+            "amount": 12700,
+            "maximumConditionalTotal": 18000,
+            "unit": "USD millions undiscounted",
+            "sourceId": "META-2026-settlement",
+            "publicationDate": "2026-08-26",
+            "conditions": "Judicial approval pending as announced. Approximately$12.7 bn committed, additional$5.3 bn conditional on Tik Tok/You Tube actions and payments; annual installments over 10 years.",
+            "treatment": "Separate legal-payment present value, or explicit nonrecurring cash outflow in forecasts, never both. Exclude $10 bn expected Q 3 accounting expense from recurring EBIT only if cash claim modeled separately.",
+            "status": "Cash dates, tax deductibility, final approval and probability of conditional portion unresolved",
+            "illustrativePVAt10Percent": {
+              "committedTenEqualYearEndPayments": 7803.600224244944,
+              "allEighteenBillionTenEqualYearEndPayments": 11060.220790268424
+            },
+            "illustrationWarning": "Equal year-end payment timing is an analytical assumption, not disclosed installment schedule."
+          },
+          {
+            "item": "Nonmarketable equity investments",
+            "amount": 30157,
+            "sourceId": "META-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "treatment": "Potential nonoperating asset at a valuation/haircut supported separately; carrying amount is not fair value. Exclude investee income from operating value.",
+            "status": "No independently verified fair value or realization tax"
+          },
+          {
+            "item": "Restricted cash",
+            "amount": 13809,
+            "sourceId": "META-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "treatment": "Do not add as surplus cash without release/use analysis",
+            "status": "Purpose restrictions remain"
+          },
+          {
+            "item": "Not-commenced leases and July additional leases",
+            "amount": 278990,
+            "additionalJuly": 68000,
+            "sourceId": "META-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "treatment": "Schedule rent or consistent lease capitalization/debt treatment; neither automatic full undiscounted deduction nor omission.",
+            "status": "Annual cash and depreciation schedule needed"
+          },
+          {
+            "item": "Noncancelable contractual commitments",
+            "amount": 349310,
+            "due2026": 53520,
+            "due2027": 81650,
+            "sourceId": "META-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "treatment": "Map purchase/cloud/capacity costs into reinvestment and operating forecasts; determine overlap with lease disclosures before aggregation",
+            "status": "Cannot sum with lease totals blindly"
+          },
+          {
+            "item": "Contingent cloud capacity support",
+            "amount": 14720,
+            "sourceId": "META-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "conditions": "Five-year maximum reduced if provider resells capacity",
+            "treatment": "Contingent downside scenario; no automatic full debt deduction",
+            "status": "Probability and net residual exposure unresolved"
+          },
+          {
+            "item": "Data-center venture residual value guarantees",
+            "existingThreshold": 28000,
+            "ElPasoMaximum": 13000,
+            "sourceId": "META-2026Q2-10Q",
+            "periodEnd": "2026-06-30 plus subsequent event",
+            "conditions": "Existing threshold declines over time; liability not considered probable as filed. El Paso additional venture guarantee.",
+            "treatment": "Risk-weighted contingent exposure and lease consistency; do not assume ownership stake eliminates risk",
+            "status": "Contract-level timing and overlap unresolved"
+          },
+          {
+            "item": "SBC, repurchases and shares",
+            "ttmSBC": 25136,
+            "currentSharesMillions": 2547.506225,
+            "sourceId": "META-2026Q2-10Q",
+            "periodEnd": "2026-06-30 / cover shares July2026",
+            "treatment": "Keep ongoing SBC in EBIT; reconcile employee-award option claims and dilution with share denominator. Repurchases are financing distributions, not FCFF.",
+            "status": "Do not mechanically extrapolate past share shrinkage"
+          }
+        ]
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "NVDA",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-NVDA.html#judgment",
+      "sourceLedgerPath": "evidence-NVDA.html#sources",
+      "registers": {
+        "unresolvedObligationAssetRegister": [
+          {
+            "id": "funded-debt",
+            "category": "unresolved obligation",
+            "amount": 33366,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "Carrying value, not current market value; includes1bn current.",
+            "proposedTreatment": "Subtract financing debt once after operating value; reconcile issuance costs and post-balance-sheet changes.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "recognized-operating-leases",
+            "category": "unresolved obligation",
+            "amount": 5494,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "Recognized lease present value.",
+            "proposedTreatment": "Choose lease-adjusted EBIT/reinvestment/WACC consistently before deducting; do not deduct after leaving full rent in EBIT without an explicit convention.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "own-use-future-procurement",
+            "category": "unresolved obligation",
+            "amount": 366000,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "279bn supply/capacity+29bn cloud+25bn uncommenced own leases+25bn equity+8bn capex; cancellation/rescheduling varies.",
+            "proposedTreatment": "Map into operating cash flow, investment and contingent-loss scenarios; no full headline deduction and no double counting.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "additional-ai-cloud-agreements",
+            "category": "unresolved obligation",
+            "amount": 36000,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-issuer-10Q-pdf",
+            "conditionality": "Third-party capacity purchases reduce NVIDIA commitments; cloud can sell to others at advantageous rates; conditional revenue sharing.",
+            "proposedTreatment": "Estimate unused-capacity support, usage offsets and recovery across scenarios; separate from29bn own-R&D agreements.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "additional-third-party-leases",
+            "category": "unresolved obligation",
+            "amount": 20000,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-issuer-10Q-pdf",
+            "conditionality": "~15-year leases beginningFY2028–29; intended reassignment to third parties has not removed obligation.",
+            "proposedTreatment": "Scenario cash exposures net of legally effective assignment/sublease recovery; distinguish25bn own-use leases.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "existing-lps-guarantees",
+            "category": "unresolved obligation",
+            "amount": 3529,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "Default-triggered, declining5–7years;712m partner escrow.",
+            "proposedTreatment": "Expected loss by default/phase/recovery; escrow is not freely available issuer cash.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "sb-energy-openai-guarantee",
+            "category": "unresolved obligation",
+            "amount": 105000,
+            "unit": "USD millions",
+            "measurementDate": "2026-08",
+            "sourceId": "NVDA-issuer-10Q-pdf",
+            "conditionality": "Nine phases/4.25GW; firstFY2029;20-year covered lease/power portions; tenant-default trigger; rating/expiry termination; optional3.8GW separate.",
+            "proposedTreatment": "Model phase-specific expected exposure and recovery jointly with demand downturn; do not subtract105bn as funded debt.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "strategic-equity-assets",
+            "category": "unresolved nonoperating asset",
+            "amount": 90681,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "42783m marketable+47898m nonmarketable equity; tax/liquidity restrictions, market sensitivity and demand correlation.",
+            "proposedTreatment": "Separate realizable after-tax asset value from operating franchise, avoid including investment gains in EBIT; no unreviewed carrying-value addback.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "equity-method-holdings",
+            "category": "unresolved nonoperating asset",
+            "amount": 3300,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "VIE maximum exposure including future commitments4.7bn; not same as carrying value.",
+            "proposedTreatment": "Value claim and remaining commitments consistently; do not add3.3bn and deduct4.7bn without overlap reconciliation.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "cash-and-current-debt-securities",
+            "category": "unresolved excess cash",
+            "amount": 56586,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "22443m cash+34143m current debt securities, before required operating liquidity/tax/restriction review.",
+            "proposedTreatment": "Add only excess available liquidity; equity securities excluded here.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "outstanding-equity-awards",
+            "category": "unresolved obligation",
+            "amount": 168,
+            "unit": "million awards",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "Millions of RSUs/PSUs/marketPSUs; vesting/performance/forfeiture matter;19.4bn future compensation not market value.",
+            "proposedTreatment": "Keep future SBC as expense; value existing awards or use coherent fully diluted bridge, avoiding double count.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "groq-license-consideration",
+            "category": "unresolved obligation",
+            "amount": 986,
+            "unit": "USD millions",
+            "measurementDate": "2026-07-26",
+            "sourceId": "NVDA-latest-10Q",
+            "conditionality": "Accrued remaining purchase consideration.",
+            "proposedTreatment": "Classify as financing-like claim or operating liability consistently with working-capital model, once.",
+            "status": "manual review required; no automatic bridge adjustment"
+          }
+        ]
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "TSLA",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-TSLA.html#judgment",
+      "sourceLedgerPath": "evidence-TSLA.html#sources",
+      "registers": {
+        "unresolvedObligationAssetRegister": [
+          {
+            "item": "Debt baseline mapping correction",
+            "periodEnd": "2026-06-30",
+            "sourceId": "TSLA-2026Q2-10Q",
+            "currentDebt": 1340,
+            "longTermDebt": 7721,
+            "financeLeases": 281,
+            "totalDebtAndFinanceLeases": 9342,
+            "existingSnapshotDebt": 7721,
+            "treatment": "Use total current+noncurrent debt; add finance leases consistently if not already treated in operation. Existing 7721 field is long-term only.",
+            "status": "Verified source-table correction required before per-share output"
+          },
+          {
+            "item": "Space X investment",
+            "periodEnd": "2026-06-30",
+            "sourceId": "TSLA-2026Q2-10Q",
+            "carryingValue": 3007,
+            "cost": 2002,
+            "unrealizedGain": 1005,
+            "treatment": "Separate nonoperating investment from operating DCF; carrying value is a mark not independently verified liquidation value. Consider haircut and tax.",
+            "status": "Valuation and realizability uncertain"
+          },
+          {
+            "item": "Digital assets",
+            "amount": 674,
+            "sourceId": "TSLA-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "treatment": "Separate nonoperating asset with price/tax sensitivity; do not add twice within cash",
+            "status": "October price and tax not revalued"
+          },
+          {
+            "item": "Noncontrolling interests",
+            "nonredeemable": 607,
+            "redeemable": 54,
+            "sourceId": "TSLA-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "treatment": "Deduct economic outside claim once if consolidated operating cash flowsincluded; carrying valuesnotmarket values",
+            "status": "Claim valuation needed"
+          },
+          {
+            "item": "2018 CEO award exercised;2025 interim forfeited",
+            "optionsExercisedMillions": 304.0,
+            "netSettlementSharesMillions": 17.5,
+            "interimSharesForfeitedMillions": 96,
+            "sourceId": "TSLA-2026Q2-10Q",
+            "eventDate": "2026-Q2",
+            "conditions": "Newrestricted sharesservice condition through 2028-01-19;96 minterimsharesforfeited April 21",
+            "treatment": "Reconcile latest common shares and restricted share status; do not subtract old option claim and add same exercisedshares again; no interim double count",
+            "status": "Current cover shares known but fully economic diluted denominator requires award-level reconciliation"
+          },
+          {
+            "item": "2025 CEO performanceaward",
+            "maximumSharesMillions": 423.743904,
+            "offsetPerShareUSD": 334.09,
+            "sourceId": "TSLA-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "conditions": "12 tranchesrequiremarket capandoperational milestones, service and holding periods;  unearned shares forfeit after 10 years; offset reduces shares unless paid cash",
+            "treatment": "State-contingent dilution/option valuation with denominator reconciliation; not full unconditional 423.7 m addition and not zero claim",
+            "status": "Currentenginecannotrepresentfull path-dependent award"
+          },
+          {
+            "item": "Operating leases and capital program",
+            "capex2026LowerBound": 25000,
+            "sourceId": "TSLA-2026Q2-10Q",
+            "periodEnd": "2026-06-30",
+            "treatment": "Schedule cash capex, replacementinvestment, working capital and leases consistently; no assumed freecash flow from merely risingrevenue",
+            "status": "Single S:C ratiofailsduringlarge capacity build with weak growth"
+          },
+          {
+            "item": "Prospective debt capacity",
+            "amountUpTo": 30000,
+            "sourceId": "TSLA-2026Q2-call-secondary",
+            "publicationDate": "2026-07-22",
+            "conditions": "CFO intention to secure opportunistic facilities, not already drawn debt",
+            "treatment": "Funding scenario only; do not deduct or add to cash as ifcompleted",
+            "status": "Primary filingcorroboration and future issuanceunresolved"
+          }
+        ]
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "COHR",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-COHR.html#judgment",
+      "sourceLedgerPath": "evidence-COHR.html#sources",
+      "registers": {
+        "obligationAssetRegister": {
+          "ticker": "COHR",
+          "asOf": "2026-10-17",
+          "scope": "Explicit unresolved operating, financing, dilution and noncore asset bridge; not a sum to subtract mechanically.",
+          "items": [
+            {
+              "id": "COHR-debt",
+              "label": "Borrowings, carrying amount",
+              "kind": "obligation",
+              "amount": 3222.224,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "COHR-FY2026-10K"
+              ],
+              "conditionality": "Debt terms and repayment schedule control.",
+              "valuationTreatment": "Reconcile debt economic claim and post-June cash payments before deducting from enterprise value.",
+              "unresolvedGap": "No October debt/cash roll-forward or current debt fair value.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "COHR-restricted",
+              "label": "Restricted cash",
+              "kind": "restricted asset",
+              "amount": 606.4,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "COHR-FY2026-10K"
+              ],
+              "conditionality": "$35.2m current plus $571.2m noncurrent; use restrictions matter.",
+              "valuationTreatment": "Exclude from unrestricted excess cash; recognize related subsidiary economics consistently.",
+              "unresolvedGap": "Confirm permitted uses, release timing and links to SiC minority arrangements.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "COHR-NCI",
+              "label": "Noncontrolling interests, book amount",
+              "kind": "obligation",
+              "amount": 334.705,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "COHR-FY2026-10K"
+              ],
+              "conditionality": "Minority holders participate in consolidated subsidiary economics.",
+              "valuationTreatment": "Deduct economic minority value once if valuing 100% consolidated cash flows.",
+              "unresolvedGap": "Book value is not independently valued minority claim.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "COHR-liquidity",
+              "label": "Cash and short-term investments",
+              "kind": "asset",
+              "amount": 1987.018,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "COHR-FY2026-10K"
+              ],
+              "conditionality": "$1,162.018m cash plus $825m short-term investments; operating liquidity still needed.",
+              "valuationTreatment": "Add only excess unrestricted cash after valuation-date roll-forward.",
+              "unresolvedGap": "October balance, cash taxes and minimum operating cash not reconciled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "COHR-leases",
+              "label": "Operating and finance lease liabilities",
+              "kind": "obligation",
+              "amount": 330.443,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "COHR-FY2026-10K"
+              ],
+              "conditionality": "$316.210m operating plus $14.233m finance leases.",
+              "valuationTreatment": "Match lease treatment to EBIT and invested capital; avoid subtracting operating rent twice.",
+              "unresolvedGap": "Future lease commitments and lease-adjusted capital bridge not independently modeled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "COHR-capacity",
+              "label": "NVIDIA capacity agreement and supplier commitments",
+              "kind": "obligation",
+              "amount": null,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-03-02",
+              "sourceIds": [
+                "COHR-FY2026-10K"
+              ],
+              "conditionality": "Manufacturing expansion and future production through 2030 can require equipment, labor and working capital. No material capacity-agreement liability recorded at June 30.",
+              "valuationTreatment": "Model incremental spending and fulfillment costs; equity investment is financing, customer orders are not immediate revenue.",
+              "unresolvedGap": "Complete commitment schedule and enforceable cancellation/shortfall exposure not quantified.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "COHR-equity",
+              "label": "Employee awards and converted preferred",
+              "kind": "equity claim",
+              "amount": null,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "COHR-FY2026-10K"
+              ],
+              "conditionality": "All Series B preferred converted in FY2026 Q2; employee award vesting remains conditional.",
+              "valuationTreatment": "Do not retain obsolete preferred deduction after counting conversion shares. Include ongoing SBC and reconcile outstanding award dilution.",
+              "unresolvedGap": "October fully diluted share bridge and current award valuation pending.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "COHR-special-PSU",
+              "label": "August special executive PSUs, target value",
+              "kind": "equity compensation claim",
+              "amount": 100,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-08-27",
+              "sourceIds": [
+                "COHR-August-PSU"
+              ],
+              "conditionality": "Four-year performance/service conditions; 0–200% of target, with relative TSR hurdle and subsequent holding requirement.",
+              "valuationTreatment": "Model contingent dilution and compensation expense; do not deduct target dollars as debt and also add all possible shares.",
+              "unresolvedGap": "Grant-date fair value, target share units and expense schedule are not fully disclosed in reviewed 8-K.",
+              "status": "unresolved bridge"
+            }
+          ],
+          "doubleCountingRule": "Amounts overlap across principal/carrying/fair value, cash/financing, RPO/customer contracts, or rent/capitalized leases. Use mutually consistent treatments."
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "LITE",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-LITE.html#judgment",
+      "sourceLedgerPath": "evidence-LITE.html#sources",
+      "registers": {
+        "obligationAssetRegister": {
+          "ticker": "LITE",
+          "asOf": "2026-10-17",
+          "scope": "Explicit unresolved operating, financing, dilution and noncore asset bridge; not a sum to subtract mechanically.",
+          "items": [
+            {
+              "id": "LITE-converts",
+              "label": "Convertible principal",
+              "kind": "obligation",
+              "amount": 1554.3,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-27",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "Principal must settle in cash; conversion premium can settle in cash, shares or both.",
+              "valuationTreatment": "Use either instrument economic value or cash principal plus explicit excess-conversion dilution, not both.",
+              "unresolvedGap": "Conversion elections, capped-call proceeds and post-June settlement bridge pending.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "LITE-requests",
+              "label": "Early conversion requests",
+              "kind": "obligation",
+              "amount": 757.8,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-08-14",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "Requests are a subset of convertible principal; excess value remains separate.",
+              "valuationTreatment": "Roll requested cash principal out of cash and debt together when settled. Do not add as another debt obligation.",
+              "unresolvedGap": "Settlement dates, actual share/cash premium and residual series amounts not fully rolled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "LITE-term",
+              "label": "Term-loan principal",
+              "kind": "obligation",
+              "amount": 92.8,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-27",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "$52.3m current and $40.5m noncurrent.",
+              "valuationTreatment": "Deduct once in debt bridge; interest belongs below operating profit.",
+              "unresolvedGap": "October repayments not reconciled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "LITE-pref",
+              "label": "NVIDIA preferred shares",
+              "kind": "equity claim",
+              "amount": 2.9,
+              "unit": "million shares",
+              "measurementOrEventDate": "2026-03-02",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "Approximately 2.9m preferred shares issued for $2bn; one-for-one common conversion, no economic preference.",
+              "valuationTreatment": "Treat as common-like dilution; do not subtract $2bn and also include common-equivalent shares.",
+              "unresolvedGap": "Exact current share count and any conversions need reconciliation.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "LITE-purchases",
+              "label": "Purchase obligations",
+              "kind": "obligation",
+              "amount": 2354.4,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-27",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "$2,112.5m due within one year and $241.9m later.",
+              "valuationTreatment": "Model inventory, capacity and procurement cash needs; these purchases are not an extra debt deduction if already in forecast cash costs.",
+              "unresolvedGap": "Determine cancellation, overlap with payables/capex and demand-downside exposure.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "LITE-cash",
+              "label": "Cash and short-term investments",
+              "kind": "asset",
+              "amount": 2738.4,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-27",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "$2,043.5m cash plus $694.9m investments; conversion payments consume liquidity.",
+              "valuationTreatment": "Add excess cash after settlement and operating-liquidity bridge.",
+              "unresolvedGap": "Do not present June cash as October cash.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "LITE-leases",
+              "label": "Operating lease liability",
+              "kind": "obligation",
+              "amount": 33.8,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-27",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "Undiscounted lease payments approximately $36m.",
+              "valuationTreatment": "Use consistent operating-rent or capitalized-lease treatment.",
+              "unresolvedGap": "Lease/capacity commitments after June remain to be reconciled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "LITE-awards",
+              "label": "Employee awards and capped calls",
+              "kind": "mixed claim/asset",
+              "amount": null,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-27",
+              "sourceIds": [
+                "LITE-FY2026-10K"
+              ],
+              "conditionality": "Award vesting and hedge caps/settlement terms affect economics.",
+              "valuationTreatment": "Keep continuing SBC in EBIT; use explicit legacy award and capped-call claim scenarios without double counting.",
+              "unresolvedGap": "Current valuation and complete settlement bridge pending.",
+              "status": "unresolved bridge"
+            }
+          ],
+          "doubleCountingRule": "Amounts overlap across principal/carrying/fair value, cash/financing, RPO/customer contracts, or rent/capitalized leases. Use mutually consistent treatments."
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "AAOI",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-AAOI.html#judgment",
+      "sourceLedgerPath": "evidence-AAOI.html#sources",
+      "registers": {
+        "obligationAssetRegister": {
+          "ticker": "AAOI",
+          "asOf": "2026-10-17",
+          "scope": "Explicit unresolved operating, financing, dilution and noncore asset bridge; not a sum to subtract mechanically.",
+          "items": [
+            {
+              "id": "AAOI-cash",
+              "label": "June unrestricted cash",
+              "kind": "asset",
+              "amount": 499.737,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "AAOI-FY2026-Q2-10Q"
+              ],
+              "conditionality": "Later financing, spending and collections change this balance.",
+              "valuationTreatment": "Roll forward using actual transactions; do not simply add ATM proceeds and assume current cash.",
+              "unresolvedGap": "Current cash after capital spending and leasing unknown.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-ATM",
+              "label": "Completed ATM net proceeds",
+              "kind": "financing event",
+              "amount": 587.99998589,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-10-05",
+              "sourceIds": [
+                "AAOI-atmCompleted"
+              ],
+              "conditionality": "Completed sale of 5.694845m shares.",
+              "valuationTreatment": "Recognize financing cash and new shares together; known-transaction share total 90.601134m is not independently verified current outstanding.",
+              "unresolvedGap": "Other issuance, vesting and cash uses since August not fully reconciled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-convert",
+              "label": "Convertible debt principal / historical fair value",
+              "kind": "obligation",
+              "amount": {
+                "principal": 124.925,
+                "carrying": 129.142,
+                "fairValue": 445.1
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "AAOI-FY2026-Q2-10Q",
+                "AAOI-indenture"
+              ],
+              "conditionality": "2.75% due January 15, 2030; cash/share settlement choices and conversion contingencies apply.",
+              "valuationTreatment": "Compare mutually exclusive fair-value claim, if-converted and principal-only sensitivities; stock settlement does not erase cost.",
+              "unresolvedGap": "October option value, current principal and settlement choices unknown.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-bank",
+              "label": "Bank debt and vendor bank acceptances",
+              "kind": "obligation",
+              "amount": {
+                "bankDebt": 58.915,
+                "vendorAcceptances": 33.94
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "AAOI-FY2026-Q2-10Q"
+              ],
+              "conditionality": "Vendor financing may appear in working capital.",
+              "valuationTreatment": "Avoid double-counting supplier financing in both debt and operating payables.",
+              "unresolvedGap": "Economic financing classification and cutoff balance bridge pending.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-warrant",
+              "label": "Amazon customer warrant",
+              "kind": "contingent equity claim",
+              "amount": {
+                "maximumShares": 7.945399,
+                "initiallyVestedShares": 1.324233,
+                "strikeUSD": 23.6956
+              },
+              "unit": "mixed units as labeled",
+              "measurementOrEventDate": "2025-03-13",
+              "sourceIds": [
+                "AAOI-FY2025-10K",
+                "AAOI-FY2026-Q2-10Q"
+              ],
+              "conditionality": "Additional vesting depends on qualifying purchases, up to a $4bn threshold; this is not guaranteed customer revenue.",
+              "valuationTreatment": "Model vesting/share dilution with contra-revenue consistently. Grant-date fair value is not current fair value.",
+              "unresolvedGap": "Current vested amount, modification status and economic valuation pending.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-capital",
+              "label": "Capital prepayments and construction",
+              "kind": "operating asset",
+              "amount": {
+                "capitalPrepayments": 324.045,
+                "constructionInProgress": 168.805
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "AAOI-FY2026-Q2-10Q"
+              ],
+              "conditionality": "Equipment must be delivered, installed, qualified and placed in service.",
+              "valuationTreatment": "Treat as operating assets, not excess cash; do not charge prepayments again on delivery. Model later depreciation and utilization.",
+              "unresolvedGap": "Detailed installation calendar and return on new capacity unknown.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-Houston",
+              "label": "Houston leases and property purchase",
+              "kind": "lease/asset commitment",
+              "amount": {
+                "monthlyBaseRentUSD": 678160.34,
+                "securityDepositUSD": 11300000,
+                "purchasePriceUSD": 26783472
+              },
+              "unit": "USD, amounts labeled",
+              "measurementOrEventDate": "2026-08-31",
+              "sourceIds": [
+                "AAOI-houstonLeases",
+                "AAOI-propertyPurchase"
+              ],
+              "conditionality": "Lease commencements and terms control; separate property purchase dated September 4.",
+              "valuationTreatment": "Include rent, deposits, improvements and purchase spending with consistent lease capitalization.",
+              "unresolvedGap": "Actual commencement, expenditure and October cash reconciliation pending.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-Ningbo",
+              "label": "Ningbo ten-year lease",
+              "kind": "lease obligation",
+              "amount": 6.896124,
+              "unit": "CNY millions per year",
+              "measurementOrEventDate": "2026-09-10",
+              "sourceIds": [
+                "AAOI-ningboLease"
+              ],
+              "conditionality": "Annual rent in CNY; currency translation and commencement matter.",
+              "valuationTreatment": "Include rent and currency risk in capacity-cost model.",
+              "unresolvedGap": "Full rent escalation/commencement schedule not modeled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "AAOI-employees",
+              "label": "Expected-to-vest employee awards",
+              "kind": "equity claim",
+              "amount": {
+                "RSU": 1.317,
+                "PSU": 0.592
+              },
+              "unit": "million shares",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "AAOI-FY2026-Q2-10Q"
+              ],
+              "conditionality": "Performance/continued-service conditions apply.",
+              "valuationTreatment": "Include continued SBC cost and a consistent existing-award dilution policy.",
+              "unresolvedGap": "October vesting/forfeiture/issuance bridge pending.",
+              "status": "unresolved bridge"
+            }
+          ],
+          "doubleCountingRule": "Amounts overlap across principal/carrying/fair value, cash/financing, RPO/customer contracts, or rent/capitalized leases. Use mutually consistent treatments."
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "NBIS",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-NBIS.html#judgment",
+      "sourceLedgerPath": "evidence-NBIS.html#sources",
+      "registers": {
+        "obligationAssetRegister": {
+          "ticker": "NBIS",
+          "asOf": "2026-10-17",
+          "scope": "Explicit unresolved operating, financing, dilution and noncore asset bridge; not a sum to subtract mechanically.",
+          "items": [
+            {
+              "id": "NBIS-converts",
+              "label": "June convertible note claims",
+              "kind": "obligation",
+              "amount": {
+                "carrying": 8499,
+                "nominalAtMaturity": 10041.8,
+                "historicalFairValue": 20823.7
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Six series include accreting nominal amounts and conversion optionality.",
+              "valuationTreatment": "Use a consistent economic debt/option claim or if-converted bridge; no double debt and full dilution deduction.",
+              "unresolvedGap": "Roll August exchanges and new series on the same original-principal/accretion basis; June fair value is not current.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-August",
+              "label": "August notes and old-note exchange",
+              "kind": "obligation",
+              "amount": {
+                "newOriginalPrincipal": 5750,
+                "oldOriginalPrincipalExchanged": 800,
+                "sharesIssuedMillionsApprox": 15.8
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-08-24",
+              "sourceIds": [
+                "NBIS-event-2026-08-24",
+                "NBIS-event-2026-08-20"
+              ],
+              "conditionality": "New notes have separate coupons and conversion rates. Old original principal differs from nominal amount at maturity.",
+              "valuationTreatment": "Roll new cash, debt, issuance fees, old extinguishment and new shares together.",
+              "unresolvedGap": "Current cash, per-series balances and option values remain unbridged.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-secured",
+              "label": "Secured financing facility",
+              "kind": "obligation",
+              "amount": 775,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-07-10",
+              "sourceIds": [
+                "NBIS-event-2026-07-17"
+              ],
+              "conditionality": "SOFR + 2.5%; maturity October 31, 2030; GPU/customer-contract collateral.",
+              "valuationTreatment": "Include actual funded balance, debt service, collateral and restricted proceeds once.",
+              "unresolvedGap": "Draw status and liens require full financing bridge.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-cash",
+              "label": "Cash and restricted cash",
+              "kind": "asset",
+              "amount": {
+                "unrestricted": 8042.1,
+                "restricted": 1056
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Cash is needed for outstanding delivery and capex commitments; restricted cash is not general liquidity.",
+              "valuationTreatment": "Add only excess unrestricted cash after post-June build and financing roll-forward.",
+              "unresolvedGap": "October cash balance and minimum operating funding are unknown.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-prepaid",
+              "label": "Customer advances / deferred revenue",
+              "kind": "performance obligation",
+              "amount": 5975.2,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Some advances are refundable; recognition over approximately one to five years requires service.",
+              "valuationTreatment": "Include working-capital inflow and future fulfillment costs. Do not count advances a second time as financing value or unrestricted profit.",
+              "unresolvedGap": "Refund, default, collateral and amortization terms by customer need mapping.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-rpo",
+              "label": "Remaining performance obligations",
+              "kind": "contract visibility",
+              "amount": 37490.6,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "36% expected within 24 months, 40% in the following 24; delivery and variable-consideration constraints apply.",
+              "valuationTreatment": "Convert to scheduled revenue and margin, not an additive balance-sheet asset.",
+              "unresolvedGap": "Customer allocation, overlap with headline TCV and timing stress unresolved.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-Meta",
+              "label": "Meta dedicated orders and backstop",
+              "kind": "conditional customer arrangement",
+              "amount": {
+                "dedicated": 12000,
+                "backstopMaximum": 15000
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-03-13",
+              "sourceIds": [
+                "NBIS-Meta-2026-contract"
+              ],
+              "conditionality": "Five-year orders start deployments in early 2027; eligible unsold capacity is backstopped, with service and late-delivery provisions.",
+              "valuationTreatment": "Do not count both third-party sales and Meta sales for the same capacity. Do not add TCV to RPO as separate value.",
+              "unresolvedGap": "Deployment schedule and precise capacity allocation must be modeled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-leases",
+              "label": "Commenced operating leases",
+              "kind": "obligation",
+              "amount": 1625.3,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Recognized liability; undiscounted payments $2,175.1m.",
+              "valuationTreatment": "Match rent/EBIT, capitalization and financing treatment.",
+              "unresolvedGap": "Lease-adjusted model not complete.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-uncommenced",
+              "label": "Signed leases not yet commenced",
+              "kind": "obligation",
+              "amount": {
+                "undiscountedPayments": 12054.1,
+                "prepayments": 612.4
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Expected starts in 2026–2027, terms up to 12 years; undiscounted sum is not present value.",
+              "valuationTreatment": "Model committed rents and prepaid assets with underlying capacity economics; avoid omitting them because not yet on balance sheet.",
+              "unresolvedGap": "Commencement/rent calendar and cancellation terms need explicit model.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-power",
+              "label": "Fixed minimum power commitments",
+              "kind": "obligation",
+              "amount": 5324.1,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "$81.7m remaining 2026, $541.8m 2027, $542m 2028, $540.5m 2029, $535.8m 2030, $3,082.3m thereafter.",
+              "valuationTreatment": "Include in operating costs/capacity model, not twice as debt plus expense.",
+              "unresolvedGap": "Overlap with leases and customer pass-through or take-or-pay protection not fully modeled.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-warrants",
+              "label": "NVIDIA pre-funded warrants",
+              "kind": "equity claim",
+              "amount": 21.065936,
+              "unit": "million shares",
+              "measurementOrEventDate": "2026-03-11",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "$0.0001 exercise price; nonexpiring, effectively paid common equity.",
+              "valuationTreatment": "Include once with legal shares; basic EPS already includes these shares.",
+              "unresolvedGap": "Cutoff legal share/award bridge pending.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-noncore",
+              "label": "Noncore investment carrying amounts",
+              "kind": "asset",
+              "amount": {
+                "ClickHouse": 1517.7,
+                "TolokaPreferred": 86.5,
+                "equityMethodOther": 13.8
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Private holdings, differing preferences and illiquidity; no automatic near-term cash realization.",
+              "valuationTreatment": "Use separately justified stake values, net of tax/realization friction. Do not multiply headline enterprise round values by stale ownership.",
+              "unresolvedGap": "Current ownership/preference terms, liquidity and intrinsic values need specialist review.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-otherclaims",
+              "label": "SAFE, milestone and earnout obligations",
+              "kind": "obligation",
+              "amount": {
+                "AvrideSAFEAndMilestones": 178.1,
+                "TavilyHoldbackEarnout": 19,
+                "NCIbook": 1
+              },
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Conversion, milestones and acquisition terms affect settlement.",
+              "valuationTreatment": "Match subsidiary cash flows and claims; avoid valuing 100% cash flow without minority obligations.",
+              "unresolvedGap": "Current contingent valuations and terms require further bridge.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-acquisition",
+              "label": "Inferize acquisition",
+              "kind": "obligation",
+              "amount": null,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-10-01",
+              "sourceIds": [
+                "NBIS-event-2026-10-01"
+              ],
+              "conditionality": "Terms not disclosed in reviewed announcement.",
+              "valuationTreatment": "Do not assume zero purchase cost or immediate synergy.",
+              "unresolvedGap": "Purchase consideration and contingent/employee issuance terms unknown.",
+              "status": "unresolved bridge"
+            },
+            {
+              "id": "NBIS-capex-payables",
+              "label": "Purchased PPE and intangible assets not yet paid",
+              "kind": "capital-spending obligation",
+              "amount": 973.3,
+              "unit": "USD millions",
+              "measurementOrEventDate": "2026-06-30",
+              "sourceIds": [
+                "NBIS-H12026-statements"
+              ],
+              "conditionality": "Recognized unpaid acquired PPE/intangibles; the same $973.3m is reported as PPE trade payables. December 2025 opening PPE payables were $1,057.7m.",
+              "valuationTreatment": "Include eventual settlement once in cash-capex/working-capital reconciliation; do not treat as additional immediate H1 cash spending or double count as both debt and reinvestment.",
+              "unresolvedGap": "A cash-versus-accrual capex bridge requires opening and closing payable movements, other adjustments and management capex-guide definition.",
+              "status": "unresolved bridge"
+            }
+          ],
+          "doubleCountingRule": "Amounts overlap across principal/carrying/fair value, cash/financing, RPO/customer contracts, or rent/capitalized leases. Use mutually consistent treatments."
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "MU",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-MU.html#judgment",
+      "sourceLedgerPath": "evidence-MU.html#sources",
+      "registers": {
+        "obligationAssetRegister": [
+          {
+            "id": "MU-OA-01",
+            "item": "Refundable strategic-customer deposits",
+            "type": "financing-like obligation",
+            "amount": 12747,
+            "unit": "USD millions cash received FY2026",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Nearly all deposits scheduled for repayment2029–2031; contract minimum purchase compliance/default remedies govern return. Noncurrent contract liabilities12,895 include other items.",
+            "proposedTreatment": "Exclude inflow from FCFF. Deduct present value of repayment claim OR explicit future repayment, once. Do not call full cash balance excess while ignoring refund obligation.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-02",
+            "item": "Existing debt and finance leases",
+            "type": "recognized financing",
+            "amount": 5179,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Includes finance-lease carrying liability2,387 and debt2,792; future embedded gas-supply leases not yet commenced may create more claims.",
+            "proposedTreatment": "Subtract consistent current financing claim once; do not add2,387 again. Reconcile lease depreciation/principal treatment in final equity valuation.",
+            "status": "reported amount verified; final consistency check open"
+          },
+          {
+            "id": "MU-OA-03",
+            "item": "Noncurrent income-tax payable",
+            "type": "cash-tax timing obligation",
+            "amount": 9820,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Timing/jurisdiction of settlement and overlap with forecast cash tax not fully reconciled. FY2025 comparator648.",
+            "proposedTreatment": "Model settlement in cash taxes or deduct incremental present-value obligation; never both. Normalized20% tax alone does not establish that accrued prior-year liability has been paid.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-04",
+            "item": "Purchase obligations with remaining term over one year",
+            "type": "operating/capex commitment",
+            "amount": 10800,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Due2027:1,300;2028:1,800;2029:1,400;2030:1,100;2031:800;2032+:4,400. Covers goods/services, PP&E and uncommenced embedded leases.",
+            "proposedTreatment": "Schedule in direct capex/operating spend. Deduct separately only demonstrably incremental onerous obligations. Do not sum mechanically with short-term PP&E commitments.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-05",
+            "item": "PP&E acquisition obligations",
+            "type": "near-term capex commitment",
+            "amount": 4180,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Substantially all expected payable within one year. Potential classification overlap with broader purchase commitments.",
+            "proposedTreatment": "Ensure included in projected gross capex; no second debt-like deduction.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-06",
+            "item": "Government incentive assets and cash receipts",
+            "type": "conditional asset",
+            "amount": 5441,
+            "unit": "USD millions recognized receivable3319 plus noncurrent assets2122",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Qualification/compliance, construction, tool installation, production, R&D and employment conditions; cash timing can differ from recognition.",
+            "proposedTreatment": "Forecast collection with qualifying capex; avoid adding receivable to cash if its collection is already a modeled grant inflow. Net-basis D&A must be consistent with incentive-reduced assets.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-07",
+            "item": "Unrecognized grants and nonbinding NY support",
+            "type": "conditional future asset",
+            "amount": null,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Remaining USCHIPS4,900;India~1,100;Japan~3,400;Singapore terms confidential. NYup to5,500 is nonbinding over20-plus years, not certain receivable.",
+            "proposedTreatment": "No separate present asset value. Scenario cash grants represent uncertain future realization; avoid including both gross headline awards and grant cash.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-08",
+            "item": "Grant clawback and upside-sharing exposure",
+            "type": "contingent obligation",
+            "amount": null,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "USCHIPS conditions include project completion, foreign-country restrictions and permissible asset use. Upside sharing can apply for up to10 years after project cumulative cash flow turns positive; cap75% of award disbursements after clawbacks/repayments.",
+            "proposedTreatment": "Do not set to zero. Model scenarios and reconcile future project economics/thresholds before a final bridge; no mechanically assumed maximum deduction.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-09",
+            "item": "Restricted-stock awards and future compensation",
+            "type": "equity dilution/expense",
+            "amount": 19,
+            "unit": "million target/nominal awards",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "16m service-only; remaining performance/market awards payout0–200% of target; unrecognized compensation1,980 throughFY2030Q4, weighted-average1.2 years.",
+            "proposedTreatment": "Keep future SBC expense in EBIT. Separately reconcile current award fair value/dilution and future expense overlap before per-share release. Do not add all authorized unissued shares.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-10",
+            "item": "Non-marketable equity investments",
+            "type": "potential nonoperating asset",
+            "amount": 1300,
+            "unit": "USD millions carrying amount",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "No readily determinable fair value; cost less impairment and observable-price adjustments. AI/technology exposure may correlate with core cycle.",
+            "proposedTreatment": "Do not add book amount as proven market value. Assess fair value and whether earnings are excluded from operating FCFF.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-11",
+            "item": "Customer letters of credit",
+            "type": "contingent recovery asset",
+            "amount": 7000,
+            "unit": "USD millions maximum proceeds",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Issued or contractually committed; accessible only on specified customer default/breach.",
+            "proposedTreatment": "Not cash, not revenue, not incremental unconditional equity asset. Recovery assumptions must avoid duplicate deposits/remedies.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-12",
+            "item": "Customer pricing adjustments and returns",
+            "type": "operating liability",
+            "amount": 4320,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Recorded in other current liabilities; expected consideration payable to customers.",
+            "proposedTreatment": "Include margin/NWC settlement, not an automatic financing deduction. Existing simple operating-NWC proxy omits this line and is deliberately not a complete GAAP NWC reconciliation.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-13",
+            "item": "Operating leases, litigation and other contingencies",
+            "type": "unresolved claims",
+            "amount": null,
+            "unit": "USD millions",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Operating leases described as not material; litigation amounts not all estimable. FY2026GAAPincludes500 patent license expense.",
+            "proposedTreatment": "Unknown is not zero. Preserve legal and lease checks; no recurring patent add-back without evidence.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "MU-OA-14",
+            "item": "Cash/marketables and restricted cash",
+            "type": "liquid asset",
+            "amount": 73453,
+            "unit": "USD millions unrestricted cash plus short/long marketables",
+            "measurementDate": "2026-09-03",
+            "sourceId": "MU-FY26-10K",
+            "sourcePublicationDate": "2026-10-09",
+            "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+            "conditionality": "Cash38,364;shortmarketables5,070;longmarketables30,019;restricted27excluded. Project financing needs and customer refunds constrain surplus.",
+            "proposedTreatment": "Add verified nonoperating liquid assets only after minimum operating cash and claims reconciliation; do not use liquidity75,480 that includes restricted cash and undrawn revolver.",
+            "status": "reported composition verified; excess-cash designation open"
+          }
+        ],
+        "equityBridge": {
+          "status": "incomplete; no per-share output",
+          "cashAndShortInvestments": 43434,
+          "additionalLongMarketableInvestments": 30019,
+          "restrictedCashExcluded": 27,
+          "nonmarketableInvestmentBookValue": 1300,
+          "nonmarketableValueAssumption": null,
+          "debtIncludingFinanceLeases": 5179,
+          "customerDepositClaim": {
+            "amount": 12747,
+            "treatment": "Provisional financing-like claim or forecast repayment outflow, exactly once. 10-K contract-liability line $12.895bn includes other items and is not interchangeable with deposit cash.",
+            "repayment": "2029-2031, conditional on meeting minimum purchases",
+            "discountedClaim": null
+          },
+          "purchaseCommitments": 10800,
+          "notes": "Purchase obligations belong in capex/operating forecast unless demonstrably incremental; avoid double subtraction. Future grant receipts modeled explicitly, with clawback exposure reviewed separately. Cash that funds committed construction is not automatically surplus. Option/RSU overhang and claims review are unfinished.",
+          "otherClaims": null,
+          "otherAssets": null,
+          "publicPerShareValue": null,
+          "preserveExistingHardGates": true
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "AVGO",
+      "currency": "USD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-AVGO.html#judgment",
+      "sourceLedgerPath": "evidence-AVGO.html#sources",
+      "registers": {
+        "unresolvedObligationAssetRegister": [
+          {
+            "id": "funded-debt",
+            "category": "unresolved obligation",
+            "amount": 59419,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "2252m current+57167m noncurrent carrying debt; market value/spread not measured.",
+            "proposedTreatment": "Reconcile financing debt and leases, subtract once after operating value.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "operating-finance-leases",
+            "category": "unresolved obligation",
+            "amount": null,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "Current complete lease bridge not extracted; prior annual combined debt/finance lease tag differs.",
+            "proposedTreatment": "Keep unresolved; consistent lease-adjusted operating value before deduction.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "purchase-commitments",
+            "category": "unresolved obligation",
+            "amount": 126821,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "Legally binding, but excludes no-penalty cancelable and terms<=1year;52674m FY27/72952m FY28.",
+            "proposedTreatment": "Map into unit costs, inventory and cash investment; stress cancellation/obsolescence; no automatic total subtraction.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "other-contractual-commitments",
+            "category": "unresolved obligation",
+            "amount": 3941,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "IT/service agreements; schedule excludes1755m uncertain-timing tax benefits/interest/penalties.",
+            "proposedTreatment": "Operating expense/working-capital and tax scenarios with overlap checks.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "customer-lease-backstop",
+            "category": "unresolved obligation",
+            "amount": 29000,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "Maximum undiscounted after deployment;5-year leases; default loss difference of85% remaining lease obligations less asset disposal; no payment and fair value immaterial.",
+            "proposedTreatment": "Probability/phase/recovery expected loss plus liquidity stress; residual racks/remedy value must not be assumed constant in AI downturn.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "customer-convertible-note-facility",
+            "category": "unresolved obligation",
+            "amount": 42000,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "Customer may issue notes TO Broadcom under specified conditions solely supporting customer lease payments; none issued.",
+            "proposedTreatment": "Model conditional investment/funding and recovery jointly with backstop; investigate overlap, do not call issuer convertible debt.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "cash",
+            "category": "unresolved excess cash",
+            "amount": 23975,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "Before operating liquidity and financing-support needs.",
+            "proposedTreatment": "Only excess accessible cash added; stress funding draws.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "equity-awards",
+            "category": "unresolved obligation",
+            "amount": 165,
+            "unit": "million awards",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "Million unvestedRSUs;18.221bn unrecognized compensation over2.9years is not fair value.",
+            "proposedTreatment": "Existing awards dilution/claim method consistent with future SBC expense and current shares.",
+            "status": "manual review required; no automatic bridge adjustment"
+          },
+          {
+            "id": "other-investments",
+            "category": "unresolved nonoperating asset",
+            "amount": null,
+            "unit": "USD millions",
+            "measurementDate": "2026-08-02",
+            "sourceId": "AVGO-latest-10Q",
+            "conditionality": "9M investment purchases756m and sales320m; complete realizable holdings not reconciled.",
+            "proposedTreatment": "Leave asset addback unresolved; do not silently treat missing as zero.",
+            "status": "manual review required; no automatic bridge adjustment"
+          }
+        ]
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    },
+    {
+      "ticker": "TSM",
+      "currency": "TWD",
+      "classification": "Source-reported balances and contingent-contract terms; valuation treatment remains explicitly conditional where stated.",
+      "authoritativeCompanyPath": "evidence-TSM.html#judgment",
+      "sourceLedgerPath": "evidence-TSM.html#sources",
+      "registers": {
+        "obligationAssetRegister": [
+          {
+            "id": "TSM-OA-01",
+            "item": "Debt, including current maturities",
+            "type": "recognized financing",
+            "amount": 1031578,
+            "unit": "TWD millions",
+            "measurementDate": "2026-09-30",
+            "sourceId": "TSM-3Q26-FS",
+            "sourcePublicationDate": "2026-10-15",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+            "conditionality": "Current213,198;noncurrent818,380, including bonds770,315.",
+            "proposedTreatment": "Subtract financing claim once; reconcile current lease exclusion and fair-value choice.",
+            "status": "reported current amount verified; final bridge open"
+          },
+          {
+            "id": "TSM-OA-02",
+            "item": "Lease liabilities",
+            "type": "financing obligation",
+            "amount": null,
+            "unit": "TWD millions; FY2025 reference35,428",
+            "measurementDate": "2026-09-30",
+            "sourceId": "TSM-FY25-IFRS",
+            "sourcePublicationDate": "2026-04-16",
+            "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+            "conditionality": "FY2025 current3,833 plus noncurrent31,595; September2026 detail missing in compact FS.",
+            "proposedTreatment": "Obtain current amount and align IFRS lease D&A/principal with FCFF before equity valuation. Never silently set to zero or label FY2025 current.",
+            "status": "open; requires final bridge reconciliation",
+            "referenceFinancialPeriodEnd": "2025-12-31",
+            "currentMeasurementVerified": false
+          },
+          {
+            "id": "TSM-OA-03",
+            "item": "Noncontrolling interests",
+            "type": "minority claim",
+            "amount": 45326,
+            "unit": "TWD millions carrying value",
+            "measurementDate": "2026-09-30",
+            "sourceId": "TSM-3Q26-FS",
+            "sourcePublicationDate": "2026-10-15",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+            "conditionality": "Consolidated operating results include partly owned foreign fabs. Book NCI need not equal economic value.",
+            "proposedTreatment": "Remove minority economic claim or model attributable flows, never both. Current carrying value is a provisional bridge amount.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "TSM-OA-04",
+            "item": "Temporary customer capacity-retention receipts",
+            "type": "refundable financing/operating liability",
+            "amount": null,
+            "unit": "TWD millions; FY2025 reference291,101.8",
+            "measurementDate": "2026-09-30",
+            "sourceId": "TSM-FY25-IFRS",
+            "sourcePublicationDate": "2026-04-16",
+            "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+            "conditionality": "FY2025 current198,602.6 plus noncurrent92,499.2. Refund or ARoffset when terms met, determined by mutual consent; current amount and schedule unavailable.",
+            "proposedTreatment": "Model cash refund/ARsettlement consistently with NWC or a separate claim once. Not permanently free capital; stale annual value not current debt.",
+            "status": "open; requires final bridge reconciliation",
+            "referenceFinancialPeriodEnd": "2025-12-31",
+            "currentMeasurementVerified": false
+          },
+          {
+            "id": "TSM-OA-05",
+            "item": "Long-term investments",
+            "type": "potential operating/nonoperating asset",
+            "amount": 224633,
+            "unit": "TWD millions carrying value",
+            "measurementDate": "2026-09-30",
+            "sourceId": "TSM-3Q26-FS",
+            "sourcePublicationDate": "2026-10-15",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+            "conditionality": "Includes investment categories requiring composition and fair-value review, including equity-method interests.",
+            "proposedTreatment": "Separate operating interests and financial assets, remove any investment earnings from FCFF, then add only independently valued excluded assets.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "TSM-OA-06",
+            "item": "Cash and short-term marketable investments",
+            "type": "liquid asset",
+            "amount": 4016979,
+            "unit": "TWD millions",
+            "measurementDate": "2026-09-30",
+            "sourceId": "TSM-3Q26-FS",
+            "sourcePublicationDate": "2026-10-15",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+            "conditionality": "Cash3,621,894;shortmarketables395,085. Operating needs, capex and refundable receipts limit surplus.",
+            "proposedTreatment": "Provisional addition subject to operating-cash and customer-liability reconciliation.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "TSM-OA-07",
+            "item": "Government grants, support and Arizona guarantees",
+            "type": "conditional asset/contingent obligation",
+            "amount": null,
+            "unit": "mixed currencies; do not aggregate without dated FX",
+            "measurementDate": "2025-12-31",
+            "sourceId": "TSM-FY25-IFRS",
+            "sourcePublicationDate": "2026-04-16",
+            "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+            "conditionality": "Annual grants receivedTWD76,258.8m. USdirectfundingup toUSD6.6bn and proposed loansup toUSD5bn subject to conditions/milestones; parent guarantees Arizona obligations toDOC. Germanyaidup toEUR5bn.",
+            "proposedTreatment": "No unconditional extra asset or free-loan proceeds. Embed net grant economics once in reinvestment/margins; assess guarantees/clawbacks if conditions fail. Original20F terms are dated, not asserted unchanged financing availability.",
+            "status": "open; requires final bridge reconciliation",
+            "referenceFinancialPeriodEnd": "2025-12-31",
+            "currentMeasurementVerified": false
+          },
+          {
+            "id": "TSM-OA-08",
+            "item": "Equipment, maintenance, material and energy commitments",
+            "type": "operating/capex obligation",
+            "amount": null,
+            "unit": "TWD millions not quantified in reviewed note",
+            "measurementDate": "2025-12-31",
+            "sourceId": "TSM-FY25-IFRS",
+            "sourcePublicationDate": "2026-04-16",
+            "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+            "conditionality": "Long-term quantity/price and delivery obligations; SSMCjointcapacity purchase at least70% with TSMCalonenotrequiredabove28%; default may require unavoidable-cost compensation.",
+            "proposedTreatment": "Include contracted costs/capex in forecast; quantify any unavoidable downside shortfall separately, without duplicating capital investment.",
+            "status": "open; requires final bridge reconciliation",
+            "referenceFinancialPeriodEnd": "2025-12-31",
+            "currentMeasurementVerified": false
+          },
+          {
+            "id": "TSM-OA-09",
+            "item": "Performance guarantees and litigation",
+            "type": "contingent obligation",
+            "amount": null,
+            "unit": "TWD millions; annual performance-guarantee reference23,375.2",
+            "measurementDate": "2025-12-31",
+            "sourceId": "TSM-FY25-IFRS",
+            "sourcePublicationDate": "2026-04-16",
+            "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+            "conditionality": "Annual unusedLC438.7; patent litigation noted with no reliable liability estimate. Current changes not established.",
+            "proposedTreatment": "No inference that unestimated liability is zero; track subsequent filings and do not deduct maximum guarantee twice with underlying obligations.",
+            "status": "open; requires final bridge reconciliation",
+            "referenceFinancialPeriodEnd": "2025-12-31",
+            "currentMeasurementVerified": false
+          },
+          {
+            "id": "TSM-OA-10",
+            "item": "SBC and share-count precision",
+            "type": "dilution gate",
+            "amount": null,
+            "unit": "ordinary shares",
+            "measurementDate": "2026-09-30",
+            "sourceId": "TSM-3Q26-FS",
+            "sourcePublicationDate": "2026-10-15",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+            "conditionality": "Quarter shares25,932m rounded; FY2025TIFRSSBC1,246.07m does not establish current award overhang.",
+            "proposedTreatment": "RecurringSBC remains EBIT expense. Obtain exact ordinary shares, current award schedule and ADSratio confirmation before per-ADS output.",
+            "status": "open; requires final bridge reconciliation"
+          },
+          {
+            "id": "TSM-OA-11",
+            "item": "FX translation and ADS conversion",
+            "type": "unit gate",
+            "amount": null,
+            "unit": "valuation-date TWD per USD",
+            "measurementDate": "2026-10-17",
+            "sourceId": "TSM-3Q26-FS",
+            "sourcePublicationDate": "2026-10-15",
+            "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+            "conditionality": "Q3flow31.983;9Mflow31.744;Sep30balancespot31.880 are not Oct16valuation spot. FiveordinarysharesperADS.",
+            "proposedTreatment": "Value nativeTWD flows withTWDWACC; divide TWD ordinary-share equity by verified date-consistent spot then multiply5. No per-share output until gated inputs verified.",
+            "status": "open; requires final bridge reconciliation"
+          }
+        ],
+        "equityBridge": {
+          "status": "hard gated",
+          "cashAndShortMarketables": 4016979,
+          "debt": 1031578,
+          "noncontrollingInterest": 45326,
+          "leasesAtCurrentDate": null,
+          "longTermInvestments": 224633,
+          "incrementalNonoperatingInvestmentValue": null,
+          "customerTemporaryReceiptCurrentLiability": null,
+          "otherClaims": null,
+          "otherAssets": null,
+          "ordinarySharesMillions": 25932,
+          "ordinarySharesPerADS": 5,
+          "valuationDateSpotFX": null,
+          "publicPerShareValue": null,
+          "preserveExistingCurrencyAndADRGates": true,
+          "notes": "Do not double-add long-term equity-method assets if operating income/value includes their economics. FY2025 lease and customer deposit values are stale references, not current claims. Verify current claims, share precision, and valuation-date FX before release."
+        }
+      },
+      "integrationPolicy": "Use source-date balances only after reconciling operating cash, investments, debt/lease policy, post-balance events and share/award treatment. An unresolved value is null, not zero. A future economic funding deficit is an outcome, not additional face-value debt."
+    }
+  ]
+}

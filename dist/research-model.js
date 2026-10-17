@@ -1,0 +1,121 @@
+// Versioned annual research model. The historical and scalar engines are unchanged.
+export const RESEARCH_PROFILE_ID='annual-research-v1';
+export const RESEARCH_VERSION='2026-10-17-reviewed-v1';
+export const RESEARCH_PATH='./data/renewed-research-2026-10-17/cases.json';
+export const RESEARCH_STORAGE_PREFIX='valuation-lab-annual-research-v1:';
+const finite=x=>typeof x==='number'&&Number.isFinite(x);
+const object=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
+const copy=x=>structuredClone(x);
+const date=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&!Number.isNaN(Date.parse(x))&&new Date(x).toISOString().slice(0,10)===x;
+const days=(a,b)=>(Date.parse(a)-Date.parse(b))/86400000;
+const terminalFields=['growth','margin','taxRate','roic','wacc'];
+const rowFields=['revenue','margin','taxRate','reinvestment','wacc'];
+
+export function researchCaseId(c){return `${RESEARCH_VERSION}:${c.ticker}:${c.scenario}`;}
+export function researchDraftFor(c){
+ if(!object(c)||!Array.isArray(c.annual)||!c.annual.length)throw Error('A complete dated annual research case is required.');
+ return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:RESEARCH_VERSION,caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:{},notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
+}
+export function researchDraftIssues(d,{includeTiming=true}={}){
+ const errors=[];
+ if(!object(d)||d.schemaVersion!==1||d.profileId!==RESEARCH_PROFILE_ID)return ['Unsupported annual-research draft.'];
+ if(d.version!==RESEARCH_VERSION||typeof d.sourceScenario!=='string'||d.caseId!==`${RESEARCH_VERSION}:${d.ticker}:${d.sourceScenario}`)errors.push('Annual research version and source-case identity must match the reviewed profile.');
+ if(!/^[A-Z0-9.-]{1,12}$/.test(d.ticker||'')||!['USD','TWD'].includes(d.currency))errors.push('A supported ticker and explicit nominal currency are required.');
+ if(!date(d.informationAsOf)||!date(d.discountOrigin)||!object(d.anchor)||!finite(d.anchor.revenue)||d.anchor.revenue<=0)errors.push('Valid information date, forecast origin and positive source revenue are required.');
+ if(!Array.isArray(d.annual)||d.annual.length<1||d.annual.length>30)errors.push('Supply a complete annual schedule of 1–30 years.');
+ else d.annual.forEach((r,i)=>{
+  if(!object(r)||r.year!==i+1||!rowFields.every(k=>finite(r[k]))){errors.push(`Year ${i+1}: every operating input must be finite; missing amounts are not zero.`);return;}
+  if(r.revenue<=0||r.margin<-.5||r.margin>1||r.taxRate<0||r.taxRate>.6||r.wacc<=0||r.wacc>1)errors.push(`Year ${i+1}: revenue must be positive, margin −50% to 100%, tax 0–60%, WACC above 0% and at most 100%.`);
+  // Reinvestment can be negative only when the analyst explicitly models a release.
+  // Revenue contraction never creates a release automatically.
+ });
+ if(!Number.isInteger(d.forecastHorizonYears)||!Array.isArray(d.annual)||d.annual.length!==d.forecastHorizonYears)errors.push('The full source forecast horizon must be preserved; annual rows cannot be truncated or appended silently.');
+ const t=d.terminal;
+ if(!object(t)||!terminalFields.every(k=>finite(t[k])))errors.push('Complete all terminal assumptions.');
+ else if(t.growth<0||t.growth>.05||t.margin<=0||t.margin>1||t.taxRate<0||t.taxRate>.6||t.wacc<=t.growth||t.wacc>1||t.roic<=t.growth)errors.push('Terminal policy requires 0–5% growth, positive margin, tax 0–60%, WACC > growth and ROIC > growth.');
+ if(d.operatingProfile!==undefined||d.yearlyOverrides!==undefined||d.assumptions!==undefined)errors.push('An annual research schedule cannot be combined with a scalar or second operating profile.');
+ if(includeTiming&&(!object(d.timing)||!['origin','as-of-scenario'].includes(d.timing.mode)||!date(d.timing.asOf)||typeof d.timing.reason!=='string'||(d.timing.stubFCFF!==null&&!finite(d.timing.stubFCFF))))errors.push('A valid explicit timing policy is required; an unknown stub must remain null.');
+ return errors;
+}
+export function restoreResearchDraft(value,c){
+ if(value==null)return {draft:researchDraftFor(c),restored:false,error:null};
+ // A malformed saved draft is never replaced by the new research numbers.
+ // Return it intact so the user can export/recover it, with calculation withheld.
+ if(!object(value)||value.profileId!==RESEARCH_PROFILE_ID||value.schemaVersion!==1||value.version!==RESEARCH_VERSION||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||value.forecastHorizonYears!==c.forecastHorizonYears||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
+ const errors=researchDraftIssues(value);
+ return {draft:copy(value),restored:true,error:errors.length?errors.join(' '):null};
+}
+export function loadAnnualResearchCase(previous,c){
+ const next=researchDraftFor(c);
+ if(object(previous)){
+  for(const key of ['notes','bridgeInputs','researchSimulationConfig'])if(Object.prototype.hasOwnProperty.call(previous,key))next[key]=copy(previous[key]);
+ }
+ return {draft:next,undo:previous==null?null:copy(previous)};
+}
+export function calculateResearchOperating(d){
+ const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
+ let prior=d.anchor.revenue,discount=1,pv=0,cumulative=0,trough=0;
+ const rows=d.annual.map(r=>{
+  const ebit=r.revenue*r.margin,tax=Math.max(0,ebit)*r.taxRate,nopat=ebit-tax,fcff=nopat-r.reinvestment;
+  discount*=1+r.wacc;const presentValue=fcff/discount;pv+=presentValue;cumulative+=fcff;trough=Math.min(trough,cumulative);
+  const growth=r.revenue/prior-1,deltaRevenue=r.revenue-prior;prior=r.revenue;
+  if(![ebit,tax,nopat,fcff,discount,presentValue,cumulative,growth,pv].every(finite))throw Error(`Year ${r.year}: forecast arithmetic exceeded the finite numerical range. Reduce the edited inputs.`);
+  return {...r,growth,ebit,tax,nopat,fcff,discountFactor:discount,pv:presentValue,cumulativeFCFF:cumulative,derivedSalesCapital:r.reinvestment!==0?deltaRevenue/r.reinvestment:null};
+ });
+ const t=d.terminal,last=rows.at(-1),revenue=last.revenue*(1+t.growth),ebit=revenue*t.margin,nopat=ebit*(1-t.taxRate),reinvestment=nopat*t.growth/t.roic,fcff=nopat-reinvestment,value=fcff/(t.wacc-t.growth),terminalPV=value/discount,enterprise=pv+terminalPV;
+ if(![revenue,ebit,nopat,reinvestment,fcff,value,terminalPV,enterprise].every(finite))throw Error('Terminal arithmetic exceeded the finite numerical range. Reduce the edited inputs.');
+ const terminal={...t,revenue,ebit,nopat,reinvestment,fcff,value,pv:terminalPV,discountFactor:discount,fcffGrowth:last.fcff!==0?fcff/last.fcff-1:null,revenueGrowthEndpointDifference:last.growth-t.growth};
+ const warnings=[];
+ if(terminal.fcffGrowth===null||Math.abs(terminal.fcffGrowth-t.growth)>1e-6)warnings.push('Final explicit FCFF and terminal FCFF do not grow at the stable revenue rate. Inspect the capital-transition sensitivity; the original research path is preserved.');
+ if(Math.abs(terminal.revenueGrowthEndpointDifference)>1e-6)warnings.push('Final explicit revenue growth differs from terminal growth. The growth endpoint change is separate from the capital transition.');
+ if(d.userEdited)warnings.push('Edited annual inputs are analyst assumptions. Original capital-component reconciliations may no longer match; check the investment evidence before relying on them.');
+ if(rows.some(r=>r.reinvestment<0))warnings.push('A negative investment amount is an explicit asset or working-capital release assumption; it is not created automatically by falling revenue.');
+ return {ticker:d.ticker,currency:d.currency,informationAsOf:d.informationAsOf,discountOrigin:d.discountOrigin,rows,terminal,forecastPV:pv,terminalPV,enterprise,terminalShare:enterprise>0?terminalPV/enterprise:null,peakEconomicDeficit:Math.max(0,-trough),negativeFCFFYears:rows.filter(r=>r.fcff<0).length,warnings,classification:'Conditional operating EV at the forecast origin, using research available on the information date. Not a contemporaneously knowable anchor-date valuation.'};
+}
+export function terminalNormalizedDraft(d,{years=3}={}){
+ const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
+ const next=copy(d),n=next.annual.length,count=Math.min(years,n),t=next.terminal;
+ if(!Number.isInteger(count)||count<1)throw Error('Choose a positive number of transition years.');
+ const original=calculateResearchOperating(d);
+ if(original.terminal.fcffGrowth!==null&&Math.abs(original.terminal.fcffGrowth-t.growth)<=1e-6){next.capitalPolicy='terminal-normalization-not-needed-v1';return next;}
+ // Blend the original investment into terminal-consistent net investment.
+ // No revision to source revenue, margin, tax, WACC, or earlier years is hidden.
+ for(let i=n-count;i<n;i++){
+  const r=next.annual[i],weight=(i-(n-count)+1)/count;
+  const ebit=r.revenue*r.margin,nopat=ebit-Math.max(0,ebit)*r.taxRate;
+  const target=nopat*t.growth/t.roic;
+  r.reinvestment=r.reinvestment*(1-weight)+target*weight;
+ }
+ next.capitalPolicy=`terminal-normalization-${count}y-v1`;next.userEdited=true;
+ return next;
+}
+export function researchTimingResult(d,operating=calculateResearchOperating(d)){
+ const t=d.timing;
+ if(!object(t))return {status:'incomplete',enterprise:null,message:'A valid explicit timing policy is required.'};
+ if(t.mode==='origin')return {status:'origin',enterprise:operating.enterprise,date:d.discountOrigin,label:'Forecast-origin operating EV',warnings:['The information date is later than reported anchors and earlier than forecast anchors. No October 17 cash-flow or capital roll-forward is implied.']};
+ if(t.mode!=='as-of-scenario'||!date(t.asOf)||t.asOf<d.informationAsOf)return {status:'incomplete',enterprise:null,message:'Use an as-of date on or after the research information date.'};
+ const elapsed=days(t.asOf,d.discountOrigin)/365.25;
+ if(elapsed>=1)return {status:'incomplete',enterprise:null,message:'This timing bridge covers only the first partial annual period; a later date needs a new operating baseline.'};
+ if(!finite(t.stubFCFF)||typeof t.reason!=='string'||!t.reason.trim())return {status:'incomplete',enterprise:null,message:elapsed>=0?'Enter and explain the already-elapsed portion of first-year FCFF. It is subtracted from the first future annual payment. Zero must be an explicit assumption.':'Enter and explain the remaining pre-origin FCFF stub. June-to-December cash use is not the remaining October-to-December stub. Zero must be an explicit assumption.'};
+ if(elapsed>=0){
+  const rate=d.annual[0].wacc,carry=(1+rate)**elapsed,removedPV=t.stubFCFF/(1+rate)*carry,enterprise=operating.enterprise*carry-removedPV;
+  if(![carry,removedPV,enterprise].every(finite))return {status:'incomplete',enterprise:null,message:'Timing arithmetic exceeded the finite numerical range. Reduce the edited cash-flow stub.'};
+  return {status:'scenario',enterprise,date:t.asOf,label:'As-of operating scenario',elapsedYears:elapsed,stubFCFF:t.stubFCFF,stubTreatment:'Remove elapsed FCFF from year 1; remaining first-year FCFF stays at its original end-of-period date.',rate,removedPV,reason:t.reason,classification:'Explicit timing assumption, not observed interim FCFF',warnings:['Operating value is date-shifted under the stated partial-year assumption. Dated cash, debt, investments, claims and shares require their own roll-forward.']};
+ }
+ if(!finite(t.stubDiscountRate)||t.stubDiscountRate<=0||t.stubDiscountRate>1)return {status:'incomplete',enterprise:null,message:'A positive, explicit stub discount rate is required.'};
+ const discount=(1+t.stubDiscountRate)**(-elapsed),enterprise=(operating.enterprise+t.stubFCFF)/discount;
+ if(![discount,enterprise].every(finite))return {status:'incomplete',enterprise:null,message:'Timing arithmetic exceeded the finite numerical range. Reduce the edited cash-flow stub.'};
+ return {status:'scenario',enterprise,date:t.asOf,label:'As-of operating scenario',elapsedYears:elapsed,stubFCFF:t.stubFCFF,stubTreatment:'Remaining pre-origin FCFF is paid at the forecast origin; it and the entire annual stream use the same extra stub discount interval.',rate:t.stubDiscountRate,stubPV:t.stubFCFF/discount,reason:t.reason,classification:'Explicit timing assumption, not observed remaining-year FCFF',warnings:['Pre-origin capital expenditure, customer advances and financing must be counted once. Reported June cash plus later raises is not verified October excess cash.']};
+}
+export function researchSensitivity(d){
+ const base=calculateResearchOperating(d),normalized=calculateResearchOperating(terminalNormalizedDraft(d));
+ const rates=[-.01,0,.01].map(shift=>{
+  const next=copy(d);next.annual.forEach(r=>r.wacc+=shift);next.terminal.wacc+=shift;
+  try{return {waccShift:shift,enterprise:calculateResearchOperating(next).enterprise};}catch(e){return {waccShift:shift,enterprise:null,error:e.message};}
+ });
+ return {base:base.enterprise,normalized:normalized.enterprise,normalizationDelta:normalized.enterprise-base.enterprise,normalizedTerminalFCFFGrowth:normalized.terminal.fcffGrowth,normalizationLabel:'Three-year terminal-capital normalization v1; analytical sensitivity, not a superior forecast',rates};
+}
+export function exportResearchCase(d,c){
+ const operating=calculateResearchOperating(d);
+ return {schemaVersion:1,exportedAt:new Date().toISOString(),classification:'Conditional research scenario; public-source evidence and analyst assumptions, not investment advice or a market quote.',originalResearchCase:copy(c),draft:copy(d),operating,timing:researchTimingResult(d,operating),sensitivity:researchSensitivity(d)};
+}

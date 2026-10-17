@@ -320,7 +320,7 @@ function comparison(snapshot, draft, baseline, samples) {
   message:'Price percentile = share of accepted simulated DCF values at or below the entered price, including ties. Conditional model frequency, not a probability of investment profit or a stock-price forecast.'};
 }
 
-export function simulateCurrent(snapshot, draft, config) {
+function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
  assertObject(snapshot,'Snapshot');
  assertObject(draft,'Current valuation draft');
  assertObject(draft.assumptions,'Current valuation assumptions');
@@ -336,6 +336,7 @@ export function simulateCurrent(snapshot, draft, config) {
  const exclude = reason => {exclusions[reason] = (exclusions[reason] || 0)+1;};
  let zeroEquityCount = 0;
  for (let trial = 0; trial < c.trials; trial++) {
+  if (trial % chunkSize === 0) yield {completed:trial,total:c.trials};
   // One draw per economic driver generates an entire coherent annual path.
   const a = scenario(baseline.assumptions,c,random,samplers);
   if (!(a.wacc > a.terminalGrowth && a.terminalGrowth >= 0 && a.terminalROIC > a.terminalGrowth)) {exclude('terminal-constraints');continue;}
@@ -382,4 +383,22 @@ export function simulateCurrent(snapshot, draft, config) {
   quote:comparison(snapshot,draft,baseline,samples),dependence,warnings,
   method:{distribution:'per-driver fixed, triangular, uniform or conditionally truncated normal',normal:'inverse conditional CDF using stable log tails; no clipping or rejection resampling; mean/SD are underlying normal parameters',inputUnits:'growth, targetMargin and wacc are fractions (0.10 = 10%); salesCapital is a ratio',quantiles:'linear interpolation at (n−1)p (type 7)',ecdf:'right-continuous; count(value ≤ price) / accepted trials',histogram:'equal-width bins; left-closed/right-open except final bin includes its upper edge',sampling:'exact attempted-trial count; invalid draws excluded without replacement',random:'FNV-1a seed hash / Mulberry32',path:'one driver vector per trial, existing deterministic transition and FCFF engine'}
  };
+}
+
+// Both runners consume the same generator. Yielding never changes RNG state,
+// draw order, exclusions, arithmetic, or the final default result.
+export function simulateCurrent(snapshot,draft,config) {
+ const run=currentSimulationSteps(snapshot,draft,config);let next;
+ do {next=run.next();} while(!next.done);
+ return next.value;
+}
+export async function simulateCurrentAsync(snapshot,draft,config,{signal,onProgress,yieldControl=()=>new Promise(resolve=>setTimeout(resolve,0)),chunkSize=64}={}) {
+ if(!Number.isInteger(chunkSize)||chunkSize<1||chunkSize>1000)throw new Error('Chunk size must be an integer from 1 to 1,000.');
+ const run=currentSimulationSteps(structuredClone(snapshot),structuredClone(draft),config==null?config:structuredClone(config),chunkSize);
+ const aborted=()=>{if(signal?.aborted){const error=new Error('Simulation canceled.');error.name='AbortError';throw error;}};
+ try {
+  while(true){aborted();const next=run.next();if(next.done){aborted();onProgress?.({completed:next.value.attempts,total:next.value.attempts});return next.value;}
+   onProgress?.(next.value);await yieldControl();aborted();
+  }
+ }finally{run.return();}
 }

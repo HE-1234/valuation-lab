@@ -1,0 +1,42 @@
+{
+  "asOf": "2026-10-17",
+  "status": "Verified source corrections proposed; application data untouched",
+  "corrections": [
+    {
+      "ticker": "TSLA",
+      "periodEnd": "2026-06-30",
+      "sourceURL": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+      "sourcePublicationDate": "2026-07-23",
+      "sourceSection": "Debt and finance leases table",
+      "currency": "USD",
+      "unit": "millions",
+      "existingDebtField": 7721,
+      "actualMeaningOfExistingField": "Long-term debt carrying value, excluding current debt and finance leases",
+      "currentDebtCarryingValue": 1340,
+      "noncurrentDebtCarryingValue": 7721,
+      "totalFundedDebtCarryingValue": 9061,
+      "currentFinanceLeaseLiability": 78,
+      "noncurrentFinanceLeaseLiability": 203,
+      "debtPlusFinanceLeases": 9342,
+      "implementationRule": "Correct total funded debt to current plus noncurrent. Include finance leases only once under the model's consistent lease policy. Do not overwrite with 9342 if finance leases are separately deducted already.",
+      "verification": "Original cached SEC debt table read and independently checked by a second reviewer."
+    },
+    {
+      "ticker": "TSLA",
+      "periodEnd": "2025-12-31",
+      "sourceURL": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+      "sourcePublicationDate": "2026-07-23",
+      "sourceSection": "Comparative December 2025 debt and finance leases table",
+      "currency": "USD",
+      "unit": "millions",
+      "existingDebtField": 6584,
+      "currentDebtCarryingValue": 1569,
+      "noncurrentDebtCarryingValue": 6584,
+      "totalFundedDebtCarryingValue": 8153,
+      "currentFinanceLeaseLiability": 71,
+      "noncurrentFinanceLeaseLiability": 152,
+      "debtPlusFinanceLeases": 8376,
+      "implementationRule": "Same mapping issue affects the annual comparator. Use carrying values consistently; principal amounts differ slightly because of fees."
+    }
+  ]
+}

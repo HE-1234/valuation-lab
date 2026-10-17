@@ -1,5 +1,19 @@
 # Change log
 
+## 2026-10-17 · Renewed annual-research defaults
+
+- Fresh entry opens the reviewed annual research workspace for all 14 companies, with adjacent dossier conclusions and source/guidance/management links. The previous scalar Studio remains available and its saved drafts are preserved.
+- Added a separately versioned direct-investment FCFF model, retaining all 160 authoritative annual rows, 10/15-year horizons, signed operating values and explicit actual-versus-forecast anchors. MU’s investment continues in declining-revenue years.
+- Added source-dated capital allocation scenarios: 11 conditional common-allocation proxies, LITE’s explicit convertible-premium input, and separate operating-only gates for the new AAOI/NBIS year-end cases. The prior AAOI June source-date model remains directly reachable.
+- Exposed dated cash/investment/debt/lease/award assumptions and verified Tesla’s current-plus-noncurrent debt correction in the new layer, without changing original filing captures.
+- Kept October timing unresolved unless an elapsed or remaining FCFF stub is explicitly entered and explained. Original forecast-origin values remain available. No missing stub or claim is silently set to zero.
+- Preserved the ten original terminal-transition warnings and added a separate, reversible three-year capital-normalization sensitivity. No stock price was used to fit any case.
+- Added full local draft/export recovery, explicit Load and Undo, live annual/terminal/claims editing, and storage-unavailable fallback. New annual Monte Carlo starts with all distributions Fixed and exposes an explicit fixed-absolute-versus-revenue-scaled investment policy. Parameter distributions, relationships, sample count and seed are visible; falling-ball playback has its own button. The legacy simulator remains available. Uncertainty Reset has one-step Undo, including exact restoration of malformed saved settings.
+- Separated flexible Studio revenue-growth duration from margin/capital timing in schema 2. Untouched schema-1 saved valuations remain exact; explicit growth edits upgrade deliberately. Grouped Years 1–5 visibly and replaced implementation-heavy growth labels.
+- Packaged all 14 dossiers, 320 source records and 70 management assessments with reading-scope distinctions, 21 sanitized files, verified local links and source fingerprints.
+
+Validation: the combined suite passes 675 tests, including independent annual-simulation and actual-workspace reset/Undo/reload checks. Original financial/history pins, signed values, source-date bridge gates and seeded legacy goldens pass. Static 320/390/1440px document-renderer previews were inspected. Native authenticated browser, touch and screen-reader behavior remain unverified; prior launch/auth restrictions were not bypassed. No push, deployment or sharing change is part of this local implementation.
+
 ## 2026-10-17, 17:42 UTC · Retain the initiating growth-path selector
 
 - Restored focus to AAOI's Operating path selector after changing it, across all eight assumption categories. The Growth category's separate pattern selector retains its existing focus behavior.

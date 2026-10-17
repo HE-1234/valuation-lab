@@ -435,3 +435,21 @@ The requested [Lusion v3 Awwwards reference](https://www.awwwards.com/sites/lusi
 - Do the longest currency amounts and all six themes remain readable at enlarged text sizes?
 
 Each later entry should identify the reading scope, one concrete design decision, the affected behavior and the checks actually performed. A useful finding can justify keeping the interface unchanged.
+
+
+## 17 October 2026 · Reviewed defaults with recoverable annual editing
+
+The latest user instruction is to make default values reflect the completed company research. Fresh entry therefore opens the annual research cases, while the earlier scalar Studio retains its own saved work. A visible explanation distinguishes direct annual investment and company-specific margin timing from the old four-driver model. Research judgments, actual evidence and management outlook link to separately labeled sections.
+
+Primary design references read for this cycle:
+- [W3C WAI Tables Tutorial](https://www.w3.org/WAI/tutorials/tables/): native captions and row/column headers preserve context in wide financial tables. Annual numeric controls have explicit year-and-field accessible names.
+- [W3C Understanding Consistent Identification](https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification.html): repeated company, Load, Undo and export actions keep stable wording and behavior. New research is identified explicitly rather than silently repurposing legacy controls.
+- [W3C Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html): surrounding content reflows into one column on phones; genuinely two-dimensional annual tables retain a bounded, keyboard-focusable horizontal scroller with an explicit instruction.
+
+Concrete choices: signed operating value is primary, dated equity allocation is secondary, and source dates sit beside both. Terminal transitions receive visible warnings. Claims controls, annual arithmetic and detailed methods are disclosures, with no mandatory confirmation checkboxes. Editing refreshes results without replacing the input node. Incomplete equity or timing does not hide valid operating EV. Malformed saved work is retained exactly and cannot be overwritten by a notes edit; deliberate recovery Load has byte-preserving Undo.
+
+Verification: independent numerical/source/claims tests and a minimal-DOM interaction fixture cover all 14 cases. Static document-renderer previews cover AAPL at 320/390/1440px plus GOOG, LITE, NBIS and native-TWD TSM on narrow screens. These are layout approximations, not browser screenshots; horizontal scrolling, native selection, touch and screen-reader output still need authenticated browser validation. No denied browser route was retried or bypassed. The served design notebook is regenerated from this study and the release change log; original financial source captures and historical research freezes remain unchanged.
+
+The same release incorporates the user’s direct feedback on growth controls and simulation discoverability: Years 1–5 are visibly grouped, growth duration no longer implicitly delays profitability in new flexible profiles, and Monte Carlo parameters, relationships and run settings have visible tabs. The annual model defaults every distribution to Fixed rather than implying research-calibrated uncertainty. An explicit playback button animates completed sampled outcomes; it is distinct from running the simulation. Existing schema-1 saved calculations retain their exact behavior until a deliberate growth edit.
+
+Final integration review also wrapped the six navigation destinations at narrow widths so none depend on a hidden scrollbar. Annual and scalar Monte Carlo controls have separate ID namespaces; label and ARIA references remain within the intended workspace. Additional 320/390px component approximations cover annual distribution hyperparameters, relationship policy, sampling/seed settings and signed negative EV. Renderer-only substitutes for native selectors, range controls and grid layout are disclosed; they are not an interactive-browser test.
