@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 13:42 UTC · Visible focus on the dark panel
+
+- Applied the valuation panel's existing bright signal color to its inherited keyboard-focus outlines.
+- Kept all outline sizes, offsets, layouts and interactions, with no visible change when controls are unfocused.
+- Preserved immediate editing, saved values, financial calculations, simulations, adjacent histories and all six themes.
+- Recorded new W3C focus/non-text-contrast reading and the exact study scope.
+
+Validation: all 416 automated checks passed, including four new regressions. Full-strength outline contrast is at least 8.62:1 across six themes; the minimum in reviewed dimmed-control previews is 4.59:1. Fifteen static before/after pairs cover 320, 390 and 1440px, with all-theme forced-focus components at phone and desktop sizes. Unfocused full-page views were pixel-identical and 180 measured focus boxes kept their geometry. These document-renderer approximations do not establish native keyboard, touch or accessibility-tree behavior; those remain unverified.
+
 ## 2026-10-17, 12:42 UTC · Clear nested history disclosures
 
 - Restored annual-table labels and available counts inside Sources & comparability by scoping the parent's decorative styling to its own summary.

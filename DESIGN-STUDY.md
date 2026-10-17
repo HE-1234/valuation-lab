@@ -2,6 +2,35 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 13:42 UTC · Make keyboard focus visible on the valuation panel
+
+### Question and evidence
+
+Can the focused control be located consistently on the dark valuation surface?
+
+The chart and Limits link already use the panel's bright signal color, but other links, buttons, disclosures and inputs inherit the general light-surface focus color. Against the dark panel, that inherited color measures 2.46:1 in Forest, 2.40:1 in Slate, 1.69:1 in Sand, 2.18:1 in Plum and 2.04:1 in Ocean, below the 3:1 non-text threshold. Midnight's existing color passes. Dimmed footer controls reduce the displayed contrast further. These are stylesheet/compositing findings, reproduced in forced-focus document previews, not measured keyboard-user performance or a native-browser audit.
+
+### New lessons read
+
+- [W3C WAI, Understanding Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html). Read In Brief, Success Criterion, Intent and User Interface Components, including Boundaries, Adjacent colors, Relationship with Use of Color, Relationship with Focus Visible, Hover states and Inactive User Interface Components. Applied the unrounded 3:1 threshold to the actual adjacent surface, including inherited opacity. The requirement is about a perceivable focused state; merely defining an outline is insufficient.
+- [W3C WAI, Understanding Focus Appearance](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html). Read In Brief, Success Criterion, Intent, Minimum area, solid outlines, other indicator shapes, inline links, Change of contrast, Relationship with Non-text Contrast, Component keyboard focus, Exceptions, Benefits and Examples. Applied preserving the existing solid outline and offset while correcting its surface-specific color. Focus Appearance is Level AAA; this focused repair is not a claim of meeting that criterion or whole-site conformance.
+
+Read on October 17, 2026. Linked interactive examples were not operated and illustration descriptions were read as text; no video, interactive exercise, full-course completion or accessibility certification is claimed.
+
+Supporting reading: the complete written [Google web.dev Images lesson](https://web.dev/learn/accessibility/images), last updated September 30, 2022, and [W3C WAI Complex Images tutorial](https://www.w3.org/WAI/tutorials/images/complex/), updated April 8, 2026. Read their purpose/context, image types, alternative descriptions, long-description approaches and displayed code examples; embedded demonstrations were not operated. The existing adjacent annual and distribution tables remain useful access to exact values, so this reading did not justify a chart or table redesign.
+
+### One bounded change
+
+Override the shared focus-color role only inside the dark valuation panel with its existing signal color. The same surface-aware color now reaches source links, simulation buttons, native summaries, distribution controls and footer actions. Keep the normal 3px outline with 4px offset; retain the chart's existing 2px/3px geometry and the Limits link's existing treatment. Focus color outside the panel remains unchanged. No new interaction, animation, confirmation step or visual treatment appears while controls are unfocused.
+
+Full-strength focus contrast is at least 8.62:1 across all six themes. In the reviewed forced-focus components, including the footer's 0.65 opacity, the minimum composited ratio is 4.59:1. Threshold checks use unrounded values. No financial JavaScript, source data, research cases, historical freezes or saved settings change. The immediate editor, adjacent evidence, all distributions and AAOI/Alphabet treatments retain their behavior.
+
+### Checks and limitations
+
+All 416 automated checks passed, including four new regressions for surface scoping, unchanged outline geometry, six-theme contrast with dimmed ancestors and hovered statistics, existing simulation controls, distribution-type editing, unchanged playback results, stable source/input nodes, invalid-result recovery and saved edits. The pre-change suite passed all 412 checks. These source and minimal-DOM checks do not establish real keyboard operation or assistive-technology output.
+
+Fifteen before/after static-preview pairs were generated. Unfocused full-page views at 320, 390 and 1440px were visually inspected and pixel-identical. Forced-focus component previews cover 320 and 1440px in every theme; all phone themes and the Slate desktop view were visually inspected, and all 180 measured focus-control boxes retained the same geometry before and after. The initial statistic-grid approximation required a renderer-only flex substitution; the app's grid was not changed. These previews also substitute form-control frames and force several outlines simultaneously for comparison. They demonstrate the intended color treatment, not native focus routing, clipping, touch, zoom or accessibility-tree behavior. The known local browser restriction and private-site owner sign-in gate were not bypassed.
+
 ## 2026-10-17, 12:42 UTC · Keep nested history controls understandable
 
 ### Question and evidence
