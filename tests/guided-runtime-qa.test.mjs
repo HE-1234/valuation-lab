@@ -26,7 +26,7 @@ async function start(storage=new Map(),blocked=false){
  const document={querySelector:s=>s==='#guided-app'?app:s==='.edition-stamp b'?stamp:nodes.get(s)||null,createElement:()=>new Element()};
  const localStorage={getItem:k=>{if(blocked)throw Error('blocked');return storage.get(k)||null;},setItem:(k,v)=>{if(blocked)throw Error('blocked');storage.set(k,v);}};
  const fetch=async path=>({ok:true,json:async()=>structuredClone(path.includes('guided-content')?content:library)});
- const deps={...engine,...current,document,localStorage,fetch,URL:{createObjectURL:()=> 'blob:fixture',revokeObjectURL(){}},Blob:class{},setTimeout:()=>0};
+ const deps={...engine,...current,mountSimulation:()=>()=>{},enterPanel:()=>{},reducedMotion:()=>true,document,localStorage,fetch,URL:{createObjectURL:()=> 'blob:fixture',revokeObjectURL(){}},Blob:class{},setTimeout:()=>0};
  const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
  await new AsyncFunction(...Object.keys(deps),source)(...Object.values(deps));
  return {storage,app,stamp,get:s=>nodes.get(s),step:n=>elements.find(el=>el.dataset.step===String(n)).click(),state:ticker=>JSON.parse(storage.get(`valuation-lab-guided-v5:${ticker||'AAPL'}:QA-FY`)),focus:()=>focused};

@@ -31,3 +31,11 @@ Additional primary design guidance consulted:
 - [Nielsen Norman Group progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/): defer advanced detail without removing important functionality or hiding safety warnings.
 
 Six palettes have the same semantic roles and contrast tests. New current-model and minimal DOM-runtime tests verify source/assumption separation, eight-step persistence, review gates, explicit WACC application, foreign-security blocking and immutable exports. The finance engine and original five research freeze hashes are unchanged. Updated actual-code-generated HTML/CSS was inspected in approximate WeasyPrint previews for desktop and narrow layouts. This is not authenticated browser E2E.
+
+## Version 6 · Possibility studio
+
+Reference requested: https://www.awwwards.com/sites/lusion-v3. The Awwwards entry documents reactive cursor/scroll animation and a sparse two-color identity; the current Lusion site https://lusion.co/ was opened in the cloud browser but remained in its loading state. The design here is original: a dimensional wire globe, type-led forest/chromatic stage, rounded research instrument, a finite four-second intro, and short clipped panel entrances. No Lusion code, logos, imagery, or assets were copied.
+
+The simulation is the functional motion centerpiece. A bounded representative sequence builds histogram mass into bins, then restores exact full-sample counts. Explicit colors resolve from the current one of six themes and repaint on theme changes. Mobile metric cards stack, controls remain touch-sized, and inspection has a native range/table alternative. Quotes retain date/source and explicit missing states. The hero shortcut exposes the simulation section without forcing users to fill every research note; evidence/model/claims gates remain enforced.
+
+Static print-renderer approximations, populated from the app's own AAPL calculations, were inspected at 1440 and 390 CSS px. SVG palette tokens are emitted as explicit colors to remove renderer ambiguity. WeasyPrint has known inline-flex/form/media differences, so these images establish only approximate hierarchy and final-chart contrast. No browser-interaction or pixel-perfect claim is made; Chromium launch was blocked by socket permissions before any app loaded. Browser access controls were respected.

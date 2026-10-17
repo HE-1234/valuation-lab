@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Monte Carlo methodology · Valuation Lab</title><style>
+:root{color-scheme:light dark;font-family:system-ui,sans-serif;line-height:1.65;color:#173b36;background:#f8f5ed}body{max-width:850px;padding:40px 22px 80px;margin:auto}a{color:#176353}h1,h2{line-height:1.2}h1{font-size:clamp(2rem,5vw,3rem)}h2{margin-top:2rem;font-size:1.4rem}.eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.75rem}.notice{border-left:4px solid #ab672f;padding:14px 20px;background:#f1e7d5}table{border-collapse:collapse;width:100%;font-size:.92rem}td,th{padding:10px;text-align:left;border-bottom:1px solid #d5d8ca}code{font-size:.9em}small{font-size:.85rem}.scroll{overflow:auto}@media(prefers-color-scheme:dark){:root{color:#e5ede5;background:#152522}a{color:#9bd6bb}.notice{background:#2b3025}td,th{border-color:#46524c}}
+</style></head><body>
+<p class="eyebrow">Valuation Lab · Simulation method 1.0.0</p>
+<h1>A distribution of values, conditional on a business story</h1>
+<p><a href="../index.html">← Return to the valuation workspace</a></p>
+<p class="notice">This is an educational uncertainty analysis of discounted cash flow (DCF). The frequencies describe the assumptions you entered. They are not calibrated probabilities of real-world outcomes, investment profit, expected returns, or future stock prices. Attractive animation cannot make unsupported assumptions reliable.</p>
+
+<h2>What comes from Damodaran, and what we chose</h2>
+<p>Damodaran’s simulation framework selects important uncertain valuation inputs, specifies their distributions and dependencies, draws inputs, and recalculates value. He cautions that output is only as sound as its inputs, historical relationships may shift, and simulation does not eliminate risk-adjusted discounting. His distribution appendix discusses triangular distributions for bounded inputs concentrated near a central value. See <a href="https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/probabilistic.pdf">Probabilistic Approaches: Scenario Analysis, Decision Trees and Simulations</a>, printed pages 22–26, 36–37 and 56–57.</p>
+<p>The particular bounds, four-driver selection, illustrative dependence settings, pseudorandom generator, interface and safeguards below are this application’s implementation choices. They are not parameters supplied or endorsed by Damodaran. The <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/Inv4ed.htm">Investment Valuation companion</a> also lists probabilistic valuation resources under Chapter 33.</p>
+
+<h2>The economic model stays the same</h2>
+<p>Every accepted trial calls the existing deterministic FCFF engine with one sampled business-driver vector. It uses the same filing facts, sourced EBIT normalization, forecast horizon, cash/debt bridge, other assets and claims, and common-share denominator as the current valuation. The historical research files, engine, outcomes and frozen assumptions are not modified.</p>
+<ol>
+<li>Initial revenue growth fades linearly to the fixed stable growth rate over the forecast horizon.</li>
+<li>Operating margin moves linearly from normalized starting EBIT/revenue to the sampled mature margin.</li>
+<li>Positive EBIT pays the fixed cash tax rate. Negative EBIT receives no immediate tax credit. There is no NOL ledger.</li>
+<li>Reinvestment equals positive incremental revenue divided by sampled sales/capital. Declining revenue does not automatically liquidate invested capital.</li>
+<li>Each annual FCFF is discounted at the sampled constant nominal WACC. Terminal FCFF includes the reinvestment needed for growth: next-year NOPAT × (1 − stable growth / mature marginal ROIC). Terminal value divides that cash flow by WACC − stable growth.</li>
+<li>Enterprise value plus fixed cash and other assets, less debt and other equity claims, gives common equity. Divide by fixed common shares.</li>
+</ol>
+<p>All accounting amounts and shares use millions, so their ratio is currency per common share, not currency millions per share. Cash flows and discount rates must use the same currency and inflation convention. No ADR or currency conversion is inferred.</p>
+<p><strong>One driver draw defines an entire path.</strong> We do not independently redraw annual revenue growth, mature margin or WACC each year. That would be a different stochastic process requiring additional temporal, cyclical and dependence assumptions. Explicit annual overrides are rejected by this simulator instead of silently overriding or ignoring sampled inputs.</p>
+
+<h2>Four bounded uncertain inputs</h2>
+<p>A triangular distribution has a minimum (“low”), most concentrated input (“mode”), and maximum (“high”). They must satisfy low ≤ mode ≤ high. Low = mode = high makes the input fixed. Low and high are hard bounds, not a confidence interval. The mode is not generally the mean or median. The initial mode comes from your deterministic assumption.</p>
+<div class="scroll"><table><thead><tr><th>Input</th><th>Illustrative initial range</th><th>Supported domain</th></tr></thead><tbody>
+<tr><td>Initial revenue growth</td><td>Mode ± 5 percentage points</td><td>−50% to +100%</td></tr>
+<tr><td>Mature operating margin</td><td>Mode ± 5 percentage points</td><td>0% to 100%</td></tr>
+<tr><td>Incremental sales/capital</td><td>Mode ± 25% of the mode</td><td>Strictly positive</td></tr>
+<tr><td>Nominal WACC</td><td>Mode ± 1.5 percentage points</td><td>Strictly positive, at most 100%</td></tr>
+</tbody></table></div>
+<p>Initial bounds stop at the supported input domain. This can make a range asymmetric near a boundary. These widths are deliberately visible teaching examples; no company-specific empirical calibration has been performed. Review and replace them using relevant evidence and a coherent business narrative. The model cannot claim that excluded tail states are impossible in the world.</p>
+<p>Tax, stable growth, mature marginal ROIC, forecast horizon, filing facts, normalization, cash, debt, other assets/claims and shares remain fixed. Stable growth must be nonnegative and at most 5%, with WACC and mature marginal ROIC both strictly above it. A 5% cap is a software limit, not a claim that 5% is economically justified in every currency or company. Constant capital efficiency and margin paths also remain simplifications.</p>
+<p>Holding terminal ROIC fixed while varying WACC changes the implied excess return on mature reinvestment. If your story instead requires terminal ROIC to equal WACC in every trial, this version does not implement that dependency. Use fixed WACC or a richer model; do not claim growth neutrality across these varying-WACC trials.</p>
+
+<h2>Dependence is an explicit assumption</h2>
+<ul>
+<li><strong>Independent:</strong> four independent input draws. This is a modeling assumption, not evidence that growth, profitability, capital efficiency and discount rates are independent in a real business.</li>
+<li><strong>Operating-linked:</strong> an optional illustrative Gaussian one-factor dependence structure connects growth, mature margin and sales/capital. Factor loadings are 0.7, 0.7 and 0.4 respectively. Independent residuals make each latent variable standard normal. Latent pairwise correlations are therefore 0.49 for growth/margin and 0.28 for each pair involving sales/capital. WACC remains independent.</li>
+</ul>
+<p>For the linked setting, the standard-normal cumulative distribution maps each latent draw into a uniform percentile; the triangular inverse distribution maps that percentile to the bounded economic input. The quoted coefficients apply to the latent normals, not exactly to the Pearson correlations of the transformed inputs. This is an illustrative positive operating-state relationship, not estimated causality or a company-specific fitted correlation matrix. It does not model crises, tail dependence, demand/margin trade-offs, financing stress or changing regimes. Rejecting invalid trials can change the accepted inputs’ joint distribution.</p>
+
+<h2>Validation and exclusions</h2>
+<p>The simulator first requires a valid current valuation: full-year/TTM financials, economic share basis, filing availability by the chosen date, review of the model and equity claims, and any required normalization evidence. It uses the same current-model gates. NBIS funding, perimeter and claim issues and TSM currency/ADR mapping issues continue to withhold generic per-share results; simulation cannot repair missing evidence or an unsuitable model.</p>
+<p>Malformed ranges, nonfinite numbers and unsupported driver names stop the run before any draw. The selected trial count is an <strong>attempt count</strong>, default 4,000, supported from 1 to 50,000. A trial with sampled WACC ≤ stable growth is excluded under “terminal-constraints”; numerical overflow is counted separately. There is no clamping of bad WACC to an artificially valid rate and no silent replacement drawing until the requested count is reached. The run reports attempts, accepted count, total excluded and reason counts.</p>
+<p>All summary statistics, histogram shares and quote ranks use <strong>accepted trials</strong> as the denominator. With exclusions, the distribution is conditional on passing those constraints. The effective input distributions have changed. Review incompatible bounds rather than treating the surviving sample as the originally specified distribution. If every trial is invalid, the result is explicitly empty, with no median, quantiles or quote rank.</p>
+<p>Negative modeled common-equity values are <strong>retained</strong> at the existing engine’s zero per-share floor. The zero-equity count and share are reported. Raw pre-floor values are exported separately, including negative values. The floor is a simplified limited-liability convention, not a model of default likelihood, recovery value, recapitalization or future dilution.</p>
+
+<h2>Reading the distribution</h2>
+<ul>
+<li><strong>Median:</strong> the 50th percentile of accepted modeled values. It is not a “most likely share price.”</li>
+<li><strong>Quantiles:</strong> 5th, 10th, 25th, 50th, 75th, 90th and 95th, with linear interpolation at sample index (n − 1) × p, often called type 7. These are conditional distribution intervals, not statistical confidence intervals for true value.</li>
+<li><strong>Histogram:</strong> equal-width value bins showing counts and fractions of accepted trials. Bins include their lower edge and exclude their upper edge, except the final bin includes the maximum. A constant or numerically indivisible distribution uses one bin. Histogram shape does not affect the quantiles.</li>
+<li><strong>Price percentile:</strong> count of simulated values ≤ the entered price, divided by accepted trials, × 100. All ties count. The complementary fraction is the share of modeled values strictly above that price. Neither number measures a probability of a profitable trade.</li>
+</ul>
+<p>A quote rank requires a positive, dated and sourced observation, matching reporting currency, explicit matching economic share basis and a date no later than the valuation date. The quote date stays visible. The app does not fetch a live price. An invalid or missing quote withholds comparison while leaving a valid simulation available.</p>
+<p>The distribution’s mean need not equal the DCF value at the input modes or input means because DCF is nonlinear. A higher percentile or larger value/price gap does not establish mispricing, a catalyst, investment suitability or a trading strategy.</p>
+
+<h2>Reproducibility and audit</h2>
+<p>Version 1.0.0 hashes the entered seed with FNV-1a and generates draws with Mulberry32. The linked setting uses Box–Muller normal draws and a standard normal-CDF approximation. This generator is for repeatable educational calculations, not cryptography. Identical source data, draft, settings, seed and software version produce the same draws. More trials can reduce sampling noise within the chosen assumptions; they do not validate those assumptions or remove structural uncertainty.</p>
+<p>The result includes the settings, deterministic baseline, ordered accepted draws, sorted per-share samples, sorted raw pre-floor samples, accepted input vectors with original trial numbers, quantiles, histogram, units, quote provenance, exclusions and methodology labels. No new randomness is needed to replay an accepted trial through the existing deterministic engine. With all four distributions fixed at their deterministic inputs, every accepted value equals the existing current valuation exactly.</p>
+<p>Tests cover deterministic equivalence, normalized EBIT and claims, seeded reproducibility, triangular checkpoints, bounded marginals, dependence diagnostics, quantiles, ECDF ties, histogram conservation, exclusion accounting, empty results, negative-equity mass, current-universe gates, source immutability and numerical failure. These tests establish implementation behavior, not empirical predictive accuracy.</p>
+
+<h2>What this model leaves out</h2>
+<p>It does not add a financing plan, NOL ledger, distress waterfall, capacity construction lags, independent maintenance-capex schedule, stock-compensation award valuation, future issuance, R&amp;D capitalization, accounting restatement or regulatory-capital valuation. Source snapshots are dated research inputs. A Monte Carlo overlay cannot make a simplified operating-company DCF appropriate for every company.</p>
+<p><small>Methodology reviewed October 17, 2026. Original implementation choices and explanation; the linked primary sources provide the underlying valuation framework.</small></p>
+</body></html>
