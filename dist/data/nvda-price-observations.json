@@ -1,0 +1,125 @@
+{
+  "ticker": "NVDA",
+  "currency": "USD",
+  "retrievedAt": "2026-10-17T04:26:00Z",
+  "datasetKind": "Five individually sourced historical price observations; not a daily series",
+  "usage": "Private educational research. No blanket redistribution license verified. Do not offer a provider-data download or describe this as open-licensed data. Cite individual sources alongside factual observations.",
+  "separation": "OUTCOME/EVALUATION ONLY. Do not expose future prices or retrospective split factors to historical assumption-setting.",
+  "normalizedBasis": "USD per share on post-June-2024 10-for-1 split basis",
+  "dividends": "Excluded. These are price-only comparisons, not total shareholder returns. No dividend reinvestment or cash dividends included.",
+  "endpointDate": "2024-12-31",
+  "observations": [
+    {
+      "date": "2021-03-01",
+      "reportedPrice": 553.67,
+      "reportedPriceType": "Contemporaneous recent/end price, corroborated by dated exchange newspaper table; not independently certified official exchange close",
+      "splitDivisorTo2024Basis": 40,
+      "splitAdjustedPrice": 13.84175,
+      "sourceTitle": "Edward Jones Stock Table as of March 1, 2021",
+      "sourceUrl": "https://www.edwardjones.com/sites/default/files/acquiadam/2021-03/stock-table-canada-newsletter.pdf",
+      "corroborationUrl": "https://www.schwab.wallst.com/ser/perfMonitor/public/dmFetch.asp?doctag=SERP_C_939_20210303&feed=7276&pageID=C",
+      "additionalCorroborationUrl": "https://ufdcimages.uflib.ufl.edu/AA/00/06/85/31/00623/03-02-2021.pdf"
+    },
+    {
+      "date": "2022-03-18",
+      "reportedPrice": 264.53,
+      "reportedPriceType": "Dated Banorte price table; contemporaneous news explicitly states Friday session ending price",
+      "splitDivisorTo2024Basis": 10,
+      "splitAdjustedPrice": 26.453,
+      "sourceTitle": "Banorte weekly report, March 18, 2022, page 20, Indicadores Tecnicos (SIC)",
+      "sourceUrl": "https://www.banorte.com/cms/casadebolsa/files/Boletin_historico/2022/Boletin_18Mar22.pdf",
+      "corroborationUrl": "https://ng.investing.com/analysis/1-stock-to-buy-1-to-dump--when-markets-open-nvidia-colgatepalmolive-107424"
+    },
+    {
+      "date": "2023-02-27",
+      "reportedPrice": 235.01,
+      "reportedPriceType": "NVIDIA S-3 last reported sale price; not labeled official closing auction price",
+      "splitDivisorTo2024Basis": 10,
+      "splitAdjustedPrice": 23.501,
+      "sourceTitle": "NVIDIA Form S-3",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000021/nvidia-formsx3.htm",
+      "corroborationUrl": "https://sp.jpmorgan.com/document/cusip/48133UR61/doctype/Product_Termsheet/document.pdf",
+      "corroborationNote": "JPMorgan reference-stock table labels this same value Closing Price on February 27, 2023."
+    },
+    {
+      "date": "2024-02-22",
+      "reportedPrice": 785.38,
+      "reportedPriceType": "Contemporaneously reported close",
+      "splitDivisorTo2024Basis": 10,
+      "splitAdjustedPrice": 78.538,
+      "sourceTitle": "AP: Nvidia, Royal Caribbean rise; Rivian, Etsy fall, Thursday, 2/22/2024",
+      "sourceUrl": "https://apnews.com/article/efc7109a43d66964a5140c033ba2bc2d",
+      "corroborationUrl": "https://www.investing.com/news/stock-market-news/ai-leader-nvidia-rises-as-forecast-tops-wall-streets-lofty-goals-3310840"
+    },
+    {
+      "date": "2024-12-31",
+      "reportedPrice": 134.29,
+      "reportedPriceType": "Quarter-end closing price in SEC-hosted Goldman Sachs 424B2; a later historical compilation, not an input available earlier in 2024",
+      "splitDivisorTo2024Basis": 1,
+      "splitAdjustedPrice": 134.29,
+      "sourceTitle": "Goldman Sachs 424B2 historical NVDA prices, 2024 Q4 period end",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/886982/000119312525299332/nvdac188_prelim.htm",
+      "corroborationUrl": "https://www.sec.gov/Archives/edgar/data/1003839/000100383925000001/mxxvxletter2024annualreport.pdf"
+    }
+  ],
+  "splitEvidence": [
+    {
+      "ratio": "4-for-1",
+      "postSplitTradingDate": "2021-07-20",
+      "sourceUrl": "https://investor.nvidia.com/files/doc_downloads/doc_faq/08/Investor-NVIDIA-2021-Stock-Split-FAQ-08.9.2021.pdf"
+    },
+    {
+      "ratio": "10-for-1",
+      "postSplitTradingDate": "2024-06-10",
+      "sourceUrl": "https://investor.nvidia.com/files/doc_downloads/2024/06/nvidia-2024-stock-split_faq_investors.pdf"
+    }
+  ],
+  "limitations": [
+    "Not an investable strategy backtest: four ex-post selected start dates and one common endpoint; unequal holding periods and hindsight/survivorship selection.",
+    "No daily paths, drawdowns, volatility, annual returns, execution assumptions, or annualized return supplied.",
+    "Prices reflect historical traded shares; do not compare them directly to retrospectively restated per-share fundamentals without aligning split bases.",
+    "Search-indexed and web-readable source evidence inspected; no paid API, account, or bulk download used. Original full documents not redistributed.",
+    "Banorte text table was readable, but screenshot retrieval failed; numerical row is corroborated by independent contemporary article.",
+    "Stooq browser verification and inaccessible terms prevented verification; no Stooq data downloaded. Yahoo official help says CSV download requires Gold subscription; no undocumented endpoint used."
+  ],
+  "providerReferences": [
+    "https://ca.help.yahoo.com/kb/SLN2311.html",
+    "https://in.help.yahoo.com/kb/adjusted-close-sln28256.html",
+    "https://stooq.com/db/h/",
+    "https://stooq.com/tos/"
+  ],
+  "caseOutcomes": [
+    {
+      "startDate": "2021-03-01",
+      "endDate": "2024-12-31",
+      "startPrice2024Basis": 13.84175,
+      "endPrice2024Basis": 134.29,
+      "priceReturnPct": 870.1807936135243,
+      "returnType": "cumulative price-only; unequal holding periods"
+    },
+    {
+      "startDate": "2022-03-18",
+      "endDate": "2024-12-31",
+      "startPrice2024Basis": 26.453,
+      "endPrice2024Basis": 134.29,
+      "priceReturnPct": 407.65508637961665,
+      "returnType": "cumulative price-only; unequal holding periods"
+    },
+    {
+      "startDate": "2023-02-27",
+      "endDate": "2024-12-31",
+      "startPrice2024Basis": 23.501,
+      "endPrice2024Basis": 134.29,
+      "priceReturnPct": 471.42249265988676,
+      "returnType": "cumulative price-only; unequal holding periods"
+    },
+    {
+      "startDate": "2024-02-22",
+      "endDate": "2024-12-31",
+      "startPrice2024Basis": 78.538,
+      "endPrice2024Basis": 134.29,
+      "priceReturnPct": 70.98729277547173,
+      "returnType": "cumulative price-only; unequal holding periods"
+    }
+  ]
+}

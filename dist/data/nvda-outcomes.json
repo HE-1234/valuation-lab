@@ -1,0 +1,42 @@
+{
+  "status": "Separated retrospective business outcomes; not used to tune scenario assumptions",
+  "outcomes": [
+    {
+      "snapshotId": "NVDA-FY2021",
+      "outcomeSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm",
+      "outcomeAvailableAt": "2022-03-18T00:33:34Z",
+      "targetFiscalYear": 2022,
+      "predictedYear1Revenue": 21200.0,
+      "actualRevenue": 26914.0,
+      "revenueSignedError": -5714.0,
+      "revenueAbsolutePercentageError": 0.21230586311956604,
+      "realizedRevenueGrowth": 0.6140329835082459,
+      "diagnosis": "Mechanical annualization of one-quarter guidance misses full-year demand changes. This is business forecast error; no price/return conclusion follows. Attribute business causes only after a separately sourced outcome review."
+    },
+    {
+      "snapshotId": "NVDA-FY2022",
+      "outcomeSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm",
+      "outcomeAvailableAt": "2023-02-24T22:23:43Z",
+      "targetFiscalYear": 2023,
+      "predictedYear1Revenue": 32400.000000000004,
+      "actualRevenue": 26974.0,
+      "revenueSignedError": 5426.000000000004,
+      "revenueAbsolutePercentageError": 0.20115666938533416,
+      "realizedRevenueGrowth": 0.002229323028906993,
+      "diagnosis": "Mechanical annualization of one-quarter guidance misses full-year demand changes. This is business forecast error; no price/return conclusion follows. Attribute business causes only after a separately sourced outcome review."
+    },
+    {
+      "snapshotId": "NVDA-FY2023",
+      "outcomeSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+      "outcomeAvailableAt": "2024-02-21T21:36:57Z",
+      "targetFiscalYear": 2024,
+      "predictedYear1Revenue": 26000.0,
+      "actualRevenue": 60922.0,
+      "revenueSignedError": -34922.0,
+      "revenueAbsolutePercentageError": 0.5732247792258954,
+      "realizedRevenueGrowth": 1.2585452658115224,
+      "diagnosis": "Mechanical annualization of one-quarter guidance misses full-year demand changes. This is business forecast error; no price/return conclusion follows. Attribute business causes only after a separately sourced outcome review."
+    }
+  ],
+  "unavailable": "FY2024 snapshot next full-year outcome not in this four-filing dataset; do not invent it."
+}
