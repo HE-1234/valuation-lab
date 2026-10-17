@@ -1,5 +1,19 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Design notebook · Valuation Lab</title><style>*{box-sizing:border-box}html{color-scheme:light;scroll-behavior:smooth}body{margin:0;background:#f4f5f8;color:#171a24;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}main{max-width:880px;padding:42px 36px 80px;margin:auto}nav{display:flex;flex-wrap:wrap;gap:10px 24px;border-bottom:1px solid #d9dde7;padding-bottom:22px;margin-bottom:40px;font-size:14px}a{color:#3142b5;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #3142b5;outline-offset:4px}h1{font-size:clamp(34px,6vw,50px);letter-spacing:-1.5px;line-height:1.15;margin:0 0 24px;font-weight:550}h2{font-size:26px;line-height:1.3;letter-spacing:-.6px;margin:46px 0 20px;border-top:1px solid #d9dde7;padding-top:28px;font-weight:550}h3{font-size:18px;line-height:1.4;margin:30px 0 12px;font-weight:600}p,li{font-size:16px}p{margin:14px 0}ul,ol{padding-left:25px}li{padding-left:5px;margin:12px 0}section+section{margin-top:65px}footer{border-top:1px solid #d9dde7;margin-top:50px;padding-top:18px;font-size:13px;color:#555d70}@media(max-width:480px){main{padding:25px 20px 55px}nav{margin-bottom:30px}h2{font-size:23px}p,li{font-size:16px}ul,ol{padding-left:21px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style></head><body><main><nav aria-label="Notebook navigation"><a href="../">← Valuation Lab</a><a href="#study">Study notes</a><a href="#changes">Change log</a><a href="company-base-cases.json">Company research ledger</a><a href="simulation-methodology.html">Simulation method</a></nav><section id="study"><h1>Design notebook</h1>
 <p>A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.</p>
+<h2>2026-10-17, 07:42 UTC · Put the source period beside the result</h2>
+<h3>Question and evidence</h3>
+<p>Can the first phone view show which financial period the large valuation uses, without opening a control or reaching the bottom of the distribution?</p>
+<p>The v9 390px static preview showed a shortened financial-baseline dropdown (“TTM through 202…”). The complete financial period and original-filing link were below the simulation. Alphabet&#x27;s nearby capital-reference date is a different context and should remain distinct. Static preview evidence supports a small source-order refinement; it does not establish a measured user-comprehension problem.</p>
+<h3>New lessons read</h3>
+<ul>
+<li><a href="https://web.dev/learn/design/macro-layouts" target="_blank" rel="noopener">Google web.dev, Macro layouts</a>. Read the complete written lesson: single-column content flow, Grid, Flexbox, content-driven layout without media queries, code examples and displayed knowledge checks. Page last updated November 3, 2021. Applied the principle that a narrow screen needs a meaningful reading order before wider layout rules are added.</li>
+<li><a href="https://web.dev/learn/design/micro-layouts" target="_blank" rel="noopener">Google web.dev, Micro layouts</a>. Read the complete written lesson: component-level adaptation, Grid, Flexbox, Container queries, combined queries, code examples and displayed knowledge check. Page last updated November 3, 2021. Applied flexible component wrapping rather than another fixed-width or truncated label.</li>
+</ul>
+<p>Read on October 17, 2026. Embedded CodePen and developer-tools demonstrations were not operated. No video watching, interactive quiz completion, or full-course completion is claimed.</p>
+<h3>One bounded change</h3>
+<p>Move the existing full period label and original-filing link into a compact wrapping line above the headline valuation. Keep it outside the live-results replacement area, with an accessible group name and a source-link name identifying the company and period. Use the six existing theme roles and a 12px label. Keep the separate AAOI/Alphabet capital-reference note and the model-limit reminder below the chart. No new financial input, calculation, source gate, or acknowledgment step is introduced.</p>
+<h3>Checks and limitations</h3>
+<p>All 388 automated checks passed, including five new source-context checks. These cover every company and financial-baseline change, the full visible period, the original filing URL, ordering before the result and simulation, named source context, stability during live edits and invalid-input recovery, and retained source/model gates. CSS contracts cover wrapping at 320/390px and text/link contrast across six themes. These markup/style checks do not establish real browser or screen-reader behavior. Static before/after previews at 320, 390 and 1440px supplement the tests; they remain document-renderer approximations. Authenticated browser and native-touch verification remain blocked by the ordinary owner sign-in gate, which is preserved.</p>
 <h2>2026-10-17 · A longer record, a quieter reference</h2>
 <h3>Question</h3>
 <p>How can ten annual observations help someone make a forecast without turning the phone view into ten squeezed columns?</p>
@@ -85,6 +99,15 @@
 <li>Do the longest currency amounts and all six themes remain readable at enlarged text sizes?</li>
 </ul>
 <p>Each later entry should identify the reading scope, one concrete design decision, the affected behavior and the checks actually performed. A useful finding can justify keeping the interface unchanged.</p></section><section id="changes"><h1>Change log</h1>
+<h2>2026-10-17, 07:42 UTC · Financial period at a glance</h2>
+<ul>
+<li>Moved the full financial-period label and original-filing link above the headline valuation, in a compact wrapping source line.</li>
+<li>Preserved the distinct AAOI/Alphabet capital-reference explanation and the model-limit reminder below the distribution.</li>
+<li>Added a descriptive source-group name and a filing-link name identifying the company and period. Numeric edits do not replace the source line.</li>
+<li>Recorded two new written responsive-design lessons and their exact reading scope in the design notebook.</li>
+<li>Preserved all valuation mathematics, source data, saved inputs, historical freezes, simulation families and themes.</li>
+</ul>
+<p>Validation: all 388 automated checks passed, including five new source-context checks. Static before/after previews were inspected at 320, 390 and 1440px, with additional AAOI and ordinary-company phone views. The complete date remains above the result and within the page in each reviewed approximation. Real authenticated browser, native-touch and accessibility-tree behavior remain unverified.</p>
 <h2>2026-10-17 · v9 explicit AAOI and Alphabet models</h2>
 <ul>
 <li>Enabled current AAOI and Alphabet valuations through source-matched capital-claims models. Missing or invalid treatment still withholds the result.</li>

@@ -2,6 +2,29 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 07:42 UTC · Put the source period beside the result
+
+### Question and evidence
+
+Can the first phone view show which financial period the large valuation uses, without opening a control or reaching the bottom of the distribution?
+
+The v9 390px static preview showed a shortened financial-baseline dropdown (“TTM through 202…”). The complete financial period and original-filing link were below the simulation. Alphabet's nearby capital-reference date is a different context and should remain distinct. Static preview evidence supports a small source-order refinement; it does not establish a measured user-comprehension problem.
+
+### New lessons read
+
+- [Google web.dev, Macro layouts](https://web.dev/learn/design/macro-layouts). Read the complete written lesson: single-column content flow, Grid, Flexbox, content-driven layout without media queries, code examples and displayed knowledge checks. Page last updated November 3, 2021. Applied the principle that a narrow screen needs a meaningful reading order before wider layout rules are added.
+- [Google web.dev, Micro layouts](https://web.dev/learn/design/micro-layouts). Read the complete written lesson: component-level adaptation, Grid, Flexbox, Container queries, combined queries, code examples and displayed knowledge check. Page last updated November 3, 2021. Applied flexible component wrapping rather than another fixed-width or truncated label.
+
+Read on October 17, 2026. Embedded CodePen and developer-tools demonstrations were not operated. No video watching, interactive quiz completion, or full-course completion is claimed.
+
+### One bounded change
+
+Move the existing full period label and original-filing link into a compact wrapping line above the headline valuation. Keep it outside the live-results replacement area, with an accessible group name and a source-link name identifying the company and period. Use the six existing theme roles and a 12px label. Keep the separate AAOI/Alphabet capital-reference note and the model-limit reminder below the chart. No new financial input, calculation, source gate, or acknowledgment step is introduced.
+
+### Checks and limitations
+
+All 388 automated checks passed, including five new source-context checks. These cover every company and financial-baseline change, the full visible period, the original filing URL, ordering before the result and simulation, named source context, stability during live edits and invalid-input recovery, and retained source/model gates. CSS contracts cover wrapping at 320/390px and text/link contrast across six themes. These markup/style checks do not establish real browser or screen-reader behavior. Static before/after previews at 320, 390 and 1440px supplement the tests; they remain document-renderer approximations. Authenticated browser and native-touch verification remain blocked by the ordinary owner sign-in gate, which is preserved.
+
 ## 2026-10-17 · A longer record, a quieter reference
 
 ### Question

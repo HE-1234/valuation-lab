@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-17, 07:42 UTC · Financial period at a glance
+
+- Moved the full financial-period label and original-filing link above the headline valuation, in a compact wrapping source line.
+- Preserved the distinct AAOI/Alphabet capital-reference explanation and the model-limit reminder below the distribution.
+- Added a descriptive source-group name and a filing-link name identifying the company and period. Numeric edits do not replace the source line.
+- Recorded two new written responsive-design lessons and their exact reading scope in the design notebook.
+- Preserved all valuation mathematics, source data, saved inputs, historical freezes, simulation families and themes.
+
+Validation: all 388 automated checks passed, including five new source-context checks. Static before/after previews were inspected at 320, 390 and 1440px, with additional AAOI and ordinary-company phone views. The complete date remains above the result and within the page in each reviewed approximation. Real authenticated browser, native-touch and accessibility-tree behavior remain unverified.
+
 ## 2026-10-17 · v9 explicit AAOI and Alphabet models
 
 - Enabled current AAOI and Alphabet valuations through source-matched capital-claims models. Missing or invalid treatment still withholds the result.
