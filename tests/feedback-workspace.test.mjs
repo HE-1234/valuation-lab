@@ -79,7 +79,7 @@ test('feedback annual: signed negative operating EV and native TWD share labels 
 test('feedback annual: summary precedes full-width editor and uncertainty; all year semantics remain',async()=>{
  const h=await startResearchWorkspace(),html=h.root.innerHTML;assert.ok(html.indexOf('id="research-results"')<html.indexOf('id="research-editor"'));assert.ok(html.indexOf('id="research-editor"')<html.indexOf('id="research-analysis"'));
  assert.ok(h.get('.research-schedule'));assert.equal(h.root.querySelectorAll('[data-research-input="annual"]').length,50);assert.ok(h.get('.period-convention'));assert.match(h.get('.period-convention').textContent,/Rolling annual periods/);assert.ok(h.get('.annual-anchor'));assert.equal(h.get('.research-date-line').querySelector('time').getAttribute('datetime'),'2026-06-27');
- const css=read('workspace.css');assert.match(css,/#research-editor>\.research-schedule\{grid-column:1\/-1/);assert.match(css,/th:first-child\{[^}]*position:sticky;left:0/);assert.match(css,/--type-body:1rem/);assert.match(css,/--type-support:\.875rem/);assert.match(css,/max-inline-size:var\(--reading-measure\)/);
+ const css=read('workspace.css');assert.match(css,/#research-editor>\.research-schedule\{grid-column:1\/-1/);assert.match(css,/th:first-child\{[^}]*position:static;left:auto/);assert.match(css,/--type-body:1rem/);assert.match(css,/--type-support:\.875rem/);assert.match(css,/max-inline-size:var\(--reading-measure\)/);
 });
 test('feedback guided: numerical change comes from opening model and never writes comparison into drafts',async()=>{
  const h=await startStudio(),initial=structuredClone(h.state());const mounted=h.mounts.at(-1),base=calculateCurrent(mounted.snapshot,initial).perShare;

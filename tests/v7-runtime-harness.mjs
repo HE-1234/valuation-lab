@@ -4,11 +4,13 @@ import * as engine from '../dist/engine.js';
 import * as current from '../dist/current-model.js';
 import * as history from '../dist/assumption-history.js';
 import * as historyView from '../dist/history-view.js';
+import {enterPanel as actualEnterPanel,cancelMotion,updateFeedback} from '../dist/motion.js';
+import {prepareFlowTables} from '../dist/document-flow.js';
 import {createContextualEvidencePanel} from '../dist/contextual-evidence.js';
 const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
 const decode=v=>String(v).replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
 const voidTags=new Set(['input','br','hr','img','meta','link','area','source','wbr']);
-export async function startStudio({storage=new Map(),storageBlocked=false,historyMissing=false,baseCasesMissing=false,baseCases:customBaseCases,library:customLibrary,annualWorkspace}={}){
+export async function startStudio({storage=new Map(),storageBlocked=false,historyMissing=false,baseCasesMissing=false,baseCases:customBaseCases,library:customLibrary,annualWorkspace,motion=false}={}){
  let focused=null;const mounts=[],downloads=[],entrances=[],timers=new Map();let timerId=0;
  const matches=(el,s)=>s==='*'?el.nodeType===1:s[0]==='#'?el.attrs.id===s.slice(1):s[0]==='.'?(el.attrs.class||'').split(/\s+/).includes(s.slice(1)):s[0]==='['?(()=>{const m=s.match(/^\[([^=\]]+)(?:="([^"]*)")?\]$/);return !!m&&m[1] in el.attrs&&(m[2]===undefined||el.attrs[m[1]]===m[2]);})():el.tag===s;
  class Element{
@@ -52,7 +54,7 @@ export async function startStudio({storage=new Map(),storageBlocked=false,histor
  const baseCases=customBaseCases===undefined?JSON.parse(read('../dist/data/company-base-cases.json')):customBaseCases;
  const files={'company-base-cases':baseCases,'current-universe':library,'company-history':JSON.parse(read('../dist/data/company-history.json')),'current-market-references':JSON.parse(read('../dist/data/current-market-references.json'))};
  const fetch=async path=>({ok:!((historyMissing&&path.includes('company-history'))||(baseCasesMissing&&path.includes('company-base-cases'))),json:async()=>structuredClone(files[Object.keys(files).find(k=>path.includes(k))])});
- const deps={createContextualEvidencePanel,...engine,...current,...history,...historyView,mountSimulation:(root,snapshot,draft,options)=>{const m={root,ticker:snapshot.ticker,sourceId:snapshot.raw.id,snapshot:structuredClone(snapshot),draft:structuredClone(draft),options,released:false};mounts.push(m);return()=>{m.released=true}},enterPanel:node=>entrances.push(node),reducedMotion:()=>true,document,localStorage,fetch,URL:{createObjectURL:blob=>{downloads.push(blob);return'blob:fixture'},revokeObjectURL(){}},Blob,setTimeout:fn=>{timers.set(++timerId,fn);return timerId;},clearTimeout:id=>timers.delete(id)};
+ const deps={createContextualEvidencePanel,cancelMotion,updateFeedback,prepareFlowTables,...engine,...current,...history,...historyView,mountSimulation:(root,snapshot,draft,options)=>{const m={root,ticker:snapshot.ticker,sourceId:snapshot.raw.id,snapshot:structuredClone(snapshot),draft:structuredClone(draft),options,released:false};mounts.push(m);return()=>{m.released=true}},enterPanel:node=>{entrances.push(node);if(motion)return actualEnterPanel(node);},reducedMotion:()=>true,document,localStorage,fetch,URL:{createObjectURL:blob=>{downloads.push(blob);return'blob:fixture'},revokeObjectURL(){}},Blob,setTimeout:fn=>{timers.set(++timerId,fn);return timerId;},clearTimeout:id=>timers.delete(id)};
  const source=read('../dist/guided.js').replace(/^import .*;\n/gm,'');
  const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
  await new AsyncFunction(...Object.keys(deps),source)(...Object.values(deps));

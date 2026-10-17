@@ -1,5 +1,6 @@
 import {createContextualEvidencePanel} from './contextual-evidence.js';
-import {enterPanel} from './motion.js';
+import {enterPanel,cancelMotion,updateFeedback} from './motion.js';
+import {prepareFlowTables} from './document-flow.js';
 
 // Presentation only: app.js retains every original input, handler, result target,
 // calculation, source disclosure, and storage identity.
@@ -105,7 +106,7 @@ export function mountHistoricalWorkspace(page) {
  for (const node of [...editor.children]) {
   if (node.tagName === 'P' && node.className.split(/\s+/).includes('micro')) move(node, caseEditor);
  }
- const evidenceHost = make('div', 'workspace-evidence-host', shell); evidenceHost.hidden = true;
+ const evidenceHost = make('div', 'workspace-evidence-host', main); evidenceHost.hidden = true;
  const evidenceInert = new Map();
  const explanation = make('p', 'historical-evidence-context', parking);
  const sourceContext = find('.context-line');
@@ -115,6 +116,7 @@ export function mountHistoricalWorkspace(page) {
  const filing = find('#evidence-details'), research = find('#case-analysis');
  const evidence = createContextualEvidencePanel({host: evidenceHost, id: 'historical-contextual-evidence',
   title: 'Historical evidence', onOpen() {
+   cancelMotion(shell);
    if (mobile !== 'evidence') previousMobile = mobile;
    for (const node of [editor, ...(view === 'tables' ? [tablesView] : [])]) {
     if (!evidenceInert.has(node)) evidenceInert.set(node, Boolean(node.inert));
@@ -175,7 +177,7 @@ export function mountHistoricalWorkspace(page) {
  }
  function setView(name) {
   if (!['result', 'tables'].includes(name) || destroyed) return false;
-  const changed = name !== view; view = name;
+  const changed = name !== view;if(changed)cancelMotion(shell); view = name;
   evidence.close({restoreFocus: false}); shell.setAttribute('data-view', name);
   resultView.hidden = name !== 'result'; tablesView.hidden = name !== 'tables';
   viewTabs.set(name); updateMobile('result');
@@ -184,7 +186,7 @@ export function mountHistoricalWorkspace(page) {
  }
  function setResultView(name) {
   if (!resultPanels.has(name) || destroyed) return false;
-  const changed = name !== result; result = name;
+  const changed = name !== result;if(changed)cancelMotion(resultView); result = name;
   for (const [id, panel] of resultPanels) panel.hidden = id !== name;
   resultTabs.set(name);
   if (changed) enterPanel(resultPanels.get(name));
@@ -192,10 +194,13 @@ export function mountHistoricalWorkspace(page) {
  }
  function setGroup(name) {
   if (!groupDefinitions.some(([id]) => id === name) || destroyed) return false;
-  group = name; refresh(); return true;
+  const changed = group !== name;group = name; refresh();
+  if(changed)enterPanel(group==='case'?caseEditor:form);
+  return true;
  }
  function refresh() {
   if (destroyed) return;
+  prepareFlowTables(page);
   const fieldsets = [...form.querySelectorAll('fieldset')];
   for (const [index, fieldset] of fieldsets.entries()) property(fieldset, 'hidden', groupDefinitions[index]?.[0] !== group);
   property(form, 'hidden', group === 'case'); caseEditor.hidden = group !== 'case';
@@ -232,11 +237,17 @@ export function mountHistoricalWorkspace(page) {
  const Observer = document.defaultView?.MutationObserver || globalThis.MutationObserver;
  const observer = typeof Observer === 'function' ? new Observer(refresh) : null;
  observer?.observe(form, {childList: true});
+ const resultObserver = typeof Observer === 'function' ? new Observer(() => {
+  cancelMotion(summary);prepareFlowTables(page);
+  updateFeedback(valuation.querySelector('.value'),summary);
+  const panel=resultPanels.get(result);cancelMotion(panel);updateFeedback(panel?.querySelector('svg'),panel);
+ }) : null;
+ resultObserver?.observe(valuation,{childList:true,subtree:true});
  setView(view); setResultView(result); refresh(); updateMobile(mobile);
 
  function destroy() {
   if (destroyed) return;
-  observer?.disconnect(); evidence.destroy(); destroyed = true;
+  cancelMotion(shell);observer?.disconnect();resultObserver?.disconnect(); evidence.destroy(); destroyed = true;
   for (const [node, event, handler] of listeners) node.removeEventListener(event, handler);
   for (const [node, placeholder] of [...moved].reverse()) {
    if (placeholder.parentNode) { placeholder.parentNode.insertBefore(node, placeholder); placeholder.remove(); }

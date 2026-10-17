@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-17 · Continuous page and visible motion
+
+- Replaced fixed desktop workspace/summary heights and all nested vertical or horizontal scrolling with natural document flow at every breakpoint, including Simulation, evidence, Research, Sources and Learn.
+- Removed obsolete clipping, scrollbar-hiding and scroll-gutter rules rather than concealing scroll controls. Wide tables fit the page; narrow tables and side-column evidence use labeled row groups with original cells, header associations and exact input nodes.
+- Moved evidence into the document grid. Explicit Open reveals an offscreen header; Close/Escape restores the original page position, focus and source nodes. Long notes grow when edited, revealed, focused or resized.
+- Made the actual tab/panel transitions visible with 280 ms opacity/8px travel and animated underlines. Result/chart updates use local 280 ms feedback while input controls remain synchronous and mounted. New actions, stale callbacks, route departure, backgrounding and reduced-motion changes are covered by cancellation checks.
+- Preserved financial engines, original research sources, complete presets, exact edits, full-load Undo, simulation sampling and the six-second representative replay.
+
+Verification: the preceding 800 checks are retained with superseded layout/motion expectations updated, plus 19 focused natural-flow and motion tests. An independent byte comparison preserves 81 protected files against v27. Static document-renderer approximations are labeled as such; they cannot verify native browser scrolling, painted motion, focus, touch or screen-reader output. The existing browser restriction remains, and no denied route was retried.
+
 ## 2026-10-17 · Screen-sized decision workspace
 
 - Rebuilt Guided, Annual and Historical around a compact navigation rail, one context toolbar, persistent valuation, in-place analysis views and a contextual input editor.

@@ -134,3 +134,12 @@ The readable report is `dist/data/studio-research-presets-2026-10-17-v1.html`, b
 Studio uses a screen-sized desktop workspace with persistent valuation, in-place Result / Simulation / Tables views, contextual base-case editors and one-click evidence. Guided controls stay mounted across category changes; Annual adds synchronized year-level controls while retaining the exact full-width editable schedule. Mobile offers Result / Inputs / Evidence and natural scrolling at narrow widths/high zoom. Complete v26 research presets, saved drafts, full-load Undo, dated claims, the six-second optional replay and every financial engine/data source are preserved.
 
 `SCREEN-WORKSPACE.md` records structure, interaction/state contracts, reference scope and the static-versus-browser verification boundary. New presentation modules are `screen-workspace.css`, `contextual-evidence.js` and `historical-workspace.js`; model code remains separate. An authentic interaction recording is still unavailable because browser execution remains blocked.
+
+
+## Version 28 continuous page and visible feedback
+
+Every model and reading view now scrolls with the document. The application no longer creates vertical or horizontal subsection scroll areas, clips a fixed-height result, or hides scrollbar controls. Evidence flows beside the result, and narrow tables become labeled year groups without replacing exact input nodes. Long notes expand into the page. The desktop rail and a safe in-column result remain available; phone summaries follow ordinary document flow.
+
+Real selection handlers now ship 280 ms opacity/8px panel transitions and drawing tab underlines. Input edits keep controls immediately usable and add 280 ms local result/chart feedback, without re-entering the editor. New actions, route departure, backgrounding and reduced-motion changes cancel motion safely. The six-second simulation replay, calculations, complete research presets, exact values, saved drafts and Undo are unchanged.
+
+`SCREEN-WORKSPACE.md` records the updated flow, accessibility and motion contracts. Validation includes the original 800 tests plus 19 focused tests; static document-renderer approximations remain distinct from browser screenshots. Native browser layout, motion painting, touch and screen-reader verification are still limited by the existing denied browser route, which was not retried or bypassed.

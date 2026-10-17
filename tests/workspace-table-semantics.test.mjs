@@ -14,12 +14,13 @@ function checkSemantics(h){
  for(const t of tables(h)){
   const caption=t.querySelector('caption');assert.equal(caption.parent,t);assert.equal(caption.querySelector('span').getAttribute('class'),'sr-only');
   assert.ok(caption.textContent.startsWith(h.get('#current-company').value+' · '));names.push(caption.textContent);
-  for(const el of [t,caption])for(const attribute of ['role','tabindex','aria-live','aria-hidden'])assert.equal(el.getAttribute(attribute),null);
+  assert.equal(t.getAttribute('role'),'table');assert.equal(caption.getAttribute('role'),null);
+  for(const el of [t,caption])for(const attribute of ['tabindex','aria-live','aria-hidden'])assert.equal(el.getAttribute(attribute),null);
   const headers=t.querySelector('thead').querySelectorAll('th');assert.ok(headers.length>=2);
-  for(const th of headers)assert.equal(th.getAttribute('scope'),'col');
+  for(const th of headers){assert.equal(th.getAttribute('scope'),'col');assert.equal(th.getAttribute('role'),'columnheader');}
   for(const row of t.querySelector('tbody').querySelectorAll('tr')){
    assert.equal(row.children.length,headers.length);assert.equal(row.children[0].tag,'th');assert.equal(row.children[0].getAttribute('scope'),'row');
-   for(const cell of row.children.slice(1))assert.equal(cell.tag,'td');
+   for(const [index,cell] of row.children.slice(1).entries()){assert.equal(cell.tag,'td');assert.equal(cell.getAttribute('role'),'cell');assert.equal(cell.getAttribute('data-column-label'),headers[index+1].textContent.trim());}
   }
  }
  assert.equal(new Set(names).size,names.length,'Visible workspace tables have distinct names');

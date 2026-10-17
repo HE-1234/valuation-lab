@@ -7,7 +7,7 @@ test('v6 QA: repeated transition cancels the previous animation and duration is 
  const prior=globalThis.matchMedia;globalThis.matchMedia=()=>({matches:false});
  try{
   const animations=[];const node={animate(frames,options){const record={frames,options,canceled:false,cancel(){this.canceled=true}};animations.push(record);return record;}};
-  enterPanel(node,1);enterPanel(node,-1);assert.equal(animations.length,2);assert.equal(animations[0].canceled,true);assert.equal(animations[1].canceled,false);assert.equal(animations[1].options.duration,180);assert.deepEqual(animations[1].frames,[{opacity:.65},{opacity:1}]);assert.ok(animations[1].frames.every(frame=>!('transform'in frame)&&!('clipPath'in frame)));
+  enterPanel(node,1);enterPanel(node,-1);assert.equal(animations.length,2);assert.equal(animations[0].canceled,true);assert.equal(animations[1].canceled,false);assert.equal(animations[1].options.duration,280);assert.deepEqual(animations[1].frames,[{opacity:.35,transform:'translateY(-8px)'},{opacity:1,transform:'translateY(0)'}]);assert.ok(animations[1].frames.every(frame=>!('clipPath'in frame)));
   animations[1].onfinish();enterPanel(node);assert.equal(animations[1].canceled,false,'finished animation must leave no active animation to cancel');
  }finally{if(prior===undefined)delete globalThis.matchMedia;else globalThis.matchMedia=prior;}
 });

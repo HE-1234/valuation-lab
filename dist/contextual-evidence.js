@@ -121,14 +121,21 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   const target = replacing ? content : element;
   if (media?.matches || typeof target.animate !== 'function') return;
   const version = animationVersion;
-  const frames = replacing ? [{opacity: .65}, {opacity: 1}] :
-   [{opacity: .65, transform: 'translateX(8px)'}, {opacity: 1, transform: 'translateX(0)'}];
+  const frames = [{opacity: .35, transform: 'translateY(8px)'}, {opacity: 1, transform: 'translateY(0)'}];
   animation = target.animate(frames, {
-   duration: replacing ? 200 : 260,
+   duration: 280,
    easing: 'cubic-bezier(.2,.8,.2,1)',
    fill: 'none'
   });
   animation.onfinish = () => { if (version === animationVersion) animation = null; };
+ }
+
+ function revealHeader() {
+  // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.
+  const bounds = header.getBoundingClientRect?.();
+  if (bounds && Number.isFinite(view?.innerHeight) && (bounds.top < 0 || bounds.bottom > view.innerHeight)) {
+   element.scrollIntoView?.({block: 'start', behavior: 'auto'});
+  }
  }
 
  function rememberPosition(current) {
@@ -197,6 +204,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   heading.textContent = options.title || title;
   if (sameContent) {
    focusWithoutScrolling(closeButton);
+   revealHeader();
    return true;
   }
   const replacing = Boolean(session);
@@ -239,6 +247,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   restoreScroll(nodeScroll);
   focusWithoutScrolling(closeButton);
   restoreScroll(current.context);
+  revealHeader();
   animateOpen(replacing);
   return true;
  }

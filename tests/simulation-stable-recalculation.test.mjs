@@ -71,7 +71,7 @@ test('default completed chart and explicit replay retain full exact bins, with b
  const h=fixture({ticker:'STABLE-DEFAULT',autoplay:null,simulationConfig:config('default')});
  try{
   const full=heights(h);assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML,/>Replay simulation<\/button>/);assert.ok(full.some(n=>n>0));
-  h.get('#mc-tab-sampling').click();assert.equal(h.animations.at(-1).options.duration,180);h.get('#mc-seed').value='new';h.get('#mc-seed').oninput();const changed=heights(h);assert.ok(h.animations.some(a=>a.options.duration===280));
+  h.get('#mc-tab-sampling').click();assert.equal(h.animations.at(-1).options.duration,280);h.get('#mc-seed').value='new';h.get('#mc-seed').oninput();const changed=heights(h);assert.ok(h.animations.some(a=>a.options.duration===280));
   h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Pause replay/);h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Resume replay/);h.get('#mc-play').click();h.get('#mc-skip').click();assert.deepEqual(heights(h),changed);
   h.motion.matches=true;h.motion.dispatch('change');const count=h.animations.length;h.get('#mc-tab-growth').click();h.get('#mc-seed').value='reduced';h.get('#mc-seed').oninput();assert.equal(h.animations.length,count);assert.equal(h.get('#mc-play').disabled,true);assert.ok(heights(h).some(n=>n>0));
  }finally{h.cleanup()}

@@ -168,7 +168,7 @@ test('evidence: source switches restore old nodes without a close callback or fo
  h.panel.content.scrollTop = 200;
  const entering = h.animations[0], staleFinish = entering.onfinish;
  h.panel.open({invoker: secondInvoker, nodes: [second]});
- assert.equal(entering.canceled, true); assert.equal(h.animations[1].options.duration, 200);
+ assert.equal(entering.canceled, true); assert.equal(h.animations[1].options.duration, 280);
  assert.equal(h.evidence.parentNode, h.source); assert.equal(second.parentNode, h.panel.content);
  assert.equal(h.panel.content.scrollTop, 0);
  assert.equal(h.invoker.getAttribute('aria-expanded'), null);
@@ -206,7 +206,7 @@ test('evidence: animation is optional, reduced motion is immediate, and preferen
   h.panel.close(); assert.equal(h.evidence.parentNode, h.source); h.panel.destroy();
  }
  const h = fixture({legacyMedia: true}); h.panel.open({nodes: [h.evidence]});
- assert.equal(h.animations[0].options.duration, 260);
+ assert.equal(h.animations[0].options.duration, 280);
  h.media.matches = true; h.media.dispatch('change');
  assert.equal(h.animations[0].canceled, true);
  assert.equal(h.panel.isOpen, true); assert.equal(h.evidence.parentNode, h.panel.content);
@@ -306,4 +306,19 @@ test('evidence: route changes restore old content without focusing hidden or det
  assert.equal(h.document.activeElement, nextPageButton);
  assert.equal(h.callbackEvents.at(-1).reason, 'navigation');
  h.panel.destroy(); assert.equal(h.document.defaultView.events.get('valuation:tab-change').size, 0);
+});
+
+test('evidence: explicit first and repeated opens reveal an offscreen header, then restore document position',()=>{
+ const h=fixture(),header=h.panel.element.children[0],view=h.document.defaultView;view.innerHeight=844;
+ let reveals=0;header.getBoundingClientRect=()=>({top:1200,bottom:1270});
+ h.panel.element.scrollIntoView=options=>{assert.deepEqual(options,{block:'start',behavior:'auto'});reveals++;h.document.scrollingElement.scrollTop=1000;};
+ h.document.scrollingElement.scrollTop=180;
+ h.panel.open({invoker:h.invoker,key:'repeat',nodes:[h.evidence]});assert.equal(reveals,1);assert.equal(h.document.activeElement,h.closeButton);
+ h.panel.open({invoker:h.invoker,key:'repeat',nodes:[h.evidence]});assert.equal(reveals,2);
+ h.panel.close();assert.equal(h.document.scrollingElement.scrollTop,180);assert.equal(h.document.activeElement,h.invoker);h.panel.destroy();
+});
+test('evidence: an already visible header does not force the document to move',()=>{
+ const h=fixture();h.document.defaultView.innerHeight=768;h.panel.element.children[0].getBoundingClientRect=()=>({top:150,bottom:210});
+ h.panel.element.scrollIntoView=()=>assert.fail('visible evidence should not jump');h.document.scrollingElement.scrollTop=90;
+ h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.equal(h.document.scrollingElement.scrollTop,90);h.panel.close();h.panel.destroy();
 });

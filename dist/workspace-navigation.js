@@ -1,3 +1,4 @@
+import {mountDocumentFlow} from './document-flow.js';
 // View navigation is separate from all model and saved-draft identities.
 export const workspacePages={
  current:{section:'studio',label:'Guided'},renewed:{section:'studio',label:'Annual model'},workbench:{section:'studio',label:'Historical'},
@@ -5,6 +6,7 @@ export const workspacePages={
 };
 const sectionLabels={studio:'Studio',research:'Research',learn:'Learn'};
 export function mountWorkspaceNavigation({document=globalThis.document,window=globalThis.window,history=globalThis.history,location=globalThis.location,enter=()=>{}}={}){
+ const releaseDocumentFlow=mountDocumentFlow(document);
  const last={studio:'renewed',research:'history',learn:'learn'};let current='renewed';
  function show(page,{record=true,animate=true}={}){
   if(!Object.hasOwn(workspacePages,page))return false;
@@ -25,5 +27,5 @@ export function mountWorkspaceNavigation({document=globalThis.document,window=gl
  const onLocation=()=>show(location.hash?location.hash.slice(1):'renewed',{record:false,animate:false});
  window.addEventListener('popstate',onLocation);window.addEventListener('hashchange',onLocation);
  show(Object.hasOwn(workspacePages,location.hash.slice(1))?location.hash.slice(1):'renewed',{record:false,animate:false});
- return {show,getPage:()=>current,destroy(){window.removeEventListener('popstate',onLocation);window.removeEventListener('hashchange',onLocation);}};
+ return {show,getPage:()=>current,destroy(){releaseDocumentFlow();window.removeEventListener('popstate',onLocation);window.removeEventListener('hashchange',onLocation);}};
 }

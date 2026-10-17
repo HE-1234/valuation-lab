@@ -98,7 +98,7 @@ test('historical: original app input handler still calculates identical values, 
 
 test('historical: grouped controls and one-action evidence are reattached after asynchronous setupFields replacements', () => {
  const h = fixture({emptyForm: true});
- assert.equal(h.observers.length, 1); assert.equal(h.observers[0].target, h.get('#assumptions'));
+ assert.equal(h.observers.length, 2); assert.equal(h.observers[0].target, h.get('#assumptions'));
  assert.deepEqual(h.observers[0].options, {childList: true});
  h.setupFields(); h.observers[0].callback();
  assert.equal(h.page.querySelectorAll('.historical-field-evidence').length, 9);
