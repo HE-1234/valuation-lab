@@ -41,7 +41,7 @@ test('independent annual review: nonzero stress and as-of timing reconcile for e
   close(actual.scenarios[0].terminalPV,terminal,c.ticker+' terminal');
   assert.equal(actual.timing.date,'2026-10-17');
   assert.equal(actual.accepted,7);
-  if(['AAOI','NBIS','LITE'].includes(c.ticker))assert.equal(actual.bridgeCoverage.complete,false,c.ticker+' remains blocked');
+  if(['AAOI','NBIS'].includes(c.ticker))assert.equal(actual.bridgeCoverage.complete,false,c.ticker+' remains blocked');
  }
 });
 
@@ -117,7 +117,7 @@ test('independent annual review: actual reset Undo preserves invalid saved value
 });
 
 test('independent annual review: claim edits immediately withhold and restore the actual common-share chart option',async()=>{
- const d=researchDraftFor(company('LITE'));d.researchSimulationConfig=smallConfig();
+ const d=researchDraftFor(company('LITE'));d.bridgeInputs.convertiblePremiumClaim=null;d.researchSimulationConfig=smallConfig();
  const storage=new Map([[RESEARCH_STORAGE_PREFIX+'LITE',JSON.stringify(d)],[RESEARCH_STORAGE_PREFIX+'selection','LITE']]);
  const h=await integratedWorkspace(storage);
  try{

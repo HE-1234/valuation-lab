@@ -171,3 +171,12 @@ Validation: all 356 automated checks passed. Focused presentation tests cover hi
 - Kept all six themes and started fresh sessions in Slate & Blue.
 
 Validation recorded for v7: 254 automated checks passed. Static previews were inspected at 320, 390 and 1440 CSS pixels. Authenticated browser, real touch and accessibility-tree behavior remained unverified because the supported browser reached the private site’s owner sign-in gate.
+
+## LITE dated capital bridge review v2 · 2026-10-17
+
+- Added the June disclosed note fair-value adjustment (6,052.9m above 1,554.3m principal) and approximately 200m capped-call asset proxy, with no duplicate note shares, coupons, conversion-request claim or historical call-premium deduction. Unchanged operating EV gives 133.8058697 USD per approximate common-equivalent share before unvalued claims.
+- Made the market-claims/intrinsic-operating hybrid, June date, incomplete employee claims and fixed claims across Monte Carlo trials explicit in the primary value card and chart. Both new values have editable sensitivities.
+- Preserved saved numerical claim edits and implicit/explicit unknowns. Added deliberate source-value Load and full Undo, including malformed operating-input recovery. Fresh drafts use the sourced defaults.
+- Added a versioned public review/correction alongside the frozen originals. The 757.8m cumulative conversion-request total includes 519.4m already settled in FY2026; neither total nor difference is extra June debt.
+- Kept AAOI/NBIS operating-only and all other renewed bridge outputs exactly unchanged. Frozen research, legacy data, scalar and historical engines are untouched.
+- Validation: 686/686 tests, syntax checks and `git diff --check` pass. Fresh Chromium launch fails before page access in this executor; browser rendering remains unverified. No commit, push or deployment.

@@ -134,7 +134,7 @@ test('renewed workspace: every company renders its actual equity option controls
   }
   assert.ok(h.get('.research-big-value'),c.ticker);
  }
- h.select('LITE');assert.equal(h.get(h.field('bridge','convertiblePremiumClaim')).value,'');assert.equal(h.get('.research-equity-value'),null);assert.match(h.get('#research-results').textContent,/explicit value.*premium/i);
+ h.select('LITE');assert.equal(h.get(h.field('bridge','convertiblePremiumClaim')).value,'6052.9');assert.equal(h.get(h.field('bridge','cappedCallAssetValue')).value,'200');assert.ok(h.get('.research-equity-value'));assert.match(h.get('#research-results').textContent,/June-dated market-claims/);
  h.input(h.field('bridge','convertiblePremiumClaim'),'0');assert.equal(h.getState().draft.bridgeInputs.convertiblePremiumClaim,0);assert.ok(h.get('.research-equity-value'));assert.match(h.get('#research-results').textContent,/principal-only/);
  h.input(h.field('bridge','convertiblePremiumClaim'),'');assert.equal(h.getState().draft.bridgeInputs.convertiblePremiumClaim,null);assert.equal(h.get('.research-equity-value'),null);assert.ok(h.get('.research-big-value'));
 });

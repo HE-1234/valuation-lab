@@ -18,7 +18,7 @@ const row=(r,id)=>r.rows.find(x=>x.id===id);
 const close=(a,b,label='')=>{assert.ok(Number.isFinite(a)&&Number.isFinite(b),label+' finite');assert.ok(Math.abs(a-b)<=Math.max(1,Math.abs(b))*2e-12,label+': '+a+' != '+b);};
 const sourceCase=t=>({...c(t),discountOrigin:researchBridgeDefinition(t).referenceDate});
 const amazonEquity=e('AMZN').supplementalEvidence['capital-funding-reconciliation'].companyReconciliation.reported_and_derived_USDm.June_current_marketable_equity_included;
-const defaultOptions=t=>t==='LITE'?{convertiblePremiumClaim:0}:{};
+const defaultOptions=()=>({});
 const evaluate=(t,ev=100000,options={})=>calculateResearchBridge(sourceCase(t),ev,{...defaultOptions(t),...options});
 const expectedFixedLines={
  AAPL:{longSecurities:reg('AAPL').claims.noncurrentMarketableSecurities},
@@ -54,7 +54,7 @@ for(const company of cases)test(`claims source audit: ${company.ticker} cash, de
  const before=JSON.stringify(company),result=calculateResearchBridge(company,123456);
  assert.equal(JSON.stringify(company),before);assert.equal(result.informationAsOf,'2026-10-17');
  assert.equal(result.capitalReferenceDate,d.referenceDate);assert.equal(result.shareReferenceDate,d.shareDate);assert.equal(result.discountOrigin,company.valuationTiming.discountOrigin);
- if(['AAOI','NBIS','LITE'].includes(ticker)){assert.equal(result.status,'operating-only');assert.equal(result.eligible,false);for(const key of ['equity','perShare','rawPerShare','flooredPerShare'])assert.equal(result[key],null);assert.ok(result.requiredInputs.length);}
+ if(['AAOI','NBIS'].includes(ticker)){assert.equal(result.status,'operating-only');assert.equal(result.eligible,false);for(const key of ['equity','perShare','rawPerShare','flooredPerShare'])assert.equal(result[key],null);assert.ok(result.requiredInputs.length);}
  else{assert.equal(result.status,'conditional');assert.equal(result.currentCapitalVerified,false);assert.equal(result.priceComparisonEligible,false);assert.equal(result.claimCompleteness,'partial');assert.ok(result.unresolved.length);}
 });
 
@@ -144,13 +144,14 @@ test('NBIS: specialist funding bridge remains blocked at every date; pre-funded 
  }
 });
 
-test('LITE: missing premium is null and blocks; explicitly entered zero is labeled principal-only stress',()=>{
- const field=researchBridgeOptionDefinitions('LITE').find(x=>x.key==='convertiblePremiumClaim');assert.equal(field.default,null);
- for(const options of [{},{convertiblePremiumClaim:null}]){const r=calculateResearchBridge(c('LITE'),10000,options);assert.equal(r.status,'operating-only');assert.equal(r.equity,null);assert.equal(r.perShare,null);}
- const zero=evaluate('LITE',10000),priced=evaluate('LITE',10000,{convertiblePremiumClaim:600});
- close(zero.allocationShares,88.6+f('LITE').balanceSheetAndClaims.preferredSharesApprox);close(row(zero,'fundedDebt').amount,1554.3+92.8);
+test('LITE: source-backed June adjustment defaults; explicit unknown still blocks and zero remains a stress',()=>{
+ const field=researchBridgeOptionDefinitions('LITE').find(x=>x.key==='convertiblePremiumClaim');assert.equal(field.default,6052.9);assert.equal(field.allowUnknown,true);
+ const unknown=calculateResearchBridge(c('LITE'),10000,{convertiblePremiumClaim:null});assert.equal(unknown.status,'operating-only');assert.equal(unknown.equity,null);assert.equal(unknown.perShare,null);
+ const base=evaluate('LITE',10000),zero=evaluate('LITE',10000,{convertiblePremiumClaim:0}),priced=evaluate('LITE',10000,{convertiblePremiumClaim:600});
+ close(base.allocationShares,88.6+f('LITE').balanceSheetAndClaims.preferredSharesApprox);close(row(base,'fundedDebt').amount,1554.3+92.8);
+ close(base.equity,10000+2738.4+200-7607.2-92.8);close(row(base,'cappedCallAssetValue').amount,200);
  assert.match(zero.warnings.join(' '),/zero premium.*omission of option value/);close(priced.equity,zero.equity-600);assert.equal(row(zero,'convertiblePremiumClaim').amount,0);
- assert.ok(!zero.rows.some(x=>x.amount===2000||x.amount===757.8));assert.equal(row(zero,'noteConversionShares'),undefined);
+ assert.ok(!base.rows.some(x=>x.amount===2000||x.amount===757.8||x.amount===238.4));assert.equal(row(base,'noteConversionShares'),undefined);
 });
 
 test('TSM: output remains native TWD ordinary shares and stale liabilities retain old dates',()=>{
@@ -181,13 +182,13 @@ test('missing amounts: unquantified AVGO leases remain unresolved, not fabricate
  const missing=reg('AVGO').unresolvedObligationAssetRegister.find(x=>x.id==='operating-finance-leases');assert.equal(missing.amount,null);
  const r=evaluate('AVGO');assert.equal(row(r,'financeLeases'),undefined);assert.match(r.warnings.join(' '),/additional finance-lease liabilities remain unquantified/);assert.equal(r.claimCompleteness,'partial');
  const tsm=f('TSM').claims;assert.equal(tsm.currentLeaseLiability,null);assert.equal(tsm.noncurrentLeaseLiability,null);
- for(const company of cases.filter(x=>!['NBIS','AAOI','LITE'].includes(x.ticker))){const result=calculateResearchBridge(company,100000);assert.match(result.warnings.join(' '),/Zero additional-claim allowance.*not verified absent/);}
+ for(const company of cases.filter(x=>!['NBIS','AAOI'].includes(x.ticker))){const result=calculateResearchBridge(company,100000);assert.match(result.warnings.join(' '),/Zero additional-claim allowance.*not verified absent/);}
 });
 
 test('options: explicit missing, strings, infinities and out-of-bounds values never silently become financial zero',()=>{
  for(const ticker of cases.map(c=>c.ticker))for(const def of researchBridgeOptionDefinitions(ticker).filter(x=>x.type==='number')){
   for(const bad of [undefined,NaN,Infinity,'0',-1])assert.throws(()=>calculateResearchBridge(sourceCase(ticker),100000,{...defaultOptions(ticker),[def.key]:bad}),undefined,ticker+' '+def.key);
-  if(def.default!==null)assert.throws(()=>calculateResearchBridge(sourceCase(ticker),100000,{...defaultOptions(ticker),[def.key]:null}));
+  if(def.default!==null&&!def.allowUnknown)assert.throws(()=>calculateResearchBridge(sourceCase(ticker),100000,{...defaultOptions(ticker),[def.key]:null}));
   if(def.max!==undefined)assert.throws(()=>calculateResearchBridge(sourceCase(ticker),100000,{...defaultOptions(ticker),[def.key]:def.max+1}));
  }
  for(const value of [undefined,null,NaN,Infinity,'100'])assert.throws(()=>calculateResearchBridge(c('AAPL'),value));

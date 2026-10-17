@@ -120,7 +120,8 @@ test('annual simulation: signed negative EV and common allocations remain unclip
 });
 
 test('annual simulation: claim gates and invalid bridge inputs withhold common equity only',()=>{
- const lite=draft('LITE');assert.equal(simulateResearch(lite,{trials:2}).bridgeCoverage.complete,false);
+ const lite=draft('LITE');assert.equal(simulateResearch(lite,{trials:2}).bridgeCoverage.complete,true);
+ lite.bridgeInputs.convertiblePremiumClaim=null;assert.equal(simulateResearch(lite,{trials:2}).bridgeCoverage.complete,false);
  lite.bridgeInputs={convertiblePremiumClaim:0};assert.equal(simulateResearch(lite,{trials:2}).bridgeCoverage.complete,true);
  const aapl=draft('AAPL');aapl.bridgeInputs={additionalClaimAllowance:-1};
  const r=simulateResearch(aapl,{trials:2});assert.equal(r.accepted,2);assert.equal(r.perShare.accepted,0);assert.equal(r.baseline.bridge.status,'invalid');

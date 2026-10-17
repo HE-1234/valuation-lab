@@ -1,4 +1,5 @@
 // Versioned annual research model. The historical and scalar engines are unchanged.
+import {researchBridgeDefinition} from './research-claims.js';
 export const RESEARCH_PROFILE_ID='annual-research-v1';
 export const RESEARCH_VERSION='2026-10-17-reviewed-v1';
 export const RESEARCH_PATH='./data/renewed-research-2026-10-17/cases.json';
@@ -14,7 +15,8 @@ const rowFields=['revenue','margin','taxRate','reinvestment','wacc'];
 export function researchCaseId(c){return `${RESEARCH_VERSION}:${c.ticker}:${c.scenario}`;}
 export function researchDraftFor(c){
  if(!object(c)||!Array.isArray(c.annual)||!c.annual.length)throw Error('A complete dated annual research case is required.');
- return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:RESEARCH_VERSION,caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:{},notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
+ const lite=c.ticker==='LITE'?researchBridgeDefinition('LITE'):null;
+ return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:RESEARCH_VERSION,caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
 }
 export function researchDraftIssues(d,{includeTiming=true}={}){
  const errors=[];
@@ -30,6 +32,8 @@ export function researchDraftIssues(d,{includeTiming=true}={}){
   // Revenue contraction never creates a release automatically.
  });
  if(!Number.isInteger(d.forecastHorizonYears)||!Array.isArray(d.annual)||d.annual.length!==d.forecastHorizonYears)errors.push('The full source forecast horizon must be preserved; annual rows cannot be truncated or appended silently.');
+ if(d.ticker==='LITE'&&d.bridgeInputs!==undefined&&!object(d.bridgeInputs))errors.push('Saved LITE bridge inputs must be an object; malformed claim settings are retained for recovery.');
+ if(d.ticker==='LITE'&&d.bridgeReviewVersion!==undefined&&!['legacy-preserved-v1','2026-10-17-lite-v2'].includes(d.bridgeReviewVersion))errors.push('Unsupported saved LITE bridge review version; retain and export before recovery.');
  const t=d.terminal;
  if(!object(t)||!terminalFields.every(k=>finite(t[k])))errors.push('Complete all terminal assumptions.');
  else if(t.growth<0||t.growth>.05||t.margin<=0||t.margin>1||t.taxRate<0||t.taxRate>.6||t.wacc<=t.growth||t.wacc>1||t.roic<=t.growth)errors.push('Terminal policy requires 0–5% growth, positive margin, tax 0–60%, WACC > growth and ROIC > growth.');
@@ -43,12 +47,25 @@ export function restoreResearchDraft(value,c){
  // Return it intact so the user can export/recover it, with calculation withheld.
  if(!object(value)||value.profileId!==RESEARCH_PROFILE_ID||value.schemaVersion!==1||value.version!==RESEARCH_VERSION||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||value.forecastHorizonYears!==c.forecastHorizonYears||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
  const errors=researchDraftIssues(value);
- return {draft:copy(value),restored:true,error:errors.length?errors.join(' '):null};
+ const draft=copy(value);
+ if(!errors.length&&c.ticker==='LITE')preserveLegacyLiteBridge(draft);
+ return {draft,restored:true,error:errors.length?errors.join(' '):null};
+}
+// Preserve old economics before any explicit operating-case recovery as well as
+// normal restore. Work only on copies; malformed claim containers stay untouched.
+function preserveLegacyLiteBridge(d){
+ if(d.bridgeReviewVersion!==undefined)return;
+ if(d.bridgeInputs===undefined)d.bridgeInputs={};
+ if(!object(d.bridgeInputs))return;
+ if(!Object.prototype.hasOwnProperty.call(d.bridgeInputs,'convertiblePremiumClaim'))d.bridgeInputs.convertiblePremiumClaim=null;
+ if(!Object.prototype.hasOwnProperty.call(d.bridgeInputs,'cappedCallAssetValue'))d.bridgeInputs.cappedCallAssetValue=0;
+ d.bridgeReviewVersion='legacy-preserved-v1';
 }
 export function loadAnnualResearchCase(previous,c){
  const next=researchDraftFor(c);
  if(object(previous)){
-  for(const key of ['notes','bridgeInputs','researchSimulationConfig'])if(Object.prototype.hasOwnProperty.call(previous,key))next[key]=copy(previous[key]);
+  for(const key of ['notes','bridgeInputs','bridgeReviewVersion','researchSimulationConfig'])if(Object.prototype.hasOwnProperty.call(previous,key))next[key]=copy(previous[key]);
+  if(c.ticker==='LITE'&&previous.ticker==='LITE'&&previous.bridgeReviewVersion===undefined){delete next.bridgeReviewVersion;if(previous.bridgeInputs===undefined)next.bridgeInputs={};preserveLegacyLiteBridge(next);}
  }
  return {draft:next,undo:previous==null?null:copy(previous)};
 }
