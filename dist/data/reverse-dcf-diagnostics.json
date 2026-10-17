@@ -1,0 +1,145 @@
+{
+  "status": "Conditional reverse-DCF diagnostics, post-freeze",
+  "cases": [
+    {
+      "snapshotId": "NVDA-FY2021",
+      "frozenHash": "52e83dbdf658f0ca8b76eae1e26aaecb4d706024e16b2f13ced07b4aa933061a",
+      "quoteDate": "2021-03-01",
+      "quoteOriginalBasis": 553.67,
+      "quoteSource": "https://www.edwardjones.com/sites/default/files/acquiadam/2021-03/stock-table-canada-newsletter.pdf",
+      "quoteCharacterization": "Contemporaneous recent/end price, corroborated by dated exchange newspaper table; not independently certified official exchange close",
+      "cutoff": "2021-03-01T14:30:00Z",
+      "timing": "Quote is entry-day close/recent sale, not known at the earlier open cutoff. This inverse diagnostic is separate from original intrinsic freeze.",
+      "baseValue": 247.05985003282254,
+      "bullValue": 536.848875239103,
+      "bullToQuoteGapPct": -3.0381138152504095,
+      "growthPremiumDiagnostic": {
+        "definition": "Add x percentage points to each of first five annual growth rates, taper premium linearly in years6–9 to zero in year10; retain margins, investment productivity, taxes, WACC, terminal g and ROIC. This changes funded investment, not just revenue.",
+        "status": "root found",
+        "parameter": 0.15630868348874705,
+        "reproducedPrice": 553.6699999999996,
+        "residual": -3.410605131648481e-13,
+        "year1Revenue": 24700.822297174855,
+        "year5Revenue": 76391.12758180946,
+        "year10Revenue": 145793.50418824394,
+        "year1Growth": 0.48130868348874706,
+        "terminalShare": 0.6991669820572156
+      },
+      "waccShiftDiagnostic": {
+        "definition": "Parallel shift to all explicit WACC rates and terminal WACC; all operating forecasts and terminal ROIC unchanged. Non-unique alternative inverse problem, not an observed historical discount rate.",
+        "status": "root found",
+        "parameter": -0.030429663129274677,
+        "reproducedPrice": 553.6700000000002,
+        "residual": 2.2737367544323206e-13,
+        "impliedTerminalWacc": 0.049570336870725325,
+        "impliedFirstYearWacc": 0.05957033687072532
+      },
+      "interpretation": "A solved parameter identifies one combination that reproduces the quote under all other fixed assumptions. It does not reveal unique market beliefs, establish fair value, or justify changing the frozen forecast."
+    },
+    {
+      "snapshotId": "NVDA-FY2022",
+      "frozenHash": "349c2f8b0c153f78d9390d1ea7e13fc8305015e367973ef2918bc59fb9932d1a",
+      "quoteDate": "2022-03-18",
+      "quoteOriginalBasis": 264.53,
+      "quoteSource": "https://www.banorte.com/cms/casadebolsa/files/Boletin_historico/2022/Boletin_18Mar22.pdf",
+      "quoteCharacterization": "Dated Banorte price table; contemporaneous news explicitly states Friday session ending price",
+      "cutoff": "2022-03-18T13:30:00Z",
+      "timing": "Quote is entry-day close/recent sale, not known at the earlier open cutoff. This inverse diagnostic is separate from original intrinsic freeze.",
+      "baseValue": 78.15785529554502,
+      "bullValue": 166.30837209227585,
+      "bullToQuoteGapPct": -37.130619554577606,
+      "growthPremiumDiagnostic": {
+        "definition": "Add x percentage points to each of first five annual growth rates, taper premium linearly in years6–9 to zero in year10; retain margins, investment productivity, taxes, WACC, terminal g and ROIC. This changes funded investment, not just revenue.",
+        "status": "root found",
+        "parameter": 0.24371594462749574,
+        "reproducedPrice": 264.53,
+        "residual": 0,
+        "year1Revenue": 39394.45093370442,
+        "year5Revenue": 144343.0773029612,
+        "year10Revenue": 317481.033148617,
+        "year1Growth": 0.46371594462749577,
+        "terminalShare": 0.6960793095971644
+      },
+      "waccShiftDiagnostic": {
+        "definition": "Parallel shift to all explicit WACC rates and terminal WACC; all operating forecasts and terminal ROIC unchanged. Non-unique alternative inverse problem, not an observed historical discount rate.",
+        "status": "root found",
+        "parameter": -0.043169875188620185,
+        "reproducedPrice": 264.5300000000001,
+        "residual": 1.1368683772161603e-13,
+        "impliedTerminalWacc": 0.04183012481137982,
+        "impliedFirstYearWacc": 0.05683012481137982
+      },
+      "interpretation": "A solved parameter identifies one combination that reproduces the quote under all other fixed assumptions. It does not reveal unique market beliefs, establish fair value, or justify changing the frozen forecast."
+    },
+    {
+      "snapshotId": "NVDA-FY2023",
+      "frozenHash": "bead6a90cfecf5451bacff55478de4b29b9c4d74952e16b52fde5bab02fd3ff8",
+      "quoteDate": "2023-02-27",
+      "quoteOriginalBasis": 235.01,
+      "quoteSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000021/nvidia-formsx3.htm",
+      "quoteCharacterization": "NVIDIA S-3 last reported sale price; not labeled official closing auction price",
+      "cutoff": "2023-02-27T14:30:00Z",
+      "timing": "Quote is entry-day close/recent sale, not known at the earlier open cutoff. This inverse diagnostic is separate from original intrinsic freeze.",
+      "baseValue": 91.59891173878475,
+      "bullValue": 251.8715018225896,
+      "bullToQuoteGapPct": 7.174801847831835,
+      "growthPremiumDiagnostic": {
+        "definition": "Add x percentage points to each of first five annual growth rates, taper premium linearly in years6–9 to zero in year10; retain margins, investment productivity, taxes, WACC, terminal g and ROIC. This changes funded investment, not just revenue.",
+        "status": "root found",
+        "parameter": 0.18079789981129685,
+        "reproducedPrice": 235.00999999999993,
+        "residual": -5.684341886080802e-14,
+        "year1Revenue": 36436.42254950992,
+        "year5Revenue": 132346.59360837188,
+        "year10Revenue": 277947.6532861344,
+        "year1Growth": 0.35079789981129683,
+        "terminalShare": 0.7015132320492631
+      },
+      "waccShiftDiagnostic": {
+        "definition": "Parallel shift to all explicit WACC rates and terminal WACC; all operating forecasts and terminal ROIC unchanged. Non-unique alternative inverse problem, not an observed historical discount rate.",
+        "status": "root found",
+        "parameter": -0.0358441160090347,
+        "reproducedPrice": 235.00999999999974,
+        "residual": -2.5579538487363607e-13,
+        "impliedTerminalWacc": 0.04915588399096531,
+        "impliedFirstYearWacc": 0.0691558839909653
+      },
+      "interpretation": "A solved parameter identifies one combination that reproduces the quote under all other fixed assumptions. It does not reveal unique market beliefs, establish fair value, or justify changing the frozen forecast."
+    },
+    {
+      "snapshotId": "NVDA-FY2024",
+      "frozenHash": "d799745495fc7feca090f5cccc37cca594eaf7b169eed65fc42c57db9a104d16",
+      "quoteDate": "2024-02-22",
+      "quoteOriginalBasis": 785.38,
+      "quoteSource": "https://apnews.com/article/efc7109a43d66964a5140c033ba2bc2d",
+      "quoteCharacterization": "Contemporaneously reported close",
+      "cutoff": "2024-02-22T14:30:00Z",
+      "timing": "Quote is entry-day close/recent sale, not known at the earlier open cutoff. This inverse diagnostic is separate from original intrinsic freeze.",
+      "baseValue": 406.9803952206175,
+      "bullValue": 897.9698382070434,
+      "bullToQuoteGapPct": 14.335714966900536,
+      "growthPremiumDiagnostic": {
+        "definition": "Add x percentage points to each of first five annual growth rates, taper premium linearly in years6–9 to zero in year10; retain margins, investment productivity, taxes, WACC, terminal g and ROIC. This changes funded investment, not just revenue.",
+        "status": "root found",
+        "parameter": 0.13893713266770413,
+        "reproducedPrice": 785.3800000000002,
+        "residual": 2.2737367544323206e-13,
+        "year1Revenue": 112031.72799638186,
+        "year5Revenue": 386418.0145407029,
+        "year10Revenue": 722834.0929130602,
+        "year1Growth": 0.8389371326677041,
+        "terminalShare": 0.6522513339263871
+      },
+      "waccShiftDiagnostic": {
+        "definition": "Parallel shift to all explicit WACC rates and terminal WACC; all operating forecasts and terminal ROIC unchanged. Non-unique alternative inverse problem, not an observed historical discount rate.",
+        "status": "root found",
+        "parameter": -0.0309994825625143,
+        "reproducedPrice": 785.3800000000003,
+        "residual": 3.410605131648481e-13,
+        "impliedTerminalWacc": 0.059000517437485696,
+        "impliedFirstYearWacc": 0.0690005174374857
+      },
+      "interpretation": "A solved parameter identifies one combination that reproduces the quote under all other fixed assumptions. It does not reveal unique market beliefs, establish fair value, or justify changing the frozen forecast."
+    }
+  ]
+}
