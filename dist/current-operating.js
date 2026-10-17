@@ -1,16 +1,29 @@
-// A documented current-only capacity ramp. Scalars remain the four sampled
+// Current-only explicit operating paths. Scalars remain the four sampled
 // economic drivers; the same deterministic adapter constructs every annual path.
+export const FLEXIBLE_PROFILE_ID='flexible-growth-v1';
+const finite=x=>typeof x==='number'&&Number.isFinite(x);
+const flexible=p=>p?.id===FLEXIBLE_PROFILE_ID;
 const sourceStart=-67.406/595.97;
 const growthWeights=[1,15/23,11/23,7/23,5/23,3/23,11/115,1/23,1/115,0];
 const referenceMargins=[-.05,0,.05,.08,.10,.12,.12,.12,.12,.12];
 const marginProgress=referenceMargins.map(m=>(m-sourceStart)/(.12-sourceStart));
 const capitalMultipliers=[1,1,1.25,1.5,1.75,2,2];
 export function operatingProfileDefinition(snapshot,draft){
- if(draft?.operatingProfile?.id!=='aaoi-capacity-ramp-v1')return null;
+ const p=draft?.operatingProfile;
+ if(flexible(p))return {id:FLEXIBLE_PROFILE_ID,label:'Flexible growth and maturity',schemaVersion:1,mode:p.mode,explicitYears:p.explicitYears,maturityYears:draft.assumptions?.years,subsequentGrowth:Array.isArray(p.subsequentGrowth)?[...p.subsequentGrowth]:p.subsequentGrowth,classification:'User-selected analyst path, not issuer guidance or a fitted forecast',growthSampling:'One initial-growth draw shifts every explicit annual growth rate by the same percentage-point difference from the baseline; the fade then reaches fixed stable growth. No annual independent draws or clipping.',risk:'Constant WACC throughout the forecast and terminal period; no risk or capital-structure fade is modeled.',note:'Growth reaches stable growth in the selected maturity year. Margin converges from normalized starting EBIT to its target over the full horizon. Initial incremental capital intensity is held through the explicit phase, then fades to (1 + stable growth) × mature margin × (1 − tax) / terminal ROIC. Synchronizing margin and capital maturity is a modeling simplification; terminal ROIC remains a separate judgment.'};
+ if(p?.id!=='aaoi-capacity-ramp-v1')return null;
  return {id:'aaoi-capacity-ramp-v1',label:'Staged capacity research case',asOf:'2026-10-17',sourceSnapshotId:'AAOI-TTM-2026-06-30',growthWeights:[...growthWeights],marginProgress:[...marginProgress],capitalMultipliers:[...capitalMultipliers],terminalCapitalIntensityFade:[1/3,2/3,1],referenceStartingMargin:sourceStart,referenceMargins:[...referenceMargins],classification:'Explicit analyst path, not issuer guidance or a fitted forecast',note:'Front-loaded growth, profitability reached during the buildout, and capital productivity initially doubling, then capital intensity fading to (1 + terminal growth) × mature margin × (1 − tax) / terminal ROIC, matching the protected engine’s terminal timing. Current-year guidance and capacity plans support the staged structure; each annual point remains an analyst assumption.'};
 }
 export function operatingIssues(snapshot,draft){
  const p=draft?.operatingProfile;if(p===undefined)return [];
+ if(flexible(p)){
+  if(typeof p!=='object'||Array.isArray(p)||p.schemaVersion!==1||Object.keys(p).some(k=>!['schemaVersion','id','mode','explicitYears','subsequentGrowth'].includes(k))||!['immediate','maintain','annual'].includes(p.mode)||!(p.mode==='immediate'?p.explicitYears===0:[3,5].includes(p.explicitYears))||!Array.isArray(p.subsequentGrowth)||p.subsequentGrowth.length!==(p.mode==='annual'?p.explicitYears-1:0)||!Array.from(p.subsequentGrowth).every(g=>finite(g)&&g>=-.5&&g<=2))return ['Choose a valid growth path: immediate fade, or 3 / 5 explicit years with finite annual growth from −50% to 200%.'];
+  if(!finite(draft.normalizationDelta))return ['The flexible path requires a finite starting EBIT normalization.'];
+  if(![10,15,20].includes(draft.assumptions?.years))return ['Flexible maturity must be 10, 15 or 20 years.'];
+  if(!(draft.assumptions?.targetMargin>0))return ['The flexible path requires a positive mature margin for finite terminal-consistent sales/capital.'];
+  if(draft.assumptions?.yearlyOverrides!=null)return ['Do not combine a flexible operating profile with a second annual-override path.'];
+  return [];
+ }
  if(!p||typeof p!=='object'||Array.isArray(p)||p.schemaVersion!==1||Object.keys(p).some(k=>!['schemaVersion','id'].includes(k))||!['linear-v1','aaoi-capacity-ramp-v1'].includes(p.id))return ['Choose a valid operating-path profile.'];
  if(p.id==='linear-v1')return [];
  if(snapshot.ticker!=='AAOI'||snapshot.raw?.id!=='AAOI-TTM-2026-06-30'||snapshot.sourceUrl!=='https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm'||snapshot.researchImported===true||snapshot.raw?.researchImported===true)return ['The staged AAOI operating profile requires its exact source-matched June 2026 TTM baseline.'];
@@ -23,6 +36,20 @@ export function operatingIssues(snapshot,draft){
 export function operatingAssumptions(snapshot,draft,assumptions){
  const errors=operatingIssues(snapshot,draft);if(errors.length)throw Error(errors.join(' '));
  const profile=operatingProfileDefinition(snapshot,draft);if(!profile)return {...assumptions};
+ if(profile.id===FLEXIBLE_PROFILE_ID){
+  const p=draft.operatingProfile,a=assumptions,n=a.years,e=p.explicitYears;
+  if(![10,15,20].includes(n)||!(a.targetMargin>0))throw Error('Flexible paths require a 10 / 15 / 20-year horizon and a positive mature margin.');
+  const shift=a.growth-draft.assumptions.growth;
+  const early=p.mode==='annual'?[a.growth,...p.subsequentGrowth.map(g=>g+shift)]:Array(e).fill(a.growth);
+  const start=(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue,terminalIntensity=(1+a.terminalGrowth)*a.targetMargin*(1-a.tax)/a.terminalROIC;
+  const yearlyOverrides=Array.from({length:n},(_,i)=>{
+   const year=i+1,fade=Math.max(0,(year-e)/(n-e));
+   const growth=p.mode==='immediate'?a.growth+(a.terminalGrowth-a.growth)*i/(n-1):year<=e?early[i]:early[e-1]+(a.terminalGrowth-early[e-1])*fade;
+   const intensity=(1-fade)/a.salesCapital+fade*terminalIntensity;
+   return {growth,margin:start+(a.targetMargin-start)*year/n,salesCapital:1/intensity,taxRate:a.tax,wacc:a.wacc};
+  });
+  return {...a,yearlyOverrides};
+ }
  if(!(assumptions.targetMargin>0))throw Error('Staged AAOI mature margin must be positive for finite terminal-consistent capital productivity.');
  const start=(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue;
  return {...assumptions,yearlyOverrides:growthWeights.map((weight,i)=>({growth:assumptions.terminalGrowth+(assumptions.growth-assumptions.terminalGrowth)*weight,margin:start+(assumptions.targetMargin-start)*marginProgress[i],salesCapital:i<7?assumptions.salesCapital*capitalMultipliers[i]:1/((1-(i-6)/3)/(2*assumptions.salesCapital)+(i-6)/3*(1+assumptions.terminalGrowth)*assumptions.targetMargin*(1-assumptions.tax)/assumptions.terminalROIC),taxRate:assumptions.tax,wacc:assumptions.wacc}))};

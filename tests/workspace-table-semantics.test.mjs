@@ -86,7 +86,7 @@ test('workspace tables: captions are escaped and every helper call supplies an e
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const render=new Function('company','esc',definition+';return table;')({ticker:'A<B'},esc),out=render('Value & <risk>',['Name','Value'],[['Example','1']]);
  assert.match(out,/<caption><span class="sr-only">A&lt;B · Value &amp; &lt;risk&gt;<\/span><\/caption>/);assert.doesNotMatch(out,/<risk>|A<B/);
- assert.doesNotMatch(source,/\btable\(\[/);assert.equal((source.match(/\btable\('/g)||[]).length,9);
+ assert.doesNotMatch(source,/\btable\(\[/);assert.equal((source.match(/\btable\('/g)||[]).length,8);assert.equal((source.match(/\btable\(isFlexible\(\)\?'Flexible annual operating path':'Staged annual operating path'/g)||[]).length,1);
 });
 
 test('workspace tables: row-heading visuals are scoped and preserve existing body-cell treatment',()=>{

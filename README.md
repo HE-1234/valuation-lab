@@ -73,3 +73,14 @@ Alphabet's full-dilution ownership proxy assumes cash preferred dividends, uncha
 All claim controls are live and saved per baseline. Invalid edits clear stale deterministic and simulation results. Quote basis changes require a matching selection after capital-basis changes. Exports contain claim inputs, source dates, formulas, annual staged paths and warnings. The published evidence is `dist/data/current-claims-research.json`; internal retrieval paths are excluded.
 
 Version 9 verification: 383 automated checks passed. The two default 4,000-trial runs accepted all trials; AAOI had 90.175% at the model zero floor, while Alphabet had a conditional median of about $166.65 per share. These frequencies are not probabilities of failure or investment profit. Phone (320/390px) and desktop (1440px) static previews were reviewed; real authenticated browser and native-touch verification remain unavailable.
+
+
+## Flexible current growth and maturity
+
+The current-only `flexible-growth-v1` profile adds immediate fade, maintained 3/5-year growth and explicitly entered 3/5-year growth paths, with selectable 10/15/20-year maturity. It is opt-in: default linear economics, existing researched cases, AAOI's documented staged ten-year profile, and the historical engine/data remain unchanged.
+
+Growth fades from the last explicit rate to stable growth at maturity. Margin converges across the full horizon. Initial capital intensity is held through the explicit phase and then converges to `(1 + g) × mature margin × (1 − tax) / terminal ROIC`; flexible immediate mode starts the capital transition from year zero. This preserves terminal FCFF timing. WACC is constant within each deterministic path or simulation draw, explicitly not a modeled risk/financing transition. Terminal ROIC is separate user judgment.
+
+The same adapter rebuilds every Monte Carlo scenario. Explicit annual rates shift together by sampled year-one growth minus baseline year-one growth, followed by the fade to fixed stable growth; invalid annual rates are excluded without redraw or clipping. Drafts and exports retain the profile, annual entries, selected horizon and resulting annual path. Loading research explicitly restores its original path. Malformed flexible saved inputs fail closed. Source, date, currency, claims and specialist-model gates remain in place.
+
+`dist/data/growth-methodology.html` documents formulas, primary sources and simplifications. `dist/data/goog-valuation-audit.html` separates source findings, legacy sensitivities and the new capital-consistent paths without changing Google's research defaults. Independent numerical, seeded-simulation, migration and runtime tests cover the feature. Browser verification limits above still apply.

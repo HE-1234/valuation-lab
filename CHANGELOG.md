@@ -1,6 +1,19 @@
 # Change log
 
 
+## 2026-10-17, 17:18 UTC · Explicit early growth and flexible maturity
+
+- Added opt-in current-company paths: immediate fade, maintained growth for 3/5 years, or explicit annual growth for 3/5 years; maturity is separately selectable at year 10/15/20.
+- Preserved every existing default, research-case input and AAOI ten-year staged schedule. Deliberate switches expose the new path, keep scalar inputs, and offer narrowly scoped Undo.
+- Synchronized flexible growth, margin and capital maturity as an explicit simplifying assumption. Capital intensity converges to the terminal reinvestment identity; WACC is explicitly constant and terminal ROIC remains independent judgment.
+- Rebuilt the same annual path inside every seeded Monte Carlo trial. Explicit annual rates shift together with sampled year-one growth; invalid trials are excluded without clipping or replacement.
+- Added maturity revenue, cumulative modeled net reinvestment, terminal ROIC/reinvestment and a same-scalar legacy-path comparison. Kept adjacent company history and linked an independent Alphabet audit.
+- Saved flexible horizon/rates without silently changing prior work. Malformed saved scalars, normalization and profile shapes fail closed; nonfinite flexible cash flows cannot masquerade as zero equity. Research reload restores the original profile, with Undo load retained.
+- Added formula/source documentation and independent oracles. No historic engine, frozen research, source financials or research defaults changed.
+
+Validation: all 487 automated tests pass, including 38 independent mathematical/seeded-draw oracles, 14 boundary/persistence checks, six UI-handler checks and 24 complete v19 valuation/simulation goldens. Twelve static previews cover 320/390/1440px, all six themes, explicit 20-year paths, forecast tables and AAOI/Alphabet. The inspected panels show no clipping. These are document-renderer approximations; authenticated browser rendering, native touch and screen-reader behavior remain unverified. No access restriction was bypassed.
+
+
 ## 2026-10-17, 16:42 UTC · Name financial tables and connect their rows
 
 - Added company-specific native captions to the current workspace's nine financial-table purposes, with caption text using the existing visually hidden treatment.

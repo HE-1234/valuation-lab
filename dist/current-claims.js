@@ -89,6 +89,7 @@ export function valueCurrentWithClaims(snapshot,draft,assumptions=draft.assumpti
  const errors=claimsIssues(snapshot,draft);if(errors.length)throw Error(errors.join(' '));
  const engineAssumptions=operatingAssumptions(snapshot,draft,assumptions),profile=operatingProfileDefinition(snapshot,draft);
  const computed=valueCompany({...snapshot,ebit:snapshot.ebit+draft.normalizationDelta,provisionalBridge:true},engineAssumptions);
+ if(profile?.id==='flexible-growth-v1'&&(!['enterprise','equity','perShare','rawPerShare','terminalPV','terminalNopat','terminalReinvestment','forecastPV'].every(k=>finite(computed[k]))||!computed.rows.every(row=>Object.values(row).every(finite))))throw Error('Flexible path valuation is numerically nonfinite; revise the scale or capital assumptions.');
  const value=profile?{...computed,assumptions:{...assumptions},operatingProfile:{...profile,annualPath:engineAssumptions.yearlyOverrides}}:computed,d=claimsDefinition(snapshot);
  if(!d)return value;
  const c=draft.claims,rows=[],warnings=[...d.cautions];
