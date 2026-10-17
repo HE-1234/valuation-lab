@@ -20,7 +20,7 @@ test('v6 QA: touch uses pointer capture, cancellation releases it and non-draggi
 });
 test('v6 QA: bounded particles pause/resume, tab/visibility cleanup and destroy remove listeners',()=>{
  const h=fixture({ticker:'ANIMQA'});try{
-  assert.equal(h.animations.length,112);assert.ok(h.animations.every(a=>a.options.duration+a.options.delay<5000));const play=h.get('#mc-play');play.click();assert.ok(h.animations.every(a=>a.state==='paused'));play.click();assert.ok(h.animations.every(a=>a.state==='running'));
+  assert.equal(h.animations.length,112);assert.ok(h.animations.every(a=>a.options.duration+a.options.delay<=6000));const play=h.get('#mc-play');play.click();assert.ok(h.animations.every(a=>a.state==='paused'));play.click();assert.ok(h.animations.every(a=>a.state==='running'));
   h.windowEvents.dispatch('valuation:tab-change',{detail:'history'});assert.ok(h.animations.every(a=>a.state==='canceled'));assert.equal(h.get('#mc-particles').children.length,0);
   play.click();assert.equal(h.animations.length,224);h.doc.hidden=true;h.doc.dispatch('visibilitychange');assert.ok(h.animations.every(a=>a.state==='canceled'));
   h.destroy();assert.ok(h.observers.every(o=>o.disconnected));assert.ok([...h.windowEvents.listeners.values(),...h.motion.listeners.values(),...h.doc.listeners.values()].every(s=>s.size===0));

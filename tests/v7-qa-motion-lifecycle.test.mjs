@@ -9,7 +9,7 @@ test('v7 QA: initial playback observes the graphic, waits for a meaningful visib
  const h=fixture({ticker:'V7-VIEWPORT',autoIntersect:false,mobile:true});try{
   const o=h.observers[0];assert.equal(o.options.threshold,.35);assert.equal(o.targets.at(-1),h.get('#mc-chart'));assert.notEqual(o.targets.at(-1),h.root);
   o.fn([{isIntersecting:true,intersectionRatio:.01}]);assert.equal(h.animations.length,0,'initial one-percent overlap must not consume the visible replay');
-  o.fn([{isIntersecting:true,intersectionRatio:.4}]);assert.equal(h.animations.length,64);assert.ok(h.animations.every(a=>a.options.duration+a.options.delay<2000));
+  o.fn([{isIntersecting:true,intersectionRatio:.4}]);assert.equal(h.animations.length,64);assert.equal(Math.max(...h.animations.map(a=>a.options.duration+a.options.delay)),6000);
   o.fn([{isIntersecting:false,intersectionRatio:0}]);assert.ok(h.animations.every(a=>a.state==='canceled'));o.fn([{isIntersecting:true,intersectionRatio:1}]);assert.equal(h.animations.length,64);
  }finally{h.cleanup()}
 });

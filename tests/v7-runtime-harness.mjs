@@ -7,7 +7,7 @@ import * as historyView from '../dist/history-view.js';
 const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
 const decode=v=>String(v).replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
 const voidTags=new Set(['input','br','hr','img','meta','link','area','source','wbr']);
-export async function startStudio({storage=new Map(),storageBlocked=false,historyMissing=false,baseCasesMissing=false,baseCases:customBaseCases,library:customLibrary}={}){
+export async function startStudio({storage=new Map(),storageBlocked=false,historyMissing=false,baseCasesMissing=false,baseCases:customBaseCases,library:customLibrary,annualWorkspace}={}){
  let focused=null;const mounts=[],downloads=[],timers=new Map();let timerId=0;
  const matches=(el,s)=>s[0]==='#'?el.attrs.id===s.slice(1):s[0]==='.'?(el.attrs.class||'').split(/\s+/).includes(s.slice(1)):s[0]==='['?(()=>{const m=s.match(/^\[([^=\]]+)(?:="([^"]*)")?\]$/);return !!m&&m[1] in el.attrs&&(m[2]===undefined||el.attrs[m[1]]===m[2]);})():el.tag===s;
  class Element{
@@ -28,7 +28,7 @@ export async function startStudio({storage=new Map(),storageBlocked=false,histor
   scrollIntoView(){}
  }
  const app=new Element('div',{id:'guided-app'});
- const document={querySelector:s=>s==='#guided-app'?app:app.querySelector(s),querySelectorAll:s=>app.querySelectorAll(s),createElement:tag=>new Element(tag)};
+ const document={querySelector:s=>s==='#guided-app'?app:s==='#renewed-research-app'?(annualWorkspace||null):app.querySelector(s),querySelectorAll:s=>app.querySelectorAll(s),createElement:tag=>new Element(tag)};
  const localStorage={getItem:k=>{if(storageBlocked)throw Error('blocked');return storage.get(k)||null;},setItem:(k,v)=>{if(storageBlocked)throw Error('blocked');storage.set(k,v);}};
  const library=customLibrary||JSON.parse(read('../dist/data/current-universe.json'));
  const baseCases=customBaseCases===undefined?JSON.parse(read('../dist/data/company-base-cases.json')):customBaseCases;

@@ -1,0 +1,399 @@
+# Studio research-default recommendations
+
+17 October 2026 · Version 2026-10-17-studio-presets-v1
+
+## Recommendation
+
+Load the complete reviewed annual schedule, source-dated equity-bridge options, timing policy and company-specific simulation settings together when “Use research” is selected. The annual schedule is the executable source of truth. Preserve existing user work until that explicit action, and provide a full undo.
+
+All 14 companies have complete defaults. The original 160 annual rows and terminal assumptions are unchanged. This is a source-linked analytical scenario set, not issuer forecasts, a complete survey of management commentary, consensus, a stock-price target, or empirically calibrated probabilities.
+
+## Why the default needs annual-backed mode
+
+The guided schema-v2 controls correctly separate revenue, margin and capital timelines, but still impose linear margin transitions and scalar sales/capital rules. They cannot faithfully reproduce every reviewed annual schedule. Micron must invest in fabs during revenue contractions; AAOI and Nebius have forecast anchors and first-year growth above the scalar ceiling; tax normalization and direct-capital timing differ by company. No case is forced into an approximate scalar S:C merely to fit the interface.
+
+## Duration and independent timelines
+
+Microsoft, Amazon, Alphabet and TSMC retain their existing 15-year reviewed paths. The other ten retain ten years. No 20-year default is justified by this evidence. A long-lived building, backlog, leadership reputation or durable brand does not establish equally long above-market revenue growth.
+
+| Company | Explicit years | Margin reaches held mature level | Capital timeline |
+|---|---:|---:|---|
+| AAPL | 10 | Year 3 | Year 10 normalization; see source convention |
+| MSFT | 15 | Year 15 | Year 15 normalization; see source convention |
+| AMZN | 15 | Year 7 | Year 15 normalization; see source convention |
+| GOOG | 15 | Year 7 | Year 10 normalization; see source convention |
+| META | 10 | Year 5 | Year 10 normalization; see source convention |
+| NVDA | 10 | Year 10 | Unresolved explicit-to-terminal step |
+| TSLA | 10 | Year 5 | Year 10 normalization; see source convention |
+| COHR | 10 | Year 3 | Year 10 normalization; see source convention |
+| LITE | 10 | Year 4 | Year 10 normalization; see source convention |
+| AAOI | 10 | Year 3 | Year 10 normalization; see source convention |
+| NBIS | 10 | Year 3 | Year 10 normalization; see source convention |
+| MU | 10 | Year 9 | Year 10 normalization; see source convention |
+| AVGO | 10 | Year 10 | Unresolved explicit-to-terminal step |
+| TSM | 15 | Year 11 | Year 15 normalization; see source convention |
+
+These are descriptive timelines, not a claim that a company or its physical assets stop changing then. MU ends explicit growth at 2.5% and enters 2.0% terminal growth, so there is no falsely asserted identical endpoint. NVDA and AVGO retain disclosed capital-intensity steps at terminal value.
+
+## What Damodaran actually uses
+
+Damodaran chooses distributions separately for the driver. His [2016 Apple example](https://aswathdamodaran.blogspot.com/2016/05/dcf-myth-32-if-you-don-look-its-not.html) used lognormal growth, triangular margin and an Apple-specific +0.50 growth–margin correlation. The growth prose includes negative outcomes, so a transformed or shifted construction would be needed to reproduce it; a standard positive lognormal is not enough.
+
+His [“Valuation’s Bermuda Triangle,” slide 16](https://pages.stern.nyu.edu/~adamodar/pdfiles/country/ValuationBermudaTriangleRealShort.pdf#page=16) illustrates uniform growth, normal margin, lognormal sales/capital and triangular WACC in one model. There is no universal “Damodaran distribution.” His [probabilistic valuation paper](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/probabilistic.pdf) emphasizes credible input distributions, dependency and risk-adjusted discount rates.
+
+These presets use bounded triangular distributions where the evidence supports a downside/base/upside scenario judgment, and Fixed where the current compressed model cannot express the uncertainty coherently. The selection is economic, not a claim that triangular is always best. No defensible Gaussian standard deviation or net-investment lognormal tail has been estimated here. Uniform would incorrectly imply equal plausibility throughout a range with a specifically reviewed central case. A component-level positive gross-cost model could use lognormal later if its transform and dispersion were justified.
+
+## Executable Monte Carlo defaults
+
+All additive values in this table are percentage points. Triangular entries are low / mode / high. The investment factor is a multiple. The machine-readable JSON uses decimal rates: 0.01 means one percentage point.
+
+| Company | Growth premium, pp | Margin shift, pp | Investment factor | WACC shift, pp | Capital policy |
+|---|---|---|---|---|---|
+| AAPL | Triangular -7 / 0 / 4 | Triangular -3 / 0 / 2 | Fixed 1 | Triangular -0.5 / 0 / 1.5 | revenue-scaled |
+| MSFT | Triangular -6 / 0 / 4 | Triangular -4 / 0 / 2 | Fixed 1 | Triangular -0.5 / 0 / 1 | fixed-schedule |
+| AMZN | Triangular -8 / 0 / 4 | Triangular -3 / 0 / 2 | Fixed 1 | Triangular -1 / 0 / 1.25 | fixed-schedule |
+| GOOG | Triangular -10 / 0 / 8 | Triangular -4 / 0 / 2 | Fixed 1 | Triangular -0.75 / 0 / 1.5 | fixed-schedule |
+| META | Triangular -10 / 0 / 5 | Triangular -5 / 0 / 3 | Fixed 1 | Triangular -1 / 0 / 1.5 | fixed-schedule |
+| NVDA | Triangular -30 / 0 / 15 | Triangular -10 / 0 / 3 | Triangular 0.833333 / 1 / 1.33333 | Triangular -1 / 0 / 2 | revenue-scaled |
+| TSLA | Triangular -10 / 0 / 13 | Triangular -2 / 0 / 2 | Fixed 1 | Triangular -1.5 / 0 / 1.5 | fixed-schedule |
+| COHR | Triangular -15 / 0 / 10 | Triangular -4 / 0 / 2 | Triangular 0.83 / 1 / 1.25 | Triangular -1 / 0 / 1.5 | revenue-scaled |
+| LITE | Triangular -25 / 0 / 15 | Triangular -5 / 0 / 3 | Triangular 0.8 / 1 / 1.3 | Triangular -1.5 / 0 / 1.5 | revenue-scaled |
+| AAOI | Triangular -40 / 0 / 30 | Triangular -7 / 0 / 4 | Fixed 1 | Triangular -1.5 / 0 / 2 | fixed-schedule |
+| NBIS | Fixed 0 | Triangular -8 / 0 / 5 | Fixed 1 | Triangular -2.5 / 0 / 2.5 | fixed-schedule |
+| MU | Triangular -10 / 0 / 10 | Triangular -13 / 0 / 1 | Fixed 1 | Triangular -1.5 / 0 / 2 | fixed-schedule |
+| AVGO | Triangular -35 / 0 / 10 | Triangular -15 / 0 / 7 | Triangular 0.8 / 1 / 1.53846 | Triangular -1 / 0 / 2 | revenue-scaled |
+| TSM | Triangular -8 / 0 / 6 | Triangular -5 / 0 / 2 | Triangular 0.866667 / 1 / 1.44444 | Triangular -1.5 / 0 / 3 | revenue-scaled |
+
+- 4,000 attempted trials; deterministic ticker-specific seed; 36 histogram bins. Those are reproducibility/display choices, not forecast-precision claims.
+- One driver vector generates a full annual path. Growth shocks fade to zero in the final explicit year; they are not independently redrawn each year. Margin and WACC shifts persist across the explicit and terminal periods.
+- The base is the neutral mode, not the simulation mean or median. Asymmetric triangular distributions have different means, and nonlinear valuation adds another difference.
+- Independent draws are a disclosed simplifying assumption. No source-calibrated correlation matrix was available. Economic demand, utilization, margins, capital and financing co-move; joint-tail risk is therefore incomplete. Damodaran’s Apple +0.50 is not copied to other companies.
+- Validity constraints are enforced without clipping or replacement. Negative EV and equity remain signed. Terminal tax, growth, ROIC, dates and claim choices stay conditional fixed inputs.
+- Source S:C ratios inform some positive investment-factor bounds. Under the implemented revenue-scaled policy, investment preserves source investment/revenue intensity, not the exact incremental delta-revenue/S:C identity after a growth shock. The factors are finite-horizon capital-intensity sensitivities, not reconstructed capex budgets.
+- Fixed capital factors mean the engine does not encode annual capex-path uncertainty. They do not mean capex is certain. Named capital scenarios remain available in the bundle with provenance; their timing must not be replaced by a uniform multiplier.
+- Nebius also keeps the growth premium fixed at zero. The selected advance balances and runoff must move with customer revenue and capacity in a component-aware model. Free growth draws would break the 25%-of-sales advance policy. Its margin/WACC distribution is explicitly conditional on the selected operating/capital/advance path.
+- A four-driver overlay is not a complete uncertainty model. It omits explicit default/recovery, funding availability, future dilution, terminal growth/ROIC uncertainty, taxes, discontinuous autonomy outcomes, geopolitics and claim-realization risk. Frequencies are model-implied scenario frequencies, not real-world probabilities.
+
+### Persistent margin ranges were checked against early operating economics
+
+Full bear/bull terminal margins were not automatically applied to every early year. For NVIDIA, a +8-point shift would imply 70% first-year EBIT margin despite cited 72–73% gross-margin outlook. In the [Q2 filing](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm), R&D alone is about 7.33% of quarterly revenue. The strict persistent default was narrowed to −10 / 0 / +3 points. Similar early-year cross-checks narrowed COHR, LITE, AAOI and TSM margin ranges. Wider complete operating scenarios remain separate.
+
+## Amazon: why retain 15 years?
+
+Retain the reviewed 15-year gradual growth fade, with 18%, 17% and 15% in the first three years and 2.5% in year 15. AWS cloud/AI adoption, advertising and retail distribution provide distinct expansion opportunities, while sustained investment must earn its cost. The April 9 shareholder letter describes 6–24 months from capex to billing and capacity expansion through 2027; the June filing reports a 6.4-year weighted AWS backlog life. Those support near- and intermediate-term deployment, not a 15-year contracted forecast. The selected case already reaches $2.527 trillion of revenue and 7.708% growth in year 10, then $3.160 trillion in year 15, 4.074 times the anchor. This is a demanding but explicit analyst judgment. Keep the first ten reviewed years, margin maturity at year 7 and the direct capital schedule unchanged. A separately rebuilt 10-year normalization case is a credible more conservative alternative; 20 years remains an outer sensitivity, not the default. This is not Damodaran’s preferred horizon or a management forecast.
+
+Amazon’s [April 9 shareholder letter](https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders) and [June filing](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm) support capacity lead times, distinct retail/advertising/AWS economics and meaningful contracted demand. They do not prove 15 years of consolidated growth. Damodaran’s [duration guidance](https://pages.stern.nyu.edu/adamodar/New_Home_Page/valquestions/highgrowthperiod.htm) calls for a check on scale, growth and competitive advantage, and his [corporate-finance discussion](https://pages.stern.nyu.edu/~adamodar/pdfiles/acf2E/Chap12.pdf#page=11) cautions against pushing high-growth periods beyond ten years. The 15-year choice is our disclosed slower-fade exception.
+
+An operating-scale comparison, keeping the first three rates at 18% / 17% / 15% and then changing the fade length, produces:
+
+| Growth maturity | Mature revenue | Multiple of starting revenue |
+|---|---:|---:|
+| 10 years | $2.083 trillion | 2.686× |
+| 15 years, selected | $3.160 trillion | 4.074× |
+| 20 years, outer sensitivity | $4.794 trillion | 6.180× |
+
+This is not an equity-value comparison. A fair 10-year alternative needs a separately rebuilt capital/terminal bridge; merely truncating the selected 15-year schedule would attach terminal value before its selected normalization. The default preserves the first ten reviewed years exactly, margin maturity in year 7 and the entire direct-investment schedule.
+
+## Dated claims, currency and timing
+
+All amounts are in company-currency millions. TSM remains nominal TWD, with ordinary-share output; USD/ADS conversion requires verified date-consistent FX and security mapping. AAOI and NBIS use uncompleted FY2026 management revenue forecasts, not actual TTM anchors. Their October 17 valuation needs the remaining October–December stub and matched timing, not the full June–December liquidity envelope.
+
+The selected mode defaults to forecast-origin valuation. Source-dated bridge options are loaded explicitly, including the reviewed LITE note-value adjustment and capped-call proxy. Existing dates, partial-claim qualifications, unresolved awards, financing/advance gates and per-share restrictions remain visible. No unknown claim, reserve or dilution is silently established as zero; existing zero scenario settings are labeled assumptions.
+
+## Per-company rationale and sources
+
+### AAPL
+
+9%/8%/7% early, then fade to 2.5% by year 10. Mature installed-base/device economics make 10 years sufficient for the reference; 15 years remains a conditional product/Services expansion bull, not default. Retain 10; no evidence requires 15–20 for the selected mature ecosystem case.
+
+Selected 31%/31.5%/32% reaches mature margin by year 3, independent of growth maturity.
+
+Early S:C 2.5/2.5/3, middle 3; final-five-year fade to terminal economics. Outsourcing does not make economic capital free.
+
+Tax: Normalized operating-tax judgment rather than near-quarter 16.5% outlook, cash-tax timing or a one-time benefit. It avoids perpetuating a temporarily favorable reported rate.
+
+Discount rate: Source scenarios 8.5%/9%/10.5% imply shifts-0.5/0/+1.5 pp. Base build:5.09% Treasury +4.5% ERP*beta 1.0,10% debt weight,0.7% debt spread,20% normalized tax gives 9.0942% unrounded, selected 9%. Beta/weights/spread are assumptions.
+
+Terminal policy: Brand, ecosystem and outsourced capital support persistent excess returns; book ROIC is distorted by expensed intangibles and buybacks.20% is analyst judgment, not a measured incremental return.
+
+Uncertainty: Three company-specific bounded triangular stress distributions for growth, margins and WACC; the investment multiplier is held fixed because it cannot represent annual capital-timing uncertainty. Independent draws and unmodeled risks are explicit.
+
+- [AAPL 10-Q 2026-06-27](https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm) · published 2026-07-31
+- [Apple FY2026Q3 results](https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/) · published 2026-07-30
+- [Apple FY2026Q3 call](https://stockanalysis.com/stocks/aapl/transcripts/658553-q3-2026/) · published 2026-07-30
+
+### MSFT
+
+18%/17%/15%/13%/11%, then slower fade to 2.5% by year 15. Retain as a conditional enterprise/cloud-adoption duration; $1.217 tn maturity revenue is 3.67 times anchor. RPO average 2.3 years and 30% conversion over 12 months do not prove 15 years. Retain 15 with scale/capital warnings; 10 is a reasonable faster-fade downside; 20 requires much more sustained monetization than current contract duration establishes.
+
+Already high-margin at 46.78% historical; selected margin declines 46% to 43%, reaching exact endpoint in year 15. Economic margin maturity need not wait for growth maturity; the long shallow decline represents competition/mix, not 15 years of improvement.
+
+Front-loaded low S:C 0.45–0.80 in years 1–5, middle 0.85, final-five-year normalization. Building lives 25 years and lease classification do not establish 25 years of above-market growth.
+
+Tax: Long-run operating-tax judgment above near-term FY 2027 Q 1 approximately 20% guide; not extrapolation of investment-gain or cash-depreciation tax timing.
+
+Discount rate: Source 9%/9.5%/10.5% implies -0.5/0/+1 pp. Base beta 1.05, debt weight 5%, debt spread 0.6%, tax 22% and common Treasury/ERP give 9.54616% before rounding. These are judgmental inputs rather than current regression/credit quotes.
+
+Terminal policy: Enterprise distribution/software IP support excess returns, tempered by cloud physical capital and capital-financing/customer concentration.16% is not audited AI-vintage ROIC.
+
+Uncertainty: Three company-specific bounded triangular stress distributions for growth, margins and WACC; the investment multiplier is held fixed because it cannot represent annual capital-timing uncertainty. Independent draws and unmodeled risks are explicit.
+
+- [MSFT 10-K 2026-06-30](https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm) · published 2026-07-29
+- [Microsoft FY2026 Q4 earnings call](https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4) · published 2026-07-29
+
+### AMZN
+
+Retain the reviewed 15-year gradual growth fade, with 18%, 17% and 15% in the first three years and 2.5% in year 15. AWS cloud/AI adoption, advertising and retail distribution provide distinct expansion opportunities, while sustained investment must earn its cost. The April 9 shareholder letter describes 6–24 months from capex to billing and capacity expansion through 2027; the June filing reports a 6.4-year weighted AWS backlog life. Those support near- and intermediate-term deployment, not a 15-year contracted forecast. The selected case already reaches $2.527 trillion of revenue and 7.708% growth in year 10, then $3.160 trillion in year 15, 4.074 times the anchor. This is a demanding but explicit analyst judgment. Keep the first ten reviewed years, margin maturity at year 7 and the direct capital schedule unchanged. A separately rebuilt 10-year normalization case is a credible more conservative alternative; 20 years remains an outer sensitivity, not the default. This is not Damodaran’s preferred horizon or a management forecast.
+
+Selected margin reaches 16% in year 7 and stays there. A 15-year revenue runway must not delay margin normalization to 15 or assume continuing margin expansion after 7.
+
+Explicit central capital assumptions through year 7: net cash capex rises $253.69 bn to $330 bn while PPE depreciation rises $65 bn to $205 bn. Net reinvestment falls $198.69 bn to $141 bn. Years 8–15 fade capital productivity to 12% terminal ROIC economics. Capex-to-billing lags support investment normalization, not automatically 15 years of excess demand.
+
+Tax: Normalized operating-tax assumption instead of recent investment-mark-distorted effective tax or temporary depreciation/R&D cash-tax benefits. Preserve a separate cash-tax funding bridge.
+
+Discount rate: Source 9.25%/10.25%/11.5% implies -1/0/+1.25 pp. Common Treasury 5.09%, chosen ERP 4.5%, beta 1.2 and equity-heavy modest-debt judgment anchor selected 10.25%; funding and customer-investment dependencies motivate downside asymmetry, not an extra double-counted deficit claim.
+
+Terminal policy: Modest persistent excess return over 10.25% WACC allows scale/distribution advantages but recognizes retail and capital-heavy AWS replacement economics. It requires 20.833% terminal NOPAT reinvestment at 2.5% growth; no audited marginal AI ROIC is disclosed.
+
+Uncertainty: Three company-specific bounded triangular stress distributions for growth, margins and WACC; the investment multiplier is held fixed because it cannot represent annual capital-timing uncertainty. Independent draws and unmodeled risks are explicit.
+
+- [AMZN Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm) · published 2026-07-31
+- [Amazon 2026Q2 results and next-quarter outlook](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx) · published 2026-07-30
+- [Amazon Q2 2026 earnings call, public transcript](https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/) · published 2026-07-30
+- [Andy Jassy 2025 shareholder letter](https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders) · published 2026-04-09
+
+### GOOG
+
+22%/20%/18%, then fade to 2.5% by 15; maturity revenue $2.292 tn is 5.14 times anchor, requiring substantial Search/AI and Cloud market expansion. Retain 15 only as a demanding conditional expansion reference. More than 50% backlog expected within 24 months cannot validate 15 years; 10 should be shown as faster normalization and 20 remains upper-bound stress.
+
+Margin falls from 32.95% to 32% by year 7, then stabilizes independently of growth.
+
+First 3 years direct delivery-led investment. Years 4–7 bridge implied S:C to prior path; S:C reaches roughly terminal 0.641 by year 10, while growth still declines through 15. Derived later component rows are bookkeeping decompositions rather than independently observed budgets.
+
+Tax: Long-run operating tax removes enormous unrealized investment gains and temporary cash/deferred-tax effects from the operating valuation.
+
+Discount rate: Source 9.25%/10%/11.5% implies -0.75/0/+1.5 pp. Common Treasury/ERP, assumed beta 1.1 and equity-heavy financing judgment underpin 10%. Preferred/common financing and capital intensity add model risk that cannot be summarized by a verified current beta.
+
+Terminal policy: Distribution/IP and Search profitability support excess returns, tempered by much larger physical infrastructure and hardware inventory. Terminal reinvestment 15.625% of NOPAT follows 2.5%/16%; not independently chosen to boost cash flow.
+
+Uncertainty: Three company-specific bounded triangular stress distributions for growth, margins and WACC; the investment multiplier is held fixed because it cannot represent annual capital-timing uncertainty. Independent draws and unmodeled risks are explicit.
+
+- [GOOG Q2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm) · published 2026-07-23
+- [Alphabet 2026Q2 issuer earnings-call transcript](https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf) · published 2026-07-22
+
+### META
+
+20%/18%/16%, then 2.5% by 10, reaching $651.6 bn/2.85 times anchor.15-year bull $1.304 tn is conditional; 20-year high growth has no source support. Retain 10; future optionality and long-lived leased assets do not by themselves justify 15–20 years of elevated advertising growth.
+
+Recurring margin declines from 37.07% toward 33% by year 5, independently of revenue maturity.
+
+Direct first 3-year investment $133.506/$136.5/$132 bn; later continuation stays capital-intensive and reaches terminal ROIC consistency in year 10. Management visibility beyond 2028 is limited; a 20-year lease option is not a 20-year high-growth forecast.
+
+Tax: Normalized operating-tax judgment rather than H 1 one-time tax benefit or settlement-specific deductibility. Legal cash payments need their own timing/tax schedule.
+
+Discount rate: Source 9%/10%/11.5% implies -1/0/+1.5 pp.10% is a judgment using common USD market inputs and business/financing risks, not an issuer WACC or measured current beta.
+
+Terminal policy: Ad-platform advantages balanced against a very capital-intensive AI/Reality Labs future.20.833% of terminal NOPAT must be reinvested at 2.5% growth.12% is an inference, not established returns on the latest build.
+
+Uncertainty: Three company-specific bounded triangular stress distributions for growth, margins and WACC; the investment multiplier is held fixed because it cannot represent annual capital-timing uncertainty. Independent draws and unmodeled risks are explicit.
+
+- [Q 2 2026 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm) · published 2026-07-30
+- [Source 2](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx) · published 2026-07-29
+- [Q 2 2026 follow-up call transcript](https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Follow-Up-Call-Transcript.pdf) · published 2026-07-29
+- [Attorneys general settlement announcement](https://investor.atmeta.com/investor-news/press-release-details/2026/Metas-Agreement-With-Bipartisan-Attorneys-General-Calling-on-TikTok-and-YouTube-to-Join-Us-in-Supporting-Teens/default.aspx) · published 2026-08-26
+
+### NVDA
+
+Three explicit ramp years, then the existing fade to 2.5% in year 10. The selected mature revenue is already $2.179 trn; software/platform reputation does not establish 20 years of excess growth. Preserve existing selected horizon; no automated 20-year extension.
+
+62/59/56% early EBIT fades independently to 45% in year 10. Current ~65.2% TTM margin and management gross-margin outlook do not justify a perpetual peak.
+
+Capital maturity is unresolved: S:C stays 2 x through year 10, while 25% terminal ROIC implies much heavier next-year reinvestment. Preserve the disclosed -4.515% terminal FCFF step; do not claim a smooth economic transition or silently repair the source.
+
+Tax: 20% normalized cash operating tax is above near-term 16–18% management outlook. Retain after-SBC/R&D/depreciation EBIT and exclude investment gains.
+
+Discount rate: Low -1 pp/high +2 pp reproduce the explicit 10–13% WACC stress band around selected 11%; zero is the selected rounded judgment. The measured reference is October 16 Treasury 5.09%, with chosen ERP 4.5%; issuer beta and credit spread were not measured.
+
+Terminal policy: 2.5% nominal perpetual growth is a macro modeling assumption, not issuer guidance. 25% ROIC retains strong platform economics but requires 10% of terminal NOPAT reinvestment; it is not historical book ROIC.
+
+Uncertainty: Company-specific bounded triangular uncertainty is centered at the reviewed neutral scenario. Positive capital-factor uncertainty is a finite-horizon investment-intensity sensitivity, not a replacement-capex or funding forecast.
+
+- [NVIDIA FY2027 Q2 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm) · published 2026-08-26
+- [NVIDIA FY2027 Q2 results](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/) · published 2026-08-26
+- [NVIDIA Q2 FY2027 corrected earnings transcript](https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf) · published 2026-08-26
+- [NVIDIA issuer-hosted FY2027Q2 10-Q](https://investor.nvidia.com/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf) · published 2026-08-26
+
+### TSLA
+
+12%/12%/10%, then 2.5% by 10; maturity revenue $210.7 bn/2.03 times anchor.15-year bull $685.9 bn depends on qualitatively different paid autonomy/software economics, not just a longer car-production forecast. Retain 10 for core-plus-buildout reference; 15 is a distinct conditional business-model scenario. No defensible 20-year base exists in the reviewed evidence.
+
+Core recovery reaches 10% by year 5, separate from growth and capital maturity.
+
+Explicit gross capex 34/38/42/38/35/34/34 bn and D&A 8/11/15/20/24/27/28 bn through year 7; years 8–10 derive gross decomposition from terminal-normalized net investment. Replacement/depreciation catch-up, not an arbitrary year 3 ratio switch, drives maturity.
+
+Tax: Normalized profitable-mature operating-tax judgment; it does not represent current cash tax, tax-credit timing or a probability of future profitability.
+
+Discount rate: Source 10.5%/12%/13.5% implies -1.5/0/+1.5 pp.12% reflects higher cyclicality, execution and business-model risk than established platform peers; it is a chosen rate, not a measured probability of autonomy success.
+
+Terminal policy: Equals selected WACC: mature core recovery earns its cost of capital, without automatically assigning enduring autonomy/robotics monopoly rents. Terminal reinvestment 20.833% of NOPAT is required.
+
+Uncertainty: Three company-specific bounded triangular stress distributions for growth, margins and WACC; the investment multiplier is held fixed because it cannot represent annual capital-timing uncertainty. Independent draws and unmodeled risks are explicit.
+
+- [Source 1](https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm) · published 2026-07-23
+- [Source 2](https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf) · published 2026-07-22
+- [Source 3](https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments) · published 2026-10-02
+- [Source 4](https://stockanalysis.com/stocks/tsla/transcripts/653184-q2-2026/) · published 2026-07-22
+
+### COHR
+
+Three early years capture transceiver/InP expansion, then fade to 2.5% in year 10. CPO/OCS opportunity and a 15-year bull do not justify lengthening the selected case to 20 years. Preserve existing selected horizon; no automated 20-year extension.
+
+The selected 20% margin is reached in year 3, well before growth maturity; it is conditional on utilization and product mix, after ongoing SBC and depreciation.
+
+Early S:C 0.8/1.0/1.25 reflects plant and WC demands; later ratios converge toward terminal economics. A complete gross capex/maintenance/WC/lease bridge is missing. Retain the small source terminal FCFF transition mismatch (1.846% rather than 2.5%).
+
+Tax: 24% normalized positive-profit operating tax is a modeling assumption. The low reported effective rate and sale gains are not a sustainable tax benchmark; do not realize loss-year tax benefits automatically.
+
+Discount rate: Bounds -1/+1.5 pp map 10.5% selected WACC to the explicit 9.5/12% source bull/bear values. Zero is the selected case; Treasury 5.09% is measured, ERP 4.5% and issuer risk are judgments, with no current beta/spread estimate.
+
+Terminal policy: 2.5% perpetual growth and 12% ROIC are analyst judgments. ROIC gives a modest spread over 10.5% WACC and requires 20.833% of terminal NOPAT reinvestment, rather than using acquisition-distorted book returns.
+
+Uncertainty: Company-specific bounded triangular uncertainty is centered at the reviewed neutral scenario. Positive capital-factor uncertainty is a finite-horizon investment-intensity sensitivity, not a replacement-capex or funding forecast.
+
+- [FY2026 annual report](https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm) · published 2026-08-14
+- [FY2026-Q4 results and next-quarter outlook](https://ir.coherent.com/node/18091/pdf) · published 2026-08-12
+- [Q4 FY2026 earnings call, Jim Anderson and Sherri Luther](https://earningscalls.dev/transcripts/coherent-corp_cohr_earnings_call_transcript_2026-08-12) · published 2026-08-12
+- [Special executive performance awards approved August 27](https://www.sec.gov/Archives/edgar/data/820318/000119312526375462/d110649d8k.htm) · published 2026-08-31
+
+### LITE
+
+Retain the three-year optical ramp and ten-year total fade; the 15-year bull is a separate content-expansion thesis, not the selected duration. Preserve existing selected horizon; no automated 20-year extension.
+
+Margin reaches its selected 25% plateau in year 4, while growth takes ten years to settle. This allows current scarcity/mix benefits to normalize before the sales-growth tail ends.
+
+Early S:C 1.1/1.2/1.4/1.6 is a provisional net-investment proxy; the later fade is tied to terminal economics. Procurement, maintenance and convertible-related cash needs are not solved by that ratio. Preserve the source 1.959% terminal FCFF step.
+
+Tax: 22% positive-profit operating tax is a normalized judgment; financing extinguishment loss and conversion accounting do not justify extrapolating the reported net-income tax result.
+
+Discount rate: The -1.5/+1.5 pp band around 11.5% is the explicit 10–13% source WACC range. It is subjective operating/financing risk around the common 5.09% Treasury/4.5% ERP reference, not a regression or a guide-hit-rate adjustment.
+
+Terminal policy: 2.5% perpetual growth and 14% ROIC are judgments about durable optical value, below peak margins but still above 11.5% cost of capital. They require 17.857% terminal NOPAT reinvestment; no verified through-cycle ROIC is claimed.
+
+Uncertainty: Company-specific bounded triangular uncertainty is centered at the reviewed neutral scenario. Positive capital-factor uncertainty is a finite-horizon investment-intensity sensitivity, not a replacement-capex or funding forecast.
+
+- [FY2026 annual report](https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm) · published 2026-08-17
+- [FY2026-Q4 results and outlook](https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Results/default.aspx) · published 2026-08-11
+- [Q4 FY2026 call, Michael Hurlston and Wajid Ali](https://earningscalls.dev/transcripts/lumentum-holdings-inc_lite_earnings_call_transcript_2026-08-11) · published 2026-08-11
+
+### AAOI
+
+The 2026 $1.1 bn anchor is management full-year outlook, not actual revenue. Three early years require qualification and productive capacity; retain ten-year fade, not the separate 15-year bull. Growth maturity is conditional on financing and demand. Preserve existing selected horizon; no automated 20-year extension.
+
+15% is assumed by year 3 although reported Q 2 EBIT is negative. Faster margin maturation than revenue maturation is a demanding utilization assumption, not demonstrated capital returns.
+
+Use selected gross spending/D&A/WC components: first-three-year net investment 847.5/722.5/731 USD m. Do not restore old S:C 0.6/0.85/1.1 as a driver. Later capital normalization is analytical; source neutral terminal FCFF grows 2.5%. Prior capital prepayments are not repurchased on delivery.
+
+Tax: 25% on positive EBIT is a normalized modeling assumption; no immediate cash tax benefit for losses. Existing losses do not prove future tax shelters are realizable.
+
+Discount rate: Bounds -1.5/+2 pp around 13.5% reproduce source 12/15.5% bull/bear WACC; zero is the selected conditional case. The high financing, customer concentration and execution risk is a judgment, not a measured beta or a distribution inferred from ten quarterly revenue guides.
+
+Terminal policy: 2.5% growth and 11% ROIC require 22.727% terminal NOPAT reinvestment. ROIC below 13.5% WACC deliberately allows growth to destroy capital; do not raise ROIC to force a positive equity story.
+
+Uncertainty: Company-specific bounded triangular uncertainty is centered at the reviewed neutral scenario. Direct investment is held fixed because the four-driver model does not represent capital-path uncertainty.
+
+- [June 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm) · published 2026-08-06
+- [FY2026-Q2 results and next-quarter guidance](https://www.sec.gov/Archives/edgar/data/1158114/000168316826006055/aaoi_ex9901.htm) · published 2026-08-06
+- [Q2 2026 investor presentation, website posting date](https://investors.ao-inc.com/static-files/93d502fe-1481-4462-9017-8ea05c43e7ce) · published 2026-09-21
+- [Issuer announcement: ATM completed](https://appliedoptoelectronics.gcs-web.com/news-releases/news-release-details/applied-optoelectronics-announces-completion-previously) · published 2026-10-05
+
+### NBIS
+
+Three early years assume active/billable capacity ramps, then ten-year growth fade; 2026 $3.2 bn is a forecast midpoint. ARR, RPO and TCV do not establish revenue, nor a 15/20-year durable advantage. Preserve existing selected horizon; no automated 20-year extension.
+
+18% by year 3 is an unproven operating-leverage assumption. Adjusted EBITDA and a server-life extension from four to five years do not prove economic replacement cost or mature EBIT.
+
+Physical/refresh capital, advances and margin mature independently. Advance balance policy reaches 25% of revenue in 2034 (year 8); year-7/year-8 negative movements are cash uses of 1,986.521/5,056.518 USD m. End-2036 advances remain 22,575.825 USD m. The fixed first-three-year net investment is 11,100/10,100/9,900 USD m, not a free-growth S:C.
+
+Tax: 25% tax on positive EBIT is a normalized assumption; no immediate cash benefit for losses. The young post-divestment perimeter and acquisitions limit historical tax comparability.
+
+Discount rate: The -2.5/+2.5 pp band around 15.5% matches source 13/18% WACC. Zero retains selected financing/competitive risk. It is not a substitute for unavailable funding, default or dilution, and cannot make an infeasible cash schedule financeable.
+
+Terminal policy: 2.5% growth and 12% terminal ROIC require 20.833% terminal NOPAT reinvestment and leave ROIC below 15.5% WACC. The conditional neutral transition is 2.5% after explicit advance normalization; do not erase remaining advances or add an invented terminal credit.
+
+Uncertainty: Margin and WACC have bounded subjective triangular stress distributions. Growth and investment stay fixed because the selected customer-advance obligations must co-move with revenue in a component-aware model.
+
+- [June 2026 interim financial statements and notes](https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm) · published 2026-08-12
+- [Q1 2026 shareholder letter](https://www.sec.gov/Archives/edgar/data/1513845/000110465926059872/tm2614392d1_ex99-2.htm) · published 2026-05-13
+- [Q2 2026 shareholder letter](https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11%3A54%3A46.695Z) · published 2026-08-12
+- [Closed $5.75bn convertible financing](https://www.sec.gov/Archives/edgar/data/1513845/000110465926100347/tm2623863d1_ex99-1.htm) · published 2026-08-24
+- [Meta agreement signed March 13, 2026, Form 6-K](https://www.sec.gov/Archives/edgar/data/1513845/000110465926027886/tm268879d1_6k.htm) · published 2026-03-16
+
+### MU
+
+Five explicit early years cover contracts, 2027–30 fab commissioning and the selected price reset, followed by normalization to year 10. Retain the final explicit 2.5% growth and separate 2% terminal growth; do not auto-smooth or extend a commodity boom for 15/20 years. Preserve existing selected horizon; no automated 20-year extension.
+
+Margins fall 79/74/52/35%, rebound to 38% in years 5–6 and settle at 35% by year 9. This is cycle normalization rather than a single monotonic maturity clock. Prices, not only bits, drove the latest boom.
+
+Gross capex 60/70/55/42/40 bn, cash grants 5/6/4/2/1 bn and D&A 14/18/23/25/26 bn are analytical first-five-year inputs. Late D&A at 18% of sales retains replacement spending. Positive investment persists through contractions. Preserve the disclosed neutral terminal FCFF jump of 6.684%, not a falsely smooth 2% claim.
+
+Tax: 15.5%/17%/20% first-three-year cash operating tax then 20% matches the selected fade from near-term guidance to normalized rates. $9.820 bn noncurrent accrued tax is a separate timing obligation; do not assume normalized tax pays it or deduct it twice.
+
+Discount rate: Bounds -1.5/+2 pp map selected 11% to source 9.5/13%. Source base build uses Treasury 5.09%, chosen ERP 4.5%, beta 1.4, debt weight 10%, spread 1.5% and tax shield 20%, yielding 10.7782%, rounded to 11%. All except Treasury are judgments.
+
+Terminal policy: 2% nominal perpetual growth is deliberately more conservative for mature memory. 12% ROIC versus 11% WACC assumes modest differentiated returns, not perpetual scarcity; 16.667% terminal NOPAT must be reinvested. Reported boom ROIC/ROE does not calibrate this.
+
+Uncertainty: Company-specific bounded triangular uncertainty is centered at the reviewed neutral scenario. Direct investment is held fixed because the four-driver model does not represent capital-path uncertainty.
+
+- [FY2026 Form 10-K](https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm) · published 2026-10-09
+- [FY2026 Q4 results and FY2027 Q1 outlook](https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/) · published 2026-09-30
+- [FY2026 Q4 prepared remarks](https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf) · published 2026-09-30
+- [FY2026 Q4 earnings deck](https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-26-Earnings-Deck.pdf) · published 2026-09-30
+
+### AVGO
+
+Three years cover known customer accelerator ramps; ten total years recognize insourcing and architectural change. The $837.7 bn selected mature revenue is already demanding. The 15-year bull remains a separate platform thesis, not a reason for automatic 20-year duration. Preserve existing selected horizon; no automated 20-year extension.
+
+53/55/54% early GAAP EBIT fades to 45% by year 10. Software mix and amortization runoff can support margin, but no assumption removes ongoing SBC, replacement IP or future acquisition costs.
+
+Capital maturity is unresolved: S:C remains 2 at final explicit year, then terminal 20% ROIC requires more reinvestment. Retain the source -7.168% terminal FCFF step and cash/lease/contingent-credit gates, rather than pretending a mature ratio bridge exists.
+
+Tax: 20% normalized operating tax is above near-term ~16% adjusted guidance; FY 2025 discrete negative GAAP tax does not establish a sustainable rate.
+
+Discount rate: Bounds -1/+2 pp recover the explicit 10/13% stress range around 11%. Concentration, contingent finance and cyclicality justify the risk judgment; common Treasury 5.09% is measured, ERP 4.5% chosen, issuer beta/spread unmeasured.
+
+Terminal policy: 2.5% nominal perpetual growth and 20% ROIC assume durable custom-silicon/networking/software rents but require 12.5% terminal NOPAT reinvestment. Acquisition-distorted book capital and a CEO record are not direct ROIC evidence.
+
+Uncertainty: Company-specific bounded triangular uncertainty is centered at the reviewed neutral scenario. Positive capital-factor uncertainty is a finite-horizon investment-intensity sensitivity, not a replacement-capex or funding forecast.
+
+- [Broadcom FY2026 Q3 Form10-Q](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm) · published 2026-09-10
+- [Broadcom FY2026 Q3 results](https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial) · published 2026-09-02
+- [Broadcom FY2026 Q3 call transcript](https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026/) · published 2026-09-02
+
+### TSM
+
+Five years cover N 2/A 14 and current overseas construction; ten additional years span several node generations while growth fades to 2% in year 15. Fifteen is supported by ecosystem and capital-cycle persistence, not brand alone. Twenty is unsupported; a ten-year compression is a separate stress, not the selected path. Preserve existing selected horizon; no automated 20-year extension.
+
+Margin reaches 46% in year 11 and stays there through year 15, earlier than growth maturity. Overseas dilution is already embedded; do not deduct the management 3–4 pp outlook again.
+
+Early marginal S:C 1.30/1.25/1.20/1.15/1.10 fades to ~0.489 by year 15. Implied capex/D&A are an audit, not extra FCFF deductions; mature gross capex remains ~TWD 4.323 tr versus D&A 3.616 tr. In a full contraction stress preserve the source 8%-of-revenue positive investment floor. Preserve the neutral 1.751% terminal FCFF step.
+
+Tax: 18%/19%/20% first-three-year operating cash tax then 20% is a selected normalization schedule, not a perpetual extrapolation of the latest effective rate. Grants are embedded once in capital economics.
+
+Discount rate: Bounds -1.5/+3 pp recover native TWD source 8.5/13% around 10%. Source base USD build 11.3182% translates using assumed USD/TWD inflation 2.5/1.5% to TWD 10.2322%, rounded to 10%. Beta 1.2, 10% debt, 1.5% spread/extra equity risk are judgments. It is not a directly observed TWD sovereign yield.
+
+Terminal policy: 2% nominal TWD perpetual growth is currency-specific, consistent with assumed long-run TWD inflation 1.5% and modest real growth; not a USD guidance transcription. 18% ROIC supports a durable but fading foundry moat and requires 11.111% terminal NOPAT reinvestment.
+
+Uncertainty: Company-specific bounded triangular uncertainty is centered at the reviewed neutral scenario. Positive capital-factor uncertainty is a finite-horizon investment-intensity sensitivity, not a replacement-capex or funding forecast.
+
+- [Q3 2026 unaudited financial statements](https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf) · published 2026-10-15
+- [2026Q3 quarterly results and next-quarter guidance](https://investor.tsmc.com/english/quarterly-results/2026/q3) · published 2026-10-15
+- [FY2025 20-F](https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm) · published 2026-04-16
+- [Q3 2026 earnings call](https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf) · published 2026-10-15
+
+## Validation
+
+210/210 checks passed across all 14 companies. The 160 annual source rows and terminal objects are unchanged; all 368 source-file hashes match. All 56,000 default attempted trials were accepted, with no invalid exclusions. Zero exclusions means the selected bounded settings passed mathematical constraints; it does not establish economic feasibility or calibrate their probabilities.
+
+The validator also checks every model/simulation rationale field, explicit bridge defaults, native currency, neutral-draw reproduction, serialization and seed replay. UI load/undo/save/restore integration is tested separately by the application work.
+
+Companion files: studio-research-presets-2026-10-17-v1.json; studio-research-presets-validation-2026-10-17-v1.json; damodaran-primary-guidance-2026-10-17.md. The bundle contains all exact annual values, all simulation hyperparameters, source dates, limitations and named alternative scenario references.

@@ -33,7 +33,7 @@ test('renewed workspace: fresh default and all fourteen companies use complete r
   if(c.anchor.fiscalCalendarCaution)assert.ok(h.get('#research-editor').textContent.includes(c.anchor.fiscalCalendarCaution),c.ticker+' fiscal caution missing');
   assert.ok(h.get('#research-editor').textContent.includes(c.anchor.classification),c.ticker+' anchor classification missing');
  }
- assert.deepEqual(h.requests,['./data/renewed-research-2026-10-17/cases.json']);
+ assert.deepEqual(h.requests,['./data/renewed-research-2026-10-17/cases.json','./data/studio-research-presets-2026-10-17-v1.json']);
 });
 
 test('renewed workspace: repeated live number and text edits preserve focused controls and editor DOM',async()=>{
@@ -218,7 +218,7 @@ test('renewed workspace: annual simulation receives exact draft, saves per compa
  config.seed=999;assert.equal(h.saved().researchSimulationConfig.seed,42,'stored config is cloned');
  h.input(h.field('annual','revenue',0),'567890');assert.deepEqual(events.slice(-2),['cleanup AAPL','mount AAPL']);assert.equal(mounts.at(-1).draft.annual[0].revenue,567890);
  mounts[0].onConfigChange({seed:666});assert.equal(h.saved().researchSimulationConfig.seed,42,'stale callback cannot overwrite current config');
- h.select('MU');assert.deepEqual(events.slice(-2),['cleanup AAPL','mount MU']);assert.equal(mounts.at(-1).draft.researchSimulationConfig,undefined);
+ h.select('MU');assert.deepEqual(events.slice(-2),['cleanup AAPL','mount MU']);assert.equal(mounts.at(-1).draft.researchSimulationConfig.seed,'mu-research-2026-10-17-v1','fresh company receives its own complete research simulation preset');
  mounts.at(-1).onConfigChange({version:1,seed:100});h.select('AAPL');assert.equal(mounts.at(-1).draft.researchSimulationConfig.seed,42);
  h.action('load');assert.equal(mounts.at(-1).draft.researchSimulationConfig.seed,42,'research reload retains explicit MC settings');h.action('undo');assert.equal(mounts.at(-1).draft.annual[0].revenue,567890);assert.equal(mounts.at(-1).draft.researchSimulationConfig.seed,42);
  h.destroy();assert.equal(events.at(-1),'cleanup AAPL');assert.equal(h.root.innerHTML,'');

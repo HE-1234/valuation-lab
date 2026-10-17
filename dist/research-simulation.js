@@ -183,7 +183,7 @@ function finishRun(state){
   : 'Each reviewed annual net-investment amount is scaled by trial revenue / reviewed revenue, then by the sampled investment multiplier. This is an analytical proportional-investment sensitivity, not verified capacity economics.';
  const warnings=[
   'Conditional distribution of operating DCF values under selected analyst stresses. Frequencies are not calibrated real-world probabilities, expected returns or stock-price forecasts.',
-  'All four inputs start Fixed at 0, 0, 1 and 0. No probability range is invented. Change distribution families and parameters only as explicit analyst assumptions.',
+  Object.values(c.drivers).every(spec=>spec.type==='fixed')?'All four inputs are Fixed. This run repeats the selected stress scenario; it is not an estimated confidence range.':'Distribution families and hyperparameters are explicit analyst judgments. They are not fitted probabilities or a forecast of investment returns.',
   'One driver vector generates the complete annual path. The growth premium fades to zero in the final explicit year; reviewed growth and maturity shape are preserved around it.',
   capitalDescription,
   'Tax, terminal growth, terminal ROIC, anchor revenue, forecast horizon, timing stub inputs and selected capital/claims assumptions stay fixed. Terminal investment remains NOPAT × growth / ROIC.',

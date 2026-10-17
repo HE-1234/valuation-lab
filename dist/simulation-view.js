@@ -9,6 +9,8 @@ const signal=()=>globalThis.matchMedia?.('(prefers-reduced-motion: reduce)');
 const palettes={forest:['#d4ef8b','#142d27','#f7faee'],slate:['#b5caff','#142640','#f5f7ff'],midnight:['#a4e5ce','#0b121d','#edf2fa'],sand:['#f6ca88','#432a20','#fff8eb'],plum:['#ecb7e3','#322039','#fff4fd'],ocean:['#afe6e5','#123641','#f0fffd']};
 const palette=()=>{const [signal,stage,text]=palettes[globalThis.document?.documentElement?.dataset?.theme]||palettes.forest;return {signal,stage,text}};
 const dimensions={width:960,height:390,left:48,right:918,top:76,bottom:326};
+// Presentation only: make arrivals readable without delaying calculation or live edits.
+const replayDuration=6000,particleDuration=2200;
 export function mountSimulation(root,snapshot,draft,options={}){
  if(!root)return ()=>{};
  const adapter=options.adapter;
@@ -117,7 +119,7 @@ export function mountSimulation(root,snapshot,draft,options={}){
   representatives.forEach(({bi,value},i)=>{
    const bin=result.histogram[bi],x=plotX(value),h=bin.count/maxCount*(dimensions.bottom-dimensions.top),y=dimensions.bottom-h*(++scheduled[bi]/quotas[bi]),dot=document.createElementNS('http://www.w3.org/2000/svg',i%4===0?'rect':'circle');
    if(i%4===0){dot.setAttribute('x',x-2.8);dot.setAttribute('y',y-2.8);dot.setAttribute('width',phone?'10':'6.5');dot.setAttribute('height',phone?'10':'6.5');dot.setAttribute('rx','1')}else{dot.setAttribute('cx',x);dot.setAttribute('cy',y);dot.setAttribute('r',phone?'5.5':'3.5')}dot.setAttribute('fill',palette().signal);dot.style.opacity='0';group.appendChild(dot);
-   if(typeof dot.animate!=='function'){dot.remove();return}const a=dot.animate([{opacity:0,transform:`translateY(${-y+18}px)`},{opacity:.9,offset:.1,transform:`translateY(${-y+18}px)`},{opacity:.85,offset:.94,transform:'translateY(0)'},{opacity:0,transform:'translateY(2px)'}],{duration:850,delay:i*(phone?12:7),easing:'cubic-bezier(.35,0,.8,.6)',fill:'none'});animations.push(a);a.onfinish=()=>{if(destroyed||version!==animationVersion||!result)return;dot.remove();const nextHeight=h*(++arrivals[bi]/quotas[bi]),bar=barFinals[bi]?.node;bar?.setAttribute('height',nextHeight);bar?.setAttribute('y',dimensions.bottom-nextHeight);animations=animations.filter(x=>x!==a);if(!animations.length)finish()};
+   if(typeof dot.animate!=='function'){dot.remove();return}const a=dot.animate([{opacity:0,transform:`translateY(${-y+18}px)`},{opacity:.9,offset:.1,transform:`translateY(${-y+18}px)`},{opacity:.85,offset:.94,transform:'translateY(0)'},{opacity:0,transform:'translateY(2px)'}],{duration:particleDuration,delay:i*(replayDuration-particleDuration)/Math.max(1,representatives.length-1),easing:'cubic-bezier(.35,0,.8,.6)',fill:'none'});animations.push(a);a.onfinish=()=>{if(destroyed||version!==animationVersion||!result)return;dot.remove();const nextHeight=h*(++arrivals[bi]/quotas[bi]),bar=barFinals[bi]?.node;bar?.setAttribute('height',nextHeight);bar?.setAttribute('y',dimensions.bottom-nextHeight);animations=animations.filter(x=>x!==a);if(!animations.length)finish()};
   });
   if(!animations.length)finish();
   if(animations.length){find('#mc-skip').hidden=false;find('#mc-play').textContent='Pause replay Ⅱ';find('#mc-play').setAttribute('aria-pressed','true')}

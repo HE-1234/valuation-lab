@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import {mountResearchWorkspace} from '../dist/research-view.js';
 import {RESEARCH_PATH,RESEARCH_STORAGE_PREFIX} from '../dist/research-model.js';
+import {STUDIO_PRESETS_PATH} from '../dist/studio-research-presets.js';
 
 const decode=value=>String(value).replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
 const voidTags=new Set(['input','br','hr','img','meta','link','area','source','wbr']);
@@ -73,20 +74,20 @@ export function minimalDocument(){
 
 export const bundledResearch=()=>JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-research-2026-10-17/cases.json',import.meta.url),'utf8'));
 
-export async function startResearchWorkspace({storage=new Map(),storageBlocked=false,readBlocked=storageBlocked,writeBlocked=storageBlocked,library=bundledResearch(),fetcher,simulationMount}={}){
- const document=minimalDocument(),root=document.root,reads=[],writes=[],requests=[],downloads=[];
+export async function startResearchWorkspace({storage=new Map(),storageBlocked=false,readBlocked=storageBlocked,writeBlocked=storageBlocked,library=bundledResearch(),fetcher,simulationMount,presetBundle,presetsMissing=false,navigate}={}){
+ const document=minimalDocument(),root=document.root,reads=[],writes=[],requests=[],downloads=[],navigations=[];
  const storageAPI={
   getItem(key){reads.push(key);if(readBlocked)throw Error('Storage read blocked');return storage.has(key)?storage.get(key):null;},
   setItem(key,value){writes.push({key,value});if(writeBlocked)throw Error('Storage write blocked');storage.set(key,value);}
  };
  const workspace=await mountResearchWorkspace(root,{
-  fetcher:fetcher|| (async path=>{requests.push(path);if(path!==RESEARCH_PATH)throw Error('Unexpected fetch '+path);return {ok:true,json:async()=>structuredClone(library)};}),
-  storage:storageAPI,simulationMount,download:(name,value)=>downloads.push({name,value:structuredClone(value)})
+  fetcher:fetcher|| (async path=>{requests.push(path);if(path===STUDIO_PRESETS_PATH){if(presetsMissing)return {ok:false};return {ok:true,json:async()=>JSON.parse(fs.readFileSync(new URL('../dist/data/studio-research-presets-2026-10-17-v1.json',import.meta.url),'utf8'))};}if(path!==RESEARCH_PATH)throw Error('Unexpected fetch '+path);return {ok:true,json:async()=>structuredClone(library)};}),
+  storage:storageAPI,simulationMount,presetBundle,navigate:navigate|| (page=>navigations.push(page)),download:(name,value)=>downloads.push({name,value:structuredClone(value)})
  });
  const get=selector=>root.querySelector(selector);
  const requireElement=selector=>{const element=get(selector);if(!element)throw Error('Missing workspace control '+selector);return element;};
  return {
-  ...workspace,document,root,get,storage,reads,writes,requests,downloads,library,
+  ...workspace,document,root,get,storage,reads,writes,requests,downloads,navigations,library,
   focus:()=>document.activeElement,
   saved(ticker=workspace.getState().company.ticker){const raw=storage.get(RESEARCH_STORAGE_PREFIX+ticker);return raw===undefined?undefined:JSON.parse(raw);},
   input(selector,value){const element=requireElement(selector);element.value=String(value);return element.oninput?.({target:element});},

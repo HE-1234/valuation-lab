@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-10-17 · Complete research presets and calmer replay
+
+- Added a prominent Use research action in Guided and Annual model. Guided clearly explains that the complete case opens in Annual mode to preserve reviewed annual economics instead of converting them into lossy scalar defaults.
+- Fresh Annual defaults now include all 14 companies’ versioned annual paths, dated claims and explicit company-specific Monte Carlo assumptions, with visible family/hyperparameters, run settings, independent-draw assumption, sources and reasoning. Distributions remain conditional analyst judgments.
+- Preserved old saved drafts without automatic upgrades. Explicit loads replace all valuation inputs together; exact full Undo survives reload, retains malformed recovery bytes and restores the prior mode. Duplicate identical clicks preserve the original meaningful Undo.
+- Retained independent revenue-growth, margin and capital timing. The reviewed 15-year cases remain MSFT, AMZN, GOOG and TSM; no unsupported 20-year default was introduced.
+- Slowed representative replay to six seconds, with 2.2-second individual falls; ordinary chart feedback remains 280 ms. Reduced motion, Pause/Resume, cleanup and final-histogram behavior are unchanged.
+- Removed the inherited outer blue border from the Studio mode strip and gave its label and mode buttons a compact, padded surface across themes and phone widths.
+- Kept source-date claims limits, signed negative EV, TWD ordinary shares and original engine/data/research freezes intact.
+
+Validation: 754 automated app checks pass, including 17 complete-preset tests and 10 replay checks. The separate research validator passes 210/210 checks, all 56,000 default draws are mathematically accepted, and all 368 original research file hashes match. Nineteen static app previews cover 320/390/1440px, six themes, Guided, annual schedules, native TWD, signed negative values and simulation; readable-report previews cover phone and desktop. These are document-renderer approximations, not browser screenshots. Real-browser rendering, touch and screen-reader output remain unverified; no denied browser route was retried or bypassed.
+
 ## 2026-10-17 · Editorial decision workspace
 
 - Simplified primary navigation to Studio / Research / Learn, with Guided / Annual model / Historical modes and the original deep links, saved cases and workbench capabilities retained.

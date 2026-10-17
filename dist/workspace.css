@@ -11,9 +11,9 @@ body>aside nav button{min-height:44px;font-size:15px;padding:10px 20px;border-ra
 body>aside nav button.active{color:var(--ink);background:var(--soft);box-shadow:inset 0 -2px var(--accent)}
 .brand{font-size:13px!important;letter-spacing:1.3px}.brand:after{display:none}
 main{max-width:1440px;padding:0 40px;margin:0 auto}.appearance-disclosure{top:23px}.appearance-disclosure>summary{font-size:14px!important;min-height:44px}
-.workspace-modebar{margin:0 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.mode-navigation{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:7px 0;margin:0;background:transparent;border-radius:0}
-.mode-navigation[hidden]{display:none}.mode-navigation>span{font-size:13px;color:var(--muted);margin-right:16px}
+.workspace-modebar{margin:0 0 22px;padding:4px 0;border:0}
+.mode-navigation{display:flex;align-items:center;gap:7px;flex-wrap:wrap;width:fit-content;max-width:100%;padding:6px;margin:0;background:var(--soft);border:0;border-radius:13px}
+.mode-navigation[hidden]{display:none}.mode-navigation>span{font-size:13px;color:var(--muted);padding:0 14px 0 10px;margin-right:4px}
 .mode-navigation button{min-height:44px;padding:9px 16px;font-size:14px;line-height:1.35;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--muted);white-space:normal}
 .mode-navigation button[aria-current=page]{background:var(--surface);border-color:var(--line);color:var(--ink);font-weight:600}
 .workspace-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:0 0 20px;min-height:45px}
@@ -311,3 +311,14 @@ body label,body legend{font-size:var(--type-support)}.research-card p,.research-
 
 /* Compact overview: detailed capital tables remain beside their result in one disclosure. */
 .research-layout>#research-results{align-items:start}.research-equity-value{margin:10px 0 12px!important}.research-equity>p{margin:10px 0}.research-equity>ul{margin:12px 0;padding-left:19px}.research-allocation-details{margin:14px 0 0;border:0;border-top:1px solid var(--line);border-radius:0;padding:0;background:transparent}.research-allocation-details>summary{font-size:14px;min-height:44px;padding:10px 0}.research-allocation-details p{max-inline-size:70ch}.research-value .research-stat-grid{margin-top:13px}.research-value>p.micro:last-child{margin-bottom:0}.research-value,.research-equity{padding:22px}@media(max-width:650px){.research-value,.research-equity{padding:20px}.research-value h2{margin-top:8px}}
+
+/* Complete research loads are explicit and reversible, with provenance nearby. */
+.research-preset-context,.guided-research-preset{border:1px solid var(--line);border-radius:12px;background:var(--soft);padding:18px 20px;margin:0 0 22px;min-width:0}
+.preset-heading{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap}.preset-heading p{font-weight:600;margin:4px 0 0}.research-preset-context>p,.guided-research-preset p{font-size:14px;line-height:1.6;max-width:85ch;margin:9px 0}.research-preset-context .micro{font-size:13px!important}.preset-heading .research-actions{flex-shrink:0}.preset-rationale{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:4px 0 0;margin:14px 0 0}.preset-rationale>summary{min-height:44px;padding:10px 0;font-size:14px}.preset-rationale h3{font-size:17px}.preset-reasoning{margin:14px 0}.preset-reasoning dt{font-weight:600;font-size:14px;margin:12px 0 3px}.preset-reasoning dd{font-size:14px;line-height:1.6;margin:0;overflow-wrap:anywhere}.preset-reasoning dl{margin:0 0 10px}.guided-research-preset{margin-top:14px}.guided-research-preset button{min-height:44px}.guided-research-preset #complete-research-status:empty{display:none}
+@media(max-width:650px){.mode-navigation{width:100%;padding:5px;gap:3px}.mode-navigation button{min-width:0;padding:10px 7px}.research-preset-context,.guided-research-preset{padding:16px}.preset-heading .research-actions{width:100%}.preset-heading .research-actions button{flex:1 1 120px;white-space:normal}.preset-heading p{font-size:15px}.preset-rationale .research-table{min-width:470px}}
+
+/* A quiet research control rail keeps valuation results visually primary. */
+.research-preset-context{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 14px;margin-bottom:22px}.research-preset-context .preset-rationale{margin-top:6px;border-top:0;padding-top:0}.research-preset-context>p{margin:7px 0 2px}.research-preset-context .preset-heading .eyebrow{color:var(--muted)}
+
+.research-primary-actions{flex:0 1 auto;min-width:0}.research-primary-actions .research-actions{gap:8px}.research-primary-actions button{padding:10px 15px;min-height:44px;font-size:14px}.research-primary-actions>span{display:block;font-size:13px;color:var(--muted);margin-top:5px}.research-layout>#research-preset-context{margin-top:2px}.research-layout .research-preset-context{padding-bottom:12px;margin-bottom:20px}.research-primary-actions button:disabled{opacity:.45;cursor:default}
+@media(max-width:650px){.research-primary-actions{grid-column:1/-1}.research-primary-actions .research-actions{display:flex}.research-primary-actions button{flex:1 1 120px}.research-primary-actions>span{margin-top:4px}.research-toolbar .research-action-menu{grid-column:1/-1}.research-layout .preset-heading p{font-size:14px}}
