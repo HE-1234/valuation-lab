@@ -26,9 +26,9 @@ test('source context: every company/baseline exposes the full period and origina
    assert.equal(context.parent,value.parent);
    const children=value.parent.children;
    assert.ok(children.indexOf(context)<children.indexOf(value));
-   assert.ok(children.indexOf(value)<children.indexOf(simulation));
-   assert.ok(children.indexOf(simulation)<children.indexOf(h.get('.result-context')));
-   assert.match(h.get('.result-context').textContent,/Provisional claims.*illustrative assumptions.*Limits/);
+   const stage=h.get('.workspace-stage').descendants();assert.ok(stage.indexOf(value)<stage.indexOf(simulation));
+   assert.ok(children.indexOf(h.get('.result-context'))<children.indexOf(value));
+   assert.match(h.get('.result-context').textContent,/Provisional claims.*illustrative assumptions.*Model limits/);
    assert.doesNotMatch(h.get('.result-context').textContent,/Derived TTM|Reported FY/);
   }
  }

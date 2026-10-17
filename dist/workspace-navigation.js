@@ -9,6 +9,7 @@ export function mountWorkspaceNavigation({document=globalThis.document,window=gl
  function show(page,{record=true,animate=true}={}){
   if(!Object.hasOwn(workspacePages,page))return false;
   const info=workspacePages[page],changed=page!==current;current=page;last[info.section]=page;
+  if(document.body)document.body.dataset.workspacePage=page;
   document.querySelectorAll('.page').forEach(el=>el.classList.toggle('hidden',el.id!==page));
   document.querySelectorAll('[data-tab]').forEach(el=>{const active=el.dataset.tab===page;el.classList.toggle('active',active);el.setAttribute('aria-current',active?'page':'false');});
   document.querySelectorAll('[data-primary]').forEach(el=>{const active=el.dataset.primary===info.section;el.classList.toggle('active',active);el.setAttribute('aria-current',active?'page':'false');});

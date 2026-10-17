@@ -21,7 +21,7 @@ test('equity amounts: only the two million-unit drivers receive the wider layout
    assert.equal(input.getAttribute('aria-describedby'),'g-hint-'+key);
    assert.ok(card.querySelector(`[data-history="${key}"]`),'history remains adjacent');
   }
-  for(const step of [2,3,4,5]){h.step(step);assert.equal(h.app.querySelectorAll('.driver-card--amount').length,0);}
+  for(const step of [2,3,4,5]){h.step(step);assert.equal(h.get('#editor-group-'+step).querySelectorAll('.driver-card--amount').length,0);assert.equal(h.get('#editor-group-6').hidden,true);}
  }
 });
 

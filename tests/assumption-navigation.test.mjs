@@ -15,7 +15,8 @@ function checkSelection(h,id){
  for(const b of tabs){
   const active=Number(b.dataset.step)===id;
   assert.equal(b.getAttribute('role'),'tab');
-  assert.equal(b.getAttribute('aria-controls'),'assumption-editor');
+  assert.equal(b.getAttribute('aria-controls'),'editor-group-'+b.dataset.step);
+  assert.equal(h.get('#editor-group-'+b.dataset.step).hidden,!active);
   assert.equal(b.getAttribute('aria-selected'),String(active));
   assert.equal(b.getAttribute('tabindex'),active?'0':'-1');
  }

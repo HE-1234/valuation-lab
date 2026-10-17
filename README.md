@@ -128,3 +128,9 @@ Revenue-growth horizons are 15 years for MSFT, AMZN, GOOG and TSM, and 10 for th
 Replay now lasts six seconds for standard desktop and phone distributions, with 2.2-second individual falls; the ordinary 280 ms chart update remains unchanged. The Studio mode strip uses a compact padded surface without the former full-width blue outline. Both changes use existing theme and reduced-motion behavior. Browser rendering, touch and screen-reader behavior remain unverified; static document renders are only approximations. No denied browser route is retried.
 
 The readable report is `dist/data/studio-research-presets-2026-10-17-v1.html`, built from `STUDIO-RESEARCH-PRESETS.md` by `scripts/build-studio-research-note.py`. It links primary methodology examples, exact preset JSON and the independent 210-check research validation. The release adds 17 integration checks, with 754 total automated checks passing; static preview limitations above still apply.
+
+## Version 27 screen workspace
+
+Studio uses a screen-sized desktop workspace with persistent valuation, in-place Result / Simulation / Tables views, contextual base-case editors and one-click evidence. Guided controls stay mounted across category changes; Annual adds synchronized year-level controls while retaining the exact full-width editable schedule. Mobile offers Result / Inputs / Evidence and natural scrolling at narrow widths/high zoom. Complete v26 research presets, saved drafts, full-load Undo, dated claims, the six-second optional replay and every financial engine/data source are preserved.
+
+`SCREEN-WORKSPACE.md` records structure, interaction/state contracts, reference scope and the static-versus-browser verification boundary. New presentation modules are `screen-workspace.css`, `contextual-evidence.js` and `historical-workspace.js`; model code remains separate. An authentic interaction recording is still unavailable because browser execution remains blocked.

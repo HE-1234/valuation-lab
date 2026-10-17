@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-10-17 · Screen-sized decision workspace
+
+- Rebuilt Guided, Annual and Historical around a compact navigation rail, one context toolbar, persistent valuation, in-place analysis views and a contextual input editor.
+- Kept Guided input nodes mounted across categories and Result / Simulation / Tables. Margin, independent margin timing and cash taxes remain together; separate Undo edit restores the preceding field edit session.
+- Kept the exact Annual schedule in a dedicated full-width view with synchronized year-level revenue/growth, margin/tax and investment/WACC controls. No scalar conversion or rounded display is written back without an edit.
+- Added one-click contextual evidence with Close, Escape, focus restoration, retained source/disclosure state and route cleanup. Covered controls cannot receive keyboard focus.
+- Retained original Historical controls and handlers while arranging cash flows, stress cases, sensitivity and the equity bridge into in-place views.
+- Added phone Result / Inputs / Evidence navigation, short interruptible transitions, explicit pane scrolling and natural document scrolling for short/narrow/high-zoom layouts. Material limitations precede supplementary comparisons in the stable result summary.
+- Preserved all financial engines, research inputs, complete company presets, Monte Carlo rules, saved cases and source-date limitations.
+
+Verification: 800/800 automated tests pass, including 46 new workspace and evidence checks; 77 protected app/engine/data files are byte-identical to v26. Full scope and limits are recorded in SCREEN-WORKSPACE.md. Before/after images are labeled static document-renderer approximations, not browser screenshots. Browser page-scroll extent, native focus, touch, screen-reader behavior and animation responsiveness remain unverified. A genuine interaction recording could not be produced under the existing browser restriction; no denied route was retried or bypassed.
+
 ## 2026-10-17 · Complete research presets and calmer replay
 
 - Added a prominent Use research action in Guided and Annual model. Guided clearly explains that the complete case opens in Annual mode to preserve reviewed annual economics instead of converting them into lossy scalar defaults.

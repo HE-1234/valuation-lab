@@ -59,7 +59,7 @@ test('history disclosure: every company keeps independent, labeled native annual
   h.change('#current-company',company.ticker);
   for(const step of [2,3,4,5,6]){
    h.step(step);
-   for(const {parent,child,summary} of nested(h)){
+   for(const {parent,child,summary} of nested(h).filter(({parent})=>h.get('#editor-group-'+step).contains(parent))){
     checked++;assert.equal(child.tag,'details');assert.equal(summary.tag,'summary');
     assert.match(summary.textContent,/All \d+ annual observations\d+ available/);
     assert.equal(summary.onclick,undefined);assert.equal(summary.getAttribute('role'),null);assert.equal(summary.getAttribute('aria-expanded'),null);

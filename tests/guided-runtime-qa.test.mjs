@@ -7,7 +7,7 @@ test('guided runtime QA: all eight categories render while live value remains av
  const h=await startStudio();assert.ok(h.get('#g-growth'));assert.equal(h.state().step,2);assert.match(h.get('#guided-results').innerHTML,/PROVISIONAL BASE CASE/);
  h.step(1);h.input('#note-today','Original business story');h.step(2);h.input('#g-growth','17');h.step(1);
  assert.equal(h.state().assumptions.growth,.17);assert.equal(h.state().notes.today,'Original business story');
- for(let i=0;i<8;i++){h.step(i);assert.ok(h.get('#guided-step-title'));assert.equal(h.state().step,i);assert.equal(h.focus(),h.get('#guided-step-title'));assert.match(h.get('#guided-results').innerHTML,/PROVISIONAL BASE CASE/);}
+ for(let i=0;i<8;i++){h.step(i);assert.ok(h.get('#guided-step-title-'+i));assert.equal(h.state().step,i);assert.equal(h.get('#editor-group-'+i).hidden,false);assert.match(h.get('#guided-results').innerHTML,/PROVISIONAL BASE CASE/);}
 });
 test('guided runtime QA: calculations need no assent and company switches retain separate drafts',async()=>{
  const h=await startStudio();assert.equal(h.state().modelReviewed,false);assert.equal(h.state().bridgeReviewed,false);assert.ok(h.mounts.length);

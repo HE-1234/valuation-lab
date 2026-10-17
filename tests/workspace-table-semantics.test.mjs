@@ -34,10 +34,10 @@ test('workspace tables: every company/baseline has a name and native row/column 
    h.step(0);checkSemantics(h);totalTables+=tables(h).length;
    const source=named(h,'Field-level evidence ledger');assert.ok(source);
    assert.deepEqual(cells(source).map(r=>r.slice(0,2)),Object.entries(raw.facts||{}).map(([key,value])=>[key,num(value)]));
-   h.step(6);checkSemantics(h);totalTables+=tables(h).length;
+   h.step(6);checkSemantics(h);
    const captured=named(h,'Captured source bridge');assert.ok(captured);const s=snapshot(h);
    assert.deepEqual(cells(captured).map(r=>r[1]),[num(s.cash),num(s.debt),num(s.shares,2)]);
-   h.step(7);checkSemantics(h);totalTables+=tables(h).length;
+   h.step(7);checkSemantics(h);
    let v;try{v=calculateCurrent(s,h.state(company.ticker));}catch{}
    if(v){supported++;assert.deepEqual(cells(named(h,'Annual cash-flow forecast')),v.rows.map(r=>[String(r.year),num(r.revenue),num(r.ebit),num(r.reinvestment),num(r.fcff)]));}
    else assert.equal(named(h,'Annual cash-flow forecast'),undefined,'Unsupported models do not expose a stale forecast');

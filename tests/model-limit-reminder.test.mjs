@@ -49,8 +49,8 @@ test('model-limit reminder: all company baselines keep the same caveat and funct
   for(const snapshot of company.snapshots){
    h.change('#current-snapshot',snapshot.id);
    const reminder=h.get('.result-context'),link=h.get('#model-limits-link'),limits=h.get('#model-limits');
-   assert.equal(reminder.textContent,'Provisional claims · illustrative assumptions Limits ↗');
-   assert.equal(link.getAttribute('href'),'#model-limits');assert.equal(link.parent.parent,reminder);
+   assert.match(reminder.textContent,/Provisional claims · illustrative assumptions.*Model limits/);
+   assert.equal(link.getAttribute('data-evidence'),'limits');assert.equal(link.parent,reminder);
    const state=JSON.stringify([...h.storage]),mounts=h.mounts.length;
    link.click();assert.equal(limits.open,true);limits.open=false;link.click();assert.equal(limits.open,true);
    assert.equal(JSON.stringify([...h.storage]),state);assert.equal(h.mounts.length,mounts);
