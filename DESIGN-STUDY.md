@@ -2,6 +2,33 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 15:42 UTC · Keep units and help with both assumption controls
+
+### Question and evidence
+
+Do the number field and its paired slider expose the same unit and explanation when navigating by control?
+
+The number fields already referenced their nearby helper text. Their paired sliders had descriptive names but no helper-text association. The visible %, × and m suffixes were separate spans, outside either control's programmatic description; some help text explained the concept without stating the entry unit. This was a source-markup gap, not an observed screen-reader failure or a measured user error.
+
+### New lessons read
+
+- [Google web.dev, Forms](https://web.dev/learn/accessibility/forms). Read the complete written lesson: Fields, Labels, Descriptions, Errors and Additional success criteria, including displayed code examples. Page last updated January 10, 2023. Applied preserving native inputs and visible labels while connecting supplementary instructions through an accessible description. Personal-data autocomplete examples are unrelated to these financial assumptions and were not adopted.
+- [W3C WAI, Form Instructions](https://www.w3.org/WAI/tutorials/forms/instructions/). Read the complete written tutorial: overall and inline instructions, instructions inside and outside labels, aria-labelledby, aria-describedby, placeholder text and styling, including displayed examples and code. Page updated May 13, 2024. Applied retaining the existing label and associating nearby explanatory text with each control rather than replacing the label or adding a placeholder.
+
+Read on October 17, 2026. Embedded CodePens and live form examples were not operated, and linked techniques were not separately studied. No video viewing, interactive exercise, full-course completion or accessibility certification is claimed.
+
+### One bounded change
+
+Point each of the nine assumption sliders to the same existing helper text as its paired number field. Prefix that helper with a short, visually hidden unit description: Percent, Times, or the selected source currency followed by millions. The prefix reuses the established screen-reader text treatment. Both USD and TWD source baselines retain their own currency context.
+
+The visible labels, unit suffixes, helper wording, layout, themes and values remain unchanged. Native number and range controls retain their names, bounds, steps, decimal input mode and synchronization. No new focus stop, live region, acknowledgement or editing step is added. Calculation, simulation, data, research cases, saved inputs and historical freezes are unchanged, including AAOI/Alphabet treatments and histories beside assumptions.
+
+### Checks and limitations
+
+All 424 automated checks passed, including four new regressions; the baseline passed 420. The new checks cover 315 number/slider pairs across all 35 company-baseline combinations, unique description targets, explicit units, existing visible help and labels, unchanged native control attributes, typing and slider synchronization, input/focus stability, category navigation, saved edits, invalid recovery and source/model withholding. They verify source and minimal-DOM relationships, not actual speech output.
+
+Seventeen before/after static-preview pairs cover full pages at 320, 390 and 1440px, AAOI/Alphabet equity pages at 390px, and the three unit types together at 320/1440px in all six themes. All 24 rendered pages were pixel-identical before and after. The three ordinary full-page comparisons and all six phone-theme components were visually inspected. These document-renderer approximations substitute form-control frames and flatten responsive CSS; they cannot establish native keyboard, touch, accessibility-tree or screen-reader behavior. The known browser restriction and private-site owner sign-in gate were not bypassed.
+
 ## 2026-10-17, 14:42 UTC · Let the valuation headline reflow
 
 ### Question and evidence

@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 15:42 UTC · Shared units and help for assumption controls
+
+- Linked each assumption slider to the same helper description as its paired number field.
+- Added a visually hidden explicit unit prefix, including the selected USD/TWD currency for million-unit amounts.
+- Preserved the visible interface, six themes, native controls, immediate editing, saved values, histories and all financial calculations and simulations.
+- Recorded new web.dev and W3C forms reading with exact study and verification limits.
+
+Validation: all 424 automated checks passed, including four new regressions covering 315 control pairs across 35 baselines, units, native attributes, editing/recovery/persistence and unchanged withholding. Seventeen static before/after pairs cover phone/desktop views, all six themes and AAOI/Alphabet; all 24 rendered pages were pixel-identical. These are document-renderer approximations; actual keyboard, touch, accessibility-tree and screen-reader output remain unverified.
+
 ## 2026-10-17, 14:42 UTC · Complete enlarged valuation headlines
 
 - Let the valuation headline and operating-value summary wrap when enlarged text needs more space.
