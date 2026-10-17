@@ -39,3 +39,35 @@ Reference requested: https://www.awwwards.com/sites/lusion-v3. The Awwwards entr
 The simulation is the functional motion centerpiece. A bounded representative sequence builds histogram mass into bins, then restores exact full-sample counts. Explicit colors resolve from the current one of six themes and repaint on theme changes. Mobile metric cards stack, controls remain touch-sized, and inspection has a native range/table alternative. Quotes retain date/source and explicit missing states. The hero shortcut exposes the simulation section without forcing users to fill every research note; evidence/model/claims gates remain enforced.
 
 Static print-renderer approximations, populated from the app's own AAPL calculations, were inspected at 1440 and 390 CSS px. SVG palette tokens are emitted as explicit colors to remove renderer ambiguity. WeasyPrint has known inline-flex/form/media differences, so these images establish only approximate hierarchy and final-chart contrast. No browser-interaction or pixel-perfect claim is made; Chromium launch was blocked by socket permissions before any app loaded. Browser access controls were respected.
+
+## Version 7 · evidence-first instrument (2026-10-17)
+
+### What changed
+
+The default current workspace is now an analytical instrument, not an eight-step onboarding flow. Its first useful content is company/baseline selection, provisional base-case value and the interactive conditional distribution. A compact, horizontally scrollable assumption navigation sits beside the result on desktop and directly below it on phone. Phone landing-page slogans and the ornamental globe are removed. Current themes remain selectable and existing choices persist; new sessions start in Slate & Blue.
+
+Each numerical assumption includes dated, source-linked company evidence in the same editing unit. Annual observations remain annual; TTM margin is separate. Missing observations remain visibly unavailable. Reported effective tax and historical book-capital productivity/return proxies are labeled as context, not silently equated with forecast cash taxes, marginal investment efficiency or terminal marginal ROIC. WACC uses dated component context without inventing company-reported WACC. Other-assets/claims edits show balance-sheet context, not fictitious historical adjustments.
+
+Review/acceptance checkboxes and Apply/Continue/Mark reviewed actions are removed from the current workflow. Inputs update immediately; notes and changes save locally. The unchanged arithmetic is invoked in an explicit provisional-bridge calculation context, which does not set either legacy user-review flag. Data, date, security/currency, adjustment-evidence and unsupported-model constraints still fail closed. Manual quote comparison now matches an explicit economic share-basis field; a legacy confirmation boolean cannot establish compatibility.
+
+Motion belongs to the chart. On first meaningful visibility (at least 35% of the actual chart), bounded representative samples assemble into the exact full distribution in about 1.6 seconds. The visibly labeled Replay/Pause/Resume controls work on touch. Editing an assumption gives 360 ms bar-height feedback using the previous and current actual histogram heights, with a 120 ms computational debounce. Navigation between assumption categories does not replace the chart or the active numeric input. Reduced motion uses a complete static result. Hidden/offscreen/cancelled animations restore exact full-run heights. All simulation settings recalculate without an Apply action, and invalid edits clear prior values, quote gaps and percentile tables.
+
+### Study actually used
+
+The design researcher read the accessible lesson transcripts and written guidance below. No claim is made to have watched all course videos, completed a paid course or inspected the reference site's live implementation. Current 2026 Webflow tooling was checked separately; Google Expressive research dates to 2025, and the web.dev/NNG foundations are older.
+
+- [Webflow University: Intro to motion](https://university.webflow.com/videos/intro-to-motion-in-webflow): distinguish feedback from sequences. Applied as short live-edit feedback plus explicit replay.
+- [Webflow University: When to use interactions](https://university.webflow.com/videos/when-to-use-interactions): purposeful triggers, no repeated blocking intro. Applied by removing the globe/hero and tying motion to the distribution.
+- [Webflow University: GSAP-powered timelines](https://university.webflow.com/videos/create-a-gsap-powered-timeline-animation): deliberate trigger/target/sequencing. Applied through bounded native WAAPI, without adding a library dependency.
+- [Webflow University: Design systems](https://university.webflow.com/videos/intro-to-design-systems-in-webflow): shared tokens/components. Applied through reusable assumption/history units and preserved semantic themes.
+- [Webflow July 2026 interaction documentation](https://help.webflow.com/hc/en-us/articles/53580099234579-Create-and-manage-Interactions-with-GSAP): confirms the current interaction workflow; no Webflow runtime is used here.
+- [Google Material 3 Expressive research](https://design.google/library/expressive-material-design-google-research): selective emphasis with familiar controls. Applied to one dominant chart, ordinary labeled number inputs, native sliders and quiet surrounding structure.
+- [NN/G visual hierarchy](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/) and [progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/): proximity before more panels; disclose infrequent detail while keeping evidence primary.
+- [Google web.dev responsive typography](https://web.dev/learn/design/typography) and [animation](https://web.dev/learn/css/animations): readable responsive text, bounded motion and reduced-motion support.
+- [W3C pause/stop/hide guidance](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html): visible playback controls, background/offscreen cancellation and a complete nonanimated alternative.
+
+### Verification and limitations
+
+The final source passes 254 automated engine, data, DOM, event and motion-lifecycle tests, including preserved historical numerical goldens and original frozen-data hashes. The legacy engine diff is one explicit provisional-bridge compatibility condition; Monte Carlo numerical changes are limited to that adapter field. All distribution arithmetic remains unchanged.
+
+Static screen approximations were rendered and visually inspected at 320px, 390px and 1440px. These use WeasyPrint with native controls represented as static elements; they are not browser screenshots and cannot establish real iOS layout, touch, accessibility-tree or animation behavior. The supported cloud browser still reaches the private host's ordinary owner sign-in gate. No access restriction, security token or user-computer restriction was bypassed. Real authenticated browser QA remains unverified.

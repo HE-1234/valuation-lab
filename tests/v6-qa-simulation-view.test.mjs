@@ -2,44 +2,14 @@
 // does not verify browser layout, accessibility tree, native touch, or paint.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mountSimulation} from '../dist/simulation-view.js';
-import {currentSnapshot,draftFor} from '../dist/current-model.js';
+import {fixture} from './v7-simulation-harness.mjs';
 import {simulateCurrent} from '../dist/simulation.js';
 
-function fixture({reduced=false,mobile=false,ticker='VIEWQA',rawId,autoIntersect=true,debt=100,quote}={}){
- const company={ticker,name:'Synthetic view QA',currency:'USD'},raw={id:rawId||ticker+'-FY',snapshotMode:'annual-reference',periodEnd:'2025-12-31',filingDate:'2026-02-01',sourceUrl:'https://example.com/view-source',currency:'USD',revenue:1000,EBIT:100,cash:50,debt,shares:10,shareBasis:'same common share basis'};
- const snapshot=currentSnapshot(company,raw),draft={...draftFor(company,raw),cutoff:'2026-10-17',bridgeReviewed:true,modelReviewed:true};if(quote)draft.quote=quote;
- const ids=new Map(),all=[],animations=[],observers=[],exports=[],globals=['document','matchMedia','addEventListener','removeEventListener','IntersectionObserver','URL','setTimeout'];
- const saved=Object.fromEntries(globals.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));
- const emitter=()=>({listeners:new Map(),addEventListener(t,f){if(!this.listeners.has(t))this.listeners.set(t,new Set());this.listeners.get(t).add(f)},removeEventListener(t,f){this.listeners.get(t)?.delete(f)},dispatch(t,e={}){for(const f of this.listeners.get(t)||[])f(e)}});
- const decode=x=>String(x).replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&amp;','&');
- class Element{
-  constructor(attrs={}){this.attrs={...attrs};this.dataset=Object.fromEntries(Object.entries(attrs).filter(([k])=>k.startsWith('data-')).map(([k,v])=>[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()),v]));this.value=attrs.value||'';this.style={};this.textContent='';this._html='';this.descendants=[];this.children=[];this.disabled='disabled'in attrs;this.hidden='hidden'in attrs;this.captured=new Set();}
-  set innerHTML(html){for(const el of this.descendants){if(ids.get('#'+el.attrs.id)===el)ids.delete('#'+el.attrs.id);const i=all.indexOf(el);if(i>=0)all.splice(i,1)}this.descendants=[];this._html=html;
-   for(const match of html.matchAll(/<([a-z][a-z0-9-]*)\b([^>]*)>/gi)){const attrs=Object.fromEntries([...match[2].matchAll(/([\w-]+)(?:="([^"]*)")?/g)].map(m=>[m[1],decode(m[2]??'')]));const el=new Element(attrs);this.descendants.push(el);all.push(el);if(attrs.id)ids.set('#'+attrs.id,el);}
-   for(const match of html.matchAll(/<select\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/select>/g)){const options=[...match[2].matchAll(/<option\b([^>]*)>/g)];const option=options.find(m=>/selected/.test(m[1]))||options[0];if(option)ids.get('#'+match[1]).value=option[1].match(/value="([^"]*)"/)[1];}
-  }
-  get innerHTML(){return this._html}
-  querySelector(s){if(s.startsWith('#'))return ids.get(s)||null;const m=s.match(/^\[([^=]+)="([^"]+)"\]$/);return m?all.find(e=>e.attrs[m[1]]===m[2])||null:null}
-  querySelectorAll(s){const attr=s.match(/^\[([^\]]+)\]$/)?.[1];return all.filter(el=>attr&&attr in el.attrs)}
-  setAttribute(k,v){this.attrs[k]=String(v)}getAttribute(k){return this.attrs[k]??null}
-  getBoundingClientRect(){return {left:10,width:960,top:0,height:390}}
-  setPointerCapture(id){this.captured.add(id)}releasePointerCapture(id){this.captured.delete(id)}
-  replaceChildren(){this.children=[]}appendChild(el){this.children.push(el);el.parent=this}remove(){if(this.parent)this.parent.children=this.parent.children.filter(e=>e!==this)}click(){return this.onclick?.({target:this})}
-  animate(frames,options){const a={frames,options,state:'running',cancel(){this.state='canceled'},pause(){this.state='paused'},play(){this.state='running'}};animations.push(a);return a}
- }
- const doc=Object.assign(emitter(),{hidden:false,documentElement:{dataset:{theme:'forest'}},createElement:()=>new Element(),createElementNS:()=>new Element()});
- const windowEvents=emitter(),motion=Object.assign(emitter(),{matches:reduced}),size=Object.assign(emitter(),{matches:mobile});
- Object.assign(globalThis,{URL:{createObjectURL(blob){exports.push(blob);return 'blob:qa'},revokeObjectURL(){}},setTimeout(){return 0},document:doc,matchMedia:q=>q.includes('reduced-motion')?motion:size,addEventListener:windowEvents.addEventListener.bind(windowEvents),removeEventListener:windowEvents.removeEventListener.bind(windowEvents),IntersectionObserver:class{constructor(fn){this.fn=fn;this.disconnected=false;observers.push(this)}observe(){}disconnect(){this.disconnected=true}}});
- const root=new Element(),destroy=mountSimulation(root,snapshot,draft);if(autoIntersect)for(const o of observers)o.fn([{isIntersecting:true}]);
- return {root,snapshot,draft,animations,observers,exports,motion,doc,windowEvents,get:s=>root.querySelector(s),bars:()=>root.querySelectorAll('[data-bin]'),destroy,cleanup(){destroy();for(const [k,descriptor]of Object.entries(saved)){if(descriptor)Object.defineProperty(globalThis,k,descriptor);else delete globalThis[k]}}};
-}
-
 test('v6 QA: actual simulation-view handlers inspect median, sourced quote, arrows, bounds and slider',()=>{
- const h=fixture({reduced:true,quote:{price:10000,date:'2026-10-16',currency:'USD',sourceUrl:'https://example.com/quote',basisConfirmed:true}});
+ const h=fixture({reduced:true,quote:{price:10000,date:'2026-10-16',currency:'USD',sourceUrl:'https://example.com/quote',shareBasis:'same common share basis'}});
  try{
   const chart=h.get('#mc-chart');assert.equal(chart.getAttribute('role'),'slider');assert.equal(chart.getAttribute('tabindex'),'0');assert.match(h.get('#mc-inspector').innerHTML,/median/i);
-  h.get('#mc-market').click();assert.match(h.get('#mc-inspector').innerHTML,/10,000/);assert.match(chart.getAttribute('aria-valuetext'),/10,000/);assert.match(h.get('#mc-output').innerHTML,/pinned to the nearest chart edge/);
+  h.get('#mc-market').click();assert.match(h.get('#mc-inspector').innerHTML,/10,000/);assert.match(chart.getAttribute('aria-valuetext'),/10,000/);assert.match(h.get('#mc-summary-content').innerHTML,/pinned to the nearest chart edge/);
   let prevented=0;const key=key=>chart.onkeydown({key,preventDefault(){prevented++}});key('Home');assert.equal(Number(chart.getAttribute('aria-valuenow')),Number(chart.getAttribute('aria-valuemin')));key('End');assert.equal(Number(chart.getAttribute('aria-valuenow')),Number(chart.getAttribute('aria-valuemax')));key('ArrowLeft');assert.ok(Number(chart.getAttribute('aria-valuenow'))<Number(chart.getAttribute('aria-valuemax')));assert.equal(prevented,3);
   h.get('#mc-scrubber').oninput({target:{value:'0'}});assert.equal(Number(chart.getAttribute('aria-valuenow')),Number(chart.getAttribute('aria-valuemin')));
   h.get('#mc-median').click();assert.match(h.get('#mc-inspector').innerHTML,/median/i);h.get('#mc-market').onpointerenter();assert.match(h.get('#mc-inspector').innerHTML,/10,000/);h.get('#mc-median').onfocus();assert.match(h.get('#mc-inspector').innerHTML,/median/i);h.get('#mc-market').onfocus();assert.match(h.get('#mc-inspector').innerHTML,/10,000/);h.get('#mc-median').onpointerenter();assert.match(h.get('#mc-inspector').innerHTML,/median/i);assert.equal(h.animations.length,0);assert.match(h.get('#mc-play').textContent,/Reduced motion/);assert.match(h.get('#mc-scrubber').getAttribute('aria-valuetext'),/USD per share; .*% of simulated values at or below/);assert.equal(h.get('#mc-scrubber').getAttribute('aria-label'),'Explore simulated value');
@@ -60,7 +30,7 @@ test('v6 QA: mobile limits particles and changing reduced-motion preference canc
  const h=fixture({mobile:true,ticker:'MOBILEQA'});try{assert.equal(h.animations.length,64);h.motion.matches=true;h.motion.dispatch('change');assert.ok(h.animations.every(a=>a.state==='canceled'));assert.equal(h.get('#mc-particles').children.length,0)}finally{h.cleanup()}
 });
 test('v6 QA: valid all-excluded settings remove chart and expose attempted/excluded accounting',()=>{
- const h=fixture({reduced:true,ticker:'EMPTYQA'});try{for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-run').click();assert.equal(h.get('#mc-chart'),null);assert.match(h.get('#mc-output').innerHTML,/No valid scenarios/);assert.match(h.get('#mc-audit').textContent,/4,000 attempted · 4,000 excluded/);assert.match(h.get('#mc-audit').textContent,/terminal-constraints: 4000/)}finally{h.cleanup()}
+ const h=fixture({reduced:true,ticker:'EMPTYQA'});try{for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-growth-low').oninput();assert.equal(h.get('#mc-chart'),null);assert.match(h.get('#mc-output').innerHTML,/No valid scenarios/);assert.match(h.get('#mc-audit').textContent,/4,000 attempted · 4,000 excluded/);assert.match(h.get('#mc-audit').textContent,/terminal-constraints: 4000/)}finally{h.cleanup()}
 });
 test('v6 QA: all-zero equity distribution remains inspectable without claiming ECDF at median is 50%',()=>{
  const h=fixture({reduced:true,ticker:'ZEROQA',debt:1e9});try{assert.match(h.get('#mc-audit').textContent,/4,000 zero-equity/);assert.match(h.get('#mc-inspector').innerHTML,/100% of simulated values at or below/);assert.equal(Number(h.get('#mc-chart').getAttribute('aria-valuenow')),0)}finally{h.cleanup()}
@@ -69,33 +39,33 @@ test('v6 QA: keyboard cannot overshoot chart bounds in visible value or ARIA tex
  const h=fixture({reduced:true,ticker:'BOUNDQA'});try{const chart=h.get('#mc-chart'),key=key=>chart.onkeydown({key,preventDefault(){}});key('End');const max=h.get('#mc-inspector').innerHTML,maxaria=chart.getAttribute('aria-valuetext');key('ArrowRight');assert.equal(h.get('#mc-inspector').innerHTML,max);assert.equal(chart.getAttribute('aria-valuetext'),maxaria);key('Home');const min=h.get('#mc-inspector').innerHTML;key('ArrowLeft');assert.equal(h.get('#mc-inspector').innerHTML,min)}finally{h.cleanup()}
 });
 test('v6 QA: invalid rerun withholds previous chart and prevents exporting stale results',()=>{
- const h=fixture({ticker:'INVALIDVIEWQA'});try{h.get('#mc-growth-low').value='90';h.get('#mc-run').click();assert.match(h.get('#mc-output').innerHTML,/Simulation withheld/);assert.equal(h.get('#mc-chart'),null);assert.match(h.get('#mc-error').textContent,/low.*mode.*high/);assert.ok(h.animations.every(a=>a.state==='canceled'));h.get('#mc-export').click();assert.equal(h.exports.length,0)}finally{h.cleanup()}
+ const h=fixture({ticker:'INVALIDVIEWQA'});try{h.get('#mc-growth-low').value='90';h.get('#mc-growth-low').oninput();assert.match(h.get('#mc-output').innerHTML,/Simulation withheld/);assert.equal(h.get('#mc-chart'),null);assert.match(h.get('#mc-error').textContent,/low.*mode.*high/);assert.ok(h.animations.every(a=>a.state==='canceled'));h.get('#mc-export').click();assert.equal(h.exports.length,0)}finally{h.cleanup()}
 });
 test('v6 QA: simulation export contains source identity and independently reruns identical samples',async()=>{
  const h=fixture({reduced:true,ticker:'EXPORTQA'});try{h.get('#mc-export').click();assert.equal(h.exports.length,1);const exported=JSON.parse(await h.exports[0].text());assert.equal(exported.snapshotId,h.snapshot.raw.id);assert.deepEqual(exported.snapshot,JSON.parse(JSON.stringify(h.snapshot)));assert.deepEqual(exported.draft,h.draft);const rerun=simulateCurrent(exported.snapshot,exported.draft,exported.config);assert.deepEqual(rerun.samples,exported.samples);assert.deepEqual(rerun.exclusions,exported.exclusions)}finally{h.cleanup()}
 });
 test('v6 QA: simulation ranges are separated by source snapshot identity and restored within a session',()=>{
- let h=fixture({reduced:true,ticker:'IDENTITYQA',rawId:'SOURCE-ONE'});try{h.get('#mc-growth-low').value='1';h.get('#mc-growth-mode').value='2';h.get('#mc-growth-high').value='3';h.get('#mc-run').click();assert.equal(h.get('#mc-error').textContent,'')}finally{h.cleanup()}
+ let h=fixture({reduced:true,ticker:'IDENTITYQA',rawId:'SOURCE-ONE'});try{h.get('#mc-growth-low').value='1';h.get('#mc-growth-mode').value='2';h.get('#mc-growth-high').value='3';h.get('#mc-growth-low').oninput();assert.equal(h.get('#mc-error').textContent,'')}finally{h.cleanup()}
  h=fixture({reduced:true,ticker:'IDENTITYQA',rawId:'SOURCE-TWO'});try{assert.equal(h.get('#mc-growth-low').value,'3');assert.equal(h.get('#mc-growth-mode').value,'8')}finally{h.cleanup()}
  h=fixture({reduced:true,ticker:'IDENTITYQA',rawId:'SOURCE-ONE'});try{assert.equal(h.get('#mc-growth-low').value,'1');assert.equal(h.get('#mc-growth-mode').value,'2')}finally{h.cleanup()}
 });
 test('v6 QA: particles wait for visibility, clean up offscreen and do not repeatedly autoplay',()=>{
- const h=fixture({ticker:'OFFSCREENQA',autoIntersect:false});try{assert.equal(h.animations.length,0);h.observers[0].fn([{isIntersecting:true}]);assert.equal(h.animations.length,112);h.observers[0].fn([{isIntersecting:false}]);assert.ok(h.animations.every(a=>a.state==='canceled'));h.observers[0].fn([{isIntersecting:true}]);assert.equal(h.animations.length,112)}finally{h.cleanup()}
+ const h=fixture({ticker:'OFFSCREENQA',autoIntersect:false});try{assert.equal(h.animations.length,0);h.observers[0].fn([{isIntersecting:true,intersectionRatio:1}]);assert.equal(h.animations.length,112);h.observers[0].fn([{isIntersecting:false}]);assert.ok(h.animations.every(a=>a.state==='canceled'));h.observers[0].fn([{isIntersecting:true,intersectionRatio:1}]);assert.equal(h.animations.length,112)}finally{h.cleanup()}
 });
 test('v6 QA: falling arrivals build bin heights and completion restores exactly every accepted-count bin',()=>{
  const h=fixture({ticker:'BUILDQA',autoIntersect:false});try{
   const heights=()=>h.bars().map(b=>Number(b.getAttribute('height'))),full=heights();assert.equal(full.length,36);assert.ok(full.some(x=>x>0));const expected=simulateCurrent(h.snapshot,h.draft).histogram,max=Math.max(...expected.map(b=>b.count));assert.deepEqual(full,expected.map(b=>b.count/max*250));
-  h.observers[0].fn([{isIntersecting:true}]);assert.ok(heights().every(x=>x===0));assert.match(h.get('#mc-animation-status').textContent,/Replay building.*statistics show full run/);
+  h.observers[0].fn([{isIntersecting:true,intersectionRatio:1}]);assert.ok(heights().every(x=>x===0));assert.match(h.get('#mc-animation-status').textContent,/Replay building.*statistics show full run/);
   for(const a of h.animations.slice(0,30)){a.state='finished';a.onfinish()}
   const partial=heights();assert.ok(partial.some(x=>x>0));assert.ok(partial.some((x,i)=>x<full[i]));assert.ok(partial.every((x,i)=>x<=full[i]+1e-10));
   h.get('#mc-play').click();assert.ok(h.animations.slice(30).every(a=>a.state==='paused'));assert.deepEqual(heights(),partial);h.get('#mc-play').click();assert.ok(h.animations.slice(30).every(a=>a.state==='running'));
   for(const a of h.animations.slice(30)){a.state='finished';a.onfinish()}
-  assert.deepEqual(heights(),full);assert.match(h.get('#mc-animation-status').textContent,/Full distribution.*all accepted/);assert.equal(h.get('#mc-particles').children.length,0);assert.equal(h.get('#mc-play').getAttribute('aria-pressed'),'false');
+  assert.deepEqual(heights(),full);assert.equal(h.get('#mc-animation-status').textContent,'Full distribution');assert.match(h.get('#mc-summary-content').innerHTML,/Histogram · all accepted scenarios/);assert.match(h.get('#mc-audit').textContent,/histogram and percentiles use every accepted scenario/);assert.equal(h.get('#mc-particles').children.length,0);assert.equal(h.get('#mc-play').getAttribute('aria-pressed'),'false');
  }finally{h.cleanup()}
 });
 test('v6 QA: all interruptions immediately restore exact full bins while theme changes refresh literal SVG colors',()=>{
  const h=fixture({ticker:'RESTOREQA',autoIntersect:false});try{
-  const heights=()=>h.bars().map(b=>Number(b.getAttribute('height'))),full=heights();h.observers[0].fn([{isIntersecting:true}]);h.motion.matches=true;h.motion.dispatch('change');assert.deepEqual(heights(),full);
+  const heights=()=>h.bars().map(b=>Number(b.getAttribute('height'))),full=heights();h.observers[0].fn([{isIntersecting:true,intersectionRatio:1}]);h.motion.matches=true;h.motion.dispatch('change');assert.deepEqual(heights(),full);
   h.motion.matches=false;h.motion.dispatch('change');h.get('#mc-play').click();assert.ok(heights().every(v=>v===0));h.windowEvents.dispatch('valuation:tab-change',{detail:'history'});assert.deepEqual(heights(),full);
   h.get('#mc-play').click();h.doc.hidden=true;h.doc.dispatch('visibilitychange');assert.deepEqual(heights(),full);h.doc.hidden=false;
   h.get('#mc-play').click();h.doc.documentElement.dataset.theme='midnight';h.windowEvents.dispatch('valuation:theme-change');assert.deepEqual(heights(),full);assert.match(h.get('#mc-output').innerHTML,/stop-color="#a4e5ce"/);assert.match(h.get('#mc-output').innerHTML,/style="fill:#edf2fa"/);
@@ -104,6 +74,6 @@ test('v6 QA: all interruptions immediately restore exact full bins while theme c
 });
 test('v6 QA: explicit skip immediately displays full exact bins and ends the replay',()=>{
  const h=fixture({ticker:'SKIPQA',autoIntersect:false});try{
-  const heights=()=>h.bars().map(b=>Number(b.getAttribute('height'))),full=heights();assert.equal(h.get('#mc-skip').hidden,true);h.observers[0].fn([{isIntersecting:true}]);assert.equal(h.get('#mc-skip').hidden,false);assert.ok(heights().every(x=>x===0));h.get('#mc-skip').click();assert.deepEqual(heights(),full);assert.ok(h.animations.every(a=>a.state==='canceled'));assert.equal(h.get('#mc-skip').hidden,true);assert.equal(h.get('#mc-particles').children.length,0);assert.match(h.get('#mc-animation-status').textContent,/Full distribution/);
+  const heights=()=>h.bars().map(b=>Number(b.getAttribute('height'))),full=heights();assert.equal(h.get('#mc-skip').hidden,true);h.observers[0].fn([{isIntersecting:true,intersectionRatio:1}]);assert.equal(h.get('#mc-skip').hidden,false);assert.ok(heights().every(x=>x===0));h.get('#mc-skip').click();assert.deepEqual(heights(),full);assert.ok(h.animations.every(a=>a.state==='canceled'));assert.equal(h.get('#mc-skip').hidden,true);assert.equal(h.get('#mc-particles').children.length,0);assert.match(h.get('#mc-animation-status').textContent,/Full distribution/);
  }finally{h.cleanup()}
 });

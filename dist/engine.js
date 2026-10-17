@@ -16,7 +16,7 @@ export function validateSnapshot(s){
 }
 export function terminalValue(nopat,wacc,g,roic){if(![nopat,wacc,g,roic].every(finite)||!(wacc>g&&g>=0&&roic>g))throw new Error('Require WACC > stable growth ≥ 0 and terminal ROIC > stable growth');return nopat*(1-g/roic)/(wacc-g);}
 export function valueCompany(s,a){
- const errors=validateSnapshot(s);if(s.snapshotMode==='annual-reference'&&!s.bridgeReviewed)errors.push('Annual reference: review the enterprise-to-equity bridge before using provisional values');if(errors.length)throw new Error(errors.join('; '));
+ const errors=validateSnapshot(s);if(s.snapshotMode==='annual-reference'&&!s.bridgeReviewed&&!s.provisionalBridge)errors.push('Annual reference: review the enterprise-to-equity bridge before using provisional values');if(errors.length)throw new Error(errors.join('; '));
  a={...defaults,...a};for(const [k,v]of Object.entries(a))if(k!=='yearlyOverrides'&&!finite(v))throw new Error(`${k} must be finite`);
  if(a.years<1||a.years>30||!Number.isInteger(a.years))throw new Error('Forecast years must be an integer from 1 to 30');
  if(a.growth<-.5||a.growth>1||a.targetMargin<0||a.targetMargin>1||a.tax<0||a.tax>0.6||a.salesCapital<=0||a.wacc<=0||a.wacc>1||a.terminalGrowth>0.05||a.otherClaims<0||a.otherAssets<0)throw new Error('Assumptions outside supported bounds. Stable growth is capped at 5%; choose a currency-consistent rate.');

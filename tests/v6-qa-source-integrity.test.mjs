@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import * as current from '../dist/current-model.js';
 import {eligibleSnapshots} from '../dist/engine.js';
 const baselineHashes={
-  "engine.js": "204f6e64ed22a46a2192ddcfde9b275d3af5090e0d3a9bf10034c6a527fb6a48",
+  "engine.js": "3229a8fcc63a64b34051be19e375484445878c9cd7ada030fa8b3397dac8e8f7",
   "data/companies.json": "6cdf199740c0549e32258211dd31abea59259cf46ecd7526b43bf932abf1e4b9",
   "data/current-market-references.json": "cb1ea4dd76a79c15a9379963e95ab5c52376fd499e6c105e1c75c2ff74c19850",
   "data/current-universe.json": "6f607bb6dd8707e91810bbdf251a8ffb358d1b44fe739ec2418c36fb3b9e8be1",
@@ -45,7 +45,7 @@ const baselineHashes={
 };
 const read=f=>fs.readFileSync(new URL('../dist/'+f,import.meta.url));
 for(const [file,expected] of Object.entries(baselineHashes))test(`v6 QA: protected source bytes ${file}`,()=>{
- assert.equal(createHash('sha256').update(read(file)).digest('hex'),expected,`v6 must not rewrite historical engine, evidence, or frozen outcomes: ${file}`);
+ assert.equal(createHash('sha256').update(read(file)).digest('hex'),expected,`Protected engine/data changed unexpectedly (v7 engine permits explicit provisional bridge only): ${file}`);
 });
 test('v6 QA: every requested company retains current-only dated sources',()=>{
  const library=JSON.parse(read('data/current-universe.json'));

@@ -193,7 +193,7 @@ export function simulateCurrent(snapshot, draft, config) {
  const baseline = calculateCurrent(snapshot,draft);
  if (!finiteValuation(baseline)) throw new Error('Baseline valuation is numerically nonfinite; revise the scale or assumptions before simulating.');
  const c = validateSimulationConfig(config ?? simulationDefaults(draft.assumptions),baseline.assumptions);
- const normalized = {...snapshot,ebit:snapshot.ebit+draft.normalizationDelta,bridgeReviewed:true};
+ const normalized = {...snapshot,ebit:snapshot.ebit+draft.normalizationDelta,provisionalBridge:true};
  const random = createSeededRandom(c.seed), draws = [], rawDraws = [], scenarios = [], exclusions = {};
  const exclude = reason => {exclusions[reason] = (exclusions[reason] || 0)+1;};
  let zeroEquityCount = 0;

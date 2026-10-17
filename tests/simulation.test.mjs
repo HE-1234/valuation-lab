@@ -10,7 +10,7 @@ const draft = () => ({...draftFor({ticker:'LESSON'},{id:'lesson'}),cutoff:'2026-
 const fixed = (d = draft(), n = 30) => ({trials:n,seed:'test',drivers:Object.fromEntries(SIMULATION_DRIVER_KEYS.map(k=>[k,{low:d.assumptions[k],mode:d.assumptions[k],high:d.assumptions[k]}]))});
 const near = (a,b,tol = 1e-10) => assert.ok(Math.abs(a-b) <= tol*Math.max(1,Math.abs(b)),`${a} != ${b}`);
 const deepFreeze = object => {Object.freeze(object); for (const value of Object.values(object)) if (value && typeof value === 'object') deepFreeze(value);return object;};
-const quote = (price,date = '2026-10-17') => ({price,date,currency:'USD',sourceUrl:'https://example.com/quote',basisConfirmed:true});
+const quote = (price,date = '2026-10-17') => ({price,date,currency:'USD',sourceUrl:'https://example.com/quote',shareBasis:'period-end common'});
 
 test('simulation: zero-width distributions reproduce deterministic baseline exactly',()=>{
  const s = snapshot(), d = draft(), expected = calculateCurrent(s,d), result = simulateCurrent(s,d,fixed(d));
@@ -134,7 +134,7 @@ test('simulation: price rank is a dated, sourced ECDF and ties are explicit',()=
 
 test('simulation: invalid quote date, source, basis or currency withholds rank only',()=>{
  const d=draft();assert.equal(simulateCurrent(snapshot(),d,fixed(d)).quote.status,'missing');
- for(const patch of [{date:'2026-10-18'},{date:'2026-02-30'},{date:'2026-10-17T00:00:00Z'},{currency:'TWD'},{basisConfirmed:false},{sourceUrl:'javascript:alert(1)'}]) {
+ for(const patch of [{date:'2026-10-18'},{date:'2026-02-30'},{date:'2026-10-17T00:00:00Z'},{currency:'TWD'},{shareBasis:'different security'},{sourceUrl:'javascript:alert(1)'}]) {
   d.quote={...quote(20),...patch};const r=simulateCurrent(snapshot(),d,fixed(d));assert.equal(r.quote.status,'blocked');assert.equal(r.accepted,30);assert.equal(r.quote.percentile,undefined);
  }
 });
@@ -161,8 +161,8 @@ test('simulation: a sourced EBIT normalization exactly preserves the determinist
  d.adjustmentSource='';assert.throws(()=>simulateCurrent(snapshot(),d,fixed(d)),/adjustment/);
 });
 
-test('simulation: source, model and claims review gates fail closed',()=>{
- for(const patch of [{bridgeReviewed:false},{modelReviewed:false},{cutoff:'2024-01-01'}]) assert.throws(()=>simulateCurrent(snapshot(),{...draft(),...patch},{trials:2}));
+test('simulation: intrinsic source, model and claims constraints fail closed without acknowledgement gates',()=>{
+ for(const patch of [{bridgeReviewed:false},{modelReviewed:false},{bridgeReviewed:false,modelReviewed:false}])assert.equal(simulateCurrent(snapshot(),{...draft(),...patch},{trials:2}).accepted,2);assert.throws(()=>simulateCurrent(snapshot(),{...draft(),cutoff:'2024-01-01'},{trials:2}));
  for(const patch of [{snapshotMode:'latest-quarter'},{shares:null},{revenue:null},{shareBasis:''},{ticker:'NBIS'},{ticker:'TSM'},{sector:'Banking'},{modelType:'specialist'},{raw:{fatalBlockers:['Unresolved claims']}}]) assert.throws(()=>simulateCurrent({...snapshot(),...patch},draft(),{trials:2}));
 });
 

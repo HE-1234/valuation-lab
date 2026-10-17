@@ -42,9 +42,9 @@ test('v6 QA: negative equity remains a visible zero-mass floor with preserved ra
  assert.equal(r.zeroEquityCount,r.accepted);assert.ok(r.rawSamples.every(v=>v<0));assert.ok(r.samples.every(v=>v===0));assert.equal(r.median,0);assert.equal(r.mean,0);
  assert.equal(r.histogram.reduce((s,b)=>s+b.count,0),r.accepted);
 });
-test('v6 QA: review, evidence, source-date and model gates also govern simulation',()=>{
+test('v6 QA: evidence, source-date and model constraints govern simulation without assent gates',()=>{
  const d=draft(),c=config(d);
- for(const bad of [{modelReviewed:false},{bridgeReviewed:false},{cutoff:'2020-01-01'}])assert.throws(()=>simulateCurrent(snapshot,{...d,...bad},c));
+ for(const acknowledgements of [{modelReviewed:false},{bridgeReviewed:false},{modelReviewed:false,bridgeReviewed:false}])assert.equal(simulateCurrent(snapshot,{...d,...acknowledgements},c).status,'ready');assert.throws(()=>simulateCurrent(snapshot,{...d,cutoff:'2020-01-01'},c));
  for(const bad of [{revenue:null},{cash:null},{shares:0},{snapshotMode:'latest-quarter'},{ticker:'NBIS'},{ticker:'TSM'},{sector:'Insurance'}])assert.throws(()=>simulateCurrent({...snapshot,...bad},d,c));
  const path={...d,assumptions:{...d.assumptions,yearlyOverrides:Array.from({length:10},()=>({growth:.08,margin:.25,taxRate:.25,salesCapital:2,wacc:.09}))}};
  assert.throws(()=>simulateCurrent(snapshot,path,c),/override|path/i);
@@ -86,13 +86,13 @@ test('v6 QA: equal-width histogram puts boundary ties into the next bin and incl
 });
 test('v6 QA: sourced price percentile reports strict-below, ties, inclusive count and dated identity',()=>{
  const d=draft(),c=fixedConfig(d);const price=calculateCurrent(snapshot,d).perShare;
- d.quote={price,date:'2026-10-16',currency:'USD',sourceUrl:'https://example.com/qa-price',basisConfirmed:true};
+ d.quote={price,date:'2026-10-16',currency:'USD',sourceUrl:'https://example.com/qa-price',shareBasis:snapshot.shareBasis};
  const r=simulateCurrent(snapshot,d,c);assert.equal(r.quote.status,'ready');assert.equal(r.quote.percentile,100);assert.equal(r.quote.equalCount,1000);assert.equal(r.quote.belowCount,0);assert.equal(r.quote.atOrBelowCount,1000);assert.equal(r.quote.aboveCount,0);assert.equal(r.quote.denominator,r.accepted);assert.equal(r.quote.sourceUrl,d.quote.sourceUrl);assert.equal(r.quote.date,d.quote.date);
- for(const bad of [{currency:'TWD'},{sourceUrl:''},{basisConfirmed:false},{date:'2026-10-18'},{date:'2026-10-16T12:00:00Z'}])assert.equal(simulateCurrent(snapshot,{...d,quote:{...d.quote,...bad}},c).quote.status,'blocked',JSON.stringify(bad));
+ for(const bad of [{currency:'TWD'},{sourceUrl:''},{shareBasis:'different security'},{date:'2026-10-18'},{date:'2026-10-16T12:00:00Z'}])assert.equal(simulateCurrent(snapshot,{...d,quote:{...d.quote,...bad}},c).quote.status,'blocked',JSON.stringify(bad));
  assert.equal(simulateCurrent(snapshot,{...d,quote:{...d.quote,price:null}},c).quote.status,'missing');
 });
 test('v6 QA: quote and histogram summaries normalize to accepted draws after exclusions',()=>{
- const d=draft(),c=fixedConfig(d);c.drivers.wacc={low:.005,mode:.025,high:.045};d.quote={price:100,date:'2026-10-16',currency:'USD',sourceUrl:'https://example.com/qa-price',basisConfirmed:true};const r=simulateCurrent(snapshot,d,c);
+ const d=draft(),c=fixedConfig(d);c.drivers.wacc={low:.005,mode:.025,high:.045};d.quote={price:100,date:'2026-10-16',currency:'USD',sourceUrl:'https://example.com/qa-price',shareBasis:snapshot.shareBasis};const r=simulateCurrent(snapshot,d,c);
  const inclusive=r.samples.filter(x=>x<=100).length;near(r.quote.percentile,100*inclusive/r.accepted);assert.equal(r.quote.denominator,r.accepted);assert.match(r.warnings.join(' '),/exclusions change|conditional.*valid/i);
 });
 test('v6 QA: seeded draws stay bounded, and linked dependence differs from independence without linking WACC',()=>{
