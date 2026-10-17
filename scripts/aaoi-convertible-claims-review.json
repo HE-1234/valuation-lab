@@ -1,0 +1,790 @@
+{
+  "schemaVersion": 1,
+  "issuer": "AAOI",
+  "reviewedAt": "2026-10-17",
+  "purpose": "Evidence and conditional modeling contract for current-company valuation; preserve raw filings and historical freezes. All forecasts below are analyst assumptions, not issuer guidance or calibrated probabilities.",
+  "units": {
+    "money": "USD millions unless named Dollars",
+    "shares": "millions unless named exactShares",
+    "rates": "decimal fractions"
+  },
+  "sources": {
+    "fy2025": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+      "title": "AAOI FY2025 Form 10-K",
+      "filedAt": "2026-02-26",
+      "sections": [
+        "Balance sheet",
+        "Note J: Fair value",
+        "Note K: Bank debt",
+        "Note L: Convertible notes",
+        "Customer warrant"
+      ],
+      "localPath": "/workspace/shared/valuation-data/aaoi20251231_10k.htm",
+      "sha256": "ab840d7d70e59f2c1859e0b1017cf2b225aafa6faad95a45f55aad3579746914"
+    },
+    "q22026": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm",
+      "title": "AAOI June 2026 Form 10-Q",
+      "filedAt": "2026-08-06",
+      "sections": [
+        "Balance sheet",
+        "Cash-flow statement",
+        "Notes 3, 5, 8, 10, 11, 12, 15, 19"
+      ],
+      "localPath": "/workspace/shared/valuation-data/aaoi20260630_10q.htm",
+      "sha256": "3be84b65e22fed12ebbd7e6c6e7fb3543d4223638dbef1a762d0ba603b77f696"
+    },
+    "indenture": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000110465924131385/tm2431223d10_ex4-1.htm",
+      "title": "2030 notes indenture",
+      "filedAt": "2024-12-23",
+      "sections": [
+        "5.01",
+        "5.03",
+        "5.05",
+        "5.07"
+      ]
+    },
+    "results": {
+      "url": "https://investors.ao-inc.com/news-releases/news-release-details/applied-optoelectronics-reports-second-quarter-2026-results?hss_channel=lcp-744608",
+      "title": "Issuer Q2 2026 results and Q3 outlook",
+      "publishedAt": "2026-08-06"
+    },
+    "atmAgreement": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000110465926099688/tm2623389d2_8k.htm",
+      "title": "August 2026 ATM agreement Form 8-K",
+      "filedAt": "2026-08-21"
+    },
+    "atmProspectus": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000110465926099685/tm2623389-1_424b5.htm",
+      "title": "August 2026 ATM prospectus",
+      "filedAt": "2026-08-21",
+      "sections": [
+        "The Offering, S-5",
+        "Use of proceeds"
+      ]
+    },
+    "atmCompleted": {
+      "url": "https://appliedoptoelectronics.gcs-web.com/news-releases/news-release-details/applied-optoelectronics-announces-completion-previously",
+      "title": "Issuer announcement: ATM completed",
+      "publishedAt": "2026-10-05"
+    },
+    "propertyPurchase": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007057/aaoi_8k.htm",
+      "title": "September property cash purchase",
+      "filedAt": "2026-09-10"
+    },
+    "houstonLeases": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006862/aaoi_8k.htm",
+      "title": "Houston expansion leases",
+      "filedAt": "2026-09-01"
+    },
+    "ningboLease": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007160/aaoi_8k.htm",
+      "title": "Ningbo expansion lease",
+      "filedAt": "2026-09-15"
+    },
+    "filingsIndex": {
+      "url": "https://investors.ao-inc.com/financial-information/sec-filings",
+      "title": "Issuer current filings index",
+      "accessedAt": "2026-10-17"
+    }
+  },
+  "datedClaims": {
+    "2025-12-31": {
+      "sourceId": "fy2025",
+      "cashUnrestricted": 206.14,
+      "bankDebt": 33.975,
+      "convertibleCarryingAmount": 129.829,
+      "convertiblePrincipal": 125,
+      "convertibleDisclosedFairValue": 145.231,
+      "fairValueMeasurementDate": "2025-12-31",
+      "fairValuePrecisionMillions": 0.001,
+      "vendorBankAcceptances": 33.363,
+      "periodEndCommonShares": 74.998,
+      "shareCountPrecisionMillions": 0.001,
+      "conversionSharesAtUnadjustedRate": 2.88605,
+      "bookFundedDebtExcludingVendor": 163.804,
+      "bookFundedDebtIncludingVendor": 197.167,
+      "principalClaimsIncludingVendor": 192.338,
+      "fairValueClaimsIncludingVendor": 212.569
+    },
+    "2026-06-30": {
+      "sourceId": "q22026",
+      "cashUnrestricted": 499.737,
+      "bankDebt": 58.915,
+      "convertibleCarryingAmount": 129.142,
+      "convertiblePrincipal": 124.925,
+      "convertibleDisclosedFairValue": 445.1,
+      "fairValueMeasurementDate": "2026-06-30",
+      "fairValuePrecisionMillions": 0.1,
+      "vendorBankAcceptances": 33.94,
+      "periodEndCommonShares": 84.386,
+      "shareCountPrecisionMillions": 0.001,
+      "conversionSharesAtUnadjustedRate": 2.88431837,
+      "bookFundedDebtExcludingVendor": 188.057,
+      "bookFundedDebtIncludingVendor": 221.99699999999999,
+      "principalClaimsIncludingVendor": 217.78,
+      "fairValueClaimsIncludingVendor": 537.955
+    }
+  },
+  "convertibleTerms": {
+    "sourceIds": [
+      "q22026",
+      "indenture"
+    ],
+    "couponRate": 0.0275,
+    "maturityDate": "2030-01-15",
+    "conversionRateSharesPer1000Dollars": 23.0884,
+    "conversionPriceDollars": 43.31179293498034,
+    "unrestrictedConversionStarts": "2029-10-15",
+    "earlyConversion": "Prior to unrestricted date, only specified stock-price, note-trading-price or event conditions; a modeled intrinsic price alone is not proof of current legal convertibility.",
+    "issuerSettlementElection": [
+      "cash",
+      "shares",
+      "combination"
+    ],
+    "settlementSource": "Indenture 5.03: physical settlement delivers conversion-rate shares; cash/combination settlement uses 40-trading-day observation period.",
+    "redemptionFrom": "2027-01-15",
+    "redemptionStockPriceThresholdMultiple": 1.3,
+    "redemptionCondition": "20 of preceding 30 trading days plus notice-preceding trading day; make-whole adjustments may increase shares.",
+    "cappedCalls": {
+      "status": "No capped-call offset identified in reviewed annual/quarterly notes or issuance indenture.",
+      "modeledOffset": 0,
+      "doNotInterpretAsExhaustiveLegalOpinion": true
+    }
+  },
+  "vendorTreatment": {
+    "sourceIds": [
+      "q22026",
+      "fy2025"
+    ],
+    "classification": "Financing claim; issuer cash-flow presentation separately includes bank acceptance proceeds and repayments under financing activities.",
+    "h12026Proceeds": 68.639,
+    "h12026Repayments": 69.215,
+    "defaultDebtFraction": 1,
+    "alternativeDebtFractionRange": [
+      0,
+      1
+    ],
+    "consistency": "Sales-to-capital reinvestment must be defined before this financing. Do not also reduce operating working capital by the same acceptance liability. If reclassified as operating supplier funding, revise reinvestment consistently rather than only deleting debt.",
+    "restrictedCashPolicy": "Exclude separately disclosed restricted cash from unrestricted cash; no unsupported offset of restricted collateral."
+  },
+  "bridgeMethods": {
+    "default": {
+      "label": "Dated disclosed-market-claim bridge",
+      "formula": "Common residual = DCF enterprise value + same-date unrestricted cash - bank debt - vendor financing - disclosed fair value of entire convertible instrument - other separately reviewed claims. Apply warrants separately.",
+      "denominator": "Same-date common outstanding, 74.998m or 84.386m, rounded as filed. Do not add convertible shares.",
+      "notCurrent": "June 30, 2026 note fair value is not an October 17 quote. It includes market-priced conversion optionality and depends on market stock prices, rates and credit. This conservative hybrid bridge is not a self-consistent intrinsic option valuation.",
+      "bookValueRule": "Replace the book convertible amount with disclosed fair value; do not subtract both."
+    },
+    "ifConverted": {
+      "label": "All-share settlement sensitivity; hypothetical, excludes option time value",
+      "formula": "Remove the whole convertible claim, then add principalMillions * conversionRate / 1000 to common shares. No new cash is received on debt conversion.",
+      "selectionCaution": "Do not automatically assume holders exchange a principal claim for shares worth less than principal. A below-strike if-converted outcome is a hypothetical settlement scenario, not a rational-holder default.",
+      "intrinsicSettlementAlternative": "Ignoring time value and legal timing, common price solves value available before notes = basicShares * price + max(notePrincipal, conversionShares * price). Equivalent to lower of principal-subtraction and all-share-conversion values before floor and other option claims."
+    },
+    "principalOnly": {
+      "label": "Principal-only sensitivity; not option-inclusive valuation",
+      "note": "Principal is the contractual maturity amount; carrying amount includes issuance premium and unamortized costs. Neither captures the economic value of conversion optionality. Do not present either as fair value."
+    }
+  },
+  "warrants": {
+    "sourceIds": [
+      "q22026",
+      "fy2025"
+    ],
+    "recipient": "Amazon affiliate",
+    "grantDate": "2025-03-13",
+    "contractTermYears": 10,
+    "totalPossibleShares": 7.945399,
+    "initiallyVestedShares": 1.324233,
+    "futureVestingShares": 6.621166,
+    "exercisePriceDollars": 23.6956,
+    "purchaseVestingThresholdDollars": 4000000000,
+    "grantDateFairValuePerShareDollars": 12.64,
+    "grantDateFairValueNotCurrent": true,
+    "currentTotalVestedShares": null,
+    "currentVestingCaution": "The disclosed 1.324233m refers to vesting at issuance. H1 2026 cash-flow statement includes $1.775m of warrant issuance/vesting value without an exact updated vested-share roll-forward; do not label the initial amount as total current vested.",
+    "defaultScenario": "Full contractual share cap, conditional on all vesting; conservative dilution scenario, not a claim that all shares have vested.",
+    "minimumScenario": "Initially vested minimum count only; excludes later vesting and understates possible dilution.",
+    "intrinsicExerciseFormula": "If pre-warrant equity / shares exceeds strike, price = (pre-warrant equity + strike * eligibleWarrantShares) / (shares + eligibleWarrantShares); otherwise use pre-warrant equity / shares. Floor negative equity at zero for common price.",
+    "exerciseProceedsRule": "Add proceeds once only if adding gross exercise shares; alternatively solve net-share dilution without a proceeds addition.",
+    "limits": [
+      "Intrinsic exercise ignores remaining time value and vesting/settlement details; it is not current warrant fair value.",
+      "Keep reported net-revenue and GAAP SBC baseline unchanged. Avoid adding a second blanket warrant-dollar claim on top of explicit warrant dilution. Future revenue reductions and future vesting can overlap economically; full-cap sensitivity is intentionally conservative."
+    ]
+  },
+  "employeeAwards": {
+    "sourceId": "q22026",
+    "measurementDate": "2026-06-30",
+    "rsuExpectedToVest": 1.317,
+    "psuExpectedToVest": 0.592,
+    "recommendedTreatment": "Disclose explicitly as existing unvested award sensitivity; retain continuing GAAP SBC as an operating expense, avoid an unexplained generic dilution percentage on top. For maximum conservatism add 1.909m awards to denominator, label service/performance vesting assumption and possible overlap with future compensation deductions."
+  },
+  "shareBasis": {
+    "sourceIds": [
+      "q22026",
+      "atmProspectus"
+    ],
+    "default": "Original contemporaneous common-share basis; no stock-split adjustment identified in reviewed filings. Do not use weighted-average EPS shares or the 92.8m non-GAAP Q3 guidance denominator as actual outstanding shares.",
+    "coverShares": {
+      "2026-08-03": 84.569237
+    },
+    "prospectusShares": {
+      "2026-08-20": 84.906289
+    }
+  },
+  "subsequentEvents": [
+    {
+      "sourceId": "atmAgreement",
+      "date": "2026-08-21",
+      "event": "New ATM capacity",
+      "grossCapacity": 600,
+      "notProofOfCompletion": true
+    },
+    {
+      "sourceId": "atmCompleted",
+      "date": "2026-10-05",
+      "event": "ATM completion confirmed by issuer",
+      "newShares": 5.694845,
+      "averageSalePriceDollars": 105.36,
+      "netProceedsDollars": 587999985.89,
+      "netProceeds": 587.99998589,
+      "knownTransactionProFormaCommonSharesFromAugust20": 90.601134,
+      "shareCountCaution": "Not a verified October outstanding count; excludes subsequent awards, conversions and other changes.",
+      "cashCaution": "Do not call June cash plus net proceeds current cash. Q3 operating/investing use, debt changes, restricted balances and other transactions remain unreconciled."
+    },
+    {
+      "sourceId": "propertyPurchase",
+      "date": "2026-09-04",
+      "event": "Completed property purchase for cash",
+      "purchasePriceDollars": 26783472,
+      "scopeCaution": "A known post-June cash use, not a complete cash roll-forward."
+    },
+    {
+      "sourceId": "houstonLeases",
+      "date": "2026-08-31",
+      "event": "New manufacturing property leases",
+      "initialMonthlyRentDollars": 678160.34,
+      "securityDepositDollars": 11300000,
+      "initialDepositDollars": 750000,
+      "structuralModificationDollars": 2550000,
+      "modelTreatment": "Keep rent within future operating margin if leases are operating; do not also capitalize/deduct all lease debt without corresponding operating adjustments."
+    },
+    {
+      "sourceId": "ningboLease",
+      "date": "2026-09-10",
+      "event": "Additional ten-year Ningbo lease",
+      "annualRentCNY": 6896124,
+      "modelTreatment": "Additional fixed operating commitment; not converted to guessed USD."
+    }
+  ],
+  "operatingEvidence": {
+    "sourceIds": [
+      "q22026",
+      "results"
+    ],
+    "ttmRevenue": 595.97,
+    "ttmEbit": -67.406,
+    "h12026CashFlowFromOperations": -73.781,
+    "h12026PpeCashPurchases": 335.132,
+    "h12026EquipmentOtherPrepayments": 289.744,
+    "h12026LandPurchase": 8.581,
+    "juneNetPpe": 697.086,
+    "juneConstructionInProgressIncludedInPpe": 168.805,
+    "juneOtherAssetsPrimarilyCapitalPrepayments": 324.045,
+    "capitalAssetPolicy": "These are operating assets already in the enterprise. Do not add them to cash/equity or charge the same prepaid amount a second time when placed into service. Future capex still needs funding.",
+    "q22026Revenue": 191.922,
+    "q32026RevenueGuidance": [
+      255,
+      290
+    ],
+    "capacityPerMonthApproximate": 200000,
+    "managementYearEnd2026CapacityExpectation": 650000,
+    "guidanceNotGuaranteed": true
+  },
+  "conditionalOperatingPath": {
+    "label": "Capital-intensive staged turnaround illustration",
+    "status": "Initial unnormalized illustration; superseded for implementation by normalizedStagedAdapter, which preserves four editable inputs and adds an exact terminal-consistent capital fade.",
+    "growth": [
+      0.6,
+      0.4,
+      0.3,
+      0.2,
+      0.15,
+      0.1,
+      0.08,
+      0.05,
+      0.03,
+      0.025
+    ],
+    "margin": [
+      -0.05,
+      0,
+      0.05,
+      0.08,
+      0.1,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12
+    ],
+    "salesCapital": [
+      0.8,
+      0.8,
+      1,
+      1.2,
+      1.4,
+      1.6,
+      1.6,
+      1.6,
+      1.6,
+      1.6
+    ],
+    "wacc": 0.135,
+    "tax": 0.25,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.1,
+    "terminalMargin": 0.12,
+    "rationale": [
+      "Front-load growth to reflect the stated near-term ramp, then slow growth substantially rather than perpetuating 60% for years.",
+      "Move margin to zero in year 2 and 12% in year 6 only as conditional operating leverage; non-GAAP net profit is not GAAP EBIT.",
+      "Improve sales-to-capital from 0.8 to 1.6 as utilization improves; this is an assumption, not a measured marginal ratio.",
+      "No observed share price or desired price target was used to select the path. A zero common residual remains a legitimate conditional result."
+    ],
+    "diagnostic": {
+      "rows": [
+        {
+          "year": 1,
+          "growth": 0.6,
+          "margin": -0.05,
+          "salesCapital": 0.8,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 953.5520000000001,
+          "ebit": -47.67760000000001,
+          "nopat": -47.67760000000001,
+          "reinvestment": 446.97750000000013,
+          "fcff": -494.6551000000002
+        },
+        {
+          "year": 2,
+          "growth": 0.4,
+          "margin": 0,
+          "salesCapital": 0.8,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 1334.9728,
+          "ebit": 0.0,
+          "nopat": 0.0,
+          "reinvestment": 476.77599999999984,
+          "fcff": -476.77599999999984
+        },
+        {
+          "year": 3,
+          "growth": 0.3,
+          "margin": 0.05,
+          "salesCapital": 1,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 1735.4646400000001,
+          "ebit": 86.77323200000001,
+          "nopat": 65.079924,
+          "reinvestment": 400.49184000000014,
+          "fcff": -335.41191600000013
+        },
+        {
+          "year": 4,
+          "growth": 0.2,
+          "margin": 0.08,
+          "salesCapital": 1.2,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2082.557568,
+          "ebit": 166.60460544000003,
+          "nopat": 124.95345408000003,
+          "reinvestment": 289.2441066666667,
+          "fcff": -164.29065258666668
+        },
+        {
+          "year": 5,
+          "growth": 0.15,
+          "margin": 0.1,
+          "salesCapital": 1.4,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2394.9412032,
+          "ebit": 239.49412032,
+          "nopat": 179.62059024,
+          "reinvestment": 223.1311679999999,
+          "fcff": -43.510577759999876
+        },
+        {
+          "year": 6,
+          "growth": 0.1,
+          "margin": 0.12,
+          "salesCapital": 1.6,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2634.43532352,
+          "ebit": 316.1322388224,
+          "nopat": 237.09917911679997,
+          "reinvestment": 149.68382520000006,
+          "fcff": 87.41535391679992
+        },
+        {
+          "year": 7,
+          "growth": 0.08,
+          "margin": 0.12,
+          "salesCapital": 1.6,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2845.1901494016,
+          "ebit": 341.422817928192,
+          "nopat": 256.067113446144,
+          "reinvestment": 131.72176617600002,
+          "fcff": 124.34534727014398
+        },
+        {
+          "year": 8,
+          "growth": 0.05,
+          "margin": 0.12,
+          "salesCapital": 1.6,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2987.4496568716804,
+          "ebit": 358.49395882460163,
+          "nopat": 268.87046911845124,
+          "reinvestment": 88.91219216880017,
+          "fcff": 179.95827694965107
+        },
+        {
+          "year": 9,
+          "growth": 0.03,
+          "margin": 0.12,
+          "salesCapital": 1.6,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 3077.073146577831,
+          "ebit": 369.2487775893397,
+          "nopat": 276.9365831920048,
+          "reinvestment": 56.014681066344,
+          "fcff": 220.92190212566078
+        },
+        {
+          "year": 10,
+          "growth": 0.025,
+          "margin": 0.12,
+          "salesCapital": 1.6,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 3153.9999752422764,
+          "ebit": 378.47999702907316,
+          "nopat": 283.85999777180484,
+          "reinvestment": 48.07926791527848,
+          "fcff": 235.78072985652636
+        }
+      ],
+      "enterpriseValue": -303.64327144103675,
+      "equityBeforeWarrants": -341.86127144103676,
+      "equityFloorPerShare": 0.0,
+      "forecastPV": -862.8057526705113,
+      "terminalPV": 559.1624812294746,
+      "negativeFcffYears": 5,
+      "peakCumulativeFcffDeficit": 1514.644246346667,
+      "unfundedFcffGapAfterJuneCash": 1014.9072463466669,
+      "fundingCaution": "FCFF deficit is an operating-funding diagnostic, not a complete liquidity waterfall: excludes debt service, required cash buffer, timing within years and financing costs. Existing cash is not both added to value and removed from FCFF; it is shown separately for financing feasibility."
+    },
+    "suggestedSensitivities": {
+      "targetMargin": [
+        0.06,
+        0.12,
+        0.18
+      ],
+      "salesCapital": [
+        0.8,
+        1.6,
+        2.4
+      ],
+      "noteBridge": [
+        "dated disclosed fair value",
+        "principal-only limitation",
+        "if-converted hypothetical"
+      ],
+      "warrantCount": [
+        1.324233,
+        7.945399
+      ]
+    },
+    "displayRules": [
+      "Show enterprise value and negative residual separately from the limited-liability common floor of $0.",
+      "A zero DCF residual does not mean the traded stock or abandonment/turnaround option has literally zero value.",
+      "Show peak cumulative negative FCFF and financing shortfall; no assumption that new equity can be raised without dilution.",
+      "Do not add new-financing cash without adding new shares, and do not subtract financing proceeds from FCFF.",
+      "A staged illustration is more informative than the old nine-negative-year smooth fade, but remains conditional rather than fully financed."
+    ]
+  },
+  "normalizedStagedAdapter": {
+    "status": "Recommended source-reasoned analyst shape; no market-price calibration",
+    "initialScalarDefaults": {
+      "growth": 0.6,
+      "targetMargin": 0.12,
+      "salesCapital": 0.8,
+      "tax": 0.25,
+      "wacc": 0.135,
+      "terminalGrowth": 0.025,
+      "terminalROIC": 0.1
+    },
+    "fourSampledDrivers": [
+      "growth",
+      "targetMargin",
+      "salesCapital",
+      "wacc"
+    ],
+    "growthWeights": [
+      1,
+      0.6521739130434783,
+      0.4782608695652174,
+      0.30434782608695654,
+      0.21739130434782608,
+      0.13043478260869565,
+      0.09565217391304348,
+      0.043478260869565216,
+      0.008695652173913044,
+      0
+    ],
+    "growthFormula": "yearGrowth = terminalGrowth + (sampledGrowth - terminalGrowth) * growthWeight; first year equals sampled growth; last year equals stable growth.",
+    "marginReferenceStart": -0.11310300854069837,
+    "marginWeights": [
+      0.2707086834088671,
+      0.4852061294650827,
+      0.6997035755212982,
+      0.8284020431550275,
+      0.9142010215775137,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "marginFormula": "yearMargin = actualAdjustedStartingMargin + (sampledTargetMargin - actualAdjustedStartingMargin) * marginWeight; from year 6 equals sampled target. Weights are fixed, computed once from reference TTM margin and the chosen illustration, not recomputed to erase sampled target uncertainty.",
+    "earlyCapitalRatioMultipliers": [
+      1,
+      1,
+      1.25,
+      1.5,
+      1.75,
+      2,
+      2
+    ],
+    "capitalDriverMeaning": "Initial incremental sales/capital; 0.8x baseline. Early-stage utilization raises it toward 2 times input in years 6\u20137.",
+    "capitalTerminalFadeYears": [
+      8,
+      9,
+      10
+    ],
+    "capitalTerminalFadeWeights": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1
+    ],
+    "terminalCapitalIntensityFormula": "(1 + terminalGrowth) * targetMargin * (1 - tax) / terminalROIC",
+    "lateCapitalFormula": "inverseSalesCapital = (1 - fadeWeight) / (2 * sampledSalesCapital) + fadeWeight * terminalCapitalIntensity; salesCapital = 1 / inverseSalesCapital.",
+    "terminalConsistencyProof": "With constant final growth g and margin m, explicit reinvestment = (R_t - R_t-1) * (1+g)*m*(1-tax)/ROIC = NOPAT_t*g/ROIC. Thus final FCFF*(1+g) equals terminal-year NOPAT*(1-g/ROIC). The (1+g) factor matches the existing engine contemporaneous delta-sales convention to its terminal g/ROIC convention.",
+    "discounting": "Use sampled WACC each year and same terminal WACC; taxes fixed unless user changes the scalar tax rate.",
+    "controls": "Keep scalar assumptions editable, derive overrides inside the shared current valuation path. Do not persist generated arrays as user-authored overrides. Every Monte Carlo draw must run the same adapter.",
+    "zeroMarginBoundary": "When targetMargin=0, terminal intensity is zero. If the existing engine requires a finite positive salesCapital override, use Number.MAX_VALUE as a documented numerical limiting representation instead of Infinity; its resulting investment is negligible at monetary precision. Deterministic and simulation must share the same convention.",
+    "defaultGrowth": [
+      0.6,
+      0.4,
+      0.3,
+      0.19999999999999998,
+      0.15,
+      0.1,
+      0.08,
+      0.05,
+      0.030000000000000002,
+      0.025
+    ],
+    "defaultMargin": [
+      -0.05,
+      0.0,
+      0.05,
+      0.08,
+      0.09999999999999999,
+      0.12000000000000001,
+      0.12000000000000001,
+      0.12000000000000001,
+      0.12000000000000001,
+      0.12000000000000001
+    ],
+    "defaultSalesCapital": [
+      0.8,
+      0.8,
+      1,
+      1.2,
+      1.4,
+      1.6,
+      1.6,
+      1.380897583429229,
+      1.2145748987854255,
+      1.0840108401084014
+    ],
+    "diagnostic": {
+      "rows": [
+        {
+          "year": 1,
+          "growth": 0.6,
+          "margin": -0.05,
+          "salesCapital": 0.8,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 953.5520000000001,
+          "ebit": -47.67760000000001,
+          "nopat": -47.67760000000001,
+          "reinvestment": 446.97750000000013,
+          "fcff": -494.6551000000002
+        },
+        {
+          "year": 2,
+          "growth": 0.4,
+          "margin": 0.0,
+          "salesCapital": 0.8,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 1334.9728,
+          "ebit": 0.0,
+          "nopat": 0.0,
+          "reinvestment": 476.77599999999984,
+          "fcff": -476.77599999999984
+        },
+        {
+          "year": 3,
+          "growth": 0.3,
+          "margin": 0.05,
+          "salesCapital": 1,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 1735.4646400000001,
+          "ebit": 86.77323200000001,
+          "nopat": 65.079924,
+          "reinvestment": 400.49184000000014,
+          "fcff": -335.41191600000013
+        },
+        {
+          "year": 4,
+          "growth": 0.19999999999999998,
+          "margin": 0.08,
+          "salesCapital": 1.2,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2082.557568,
+          "ebit": 166.60460544000003,
+          "nopat": 124.95345408000003,
+          "reinvestment": 289.2441066666667,
+          "fcff": -164.29065258666668
+        },
+        {
+          "year": 5,
+          "growth": 0.15,
+          "margin": 0.09999999999999999,
+          "salesCapital": 1.4,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2394.9412032,
+          "ebit": 239.49412031999998,
+          "nopat": 179.62059023999998,
+          "reinvestment": 223.1311679999999,
+          "fcff": -43.510577759999904
+        },
+        {
+          "year": 6,
+          "growth": 0.1,
+          "margin": 0.12000000000000001,
+          "salesCapital": 1.6,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2634.43532352,
+          "ebit": 316.13223882240004,
+          "nopat": 237.09917911680003,
+          "reinvestment": 149.68382520000006,
+          "fcff": 87.41535391679997
+        },
+        {
+          "year": 7,
+          "growth": 0.08,
+          "margin": 0.12000000000000001,
+          "salesCapital": 1.6,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2845.1901494016,
+          "ebit": 341.42281792819205,
+          "nopat": 256.06711344614405,
+          "reinvestment": 131.72176617600002,
+          "fcff": 124.34534727014403
+        },
+        {
+          "year": 8,
+          "growth": 0.05,
+          "margin": 0.12000000000000001,
+          "salesCapital": 1.380897583429229,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 2987.4496568716804,
+          "ebit": 358.4939588246017,
+          "nopat": 268.8704691184513,
+          "reinvestment": 103.0195933262498,
+          "fcff": 165.8508757922015
+        },
+        {
+          "year": 9,
+          "growth": 0.030000000000000002,
+          "margin": 0.12000000000000001,
+          "salesCapital": 1.2145748987854255,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 3077.073146577831,
+          "ebit": 369.24877758933974,
+          "nopat": 276.93658319200483,
+          "reinvestment": 73.79000652473047,
+          "fcff": 203.14657666727436
+        },
+        {
+          "year": 10,
+          "growth": 0.025,
+          "margin": 0.12000000000000001,
+          "salesCapital": 1.0840108401084014,
+          "taxRate": 0.25,
+          "wacc": 0.135,
+          "revenue": 3153.9999752422764,
+          "ebit": 378.4799970290732,
+          "nopat": 283.8599977718049,
+          "reinvestment": 70.96499944295101,
+          "fcff": 212.8949983288539
+        }
+      ],
+      "enterpriseValue": -320.90306772729616,
+      "equityBeforeWarrants": -359.1210677272962,
+      "equityFloorPerShare": 0.0,
+      "forecastPV": -880.0655489567707,
+      "terminalPV": 559.1624812294746,
+      "negativeFcffYears": 5,
+      "peakCumulativeFcffDeficit": 1514.644246346667,
+      "unfundedFcffGapAfterJuneCash": 1014.9072463466669,
+      "terminalNextYearFcff": 218.217373287075,
+      "finalYearFcffTimesOnePlusG": 218.21737328707522
+    },
+    "rationale": [
+      "The issuer reported Q2 2026 revenue of $191.9m and guided Q3 to $255\u2013290m. A front-loaded growth path with a fast decline from 60% to 40%, 30% and 20% is a bounded analyst illustration of ramp then slowdown, not a forecast derived directly from units or guidance.",
+      "Management described approximate 200,000 monthly capacity and an expected 650,000 by year-end 2026. Capacity is not recognized revenue or guaranteed utilization; no direct multiplication of capacity by an invented selling price is used.",
+      "The initial margin is reported GAAP TTM EBIT/revenue. Conditional break-even by year 2 and 12% mature margin by year 6 are analyst operating-leverage judgments; non-GAAP net income is not substituted for GAAP EBIT.",
+      "Initial 0.8x sales/capital remains a conservative capital-heavy input; the temporary twofold utilization improvement is assumed, motivated by already funded construction and equipment prepayments, not by a verified incremental asset-turnover ratio.",
+      "Capital intensity subsequently converges to the independently specified mature marginal ROIC, allowing competitive erosion of the higher mid-ramp return and eliminating a mechanical terminal reinvestment jump.",
+      "All forecast growth, margin, capital-efficiency and risk values remain editable or sampled. The fixed weights describe transition shape, not independent reported facts or probabilities."
+    ],
+    "defaultOutputInterpretation": "The shared staged default still has negative operating enterprise value and common residual; show both raw residual and limited-liability floor, plus funding needs. It does not price abandonment, future funding access, default, recovery or an option to change strategy."
+  }
+}

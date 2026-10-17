@@ -1,5 +1,17 @@
 # Change log
 
+## 2026-10-17 · v9 explicit AAOI and Alphabet models
+
+- Enabled current AAOI and Alphabet valuations through source-matched capital-claims models. Missing or invalid treatment still withholds the result.
+- AAOI now has a staged capacity operating profile for fresh research cases: front-loaded growth, earlier margin recovery, improving initial capital productivity and a terminal-consistent capital-intensity fade. Every Monte Carlo draw uses the same adapter. Saved linear drafts remain intact and can be compared or replaced explicitly.
+- AAOI uses disclosed period-end convertible fair value, separate bank-acceptance financing and an explicit intrinsic customer-warrant approximation. Fair-value, principal-only and immediate-conversion cases are mutually exclusive. A separately labeled known-ATM/property pro forma retains an editable unknown cash-flow adjustment.
+- Alphabet uses exact preferred conversion endpoints and a dated dividend PV, separately reconciled finance leases, noncontrolling interests and a gross noncurrent-investment proxy. Capped calls and investment taxes remain disclosed limitations.
+- Added editable claims inputs, bridge and share-denominator tables, dividend schedule, source ledger and claim sensitivities. AAOI also shows cash-deficit diagnostics and margin/capital-productivity stresses.
+- The default staged AAOI case remains at the common-equity zero floor; its raw deficit is shown. No operating assumption was fitted to a positive share price. Alphabet's conditional model is available with source-dated approximations.
+- The original deterministic engine, historical files and research freezes are unchanged. All ordinary-company numerical regressions and the four editable simulation distribution families remain in scope.
+
+Validation: all 383 automated checks passed, including independent operating/claims oracles, every-draw comparisons, invalid-state clearing, persistence, load/undo and protected historical source hashes. Phone and desktop static layouts were reviewed; numeric claim-table wrapping was repaired. Static screen approximations are not authenticated browser screenshots. Real browser, native touch and accessibility-tree behavior remain unverified.
+
 ## 2026-10-17 · v8 company cases, longer history and editable distributions
 
 Release 8 retains the existing owner-private site and adds researched company assumptions, ten-year references where comparable data is available, and editable distribution hyperparameters.

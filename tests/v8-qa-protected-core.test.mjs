@@ -46,8 +46,8 @@ test('v8 QA: richer evidence cannot mutate assumptions or any supported valuatio
   const blocked=currentIssues(s,d).length>0,valuation=blocked?null:calculateCurrent(s,d),simulation=blocked?null:simulateCurrent(s,d,{trials:7,seed:81227});
   for(const key of assumptionHistoryKeys)assumptionEvidence(history,c.ticker,key,{snapshot:s,marketReferences:market,cutoff:universe.asOf});
   assert.equal(JSON.stringify(d),before,c.ticker+' draft changed');
-  if(blocked){assert.ok(['NBIS','TSM','AAOI','GOOG'].includes(c.ticker));assert.throws(()=>calculateCurrent(s,d));}
+  if(blocked){assert.ok(['NBIS','TSM'].includes(c.ticker));assert.throws(()=>calculateCurrent(s,d));}
   else{assert.deepEqual(calculateCurrent(s,d),valuation,c.ticker);assert.deepEqual(simulateCurrent(s,d,{trials:7,seed:81227}),simulation,c.ticker);supported++;}
  }
- assert.equal(supported,10);assert.equal(JSON.stringify({history,universe,market}),saved);
+ assert.equal(supported,12);assert.equal(JSON.stringify({history,universe,market}),saved);
 });

@@ -59,6 +59,7 @@ function userProvenance(company,raw){
 // authored state permits automatic upgrading after optional research arrives.
 export function isUntouchedGenericDraft(draft,company,raw){
  const p=draft?.assumptionProvenance;
+ if(Object.prototype.hasOwnProperty.call(draft||{},'claims')||Object.prototype.hasOwnProperty.call(draft||{},'operatingProfile'))return false;
  if(!object(p)||p.schemaVersion!==BASE_CASE_PROVENANCE_VERSION||p.kind!=='generic-default'||p.version!==genericVersion||p.ticker!==company.ticker||p.snapshotId!==raw?.id||p.userEdited!==false||!Array.isArray(p.editedKeys)||p.editedKeys.length)return false;
  if(!equalAssumptions(p.initialAssumptions,defaults)||!equalAssumptions(draft.assumptions,defaults)||Object.keys(draft.assumptions).some(k=>!keys.includes(k)))return false;
  if(!text(p.initialCutoff)||draft.cutoff!==p.initialCutoff||!equalNormalization(normalizationOf(draft),normalizationOf())||!equalNormalization(p.initialNormalization||{},normalizationOf()))return false;
@@ -66,7 +67,7 @@ export function isUntouchedGenericDraft(draft,company,raw){
  const q=draft.quote;
  if(!object(q)||q.price!==null||q.basisConfirmed!==false||['date','currency','sourceUrl','shareBasis'].some(k=>q[k]!==''))return false;
  if(!object(draft.waccWorksheet)||Object.values(draft.waccWorksheet).some(v=>v!==null))return false;
- const known=new Set(['schemaVersion','ticker','snapshotId','step','cutoff','assumptions','notes','reviewed','bridgeReviewed','modelReviewed','normalizationDelta','adjustmentReason','adjustmentSource','quote','waccWorksheet','updatedAt','assumptionProvenance']);
+ const known=new Set(['schemaVersion','ticker','snapshotId','step','cutoff','assumptions','notes','reviewed','bridgeReviewed','modelReviewed','normalizationDelta','adjustmentReason','adjustmentSource','quote','waccWorksheet','updatedAt','assumptionProvenance','claims','operatingProfile']);
  return !Object.keys(draft).some(k=>!known.has(k));
 }
 
@@ -100,5 +101,5 @@ export function loadResearchedBaseCase(draft,company,raw,library,{selection='exp
  // metadata and custom uncertainty. Only the explicitly selected assumptions
  // and their starting-EBIT normalization are replaced. Caller can retain a full
  // copy for Undo without a storage side effect from this pure operation.
- return {...clone(draft),assumptions:{...c.assumptions},...c.normalization,assumptionProvenance:{schemaVersion:BASE_CASE_PROVENANCE_VERSION,kind:'researched-base-case',version:c.version,ticker:company.ticker,snapshotId:raw.id,sourcePath:BASE_CASE_PATH,asOf:c.asOf,initialCutoff:draft.cutoff,initialAssumptions:{...c.assumptions},initialNormalization:{...c.normalization},displayLabel:text(c.displayLabel)?c.displayLabel:'Researched base case',classification:c.classification,caseSummary:c.summary,rationale:clone(c.rationale),sources:c.sources.map(s=>({id:s.id,title:s.title,url:s.url,...(validDate(s.publishedAt)?{publishedAt:s.publishedAt}:{})})),userEdited:false,editedKeys:[],selection}};
+ return {...clone(draft),...(c.operatingProfile?{operatingProfile:clone(c.operatingProfile)}:{}),assumptions:{...c.assumptions},...c.normalization,assumptionProvenance:{schemaVersion:BASE_CASE_PROVENANCE_VERSION,kind:'researched-base-case',version:c.version,ticker:company.ticker,snapshotId:raw.id,sourcePath:BASE_CASE_PATH,asOf:c.asOf,initialCutoff:draft.cutoff,initialAssumptions:{...c.assumptions},initialNormalization:{...c.normalization},displayLabel:text(c.displayLabel)?c.displayLabel:'Researched base case',classification:c.classification,caseSummary:c.summary,rationale:clone(c.rationale),sources:c.sources.map(s=>({id:s.id,title:s.title,url:s.url,...(validDate(s.publishedAt)?{publishedAt:s.publishedAt}:{})})),userEdited:false,editedKeys:[],selection}};
 }

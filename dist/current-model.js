@@ -1,16 +1,21 @@
 import {defaults,validateSnapshot,valueCompany,validDate} from './engine.js';
 import {genericProvenance,researchCaseFor,loadResearchedBaseCase,restoreDraftProvenance,isUntouchedGenericDraft} from './base-cases.js';
 import {currentClaimsEvidence} from './current-claims-gates.js';
+import {operatingIssues} from './current-operating.js';
+export {operatingProfileDefinition,operatingIssues} from './current-operating.js';
+import {claimsDefaults,restoreClaims,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis} from './current-claims.js';
+export {claimsDefinition,claimsDefaults,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis,claimsSensitivity} from './current-claims.js';
 export {researchCaseFor,loadResearchedBaseCase,markDraftEdited,fetchBaseCases} from './base-cases.js';
 export {currentClaimsEvidence} from './current-claims-gates.js';
 export const REQUIRED_TICKERS=['AAPL','MSFT','AMZN','GOOG','META','NVDA','TSLA','COHR','LITE','AAOI','NBIS','MU','AVGO','TSM'];
 export function currentSnapshot(company,raw){
  const f=raw?.facts||{};const number=(...v)=>v.find(x=>typeof x==='number'&&Number.isFinite(x))??null;
- return {ticker:company.ticker,name:company.name,modelType:raw?.modelType||company.modelType,sector:raw?.sector||company.sector,currency:raw?.currency||company.currency||'',units:'millions',periodEnd:raw?.periodEnd||raw?.fiscalPeriodEnd,filedAt:raw?.filedAt||raw?.filingDate,availableFrom:raw?.availableFrom||raw?.acceptedAt||raw?.filedAt||raw?.filingDate,acceptedAt:raw?.acceptedAt,sourceUrl:raw?.sourceUrl||raw?.sourceURL||'',revenue:number(raw?.revenue,f.revenue),ebit:number(raw?.ebit,raw?.EBIT,f.operatingIncome,f.EBIT),cash:number(raw?.cash,f.cash),debt:number(raw?.debt,f.debt,f.totalDebt),shares:number(raw?.shares,f.shares,f.sharesOutstanding),shareBasis:raw?.shareBasis||'',coverShareDate:raw?.coverShareDate||raw?.sharesAsOf||raw?.sharesDate,snapshotMode:raw?.snapshotMode,backtestEligible:false,raw};
+ return {ticker:company.ticker,name:company.name,modelType:raw?.modelType||company.modelType,sector:raw?.sector||company.sector,currency:raw?.currency||company.currency||'',units:'millions',periodEnd:raw?.periodEnd||raw?.fiscalPeriodEnd,filedAt:raw?.filedAt||raw?.filingDate,availableFrom:raw?.availableFrom||raw?.acceptedAt||raw?.filedAt||raw?.filingDate,acceptedAt:raw?.acceptedAt,sourceUrl:raw?.sourceUrl||raw?.sourceURL||'',revenue:number(raw?.revenue,f.revenue),ebit:number(raw?.ebit,raw?.EBIT,f.operatingIncome,f.EBIT),cash:number(raw?.cash,f.cash),debt:number(raw?.debt,f.debt,f.totalDebt),shares:number(raw?.shares,f.shares,f.sharesOutstanding),shareBasis:raw?.shareBasis||'',coverShareDate:raw?.coverShareDate||raw?.sharesAsOf||raw?.sharesDate,snapshotMode:raw?.snapshotMode,backtestEligible:false,researchImported:company.researchImported===true||raw?.researchImported===true,raw};
 }
 export function draftFor(company,raw,{baseCases}={}){
  const cutoff=new Date().toISOString().slice(0,10);
  const d={schemaVersion:5,ticker:company.ticker,snapshotId:raw?.id,step:2,cutoff,assumptions:{...defaults},notes:{},reviewed:[],bridgeReviewed:false,modelReviewed:false,normalizationDelta:0,adjustmentReason:'',adjustmentSource:'',quote:{price:null,date:'',currency:'',sourceUrl:'',basisConfirmed:false,shareBasis:''},waccWorksheet:{riskFree:null,beta:null,equityPremium:null,countryPremium:null,costOfDebt:null,debtWeight:null,tax:null},updatedAt:null,assumptionProvenance:genericProvenance(company,raw,cutoff)};
+ const claims=claimsDefaults(currentSnapshot(company,raw));if(claims)d.claims=claims;
  const c=researchCaseFor(baseCases,company,raw);
  return c&&c.asOf.slice(0,10)<=cutoff?loadResearchedBaseCase(d,company,raw,baseCases,{selection:'fresh'}):d;
 }
@@ -22,7 +27,7 @@ export function currentIssues(snapshot,draft,{includeReview=true}={}){
  if(!snapshot.shareBasis)errors.push('The economic share basis is unverified.');
  const r=snapshot.raw||{};
  if(snapshot.ticker==='JPM'||/bank|insurance|financial/i.test(snapshot.sector||'')||snapshot.modelType&&snapshot.modelType!=='operating-fcff')errors.push('Financial institutions or specialist models require an equity/regulatory-capital workflow; this operating-company FCFF model is unsuitable.');
- const explicit=[...(r.hardBlockers||[]),...(r.fatalBlockers||[])];errors.push(...explicit,...currentClaimsEvidence(snapshot).map(x=>x.message));
+ const explicit=[...(r.hardBlockers||[]),...(r.fatalBlockers||[])];errors.push(...explicit,...claimsIssues(snapshot,draft),...operatingIssues(snapshot,draft));
  const provenance=draft.assumptionProvenance;if(provenance?.kind==='researched-base-case'&&validDate(provenance.asOf)&&validDate(draft.cutoff)&&provenance.asOf.slice(0,10)>draft.cutoff.slice(0,10))errors.push(`This researched base case includes information through ${provenance.asOf.slice(0,10)}, after the valuation date. Choose that date or later.`);
  // Never infer an ADR conversion or a reporting currency from the US ticker.
  if(snapshot.ticker==='TSM'&&!r.adrConversionVerified)errors.push('TSM: reporting currency and depositary-share conversion require a verified model-specific mapping. Per-ADR valuation is withheld.');
@@ -32,8 +37,8 @@ export function currentIssues(snapshot,draft,{includeReview=true}={}){
  // Source, date, currency/security and model compatibility above remain hard constraints.
  return [...new Set(errors)];
 }
-export function calculateCurrent(snapshot,draft){const errors=currentIssues(snapshot,draft);if(errors.length)throw new Error(errors.join(' '));return valueCompany({...snapshot,ebit:snapshot.ebit+draft.normalizationDelta,provisionalBridge:true},{...draft.assumptions});}
-export function quoteComparison(snapshot,draft,value){const q=draft.quote||{};if(!(typeof q.price==='number'&&Number.isFinite(q.price)&&q.price>0))return {status:'missing',message:'No verified current market price. Add a dated, sourced quote to compare.'};if(!validDate(q.date)||q.date>draft.cutoff||q.currency!==snapshot.currency||!/^https?:\/\//.test(q.sourceUrl||'')||!q.shareBasis||q.shareBasis!==snapshot.shareBasis)return {status:'blocked',message:'Quote comparison withheld: verify date, matching currency, source and economic share basis.'};return {status:'ready',price:q.price,date:q.date,gap:value.perShare/q.price-1,message:'Value-to-price gap, not an expected return.'};}
+export function calculateCurrent(snapshot,draft){const errors=currentIssues(snapshot,draft);if(errors.length)throw new Error(errors.join(' '));return valueCurrentWithClaims(snapshot,draft);}
+export function quoteComparison(snapshot,draft,value){const q=draft.quote||{};if(!(typeof q.price==='number'&&Number.isFinite(q.price)&&q.price>0))return {status:'missing',message:'No verified current market price. Add a dated, sourced quote to compare.'};if(!validDate(q.date)||q.date>draft.cutoff||q.currency!==snapshot.currency||!/^https?:\/\//.test(q.sourceUrl||'')||!q.shareBasis||q.shareBasis!==currentEconomicShareBasis(snapshot,draft))return {status:'blocked',message:'Quote comparison withheld: verify date, matching currency, source and economic share basis.'};return {status:'ready',price:q.price,date:q.date,gap:value.perShare/q.price-1,message:'Value-to-price gap, not an expected return.'};}
 export function safeDraft(value,company,raw,{baseCases}={}){
  if(!value||typeof value!=='object'||Array.isArray(value)||value.schemaVersion!==5||value.ticker!==company.ticker||value.snapshotId!==raw?.id)return draftFor(company,raw,{baseCases});
  // Restore saved numbers over the original generic baseline first. Filling a
@@ -46,6 +51,7 @@ export function safeDraft(value,company,raw,{baseCases}={}){
  for(const k of ['cutoff','adjustmentReason','adjustmentSource'])if(typeof d[k]!=='string')d[k]=base[k];
  if(value.quote&&typeof value.quote==='object'){const q=value.quote;d.quote.price=typeof q.price==='number'&&Number.isFinite(q.price)?q.price:null;for(const k of ['date','currency','sourceUrl','shareBasis'])d.quote[k]=typeof q[k]==='string'?q[k]:'';d.quote.basisConfirmed=q.basisConfirmed===true;}
  d.waccWorksheet={...base.waccWorksheet};for(const k of Object.keys(base.waccWorksheet))if(typeof value.waccWorksheet?.[k]==='number'&&Number.isFinite(value.waccWorksheet[k]))d.waccWorksheet[k]=value.waccWorksheet[k];
+ const restoredClaims=restoreClaims(value.claims,currentSnapshot(company,raw));if(restoredClaims!==null||Object.prototype.hasOwnProperty.call(value,'claims'))d.claims=restoredClaims;
  d.assumptionProvenance=restoreDraftProvenance(value,d,company,raw);
  const c=untouched?researchCaseFor(baseCases,company,raw):null;
  return c&&validDate(d.cutoff)&&c.asOf.slice(0,10)<=d.cutoff.slice(0,10)?loadResearchedBaseCase(d,company,raw,baseCases,{selection:'untouched-upgrade'}):d;

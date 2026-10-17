@@ -12,9 +12,13 @@ const resultFields=['status','samples','rawSamples','draws','quantiles','histogr
 test('v8 QA: legacy triangular simulation fixture is byte-pinned',()=>{
  assert.equal(createHash('sha256').update(fs.readFileSync(new URL('./fixtures/simulation-v7-baseline.mjs',import.meta.url))).digest('hex'),'3cfe3724ba60041e58c3dbc8a00993fb10bf1684aa4348b02ccf05b1be04ea63');
 });
-test('v8 QA: untyped legacy triangular configurations retain every seeded draw and DCF result',()=>{
+test('v8 QA: ordinary-company legacy triangular configurations retain every seeded draw and DCF result',()=>{
  let cases=0;
  for(const c of universe.companies){
+  // AAOI/GOOG now have explicit source-reviewed special-claim bridges.
+  // Their new arithmetic has independent per-draw tests; preserve all 60
+  // pre-existing ordinary-company configurations against this pinned oracle.
+  if(['AAOI','GOOG'].includes(c.ticker))continue;
   const raw=c.snapshots.find(s=>s.id===c.currentSnapshotId),s=currentSnapshot(c,raw),d={...draftFor(c,raw),cutoff:universe.asOf};if(currentIssues(s,d).length)continue;
   for(const dependence of ['independent','operating-linked'])for(const variant of ['normal','invalid-wacc','zero-equity']){
    const config={...legacy.simulationDefaults(d.assumptions),trials:257,seed:'v8-legacy-'+c.ticker,dependence};

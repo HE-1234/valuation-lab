@@ -1,7 +1,7 @@
 // Conditional uncertainty in DCF inputs, never a stock-price process.
 // Existing deterministic/historical engine and research records remain unchanged.
 import {defaults, valueCompany, validDate} from './engine.js';
-import {calculateCurrent, currentIssues, quoteComparison} from './current-model.js';
+import {calculateCurrent, currentIssues, quoteComparison, valueCurrentWithClaims} from './current-model.js';
 
 export const SIMULATION_VERSION = '1.1.0';
 export const SIMULATION_DRIVER_KEYS = Object.freeze(['growth', 'targetMargin', 'salesCapital', 'wacc']);
@@ -331,8 +331,7 @@ export function simulateCurrent(snapshot, draft, config) {
  const baseline = calculateCurrent(snapshot,draft);
  if (!finiteValuation(baseline)) throw new Error('Baseline valuation is numerically nonfinite; revise the scale or assumptions before simulating.');
  const c = validateSimulationConfig(config ?? simulationDefaults(draft.assumptions),baseline.assumptions);
- const normalized = {...snapshot,ebit:snapshot.ebit+draft.normalizationDelta,provisionalBridge:true};
- const random = createSeededRandom(c.seed), draws = [], rawDraws = [], scenarios = [], exclusions = {};
+  const random = createSeededRandom(c.seed), draws = [], rawDraws = [], scenarios = [], exclusions = {};
  const samplers = Object.fromEntries(SIMULATION_DRIVER_KEYS.map(key=>[key,prepareDistribution(c.drivers[key])]));
  const exclude = reason => {exclusions[reason] = (exclusions[reason] || 0)+1;};
  let zeroEquityCount = 0;
@@ -341,11 +340,11 @@ export function simulateCurrent(snapshot, draft, config) {
   const a = scenario(baseline.assumptions,c,random,samplers);
   if (!(a.wacc > a.terminalGrowth && a.terminalGrowth >= 0 && a.terminalROIC > a.terminalGrowth)) {exclude('terminal-constraints');continue;}
   try {
-   const value = valueCompany(normalized,a);
+   const value = valueCurrentWithClaims(snapshot,draft,a);
    if (!finiteValuation(value)) {exclude('nonfinite-valuation');continue;}
    draws.push(value.perShare); rawDraws.push(value.rawPerShare);
    if (value.equity <= 0) zeroEquityCount++;
-   scenarios.push({trial:trial+1,...Object.fromEntries(SIMULATION_DRIVER_KEYS.map(k=>[k,a[k]])),perShare:value.perShare,rawPerShare:value.rawPerShare});
+   scenarios.push({trial:trial+1,...Object.fromEntries(SIMULATION_DRIVER_KEYS.map(k=>[k,a[k]])),perShare:value.perShare,rawPerShare:value.rawPerShare,...(value.claimsBridge?{claims:{method:value.claimsBridge.method,allocationShares:value.claimsBridge.allocationShares,additionalClaims:value.claimsBridge.additionalClaims,additionalAssets:value.claimsBridge.additionalAssets,warrantClaim:value.claimsBridge.warrantClaim}}:{})});
   } catch (error) {
    // Bounded driver validation is performed up front; no silent redraws.
    if (!(error instanceof Error)) throw error;
@@ -360,10 +359,12 @@ export function simulateCurrent(snapshot, draft, config) {
  const warnings = [
   'Conditional distribution of DCF values under selected assumptions. Frequencies are not calibrated real-world outcome probabilities, expected returns, or stock-price forecasts.',
   'Initial ranges are illustrative teaching assumptions, not estimates fitted to company or market data. Review every distribution family, parameter and dependence against evidence.',
-  'Tax, terminal growth, terminal marginal ROIC, forecast horizon, source financials, cash, debt, other claims/assets and shares are fixed. Unmodeled uncertainty remains.',
+  'Tax, terminal growth, terminal marginal ROIC, forecast horizon, source financials and selected capital/claims assumptions are fixed. Any source-specific allocation rule is applied to each trial. Unmodeled uncertainty remains.',
   'Each trial draws a whole-business growth/margin path once; annual growth is not independently resampled. WACC is nominal and currency-consistent; simulation does not remove the need for a risk-adjusted discount rate.',
   'Negative modeled common-equity values are retained at the engine’s zero equity floor, with raw pre-floor values exported. This is not a distress/recovery or financing model.'
  ];
+ if (baseline.operatingProfile) warnings.push('AAOI uses the documented staged capacity profile in every draw: initial growth, mature margin, initial sales/capital and WACC form a coherent annual path; terminal capital intensity follows terminal growth, margin, tax and ROIC.');
+ if (baseline.claimsBridge) warnings.push('Every trial uses the same explicit source-dated claims model as the deterministic value. Selected claims inputs are held fixed, but the AAOI intrinsic warrant allocation, where applicable, is recomputed from each trial’s equity value.',...baseline.claimsBridge.warnings);
  if (Object.values(c.drivers).some(d=>d.type==='normal')) warnings.push('Normal mean and SD are underlying unbounded parameters. The bounded input moments generally differ; exported input summaries label their numerical approximation. Truncation conditions on the bounds without clipping or replacement sampling.');
  if (excluded) warnings.push(`${excluded} of ${c.trials} attempted trials were excluded. Reported quantiles and frequencies are conditional on the ${accepted} valid trials; exclusions change the effective input distribution. Revise overlapping terminal bounds instead of interpreting this as unbiased sampling.`);
  if (!accepted) warnings.push('No valid trials remain. Revise the bounds; no distribution or market-price percentile is available.');

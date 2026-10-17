@@ -43,14 +43,14 @@ test('v7 QA: removing acknowledgements never removes economic, source, date or m
  assert.throws(()=>calculateCurrent(snapshot,{...d,cutoff:'2020-01-01'}),/not available/);
  assert.throws(()=>calculateCurrent(snapshot,{...d,normalizationDelta:100}),/Explain and source/);
 });
-test('v7 QA: all fourteen current selections preserve their intrinsic supported-or-withheld classification',()=>{
+test('v7 QA: all fourteen current selections retain source gates while reviewed special claims support AAOI and GOOG',()=>{
  assert.equal(universe.companies.length,14);let ready=0;
  for(const c of universe.companies){const r=c.snapshots.find(s=>s.id===c.currentSnapshotId),s=currentSnapshot(c,r),d={...draftFor(c,r),cutoff:universe.asOf};
   const issues=currentIssues(s,d);
-  if(['TSM','NBIS','AAOI','GOOG'].includes(c.ticker)){assert.ok(issues.some(x=>/withheld|mapping|perimeter|financing/i.test(x)));assert.throws(()=>calculateCurrent(s,d));}
+  if(['TSM','NBIS'].includes(c.ticker)){assert.ok(issues.some(x=>/withheld|mapping|perimeter|financing/i.test(x)));assert.throws(()=>calculateCurrent(s,d));}
   else{assert.deepEqual(issues,[],c.ticker);assert.ok(Number.isFinite(calculateCurrent(s,d).perShare),c.ticker);ready++;}
  }
- assert.equal(ready,10);
+ assert.equal(ready,12);
 });
 // v8 adds distribution families. Numerical legacy-triangular equivalence is now
 // protected by tests/v8-qa-simulation-oracle.test.mjs instead of whole-file bytes.

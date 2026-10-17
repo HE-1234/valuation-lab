@@ -227,12 +227,12 @@ research={
  'limits':['Valuation remains withheld: native TWD financials and ordinary shares cannot be compared directly with a USD ADR. The inflation conversion is an analyst assumption, not a quoted TWD yield or a verified ADR mapping.'],
  'bridge':'Preserve the existing hard gate for reporting currency, FX and five-ordinary-shares-per-ADR mapping; review minority interests and lease liabilities separately.'}}
 
-result={'schemaVersion':1,'version':ASOF+'.1','asOf':ASOF,'classification':'Assistant-authored educational base-case judgments, not company guidance, analyst consensus, investment recommendations or price targets.',
+result={'schemaVersion':1,'version':ASOF+'.2','asOf':ASOF,'classification':'Assistant-authored educational base-case judgments, not company guidance, analyst consensus, investment recommendations or price targets.',
  'units':{'rates':'decimal fractions','salesCapital':'incremental revenue / net reinvestment multiple','amounts':'snapshot reporting-currency millions'},
  'methodology':{
   'scope':'These defaults apply only to a fresh or explicitly reset current-company draft matching the named snapshot. Existing user edits and historical/frozen experiments must not change.',
-  'growth':'Year 1 uses growth, then annual growth fades linearly to terminalGrowth in year 10. It is not a constant ten-year CAGR. Economic checks show the resulting size and CAGR.',
-  'margin':'Reported baseline EBIT margin fades linearly to targetMargin by year 10, except an explicitly disclosed starting-EBIT normalization. Target margin is operating EBIT after ongoing R&D, SBC and depreciation, not gross margin, EBITDA or an adjusted EPS margin.',
+  'growth':'Except for the documented AAOI staged profile, year 1 uses growth, then annual growth fades linearly to terminalGrowth in year 10. It is not a constant ten-year CAGR. Economic checks show the resulting size and CAGR.',
+  'margin':'Except for the documented AAOI staged profile, reported baseline EBIT margin fades linearly to targetMargin by year 10, except an explicitly disclosed starting-EBIT normalization. Target margin is operating EBIT after ongoing R&D, SBC and depreciation, not gross margin, EBITDA or an adjusted EPS margin.',
   'reinvestment':'Net reinvestment = max(0, change in revenue / salesCapital). Ratios are independent forward judgments, not mechanically copied from total sales/book-capital or capex/sales. Gross maintenance capex, R&D capitalization and replacement cycles are not separately modeled.',
   'tax':'Normalized blended operating cash-tax estimates apply to positive EBIT only. Reported accounting effective rates are evidence, not marginal cash-tax forecasts; tax-loss carryforwards are not modeled.',
   'wacc':'WACC is an assumed nominal required return, never issuer-reported. Use observed USD Treasury 5.09% on 2026-10-16, an explicitly chosen 4.5% equity premium informed by January 2026’s 4.23% estimate, and assumed beta, target market-value debt weight and debt spread. The January premium is not an October observation. Round model WACC to 0.5 percentage points; betas and weights are not measured live. TSM uses a separately disclosed assumed currency conversion.',
@@ -276,8 +276,14 @@ for t,p in params.items():
   rev=f['revenue'];rows=[];pv=0
   for y in range(1,11):
    g=assumptions['growth']+(assumptions['terminalGrowth']-assumptions['growth'])*(y-1)/9
-   nxt=rev*(1+g);m=margin0+(assumptions['targetMargin']-margin0)*y/10
-   nopat=nxt*m-max(0,nxt*m)*assumptions['tax'];reinv=max(0,(nxt-rev)/assumptions['salesCapital']);fcff=nopat-reinv
+   m=margin0+(assumptions['targetMargin']-margin0)*y/10;sc=assumptions['salesCapital']
+   if t=='AAOI':
+    g=assumptions['terminalGrowth']+(assumptions['growth']-assumptions['terminalGrowth'])*[1,15/23,11/23,7/23,5/23,3/23,11/115,1/23,1/115,0][y-1]
+    m0ref=-67.406/595.97;progress=([-.05,0,.05,.08,.10,.12,.12,.12,.12,.12][y-1]-m0ref)/(.12-m0ref)
+    m=margin0+(assumptions['targetMargin']-margin0)*progress
+    sc=sc*[1,1,1.25,1.5,1.75,2,2][y-1] if y<=7 else 1/((1-(y-7)/3)/(2*sc)+(y-7)/3*(1+assumptions['terminalGrowth'])*assumptions['targetMargin']*(1-assumptions['tax'])/assumptions['terminalROIC'])
+   nxt=rev*(1+g)
+   nopat=nxt*m-max(0,nxt*m)*assumptions['tax'];reinv=max(0,(nxt-rev)/sc);fcff=nopat-reinv
    rows.append({'year':y,'growth':g,'revenue':nxt,'margin':m,'netReinvestment':reinv,'fcff':fcff});pv+=fcff/(1+assumptions['wacc'])**y;rev=nxt
   terminalNopat=rev*(1+assumptions['terminalGrowth'])*assumptions['targetMargin']*(1-assumptions['tax'])
   tv=terminalNopat*(1-assumptions['terminalGrowth']/assumptions['terminalROIC'])/(assumptions['wacc']-assumptions['terminalGrowth'])/(1+assumptions['wacc'])**10
@@ -292,11 +298,28 @@ for t,p in params.items():
   scenarios.append({'name':name,'classification':'analyst stress illustration, not a confidence interval','assumptions':{k:sa[k] for k in ['growth','targetMargin','salesCapital','wacc']},'year10RevenueMultiple':rr[-1]['revenue']/f['revenue'],'negativeFCFFYears':[x['year'] for x in rr if x['fcff']<0],'operatingValueRelativeToBase':(fp+tp)/(pv+tv) if pv+tv>0 else None,'perShareValue':None})
  checks['operatingEVPositive']=pv+tv>0
  if pv+tv<=0:
-  out['modelLimits'].insert(0,'This exact linear-path assumption set produces negative operating enterprise value and nine cash-burning forecast years. It is an operating stress hypothesis, not a credible standalone fair-value estimate; a staged capacity, margin, replacement-capital and financing model is needed before drawing an investment conclusion.')
+  out['modelLimits'].insert(0,'This staged capacity assumption set produces negative operating enterprise value and five cash-burning forecast years. It is a conditional operating stress case, not a standalone fair-value estimate; financing, default, recovery and detailed maintenance replacement remain unmodeled.' if t=='AAOI' else 'This exact linear-path assumption set produces negative operating enterprise value. It is an operating stress hypothesis, not a credible standalone fair-value estimate.')
  elif tv/(pv+tv)>.75:
   out['modelLimits'].insert(0,f"About {tv/(pv+tv):.0%} of modeled operating value comes after year 10. The result is highly dependent on mature margins, required reinvestment and discount rates.")
  out['economicChecks']=checks;out['stressIllustrations']=scenarios
+ if t in ['AAOI','GOOG']:
+  claim_note=('The separate source-dated current claims model deducts the disclosed convertible fair-value proxy and vendor financing once, and uses an explicit intrinsic customer-warrant scenario. Counterfactual note conversion and the incomplete known-ATM pro forma are separate sensitivities. Current employee awards and warrant time value remain incomplete.' if t=='AAOI' else 'The separate source-dated current claims model explicitly allocates mandatory preferred dilution/dividends, finance leases and noncontrolling claims, and adds a gross noncurrent-investment carrying proxy. Capped-call recovery, investment realization taxes and employee awards remain incomplete.')
+  out['bridgePolicy']={'status':'explicit-conditional-claims-overlay','zeroMeansVerifiedAbsent':False,'preserveExistingGates':True,'note':claim_note,'numericResultPolicy':'available-only-with-valid-source-matched-claims-model','sourcePath':'./data/current-claims-research.json'}
+  ra['otherClaims']='0 means no additional user-entered claim beyond the separate explicit current claims model. Do not enter the same modeled claims again. '+claim_note
+  ra['otherAssets']='0 means no additional user-entered asset beyond the separate explicit current claims model. Alphabet already includes a gross noncurrent-investment proxy in that bridge; never add it again. No zero is proof of absence.' if t=='GOOG' else '0 is an additional-asset assumption beyond source cash and any explicitly selected financing proceeds. It is not proof that every other nonoperating asset is absent.'
+  checks['note']='Operating math only; the separate source-matched current claims model computes conditional per-share values. No result is asserted here. Terminal share is not meaningful when operating value is nonpositive.'
+  if t=='AAOI':
+   out['classification']='conditional staged capacity research assumptions; not a validated fair-value estimate'
+   out['displayLabel']='Staged capacity research case'
+   out['operatingProfile']={'schemaVersion':1,'id':'aaoi-capacity-ramp-v1'}
+   out['modelSuitability']={'status':'conditional-staged-capacity-case','economicallyValidated':False,'note':'The explicit capacity/margin/capital path still produces negative operating value. The claims bridge shows the conditional equity floor and raw deficit; financing/default/recovery are not modeled.'}
+   out['legacyOperatingStress']={'profile':'linear-v1','salesCapital':.8,'negativeFCFFYears':9,'note':'The prior linear 60% growth fade and slow profitability transition remains available for saved drafts. It is a stress hypothesis, not the fresh staged research default.'}
+   ra['growth']='60% is year 1 growth. The staged profile then uses 40%, 30%, 20%, 15%, 10%, 8%, 5%, 3%, and 2.5% at these defaults. Quarter 3 guidance and capacity expansion support a front-loaded structure; the annual path is analyst judgment, not management guidance. Each simulated initial-growth input changes the whole same weighted path.'
+   ra['targetMargin']='12% mature GAAP EBIT margin is reached in year 6. At the reported starting loss, the staged path is −5%,0%,5%,8%,10%,12% before maturity. This is a conditional utilization and operating-leverage judgment; no non-GAAP net margin is substituted.'
+   ra['salesCapital']='0.8x is initial incremental sales/capital, requiring $1.25 investment per $1 extra revenue in years 1–2. It rises to 1.6x by years 6–7 as capacity is used. Years 8–10 fade capital intensity toward (1 + terminal growth) × margin × (1 − tax) / terminal ROIC, ending at 1.084x at defaults to align year 10 and terminal economics. The whole path is an explicit assumption, not a reported ratio.'
  result['companies'][t]=out
+result['revision']={'priorVersion':ASOF+'.1','summary':'AAOI staged capacity profile and explicit current claims overlays for AAOI/Alphabet; original operating scalar assumptions retained; saved prior paths not silently replaced.'}
+result['methodology']['companySpecificPath']='AAOI fresh research uses the documented staged capacity profile. Growth/margin progression and capital-intensity terminal fade are applied to every deterministic and simulated case. Other companies retain the original linear transition.'
 path=ROOT/'dist/data/company-base-cases.json';path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(path)
 for t,c in result['companies'].items():
  e=c['economicChecks'];print(t,c['assumptions'],'revenue multiple',round(e['revenueMultiple10Years'],2),'FCFF loss years',e['negativeFCFFYears'],'TV share',round(e['terminalValueShareOfOperatingEV'],3) if e['terminalValueShareOfOperatingEV'] else None)

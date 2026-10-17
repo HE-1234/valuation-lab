@@ -69,15 +69,26 @@ test('base cases: missing or delayed optional JSON returns a generic-compatible 
  assert.equal(await fetchBaseCases({fetcher:async()=>new Promise(()=>{}),timeoutMs:5}),null);
  const got=await fetchBaseCases({fetcher:async path=>{assert.equal(path,BASE_CASE_PATH);return {ok:true,json:async()=>baseCases}}});assert.deepEqual(got,baseCases);
 });
-test('current claims: confirmed convertible/preferred omissions gate only exact affected baselines',()=>{
+test('current claims: exact affected baselines require a source-specific bridge rather than acknowledgement flags',()=>{
  const affected=new Set(['AAOI-CURRENT-2025-12-31','AAOI-CURRENT-2026-06-30','AAOI-TTM-2026-06-30','GOOG-CURRENT-2026-06-30','GOOG-TTM-2026-06-30']);
- for(const c of universe.companies.filter(c=>['AAOI','GOOG'].includes(c.ticker)))for(const r of c.snapshots){const s=currentSnapshot(c,r),d=draftFor(c,r),issues=currentClaimsEvidence(s);assert.equal(issues.length,affected.has(r.id)?1:0,r.id);if(!affected.has(r.id)){assert.doesNotThrow(()=>calculateCurrent(s,d));continue;}assert.match(issues[0].sourceUrl,/sec\.gov\/Archives/);assert.ok(issues[0].amount>0);assert.ok(currentIssues(s,d).some(x=>/claims bridge/.test(x)));for(const flags of [{},{bridgeReviewed:true,modelReviewed:true,reviewed:[0,1,2,3,4,5,6,7]}]){const edited={...d,...flags,assumptions:{...d.assumptions,otherClaims:issues[0].amount}};assert.throws(()=>calculateCurrent(s,edited),/claims bridge/);assert.throws(()=>simulateCurrent(s,edited,{trials:3}),/claims bridge/);}}
+ for(const c of universe.companies.filter(c=>['AAOI','GOOG'].includes(c.ticker)))for(const r of c.snapshots){
+  const s=currentSnapshot(c,r),d=draftFor(c,r),e=currentClaimsEvidence(s);assert.equal(e.length,affected.has(r.id)?1:0,r.id);
+  if(!affected.has(r.id)){assert.doesNotThrow(()=>calculateCurrent(s,d));continue;}
+  assert.match(e[0].sourceUrl,/sec\.gov\/Archives/);assert.ok(e[0].amount>0);
+  for(const flags of [{},{bridgeReviewed:true,modelReviewed:true,reviewed:[0,1,2,3,4,5,6,7]}]){
+   const missing={...d,...flags,claims:undefined,assumptions:{...d.assumptions,otherClaims:e[0].amount}};
+   assert.ok(currentIssues(s,missing).some(x=>/claims|convertible|preferred/i.test(x)));
+   assert.throws(()=>calculateCurrent(s,missing),/claims|convertible|preferred/i);assert.throws(()=>simulateCurrent(s,missing,{trials:3}),/claims|convertible|preferred/i);
+  }
+  if(r.snapshotMode==='latest-quarter')assert.throws(()=>calculateCurrent(s,d),/Interim/);
+  else{assert.deepEqual(currentIssues(s,d),[]);assert.ok(Number.isFinite(calculateCurrent(s,d).perShare));}
+ }
  const goog=universe.companies.find(c=>c.ticker==='GOOG'),annual=goog.snapshots.find(r=>r.id==='GOOG-CURRENT-2025-12-31');assert.deepEqual(currentClaimsEvidence(currentSnapshot(goog,annual)),[]);
 });
 
 test('base cases: all fourteen shipped cases load only their exact current baseline with distinct assumptions',()=>{
  const shipped=JSON.parse(fs.readFileSync(new URL('../dist/data/company-base-cases.json',import.meta.url))),signatures=new Set(),before=JSON.stringify(universe);
  assert.equal(Object.keys(shipped.companies).length,14);let supported=0;
- for(const c of universe.companies){const r=c.snapshots.find(x=>x.id===c.currentSnapshotId),b=researchCaseFor(shipped,c,r);assert.ok(b,c.ticker+' case rejected');const d=draftFor(c,r,{baseCases:shipped});assert.equal(d.assumptionProvenance.kind,'researched-base-case',c.ticker);assert.equal(d.assumptionProvenance.version,shipped.version);assert.deepEqual(d.assumptions,b.assumptions);assert.equal(d.normalizationDelta,b.normalization.normalizationDelta);assert.equal(d.modelReviewed,false);assert.equal(d.bridgeReviewed,false);signatures.add(JSON.stringify(d.assumptions));const s=currentSnapshot(c,r);if(currentIssues(s,d).length)assert.ok(['GOOG','AAOI','NBIS','TSM'].includes(c.ticker));else{supported++;assert.ok(Number.isFinite(calculateCurrent(s,d).perShare));assert.ok(simulateCurrent(s,d,{trials:10,seed:'shipped-case-check'}).accepted>0,c.ticker);}for(const alternate of c.snapshots.filter(x=>x.id!==r.id))assert.equal(researchCaseFor(shipped,c,alternate),null,c.ticker+' research leaked to another baseline');}
- assert.equal(signatures.size,14);assert.equal(supported,10);assert.equal(JSON.stringify(universe),before);
+ for(const c of universe.companies){const r=c.snapshots.find(x=>x.id===c.currentSnapshotId),b=researchCaseFor(shipped,c,r);assert.ok(b,c.ticker+' case rejected');const d=draftFor(c,r,{baseCases:shipped});assert.equal(d.assumptionProvenance.kind,'researched-base-case',c.ticker);assert.equal(d.assumptionProvenance.version,shipped.version);assert.deepEqual(d.assumptions,b.assumptions);assert.equal(d.normalizationDelta,b.normalization.normalizationDelta);assert.equal(d.modelReviewed,false);assert.equal(d.bridgeReviewed,false);signatures.add(JSON.stringify(d.assumptions));const s=currentSnapshot(c,r);if(currentIssues(s,d).length)assert.ok(['NBIS','TSM'].includes(c.ticker));else{supported++;assert.ok(Number.isFinite(calculateCurrent(s,d).perShare));assert.ok(simulateCurrent(s,d,{trials:10,seed:'shipped-case-check'}).accepted>0,c.ticker);}for(const alternate of c.snapshots.filter(x=>x.id!==r.id))assert.equal(researchCaseFor(shipped,c,alternate),null,c.ticker+' research leaked to another baseline');}
+ assert.equal(signatures.size,14);assert.equal(supported,12);assert.equal(JSON.stringify(universe),before);
 });

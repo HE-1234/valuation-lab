@@ -1,12 +1,12 @@
 # Company-specific current research assumptions
 
-As of **October 17, 2026**, version `2026-10-17.1`.
+As of **October 17, 2026**, version `2026-10-17.2`.
 
 These are assistant-authored educational judgments. They are not issuer guidance, sell-side consensus, stock recommendations, price targets, or a claim that these businesses have been valued accurately. Reported facts remain in the existing source data. Each case identifies an exact current snapshot, dated primary sources, driver-by-driver reasoning, uncertainty, WACC components, and computed operating consequences in `dist/data/company-base-cases.json`.
 
 ## Chosen parameters
 
-Percentages below are displayed percentages; the JSON uses decimal fractions. Sales/capital means **incremental revenue / net reinvestment**, not revenue / total book capital. All cases use a ten-year forecast; initial growth fades linearly to terminal growth rather than persisting for ten years.
+Percentages below are displayed percentages; the JSON uses decimal fractions. Sales/capital means **incremental revenue / net reinvestment**, not revenue / total book capital. All cases use a ten-year forecast. Most use a linear fade toward stable growth. AAOI uses the documented staged capacity path; its sales/capital parameter is initial productivity, followed by utilization improvements and a terminal-consistent capital-intensity fade.
 
 | Company | Initial growth | Mature EBIT margin | Tax | Sales/capital | WACC | Stable growth | Terminal ROIC |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -25,7 +25,7 @@ Percentages below are displayed percentages; the JSON uses decimal fractions. Sa
 | AVGO | 35% | 45% | 20% | 2.00x | 10% | 2.5% | 20% |
 | TSM³ | 22% | 45% | 20% | 0.90x | 10% | 2% | 18% |
 
-1. **AAOI and NBIS are unsupported provisional operating hypotheses.** These particular straight-line growth/margin/capital assumptions produce nine cash-burning years and negative operating enterprise value. This is not an economically validated base-case valuation. A specialist multistage capacity, margin, GPU/equipment replacement, funding and dilution model is required. Assumptions were not tuned to make a share value positive. Bridge and specialist blocks remain in force.
+1. **AAOI is a conditional staged capacity case; NBIS remains unsupported.** AAOI's fresh research profile has five cash-burning years and negative operating value. Its valid source-dated claims bridge shows a zero common-equity floor and the raw deficit. Existing saved AAOI linear drafts retain their original nine-year cash-burn stress. Neither path is an economically validated fair-value appraisal, and neither models future financing or default/recovery. NBIS still needs a specialist capacity, equipment replacement, funding and perimeter model and remains blocked. No assumption was tuned to make a share value positive.
 2. **MU uses a visible starting-EBIT normalization.** Reported FY2026 revenue remains $133,188m and reported EBIT remains $99,340m. The model instead starts from EBIT of $46,615.8m (35% margin), an adjustment of −$52,724.2m. This judgment avoids a decade-long fade from the extraordinary 74.6% reported margin; 35% allows structural HBM benefits above FY2025’s 26.1% margin. It is not a restatement, near-term earnings forecast, or full through-cycle revenue normalization. Both the reason and exact filing URL travel with the draft.
 3. **TSM parameters are in nominal TWD.** Its USD ADR and ordinary-share conversion remain blocked until explicitly reconciled. The chosen currency adjustment is an assumption, not a verified FX quote or an observed Taiwanese government yield.
 
@@ -63,15 +63,15 @@ Examples of important consequences:
 - NVIDIA’s 40% initial growth fading to 2.5% still creates roughly 6.5 times current revenue after ten years. A faster early fade may be more realistic than this simple curve.
 - Amazon’s current case has four negative-FCFF forecast years and about 93% of operating value in the terminal period.
 - Tesla, Coherent and Lumentum also depend heavily on terminal profitability (roughly 89%, 80% and 78% of modeled operating value).
-- AAOI and NBIS fail the simple-path viability check described above; their result must never be presented as a meaningful standalone fair value.
+- AAOI's staged research case remains an operating stress with negative enterprise value, five negative-FCFF years and substantial cumulative cash deficits. Its zero equity floor is a conditional result, not evidence that the traded security is worthless. NBIS remains blocked. Neither is a standalone fair-value conclusion.
 
 These warnings must be visible beside the assumptions, not hidden by the existence of a source link. Source-backed inputs and algebraically correct math do not validate forward economic judgments.
 
 ## Claims, assets and saved user work
 
-`otherClaims: 0` and `otherAssets: 0` are deliberately labeled **unreviewed placeholders**, not verified zeros. They do not mean preferred stock, convertibles, minority interests, awards, leases, investments, or contingent obligations are absent or worthless. There are no automatic “reviewed” flags.
+`otherClaims: 0` and `otherAssets: 0` mean no additional user-entered amount. For AAOI and Alphabet, the separate source-dated model already includes explicitly modeled claims and assets; never enter them again. For other companies these remain **unreviewed placeholders**, not verified zeros. They do not mean preferred stock, convertibles, minority interests, awards, leases, investments, or contingent obligations are absent or worthless. There are no automatic “reviewed” flags.
 
-Research identified material June 2026 bridge issues in Alphabet (mandatory-convertible preferred securities) and Applied Optoelectronics (separately reported convertible notes). Their correct treatment cannot be replaced by an unsupported fair-value number or a footnote. Existing Nebius funding/perimeter and TSM currency/security gates also remain intact.
+Research identified material June 2026 bridge issues in Alphabet (mandatory-convertible preferred securities) and Applied Optoelectronics (separately reported convertible notes). Version 9 resolves those gates only with an exact source-matched claims model, explicit alternative treatments and visible limitations. The resulting numbers are conditional approximations; missing or invalid model inputs still withhold results. Existing Nebius funding/perimeter and TSM currency/security gates also remain intact.
 
 Defaults apply only to a fresh current draft or an explicit load/reset matching the current snapshot. Never rewrite a saved user draft, saved normalization, historical case, frozen experiment, or engine-wide defaults. The new artifact has independent provenance/version metadata so the user can distinguish their assumptions from these research starting points.
 
@@ -101,3 +101,9 @@ The focused suite checks coverage, exact snapshot identity, source dates/URLs, f
 - TSM: [issuer release](https://investor.tsmc.com/japanese/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf) (2026-10-15); [exact baseline filing](https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf) (2026-10-15)
 - [US Treasury 10-year nominal USD yield, October 16, 2026](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve)
 - [Damodaran January 2026 implied US equity-risk premium](https://aswathdamodaran.blogspot.com/2026/01/data-update-2-for-2026-equities-get.html)
+
+## Version 2026-10-17.2: staged AAOI and explicit claims overlays
+
+The scalar assumptions remain unchanged. AAOI fresh and explicit research loads now select the source-linked staged capacity profile. The profile reaches 12% margin in year 6 at defaults and uses growth of 60%, 40%, 30%, 20%, 15%, 10%, 8%, 5%, 3%, and 2.5%. Initial sales/capital of 0.8 rises through 1.0, 1.2, 1.4, and 1.6, then capital intensity fades to (1 + g) × margin × (1 − tax) / terminal ROIC. This final timing convention makes year 10 FCFF × (1 + g) equal terminal FCFF. The normalized weights apply to each sampled driver vector.
+
+The original linear 60% / 0.8 case remains a preserved legacy stress and is not silently substituted in existing drafts. Fresh staged reported-capital default has negative operating EV and five negative-FCFF years; the zero common-equity floor and raw deficit are both visible. Neither path includes a default/recovery or future financing model. The separately sourced current claims overlay now computes AAOI and Alphabet conditional values, while null/invalid/mismatched-source states remain blocked.

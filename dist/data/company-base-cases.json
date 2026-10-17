@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-17.1",
+  "version": "2026-10-17.2",
   "asOf": "2026-10-17",
   "classification": "Assistant-authored educational base-case judgments, not company guidance, analyst consensus, investment recommendations or price targets.",
   "units": {
@@ -10,15 +10,16 @@
   },
   "methodology": {
     "scope": "These defaults apply only to a fresh or explicitly reset current-company draft matching the named snapshot. Existing user edits and historical/frozen experiments must not change.",
-    "growth": "Year 1 uses growth, then annual growth fades linearly to terminalGrowth in year 10. It is not a constant ten-year CAGR. Economic checks show the resulting size and CAGR.",
-    "margin": "Reported baseline EBIT margin fades linearly to targetMargin by year 10, except an explicitly disclosed starting-EBIT normalization. Target margin is operating EBIT after ongoing R&D, SBC and depreciation, not gross margin, EBITDA or an adjusted EPS margin.",
+    "growth": "Except for the documented AAOI staged profile, year 1 uses growth, then annual growth fades linearly to terminalGrowth in year 10. It is not a constant ten-year CAGR. Economic checks show the resulting size and CAGR.",
+    "margin": "Except for the documented AAOI staged profile, reported baseline EBIT margin fades linearly to targetMargin by year 10, except an explicitly disclosed starting-EBIT normalization. Target margin is operating EBIT after ongoing R&D, SBC and depreciation, not gross margin, EBITDA or an adjusted EPS margin.",
     "reinvestment": "Net reinvestment = max(0, change in revenue / salesCapital). Ratios are independent forward judgments, not mechanically copied from total sales/book-capital or capex/sales. Gross maintenance capex, R&D capitalization and replacement cycles are not separately modeled.",
     "tax": "Normalized blended operating cash-tax estimates apply to positive EBIT only. Reported accounting effective rates are evidence, not marginal cash-tax forecasts; tax-loss carryforwards are not modeled.",
     "wacc": "WACC is an assumed nominal required return, never issuer-reported. Use observed USD Treasury 5.09% on 2026-10-16, an explicitly chosen 4.5% equity premium informed by January 2026’s 4.23% estimate, and assumed beta, target market-value debt weight and debt spread. The January premium is not an October observation. Round model WACC to 0.5 percentage points; betas and weights are not measured live. TSM uses a separately disclosed assumed currency conversion.",
     "terminal": "Stable growth is modest nominal growth in the model currency, below WACC and terminal ROIC. Terminal reinvestment/NOPAT = g/ROIC. Mature returns normally fall from explicit-period productivity; a discrete year-11 transition remains a simplification.",
     "bridge": "otherClaims=0 and otherAssets=0 are unreviewed numerical placeholders, not verified absence or fair values. No reviewed flags, financing reconciliation or share conversion is implied. Explicit specialist and claim-related gates take precedence over these defaults.",
     "validation": "Deterministic operating-path checks and lower/higher operating cases are model sanity tests, not calibrated probabilities. No stock price or future return is used to choose assumptions.",
-    "evidence": "Primary issuer releases and exact current filing sources available by 2026-10-17 anchor judgments. Historical annual data are latest-reported context and may include recasts; structural breaks are disclosed."
+    "evidence": "Primary issuer releases and exact current filing sources available by 2026-10-17 anchor judgments. Historical annual data are latest-reported context and may include recasts; structural breaks are disclosed.",
+    "companySpecificPath": "AAOI fresh research uses the documented staged capacity profile. Growth/margin progression and capital-intensity terminal fade are applied to every deterministic and simulated case. Other companies retain the original linear transition."
   },
   "sources": {
     "treasury": {
@@ -841,8 +842,8 @@
         "wacc": "10.0% nominal USD is a rounded model estimate. Assumed beta 1.1, 5% target debt and a 0.8-point debt spread reflect strong core cash flow plus search-transition and regulatory exposure.",
         "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
         "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
-        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. June 2026 mandatory-convertible preferred stock has $18,023m reported carrying value. The common-equity bridge requires explicit preferred-dividend, conversion and dilution treatment; this is not its fair value. Withhold a clean per-common-share result until resolved.",
-        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+        "otherClaims": "0 means no additional user-entered claim beyond the separate explicit current claims model. Do not enter the same modeled claims again. The separate source-dated current claims model explicitly allocates mandatory preferred dilution/dividends, finance leases and noncontrolling claims, and adds a gross noncurrent-investment carrying proxy. Capped-call recovery, investment realization taxes and employee awards remain incomplete.",
+        "otherAssets": "0 means no additional user-entered asset beyond the separate explicit current claims model. Alphabet already includes a gross noncurrent-investment proxy in that bridge; never add it again. No zero is proof of absence."
       },
       "reportedAnchors": [
         {
@@ -899,11 +900,12 @@
         "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
       },
       "bridgePolicy": {
-        "status": "unreviewed",
+        "status": "explicit-conditional-claims-overlay",
         "zeroMeansVerifiedAbsent": false,
         "preserveExistingGates": true,
-        "note": "June 2026 mandatory-convertible preferred stock has $18,023m reported carrying value. The common-equity bridge requires explicit preferred-dividend, conversion and dilution treatment; this is not its fair value. Withhold a clean per-common-share result until resolved.",
-        "numericResultPolicy": "withhold-until-explicit-bridge-or-specialist-resolution"
+        "note": "The separate source-dated current claims model explicitly allocates mandatory preferred dilution/dividends, finance leases and noncontrolling claims, and adds a gross noncurrent-investment carrying proxy. Capped-call recovery, investment realization taxes and employee awards remain incomplete.",
+        "numericResultPolicy": "available-only-with-valid-source-matched-claims-model",
+        "sourcePath": "./data/current-claims-research.json"
       },
       "modelLimits": [
         "Non-operating equity gains are excluded from operating income; no separate option value is assigned to Other Bets."
@@ -934,7 +936,7 @@
         "terminalValueShareOfOperatingEV": 0.6740255348884656,
         "discountSpread": 0.07500000000000001,
         "publicPerShareResult": null,
-        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "note": "Operating math only; the separate source-matched current claims model computes conditional per-share values. No result is asserted here. Terminal share is not meaningful when operating value is nonpositive.",
         "operatingEVPositive": true
       },
       "stressIllustrations": [
@@ -1792,7 +1794,7 @@
       "snapshotId": "AAOI-TTM-2026-06-30",
       "asOf": "2026-10-17",
       "currency": "USD",
-      "classification": "provisional unsupported linear-ramp research assumptions; not a validated base-case valuation",
+      "classification": "conditional staged capacity research assumptions; not a validated fair-value estimate",
       "summary": "Provisional research assumptions only. A high-risk capacity-led turnaround in datacenter optics, with substantial funding needs before durable GAAP profitability.",
       "assumptions": {
         "growth": 0.6,
@@ -1807,16 +1809,16 @@
         "otherAssets": 0
       },
       "rationale": {
-        "growth": "60% reflects an early 800G/1.6T volume ramp, while still below recent annual growth. Starting from a small TTM base and fading immediately is essential; the ten-year outcome remains highly uncertain.",
-        "targetMargin": "12% assumes a genuine operating turnaround from the current 11.3% loss margin. It requires utilization and cost absorption to improve, without equating non-GAAP net profitability with GAAP operating profit.",
+        "growth": "60% is year 1 growth. The staged profile then uses 40%, 30%, 20%, 15%, 10%, 8%, 5%, 3%, and 2.5% at these defaults. Quarter 3 guidance and capacity expansion support a front-loaded structure; the annual path is analyst judgment, not management guidance. Each simulated initial-growth input changes the whole same weighted path.",
+        "targetMargin": "12% mature GAAP EBIT margin is reached in year 6. At the reported starting loss, the staged path is −5%,0%,5%,8%,10%,12% before maturity. This is a conditional utilization and operating-leverage judgment; no non-GAAP net margin is substituted.",
         "tax": "25% applies only to positive modeled EBIT. This is a normalized mature rate; no tax refund or verified NOL benefit is assumed during losses.",
-        "salesCapital": "0.8x means $1.25 of net investment per incremental $1 of revenue. Manufacturing expansion, inventory and receivables make growth cash-consuming; early negative FCFF is intentional.",
+        "salesCapital": "0.8x is initial incremental sales/capital, requiring $1.25 investment per $1 extra revenue in years 1–2. It rises to 1.6x by years 6–7 as capacity is used. Years 8–10 fade capital intensity toward (1 + terminal growth) × margin × (1 − tax) / terminal ROIC, ending at 1.084x at defaults to align year 10 and terminal economics. The whole path is an explicit assumption, not a reported ratio.",
         "terminalROIC": "10% assumes capital utilization improves in maturity but grants no excess return versus the high constant model discount rate.",
         "wacc": "13.5% nominal USD is a rounded model estimate. Assumed beta 1.8 plus a 1-point extra equity allowance, 10% target debt and a 3.5-point debt spread reflect concentrated customers, execution and funding risk. These are judgments, not quoted borrowing terms.",
         "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
         "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
-        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. The June 2026 10-Q separately reports $129.142m convertible notes in addition to $58.915m bank/current debt, plus $33.940m bank-acceptance payables needing classification. Withhold a clean share value until a coherent debt/dilution bridge is implemented.",
-        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+        "otherClaims": "0 means no additional user-entered claim beyond the separate explicit current claims model. Do not enter the same modeled claims again. The separate source-dated current claims model deducts the disclosed convertible fair-value proxy and vendor financing once, and uses an explicit intrinsic customer-warrant scenario. Counterfactual note conversion and the incomplete known-ATM pro forma are separate sensitivities. Current employee awards and warrant time value remain incomplete.",
+        "otherAssets": "0 is an additional-asset assumption beyond source cash and any explicitly selected financing proceeds. It is not proof that every other nonoperating asset is absent."
       },
       "reportedAnchors": [
         {
@@ -1873,14 +1875,15 @@
         "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
       },
       "bridgePolicy": {
-        "status": "unreviewed",
+        "status": "explicit-conditional-claims-overlay",
         "zeroMeansVerifiedAbsent": false,
         "preserveExistingGates": true,
-        "note": "The June 2026 10-Q separately reports $129.142m convertible notes in addition to $58.915m bank/current debt, plus $33.940m bank-acceptance payables needing classification. Withhold a clean share value until a coherent debt/dilution bridge is implemented.",
-        "numericResultPolicy": "withhold-until-explicit-bridge-or-specialist-resolution"
+        "note": "The separate source-dated current claims model deducts the disclosed convertible fair-value proxy and vendor financing once, and uses an explicit intrinsic customer-warrant scenario. Counterfactual note conversion and the incomplete known-ATM pro forma are separate sensitivities. Current employee awards and warrant time value remain incomplete.",
+        "numericResultPolicy": "available-only-with-valid-source-matched-claims-model",
+        "sourcePath": "./data/current-claims-research.json"
       },
       "modelLimits": [
-        "This exact linear-path assumption set produces negative operating enterprise value and nine cash-burning forecast years. It is an operating stress hypothesis, not a credible standalone fair-value estimate; a staged capacity, margin, replacement-capital and financing model is needed before drawing an investment conclusion.",
+        "This staged capacity assumption set produces negative operating enterprise value and five cash-burning forecast years. It is a conditional operating stress case, not a standalone fair-value estimate; financing, default, recovery and detailed maintenance replacement remain unmodeled.",
         "The simple model has no financing or default-probability schedule; a large terminal value can conceal years of cash burn."
       ],
       "uncertainties": [
@@ -1888,39 +1891,35 @@
         "Convertible notes, vendor financing, dilution and warrants"
       ],
       "modelSuitability": {
-        "status": "unsupported-linear-ramp",
+        "status": "conditional-staged-capacity-case",
         "economicallyValidated": false,
-        "note": "The simple linear fade cannot represent the capacity, profitability and financing ramp. Use a specialist multistage path before a meaningful valuation."
+        "note": "The explicit capacity/margin/capital path still produces negative operating value. The claims bridge shows the conditional equity floor and raw deficit; financing/default/recovery are not modeled."
       },
-      "displayLabel": "Provisional operating hypothesis",
+      "displayLabel": "Staged capacity research case",
       "economicChecks": {
         "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
         "startingRevenue": 595.9699999999999,
         "startingModelMargin": -0.11310300854069837,
         "firstYearRevenue": 953.5519999999999,
-        "year10Revenue": 8184.869552014342,
-        "revenueMultiple10Years": 13.733693897367893,
-        "impliedRevenueCAGR10Years": 0.29950733842864596,
+        "year10Revenue": 3153.999975242276,
+        "revenueMultiple10Years": 5.292212653728001,
+        "impliedRevenueCAGR10Years": 0.18130958743686332,
         "firstYearNetReinvestmentToRevenue": 0.46875,
         "negativeFCFFYears": [
           1,
           2,
           3,
           4,
-          5,
-          6,
-          7,
-          8,
-          9
+          5
         ],
-        "firstPositiveFCFFYear": 10,
+        "firstPositiveFCFFYear": 6,
         "terminalReinvestmentRate": 0.25,
         "matureMarginTimesCapitalAfterTax": 0.072,
         "terminalROIC": 0.1,
         "terminalValueShareOfOperatingEV": null,
         "discountSpread": 0.11000000000000001,
         "publicPerShareResult": null,
-        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "note": "Operating math only; the separate source-matched current claims model computes conditional per-share values. No result is asserted here. Terminal share is not meaningful when operating value is nonpositive.",
         "operatingEVPositive": false
       },
       "stressIllustrations": [
@@ -1933,17 +1932,13 @@
             "salesCapital": 0.6400000000000001,
             "wacc": 0.155
           },
-          "year10RevenueMultiple": 4.380158666573723,
+          "year10RevenueMultiple": 2.652252659224748,
           "negativeFCFFYears": [
             1,
             2,
             3,
             4,
-            5,
-            6,
-            7,
-            8,
-            9
+            5
           ],
           "operatingValueRelativeToBase": null,
           "perShareValue": null
@@ -1957,21 +1952,27 @@
             "salesCapital": 0.96,
             "wacc": 0.12000000000000001
           },
-          "year10RevenueMultiple": 31.69229960918109,
+          "year10RevenueMultiple": 8.852864765898483,
           "negativeFCFFYears": [
             1,
             2,
             3,
-            4,
-            5,
-            6,
-            7,
-            8
+            4
           ],
           "operatingValueRelativeToBase": null,
           "perShareValue": null
         }
-      ]
+      ],
+      "operatingProfile": {
+        "schemaVersion": 1,
+        "id": "aaoi-capacity-ramp-v1"
+      },
+      "legacyOperatingStress": {
+        "profile": "linear-v1",
+        "salesCapital": 0.8,
+        "negativeFCFFYears": 9,
+        "note": "The prior linear 60% growth fade and slow profitability transition remains available for saved drafts. It is a stress hypothesis, not the fresh staged research default."
+      }
     },
     "NBIS": {
       "ticker": "NBIS",
@@ -2067,7 +2068,7 @@
         "numericResultPolicy": "withhold-until-explicit-bridge-or-specialist-resolution"
       },
       "modelLimits": [
-        "This exact linear-path assumption set produces negative operating enterprise value and nine cash-burning forecast years. It is an operating stress hypothesis, not a credible standalone fair-value estimate; a staged capacity, margin, replacement-capital and financing model is needed before drawing an investment conclusion.",
+        "This exact linear-path assumption set produces negative operating enterprise value. It is an operating stress hypothesis, not a credible standalone fair-value estimate.",
         "Valuation remains withheld. Linear margin recovery from TTM losses, a constant discount rate and growth-only reinvestment cannot represent the announced ramp, funding or GPU replacement cycle.",
         "Old Yandex-group history is not comparable with the post-divestment AI-cloud business."
       ],
@@ -2643,5 +2644,9 @@
         }
       ]
     }
+  },
+  "revision": {
+    "priorVersion": "2026-10-17.1",
+    "summary": "AAOI staged capacity profile and explicit current claims overlays for AAOI/Alphabet; original operating scalar assumptions retained; saved prior paths not silently replaced."
   }
 }
