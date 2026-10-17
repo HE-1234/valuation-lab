@@ -2,6 +2,32 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 22:37 UTC · The approved ivory and teal interface
+
+### Approved source and implementation
+
+The supplied October 17 handoff (`START-HERE.txt`, `approved-source.html`, `approved-preview.html`, and the Growth, Profitability and Valuation range images) is the visual reference for this pass. The source and all three images were inspected before implementation. Its preview numbers and simplified growth interpolation are fixtures, not production economics.
+
+The shared shell now uses the exact ivory/teal light palette, its dark counterpart, self-hosted licensed Instrument Serif and DM Sans, compact global and mode navigation, and left-side assumptions with right-side reported history. The six stored appearance keys remain. Annual model, Historical, Research, Sources/imports and Learn extend the same design system; all existing destinations, complete presets, Undo, source disclosures, saved drafts and deep links remain. The repository’s APPROVED-UI.md lists the full capability map and exact tokens.
+
+Growth bars use every actual annual model row through its stable-growth endpoint, including 10-, 15- and 20-year flexible paths, three/five explicit years, immediate/maintained/annual/legacy paths and AAOI's staged path. Shared year nodes retain identity across edits and duration changes; negative rates have a true zero baseline and one scale across wrapped rows. Profitability shows final-forecast-row EBIT and NOPAT per 100 revenue. Historical values retain their fiscal dates, missing observations, annual/TTM distinction, source links and actual predecessor/recast/accounting comparability notes. No financial engine, research assumption or source fact is changed.
+
+Input uncertainty bars use the existing sampler's normalized density summary. Input shape changes and the calculated output distribution remain separate. Pending, previous, invalid and failed output states, exact exports, seeds and optional six-second replay keep their original meaning. Small text on soft-fill notices uses primary ink for contrast; pale structural dividers are separate from stronger interactive control boundaries.
+
+### Written guidance and application
+
+Read on October 17, 2026 at 22:37 UTC: [W3C WCAG 2.2 Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) and [Animation from Interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html). This was a review of written guidance, not completion of a course, video or assistive-technology test.
+
+Ordinary content is designed to reflow at 320 CSS pixels without loss of information or two-axis reading. Inputs stack before evidence, and complete growth years wrap sequentially on a shared scale. The table exception applies only to genuinely tabular content and does not justify page-wide overflow. Existing narrow-table labeled row groups remain; ordinary forms stay in the document's natural flow.
+
+Bar geometry transitions over 460ms with cubic-bezier(.22,.75,.2,1), tab indicators over 320ms, and panel entry over 240ms with 6px translation. Edits update keyed marks rather than repeatedly animating from zero. Reduced motion immediately exposes the final state without nonessential transitions or replay. Original labels, IDs, focus-return and keyboard handlers remain attached to their controls when supplemental help moves into disclosures.
+
+### Verification limits
+
+Automated checks exercise real application handlers under synthetic DOM fixtures, all model growth endpoints, rapid edits, node/focus preservation, signed values, invalid recovery, distribution updates, source comparability and theme/contrast contracts. Independent checks compare complete deterministic and seeded outputs for all 14 companies and protected model/source hashes. The final aggregate and known external raw-source fixture gap are recorded in the release notes.
+
+New review images are explicitly labeled WeasyPrint static approximations. Native browser layout, 200% zoom, touch, screen-reader output and painted animation/recording remain unverified: the supported cloud route could not reach the local preview, and the earlier local-browser restriction was not bypassed. Renderer-specific adaptations are outside the app and are not evidence of native browser behavior.
+
 ## 2026-10-17 · A decision workspace shaped by the desktop review
 
 ### Evidence and scope

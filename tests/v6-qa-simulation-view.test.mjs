@@ -68,7 +68,7 @@ test('v6 QA: all interruptions immediately restore exact full bins while theme c
   const heights=()=>h.bars().map(b=>Number(b.getAttribute('height'))),full=heights();h.observers[0].fn([{isIntersecting:true,intersectionRatio:1}]);h.motion.matches=true;h.motion.dispatch('change');assert.deepEqual(heights(),full);
   h.motion.matches=false;h.motion.dispatch('change');h.get('#mc-play').click();assert.ok(heights().every(v=>v===0));h.windowEvents.dispatch('valuation:tab-change',{detail:'history'});assert.deepEqual(heights(),full);
   h.get('#mc-play').click();h.doc.hidden=true;h.doc.dispatch('visibilitychange');assert.deepEqual(heights(),full);h.doc.hidden=false;
-  h.get('#mc-play').click();h.doc.documentElement.dataset.theme='midnight';h.windowEvents.dispatch('valuation:theme-change');assert.deepEqual(heights(),full);assert.match(h.get('#mc-output').innerHTML,/stop-color="#a4e5ce"/);assert.match(h.get('#mc-output').innerHTML,/style="fill:#edf2fa"/);
+  h.get('#mc-play').click();h.doc.documentElement.dataset.theme='midnight';h.windowEvents.dispatch('valuation:theme-change');assert.deepEqual(heights(),full);assert.match(h.get('#mc-output').innerHTML,/stop-color="#8dcdbb"/);assert.match(h.get('#mc-output').innerHTML,/style="fill:#e9f1ec"/);
   h.get('#mc-play').click();h.destroy();assert.deepEqual(heights(),full);
  }finally{h.cleanup()}
 });

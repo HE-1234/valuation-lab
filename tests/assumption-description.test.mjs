@@ -15,6 +15,9 @@ const fields=[
  [6,'otherAssets',null,'m',1,0,100000,100],
  [6,'otherClaims',null,'m',1,0,100000,100]
 ];
+// Collect helper text through presentation spans without counting its hidden
+// unit prefix as the visible explanation. This is markup, not computed layout.
+const visibleHelperText=node=>node.hidden||node.getAttribute('aria-hidden')==='true'||node.classList.contains('sr-only')?'':node._text+node.children.map(visibleHelperText).join('');
 
 test('assumption descriptions: both native controls reference explicit units and the same helper for all baselines',async()=>{
  const h=await startStudio();let pairs=0;const currencies=new Set();
@@ -30,7 +33,8 @@ test('assumption descriptions: both native controls reference explicit units and
     assert.equal(number.getAttribute('type'),'number');assert.equal(number.getAttribute('inputmode'),'decimal');
     assert.equal(slider.getAttribute('type'),'range');assert.ok(slider.getAttribute('aria-label'));
     assert.equal(number.parent.querySelector('span').textContent,unit);
-    assert.ok(hint._text.trim(),'Existing visible helper stays present');
+    assert.equal(visibleHelperText(prefix),'','The hidden unit cannot satisfy the visible-helper assertion');
+    assert.ok(visibleHelperText(hint).trim(),'Existing visible helper stays present');
     for(const control of [number,slider]){
      assert.equal(control.getAttribute('aria-describedby'),'g-hint-'+key);
      assert.equal(Number(control.dataset.scale),scale);assert.equal(Number(control.getAttribute('min')),min);

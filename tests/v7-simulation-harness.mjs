@@ -12,7 +12,11 @@ export function fixture({reduced=false,mobile=false,ticker='VIEWQA',rawId,autoIn
  class Element{
   constructor(attrs={}){this.attrs={...attrs};this.dataset=Object.fromEntries(Object.entries(attrs).filter(([k])=>k.startsWith('data-')).map(([k,v])=>[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()),v]));this.value=attrs.value||'';this.style={setProperty(name,value){this[name]=String(value)}};this.textContent='';this._html='';this.descendants=[];this.children=[];this.disabled='disabled'in attrs;this.hidden='hidden'in attrs;this.captured=new Set();}
   set innerHTML(html){const remove=el=>{for(const child of el.descendants)remove(child);if(ids.get('#'+el.attrs.id)===el)ids.delete('#'+el.attrs.id);const i=all.indexOf(el);if(i>=0)all.splice(i,1)};for(const el of this.descendants)remove(el);this.descendants=[];this._html=html;
-   for(const match of html.matchAll(/<([a-z][a-z0-9-]*)\b([^>]*)>/gi)){const attrs=Object.fromEntries([...match[2].matchAll(/([\w-]+)(?:="([^"]*)")?/g)].map(m=>[m[1],decode(m[2]??'')]));const el=new Element(attrs);this.descendants.push(el);all.push(el);if(attrs.id)ids.set('#'+attrs.id,el);}
+   for(const match of html.matchAll(/<([a-z][a-z0-9-]*)\b([^>]*)>/gi)){const attrs=Object.fromEntries([...match[2].matchAll(/([\w-]+)(?:="([^"]*)")?/g)].map(m=>[m[1],decode(m[2]??'')]));const el=new Element(attrs);
+    // Retain nested markup for read-only assertions when production updates a
+    // chart's keyed descendants instead of replacing the shape container.
+    if(attrs.id&&!['input','br','img','meta','link'].includes(match[1])){const nested=new RegExp('<\\/?'+match[1]+'\\b[^>]*>','gi');nested.lastIndex=match.index+match[0].length;let depth=1,item;while((item=nested.exec(html))){depth+=item[0].startsWith('</')?-1:1;if(!depth){el._html=html.slice(match.index+match[0].length,item.index);break;}}}
+    this.descendants.push(el);all.push(el);if(attrs.id)ids.set('#'+attrs.id,el);}
    for(const match of html.matchAll(/<select\b[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/select>/g)){const options=[...match[2].matchAll(/<option\b([^>]*)>/g)];const option=options.find(m=>/selected/.test(m[1]))||options[0];if(option)ids.get('#'+match[1]).value=option[1].match(/value="([^"]*)"/)[1];}
   }
   get innerHTML(){return this._html}

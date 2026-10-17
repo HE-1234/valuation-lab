@@ -9,9 +9,9 @@ const themeNames=['forest','slate','midnight','sand','plum','ocean'];
 function setTheme(theme,persist=false){
  if(!themeNames.includes(theme))theme='forest';
  document.documentElement.dataset.theme=theme;
- const themeLabel=document.querySelector('#current-theme-name');if(themeLabel)themeLabel.textContent={forest:'Paper & Forest',slate:'Slate & Blue',midnight:'Midnight',sand:'Sand & Terracotta',plum:'Plum & Rose',ocean:'Ocean & Teal'}[theme];
+ const themeLabel=document.querySelector('#current-theme-name');if(themeLabel)themeLabel.textContent={forest:'Paper & Forest',slate:'Ivory & Teal',midnight:'Midnight',sand:'Sand & Terracotta',plum:'Plum & Rose',ocean:'Ocean & Teal'}[theme];
  document.querySelectorAll('[data-theme-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themeChoice===theme)));
- document.querySelector('meta[name="theme-color"]').content={forest:'#183b30',slate:'#172b4a',midnight:'#111a29',sand:'#633b2c',plum:'#402642',ocean:'#123f49'}[theme];
+ document.querySelector('meta[name="theme-color"]').content={forest:'#183b30',slate:'#f8f7f2',midnight:'#142024',sand:'#633b2c',plum:'#402642',ocean:'#123f49'}[theme];
  if(typeof window!=='undefined'&&typeof CustomEvent==='function')window.dispatchEvent(new CustomEvent('valuation:theme-change',{detail:theme}));
  if(persist)try{localStorage.setItem('valuation-lab-theme',theme)}catch{toast('Theme changed for this visit. Browser storage is unavailable.')}
 }

@@ -40,7 +40,7 @@ test('actual Annual handlers: view and input-group changes visibly animate once 
  const h=await startResearchWorkspace(),m=animateWorkspace(h);
  h.get('[data-annual-view="simulation"]').click();assert.equal(m.animations.length,1);assert.equal(m.animations[0].node,h.get('#annual-simulation-view'));
  h.get('[data-annual-view="simulation"]').click();assert.equal(m.animations.length,1);
- h.get('[data-annual-view="result"]').click();assert.equal(m.animations[0].canceled,true);assert.equal(m.animations.at(-1).options.duration,280);
+ h.get('[data-annual-view="result"]').click();assert.equal(m.animations[0].canceled,true);assert.equal(m.animations.at(-1).options.duration,240);
  h.get('[data-annual-editor="terminal"]').click();const a=m.animations.at(-1);assert.equal(a.node,h.get('#annual-editor-panel-terminal'));h.get('[data-annual-editor="notes"]').click();assert.equal(a.canceled,true);
  const count=m.animations.length;h.get('[data-annual-editor="notes"]').click();assert.equal(m.animations.length,count);assert.equal(m.scrolls(),0);h.destroy();assert.ok(m.animations.every(a=>a.canceled));
 });
@@ -51,9 +51,9 @@ test('actual Annual typing: immediate values, persistent focused inputs and boun
  assert.ok(m.animations.every(a=>a.options.duration===280&&a.frames[0].transform==='translateY(4px)'));assert.equal(m.scrolls(),0);
  m.media.matches=true;m.events.get('change')();assert.ok(m.animations.every(a=>a.canceled));const count=m.animations.length;h.input('[data-year-field="revenue"]','520000');assert.equal(m.animations.length,count);assert.equal(h.getState().draft.annual[0].revenue,520000);h.destroy();
 });
-test('actual Guided handlers: 8px group navigation and 4px result feedback do not replace editors or force scrolling',async()=>{
+test('actual Guided handlers: 6px group navigation and 4px result feedback do not replace editors or force scrolling',async()=>{
  const h=await startStudio({motion:true}),m=animateWorkspace(h),field=h.get('#g-growth');
- h.step(3);assert.equal(m.animations.at(-1).node,h.get('#editor-group-3'));assert.equal(m.animations.at(-1).frames[0].transform,'translateY(8px)');
+ h.step(3);assert.equal(m.animations.at(-1).node,h.get('#editor-group-3'));assert.equal(m.animations.at(-1).frames[0].transform,'translateY(6px)');
  const count=m.animations.length;h.step(3);assert.equal(m.animations.length,count);h.step(2);field.focus();h.input('#g-growth','12');
  assert.equal(h.get('#g-growth'),field);assert.equal(h.focus(),field);assert.equal(h.state().assumptions.growth,.12);assert.ok(m.animations.slice(-2).every(a=>a.frames[0].transform==='translateY(4px)'));assert.equal(m.scrolls(),0);
  const previous=m.animations.slice(-2);h.input('#g-growth','13');assert.ok(previous.every(a=>a.canceled));h.get('#guided-view-simulation').click();assert.equal(m.animations.at(-1).node,h.get('#guided-pane-simulation'));cancelMotion();

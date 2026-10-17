@@ -22,7 +22,12 @@ test('v8 QA: deterministic engine remains byte-identical; UI and motion have exp
 // Strip only those known presentation lines/wrappers, then pin every remaining
 // app byte to pre-feedback v24. This is not a broad refresh of protected hashes.
 test('feedback preservation: historical app logic outside authorized presentation stays exact',()=>{
- const normalize=source=>source.split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
+ // Approved 2026-10-17 redesign changes only these theme presentation literals.
+ // Reverse exactly those substitutions before comparing the SAME protected hash.
+ const restoreApprovedThemePresentation=source=>source
+  .replace("slate:'Ivory & Teal'","slate:'Slate & Blue'")
+  .replace("slate:'#f8f7f2',midnight:'#142024'","slate:'#172b4a',midnight:'#111a29'");
+ const normalize=source=>restoreApprovedThemePresentation(source).split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
  assert.equal(createHash('sha256').update(normalize(read('dist/app.js').toString())).digest('hex'),'3dd3826561e371f46b58af041b8088e69b20add0aae3bebb72cb03737360f6cc');
 });
 test('v8 QA: prior annual economics remain fixed except the exact source-reviewed AAOI debt corrections',()=>{

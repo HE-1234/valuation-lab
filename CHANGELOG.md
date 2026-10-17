@@ -1,5 +1,16 @@
 # Change log
 
+## Approved interface direction · 17 October 2026
+
+Implemented the supplied ivory/teal Instrument Serif + DM Sans design across the existing workspace, with self-hosted licensed fonts, compact global/mode navigation, editable assumptions on the left and sourced context on the right. Guided output destinations are now clearly labeled Forecast, Valuation range and Annual tables while route IDs, six stored themes and all existing product capabilities remain intact.
+
+Growth displays every actual model year through stable growth, with keyed, signed, responsive animated bars. Profitability uses the calculated final forecast EBIT/NOPAT row. Input uncertainty shapes animate independently from real simulation outputs; prior/pending/failed output and export rules remain unchanged. Model/source/research files are not changed. See the repository’s APPROVED-UI.md for the capability map, design source, exact motion, accessibility rationale and honest verification limits.
+
+New review images are static approximations. Native-browser layout and motion recording remain unverified under the existing access restriction. The restored baseline's external AAOI raw-source fixture remains missing; the assertion is unchanged.
+
+Verification: final full independent run 834 tests, 832 passed, one known missing-AAOI-raw-cache rebuild failure and one existing raw-cache skip. Exact deterministic and seeded outputs across 14 Annual companies, 14 Guided companies and 10 Historical cases remain byte-identical; 107 protected model/data/research files are unchanged. The only intentional exception in the 108-file baseline manifest is this regenerated design notebook. Independent 140-state Growth mapping, source syntax and whitespace checks passed. Native-browser layout, painted motion, zoom, touch and screen-reader behavior remain unverified. The final full run includes helper-node preservation, all 315 original input/slider description pairs and the final-forecast-year profit caption.
+
+
 ## 2026-10-17 · Continuous page and visible motion
 
 - Replaced fixed desktop workspace/summary heights and all nested vertical or horizontal scrolling with natural document flow at every breakpoint, including Simulation, evidence, Research, Sources and Learn.

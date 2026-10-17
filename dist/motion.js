@@ -41,9 +41,9 @@ function animate(node, scope, frames, duration) {
 }
 export function enterPanel(node, direction = 1, scope = node?.parentElement || node) {
  return animate(node, scope, [
-  {opacity: .35, transform: `translateY(${direction < 0 ? -8 : 8}px)`},
+  {opacity: .3, transform: `translateY(${direction < 0 ? -6 : 6}px)`},
   {opacity: 1, transform: 'translateY(0)'}
- ], 280);
+ ], 240);
 }
 // Feedback is confined to the result, never the editor or its input nodes.
 export function updateFeedback(node, scope = node) {

@@ -25,7 +25,7 @@ test('v7 QA: missing animation support retains exact nonzero full bins and usabl
 });
 test('v7 QA: assumption edits use bounded chart feedback without replaying representative particles',()=>{
  const h=fixture({ticker:'V7-EDIT-MOTION',animateChange:true});try{
-  assert.equal(h.animations.length,exactHeights(h).filter(v=>v>0).length);assert.ok(h.animations.every(a=>a.options.duration<=400));assert.equal(h.get('#mc-particles').children.length,0);assert.ok(exactHeights(h).some(x=>x>0));
+  assert.equal(h.animations.length,exactHeights(h).filter(v=>v>0).length);assert.ok(h.animations.every(a=>a.options.duration===460));assert.equal(h.get('#mc-particles').children.length,0);assert.ok(exactHeights(h).some(x=>x>0));
   h.motion.matches=true;h.motion.dispatch('change');assert.ok(h.animations.every(a=>a.state==='canceled'));assert.match(h.get('#mc-play').textContent,/Reduced motion/);
  }finally{h.cleanup()}
 });
@@ -42,5 +42,5 @@ test('v7 QA: zero accepted scenarios remove old summary tables and preserve comp
  }finally{h.cleanup()}
 });
 test('v7 QA: chart replacement rebinds viewport observation to the new visible graphic',()=>{
- const h=fixture({ticker:'V7-REOBSERVE',reduced:true});try{const old=h.get('#mc-chart'),o=h.observers[0];h.doc.documentElement.dataset.theme='ocean';h.windowEvents.dispatch('valuation:theme-change');assert.notEqual(h.get('#mc-chart'),old);assert.equal(o.targets.at(-1),h.get('#mc-chart'));assert.match(h.get('#mc-output').innerHTML,/#afe6e5/);}finally{h.cleanup()}
+ const h=fixture({ticker:'V7-REOBSERVE',reduced:true});try{const old=h.get('#mc-chart'),o=h.observers[0];h.doc.documentElement.dataset.theme='ocean';h.windowEvents.dispatch('valuation:theme-change');assert.notEqual(h.get('#mc-chart'),old);assert.equal(o.targets.at(-1),h.get('#mc-chart'));assert.match(h.get('#mc-output').innerHTML,/#086b73/);}finally{h.cleanup()}
 });

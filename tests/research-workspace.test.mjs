@@ -192,7 +192,7 @@ test('renewed workspace: index initially shows only Annual model with coherent n
  assert.equal(document.querySelector('#breadcrumb').textContent,'Studio / Annual model');
  const pages=document.querySelectorAll('.page').filter(el=>!el.classList.contains('hidden')&&!el.hidden);assert.equal(pages.length,1);assert.equal(pages[0].id,'renewed');
  assert.ok(document.querySelector('#renewed-research-app'));assert.ok(document.querySelector('#guided-app'));assert.ok(document.querySelector('#current').classList.contains('hidden'));
- assert.equal(document.querySelector('[data-tab="current"]').textContent,'Guided');assert.equal(document.querySelector('[data-tab="current"]').getAttribute('aria-controls'),'current');
+ assert.equal(document.querySelector('[data-tab="current"]').textContent,'Guided valuation');assert.equal(document.querySelector('[data-tab="current"]').getAttribute('aria-controls'),'current');
  assert.equal(document.querySelector('#renewed').querySelector('h1').textContent,'Annual valuation studio');assert.ok(document.querySelector('#renewed').querySelector('h1').classList.contains('sr-only'));
  const scripts=document.querySelectorAll('script').map(el=>el.getAttribute('src')).filter(Boolean);for(const script of ['app.js','guided.js','research-view.js'])assert.ok(scripts.includes(script));
 });

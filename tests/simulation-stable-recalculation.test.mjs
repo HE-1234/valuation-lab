@@ -71,7 +71,7 @@ test('default completed chart and explicit replay retain full exact bins, with b
  const h=fixture({ticker:'STABLE-DEFAULT',autoplay:null,simulationConfig:config('default')});
  try{
   const full=heights(h);assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML,/>Replay simulation<\/button>/);assert.ok(full.some(n=>n>0));
-  h.get('#mc-tab-sampling').click();assert.equal(h.animations.at(-1).options.duration,280);h.get('#mc-seed').value='new';h.get('#mc-seed').oninput();const changed=heights(h);assert.ok(h.animations.some(a=>a.options.duration===280));
+  h.get('#mc-tab-sampling').click();assert.equal(h.animations.at(-1).options.duration,240);h.get('#mc-seed').value='new';h.get('#mc-seed').oninput();const changed=heights(h);assert.ok(h.animations.some(a=>a.options.duration===460));
   h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Pause replay/);h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Resume replay/);h.get('#mc-play').click();h.get('#mc-skip').click();assert.deepEqual(heights(h),changed);
   h.motion.matches=true;h.motion.dispatch('change');const count=h.animations.length;h.get('#mc-tab-growth').click();h.get('#mc-seed').value='reduced';h.get('#mc-seed').oninput();assert.equal(h.animations.length,count);assert.equal(h.get('#mc-play').disabled,true);assert.ok(heights(h).some(n=>n>0));
  }finally{h.cleanup()}
@@ -100,7 +100,7 @@ test('failed async annual replacement hides cached values and preserves output g
 
 test('transition geometry is used only for matching histogram bounds and basis; fresh axes use an exact-mark fade',()=>{
  const h=fixture({ticker:'STABLE-TRANSITION',autoplay:false,simulationConfig:config('bounds')});
- try{h.get('#mc-growth-high').value='25';h.get('#mc-growth-high').oninput();const changes=h.animations.filter(a=>a.options.duration===280);assert.ok(changes.length);assert.ok(changes.every(a=>a.frames[0].transform==='scaleY(1)'));}finally{h.cleanup()}
+ try{h.get('#mc-growth-high').value='25';h.get('#mc-growth-high').oninput();const changes=h.animations.filter(a=>a.options.duration===460);assert.ok(changes.length);assert.ok(changes.every(a=>a.frames[0].transform==='scaleY(1)'));}finally{h.cleanup()}
 });
 
 test('pending charts remain explicitly previous through visibility and reduced-motion changes',()=>{
