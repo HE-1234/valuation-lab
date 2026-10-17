@@ -11,7 +11,7 @@ test('guided runtime QA: all eight categories render while live value remains av
 });
 test('guided runtime QA: calculations need no assent and company switches retain separate drafts',async()=>{
  const h=await startStudio();assert.equal(h.state().modelReviewed,false);assert.equal(h.state().bridgeReviewed,false);assert.ok(h.mounts.length);
- h.input('#g-growth','17');h.change('#current-company','MSFT');assert.equal(h.state('MSFT').assumptions.growth,.08);assert.match(h.get('#guided-results').innerHTML,/PROVISIONAL BASE CASE/);
+ h.input('#g-growth','17');h.change('#current-company','MSFT');assert.equal(h.state('MSFT').assumptions.growth,h.baseCases.companies.MSFT.assumptions.growth);assert.match(h.get('#guided-results').innerHTML,/PROVISIONAL BASE CASE/);
  h.change('#current-company','AAPL');assert.equal(h.state().assumptions.growth,.17);assert.equal(h.state().modelReviewed,false);assert.equal(h.state().bridgeReviewed,false);assert.match(h.get('#guided-results').innerHTML,/PROVISIONAL BASE CASE/);
 });
 test('guided runtime QA: malformed selection and draft storage cannot prevent startup',async()=>{

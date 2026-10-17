@@ -8,6 +8,7 @@ from lxml import html
 P=pathlib.Path(sys.argv[1] if len(sys.argv)>1 else '/workspace/shared/valuation-data/current-universe-v5')
 OUT=pathlib.Path(sys.argv[2] if len(sys.argv)>2 else pathlib.Path(__file__).parents[1]/'dist/data/company-history.json')
 ASOF='2026-10-17'
+HISTORY_YEARS=10
 TICKERS=['AAPL','MSFT','AMZN','GOOG','META','NVDA','TSLA','COHR','LITE','AAOI','MU','AVGO']
 FLOW={
 'revenue':['RevenueFromContractWithCustomerExcludingAssessedTax','RevenueFromContractWithCustomerIncludingAssessedTax','Revenues','SalesRevenueNet'],
@@ -54,11 +55,11 @@ COMPANY_NOTES={
 'META':['Advertising funds large AI and Reality Labs investments. Capital spending and depreciation can lag economic investment; accounting tax charges can be nonrecurring.'],
 'NVDA':['Fabless economics, exceptional AI growth and customer concentration make a short historical range a weak steady-state anchor. Expensed R&D is not capitalized.'],
 'TSLA':['Automotive pricing, regulatory credits and energy mix can change margins. Tax benefits and new-factory utilization require normalization.'],
-'COHR':['The 2022 Coherent acquisition changed scale and capital structure; acquisition amortization and impairments affect comparability. FY2024–2026 EBIT is a derived subtotal using the latest statements, identified in evidence.'],
-'LITE':['Acquisitions and optical-market cycles affect revenue, purchased intangibles and margins. A return from losses is not a normal growth base.'],
-'AAOI':['Loss years do not provide a meaningful effective tax-rate assumption. Customer concentration, utilization and expansion capex can dominate short-term ratios.'],
+'COHR':['The July 2022 Coherent acquisition changed scale and capital structure. FY2017–FY2022 describe legacy II-VI and are visible as predecessor context, but excluded from current-business summary ranges. Acquisition amortization and impairments affect comparability. FY2024–2026 EBIT is a derived subtotal using the latest statements, identified in evidence.'],
+'LITE':['Oclaro, NeoPhotonics and Cloud Light acquisitions changed the business mix, purchased intangibles and capital structure. Ten reported years are not a like-for-like decade of the current business. Optical-market cycles and returns from losses also affect comparisons.'],
+'AAOI':['Loss years do not provide a meaningful effective tax-rate assumption. Customer concentration, utilization and expansion capex can dominate short-term ratios. Historical debt from FY2019 includes separately reported convertible senior notes; bank notes alone are not total funded debt. FY2024 bank-debt presentation differs by $0.001m between the face balance sheet and Note K; the mapped proxy follows the tagged Note K amounts.'],
 'MU':['Memory pricing is cyclical; peak/trough margins and utilization should not be extrapolated indefinitely. Debt mapping includes finance leases when the combined tag is used.'],
-'AVGO':['VMware and other acquisitions changed the business mix and book capital; acquired-intangible amortization depresses reported EBIT. Combined debt tags include finance leases.']}
+'AVGO':['Broadcom, CA, Symantec enterprise security and VMware acquisitions changed the business mix and book capital. Ten reported years are not a like-for-like decade of the current business; acquired-intangible amortization depresses reported EBIT. Combined debt tags include finance leases.']}
 def day(s): return dt.date.fromisoformat(s)
 def isannual(r): return bool(r.get('start')) and 330<=(day(r['end'])-day(r['start'])).days<=380
 
@@ -92,6 +93,8 @@ def derived(value,formula,components,reason=None,**extra):
 
 def build_company(t):
  fp=P/f'{t}-facts.json'; raw=json.load(open(fp)); facts=raw['facts']['us-gaap']; sub=json.load(open(P/f'{t}-submissions.json'))['filings']['recent']; docs={a:sub['primaryDocument'][i] for i,a in enumerate(sub['accessionNumber'])}; retrieval=json.load(open(P/f'{t}-retrieval.json'))[0]
+ review_path=pathlib.Path(__file__).with_name('aaoi-history-debt-review.json')
+ aaoi_review=json.load(open(review_path)) if t=='AAOI' and review_path.exists() else {}
  cached={}
  for i,a in enumerate(sub['accessionNumber']):
   path=P/(t+'-'+sub['primaryDocument'][i])
@@ -109,10 +112,11 @@ def build_company(t):
   _,_,r,tag,unit=max(candidates,key=lambda x:(x[0],x[1])); acc=r['accn']; url=f'https://www.sec.gov/Archives/edgar/data/{raw["cik"]}/{acc.replace("-","")}/'+docs.get(acc,acc+'-index.html')
   match=next((x for x in cached.get(acc,[]) if x[0]=='us-gaap:'+tag and x[1]==r.get('start') and x[2]==r['end'] and abs(x[3]-r['val'])<max(1,abs(r['val'])*1e-10)),None)
   return {'value':r['val']/1e6,'rawValue':r['val'],'unit':unit+' millions' if unit=='USD' else 'million shares','tag':'us-gaap:'+tag,'periodStart':r.get('start'),'periodEnd':end,'filedAt':r['filed'],'accession':acc,'sourceUrl':url,'sourceType':'SEC standardized Company Facts / annual filing','originalDocumentVerified':bool(match),'contextRef':match[4] if match else None}
- periods=sorted(set(r['end'] for tag in FLOW['revenue'] for r in facts.get(tag,{}).get('units',{}).get('USD',[]) if r.get('form') in ['10-K','10-K/A'] and r.get('filed','')<=ASOF and isannual(r)))[-6:]
+ periods=sorted(set(r['end'] for tag in FLOW['revenue'] for r in facts.get(tag,{}).get('units',{}).get('USD',[]) if r.get('form') in ['10-K','10-K/A'] and r.get('filed','')<=ASOF and isannual(r)))[-(HISTORY_YEARS+1):]
  observations=[]
  for end in periods:
   fs={k:pick(tags,end,True) for k,tags in FLOW.items() if t=='COHR' or k not in ['costOfGoodsSold','sellingGeneralAdministrative','restructuringCharges','impairmentHeldForSale','gainOnSaleOfBusiness']};fs.update({k:pick(tags,end) for k,tags in BAL.items()})
+  if t=='AAOI':fs['convertibleSeniorNotesNoncurrent']=pick(['ConvertibleLongTermNotesPayable'],end)
   def val(k):return fs.get(k,{}).get('value')
   def setderived(k,parts,formula,calc,note):
    ok=all(val(x) is not None for x in parts)
@@ -130,13 +134,55 @@ def build_company(t):
   elif val('longTermDebtTotal') is not None:debtparts=['longTermDebtTotal']
   # Only add explicitly separate commercial paper to Apple. No zero filling or automatic overlapping short-term tag sums.
   if t=='AAPL' and debtparts and val('commercialPaper') is not None:debtparts+=['commercialPaper']
-  if debtparts:setderived('mappedDebt',debtparts,' + '.join(debtparts),lambda:sum(val(x) for x in debtparts),'Mapped funded-debt proxy. This is not a complete debt/claims audit. Leases and short-term borrowings may be excluded; combined tags can include finance leases.')
-  else:fs['mappedDebt']={'value':None,'reason':'No unambiguous mapped debt subtotal available; not assumed zero.'}
+  review=None;debt_reason=None
+  if t=='AAOI' and end>='2019-01-01':
+   review=aaoi_review.get('periods',{}).get(end)
+   reviewed_parts=review.get('components',[]) if review else []
+   if reviewed_parts and all(val(k) is not None for k in reviewed_parts) and abs(sum(val(k) for k in reviewed_parts)-review['mappedDebtMillions'])<1e-8:debtparts=reviewed_parts
+   else:
+    debtparts=[];debt_reason='AAOI bank debt excludes separate convertible senior notes; a complete reviewed funded-debt mapping is unavailable for this period. Capital proxies are withheld.'
+  if debtparts:
+   note='Mapped funded-debt proxy. This is not a complete debt/claims audit. Leases and short-term borrowings may be excluded; combined tags can include finance leases.'
+   if review:note='Reviewed bank notes plus separate convertible senior notes at book carrying value; includes the separately reported current convertible portion without double-counting noncurrent notes. Lease liabilities remain outside this proxy.'+(' '+review['roundingCaution'] if review.get('roundingCaution') else '')
+   setderived('mappedDebt',debtparts,' + '.join(debtparts),lambda:sum(val(x) for x in debtparts),note)
+   if review:fs['mappedDebt']['mappingReview']={'reviewed':True,'sourceUrl':review['sourceUrl'],'expectedCarryingValueMillions':review['mappedDebtMillions'],'scope':'Original annual balance sheet and separate convertible-note disclosures; explicitly corrects the prior bank-only mapping.'}
+  else:fs['mappedDebt']={'value':None,'reason':debt_reason or 'No unambiguous mapped debt subtotal available; not assumed zero.'}
   setderived('bookCapitalProxy',['bookEquity','mappedDebt','cashAndEquivalents'],'Book equity + mapped debt − cash and cash equivalents',lambda:val('bookEquity')+val('mappedDebt')-val('cashAndEquivalents'),'Unadjusted cash-only book-capital proxy. Securities are not deducted; R&D/leases not restated; preferred/minority and debt completeness require review.')
   row={'period':'FY'+end[:4],'periodStart':fs['revenue'].get('periodStart'),'periodEnd':end,'currency':'USD','periodType':'annual','facts':fs,'metrics':{}}
   observations.append(row)
  derive_metrics(observations)
- return {'ticker':t,'name':raw['entityName'],'currency':'USD','accountingBasis':'US GAAP; latest-reported annual facts as of dataset cutoff, not a point-in-time backtest','backtestEligible':False,'sourceEndpoint':retrieval['url'],'retrievedAt':retrieval['retrievedAt'],'sourceCacheSHA256':hashlib.sha256(fp.read_bytes()).hexdigest(),'annual':observations[-5:],'baseObservation':observations[-6] if len(observations)>5 else None,'cautions':COMPANY_NOTES[t]}
+ return {'ticker':t,'name':raw['entityName'],'currency':'USD','accountingBasis':'US GAAP; latest-reported annual facts as of dataset cutoff, not a point-in-time backtest','backtestEligible':False,'sourceEndpoint':retrieval['url'],'retrievedAt':retrieval['retrievedAt'],'sourceCacheSHA256':hashlib.sha256(fp.read_bytes()).hexdigest(),'annual':observations[-HISTORY_YEARS:],'baseObservation':observations[-HISTORY_YEARS-1] if len(observations)>HISTORY_YEARS else None,'cautions':COMPANY_NOTES[t]}
+
+def describe_coverage(t,company):
+ """Expose real coverage, without treating a ten-row series as a like-for-like decade."""
+ rows=company['annual']; n=len(rows); note=None
+ comparable=n
+ if t=='COHR':
+  break_date='2022-07-01'
+  source='https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm'
+  note='FY2017–FY2022 are legacy II-VI. Summary ranges use FY2023–FY2026 after the July 2022 Coherent acquisition; FY2023 changes using pre-acquisition denominators are excluded.'
+  company['structuralBreak']={'material':True,'date':break_date,'description':note,'sourceUrl':source,'sourceExcerpt':'As a result of the Coherent, Inc. acquisition on July 1, 2022','summaryRangeFrom':'2023-06-30','predecessorHistoryVisible':True}
+  for row in rows:
+   if row['periodEnd']<break_date:
+    row['rangeEligible']=False
+    row['comparabilityNote']='Legacy II-VI before the July 2022 Coherent acquisition; shown as historical context and excluded from the summary range.'
+    for metric in row['metrics'].values():
+     metric['rangeEligible']=False;metric['comparabilityNote']=row['comparabilityNote']
+   elif row['periodStart']==break_date:
+    row['comparabilityNote']='First combined Coherent fiscal year; changes from prior-year legacy II-VI are not like-for-like.'
+    for key in ['growth','incrementalBookSalesCapitalProxy','bookROICProxy']:
+     row['metrics'][key]['rangeEligible']=False
+     row['metrics'][key]['comparabilityNote']='Prior-year denominator is legacy II-VI before the Coherent acquisition; excluded from the summary range.'
+  comparable=sum(r['periodEnd']>=break_date for r in rows)
+ elif t=='NBIS':
+  note='Only FY2023–FY2025 recast continuing operations are comparable. Old Yandex consolidated totals are excluded; FY2023 balance-sheet evidence is unavailable.'
+ elif t in ['LITE','AVGO']:
+  comparable=None
+  note=company['cautions'][0]
+ shortfall='Only three comparable FY2025-recast continuing-operations years are available; older Yandex totals are not substituted.' if t=='NBIS' else 'Fewer than ten annual periods have reviewed primary evidence.' if n<HISTORY_YEARS else None
+ prior=company.get('baseObservation')
+ company['coverageDescription']=company.get('coverage') if isinstance(company.get('coverage'),str) else company.get('coverageDescription')
+ company['coverage']={'requestedYears':HISTORY_YEARS,'annualYears':n,'periodStart':rows[0]['periodStart'] if rows else None,'periodEnd':rows[-1]['periodEnd'] if rows else None,'label':(rows[0]['period']+'–'+rows[-1]['period']+' · '+str(n)+' reported fiscal years') if rows else 'No reviewed annual evidence','shortfallReason':shortfall,'comparableAnnualYears':comparable,'comparabilityNote':note,'openingPeriod':prior['period'] if prior else None,'openingPeriodReason':None if prior else 'No reviewed adjacent opening annual observation; first-year growth and beginning-capital returns may be unavailable.','metricAvailability':{key:{'availableYears':sum(r['metrics'][key]['value'] is not None for r in rows),'rangeYears':sum(r['metrics'][key]['value'] is not None and r['metrics'][key].get('rangeEligible',True) for r in rows)} for key in rows[0]['metrics']} if rows else {}}
 
 def derive_metrics(rows):
  for i,row in enumerate(rows):
@@ -221,7 +267,8 @@ if __name__=='__main__':
     rows=([c['baseObservation']] if c.get('baseObservation') else [])+c['annual'];derive_metrics(rows);companies[t]=c
  for t in ['NBIS','TSM']:
   if t not in companies:companies[t]={'ticker':t,'currency':'USD' if t=='NBIS' else 'TWD','annual':[],'baseObservation':None,'backtestEligible':False,'cautions':['Historical issuer evidence is still being reviewed. Missing history is not zero.']}
- output={'schemaVersion':1,'asOf':ASOF,'classification':'Current-research historical context; latest-reported evidence, not an as-released backtest or forecasts.','units':{'financials':'reporting-currency millions','shares':'millions','rates':'decimal fractions','capitalProductivity':'multiple'},'methodology':{'selection':'Last five complete fiscal years; a sixth preceding annual observation supports growth and beginning-capital denominators. Latest eligible annual filing per period/concept, through cutoff; can include recasts. Quarter and YTD facts excluded.','capitalProxy':'Book equity + explicitly mapped debt − cash and cash equivalents. Not adjusted invested capital: does not deduct marketable securities or capitalize R&D, normalize leases, remove goodwill, or validate all debt/claims.','reinvestmentWarning':'Historical total sales/book-capital is a stock ratio. The model uses incremental revenue/reinvestment. Neither that stock ratio nor changes in book capital are a direct measurement of economic marginal reinvestment.','taxWarning':'Tax/pretax income only when pretax income > 0. Tax benefits or >100% rates shown but excluded from normal ranges/ROIC. Effective accounting tax is not a forecast marginal cash-tax rate; no NOL schedule.','rangeWarning':'Observed min/median/max of available observations are descriptive, not recommended ranges or prediction intervals.','temporalWarning':'History uses latest-reported data and must not be used to assert what was known at an earlier date.','teachingSources':[{'title':'Damodaran: Fundamental determinants of growth','url':'https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/growth.htm'},{'title':'Damodaran: Growth-company value drivers','url':'https://people.stern.nyu.edu/adamodar/New_Home_Page/littlebook/growthvaluedrivers.htm'},{'title':'Damodaran: Valuation lecture notes, sales to invested capital','url':'https://pages.stern.nyu.edu/adamodar/pdfiles/eqnotes/valpacket1spr23.pdf'}]},'companies':companies}
+ for t,c in companies.items():describe_coverage(t,c)
+ output={'schemaVersion':1,'asOf':ASOF,'classification':'Current-research historical context; latest-reported evidence, not an as-released backtest or forecasts.','units':{'financials':'reporting-currency millions','shares':'millions','rates':'decimal fractions','capitalProductivity':'multiple'},'methodology':{'selection':'Up to ten complete fiscal years; an eleventh preceding annual observation supports growth and beginning-capital denominators. Missing or incomparable years are never invented. Latest eligible annual filing per period/concept, through cutoff; can include recasts. Quarter and YTD facts excluded.','capitalProxy':'Book equity + explicitly mapped debt − cash and cash equivalents. Not adjusted invested capital: does not deduct marketable securities or capitalize R&D, normalize leases, remove goodwill, or validate all debt/claims.','reinvestmentWarning':'Historical total sales/book-capital is a stock ratio. The model uses incremental revenue/reinvestment. Neither that stock ratio nor changes in book capital are a direct measurement of economic marginal reinvestment.','taxWarning':'Tax/pretax income only when pretax income > 0. Tax benefits or >100% rates shown but excluded from normal ranges/ROIC. Effective accounting tax is not a forecast marginal cash-tax rate; no NOL schedule.','rangeWarning':'Observed min/median/max of available observations are descriptive, not recommended ranges or prediction intervals.','temporalWarning':'History uses latest-reported data and must not be used to assert what was known at an earlier date.','teachingSources':[{'title':'Damodaran: Fundamental determinants of growth','url':'https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/growth.htm'},{'title':'Damodaran: Growth-company value drivers','url':'https://people.stern.nyu.edu/adamodar/New_Home_Page/littlebook/growthvaluedrivers.htm'},{'title':'Damodaran: Valuation lecture notes, sales to invested capital','url':'https://pages.stern.nyu.edu/adamodar/pdfiles/eqnotes/valpacket1spr23.pdf'}]},'companies':companies}
  OUT.write_text(json.dumps(output,indent=2)+'\n')
  for t,c in companies.items():print(t,[(r['period'],r['facts']['revenue']['value'],r['metrics']['operatingMargin']['value'],r['metrics']['effectiveTaxRate']['value'],r['metrics']['bookSalesCapitalProxy']['value']) for r in c['annual']])
  print('Wrote',OUT)

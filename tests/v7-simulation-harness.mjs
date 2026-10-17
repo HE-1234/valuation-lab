@@ -2,9 +2,9 @@
 import {mountSimulation} from '../dist/simulation-view.js';
 import {currentSnapshot,draftFor} from '../dist/current-model.js';
 
-export function fixture({reduced=false,mobile=false,ticker='VIEWQA',rawId,autoIntersect=true,debt=100,quote,hidden=false,animateChange=false,hasAnimationAPI=true}={}){
+export function fixture({reduced=false,mobile=false,ticker='VIEWQA',rawId,autoIntersect=true,debt=100,quote,hidden=false,animateChange=false,hasAnimationAPI=true,assumptions,simulationConfig,onConfigChange}={}){
  const company={ticker,name:'Synthetic view QA',currency:'USD'},raw={id:rawId||ticker+'-FY',snapshotMode:'annual-reference',periodEnd:'2025-12-31',filingDate:'2026-02-01',sourceUrl:'https://example.com/view-source',currency:'USD',revenue:1000,EBIT:100,cash:50,debt,shares:10,shareBasis:'same common share basis'};
- const snapshot=currentSnapshot(company,raw),draft={...draftFor(company,raw),cutoff:'2026-10-17',bridgeReviewed:false,modelReviewed:false};if(quote)draft.quote=quote;
+ const snapshot=currentSnapshot(company,raw),draft={...draftFor(company,raw),cutoff:'2026-10-17',bridgeReviewed:false,modelReviewed:false};if(quote)draft.quote=quote;if(assumptions)Object.assign(draft.assumptions,assumptions);if(simulationConfig!==undefined)draft.simulationConfig=simulationConfig;
  const ids=new Map(),all=[],animations=[],observers=[],exports=[],globals=['document','matchMedia','addEventListener','removeEventListener','IntersectionObserver','URL','setTimeout','clearTimeout'];
  const saved=Object.fromEntries(globals.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));
  const emitter=()=>({listeners:new Map(),addEventListener(t,f){if(!this.listeners.has(t))this.listeners.set(t,new Set());this.listeners.get(t).add(f)},removeEventListener(t,f){this.listeners.get(t)?.delete(f)},dispatch(t,e={}){for(const f of this.listeners.get(t)||[])f(e)}});
@@ -27,7 +27,7 @@ export function fixture({reduced=false,mobile=false,ticker='VIEWQA',rawId,autoIn
  const doc=Object.assign(emitter(),{hidden,documentElement:{dataset:{theme:'forest'}},createElement:()=>new Element(),createElementNS:()=>new Element()});
  const windowEvents=emitter(),motion=Object.assign(emitter(),{matches:reduced}),size=Object.assign(emitter(),{matches:mobile});
  Object.assign(globalThis,{URL:{createObjectURL(blob){exports.push(blob);return 'blob:qa'},revokeObjectURL(){}},setTimeout(){return 0},clearTimeout(){},document:doc,matchMedia:q=>q.includes('reduced-motion')?motion:size,addEventListener:windowEvents.addEventListener.bind(windowEvents),removeEventListener:windowEvents.removeEventListener.bind(windowEvents),IntersectionObserver:class{constructor(fn,options){this.fn=fn;this.options=options;this.targets=[];this.disconnected=false;observers.push(this)}observe(target){this.targets.push(target);this.disconnected=false}disconnect(){this.disconnected=true}}});
- if(!hasAnimationAPI)Element.prototype.animate=undefined;const root=new Element(),destroy=mountSimulation(root,snapshot,draft,{animateChange});if(autoIntersect)for(const o of observers)o.fn([{isIntersecting:true,intersectionRatio:1}]);
+ if(!hasAnimationAPI)Element.prototype.animate=undefined;const root=new Element(),destroy=mountSimulation(root,snapshot,draft,{animateChange,onConfigChange});if(autoIntersect)for(const o of observers)o.fn([{isIntersecting:true,intersectionRatio:1}]);
  return {root,snapshot,draft,animations,observers,exports,motion,doc,windowEvents,get:s=>root.querySelector(s),bars:()=>root.querySelectorAll('[data-bin]'),destroy,cleanup(){destroy();for(const [k,descriptor]of Object.entries(saved)){if(descriptor)Object.defineProperty(globalThis,k,descriptor);else delete globalThis[k]}}};
 }
 

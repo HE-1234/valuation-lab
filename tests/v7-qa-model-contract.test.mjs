@@ -47,11 +47,10 @@ test('v7 QA: all fourteen current selections preserve their intrinsic supported-
  assert.equal(universe.companies.length,14);let ready=0;
  for(const c of universe.companies){const r=c.snapshots.find(s=>s.id===c.currentSnapshotId),s=currentSnapshot(c,r),d={...draftFor(c,r),cutoff:universe.asOf};
   const issues=currentIssues(s,d);
-  if(['TSM','NBIS'].includes(c.ticker)){assert.ok(issues.some(x=>/withheld|mapping|perimeter|financing/i.test(x)));assert.throws(()=>calculateCurrent(s,d));}
+  if(['TSM','NBIS','AAOI','GOOG'].includes(c.ticker)){assert.ok(issues.some(x=>/withheld|mapping|perimeter|financing/i.test(x)));assert.throws(()=>calculateCurrent(s,d));}
   else{assert.deepEqual(issues,[],c.ticker);assert.ok(Number.isFinite(calculateCurrent(s,d).perShare),c.ticker);ready++;}
  }
- assert.equal(ready,12);
+ assert.equal(ready,10);
 });
-test('v7 QA: Monte Carlo numerical implementation is unchanged apart from explicit provisional-bridge metadata',()=>{
- assert.equal(createHash('sha256').update(fs.readFileSync(new URL('../dist/simulation.js',import.meta.url),'utf8').replaceAll('provisionalBridge:true','bridgeReviewed:true')).digest('hex'),'2c3e6c64d3694f13acc179147a51fbafd46900e1f6ea46caf2a720561ee4b9fd');
-});
+// v8 adds distribution families. Numerical legacy-triangular equivalence is now
+// protected by tests/v8-qa-simulation-oracle.test.mjs instead of whole-file bytes.

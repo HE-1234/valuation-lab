@@ -35,7 +35,7 @@ function evidenceRows(company,spec,cutoff){
   if(prior)filedDates.push(...['revenue','bookCapitalProxy'].map(k=>prior.facts?.[k]?.filedAt).filter(Boolean));
   const newest=[...filedDates,fact?.availableFrom,fact?.filedAt].filter(Boolean).sort().at(-1)||null;
   const future=validDate(cutoff)&&(row.periodEnd>cutoff||newest&&newest>cutoff);
-  return {period:row.period,periodStart:row.periodStart,periodEnd:row.periodEnd,periodType:'annual',currency:row.currency||company.currency,value:future?null:finite(fact?.value)?fact.value:null,unit:spec.unit,classification:spec.kind||fact?.classification||'derived',rangeEligible:!future&&fact?.rangeEligible!==false,sourceUrl:urls[0]||null,sourceUrls:urls,filedAt:newest,formula:fact?.formula||spec.formula,detail:future?'Latest-reported evidence for this period was filed after your selected date; withheld.':fact?.reason||fact?.caution||fact?.note||null,numerator:fact?.numerator??null,denominator:fact?.denominator??null,priorPeriodEnd:fact?.priorPeriodEnd||null};
+  return {period:row.period,periodStart:row.periodStart,periodEnd:row.periodEnd,periodType:'annual',currency:row.currency||company.currency,value:future?null:finite(fact?.value)?fact.value:null,unit:spec.unit,classification:spec.kind||fact?.classification||'derived',rangeEligible:!future&&row.rangeEligible!==false&&fact?.rangeEligible!==false,comparabilityNote:fact?.comparabilityNote||row.comparabilityNote||null,sourceUrl:urls[0]||null,sourceUrls:urls,filedAt:newest,formula:fact?.formula||spec.formula,detail:future?'Latest-reported evidence for this period was filed after your selected date; withheld.':fact?.reason||fact?.caution||fact?.note||null,numerator:future?null:fact?.numerator??null,denominator:future?null:fact?.denominator??null,priorPeriodEnd:fact?.priorPeriodEnd||null};
  });
 }
 function group(company,title,key,unit,metric,cutoff){return {title,unit:unit==='money'?company.currency+' millions':unit==='shares'?'million shares':unit,series:evidenceRows(company,metric?{metric:key,unit}:{field:key,unit},cutoff)};}
@@ -43,7 +43,7 @@ function pointsFromMarket(refs,cutoff){
  const rf=refs?.riskFreeReference,erp=refs?.equityRiskPremiumReference;
  return [rf&&{label:rf.instrument||'Currency-matched risk-free reference',value:rf.decimal,unit:'percent',date:rf.observationDate,currency:rf.currency,sourceUrl:rf.sourceURL,classification:'Observed market reference, not company WACC'},erp&&{label:'Dated implied equity risk premium',value:erp.decimal,unit:'percent',date:erp.referenceDate,availableFrom:(erp.updatedAt||erp.publishedAt||erp.referenceDate)?.slice(0,10),sourceUrl:erp.sourceURL,classification:'Model-dependent market estimate',detail:erp.caution}].filter(x=>x&&finite(x.value)&&(!validDate(cutoff)||(x.availableFrom||x.date)<=cutoff));
 }
-function baseAnswer(dataset,company,ticker,key){return {ticker,key,currency:company?.currency||null,title:'Company evidence unavailable',unit:'percent',kind:'unavailable',status:'unavailable',series:[],range:null,contextSeries:[],components:[],sources:[],summary:'No sourced evidence is included for this input.',cautions:[...(company?.cautions||[])],formula:null,asOf:dataset?.asOf||null,backtestEligible:false,historyBasis:company?.accountingBasis||dataset?.classification||'Latest-reported research history'};}
+function baseAnswer(dataset,company,ticker,key){return {ticker,key,currency:company?.currency||null,title:'Company evidence unavailable',unit:'percent',kind:'unavailable',status:'unavailable',series:[],range:null,contextSeries:[],components:[],sources:[],summary:'No sourced evidence is included for this input.',cautions:[...(company?.cautions||[])],formula:null,asOf:dataset?.asOf||null,backtestEligible:false,historyBasis:company?.accountingBasis||dataset?.classification||'Latest-reported research history',coverage:company?.coverage&&typeof company.coverage==='object'?{...company.coverage}:null};}
 function ttmPoint(snapshot,key){
  const r=snapshot?.raw||snapshot;if(r?.snapshotMode!=='ttm')return null;
  const f=r.facts||{},revenue=snapshot?.revenue??f.revenue,ebit=snapshot?.ebit??f.operatingIncome??f.EBIT;
@@ -92,14 +92,17 @@ export function assumptionEvidence(dataset,ticker,inputKey,{snapshot=null,market
  }else if(key==='years'){
   Object.assign(result,{title:'Forecast horizon',unit:'years',kind:'context',status:'contextual',summary:'The ten-year forecast horizon is a modeling choice. It has no historical company counterpart.',formula:'Explicit forecast followed by a mature-business terminal period'});
  }
+ if(result.coverage){result.coverage.observationYears=result.series.filter(x=>finite(x.value)).length;result.coverage.rangeYears=result.range?.count||0;}
  if(ticker==='NBIS')result.summary+=' This series is FY2025-recast continuing operations; old Yandex group totals are excluded.';
  if(ticker==='NBIS'&&key==='tax')result.summary+=' FY2025’s tax ratio is excluded from the range because investment gains obscure operating losses.';
  if(ticker==='TSM'){
   result.summary+=' Annual history is IASB IFRS in TWD; it is not interchangeable with the current TIFRS TTM series.';
   for(const point of result.components)if(point.currency&&point.currency!==company.currency)point.label+=' (USD-only context; not a TWD risk-free rate)';
  }
- result.sources=uniq([...result.series.flatMap(x=>x.sourceUrls||[]),...result.contextSeries.flatMap(g=>g.series.flatMap(x=>x.sourceUrls||[])),...result.components.map(x=>x.sourceUrl)]).map(url=>({url,title:url.includes('sec.gov')?'SEC annual filing / issuer evidence':'Primary reference'}));
- if(result.range)result.range.label='Historical range · '+result.range.count+' annual observations';
+ result.sources=uniq([...result.series.flatMap(x=>x.sourceUrls||[]),...result.contextSeries.flatMap(g=>g.series.flatMap(x=>x.sourceUrls||[])),...result.components.map(x=>x.sourceUrl),company.structuralBreak?.sourceUrl]).map(url=>({url,title:url.includes('sec.gov')?'SEC annual filing / issuer evidence':'Primary reference'}));
+ if(result.range)result.range.label=(ticker==='COHR'?'Post-acquisition descriptive range · ':'Historical range · ')+result.range.count+' annual observations';
+ if(result.coverage?.shortfallReason)result.cautions.push(result.coverage.shortfallReason);
+ if(result.coverage?.comparabilityNote)result.cautions.push(result.coverage.comparabilityNote);
  result.cautions.push('History is latest-reported, not a point-in-time archive. Observed ranges describe the past; they are not recommended assumptions.');
  return result;
 }

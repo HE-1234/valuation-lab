@@ -43,7 +43,7 @@ test('v7 QA: WACC, perpetual growth and additional claims do not masquerade as o
 test('v7 QA: percentage, multiple and money formatting avoids unsupported precision and blank-as-zero',()=>{
  assert.equal(formatEvidenceValue(.123456,'percent'),'12.3%');assert.equal(formatEvidenceValue(1.234567,'multiple'),'1.23×');assert.equal(formatEvidenceValue(1234.56789,'USD millions'),'1,234.6');for(const v of [null,undefined,NaN,Infinity])assert.equal(formatEvidenceValue(v,'percent'),'Unavailable');
 });
-test('v7 QA: quarterly TTM context remains separate from five-year annual statistics',()=>{
+test('v7 QA: quarterly TTM context remains separate from annual statistics',()=>{
  const c=universe.companies.find(c=>c.ticker==='AAPL'),r=c.snapshots.find(s=>s.snapshotMode==='ttm'),s=currentSnapshot(c,r),e=assumptionEvidence(data,c.ticker,'targetMargin',{snapshot:s,cutoff:data.asOf});
  assert.ok(e.ttm);assert.equal(e.ttm.periodType,'ttm');assert.ok(e.series.every(p=>p.periodType==='annual'));assert.match(e.ttm.detail,/excluded from annual range/);near(e.ttm.value,s.ebit/s.revenue);assert.equal(assumptionEvidence(data,c.ticker,'targetMargin',{snapshot:s,cutoff:'2000-01-01'}).ttm,null);
 });

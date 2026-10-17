@@ -1,0 +1,351 @@
+{
+  "issuer": "AAOI",
+  "baselineCommit": "d0fedd2",
+  "reviewLedger": "scripts/aaoi-history-debt-review.json",
+  "reason": "Source-audited correction of omitted separately reported convertible notes; no other prior economic facts may change.",
+  "corrections": [
+    {
+      "periodEnd": "2021-12-31",
+      "changes": [
+        {
+          "path": [
+            "facts",
+            "mappedDebt"
+          ],
+          "before": 54.689,
+          "after": 133.369
+        },
+        {
+          "path": [
+            "facts",
+            "bookCapitalProxy"
+          ],
+          "before": 274.603,
+          "after": 353.28299999999996
+        },
+        {
+          "path": [
+            "facts",
+            "convertibleSeniorNotesNoncurrent"
+          ],
+          "absentBefore": true,
+          "after": 78.68
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "value"
+          ],
+          "before": 0.7704395072158716,
+          "after": 0.5988541763968264
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": 274.603,
+          "after": 353.28299999999996
+        },
+        {
+          "path": [
+            "metrics",
+            "incrementalBookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": -12.031999999999982,
+          "after": -11.206000000000017
+        },
+        {
+          "path": [
+            "metrics",
+            "bookROICProxy",
+            "denominator"
+          ],
+          "before": 286.635,
+          "after": 364.489
+        }
+      ]
+    },
+    {
+      "periodEnd": "2022-12-31",
+      "changes": [
+        {
+          "path": [
+            "facts",
+            "mappedDebt"
+          ],
+          "before": 57.074,
+          "after": 136.57999999999998
+        },
+        {
+          "path": [
+            "facts",
+            "bookCapitalProxy"
+          ],
+          "before": 217.05899999999997,
+          "after": 296.565
+        },
+        {
+          "path": [
+            "facts",
+            "convertibleSeniorNotesNoncurrent"
+          ],
+          "absentBefore": true,
+          "after": 79.506
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "value"
+          ],
+          "before": 1.026531956749087,
+          "after": 0.7513293881611114
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": 217.05899999999997,
+          "after": 296.565
+        },
+        {
+          "path": [
+            "metrics",
+            "incrementalBookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": -57.54400000000004,
+          "after": -56.71799999999996
+        },
+        {
+          "path": [
+            "metrics",
+            "bookROICProxy",
+            "denominator"
+          ],
+          "before": 274.603,
+          "after": 353.28299999999996
+        }
+      ]
+    },
+    {
+      "periodEnd": "2023-12-31",
+      "changes": [
+        {
+          "path": [
+            "facts",
+            "mappedDebt"
+          ],
+          "before": 23.197,
+          "after": 99.71600000000001
+        },
+        {
+          "path": [
+            "facts",
+            "bookCapitalProxy"
+          ],
+          "before": 192.7,
+          "after": 269.21900000000005
+        },
+        {
+          "path": [
+            "facts",
+            "convertibleSeniorNotesNoncurrent"
+          ],
+          "absentBefore": true,
+          "after": 76.233
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "value"
+          ],
+          "before": 1.1294551115723923,
+          "after": 0.8084347687198895
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": 192.7,
+          "after": 269.21900000000005
+        },
+        {
+          "path": [
+            "metrics",
+            "incrementalBookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": -24.35899999999998,
+          "after": -27.345999999999947
+        },
+        {
+          "path": [
+            "metrics",
+            "bookROICProxy",
+            "denominator"
+          ],
+          "before": 217.05899999999997,
+          "after": 296.565
+        }
+      ]
+    },
+    {
+      "periodEnd": "2024-12-31",
+      "changes": [
+        {
+          "path": [
+            "facts",
+            "mappedDebt"
+          ],
+          "before": 26.682,
+          "after": 161.179
+        },
+        {
+          "path": [
+            "facts",
+            "bookCapitalProxy"
+          ],
+          "before": 188.36599999999999,
+          "after": 322.863
+        },
+        {
+          "path": [
+            "facts",
+            "convertibleSeniorNotesNoncurrent"
+          ],
+          "absentBefore": true,
+          "after": 134.497
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "value"
+          ],
+          "before": 1.3238323264283365,
+          "after": 0.7723554572682532
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": 188.36599999999999,
+          "after": 322.863
+        },
+        {
+          "path": [
+            "metrics",
+            "incrementalBookSalesCapitalProxy",
+            "value"
+          ],
+          "before": null,
+          "after": 0.5912870032063241
+        },
+        {
+          "path": [
+            "metrics",
+            "incrementalBookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": -4.334000000000003,
+          "after": 53.64399999999995
+        },
+        {
+          "path": [
+            "metrics",
+            "bookROICProxy",
+            "denominator"
+          ],
+          "before": 192.7,
+          "after": 269.21900000000005
+        }
+      ]
+    },
+    {
+      "periodEnd": "2025-12-31",
+      "changes": [
+        {
+          "path": [
+            "facts",
+            "mappedDebt"
+          ],
+          "before": 33.975,
+          "after": 163.804
+        },
+        {
+          "path": [
+            "facts",
+            "bookCapitalProxy"
+          ],
+          "before": 561.753,
+          "after": 691.582
+        },
+        {
+          "path": [
+            "facts",
+            "convertibleSeniorNotesNoncurrent"
+          ],
+          "absentBefore": true,
+          "after": 129.829
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "value"
+          ],
+          "before": 0.8112373231651633,
+          "after": 0.6589457215485655
+        },
+        {
+          "path": [
+            "metrics",
+            "bookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": 561.753,
+          "after": 691.582
+        },
+        {
+          "path": [
+            "metrics",
+            "incrementalBookSalesCapitalProxy",
+            "value"
+          ],
+          "before": 0.552643771743526,
+          "after": 0.5596402680632133
+        },
+        {
+          "path": [
+            "metrics",
+            "incrementalBookSalesCapitalProxy",
+            "denominator"
+          ],
+          "before": 373.38700000000006,
+          "after": 368.719
+        },
+        {
+          "path": [
+            "metrics",
+            "bookROICProxy",
+            "denominator"
+          ],
+          "before": 188.36599999999999,
+          "after": 322.863
+        }
+      ]
+    }
+  ]
+}

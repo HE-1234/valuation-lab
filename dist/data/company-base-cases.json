@@ -1,0 +1,2647 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-10-17.1",
+  "asOf": "2026-10-17",
+  "classification": "Assistant-authored educational base-case judgments, not company guidance, analyst consensus, investment recommendations or price targets.",
+  "units": {
+    "rates": "decimal fractions",
+    "salesCapital": "incremental revenue / net reinvestment multiple",
+    "amounts": "snapshot reporting-currency millions"
+  },
+  "methodology": {
+    "scope": "These defaults apply only to a fresh or explicitly reset current-company draft matching the named snapshot. Existing user edits and historical/frozen experiments must not change.",
+    "growth": "Year 1 uses growth, then annual growth fades linearly to terminalGrowth in year 10. It is not a constant ten-year CAGR. Economic checks show the resulting size and CAGR.",
+    "margin": "Reported baseline EBIT margin fades linearly to targetMargin by year 10, except an explicitly disclosed starting-EBIT normalization. Target margin is operating EBIT after ongoing R&D, SBC and depreciation, not gross margin, EBITDA or an adjusted EPS margin.",
+    "reinvestment": "Net reinvestment = max(0, change in revenue / salesCapital). Ratios are independent forward judgments, not mechanically copied from total sales/book-capital or capex/sales. Gross maintenance capex, R&D capitalization and replacement cycles are not separately modeled.",
+    "tax": "Normalized blended operating cash-tax estimates apply to positive EBIT only. Reported accounting effective rates are evidence, not marginal cash-tax forecasts; tax-loss carryforwards are not modeled.",
+    "wacc": "WACC is an assumed nominal required return, never issuer-reported. Use observed USD Treasury 5.09% on 2026-10-16, an explicitly chosen 4.5% equity premium informed by January 2026’s 4.23% estimate, and assumed beta, target market-value debt weight and debt spread. The January premium is not an October observation. Round model WACC to 0.5 percentage points; betas and weights are not measured live. TSM uses a separately disclosed assumed currency conversion.",
+    "terminal": "Stable growth is modest nominal growth in the model currency, below WACC and terminal ROIC. Terminal reinvestment/NOPAT = g/ROIC. Mature returns normally fall from explicit-period productivity; a discrete year-11 transition remains a simplification.",
+    "bridge": "otherClaims=0 and otherAssets=0 are unreviewed numerical placeholders, not verified absence or fair values. No reviewed flags, financing reconciliation or share conversion is implied. Explicit specialist and claim-related gates take precedence over these defaults.",
+    "validation": "Deterministic operating-path checks and lower/higher operating cases are model sanity tests, not calibrated probabilities. No stock price or future return is used to choose assumptions.",
+    "evidence": "Primary issuer releases and exact current filing sources available by 2026-10-17 anchor judgments. Historical annual data are latest-reported context and may include recasts; structural breaks are disclosed."
+  },
+  "sources": {
+    "treasury": {
+      "title": "US Treasury 10-year nominal USD yield, October 16, 2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+      "publishedAt": "2026-10-16",
+      "retrievedAt": "2026-10-17",
+      "classification": "observed market reference"
+    },
+    "erp-reference": {
+      "title": "Damodaran January 2026 implied US equity-risk premium",
+      "url": "https://aswathdamodaran.blogspot.com/2026/01/data-update-2-for-2026-equities-get.html",
+      "publishedAt": "2026-01-23",
+      "retrievedAt": "2026-10-17",
+      "classification": "dated third-party model estimate, not October ERP"
+    },
+    "AAPL-release": {
+      "title": "Apple fiscal Q3 2026 results",
+      "url": "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/",
+      "publishedAt": "2026-07-30",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "MSFT-release": {
+      "title": "Microsoft fiscal Q4 and FY2026 results",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "publishedAt": "2026-07-29",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AMZN-release": {
+      "title": "Amazon Q2 2026 results",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx?mode=light",
+      "publishedAt": "2026-07-30",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "GOOG-release": {
+      "title": "Alphabet Q2 2026 issuer earnings release filed with SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+      "publishedAt": "2026-07-22",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "META-release": {
+      "title": "Meta Q2 2026 results",
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/",
+      "publishedAt": "2026-07-29",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "NVDA-release": {
+      "title": "NVIDIA fiscal Q2 2027 results and Q3 outlook",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/",
+      "publishedAt": "2026-08-26",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "TSLA-release": {
+      "title": "Tesla Q2 2026 production, deliveries and storage deployments",
+      "url": "https://ir.tesla.com/press-release/tesla-second-quarter-2026-production-deliveries-and-deployments",
+      "publishedAt": "2026-07-02",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "COHR-release": {
+      "title": "Coherent fiscal Q4 and FY2026 issuer release filed with SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000119312526346860/d128030dex991.htm",
+      "publishedAt": "2026-08-12",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "LITE-release": {
+      "title": "Lumentum fiscal Q4 and FY2026 results",
+      "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Results/default.aspx",
+      "publishedAt": "2026-08-11",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AAOI-release": {
+      "title": "Applied Optoelectronics Q2 2026 results and Q3 outlook",
+      "url": "https://investors.ao-inc.com/news-releases/news-release-details/applied-optoelectronics-reports-second-quarter-2026-results?hss_channel=lcp-744608",
+      "publishedAt": "2026-08-06",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "NBIS-release": {
+      "title": "Nebius Q2 2026 shareholder letter",
+      "url": "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11%3A54%3A46.695Z",
+      "publishedAt": "2026-08-12",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "MU-release": {
+      "title": "Micron fiscal Q4 and FY2026 results",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+      "publishedAt": "2026-09-30",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AVGO-release": {
+      "title": "Broadcom fiscal Q3 2026 results and Q4 outlook",
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+      "publishedAt": "2026-09-02",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "TSM-release": {
+      "title": "TSMC Q3 2026 results and Q4 outlook",
+      "url": "https://investor.tsmc.com/japanese/encrypt/files/encrypt_file/reports/2026-10/526b65af7305df2dde6b9ece6812b1fdf1e49f9b/3Q26%20EarningsRelease.pdf",
+      "publishedAt": "2026-10-15",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AAPL-filing": {
+      "title": "Apple Inc. derived for period ended 2026-06-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+      "publishedAt": "2026-07-31",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AAPL-annual-filing": {
+      "title": "Apple Inc. annual financial context ended 2025-09-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "publishedAt": "2025-10-31",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "MSFT-filing": {
+      "title": "MICROSOFT CORPORATION 10-K for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "publishedAt": "2026-07-29",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "MSFT-annual-filing": {
+      "title": "MICROSOFT CORPORATION annual financial context ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "publishedAt": "2026-07-29",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AMZN-filing": {
+      "title": "AMAZON COM INC derived for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+      "publishedAt": "2026-07-31",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AMZN-annual-filing": {
+      "title": "AMAZON COM INC annual financial context ended 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "publishedAt": "2026-02-06",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "GOOG-filing": {
+      "title": "Alphabet Inc. derived for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "publishedAt": "2026-07-23",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "GOOG-annual-filing": {
+      "title": "Alphabet Inc. annual financial context ended 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "publishedAt": "2026-02-05",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "META-filing": {
+      "title": "Meta Platforms, Inc. derived for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+      "publishedAt": "2026-07-30",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "META-annual-filing": {
+      "title": "Meta Platforms, Inc. annual financial context ended 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "publishedAt": "2026-01-29",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "NVDA-filing": {
+      "title": "NVIDIA CORP derived for period ended 2026-07-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+      "publishedAt": "2026-08-26",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "NVDA-annual-filing": {
+      "title": "NVIDIA CORP annual financial context ended 2026-01-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "publishedAt": "2026-02-25",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "TSLA-filing": {
+      "title": "Tesla, Inc. derived for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+      "publishedAt": "2026-07-23",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "TSLA-annual-filing": {
+      "title": "Tesla, Inc. annual financial context ended 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+      "publishedAt": "2026-01-29",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "COHR-filing": {
+      "title": "COHERENT CORP. 10-K for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+      "publishedAt": "2026-08-14",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "COHR-annual-filing": {
+      "title": "COHERENT CORP. annual financial context ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+      "publishedAt": "2026-08-14",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "LITE-filing": {
+      "title": "Lumentum Holdings Inc. 10-K for period ended 2026-06-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+      "publishedAt": "2026-08-17",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "LITE-annual-filing": {
+      "title": "Lumentum Holdings Inc. annual financial context ended 2026-06-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+      "publishedAt": "2026-08-17",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AAOI-filing": {
+      "title": "APPLIED OPTOELECTRONICS, INC. derived for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm",
+      "publishedAt": "2026-08-06",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AAOI-annual-filing": {
+      "title": "APPLIED OPTOELECTRONICS, INC. annual financial context ended 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+      "publishedAt": "2026-02-26",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "NBIS-filing": {
+      "title": "Nebius Group N.V. 6-K for period ended 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "publishedAt": "2026-08-12",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "NBIS-annual-filing": {
+      "title": "Nebius Group N.V. annual financial context ended 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "publishedAt": "2026-04-30",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "MU-filing": {
+      "title": "Micron Technology, Inc. 10-K for period ended 2026-09-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+      "publishedAt": "2026-10-09",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "MU-annual-filing": {
+      "title": "Micron Technology, Inc. annual financial context ended 2026-09-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+      "publishedAt": "2026-10-09",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AVGO-filing": {
+      "title": "Broadcom Inc. derived for period ended 2026-08-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+      "publishedAt": "2026-09-10",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "AVGO-annual-filing": {
+      "title": "Broadcom Inc. annual financial context ended 2025-11-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/avgo-20251102.htm",
+      "publishedAt": "2025-12-18",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "TSM-filing": {
+      "title": "Taiwan Semiconductor Manufacturing Company Limited issuer quarterly financial statements for period ended 2026-09-30",
+      "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+      "publishedAt": "2026-10-15",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    },
+    "TSM-annual-filing": {
+      "title": "Taiwan Semiconductor Manufacturing Company Limited annual financial context ended 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+      "publishedAt": "2026-04-16",
+      "retrievedAt": "2026-10-17",
+      "classification": "issuer-reported evidence"
+    }
+  },
+  "companies": {
+    "AAPL": {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "snapshotId": "AAPL-TTM-2026-06-27",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "A mature hardware franchise with recurring services: moderate expansion, durable margins and relatively light incremental capital needs.",
+      "assumptions": {
+        "growth": 0.08,
+        "targetMargin": 0.32,
+        "tax": 0.2,
+        "salesCapital": 3,
+        "wacc": 0.09,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.2,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "8% starts above FY2025 growth of 6.4% but below the latest 16% quarter. Services and replacement demand support growth; the installed base and hardware maturity argue for an immediate fade rather than extrapolating one strong quarter.",
+        "targetMargin": "32% is close to FY2025 operating margin and below the current 33.2% TTM. Services mix offsets hardware competition; the latest tariff-refund benefit is not assumed permanent.",
+        "tax": "20% is a normalized blended cash-tax judgment above FY2025 accounting tax of 15.6%; one-off tax charges, geographic mix and minimum-tax changes make any single reported rate a weak long-run anchor.",
+        "salesCapital": "3.0x requires about $0.33 of net reinvestment for each extra $1 of revenue. Outsourced manufacturing and services justify lighter capital needs; this is not the inflated book return created by buybacks or a claim that working capital is free.",
+        "terminalROIC": "20% retains a brand/ecosystem advantage but materially reduces returns on new capital from the explicit-period margin/capital combination.",
+        "wacc": "9.0% nominal USD is a rounded model estimate. Assumed beta 1.0, modest 10% target debt and a 0.7-point debt spread reflect broad cash generation, balanced against product concentration and supply-chain exposure.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Long-dated securities, leases and employee awards need a consistent enterprise-to-common-equity reconciliation; zero additional assets does not mean the securities are worthless.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-27",
+          "publishedAt": "2026-07-31",
+          "snapshotId": "AAPL-TTM-2026-06-27",
+          "currency": "USD",
+          "revenue": 466823.0,
+          "operatingIncome": 154859.0,
+          "operatingMargin": 0.3317295848747812,
+          "sourceIds": [
+            "AAPL-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Fiscal Q3 2026 revenue was $109.4bn, up 16%; reported gross margin included approximately two percentage points of favorable tariff refunds.",
+          "sourceIds": [
+            "AAPL-release"
+          ],
+          "publishedAt": "2026-07-30"
+        }
+      ],
+      "sourceIds": [
+        "AAPL-filing",
+        "AAPL-annual-filing",
+        "AAPL-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1,
+        "assumedDebtWeight": 0.1,
+        "assumedDebtSpreadUSD": 0.007,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.0959,
+        "assumedPretaxCostOfDebtUSD": 0.0579,
+        "normalizedTax": 0.2,
+        "unroundedWaccUSD": 0.090942,
+        "unroundedWaccInModelCurrency": 0.090942,
+        "selectedWacc": 0.09,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Long-dated securities, leases and employee awards need a consistent enterprise-to-common-equity reconciliation; zero additional assets does not mean the securities are worthless."
+      },
+      "modelLimits": [
+        "Consolidated linear growth does not separately forecast hardware units, prices or services."
+      ],
+      "uncertainties": [
+        "iPhone replacement cycles, China demand, tariffs and memory/input costs",
+        "Services regulation and the cost of supporting AI features"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 466823.0,
+        "startingModelMargin": 0.3317295848747812,
+        "firstYearRevenue": 504168.84,
+        "year10Revenue": 777623.159319865,
+        "revenueMultiple10Years": 1.6657773060022,
+        "impliedRevenueCAGR10Years": 0.05235360734758965,
+        "firstYearNetReinvestmentToRevenue": 0.024691358024691374,
+        "negativeFCFFYears": [],
+        "firstPositiveFCFFYear": 1,
+        "terminalReinvestmentRate": 0.125,
+        "matureMarginTimesCapitalAfterTax": 0.768,
+        "terminalROIC": 0.2,
+        "terminalValueShareOfOperatingEV": 0.5399775123874911,
+        "discountSpread": 0.065,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.04,
+            "targetMargin": 0.28,
+            "salesCapital": 2.4000000000000004,
+            "wacc": 0.11
+          },
+          "year10RevenueMultiple": 1.3767463157317128,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.5989801528884346,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.12,
+            "targetMargin": 0.35,
+            "salesCapital": 3.5999999999999996,
+            "wacc": 0.075
+          },
+          "year10RevenueMultiple": 2.0055637477806334,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 1.6533103287323756,
+          "perShareValue": null
+        }
+      ]
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "name": "MICROSOFT CORPORATION",
+      "snapshotId": "MSFT-CURRENT-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "Cloud and enterprise software sustain growth, while AI infrastructure reduces the capital efficiency of the historical software model.",
+      "assumptions": {
+        "growth": 0.18,
+        "targetMargin": 0.42,
+        "tax": 0.22,
+        "salesCapital": 0.6,
+        "wacc": 0.095,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.16,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "18% begins near FY2026 reported growth. Azure and recurring enterprise subscriptions support the starting rate, which then fades to 2.5% as the revenue base expands.",
+        "targetMargin": "42% is below FY2026 operating margin of 46.8%. Recurring software remains profitable, but AI depreciation, inference costs and competition constrain permanent peak-margin extrapolation.",
+        "tax": "22% allows a higher normalized burden than FY2026 accounting tax of 19.4%; it does not extend discrete investment-related tax effects indefinitely.",
+        "salesCapital": "0.6x means $1.67 of incremental net capital per extra $1 of revenue. FY2026 cash capex was $115.9bn; AI capacity makes an old asset-light software ratio inappropriate. It remains a normalized net-reinvestment assumption, not gross capex guidance.",
+        "terminalROIC": "16% assumes a persistent distribution and switching-cost advantage while fading returns as cloud infrastructure becomes a larger part of the business.",
+        "wacc": "9.5% nominal USD is a rounded model estimate. Assumed beta 1.0, 5% target debt and a 0.5-point debt spread reflect diversified recurring revenue and modest financing risk, with AI-demand uncertainty still present.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Finance-lease obligations and non-operating investments are material. Lease capitalization must be reconciled with operating profit and reinvestment, not deducted a second time mechanically.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-07-29",
+          "snapshotId": "MSFT-CURRENT-2026-06-30",
+          "currency": "USD",
+          "revenue": 331839.0,
+          "operatingIncome": 155237.0,
+          "operatingMargin": 0.4678081840892722,
+          "sourceIds": [
+            "MSFT-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "FY2026 revenue was $331.8bn and operating income $155.2bn; Q4 revenue grew 18%.",
+          "sourceIds": [
+            "MSFT-release"
+          ],
+          "publishedAt": "2026-07-29"
+        }
+      ],
+      "sourceIds": [
+        "MSFT-filing",
+        "MSFT-annual-filing",
+        "MSFT-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1,
+        "assumedDebtWeight": 0.05,
+        "assumedDebtSpreadUSD": 0.005,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.0959,
+        "assumedPretaxCostOfDebtUSD": 0.0559,
+        "normalizedTax": 0.22,
+        "unroundedWaccUSD": 0.0932851,
+        "unroundedWaccInModelCurrency": 0.0932851,
+        "selectedWacc": 0.095,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Finance-lease obligations and non-operating investments are material. Lease capitalization must be reconciled with operating profit and reinvestment, not deducted a second time mechanically."
+      },
+      "modelLimits": [
+        "One sales/capital ratio smooths the front-loaded infrastructure buildout and may overstate early cash flow."
+      ],
+      "uncertainties": [
+        "AI monetization and customer returns on infrastructure spending",
+        "GPU useful lives, finance leases and capacity utilization"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 331839.0,
+        "startingModelMargin": 0.4678081840892722,
+        "firstYearRevenue": 391570.01999999996,
+        "year10Revenue": 871633.8386628223,
+        "revenueMultiple10Years": 2.6266769085695842,
+        "impliedRevenueCAGR10Years": 0.10138882480438283,
+        "firstYearNetReinvestmentToRevenue": 0.2542372881355931,
+        "negativeFCFFYears": [],
+        "firstPositiveFCFFYear": 1,
+        "terminalReinvestmentRate": 0.15625,
+        "matureMarginTimesCapitalAfterTax": 0.19655999999999998,
+        "terminalROIC": 0.16,
+        "terminalValueShareOfOperatingEV": 0.6549477437584091,
+        "discountSpread": 0.07,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.12,
+            "targetMargin": 0.35,
+            "salesCapital": 0.48,
+            "wacc": 0.115
+          },
+          "year10RevenueMultiple": 2.005563747780633,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.5012753307498368,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.24,
+            "targetMargin": 0.47,
+            "salesCapital": 0.72,
+            "wacc": 0.08
+          },
+          "year10RevenueMultiple": 3.407099307783406,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 1.894635999007774,
+          "perShareValue": null
+        }
+      ]
+    },
+    "AMZN": {
+      "ticker": "AMZN",
+      "name": "AMAZON COM INC",
+      "snapshotId": "AMZN-TTM-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "AWS, advertising and fulfillment efficiency raise consolidated profitability, with a heavy infrastructure bill and lower-margin retail still central.",
+      "assumptions": {
+        "growth": 0.14,
+        "targetMargin": 0.15,
+        "tax": 0.24,
+        "salesCapital": 0.8,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.1,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "14% sits between FY2025 growth of 12.4% and Q2 2026 growth of 20%. AWS and advertising support expansion, but they cannot justify applying their segment growth to all retail revenue.",
+        "targetMargin": "15% improves on 12.1% TTM as AWS/advertising mix and retail efficiency rise. It remains far below AWS segment margins because consolidated sales include substantial low-margin commerce.",
+        "tax": "24% is a normalized operating-tax assumption. Recent investment gains distort pretax income and the accounting effective rate, so those gains do not set operating cash tax.",
+        "salesCapital": "0.8x requires $1.25 of net reinvestment per incremental $1 of sales. AI data centers, fulfillment and working capital keep reinvestment high even with supplier financing; early modeled FCFF can be negative.",
+        "terminalROIC": "10% assumes mature capital earns approximately the cost of capital. Scale advantages are largely competed away after the explicit growth period.",
+        "wacc": "10.0% nominal USD is a rounded model estimate. Assumed beta 1.2, 10% target debt and a 1-point debt spread balance resilient diversified businesses against discretionary spending and the infrastructure funding cycle.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Review operating/finance leases, financing obligations and minority investments. Current cash is not a complete appraisal of all non-operating assets.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-07-31",
+          "snapshotId": "AMZN-TTM-2026-06-30",
+          "currency": "USD",
+          "revenue": 775680.0,
+          "operatingIncome": 93712.0,
+          "operatingMargin": 0.12081270627062707,
+          "sourceIds": [
+            "AMZN-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Q2 revenue grew 20%, AWS revenue grew 37%, and TTM free cash flow was an outflow of $7.6bn. The release separately identified non-operating investment gains.",
+          "sourceIds": [
+            "AMZN-release"
+          ],
+          "publishedAt": "2026-07-30"
+        }
+      ],
+      "sourceIds": [
+        "AMZN-filing",
+        "AMZN-annual-filing",
+        "AMZN-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.2,
+        "assumedDebtWeight": 0.1,
+        "assumedDebtSpreadUSD": 0.01,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1049,
+        "assumedPretaxCostOfDebtUSD": 0.0609,
+        "normalizedTax": 0.24,
+        "unroundedWaccUSD": 0.0990384,
+        "unroundedWaccInModelCurrency": 0.0990384,
+        "selectedWacc": 0.1,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Review operating/finance leases, financing obligations and minority investments. Current cash is not a complete appraisal of all non-operating assets."
+      },
+      "modelLimits": [
+        "About 93% of modeled operating value comes after year 10. The result is highly dependent on mature margins, required reinvestment and discount rates.",
+        "A single margin hides very different AWS, advertising and retail economics; net reinvestment is not the company free-cash-flow reconciliation."
+      ],
+      "uncertainties": [
+        "AWS capacity economics and depreciation versus AI demand",
+        "Retail wage, shipping and competitive pressures; investment gains are not operating earnings"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 775680.0,
+        "startingModelMargin": 0.12081270627062707,
+        "firstYearRevenue": 884275.2000000001,
+        "year10Revenue": 1703974.0866059659,
+        "revenueMultiple10Years": 2.196748770892592,
+        "impliedRevenueCAGR10Years": 0.08187737649235394,
+        "firstYearNetReinvestmentToRevenue": 0.15350877192982465,
+        "negativeFCFFYears": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "firstPositiveFCFFYear": 5,
+        "terminalReinvestmentRate": 0.25,
+        "matureMarginTimesCapitalAfterTax": 0.0912,
+        "terminalROIC": 0.1,
+        "terminalValueShareOfOperatingEV": 0.931374009607243,
+        "discountSpread": 0.07500000000000001,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.08,
+            "targetMargin": 0.1,
+            "salesCapital": 0.6400000000000001,
+            "wacc": 0.12000000000000001
+          },
+          "year10RevenueMultiple": 1.6657773060021994,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "operatingValueRelativeToBase": 0.32397176009718304,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.2,
+            "targetMargin": 0.18,
+            "salesCapital": 0.96,
+            "wacc": 0.085
+          },
+          "year10RevenueMultiple": 2.8675779799977277,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "operatingValueRelativeToBase": 2.2908508659119273,
+          "perShareValue": null
+        }
+      ]
+    },
+    "GOOG": {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc.",
+      "snapshotId": "GOOG-TTM-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "Search and Cloud continue growing, but AI delivery costs, capital intensity and regulatory risk temper long-run margins.",
+      "assumptions": {
+        "growth": 0.18,
+        "targetMargin": 0.3,
+        "tax": 0.22,
+        "salesCapital": 0.7,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.15,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "18% is below the latest 24% quarter and above FY2025 growth of 15.1%. Cloud expansion supports the uplift, while Search scale and competitive substitution force a deceleration.",
+        "targetMargin": "30% is below 33.1% TTM. Search monetization and Cloud scale are offset by AI compute costs, traffic acquisition and investment in new products.",
+        "tax": "22% normalizes operating taxes above recent effective rates; very large non-operating equity gains make consolidated pretax-income tax ratios unsuitable as a direct operating forecast.",
+        "salesCapital": "0.7x requires $1.43 of net investment per extra $1 of revenue. The current AI buildout warrants much more capital than the historic search-only model.",
+        "terminalROIC": "15% retains valuable distribution and software assets but reduces returns as competition and infrastructure intensity rise.",
+        "wacc": "10.0% nominal USD is a rounded model estimate. Assumed beta 1.1, 5% target debt and a 0.8-point debt spread reflect strong core cash flow plus search-transition and regulatory exposure.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. June 2026 mandatory-convertible preferred stock has $18,023m reported carrying value. The common-equity bridge requires explicit preferred-dividend, conversion and dilution treatment; this is not its fair value. Withhold a clean per-common-share result until resolved.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-07-23",
+          "snapshotId": "GOOG-TTM-2026-06-30",
+          "currency": "USD",
+          "revenue": 445866.0,
+          "operatingIncome": 147628.0,
+          "operatingMargin": 0.331103963971238,
+          "sourceIds": [
+            "GOOG-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Q2 2026 revenue was $119.8bn, up 24%, with a 34% operating margin; Google Cloud revenue rose 82%.",
+          "sourceIds": [
+            "GOOG-release"
+          ],
+          "publishedAt": "2026-07-22"
+        }
+      ],
+      "sourceIds": [
+        "GOOG-filing",
+        "GOOG-annual-filing",
+        "GOOG-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.1,
+        "assumedDebtWeight": 0.05,
+        "assumedDebtSpreadUSD": 0.008,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1004,
+        "assumedPretaxCostOfDebtUSD": 0.0589,
+        "normalizedTax": 0.22,
+        "unroundedWaccUSD": 0.0976771,
+        "unroundedWaccInModelCurrency": 0.09767709999999999,
+        "selectedWacc": 0.1,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "June 2026 mandatory-convertible preferred stock has $18,023m reported carrying value. The common-equity bridge requires explicit preferred-dividend, conversion and dilution treatment; this is not its fair value. Withhold a clean per-common-share result until resolved.",
+        "numericResultPolicy": "withhold-until-explicit-bridge-or-specialist-resolution"
+      },
+      "modelLimits": [
+        "Non-operating equity gains are excluded from operating income; no separate option value is assigned to Other Bets."
+      ],
+      "uncertainties": [
+        "AI query economics, traffic acquisition and regulatory remedies",
+        "Mandatory-convertible preferred securities and non-marketable investment valuations"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 445866.0,
+        "startingModelMargin": 0.331103963971238,
+        "firstYearRevenue": 526121.88,
+        "year10Revenue": 1171145.926516286,
+        "revenueMultiple10Years": 2.626676908569584,
+        "impliedRevenueCAGR10Years": 0.1013888248043826,
+        "firstYearNetReinvestmentToRevenue": 0.21791767554479421,
+        "negativeFCFFYears": [],
+        "firstPositiveFCFFYear": 1,
+        "terminalReinvestmentRate": 0.16666666666666669,
+        "matureMarginTimesCapitalAfterTax": 0.16379999999999997,
+        "terminalROIC": 0.15,
+        "terminalValueShareOfOperatingEV": 0.6740255348884656,
+        "discountSpread": 0.07500000000000001,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.1,
+            "targetMargin": 0.24,
+            "salesCapital": 0.5599999999999999,
+            "wacc": 0.12000000000000001
+          },
+          "year10RevenueMultiple": 1.8288870060140978,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.47396469309584094,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.25,
+            "targetMargin": 0.35,
+            "salesCapital": 0.84,
+            "wacc": 0.085
+          },
+          "year10RevenueMultiple": 3.554920484857177,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 2.041133318913968,
+          "perShareValue": null
+        }
+      ]
+    },
+    "META": {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "snapshotId": "META-TTM-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "AI improves ad effectiveness, but a capital-intensive buildout and continuing new-business spending limit margin expansion.",
+      "assumptions": {
+        "growth": 0.2,
+        "targetMargin": 0.35,
+        "tax": 0.2,
+        "salesCapital": 0.5,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.12,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "20% is below Q2 revenue growth of 28% and near recent annual growth. Ad effectiveness and monetization support the starting rate; user scale and advertising cyclicality justify fading it.",
+        "targetMargin": "35% sits below the 38.1% TTM margin. It allows some normalization of legal/severance costs while retaining AI infrastructure, research and Reality Labs burdens.",
+        "tax": "20% is a long-run normalized rate, above management’s 15–17% remaining-2026 outlook; it avoids extending short-term credits or one-off tax adjustments forever.",
+        "salesCapital": "0.5x requires $2 of incremental net capital per $1 of added revenue. The high AI buildout and $130–145bn company capex outlook justify a capital-heavy starting case rather than an old asset-light advertising ratio.",
+        "terminalROIC": "12% retains a modest network/data advantage after competition and sustained infrastructure needs reduce historical excess returns.",
+        "wacc": "10.0% nominal USD is a rounded model estimate. Assumed beta 1.2, 10% target debt and a 1-point debt spread reflect advertising cyclicality, regulatory exposure and a rapidly expanding investment budget.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Review lease arrangements, infrastructure venture commitments, employee awards and potential legal claims; no arbitrary litigation liability is invented.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-07-30",
+          "snapshotId": "META-TTM-2026-06-30",
+          "currency": "USD",
+          "revenue": 228247.0,
+          "operatingIncome": 86926.0,
+          "operatingMargin": 0.3808418073402936,
+          "sourceIds": [
+            "META-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Q2 revenue grew 28%; operating margin was 31% including legal and severance charges. Management’s 2026 capex outlook was $130–145bn including finance-lease principal.",
+          "sourceIds": [
+            "META-release"
+          ],
+          "publishedAt": "2026-07-29"
+        }
+      ],
+      "sourceIds": [
+        "META-filing",
+        "META-annual-filing",
+        "META-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.2,
+        "assumedDebtWeight": 0.1,
+        "assumedDebtSpreadUSD": 0.01,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1049,
+        "assumedPretaxCostOfDebtUSD": 0.0609,
+        "normalizedTax": 0.2,
+        "unroundedWaccUSD": 0.099282,
+        "unroundedWaccInModelCurrency": 0.099282,
+        "selectedWacc": 0.1,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Review lease arrangements, infrastructure venture commitments, employee awards and potential legal claims; no arbitrary litigation liability is invented."
+      },
+      "modelLimits": [
+        "A smooth investment ratio cannot reproduce individual data-center projects or legal settlements."
+      ],
+      "uncertainties": [
+        "Advertising demand, user engagement and monetization of AI features",
+        "Legal liabilities, privacy rules and returns on AI/Reality Labs spending"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 228247.0,
+        "startingModelMargin": 0.3808418073402936,
+        "firstYearRevenue": 273896.39999999997,
+        "year10Revenue": 654516.0712005413,
+        "revenueMultiple10Years": 2.8675779799977277,
+        "impliedRevenueCAGR10Years": 0.11109584538184758,
+        "firstYearNetReinvestmentToRevenue": 0.33333333333333315,
+        "negativeFCFFYears": [
+          1,
+          2
+        ],
+        "firstPositiveFCFFYear": 3,
+        "terminalReinvestmentRate": 0.20833333333333334,
+        "matureMarginTimesCapitalAfterTax": 0.13999999999999999,
+        "terminalROIC": 0.12,
+        "terminalValueShareOfOperatingEV": 0.7452907702722505,
+        "discountSpread": 0.07500000000000001,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.1,
+            "targetMargin": 0.28,
+            "salesCapital": 0.4,
+            "wacc": 0.12000000000000001
+          },
+          "year10RevenueMultiple": 1.8288870060140976,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.44793672093743264,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.28,
+            "targetMargin": 0.42,
+            "salesCapital": 0.6,
+            "wacc": 0.085
+          },
+          "year10RevenueMultiple": 4.032122635175049,
+          "negativeFCFFYears": [
+            1,
+            2
+          ],
+          "operatingValueRelativeToBase": 2.2658611328834892,
+          "perShareValue": null
+        }
+      ]
+    },
+    "NVDA": {
+      "ticker": "NVDA",
+      "name": "NVIDIA CORP",
+      "snapshotId": "NVDA-TTM-2026-07-26",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "AI infrastructure sustains exceptional expansion, followed by substantial growth and margin normalization as customers, competitors and the supply chain mature.",
+      "assumptions": {
+        "growth": 0.4,
+        "targetMargin": 0.45,
+        "tax": 0.2,
+        "salesCapital": 2,
+        "wacc": 0.11,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.25,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "40% starts below Q2 year-over-year growth of 106% and produces about $424bn in first-year revenue from the $303bn TTM base. The lower rate limits a ten-year straight-line fade; it is not a transcription of near-term guidance.",
+        "targetMargin": "45% falls materially from 65.2% TTM. Software/ecosystem and system-level integration support a premium, but customer-designed chips, competition and scarcity normalization erode peak economics.",
+        "tax": "20% is above the company’s 16–18% FY2027 outlook, allowing tax benefits to normalize over a much longer horizon.",
+        "salesCapital": "2.0x assumes $0.50 of net reinvestment per added $1 of revenue. Fabless production helps, while inventory, receivables, supply commitments and broader infrastructure investments prevent growth from being capital-free.",
+        "terminalROIC": "25% deliberately retains a strong platform advantage but is far below the explicit margin/capital combination. This remains an optimistic moat assumption requiring stress tests.",
+        "wacc": "11.0% nominal USD is a rounded model estimate. Assumed beta 1.4, 3% target debt and a 1-point debt spread reflect high operating volatility and customer-capex concentration despite limited conventional leverage.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Review strategic investments, commitments, convertible instruments and awards; gross capex alone does not measure economic reinvestment.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-07-26",
+          "publishedAt": "2026-08-26",
+          "snapshotId": "NVDA-TTM-2026-07-26",
+          "currency": "USD",
+          "revenue": 302970.0,
+          "operatingIncome": 197579.0,
+          "operatingMargin": 0.652140475954715,
+          "sourceIds": [
+            "NVDA-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Fiscal Q2 2027 revenue was $96.2bn, up 106%; Q3 revenue guidance was $108bn ±2%, with no China Data Center compute revenue assumed.",
+          "sourceIds": [
+            "NVDA-release"
+          ],
+          "publishedAt": "2026-08-26"
+        }
+      ],
+      "sourceIds": [
+        "NVDA-filing",
+        "NVDA-annual-filing",
+        "NVDA-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.4,
+        "assumedDebtWeight": 0.03,
+        "assumedDebtSpreadUSD": 0.01,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1139,
+        "assumedPretaxCostOfDebtUSD": 0.0609,
+        "normalizedTax": 0.2,
+        "unroundedWaccUSD": 0.1119446,
+        "unroundedWaccInModelCurrency": 0.11194459999999999,
+        "selectedWacc": 0.11,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Review strategic investments, commitments, convertible instruments and awards; gross capex alone does not measure economic reinvestment."
+      },
+      "modelLimits": [
+        "40% fading over ten years still implies roughly 6.5x revenue. A multistage ramp followed by faster early deceleration may be more realistic than this deliberately simplified curve."
+      ],
+      "uncertainties": [
+        "AI customers’ sustainable returns, custom accelerators and export restrictions",
+        "Supply availability, product transitions and investment/financing commitments"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 302970.0,
+        "startingModelMargin": 0.652140475954715,
+        "firstYearRevenue": 424158.0,
+        "year10Revenue": 1980961.9404268896,
+        "revenueMultiple10Years": 6.5384755600451845,
+        "impliedRevenueCAGR10Years": 0.20655646343086165,
+        "firstYearNetReinvestmentToRevenue": 0.14285714285714285,
+        "negativeFCFFYears": [],
+        "firstPositiveFCFFYear": 1,
+        "terminalReinvestmentRate": 0.1,
+        "matureMarginTimesCapitalAfterTax": 0.7200000000000001,
+        "terminalROIC": 0.25,
+        "terminalValueShareOfOperatingEV": 0.5451438135995232,
+        "discountSpread": 0.08499999999999999,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.2,
+            "targetMargin": 0.32,
+            "salesCapital": 1.6,
+            "wacc": 0.13
+          },
+          "year10RevenueMultiple": 2.867577979997728,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.31827272468529116,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.55,
+            "targetMargin": 0.55,
+            "salesCapital": 2.4,
+            "wacc": 0.095
+          },
+          "year10RevenueMultiple": 11.485012258871414,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 2.5052545850760657,
+          "perShareValue": null
+        }
+      ]
+    },
+    "TSLA": {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "snapshotId": "TSLA-TTM-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "A vehicle-and-energy growth case with better utilization and product mix; major unproven businesses are not separately capitalized.",
+      "assumptions": {
+        "growth": 0.12,
+        "targetMargin": 0.12,
+        "tax": 0.25,
+        "salesCapital": 1.3,
+        "wacc": 0.12,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.12,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "12% assumes vehicle stabilization and continued energy expansion from the current base. It exceeds FY2025 contraction but avoids projecting the latest rebound or speculative autonomy revenue indefinitely.",
+        "targetMargin": "12% recovers from 4.2% TTM through utilization, manufacturing efficiency and energy mix. This requires a meaningful improvement and does not assume software-platform margins for the whole company.",
+        "tax": "25% is a normalized profitable-company rate. Historic tax benefits and losses are not a sustainable marginal rate; the engine has no detailed loss-carryforward schedule.",
+        "salesCapital": "1.3x requires about $0.77 of net investment per extra $1 of sales for factories, storage capacity and working capital. Software potential does not eliminate manufacturing capital needs.",
+        "terminalROIC": "12% approximately matches WACC, so no perpetual excess return is granted to a mature competitive vehicle/energy business.",
+        "wacc": "12.0% nominal USD is a rounded model estimate. Assumed beta 1.6, 5% target debt and a 1.5-point debt spread reflect cyclical vehicle demand, pricing competition and execution uncertainty.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Noncontrolling interests, financing structures and employee awards require review. No future buyback or dilution forecast is hidden in the fixed share count.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-07-23",
+          "snapshotId": "TSLA-TTM-2026-06-30",
+          "currency": "USD",
+          "revenue": 103619.0,
+          "operatingIncome": 4372.0,
+          "operatingMargin": 0.04219303409606346,
+          "sourceIds": [
+            "TSLA-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Q2 2026 deliveries were 480,126 vehicles and storage deployment was 13.5GWh; these volume measures do not by themselves determine earnings.",
+          "sourceIds": [
+            "TSLA-release"
+          ],
+          "publishedAt": "2026-07-02"
+        }
+      ],
+      "sourceIds": [
+        "TSLA-filing",
+        "TSLA-annual-filing",
+        "TSLA-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.6,
+        "assumedDebtWeight": 0.05,
+        "assumedDebtSpreadUSD": 0.015,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1229,
+        "assumedPretaxCostOfDebtUSD": 0.0659,
+        "normalizedTax": 0.25,
+        "unroundedWaccUSD": 0.11922625,
+        "unroundedWaccInModelCurrency": 0.11922624999999998,
+        "selectedWacc": 0.12,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Noncontrolling interests, financing structures and employee awards require review. No future buyback or dilution forecast is hidden in the fixed share count."
+      },
+      "modelLimits": [
+        "About 89% of modeled operating value comes after year 10. The result is highly dependent on mature margins, required reinvestment and discount rates.",
+        "No distinct robotaxi or humanoid-robot option value is added; a separate probability-weighted business model would be required."
+      ],
+      "uncertainties": [
+        "Vehicle pricing, demand, tariffs and energy storage profitability",
+        "Timing and economics of autonomy/robotics; compensation and dilution"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 103619.0,
+        "startingModelMargin": 0.04219303409606346,
+        "firstYearRevenue": 116053.28000000001,
+        "year10Revenue": 207814.50998128147,
+        "revenueMultiple10Years": 2.0055637477806334,
+        "impliedRevenueCAGR10Years": 0.07207124381184493,
+        "firstYearNetReinvestmentToRevenue": 0.08241758241758249,
+        "negativeFCFFYears": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "firstPositiveFCFFYear": 5,
+        "terminalReinvestmentRate": 0.20833333333333334,
+        "matureMarginTimesCapitalAfterTax": 0.11699999999999999,
+        "terminalROIC": 0.12,
+        "terminalValueShareOfOperatingEV": 0.8873339009499388,
+        "discountSpread": 0.095,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.03,
+            "targetMargin": 0.07,
+            "salesCapital": 1.04,
+            "wacc": 0.13999999999999999
+          },
+          "year10RevenueMultiple": 1.3116352153032824,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.3953657133497146,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.22,
+            "targetMargin": 0.18,
+            "salesCapital": 1.56,
+            "wacc": 0.105
+          },
+          "year10RevenueMultiple": 3.127308226277191,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "operatingValueRelativeToBase": 3.2985113826579178,
+          "perShareValue": null
+        }
+      ]
+    },
+    "COHR": {
+      "ticker": "COHR",
+      "name": "COHERENT CORP.",
+      "snapshotId": "COHR-CURRENT-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "Optical datacenter demand and integration benefits lift profitability, balanced against manufacturing investment and a mixed industrial portfolio.",
+      "assumptions": {
+        "growth": 0.25,
+        "targetMargin": 0.2,
+        "tax": 0.24,
+        "salesCapital": 1.25,
+        "wacc": 0.105,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.12,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "25% is near FY2026 growth of 22.5% and below the latest 34% reported quarter. AI optics supports expansion; industrial exposure and eventually normalizing customer investment require a fade.",
+        "targetMargin": "20% improves on FY2026 GAAP EBIT margin of 12.6% through utilization, mix and integration. It is an EBIT assumption after ongoing compensation and depreciation, not a non-GAAP gross-margin target.",
+        "tax": "24% normalizes the very low FY2026 effective rate and prior loss-related volatility; acquisition and restructuring tax effects are not extended indefinitely.",
+        "salesCapital": "1.25x implies $0.80 of net investment for each incremental $1 of sales. Vertical manufacturing, capacity and working capital remain important even if acquired capacity improves utilization.",
+        "terminalROIC": "12% assumes moderate enduring photonics know-how benefits but much less than current high-growth incremental economics.",
+        "wacc": "10.5% nominal USD is a rounded model estimate. Assumed beta 1.5, 20% target debt and a 2.5-point spread reflect optical/industrial cyclicality and a more levered acquisition history.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Review preferred securities, minority interests and debt terms; acquisition accounting and claims cannot be inferred from a historical book-capital ratio.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-08-14",
+          "snapshotId": "COHR-CURRENT-2026-06-30",
+          "currency": "USD",
+          "revenue": 7118.181,
+          "operatingIncome": 897.8610000000001,
+          "operatingMargin": 0.1261362980233293,
+          "sourceIds": [
+            "COHR-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Fiscal Q4 2026 revenue was $2.05bn, up 34% reported and 42% pro forma, with 38.5% GAAP gross margin.",
+          "sourceIds": [
+            "COHR-release"
+          ],
+          "publishedAt": "2026-08-12"
+        }
+      ],
+      "sourceIds": [
+        "COHR-filing",
+        "COHR-annual-filing",
+        "COHR-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.5,
+        "assumedDebtWeight": 0.2,
+        "assumedDebtSpreadUSD": 0.025,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1184,
+        "assumedPretaxCostOfDebtUSD": 0.0759,
+        "normalizedTax": 0.24,
+        "unroundedWaccUSD": 0.1062568,
+        "unroundedWaccInModelCurrency": 0.10625680000000001,
+        "selectedWacc": 0.105,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Review preferred securities, minority interests and debt terms; acquisition accounting and claims cannot be inferred from a historical book-capital ratio."
+      },
+      "modelLimits": [
+        "About 80% of modeled operating value comes after year 10. The result is highly dependent on mature margins, required reinvestment and discount rates.",
+        "The 2022 Coherent acquisition is a structural break; predecessor II-VI decade averages are not a clean forecast for today’s perimeter."
+      ],
+      "uncertainties": [
+        "Optical design wins, yields, pricing and capacity ramps",
+        "Integration, divestitures, debt and minority/preferred interests"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 7118.181,
+        "startingModelMargin": 0.1261362980233293,
+        "firstYearRevenue": 8897.72625,
+        "year10Revenue": 25304.567451821145,
+        "revenueMultiple10Years": 3.554920484857177,
+        "impliedRevenueCAGR10Years": 0.13522772501476577,
+        "firstYearNetReinvestmentToRevenue": 0.16000000000000003,
+        "negativeFCFFYears": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "firstPositiveFCFFYear": 5,
+        "terminalReinvestmentRate": 0.20833333333333334,
+        "matureMarginTimesCapitalAfterTax": 0.19000000000000003,
+        "terminalROIC": 0.12,
+        "terminalValueShareOfOperatingEV": 0.8033006041475973,
+        "discountSpread": 0.07999999999999999,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.12,
+            "targetMargin": 0.13,
+            "salesCapital": 1.0,
+            "wacc": 0.125
+          },
+          "year10RevenueMultiple": 2.0055637477806334,
+          "negativeFCFFYears": [
+            1,
+            2
+          ],
+          "operatingValueRelativeToBase": 0.28609985493316425,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.35,
+            "targetMargin": 0.25,
+            "salesCapital": 1.5,
+            "wacc": 0.09
+          },
+          "year10RevenueMultiple": 5.366072922929367,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3
+          ],
+          "operatingValueRelativeToBase": 2.630494575496036,
+          "perShareValue": null
+        }
+      ]
+    },
+    "LITE": {
+      "ticker": "LITE",
+      "name": "Lumentum Holdings Inc.",
+      "snapshotId": "LITE-CURRENT-2026-06-27",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "An optical connectivity ramp with lasting scale benefits, while current hypergrowth and peak product margins gradually normalize.",
+      "assumptions": {
+        "growth": 0.35,
+        "targetMargin": 0.25,
+        "tax": 0.22,
+        "salesCapital": 1.2,
+        "wacc": 0.115,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.14,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "35% is well below FY2026 growth of 83% and the latest 109% quarter. It still compounds into a much larger business over ten years; optical adoption supports growth but current capacity shortages are not permanent.",
+        "targetMargin": "25% improves on FY2026 annual GAAP EBIT margin of 17.4% but is below the latest quarter’s 27.8%. It preserves operating leverage without using non-GAAP guidance as GAAP EBIT.",
+        "tax": "22% is a normalized profitable-company assumption. Recent loss periods and the FY2026 tax benefit do not support a negative long-run cash-tax rate.",
+        "salesCapital": "1.2x requires about $0.83 of net reinvestment per added $1 of sales. Capacity additions and working capital make the ramp less capital-light than a pure design/software business.",
+        "terminalROIC": "14% retains a limited technology advantage while allowing competition and product replacement to erode peak returns.",
+        "wacc": "11.5% nominal USD is a rounded model estimate. Assumed beta 1.6, 15% target debt and a 2.5-point debt spread reflect a concentrated, volatile optical cycle and financing exposure.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Review convertible-note conversion, capped-call treatment and employee dilution without counting the same instrument as both full debt and converted equity.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-27",
+          "publishedAt": "2026-08-17",
+          "snapshotId": "LITE-CURRENT-2026-06-27",
+          "currency": "USD",
+          "revenue": 3014.0,
+          "operatingIncome": 524.8,
+          "operatingMargin": 0.1741207697412077,
+          "sourceIds": [
+            "LITE-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Fiscal Q4 2026 revenue was $1.006bn, up 109%; GAAP operating margin was 27.8%, compared with a 36.6% non-GAAP margin.",
+          "sourceIds": [
+            "LITE-release"
+          ],
+          "publishedAt": "2026-08-11"
+        }
+      ],
+      "sourceIds": [
+        "LITE-filing",
+        "LITE-annual-filing",
+        "LITE-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.6,
+        "assumedDebtWeight": 0.15,
+        "assumedDebtSpreadUSD": 0.025,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1229,
+        "assumedPretaxCostOfDebtUSD": 0.0759,
+        "normalizedTax": 0.22,
+        "unroundedWaccUSD": 0.1133453,
+        "unroundedWaccInModelCurrency": 0.11334529999999998,
+        "selectedWacc": 0.115,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Review convertible-note conversion, capped-call treatment and employee dilution without counting the same instrument as both full debt and converted equity."
+      },
+      "modelLimits": [
+        "About 78% of modeled operating value comes after year 10. The result is highly dependent on mature margins, required reinvestment and discount rates.",
+        "The annual baseline lags the latest quarter’s ramp; a smooth ten-year path can understate early acceleration and overstate later growth."
+      ],
+      "uncertainties": [
+        "800G/1.6T adoption, customer concentration and production yields",
+        "Price erosion, acquisitions and conversion/dilution of debt securities"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 3014.0,
+        "startingModelMargin": 0.1741207697412077,
+        "firstYearRevenue": 4068.9,
+        "year10Revenue": 16173.343789709112,
+        "revenueMultiple10Years": 5.366072922929367,
+        "impliedRevenueCAGR10Years": 0.18294800731780714,
+        "firstYearNetReinvestmentToRevenue": 0.21604938271604943,
+        "negativeFCFFYears": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "firstPositiveFCFFYear": 5,
+        "terminalReinvestmentRate": 0.17857142857142858,
+        "matureMarginTimesCapitalAfterTax": 0.23399999999999999,
+        "terminalROIC": 0.14,
+        "terminalValueShareOfOperatingEV": 0.7814414132543311,
+        "discountSpread": 0.09,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.18,
+            "targetMargin": 0.17,
+            "salesCapital": 0.96,
+            "wacc": 0.135
+          },
+          "year10RevenueMultiple": 2.626676908569584,
+          "negativeFCFFYears": [
+            1,
+            2
+          ],
+          "operatingValueRelativeToBase": 0.25823030253267876,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.5,
+            "targetMargin": 0.32,
+            "salesCapital": 1.44,
+            "wacc": 0.1
+          },
+          "year10RevenueMultiple": 9.563071766331504,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3
+          ],
+          "operatingValueRelativeToBase": 3.098081808893966,
+          "perShareValue": null
+        }
+      ]
+    },
+    "AAOI": {
+      "ticker": "AAOI",
+      "name": "APPLIED OPTOELECTRONICS, INC.",
+      "snapshotId": "AAOI-TTM-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "provisional unsupported linear-ramp research assumptions; not a validated base-case valuation",
+      "summary": "Provisional research assumptions only. A high-risk capacity-led turnaround in datacenter optics, with substantial funding needs before durable GAAP profitability.",
+      "assumptions": {
+        "growth": 0.6,
+        "targetMargin": 0.12,
+        "tax": 0.25,
+        "salesCapital": 0.8,
+        "wacc": 0.135,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.1,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "60% reflects an early 800G/1.6T volume ramp, while still below recent annual growth. Starting from a small TTM base and fading immediately is essential; the ten-year outcome remains highly uncertain.",
+        "targetMargin": "12% assumes a genuine operating turnaround from the current 11.3% loss margin. It requires utilization and cost absorption to improve, without equating non-GAAP net profitability with GAAP operating profit.",
+        "tax": "25% applies only to positive modeled EBIT. This is a normalized mature rate; no tax refund or verified NOL benefit is assumed during losses.",
+        "salesCapital": "0.8x means $1.25 of net investment per incremental $1 of revenue. Manufacturing expansion, inventory and receivables make growth cash-consuming; early negative FCFF is intentional.",
+        "terminalROIC": "10% assumes capital utilization improves in maturity but grants no excess return versus the high constant model discount rate.",
+        "wacc": "13.5% nominal USD is a rounded model estimate. Assumed beta 1.8 plus a 1-point extra equity allowance, 10% target debt and a 3.5-point debt spread reflect concentrated customers, execution and funding risk. These are judgments, not quoted borrowing terms.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. The June 2026 10-Q separately reports $129.142m convertible notes in addition to $58.915m bank/current debt, plus $33.940m bank-acceptance payables needing classification. Withhold a clean share value until a coherent debt/dilution bridge is implemented.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-08-06",
+          "snapshotId": "AAOI-TTM-2026-06-30",
+          "currency": "USD",
+          "revenue": 595.9699999999999,
+          "operatingIncome": -67.40599999999999,
+          "operatingMargin": -0.11310300854069837,
+          "sourceIds": [
+            "AAOI-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Q2 2026 revenue was $191.9m; GAAP gross margin was 27.7% and GAAP net loss $22.8m. Q3 revenue guidance was $255–290m.",
+          "sourceIds": [
+            "AAOI-release"
+          ],
+          "publishedAt": "2026-08-06"
+        }
+      ],
+      "sourceIds": [
+        "AAOI-filing",
+        "AAOI-annual-filing",
+        "AAOI-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.8,
+        "assumedDebtWeight": 0.1,
+        "assumedDebtSpreadUSD": 0.035,
+        "assumedExtraEquityRisk": 0.01,
+        "assumedCostOfEquityUSD": 0.1419,
+        "assumedPretaxCostOfDebtUSD": 0.0859,
+        "normalizedTax": 0.25,
+        "unroundedWaccUSD": 0.1341525,
+        "unroundedWaccInModelCurrency": 0.1341525,
+        "selectedWacc": 0.135,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "The June 2026 10-Q separately reports $129.142m convertible notes in addition to $58.915m bank/current debt, plus $33.940m bank-acceptance payables needing classification. Withhold a clean share value until a coherent debt/dilution bridge is implemented.",
+        "numericResultPolicy": "withhold-until-explicit-bridge-or-specialist-resolution"
+      },
+      "modelLimits": [
+        "This exact linear-path assumption set produces negative operating enterprise value and nine cash-burning forecast years. It is an operating stress hypothesis, not a credible standalone fair-value estimate; a staged capacity, margin, replacement-capital and financing model is needed before drawing an investment conclusion.",
+        "The simple model has no financing or default-probability schedule; a large terminal value can conceal years of cash burn."
+      ],
+      "uncertainties": [
+        "Customer concentration, ramp yields, price competition and capital availability",
+        "Convertible notes, vendor financing, dilution and warrants"
+      ],
+      "modelSuitability": {
+        "status": "unsupported-linear-ramp",
+        "economicallyValidated": false,
+        "note": "The simple linear fade cannot represent the capacity, profitability and financing ramp. Use a specialist multistage path before a meaningful valuation."
+      },
+      "displayLabel": "Provisional operating hypothesis",
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 595.9699999999999,
+        "startingModelMargin": -0.11310300854069837,
+        "firstYearRevenue": 953.5519999999999,
+        "year10Revenue": 8184.869552014342,
+        "revenueMultiple10Years": 13.733693897367893,
+        "impliedRevenueCAGR10Years": 0.29950733842864596,
+        "firstYearNetReinvestmentToRevenue": 0.46875,
+        "negativeFCFFYears": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "firstPositiveFCFFYear": 10,
+        "terminalReinvestmentRate": 0.25,
+        "matureMarginTimesCapitalAfterTax": 0.072,
+        "terminalROIC": 0.1,
+        "terminalValueShareOfOperatingEV": null,
+        "discountSpread": 0.11000000000000001,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": false
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.3,
+            "targetMargin": 0.06,
+            "salesCapital": 0.6400000000000001,
+            "wacc": 0.155
+          },
+          "year10RevenueMultiple": 4.380158666573723,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "operatingValueRelativeToBase": null,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.85,
+            "targetMargin": 0.18,
+            "salesCapital": 0.96,
+            "wacc": 0.12000000000000001
+          },
+          "year10RevenueMultiple": 31.69229960918109,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "operatingValueRelativeToBase": null,
+          "perShareValue": null
+        }
+      ]
+    },
+    "NBIS": {
+      "ticker": "NBIS",
+      "name": "Nebius Group N.V.",
+      "snapshotId": "NBIS-TTM-2026-06-30",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "provisional unsupported linear-ramp research assumptions; not a validated base-case valuation",
+      "summary": "Provisional research assumptions only. A directional AI-cloud operating hypothesis only: growth, funding, depreciation and post-financing equity claims need a specialist model.",
+      "assumptions": {
+        "growth": 0.85,
+        "targetMargin": 0.25,
+        "tax": 0.25,
+        "salesCapital": 0.6,
+        "wacc": 0.155,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.12,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "85% is a deliberately capped smooth-path hypothesis, not near-term guidance. Latest quarterly growth exceeded 400%, so a single initial rate fading for ten years cannot reproduce the actual capacity ramp.",
+        "targetMargin": "25% is mature EBIT after depreciation, not the reported AI-cloud adjusted EBITDA margin. Reaching it requires sustained utilization, pricing and discipline after the infrastructure buildout.",
+        "tax": "25% is a normalized eventual profitable-state tax assumption. The engine taxes positive EBIT only and does not model jurisdictional loss carryforwards.",
+        "salesCapital": "0.6x means $1.67 of incremental net capital per added $1 of revenue. Hardware/data centers are capital-heavy; this normalized ratio is far less demanding than today’s front-loaded spend and cannot finance the actual ramp.",
+        "terminalROIC": "12% assumes competitive mature infrastructure returns below the constant 15.5% model WACC. A credible model would separately fade risk and capital intensity as the company matures.",
+        "wacc": "15.5% nominal USD is a rounded model estimate. Assumed beta 2.1 plus a 2-point equity allowance, 10% target debt and a 4-point debt spread reflect severe execution/funding uncertainty; this is not a verified capital structure or a substitute for default scenarios.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Preserve the existing hard gate: August financing and share exchanges supersede the June balance sheet; post-financing cash, debt, exact shares and equity-linked claims must be reconciled.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-06-30",
+          "publishedAt": "2026-08-12",
+          "snapshotId": "NBIS-TTM-2026-06-30",
+          "currency": "USD",
+          "revenue": 1355.1,
+          "operatingIncome": -684.1,
+          "operatingMargin": -0.5048335916168549,
+          "sourceIds": [
+            "NBIS-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Q2 group revenue was $582.3m, up 454%; AI-cloud ARR was $3.0bn. Q2 capex was approximately $5.7bn. ARR is last-month revenue annualized, not recognized annual revenue.",
+          "sourceIds": [
+            "NBIS-release"
+          ],
+          "publishedAt": "2026-08-12"
+        }
+      ],
+      "sourceIds": [
+        "NBIS-filing",
+        "NBIS-annual-filing",
+        "NBIS-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 2.1,
+        "assumedDebtWeight": 0.1,
+        "assumedDebtSpreadUSD": 0.04,
+        "assumedExtraEquityRisk": 0.02,
+        "assumedCostOfEquityUSD": 0.1654,
+        "assumedPretaxCostOfDebtUSD": 0.0909,
+        "normalizedTax": 0.25,
+        "unroundedWaccUSD": 0.1556775,
+        "unroundedWaccInModelCurrency": 0.1556775,
+        "selectedWacc": 0.155,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Preserve the existing hard gate: August financing and share exchanges supersede the June balance sheet; post-financing cash, debt, exact shares and equity-linked claims must be reconciled.",
+        "numericResultPolicy": "withhold-until-explicit-bridge-or-specialist-resolution"
+      },
+      "modelLimits": [
+        "This exact linear-path assumption set produces negative operating enterprise value and nine cash-burning forecast years. It is an operating stress hypothesis, not a credible standalone fair-value estimate; a staged capacity, margin, replacement-capital and financing model is needed before drawing an investment conclusion.",
+        "Valuation remains withheld. Linear margin recovery from TTM losses, a constant discount rate and growth-only reinvestment cannot represent the announced ramp, funding or GPU replacement cycle.",
+        "Old Yandex-group history is not comparable with the post-divestment AI-cloud business."
+      ],
+      "uncertainties": [
+        "Power/capacity delivery, utilization, GPU pricing and economic useful lives",
+        "Convertible financing, warrants, subsidiary claims and future dilution",
+        "Owned infrastructure versus partner-funded asset-light mix"
+      ],
+      "modelSuitability": {
+        "status": "unsupported-linear-ramp",
+        "economicallyValidated": false,
+        "note": "The simple linear fade cannot represent the capacity, profitability and financing ramp. Use a specialist multistage path before a meaningful valuation."
+      },
+      "displayLabel": "Provisional operating hypothesis",
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 1355.1,
+        "startingModelMargin": -0.5048335916168549,
+        "firstYearRevenue": 2506.935,
+        "year10Revenue": 42946.235200401294,
+        "revenueMultiple10Years": 31.69229960918109,
+        "impliedRevenueCAGR10Years": 0.41284778568288294,
+        "firstYearNetReinvestmentToRevenue": 0.7657657657657658,
+        "negativeFCFFYears": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "firstPositiveFCFFYear": 10,
+        "terminalReinvestmentRate": 0.20833333333333334,
+        "matureMarginTimesCapitalAfterTax": 0.11249999999999999,
+        "terminalROIC": 0.12,
+        "terminalValueShareOfOperatingEV": null,
+        "discountSpread": 0.13,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": false
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.45,
+            "targetMargin": 0.12,
+            "salesCapital": 0.48,
+            "wacc": 0.175
+          },
+          "year10RevenueMultiple": 7.9265262057756445,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "operatingValueRelativeToBase": null,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 1,
+            "targetMargin": 0.32,
+            "salesCapital": 0.72,
+            "wacc": 0.14
+          },
+          "year10RevenueMultiple": 50.27773098527109,
+          "negativeFCFFYears": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "operatingValueRelativeToBase": null,
+          "perShareValue": null
+        }
+      ]
+    },
+    "MU": {
+      "ticker": "MU",
+      "name": "Micron Technology, Inc.",
+      "snapshotId": "MU-CURRENT-2026-09-03",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "Normalize a memory scarcity boom before forecasting modest through-cycle growth; do not capitalize the peak EBIT margin for a decade.",
+      "assumptions": {
+        "growth": 0.08,
+        "targetMargin": 0.35,
+        "tax": 0.2,
+        "salesCapital": 0.8,
+        "wacc": 0.11,
+        "terminalGrowth": 0.02,
+        "terminalROIC": 0.12,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "8% is a through-cycle growth judgment on the already elevated FY2026 revenue base. HBM/content demand supports long-run expansion, but pricing and supply cycles prevent extrapolating 256% annual growth or near-term guidance.",
+        "targetMargin": "35% is a normalized mature EBIT margin. The base case also resets starting EBIT to 35% of reported revenue, so the model does not take ten years to fade from FY2026’s extraordinary 74.6% margin.",
+        "tax": "20% is a normalized operating tax above FY2026 accounting tax of 14.8%; tax incentives and geographical manufacturing mix remain uncertain.",
+        "salesCapital": "0.8x requires $1.25 of net reinvestment per extra $1 of sales. Fabs, advanced packaging and process transitions require capital across the cycle; the ratio is not gross capex divided by current revenue.",
+        "terminalROIC": "12% allows a modest technology/industry-structure advantage while avoiding a perpetual scarcity return on memory capacity.",
+        "wacc": "11.0% nominal USD is a rounded model estimate. Assumed beta 1.4, 10% target debt and a 1.5-point debt spread reflect cyclical memory pricing and capital intensity even after unusually strong current cash generation.",
+        "terminalGrowth": "2.0% nominal USD avoids granting a mature cyclical memory producer permanent above-economy growth.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Review restricted cash, long-dated investments, customer prepayments, commitments and incentives before treating all cash as surplus or the equity bridge as complete.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting.",
+        "normalization": "Analyst through-cycle assumption: reset starting EBIT to 35% of reported FY2026 revenue instead of carrying the 74.6% scarcity-cycle margin through a slow ten-year fade. FY2025 EBIT margin was 26.1%; 35% assumes structural HBM benefits above that year. This is not a reported restatement and revenue is not normalized."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-09-03",
+          "publishedAt": "2026-10-09",
+          "snapshotId": "MU-CURRENT-2026-09-03",
+          "currency": "USD",
+          "revenue": 133188.0,
+          "operatingIncome": 99340.0,
+          "operatingMargin": 0.7458629906598192,
+          "sourceIds": [
+            "MU-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "FY2026 revenue was $133.188bn and GAAP operating income $99.340bn, a 74.6% margin, versus a 26.1% FY2025 operating margin.",
+          "sourceIds": [
+            "MU-release"
+          ],
+          "publishedAt": "2026-09-30"
+        }
+      ],
+      "sourceIds": [
+        "MU-filing",
+        "MU-annual-filing",
+        "MU-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.4,
+        "assumedDebtWeight": 0.1,
+        "assumedDebtSpreadUSD": 0.015,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1139,
+        "assumedPretaxCostOfDebtUSD": 0.0659,
+        "normalizedTax": 0.2,
+        "unroundedWaccUSD": 0.107782,
+        "unroundedWaccInModelCurrency": 0.107782,
+        "selectedWacc": 0.11,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Review restricted cash, long-dated investments, customer prepayments, commitments and incentives before treating all cash as surplus or the equity bridge as complete."
+      },
+      "modelLimits": [
+        "The 35% EBIT normalization is an analyst assumption, not a reported restatement; peak revenue itself is not normalized. The simple model cannot simulate a boom/bust sequence or replacement-capex spikes."
+      ],
+      "uncertainties": [
+        "HBM demand versus DRAM/NAND supply additions and pricing reversals",
+        "Fab execution, node transitions, customer prepayments and incentive timing"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "normalization": {
+        "asOf": "2026-10-17",
+        "normalizationDelta": -52724.2,
+        "adjustmentReason": "Analyst through-cycle assumption: reset starting EBIT to 35% of reported FY2026 revenue instead of carrying the 74.6% scarcity-cycle margin through a slow ten-year fade. FY2025 EBIT margin was 26.1%; 35% assumes structural HBM benefits above that year. This is not a reported restatement and revenue is not normalized.",
+        "adjustmentSource": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "normalizedStartingMargin": 0.35,
+        "classification": "analyst judgment; modifies model EBIT only, never reported facts"
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 133188.0,
+        "startingModelMargin": 0.35,
+        "firstYearRevenue": 143843.04,
+        "year10Revenue": 216588.64882199146,
+        "revenueMultiple10Years": 1.6261874104423182,
+        "impliedRevenueCAGR10Years": 0.049825359768280064,
+        "firstYearNetReinvestmentToRevenue": 0.09259259259259266,
+        "negativeFCFFYears": [],
+        "firstPositiveFCFFYear": 1,
+        "terminalReinvestmentRate": 0.16666666666666669,
+        "matureMarginTimesCapitalAfterTax": 0.22399999999999998,
+        "terminalROIC": 0.12,
+        "terminalValueShareOfOperatingEV": 0.4697782735727118,
+        "discountSpread": 0.09,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.0,
+            "targetMargin": 0.22,
+            "salesCapital": 0.6400000000000001,
+            "wacc": 0.13
+          },
+          "year10RevenueMultiple": 1.1044015576914892,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.5172600452183579,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.15,
+            "targetMargin": 0.45,
+            "salesCapital": 0.96,
+            "wacc": 0.095
+          },
+          "year10RevenueMultiple": 2.24449272571966,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 1.9383225553744965,
+          "perShareValue": null
+        }
+      ]
+    },
+    "AVGO": {
+      "ticker": "AVGO",
+      "name": "Broadcom Inc.",
+      "snapshotId": "AVGO-TTM-2026-08-02",
+      "asOf": "2026-10-17",
+      "currency": "USD",
+      "classification": "assistant judgment / educational default",
+      "summary": "Custom AI silicon and infrastructure software support growth and high profitability, with customer concentration and product-mix normalization.",
+      "assumptions": {
+        "growth": 0.35,
+        "targetMargin": 0.45,
+        "tax": 0.2,
+        "salesCapital": 2,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.2,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "35% is above FY2025 growth of 23.9% but far below the latest 86% quarter. Custom accelerators and networking justify the uplift; a large base and concentrated programs require a steep fade.",
+        "targetMargin": "45% is below 48.0% TTM GAAP EBIT margin. High software and semiconductor profitability persists, while lower-margin system mix and competition prevent extrapolating non-GAAP peak margins.",
+        "tax": "20% is a normalized operating-tax assumption. FY2025’s tax benefit and discrete restructuring/acquisition effects do not establish a sustainable long-term rate.",
+        "salesCapital": "2.0x means $0.50 of net investment per incremental $1 of revenue. Fabless design and software are efficient, but working capital, supply commitments and future investment are not zero because reported capex is low.",
+        "terminalROIC": "20% retains defensible IP and installed software advantages while reducing growth-period incremental returns substantially.",
+        "wacc": "10.0% nominal USD is a rounded model estimate. Assumed beta 1.3, 15% target debt and a 1.5-point debt spread reflect strong cash generation alongside concentrated semiconductor customers and acquisition leverage.",
+        "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Review acquisition debt, employee awards, contingent obligations and non-operating assets; no future acquisition is assumed to arrive without a capital cost.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-08-02",
+          "publishedAt": "2026-09-10",
+          "snapshotId": "AVGO-TTM-2026-08-02",
+          "currency": "USD",
+          "revenue": 89104.0,
+          "operatingIncome": 42814.0,
+          "operatingMargin": 0.4804947028191776,
+          "sourceIds": [
+            "AVGO-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Fiscal Q3 2026 revenue was $29.6bn, up 86%, with $16.0bn GAAP operating income; Q4 revenue guidance was approximately $34.8bn.",
+          "sourceIds": [
+            "AVGO-release"
+          ],
+          "publishedAt": "2026-09-02"
+        }
+      ],
+      "sourceIds": [
+        "AVGO-filing",
+        "AVGO-annual-filing",
+        "AVGO-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "USD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.3,
+        "assumedDebtWeight": 0.15,
+        "assumedDebtSpreadUSD": 0.015,
+        "assumedExtraEquityRisk": 0,
+        "assumedCostOfEquityUSD": 0.1094,
+        "assumedPretaxCostOfDebtUSD": 0.0659,
+        "normalizedTax": 0.2,
+        "unroundedWaccUSD": 0.100898,
+        "unroundedWaccInModelCurrency": 0.10089799999999999,
+        "selectedWacc": 0.1,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Review acquisition debt, employee awards, contingent obligations and non-operating assets; no future acquisition is assumed to arrive without a capital cost."
+      },
+      "modelLimits": [
+        "VMware and earlier acquisitions change the business mix; consolidated historical growth is not an organic growth series."
+      ],
+      "uncertainties": [
+        "Timing and profitability of large custom-AI programs",
+        "Software retention, integration, amortization and leverage"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 89104.0,
+        "startingModelMargin": 0.4804947028191776,
+        "firstYearRevenue": 120290.40000000001,
+        "year10Revenue": 478138.56172469835,
+        "revenueMultiple10Years": 5.3660729229293676,
+        "impliedRevenueCAGR10Years": 0.18294800731780714,
+        "firstYearNetReinvestmentToRevenue": 0.12962962962962965,
+        "negativeFCFFYears": [],
+        "firstPositiveFCFFYear": 1,
+        "terminalReinvestmentRate": 0.125,
+        "matureMarginTimesCapitalAfterTax": 0.7200000000000001,
+        "terminalROIC": 0.2,
+        "terminalValueShareOfOperatingEV": 0.6031015403999395,
+        "discountSpread": 0.07500000000000001,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.2,
+            "targetMargin": 0.35,
+            "salesCapital": 1.6,
+            "wacc": 0.12000000000000001
+          },
+          "year10RevenueMultiple": 2.8675779799977277,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.36444023954336213,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.5,
+            "targetMargin": 0.52,
+            "salesCapital": 2.4,
+            "wacc": 0.085
+          },
+          "year10RevenueMultiple": 9.563071766331504,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 2.5410871699471698,
+          "perShareValue": null
+        }
+      ]
+    },
+    "TSM": {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor Manufacturing Company Limited",
+      "snapshotId": "TSM-TTM-2026-09-30",
+      "asOf": "2026-10-17",
+      "currency": "TWD",
+      "classification": "assistant judgment / educational default",
+      "summary": "Leading-edge foundry and packaging scale support growth, with eventual margin normalization and explicit TWD-currency assumptions.",
+      "assumptions": {
+        "growth": 0.22,
+        "targetMargin": 0.45,
+        "tax": 0.2,
+        "salesCapital": 0.9,
+        "wacc": 0.1,
+        "terminalGrowth": 0.02,
+        "terminalROIC": 0.18,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "rationale": {
+        "growth": "22% is below recent annual growth and Q3’s 50.9% TWD growth. Advanced nodes and AI demand support expansion; scale, cyclicality and currency effects require a decline toward mature growth.",
+        "targetMargin": "45% is below the 58.0% TTM operating margin and near earlier-cycle levels. Technology leadership persists, while overseas-fab costs, node transitions and pricing normalize peak profitability.",
+        "tax": "20% is a normalized rate above FY2025’s 17.0% accounting tax, allowing tax incentives and geographic production mix to normalize.",
+        "salesCapital": "0.9x means $1.11 of net reinvestment per additional TWD1 of sales. Fabs and advanced packaging are capital-intensive; depreciation is already inside EBIT and this ratio represents investment net of that economic consumption.",
+        "terminalROIC": "18% assumes lasting process/yield advantages with much lower returns than the explicit margin/capital combination. It does not eliminate geopolitical tail risk.",
+        "wacc": "10.0% nominal TWD is a rounded model estimate. A USD risk build uses beta 1.2, 10% target debt, a 1.5-point debt spread and 1.5-point extra equity risk. Assumed USD 2.5% versus TWD 1.5% inflation converts this to about 10.2% nominal TWD, rounded to 10%.",
+        "terminalGrowth": "2.0% nominal TWD combines an assumed 1.5% long-run inflation rate with modest real expansion; it is not USD ADR growth.",
+        "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+        "otherClaims": "0 is an unreviewed placeholder, not evidence that no additional claims exist. Preserve the existing hard gate for reporting currency, FX and five-ordinary-shares-per-ADR mapping; review minority interests and lease liabilities separately.",
+        "otherAssets": "0 is an unreviewed placeholder, not a statement that all non-operating assets are absent or worthless. Review assets not already included in snapshot cash and avoid double counting."
+      },
+      "reportedAnchors": [
+        {
+          "classification": "reported or directly derived from reported current financials",
+          "periodEnd": "2026-09-30",
+          "publishedAt": "2026-10-15",
+          "snapshotId": "TSM-TTM-2026-09-30",
+          "currency": "TWD",
+          "revenue": 4944817.272,
+          "operatingIncome": 2866916.677,
+          "operatingMargin": 0.5797821272858554,
+          "sourceIds": [
+            "TSM-filing"
+          ]
+        },
+        {
+          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+          "text": "Q3 2026 TWD revenue grew 50.9% and operating margin was 58.7%; the issuer’s Q4 operating-margin outlook was 56.5–58.5%.",
+          "sourceIds": [
+            "TSM-release"
+          ],
+          "publishedAt": "2026-10-15"
+        }
+      ],
+      "sourceIds": [
+        "TSM-filing",
+        "TSM-annual-filing",
+        "TSM-release",
+        "treasury",
+        "erp-reference"
+      ],
+      "waccBuild": {
+        "asOf": "2026-10-17",
+        "currency": "TWD",
+        "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+        "riskFreeUSD": 0.0509,
+        "riskFreeObservationDate": "2026-10-16",
+        "riskFreeSourceId": "treasury",
+        "equityRiskPremium": 0.045,
+        "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+        "equityRiskPremiumReferenceSourceId": "erp-reference",
+        "assumedLeveredBeta": 1.2,
+        "assumedDebtWeight": 0.1,
+        "assumedDebtSpreadUSD": 0.015,
+        "assumedExtraEquityRisk": 0.015,
+        "assumedCostOfEquityUSD": 0.1199,
+        "assumedPretaxCostOfDebtUSD": 0.0659,
+        "normalizedTax": 0.2,
+        "unroundedWaccUSD": 0.113182,
+        "unroundedWaccInModelCurrency": 0.10232168780487805,
+        "selectedWacc": 0.1,
+        "rounding": "nearest 0.5 percentage point",
+        "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+        "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence.",
+        "currencyConversion": {
+          "assumedUSDInflation": 0.025,
+          "assumedTWDInflation": 0.015,
+          "formula": "(1 + USD WACC) × (1 + assumed TWD inflation) / (1 + assumed USD inflation) − 1",
+          "classification": "analyst inflation/currency judgment, not observed inflation or current FX"
+        }
+      },
+      "bridgePolicy": {
+        "status": "unreviewed",
+        "zeroMeansVerifiedAbsent": false,
+        "preserveExistingGates": true,
+        "note": "Preserve the existing hard gate for reporting currency, FX and five-ordinary-shares-per-ADR mapping; review minority interests and lease liabilities separately.",
+        "numericResultPolicy": "withhold-until-explicit-bridge-or-specialist-resolution"
+      },
+      "modelLimits": [
+        "Valuation remains withheld: native TWD financials and ordinary shares cannot be compared directly with a USD ADR. The inflation conversion is an analyst assumption, not a quoted TWD yield or a verified ADR mapping."
+      ],
+      "uncertainties": [
+        "Advanced-node demand, overseas-fab economics and capacity utilization",
+        "Geopolitical interruption, energy/water supply and exchange rates"
+      ],
+      "modelSuitability": {
+        "status": "provisional-simplified-operating-case",
+        "economicallyValidated": false,
+        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+      },
+      "economicChecks": {
+        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+        "startingRevenue": 4944817.272,
+        "startingModelMargin": 0.5797821272858554,
+        "firstYearRevenue": 6032677.071839999,
+        "year10Revenue": 15109756.935366074,
+        "revenueMultiple10Years": 3.055675488945767,
+        "impliedRevenueCAGR10Years": 0.11817743287071325,
+        "firstYearNetReinvestmentToRevenue": 0.20036429872495437,
+        "negativeFCFFYears": [],
+        "firstPositiveFCFFYear": 1,
+        "terminalReinvestmentRate": 0.11111111111111112,
+        "matureMarginTimesCapitalAfterTax": 0.32400000000000007,
+        "terminalROIC": 0.18,
+        "terminalValueShareOfOperatingEV": 0.5607217550080872,
+        "discountSpread": 0.08,
+        "publicPerShareResult": null,
+        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+        "operatingEVPositive": true
+      },
+      "stressIllustrations": [
+        {
+          "name": "lower-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.12,
+            "targetMargin": 0.35,
+            "salesCapital": 0.7200000000000001,
+            "wacc": 0.12000000000000001
+          },
+          "year10RevenueMultiple": 1.9584138773927162,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 0.4609589136016095,
+          "perShareValue": null
+        },
+        {
+          "name": "higher-operating-case",
+          "classification": "analyst stress illustration, not a confidence interval",
+          "assumptions": {
+            "growth": 0.32,
+            "targetMargin": 0.52,
+            "salesCapital": 1.08,
+            "wacc": 0.085
+          },
+          "year10RevenueMultiple": 4.647617272377158,
+          "negativeFCFFYears": [],
+          "operatingValueRelativeToBase": 2.0978964430994655,
+          "perShareValue": null
+        }
+      ]
+    }
+  }
+}

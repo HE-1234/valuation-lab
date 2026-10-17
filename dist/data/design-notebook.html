@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Design notebook · Valuation Lab</title><style>*{box-sizing:border-box}html{color-scheme:light;scroll-behavior:smooth}body{margin:0;background:#f4f5f8;color:#171a24;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7}main{max-width:880px;padding:42px 36px 80px;margin:auto}nav{display:flex;flex-wrap:wrap;gap:10px 24px;border-bottom:1px solid #d9dde7;padding-bottom:22px;margin-bottom:40px;font-size:14px}a{color:#3142b5;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}a:focus-visible{outline:3px solid #3142b5;outline-offset:4px}h1{font-size:clamp(34px,6vw,50px);letter-spacing:-1.5px;line-height:1.15;margin:0 0 24px;font-weight:550}h2{font-size:26px;line-height:1.3;letter-spacing:-.6px;margin:46px 0 20px;border-top:1px solid #d9dde7;padding-top:28px;font-weight:550}h3{font-size:18px;line-height:1.4;margin:30px 0 12px;font-weight:600}p,li{font-size:16px}p{margin:14px 0}ul,ol{padding-left:25px}li{padding-left:5px;margin:12px 0}section+section{margin-top:65px}footer{border-top:1px solid #d9dde7;margin-top:50px;padding-top:18px;font-size:13px;color:#555d70}@media(max-width:480px){main{padding:25px 20px 55px}nav{margin-bottom:30px}h2{font-size:23px}p,li{font-size:16px}ul,ol{padding-left:21px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style></head><body><main><nav aria-label="Notebook navigation"><a href="../">← Valuation Lab</a><a href="#study">Study notes</a><a href="#changes">Change log</a><a href="company-base-cases.json">Company research ledger</a><a href="simulation-methodology.html">Simulation method</a></nav><section id="study"><h1>Design notebook</h1>
+<p>A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.</p>
+<h2>2026-10-17 · A longer record, a quieter reference</h2>
+<h3>Question</h3>
+<p>How can ten annual observations help someone make a forecast without turning the phone view into ten squeezed columns?</p>
+<h3>Sources read for this pass</h3>
+<ul>
+<li><a href="https://www.w3.org/WAI/tutorials/tables/" target="_blank" rel="noopener">W3C WAI, Tables Tutorial</a>. Read the overview, including header relationships and captions. The page reports an update date of February 16, 2023. Applied here: a real two-column table, a descriptive caption, column headers and fiscal-year row headers. The compact graphic never replaces the exact values.</li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html" target="_blank" rel="noopener">W3C, Understanding Reflow</a>. Read the criterion, intent, basic reflow, responsive layout and two-dimensional-content discussion. Applied here: keep year/value rows within a narrow column and let explanations wrap. The 320 CSS-pixel reference motivates a narrow preview; a static preview does not prove WCAG conformance.</li>
+</ul>
+<p>These are original implementation decisions based on those readings. No course-video viewing or paid course completion is claimed.</p>
+<h3>Decisions</h3>
+<ol>
+<li>Keep the v7 workspace. Company choice, the conditional valuation, the distribution and live assumptions keep their current order. This is a bounded refinement, not another redesign.</li>
+<li>Give each history a clear latest fiscal-year value, with its unit and original source. If that latest value is missing, show “Unavailable” rather than silently substituting an older observation.</li>
+<li>Show a small, nonanimated trend across the entire available record. Horizontal position uses fiscal period-end dates. Missing observations, absent years and material comparability changes break the line. No smoothing, interpolation or projected years are added.</li>
+<li>Place an “All annual observations” disclosure directly inside the same reference unit. It opens a vertical year/value table with links, period-end dates and missing-data or comparability notes. Ten years remain readable without horizontal page scrolling.</li>
+<li>Keep coverage and limitations outside the disclosure. Requested history is ten years where supported; shorter records say why. Ten reported years are not necessarily ten comparable years for the business that exists today.</li>
+<li>Use the existing six-theme color roles and normal text controls. Historical trends remain quiet so that the live distribution stays the visual focus.</li>
+<li>Keep reported history separate from forecasts. Reported effective tax is not forecast cash tax; historical book-capital proxies are not marginal reinvestment or terminal returns; dated component evidence is not invented company-reported WACC.</li>
+</ol>
+<h3>What to verify</h3>
+<ul>
+<li>Every available year and source survives rendering; no five-year truncation remains.</li>
+<li>Latest missing values, loss years, structural breaks and shorter company records are explicit.</li>
+<li>The same valid edit still changes the valuation without Apply buttons or confirmation checkboxes.</li>
+<li>Engine goldens, frozen data, live updates, simulations and all six themes retain their existing tests.</li>
+<li>Inspect 320, 390 and 1440 CSS-pixel static previews, including the expanded annual table and a shorter-history company. Keep the exact render method in the release record.</li>
+<li>Real authenticated browser, touch, keyboard-disclosure and accessibility-tree checks remain a separate requirement. Earlier cloud-browser checks reached the ordinary owner sign-in gate. No access control was bypassed.</li>
+</ul>
+<h2>2026-10-17 · Company judgments and editable uncertainty</h2>
+<p>The request expanded during this pass: replace identical company starting assumptions with reasoned company cases, and let the distribution family and its parameters be changed directly.</p>
+<h3>Additional source read</h3>
+<ul>
+<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/" target="_blank" rel="noopener">W3C WAI, Labeling Controls</a>. Read the overview and sections on explicit labels, visual label placement and mobile controls. The page reports an update date of May 13, 2024. Applied visible labels tied to control IDs, above-field labels, normal selects, numeric keyboards and associated explanatory text. No accessibility-conformance claim follows from markup tests alone.</li>
+</ul>
+<h3>Company-case decisions</h3>
+<ul>
+<li>Keep reported reference points, analyst judgments and computed consequences distinct. Each proposed driver has its own rationale and dated sources. The complete company ledger preserves those distinctions.</li>
+<li>New current drafts use the researched case for the exact company and financial baseline. A different or imported baseline does not inherit an unrelated case merely because the ticker matches.</li>
+<li>Preserve existing saved input values and notes. A numerical match with yesterday’s generic defaults is not proof that the user did not choose them. Put “Use researched base case” above the assumption tabs, with a true Undo and a nearby preview of current versus proposed values.</li>
+<li>Keep the current model’s profit adjustment visible. Micron’s researched case uses an explicitly labeled through-cycle starting EBIT adjustment; its reported figures remain intact.</li>
+<li>Label AAOI and Nebius as provisional operating hypotheses. Their simple linear paths produce nine cash-burning forecast years and do not model financing. Existing claims, share-basis and specialist-model limitations still withhold unsupported share values. A well-explained assumption does not make an unsuitable valuation model valid.</li>
+<li>Surface high terminal-value dependence rather than making a precise-looking result imply a robust estimate.</li>
+</ul>
+<h3>Distribution-control decisions</h3>
+<ul>
+<li>Offer Fixed, Triangular, Uniform and Truncated normal for each of the four simulated drivers. Show only the parameters relevant to the chosen family.</li>
+<li>Keep bounds explicit. Normal mean and standard deviation describe the underlying, untruncated normal; actual bounded moments can differ. A standard deviation of 2 in a percent input means two percentage points.</li>
+<li>Show a small qualitative density shape beside each driver. Its vertical scale is normalized relative density, not a probability. Fixed values use a single marker. The numerical simulation remains the source of actual output percentiles.</li>
+<li>Validate before plotting. Invalid edits clear the old distribution and prevent stale export; malformed saved configurations produce a recoverable, visible error.</li>
+<li>Preserve custom uncertainty with the saved draft. Changing a main assumption or reloading does not silently replace deliberately chosen distributions. An explicit reset restores illustrative starting ranges around the current assumptions.</li>
+<li>Retain the original triangular sampling path and finance arithmetic while extending the input distributions. The simulation methodology page describes the new sampling and relationship assumptions.</li>
+</ul>
+<h3>Checks added</h3>
+<p>Focused presentation tests cover ten-year tables, missing/structurally different periods, all four distribution families, unit conversion, invalid-edit recovery, persistent custom settings, company-case loading, saved-draft preservation, Undo, visible profit normalization and unsupported-model warnings. Existing model, frozen-data, theme and animation checks remain in the full release suite.</p>
+<h2>2026-10-17 · v7 study that shaped the instrument</h2>
+<p>The earlier design pass reviewed public lesson transcripts, written documentation and research articles. Embedded videos were not watched. The references below record that verified reading scope; this pass does not claim to have reread every item.</p>
+<h3>Motion that explains the model</h3>
+<ul>
+<li><a href="https://university.webflow.com/videos/intro-to-motion-in-webflow" target="_blank" rel="noopener">Webflow University, Intro to motion</a>: public transcript. Used the distinction between a lightweight transition and a longer sequence.</li>
+<li><a href="https://university.webflow.com/videos/when-to-use-interactions" target="_blank" rel="noopener">Webflow University, When to use interactions</a>: public transcript. Applied purposeful feedback and avoided repeating a blocking intro.</li>
+<li><a href="https://university.webflow.com/videos/create-a-gsap-powered-timeline-animation" target="_blank" rel="noopener">Webflow University, Create a GSAP-powered timeline</a>: public transcript. Applied deliberate triggers, targets and timing using native animation APIs; this app does not use a Webflow or GSAP runtime.</li>
+<li><a href="https://help.webflow.com/hc/en-us/articles/53580099234579-Create-and-manage-Interactions-with-GSAP" target="_blank" rel="noopener">Webflow, Create and manage Interactions with GSAP</a>: documentation marked July 20, 2026. Checked the current workflow separately from older foundational lessons.</li>
+<li><a href="https://web.dev/learn/css/animations" target="_blank" rel="noopener">Google web.dev, Animations</a>: written module dated May 4, 2021. Applied finite timing, interruption handling and reduced motion.</li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html" target="_blank" rel="noopener">W3C, Pause, Stop, Hide</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html" target="_blank" rel="noopener">Animation from Interactions</a>: written guidance. Used visible replay/pause controls and a complete nonanimated state. The interaction-animation criterion is Level AAA; no blanket conformance claim is made.</li>
+</ul>
+<p>Decision carried forward: the distribution is the expressive object. Numeric labels stay stable, the opening sequence is bounded, edits have brief feedback, and the final bars match the full simulation output. The history reference does not need a second competing animation.</p>
+<h3>Hierarchy, familiarity and a reusable system</h3>
+<ul>
+<li><a href="https://university.webflow.com/videos/intro-to-design-systems-in-webflow" target="_blank" rel="noopener">Webflow University, Intro to design systems</a>: public transcript. Applied shared components and semantic visual roles.</li>
+<li><a href="https://design.google/library/expressive-material-design-google-research" target="_blank" rel="noopener">Google Design, Material 3 Expressive research</a>: 2025 research article. Applied selective emphasis and familiar labeled controls. The app does not claim the study’s measured improvements.</li>
+<li><a href="https://www.nngroup.com/articles/visual-hierarchy-ux-definition/" target="_blank" rel="noopener">Nielsen Norman Group, Visual Hierarchy</a>: January 17, 2021 article. Applied scale, proximity and grouping to populated screens.</li>
+<li><a href="https://www.nngroup.com/articles/progressive-disclosure/" target="_blank" rel="noopener">Nielsen Norman Group, Progressive Disclosure</a>: December 3, 2006 article. Deferred lengthy explanations while keeping important comparison evidence and limitations close to the input.</li>
+<li><a href="https://web.dev/learn/design/typography" target="_blank" rel="noopener">Google web.dev, Responsive Typography</a>: written module dated December 9, 2021. Applied readable secondary text, flexible measure and responsive layout.</li>
+</ul>
+<p>Decision carried forward: the app opens as an analytical instrument rather than a presentation or onboarding wizard. A quiet surround supports one dominant chart. Optional notes and detailed source material remain reachable without gating ordinary numerical exploration.</p>
+<h3>Reference inspection and limits</h3>
+<p>The requested <a href="https://www.awwwards.com/sites/lusion-v3" target="_blank" rel="noopener">Lusion v3 Awwwards reference</a> was used as inspiration, not copied. The main entry timed out during the earlier study. The <a href="https://www.awwwards.com/inspiration/mobile_thumbnail-submission-650970892ec97887227982" target="_blank" rel="noopener">Awwwards showcase entry</a> and its linked 1600 × 1200 promotional image were inspected. The image supported observations about a pale surround, strong blue/black dimensional imagery and a singular visual focus. It did not establish actual phone layout or live interaction behavior. No logos, assets or implementation were copied.</p>
+<h2>Next focused questions</h2>
+<ul>
+<li>Does expanding the year table preserve a comfortable reading position in actual mobile Safari?</li>
+<li>Are keyboard and screen-reader labels sufficient to move between the latest reading, full history and source documents?</li>
+<li>Can repeated explanatory text be shortened further without obscuring accounting differences or missing evidence?</li>
+<li>Do the longest currency amounts and all six themes remain readable at enlarged text sizes?</li>
+</ul>
+<p>Each later entry should identify the reading scope, one concrete design decision, the affected behavior and the checks actually performed. A useful finding can justify keeping the interface unchanged.</p></section><section id="changes"><h1>Change log</h1>
+<h2>2026-10-17 · v8 company cases, longer history and editable distributions</h2>
+<p>Release 8 retains the existing owner-private site and adds researched company assumptions, ten-year references where comparable data is available, and editable distribution hyperparameters.</p>
+<ul>
+<li>Expanded supported company reference histories toward ten annual periods, preserving source dates, explicit missing values and shorter comparable records.</li>
+<li>Replaced the five-number history strip with a source-linked latest value, a compact full-record trend and an adjacent expandable year/value table.</li>
+<li>Used actual fiscal period-end dates for trend spacing. Missing years and material accounting/business-basis changes interrupt the line.</li>
+<li>Added visible coverage and comparability explanations. A legacy-company period is not silently presented as the same operating business or folded into a misleading comparable range.</li>
+<li>Added distinct, dated company research assumptions for all 14 current baselines, with driver rationale, reference facts, model caveats and source links. Existing saved inputs remain intact until the visible load action is used; the load can be undone.</li>
+<li>Made the Micron starting EBIT normalization visible and labeled AAOI/Nebius as provisional operating hypotheses rather than validated valuations.</li>
+<li>Added Fixed, Triangular, Uniform and Truncated-normal controls and shape previews for each simulated driver. Custom settings persist in the saved draft, with an explicit reset to the current assumptions.</li>
+<li>Corrected AAOI FY2019–FY2025 reference debt to include separately disclosed convertible notes, with primary evidence; related book-capital ratios were recomputed. Frozen historical datasets and unaffected observations are unchanged.</li>
+<li>Added exact-snapshot claims gates where AAOI convertible debt and Alphabet preferred claims are missing from the current common-equity bridge. Unsupported values stay withheld.</li>
+<li>Added this readable design notebook and change log, linked from Sources.</li>
+<li>Preserved DCF arithmetic, current baseline data, the original triangular numerical behavior, live edits, six themes and the confirmation-free assumption workflow.</li>
+</ul>
+<p>Validation: all 356 automated checks passed. Focused presentation tests cover history, all four distribution families, source links, semantic tables, saved settings, researched-case loading and Undo. Static layouts were reviewed at 320, 390 and 1440 CSS pixels; the phone rationale layout was repaired and re-reviewed before release. Static previews are document-renderer approximations, not authenticated browser screenshots. Authenticated browser, real touch and accessibility-tree behavior remain unverified because the supported browser reached the private site’s owner sign-in gate.</p>
+<h2>2026-10-17 · v7 evidence-first instrument</h2>
+<ul>
+<li>Replaced the current eight-step workflow with a direct assumption editor beside the live conditional valuation and distribution.</li>
+<li>Added dated company reference history beside assumptions and explicit labels for historical proxies and contextual evidence.</li>
+<li>Removed numerical acceptance checkboxes and Apply/Continue actions; valid changes update immediately.</li>
+<li>Preserved the data, security, date, currency and model limitations that genuinely prevent calculation.</li>
+<li>Added visibility-triggered distribution assembly, short edit feedback, visible replay/pause/resume controls and a complete reduced-motion state.</li>
+<li>Kept all six themes and started fresh sessions in Slate &amp; Blue.</li>
+</ul>
+<p>Validation recorded for v7: 254 automated checks passed. Static previews were inspected at 320, 390 and 1440 CSS pixels. Authenticated browser, real touch and accessibility-tree behavior remained unverified because the supported browser reached the private site’s owner sign-in gate.</p></section><footer>Valuation Lab · Original design notes and implementation record · Updated 17 October 2026</footer></main></body></html>

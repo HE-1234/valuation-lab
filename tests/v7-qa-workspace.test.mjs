@@ -11,7 +11,7 @@ test('v7 QA: every editable driver includes adjacent company evidence and source
 test('v7 QA: equity context, dated risk components and missing periods actually render beside inputs',async()=>{
  const h=await startStudio();h.step(6);assert.match(h.get('[data-history="otherAssets"]').textContent,/Cash|cash/);assert.match(h.get('[data-history="otherAssets"]').textContent,/FY202/);assert.match(h.get('[data-history="otherClaims"]').textContent,/Mapped debt|debt proxy/);
  h.step(5);assert.match(h.get('[data-history="wacc"]').textContent,/2026|2025/);assert.match(h.get('[data-history="wacc"]').textContent,/%/);
- h.change('#current-company','AAOI');h.step(3);const tax=h.get('[data-history="tax"]').textContent;assert.match(tax,/FY2021/);assert.match(tax,/Unavailable/i);assert.doesNotMatch(tax,/Observed range.*0%/);
+ h.change('#current-company','AAOI');h.step(3);const tax=h.get('[data-history="tax"]').textContent;assert.match(tax,/FY2021/);assert.match(tax,/Unavailable/i);const range=h.get('[data-history="tax"]').querySelector('.history-range');assert.ok(range);assert.match(range.textContent,/12\.5%/);assert.doesNotMatch(range.textContent,/\b0%/);
 });
 test('v7 QA: invalid assumptions synchronously withhold base value, chart and prior quote gap',async()=>{
  const h=await startStudio();h.input('#quote-price','150');h.input('#quote-date','2026-10-16');h.input('#quote-currency','USD');h.input('#quote-source','https://example.com/quote');h.change('#quote-share-basis',h.mounts[0].snapshot.shareBasis);h.flush();assert.match(h.get('#quote-comparison').textContent,/value-to-price gap/);
@@ -26,5 +26,5 @@ test('v7 QA: absent optional history never prevents valuation or invents histori
 });
 test('v7 QA: rapid valid edits debounce to the latest current-source simulation; switching cancels pending work',async()=>{
  const h=await startStudio();h.input('#g-growth','12');h.input('#g-growth','15');h.input('#g-growth','18');assert.equal(h.timers.size,1);h.flush();assert.equal(h.mounts.at(-1).draft.assumptions.growth,.18);
- h.input('#g-growth','19');h.change('#current-company','MSFT');h.flush();assert.equal(h.mounts.filter(m=>!m.released).length,1);assert.equal(h.mounts.at(-1).ticker,'MSFT');assert.equal(h.mounts.at(-1).draft.assumptions.growth,.08);
+ h.input('#g-growth','19');h.change('#current-company','MSFT');h.flush();assert.equal(h.mounts.filter(m=>!m.released).length,1);assert.equal(h.mounts.at(-1).ticker,'MSFT');assert.equal(h.mounts.at(-1).draft.assumptions.growth,h.baseCases.companies.MSFT.assumptions.growth);
 });
