@@ -2,6 +2,33 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 08:42 UTC · Keep assumption categories in view
+
+### Question and evidence
+
+Can every assumption category be found without discovering a hidden horizontal gesture?
+
+The previous source used a single nonwrapping row with horizontal scrolling and a hidden scrollbar. The 390px static preview showed the later categories extending beyond the available space; Sources and Details were out of view. Keyboard navigation already existed, but the scrolling container could also clip an outward focus outline. These are code and static-layout observations, not measured user research.
+
+### New lessons read
+
+- [Google web.dev, Interaction](https://web.dev/learn/design/interaction/). Read the complete written lesson: Pointer, Any pointer, Hover, Any hover, Virtual keyboards, Input types, Input modes, Autocomplete, code examples and displayed knowledge checks. Page last updated December 23, 2021. Applied its guidance that sufficiently large interactive targets benefit different input methods, and that screen width alone does not identify the input method.
+- [Google web.dev, Keyboard focus](https://web.dev/learn/accessibility/focus/). Read the complete written lesson: Focus order, Tabindex, Skip links, Focus indicator, Browser default styling and Custom styles, including the displayed code examples. Page last updated October 31, 2022. Applied a visible theme-aware outline and preserved the existing logical category order and keyboard handling.
+
+Read on October 17, 2026. Embedded demonstrations were not operated; linked videos and animations were not watched. No interactive quiz or full-course completion is claimed.
+
+### One bounded change
+
+Replace the hidden scrolling assumption strip with a compact, wrapping category group. All eight labels and their order stay the same. A bordered active state distinguishes selection; each control has a minimum 44px height, readable text and a separate visible focus outline. Small-screen wrapping uses a font-relative basis, so enlarged labels can take additional rows. The surrounding surface and every state use the existing six-theme color roles.
+
+This remains direct, nonsequential category navigation. There are no numbers, completion marks, review boxes or new steps. Selection, saved inputs, live updates and keyboard arrows/Home/End keep their existing behavior. Showing every category uses more vertical space on phones; this is an intentional tradeoff for discoverability. The valuation, distribution and source context keep their positions.
+
+### Checks and limitations
+
+All 393 automated checks passed, including five new navigation regressions. They cover all eight categories for all 14 companies, a single selected/tabbable item, panel labeling, keyboard order and wrapping, saved category/input restoration, uninterrupted simulations, and label/selection/focus contrast in all six themes. No financial JavaScript or source JSON changed.
+
+Static before/after layouts were inspected at 320, 390 and 1440px. An initial percentage-based phone layout overflowed in the document renderer; using the font-relative small-screen basis repaired it. Additional navigation-only layouts at 320px checked all six themes at normal and doubled category-text size: all 96 control boxes stayed within the page and at least 44px tall. Focus styling was forced for visual inspection. These are document-renderer approximations, not real browser zoom, keyboard, touch or accessibility-tree tests. Real authenticated browser verification remains unavailable behind the normal owner sign-in gate; no access control was bypassed.
+
 ## 2026-10-17, 07:42 UTC · Put the source period beside the result
 
 ### Question and evidence

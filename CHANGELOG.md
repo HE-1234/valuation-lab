@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-17, 08:42 UTC · Visible assumption categories
+
+- Replaced the hidden horizontal category strip with a compact, wrapping group, making Growth through Details visible without a side swipe.
+- Added a bordered selected state, 44px minimum control height and unclipped, theme-aware focus outline.
+- Preserved direct category selection, existing keyboard navigation, saved category and inputs, live edits and the current simulation.
+- Documented two newly read written design lessons, their exact reading scope, and the deliberate phone-height tradeoff.
+- Preserved all valuation mathematics, financial source data, historical freezes, claims models, distributions and six themes.
+
+Validation: all 393 automated checks passed, including five new navigation regressions. Static before/after previews were reviewed at 320, 390 and 1440px. Navigation-only previews checked all six themes at 320px with normal and doubled category text; all 96 control boxes remained within the page and at least 44px tall. These are document-renderer approximations with forced focus styling. Real authenticated browser, browser zoom, native-touch and accessibility-tree behavior remain unverified.
+
 ## 2026-10-17, 07:42 UTC · Financial period at a glance
 
 - Moved the full financial-period label and original-filing link above the headline valuation, in a compact wrapping source line.
