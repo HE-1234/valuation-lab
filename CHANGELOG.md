@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 11:42 UTC · Model issues beside the editor
+
+- Added a compact copy of the existing model-issue explanation immediately above the assumption editor, so it remains nearby on phones.
+- Kept the same validation, result explanation and existing live-announcement path. The note hides automatically when the result is valid and remains stable across category changes.
+- Preserved input focus, saved edits, historical references, source gates, claims calculations, simulations and all six themes.
+- Recorded newly read W3C feedback/error guidance and its exact reading scope.
+
+Validation: all 407 automated checks passed, including six new regressions. Before/after full-page approximations were reviewed at 320, 390 and 1440px, plus all six themes with normal and doubled note text at 320px. All 18 visible after-state note boxes fit their page widths. Valid 390/1440px previews were pixel-identical. These document-renderer approximations do not establish native-browser, touch or accessibility-tree behavior; those checks remain unverified.
+
 ## 2026-10-17, 10:42 UTC · Room for equity amounts
 
 - Widened only the Other nonoperating assets and Other claims on equity number fields using character-relative sizing.

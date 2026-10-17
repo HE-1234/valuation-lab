@@ -2,6 +2,33 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 11:42 UTC · Keep model issues near the assumptions
+
+### Question and evidence
+
+Can a phone user read why a valuation is withheld without returning from the assumption editor to the result panel?
+
+The existing live validation correctly clears unsupported results and explains the reason in the valuation panel. On narrow screens, that panel precedes the assumptions, research controls and category group. Source inspection and before previews showed that an invalid input had no nearby explanation at the editor. This is a reading-order observation, not measured evidence that users missed an error.
+
+### New lessons read
+
+- [W3C WAI, User Notification](https://www.w3.org/WAI/tutorials/forms/notifications/). Read the complete written tutorial: overview, overall feedback, headings, page titles, dialogs, error lists, inline feedback, after-submit feedback, during-typing examples and focus-change guidance, including the displayed code. The page reports an update date of June 3, 2022. Applied placing feedback near the controls while preserving the current result feedback. The app has direct live inputs rather than a submit flow, so no dialog, submit button or focus jump was added.
+- [W3C WAI, Understanding Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html). Read In Brief, the success criterion, Intent, native HTML validation discussion, Benefits, Examples and the listed sufficient/advisory techniques. Applied a visible text explanation, rather than a color-only cue, without inventing new validation rules. This guidance does not require a particular placement; the phone layout motivated the local copy.
+
+Read on October 17, 2026. Live examples, linked techniques and interactive demonstrations were not operated. No video, course completion, user-testing result or accessibility certification is claimed.
+
+### One bounded change
+
+Add a compact model-issue note between the category group and editor, visible only while the current valuation is withheld. Its heading and message use the existing result wording; the message comes from the same caught validation error. Preserve the original explanation and its existing live region. The nearby copy is a named, noninteractive note with no second live region, no dismissal and no forced focus movement.
+
+Keep the note stable when switching categories. Clear it as soon as the model returns a valid result, and reconstruct it from validation on company/baseline changes and reload. It adds a little vertical space only in an unavailable-result state. Valid-state layout, inputs, saved edits, source/model gates, adjacent histories, claims, simulation and calculations are unchanged. The existing six-theme warning palette supplies a full-strength border and readable text; the wording remains the cue even without color.
+
+### Checks and limitations
+
+All 407 automated checks passed, including six new regressions for hidden/visible state, exact agreement with result feedback, input/focus stability, invalid edits and recovery, category navigation, saved values, every company/baseline, AAOI/Alphabet claims, source/model withholding and six-theme text contrast. No second live region was added; minimal-DOM checks do not establish actual assistive-technology announcements.
+
+Before/after full-page approximations were reviewed at 320, 390 and 1440px, covering empty growth, incompatible WACC/stable growth, invalid Alphabet claims and the longer NBIS model constraint. Valid AAPL views at 390 and 1440px were pixel-identical before and after. Twelve additional editor previews per version covered all six themes at 320px with normal and doubled note text. Every one of the 18 visible after-state note boxes stayed within its page width, including the longest reviewed constraint. Native controls are substituted with text frames in this document renderer; these are layout approximations, not browser zoom, native editing, touch or accessibility-tree verification. The known browser socket restriction and owner sign-in gate remain intact.
+
 ## 2026-10-17, 10:42 UTC · Give equity amounts enough room
 
 ### Question and evidence
