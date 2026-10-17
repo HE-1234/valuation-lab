@@ -2,6 +2,35 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 14:42 UTC · Let the valuation headline reflow
+
+### Question and evidence
+
+Does the amount keep its currency and per-share qualification when headline text is enlarged?
+
+The header used two nonwrapping flex rows: one for the amount and unit, and one beside the operating-value summary. With doubled header text, the 320px document preview clipped the currency/per-share label at the panel edge; at 390px, the operating summary overlapped the amount. The amount itself still fit. These are source and static-layout findings, not measured user behavior or a native-browser accessibility result.
+
+### New lessons read
+
+- [W3C WAI, Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html). Read In Brief, Success Criterion, Intent, Basic text reflow, responsive-layout examples, section-specific exceptions, viewport/zoom distinctions, and the overlaps with Resize Text and Focus Not Obscured. Applied allowing ordinary result text to reflow independently of the adjacent chart; a chart's two-dimensional meaning does not extend to its text qualification.
+- [W3C WAI, Understanding Resize Text](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html). Read In Brief, Success Criterion, Intent, Benefits, Examples, and the listed sufficient/advisory techniques and failures. Applied keeping content available when enlarged, including intermediate responsive layouts. The criterion can be satisfied through supported scaling mechanisms; these static checks do not establish conformance.
+
+Read on October 17, 2026. Illustration descriptions were read as text. Linked techniques and demonstrations were not operated; no video, interactive exercise, full-course completion or accessibility certification is claimed.
+
+### One bounded change
+
+Let the header's two existing summaries wrap when they need more space. Keep the currency and per-share label together as an inline group that can move below the amount. Allow the primary summary to use available width, cap its container to the panel, and keep the secondary operating summary right-aligned when it moves to another row.
+
+The amount, precision, wording, font sizes, color roles and existing small-screen visibility rules stay the same. Enlarged headers can become taller so their complete text remains readable. At ordinary text size, the three full-page comparisons changed only the unit label's local arrangement; the amount, chart and remaining page kept their positions. No application JavaScript, calculation, data, research case, saved setting or historical freeze changes. Direct editing, adjacent histories, all distributions and AAOI/Alphabet treatments retain their behavior.
+
+### Checks and limitations
+
+All 420 automated checks passed, including four new regressions. The baseline passed 416 checks. New checks cover the scoped wrapping contract, exact displayed amount/currency/operating summary for all 19 supported company-baseline combinations, 16 withheld combinations, category navigation, input/focus stability, invalid recovery, saved edits, and unchanged six-theme text contrast.
+
+Twenty before/after static-preview pairs cover ordinary full pages at 320, 390 and 1440px, an enlarged 320px full page, enlarged 320/390px headers, MSFT/AAOI/Alphabet cases, and enlarged header components at 320/1440px in all six themes. All 117 after-state header text boxes fit within the panel and had no pairwise text overlap. Ordinary full-page pixel differences were confined to the currency/per-share label. The three ordinary full-page pairs, enlarged phone comparisons and all six phone themes were visually inspected.
+
+The document renderer substitutes form-control frames, flattens responsive CSS and doubles the header's resolved font sizes for the enlarged-text approximations. These are not real browser zoom, touch, keyboard or accessibility-tree tests, nor a claim about every possible user-entered extreme valuation. The known local browser restriction and private-site owner sign-in gate were not bypassed.
+
 ## 2026-10-17, 13:42 UTC · Make keyboard focus visible on the valuation panel
 
 ### Question and evidence

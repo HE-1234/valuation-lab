@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 14:42 UTC · Complete enlarged valuation headlines
+
+- Let the valuation headline and operating-value summary wrap when enlarged text needs more space.
+- Kept the currency/per-share label together, including when it moves below the amount.
+- Preserved numerical precision, typography, six themes, immediate editing, source history, saved values, financial models and simulations.
+- Recorded new W3C reflow/resize-text reading and the exact study scope.
+
+Validation: all 420 automated checks passed, including four new regressions covering all 35 company-baseline combinations, editing/recovery/persistence and six-theme contrast. Twenty static before/after pairs cover 320, 390 and 1440px, doubled header text, all six themes and special-company cases. All 117 after-state header text boxes fit the panel without overlap. Normal full-page pixel differences stayed within the currency/per-share label. These document-renderer approximations do not establish native zoom, keyboard, touch or accessibility-tree behavior; those remain unverified.
+
 ## 2026-10-17, 13:42 UTC · Visible focus on the dark panel
 
 - Applied the valuation panel's existing bright signal color to its inherited keyboard-focus outlines.
