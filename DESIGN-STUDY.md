@@ -2,6 +2,39 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+
+## 2026-10-17, 16:42 UTC · Keep table values connected to their row labels
+
+### Question and evidence
+
+When navigating a financial table cell by cell, can its purpose and the row belonging to each number be identified from the markup?
+
+The current workspace's shared table helper supplied column headers but no table name, and rendered the first-column row labels as ordinary data cells. Source inspection found this pattern in nine table purposes: source facts, captured capital inputs, the equity bridge, share allocation, claims comparisons, dividend dates, operating stresses, the staged path and the annual cash-flow forecast. Across all 35 company-baseline combinations, those views generate 102 table instances and 1,635 body rows. Adjacent history and distribution tables already have captions and row headers. This is a markup finding, not an observed screen-reader failure or measured user error.
+
+### New lessons read
+
+- [W3C WAI, Tables with One Header](https://www.w3.org/WAI/tutorials/tables/one-header/). Read the complete written tutorial: overview, top-row headers, first-column headers, ambiguous data, displayed examples and code snippets. Applied explicit column direction rather than relying on the appearance of a heading. Existing column headers were already correct and remain unchanged.
+- [W3C WAI, Tables with Two Headers](https://www.w3.org/WAI/tutorials/tables/two-headers/). Read the complete written tutorial: overview, top-row/first-column example, offset row-header example and displayed code snippets. Applied native row headers alongside the existing column headers, so each numerical cell has both a metric/date/year context and a column context.
+- [W3C WAI, Caption & Summary](https://www.w3.org/WAI/tutorials/tables/caption-summary/). Read the complete written tutorial: overview, identifying a table with a caption, complex-table summaries, caption nesting, aria-describedby and figure approaches, including displayed examples and code. Applied a concise caption identifying the company and table purpose. These simple tables do not need a new complex-structure summary; nearby explanations remain available.
+
+Read on October 17, 2026. All three pages report an update date of July 27, 2019. Linked full-code pages and techniques were not separately opened, and no live assistive-technology demonstration was operated. No video, interactive exercise, course completion or accessibility certification is claimed.
+
+### One bounded change
+
+Give each shared current-workspace table a native caption naming the company and table purpose. Keep its text visually hidden using the established text treatment, because visible headings, disclosures and column labels already provide context in the layout. Mark each first-column label as a row header and retain the existing column scopes.
+
+Scope the new row-header styling to these tables so their previous body-cell appearance remains intact, including the smaller ordinary-table type and the claims tables' separate size and minimum width. No new focus stop, live region, button, acknowledgement or editing step is introduced. Existing histories and distribution tables are unchanged.
+
+All displayed figures, units, rows, source links and formulas retain their existing content. No model, simulation, financial data, research case or historical freeze changes. Direct editing, saved drafts, six themes, adjacent histories and AAOI/Alphabet treatments retain their behavior.
+
+### Checks and limitations
+
+All 429 automated checks passed, including five new regressions; the baseline passed 424. The new checks cover native caption and row/column relationships across all 102 generated tables, exact source and forecast values across all 35 baselines, the 19 supported forecasts and 16 withheld cases, claims alternatives, staged/linear paths, live edits, input/focus stability, invalid-state clearing and recovery, category navigation, saved drafts and escaped caption text. These are source and minimal-DOM checks, not actual speech-output verification.
+
+Twenty-six before/after static-preview pairs cover 320, 390 and 1440px pages, source and forecast tables, AAOI/Alphabet equity views, and claims tables in all six themes at phone and desktop widths. All 2,018 measured cell boxes retained their text and geometry. Forty-five of 47 paginated pages were pixel-identical; two differed only in rounded table corners at document page boundaries. Two additional continuous-height before/after pairs were pixel-identical, isolating that document-fragmentation artifact. Ordinary phone/desktop views, source and forecast tables, both claims contexts and all six phone themes were visually inspected. An initial row-font mismatch was corrected and all affected previews rerendered before completion.
+
+The renderer substitutes form-control frames, flattens responsive CSS and paginates a continuous website. Existing wide numerical tables retain their horizontal-scroll containers; these static previews cannot operate them. They are not browser screenshots, keyboard/touch tests, browser-zoom tests or accessibility-tree/speech verification. The known local-browser restriction and private-site owner sign-in gate were not bypassed.
+
 ## 2026-10-17, 15:42 UTC · Keep units and help with both assumption controls
 
 ### Question and evidence

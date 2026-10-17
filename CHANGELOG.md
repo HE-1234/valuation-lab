@@ -1,5 +1,16 @@
 # Change log
 
+
+## 2026-10-17, 16:42 UTC · Name financial tables and connect their rows
+
+- Added company-specific native captions to the current workspace's nine financial-table purposes, with caption text using the existing visually hidden treatment.
+- Marked first-column labels as row headers alongside the existing column headers, preserving every displayed value, source and unit.
+- Retained the previous table appearance through narrowly scoped body-header styling, including the claims tables' size and width rules.
+- Recorded three newly read W3C WAI table tutorials, their exact reading scope and the source-markup rationale in the design notebook.
+- Preserved all valuation mathematics, financial source data, research freezes, simulations, saved edits, adjacent histories, six themes and AAOI/Alphabet treatments.
+
+Validation: all 429 automated checks passed, including five new regressions covering 102 table instances across all 35 baselines, exact source/forecast values, claims alternatives, invalid recovery, focus and saved drafts. Twenty-eight before/after static-preview pairs covered phone/desktop layouts and all six themes. All 2,018 measured cell boxes in the primary matrix retained their geometry. Two document-page corner differences disappeared in continuous-height comparisons. These are document-renderer approximations; real authenticated browser, native touch and screen-reader behavior remain unverified.
+
 ## 2026-10-17, 15:42 UTC · Shared units and help for assumption controls
 
 - Linked each assumption slider to the same helper description as its paired number field.
