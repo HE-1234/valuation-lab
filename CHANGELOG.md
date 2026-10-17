@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 10:42 UTC · Room for equity amounts
+
+- Widened only the Other nonoperating assets and Other claims on equity number fields using character-relative sizing.
+- Let their label/input rows wrap on narrow screens, keeping the amount and its millions unit together.
+- Preserved native editing, live calculations, saved values, adjacent histories, source data, simulation controls and all six themes.
+- Recorded newly read GOV.UK and IBM Carbon input-design guidance and its exact reading scope.
+
+Validation: all 401 automated checks passed, including four new input-layout and editing regressions. Before/after full-page approximations were reviewed at 320, 390 and 1440px; 14 before and 14 after component previews include all six themes and doubled field text. All 28 fields in the 14 after previews fit, contained the test amounts and retained at least 44px height. These use substituted input text frames in a document renderer; real-browser editing, zoom, touch and accessibility-tree behavior remain unverified.
+
 ## 2026-10-17, 09:42 UTC · Readable model-limit reminder
 
 - Removed the inherited fade from the reminder below the distribution, restoring the existing text/link palette's full contrast in all six themes.

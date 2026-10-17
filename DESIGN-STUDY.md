@@ -2,6 +2,33 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 10:42 UTC · Give equity amounts enough room
+
+### Question and evidence
+
+Can a six-digit amount be reviewed comfortably in the same compact input used for a percentage?
+
+The Other nonoperating assets and Other claims on equity controls use source-currency millions, and their displayed slider range reaches 100000. They inherited the percentage input's 75px maximum width at 320px. A decimal amount such as 99999.99 also needs more room. Source inspection and an isolated document-renderer approximation showed the value crowding its unit; the approximation is not evidence of native input scrolling or a measured user error.
+
+### New lessons read
+
+- [GOV.UK Design System, Text input](https://design-system.service.gov.uk/components/text-input/). Read How it works, Avoid placeholder text, Use appropriately-sized text inputs, Fixed width inputs, Fluid width inputs, Hint text, Numbers and the Prefixes and suffixes overview, including the displayed HTML/Nunjucks examples. Applied content-based character sizing, a viewport cap and a visible label. The suffix remains separate from the editable number. The existing native input type and decimal keyboard are preserved; this pass does not adopt a different parsing or stepper design.
+- [IBM Carbon Design System, Number input](https://www.carbondesignsystem.com/building-blocks/core/components/number-input/guidelines). Read Overview, When to use/not use, Formatting, Anatomy, Styling, Sizing, Content, States, Mouse/Keyboard interactions and Validation. The page reports an update date of September 30, 2026. Applied sizing to the amount's content and available layout, retaining its label, helper text and established interaction.
+
+Read on October 17, 2026. Live examples, Storybook and embedded demonstrations were not operated; linked videos were not watched. No course completion, user testing or accessibility certification is claimed.
+
+### One bounded change
+
+Give only the two million-unit assumption cards a wider, character-relative number field. Cap it to the container and let its label/number row wrap when space is tight. Preserve the separate unit and the existing font, height, palette, focus styling, hints and adjacent histories. At 320px, the amount can move below its label; at wider widths it stays alongside when there is enough room. The extra narrow-screen height is an intentional tradeoff for checking the complete amount.
+
+No field is reformatted, clamped or replaced while typing. Percentages, multiples, native number/range controls, saved values, direct live updates, simulation settings and financial validation retain their existing behavior. No valuation, source-data or research file changes.
+
+### Checks and limitations
+
+All 401 automated checks passed, including four new regressions covering all-company layout scoping, labels/units/history, six-digit and decimal edits, slider synchronization, saved values, focus retention and invalid-result recovery. The existing AAOI/Alphabet, historical-source, simulation and six-theme checks remain intact.
+
+Before/after full-page approximations were reviewed at 320, 390 and 1440px, with additional AAOI and unchanged growth views. Fourteen before and fourteen after isolated component previews cover these widths, including all six themes at 320px with normal and doubled field text. Each preview contains two amount fields. All 28 input frames in the fourteen after previews remained within the page, contained the two test amounts and were at least 44px tall. The document renderer substitutes styled text frames for native inputs; character sizing and wrapping here are approximations, not real-browser zoom, editing, touch, keyboard or accessibility-tree verification. No browser restriction or private-site sign-in gate was bypassed.
+
 ## 2026-10-17, 09:42 UTC · Keep the model-limit reminder readable
 
 ### Question and evidence
