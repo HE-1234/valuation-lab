@@ -2,6 +2,33 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 09:42 UTC · Keep the model-limit reminder readable
+
+### Question and evidence
+
+Does the quiet reminder below the distribution retain enough contrast to be read and followed?
+
+Its enclosing span had 0.6 opacity, so the otherwise high-contrast theme colors were blended into the dark stage. The nested Limits link calculated to 4.30:1 in Slate, 4.15:1 in Sand, 4.17:1 in Plum and 4.43:1 in Ocean, below the 4.5:1 threshold for small text. The inherited general-purpose focus color was also poorly matched to this dark surface in five themes. These are stylesheet/compositing observations, not measured user research or a whole-site accessibility audit.
+
+### New lessons read
+
+- [Google web.dev, Color and contrast](https://web.dev/learn/accessibility/color-contrast/). Read the complete written module: Perceive color, Measure color contrast, Calculate color contrast, Using color, Color-focused media queries, Prefers color scheme, Prefers contrast and Layer media queries. Page last updated September 30, 2022. Applied checking the displayed foreground/background combination across every theme, rather than assuming that a named palette color guarantees readable text.
+- [W3C WAI, Understanding Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html). Read In Brief, Success Criterion, Intent, ratio rationale, formula notes, Benefits and the contrast-ratio/relative-luminance definitions. Applied the unrounded 4.5:1 small-text threshold and the distinction between meaningful text and decoration. A model-limit link carries information, so visual de-emphasis does not excuse insufficient contrast.
+
+Read on October 17, 2026. Embedded demonstrations were not operated; linked videos and external tools were not used. No interactive exercise, full-course completion or accessibility certification is claimed.
+
+### One bounded change
+
+Render this reminder at full opacity using its existing stage-text and signal colors. Give only its Limits link the signal-colored focus outline, keeping the existing 3px outline and 4px offset. The wording, size, placement, wrapping and disclosure action stay the same. No other text or control is brightened, and no model code, input, saved setting or calculation changes.
+
+Across all six themes, the resulting text contrast is at least 12.49:1 and the link/focus color at least 8.62:1 against the stage. Threshold checks use unrounded values. The reminder remains subordinate in size and position, but its qualification is easier to see.
+
+### Checks and limitations
+
+All 397 automated checks passed, including four new regressions for composited colors, scoped focus styling, all-company/baseline disclosure behavior and stable live-edit/invalid-result recovery. Repeated opening does not change saved inputs or restart the simulation; unsupported models remain withheld.
+
+Static before/after full-page previews were inspected at 320, 390 and 1440px. Pixel differences were confined to the reminder/link area, with no layout shift. Twenty-four additional 320px component previews cover normal and forced-focus states before/after in all six themes. The link and its outline remain inside the panel in these previews. These are document-renderer approximations; forced focus does not establish actual keyboard or accessibility-tree behavior. Authenticated browser verification remains behind the normal owner sign-in gate, and the known local browser socket restriction was not bypassed.
+
 ## 2026-10-17, 08:42 UTC · Keep assumption categories in view
 
 ### Question and evidence

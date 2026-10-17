@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 09:42 UTC · Readable model-limit reminder
+
+- Removed the inherited fade from the reminder below the distribution, restoring the existing text/link palette's full contrast in all six themes.
+- Matched only the Limits link's focus outline to the dark-stage signal color; kept its existing outline size and offset.
+- Preserved wording, font sizes, layout, disclosure behavior, saved inputs, financial calculations and all protected source data.
+- Recorded two new written contrast lessons and the exact reading scope in the design notebook.
+
+Validation: all 397 automated checks passed, including four new contrast and behavior regressions. Static before/after previews at 320, 390 and 1440px showed pixel changes only in the reminder/link area. All six themes were also reviewed at 320px in normal and forced-focus states. Calculated text contrast is at least 12.49:1; link and focus-color contrast is at least 8.62:1. These are scoped checks and document-renderer approximations, not a whole-site accessibility audit or authenticated browser tests. Real browser, native-touch and accessibility-tree verification remain unavailable.
+
 ## 2026-10-17, 08:42 UTC · Visible assumption categories
 
 - Replaced the hidden horizontal category strip with a compact, wrapping group, making Growth through Details visible without a side swipe.
