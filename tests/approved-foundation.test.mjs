@@ -72,3 +72,27 @@ test('approved text and control contrast covers plain and soft surfaces without 
  assert.ok(softRule,'soft-fill supporting text must use opaque ink');
  for(const selector of ['.approved-comparison','.screen-workspace .mc-inspector :is(small,span)','.screen-workspace .mc-stat :is(small,span)','.screen-workspace .mc-inspector>span:last-child small'])assert.ok(softRule[1].includes(selector),selector);
 });
+
+
+test('Annual and Historical evidence explicitly shares desktop rows with original inputs and a visible summary',()=>{
+ const rules=[...css.matchAll(/([^{}]+)\{([^{}]+)\}/g)];
+ const rule=selector=>rules.find(([,selectors])=>selectors.trim()===selector)?.[2]||'';
+ const open=':is(.annual-workspace, .historical-workspace)[data-evidence-open="true"]';
+ assert.match(rule(open+' .workspace-main > .workspace-stage'),/display: contents/);
+ assert.match(rule(open+' .workspace-stage > .workspace-summary'),/grid-column: 1 \/ -1; grid-row: 1/);
+ assert.match(rule(open+' .workspace-main > .workspace-editor'),/grid-column: 1; grid-row: 2/);
+ assert.match(rule(':is(.annual-workspace, .historical-workspace) .workspace-main > .workspace-evidence-host'),/grid-column: 2; grid-row: 2/);
+ const screen=readFileSync(new URL('../dist/screen-workspace.css',import.meta.url),'utf8');
+ assert.doesNotMatch(screen,/\.screen-workspace\[data-evidence-open=true\] \.(?:workspace-editor|mc-setup)\{display:none/);
+ assert.match(screen,/\.screen-workspace\[data-evidence-open=true\] \.mc-setup\{grid-column:1;grid-row:4/);
+});
+
+test('Annual and Historical mobile evidence follows accessible inputs and active tables without nested scrolling',()=>{
+ const mobile=css.slice(css.indexOf('@media (max-width: 760px)'));
+ assert.match(mobile,/\.workspace-main > \.workspace-editor \{ order: 1; \}/);
+ assert.match(mobile,/\.workspace-main > \.workspace-evidence-host \{ order: 3;/);
+ assert.match(mobile,/\.annual-workspace\[data-evidence-open="true"\] \.workspace-main > #research-editor \{ display: flex;/);
+ assert.match(mobile,/\[data-evidence-open="true"\]:is\(\[data-view="simulation"\],\[data-view="schedule"\],\[data-view="tables"\]\) \.workspace-stage > \.workspace-view \{ display: block;/);
+ assert.doesNotMatch(mobile,/\[data-mobile-view="evidence"\][^{]*workspace-editor[^}]+display: none/);
+ assert.doesNotMatch(css,/overflow(?:-[xy])?\s*:\s*(?:auto|scroll)|height\s*:\s*100(?:d|v)?vh/);
+});

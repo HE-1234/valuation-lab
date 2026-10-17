@@ -227,3 +227,18 @@ body input:focus,body select:focus,body textarea:focus,.guided-screen .workspace
 .approved-history-row sup{font-size:9px;color:var(--ink);margin-left:3px}
 .approved-comparability-notes{font-size:11px;line-height:1.5;color:var(--ink);padding-left:16px;margin:10px 0}
 .approved-comparability-notes li{margin:4px 0}
+
+/* The permanent history column shows the complete sourced record beside live inputs. */
+.approved-history-context{margin:22px 0 12px;min-width:0}
+.approved-history-context h3{font-size:14px;line-height:1.5;margin:0 0 8px}
+.approved-evidence-cautions{margin:14px 0;font-size:12px;line-height:1.5}
+.approved-evidence-cautions summary{font-size:12px;color:var(--accent)}
+.guided-screen .workspace-evidence-host:has(.contextual-evidence-panel[hidden]){display:none}
+
+.approved-related-history{margin:16px 0;font-size:12px;line-height:1.5}
+.approved-related-history>summary{font-size:12px;color:var(--accent);min-height:40px}
+.approved-related-history>summary>span{font-size:11px;color:var(--muted);margin-left:8px}
+
+/* Evidence can live outside the editor; retain readable disclosure spacing. */
+.contextual-evidence-content .history-years>summary{display:flex;flex-wrap:wrap;align-items:center;gap:10px;min-height:44px;line-height:1.5}
+.contextual-evidence-content .history-years>summary>span:first-child{flex:1 1 10em;min-width:0}

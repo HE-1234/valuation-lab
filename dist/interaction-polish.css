@@ -1,0 +1,173 @@
+/* October 17 visual feedback: navigation uses calm surfaces instead of stacked
+   rules. Load after both approved stylesheets. This layer changes chrome only;
+   input boundaries, source links, financial tables and chart axes keep theirs. */
+:root {
+  --interaction-duration: 180ms;
+  --interaction-ease: cubic-bezier(.2,.8,.2,1);
+  --interaction-radius: 7px;
+  --interaction-hover: var(--soft);
+  --interaction-selected: var(--soft);
+}
+
+/* A lighter hover keeps the persistent selected block distinct. The first
+   declaration above remains a safe fallback for older color-mix engines. */
+@supports (background: color-mix(in srgb, white, black)) {
+  :root { --interaction-hover: color-mix(in srgb, var(--soft) 58%, var(--paper)); }
+}
+
+/* These replace approved-foundation's global/mode/toolbar dividers and
+   approved-workspace's paired output rules and assumption-tab baseline. */
+body > aside,
+body .workspace-modebar,
+body .screen-workspace .workspace-toolbar,
+body .screen-workspace .workspace-summary,
+body .guided-screen { border-bottom: 0; }
+
+body > aside nav,
+body .mode-navigation { gap: 4px; }
+body .mode-navigation > span { margin-right: 10px; }
+
+body .screen-workspace [role="tablist"],
+body .screen-workspace .workspace-mobile-tabs,
+body .guided-screen .workspace-editor .assumption-tabs {
+  border: 0;
+  background: transparent;
+  gap: 4px;
+}
+
+/* Padding is constant in every state. Equal outer row heights preserve the
+   compact workspace; only the painted rectangle changes when hovered. */
+body > aside nav > button,
+body .mode-navigation > button,
+body .screen-workspace .workspace-mobile-tabs > button,
+body .screen-workspace [role="tablist"] > button[role="tab"] {
+  border: 0;
+  border-radius: var(--interaction-radius);
+  background: transparent;
+  color: var(--muted);
+  box-shadow: none;
+  text-decoration: none;
+  padding: 7px 10px;
+  min-height: 35px;
+  font-weight: 500;
+  transform: none;
+  transition: background-color var(--interaction-duration) var(--interaction-ease),
+              color var(--interaction-duration) var(--interaction-ease);
+}
+body > aside nav > button { min-height: 34px; padding-block: 5px; }
+body .mode-navigation { padding-block: 4px; }
+body .screen-workspace .workspace-view-tabs { padding-block: 4px; }
+body .guided-screen .workspace-editor .assumption-tabs { padding-block: 4px; }
+body .screen-workspace .workspace-editor .assumption-tabs > button[role="tab"] { min-height: 34px; }
+
+/* Defeat both screen-workspace's animated ::after underline and the old
+   global-nav inset shadow. No new indicator requires JavaScript or motion. */
+body > aside nav > button::after,
+body .mode-navigation > button::after,
+body .screen-workspace .workspace-mobile-tabs > button::after,
+body .screen-workspace [role="tablist"] > button[role="tab"]::after {
+  content: none;
+  display: none;
+}
+
+/* All soft fills use primary ink: the muted and accent text colors are too
+   low-contrast on the approved light soft surface. Selection is persistent
+   (ARIA/current state + weight + fill), including touch and reduced motion. */
+body > aside nav > button:is(.active, [aria-current="page"]),
+body .mode-navigation > button[aria-current="page"],
+body .screen-workspace .workspace-mobile-tabs > button[aria-pressed="true"],
+body .screen-workspace [role="tablist"] > button[role="tab"][aria-selected="true"] {
+  background: var(--interaction-selected);
+  color: var(--ink);
+  font-weight: 650;
+  border: 0;
+  box-shadow: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body > aside nav > button:not(.active):not([aria-current="page"]):not(:disabled):hover,
+  body .mode-navigation > button:not([aria-current="page"]):not(:disabled):hover,
+  body .screen-workspace .workspace-mobile-tabs > button:not([aria-pressed="true"]):not(:disabled):hover,
+  body .screen-workspace [role="tablist"] > button[role="tab"]:not([aria-selected="true"]):not(:disabled):hover {
+    background: var(--interaction-hover);
+    color: var(--ink);
+  }
+}
+
+/* Legacy global-nav :hover rules were unconditional. Cancel their text-only
+   sticky state on touch as well, rather than just limiting the new surface. */
+@media (hover: none), (pointer: coarse) {
+  body > aside nav > button:not(.active):not([aria-current="page"]):hover,
+  body .mode-navigation > button:not([aria-current="page"]):hover,
+  body .screen-workspace .workspace-mobile-tabs > button:not([aria-pressed="true"]):hover,
+  body .screen-workspace [role="tablist"] > button[role="tab"]:not([aria-selected="true"]):hover {
+    background: transparent;
+    color: var(--muted);
+  }
+}
+
+/* The focus ring is functional, separate from the removed decorative rules.
+   It is immediate, never clipped, and doesn't depend on hover capability. */
+body > aside nav > button:focus-visible,
+body .mode-navigation > button:focus-visible,
+body .screen-workspace .workspace-mobile-tabs > button:focus-visible,
+body .screen-workspace [role="tablist"] > button[role="tab"]:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  color: var(--ink);
+}
+body > aside nav > button:active,
+body .mode-navigation > button:active,
+body .screen-workspace .workspace-mobile-tabs > button:active,
+body .screen-workspace [role="tablist"] > button[role="tab"]:active {
+  background: var(--interaction-selected);
+  color: var(--ink);
+  transform: none;
+}
+
+/* The dated claims and the two value figures already have labels and spacing;
+   extra rules in this compact summary only repeat that grouping. */
+body .guided-screen .workspace-summary .claims-result-note { border-top: 0; }
+body .guided-screen .workspace-summary .live-value-meta { border-left: 0; }
+
+/* Existing wrappers still wrap rather than becoming horizontally scrolling
+   strips. Touch targets remain at least 44px without a sticky hover state. */
+@media (max-width: 760px), (pointer: coarse) {
+  body > aside nav > button,
+  body .mode-navigation > button,
+  body .screen-workspace .workspace-mobile-tabs > button,
+  body .screen-workspace [role="tablist"] > button[role="tab"],
+  body .screen-workspace .workspace-editor .assumption-tabs > button[role="tab"] {
+    min-height: 44px;
+  }
+  body .mode-navigation,
+  body .screen-workspace .workspace-view-tabs,
+  body .guided-screen .workspace-editor .assumption-tabs { padding-block: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body > aside nav > button,
+  body .mode-navigation > button,
+  body .screen-workspace .workspace-mobile-tabs > button,
+  body .screen-workspace [role="tablist"] > button[role="tab"] {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  body > aside nav > button:is(.active, [aria-current="page"]),
+  body .mode-navigation > button[aria-current="page"],
+  body .screen-workspace .workspace-mobile-tabs > button[aria-pressed="true"],
+  body .screen-workspace [role="tablist"] > button[role="tab"][aria-selected="true"] {
+    outline: 1px solid Highlight;
+    outline-offset: -2px;
+  }
+  body > aside nav > button:focus-visible,
+  body .mode-navigation > button:focus-visible,
+  body .screen-workspace .workspace-mobile-tabs > button:focus-visible,
+  body .screen-workspace [role="tablist"] > button[role="tab"]:focus-visible {
+    outline: 2px solid CanvasText;
+    outline-offset: 2px;
+  }
+}

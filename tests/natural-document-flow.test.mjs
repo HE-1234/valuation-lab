@@ -49,7 +49,7 @@ test('natural flow: actual annual schedule and evidence have labels without repl
 test('natural flow: Guided evidence occupies the document grid and exact inputs survive repeated open and close',async()=>{
  const h=await startStudio(),input=h.get('#g-growth'),host=h.get('.workspace-evidence-host');
  assert.equal(host.parentElement,h.get('.workspace-main'));
- for(let i=0;i<3;i++){h.get('[data-evidence="history-growth"]').click();assert.equal(h.get('.screen-workspace').dataset.evidenceOpen,'true');h.get('.contextual-evidence-close').click();assert.equal(h.get('#g-growth'),input);assert.equal(h.get('.workspace-editor').inert,false);}
+ for(let i=0;i<3;i++){h.get('[data-evidence="why-growth"]').click();assert.equal(h.get('.screen-workspace').dataset.evidenceOpen,'true');h.get('.contextual-evidence-close').click();assert.equal(h.get('#g-growth'),input);assert.equal(h.get('.workspace-editor').inert,false);}
 });
 test('natural flow: mobile row groups and evidence rows use the same labeled cells and retain readable input width',()=>{
  const css=read('screen-workspace.css');assert.match(css,/@media\(max-width:1000px\)\{\.page table.flow-table/);

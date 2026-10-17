@@ -322,3 +322,22 @@ test('evidence: an already visible header does not force the document to move',(
  h.panel.element.scrollIntoView=()=>assert.fail('visible evidence should not jump');h.document.scrollingElement.scrollTop=90;
  h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.equal(h.document.scrollingElement.scrollTop,90);h.panel.close();h.panel.destroy();
 });
+
+test('evidence: passive refresh preserves current keyboard focus and document position without replay/reveal', () => {
+ const h=fixture();let reveals=0;h.panel.element.scrollIntoView=()=>reveals++;
+ h.document.defaultView.innerHeight=700;h.panel.element.children[0].getBoundingClientRect=()=>({top:900,bottom:940});
+ h.panel.open({invoker:h.invoker,nodes:[h.evidence],key:'first',focus:false,reveal:false,restorePosition:false,animate:false});
+ assert.equal(h.document.activeElement,h.invoker);assert.equal(reveals,0);assert.equal(h.animations.length,0);
+ h.document.documentElement.scrollTop=450;const second=h.make('article',h.source),input=h.make('input',h.editor);input.focus();
+ h.panel.open({invoker:h.invoker,nodes:[second],key:'second',focus:false,reveal:false,restorePosition:false,animate:false});
+ assert.equal(h.document.activeElement,input);assert.equal(h.document.documentElement.scrollTop,450);assert.equal(reveals,0);assert.equal(h.animations.length,0);
+ h.panel.close({restoreFocus:false,restorePosition:false});assert.equal(h.document.activeElement,input);assert.equal(h.document.documentElement.scrollTop,450);h.panel.destroy();
+});
+
+
+test('evidence: passive teardown never restores an obsolete opening page position', () => {
+ const h=fixture();h.document.documentElement.scrollTop=120;
+ h.panel.open({invoker:h.invoker,nodes:[h.evidence],focus:false,reveal:false});
+ h.document.documentElement.scrollTop=650;h.input.focus();h.panel.destroy();
+ assert.equal(h.document.documentElement.scrollTop,650);assert.equal(h.document.activeElement,h.input);
+});

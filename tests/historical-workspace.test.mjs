@@ -116,7 +116,7 @@ test('historical: evidence uses original live source targets, preserves source u
  const originalParent = filing.parentNode;
  invoker.click();
  assert.equal(h.workspace.evidence.isOpen, true);
- assert.equal(h.get('.historical-editor').inert, true);
+ assert.equal(Boolean(h.get('.historical-editor').inert), false);
  assert.equal(filing.parentNode, h.workspace.evidence.content);
  assert.equal(filing.open, true);
  assert.match(h.get('.contextual-evidence-title').textContent, /Mature operating margin/);
@@ -128,7 +128,7 @@ test('historical: evidence uses original live source targets, preserves source u
  assert.match(h.workspace.evidence.content.textContent, /A newer source update/);
  h.document.dispatch('keydown', {key: 'Escape'});
  assert.equal(h.workspace.evidence.isOpen, false); assert.equal(filing.parentNode, originalParent);
- assert.equal(h.get('.historical-editor').inert, false);
+ assert.equal(Boolean(h.get('.historical-editor').inert), false);
  assert.equal(h.document.activeElement, invoker); assert.deepEqual(invoker.focusOptions, {preventScroll: true});
  assert.equal(h.workspace.element.getAttribute('data-mobile-view'), 'result');
  h.workspace.destroy();
@@ -163,11 +163,11 @@ test('historical: mobile views and existing hash links navigate without losing c
  h.workspace.destroy();
 });
 
-test('historical: table content covered by evidence is inert only until the panel closes', () => {
+test('historical: open evidence never makes the original table content inert', () => {
  const h = fixture(); h.workspace.setView('tables');
  const tablePane = h.get('#historical-tables-view');
- h.workspace.openEvidence(); assert.equal(tablePane.inert, true);
- h.workspace.evidence.close(); assert.equal(tablePane.inert, false);
+ h.workspace.openEvidence(); assert.equal(Boolean(tablePane.inert), false);
+ h.workspace.evidence.close(); assert.equal(Boolean(tablePane.inert), false);
  assert.equal(h.workspace.getState().view, 'tables');
  h.workspace.destroy();
 });
@@ -187,4 +187,19 @@ test('historical: teardown restores original hierarchy, attributes, controls, an
  assert.deepEqual(form.querySelectorAll('fieldset').map(node => node.hidden), [false, false, false]);
  const second = mountHistoricalWorkspace(h.page); assert.ok(second); second.destroy();
  assert.equal(mountHistoricalWorkspace(null), null);
+});
+
+
+test('historical: evidence stays open while original controls in different groups edit the valuation', () => {
+ const h=fixture(),form=h.get('#assumptions'),growth=h.get('#a-growth'),margin=h.get('#a-targetMargin');
+ const before=Number(h.get('#valuation-result').textContent),handler=form.oninput;
+ h.workspace.openEvidence();growth.focus();growth.value='25';form.dispatch('input',{target:growth});
+ assert.equal(h.workspace.evidence.isOpen,true);assert.equal(h.document.activeElement,growth);
+ assert.equal(h.assumptions.growth,.25);assert.notEqual(Number(h.get('#valuation-result').textContent),before);
+ h.workspace.setGroup('risk');h.workspace.setGroup('operating');margin.focus();margin.value='31';form.dispatch('input',{target:margin});
+ assert.equal(h.assumptions.targetMargin,.31);assert.equal(h.workspace.evidence.isOpen,true);
+ assert.equal(h.get('#a-growth'),growth);assert.equal(h.get('#a-targetMargin'),margin);assert.equal(form.oninput,handler);
+ assert.equal(h.document.activeElement,margin);assert.equal(Boolean(h.get('.historical-editor').inert),false);
+ assert.equal(Number(h.get('#valuation-result').textContent),valueCompany(h.snapshot,h.assumptions).perShare);
+ h.workspace.destroy();
 });

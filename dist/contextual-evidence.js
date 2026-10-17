@@ -62,7 +62,8 @@ function focusWithoutScrolling(node) {
  * own scroll and state without a key. Existing nodes are not unhidden or opened:
  * callers control disclosure state and should park them in a hidden container.
  *
- * close({restoreFocus?: boolean}) restores nodes synchronously, before returning.
+ * For passive refresh, use focus:false, reveal:false, restorePosition:false, animate:false.
+ * close({restoreFocus?: boolean, restorePosition?: boolean}) restores nodes synchronously, before returning.
  * Call close({restoreFocus:false}) before replacing an editor's markup.
  * Callbacks receive {element, invoker, key}; onClose also receives reason.
  */
@@ -171,7 +172,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   restoreAttribute(current.invoker, 'aria-expanded', current.expanded);
  }
 
- function close({restoreFocus = true, reason = 'close'} = {}) {
+ function close({restoreFocus = true, restorePosition = true, reason = 'close'} = {}) {
   if (!session) return false;
   cancelMotion();
   const current = session;
@@ -182,7 +183,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   // Layout mode must return before restoring focus (especially on mobile).
   onClose?.({element, invoker: current.invoker, key: current.key, reason});
   if (restoreFocus) focusWithoutScrolling(current.invoker);
-  restoreScroll(current.context);
+  if (restorePosition) restoreScroll(current.context);
   return true;
  }
 
@@ -203,15 +204,16 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
    session.html === options.html;
   heading.textContent = options.title || title;
   if (sameContent) {
-   focusWithoutScrolling(closeButton);
-   revealHeader();
+   if (options.focus !== false) focusWithoutScrolling(closeButton);
+   if (options.reveal !== false) revealHeader();
    return true;
   }
   const replacing = Boolean(session);
   if (session) {
    cancelMotion();
    restoreContent(session);
-   restoreScroll(session.context);
+   // A replacement keeps the current page position, not a stale opening position.
+   if (options.restorePosition !== false) restoreScroll(session.context);
   }
   const current = {
    invoker, key: options.key, identity: nodes[0] || (invoker?.nodeType ? invoker : null), html: options.html,
@@ -245,10 +247,10 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   element.scrollTop = position?.panelTop || 0;
   element.scrollLeft = position?.panelLeft || 0;
   restoreScroll(nodeScroll);
-  focusWithoutScrolling(closeButton);
-  restoreScroll(current.context);
-  revealHeader();
-  animateOpen(replacing);
+  if (options.focus !== false) focusWithoutScrolling(closeButton);
+  if (options.restorePosition !== false) restoreScroll(current.context);
+  if (options.reveal !== false) revealHeader();
+  if (options.animate !== false) animateOpen(replacing);
   return true;
  }
 
@@ -265,7 +267,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   if (!session || !destination) return;
   for (let ancestor = element.parentElement; ancestor; ancestor = ancestor.parentElement) {
    if (!(ancestor.getAttribute?.('class') || '').split(/\s+/).includes('page')) continue;
-   if (ancestor.id && ancestor.id !== destination) close({restoreFocus: false, reason: 'navigation'});
+   if (ancestor.id && ancestor.id !== destination) close({restoreFocus: false, restorePosition: false, reason: 'navigation'});
    break;
   }
  };
@@ -277,7 +279,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
 
  function destroy() {
   if (destroyed) return;
-  close({restoreFocus: false, reason: 'destroy'});
+  close({restoreFocus: false, restorePosition: false, reason: 'destroy'});
   destroyed = true;
   cancelMotion();
   document.removeEventListener('keydown', onKeydown);

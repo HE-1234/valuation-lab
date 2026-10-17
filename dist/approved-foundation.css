@@ -306,9 +306,18 @@ main > header { display: none; }
 :is(.annual-workspace, .historical-workspace)[data-view="tables"] .workspace-main { grid-template-columns: minmax(0,1fr); }
 :is(.annual-workspace, .historical-workspace):is([data-view="simulation"],[data-view="schedule"],[data-view="tables"]) .workspace-main > .workspace-stage { grid-column: 1; padding-left: 0; }
 :is(.annual-workspace, .historical-workspace):is([data-view="simulation"],[data-view="schedule"],[data-view="tables"]) .workspace-main > .workspace-editor { display: none; }
-:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
-:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main > .workspace-stage { grid-column: 1; padding-left: 0; padding-right: 24px; }
-:is(.annual-workspace, .historical-workspace) .workspace-main > .workspace-evidence-host { grid-column: 2; grid-row: 1; margin: 16px 0; min-width: 0; }
+/* Evidence shares the page with the original editable controls. The summary
+   stays above both columns; existing charts and view tabs continue below. */
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main { grid-template-columns: minmax(0,1.38fr) minmax(0,1fr); }
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main > .workspace-stage { display: contents; }
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-stage > .workspace-summary { grid-column: 1 / -1; grid-row: 1; padding: 16px 0; }
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main > .workspace-editor { grid-column: 1; grid-row: 2; }
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-stage > .workspace-view-tabs { grid-column: 1 / -1; grid-row: 3; }
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-stage > .workspace-view { grid-column: 1 / -1; grid-row: 4; }
+:is(.annual-workspace, .historical-workspace) .workspace-main > .workspace-evidence-host { grid-column: 2; grid-row: 2; margin: 16px 0 16px 24px; min-width: 0; }
+/* Tables and simulation already contain their relevant controls in the stage. */
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"]:is([data-view="simulation"],[data-view="schedule"],[data-view="tables"]) .workspace-main > .workspace-stage { display: flex; grid-column: 1; grid-row: 1; padding: 16px 24px 18px 0; }
+:is(.annual-workspace, .historical-workspace)[data-evidence-open="true"]:is([data-view="simulation"],[data-view="schedule"],[data-view="tables"]) .workspace-main > .workspace-evidence-host { grid-row: 1; margin-left: 0; }
 
 /* Research, import tools and learning retain their complete document content. */
 #history, #data, #learn { padding: 22px 0 28px; }
@@ -396,10 +405,18 @@ main > header { display: none; }
   :is(.annual-workspace, .historical-workspace) .workspace-main > .workspace-editor { order: 1; }
   :is(.annual-workspace, .historical-workspace) .workspace-main > .workspace-stage { order: 2; }
   :is(.annual-workspace, .historical-workspace) .workspace-main > .workspace-evidence-host { order: 3; width: 100%; margin: 0 0 18px; }
-  :is(.annual-workspace, .historical-workspace)[data-mobile-view="result"] .workspace-main > .workspace-editor,
-  :is(.annual-workspace, .historical-workspace)[data-mobile-view="evidence"] .workspace-main > .workspace-editor { display: none; }
-  :is(.annual-workspace, .historical-workspace)[data-mobile-view="inputs"] .workspace-main > .workspace-editor { display: flex; }
+  :is(.annual-workspace, .historical-workspace)[data-mobile-view="result"] .workspace-main > .workspace-editor { display: none; }
+  :is(.annual-workspace, .historical-workspace)[data-mobile-view="inputs"] .workspace-main > .workspace-editor,
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main > .workspace-editor,
+  .annual-workspace[data-evidence-open="true"] .workspace-main > #research-editor { display: flex; }
   :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main > .workspace-stage { padding-right: 0; }
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-stage > .workspace-summary { order: 0; }
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-stage > .workspace-view-tabs,
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-stage > .workspace-view { order: 2; }
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"]:is([data-view="simulation"],[data-view="schedule"],[data-view="tables"]) .workspace-main > .workspace-stage { display: flex; padding: 18px 0; }
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"]:is([data-view="simulation"],[data-view="schedule"],[data-view="tables"]) .workspace-stage > .workspace-view-tabs { display: flex; }
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"]:is([data-view="simulation"],[data-view="schedule"],[data-view="tables"]) .workspace-stage > .workspace-view { display: block; }
+  :is(.annual-workspace, .historical-workspace)[data-evidence-open="true"] .workspace-main > .workspace-evidence-host { margin: 0 0 18px; }
   .annual-summary-values { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .annual-summary-equity { padding: 0 0 0 12px; border-top: 0; border-left: 1px solid var(--line); }
   .annual-editor-panel .research-field-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }

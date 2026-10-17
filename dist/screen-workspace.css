@@ -77,9 +77,8 @@ html,body{height:auto;min-height:100%;overflow:visible}
 .contextual-evidence-header{position:sticky;top:8px;z-index:9;background:var(--surface);border-radius:var(--radius-panel) var(--radius-panel) 0 0}
 .contextual-evidence-content{flex:none;overflow-wrap:anywhere}
 .screen-workspace[data-evidence-open=true] .workspace-main{grid-template-columns:minmax(0,1fr) var(--workspace-editor)}
-.screen-workspace[data-evidence-open=true] .workspace-editor{display:none!important}
 .screen-workspace[data-evidence-open=true] .simulation-lab{grid-template-columns:minmax(0,1fr)}
-.screen-workspace[data-evidence-open=true] .mc-setup{display:none}
+.screen-workspace[data-evidence-open=true] .mc-setup{grid-column:1;grid-row:4;border-left:0;border-top:1px solid var(--line);padding:16px 0 0;margin:12px 0 0}
 .screen-workspace[data-evidence-open=true] .workspace-stage{grid-column:1;grid-row:1}
 body>aside nav,.page .table-wrap,.page .research-table-scroll,.page .claims-panel .table-wrap,.page .history-series,.page #chart{overflow:visible;max-height:none;min-width:0}
 .page .research-schedule>.research-table-scroll{overflow:visible;max-height:none;scroll-padding:0}

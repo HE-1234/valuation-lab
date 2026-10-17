@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 23:30 UTC · Keep history open while editing
+
+- Guided now shows every available annual observation for the selected metric by default, with secondary measures under Related historical comparisons. Risk displays source-linked, dated WACC components instead of an empty summary; terminal growth and ROIC retain their economic/proxy limitations.
+- View history switches the permanent right column in one click. Input focus and edits follow the selected metric, preserving exact input/evidence nodes and updating the comparison without focus or scroll jumps. Selections survive ordinary refreshes; company, source and cutoff changes rebuild dated evidence.
+- Why and full Sources & comparability remain available. Annual/Historical evidence also leaves original inputs interactive; live Annual result evidence refreshes without repeated entry motion.
+- Desktop retains the value summary and side-by-side inputs/evidence; mobile uses whole-page flow with inputs first. No financial model, research source, simulation policy, draft namespace or sharing change.
+
+Focused shipped-handler tests cover repeated history/source switches, same- and different-field edits, keyboard selection, source-date changes, missing data and node identity. Full-suite and independent preservation results are recorded in the final release verification. Native-browser layout, touch, screen-reader output and recording remain unverified. See SCREEN-WORKSPACE.md for dated primary accessibility sources and exact scope.
+
 ## Approved interface direction · 17 October 2026
 
 Implemented the supplied ivory/teal Instrument Serif + DM Sans design across the existing workspace, with self-hosted licensed fonts, compact global/mode navigation, editable assumptions on the left and sourced context on the right. Guided output destinations are now clearly labeled Forecast, Valuation range and Annual tables while route IDs, six stored themes and all existing product capabilities remain intact.
@@ -247,3 +256,6 @@ Validation recorded for v7: 254 automated checks passed. Static previews were in
 - Added a versioned public review/correction alongside the frozen originals. The 757.8m cumulative conversion-request total includes 519.4m already settled in FY2026; neither total nor difference is extra June debt.
 - Kept AAOI/NBIS operating-only and all other renewed bridge outputs exactly unchanged. Frozen research, legacy data, scalar and historical engines are untouched.
 - Validation: 686/686 tests, syntax checks and `git diff --check` pass. Fresh Chromium launch fails before page access in this executor; browser rendering remains unverified. No commit, push or deployment.
+## Final verification for persistent history and navigation polish
+
+The frozen application completed 865 tests: 863 passed, one existing AAOI raw-source rebuild test failed because its external cache is unavailable, and one existing raw-cache equivalence test skipped. Exact numerical captures for all 14 Annual presets, all 14 Guided companies and 10 Historical companies remain unchanged. Independent checks cover editing with evidence open, direct metric switching, saved precision, 154 primary/secondary-history cases and six-theme contrast. A subsequent CSS-only spacing correction keeps full-history disclosure labels separated outside the editor; affected contextual and navigation checks were rerun. Source-driven static layouts were inspected; native-browser layout, hover painting and recording remain unverified.

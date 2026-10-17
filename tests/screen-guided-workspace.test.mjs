@@ -8,7 +8,7 @@ test('screen Guided: growth, margin, simulation, evidence and Undo preserve all 
  assert.equal(h.get('#g-growth'),growth);assert.equal(h.get('#g-targetMargin'),margin);assert.equal(h.get('#g-tax'),tax);assert.equal(h.focus(),margin);
  const mounts=h.mounts.length,root=h.get('#simulation-lab');h.get('#guided-view-simulation').click();h.get('#guided-view-result').click();assert.equal(h.get('#simulation-lab'),root);assert.equal(h.mounts.length,mounts);
  const source=h.get('[data-evidence-source="why-targetMargin"]'),button=h.get('[data-evidence="why-targetMargin"]'),editor=h.get('.workspace-editor');button.focus();button.click();
- assert.equal(source.parent,h.get('.contextual-evidence-content'));assert.equal(editor.inert,true);assert.equal(h.get('.contextual-evidence-panel').hidden,false);
+ assert.equal(source.parent,h.get('.contextual-evidence-content'));assert.equal(editor.inert,false);assert.equal(h.get('.contextual-evidence-panel').hidden,false);
  h.document.dispatchEvent({type:'keydown',key:'Escape',preventDefault(){}});assert.equal(h.focus(),button);assert.deepEqual(button.focusOptions,{preventScroll:true});assert.equal(editor.inert,false);assert.equal(h.get('.contextual-evidence-panel').hidden,true);assert.equal(source.parent.hidden,true);
  h.get('#undo-input').click();assert.deepEqual(h.state().assumptions,{...base,growth:.12});assert.equal(h.get('#undo-input').disabled,true);
 });
@@ -19,10 +19,10 @@ test('screen Guided: every assumption pane stays mounted and selected state is i
 });
 test('screen Guided: mobile Evidence returns to the originating Result or Inputs view and focus',async()=>{
  const h=await startStudio(),shell=h.get('.screen-workspace');
- for(const view of ['result','inputs']){const tab=h.get('.workspace-mobile-tabs').querySelectorAll('button').find(b=>b.dataset.mobileView===view);tab.click();assert.equal(shell.dataset.mobileView,view);const b=h.get('[data-evidence="history-growth"]');b.click();assert.equal(shell.dataset.mobileView,'evidence');h.get('.contextual-evidence-close').click();assert.equal(shell.dataset.mobileView,view);assert.equal(h.focus(),b);}
+ for(const view of ['result','inputs']){const tab=h.get('.workspace-mobile-tabs').querySelectorAll('button').find(b=>b.dataset.mobileView===view);tab.click();assert.equal(shell.dataset.mobileView,view);const b=h.get('[data-evidence="why-growth"]');b.click();assert.equal(shell.dataset.mobileView,'evidence');h.get('.contextual-evidence-close').click();assert.equal(shell.dataset.mobileView,view);assert.equal(h.focus(),b);}
 });
 test('screen Guided: company change while evidence is open releases detached content and preserves drafts',async()=>{
- const h=await startStudio();h.input('#g-growth','13');const prior=h.get('[data-evidence-source="history-growth"]');h.get('[data-evidence="history-growth"]').click();h.change('#current-company','MSFT');assert.equal(h.get('.contextual-evidence-panel').hidden,true);assert.notEqual(h.get('[data-evidence-source="history-growth"]'),prior);h.change('#current-company','AAPL');assert.equal(h.get('#g-growth').value,'13');
+ const h=await startStudio();h.input('#g-growth','13');const prior=h.get('[data-evidence-source="history-growth"]');h.get('[data-evidence="why-growth"]').click();h.change('#current-company','MSFT');assert.equal(h.get('.contextual-evidence-panel').hidden,true);assert.notEqual(h.get('[data-evidence-source="history-growth"]'),prior);h.change('#current-company','AAPL');assert.equal(h.get('#g-growth').value,'13');
 });
 test('screen Guided: all fourteen companies have unique IDs and a persistent limitation plus full baseline disclosure',async()=>{
  const h=await startStudio();for(const c of h.library.companies){h.change('#current-company',c.ticker);const ids=h.app.descendants().map(n=>n.id).filter(Boolean);assert.equal(ids.length,new Set(ids).size,c.ticker);assert.ok(h.get('#model-limits-link'));assert.ok(h.get('#use-research'));assert.ok(h.get('#current-snapshot'));assert.equal(h.get('#editor-group-3').querySelectorAll('[data-assumption]').length,2);}

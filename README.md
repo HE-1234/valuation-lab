@@ -1,6 +1,12 @@
 # Valuation Lab
 
-Private, buildless browser application. Serve `dist/` with any static HTTP host. No server credentials, broker connections, market trades or paid API calls.
+Buildless browser application with an owner-private Sites deployment. Serve `dist/` with a local static HTTP host. No server credentials, broker connections, market trades or paid API calls.
+
+## Source and hosting
+
+The owner-approved source mirror is https://github.com/HE-1234/valuation-lab. Source visibility is separate from the live website's owner-private access. The static files do not implement authentication themselves; another host does not inherit Sites access controls. Font licenses and research-source provenance remain included.
+
+For a loopback-only local preview, run `python3 -m http.server 8080 --bind 127.0.0.1 --directory dist`, then open http://localhost:8080. Use a separate browser profile for demonstrations to keep existing local drafts untouched.
 
 ## Run and verify
 

@@ -15,7 +15,7 @@ export async function startStudio({storage=new Map(),storageBlocked=false,histor
  let focused=null;const mounts=[],downloads=[],entrances=[],timers=new Map();let timerId=0;
  const matches=(el,s)=>s==='*'?el.nodeType===1:s[0]==='#'?el.attrs.id===s.slice(1):s[0]==='.'?(el.attrs.class||'').split(/\s+/).includes(s.slice(1)):s[0]==='['?(()=>{const m=s.match(/^\[([^=\]]+)(?:="([^"]*)")?\]$/);return !!m&&m[1] in el.attrs&&(m[2]===undefined||el.attrs[m[1]]===m[2]);})():el.tag===s;
  class Element{
-  constructor(tag='div',attrs={}){this.tag=tag;this.tagName=tag.toUpperCase();this.nodeType=tag==='#comment'?8:1;this.attrs=attrs;this.events=new Map();this.scrollTop=0;this.scrollLeft=0;this.dataset=Object.fromEntries(Object.entries(attrs).filter(([k])=>k.startsWith('data-')).map(([k,v])=>[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()),v]));this.children=[];this.parent=null;this.value=attrs.value||'';this.checked='checked'in attrs;this.hidden='hidden'in attrs;this.disabled='disabled'in attrs;this._html='';this._text='';this.open=false;}
+  constructor(tag='div',attrs={}){this.tag=tag;this.tagName=tag.toUpperCase();this.nodeType=tag==='#comment'?8:1;this.attrs=attrs;this.events=new Map();this.scrollTop=0;this.scrollLeft=0;this.dataset=Object.fromEntries(Object.entries(attrs).filter(([k])=>k.startsWith('data-')).map(([k,v])=>[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase()),v]));this.children=[];this.parent=null;this.value=attrs.value||'';this.checked='checked'in attrs;this.hidden='hidden'in attrs;this.disabled='disabled'in attrs;this.inert=false;this._html='';this._text='';this.open=false;}
   get ownerDocument(){return document;}
   get id(){return this.attrs.id||'';} set id(v){this.attrs.id=v;}
   get className(){return this.attrs.class||'';} set className(v){this.attrs.class=v;}
@@ -32,11 +32,11 @@ export async function startStudio({storage=new Map(),storageBlocked=false,histor
   removeEventListener(name,fn){this.events.get(name)?.delete(fn);}
   dispatchEvent(event){for(const fn of this.events.get(event.type)||[])fn(event);}
   removeAttribute(k){delete this.attrs[k];}
-  set innerHTML(html){this._html=html;this.children=[];this._text='';const stack=[this];for(const token of html.match(/<[^>]+>|[^<]+/g)||[]){if(token.startsWith('</')){if(stack.length>1)stack.pop();continue;}if(token.startsWith('<')){if(token.startsWith('<!'))continue;const m=token.match(/^<([\w-]+)\b([\s\S]*?)\/?\s*>$/);if(!m)continue;const attrs=Object.fromEntries([...m[2].matchAll(/([\w-]+)(?:="([^"]*)")?/g)].map(x=>[x[1],decode(x[2]??'')]));const el=new Element(m[1].toLowerCase(),attrs);el.parent=stack.at(-1);el.parent.children.push(el);if(!voidTags.has(el.tag)&&!token.endsWith('/>'))stack.push(el);}else stack.at(-1)._text+=decode(token);}
+  set innerHTML(html){this._html=html;for(const child of this.children)child.parent=null;this.children=[];this._text='';const stack=[this];for(const token of html.match(/<[^>]+>|[^<]+/g)||[]){if(token.startsWith('</')){if(stack.length>1)stack.pop();continue;}if(token.startsWith('<')){if(token.startsWith('<!'))continue;const m=token.match(/^<([\w-]+)\b([\s\S]*?)\/?\s*>$/);if(!m)continue;const attrs=Object.fromEntries([...m[2].matchAll(/([\w-]+)(?:="([^"]*)")?/g)].map(x=>[x[1],decode(x[2]??'')]));const el=new Element(m[1].toLowerCase(),attrs);el.parent=stack.at(-1);el.parent.children.push(el);if(!voidTags.has(el.tag)&&!token.endsWith('/>'))stack.push(el);}else stack.at(-1)._text+=decode(token);}
    for(const select of this.querySelectorAll('select'))select.value=(select.children.find(x=>'selected'in x.attrs)||select.children[0])?.value||'';
   }
   get innerHTML(){return this._html;}
-  set textContent(s){this._text=String(s);this.children=[];this._html='';}
+  set textContent(s){this._text=String(s);for(const child of this.children)child.parent=null;this.children=[];this._html='';}
   get textContent(){return this._text+this.children.map(c=>c.textContent).join('');}
   descendants(){return this.children.flatMap(c=>[c,...c.descendants()]);}
   querySelector(s){return this.descendants().find(el=>matches(el,s))||null;}
@@ -44,7 +44,7 @@ export async function startStudio({storage=new Map(),storageBlocked=false,histor
   setAttribute(k,v){this.attrs[k]=String(v);if(k.startsWith('data-'))this.dataset[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=String(v);}
   getAttribute(k){return this.attrs[k]??null;}
   click(){if(this.disabled)return;const e={type:'click',target:this,preventDefault(){}};this.dispatchEvent(e);return this.onclick?.(e);}
-  focus(options){focused=this;this.focusOptions=options;}
+  focus(options){const changed=focused!==this;focused=this;this.focusOptions=options;if(changed)this.dispatchEvent({type:'focus',target:this});}
   scrollIntoView(){}
  }
  const app=new Element('div',{id:'guided-app'});

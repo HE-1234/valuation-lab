@@ -107,7 +107,6 @@ export function mountHistoricalWorkspace(page) {
   if (node.tagName === 'P' && node.className.split(/\s+/).includes('micro')) move(node, caseEditor);
  }
  const evidenceHost = make('div', 'workspace-evidence-host', main); evidenceHost.hidden = true;
- const evidenceInert = new Map();
  const explanation = make('p', 'historical-evidence-context', parking);
  const sourceContext = find('.context-line');
  const about = make('details', 'historical-source-about', parking);
@@ -118,15 +117,9 @@ export function mountHistoricalWorkspace(page) {
   title: 'Historical evidence', onOpen() {
    cancelMotion(shell);
    if (mobile !== 'evidence') previousMobile = mobile;
-   for (const node of [editor, ...(view === 'tables' ? [tablesView] : [])]) {
-    if (!evidenceInert.has(node)) evidenceInert.set(node, Boolean(node.inert));
-    node.inert = true;
-   }
    evidenceHost.hidden = false; shell.setAttribute('data-evidence-open', 'true');
    updateMobile('evidence');
   }, onClose() {
-   for (const [node, inert] of evidenceInert) node.inert = inert;
-   evidenceInert.clear();
    evidenceHost.hidden = true; shell.setAttribute('data-evidence-open', 'false');
    updateMobile(previousMobile);
   }});
