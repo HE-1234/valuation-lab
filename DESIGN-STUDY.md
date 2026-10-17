@@ -2,6 +2,35 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 12:42 UTC · Keep nested history controls understandable
+
+### Question and evidence
+
+When Sources & comparability is open, can the annual-observation tables inside it still be found and their state understood?
+
+Two broad CSS selectors leaked into nested disclosures: the parent's decorative-span rule hid the inner table's label and available-count text, and the parent's open-state rule displayed a minus on the inner control even while that table was closed. Source inspection found 196 nested annual disclosures across the 14 current company views. Before-state document previews reproduced the blank, minus-only controls. This is a verified selector and static-presentation defect, not measured user research or a native-browser accessibility result.
+
+### New lessons read
+
+- [Google web.dev, Details and summary](https://web.dev/learn/html/details). Read the complete written lesson: introduction, native details/summary behavior, Toggle visibility with the open attribute, Toggle the summary marker, How errors are handled, the HTMLDetailsElement interface and the displayed knowledge check. Page last updated February 21, 2023. Applied the relationship between each summary and its own parent, preserving a visible label and a state indicator. The example selectors are illustrative; this app's nested controls require direct-child scoping.
+- [W3C WAI, Disclosure (Show/Hide) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/). Read About This Pattern, the example list, Keyboard Interaction and WAI-ARIA Roles, States, and Properties. Applied agreement between a control's visual state and its own content visibility. Native details/summary elements remain in place; no redundant role or scripted expanded-state attribute was added.
+
+Read on October 17, 2026. Embedded examples and linked demonstrations were not operated. No interactive quiz, video, course completion, user-testing result or accessibility certification is claimed.
+
+### One bounded change
+
+Restrict the parent disclosure's open-state indicator and special summary styling to its own direct summary. Restrict the hidden decorative span to that summary's own child. The nested All annual observations label, available count and plus/minus now remain independent of the parent's state.
+
+Let annual-observation summary content wrap with a font-relative label basis. An enlarged-text preview exposed crowding between the restored count and marker; allowing a second row keeps them separate when space is tight. Ordinary-size summaries keep their compact arrangement. The same native control opens each table, and no table is automatically opened or closed by another.
+
+No JavaScript, financial model, source data, history values, research cases or simulation code changes. Source references remain beside assumptions, editing stays immediate, and existing saved values, six themes and AAOI/Alphabet treatments retain their established behavior.
+
+### Checks and limitations
+
+All 412 automated checks passed, including five new regressions. They cover label/count visibility and independent marker states across all 196 nested controls; parent closing and reopening with a child still open; repeated open/closed combinations; unchanged input nodes, saved edits and invalid-result recovery; existing six-theme contrast; and the wrapping/44px style contract. Selector and minimal-DOM checks do not establish actual keyboard or screen-reader behavior.
+
+Twenty-two before and twenty-two after static previews cover 320, 390 and 1440px, parent/child open and closed states, mixed sibling states, shorter NBIS history, AAOI/Alphabet equity contexts, and all six themes at normal and doubled summary text sizes. The enlarged-text crowding was repaired and the affected previews rechecked. All 29 visible nested summary boxes kept their label, count and correct marker within the control without text overlap and retained at least 44px height. Closed 390px and 1440px views were pixel-identical before and after. These use a document renderer with substituted form-control frames and manually selected disclosure states; they are layout approximations, not browser zoom, native interaction, touch or accessibility-tree verification. The known browser socket restriction and private-site owner sign-in gate were not bypassed.
+
 ## 2026-10-17, 11:42 UTC · Keep model issues near the assumptions
 
 ### Question and evidence

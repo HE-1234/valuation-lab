@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-17, 12:42 UTC · Clear nested history disclosures
+
+- Restored annual-table labels and available counts inside Sources & comparability by scoping the parent's decorative styling to its own summary.
+- Kept each table's plus/minus tied to its own open state, including after closing and reopening its parent.
+- Allowed annual-summary content to wrap when enlarged text needs more room, keeping the count and marker separate.
+- Preserved native disclosures, immediate editing, saved inputs, adjacent source history, every calculation, simulation and all six themes.
+- Recorded two newly read disclosure lessons and their exact reading scope.
+
+Validation: all 412 automated checks passed, including five new regressions across 196 nested controls. Twenty-two before/after static-preview pairs cover phone and desktop widths, nested open/closed combinations, AAOI/Alphabet and shorter-history contexts, and normal/doubled summary text in all six themes. Initial enlarged-text crowding was repaired and rechecked; all 29 visible nested summary boxes retained readable, nonoverlapping content and at least 44px height. Closed 390/1440px views were pixel-identical. These are document-renderer approximations; native browser, touch and accessibility-tree behavior remain unverified.
+
 ## 2026-10-17, 11:42 UTC · Model issues beside the editor
 
 - Added a compact copy of the existing model-issue explanation immediately above the assumption editor, so it remains nearby on phones.
