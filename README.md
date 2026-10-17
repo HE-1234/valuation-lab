@@ -27,3 +27,17 @@ Five frozen researched cases are available: Microsoft FY2019 and NVIDIA FY2021â€
 ## Version 4 interface
 
 Three selectable, locally persistent appearances: Paper & Forest, Slate & Blue, Midnight. The workbench prioritizes company/date selection, valuation and grouped assumptions. Full source/accounting detail remains in labeled disclosures. Charts have theme colors, units, a second-series pattern and a table alternative; mobile keeps all navigation/actions available. `DESIGN.md` records sources and verification limits. `npm test` now includes theme/contrast checks; real-browser interaction remains unverified in this restricted executor.
+
+## Version 5 current guided workspace
+
+The default is now a separate eight-stage current-company notebook. The historical workbench/research remains isolated: no current snapshot enters `eligibleSnapshots`, and original engine, research files and freeze hashes remain unchanged.
+
+- `dist/current-model.js`: strict FY/TTM adapter, current-only eligibility, evidence and model gates, quote compatibility, safe draft restoration, immutable exports, optional WACC worksheet.
+- `dist/guided.js`: progressive evidence/story/growth/profit/reinvestment/risk/claims/review workflow. Per-company and snapshot local drafts, a session fallback when storage is unavailable, immutable export. Imported raw data require export and are not uploaded.
+- `dist/data/current-universe.json`: 14 requested companies, original filing/issuer evidence and derived TTM components checked as of 2026-10-17. Quarter/YTD evidence cannot be used as a full-year DCF. Unknown values remain null. TSM FX/ADR and NBIS financing/perimeter cases are researchable but withhold generic per-share results.
+- `dist/data/current-market-references.json`: separately dated Treasury/ERP contextual references; neither silently sets WACC. The optional worksheet requires explicit Apply.
+- `dist/data/provider-research.html`: free and paid-provider feasibility, costs and rights limits. No account, key, purchase or backend refresh was configured. This release intentionally implements the authorized dated 14-company fallback rather than a misleading live feed.
+
+Six semantic themes now include Sand & Terracotta, Plum & Rose, and Ocean & Teal, available in a compact Appearance disclosure. Themes persist independently from financial inputs.
+
+Additional automated tests use pure-function and minimal DOM fixtures, including eight-stage navigation, source-specific drafts, disabled storage, WACC application, null/quarter/model gates, evidence coverage and TTM arithmetic. They do not establish browser rendering or accessibility behavior. Approximate static WeasyPrint previews are not browser screenshots. Prior browser launch/access failures remain a verification limit; no access restriction was bypassed.

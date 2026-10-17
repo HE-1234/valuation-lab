@@ -20,3 +20,14 @@ Three persistent, keyboard-operable themes share semantic surface, text, action,
 No finance engine or research dataset was changed. Browser E2E remains unverified: local Chromium launch failed with `socket() failed: Operation not permitted`; cloud localhost preview did not load, then observation was denied by the browser URL policy. No security setting was changed, access gate bypassed, or sharing widened.
 
 Approximate desktop previews were generated from actual HTML/CSS and actual Microsoft model outputs with WeasyPrint 70 and inspected. These are document-renderer previews, not browser screenshots. Native form controls were represented by static values, closed details explicitly collapsed, and SVG CSS variables resolved to theme colors for that renderer. They validate visual direction, not browser layout or interactions.
+
+## Version 5 guided desk
+
+The default task now begins with company/security and dated evidence, then asks one coherent economic question per stage. An editorial serif headline, more whitespace, an eight-step vertical index, larger grouped input cards, and a check-answers stage separate evidence from judgment. Themes live in a compact disclosure so personalization does not compete with research. Essential missing-evidence/model blockers remain outside disclosures. Detailed field ledger, original documents, annual forecast, provider limitations and optional WACC construction remain one action away.
+
+Additional primary design guidance consulted:
+- [GOV.UK question pages](https://design-system.service.gov.uk/patterns/question-pages/): focused questions, clear reasons, retained answers, back/continue navigation.
+- [GOV.UK check answers](https://design-system.service.gov.uk/patterns/check-answers/): inspect assumptions and return to edit before freezing.
+- [Nielsen Norman Group progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/): defer advanced detail without removing important functionality or hiding safety warnings.
+
+Six palettes have the same semantic roles and contrast tests. New current-model and minimal DOM-runtime tests verify source/assumption separation, eight-step persistence, review gates, explicit WACC application, foreign-security blocking and immutable exports. The finance engine and original five research freeze hashes are unchanged. Updated actual-code-generated HTML/CSS was inspected in approximate WeasyPrint previews for desktop and narrow layouts. This is not authenticated browser E2E.

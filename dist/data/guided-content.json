@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "title": "Build the story. Test the numbers.",
+  "subtitle": "A guided valuation inspired by Aswath Damodaran\u2019s published approach. Independent educational tool; no affiliation or endorsement.",
+  "steps": [
+    {
+      "id": "setup",
+      "title": "Company, date & evidence",
+      "question": "What are we valuing?",
+      "why": "Start with the business, its reporting date, currency and the share you own. A filing describes a past period; a valuation belongs to your chosen date.",
+      "topics": [
+        "Company and security",
+        "Valuation cutoff",
+        "Filing, publication and price dates",
+        "Currency and share basis"
+      ],
+      "challenge": "Which facts are current enough for this decision?",
+      "checks": [
+        "model-fit",
+        "date-eligibility",
+        "currency-share-basis"
+      ]
+    },
+    {
+      "id": "story",
+      "title": "Business & starting point",
+      "question": "How does this business make money, and what earnings are repeatable?",
+      "why": "Numbers need an economic story. Adjustments should reflect the business, not make it appear more profitable.",
+      "topics": [
+        "Today / what changes / what could break",
+        "Segments and lifecycle",
+        "Reported-to-normalized adjustments"
+      ],
+      "challenge": "Does this one-off cost keep returning?",
+      "checks": [
+        "segment-reconciliation",
+        "normalization-ledger"
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "Revenue & growth",
+      "question": "How big can the business realistically become?",
+      "why": "Growth comes from customers, capacity, prices or products. Your final revenue should fit a plausible market.",
+      "topics": [
+        "Near-term growth",
+        "Fade and forecast length",
+        "Market, capacity or customer scale"
+      ],
+      "challenge": "What market share or capacity does your forecast imply?",
+      "checks": [
+        "attainable-scale",
+        "growth-capacity-link"
+      ]
+    },
+    {
+      "id": "profit",
+      "title": "Margins & taxes",
+      "question": "What can the business keep from each dollar of sales?",
+      "why": "Competition and costs determine how much growth becomes operating profit. Cash-tax relief needs evidence and timing.",
+      "topics": [
+        "Target margin and transition",
+        "Cash-tax rate or path"
+      ],
+      "challenge": "What lets margins improve, and what limits them?",
+      "checks": [
+        "margin-definition",
+        "tax-loss-treatment"
+      ]
+    },
+    {
+      "id": "investment",
+      "title": "Reinvestment & funding",
+      "question": "What must the company reinvest to deliver that growth?",
+      "why": "Factories, data centers, R&D and working capital use cash. Faster growth is not free.",
+      "topics": [
+        "Incremental sales/capital",
+        "Replacement and maintenance review",
+        "Capital lead time and funding needs"
+      ],
+      "challenge": "For each extra dollar of sales, how much new capital is needed?",
+      "checks": [
+        "growth-funding",
+        "replacement-capex",
+        "no-automatic-capital-release"
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "Risk & mature economics",
+      "question": "What return is required, and what survives after fast growth ends?",
+      "why": "Risk must match the cash-flow currency. Stable growth still needs investment and a credible mature business.",
+      "topics": [
+        "WACC or dated annual path",
+        "Stable growth and marginal ROIC",
+        "Mature margin, tax and risk"
+      ],
+      "challenge": "Why would excess returns persist, and how will competition change them?",
+      "checks": [
+        "currency-risk-consistency",
+        "terminal-math",
+        "terminal-transition"
+      ]
+    },
+    {
+      "id": "claims",
+      "title": "Equity & share claim",
+      "question": "How much of the operating value belongs to this share?",
+      "why": "Cash, debt and other claims must be counted once. The share count must match the security you are valuing.",
+      "topics": [
+        "Cash and nonoperating assets",
+        "Debt, leases and other claims",
+        "Share count, awards, splits and ADR ratio"
+      ],
+      "challenge": "Does every asset and obligation appear exactly once?",
+      "checks": [
+        "claims-review",
+        "share-basis",
+        "adr-proof"
+      ]
+    },
+    {
+      "id": "challenge",
+      "title": "Challenge & review",
+      "question": "What would have to be true for your estimate to be wrong?",
+      "why": "Coherent scenarios reveal uncertainty. Saving the original lets you learn whether the story, evidence or expectations changed.",
+      "topics": [
+        "Downside, base and upside stories",
+        "Sensitivity and implied expectations",
+        "Open questions and next evidence"
+      ],
+      "challenge": "What new evidence would make you revise your story?",
+      "checks": [
+        "scenario-consistency",
+        "reverse-dcf-conditions",
+        "freeze-no-lookahead"
+      ]
+    }
+  ],
+  "evidenceKinds": [
+    "reported",
+    "derived",
+    "judgment",
+    "proxy"
+  ],
+  "stepStatuses": [
+    "not-started",
+    "draft",
+    "reviewed",
+    "needs-attention",
+    "not-applicable"
+  ],
+  "supportStatuses": [
+    "supported",
+    "partial",
+    "research-only",
+    "unsupported"
+  ],
+  "labels": {
+    "researchOnly": "Recorded for review; not yet included in the calculation.",
+    "draftValue": "Draft estimate under your assumptions",
+    "historical": "Historical case; not current data",
+    "missing": "Missing evidence",
+    "manual": "Manual assumption with supporting evidence",
+    "source": "Source and availability date",
+    "simplifiedInvestment": "Simplified reinvestment: growth-linked sales/capital does not separately model asset replacement or capital lead times."
+  },
+  "readinessPolicy": {
+    "principle": "A nuance is not automatically a hard block. Distinguish immaterial/not-applicable, manually supported simplification, and unsupported material mechanics. Allow research and drafts regardless; withhold a complete-model claim where material economics are missing.",
+    "blocking": [
+      "Unavailable or future-dated source used as eligible fact",
+      "Invalid terminal math",
+      "Unresolved currency/security/ADR claim conversion for per-share value",
+      "Unsupported required financial-institution model",
+      "Material unmodeled mechanics without explicit limitation/manual evidence"
+    ],
+    "review": [
+      "Cyclical starting-point normalization",
+      "Replacement capex and capital lead-time materiality",
+      "NOL/cash-tax timing evidence",
+      "SBC/awards economic treatment",
+      "Terminal transition jump",
+      "Distress and funding needs"
+    ]
+  },
+  "companyPrompts": {
+    "NBIS": "Review business perimeter, capacity/power investment, utilization ramp, replacement cycles, losses and tax use, financing and dilution. Record research; do not imply the simple engine models all of these.",
+    "MU": "Normalize memory price/volume/mix and full-cycle margins; support replacement investment and obsolescence assumptions.",
+    "TSM": "Verify reporting/valuation currency, dated FX and depositary-share ratio; reconcile fabrication capacity and investment.",
+    "NVDA": "Fabless still requires R&D and working capital; review supply commitments, SBC/awards, feasible market scale and marginal return fade.",
+    "AAPL": "Verify product and service economics, installed base, replacement cycle, channel inventory, manufacturing exposure, and cash/claims.",
+    "MSFT": "Verify subscription and cloud segment drivers, AI/data-center reinvestment and asset lives, central costs and stock compensation.",
+    "AMZN": "Separate retail and cloud economics; reconcile leases, fulfillment investment, working capital and segment overhead.",
+    "GOOG": "Examine search/advertising economics, cloud and other bets, AI effects on costs/capex, and common-class economic rights.",
+    "META": "Examine advertising monetization and engagement, infrastructure reinvestment, long-horizon losses and stock compensation.",
+    "TSLA": "Separate automotive price/volume/capacity and energy. Optional businesses need explicit probability, costs and no double counting.",
+    "COHR": "Review optical/customer mix, manufacturing capacity/yields and the derived operating-income subtotal. Investigate gains, restructuring and impairments without assuming they are nonrecurring.",
+    "LITE": "Review optical product/customer mix, concentration, manufacturing capacity and capex lead time; reconcile acquisition and restructuring effects.",
+    "AAOI": "Review optical product/customer mix, customer concentration, manufacturing yields, capacity and funding needs.",
+    "AVGO": "Separate semiconductor and software economics; review acquisition amortization, debt/claims, R&D, concentration and shared costs."
+  }
+}
