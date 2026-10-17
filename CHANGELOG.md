@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-17, 17:42 UTC · Retain the initiating growth-path selector
+
+- Restored focus to AAOI's Operating path selector after changing it, across all eight assumption categories. The Growth category's separate pattern selector retains its existing focus behavior.
+- Used one focus restoration with automatic scrolling prevented. No new control, step, layout, label or theme change.
+- Preserved every financial calculation, source, researched case, frozen history, simulation, saved input and Undo behavior.
+- Recorded new W3C input/focus guidance, the precise source finding and verification limits in the design notebook.
+
+Validation: all 490 tests pass, including three new regressions covering 24 AAOI path/category combinations, 85 pattern changes across 14 companies, annual edits, invalid recovery, maturity Undo and persistence. Before/after DOM, result and saved-state comparisons are identical across 24 AAOI states, excluding save timestamps. All 24 static-input files and both stylesheets are unchanged; paired 320/390/1440px previews are pixel-identical across four rendered pages. These are minimal-DOM and document-renderer checks; native browser, select-popup, touch and screen-reader behavior remain unverified.
+
 
 ## 2026-10-17, 17:18 UTC · Explicit early growth and flexible maturity
 

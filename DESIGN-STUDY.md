@@ -2,6 +2,36 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17, 17:42 UTC · Keep focus on the path control that changed
+
+### Question and evidence
+
+When a growth-path selector rebuilds the workspace, does focus stay with the same logical control?
+
+The shared handler always restored focus to Early growth pattern inside the Growth category. AAOI's separate Operating path selector is available above all eight categories. Using that selector in Growth moved focus to the other control; in the seven other categories the target was absent, so the initiating node was replaced without focus restoration. The prior Operating path handler also lacked restoration; the shared handler introduced the explicit different target in Growth. This is a source and minimal-DOM finding, not an observed native-browser or screen-reader failure.
+
+### New lessons read
+
+- [W3C WAI, Understanding On Input](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html). Read the complete written guidance: In Brief, criterion, Intent, Benefits, Examples, Techniques and key definitions. Page updated June 28, 2026. Applied the distinction between a predictable local content update and an unexpected change of focus or context. Live valuation updates do not by themselves call for an Apply button.
+- [W3C WAI, Understanding Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html). Read the complete written guidance, examples, techniques and definitions. Page updated March 9, 2026. Applied preserving a logical place in the interaction rather than sending the user to a different control. More than one understandable content order can be valid; this reading does not require rearranging the growth fields.
+- [W3C WAI, SCR19: Using an onchange event on a select element without causing a change of context](https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR19). Read Description, the displayed code example, Procedure and Expected Results. Page updated January 12, 2026. Applied retaining the trigger's logical identity while updating subsequent controls. The example's distinction between browsing and committing an option remains an important native-browser check.
+
+Read on October 17, 2026. Linked working examples and external resources were not operated. No video, course completion, native assistive-technology test or accessibility-conformance claim is made.
+
+### One bounded change
+
+Pass the initiating selector's ID to the existing path-change handler. After its existing render, restore focus once to that selector's replacement node, with the existing prevention of automatic scrolling. The Growth selector keeps its original target; AAOI's Operating path selector now keeps its own target in every category.
+
+No layout, label, unit, control order, theme, annual rate, default, stored value or Undo behavior changes. Live updates remain immediate. All financial arithmetic, simulation, source data, company research, historical freezes, adjacent history and private access remain unchanged. The review found no evidence justifying a broader visual change while the company forecast research remains the priority.
+
+### Checks and limitations
+
+All 490 automated tests pass; the baseline passed 487. Three new regressions cover all 24 combinations of AAOI's three path options and eight categories, 85 Growth-selector changes across all 14 companies, and annual editing, invalid recovery, maturity Undo and saved restoration. AAOI checks require exactly one focus call to the attached replacement control with automatic scrolling prevented. The new tests fail against the prior handler and pass with the repair.
+
+All 24 AAOI before/after states retain identical serialized DOM, result markup and saved-draft content after excluding the save timestamp. Both stylesheets are unchanged. Twenty-four generated static-input files, including flexible paths in all six themes, are identical before and after. Three paired AAOI full-page static previews at 320, 390 and 1440px produce four paginated images; every corresponding image is pixel-identical. The phone and desktop views were visually inspected.
+
+These document-renderer approximations substitute native controls and do not establish native select-popup behavior, keyboard selection/cancellation, touch, screen-reader output or browser focus fallback. The minimal-DOM fixture verifies handler targets rather than native focus behavior. The known browser restriction and private owner-sign-in gate were not retried or bypassed.
+
 
 
 ## 2026-10-17, 17:18 UTC · Separate early growth from maturity
