@@ -60,3 +60,29 @@
 
 .simulation-lab [id$="mc-error"]:empty{display:none}.simulation-lab [id$="mc-error"]{color:var(--error)}
 .simulation-lab .mc-reset-actions{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px}.simulation-lab .mc-reset-actions button{min-height:44px;font-size:12px;text-align:left}
+
+/* Recalculation keeps the last exact geometry in place and unmistakably stale. */
+.simulation-lab .mc-output-stage{position:relative;isolation:isolate;min-width:0}
+.simulation-lab .mc-output{min-height:320px}
+.simulation-lab .mc-output[data-result-state="pending"]{pointer-events:none;user-select:none}
+.simulation-lab .mc-output[data-result-state="pending"] .mc-chart-wrap,
+.simulation-lab .mc-output[data-result-state="pending"] .mc-output-choice{opacity:.42}
+.simulation-lab .mc-run-progress{position:absolute;z-index:2;inset:76px 14px auto;margin:0;padding:14px 16px;min-height:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-size:14px;line-height:1.55;box-shadow:0 4px 18px #00000012}
+.value-column .simulation-lab .mc-run-progress{background:var(--stage);color:var(--stage-text);border-color:#ffffff60}
+.simulation-lab .mc-empty-state{min-height:320px;padding:22px 0;font-size:14px;line-height:1.65}
+.simulation-lab .mc-chart-placeholder{aspect-ratio:960/420;min-height:180px;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to bottom,transparent,transparent calc(25% - 1px),var(--line) 25%);opacity:.35}
+.simulation-lab .mc-preparing>p{font-size:14px;color:var(--muted)}
+.simulation-lab .mc-setup-tabs button{transition:background-color 180ms,color 180ms,border-color 180ms}
+.simulation-lab .mc-count,.simulation-lab .mc-count b,.simulation-lab .mc-setup-heading>span,.simulation-lab .mc-setup label,.simulation-lab .mc-setup legend,.simulation-lab .mc-shape-preview p,.simulation-lab .mc-shape-note,.simulation-lab .mc-assumption-note,.simulation-lab .mc-setup .micro,.simulation-lab .mc-playback button,.simulation-lab .mc-extra>summary,.simulation-lab .mc-reset-actions button,.simulation-lab .mc-output-choice label,.simulation-lab .mc-output-choice .micro{font-size:13px;line-height:1.55}
+.simulation-lab .mc-setup-tabs button,.simulation-lab [id$="mc-reset-distributions"],.simulation-lab .mc-shape-bounds,.simulation-lab .mc-help,.simulation-lab .mc-scrubber-label{font-size:13px}
+.simulation-lab .mc-chart-top>span,.value-column .simulation-lab .mc-chart-top>span{font-size:13px;opacity:.85}
+.simulation-lab input,.simulation-lab .mc-inspector,.simulation-lab .mc-stat,.simulation-lab .mc-count{font-variant-numeric:tabular-nums}
+#research-simulation-root .mc-intro,#research-simulation-root .mc-bridge-summary{font-size:14px;line-height:1.65;max-width:72ch}
+#research-simulation-root .mc-inspector>span:last-child small{font-size:13px}
+@media(max-width:650px){.simulation-lab .mc-run-progress{inset:68px 8px auto}.simulation-lab .mc-output,.simulation-lab .mc-empty-state{min-height:300px}}
+@media(prefers-reduced-motion:reduce){.simulation-lab .mc-setup-tabs button{transition:none}}
+/* SVG text scales inversely with its viewport so the labels remain 13px on screen. */
+.simulation-lab .mc-chart .mc-axis-label,.value-column .simulation-lab .mc-chart .mc-axis-label,#research-simulation-root .mc-chart .mc-axis-label,
+.simulation-lab .mc-chart .mc-svg-note,.value-column .simulation-lab .mc-chart .mc-svg-note,#research-simulation-root .mc-chart .mc-svg-note{font-size:calc(13px * var(--mc-label-scale,2.8));letter-spacing:0;font-variant-numeric:tabular-nums}
+.simulation-lab .mc-chart-caption,.simulation-lab .mc-axis-title{font-size:13px;line-height:1.5;color:var(--stage-text);opacity:.85;margin:8px 0 0;max-width:none!important}
+.simulation-lab .mc-axis-title{text-align:center;margin:-10px 0 12px}

@@ -11,11 +11,11 @@ export function annualResearchSimulationAdapter(draft){
  const unit=()=>basis==='perShare'?`${draft.currency} / ${shareName} share`:`${draft.currency} million EV`;
  const descriptions=RESEARCH_SIMULATION_DRIVER_DESCRIPTIONS;
  const adapter={
-  id:'annual-research',idPrefix:'research-',savedConfig:draft.researchSimulationConfig,
+  id:'annual-research',idPrefix:'research-',savedConfig:draft.researchSimulationConfig,captureDraft:()=>structuredClone(draft),
   labels:RESEARCH_SIMULATION_DRIVER_LABELS,
   tabNames:{growthPremium:'Growth premium',marginShift:'Margin shift',investmentMultiplier:'Investment',waccShift:'WACC shift'},
   defaults:()=>simulationResearchDefaults(draft),validate:validateResearchSimulationConfig,
-  simulate:config=>simulateResearch(draft,config),simulateAsync:(config,options)=>simulateResearchAsync(draft,config,options),
+  simulate:(config,runDraft=draft)=>simulateResearch(runDraft,config),simulateAsync:(config,options,runDraft=draft)=>simulateResearchAsync(runDraft,config,options),
   introduction:'Stress this reviewed annual path. Defaults start Fixed; choose a distribution to explore explicit uncertainty assumptions.',
   defaultNote:'All stresses start Fixed: growth 0 pp, margin 0 pp, investment 1× and WACC 0 pp. No uncertainty range is assumed.',
   uncertaintyNote:'These are analyst stress assumptions, not calibrated probabilities. Switching from Fixed offers editable example bounds. Rate shifts use percentage points: 1 means +1 pp.',

@@ -1,5 +1,18 @@
 # Change log
 
+## 2026-10-17 · Editorial decision workspace
+
+- Simplified primary navigation to Studio / Research / Learn, with Guided / Annual model / Historical modes and the original deep links, saved cases and workbench capabilities retained.
+- Put company, mode and financial period together; reduced the research announcement to a dated link and kept source reasoning available through disclosures.
+- Unified body and supporting type, tabular financial numbers, shorter reading measures and controls across six themes. Slate & Blue now has a warmer neutral surround.
+- Made the annual schedule full width, with sticky year context, explicit currency units, compact source-based period labels and full-precision editing behind readable grouped displays. Display-only focus/blur never saves or rounds model data.
+- Added actual change-from-opening-case feedback to Guided and Annual model. Signed values, dated comparisons, claims gates and native TWD ordinary-share labels remain explicit.
+- Retained the completed distribution during recalculation as visibly previous and non-exportable, reserved chart space for invalid states, and made Replay simulation optional. Quiet 180ms navigation and 280ms chart transitions honor reduced motion.
+- Focused Learn on one original question at a time, visible progress and a small teaching-only interaction after answering.
+- Preserved every financial calculation, original research default, source annual row, frozen history, saved draft, case Load/Undo and access setting.
+
+Validation: all 727 automated tests pass, also confirmed by an independent preservation audit. Nineteen static before/after pairs cover 320/390/1440px, six themes, Guided/Learn, annual schedules, TWD and signed-negative values; phone/desktop previews were inspected. Native browser, touch, screen-reader and animation-performance behavior remain unverified. No denied browser route was retried or bypassed. No commit, publication or sharing change is included in this local implementation.
+
 ## 2026-10-17, 19:49 UTC · Keep focus while switching renewed companies
 
 - Restored focus once to the renewed annual workspace's Company selector after its explicit selection event rebuilds the page, with automatic scrolling prevented.

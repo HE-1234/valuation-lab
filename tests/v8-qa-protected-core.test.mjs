@@ -14,9 +14,16 @@ test('v8 QA: original 35 protected data files remain byte-identical to v7',()=>{
  assert.equal(Object.keys(manifest.data).length,35);
  for(const [file,sha] of Object.entries(manifest.data))assert.equal(createHash('sha256').update(read(file)).digest('hex'),sha,file);
 });
-test('v8 QA: v7 historical workbench, deterministic engine and motion modules are unchanged',()=>{
+test('v8 QA: deterministic engine remains byte-identical; UI and motion have explicit bounded contracts',()=>{
  assert.equal(Object.keys(manifest.core).length,3);
- for(const [file,sha] of Object.entries(manifest.core))assert.equal(createHash('sha256').update(read(file)).digest('hex'),sha,file);
+ for(const [file,sha] of Object.entries(manifest.core).filter(([file])=>!['dist/app.js','dist/motion.js'].includes(file)))assert.equal(createHash('sha256').update(read(file)).digest('hex'),sha,file);
+});
+// UI feedback explicitly authorizes navigation, Learn, and human-readable dates.
+// Strip only those known presentation lines/wrappers, then pin every remaining
+// app byte to pre-feedback v24. This is not a broad refresh of protected hashes.
+test('feedback preservation: historical app logic outside authorized presentation stays exact',()=>{
+ const normalize=source=>source.split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
+ assert.equal(createHash('sha256').update(normalize(read('dist/app.js').toString())).digest('hex'),'3dd3826561e371f46b58af041b8088e69b20add0aae3bebb72cb03737360f6cc');
 });
 test('v8 QA: prior annual economics remain fixed except the exact source-reviewed AAOI debt corrections',()=>{
  const history=json('dist/data/company-history.json'),corrections=JSON.parse(fs.readFileSync(new URL('./fixtures/v8-aaoi-source-corrections.json',import.meta.url)));let count=0,corrected=0;

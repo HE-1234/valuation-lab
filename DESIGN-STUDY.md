@@ -2,6 +2,60 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-17 · A decision workspace shaped by the desktop review
+
+### Evidence and scope
+
+The supplied desktop review described a strong central interaction, changing an assumption and understanding its effect, surrounded by competing navigation, small text and an overly narrow annual editor. It reported a distribution disappearing during recalculation. That report is user-provided interaction evidence; our confirmation here comes from shipped code, synthetic lifecycle tests and static rendering, not a new browser observation. The review’s $49.97 example is one observed test result, never an expected value or a constant in the implementation.
+
+This pass addresses the whole supplied direction while retaining the distinct models. No accounting arithmetic, source fact, default research judgment, saved-case identity, annual source row, historical freeze, claim gate, access policy or sharing setting changes.
+
+### Written sources read for this pass
+
+- [W3C WAI, Menu Structure](https://www.w3.org/WAI/tutorials/menus/structure/). Read the overview, menu representation, identification and labeling, current-item state, and responsive structure. Applied separate, named primary and model-mode navigation, stable route identities, visible current state and the same destinations on narrow screens. The page is dated May 13, 2024.
+- [W3C WAI, Tables Tutorial](https://www.w3.org/WAI/tutorials/tables/). Read the complete overview covering header relationships, row/column scope, captions and alternative presentation. Retained native two-direction headers, a caption with currency units and year-specific input names. The sticky year column is an added visual aid, not a substitute for those relationships. The page is dated February 16, 2023.
+- [Google web.dev, Typography](https://web.dev/learn/design/typography). Read the written sections on text size, scaling, clamp, line length, line height, hierarchy and font loading, plus the displayed knowledge checks. Applied a shared 15–16px reading/body scale, 13–14px supporting scale, relative units and a 70ch measure. System fonts avoid an extra remote-font request. The page is dated December 9, 2021.
+
+Read on October 17, 2026. No linked interactive example, embedded video, course assessment, native browser or assistive technology was operated. This is a bounded implementation study, not an accessibility-conformance claim.
+
+### Product structure and first screen
+
+Studio, Research and Learn are the three primary destinations. Guided, Annual model and Historical are visible Studio modes. The existing route IDs and all three separate saved-data namespaces remain intact. Annual model remains the fresh-session default, matching the earlier research-default instruction. Research begins with the dated company dossiers and evidence links; the historical experiment protocol, freezes, evaluation controls and source/import tools remain reachable.
+
+Company, model mode and financial period share one toolbar. Research actions use a disclosure; the earlier large research announcement becomes a dated update link. Navigation retains the selected mode when returning to a section, supports the original deep links and Back/Forward, and does not force a page-top scroll. A regression specifically covers Back from Guided to the initial empty URL hash.
+
+The existing six theme choices remain. Slate & Blue receives a warm neutral surround with the existing navy and blue roles. One shared typography layer lifts the legacy small supporting text across workspaces. Financial numbers use tabular figures. Result and active-editing surfaces carry most of the fill; source explanations use dividers and spacing. Research and Learn prose uses a 70ch maximum measure.
+
+### Annual editing and exact display
+
+A compact operating/equity summary precedes the full-width annual schedule, followed by simulation and supporting analysis. The 160 source annual rows remain intact across 14 companies. The schedule retains a named horizontal scroll region on phones, with a sticky year column and header. Its units identify USD or TWD millions; rates stay percentages. One adjacent source anchor identifies actual versus management-forecast context.
+
+Annual cells display grouped numbers at a readable precision. Focusing reveals the full stored numeric string; blur only changes presentation. Neither event writes a draft or recalculates. Actual edits parse conventional thousands groups explicitly; malformed grouping, blank required values and invalid numerical domains withhold outputs. Raw typed invalid text survives refocusing. Full precision remains in the draft and JSON export.
+
+Compact period labels use the supplied annual period, without inventing an exact fiscal year end. NVDA’s rolling July and AVGO’s rolling August periods remain different from their fiscal years; MU remains FY-labeled. The complete original labels and fiscal-calendar cautions are available in the same editor. The main headline uses compact money such as trillions, while exact operating value and million-unit sensitivity tables remain available. Signed negative operating EV, conditional equity treatment and TWD ordinary-share units remain explicit. Human-readable UTC timestamps are display-only.
+
+### Assumption → outcome → explanation
+
+Guided and Annual model now compare the current deterministic result against that company’s opening draft in the current session, including an already saved draft. The comparison is calculated from actual model outputs. It follows edits and Undo without becoming a new model input; switching companies does not mix baselines. Reload establishes a new session opening case. Different capital/share bases or valuation dates suppress an inapplicable comparison. Percentage changes are omitted for nonpositive starting values.
+
+The label says that this is a model change, not investment return. Guided names changed core drivers; annual controls retain direct revenue, investment and terminal-method explanations. Full claims limitations and material timing/terminal warnings stay beside results. Detailed claims, original period definitions, capital reconciliations and research reasoning remain disclosures rather than being deleted.
+
+Completed distributions are the default. The optional falling-ball experience is labeled Replay simulation. Recalculation retains a same-sized, visibly previous chart with an Updating status; stale chart inspection and export are disabled. Invalid or failed calculations use an honest same-height placeholder. A 280ms change transition is used when motion is enabled; bar geometry is only interpolated for comparable bounds and value basis. Otherwise exact new marks fade in. Source axes are never frozen in a way that clips new values. Repeated edits, stale completions, cancellation, teardown, visibility changes and reduced motion are covered by lifecycle tests.
+
+Shared page and assumption-category entrances now use an interruptible 180ms opacity-only transition. The former 520ms translation and clipping entrance is removed. Reduced motion keeps the complete final state immediately. SVG simulation labels compensate for viewBox scaling to remain readable; this is tested through the synthetic resize API, not a physical-device observation.
+
+### Learn
+
+The original six questions and their answers/explanations are unchanged. Learn presents one question at a time with visible question/answer progress, Previous/Next review and remembered answers during the session. After answering, each topic offers a small interactive teaching example. These invented teaching numbers are clearly separate from company valuations and never alter a model. Feedback updates preserve control focus and do not force scrolling. The previous worked example remains in a disclosure.
+
+### Verification and limits
+
+The current aggregate passes all 727 automated tests, including new navigation, display/precision, real-output comparison, Learn and simulation lifecycle checks. Every one of the 800 annual input fields was focused and blurred in the actual workspace fixture without changing or saving its value. Model and source golden checks remain intact. The historical app’s operational content is pinned to the pre-feedback source after narrowly excluding the explicitly authorized navigation/Learn lines and display-date wrappers; the engine retains its original byte pin. Shared motion has an explicit new 180ms/no-translation contract rather than silently refreshing a protected hash.
+
+Nineteen before/after static-preview pairs (38 primary images and 18 top crops) cover Annual at 320/390/1440px, the full annual schedule and simulation at phone/desktop widths, Guided and Learn at 390/1440px, TSM native TWD, an engine-computed signed-negative scenario, and result cards in all six themes. The phone/desktop hierarchy, schedule, Guided distribution, focused Learn exercise, TWD units and dark-theme exact-value disclosure were visually inspected. A dark disclosure-label contrast defect was corrected before the final renders. The checked source and model values are produced by each version’s actual runtime fixtures, not hand-entered preview figures. A reproducible renderer script, source fingerprints and an override manifest accompany the previews.
+
+These WeasyPrint document approximations use static native-control substitutes, flattened media rules and renderer-only grid/flex/SVG workarounds. They cannot verify real sticky scrolling, native controls, touch, screen-reader announcements, animation frame rate or layout stability in a browser. The independent preservation audit also passes all 727 tests with no remaining observed implementation blocker. No denied browser-launch route or owner sign-in gate was retried or bypassed.
+
 ## 2026-10-17, 19:49 UTC · Retain the renewed Company selector
 
 ### Question and evidence

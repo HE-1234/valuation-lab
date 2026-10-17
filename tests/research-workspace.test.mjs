@@ -29,7 +29,7 @@ test('renewed workspace: fresh default and all fourteen companies use complete r
   assert.equal(h.root.querySelectorAll('[data-research-input="annual"]').length,c.annual.length*5,c.ticker);
   assert.ok(h.get('.research-value'),c.ticker+' operating value missing');assert.ok(Number.isFinite(calculateResearchOperating(d).enterprise),c.ticker);
   assert.match(h.get('#research-results').textContent,/Forecast-origin operating value/);
-  assert.match(h.get('#research-results').textContent,new RegExp(c.valuationTiming.discountOrigin));
+  assert.equal(h.get('.research-date-line').querySelector('time').getAttribute('datetime'),c.valuationTiming.discountOrigin);
   if(c.anchor.fiscalCalendarCaution)assert.ok(h.get('#research-editor').textContent.includes(c.anchor.fiscalCalendarCaution),c.ticker+' fiscal caution missing');
   assert.ok(h.get('#research-editor').textContent.includes(c.anchor.classification),c.ticker+' anchor classification missing');
  }
@@ -169,9 +169,9 @@ test('renewed workspace: incomplete as-of timing preserves honest origin value a
  for(const ticker of ['AAPL','AAOI','NBIS']){
   h.select(ticker);const original=displayedEV(h),origin=h.getState().draft.discountOrigin;
   h.change('#research-timing-mode','as-of-scenario');assert.equal(h.getState().draft.timing.stubFCFF,null);assert.equal(displayedEV(h),original);assert.equal(h.get('.research-equity-value'),null);
-  assert.match(h.get('#research-results').textContent,/Forecast-origin operating value/);assert.match(h.get('#research-results').textContent,/Origin value remains visible/);assert.match(h.get('#research-results').textContent,/As-of value not computed/);assert.match(h.get('.research-date-line').textContent,new RegExp(origin));
+  assert.match(h.get('#research-results').textContent,/Forecast-origin operating value/);assert.match(h.get('#research-results').textContent,/Origin value remains visible/);assert.match(h.get('#research-results').textContent,/As-of value not computed/);assert.equal(h.get('.research-date-line').querySelector('time').getAttribute('datetime'),origin);
   h.input(h.field('timing','stubFCFF'),'0');assert.match(h.get('#research-results').textContent,/As-of value not computed/);
-  h.input('#research-stub-reason','Explicit zero stub for an analytical sensitivity');assert.match(h.get('#research-results').textContent,/As-of operating scenario/);assert.match(h.get('.research-date-line').textContent,/Scenario date 2026-10-17/);
+  h.input('#research-stub-reason','Explicit zero stub for an analytical sensitivity');assert.match(h.get('#research-results').textContent,/As-of operating scenario/);assert.match(h.get('.research-date-line').textContent,/Scenario date/);assert.equal(h.get('.research-date-line').querySelector('time').textContent,'Oct 17, 2026');assert.equal(h.get('.research-date-line').querySelector('time').getAttribute('datetime'),'2026-10-17');
   assert.equal(researchTimingResult(h.getState().draft).status,'scenario');
   if(ticker!=='AAPL')assert.equal(h.get('.research-equity-value'),null,'forecast-origin funding gaps must remain blocked');
  }
@@ -185,11 +185,11 @@ test('renewed workspace: runtime actions never read or overwrite legacy Studio a
  assert.ok(h.reads.every(name=>name.startsWith(RESEARCH_STORAGE_PREFIX)));assert.ok(h.writes.every(({key:name})=>name.startsWith(RESEARCH_STORAGE_PREFIX)));
 });
 
-test('renewed workspace: index initially shows only Renewed cases with coherent navigation and the legacy Studio retained',()=>{
+test('renewed workspace: index initially shows only Annual model with coherent navigation and the legacy Studio retained',()=>{
  const document=minimalDocument();document.root.innerHTML=read('index.html');
  const active=document.querySelectorAll('[data-tab]').filter(el=>el.classList.contains('active'));
  assert.equal(active.length,1);assert.equal(active[0].dataset.tab,'renewed');assert.equal(active[0].getAttribute('aria-current'),'page');
- assert.equal(document.querySelector('#breadcrumb').textContent,'Workspace / Renewed cases');
+ assert.equal(document.querySelector('#breadcrumb').textContent,'Studio / Annual model');
  const pages=document.querySelectorAll('.page').filter(el=>!el.classList.contains('hidden')&&!el.hidden);assert.equal(pages.length,1);assert.equal(pages[0].id,'renewed');
  assert.ok(document.querySelector('#renewed-research-app'));assert.ok(document.querySelector('#guided-app'));assert.ok(document.querySelector('#current').classList.contains('hidden'));
  assert.equal(document.querySelector('#open-renewed-research').getAttribute('href'),'#renewed');
@@ -231,9 +231,9 @@ test('renewed workspace: simulation failure never hides deterministic value or r
  h.input(h.field('annual','revenue',0),'567890');assert.ok(h.get('.research-big-value'));assert.deepEqual(h.saved().researchSimulationConfig,config);
 });
 
-test('renewed navigation: all six destinations remain visible on narrow screens through a wrapping layout',()=>{
- const css=read('research.css');assert.match(css,/@media\(max-width:650px\)\{body>aside nav\{[^}]*flex-wrap:wrap;[^}]*overflow:visible/);assert.match(css,/body>aside nav button\{[^}]*min-height:44px;[^}]*white-space:normal/);
- const doc=minimalDocument();doc.root.innerHTML=read('index.html');assert.equal(doc.querySelectorAll('[data-tab]').length,6);
+test('renewed navigation: all six routes survive inside visible primary and model groups',()=>{
+ const css=read('workspace.css');assert.match(css,/mode-navigation button\{[^}]*min-height:44px/);assert.match(css,/body>aside nav\{[^}]*flex-wrap:wrap;overflow:visible/);
+ const doc=minimalDocument();doc.root.innerHTML=read('index.html');assert.equal(doc.querySelectorAll('[data-tab]').length,6);assert.equal(doc.querySelectorAll('[data-primary]').length,3);assert.equal(doc.querySelector('[data-mode-group="studio"]').getAttribute('aria-label'),'Studio model mode');
 });
 
 test('renewed workspace: temporarily blank as-of date does not erase valid forecast-origin operating EV',async()=>{

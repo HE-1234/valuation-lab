@@ -4,6 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {startStudio} from './v7-runtime-harness.mjs';
+import {formatMoneyMillions} from '../dist/display-format.js';
 import {calculateCurrent} from '../dist/current-model.js';
 const css=fs.readFileSync(new URL('../dist/studio.css',import.meta.url),'utf8');
 const rules=[...css.replace(/\/\*[\s\S]*?\*\//g,'').matchAll(/([^{}]+)\{([^}]+)\}/g)];
@@ -36,7 +37,7 @@ test('valuation header: every supported company and baseline keeps exact amount,
    const mount=h.mounts.at(-1),v=calculateCurrent(mount.snapshot,mount.draft),number=h.get('.valuation-number'),unit=number.querySelector('span'),meta=h.get('.live-value-meta');
    assert.equal(number._text,format(v.perShare,2));
    assert.equal(unit.textContent,`${mount.snapshot.currency}/ share`);assert.equal(unit.querySelector('small').textContent,'/ share');
-   assert.equal(meta.querySelector('b').textContent,`${format(v.enterprise/1000,1)}bn`);
+   assert.equal(meta.querySelector('b').textContent,formatMoneyMillions(v.enterprise,mount.snapshot.currency));
    assert.match(meta.textContent,/10-year FCFF.*operating value/);
    assert.ok(h.get('.valuation-source-context'));supported++;
   }

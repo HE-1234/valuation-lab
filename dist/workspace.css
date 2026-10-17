@@ -1,0 +1,313 @@
+/* 2026-10-17 feedback pass: one editorial workspace across all existing models. */
+:root{--type-body:1rem;--type-reading:.9375rem;--type-support:.875rem;--type-label:.8125rem;--reading-measure:70ch}
+[data-theme="slate"]{--paper:#f7f6f2;--surface:#fffefa;--soft:#edf0f5;--chart-two:#7892bd;--secondary:#2154ba}
+html{scroll-behavior:auto}body{font-size:var(--type-body);line-height:1.55}
+button,input,select,textarea{font-family:inherit}button,select,input:not([type=range]),summary{min-height:44px}
+input,select,textarea{font-size:1rem}input,td,th,.valuation-number,.research-big-value,.research-equity-value,.value-change{font-variant-numeric:tabular-nums lining-nums}
+p,li{overflow-wrap:break-word}.intro,.research-card>p,.research-card>ul,.research-warning,.research-evidence-banner p,#history>.notice,#learn .panel>p,.reading-list{max-inline-size:var(--reading-measure)}
+body>aside{position:relative;inset:auto;width:auto;display:flex;max-width:1440px;padding:20px 190px 18px 40px;gap:36px;min-height:84px;margin:0 auto;background:transparent}
+body>aside nav{flex-wrap:wrap;overflow:visible;background:transparent;padding:0;gap:8px;max-width:100%;border-radius:0}
+body>aside nav button{min-height:44px;font-size:15px;padding:10px 20px;border-radius:8px;color:var(--muted);white-space:normal}
+body>aside nav button.active{color:var(--ink);background:var(--soft);box-shadow:inset 0 -2px var(--accent)}
+.brand{font-size:13px!important;letter-spacing:1.3px}.brand:after{display:none}
+main{max-width:1440px;padding:0 40px;margin:0 auto}.appearance-disclosure{top:23px}.appearance-disclosure>summary{font-size:14px!important;min-height:44px}
+.workspace-modebar{margin:0 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mode-navigation{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:7px 0;margin:0;background:transparent;border-radius:0}
+.mode-navigation[hidden]{display:none}.mode-navigation>span{font-size:13px;color:var(--muted);margin-right:16px}
+.mode-navigation button{min-height:44px;padding:9px 16px;font-size:14px;line-height:1.35;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--muted);white-space:normal}
+.mode-navigation button[aria-current=page]{background:var(--surface);border-color:var(--line);color:var(--ink);font-weight:600}
+.workspace-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:0 0 20px;min-height:45px}
+.workspace-heading h1{font-size:30px;line-height:1.25;font-weight:500;letter-spacing:-.8px;margin:0}.workspace-heading h1 em{font-family:Georgia,serif;font-weight:400;color:var(--accent)}
+.research-update-link{font-size:14px;line-height:1.5;color:var(--muted);min-height:44px;display:inline-flex;align-items:center}
+.studio-toolbar,.research-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:18px 28px;min-width:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0;margin:0 0 20px}
+.studio-toolbar label,.research-toolbar label,.toolbar-model>span,.toolbar-period>span{display:block;font-size:13px!important;text-transform:none;letter-spacing:0;color:var(--muted);margin:0 0 4px}
+.studio-toolbar select,.research-toolbar select{font-size:16px!important;font-weight:500;min-height:44px;background:var(--surface);border:1px solid var(--control);border-radius:7px;padding:9px 28px 9px 11px}
+.company-control{flex:1 1 240px}.company-control>div{min-width:0}.company-monogram{display:none}.baseline-control{flex:1 1 240px;width:auto}
+.toolbar-model{flex:0 0 125px}.toolbar-period{flex:1 1 220px;min-width:0}.toolbar-model b,.toolbar-period b{font-size:16px;font-weight:500}.toolbar-model small,.toolbar-period small{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+.library-status{display:none}.research-toolbar>label{flex:0 1 145px;min-width:100px;width:auto;margin:0}
+.research-action-menu{position:relative;flex:0 0 auto;margin:0;padding:0;border:0;background:transparent}.research-action-menu>summary{font-size:14px;padding:10px 0;cursor:pointer}.research-action-menu[open]{flex:1 1 100%;padding-bottom:8px}.research-action-menu .research-actions{margin:8px 0}.research-action-menu p{max-width:70ch}
+.research-statusline{font-size:13px;margin:-11px 0 18px;display:flex;gap:8px 18px;flex-wrap:wrap;color:var(--muted)}.research-statusline p{margin:0}
+.studio-columns{gap:30px;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr)}.value-column{position:relative;top:auto;padding:25px 26px 10px;border-radius:14px}.assumptions-header h2{font-size:26px}.assumptions-column{padding-top:2px}
+.valuation-number{font-size:clamp(2.7rem,4.2vw,3.8rem);letter-spacing:-1.7px}.live-value-meta b{font-size:23px}.live-value-meta span,.live-value-meta small,.live-value .eyebrow{opacity:1}
+.value-change{font-size:15px!important;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.55!important;margin:7px 0 5px!important;color:inherit}.comparison-basis{font-size:13px!important;line-height:1.55!important;margin:0 0 17px!important;color:inherit;opacity:1}.value-column .comparison-basis{color:var(--stage-text)}.comparison-unavailable{font-weight:400}
+.valuation-source-context{font-size:14px!important}.driver-top>label{font-size:16px}.driver-help{font-size:14px!important;line-height:1.6}.driver-number input{font-size:27px;min-height:48px}.assumption-tabs button{font-size:14px!important;flex:1 1 22%;min-width:7em}.assumption-tag{font-size:13px!important;text-transform:none;letter-spacing:0}.driver-card{margin-bottom:26px}
+.assumption-history{padding-top:14px}.history-heading{font-weight:500}.history-method{border-bottom:0}.history-summary,.history-range,.history-coverage p{line-height:1.6}.driver-rationale{margin-top:10px}.assumption-editor .driver-rationale summary{font-size:14px!important}
+.value-column details p,.value-column details li{font-size:14px!important;opacity:1}.value-column details>summary{font-size:14px!important}.value-column .result-context,.value-column .result-context span:last-child{font-size:13px!important;line-height:1.65}.value-column .mc-help,.value-column .mc-bottom,.value-column .mc-stat>small,.value-column .mc-stat>span,.value-column .mc-count,.value-column .mc-chart-top>span,.value-column .mc-inspector>span:last-child small{opacity:1}
+.research-layout{display:block}.research-layout>#research-results{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:22px;align-items:stretch;margin:0 0 24px}
+#research-results>.research-warning,#research-results>.error{grid-column:1/-1;margin:0;max-inline-size:none}
+.research-value,.research-equity{margin:0;border-radius:14px;padding:24px}.research-value{--focus:var(--signal);background:var(--stage);color:var(--stage-text)}
+.research-value .eyebrow,.research-value .micro,.research-value .research-stat-grid span{color:var(--stage-text)}.research-value h2,.research-equity h2{font-size:18px;font-weight:500;margin:4px 0 10px}.research-value .research-big-value{font-size:clamp(2.5rem,4vw,3.5rem);line-height:1.1;margin:10px 0 12px;letter-spacing:-1.6px}.research-equity-value{font-size:32px!important}
+.research-value p,.research-equity p{font-size:14px;line-height:1.6}.research-equity li{font-size:14px;line-height:1.6}.research-date-line{font-size:14px!important;font-weight:400}.research-stat-grid{gap:12px;padding-top:14px;margin-top:14px}.research-stat-grid span{font-size:13px!important}.research-stat-grid b{font-size:18px}.research-value .research-warning{max-inline-size:none}
+.exact-value{background:transparent;border:0;border-top:1px solid #ffffff26;margin:10px 0 14px;padding:0;color:inherit}.exact-value summary{font-size:13px;padding:7px 0;min-height:36px;cursor:pointer}.exact-value p{font-size:13px!important;overflow-wrap:anywhere}
+#research-editor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;align-items:start}#research-editor>.research-schedule{grid-column:1/-1}
+.research-card{padding:21px;margin-bottom:20px;border-radius:10px}.research-card p,.research-card li{font-size:15px;line-height:1.65}.research-card .micro{font-size:14px!important}.research-card label{font-size:14px}.research-card textarea{font-size:16px}
+#research-editor>details,#research-analysis>details,.research-evidence-banner{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:17px 0;margin:0 0 12px;overflow:visible}
+.research-card>summary,.research-evidence-banner>summary{font-size:16px;font-weight:500;min-height:44px;line-height:1.55;cursor:pointer}.research-evidence-banner p{font-size:15px;line-height:1.65}
+.research-schedule{background:var(--surface);border:1px solid var(--line);padding:22px 24px 14px}.schedule-heading{display:flex;align-items:center;justify-content:space-between;gap:18px}.schedule-heading h2{font-size:24px;margin:4px 0 7px}.schedule-heading .eyebrow{font-size:13px!important;letter-spacing:.8px}.research-schedule>p{max-inline-size:85ch;margin:8px 0 15px}.annual-anchor{display:flex;flex-wrap:wrap;gap:5px 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;font-size:14px;margin:12px 0}.annual-anchor b{font-weight:500;flex:1 1 350px}.annual-anchor span{font-variant-numeric:tabular-nums}.annual-anchor a{white-space:nowrap}
+.research-schedule>.research-table-scroll{overflow:auto;max-height:620px;scrollbar-width:auto;overscroll-behavior-inline:contain;scroll-padding-inline-start:135px;border:1px solid var(--line);border-radius:8px;margin:16px 0 12px}
+.research-schedule>.research-table-scroll>.research-table{min-width:860px;border-collapse:separate;border-spacing:0;table-layout:fixed}
+.research-schedule>.research-table-scroll>.research-table th:first-child{width:135px;position:sticky;left:0;z-index:2;background:var(--surface);border-right:1px solid var(--line);text-align:left}
+.research-schedule>.research-table-scroll>.research-table thead th{position:sticky;top:0;z-index:3;background:var(--soft);white-space:normal;vertical-align:middle}.research-schedule>.research-table-scroll>.research-table thead th:first-child{z-index:4;background:var(--soft)}
+.research-table{font-size:14px}.research-table caption{font-size:13px!important;text-align:left;padding:12px;color:var(--muted)}.research-table thead th{font-size:13px!important}.research-table th,.research-table td{padding:10px 12px;vertical-align:middle}.research-table th small{font-size:13px!important;min-width:0;max-width:none;white-space:normal;line-height:1.5;margin-top:3px}
+.research-table input[data-research-input="annual"]{width:100%;min-width:9ch;font-size:16px;text-align:right;font-variant-numeric:tabular-nums;min-height:46px;padding:8px;background:transparent;border:1px solid transparent;border-radius:6px}
+.research-table input[data-research-input="annual"]:hover{border-color:var(--control)}.research-table input[data-research-input="annual"]:focus{background:var(--soft);border-color:var(--accent)}.research-table input[aria-invalid=true]{border-color:var(--error)}
+.research-table input[type=number]{font-size:16px;min-height:46px;text-align:right}.research-field-grid input,.research-field-grid select{font-size:16px;min-height:46px}.research-field-grid{gap:12px 22px}
+.period-convention,.terminal-editor{border:0;border-top:1px solid var(--line);border-radius:0;padding:5px 0;margin:0;background:transparent}.period-convention summary,.terminal-editor summary{font-size:14px;font-weight:500;min-height:44px;display:flex;align-items:center;cursor:pointer}.period-convention td{white-space:normal}.period-convention .research-table{table-layout:fixed}.period-convention th:first-child{width:110px}
+#research-analysis{min-width:0;margin-top:14px}#research-analysis>#research-simulation-root{margin:0 0 24px}#research-analysis .research-card{max-width:none}
+#history h1,#learn h1,#data h1,#workbench h1{font-size:clamp(2rem,3.5vw,3rem);line-height:1.15;letter-spacing:-1.2px}#history>.intro,#learn>.intro{max-width:68ch}#learn .panel{max-width:78ch}#history .panel>p,#data .panel>p{max-width:70ch}.panel:not(.assumptions){box-shadow:none}.panel .intro{font-size:16px}
+/* Shared readable support text replaces the prior 6–12px labels. SVG uses its own viewBox scale. */
+.brand,
+.aside-label,
+.aside-bottom,
+.aside-bottom small,
+header,
+.pill,
+.pill.small,
+.appearance-label,
+.theme-option,
+.eyebrow,
+.context-line,
+label,
+.notice,
+.model-status,
+.micro,
+legend,
+.field-row small,
+.number-wrap,
+.quiet,
+.hero-result .eyebrow,
+.hero-meta,
+.scenario-grid p,
+.scenario-grid small,
+table,
+th,
+.legend,
+.chart-link,
+footer,
+#selected-evidence p,
+nav button,
+.panel-head>.muted,
+.company-bar .quiet,
+.chart-scroll-hint,
+.edition-stamp span,
+.edition-stamp small,
+.source-strip,
+.source-badge,
+.guided-step,
+.guided-step .step-index,
+.guided-field small,
+.guided-utility,
+.fact-tile span,
+.fact-tile a,
+.assumption-tag,
+.source-list,
+.step-status,
+.text-button,
+.appearance-disclosure>summary,
+.info-strip,
+header .pill,
+.current-heading .eyebrow,
+.hero-start,
+.hero-footnote,
+.art-caption,
+.workspace-heading .eyebrow,
+.workspace-caption,
+.guided-toolbar label,
+.guided-card>.eyebrow,
+.guided-field label,
+.guided-card details summary,
+.guided-callout,
+.check-row,
+.primary,
+.error,
+td,
+.brand:after,
+.current-heading .intro,
+.guided-toolbar select,
+.guided-footer .step-status,
+.guided-lead,
+.hero-result .value small,
+.mc-heading .eyebrow,
+.mc-count,
+.mc-intro,
+.mc-stat>span,
+.mc-stat b small,
+.mc-stat>small,
+.mc-chart-top>span,
+.mc-chart-top button,
+.mc-inspector>span:first-child,
+.mc-inspector b small,
+.mc-inspector>span:last-child,
+.mc-inspector>span:last-child small,
+.mc-help,
+.mc-scrubber-label,
+.mc-quote-note,
+.mc-table caption,
+.mc-settings summary span,
+.mc-input-grid legend,
+.mc-input-grid label,
+.mc-settings-row label,
+.mc-settings-row input,
+.mc-settings-row select,
+.mc-bottom,
+.mc-bottom .micro,
+.mc-settings summary,
+.hero-simulation,
+.simulation-gate .eyebrow,
+.simulation-gate p,
+.simulation-gate small,
+.mc-playback button,
+body>aside nav button,
+.studio-heading .eyebrow,
+.studio-toolbar label,
+.library-status,
+.library-status small,
+.valuation-source-context,
+.live-value .eyebrow,
+.valuation-number>span,
+.valuation-number small,
+.live-value-meta span,
+.live-value-meta small,
+.value-column .mc-count,
+.value-column .mc-count b,
+.value-column .mc-chart-top>span,
+.value-column .mc-playback button,
+.value-column .mc-inspector>span:first-child,
+.value-column .mc-inspector b small,
+.value-column .mc-inspector>span:last-child small,
+.value-column .mc-scrubber-label,
+.value-column .mc-help,
+.value-column .mc-stat>span,
+.value-column .mc-stat b small,
+.value-column .mc-stat>small,
+.value-column .mc-quote-note,
+.value-column details>summary,
+.value-column details>summary span,
+.value-column details p,
+.value-column details li,
+.value-column .mc-bottom,
+.value-column .mc-bottom .micro,
+.value-column .text-button,
+.value-column .mc-input-grid legend,
+.value-column .mc-input-grid label,
+.value-column .mc-settings-row label,
+.value-column .mc-settings .micro,
+.value-column .result-context,
+.result-context span:last-child,
+.quote-grid label,
+.valuation-unavailable .eyebrow,
+.assumptions-header .eyebrow,
+.auto-status,
+.assumption-tabs button,
+.driver-help,
+.history-heading,
+.history-status,
+.history-point span,
+.history-summary,
+.history-range,
+.assumption-editor details summary,
+.assumption-editor details summary>span,
+.assumption-editor .history-method>summary,
+.assumption-editor .history-method p,
+.assumption-editor .history-method li,
+.assumption-editor label,
+.worksheet-grid label,
+.draft-footer,
+.draft-footer .text-button,
+.source-facts span,
+.model-boundary,
+.model-boundary p,
+.detail-metrics span,
+.stress-cases span,
+.data-options summary,
+.data-options summary>span,
+main>footer,
+.appearance-disclosure .theme-option,
+.studio-heading>p,
+.baseline-control select,
+.value-column .mc-heading h3,
+.value-column .mc-inspector>span:last-child,
+.history-context-title,
+.history-point.is-unavailable b,
+.history-components a,
+.history-components small,
+.history-ttm,
+.history-context .history-point.is-unavailable b,
+.studio-secondary summary,
+.studio-secondary summary>span,
+.value-column .result-context span:last-child,
+.history-coverage p,
+.history-latest>span,
+.history-latest b a>span,
+.history-latest>small,
+.history-trend-labels,
+.history-trend-labels span:nth-child(2),
+.history-no-trend,
+.assumption-editor .history-years>summary,
+.history-years .history-count,
+.history-years caption,
+.history-years thead th,
+.history-years th>small,
+.history-years td a>span,
+.history-years .is-unavailable td,
+.history-years .history-row-note td,
+.mc-shape-bounds,
+.value-column .mc-shape-preview p,
+.value-column .mc-shape-note,
+.value-column #mc-settings-status,
+.value-column #mc-reset-distributions,
+.assumption-editor .history-years>summary>span:first-child,
+.base-case-panel>summary small,
+.base-case-ledger,
+.base-case-fallback,
+.assumption-editor .driver-rationale summary,
+.assumption-editor .driver-rationale summary>span,
+.base-case-bar>span,
+.base-case-bar .quiet,
+.base-case-bar .text-button,
+.base-case-control #base-case-action-status,
+.base-case-control .base-case-panel>summary,
+.base-case-control .base-case-panel>summary small,
+.valuation-unavailable .claim-source,
+.base-case-driver>.base-case-current,
+.claims-input small,
+.claims-panel td,
+.claims-panel th,
+.claims-result-note,
+.equity-floor-note,
+.claims-result-note p,
+.equity-floor-note p,
+.operating-profile-panel p,
+.operating-profile-panel a,
+.value-column .mc-floor-note,
+.workspace-table tbody th,
+.claims-panel .workspace-table tbody th,
+.growth-method summary,
+.growth-method p,
+.growth-method a,
+.economic-insight p,
+.assumption-editor .annual-growth-method>summary,
+.valuation-timing-note,
+.research-stat-grid span,
+.research-table,
+.research-table caption,
+.research-table thead th,
+.research-table th small,
+.research-card .micro,
+.research-toolbar .eyebrow{font-size:var(--type-support)!important}
+body label,body legend{font-size:var(--type-support)}.research-card p,.research-card li{font-size:var(--type-reading)}body .eyebrow{font-size:var(--type-label)!important;letter-spacing:.08em}.value-column .live-value-meta b{font-size:23px}.workspace-heading h1{font-size:30px}.research-table input{font-size:16px!important}
+@media(max-width:900px){body>aside{padding-left:24px;padding-right:150px;gap:22px}main{padding:0 24px}.appearance-disclosure{right:24px}.studio-columns{grid-template-columns:1fr}.research-layout>#research-results{grid-template-columns:1fr}.value-column{position:relative;top:auto}#research-editor{grid-template-columns:1fr}.workspace-heading h1{font-size:27px}.research-value,.research-equity{padding:22px}.toolbar-period{flex-basis:200px}}
+@media(max-width:650px){body>aside{display:block;padding:19px 18px 12px;min-height:0}.brand{width:max-content;max-width:calc(100% - 105px)}body>aside nav{display:flex;margin:16px 0 0;gap:6px;flex-wrap:nowrap}body>aside nav button{flex:1 1 0;min-width:0;min-height:44px;padding:10px 8px;font-size:15px!important}.appearance-disclosure{top:17px;right:18px}.appearance-disclosure>summary{padding:9px 10px;font-size:13px!important}main{padding:0 18px}.workspace-modebar{margin-bottom:18px}.mode-navigation{gap:4px;flex-wrap:nowrap}.mode-navigation>span{display:none}.mode-navigation button{flex:1 1 auto;padding:10px 7px;font-size:14px!important}.workspace-heading{display:block;margin-bottom:15px}.workspace-heading h1{font-size:25px;line-height:1.3}.research-update-link{font-size:13px;margin-top:2px;min-height:35px}.research-toolbar,.studio-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 18px;margin-bottom:17px;padding:15px 0}.research-toolbar>label{width:auto;min-width:0}.toolbar-model,.toolbar-period,.baseline-control{min-width:0;width:auto}.toolbar-period{grid-column:1/-1}.company-control{grid-column:1/-1}.studio-toolbar .toolbar-model{grid-column:1}.studio-toolbar .baseline-control{grid-column:2}.research-action-menu{grid-column:1/-1}.research-action-menu>summary{padding:4px 0;min-height:36px}.research-actions{gap:8px}.research-actions button{font-size:14px!important;padding:10px 12px;flex:1 1 145px}.research-statusline{margin:0 0 16px}.research-layout>#research-results{gap:16px;margin-bottom:22px}.research-value,.research-equity{padding:20px}.research-value .research-big-value{font-size:43px}.research-equity-value{font-size:29px!important}.research-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.research-stat-grid>div:last-child{grid-column:1/-1}.research-schedule{padding:19px 15px 10px}.schedule-heading{align-items:start}.schedule-heading h2{font-size:22px}.schedule-heading .auto-status{white-space:normal;max-width:65px;text-align:right}.annual-anchor{display:block}.annual-anchor b,.annual-anchor span,.annual-anchor a{display:block;margin:4px 0}.research-schedule>.research-table-scroll{margin-left:0;margin-right:0;max-height:570px;scroll-padding-inline-start:110px}.research-schedule>.research-table-scroll>.research-table th:first-child{width:110px}.research-table th,.research-table td{padding:9px 8px}.research-field-grid{grid-template-columns:1fr}.value-column{padding:22px 19px 10px}.studio-columns{gap:27px}.valuation-number{font-size:49px}.assumption-tabs button{font-size:13px!important}.research-warning{padding:13px 14px}.comparison-basis{margin-bottom:14px!important}main>footer{padding:27px 0;font-size:13px!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.research-resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:26px 0 36px}.research-resource-grid>a{display:block;border-top:2px solid var(--accent);padding:18px 0;color:var(--ink);text-decoration:none;min-height:44px}.research-resource-grid b{display:block;font-size:18px;font-weight:500;line-height:1.45}.research-resource-grid span{display:block;margin-top:10px;font-size:15px;line-height:1.6;color:var(--muted);max-width:42ch}.research-resource-grid a:hover b{text-decoration:underline;text-underline-offset:3px}.historical-research-heading{border-top:1px solid var(--line);padding-top:25px;margin-top:10px}.historical-research-heading h2{font-size:27px;font-weight:500;margin:6px 0 15px;letter-spacing:-.5px}@media(max-width:650px){.research-resource-grid{grid-template-columns:1fr;gap:12px;margin:24px 0}.research-resource-grid>a{padding:14px 0}.research-resource-grid span{margin-top:6px;max-width:65ch}.historical-research-heading h2{font-size:24px}}
+
+.company-bar{display:flex;align-items:end;flex-wrap:wrap;gap:16px 22px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent;box-shadow:none}.company-bar>div{flex:1 1 210px;min-width:0}.company-bar>.toolbar-model{flex:0 1 150px;padding-bottom:5px}.company-bar>button{font-size:14px;min-height:44px}.company-bar select{font-size:16px;min-height:44px}.company-bar label{font-size:14px;letter-spacing:0;text-transform:none}@media(max-width:650px){.company-bar{gap:12px}.company-bar>div{flex-basis:100%}.company-bar>.toolbar-model{flex-basis:100%}.company-bar>button{flex:1 1 135px}}
+
+/* The exact-value disclosure is on the dark result surface, including its marker. */
+.research-value .exact-value>summary{color:var(--stage-text)}.research-value .exact-value>summary::marker{color:var(--signal)}
+.research-value .exact-value>summary:focus-visible{outline-color:var(--signal)}
+@media(min-width:360px) and (max-width:650px){.research-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.research-stat-grid>div:last-child{grid-column:auto}.research-stat-grid span{font-size:13px!important}.research-stat-grid b{font-size:17px}}
+
+/* Compact overview: detailed capital tables remain beside their result in one disclosure. */
+.research-layout>#research-results{align-items:start}.research-equity-value{margin:10px 0 12px!important}.research-equity>p{margin:10px 0}.research-equity>ul{margin:12px 0;padding-left:19px}.research-allocation-details{margin:14px 0 0;border:0;border-top:1px solid var(--line);border-radius:0;padding:0;background:transparent}.research-allocation-details>summary{font-size:14px;min-height:44px;padding:10px 0}.research-allocation-details p{max-inline-size:70ch}.research-value .research-stat-grid{margin-top:13px}.research-value>p.micro:last-child{margin-bottom:0}.research-value,.research-equity{padding:22px}@media(max-width:650px){.research-value,.research-equity{padding:20px}.research-value h2{margin-top:8px}}
