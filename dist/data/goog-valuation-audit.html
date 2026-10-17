@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Google valuation audit · Valuation Lab</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#182a2b;background:#f5f7f4;line-height:1.6;font-size:17px}*{box-sizing:border-box}body{margin:0}main{max-width:1000px;margin:auto;padding:36px 24px 70px}a{color:#16675c;text-underline-offset:3px}a:focus-visible{outline:3px solid #e7a325;outline-offset:4px}header{padding:24px 0 28px;border-bottom:1px solid #cbd7d1}h1{font-size:clamp(2.1rem,7vw,3.8rem);line-height:1.08;letter-spacing:-.045em;margin:.5em 0}h2{font-size:1.45rem;line-height:1.3;margin:2.2em 0 .7em}h3{font-size:1.08rem;margin:1.6em 0 .5em}.eyebrow{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase}.lead{font-size:1.2rem;max-width:760px}.muted,small{color:#546660}.verdict{padding:18px 22px;border:1px solid #cbd7d1;border-left:4px solid #237965;border-radius:8px;margin:24px 0;background:#fff}ul,ol{padding-left:1.4em}li{margin:.6em 0}.table-wrap{overflow:auto;border:1px solid #cbd7d1;border-radius:8px;margin:18px 0;background:#fff}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.91rem}caption{text-align:left;font-weight:650;padding:15px 16px}th,td{text-align:left;padding:11px 16px;border-top:1px solid #dce4df;vertical-align:top}thead th{font-size:.8rem;background:#eaf0eb}tbody th{font-weight:500}.number{text-align:right;white-space:nowrap}.total{font-weight:700;background:#eaf0eb}code{font-size:.86em;overflow-wrap:anywhere}.formula{padding:14px 16px;background:#eaf0eb;border-radius:6px;font-size:.9rem;overflow-wrap:anywhere}footer{margin-top:40px;border-top:1px solid #cbd7d1;padding-top:20px;font-size:.84rem}.source-list{font-size:.88rem;overflow-wrap:anywhere}.scroll-hint{display:none}@media(max-width:600px){.scroll-hint{display:block;font-size:.85rem;color:#546660}main{padding:20px 16px 50px}th,td{padding:10px 12px}.lead{font-size:1.05rem}}@media(prefers-color-scheme:dark){:root{color:#e4eee8;background:#17201d}a{color:#8ad8bd}.muted,small,.scroll-hint{color:#afc1b7}.verdict,.table-wrap{background:#202d27;border-color:#52665a}thead th,.total,.formula{background:#2b3b31}th,td,header,footer{border-color:#405548}}@media print{main{max-width:none;padding:0;font-size:11pt}.table-wrap{overflow:visible}a{color:inherit}h2,h3{break-after:avoid}tr{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="Audit navigation"><a href="../index.html">← Valuation Lab</a> · <a href="goog-valuation-audit.json">Full calculation data</a></nav>
+<header>
+<p class="eyebrow">Model review · October 17, 2026</p>
+<h1>Why Google shows $167.71</h1>
+<p class="lead">The original result reproduces correctly. Its main driver is a cautious growth and reinvestment path. A more flexible forecast is useful; a $250 minimum is not a validation test.</p>
+<p class="muted">June 2026 TTM financial reference · USD per common share · Educational conditional valuation</p>
+</header>
+<div class="verdict"><strong>No material arithmetic error or wrong-issuer input was found in the items checked.</strong> The 18% growth input means year one, then an immediate fade to 2.5% in year ten. That produces a 10.14% revenue CAGR. The specialist claims overlay actually adds $10.10 per share versus a simple cash-minus-debt bridge.</div>
+
+<section aria-labelledby="sources-heading">
+<h2 id="sources-heading">The source checks</h2>
+<p>Revenue reconciles to $445.866bn and operating income to $147.628bn using annual + current six months − prior-year six months. The starting margin is 33.1104%, without an EBIT adjustment. See the <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm">FY2025 statements</a> and <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm">Q2 filing</a>.</p>
+<p>The unusual preferred securities are genuine Alphabet instruments. The <a href="https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818dex31.htm">Series A</a> and <a href="https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818dex32.htm">Series B certificates</a> support the conversion inputs. The <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm">June balance sheet and notes</a> reconcile the cash, debt, investments, finance leases and noncontrolling interests; noncurrent investments do not duplicate current marketables. The separate <a href="https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm">August debt issuance</a> is outside this dated capital reference.</p>
+</section>
+
+<section aria-labelledby="bridge-heading">
+<h2 id="bridge-heading">What the value consists of</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Google value contributions, scrollable">
+<table><caption>Per-share contribution using one consistent diluted denominator</caption><thead><tr><th scope="col">Component</th><th scope="col" class="number">USD / share</th></tr></thead><tbody>
+<tr><th scope="row">Years 1–10 FCFF, present value</th><td class="number">47.37</td></tr>
+<tr><th scope="row">Terminal operations, present value</th><td class="number">97.95</td></tr>
+<tr><th scope="row">Cash and current marketables</th><td class="number">19.74</td></tr>
+<tr><th scope="row">Debt</th><td class="number">−8.15</td></tr>
+<tr><th scope="row">Noncurrent investments</th><td class="number">11.85</td></tr>
+<tr><th scope="row">Finance leases, NCI and preferred dividends</th><td class="number">−1.05</td></tr>
+<tr class="total"><th scope="row">Total, before rounding individual lines</th><td class="number">167.71</td></tr>
+</tbody></table></div>
+<p>The model deducts $114.65bn of net reinvestment from $134.60bn year-one NOPAT, leaving $19.95bn FCFF. Terminal operations account for 67.4% of operating enterprise value. Depreciation inside EBIT plus <em>net</em> reinvestment is not a double deduction of gross capex.</p>
+</section>
+
+<section aria-labelledby="judgments-heading">
+<h2 id="judgments-heading">Cautious judgments, not incorrect facts</h2>
+<ul>
+<li><strong>18% growth:</strong> below the latest quarter's 24%. The exact immediate fade has less company-specific support than a separate near-term Services/Cloud forecast. <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm">Issuer results</a></li>
+<li><strong>30% mature margin:</strong> assumes erosion from 33.11%. It is a scenario, not an established destination. Maintaining the starting margin alone gives $183.38.</li>
+<li><strong>0.70x sales/capital:</strong> expensive growth, but within the order of magnitude of the recent buildout. A constant decade-long ratio needs stronger justification. Raising it to 1.00x alone gives $184.12.</li>
+<li><strong>10% WACC:</strong> the worksheet is internally correct. The <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&amp;type=daily_treasury_yield_curve">observed ten-year Treasury yield is 5.09%</a>; beta, risk premium, debt weight and spread are assumptions. Using the unrounded 9.76771% gives $173.68. At 9%: $196.59; at 8%: $236.47.</li>
+</ul>
+<p>These are one-factor sensitivities on the original path. They are not additive. Removing every cautious input would create an optimistic scenario rather than demonstrate a correction.</p>
+</section>
+
+<section aria-labelledby="horizons-heading">
+<h2 id="horizons-heading">Three or five explicit years, then a fade</h2>
+<p>Hold 18% growth through the explicit period, then fade to 2.5% in the selected maturity year. Margin fades to 30% over the full horizon. Taxes, WACC, terminal ROIC and claims remain unchanged.</p>
+<p class="scroll-hint">Scroll the table sideways to see every column.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Forecast horizon comparison, scrollable">
+<table><caption>Legacy constant capital versus terminal-consistent capital</caption><thead><tr><th scope="col">Explicit years</th><th scope="col">Maturity year</th><th scope="col" class="number">Consistent capital</th><th scope="col" class="number">Constant capital</th><th scope="col" class="number">Maturity revenue</th></tr></thead><tbody>
+<tr><th scope="row">3</th><td>10</td><td class="number">$177.29</td><td class="number">$179.34</td><td class="number">$1.34tn</td></tr>
+<tr><th scope="row">5</th><td>10</td><td class="number">$189.86</td><td class="number">$191.51</td><td class="number">$1.54tn</td></tr>
+<tr><th scope="row">3</th><td>15</td><td class="number">$207.75</td><td class="number">$211.50</td><td class="number">$2.18tn</td></tr>
+<tr><th scope="row">5</th><td>15</td><td class="number">$223.19</td><td class="number">$226.69</td><td class="number">$2.50tn</td></tr>
+<tr><th scope="row">3</th><td>20</td><td class="number">$242.04</td><td class="number">$247.71</td><td class="number">$3.54tn</td></tr>
+<tr><th scope="row">5</th><td>20</td><td class="number">$260.74</td><td class="number">$266.34</td><td class="number">$4.06tn</td></tr>
+</tbody></table></div>
+<p>Constant capital retains 0.70x sales/capital. Consistent capital holds it through the explicit period, then fades its reciprocal to terminal intensity. For this case, terminal sales/capital is 0.6253908693x, so consistency slightly lowers value.</p>
+<p class="formula">For year y, explicit period E and maturity N: t = max(0, (y − E) / (N − E)). Capital intensity = (1 − t) / 0.7 + t × (1 + g) × mature margin × (1 − tax) / terminal ROIC.</p>
+<p><strong>The five-year/20-year case is a conditional $260.74.</strong> It also requires 9.10 times starting revenue and $5.42tn cumulative net reinvestment. Longer horizons change the business forecast; choose them using operating evidence, not the desired share value.</p>
+</section>
+
+<section aria-labelledby="limits-heading">
+<h2 id="limits-heading">What still needs care</h2>
+<ul>
+<li>Investment carrying values are gross proxies before realization taxes and liquidity discounts. Employee awards and the preferred payoff are not fully appraised. No capped-call recovery is credited.</li>
+<li>The result uses June capital. It is not a live October balance sheet or market quote.</li>
+<li>Any adjustment for legal charges must also address settlement cash, taxes and double-counting. Lease/funding commitments must agree with the operating forecast.</li>
+<li>A genuine, tiny documentation mismatch remains: the research dividend PV uses ACT/365, while runtime uses ACT/365.25. The difference is $0.00001622 per share, not the valuation gap.</li>
+</ul>
+</section>
+
+<footer>
+<p><strong>Reproducible calculation:</strong> <a href="goog-valuation-audit.json">full-precision JSON and annual cash flows</a>. In the repository, run <code>node scripts/audit-goog-valuation.mjs</code>. The oracle imports no production valuation functions and checks both the original result and terminal FCFF continuity. Full audit: <code>GOOG-VALUATION-AUDIT.md</code>.</p>
+<p>Audited starting commit: <code>2fbb15601219afd184a903d86e8119df8ba96840</code>. Financial evidence: <code>dist/data/current-universe.json</code>, GOOG-TTM-2026-06-30. Assumptions: <code>dist/data/company-base-cases.json</code>, companies.GOOG. Claims: <code>dist/current-claims.js</code> and <code>dist/data/current-claims-research.json</code>. All primary links above were checked October 17, 2026. No unique replacement base case is established.</p>
+</footer>
+</main>
+</body>
+</html>

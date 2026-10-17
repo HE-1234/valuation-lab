@@ -1,0 +1,144 @@
+{
+  "baselineCommit": "d0fedd2",
+  "note": "The original 35 protected source/data files and v7 deterministic engine, motion and historical-workbench modules are byte protected. New histories, researched defaults, distributions and corresponding views may change; legacy triangular outputs have a separate v7 numerical oracle.",
+  "data": {
+    "dist/data/companies.json": "6cdf199740c0549e32258211dd31abea59259cf46ecd7526b43bf932abf1e4b9",
+    "dist/data/current-market-references.json": "cb1ea4dd76a79c15a9379963e95ab5c52376fd499e6c105e1c75c2ff74c19850",
+    "dist/data/current-universe.json": "6f607bb6dd8707e91810bbdf251a8ffb358d1b44fe739ec2418c36fb3b9e8be1",
+    "dist/data/frozen-case-evaluation.json": "cd7025bdd351be41a24675b5fb4f20a0620fa17a3ff5c6b267c79608be2267a6",
+    "dist/data/guided-content.json": "88463669d52625fdb5272cd617ab26d6d4d27c39ee22fc394d846510bd6fb9c0",
+    "dist/data/msft-annual-scenario-paths.csv": "1bcb7f35f04cc0de6eee31a67b8fb823f8ae735258da8d11fad0d4b960e774cd",
+    "dist/data/msft-business-outcome-evaluation.json": "dc187b573504fa367acc7db157f0900b3ccdc93c041ea7b8ecc6553a42cf52b2",
+    "dist/data/msft-independent-check.json": "4ba080c05091830f112023f7c8c23d209b2b1a05bf42d8f807ec72cc2580a990",
+    "dist/data/msft-researched-cases.json": "f17bb13a289ea6ae53a5ca682e53c97ba7bf75445f8e05f54b50d85e8e5f7258",
+    "dist/data/nvda-cases.json": "3aaecd25b835ce2cf7857d47be26a63ae5b119bd367d434ebe8e2f410b5621a8",
+    "dist/data/nvda-claim-scale-diagnostics.json": "aaaf1221694fbf4d712d13d651f4caab3843b747d27f6c71434fb34176a72ed4",
+    "dist/data/nvda-fy2025-outcome.json": "d9b9d3d0d046fc1a7ce9a2153a6cc767e3238b748de819c1606cfa0e11be3ead",
+    "dist/data/nvda-outcomes.json": "f68410dca37b185119a7752d693c0268928821fedd3eabb18f68143c32f6511f",
+    "dist/data/nvda-price-observations.json": "2b000fbb491635290757926c7aa15eb9d5aa9535a13c3bf18af5fcad7ea91642",
+    "dist/data/nvda-researched-cases.json": "f222cd3ce4c31c620672080223c795c81bf8cb0f54e3c1170951a55b4cb0ca39",
+    "dist/data/provider-research.html": "b9e49336ad974f7303a4fad2a7af2a9a5a704565e136f3861dec1c2bd15868f8",
+    "dist/data/research-addenda.json": "41bb214aaac5f8ccacac8e2e072466aef6cc50b20ebf10f45dbe6b1ccb1c1219",
+    "dist/data/research-versions/FY2024-terminal-scale-constraints-v1.json": "dae3080be97a7b4480d9477c481de745441dece3be7a93442697ccb388c8b968",
+    "dist/data/research-versions/MSFT-FY2019-frozen-v1.json": "437167e8e7655cd7421972c7b05a1f4d29cbbc694cb4ac63355448c5ab7c37a0",
+    "dist/data/research-versions/MSFT-FY2019-frozen-v1.sha256": "a983ad72062aac7bc09fd6dea9a40cd436e3a008769e34777abb6fc203b7dffb",
+    "dist/data/research-versions/NVDA-FY2021-Arm-contingent-supplement.json": "c7ab3abed494e8a33e1d5caec2f5cae39846577642c5155eb86c742d3ac0ffec",
+    "dist/data/research-versions/NVDA-FY2021-frozen.json": "52e83dbdf658f0ca8b76eae1e26aaecb4d706024e16b2f13ced07b4aa933061a",
+    "dist/data/research-versions/NVDA-FY2021-frozen.sha256": "2d421e88f856148c2d656ed4e30fe8280668ff78e3d4163ef116eb3fc286c0c1",
+    "dist/data/research-versions/NVDA-FY2021-method-diagnostics-v2.json": "8a03f8d0941592afbdc4602c47a368eeda508bd59fc79d502a1ee67e730c7238",
+    "dist/data/research-versions/NVDA-FY2022-frozen.json": "349c2f8b0c153f78d9390d1ea7e13fc8305015e367973ef2918bc59fb9932d1a",
+    "dist/data/research-versions/NVDA-FY2022-frozen.sha256": "e388a86da02435da5f820debe37bb6f2642d63c8a9b2ac6b8f19c43e90f97e18",
+    "dist/data/research-versions/NVDA-FY2023-frozen.json": "bead6a90cfecf5451bacff55478de4b29b9c4d74952e16b52fde5bab02fd3ff8",
+    "dist/data/research-versions/NVDA-FY2023-frozen.sha256": "f425e2544c4b947663dae845496209d6fd92114b393ad0b086dbd949fa82465a",
+    "dist/data/research-versions/NVDA-FY2024-frozen.json": "d799745495fc7feca090f5cccc37cca594eaf7b169eed65fc42c57db9a104d16",
+    "dist/data/research-versions/NVDA-FY2024-frozen.sha256": "2f2eab2b3d6a66e9015eec70d3efd316c89db8044ad836f51c7157ed2d425966",
+    "dist/data/research-versions/NVDA-FY2024-method-diagnostics-v2.json": "62c2fddff7fe6afb83664131dfeafddb52a8ed627ff1cd714cc0426fa800a5c7",
+    "dist/data/research-versions/legacy-award-evidence-v1.json": "91b6b4226ba0b6d002261e741db8f5e35c176da9ca1e2d715a2f171ecfd62da7",
+    "dist/data/research-versions/market-anchor-stress-v1.json": "34847cb0eec11e81249af9395d1908730c6056fcd0235d2d9e87a6dc703b0c0a",
+    "dist/data/research-versions/operating-miss-diagnosis-v1.json": "4d89b7c505e8c3cf58646cdc3f2f566aa2874a2ed23ab772ed31a5c3aea1c57d",
+    "dist/data/reverse-dcf-diagnostics.json": "3d6649d8a4eb2f0b898eede646f08e4bf766095b9834f434daadec0c1c09adfe"
+  },
+  "core": {
+    "dist/app.js": "0b1e48212d274fbb8649dcc4b77a50c738babba13530b1df672dccaa4a82fe51",
+    "dist/engine.js": "3229a8fcc63a64b34051be19e375484445878c9cd7ada030fa8b3397dac8e8f7",
+    "dist/motion.js": "6e007d9fae971458fb83e06943108a0fda281bb630f783cc44e7cf90a95ba763"
+  },
+  "previousHistory": {
+    "AAPL": {
+      "2021-09-25": "394494e8e54ee8832b8f7257c2b71f69710cbf5a076ab4dbb00d3ea30977109f",
+      "2022-09-24": "32c5a3863a1a6e8275b560f2f9f2b90ccb3f3319093f2144c6f6abd19515a852",
+      "2023-09-30": "156ffb7fc2a46378fbee3f134a2fea692e80c5489ad58b1d443636971ca6f91e",
+      "2024-09-28": "8844e8ba7c6f93de77d9c1e61618e9b0b2ee0880fb589e7696551e9acd0a09e5",
+      "2025-09-27": "19dabbc39fec0d0a59aa6eee087efc6a9fd57767d6f91360e13e51fc7bd614ef"
+    },
+    "MSFT": {
+      "2022-06-30": "6367ac89d00037f475324ee24dc036dc054598928dd0952cbf76b82ad386a915",
+      "2023-06-30": "9e751e6915165b4793fa4f600395d7e69903617a6abb72c9bae47aebe6f66c9a",
+      "2024-06-30": "12cec646b71b4a8bc32856cb14443b1d8b11bc6f1680bc7b9461e9e7391ea82c",
+      "2025-06-30": "79f245b5cd8755d17b30dd948dea3f42ec511107461d94f24d6e789585a2b5ba",
+      "2026-06-30": "f96df697381fa085583439b7bc7be4f986bede1af587708188d6a9ad365173a2"
+    },
+    "AMZN": {
+      "2021-12-31": "7f221bd5a9bf4139056b3e1d1e67350c10773f2131702b44e37610c35b918e3b",
+      "2022-12-31": "3285b2b44ee00ec5980dffe974d0d2e3d8f06522880a70b47ca960dca393fbf5",
+      "2023-12-31": "c53fd52cbaf64f747d78c804f1af5d2878fbfebf25770dc8ca30b7b0aa89c473",
+      "2024-12-31": "f21088ba7a41fb69158c31bb2310106671e0fccc571236d9f7a55dc1ccd474ee",
+      "2025-12-31": "98f3989376141eafe76c4db7adb1ee46c6a7e57fea71103e0b48f6fd803303c1"
+    },
+    "GOOG": {
+      "2021-12-31": "fbecd4fcc84a64f863e1669f72d8c21443500e3b808fefdca8ba54e35565c604",
+      "2022-12-31": "3109af109e7e0263abadf224801d326a45869ed9a29f132409e414dd3ed21d76",
+      "2023-12-31": "5b5cf534aca872041f85a2fb2d17fb720d3145d741c31eee0802cce527078129",
+      "2024-12-31": "7cf6b950bc0d461cd7259495c5cf6ac025034c42a912f16860ea48759c6af353",
+      "2025-12-31": "3aa8b01b56350ea0bd792da73d7bcc9b1ecd8ddd7b4d73141b121838150287b5"
+    },
+    "META": {
+      "2021-12-31": "58dc21ab330fc38c525d08f9c33d93ca26ee3d19d5864bfbc68771d1ae9fa6f1",
+      "2022-12-31": "2cc77a5c1dbaca5546d330f344423db867b02e551aeda689a26995604421d86f",
+      "2023-12-31": "a124704f1d35b5037dad8682e2a17cefddce207bf6aafaa867ba6a37ecc8f47d",
+      "2024-12-31": "673c9068f66c0965d8fde03daa906b9d4afc925ac1b93c184fd90ab42f464d30",
+      "2025-12-31": "f3271e9164db0d5d16a055d3991a6131da7834a1e18bc59c412dede0883c19a0"
+    },
+    "NVDA": {
+      "2022-01-30": "16fd444b4e518b3ac9a39495e0a5584a1a8133a5faabb879bf4b16a95d858370",
+      "2023-01-29": "a68ca36f6128af3084c9d5667bd184ca7b347337659c212c6b7b0103d39608e8",
+      "2024-01-28": "05b01b57ad3a0280eda381804d35272173aff8211fe436b3be197f2f97fa3968",
+      "2025-01-26": "a4a8c0453cd50afaf74b34200e59dd0a60b452760ad2e484d2067527ae6bc11f",
+      "2026-01-25": "557a8f8338dea15f5a868b089a9a5736667e6a2073ce4037c2bcb8db2696da83"
+    },
+    "TSLA": {
+      "2021-12-31": "b8ace251046b187c3b2b3690789cf332cddf2d097badc0c6882ed5afe98be5c8",
+      "2022-12-31": "d72b52e543670aa14cf85ae4e7f71abd3b76e4637826adb71ccf2177e00c2b61",
+      "2023-12-31": "45b55c4fcf0c55a243cda94fb74dc6129eeefd774c65609be750111dc305561e",
+      "2024-12-31": "aec913aa5b21d4b93ef834df70c94d84b65fc7c08c9a87da3610e30baae4fb1b",
+      "2025-12-31": "f992ef7b8e767ea086c5cb9afa5ae13bb0783b02f7a9fac499a6d5a1f0e480e8"
+    },
+    "COHR": {
+      "2022-06-30": "8eff3b2fe56f02d7e4be5bb05769bf0b5604e18339f2f9595924c77062b4b546",
+      "2023-06-30": "dd8eb175fa8c1a5f17c0810a52916818937df635893ad7aceaac066c0f87bdd6",
+      "2024-06-30": "8b6c9f7772ffe36cbc35ba1040f2d53a5686d59c477cdd0ee063a0f182c80331",
+      "2025-06-30": "541f183d94539434ffd4ca10c8fb25c76e3af472ca0b68eb17572fde665d2689",
+      "2026-06-30": "623d617a805bbcf2403883a2e15f7a265f6b5a241e4227db55c248b466f476b8"
+    },
+    "LITE": {
+      "2022-07-02": "e60d61895f7d9c86e61da36f10abfa50243a191d0f4ed5a11103a445bfa33887",
+      "2023-07-01": "3afdd1894ac2b1d7b3347a1069e37166e7a601ce8bf865c1b760317b1aa9cca0",
+      "2024-06-29": "1a72f9306e3e3866adf860574691128c6ca19f0dd176bd874f37ecf41ec0361e",
+      "2025-06-28": "c854a86ed56b9d4b1679e88d310b0a2b66acf1e6caa24288d312f05dc6a311de",
+      "2026-06-27": "0df7d04c871cf8d7a314abe3076eed0f6328d4dad22221956161a94725927a8f"
+    },
+    "AAOI": {
+      "2021-12-31": "bc1609763a621b660b9544655fdec76fe1825678482abe8a24d05bd190ef182e",
+      "2022-12-31": "84d66082bce05cc07d3e0bd2f7e49030845ce32ca2909472a60570ccd90c8194",
+      "2023-12-31": "f3bc17373b02551eff114354e784d3dda1605b74dc03a6783182dd622a5c4a9a",
+      "2024-12-31": "d6a8d7508867b821c0993396cdbeb29d56ce76aec5280620addf9366dc521047",
+      "2025-12-31": "e60ff19fb61789bf1e941af9a0e1674dd298cedb4f640eca8c3ba016339d50ec"
+    },
+    "MU": {
+      "2022-09-01": "13a67393c223448d4a72e562ead51ed9aebdf2c8c377782094e7c60312f380da",
+      "2023-08-31": "359e93cfa8ecca4ea5b6d697ec6a767bf08c0f62694f80941f4f8c5ed7f6af9b",
+      "2024-08-29": "c5d651e31879116c23ebcf399a45feacb3e20ec8b312ad8aa71dfa0f7d4b9fcd",
+      "2025-08-28": "6a0951cc00b1891044e6402d6711d65aac405e231e9c37b6acfc50706adb313e",
+      "2026-09-03": "3d00e660b0d8b0e4a5432c892469b81aebfa438532877309279a6633198939ff"
+    },
+    "AVGO": {
+      "2021-10-31": "229a4de17f2db28fac54d76c9aa247917e1bdc8d8794c9f43884d6b315c12425",
+      "2022-10-30": "d04346b6ce04e61532c0a3814b651ae87d897d659f772725584e7c995e6a24d8",
+      "2023-10-29": "174490c0e173ff69ad9151dd848a698f5f7653dd44687554b47f61fa3f089e59",
+      "2024-11-03": "ed54165fe7a443f913ea30d5e68ccea6d283ccafbcca310c4d4e3595b3139d2a",
+      "2025-11-02": "fdace699ae936c303bdea020d409e375ab33fbb6605048f884cf22fb187c961f"
+    },
+    "NBIS": {
+      "2023-12-31": "a20e7464772b646caa1caf3bfb77824c1746869dbc3e0f72704bd5c0b0c18065",
+      "2024-12-31": "0b84f0bcb8871f77b0a5c2e175639faacaf001126fcf5df9c3f7a200a8d28dff",
+      "2025-12-31": "337ecc0c12726420cfbf6a00b68f4fc3da6816adb9de93a22466262fc49ce278"
+    },
+    "TSM": {
+      "2021-12-31": "658e7a959b4d5041928fc15886509ae5d290b51e4d560510928c550f2d9e7c7b",
+      "2022-12-31": "0b5565554463b7f59856687ac3b56dd3414821bdcdc7f1d20bd1d80a9f2146e8",
+      "2023-12-31": "1a6ceea60087221fe07399d58b11e0138c4f168eeac41aff22708faafc7a5652",
+      "2024-12-31": "88e53dcdedbf7c4a351d7f27ced730bf49a47972955db450d467f00ae0bf1112",
+      "2025-12-31": "505d16a2ae801f915d9d223c97192d80d50b552131ae5074eb65873b1d0de72a"
+    }
+  }
+}

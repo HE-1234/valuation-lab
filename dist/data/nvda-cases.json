@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "status": "Teaching cases; assumptions are transparent, uncalibrated and not strategy validation",
+  "cases": [
+    {
+      "id": "NVDA-FY2021",
+      "snapshotId": "NVDA-FY2021",
+      "asOf": "2021-03-01T14:30:00Z",
+      "sourceCutoff": "2021-03-01T14:30:00Z",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2021"
+      ],
+      "classification": "Illustrative guidance-run-rate scenario, not a complete historically estimated investment forecast",
+      "thesis": "Annualize the announced next-quarter revenue midpoint as a transparent starting run rate, then fade toward maturity. Do not assume that management guided the entire fiscal year or the next decade.",
+      "rules": {
+        "firstYearGrowth": "4 * Q1 guidance revenue / last full fiscal year revenue - 1",
+        "targetMargin": "30% common illustrative mature margin across all dates; sensitivity 20%-40%",
+        "tax": "25% illustrative mature cash-tax assumption, not management near-term effective tax guidance",
+        "salesCapital": "2x common illustrative incremental sales/capital; sensitivity 1x-4x",
+        "wacc": "10% common illustrative nominal USD hurdle; sensitivity 8%-14%; NOT a reconstructed historical WACC",
+        "terminalGrowth": "2.5% illustrative stable USD growth",
+        "terminalROIC": "10%, competitive steady state equal to illustrative WACC"
+      },
+      "contemporaneousAnchors": {
+        "priorFiscalRevenue": 16675.0,
+        "nextQuarterRevenue": 5300,
+        "annualizedQuarterRevenue": 21200,
+        "annualizedRunRateGrowth": 0.2713643178410794,
+        "quarterRecurringOperatingMargin": 0.3229056603773585,
+        "quarterTaxGuidance": 0.1,
+        "specialItem": null
+      },
+      "assumptions": {
+        "growth": 0.2713643178410794,
+        "targetMargin": 0.3,
+        "tax": 0.25,
+        "salesCapital": 2,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.1,
+        "years": 10,
+        "otherAssets": 0,
+        "otherClaims": 0
+      },
+      "sensitivities": {
+        "growth": [
+          0.1213643178410794,
+          0.2713643178410794,
+          0.4213643178410794
+        ],
+        "targetMargin": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "salesCapital": [
+          1,
+          2,
+          4
+        ],
+        "wacc": [
+          0.08,
+          0.1,
+          0.14
+        ]
+      },
+      "uncertainty": [
+        "Annualizing one quarter ignores seasonality, demand acceleration/deceleration and later quarters.",
+        "The linear fade engine does not implement quarter-specific margin guidance or a segmented cycle/hypergrowth model.",
+        "Historical risk-free/ERP/beta/spread vintages are not yet reconstructed; discount rates are scenarios.",
+        "Capital intensity and mature margin are common teaching assumptions, not facts established by these filings.",
+        "Forecasts are retrospectively reconstructed; model/human hindsight cannot be eliminated."
+      ],
+      "sourceSnapshotSha256": "9b9e140f66b0c98a16553920a0b0f87c14081c444b6ebb2cbe8e979d9ba97292"
+    },
+    {
+      "id": "NVDA-FY2022",
+      "snapshotId": "NVDA-FY2022",
+      "asOf": "2022-03-18T13:30:00Z",
+      "sourceCutoff": "2022-03-18T13:30:00Z",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm",
+        "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2022"
+      ],
+      "classification": "Illustrative guidance-run-rate scenario, not a complete historically estimated investment forecast",
+      "thesis": "Annualize the announced next-quarter revenue midpoint as a transparent starting run rate, then fade toward maturity. Do not assume that management guided the entire fiscal year or the next decade.",
+      "rules": {
+        "firstYearGrowth": "4 * Q1 guidance revenue / last full fiscal year revenue - 1",
+        "targetMargin": "30% common illustrative mature margin across all dates; sensitivity 20%-40%",
+        "tax": "25% illustrative mature cash-tax assumption, not management near-term effective tax guidance",
+        "salesCapital": "2x common illustrative incremental sales/capital; sensitivity 1x-4x",
+        "wacc": "10% common illustrative nominal USD hurdle; sensitivity 8%-14%; NOT a reconstructed historical WACC",
+        "terminalGrowth": "2.5% illustrative stable USD growth",
+        "terminalROIC": "10%, competitive steady state equal to illustrative WACC"
+      },
+      "contemporaneousAnchors": {
+        "priorFiscalRevenue": 26914.0,
+        "nextQuarterRevenue": 8100,
+        "annualizedQuarterRevenue": 32400,
+        "annualizedRunRateGrowth": 0.20383443560971992,
+        "quarterRecurringOperatingMargin": 0.38162962962962965,
+        "quarterTaxGuidance": 0.11,
+        "specialItem": "Includes announced $1,360m Arm termination write-off; do not extrapolate as recurring cost."
+      },
+      "assumptions": {
+        "growth": 0.20383443560971992,
+        "targetMargin": 0.3,
+        "tax": 0.25,
+        "salesCapital": 2,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.1,
+        "years": 10,
+        "otherAssets": 0,
+        "otherClaims": 0
+      },
+      "sensitivities": {
+        "growth": [
+          0.05383443560971993,
+          0.20383443560971992,
+          0.35383443560971994
+        ],
+        "targetMargin": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "salesCapital": [
+          1,
+          2,
+          4
+        ],
+        "wacc": [
+          0.08,
+          0.1,
+          0.14
+        ]
+      },
+      "uncertainty": [
+        "Annualizing one quarter ignores seasonality, demand acceleration/deceleration and later quarters.",
+        "The linear fade engine does not implement quarter-specific margin guidance or a segmented cycle/hypergrowth model.",
+        "Historical risk-free/ERP/beta/spread vintages are not yet reconstructed; discount rates are scenarios.",
+        "Capital intensity and mature margin are common teaching assumptions, not facts established by these filings.",
+        "Forecasts are retrospectively reconstructed; model/human hindsight cannot be eliminated."
+      ],
+      "sourceSnapshotSha256": "38a8c68bed5cabfdd987b122fe067096d731c0721339dd104e336937ef8e36f1"
+    },
+    {
+      "id": "NVDA-FY2023",
+      "snapshotId": "NVDA-FY2023",
+      "asOf": "2023-02-27T14:30:00Z",
+      "sourceCutoff": "2023-02-27T14:30:00Z",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm",
+        "https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2023/"
+      ],
+      "classification": "Illustrative guidance-run-rate scenario, not a complete historically estimated investment forecast",
+      "thesis": "Annualize the announced next-quarter revenue midpoint as a transparent starting run rate, then fade toward maturity. Do not assume that management guided the entire fiscal year or the next decade.",
+      "rules": {
+        "firstYearGrowth": "4 * Q1 guidance revenue / last full fiscal year revenue - 1",
+        "targetMargin": "30% common illustrative mature margin across all dates; sensitivity 20%-40%",
+        "tax": "25% illustrative mature cash-tax assumption, not management near-term effective tax guidance",
+        "salesCapital": "2x common illustrative incremental sales/capital; sensitivity 1x-4x",
+        "wacc": "10% common illustrative nominal USD hurdle; sensitivity 8%-14%; NOT a reconstructed historical WACC",
+        "terminalGrowth": "2.5% illustrative stable USD growth",
+        "terminalROIC": "10%, competitive steady state equal to illustrative WACC"
+      },
+      "contemporaneousAnchors": {
+        "priorFiscalRevenue": 26974.0,
+        "nextQuarterRevenue": 6500,
+        "annualizedQuarterRevenue": 26000,
+        "annualizedRunRateGrowth": -0.03610884555497884,
+        "quarterRecurringOperatingMargin": 0.2517692307692308,
+        "quarterTaxGuidance": 0.13,
+        "specialItem": null
+      },
+      "assumptions": {
+        "growth": -0.03610884555497884,
+        "targetMargin": 0.3,
+        "tax": 0.25,
+        "salesCapital": 2,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.1,
+        "years": 10,
+        "otherAssets": 0,
+        "otherClaims": 0
+      },
+      "sensitivities": {
+        "growth": [
+          -0.18610884555497884,
+          -0.03610884555497884,
+          0.11389115444502115
+        ],
+        "targetMargin": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "salesCapital": [
+          1,
+          2,
+          4
+        ],
+        "wacc": [
+          0.08,
+          0.1,
+          0.14
+        ]
+      },
+      "uncertainty": [
+        "Annualizing one quarter ignores seasonality, demand acceleration/deceleration and later quarters.",
+        "The linear fade engine does not implement quarter-specific margin guidance or a segmented cycle/hypergrowth model.",
+        "Historical risk-free/ERP/beta/spread vintages are not yet reconstructed; discount rates are scenarios.",
+        "Capital intensity and mature margin are common teaching assumptions, not facts established by these filings.",
+        "Forecasts are retrospectively reconstructed; model/human hindsight cannot be eliminated.",
+        "Negative run-rate growth is valid input evidence. Do not silently replace with zero; sales contraction does not automatically release accounting capital as cash."
+      ],
+      "sourceSnapshotSha256": "a133d8e753462a4120ff3f4fefa2c3907b59d64e0461f397a469066e5c2b7d2d"
+    },
+    {
+      "id": "NVDA-FY2024",
+      "snapshotId": "NVDA-FY2024",
+      "asOf": "2024-02-22T14:30:00Z",
+      "sourceCutoff": "2024-02-22T14:30:00Z",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+        "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/"
+      ],
+      "classification": "Illustrative guidance-run-rate scenario, not a complete historically estimated investment forecast",
+      "thesis": "Annualize the announced next-quarter revenue midpoint as a transparent starting run rate, then fade toward maturity. Do not assume that management guided the entire fiscal year or the next decade.",
+      "rules": {
+        "firstYearGrowth": "4 * Q1 guidance revenue / last full fiscal year revenue - 1",
+        "targetMargin": "30% common illustrative mature margin across all dates; sensitivity 20%-40%",
+        "tax": "25% illustrative mature cash-tax assumption, not management near-term effective tax guidance",
+        "salesCapital": "2x common illustrative incremental sales/capital; sensitivity 1x-4x",
+        "wacc": "10% common illustrative nominal USD hurdle; sensitivity 8%-14%; NOT a reconstructed historical WACC",
+        "terminalGrowth": "2.5% illustrative stable USD growth",
+        "terminalROIC": "10%, competitive steady state equal to illustrative WACC"
+      },
+      "contemporaneousAnchors": {
+        "priorFiscalRevenue": 60922.0,
+        "nextQuarterRevenue": 24000,
+        "annualizedQuarterRevenue": 96000,
+        "annualizedRunRateGrowth": 0.5757854305505401,
+        "quarterRecurringOperatingMargin": 0.6171666666666666,
+        "quarterTaxGuidance": 0.17,
+        "specialItem": null
+      },
+      "assumptions": {
+        "growth": 0.5757854305505401,
+        "targetMargin": 0.3,
+        "tax": 0.25,
+        "salesCapital": 2,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.1,
+        "years": 10,
+        "otherAssets": 0,
+        "otherClaims": 0
+      },
+      "sensitivities": {
+        "growth": [
+          0.4257854305505401,
+          0.5757854305505401,
+          0.7257854305505401
+        ],
+        "targetMargin": [
+          0.2,
+          0.3,
+          0.4
+        ],
+        "salesCapital": [
+          1,
+          2,
+          4
+        ],
+        "wacc": [
+          0.08,
+          0.1,
+          0.14
+        ]
+      },
+      "uncertainty": [
+        "Annualizing one quarter ignores seasonality, demand acceleration/deceleration and later quarters.",
+        "The linear fade engine does not implement quarter-specific margin guidance or a segmented cycle/hypergrowth model.",
+        "Historical risk-free/ERP/beta/spread vintages are not yet reconstructed; discount rates are scenarios.",
+        "Capital intensity and mature margin are common teaching assumptions, not facts established by these filings.",
+        "Forecasts are retrospectively reconstructed; model/human hindsight cannot be eliminated."
+      ],
+      "sourceSnapshotSha256": "6f25c53340256a2b9f33808fba63a51cd00560178760dce64f4cff5830adc31d"
+    }
+  ]
+}

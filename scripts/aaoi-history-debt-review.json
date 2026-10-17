@@ -1,0 +1,622 @@
+{
+  "issuer": "AAOI",
+  "asOf": "2026-10-17",
+  "scope": "Correct an omitted, separately presented convertible-note claim in additive historical book-capital proxies only. Debt is book carrying value, not market value. Original frozen data are unchanged.",
+  "firstConvertibleIssuance": "2019-03-05",
+  "firstIssuanceEvidence": "Issuer annual Note L describes the initial March 5, 2019 issuance of $80.5m senior convertible notes due March 15, 2024. Before 2019 no such claim is added.",
+  "periods": {
+    "2019-12-31": {
+      "components": [
+        "longTermDebtCurrent",
+        "longTermDebtNoncurrent",
+        "convertibleSeniorNotesNoncurrent"
+      ],
+      "bankDebtMillions": 49.923,
+      "convertibleNoncurrentMillions": 77.041,
+      "separatelyReportedConvertibleCurrentMillions": null,
+      "mappedDebtMillions": 126.964,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774921004108/aaoi20201231_10k.htm",
+      "review": "Original balance sheets and separate convertible-note disclosures establish that bank notes exclude convertible senior notes. Only the explicitly presented current convertible portion is added; the noncurrent amount is not counted twice.",
+      "roundingCaution": null
+    },
+    "2020-12-31": {
+      "components": [
+        "longTermDebtCurrent",
+        "longTermDebtNoncurrent",
+        "convertibleSeniorNotesNoncurrent"
+      ],
+      "bankDebtMillions": 52.169,
+      "convertibleNoncurrentMillions": 77.854,
+      "separatelyReportedConvertibleCurrentMillions": null,
+      "mappedDebtMillions": 130.023,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774922004349/aaoi20211231_10k.htm",
+      "review": "Original balance sheets and separate convertible-note disclosures establish that bank notes exclude convertible senior notes. Only the explicitly presented current convertible portion is added; the noncurrent amount is not counted twice.",
+      "roundingCaution": null
+    },
+    "2021-12-31": {
+      "components": [
+        "longTermDebtCurrent",
+        "longTermDebtNoncurrent",
+        "convertibleSeniorNotesNoncurrent"
+      ],
+      "bankDebtMillions": 54.689,
+      "convertibleNoncurrentMillions": 78.68,
+      "separatelyReportedConvertibleCurrentMillions": null,
+      "mappedDebtMillions": 133.369,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774923004648/aaoi20221231_10k.htm",
+      "review": "Original balance sheets and separate convertible-note disclosures establish that bank notes exclude convertible senior notes. Only the explicitly presented current convertible portion is added; the noncurrent amount is not counted twice.",
+      "roundingCaution": null
+    },
+    "2022-12-31": {
+      "components": [
+        "longTermDebtCurrent",
+        "longTermDebtNoncurrent",
+        "convertibleSeniorNotesNoncurrent",
+        "convertibleDebtCurrent"
+      ],
+      "bankDebtMillions": 57.074,
+      "convertibleNoncurrentMillions": 79.506,
+      "separatelyReportedConvertibleCurrentMillions": 0.0,
+      "mappedDebtMillions": 136.58,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774924005367/aaoi20231231_10k.htm",
+      "review": "Original balance sheets and separate convertible-note disclosures establish that bank notes exclude convertible senior notes. Only the explicitly presented current convertible portion is added; the noncurrent amount is not counted twice.",
+      "roundingCaution": null
+    },
+    "2023-12-31": {
+      "components": [
+        "longTermDebtCurrent",
+        "longTermDebtNoncurrent",
+        "convertibleSeniorNotesNoncurrent",
+        "convertibleDebtCurrent"
+      ],
+      "bankDebtMillions": 23.197,
+      "convertibleNoncurrentMillions": 76.233,
+      "separatelyReportedConvertibleCurrentMillions": 0.286,
+      "mappedDebtMillions": 99.716,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774925005575/aaoi20241231_10k.htm",
+      "review": "Original balance sheets and separate convertible-note disclosures establish that bank notes exclude convertible senior notes. Only the explicitly presented current convertible portion is added; the noncurrent amount is not counted twice.",
+      "roundingCaution": null
+    },
+    "2024-12-31": {
+      "components": [
+        "longTermDebtCurrent",
+        "longTermDebtNoncurrent",
+        "convertibleSeniorNotesNoncurrent",
+        "convertibleDebtCurrent"
+      ],
+      "bankDebtMillions": 26.682,
+      "convertibleNoncurrentMillions": 134.497,
+      "separatelyReportedConvertibleCurrentMillions": 0.0,
+      "mappedDebtMillions": 161.179,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+      "review": "Original balance sheets and separate convertible-note disclosures establish that bank notes exclude convertible senior notes. Only the explicitly presented current convertible portion is added; the noncurrent amount is not counted twice.",
+      "roundingCaution": "FY2024 Note K current bank debt is 22.369m, while the face balance sheet shows 22.370m. The mapped proxy follows the tagged Note K subtotal (26.682m); the 0.001m presentation difference is retained explicitly."
+    },
+    "2025-12-31": {
+      "components": [
+        "longTermDebtCurrent",
+        "longTermDebtNoncurrent",
+        "convertibleSeniorNotesNoncurrent"
+      ],
+      "bankDebtMillions": 33.975,
+      "convertibleNoncurrentMillions": 129.829,
+      "separatelyReportedConvertibleCurrentMillions": null,
+      "mappedDebtMillions": 163.804,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+      "review": "Original balance sheets and separate convertible-note disclosures establish that bank notes exclude convertible senior notes. Only the explicitly presented current convertible portion is added; the noncurrent amount is not counted twice.",
+      "roundingCaution": null
+    }
+  },
+  "sources": [
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774921004108/aaoi20201231_10k.htm",
+      "sha256": "6a43c66b3d747bae9b3dcc9a1ca8743888a369c63ed38ae4af738dcb3d022801",
+      "originalDocumentVerified": true,
+      "debtTableRows": [
+        [
+          "Current portion of notes payable and long-term debt",
+          "",
+          "$",
+          "38,265",
+          "",
+          "",
+          "$",
+          "33,371",
+          ""
+        ],
+        [
+          "Notes payable and long-term debt, less current portion",
+          "",
+          "",
+          "13,904",
+          "",
+          "",
+          "",
+          "16,552",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "77,854",
+          "",
+          "",
+          "",
+          "77,041",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "70,225",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "70,225",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "77,191",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "77,191",
+          ""
+        ],
+        [
+          "Net carrying amount",
+          "",
+          "$",
+          "77,854",
+          ""
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774922004349/aaoi20211231_10k.htm",
+      "sha256": "b4ba3695087b6ccdb57f508a86032013d13bd9cfa91bc9d6a7e10671cb0a5224",
+      "originalDocumentVerified": true,
+      "debtTableRows": [
+        [
+          "Current portion of notes payable and long-term debt",
+          "",
+          "$",
+          "49,689",
+          "",
+          "",
+          "$",
+          "38,265",
+          ""
+        ],
+        [
+          "Notes payable and long-term debt, less current portion",
+          "",
+          "",
+          "5,000",
+          "",
+          "",
+          "",
+          "13,904",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "78,680",
+          "",
+          "",
+          "",
+          "77,854",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "67,588",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "67,588",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "70,225",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "70,225",
+          ""
+        ],
+        [
+          "Net carrying amount",
+          "",
+          "$",
+          "78,680",
+          ""
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774923004648/aaoi20221231_10k.htm",
+      "sha256": "7f4dbf703cf360e141b7863be871f296aed574471e2cc5358e09442eab7042c3",
+      "originalDocumentVerified": true,
+      "debtTableRows": [
+        [
+          "Current portion of notes payable and long-term debt",
+          "",
+          "",
+          "57,074",
+          "",
+          "",
+          "",
+          "49,689",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "79,506",
+          "",
+          "",
+          "",
+          "78,680",
+          ""
+        ],
+        [
+          "Notes payable and long-term debt, less current portion",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "5,000",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "58,314",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "58,314",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "67,588",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "67,588",
+          ""
+        ],
+        [
+          "Net carrying amount",
+          "",
+          "$",
+          "79,506",
+          ""
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774924005367/aaoi20231231_10k.htm",
+      "sha256": "c6a98fa0da99b65064427ee7201905f6b157ec298076d7f77cafe12fa8c1e25d",
+      "originalDocumentVerified": true,
+      "debtTableRows": [
+        [
+          "Current portion of notes payable and long-term debt",
+          "",
+          "",
+          "23,197",
+          "",
+          "",
+          "",
+          "57,074",
+          ""
+        ],
+        [
+          "Current portion of convertible notes",
+          "",
+          "",
+          "286",
+          "",
+          "",
+          "",
+          "\u2014",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "76,233",
+          "",
+          "",
+          "",
+          "79,506",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "76,519",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "76,519",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "58,314",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "58,314",
+          ""
+        ],
+        [
+          "Net carrying amount",
+          "",
+          "$",
+          "76,233",
+          ""
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774925005575/aaoi20241231_10k.htm",
+      "sha256": "6ae0f3bca6129c89f02cafcbd51df76f295d81573b2b0f176e1b5079a6b3c90b",
+      "originalDocumentVerified": true,
+      "debtTableRows": [
+        [
+          "Current portion of notes payable and long-term debt",
+          "",
+          "",
+          "22,370",
+          "",
+          "",
+          "",
+          "23,197",
+          ""
+        ],
+        [
+          "Current portion of convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "286",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "134,497",
+          "",
+          "",
+          "",
+          "76,233",
+          ""
+        ],
+        [
+          "Notes payable and long-term debt, less current portion",
+          "",
+          "",
+          "4,313",
+          "",
+          "",
+          "",
+          "\u2014",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "148,625",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "148,625",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "76,519",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "76,519",
+          ""
+        ],
+        [
+          "Total net carry amount",
+          "",
+          "$",
+          "134,497",
+          ""
+        ]
+      ]
+    },
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+      "sha256": "ab840d7d70e59f2c1859e0b1017cf2b225aafa6faad95a45f55aad3579746914",
+      "originalDocumentVerified": true,
+      "debtTableRows": [
+        [
+          "Current portion of notes payable and long-term debt",
+          "",
+          "",
+          "33,975",
+          "",
+          "",
+          "",
+          "22,370",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "129,829",
+          "",
+          "",
+          "",
+          "134,497",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "145,231",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "145,231",
+          ""
+        ],
+        [
+          "Convertible senior notes",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "148,625",
+          "",
+          "",
+          "",
+          "\u2014",
+          "",
+          "",
+          "",
+          "148,625",
+          ""
+        ],
+        [
+          "Total net carry amount",
+          "",
+          "$",
+          "129,829",
+          ""
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3614 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-17",
+  "status": "Source-backed historical financial case studies; no strategy-performance claim",
+  "limitations": [
+    "Current-company selection is survivorship biased.",
+    "Four annual cases cannot validate an investing strategy.",
+    "Historical prices and total return not yet supplied.",
+    "Decision cutoffs are next regular US session opens after original 10-K acceptance; releases may have provided some data earlier.",
+    "Raw current SEC API facts are accession-filtered. Original filings are cached and used for custom tags.",
+    "No analyst growth, WACC, terminal assumptions are represented as historical facts."
+  ],
+  "companies": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "cik": "0001045810",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "NVDA-FY2021",
+          "fiscalYear": 2021,
+          "fiscalLabel": "FY2021 (ended 2021-01-31; mostly calendar 2020)",
+          "fiscalPeriodEnd": "2021-01-31",
+          "periodEnd": "2021-01-31",
+          "filingDate": "2021-02-26",
+          "filedAt": "2021-02-26",
+          "acceptedAt": "2021-02-26T22:03:14Z",
+          "acceptedAtEastern": "2021-02-26T17:03:14-05:00",
+          "availableFrom": "2021-03-01T14:30:00Z",
+          "decisionCutoff": "2021-03-01T14:30:00Z",
+          "accession": "0001045810-21-000010",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm",
+          "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/0001045810-21-000010-index-headers.html",
+          "vintage": "Original annual filing, exact accession; not later restated comparatives",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions of contemporaneous shares",
+            "grossMargin": "decimal ratio"
+          },
+          "currency": "USD",
+          "facts": {
+            "revenue": 16675.0,
+            "operatingIncome": 4532.0,
+            "netIncome": 4332.0,
+            "cashAndEquivalents": 847.0,
+            "marketableSecurities": 10714.0,
+            "totalDebt": 6963.0,
+            "periodEndShares": 620.0,
+            "dilutedShares": 628.0,
+            "grossProfit": 10396.0,
+            "researchAndDevelopment": 3924.0,
+            "stockBasedCompensation": 1397.0,
+            "operatingCashFlow": 5822.0,
+            "depreciationAmortization": 1098.0,
+            "incomeTaxExpense": 77.0,
+            "shares": 620.0,
+            "capitalExpenditureIncludingIntangibles": 1128.0,
+            "gamingRevenue": 7759.0,
+            "dataCenterRevenue": 6696.0,
+            "cash": 11561.0,
+            "debt": 6963.0,
+            "EBIT": 4532.0,
+            "grossMargin": 0.623448275862069
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecurities": "us-gaap:MarketableSecuritiesCurrent",
+            "totalDebt": "us-gaap:LongTermDebt",
+            "periodEndShares": "us-gaap:CommonStockSharesOutstanding",
+            "dilutedShares": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+            "grossProfit": "us-gaap:GrossProfit",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "depreciationAmortization": "us-gaap:DepreciationAndAmortization",
+            "incomeTaxExpense": "us-gaap:IncomeTaxExpenseBenefit",
+            "shares": "dei:EntityCommonStockSharesOutstanding",
+            "capitalExpenditureIncludingIntangibles": "nvda:PurchasesOfPropertyAndEquipmentAndIntangibleAssets",
+            "gamingRevenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "dataCenterRevenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 16675000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "operatingIncome": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 4532000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "netIncome": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 4332000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "cashAndEquivalents": {
+              "end": "2021-01-31",
+              "val": 847000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "marketableSecurities": {
+              "end": "2021-01-31",
+              "val": 10714000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "totalDebt": {
+              "end": "2021-01-31",
+              "val": 6963000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "periodEndShares": {
+              "end": "2021-01-31",
+              "val": 620000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "dilutedShares": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 628000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "grossProfit": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 10396000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "researchAndDevelopment": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 3924000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "stockBasedCompensation": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 1397000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "operatingCashFlow": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 5822000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "depreciationAmortization": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 1098000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26",
+              "frame": "CY2020"
+            },
+            "incomeTaxExpense": {
+              "start": "2020-01-27",
+              "end": "2021-01-31",
+              "val": 77000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26"
+            },
+            "shares": {
+              "end": "2021-02-19",
+              "val": 620000000,
+              "accn": "0001045810-21-000010",
+              "fy": 2021,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2021-02-26",
+              "frame": "CY2021Q1I"
+            },
+            "capitalExpenditureIncludingIntangibles": {
+              "rawText": "Purchases related to property and equipment and intangible assets(1,128)(489)(600)",
+              "contextRef": "i333bb1209df1462d83f7cab2751d7569_D20200127-20210131",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm"
+            },
+            "gamingRevenue": {
+              "rawText": "Gaming$7,759 $5,518 $6,246",
+              "contextRef": "i5c19f831cdee4e4fa89e999d70135ed5_D20200127-20210131",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm"
+            },
+            "dataCenterRevenue": {
+              "rawText": "Data Center6,696 2,983 2,932",
+              "contextRef": "i69f6e1a74d3a440d8cbdd0fd764753eb_D20200127-20210131",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm"
+            }
+          },
+          "missingFields": [],
+          "sharesAsOf": "2021-02-19",
+          "shareBasis": "Before July 2021 4-for-1 and June 2024 10-for-1 splits",
+          "sharesNote": "Cover-page actual outstanding count, rounded as reported, not diluted weighted-average shares. Existing options/RSUs require a separate dilution adjustment.",
+          "cashDefinition": "Cash and cash equivalents plus current marketable securities; analyst must assess operating cash and restrictions.",
+          "debtDefinition": "Reported total long-term debt including current portion; book carrying value, leases not included.",
+          "splitAdjustmentApplied": false,
+          "entryPrice": null,
+          "entryPriceStatus": "Missing verified price source; requires price import on identical share basis.",
+          "rawFilingSha256": "d01daed093fb17314b4b345b2c64a30d24b94942ff6adb142276473747d7bcc5",
+          "revenue": 16675.0,
+          "EBIT": 4532.0,
+          "cash": 11561.0,
+          "debt": 6963.0,
+          "shares": 620.0,
+          "guidance": {
+            "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2021",
+            "publishedDate": "2021-02-24",
+            "period": "Q1 FY2022",
+            "revenueMidpointUSDmillions": 5300,
+            "revenueRangePct": 2,
+            "gaapGrossMargin": 0.638,
+            "gaapGrossMarginRangeBasisPoints": 50,
+            "gaapOperatingExpenseUSDmillions": 1670,
+            "gaapTaxRate": 0.1,
+            "taxRateRangePercentagePoints": 1,
+            "classification": "Contemporaneous management guidance; not realized result or long-run forecast",
+            "specialItemNote": null
+          },
+          "splitBasis": "Before July 2021 4-for-1 and June 2024 10-for-1 splits",
+          "coverShareDate": "2021-02-19",
+          "interpretationNotes": [
+            "GAAP EBIT already expenses stock compensation; do not add it back without charging dilution.",
+            "Capex includes purchased intangible assets; cash flow from operations minus capex is not unlevered FCFF.",
+            "Data Center and Gaming are market-platform revenues, not the reportable operating segments.",
+            "Any long-term forecast is an analyst assumption requiring a dated rationale and uncertainty range."
+          ]
+        },
+        {
+          "id": "NVDA-FY2022",
+          "fiscalYear": 2022,
+          "fiscalLabel": "FY2022 (ended 2022-01-30; mostly calendar 2021)",
+          "fiscalPeriodEnd": "2022-01-30",
+          "periodEnd": "2022-01-30",
+          "filingDate": "2022-03-18",
+          "filedAt": "2022-03-18",
+          "acceptedAt": "2022-03-18T00:33:34Z",
+          "acceptedAtEastern": "2022-03-17T20:33:34-04:00",
+          "availableFrom": "2022-03-18T13:30:00Z",
+          "decisionCutoff": "2022-03-18T13:30:00Z",
+          "accession": "0001045810-22-000036",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm",
+          "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/0001045810-22-000036-index-headers.html",
+          "vintage": "Original annual filing, exact accession; not later restated comparatives",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions of contemporaneous shares",
+            "grossMargin": "decimal ratio"
+          },
+          "currency": "USD",
+          "facts": {
+            "revenue": 26914.0,
+            "operatingIncome": 10041.0,
+            "netIncome": 9752.0,
+            "cashAndEquivalents": 1990.0,
+            "marketableSecurities": 19218.0,
+            "totalDebt": 10946.0,
+            "periodEndShares": 2506.0,
+            "dilutedShares": 2535.0,
+            "grossProfit": 17475.0,
+            "researchAndDevelopment": 5268.0,
+            "stockBasedCompensation": 2004.0,
+            "operatingCashFlow": 9108.0,
+            "depreciationAmortization": 1174.0,
+            "incomeTaxExpense": 189.0,
+            "shares": 2510.0,
+            "capitalExpenditureIncludingIntangibles": 976.0,
+            "gamingRevenue": 12462.0,
+            "dataCenterRevenue": 10613.0,
+            "cash": 21208.0,
+            "debt": 10946.0,
+            "EBIT": 10041.0,
+            "grossMargin": 0.6492903321691313
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:Revenues",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecurities": "us-gaap:MarketableSecuritiesCurrent",
+            "totalDebt": "us-gaap:LongTermDebt",
+            "periodEndShares": "us-gaap:CommonStockSharesOutstanding",
+            "dilutedShares": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+            "grossProfit": "us-gaap:GrossProfit",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "depreciationAmortization": "us-gaap:DepreciationDepletionAndAmortization",
+            "incomeTaxExpense": "us-gaap:IncomeTaxExpenseBenefit",
+            "shares": "dei:EntityCommonStockSharesOutstanding",
+            "capitalExpenditureIncludingIntangibles": "nvda:PurchasesOfPropertyAndEquipmentAndIntangibleAssets",
+            "gamingRevenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "dataCenterRevenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 26914000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "operatingIncome": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 10041000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "netIncome": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 9752000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "cashAndEquivalents": {
+              "end": "2022-01-30",
+              "val": 1990000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "marketableSecurities": {
+              "end": "2022-01-30",
+              "val": 19218000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "totalDebt": {
+              "end": "2022-01-30",
+              "val": 10946000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "periodEndShares": {
+              "end": "2022-01-30",
+              "val": 2506000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "dilutedShares": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 2535000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "grossProfit": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 17475000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "researchAndDevelopment": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 5268000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "stockBasedCompensation": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 2004000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "operatingCashFlow": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 9108000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "depreciationAmortization": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 1174000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "incomeTaxExpense": {
+              "start": "2021-02-01",
+              "end": "2022-01-30",
+              "val": 189000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18"
+            },
+            "shares": {
+              "end": "2022-03-11",
+              "val": 2510000000,
+              "accn": "0001045810-22-000036",
+              "fy": 2022,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2022-03-18",
+              "frame": "CY2022Q1I"
+            },
+            "capitalExpenditureIncludingIntangibles": {
+              "rawText": "Purchases related to property and equipment and intangible assets(976)(1,128)(489)",
+              "contextRef": "i2c5e111a942340e08ad1e8d2e3b0fb71_D20210201-20220130",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm"
+            },
+            "gamingRevenue": {
+              "rawText": "Gaming$12,462 $7,759 $5,518",
+              "contextRef": "i945261b6b4ab40ca99d9a61ce22615cb_D20210201-20220130",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm"
+            },
+            "dataCenterRevenue": {
+              "rawText": "Data Center10,613 6,696 2,983",
+              "contextRef": "i46494ac979fd4188b2c741cdcf2b6f8b_D20210201-20220130",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm"
+            }
+          },
+          "missingFields": [],
+          "sharesAsOf": "2022-03-11",
+          "shareBasis": "After July 2021 4-for-1; before June 2024 10-for-1 split",
+          "sharesNote": "Cover-page actual outstanding count, rounded as reported, not diluted weighted-average shares. Existing options/RSUs require a separate dilution adjustment.",
+          "cashDefinition": "Cash and cash equivalents plus current marketable securities; analyst must assess operating cash and restrictions.",
+          "debtDefinition": "Reported total long-term debt including current portion; book carrying value, leases not included.",
+          "splitAdjustmentApplied": false,
+          "entryPrice": null,
+          "entryPriceStatus": "Missing verified price source; requires price import on identical share basis.",
+          "rawFilingSha256": "0ccc013e50f73f97a7a5705e6e04e1da13dbe0b0f4cfa847e87bb10f9bf88be9",
+          "revenue": 26914.0,
+          "EBIT": 10041.0,
+          "cash": 21208.0,
+          "debt": 10946.0,
+          "shares": 2510.0,
+          "guidance": {
+            "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2022",
+            "publishedDate": "2022-02-16",
+            "period": "Q1 FY2023",
+            "revenueMidpointUSDmillions": 8100,
+            "revenueRangePct": 2,
+            "gaapGrossMargin": 0.652,
+            "gaapGrossMarginRangeBasisPoints": 50,
+            "gaapOperatingExpenseUSDmillions": 3550,
+            "gaapTaxRate": 0.11,
+            "taxRateRangePercentagePoints": 1,
+            "classification": "Contemporaneous management guidance; not realized result or long-run forecast",
+            "specialItemNote": "Includes announced $1,360m Arm termination write-off; do not extrapolate as recurring cost."
+          },
+          "splitBasis": "After July 2021 4-for-1; before June 2024 10-for-1 split",
+          "coverShareDate": "2022-03-11",
+          "interpretationNotes": [
+            "GAAP EBIT already expenses stock compensation; do not add it back without charging dilution.",
+            "Capex includes purchased intangible assets; cash flow from operations minus capex is not unlevered FCFF.",
+            "Data Center and Gaming are market-platform revenues, not the reportable operating segments.",
+            "Any long-term forecast is an analyst assumption requiring a dated rationale and uncertainty range."
+          ]
+        },
+        {
+          "id": "NVDA-FY2023",
+          "fiscalYear": 2023,
+          "fiscalLabel": "FY2023 (ended 2023-01-29; mostly calendar 2022)",
+          "fiscalPeriodEnd": "2023-01-29",
+          "periodEnd": "2023-01-29",
+          "filingDate": "2023-02-24",
+          "filedAt": "2023-02-24",
+          "acceptedAt": "2023-02-24T22:23:43Z",
+          "acceptedAtEastern": "2023-02-24T17:23:43-05:00",
+          "availableFrom": "2023-02-27T14:30:00Z",
+          "decisionCutoff": "2023-02-27T14:30:00Z",
+          "accession": "0001045810-23-000017",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm",
+          "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/0001045810-23-000017-index-headers.html",
+          "vintage": "Original annual filing, exact accession; not later restated comparatives",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions of contemporaneous shares",
+            "grossMargin": "decimal ratio"
+          },
+          "currency": "USD",
+          "facts": {
+            "revenue": 26974.0,
+            "operatingIncome": 4224.0,
+            "netIncome": 4368.0,
+            "cashAndEquivalents": 3389.0,
+            "marketableSecurities": 9907.0,
+            "totalDebt": 10953.0,
+            "periodEndShares": 2466.0,
+            "dilutedShares": 2507.0,
+            "grossProfit": 15356.0,
+            "researchAndDevelopment": 7339.0,
+            "stockBasedCompensation": 2709.0,
+            "operatingCashFlow": 5641.0,
+            "depreciationAmortization": 1544.0,
+            "incomeTaxExpense": -187.0,
+            "shares": 2470.0,
+            "capitalExpenditureIncludingIntangibles": 1833.0,
+            "dataCenterRevenue": 15005.0,
+            "gamingRevenue": 9067.0,
+            "cash": 13296.0,
+            "debt": 10953.0,
+            "EBIT": 4224.0,
+            "grossMargin": 0.5692889449099132
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:Revenues",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecurities": "us-gaap:MarketableSecuritiesCurrent",
+            "totalDebt": "us-gaap:LongTermDebt",
+            "periodEndShares": "us-gaap:CommonStockSharesOutstanding",
+            "dilutedShares": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+            "grossProfit": "us-gaap:GrossProfit",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "depreciationAmortization": "us-gaap:DepreciationDepletionAndAmortization",
+            "incomeTaxExpense": "us-gaap:IncomeTaxExpenseBenefit",
+            "shares": "dei:EntityCommonStockSharesOutstanding",
+            "capitalExpenditureIncludingIntangibles": "nvda:PurchasesOfPropertyAndEquipmentAndIntangibleAssets",
+            "dataCenterRevenue": "us-gaap:Revenues",
+            "gamingRevenue": "us-gaap:Revenues"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 26974000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "operatingIncome": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 4224000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "netIncome": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 4368000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "cashAndEquivalents": {
+              "end": "2023-01-29",
+              "val": 3389000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "marketableSecurities": {
+              "end": "2023-01-29",
+              "val": 9907000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "totalDebt": {
+              "end": "2023-01-29",
+              "val": 10953000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "periodEndShares": {
+              "end": "2023-01-29",
+              "val": 2466000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "dilutedShares": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 2507000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "grossProfit": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 15356000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "researchAndDevelopment": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 7339000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "stockBasedCompensation": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 2709000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "operatingCashFlow": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 5641000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "depreciationAmortization": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": 1544000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "incomeTaxExpense": {
+              "start": "2022-01-31",
+              "end": "2023-01-29",
+              "val": -187000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24"
+            },
+            "shares": {
+              "end": "2023-02-17",
+              "val": 2470000000,
+              "accn": "0001045810-23-000017",
+              "fy": 2023,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2023-02-24",
+              "frame": "CY2023Q1I"
+            },
+            "capitalExpenditureIncludingIntangibles": {
+              "rawText": "Purchases related to property and equipment and intangible assets(1,833)(976)(1,128)",
+              "contextRef": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm"
+            },
+            "dataCenterRevenue": {
+              "rawText": "Data Center$15,005 $10,613 $6,696",
+              "contextRef": "ic04edda7ae0d4cb8ae20b4266c205862_D20220131-20230129",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm"
+            },
+            "gamingRevenue": {
+              "rawText": "Gaming9,067 12,462 7,759",
+              "contextRef": "ida87c5eb52bd4f53b7170a6d382aee2d_D20220131-20230129",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm"
+            }
+          },
+          "missingFields": [],
+          "sharesAsOf": "2023-02-17",
+          "shareBasis": "After July 2021 4-for-1; before June 2024 10-for-1 split",
+          "sharesNote": "Cover-page actual outstanding count, rounded as reported, not diluted weighted-average shares. Existing options/RSUs require a separate dilution adjustment.",
+          "cashDefinition": "Cash and cash equivalents plus current marketable securities; analyst must assess operating cash and restrictions.",
+          "debtDefinition": "Reported total long-term debt including current portion; book carrying value, leases not included.",
+          "splitAdjustmentApplied": false,
+          "entryPrice": null,
+          "entryPriceStatus": "Missing verified price source; requires price import on identical share basis.",
+          "rawFilingSha256": "83253ec43dfa602e975861b94c87d78753b1123815c3d606e257f435769a8ff3",
+          "revenue": 26974.0,
+          "EBIT": 4224.0,
+          "cash": 13296.0,
+          "debt": 10953.0,
+          "shares": 2470.0,
+          "guidance": {
+            "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2023/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2023/",
+            "publishedDate": "2023-02-22",
+            "period": "Q1 FY2024",
+            "revenueMidpointUSDmillions": 6500,
+            "revenueRangePct": 2,
+            "gaapGrossMargin": 0.641,
+            "gaapGrossMarginRangeBasisPoints": 50,
+            "gaapOperatingExpenseUSDmillions": 2530,
+            "gaapTaxRate": 0.13,
+            "taxRateRangePercentagePoints": 1,
+            "classification": "Contemporaneous management guidance; not realized result or long-run forecast",
+            "specialItemNote": null
+          },
+          "splitBasis": "After July 2021 4-for-1; before June 2024 10-for-1 split",
+          "coverShareDate": "2023-02-17",
+          "interpretationNotes": [
+            "GAAP EBIT already expenses stock compensation; do not add it back without charging dilution.",
+            "Capex includes purchased intangible assets; cash flow from operations minus capex is not unlevered FCFF.",
+            "Data Center and Gaming are market-platform revenues, not the reportable operating segments.",
+            "Any long-term forecast is an analyst assumption requiring a dated rationale and uncertainty range."
+          ]
+        },
+        {
+          "id": "NVDA-FY2024",
+          "fiscalYear": 2024,
+          "fiscalLabel": "FY2024 (ended 2024-01-28; mostly calendar 2023)",
+          "fiscalPeriodEnd": "2024-01-28",
+          "periodEnd": "2024-01-28",
+          "filingDate": "2024-02-21",
+          "filedAt": "2024-02-21",
+          "acceptedAt": "2024-02-21T21:36:57Z",
+          "acceptedAtEastern": "2024-02-21T16:36:57-05:00",
+          "availableFrom": "2024-02-22T14:30:00Z",
+          "decisionCutoff": "2024-02-22T14:30:00Z",
+          "accession": "0001045810-24-000029",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+          "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/0001045810-24-000029-index-headers.html",
+          "vintage": "Original annual filing, exact accession; not later restated comparatives",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions of contemporaneous shares",
+            "grossMargin": "decimal ratio"
+          },
+          "currency": "USD",
+          "facts": {
+            "revenue": 60922.0,
+            "operatingIncome": 32972.0,
+            "netIncome": 29760.0,
+            "cashAndEquivalents": 7280.0,
+            "marketableSecurities": 18704.0,
+            "totalDebt": 9709.0,
+            "periodEndShares": 2464.0,
+            "dilutedShares": 2494.0,
+            "grossProfit": 44301.0,
+            "researchAndDevelopment": 8675.0,
+            "stockBasedCompensation": 3549.0,
+            "operatingCashFlow": 28090.0,
+            "depreciationAmortization": 1508.0,
+            "incomeTaxExpense": 4058.0,
+            "shares": 2500.0,
+            "capitalExpenditureIncludingIntangibles": 1069.0,
+            "dataCenterRevenue": 47525.0,
+            "gamingRevenue": 10447.0,
+            "cash": 25984.0,
+            "debt": 9709.0,
+            "EBIT": 32972.0,
+            "grossMargin": 0.7271757329043695
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:Revenues",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecurities": "us-gaap:MarketableSecuritiesCurrent",
+            "totalDebt": "us-gaap:LongTermDebt",
+            "periodEndShares": "us-gaap:CommonStockSharesOutstanding",
+            "dilutedShares": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+            "grossProfit": "us-gaap:GrossProfit",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "depreciationAmortization": "us-gaap:DepreciationDepletionAndAmortization",
+            "incomeTaxExpense": "us-gaap:IncomeTaxExpenseBenefit",
+            "shares": "dei:EntityCommonStockSharesOutstanding",
+            "capitalExpenditureIncludingIntangibles": "us-gaap:PaymentsToAcquireProductiveAssets",
+            "dataCenterRevenue": "us-gaap:Revenues",
+            "gamingRevenue": "us-gaap:Revenues"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 60922000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "operatingIncome": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 32972000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "netIncome": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 29760000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "cashAndEquivalents": {
+              "end": "2024-01-28",
+              "val": 7280000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "marketableSecurities": {
+              "end": "2024-01-28",
+              "val": 18704000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "totalDebt": {
+              "end": "2024-01-28",
+              "val": 9709000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "periodEndShares": {
+              "end": "2024-01-28",
+              "val": 2464000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "dilutedShares": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 2494000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "grossProfit": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 44301000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "researchAndDevelopment": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 8675000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "stockBasedCompensation": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 3549000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "operatingCashFlow": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 28090000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "depreciationAmortization": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 1508000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "incomeTaxExpense": {
+              "start": "2023-01-30",
+              "end": "2024-01-28",
+              "val": 4058000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21"
+            },
+            "shares": {
+              "end": "2024-02-16",
+              "val": 2500000000,
+              "accn": "0001045810-24-000029",
+              "fy": 2024,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2024-02-21",
+              "frame": "CY2024Q1I"
+            },
+            "capitalExpenditureIncludingIntangibles": {
+              "rawText": "Purchases related to property and equipment and intangible assets(1,069)(1,833)(976)",
+              "contextRef": "c-1",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm"
+            },
+            "dataCenterRevenue": {
+              "rawText": "Data Center$47,525 $15,005 $10,613",
+              "contextRef": "c-237",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm"
+            },
+            "gamingRevenue": {
+              "rawText": "Gaming10,447 9,067 12,462",
+              "contextRef": "c-240",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm"
+            }
+          },
+          "missingFields": [],
+          "sharesAsOf": "2024-02-16",
+          "shareBasis": "After July 2021 4-for-1; before June 2024 10-for-1 split",
+          "sharesNote": "Cover-page actual outstanding count, rounded as reported, not diluted weighted-average shares. Existing options/RSUs require a separate dilution adjustment.",
+          "cashDefinition": "Cash and cash equivalents plus current marketable securities; analyst must assess operating cash and restrictions.",
+          "debtDefinition": "Reported total long-term debt including current portion; book carrying value, leases not included.",
+          "splitAdjustmentApplied": false,
+          "entryPrice": null,
+          "entryPriceStatus": "Missing verified price source; requires price import on identical share basis.",
+          "rawFilingSha256": "95ef92fbe42373c035c7125f2a204f2f9a6f57218c86d5b544ef8b354f177f2d",
+          "revenue": 60922.0,
+          "EBIT": 32972.0,
+          "cash": 25984.0,
+          "debt": 9709.0,
+          "shares": 2500.0,
+          "guidance": {
+            "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/",
+            "publishedDate": "2024-02-21",
+            "period": "Q1 FY2025",
+            "revenueMidpointUSDmillions": 24000,
+            "revenueRangePct": 2,
+            "gaapGrossMargin": 0.763,
+            "gaapGrossMarginRangeBasisPoints": 50,
+            "gaapOperatingExpenseUSDmillions": 3500,
+            "gaapTaxRate": 0.17,
+            "taxRateRangePercentagePoints": 1,
+            "classification": "Contemporaneous management guidance; not realized result or long-run forecast",
+            "specialItemNote": null
+          },
+          "splitBasis": "After July 2021 4-for-1; before June 2024 10-for-1 split",
+          "coverShareDate": "2024-02-16",
+          "interpretationNotes": [
+            "GAAP EBIT already expenses stock compensation; do not add it back without charging dilution.",
+            "Capex includes purchased intangible assets; cash flow from operations minus capex is not unlevered FCFF.",
+            "Data Center and Gaming are market-platform revenues, not the reportable operating segments.",
+            "Any long-term forecast is an analyst assumption requiring a dated rationale and uncertainty range."
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "AAOI",
+      "name": "APPLIED OPTOELECTRONICS, INC.",
+      "cik": "0001158114",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "AAOI-FY2025",
+          "fiscalYear": 2025,
+          "fiscalLabel": "Annual filing ended 2025-12-31",
+          "periodEnd": "2025-12-31",
+          "fiscalPeriodEnd": "2025-12-31",
+          "filedAt": "2026-02-26",
+          "filingDate": "2026-02-26",
+          "acceptedAt": "2026-02-26T21:24:24Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0001437749-26-005875",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 455.715,
+            "operatingIncome": -54.602,
+            "cashAndEquivalents": 206.14,
+            "marketableSecuritiesCurrent": null,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": 33.975,
+            "commercialPaper": null,
+            "shortTermBorrowings": null,
+            "longTermDebtCurrent": 33.975,
+            "longTermDebtNoncurrent": 0.0,
+            "researchAndDevelopment": 85.507,
+            "stockBasedCompensation": 11.71,
+            "operatingCashFlow": -174.428,
+            "capitalExpenditure": 179.148,
+            "netIncome": -38.228,
+            "shares": 75.198817,
+            "EBIT": -54.602,
+            "cash": 206.14,
+            "debt": 33.975
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "longTermDebtTotal": "us-gaap:LongTermDebt",
+            "longTermDebtCurrent": "us-gaap:LongTermDebtCurrent",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 455715000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025"
+            },
+            "operatingIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": -54602000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025"
+            },
+            "cashAndEquivalents": {
+              "end": "2025-12-31",
+              "val": 206140000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "longTermDebtTotal": {
+              "end": "2025-12-31",
+              "val": 33975000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025Q4I"
+            },
+            "longTermDebtCurrent": {
+              "end": "2025-12-31",
+              "val": 33975000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2025-12-31",
+              "val": 0,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "researchAndDevelopment": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 85507000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 11710000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025"
+            },
+            "operatingCashFlow": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": -174428000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025"
+            },
+            "capitalExpenditure": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 179148000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025"
+            },
+            "netIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": -38228000,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26"
+            },
+            "shares": {
+              "end": "2026-02-01",
+              "val": 75198817,
+              "accn": "0001437749-26-005875",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-26",
+              "frame": "CY2025Q4I"
+            }
+          },
+          "missingFields": [
+            "marketableSecuritiesCurrent",
+            "marketableSecuritiesNoncurrent",
+            "commercialPaper",
+            "shortTermBorrowings"
+          ],
+          "coverShareDate": "2026-02-01",
+          "sharesAsOf": "2026-02-01",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Reported long-term debt only; short-term and lease completeness must be reviewed before valuation.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 455.715,
+          "EBIT": -54.602,
+          "cash": 206.14,
+          "debt": 33.975,
+          "shares": 75.198817,
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 12,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "cik": "0000320193",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "AAPL-FY2025",
+          "fiscalYear": 2025,
+          "fiscalLabel": "Annual filing ended 2025-09-27",
+          "periodEnd": "2025-09-27",
+          "fiscalPeriodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "filingDate": "2025-10-31",
+          "acceptedAt": "2025-10-31T10:01:26Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0000320193-25-000079",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 416161.0,
+            "operatingIncome": 133050.0,
+            "cashAndEquivalents": 35934.0,
+            "marketableSecuritiesCurrent": 18763.0,
+            "marketableSecuritiesNoncurrent": 77723.0,
+            "longTermDebtTotal": 90678.0,
+            "commercialPaper": 7979.0,
+            "shortTermBorrowings": null,
+            "longTermDebtCurrent": 12350.0,
+            "longTermDebtNoncurrent": 78328.0,
+            "researchAndDevelopment": 34550.0,
+            "stockBasedCompensation": 12863.0,
+            "operatingCashFlow": 111482.0,
+            "capitalExpenditure": 12715.0,
+            "netIncome": 112010.0,
+            "shares": 14776.353,
+            "EBIT": 133050.0,
+            "cash": 35934.0,
+            "debt": 98657.0
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:MarketableSecuritiesCurrent",
+            "marketableSecuritiesNoncurrent": "us-gaap:MarketableSecuritiesNoncurrent",
+            "longTermDebtTotal": "us-gaap:LongTermDebt",
+            "commercialPaper": "us-gaap:CommercialPaper",
+            "longTermDebtCurrent": "us-gaap:LongTermDebtCurrent",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "val": 416161000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025"
+            },
+            "operatingIncome": {
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "val": 133050000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025"
+            },
+            "cashAndEquivalents": {
+              "end": "2025-09-27",
+              "val": 35934000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2025-09-27",
+              "val": 18763000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31"
+            },
+            "marketableSecuritiesNoncurrent": {
+              "end": "2025-09-27",
+              "val": 77723000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31"
+            },
+            "longTermDebtTotal": {
+              "end": "2025-09-27",
+              "val": 90678000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31"
+            },
+            "commercialPaper": {
+              "end": "2025-09-27",
+              "val": 7979000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31"
+            },
+            "longTermDebtCurrent": {
+              "end": "2025-09-27",
+              "val": 12350000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2025-09-27",
+              "val": 78328000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31"
+            },
+            "researchAndDevelopment": {
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "val": 34550000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025"
+            },
+            "stockBasedCompensation": {
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "val": 12863000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025"
+            },
+            "operatingCashFlow": {
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "val": 111482000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025"
+            },
+            "capitalExpenditure": {
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "val": 12715000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025"
+            },
+            "netIncome": {
+              "start": "2024-09-29",
+              "end": "2025-09-27",
+              "val": 112010000000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025"
+            },
+            "shares": {
+              "end": "2025-10-17",
+              "val": 14776353000,
+              "accn": "0000320193-25-000079",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2025-10-31",
+              "frame": "CY2025Q3I"
+            }
+          },
+          "missingFields": [
+            "shortTermBorrowings"
+          ],
+          "coverShareDate": "2025-10-17",
+          "sharesAsOf": "2025-10-17",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Term debt carrying value plus commercial paper; excludes leases.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 416161.0,
+          "EBIT": 133050.0,
+          "cash": 35934.0,
+          "debt": 98657.0,
+          "shares": 14776.353,
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 15,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "name": "AMAZON COM INC",
+      "cik": "0001018724",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "AMZN-FY2025",
+          "fiscalYear": 2025,
+          "fiscalLabel": "Annual filing ended 2025-12-31",
+          "periodEnd": "2025-12-31",
+          "fiscalPeriodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "filingDate": "2026-02-06",
+          "acceptedAt": "2026-02-05T23:44:31Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0001018724-26-000004",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 716924.0,
+            "operatingIncome": 79975.0,
+            "cashAndEquivalents": 86810.0,
+            "marketableSecuritiesCurrent": 36219.0,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": 68836.0,
+            "commercialPaper": null,
+            "shortTermBorrowings": 455.0,
+            "longTermDebtCurrent": 2748.0,
+            "longTermDebtNoncurrent": 65648.0,
+            "researchAndDevelopment": null,
+            "stockBasedCompensation": 19467.0,
+            "operatingCashFlow": 139514.0,
+            "capitalExpenditure": null,
+            "netIncome": 77670.0,
+            "shares": 10734.92087,
+            "EBIT": 79975.0,
+            "cash": 86810.0,
+            "debt": 68836.0
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:MarketableSecuritiesCurrent",
+            "longTermDebtTotal": "us-gaap:LongTermDebt",
+            "shortTermBorrowings": "us-gaap:ShortTermBorrowings",
+            "longTermDebtCurrent": "us-gaap:LongTermDebtCurrent",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 716924000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "frame": "CY2025"
+            },
+            "operatingIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 79975000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "frame": "CY2025"
+            },
+            "cashAndEquivalents": {
+              "end": "2025-12-31",
+              "val": 86810000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2025-12-31",
+              "val": 36219000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06"
+            },
+            "longTermDebtTotal": {
+              "end": "2025-12-31",
+              "val": 68836000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06"
+            },
+            "shortTermBorrowings": {
+              "end": "2025-12-31",
+              "val": 455000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06"
+            },
+            "longTermDebtCurrent": {
+              "end": "2025-12-31",
+              "val": 2748000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2025-12-31",
+              "val": 65648000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 19467000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "frame": "CY2025"
+            },
+            "operatingCashFlow": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 139514000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "frame": "CY2025"
+            },
+            "netIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 77670000000,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06"
+            },
+            "shares": {
+              "end": "2026-01-28",
+              "val": 10734920870,
+              "accn": "0001018724-26-000004",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-06",
+              "frame": "CY2025Q4I"
+            }
+          },
+          "missingFields": [
+            "marketableSecuritiesNoncurrent",
+            "commercialPaper",
+            "researchAndDevelopment",
+            "capitalExpenditure"
+          ],
+          "coverShareDate": "2026-01-28",
+          "sharesAsOf": "2026-01-28",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Reported long-term debt only; short-term and lease completeness must be reviewed before valuation.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 716924.0,
+          "EBIT": 79975.0,
+          "cash": 86810.0,
+          "debt": 68836.0,
+          "shares": 10734.92087,
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 12,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "COHR",
+      "name": "COHERENT CORP.",
+      "cik": "0000820318",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "COHR-FY2026",
+          "fiscalYear": 2026,
+          "fiscalLabel": "Annual filing ended 2026-06-30",
+          "periodEnd": "2026-06-30",
+          "fiscalPeriodEnd": "2026-06-30",
+          "filedAt": "2026-08-14",
+          "filingDate": "2026-08-14",
+          "acceptedAt": "2026-08-14T12:10:05Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0000820318-26-000020",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 7118.181,
+            "operatingIncome": null,
+            "cashAndEquivalents": 1162.018,
+            "marketableSecuritiesCurrent": 825.0,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": 3222.224,
+            "commercialPaper": null,
+            "shortTermBorrowings": null,
+            "longTermDebtCurrent": 7.916,
+            "longTermDebtNoncurrent": 3214.308,
+            "researchAndDevelopment": 722.952,
+            "stockBasedCompensation": 186.468,
+            "operatingCashFlow": 79.514,
+            "capitalExpenditure": 1102.909,
+            "netIncome": 804.998,
+            "shares": 195.832246,
+            "EBIT": null,
+            "cash": 1162.018,
+            "debt": 3222.224
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:ShortTermInvestments",
+            "longTermDebtTotal": "us-gaap:LongTermDebt",
+            "longTermDebtCurrent": "us-gaap:LongTermDebtCurrent",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 7118181000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026"
+            },
+            "cashAndEquivalents": {
+              "end": "2026-06-30",
+              "val": 1162018000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026Q2I"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2026-06-30",
+              "val": 825000000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtTotal": {
+              "end": "2026-06-30",
+              "val": 3222224000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtCurrent": {
+              "end": "2026-06-30",
+              "val": 7916000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2026-06-30",
+              "val": 3214308000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026Q2I"
+            },
+            "researchAndDevelopment": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 722952000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 186468000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026"
+            },
+            "operatingCashFlow": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 79514000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026"
+            },
+            "capitalExpenditure": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 1102909000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026"
+            },
+            "netIncome": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 804998000,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14"
+            },
+            "shares": {
+              "end": "2026-08-10",
+              "val": 195832246,
+              "accn": "0000820318-26-000020",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-14",
+              "frame": "CY2026Q2I"
+            }
+          },
+          "missingFields": [
+            "operatingIncome",
+            "marketableSecuritiesNoncurrent",
+            "commercialPaper",
+            "shortTermBorrowings",
+            "EBIT"
+          ],
+          "coverShareDate": "2026-08-10",
+          "sharesAsOf": "2026-08-10",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Reported long-term debt only; short-term and lease completeness must be reviewed before valuation.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 7118.181,
+          "EBIT": null,
+          "cash": 1162.018,
+          "debt": 3222.224,
+          "shares": 195.832246,
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 12,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "FN",
+      "name": "FABRINET",
+      "cik": "0001408710",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "FN-FY2026",
+          "fiscalYear": 2026,
+          "fiscalLabel": "Annual filing ended 2026-06-26",
+          "periodEnd": "2026-06-26",
+          "fiscalPeriodEnd": "2026-06-26",
+          "filedAt": "2026-08-18",
+          "filingDate": "2026-08-18",
+          "acceptedAt": "2026-08-18T11:12:07Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0001408710-26-000028",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 4641.097,
+            "operatingIncome": 462.887,
+            "cashAndEquivalents": 346.711,
+            "marketableSecuritiesCurrent": 528.344,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": null,
+            "commercialPaper": null,
+            "shortTermBorrowings": null,
+            "longTermDebtCurrent": null,
+            "longTermDebtNoncurrent": null,
+            "researchAndDevelopment": null,
+            "stockBasedCompensation": 34.63,
+            "operatingCashFlow": 256.725,
+            "capitalExpenditure": 252.503,
+            "netIncome": 473.027,
+            "shares": 35.834864,
+            "EBIT": 462.887,
+            "cash": 346.711,
+            "debt": null
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:Revenues",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:ShortTermInvestments",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-06-28",
+              "end": "2026-06-26",
+              "val": 4641097000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2025"
+            },
+            "operatingIncome": {
+              "start": "2025-06-28",
+              "end": "2026-06-26",
+              "val": 462887000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2025"
+            },
+            "cashAndEquivalents": {
+              "end": "2026-06-26",
+              "val": 346711000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2026Q2I"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2026-06-26",
+              "val": 528344000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2026Q2I"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-06-28",
+              "end": "2026-06-26",
+              "val": 34630000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2025"
+            },
+            "operatingCashFlow": {
+              "start": "2025-06-28",
+              "end": "2026-06-26",
+              "val": 256725000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2025"
+            },
+            "capitalExpenditure": {
+              "start": "2025-06-28",
+              "end": "2026-06-26",
+              "val": 252503000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2025"
+            },
+            "netIncome": {
+              "start": "2025-06-28",
+              "end": "2026-06-26",
+              "val": 473027000,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2025"
+            },
+            "shares": {
+              "end": "2026-08-07",
+              "val": 35834864,
+              "accn": "0001408710-26-000028",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-18",
+              "frame": "CY2026Q2I"
+            }
+          },
+          "missingFields": [
+            "marketableSecuritiesNoncurrent",
+            "longTermDebtTotal",
+            "commercialPaper",
+            "shortTermBorrowings",
+            "longTermDebtCurrent",
+            "longTermDebtNoncurrent",
+            "researchAndDevelopment",
+            "debt"
+          ],
+          "coverShareDate": "2026-08-07",
+          "sharesAsOf": "2026-08-07",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Debt total not mapped confidently; user must supply reviewed total.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 4641.097,
+          "EBIT": 462.887,
+          "cash": 346.711,
+          "debt": null,
+          "shares": 35.834864,
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 9,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc.",
+      "cik": "0001652044",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "GOOG-FY2025",
+          "fiscalYear": 2025,
+          "fiscalLabel": "Annual filing ended 2025-12-31",
+          "periodEnd": "2025-12-31",
+          "fiscalPeriodEnd": "2025-12-31",
+          "filedAt": "2026-02-05",
+          "filingDate": "2026-02-05",
+          "acceptedAt": "2026-02-05T02:56:03Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0001652044-26-000018",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 402836.0,
+            "operatingIncome": 129039.0,
+            "cashAndEquivalents": 30708.0,
+            "marketableSecuritiesCurrent": 96135.0,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": 49085.0,
+            "commercialPaper": 0.0,
+            "shortTermBorrowings": null,
+            "longTermDebtCurrent": 1996.0,
+            "longTermDebtNoncurrent": 46547.0,
+            "researchAndDevelopment": 61087.0,
+            "stockBasedCompensation": 24953.0,
+            "operatingCashFlow": 164713.0,
+            "capitalExpenditure": 91447.0,
+            "netIncome": 132170.0,
+            "shares": 12097.0,
+            "EBIT": 129039.0,
+            "cash": 30708.0,
+            "debt": 49085.0
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:Revenues",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:MarketableSecuritiesCurrent",
+            "longTermDebtTotal": "us-gaap:LongTermDebt",
+            "commercialPaper": "us-gaap:CommercialPaper",
+            "longTermDebtCurrent": "us-gaap:LongTermDebtCurrent",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "Sum of distinct cover-page common stock classes (dei:EntityCommonStockSharesOutstanding)"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 402836000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "frame": "CY2025"
+            },
+            "operatingIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 129039000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "frame": "CY2025"
+            },
+            "cashAndEquivalents": {
+              "end": "2025-12-31",
+              "val": 30708000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2025-12-31",
+              "val": 96135000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05"
+            },
+            "longTermDebtTotal": {
+              "end": "2025-12-31",
+              "val": 49085000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "frame": "CY2025Q4I"
+            },
+            "commercialPaper": {
+              "end": "2025-12-31",
+              "val": 0,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05"
+            },
+            "longTermDebtCurrent": {
+              "end": "2025-12-31",
+              "val": 1996000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2025-12-31",
+              "val": 46547000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05"
+            },
+            "researchAndDevelopment": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 61087000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "frame": "CY2025"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 24953000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "frame": "CY2025"
+            },
+            "operatingCashFlow": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 164713000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "frame": "CY2025"
+            },
+            "capitalExpenditure": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 91447000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05",
+              "frame": "CY2025"
+            },
+            "netIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 132170000000,
+              "accn": "0001652044-26-000018",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-02-05"
+            },
+            "shares": {
+              "components": [
+                {
+                  "class": "us-gaap:CommonClassAMember",
+                  "valueMillions": 5822.0,
+                  "asOf": "2026-01-28",
+                  "contextRef": "c-16"
+                },
+                {
+                  "class": "us-gaap:CommonClassBMember",
+                  "valueMillions": 837.0,
+                  "asOf": "2026-01-28",
+                  "contextRef": "c-17"
+                },
+                {
+                  "class": "goog:CapitalClassCMember",
+                  "valueMillions": 5438.0,
+                  "asOf": "2026-01-28",
+                  "contextRef": "c-18"
+                }
+              ],
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+            }
+          },
+          "missingFields": [
+            "marketableSecuritiesNoncurrent",
+            "shortTermBorrowings"
+          ],
+          "coverShareDate": "2026-01-28",
+          "sharesAsOf": "2026-01-28",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Reported long-term debt only; short-term and lease completeness must be reviewed before valuation.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 402836.0,
+          "EBIT": 129039.0,
+          "cash": 30708.0,
+          "debt": 49085.0,
+          "shares": 12097.0,
+          "sharesNote": "All outstanding common stock classes combined; assumes equal per-share economic claims for valuation, distinct voting rights/market prices remain.",
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 13,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum Holdings Inc.",
+      "cik": "0001633978",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "LITE-FY2026",
+          "fiscalYear": 2026,
+          "fiscalLabel": "Annual filing ended 2026-06-27",
+          "periodEnd": "2026-06-27",
+          "fiscalPeriodEnd": "2026-06-27",
+          "filedAt": "2026-08-17",
+          "filingDate": "2026-08-17",
+          "acceptedAt": "2026-08-17T20:03:17Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0001628280-26-057358",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 3014.0,
+            "operatingIncome": 524.8,
+            "cashAndEquivalents": 2043.5,
+            "marketableSecuritiesCurrent": 694.9,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": null,
+            "commercialPaper": null,
+            "shortTermBorrowings": 1596.9,
+            "longTermDebtCurrent": 1596.9,
+            "longTermDebtNoncurrent": 40.5,
+            "researchAndDevelopment": 356.5,
+            "stockBasedCompensation": 170.2,
+            "operatingCashFlow": 751.4,
+            "capitalExpenditure": 451.3,
+            "netIncome": -6935.1,
+            "shares": 89.7,
+            "EBIT": 524.8,
+            "cash": 2043.5,
+            "debt": 1637.4
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:ShortTermInvestments",
+            "shortTermBorrowings": "us-gaap:ShortTermBorrowings",
+            "longTermDebtCurrent": "us-gaap:LongTermDebtCurrent",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-06-29",
+              "end": "2026-06-27",
+              "val": 3014000000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2025"
+            },
+            "operatingIncome": {
+              "start": "2025-06-29",
+              "end": "2026-06-27",
+              "val": 524800000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2025"
+            },
+            "cashAndEquivalents": {
+              "end": "2026-06-27",
+              "val": 2043500000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2026Q2I"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2026-06-27",
+              "val": 694900000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2026Q2I"
+            },
+            "shortTermBorrowings": {
+              "end": "2026-06-27",
+              "val": 1596900000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtCurrent": {
+              "end": "2026-06-27",
+              "val": 1596900000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2026-06-27",
+              "val": 40500000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2026Q2I"
+            },
+            "researchAndDevelopment": {
+              "start": "2025-06-29",
+              "end": "2026-06-27",
+              "val": 356500000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2025"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-06-29",
+              "end": "2026-06-27",
+              "val": 170200000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2025"
+            },
+            "operatingCashFlow": {
+              "start": "2025-06-29",
+              "end": "2026-06-27",
+              "val": 751400000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2025"
+            },
+            "capitalExpenditure": {
+              "start": "2025-06-29",
+              "end": "2026-06-27",
+              "val": 451300000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2025"
+            },
+            "netIncome": {
+              "start": "2025-06-29",
+              "end": "2026-06-27",
+              "val": -6935100000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17"
+            },
+            "shares": {
+              "end": "2026-08-14",
+              "val": 89700000,
+              "accn": "0001628280-26-057358",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-08-17",
+              "frame": "CY2026Q2I"
+            }
+          },
+          "missingFields": [
+            "marketableSecuritiesNoncurrent",
+            "longTermDebtTotal",
+            "commercialPaper"
+          ],
+          "coverShareDate": "2026-08-14",
+          "sharesAsOf": "2026-08-14",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Current plus noncurrent long-term debt; short-term and lease completeness must be reviewed.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 3014.0,
+          "EBIT": 524.8,
+          "cash": 2043.5,
+          "debt": 1637.4,
+          "shares": 89.7,
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 13,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms, Inc.",
+      "cik": "0001326801",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "META-FY2025",
+          "fiscalYear": 2025,
+          "fiscalLabel": "Annual filing ended 2025-12-31",
+          "periodEnd": "2025-12-31",
+          "fiscalPeriodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "filingDate": "2026-01-29",
+          "acceptedAt": "2026-01-29T00:13:46Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0001628280-26-003942",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 200966.0,
+            "operatingIncome": 83276.0,
+            "cashAndEquivalents": 35873.0,
+            "marketableSecuritiesCurrent": 45719.0,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": 58744.0,
+            "commercialPaper": null,
+            "shortTermBorrowings": null,
+            "longTermDebtCurrent": null,
+            "longTermDebtNoncurrent": 58744.0,
+            "researchAndDevelopment": 57372.0,
+            "stockBasedCompensation": 20427.0,
+            "operatingCashFlow": 115800.0,
+            "capitalExpenditure": 69691.0,
+            "netIncome": 60458.0,
+            "shares": 2529.555464,
+            "EBIT": 83276.0,
+            "cash": 35873.0,
+            "debt": 58744.0
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:MarketableSecuritiesCurrent",
+            "longTermDebtTotal": "us-gaap:LongTermDebt",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "Sum of distinct cover-page common stock classes (dei:EntityCommonStockSharesOutstanding)"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 200966000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29",
+              "frame": "CY2025"
+            },
+            "operatingIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 83276000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29",
+              "frame": "CY2025"
+            },
+            "cashAndEquivalents": {
+              "end": "2025-12-31",
+              "val": 35873000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2025-12-31",
+              "val": 45719000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29"
+            },
+            "longTermDebtTotal": {
+              "end": "2025-12-31",
+              "val": 58744000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2025-12-31",
+              "val": 58744000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29"
+            },
+            "researchAndDevelopment": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 57372000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29",
+              "frame": "CY2025"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 20427000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29",
+              "frame": "CY2025"
+            },
+            "operatingCashFlow": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 115800000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29",
+              "frame": "CY2025"
+            },
+            "capitalExpenditure": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 69691000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29",
+              "frame": "CY2025"
+            },
+            "netIncome": {
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "val": 60458000000,
+              "accn": "0001628280-26-003942",
+              "fy": 2025,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-01-29"
+            },
+            "shares": {
+              "components": [
+                {
+                  "class": "us-gaap:CommonClassAMember",
+                  "valueMillions": 2187.177748,
+                  "asOf": "2026-01-23",
+                  "contextRef": "c-3"
+                },
+                {
+                  "class": "us-gaap:CommonClassBMember",
+                  "valueMillions": 342.377716,
+                  "asOf": "2026-01-23",
+                  "contextRef": "c-4"
+                }
+              ],
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+            }
+          },
+          "missingFields": [
+            "marketableSecuritiesNoncurrent",
+            "commercialPaper",
+            "shortTermBorrowings",
+            "longTermDebtCurrent"
+          ],
+          "coverShareDate": "2026-01-23",
+          "sharesAsOf": "2026-01-23",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Reported long-term debt only; short-term and lease completeness must be reviewed before valuation.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 200966.0,
+          "EBIT": 83276.0,
+          "cash": 35873.0,
+          "debt": 58744.0,
+          "shares": 2529.555464,
+          "sharesNote": "All outstanding common stock classes combined; assumes equal per-share economic claims for valuation, distinct voting rights/market prices remain.",
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 11,
+            "status": "passed"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "MICROSOFT CORPORATION",
+      "cik": "0000789019",
+      "currency": "USD",
+      "snapshots": [
+        {
+          "id": "MSFT-FY2026",
+          "fiscalYear": 2026,
+          "fiscalLabel": "Annual filing ended 2026-06-30",
+          "periodEnd": "2026-06-30",
+          "fiscalPeriodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "filingDate": "2026-07-29",
+          "acceptedAt": "2026-07-29T20:08:01Z",
+          "availableFrom": null,
+          "decisionCutoff": null,
+          "accession": "0001193125-26-323660",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 331839.0,
+            "operatingIncome": 155237.0,
+            "cashAndEquivalents": 20935.0,
+            "marketableSecuritiesCurrent": 55908.0,
+            "marketableSecuritiesNoncurrent": null,
+            "longTermDebtTotal": 40294.0,
+            "commercialPaper": null,
+            "shortTermBorrowings": null,
+            "longTermDebtCurrent": 9227.0,
+            "longTermDebtNoncurrent": 31067.0,
+            "researchAndDevelopment": 35562.0,
+            "stockBasedCompensation": 12405.0,
+            "operatingCashFlow": 182935.0,
+            "capitalExpenditure": 115948.0,
+            "netIncome": 133749.0,
+            "shares": 7425.545491,
+            "EBIT": 155237.0,
+            "cash": 20935.0,
+            "debt": 40294.0
+          },
+          "fieldMapping": {
+            "revenue": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "us-gaap:OperatingIncomeLoss",
+            "cashAndEquivalents": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+            "marketableSecuritiesCurrent": "us-gaap:ShortTermInvestments",
+            "longTermDebtTotal": "us-gaap:LongTermDebt",
+            "longTermDebtCurrent": "us-gaap:LongTermDebtCurrent",
+            "longTermDebtNoncurrent": "us-gaap:LongTermDebtNoncurrent",
+            "researchAndDevelopment": "us-gaap:ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "us-gaap:ShareBasedCompensation",
+            "operatingCashFlow": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "capitalExpenditure": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "netIncome": "us-gaap:NetIncomeLoss",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 331839000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026"
+            },
+            "operatingIncome": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 155237000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026"
+            },
+            "cashAndEquivalents": {
+              "end": "2026-06-30",
+              "val": 20935000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026Q2I"
+            },
+            "marketableSecuritiesCurrent": {
+              "end": "2026-06-30",
+              "val": 55908000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtTotal": {
+              "end": "2026-06-30",
+              "val": 40294000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtCurrent": {
+              "end": "2026-06-30",
+              "val": 9227000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026Q2I"
+            },
+            "longTermDebtNoncurrent": {
+              "end": "2026-06-30",
+              "val": 31067000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026Q2I"
+            },
+            "researchAndDevelopment": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 35562000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026"
+            },
+            "stockBasedCompensation": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 12405000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026"
+            },
+            "operatingCashFlow": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 182935000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026"
+            },
+            "capitalExpenditure": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 115948000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026"
+            },
+            "netIncome": {
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "val": 133749000000,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026"
+            },
+            "shares": {
+              "end": "2026-07-23",
+              "val": 7425545491,
+              "accn": "0001193125-26-323660",
+              "fy": 2026,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2026-07-29",
+              "frame": "CY2026Q2I"
+            }
+          },
+          "missingFields": [
+            "marketableSecuritiesNoncurrent",
+            "commercialPaper",
+            "shortTermBorrowings"
+          ],
+          "coverShareDate": "2026-07-23",
+          "sharesAsOf": "2026-07-23",
+          "splitBasis": "Contemporaneous original filing basis; do not compare with adjusted prices without checking splits.",
+          "shareBasis": "Contemporaneous original filing basis",
+          "cashDefinition": "Cash and cash equivalents only. Marketable securities separately disclosed; add only after assessing operating needs/restrictions.",
+          "debtDefinition": "Total reported long-term debt current plus noncurrent; excludes lease liabilities.",
+          "vintage": "Exact original annual filing accession; current annual reference, not live or latest quarterly data.",
+          "entryPrice": null,
+          "entryPriceStatus": "No verified quote imported",
+          "snapshotMode": "annual-reference",
+          "backtestEligible": false,
+          "interpretationNotes": [
+            "Annual snapshot can be stale; quarterly changes and subsequent events not captured.",
+            "Review debt completeness and securities before computing equity bridge."
+          ],
+          "revenue": 331839.0,
+          "EBIT": 155237.0,
+          "cash": 20935.0,
+          "debt": 40294.0,
+          "shares": 7425.545491,
+          "validation": {
+            "standardFactsCrossCheckedAgainstOriginalFiling": 13,
+            "status": "passed"
+          }
+        },
+        {
+          "id": "MSFT-FY2019",
+          "ticker": "MSFT",
+          "fiscalYear": 2019,
+          "periodEnd": "2019-06-30",
+          "fiscalPeriodEnd": "2019-06-30",
+          "filingDate": "2019-08-01",
+          "filedAt": "2019-08-01",
+          "acceptedAt": "2019-08-01T20:09:55Z",
+          "decisionCutoff": "2019-08-02T13:30:00Z",
+          "availableFrom": "2019-08-02T13:30:00Z",
+          "accession": "0001564590-19-027952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 125843.0,
+            "operatingIncome": 42959.0,
+            "cashAndEquivalents": 11356.0,
+            "shortTermInvestments": 122463.0,
+            "cash": 133819.0,
+            "debtCurrent": 5516.0,
+            "debtNoncurrent": 66662.0,
+            "commercialPaper": 0.0,
+            "financeLeaseLiability": 6574.0,
+            "operatingLeaseLiability": 7703.0,
+            "operatingLeaseCost": 1707.0,
+            "financeLeaseInterestExpense": 247.0,
+            "researchAndDevelopment": 16876.0,
+            "stockBasedCompensation": 4652.0,
+            "capitalExpenditure": 13925.0,
+            "depreciationAmortization": null,
+            "operatingCashFlow": 52185.0,
+            "netIncome": 39240.0,
+            "incomeTaxExpense": 4448.0,
+            "interestExpense": 2686.0,
+            "grossProfit": 82933.0,
+            "receivables": 29524.0,
+            "inventory": 2063.0,
+            "accountsPayable": 9382.0,
+            "shares": 7635.4094,
+            "debt": 72178.0,
+            "EBIT": 42959.0,
+            "debtIncludingFinanceLeases": 78752.0,
+            "allDebtAndLeaseLiabilities": 86455.0,
+            "depreciationAmortizationAndOther": 11682,
+            "nonvestedAwardsMillions": 147,
+            "unrecognizedFutureCompensationUSDmillions": 8600,
+            "debtFairValueUSDmillions": 78900
+          },
+          "fieldMapping": {
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "OperatingIncomeLoss",
+            "cashAndEquivalents": "CashAndCashEquivalentsAtCarryingValue",
+            "shortTermInvestments": "ShortTermInvestments",
+            "cash": "CashCashEquivalentsAndShortTermInvestments",
+            "debtCurrent": "LongTermDebtCurrent",
+            "debtNoncurrent": "LongTermDebtNoncurrent",
+            "commercialPaper": "CommercialPaper",
+            "financeLeaseLiability": "FinanceLeaseLiability",
+            "operatingLeaseLiability": "OperatingLeaseLiability",
+            "operatingLeaseCost": "OperatingLeaseCost",
+            "financeLeaseInterestExpense": "FinanceLeaseInterestExpense",
+            "researchAndDevelopment": "ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "ShareBasedCompensation",
+            "capitalExpenditure": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "depreciationAmortization": "DepreciationDepletionAndAmortization",
+            "operatingCashFlow": "NetCashProvidedByUsedInOperatingActivities",
+            "netIncome": "NetIncomeLoss",
+            "incomeTaxExpense": "IncomeTaxExpenseBenefit",
+            "interestExpense": "InterestExpense",
+            "grossProfit": "GrossProfit",
+            "receivables": "AccountsReceivableNetCurrent",
+            "inventory": "InventoryNet",
+            "accountsPayable": "AccountsPayableCurrent",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 125843000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingIncome": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 42959000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "cashAndEquivalents": {
+              "end": "2019-06-30",
+              "val": 11356000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "shortTermInvestments": {
+              "end": "2019-06-30",
+              "val": 122463000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "cash": {
+              "end": "2019-06-30",
+              "val": 133819000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "debtCurrent": {
+              "end": "2019-06-30",
+              "val": 5516000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "debtNoncurrent": {
+              "end": "2019-06-30",
+              "val": 66662000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "commercialPaper": {
+              "end": "2019-06-30",
+              "val": 0,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01",
+              "frame": "CY2019Q2I"
+            },
+            "financeLeaseLiability": {
+              "end": "2019-06-30",
+              "val": 6574000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingLeaseLiability": {
+              "end": "2019-06-30",
+              "val": 7703000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingLeaseCost": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 1707000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "financeLeaseInterestExpense": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 247000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "researchAndDevelopment": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 16876000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "stockBasedCompensation": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 4652000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "capitalExpenditure": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 13925000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingCashFlow": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 52185000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "netIncome": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 39240000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "incomeTaxExpense": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 4448000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "interestExpense": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 2686000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "grossProfit": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 82933000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "receivables": {
+              "end": "2019-06-30",
+              "val": 29524000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "inventory": {
+              "end": "2019-06-30",
+              "val": 2063000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "accountsPayable": {
+              "end": "2019-06-30",
+              "val": 9382000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "shares": {
+              "end": "2019-07-29",
+              "val": 7635409400,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01",
+              "frame": "CY2019Q2I"
+            }
+          },
+          "coverShareDate": "2019-07-29",
+          "sharesAsOf": "2019-07-29",
+          "shareBasis": "Original contemporary cover-page outstanding common shares; no future corporate actions applied",
+          "cashDefinition": "Cash and cash equivalents plus short-term investments; assess operating cash needs and restrictions before full add-back",
+          "debtDefinition": "Current plus noncurrent debt carrying values plus reported commercial paper. Finance and operating lease liabilities separately disclosed; lease treatment must be consistent with operating cash flows.",
+          "priorHistoryAsReportedInOriginalFiling": {
+            "revenue": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 96571000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 96571.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 110360000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 110360.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 125843000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 125843.0
+              }
+            ],
+            "operatingIncome": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 29025000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 29025.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 35058000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 35058.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 42959000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 42959.0
+              }
+            ],
+            "researchAndDevelopment": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 13037000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 13037.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 14726000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 14726.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 16876000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 16876.0
+              }
+            ],
+            "stockBasedCompensation": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 3266000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 3266.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 3940000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 3940.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 4652000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 4652.0
+              }
+            ]
+          },
+          "vintage": "Original FY2019 10-K only",
+          "missingFields": [
+            "depreciationAmortization"
+          ],
+          "interpretationNotes": [
+            "FY2019 GAAP tax rate affected by $2.6bn tax benefit from intangible-property transfers; do not extrapolate as marginal rate.",
+            "SBC is already an operating expense in GAAP EBIT; do not add back without dilution charge.",
+            "Debt excludes leases by default; alternative totals provided. Do not add operating lease debt without corresponding operating-profit/cash-flow adjustment.",
+            "Review employee option/RSU claims in original stock-based compensation note before claiming fully diluted common value.",
+            "Capex cash purchases omit finance-lease right-of-use additions; separate lease additions matter for reinvestment analysis."
+          ],
+          "revenue": 125843.0,
+          "EBIT": 42959.0,
+          "cash": 133819.0,
+          "debt": 72178.0,
+          "shares": 7635.4094,
+          "backtestEligible": true,
+          "snapshotMode": "historical-case",
+          "splitBasis": "Original contemporary cover-page outstanding common shares; no future corporate actions applied",
+          "fiscalLabel": "FY2019 ended June 30, 2019",
+          "supplementalEvidence": {
+            "depreciationAmortizationAndOther": "Original consolidated cash-flow statement; includes other adjustments, not pure D&A.",
+            "nonvestedAwardsMillions": "Original stock-based compensation note stock-based compensation; 147m nonvested shares, grant-date weighted average fair value $78.49.",
+            "unrecognizedFutureCompensationUSDmillions": "Original stock-based compensation note: $8.6bn unrecognized compensation over weighted average3yrs.",
+            "debtFairValueUSDmillions": "Original debt note, rounded $78.9bn fair value; not carrying value."
+          }
+        }
+      ]
+    }
+  ]
+}

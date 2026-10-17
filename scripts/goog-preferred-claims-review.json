@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "id": "GOOG-JUNE2026-PREFERRED-CLAIMS-REVIEW-v1",
+  "ticker": "GOOG",
+  "reviewedAt": "2026-10-17",
+  "valuationAnchorDate": "2026-06-30",
+  "units": "USD millions and shares millions except explicitly per-share terms",
+  "classification": "Primary-source terms plus explicit analyst bridge scenarios; not a security fair-value appraisal or current quote",
+  "appliesToSnapshotIds": [
+    "GOOG-CURRENT-2026-06-30",
+    "GOOG-TTM-2026-06-30"
+  ],
+  "historicalFreezePolicy": "No change to historical source files, hashes, dates, or forecasts. June 2026 instrument is never backfilled into December 2025.",
+  "sources": {
+    "q2": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "title": "Alphabet Q2 2026 Form 10-Q",
+      "publishedAt": "2026-07-23",
+      "sections": [
+        "Balance sheets",
+        "Cash flows",
+        "Notes 3, 4, 6, 7, 11, 12"
+      ],
+      "retrievedAt": "2026-10-17"
+    },
+    "closing": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818d8k.htm",
+      "title": "Alphabet preferred offering closing 8-K",
+      "publishedAt": "2026-06-05",
+      "sections": [
+        "Item 1.01"
+      ],
+      "retrievedAt": "2026-10-17"
+    },
+    "seriesA": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818dex31.htm",
+      "title": "Series A certificate of designations",
+      "publishedAt": "2026-06-05",
+      "sections": [
+        "Part 1",
+        "Annex A sections 1\u20139 and 13"
+      ],
+      "retrievedAt": "2026-10-17"
+    },
+    "seriesB": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526259830/d36818dex32.htm",
+      "title": "Series B certificate of designations",
+      "publishedAt": "2026-06-05",
+      "sections": [
+        "Part 1",
+        "Annex A sections 1\u20139 and 13"
+      ],
+      "retrievedAt": "2026-10-17"
+    },
+    "prospectusA": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526257690/d159942d424b5.htm",
+      "title": "Series A final prospectus supplement",
+      "publishedAt": "2026-06-04",
+      "sections": [
+        "Offering summary",
+        "Dividends",
+        "Description of capped call transactions",
+        "Description of capital stock"
+      ],
+      "retrievedAt": "2026-10-17"
+    },
+    "prospectusB": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526257702/d152175d424b5.htm",
+      "title": "Series B final prospectus supplement",
+      "publishedAt": "2026-06-04",
+      "sections": [
+        "Offering summary",
+        "Dividends",
+        "Description of capped call transactions"
+      ],
+      "retrievedAt": "2026-10-17"
+    },
+    "augustDebt": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+      "title": "Alphabet August 10 senior-note closing 8-K",
+      "publishedAt": "2026-08-10",
+      "sections": [
+        "Item 8.01"
+      ],
+      "retrievedAt": "2026-10-17"
+    }
+  },
+  "reportedAmounts": {
+    "preferredAndAPIC": 18023,
+    "preferredIssuedNetAPIC": 19034,
+    "cappedCallPremiumChargedToEquity": 1011,
+    "preferredCashFlowNetProceeds": 19063,
+    "source": "q2",
+    "reconciliation": "19034 - 1011 = 18023. Cash-flow proceeds differ from equity issuance presentation by 29; do not silently force equality or invent the reason.",
+    "cashAndEquivalents": 55911,
+    "currentMarketableSecurities": 186563,
+    "cashPlusCurrentMarketables": 242474,
+    "currentMarketableEquityIncludedInCashBridge": 87063,
+    "shortTermRestrictedSpaceXIncludedInMarketableEquity": 80000,
+    "noncurrentMarketableEquity": 14126,
+    "nonmarketableSecurities": 131461,
+    "measurementAlternativeEquityIncludedInNonmarketable": 124259,
+    "equityMethodAndOtherIncludedInNonmarketable": 7202,
+    "additionalNoncurrentInvestmentCarryingProxy": 145587,
+    "currentDebt": 1999,
+    "noncurrentDebt": 98165,
+    "debtCarryingTotal": 100164,
+    "debtFaceTotal": 101085,
+    "debtDiscountsAndFees": 921,
+    "commercialPaper": 0,
+    "financeLeaseCurrent": 449,
+    "financeLeaseNoncurrent": 2141,
+    "financeLeaseTotal": 2590,
+    "operatingLeaseTotal": 18037,
+    "noncontrollingInterestsRounded": 7100,
+    "redeemableNCIIncludedWithinNCI": 824,
+    "preferredAccumulatedDividendsReportedRounded": 86,
+    "deferredTaxLiabilitiesAllItems": 22819,
+    "commonSharesJune30": {
+      "classA": 5868,
+      "classB": 835,
+      "classC": 5527,
+      "total": 12230,
+      "precision": "Rounded to millions. July 15 cover counts coincidentally equal these June 30 balance-sheet counts."
+    }
+  },
+  "securityTerms": {
+    "issueDate": "2026-06-05",
+    "depositarySharesTotal": 385,
+    "preferredFractionPerDepositary": 0.05,
+    "preferredSharesTotal": 19.25,
+    "preferredSharesPerSeries": 9.625,
+    "liquidationPreferencePerPreferredUSD": 1000,
+    "liquidationPreferencePerDepositaryUSD": 50,
+    "aggregateLiquidationPreference": 19250,
+    "sources": [
+      "closing",
+      "seriesA",
+      "seriesB"
+    ],
+    "priority": "Senior to all three common classes; A and B rank equally; junior to indebtedness and any future senior stock. Liquidation preference plus accumulated unpaid dividends. No participation in residual assets after payment.",
+    "redemption": "No issuer redemption or sinking fund. Ordinary holder early conversion uses the minimum rate, subject to adjustments.",
+    "voting": "Preferred generally nonvoting, with protective/nonpayment exceptions. Common A has 1 vote, B 10 votes, C no vote except legally required. A/B/C economic dividend and liquidation rights are otherwise equal. Valuation does not price voting premiums.",
+    "mandatoryConversionExpectedDate": "2029-05-15",
+    "mandatoryConversionDateRule": "Second business day after the last trading day of the final averaging period; date can shift under contractual market-disruption rules.",
+    "applicableMarketValueRule": "Arithmetic average of daily VWAP over 20 consecutive trading days beginning with the 21st scheduled trading day immediately preceding May 15, 2029. Each class uses its own future average.",
+    "series": [
+      {
+        "series": "A",
+        "depositaryTicker": "GOOGM",
+        "commonClass": "A",
+        "commonTicker": "GOOGL",
+        "preferredShares": 9.625,
+        "minimumConversionRate": 2.252,
+        "maximumConversionRate": 2.816,
+        "initialPriceUSD": 355.1136,
+        "thresholdAppreciationPriceUSD": 444.0497,
+        "dividendStockFloorUSD": 124.29,
+        "source": "seriesA"
+      },
+      {
+        "series": "B",
+        "depositaryTicker": "GOOGN",
+        "commonClass": "C",
+        "commonTicker": "GOOG",
+        "preferredShares": 9.625,
+        "minimumConversionRate": 2.274,
+        "maximumConversionRate": 2.842,
+        "initialPriceUSD": 351.8649,
+        "thresholdAppreciationPriceUSD": 439.7537,
+        "dividendStockFloorUSD": 123.15,
+        "source": "seriesB"
+      }
+    ],
+    "conversionFormula": "Below initial price: maximum rate. From initial price through threshold: 1000 / applicable future class VWAP, rounded to 4 decimal places. Above threshold: minimum rate. Subject to anti-dilution and dividend additions.",
+    "grossMinimumConversionCommonShares": 43.56275,
+    "grossMaximumConversionCommonShares": 54.45825,
+    "maxConversionDenominatorBeforeOtherAwards": 12284.45825,
+    "fundamentalChanges": "Certificates grant a holder fundamental-change conversion election with special rates and potentially dividend make-whole; these are outside the ordinary mandatory-conversion model. Do not treat the abbreviated 10-Q description as a complete legal payoff.",
+    "adjustmentsExcluded": "Stock splits, extraordinary distributions, anti-dilution adjustments, early/fundamental-change conversion, default, and extra common shares for unpaid dividends."
+  },
+  "preferredDividendModel": {
+    "annualRate": 0.0625,
+    "annualDividendPerPreferredUSD": 62.5,
+    "annualAggregateDividend": 1203.125,
+    "fullQuarterDividendPerPreferredUSD": 15.625,
+    "fullQuarterAggregateDividend": 300.78125,
+    "firstExpectedProspectusDividendPerPreferredUSD": 12.1528,
+    "firstDeclaredDividendPerPreferredReportedUSD": 12.15,
+    "firstModelDividendPerPreferredUSD": 12.15,
+    "firstModelAggregateDividend": 233.8875,
+    "firstAmountPrecision": "Model uses the July declaration as rounded in the 10-Q. Prospectuses provide the expected initial stub at approximately 12.1528. Using 12.1528 changes undiscounted aggregate dividends by only 0.0539 million. Neither source establishes subsequent actual payment in this review.",
+    "recordDates": "First day of February, May, August and November.",
+    "paymentDateRule": "Nominal 15th; actual payment rolls to the next New York bank business day if needed, without extra interest.",
+    "dividendsAreCumulative": true,
+    "cashSettlementIsAssumption": true,
+    "stockSettlementRule": "Issuer may deliver common shares at 97% of the relevant five-trading-day average price, subject to a floor and possible cash shortfall; unpaid dividends can add conversion shares. Cash settlement default does not cover this extra dilution.",
+    "discountAnchor": "2026-06-30",
+    "discountYearBasis": "ACT/365",
+    "paymentTimingApproximation": "Uses nominal quarterly dates. Does not price the small next-business-day settlement delay.",
+    "annualDiscountRateAssumption": 0.0625,
+    "discountRateClassification": "Analyst assumption chosen for a transparent coupon-rate reference; NOT observed yield, fair-value rate, tax-adjusted WACC, or the contractual fundamental-change make-whole discount rate.",
+    "discountSensitivity": [
+      0,
+      0.0625,
+      0.1,
+      0.12
+    ],
+    "nominalSchedule": [
+      {
+        "nominalDate": "2026-08-15",
+        "cashDividend": 233.88750000000002
+      },
+      {
+        "nominalDate": "2026-11-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2027-02-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2027-05-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2027-08-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2027-11-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2028-02-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2028-05-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2028-08-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2028-11-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2029-02-15",
+        "cashDividend": 300.78125
+      },
+      {
+        "nominalDate": "2029-05-15",
+        "cashDividend": 300.78125
+      }
+    ],
+    "undiscountedDividends": 3542.48125,
+    "pvAtDefault": 3233.130181671206,
+    "pvSensitivity": {
+      "0": 3542.48125,
+      "0.0625": 3233.130181671206,
+      "0.1": 3072.1167642437886,
+      "0.12": 2992.689797393394
+    },
+    "accrualTreatment": "The full initial future payment already includes the June 30 accumulated amount. Do not subtract the reported 86 again in conversion mode. Preferred dividends are financing distributions, not deductions from operating EBIT or FCFF.",
+    "sources": [
+      "q2",
+      "prospectusA",
+      "prospectusB",
+      "seriesA",
+      "seriesB"
+    ]
+  },
+  "cappedCalls": {
+    "premiumAlreadyPaid": 1011,
+    "seriesAInitialStrikeUSD": 444.0497,
+    "seriesBInitialStrikeUSD": 439.7537,
+    "seriesAInitialCapUSD": 532.6704,
+    "seriesBInitialCapUSD": 527.7974,
+    "coveredSharesBasis": "Common shares underlying the preferred at minimum conversion rates.",
+    "defaultFutureBenefit": 0,
+    "defaultTreatment": "No future capped-call asset or share offset is assumed; historical premium is already in June cash/equity and is never charged again. Zero future recovery is a conservative scenario assumption, not a finding that the options have no value.",
+    "settlement": "Issuer can elect cash settlement; otherwise generally common shares based on excess over strike, limited by cap. Counterparty risk applies.",
+    "sensitivityFormulaOnly": "At an explicitly assumed common future settlement price P, gross economic share offset approximation = minimum underlying shares * max(0, min(P, cap) - strike) / P. This ignores detailed averaging and adjustments; do not present it as observed option fair value.",
+    "sources": [
+      "q2",
+      "closing",
+      "prospectusA",
+      "prospectusB"
+    ]
+  },
+  "recommendedBridge": {
+    "defaultMode": "maximum-contractual-conversion-static-if-converted-proxy",
+    "defaultAdditionalShares": 54.45825,
+    "defaultPreferredPrincipalDeduction": 0,
+    "defaultPreferredDividendPV": 3233.130181671206,
+    "defaultFinanceLeaseDeduction": 2590,
+    "defaultNCIDeduction": 7100,
+    "baseEquation": "E = EV + reported cash/current marketables + analyst other-asset values - reported debt - finance leases - NCI value - additional non-preferred claims. v = (E - preferred-dividend PV) / (12230 + incremental preferred conversion shares).",
+    "timingRationale": "Conversion occurs inside the ten-year forecast. A static fully diluted denominator allocates all residual present equity to eventual shares, with no separately modeled preconversion common payouts. It is a transparent approximation to actual timed conversion, not an exact preferred fair-value calculation. Do not discount the number of conversion shares.",
+    "timingRefinement": "If A is the present value of total common distributions before conversion, a consistent payout refinement is A/12230 + (E - dividendPV - A)/(12230 + q), holding other capital structure assumptions fixed. The default assumes A=0 for this allocation; it does not predict Alphabet will cease common dividends.",
+    "maxDilutionCaveat": "Maximum contractual gross shares gives the lower positive value only with other inputs held fixed, cash-paid preferred dividends, unchanged conversion terms, and no cap-call recovery. It is not a universal economic lower bound.",
+    "conversionSensitivity": {
+      "maximum": 54.45825,
+      "minimum": 43.56275,
+      "formulaDriven": "Requires separately labeled future Class A and Class C VWAP assumptions, never substitutes current GOOG quote for both."
+    },
+    "alternativeModes": [
+      {
+        "mode": "liquidation-priority-claim-proxy",
+        "preferredPrincipal": 19250,
+        "accruedDividendProxy": 86,
+        "totalPreferredClaimProxy": 19336,
+        "preferredDividendPVAdditional": 0,
+        "additionalPreferredShares": 0,
+        "label": "Liquidation preference plus rounded accumulated dividends; not current market/fair value and not a complete liquidation appraisal of operating assets. Future preferred dividends do not survive liquidation."
+      },
+      {
+        "mode": "dated-security-fair-value-claim",
+        "formula": "192.5m GOOGM depositaries * USD market price + 192.5m GOOGN depositaries * USD market price, with consistent clean/dirty dividend convention; or an explicitly labeled analyst total claim value.",
+        "requiredInputs": [
+          "Date matching valuation balance basis, or an explicit complete roll-forward",
+          "Verified sources and depositary unit basis for both securities",
+          "Dividend entitlement and ex-dividend/dirty price convention"
+        ],
+        "additionalPreferredShares": 0,
+        "preferredDividendPVAdditional": 0,
+        "capCallAsset": "Value separately if verified; never deduct the historical premium again.",
+        "warning": "An entire preferred fair-value claim includes conversion rights and dividend rights; subtracting additional conversion dilution or the whole dividend PV would double-count."
+      }
+    ],
+    "investmentTreatment": "Current cash bridge already includes 87063 of marketable equity. Noncurrent investments 145587 may be added as an explicitly selected gross carrying-value proxy with separate editable haircuts. Neither their full book value nor a zero haircut is a fair-value conclusion.",
+    "investmentTaxes": "Gross asset proxy has no implied realization-tax allowance. Add an explicit analyst tax reserve if used. Total reported deferred tax liabilities 22819 cannot be assigned wholesale to these investments without evidence.",
+    "operatingLeaseTreatment": "Keep operating lease expense in forecast operating profit; do not mechanically add operating lease liabilities as debt without restating operating profit and reinvestment consistently.",
+    "otherAwards": "Quarterly weighted-average diluted EPS shares already include some preferred conversion effects and cannot be combined with full preferred conversion shares. Use actual June common count; existing employee awards require their own separately documented treatment.",
+    "numericPrecision": "Retain calculation precision internally, but display valuation in sensible rounded dollars, not as exact security fair value. NCI/common counts and some dividends are rounded filing facts."
+  },
+  "subsequentEvents": {
+    "eventDate": "2026-08-10",
+    "newDebtFace": 25000,
+    "source": "augustDebt",
+    "treatment": "Known later financing is excluded from the June 30 balance-date valuation. Do not add only the new debt while retaining June cash; a current October value requires a complete cash/debt/capex and security roll-forward.",
+    "researchScope": "Checked the available current SEC submissions listing and the August 10 closing 8-K. This is not a certification of every change through October 17 or a current quote."
+  },
+  "doubleCountingChecks": [
+    "Never subtract preferred carrying balance or liquidation principal in conversion mode.",
+    "Never add full preferred dilution to an entire market-valued preferred claim deduction.",
+    "Never add June preferred financing proceeds or charge June capped-call premium again.",
+    "Never add RNCI 824 separately from NCI 7100.",
+    "Never add current marketable equity 87063 again; it is within cash/current marketables 242474.",
+    "Never combine aggregate diluted EPS shares with full conversion shares.",
+    "Do not add all reported deferred taxes or operating lease debt mechanically."
+  ],
+  "limitations": [
+    "No current GOOG, GOOGL, GOOGM or GOOGN quote was used or fabricated.",
+    "These scenarios resolve the mandatory preferred mechanics sufficiently for a conditional educational valuation; they do not certify complete fair market value.",
+    "Valuation uses June 30 balances and a forward forecast; October review date is not an October balance-sheet measurement.",
+    "Potential taxation, security restrictions, employee awards and uncommenced infrastructure commitments remain explicit modeling limitations."
+  ]
+}

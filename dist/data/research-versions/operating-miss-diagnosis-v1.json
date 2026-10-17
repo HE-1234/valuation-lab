@@ -1,0 +1,133 @@
+{
+  "version": "operating-miss-diagnosis-v1",
+  "createdAtUTC": "2026-10-17T04:36:19.760203+00:00",
+  "classification": "Post-freeze evaluation of first-year operating forecasts using next original filing already subsequently opened in sequence; no original parameters changed",
+  "outcomeScope": "Revenue and GAAP EBIT/margin only. These are not observed intrinsic values, market returns or investment-signal tests. FY2024 next-year results not supplied/evaluated.",
+  "scoring": "Signed error=(forecast-actual)/actual. Margin error is forecast minusactual inpercentagepoints. Scenario envelopes not confidence intervals.",
+  "iterationsAllowed": "Improve future protocol: predeclare stronger channel/capex contraction tests, open-ended adoption-tail states tied to explicit quarterly/segment conversion, and verify historic risk/claim inputs. Any new historical version must be labeled post-exposure and cannot receive credit as a clean backtest.",
+  "cases": [
+    {
+      "snapshotId": "NVDA-FY2021",
+      "actualSourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm",
+      "actualAcceptedAt": "2022-03-18T00:33:34Z",
+      "states": [
+        {
+          "state": "base",
+          "forecastRevenue": 22094.375,
+          "actualRevenue": 26914.0,
+          "signedRevenueErrorPctOfActual": -0.17907501671992276,
+          "forecastGAAPMargin": 0.32,
+          "actualGAAPMargin": 0.3730772088875678,
+          "signedMarginErrorPercentagePoints": -5.307720888756778,
+          "forecastEBIT": 7070.2,
+          "actualEBIT": 10041.0
+        },
+        {
+          "state": "bear",
+          "forecastRevenue": 19676.5,
+          "actualRevenue": 26914.0,
+          "signedRevenueErrorPctOfActual": -0.26891209036189345,
+          "forecastGAAPMargin": 0.28,
+          "actualGAAPMargin": 0.3730772088875678,
+          "signedMarginErrorPercentagePoints": -9.307720888756776,
+          "forecastEBIT": 5509.42,
+          "actualEBIT": 10041.0
+        },
+        {
+          "state": "bull",
+          "forecastRevenue": 24178.75,
+          "actualRevenue": 26914.0,
+          "signedRevenueErrorPctOfActual": -0.10162926358029278,
+          "forecastGAAPMargin": 0.34,
+          "actualGAAPMargin": 0.3730772088875678,
+          "signedMarginErrorPercentagePoints": -3.3077208887567764,
+          "forecastEBIT": 8220.775000000001,
+          "actualEBIT": 10041.0
+        }
+      ],
+      "diagnosis": "Original base underestimates continuing Gaming/Ampere and DataCenter demand; source-bound forecast does not fully capture operating leverage. Next filing shows actualFY2022Gaming12,462 andDataCenter10,613. This is an operating forecast miss, not proof fair value should equal future price."
+    },
+    {
+      "snapshotId": "NVDA-FY2022",
+      "actualSourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm",
+      "actualAcceptedAt": "2023-02-24T22:23:43Z",
+      "states": [
+        {
+          "state": "base",
+          "forecastRevenue": 32835.08,
+          "actualRevenue": 26974.0,
+          "signedRevenueErrorPctOfActual": 0.21728627567287018,
+          "forecastGAAPMargin": 0.38,
+          "actualGAAPMargin": 0.1565952398606065,
+          "signedMarginErrorPercentagePoints": 22.34047601393935,
+          "forecastEBIT": 12477.3304,
+          "actualEBIT": 4224.0
+        },
+        {
+          "state": "bear",
+          "forecastRevenue": 26914.0,
+          "actualRevenue": 26974.0,
+          "signedRevenueErrorPctOfActual": -0.002224364202565443,
+          "forecastGAAPMargin": 0.29,
+          "actualGAAPMargin": 0.1565952398606065,
+          "signedMarginErrorPercentagePoints": 13.340476013939348,
+          "forecastEBIT": 7805.0599999999995,
+          "actualEBIT": 4224.0
+        },
+        {
+          "state": "bull",
+          "forecastRevenue": 36333.9,
+          "actualRevenue": 26974.0,
+          "signedRevenueErrorPctOfActual": 0.34699710832653663,
+          "forecastGAAPMargin": 0.4,
+          "actualGAAPMargin": 0.1565952398606065,
+          "signedMarginErrorPercentagePoints": 24.34047601393935,
+          "forecastEBIT": 14533.560000000001,
+          "actualEBIT": 4224.0
+        }
+      ],
+      "diagnosis": "Gaming andProfessionalVisualization channel/inventory correction overwhelmDataCenter growth; inventory commitments and noncashArm termination hitGAAP results. Original bear permits totalrevenue flat but correctly allows margin compression. Compare rawGAAP and recurring earnings separately: original normalized forecast excludes sunkArm writeoff."
+    },
+    {
+      "snapshotId": "NVDA-FY2023",
+      "actualSourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+      "actualAcceptedAt": "2024-02-21T21:36:57Z",
+      "states": [
+        {
+          "state": "base",
+          "forecastRevenue": 31559.579999999998,
+          "actualRevenue": 60922.0,
+          "signedRevenueErrorPctOfActual": -0.4819674337677686,
+          "forecastGAAPMargin": 0.28,
+          "actualGAAPMargin": 0.5412166376678376,
+          "signedMarginErrorPercentagePoints": -26.121663766783755,
+          "forecastEBIT": 8836.6824,
+          "actualEBIT": 32972.0
+        },
+        {
+          "state": "bear",
+          "forecastRevenue": 24816.08,
+          "actualRevenue": 60922.0,
+          "signedRevenueErrorPctOfActual": -0.5926581530481598,
+          "forecastGAAPMargin": 0.21,
+          "actualGAAPMargin": 0.5412166376678376,
+          "signedMarginErrorPercentagePoints": -33.12166376678376,
+          "forecastEBIT": 5211.3768,
+          "actualEBIT": 32972.0
+        },
+        {
+          "state": "bull",
+          "forecastRevenue": 39112.299999999996,
+          "actualRevenue": 60922.0,
+          "signedRevenueErrorPctOfActual": -0.3579938281737304,
+          "forecastGAAPMargin": 0.34,
+          "actualGAAPMargin": 0.5412166376678376,
+          "signedMarginErrorPercentagePoints": -20.121663766783755,
+          "forecastEBIT": 13298.181999999999,
+          "actualEBIT": 32972.0
+        }
+      ],
+      "diagnosis": "Next filing documents much faster generativeAI infrastructure deployment: DataCenter47,525 vs15,005 prior year,217% growth. Even original45% consolidated-growth bull fails to span realized revenue. This reveals insufficient upper-tail scenario coverage, not a license to replace original growth with realized results."
+    }
+  ]
+}

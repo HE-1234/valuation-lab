@@ -1,0 +1,98 @@
+{
+  "classification": "Independent primary-filing facts for special-claim QA; amounts and shares are millions unless a per-security rate is named.",
+  "reviewedAsOf": "2026-10-17",
+  "AAOI": {
+    "2025-12-31": {
+      "filedAt": "2026-02-26",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+      "bankDebt": 33.975,
+      "bankAcceptancePayable": 33.363,
+      "notePrincipal": 125,
+      "noteCarryingAmount": 129.829,
+      "noteFairValue": 145.231,
+      "periodEndCommonShares": 74.998
+    },
+    "2026-06-30": {
+      "filedAt": "2026-08-06",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm",
+      "bankDebt": 58.915,
+      "bankAcceptancePayable": 33.94,
+      "notePrincipal": 124.925,
+      "noteCarryingAmount": 129.142,
+      "noteFairValue": 445.1,
+      "periodEndCommonShares": 84.386
+    },
+    "noteTerms": {
+      "couponRate": 0.0275,
+      "maturity": "2030-01-15",
+      "sharesPerThousandPrincipal": 23.0884,
+      "settlement": "Issuer election of cash, common shares, or a combination",
+      "conversionRightUnconditionalFrom": "2029-10-15"
+    },
+    "customerWarrant": {
+      "issueDate": "2025-03-13",
+      "maximumShares": 7.945399,
+      "vestedSharesAtIssuance": 1.324233,
+      "exercisePrice": 23.6956,
+      "originalTermYears": 10
+    },
+    "knownTransactions": {
+      "ATMCompletedAt": "2026-10-05",
+      "ATMNetCashProceeds": 587.99998589,
+      "ATMSharesIssued": 5.694845,
+      "preOfferingCommonShares": 84.906289,
+      "preOfferingShareDate": "2026-08-20",
+      "SeptemberPropertyPurchaseCash": 26.783472,
+      "propertyPurchasedAt": "2026-09-04",
+      "propertyPurchaseFiledAt": "2026-09-10",
+      "propertyPurchaseSource": "https://www.sec.gov/Archives/edgar/data/1158114/000168316826007057/aaoi_8k.htm"
+    }
+  },
+  "GOOG": {
+    "periodEnd": "2026-06-30",
+    "filedAt": "2026-07-23",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+    "issueDate": "2026-06-05",
+    "bookPreferredAndAPIC": 18023,
+    "depositaryShares": 385,
+    "depositarySharesPerPreferred": 20,
+    "preferredShares": 19.25,
+    "liquidationPreferencePerPreferred": 1000,
+    "aggregateLiquidationPreference": 19250,
+    "couponRate": 0.0625,
+    "firstDividendDate": "2026-08-15",
+    "firstDividendPerPreferred": 12.15,
+    "mandatoryConversionDate": "2029-05-15",
+    "seriesA": {
+      "preferredShares": 9.625,
+      "minimumRate": 2.252,
+      "maximumRate": 2.816,
+      "cappedCallCapPrice": 532.6704,
+      "initialPrice": 355.1136,
+      "thresholdAppreciationPrice": 444.0497
+    },
+    "seriesB": {
+      "preferredShares": 9.625,
+      "minimumRate": 2.274,
+      "maximumRate": 2.842,
+      "cappedCallCapPrice": 527.7974,
+      "initialPrice": 351.8649,
+      "thresholdAppreciationPrice": 439.7537
+    },
+    "totalMinimumCommonShares": 43.56275,
+    "totalMaximumCommonShares": 54.45825,
+    "cappedCallPremiumPaid": 1011,
+    "netPreferredIssuanceProceeds": 19034,
+    "financeLeaseLiability": 2590,
+    "accruedPreferredDividends": 86,
+    "noncontrollingInterestsIncludingRedeemable": 7100,
+    "redeemableNoncontrollingInterestsIncluded": 824,
+    "firstDividendPerPreferredContractualApproximation": 12.1528,
+    "periodEndCommonShares": 12230,
+    "noncurrentInvestments": 145587,
+    "noncurrentMarketableEquity": 14126,
+    "nonmarketableInvestments": 131461,
+    "currentMarketableEquityAlreadyInCash": 87063,
+    "restrictedEquityIncludedInCurrentMarketables": 80000
+  }
+}

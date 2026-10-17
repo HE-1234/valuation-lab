@@ -1,0 +1,523 @@
+{
+  "auditDate": "2026-10-17",
+  "auditedCommit": "2fbb15601219afd184a903d86e8119df8ba96840",
+  "classification": "Conditional arithmetic sensitivities, not a recommendation or price-target calibration",
+  "snapshotId": "GOOG-TTM-2026-06-30",
+  "auditedAssumptions": {
+    "growth": 0.18,
+    "targetMargin": 0.3,
+    "tax": 0.22,
+    "salesCapital": 0.7,
+    "wacc": 0.1,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.15
+  },
+  "currentBaseCaseAssumptions": {
+    "growth": 0.18,
+    "targetMargin": 0.3,
+    "tax": 0.22,
+    "salesCapital": 0.7,
+    "wacc": 0.1,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.15,
+    "years": 10,
+    "otherClaims": 0,
+    "otherAssets": 0
+  },
+  "legacy": {
+    "years": 10,
+    "explicitYears": 1,
+    "capitalFade": false,
+    "perShare": 167.71177213748823,
+    "enterprise": 1785274.5923152026,
+    "forecastPV": 581953.930307161,
+    "terminalPV": 1203320.6620080417,
+    "terminalShare": 0.6740255348884656,
+    "maturityRevenue": 1171145.926516286,
+    "revenueMultiple": 2.626676908569584,
+    "revenueCAGR": 0.1013888248043826,
+    "cumulativeReinvestment": 1036114.1807375515,
+    "terminalSalesCapital": 0.6253908692933084,
+    "terminalFCFF": 234082.79206244263
+  },
+  "legacyRows": [
+    {
+      "year": 1,
+      "growth": 0.18,
+      "margin": 0.3279935675741142,
+      "salesCapital": 0.7,
+      "revenue": 526121.88,
+      "nopat": 134600.382072,
+      "reinvestment": 114651.25714285715,
+      "fcff": 19949.124929142854,
+      "pv": 18135.568117402592
+    },
+    {
+      "year": 2,
+      "growth": 0.16277777777777777,
+      "margin": 0.3248831711769904,
+      "salesCapital": 0.7,
+      "revenue": 611762.8304666666,
+      "nopat": 155026.12972877332,
+      "reinvestment": 122344.21495238086,
+      "fcff": 32681.914776392456,
+      "pv": 27009.84692263839
+    },
+    {
+      "year": 3,
+      "growth": 0.14555555555555555,
+      "margin": 0.3217727747798666,
+      "salesCapital": 0.7,
+      "revenue": 700808.3091234815,
+      "nopat": 175890.80668805033,
+      "reinvestment": 127207.82665259272,
+      "fcff": 48682.980035457615,
+      "pv": 36576.24345263531
+    },
+    {
+      "year": 4,
+      "growth": 0.12833333333333333,
+      "margin": 0.3186623783827428,
+      "salesCapital": 0.7,
+      "revenue": 790745.375460995,
+      "nopat": 196545.0255908534,
+      "reinvestment": 128481.52333930501,
+      "fcff": 68063.50225154837,
+      "pv": 46488.28785707831
+    },
+    {
+      "year": 5,
+      "growth": 0.1111111111111111,
+      "margin": 0.31555198198561896,
+      "salesCapital": 0.7,
+      "revenue": 878605.972734439,
+      "nopat": 216251.76774298883,
+      "reinvestment": 125515.13896206277,
+      "fcff": 90736.62878092605,
+      "pv": 56340.30759258001
+    },
+    {
+      "year": 6,
+      "growth": 0.09388888888888888,
+      "margin": 0.31244158558849516,
+      "salesCapital": 0.7,
+      "revenue": 961097.3112856168,
+      "nopat": 234223.67891747577,
+      "reinvestment": 117844.76935882554,
+      "fcff": 116378.90955865024,
+      "pv": 65692.86045394439
+    },
+    {
+      "year": 7,
+      "growth": 0.07666666666666666,
+      "margin": 0.30933118919137137,
+      "salesCapital": 0.7,
+      "revenue": 1034781.4384841808,
+      "nopat": 249670.33487718625,
+      "reinvestment": 105263.03885509144,
+      "fcff": 144407.29602209482,
+      "pv": 74103.77628548276
+    },
+    {
+      "year": 8,
+      "growth": 0.05944444444444444,
+      "margin": 0.3062207927942476,
+      "salesCapital": 0.7,
+      "revenue": 1096293.446216296,
+      "nopat": 261852.12162368372,
+      "reinvestment": 87874.29676016443,
+      "fcff": 173977.8248635193,
+      "pv": 81161.93929166814
+    },
+    {
+      "year": 9,
+      "growth": 0.04222222222222222,
+      "margin": 0.3031103963971238,
+      "salesCapital": 0.7,
+      "revenue": 1142581.391723206,
+      "nopat": 270136.0728777347,
+      "reinvestment": 66125.63643844299,
+      "fcff": 204010.43643929175,
+      "pv": 86520.34021703477
+    },
+    {
+      "year": 10,
+      "growth": 0.024999999999999994,
+      "margin": 0.3,
+      "salesCapital": 0.7,
+      "revenue": 1171145.926516286,
+      "nopat": 274048.1468048109,
+      "reinvestment": 40806.47827582866,
+      "fcff": 233241.66852898226,
+      "pv": 89924.76011669624
+    }
+  ],
+  "claims": {
+    "cash": 242474,
+    "debt": 100164,
+    "commonShares": 12230,
+    "conversionShares": 54.45825,
+    "investments": 145587,
+    "financeLeases": 2590,
+    "nci": 7100,
+    "dividendPV": 3233.329458715413,
+    "allocationShares": 12284.45825,
+    "netBridge": 274973.6705412846
+  },
+  "decomposition": {
+    "explicitFCFF": 47.373186384280395,
+    "terminal": 97.95471949347395,
+    "cashAndCurrentMarketables": 19.738273765552503,
+    "debt": -8.153717320012872,
+    "noncurrentInvestments": 11.851316275994508,
+    "financeLeases": -0.21083550835463177,
+    "nci": -0.577966065373701,
+    "preferredDividends": -0.26320488807191905
+  },
+  "comparisons": [
+    {
+      "years": 10,
+      "explicitYears": 3,
+      "capitalFade": false,
+      "perShare": 179.34447740428752,
+      "enterprise": 1928176.0744997538,
+      "forecastPV": 547531.8825060377,
+      "terminalPV": 1380644.1919937162,
+      "terminalShare": 0.7160363673488225,
+      "maturityRevenue": 1343728.128729667,
+      "revenueMultiple": 3.01374881405998,
+      "revenueCAGR": 0.11663363451538689,
+      "cumulativeReinvestment": 1282660.1838995244,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 268577.65972984215
+    },
+    {
+      "years": 10,
+      "explicitYears": 3,
+      "capitalFade": true,
+      "perShare": 177.29044815520555,
+      "enterprise": 1902943.4379451275,
+      "forecastPV": 522299.2459514112,
+      "terminalPV": 1380644.1919937162,
+      "terminalShare": 0.7255308615397363,
+      "maturityRevenue": 1343728.128729667,
+      "revenueMultiple": 3.01374881405998,
+      "revenueCAGR": 0.11663363451538689,
+      "cumulativeReinvestment": 1332706.4019316398,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 268577.65972984215
+    },
+    {
+      "years": 10,
+      "explicitYears": 5,
+      "capitalFade": false,
+      "perShare": 191.51227280208764,
+      "enterprise": 2077650.8490585713,
+      "forecastPV": 493618.9823851962,
+      "terminalPV": 1584031.866673375,
+      "terminalShare": 0.7624148530014725,
+      "maturityRevenue": 1541677.565006454,
+      "revenueMultiple": 3.457715019773775,
+      "revenueCAGR": 0.13208469648676724,
+      "cumulativeReinvestment": 1565445.092866363,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 308142.8033056649
+    },
+    {
+      "years": 10,
+      "explicitYears": 5,
+      "capitalFade": true,
+      "perShare": 189.86114770508556,
+      "enterprise": 2057367.6717389221,
+      "forecastPV": 473335.8050655471,
+      "terminalPV": 1584031.866673375,
+      "terminalShare": 0.769931348894252,
+      "maturityRevenue": 1541677.565006454,
+      "revenueMultiple": 3.457715019773775,
+      "revenueCAGR": 0.13208469648676724,
+      "cumulativeReinvestment": 1608994.0153443315,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 308142.8033056649
+    },
+    {
+      "years": 15,
+      "explicitYears": 3,
+      "capitalFade": false,
+      "perShare": 211.49505303065408,
+      "enterprise": 2323128.4784953212,
+      "forecastPV": 932333.4526077387,
+      "terminalPV": 1390795.0258875827,
+      "terminalShare": 0.5986733143525466,
+      "maturityRevenue": 2179998.490026757,
+      "revenueMultiple": 4.889357991025907,
+      "revenueCAGR": 0.11160405522761607,
+      "cumulativeReinvestment": 2477332.128609653,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 435727.19819409796
+    },
+    {
+      "years": 15,
+      "explicitYears": 3,
+      "capitalFade": true,
+      "perShare": 207.7542986391623,
+      "enterprise": 2277175.3373495364,
+      "forecastPV": 886380.3114619536,
+      "terminalPV": 1390795.0258875827,
+      "terminalShare": 0.6107544742278674,
+      "maturityRevenue": 2179998.490026757,
+      "revenueMultiple": 4.889357991025907,
+      "revenueCAGR": 0.11160405522761607,
+      "cumulativeReinvestment": 2598721.4940167037,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 435727.19819409796
+    },
+    {
+      "years": 15,
+      "explicitYears": 5,
+      "capitalFade": false,
+      "perShare": 226.69136982533087,
+      "enterprise": 2509806.9977133023,
+      "forecastPV": 914022.0515335514,
+      "terminalPV": 1595784.9461797506,
+      "terminalShare": 0.6358197852000884,
+      "maturityRevenue": 2501309.472874457,
+      "revenueMultiple": 5.610002720266755,
+      "revenueCAGR": 0.12183987195219115,
+      "cumulativeReinvestment": 2936347.8183920817,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 499949.23089078197
+    },
+    {
+      "years": 15,
+      "explicitYears": 5,
+      "capitalFade": true,
+      "perShare": 223.19306517311995,
+      "enterprise": 2466832.2202674365,
+      "forecastPV": 871047.2740876859,
+      "terminalPV": 1595784.9461797506,
+      "terminalShare": 0.646896425735329,
+      "maturityRevenue": 2501309.472874457,
+      "revenueMultiple": 5.610002720266755,
+      "revenueCAGR": 0.12183987195219115,
+      "cumulativeReinvestment": 3058676.0012866976,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 499949.23089078197
+    },
+    {
+      "years": 20,
+      "explicitYears": 3,
+      "capitalFade": false,
+      "perShare": 247.7054579858285,
+      "enterprise": 2767953.6863827547,
+      "forecastPV": 1367014.3849620752,
+      "terminalPV": 1400939.3014206793,
+      "terminalShare": 0.5061281582537853,
+      "maturityRevenue": 3536517.4781673094,
+      "revenueMultiple": 7.931794481228238,
+      "revenueCAGR": 0.10909455364853082,
+      "cumulativeReinvestment": 4415216.39738187,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 706861.4309486909
+    },
+    {
+      "years": 20,
+      "explicitYears": 3,
+      "capitalFade": true,
+      "perShare": 242.04428523467357,
+      "enterprise": 2698409.2460751543,
+      "forecastPV": 1297469.9446544752,
+      "terminalPV": 1400939.3014206793,
+      "terminalShare": 0.5191722876944446,
+      "maturityRevenue": 3536517.4781673094,
+      "revenueMultiple": 7.931794481228238,
+      "revenueCAGR": 0.10909455364853082,
+      "cumulativeReinvestment": 4662325.377115129,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 706861.4309486909
+    },
+    {
+      "years": 20,
+      "explicitYears": 5,
+      "capitalFade": false,
+      "perShare": 266.3397373902191,
+      "enterprise": 2996865.7137448257,
+      "forecastPV": 1389417.8468037618,
+      "terminalPV": 1607447.866941064,
+      "terminalShare": 0.536376341311746,
+      "maturityRevenue": 4057825.6823225403,
+      "revenueMultiple": 9.100998242347567,
+      "revenueCAGR": 0.11674611815392866,
+      "cumulativeReinvestment": 5159942.403317913,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 811057.9082542177
+    },
+    {
+      "years": 20,
+      "explicitYears": 5,
+      "capitalFade": true,
+      "perShare": 260.7438960087143,
+      "enterprise": 2928123.833920107,
+      "forecastPV": 1320675.966979043,
+      "terminalPV": 1607447.866941064,
+      "terminalShare": 0.5489685403055677,
+      "maturityRevenue": 4057825.6823225403,
+      "revenueMultiple": 9.100998242347567,
+      "revenueCAGR": 0.11674611815392866,
+      "cumulativeReinvestment": 5422152.992912807,
+      "terminalSalesCapital": 0.6253908692933084,
+      "terminalFCFF": 811057.9082542177
+    }
+  ],
+  "sensitivities": [
+    {
+      "key": "growth",
+      "value": 0.1,
+      "perShare": 141.72753410259605
+    },
+    {
+      "key": "growth",
+      "value": 0.18,
+      "perShare": 167.71177213748823
+    },
+    {
+      "key": "growth",
+      "value": 0.24,
+      "perShare": 192.49527083033135
+    },
+    {
+      "key": "growth",
+      "value": 0.25,
+      "perShare": 197.13713901100147
+    },
+    {
+      "key": "targetMargin",
+      "value": 0.27,
+      "perShare": 152.6023380016887
+    },
+    {
+      "key": "targetMargin",
+      "value": 0.3,
+      "perShare": 167.71177213748823
+    },
+    {
+      "key": "targetMargin",
+      "value": 0.331103963971238,
+      "perShare": 183.37721530367824
+    },
+    {
+      "key": "targetMargin",
+      "value": 0.35,
+      "perShare": 192.89416236382075
+    },
+    {
+      "key": "salesCapital",
+      "value": 0.5,
+      "perShare": 145.83341620307823
+    },
+    {
+      "key": "salesCapital",
+      "value": 0.7,
+      "perShare": 167.71177213748823
+    },
+    {
+      "key": "salesCapital",
+      "value": 1,
+      "perShare": 184.12053908829574
+    },
+    {
+      "key": "salesCapital",
+      "value": 1.4,
+      "perShare": 195.05971705550073
+    },
+    {
+      "key": "salesCapital",
+      "value": 2,
+      "perShare": 203.26410053090444
+    },
+    {
+      "key": "wacc",
+      "value": 0.08,
+      "perShare": 236.47390130524138
+    },
+    {
+      "key": "wacc",
+      "value": 0.085,
+      "perShare": 214.80593238373973
+    },
+    {
+      "key": "wacc",
+      "value": 0.09,
+      "perShare": 196.58507163494076
+    },
+    {
+      "key": "wacc",
+      "value": 0.0976771,
+      "perShare": 173.67704659059527
+    },
+    {
+      "key": "wacc",
+      "value": 0.1,
+      "perShare": 167.71177213748823
+    },
+    {
+      "key": "wacc",
+      "value": 0.11,
+      "perShare": 145.94079704199723
+    },
+    {
+      "key": "terminalGrowth",
+      "value": 0.02,
+      "perShare": 163.33381046177834
+    },
+    {
+      "key": "terminalGrowth",
+      "value": 0.025,
+      "perShare": 167.71177213748823
+    },
+    {
+      "key": "terminalGrowth",
+      "value": 0.03,
+      "perShare": 172.6382740283945
+    },
+    {
+      "key": "terminalROIC",
+      "value": 0.1,
+      "perShare": 157.91630018814084
+    },
+    {
+      "key": "terminalROIC",
+      "value": 0.15,
+      "perShare": 167.71177213748823
+    },
+    {
+      "key": "terminalROIC",
+      "value": 0.2,
+      "perShare": 172.6095081121619
+    },
+    {
+      "key": "tax",
+      "value": 0.18,
+      "perShare": 177.9694026869128
+    },
+    {
+      "key": "tax",
+      "value": 0.2,
+      "perShare": 172.84058741220053
+    },
+    {
+      "key": "tax",
+      "value": 0.22,
+      "perShare": 167.71177213748823
+    },
+    {
+      "key": "tax",
+      "value": 0.25,
+      "perShare": 160.01854922541978
+    }
+  ],
+  "documentationDayCountDifference": {
+    "runtime365_25": 3233.329458715413,
+    "research365": 3233.1301816712066,
+    "perShareDifference": 0.00001622188298015955
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "snapshotId": "NVDA-FY2024",
+  "asOf": "2024-02-22T14:30:00Z",
+  "acceptedAt": "2024-02-21T21:36:57Z",
+  "fiscalLabel": "FY2024 (ended 2024-01-28; mostly calendar 2023)",
+  "shareBasis": "Contemporaneous original filing share basis; no future corporate actions applied.",
+  "classification": "Retrospective point-in-time source-bounded teaching case; not truly blind, not independent clean holdout. Model pretraining may contain subsequent knowledge. No later outcome files or later vintage packets actively consulted before this freeze.",
+  "thesis": "Revalue only after AI adoption is actually evidenced by FY2024 results and next-quarter guidance, while explicitly questioning duration, customer concentration, replacement cycles and terminal capital productivity.",
+  "sourceUrls": [
+    "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+    "https://investor.nvidia.com/news/press-release-details/2024/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2024/"
+  ],
+  "sourceHashes": {
+    "original-10k.html": "95ef92fbe42373c035c7125f2a204f2f9a6f57218c86d5b544ef8b354f177f2d",
+    "financial-inputs.json": "75b925c0de99ee12b4ee845ec9e624f5e0d0cb85a44443085439e4b27a84da77",
+    "README.txt": "a67b74732bb57d288a2306170efb5f41602b5249a60ccf4de5208bc2fa7f482c",
+    "original-filing-headers.html": "090f6f598dba4827f39d94634a168a09ecc86d314d37c16414a41478cb651688",
+    "contemporaneous-guidance.json": "47f2d9d152f95746aa31bde381f357bdf33a96bbd83e259ab9b9665941cfd9c4"
+  },
+  "sourceAssumptionLedger": [
+    {
+      "fact": "FY2024 revenue60,922; DataCenter47,525 grew217%; Gaming10,447 grew15%; EBIT32,972,margin54.12%.",
+      "source": "10-K platform discussion and financials",
+      "inference": "Base next-year platform bridge DataCenter+85%,Gaming+10%,remainder+10% gives68.5%,rounded70%. This is far below repeating217% segment growth."
+    },
+    {
+      "fact": "Q1 FY2025 guidance24,000\u00b12%,GAAP GM76.3%,opex3,500,tax17%.",
+      "source": "2024-02-21 release",
+      "inference": "Guided quarter implies61.72% EBIT margin. Base FY2025 revenue103,567 versus96,000 annualized quarter and60% annual margin; bear85,291 requires weaker later quarters; bull121,844 requires further expansion."
+    },
+    {
+      "fact": "One indirect customer approximately19% of annual revenue; China DataCenter revenue14% annual and mid-single-digit share inQ4 following licensing restrictions.",
+      "source": "10-K customer and geographic risk discussions",
+      "inference": "Bear contains a post-backlog capital-spending pause and pricing pressure, rather than assuming uninterrupted market growth."
+    },
+    {
+      "fact": "Inventory/purchase provisions2,200 in each FY2024/FY2023; releases540/137; net margin effect2.7%/7.5%; long-term trajectory of generative-AI demand explicitly unknown.",
+      "source": "10-K MD&A and risk factors",
+      "inference": "Retain recurring obsolescence economics; no blanket margin addback. Initial sales/capital3 reflects fabless platform plus working capital, with lower capital efficiency as excess returns fade."
+    },
+    {
+      "fact": "Federal/state/foreign NOL315/342/361 and capital losses1,400 subject to restrictions.",
+      "source": "10-K tax note",
+      "inference": "Guided17% tax rises21%; no capital-loss deduction against operating NOPAT or separate tax asset uplift."
+    },
+    {
+      "fact": "No independently retrieved historical risk-free/beta/ERP or industry TAM forecast in packet.",
+      "source": "Evidence limitation",
+      "inference": "WACC10%\u21929% base and9.5\u201311.5% initial states are analyst assumptions. Terminal growth2\u20133%,ROIC12\u201328%. Do not call these statistically estimated; display implied final revenue to challenge scale."
+    },
+    {
+      "fact": "Competitive fade is an economic assumption, not filing guidance.",
+      "source": "Analyst constraint",
+      "inference": "For this vintage, year10 sales/capital equals terminalROIC/[terminalMargin*(1-terminalTax)] to align incremental mature returns with terminal ROIC. Earlier frozen cases retain constant explicit sales/capital and must flag a terminal reinvestment-regime change."
+    }
+  ],
+  "states": {
+    "base": {
+      "narrative": "Strong AI infrastructure deployment continues from guided runrate; GPU software/system advantages retain profits, but customers diversify suppliers, custom silicon and pricing competition compress mature rents.",
+      "assumptions": {
+        "years": 10,
+        "growth": 0.7,
+        "targetMargin": 0.4,
+        "tax": 0.21,
+        "salesCapital": 3,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.22,
+        "otherAssets": 0,
+        "otherClaims": 1218.44
+      },
+      "yearlyOverrides": [
+        {
+          "growth": 0.7,
+          "margin": 0.6,
+          "taxRate": 0.17,
+          "salesCapital": 3,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.3,
+          "margin": 0.59,
+          "taxRate": 0.18,
+          "salesCapital": 3,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.25,
+          "margin": 0.57,
+          "taxRate": 0.19,
+          "salesCapital": 3,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.2,
+          "margin": 0.54,
+          "taxRate": 0.2,
+          "salesCapital": 2.8,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.15,
+          "margin": 0.51,
+          "taxRate": 0.21,
+          "salesCapital": 2.5,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.12,
+          "margin": 0.48,
+          "taxRate": 0.21,
+          "salesCapital": 2,
+          "wacc": 0.0975
+        },
+        {
+          "growth": 0.09,
+          "margin": 0.45,
+          "taxRate": 0.21,
+          "salesCapital": 1.6,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.06,
+          "margin": 0.43,
+          "taxRate": 0.21,
+          "salesCapital": 1.2,
+          "wacc": 0.0925
+        },
+        {
+          "growth": 0.04,
+          "margin": 0.41,
+          "taxRate": 0.21,
+          "salesCapital": 0.9,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.025,
+          "margin": 0.4,
+          "taxRate": 0.21,
+          "salesCapital": 0.6962025316,
+          "wacc": 0.09
+        }
+      ]
+    },
+    "bear": {
+      "narrative": "Initial backlog converts, followed by a concentrated-customer investment pause; alternative accelerators and export limits pressure price and utilization.",
+      "assumptions": {
+        "years": 10,
+        "growth": 0.4,
+        "targetMargin": 0.3,
+        "tax": 0.21,
+        "salesCapital": 2,
+        "wacc": 0.115,
+        "terminalGrowth": 0.02,
+        "terminalROIC": 0.12,
+        "otherAssets": 0,
+        "otherClaims": 1218.44
+      },
+      "yearlyOverrides": [
+        {
+          "growth": 0.4,
+          "margin": 0.54,
+          "taxRate": 0.17,
+          "salesCapital": 2,
+          "wacc": 0.115
+        },
+        {
+          "growth": -0.1,
+          "margin": 0.4,
+          "taxRate": 0.18,
+          "salesCapital": 2,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.02,
+          "margin": 0.36,
+          "taxRate": 0.19,
+          "salesCapital": 2,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.35,
+          "taxRate": 0.2,
+          "salesCapital": 1.8,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.34,
+          "taxRate": 0.21,
+          "salesCapital": 1.6,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.07,
+          "margin": 0.33,
+          "taxRate": 0.21,
+          "salesCapital": 1.3,
+          "wacc": 0.11
+        },
+        {
+          "growth": 0.06,
+          "margin": 0.32,
+          "taxRate": 0.21,
+          "salesCapital": 1.0,
+          "wacc": 0.1075
+        },
+        {
+          "growth": 0.04,
+          "margin": 0.31,
+          "taxRate": 0.21,
+          "salesCapital": 0.8,
+          "wacc": 0.105
+        },
+        {
+          "growth": 0.03,
+          "margin": 0.3,
+          "taxRate": 0.21,
+          "salesCapital": 0.65,
+          "wacc": 0.1025
+        },
+        {
+          "growth": 0.02,
+          "margin": 0.3,
+          "taxRate": 0.21,
+          "salesCapital": 0.5063291139,
+          "wacc": 0.1
+        }
+      ]
+    },
+    "bull": {
+      "narrative": "Broad training plus inference demand and system/networking sales sustain rapid deployment; software portability and customer alternatives erode the moat slowly, not immediately.",
+      "assumptions": {
+        "years": 10,
+        "growth": 1,
+        "targetMargin": 0.45,
+        "tax": 0.21,
+        "salesCapital": 4,
+        "wacc": 0.095,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.28,
+        "otherAssets": 0,
+        "otherClaims": 1218.44
+      },
+      "yearlyOverrides": [
+        {
+          "growth": 1,
+          "margin": 0.63,
+          "taxRate": 0.17,
+          "salesCapital": 4,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.45,
+          "margin": 0.64,
+          "taxRate": 0.18,
+          "salesCapital": 4,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.35,
+          "margin": 0.63,
+          "taxRate": 0.19,
+          "salesCapital": 4,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.28,
+          "margin": 0.61,
+          "taxRate": 0.2,
+          "salesCapital": 3.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.22,
+          "margin": 0.58,
+          "taxRate": 0.21,
+          "salesCapital": 3.5,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.17,
+          "margin": 0.55,
+          "taxRate": 0.21,
+          "salesCapital": 3,
+          "wacc": 0.0925
+        },
+        {
+          "growth": 0.12,
+          "margin": 0.52,
+          "taxRate": 0.21,
+          "salesCapital": 2.3,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.49,
+          "taxRate": 0.21,
+          "salesCapital": 1.7,
+          "wacc": 0.0875
+        },
+        {
+          "growth": 0.05,
+          "margin": 0.47,
+          "taxRate": 0.21,
+          "salesCapital": 1.1,
+          "wacc": 0.085
+        },
+        {
+          "growth": 0.03,
+          "margin": 0.45,
+          "taxRate": 0.21,
+          "salesCapital": 0.7876230661,
+          "wacc": 0.085
+        }
+      ]
+    }
+  },
+  "assumptions": {
+    "years": 10,
+    "growth": 0.7,
+    "targetMargin": 0.4,
+    "tax": 0.21,
+    "salesCapital": 3,
+    "wacc": 0.1,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.22,
+    "otherAssets": 0,
+    "otherClaims": 1218.44
+  },
+  "yearlyOverrides": [
+    {
+      "growth": 0.7,
+      "margin": 0.6,
+      "taxRate": 0.17,
+      "salesCapital": 3,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.3,
+      "margin": 0.59,
+      "taxRate": 0.18,
+      "salesCapital": 3,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.25,
+      "margin": 0.57,
+      "taxRate": 0.19,
+      "salesCapital": 3,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.2,
+      "margin": 0.54,
+      "taxRate": 0.2,
+      "salesCapital": 2.8,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.15,
+      "margin": 0.51,
+      "taxRate": 0.21,
+      "salesCapital": 2.5,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.12,
+      "margin": 0.48,
+      "taxRate": 0.21,
+      "salesCapital": 2,
+      "wacc": 0.0975
+    },
+    {
+      "growth": 0.09,
+      "margin": 0.45,
+      "taxRate": 0.21,
+      "salesCapital": 1.6,
+      "wacc": 0.095
+    },
+    {
+      "growth": 0.06,
+      "margin": 0.43,
+      "taxRate": 0.21,
+      "salesCapital": 1.2,
+      "wacc": 0.0925
+    },
+    {
+      "growth": 0.04,
+      "margin": 0.41,
+      "taxRate": 0.21,
+      "salesCapital": 0.9,
+      "wacc": 0.09
+    },
+    {
+      "growth": 0.025,
+      "margin": 0.4,
+      "taxRate": 0.21,
+      "salesCapital": 0.6962025316,
+      "wacc": 0.09
+    }
+  ],
+  "uncertainty": [
+    "States are coherent analyst judgments, not empirically calibrated probabilities or statistical confidence intervals.",
+    "WACC is an explicitly assumed USD nominal range, not a retrieved historical risk-free/beta/ERP estimate.",
+    "No verified entry market price or total-return outcome used to select assumptions.",
+    "Long-run growth, competitive fade and reinvestment are judgments constrained by contemporaneous operations; they are not company guidance."
+  ],
+  "diagnosticFlags": [
+    "Retrospective training-data leakage cannot be excluded.",
+    "First forecast year approximates next fiscal year; reporting-to-decision stub ignored.",
+    "Per-share results conditional on unpriced existing equity awards and book-debt proxy.",
+    "Terminal residual may dominate; display terminal share."
+  ],
+  "accounting": {
+    "SBC": "Future SBC remains fully expensed in GAAP operating margin. Never add back SBC to FCFF. Existing awards are a separate unresolved claim; test a 0\u20135% equity-value haircut, not assumed fair value. Do not also forecast dilution for the same future compensation.",
+    "R&D": "Expensed as reported in base and future margins. No arbitrary R&D asset uplift. Full capitalization would require dated expenditure cohorts, amortization and equal added net reinvestment, preserving cash taxes. This is an explicitly uncapitalized teaching model.",
+    "leases": "Lease expense remains an operating cost; lease liabilities excluded from financial debt consistently. No double subtraction.",
+    "taxNOL": "Forecast cash-tax proxies transition to 21%; no separate DTA/NOL asset added. Jurisdiction/expiry limitations make aggregate NOL offset invalid.",
+    "reinvestment": "Incremental revenue divided by sales-to-capital ratio, excluding R&D already expensed. Negative growth has zero release by default. Procurement commitments flow through future margins/working capital, not wholesale duplicate debt subtraction.",
+    "cash": "Subtract 2% of current annual revenue as assumed operating cash via otherClaims; remaining cash/securities added. No independent restriction audit.",
+    "otherClaims": "Operating cash only in numeric base bridge; existing equity awards unpriced and acquisition caveats explicit.",
+    "debt": "Reported carrying debt is a proxy; no market-value debt reconstruction."
+  },
+  "caseSpecific": {
+    "competition": "Margins decline from guidance-anchored60% to40% base; bull45%,bear30% at maturity. This is judgment, not a prediction that current scarcity margins last forever.",
+    "capitalFade": "Mature sales-to-capital matches terminal return convention to reduce the discontinuity between explicit and terminal reinvestment. This is a capital-productivity discipline, not an observed requirement to build fabs.",
+    "precision": "Cover-page shares2,500m is rounded; period-end2,464m alternative changes per-share value about1.46%. Existing award claim and rounded cover denominator prevent spurious cents-level precision."
+  },
+  "freezeTimestampUTC": "2026-10-17T04:31:15.876120+00:00"
+}

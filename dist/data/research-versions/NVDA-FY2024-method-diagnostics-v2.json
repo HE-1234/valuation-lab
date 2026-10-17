@@ -1,0 +1,31 @@
+{
+  "version": "2024-method-diagnostics-v2",
+  "timestampUTC": "2026-10-17T04:36:49.388701+00:00",
+  "classification": "Post-freeze methodological and source-completeness addendum, no original values changed",
+  "originalFreezeSHA256": "d799745495fc7feca090f5cccc37cca594eaf7b169eed65fc42c57db9a104d16",
+  "bridgePrecision": {
+    "originalForecastGrowth": 0.7,
+    "exactPlatformBridgeGrowth": 0.6850718952102688,
+    "differenceInForecastRevenue": 909.4500000000022,
+    "exactBridgePerShare": 403.52433447861637,
+    "interpretation": "70% was declared rounded judgment, not exact bridge; show added revenue rather than presenting rounding as immaterial."
+  },
+  "scaleTest": {
+    "base": 320378.31723547983,
+    "bear": 113175.58782427968,
+    "bull": 570072.2260742417
+  },
+  "scaleCaveat": "No dated independent TAM or customer-capex budget reconstruction validates these final-year sales. They are implied scenario scales, not demonstrated addressable demand. Bottom-up customer deployment, replacement cycles, inference economics and alternative-silicon share are required to validate them.",
+  "capitalMechanism": "Maturity can demand larger working-capital buffers, capacity reservations/prepayments, system/networking mix, support/cloud infrastructure and replacement/obsolescence investment. These mechanisms could reduce sales/capital. The exact3to0.6962path is an algebraic competitive-return constraint, NOT measured proof these mechanisms reach that magnitude. No invented fabs are assumed.",
+  "knownCommitments": {
+    "inventorySupplyAndCapacityObligations": 16100,
+    "otherPurchaseObligations": 4600,
+    "cloudWithinOther": 3500,
+    "nextFiscalYearPPECapexGuidanceLow": 3500,
+    "nextFiscalYearPPECapexGuidanceHigh": 4000,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+    "sections": "Notes Commitments and Contingencies; MD&A Liquidity",
+    "treatment": "Operating inventory and cloud/R&D commitments belong in future operating costs and working-capital/investment timing; do not deduct20.7bn wholesale as debt in addition. Base first-year net reinvestment14.22bn is an undifferentiated sales/capital proxy, not a line-item reconciliation to these commitments or PPE guidance. Validate by detailed dated cash-flow schedule in a future version."
+  },
+  "shareCountCaveat": "Cover-page2,500m is rounded and datedFebruary16; period-end2,464m isJanuary28. Differences involve dates plus reporting precision; do not substitute or call difference purely rounding. No true fully diluted claim bridge supplied."
+}

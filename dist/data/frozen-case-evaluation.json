@@ -1,0 +1,251 @@
+{
+  "evaluationType": "Post-freeze retrospective evaluation; no assumption retuning",
+  "priceReturnLimits": "Sparse price only, no dividends or benchmark; unequal horizons, no execution record and no alpha inference.",
+  "caseSelectionLimits": "Four selected NVDA vintages; neither statistical strategy validation nor a truly blind holdout.",
+  "cases": [
+    {
+      "snapshotId": "NVDA-FY2021",
+      "originalFreezeSHA256": "52e83dbdf658f0ca8b76eae1e26aaecb4d706024e16b2f13ced07b4aa933061a",
+      "asOf": "2021-03-01T14:30:00Z",
+      "entryPriceOriginalBasis": 553.67,
+      "entryPriceCharacterization": "Contemporaneous recent/end price, corroborated by dated exchange newspaper table; not independently certified official exchange close",
+      "valueOriginalBasis": {
+        "base": 247.05985003282254,
+        "bear": 102.74753000696059,
+        "bull": 536.848875239103
+      },
+      "baseValueToPriceGapPct": -55.37777917661738,
+      "gapMeaning": "Conditional intrinsic-value-to-observed-price gap, NOT forecast error against known true intrinsic value",
+      "baseValueOn2024SplitBasis": 6.176496250820564,
+      "subsequentPriceOnlyReturnPct": 870.1807936135243,
+      "returnEndDate": "2024-12-31",
+      "baseTerminalShare": 0.6118465990182056,
+      "businessForecastComparisons": [
+        {
+          "year": 1,
+          "actualFiscalYear": 2022,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm",
+          "actualAvailableAt": "2022-03-18T00:33:34Z",
+          "forecastRevenue": 22094.375,
+          "actualRevenue": 26914.0,
+          "revenueErrorPct": -17.907501671992275,
+          "forecastOperatingMargin": 0.32,
+          "actualOperatingMargin": 0.3730772088875678,
+          "operatingMarginErrorPercentagePoints": -5.307720888756778,
+          "forecastEBIT": 7070.2,
+          "actualEBIT": 10041.0,
+          "ebitErrorPct": -29.586694552335423,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        },
+        {
+          "year": 2,
+          "actualFiscalYear": 2023,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm",
+          "actualAvailableAt": "2023-02-24T22:23:43Z",
+          "forecastRevenue": 26513.25,
+          "actualRevenue": 26974.0,
+          "revenueErrorPct": -1.7081263438867067,
+          "forecastOperatingMargin": 0.33,
+          "actualOperatingMargin": 0.1565952398606065,
+          "operatingMarginErrorPercentagePoints": 17.34047601393935,
+          "forecastEBIT": 8749.372500000001,
+          "actualEBIT": 4224.0,
+          "ebitErrorPct": 107.13476562500004,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        },
+        {
+          "year": 3,
+          "actualFiscalYear": 2024,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+          "actualAvailableAt": "2024-02-21T21:36:57Z",
+          "forecastRevenue": 31285.635,
+          "actualRevenue": 60922.0,
+          "revenueErrorPct": -48.64640852237287,
+          "forecastOperatingMargin": 0.34,
+          "actualOperatingMargin": 0.5412166376678376,
+          "operatingMarginErrorPercentagePoints": -20.121663766783755,
+          "forecastEBIT": 10637.1159,
+          "actualEBIT": 32972.0,
+          "ebitErrorPct": -67.73894243600631,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        },
+        {
+          "year": 4,
+          "actualFiscalYear": 2025,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+          "actualAvailableAt": "2025-02-26T21:48:33Z",
+          "forecastRevenue": 36291.336599999995,
+          "actualRevenue": 130497.0,
+          "revenueErrorPct": -72.18990735419206,
+          "forecastOperatingMargin": 0.34,
+          "actualOperatingMargin": 0.6241752683969747,
+          "operatingMarginErrorPercentagePoints": -28.417526839697466,
+          "forecastEBIT": 12339.054444,
+          "actualEBIT": 81453.0,
+          "ebitErrorPct": -84.85131984825604,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        }
+      ],
+      "businessOutcomeStatus": "available for listed later filings only"
+    },
+    {
+      "snapshotId": "NVDA-FY2022",
+      "originalFreezeSHA256": "349c2f8b0c153f78d9390d1ea7e13fc8305015e367973ef2918bc59fb9932d1a",
+      "asOf": "2022-03-18T13:30:00Z",
+      "entryPriceOriginalBasis": 264.53,
+      "entryPriceCharacterization": "Dated Banorte price table; contemporaneous news explicitly states Friday session ending price",
+      "valueOriginalBasis": {
+        "base": 78.15785529554502,
+        "bear": 31.214291765488415,
+        "bull": 166.30837209227585
+      },
+      "baseValueToPriceGapPct": -70.45406747985294,
+      "gapMeaning": "Conditional intrinsic-value-to-observed-price gap, NOT forecast error against known true intrinsic value",
+      "baseValueOn2024SplitBasis": 7.815785529554502,
+      "subsequentPriceOnlyReturnPct": 407.65508637961665,
+      "returnEndDate": "2024-12-31",
+      "baseTerminalShare": 0.553861516762733,
+      "businessForecastComparisons": [
+        {
+          "year": 1,
+          "actualFiscalYear": 2023,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm",
+          "actualAvailableAt": "2023-02-24T22:23:43Z",
+          "forecastRevenue": 32835.08,
+          "actualRevenue": 26974.0,
+          "revenueErrorPct": 21.728627567287017,
+          "forecastOperatingMargin": 0.38,
+          "actualOperatingMargin": 0.1565952398606065,
+          "operatingMarginErrorPercentagePoints": 22.34047601393935,
+          "forecastEBIT": 12477.3304,
+          "actualEBIT": 4224.0,
+          "ebitErrorPct": 195.39134469696972,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        },
+        {
+          "year": 2,
+          "actualFiscalYear": 2024,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+          "actualAvailableAt": "2024-02-21T21:36:57Z",
+          "forecastRevenue": 38417.0436,
+          "actualRevenue": 60922.0,
+          "revenueErrorPct": -36.94060667739076,
+          "forecastOperatingMargin": 0.38,
+          "actualOperatingMargin": 0.5412166376678376,
+          "operatingMarginErrorPercentagePoints": -16.121663766783755,
+          "forecastEBIT": 14598.476567999998,
+          "actualEBIT": 32972.0,
+          "ebitErrorPct": -55.72462523353149,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        },
+        {
+          "year": 3,
+          "actualFiscalYear": 2025,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+          "actualAvailableAt": "2025-02-26T21:48:33Z",
+          "forecastRevenue": 44179.600139999995,
+          "actualRevenue": 130497.0,
+          "revenueErrorPct": -66.14512200280467,
+          "forecastOperatingMargin": 0.38,
+          "actualOperatingMargin": 0.6241752683969747,
+          "operatingMarginErrorPercentagePoints": -24.417526839697466,
+          "forecastEBIT": 16788.248053199997,
+          "actualEBIT": 81453.0,
+          "ebitErrorPct": -79.38903655703288,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        }
+      ],
+      "businessOutcomeStatus": "available for listed later filings only"
+    },
+    {
+      "snapshotId": "NVDA-FY2023",
+      "originalFreezeSHA256": "bead6a90cfecf5451bacff55478de4b29b9c4d74952e16b52fde5bab02fd3ff8",
+      "asOf": "2023-02-27T14:30:00Z",
+      "entryPriceOriginalBasis": 235.01,
+      "entryPriceCharacterization": "NVIDIA S-3 last reported sale price; not labeled official closing auction price",
+      "valueOriginalBasis": {
+        "base": 91.59891173878475,
+        "bear": 27.5415169296647,
+        "bull": 251.8715018225896
+      },
+      "baseValueToPriceGapPct": -61.02339826442077,
+      "gapMeaning": "Conditional intrinsic-value-to-observed-price gap, NOT forecast error against known true intrinsic value",
+      "baseValueOn2024SplitBasis": 9.159891173878474,
+      "subsequentPriceOnlyReturnPct": 471.42249265988676,
+      "returnEndDate": "2024-12-31",
+      "baseTerminalShare": 0.6060234246206184,
+      "businessForecastComparisons": [
+        {
+          "year": 1,
+          "actualFiscalYear": 2024,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm",
+          "actualAvailableAt": "2024-02-21T21:36:57Z",
+          "forecastRevenue": 31559.579999999998,
+          "actualRevenue": 60922.0,
+          "revenueErrorPct": -48.196743376776865,
+          "forecastOperatingMargin": 0.28,
+          "actualOperatingMargin": 0.5412166376678376,
+          "operatingMarginErrorPercentagePoints": -26.121663766783755,
+          "forecastEBIT": 8836.6824,
+          "actualEBIT": 32972.0,
+          "ebitErrorPct": -73.19943467184278,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        },
+        {
+          "year": 2,
+          "actualFiscalYear": 2025,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+          "actualAvailableAt": "2025-02-26T21:48:33Z",
+          "forecastRevenue": 38818.2834,
+          "actualRevenue": 130497.0,
+          "revenueErrorPct": -70.25350513804915,
+          "forecastOperatingMargin": 0.33,
+          "actualOperatingMargin": 0.6241752683969747,
+          "operatingMarginErrorPercentagePoints": -29.417526839697466,
+          "forecastEBIT": 12810.033522000002,
+          "actualEBIT": 81453.0,
+          "ebitErrorPct": -84.2730979558764,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        }
+      ],
+      "businessOutcomeStatus": "available for listed later filings only"
+    },
+    {
+      "snapshotId": "NVDA-FY2024",
+      "originalFreezeSHA256": "d799745495fc7feca090f5cccc37cca594eaf7b169eed65fc42c57db9a104d16",
+      "asOf": "2024-02-22T14:30:00Z",
+      "entryPriceOriginalBasis": 785.38,
+      "entryPriceCharacterization": "Contemporaneously reported close",
+      "valueOriginalBasis": {
+        "base": 406.9803952206175,
+        "bear": 98.14989187806566,
+        "bull": 897.9698382070434
+      },
+      "baseValueToPriceGapPct": -48.18044828992112,
+      "gapMeaning": "Conditional intrinsic-value-to-observed-price gap, NOT forecast error against known true intrinsic value",
+      "baseValueOn2024SplitBasis": 40.69803952206175,
+      "subsequentPriceOnlyReturnPct": 70.98729277547173,
+      "returnEndDate": "2024-12-31",
+      "baseTerminalShare": 0.561923866944743,
+      "businessForecastComparisons": [
+        {
+          "year": 1,
+          "actualFiscalYear": 2025,
+          "actualSource": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+          "actualAvailableAt": "2025-02-26T21:48:33Z",
+          "forecastRevenue": 103567.4,
+          "actualRevenue": 130497.0,
+          "revenueErrorPct": -20.636183207276805,
+          "forecastOperatingMargin": 0.6,
+          "actualOperatingMargin": 0.6241752683969747,
+          "operatingMarginErrorPercentagePoints": -2.4175268396974703,
+          "forecastEBIT": 62140.439999999995,
+          "actualEBIT": 81453.0,
+          "ebitErrorPct": -23.71006592759015,
+          "actualFcffStatus": "Not reconstructed; CFO minus capex is not automatically FCFF"
+        }
+      ],
+      "businessOutcomeStatus": "available for listed later filings only"
+    }
+  ]
+}

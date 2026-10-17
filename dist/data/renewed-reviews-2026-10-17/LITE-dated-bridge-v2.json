@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "LITE-2026-10-17-lite-v2",
+  "reviewedOn": "2026-10-17",
+  "ticker": "LITE",
+  "capitalReferenceDate": "2026-06-27",
+  "shareReferenceDate": "2026-06-27",
+  "currency": "USD",
+  "moneyUnit": "millions",
+  "shareUnit": "millions",
+  "status": "dated-conditional-allocation",
+  "claimCompleteness": "partial",
+  "source": {
+    "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+    "title": "Lumentum FY2026 Form 10-K",
+    "sections": [
+      "Note 5: cash and short-term investments",
+      "Note 6: fair value",
+      "Note 10: debt and capped calls"
+    ],
+    "readingScope": "Targeted capital-bridge review; not a complete new operating or employee-claim appraisal."
+  },
+  "reportedFacts": {
+    "notes": [
+      {
+        "series": 2026,
+        "principal": 54.8,
+        "fairValue": 447.2
+      },
+      {
+        "series": 2028,
+        "principal": 179.6,
+        "fairValue": 1108.7
+      },
+      {
+        "series": 2029,
+        "principal": 54.9,
+        "fairValue": 640.2
+      },
+      {
+        "series": 2032,
+        "principal": 1265,
+        "fairValue": 5411.1
+      }
+    ],
+    "notePrincipal": 1554.3,
+    "noteCarryingValue": 1544.6,
+    "noteFairValue": 7607.2,
+    "termPrincipal": 92.8,
+    "termFairValueApprox": 91.6,
+    "cashAndEquivalents": 2043.5,
+    "shortTermInvestments": 694.9,
+    "cappedCallFairValueApprox": 200,
+    "cappedCallAccounting": "Equity-classified; not recognized as a separate balance-sheet asset.",
+    "principalSettlement": "Cash for every note series; only excess conversion value may settle in shares.",
+    "cumulativeConversionRequestsThrough20260814": 757.8,
+    "conversionPrincipalAlreadyCashSettledFY2026": 519.4
+  },
+  "analyticalTreatment": {
+    "fundedDebtDeduction": 1647.1,
+    "noteFairValueAdjustmentAbovePrincipal": 6052.9,
+    "cappedCallAssetCredit": 200,
+    "basicShares": 88.6,
+    "preferredCommonEquivalentSharesApprox": 2.9,
+    "allocationSharesApprox": 91.5,
+    "convertibleSharesAdded": 0,
+    "formula": "(operating EV + 2738.4 cash + 200 capped calls - 7607.2 note fair value - 92.8 term principal) / 91.5",
+    "selectedOperatingEV": 17004.83707529623,
+    "conditionalCommonEquity": 12243.23707529623,
+    "conditionalPerShare": 133.80586967536865,
+    "classification": "June-dated market-claims / intrinsic-operating hybrid",
+    "claimRepricedPerTrial": false,
+    "notes": [
+      "The adjustment above principal is not a pure option value. No separate convertible shares, coupons or historical capped-call premiums are charged.",
+      "The term-loan face proxy is retained. The approx 91.5 denominator is a common-equivalent allocation, not fully diluted fair value.",
+      "Both dated financing proxies remain fixed across operating Monte Carlo trials; changes in internally estimated operating value do not reprice them."
+    ]
+  },
+  "correction": {
+    "supersedesInterpretation": "The frozen register described 757.8 conversion requests as a simple subset of June note principal.",
+    "correctedInterpretation": "757.8 is cumulative through August 14 and includes 519.4 already cash-settled during FY2026. Neither the total nor the 238.4 difference is an additional verified June claim.",
+    "incrementalJuneClaimFromRequests": null,
+    "requestDifferenceIsVerifiedJuneClaim": false
+  },
+  "limits": [
+    "Employee-award claims remain unvalued.",
+    "The capped-call amount and preferred common-equivalent denominator are approximate.",
+    "This is not a self-consistent intrinsic option valuation, complete equity appraisal or current October price.",
+    "Cash availability and the June-to-October settlement/cash/share roll-forward remain unresolved.",
+    "AAOI and NBIS renewed cases remain operating-only; no partial fair-value range is introduced."
+  ],
+  "savedDraftPolicy": {
+    "freshDraft": "Seed the sourced June note adjustment and capped-call credit.",
+    "legacyDraft": "Preserve all entered values. Make an absent old note adjustment explicitly null and absent old capped-call credit zero. Never infer that unknown means zero.",
+    "explicitLoad": "Load reviewed June bridge values changes only these two LITE inputs and its review marker. Full prior-draft Undo remains available.",
+    "malformedDraft": "Retain for recovery; do not substitute source numbers."
+  },
+  "frozenOriginals": {
+    "cases.json": "f92f32f7d805cf50e3a873996eac57d307123bbe6aae1ac0cda8bdb597a46ead",
+    "claims.json": "f9f7f542dfb07515bfb655024645d5fee3805a9532719dfe5f8903f11eeb8e99",
+    "corrections.json": "7c30fb37d3882c14644ed0a100e76b1f1965d19557762095f1add77afedc551a",
+    "evidence.json": "773d68ce7681c8391b0582bf28b816089fed924e1595722025754f74ba6760d7",
+    "evidence-LITE.html": "dde454188ea6c0cacac27624cdab42ba80bcc00a4c9f5662f173ca39f0a75c05",
+    "dossiers.html": "f55bb630d0779b8d59a5d14668f9f4b8bcd4acc133826b17d69c4fc84d87672c",
+    "manifest.json": "eaebfbe7b271044fb587197c859dfdcacfaf109ed994ebeaa04258bad8be1cae"
+  }
+}

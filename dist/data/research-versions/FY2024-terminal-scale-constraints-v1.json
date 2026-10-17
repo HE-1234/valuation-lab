@@ -1,0 +1,105 @@
+{
+  "version": "FY2024-terminal-scale-constraints-v1",
+  "createdAtUTC": "2026-10-17T04:38:22.409029+00:00",
+  "classification": "Post-freeze scale diagnostic based on contemporaneous issuer market narrative, not validated market forecast",
+  "source": {
+    "url": "https://s201.q4cdn.com/141608511/files/doc_presentations/2023/Oct/11/ndr_presentation_oct_2023_final.pdf",
+    "documentTitle": "NVIDIA Investor Presentation,October2023",
+    "page": 33,
+    "documentDateEvidence": "PDF cover explicitlyOctober2023; URL includes2023/Oct/11. No archived exact release timestamp verified.",
+    "access": "Web tool extracted PDF text; screenshot retrieval failed with cache miss.",
+    "issuerLongTermAnnualTAMUSDmillions": {
+      "total": 1000000,
+      "DataCenterSystems": 300000,
+      "AIEnterpriseAndDGXCloud": 150000,
+      "AutonomousMachines": 300000,
+      "OmniverseEnterprise": 150000,
+      "Gaming": 100000
+    }
+  },
+  "interpretation": "Issuer long-term opportunity claim is promotional forward-looking evidence, not independent demand verification or a timed FY2035 spending forecast. Do not confuse the separate1trillion installed data-center infrastructure stock with1trillion annual spending. Platform revenue categories and TAM categories are not one-to-one.",
+  "constraints": [
+    "30%,50%,70% share coordinates are illustrative analyst constraints, not observed or independently established plausible shares.",
+    "Current78.0% DataCenter/17.1%Gaming mix held constant is a diagnostic, not forecast;90%DataCenter is an alternative mix stress.",
+    "A share above100% of stated systems TAM exposes either need for future TAM expansion, different category scope, higher software/services mix or a revenue-path revision. It does not prove the oldTAM is a hard ceiling.",
+    "Broad trillion opportunity includes speculative autonomous/Omniverse markets; cannot lend that total to a mostlyDataCenter forecast without separate segment cases.",
+    "No dated bottom-up hyperscaler/customer capex and NVIDIA capture schedule verifies feasibility; this remains a material validation gap."
+  ],
+  "cases": [
+    {
+      "state": "base",
+      "year10RevenueUSDmillions": 320378.31723547983,
+      "firstTerminalYearRevenueUSDmillions": 328387.7751663668,
+      "shareOfManagementBroadOneTrillionAnnualOpportunity": 0.32838777516636675,
+      "minimumAnnualTAMAtAssumedShares": {
+        "0.3": 1094625.9172212225,
+        "0.5": 656775.5503327335,
+        "0.7": 469125.3930948097
+      },
+      "constantCurrentPlatformMixDiagnostic": {
+        "assumedDataCenterMix": 0.7800958602803585,
+        "impliedDataCenterRevenue": 256173.94397395983,
+        "shareOfManagement300bnDataCenterSystemsOpportunity": 0.8539131465798661,
+        "minimumDataCenterTAMAt50pctShare": 512347.88794791966,
+        "assumedGamingMix": 0.17148156659334887,
+        "impliedGamingRevenue": 56312.450135633,
+        "shareOfManagement100bnGamingOpportunity": 0.56312450135633
+      },
+      "dataCenter90pctMixStress": {
+        "impliedDataCenterRevenue": 295548.9976497301,
+        "shareOfManagement300bnOpportunity": 0.9851633254991005,
+        "minimumDataCenterTAMAt50pctShare": 591097.9952994602
+      }
+    },
+    {
+      "state": "bear",
+      "year10RevenueUSDmillions": 113175.58782427968,
+      "firstTerminalYearRevenueUSDmillions": 115439.09958076527,
+      "shareOfManagementBroadOneTrillionAnnualOpportunity": 0.11543909958076526,
+      "minimumAnnualTAMAtAssumedShares": {
+        "0.3": 384796.9986025509,
+        "0.5": 230878.19916153053,
+        "0.7": 164912.99940109326
+      },
+      "constantCurrentPlatformMixDiagnostic": {
+        "assumedDataCenterMix": 0.7800958602803585,
+        "impliedDataCenterRevenue": 90053.56369744705,
+        "shareOfManagement300bnDataCenterSystemsOpportunity": 0.3001785456581568,
+        "minimumDataCenterTAMAt50pctShare": 180107.1273948941,
+        "assumedGamingMix": 0.17148156659334887,
+        "impliedGamingRevenue": 19795.67764223523,
+        "shareOfManagement100bnGamingOpportunity": 0.1979567764223523
+      },
+      "dataCenter90pctMixStress": {
+        "impliedDataCenterRevenue": 103895.18962268875,
+        "shareOfManagement300bnOpportunity": 0.34631729874229583,
+        "minimumDataCenterTAMAt50pctShare": 207790.3792453775
+      }
+    },
+    {
+      "state": "bull",
+      "year10RevenueUSDmillions": 570072.2260742417,
+      "firstTerminalYearRevenueUSDmillions": 587174.3928564689,
+      "shareOfManagementBroadOneTrillionAnnualOpportunity": 0.5871743928564689,
+      "minimumAnnualTAMAtAssumedShares": {
+        "0.3": 1957247.9761882299,
+        "0.5": 1174348.7857129378,
+        "0.7": 838820.5612235271
+      },
+      "constantCurrentPlatformMixDiagnostic": {
+        "assumedDataCenterMix": 0.7800958602803585,
+        "impliedDataCenterRevenue": 458052.3131299643,
+        "shareOfManagement300bnDataCenterSystemsOpportunity": 1.5268410437665476,
+        "minimumDataCenterTAMAt50pctShare": 916104.6262599286,
+        "assumedGamingMix": 0.17148156659334887,
+        "impliedGamingRevenue": 100689.58475052577,
+        "shareOfManagement100bnGamingOpportunity": 1.0068958475052576
+      },
+      "dataCenter90pctMixStress": {
+        "impliedDataCenterRevenue": 528456.953570822,
+        "shareOfManagement300bnOpportunity": 1.7615231785694068,
+        "minimumDataCenterTAMAt50pctShare": 1056913.907141644
+      }
+    }
+  ]
+}

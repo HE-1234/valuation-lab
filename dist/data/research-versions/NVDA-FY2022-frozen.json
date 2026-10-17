@@ -1,0 +1,421 @@
+{
+  "snapshotId": "NVDA-FY2022",
+  "asOf": "2022-03-18T13:30:00Z",
+  "acceptedAt": "2022-03-18T00:33:34Z",
+  "fiscalLabel": "FY2022 (ended 2022-01-30; mostly calendar 2021)",
+  "shareBasis": "Contemporaneous original filing share basis; no future corporate actions applied.",
+  "classification": "Retrospective point-in-time source-bounded teaching case; not truly blind, not independent clean holdout. Model pretraining may contain subsequent knowledge. No later outcome files or later vintage packets actively consulted before this freeze.",
+  "thesis": "Strong observed platform growth supports runway, but hardware cyclicality, crypto demand and supply commitments require an explicit contraction state.",
+  "sourceUrls": [
+    "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm",
+    "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2022"
+  ],
+  "sourceHashes": {
+    "original-10k.html": "0ccc013e50f73f97a7a5705e6e04e1da13dbe0b0f4cfa847e87bb10f9bf88be9",
+    "financial-inputs.json": "1fb5ca686c12d17abc213d2abe73937c960fa9363e7db41367dfb62d6814fde3",
+    "README.txt": "c458240b1650724c45c4de71015e9b2a80a2b63e19428b613a3967d4ba6c4aaa",
+    "original-filing-headers.html": "62885b4dd9d7bc1c33adcd14193f886397e699e4f6a65a09171d59a0e9cc562b",
+    "contemporaneous-guidance.json": "4a22f9440092aa5a4c99b7f83d763287a1b3de088e4e72f260076eb2cf525eb5"
+  },
+  "sourceAssumptionLedger": [
+    {
+      "fact": "Gaming12,462 and DataCenter10,613 grew61% and58%; total26,914, EBIT10,041.",
+      "source": "10-K MD&A",
+      "inference": "Base next-year bridge gaming+15%,DataCenter+35%,other+10% yields22.18%; rounded22% explicitly slows extraordinary cycle."
+    },
+    {
+      "fact": "Q1 FY2023 revenue8,100\u00b12%; GM65.2%; opex3,550 includes1,360 Arm noncash writeoff.",
+      "source": "2022-02-16 release",
+      "inference": "Recurring guided margin=(8,100*.652-(3,550-1,360))/8,100=38.16%; use38%, not21.37% including sunk noncash charge. Full-year revenue32,835 slightly above32,400 quarterly runrate."
+    },
+    {
+      "fact": "Supply obligations9,000, other commitments1,300; crypto-demand uncertainty explicit; CMP550 FY2022.",
+      "source": "10-K MD&A,Note13",
+      "inference": "Lower base sales/capital2.8 versus3 in prior case; severe joint downside includes revenue contraction and23% margin rather than independent arbitrary growth toggles."
+    },
+    {
+      "fact": "Federal/state/foreign NOL397/345/341 with restrictions; guided tax11%.",
+      "source": "10-K tax note, release",
+      "inference": "11% to21% cash-tax proxy; no additional DTA value or universal NOL shelter."
+    },
+    {
+      "fact": "No verified historical rate/beta/ERP observations in supplied packet.",
+      "source": "Evidence limit",
+      "inference": "WACC10% to8.5% base with9.5\u201311.5% initial states is assumed higher required-return range, not falsely sourced historical estimate. Terminal g2\u20133%,ROIC10\u201322% keeps moat finite."
+    }
+  ],
+  "states": {
+    "base": {
+      "narrative": "Data-center training/inference broadens while exceptional gaming/crypto and pandemic growth decelerates; supplier funding constrains physical capital efficiency.",
+      "assumptions": {
+        "years": 10,
+        "growth": 0.22,
+        "targetMargin": 0.31,
+        "tax": 0.21,
+        "salesCapital": 2.8,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.16,
+        "otherAssets": 0,
+        "otherClaims": 538.28
+      },
+      "yearlyOverrides": [
+        {
+          "growth": 0.22,
+          "margin": 0.38,
+          "taxRate": 0.11,
+          "salesCapital": 2.8,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.17,
+          "margin": 0.38,
+          "taxRate": 0.13,
+          "salesCapital": 2.8,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.15,
+          "margin": 0.38,
+          "taxRate": 0.15,
+          "salesCapital": 2.8,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.13,
+          "margin": 0.37,
+          "taxRate": 0.17,
+          "salesCapital": 2.8,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.11,
+          "margin": 0.36,
+          "taxRate": 0.19,
+          "salesCapital": 2.8,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.09,
+          "margin": 0.35,
+          "taxRate": 0.2,
+          "salesCapital": 2.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.07,
+          "margin": 0.34,
+          "taxRate": 0.21,
+          "salesCapital": 2.8,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.05,
+          "margin": 0.33,
+          "taxRate": 0.21,
+          "salesCapital": 2.8,
+          "wacc": 0.0875
+        },
+        {
+          "growth": 0.035,
+          "margin": 0.32,
+          "taxRate": 0.21,
+          "salesCapital": 2.8,
+          "wacc": 0.085
+        },
+        {
+          "growth": 0.025,
+          "margin": 0.31,
+          "taxRate": 0.21,
+          "salesCapital": 2.8,
+          "wacc": 0.085
+        }
+      ]
+    },
+    "bear": {
+      "narrative": "Crypto and gaming correction offsets enterprise growth, with excess committed supply and lower pricing creating operating deleverage.",
+      "assumptions": {
+        "years": 10,
+        "growth": 0,
+        "targetMargin": 0.28,
+        "tax": 0.21,
+        "salesCapital": 1.8,
+        "wacc": 0.115,
+        "terminalGrowth": 0.02,
+        "terminalROIC": 0.1,
+        "otherAssets": 0,
+        "otherClaims": 538.28
+      },
+      "yearlyOverrides": [
+        {
+          "growth": 0,
+          "margin": 0.29,
+          "taxRate": 0.11,
+          "salesCapital": 1.8,
+          "wacc": 0.115
+        },
+        {
+          "growth": -0.1,
+          "margin": 0.23,
+          "taxRate": 0.13,
+          "salesCapital": 1.8,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.05,
+          "margin": 0.25,
+          "taxRate": 0.15,
+          "salesCapital": 1.8,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.27,
+          "taxRate": 0.17,
+          "salesCapital": 1.8,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.28,
+          "taxRate": 0.19,
+          "salesCapital": 1.8,
+          "wacc": 0.115
+        },
+        {
+          "growth": 0.07,
+          "margin": 0.28,
+          "taxRate": 0.2,
+          "salesCapital": 1.8,
+          "wacc": 0.11
+        },
+        {
+          "growth": 0.05,
+          "margin": 0.28,
+          "taxRate": 0.21,
+          "salesCapital": 1.8,
+          "wacc": 0.105
+        },
+        {
+          "growth": 0.04,
+          "margin": 0.28,
+          "taxRate": 0.21,
+          "salesCapital": 1.8,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.03,
+          "margin": 0.28,
+          "taxRate": 0.21,
+          "salesCapital": 1.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.02,
+          "margin": 0.28,
+          "taxRate": 0.21,
+          "salesCapital": 1.8,
+          "wacc": 0.09
+        }
+      ]
+    },
+    "bull": {
+      "narrative": "AI training/inference and networking sustain stronger sales and mix; platform software offsets competitive pressure for longer.",
+      "assumptions": {
+        "years": 10,
+        "growth": 0.35,
+        "targetMargin": 0.35,
+        "tax": 0.21,
+        "salesCapital": 3.8,
+        "wacc": 0.095,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.22,
+        "otherAssets": 0,
+        "otherClaims": 538.28
+      },
+      "yearlyOverrides": [
+        {
+          "growth": 0.35,
+          "margin": 0.4,
+          "taxRate": 0.11,
+          "salesCapital": 3.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.28,
+          "margin": 0.42,
+          "taxRate": 0.13,
+          "salesCapital": 3.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.25,
+          "margin": 0.43,
+          "taxRate": 0.15,
+          "salesCapital": 3.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.22,
+          "margin": 0.43,
+          "taxRate": 0.17,
+          "salesCapital": 3.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.19,
+          "margin": 0.42,
+          "taxRate": 0.19,
+          "salesCapital": 3.8,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.15,
+          "margin": 0.41,
+          "taxRate": 0.2,
+          "salesCapital": 3.8,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.11,
+          "margin": 0.4,
+          "taxRate": 0.21,
+          "salesCapital": 3.8,
+          "wacc": 0.0875
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.38,
+          "taxRate": 0.21,
+          "salesCapital": 3.8,
+          "wacc": 0.085
+        },
+        {
+          "growth": 0.05,
+          "margin": 0.36,
+          "taxRate": 0.21,
+          "salesCapital": 3.8,
+          "wacc": 0.08
+        },
+        {
+          "growth": 0.03,
+          "margin": 0.35,
+          "taxRate": 0.21,
+          "salesCapital": 3.8,
+          "wacc": 0.08
+        }
+      ]
+    }
+  },
+  "assumptions": {
+    "years": 10,
+    "growth": 0.22,
+    "targetMargin": 0.31,
+    "tax": 0.21,
+    "salesCapital": 2.8,
+    "wacc": 0.1,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.16,
+    "otherAssets": 0,
+    "otherClaims": 538.28
+  },
+  "yearlyOverrides": [
+    {
+      "growth": 0.22,
+      "margin": 0.38,
+      "taxRate": 0.11,
+      "salesCapital": 2.8,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.17,
+      "margin": 0.38,
+      "taxRate": 0.13,
+      "salesCapital": 2.8,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.15,
+      "margin": 0.38,
+      "taxRate": 0.15,
+      "salesCapital": 2.8,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.13,
+      "margin": 0.37,
+      "taxRate": 0.17,
+      "salesCapital": 2.8,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.11,
+      "margin": 0.36,
+      "taxRate": 0.19,
+      "salesCapital": 2.8,
+      "wacc": 0.1
+    },
+    {
+      "growth": 0.09,
+      "margin": 0.35,
+      "taxRate": 0.2,
+      "salesCapital": 2.8,
+      "wacc": 0.095
+    },
+    {
+      "growth": 0.07,
+      "margin": 0.34,
+      "taxRate": 0.21,
+      "salesCapital": 2.8,
+      "wacc": 0.09
+    },
+    {
+      "growth": 0.05,
+      "margin": 0.33,
+      "taxRate": 0.21,
+      "salesCapital": 2.8,
+      "wacc": 0.0875
+    },
+    {
+      "growth": 0.035,
+      "margin": 0.32,
+      "taxRate": 0.21,
+      "salesCapital": 2.8,
+      "wacc": 0.085
+    },
+    {
+      "growth": 0.025,
+      "margin": 0.31,
+      "taxRate": 0.21,
+      "salesCapital": 2.8,
+      "wacc": 0.085
+    }
+  ],
+  "uncertainty": [
+    "States are coherent analyst judgments, not empirically calibrated probabilities or statistical confidence intervals.",
+    "WACC is an explicitly assumed USD nominal range, not a retrieved historical risk-free/beta/ERP estimate.",
+    "No verified entry market price or total-return outcome used to select assumptions.",
+    "Long-run growth, competitive fade and reinvestment are judgments constrained by contemporaneous operations; they are not company guidance."
+  ],
+  "diagnosticFlags": [
+    "Retrospective training-data leakage cannot be excluded.",
+    "First forecast year approximates next fiscal year; reporting-to-decision stub ignored.",
+    "Per-share results conditional on unpriced existing equity awards and book-debt proxy.",
+    "Terminal residual may dominate; display terminal share."
+  ],
+  "accounting": {
+    "SBC": "Future SBC remains fully expensed in GAAP operating margin. Never add back SBC to FCFF. Existing awards are a separate unresolved claim; test a 0\u20135% equity-value haircut, not assumed fair value. Do not also forecast dilution for the same future compensation.",
+    "R&D": "Expensed as reported in base and future margins. No arbitrary R&D asset uplift. Full capitalization would require dated expenditure cohorts, amortization and equal added net reinvestment, preserving cash taxes. This is an explicitly uncapitalized teaching model.",
+    "leases": "Lease expense remains an operating cost; lease liabilities excluded from financial debt consistently. No double subtraction.",
+    "taxNOL": "Forecast cash-tax proxies transition to 21%; no separate DTA/NOL asset added. Jurisdiction/expiry limitations make aggregate NOL offset invalid.",
+    "reinvestment": "Incremental revenue divided by sales-to-capital ratio, excluding R&D already expensed. Negative growth has zero release by default. Procurement commitments flow through future margins/working capital, not wholesale duplicate debt subtraction.",
+    "cash": "Subtract 2% of current annual revenue as assumed operating cash via otherClaims; remaining cash/securities added. No independent restriction audit.",
+    "otherClaims": "Operating cash only in numeric base bridge; existing equity awards unpriced and acquisition caveats explicit.",
+    "debt": "Reported carrying debt is a proxy; no market-value debt reconstruction."
+  },
+  "caseSpecific": {
+    "Arm": "Termination already announced February8,2022. The1,360 writeoff is noncash sunk signing consideration, not recurring operating cash expense; standalone forecasts exclude Arm business and future closing consideration. No arbitrary reversal asset credited.",
+    "timing": "Source set includes earnings release and annual filing accepted March18, not every event to cutoff; no claim to exhaustive contemporaneous information. Later outcomes deliberately not consulted."
+  },
+  "freezeTimestampUTC": "2026-10-17T04:29:45.938946+00:00"
+}

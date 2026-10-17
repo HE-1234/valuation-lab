@@ -1,0 +1,392 @@
+{
+  "version": "2021-method-diagnostics-v2",
+  "timestampUTC": "2026-10-17T04:33:58.420335+00:00",
+  "originalFreezeSHA256": "52e83dbdf658f0ca8b76eae1e26aaecb4d706024e16b2f13ced07b4aa933061a",
+  "classification": "Post-freeze methodological checks after later-vintage exposure; not better historical foresight, not replacement of original. No market outcomes used.",
+  "corrections": [
+    {
+      "issue": "2021 platform bridge arithmetic",
+      "originalText": "gaming30%, DataCenter40%, remainder15% gives about32.5%",
+      "correctCalculation": 0.32018590704647676,
+      "resolution": "Actual32.01859%;32.5% original forecast is0.48141percentage points higher. Preserve original; separate arithmetic-consistent run below."
+    }
+  ],
+  "arithmeticConsistentBase": {
+    "assumptions": {
+      "years": 10,
+      "growth": 0.32018590704647676,
+      "targetMargin": 0.3,
+      "tax": 0.21,
+      "salesCapital": 3,
+      "wacc": 0.08,
+      "terminalGrowth": 0.025,
+      "terminalROIC": 0.16,
+      "otherAssets": 0,
+      "otherClaims": 333.5,
+      "yearlyOverrides": [
+        {
+          "growth": 0.32018590704647676,
+          "margin": 0.32,
+          "taxRate": 0.1,
+          "salesCapital": 3,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.2,
+          "margin": 0.33,
+          "taxRate": 0.12,
+          "salesCapital": 3,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.18,
+          "margin": 0.34,
+          "taxRate": 0.14,
+          "salesCapital": 3,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.16,
+          "margin": 0.34,
+          "taxRate": 0.16,
+          "salesCapital": 3,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.14,
+          "margin": 0.34,
+          "taxRate": 0.18,
+          "salesCapital": 3,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.11,
+          "margin": 0.33,
+          "taxRate": 0.2,
+          "salesCapital": 3,
+          "wacc": 0.0875
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.32,
+          "taxRate": 0.21,
+          "salesCapital": 3,
+          "wacc": 0.085
+        },
+        {
+          "growth": 0.06,
+          "margin": 0.31,
+          "taxRate": 0.21,
+          "salesCapital": 3,
+          "wacc": 0.0825
+        },
+        {
+          "growth": 0.04,
+          "margin": 0.3,
+          "taxRate": 0.21,
+          "salesCapital": 3,
+          "wacc": 0.08
+        },
+        {
+          "growth": 0.025,
+          "margin": 0.3,
+          "taxRate": 0.21,
+          "salesCapital": 3,
+          "wacc": 0.08
+        }
+      ]
+    },
+    "result": {
+      "enterprise": 148390.09365998482,
+      "equity": 152654.59365998482,
+      "perShare": 246.2170865483626,
+      "terminalShare": 0.6117702058846406,
+      "terminalPV": 90780.63814961002,
+      "terminalNopat": 13564.664119991281,
+      "terminalReinvestment": 2119.478768748638,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 22014.1,
+          "ebit": 7044.512,
+          "nopat": 6340.060799999999,
+          "reinvestment": 1779.6999999999996,
+          "fcff": 4560.3607999999995,
+          "discountFactor": 1.09
+        },
+        {
+          "year": 2,
+          "revenue": 26416.92,
+          "ebit": 8717.5836,
+          "nopat": 7671.473567999999,
+          "reinvestment": 1467.6066666666666,
+          "fcff": 6203.866901333333,
+          "discountFactor": 1.1881000000000002
+        },
+        {
+          "year": 3,
+          "revenue": 31171.965599999996,
+          "ebit": 10598.468304,
+          "nopat": 9114.68274144,
+          "reinvestment": 1585.0151999999991,
+          "fcff": 7529.667541440001,
+          "discountFactor": 1.2950290000000002
+        },
+        {
+          "year": 4,
+          "revenue": 36159.48009599999,
+          "ebit": 12294.223232639999,
+          "nopat": 10327.147515417599,
+          "reinvestment": 1662.5048319999987,
+          "fcff": 8664.6426834176,
+          "discountFactor": 1.4115816100000003
+        },
+        {
+          "year": 5,
+          "revenue": 41221.807309439995,
+          "ebit": 14015.4144852096,
+          "nopat": 11492.639877871872,
+          "reinvestment": 1687.442404480001,
+          "fcff": 9805.19747339187,
+          "discountFactor": 1.5386239549000005
+        },
+        {
+          "year": 6,
+          "revenue": 45756.2061134784,
+          "ebit": 15099.548017447873,
+          "nopat": 12079.638413958299,
+          "reinvestment": 1511.4662680128022,
+          "fcff": 10568.172145945497,
+          "discountFactor": 1.6732535509537503
+        },
+        {
+          "year": 7,
+          "revenue": 49416.702602556674,
+          "ebit": 15813.344832818137,
+          "nopat": 12492.542417926328,
+          "reinvestment": 1220.165496359424,
+          "fcff": 11272.376921566904,
+          "discountFactor": 1.815480102784819
+        },
+        {
+          "year": 8,
+          "revenue": 52381.704758710075,
+          "ebit": 16238.328475200124,
+          "nopat": 12828.279495408098,
+          "reinvestment": 988.3340520511338,
+          "fcff": 11839.945443356964,
+          "discountFactor": 1.9652572112645668
+        },
+        {
+          "year": 9,
+          "revenue": 54476.97294905848,
+          "ebit": 16343.091884717544,
+          "nopat": 12911.042588926859,
+          "reinvestment": 698.4227301161349,
+          "fcff": 12212.619858810724,
+          "discountFactor": 2.122477788165732
+        },
+        {
+          "year": 10,
+          "revenue": 55838.89727278494,
+          "ebit": 16751.66918183548,
+          "nopat": 13233.81865365003,
+          "reinvestment": 453.97477457548666,
+          "fcff": 12779.843879074544,
+          "discountFactor": 2.292276011218991
+        }
+      ]
+    }
+  },
+  "contractingCycleStress": {
+    "assumptions": {
+      "years": 10,
+      "growth": 0.18,
+      "targetMargin": 0.27,
+      "tax": 0.21,
+      "salesCapital": 2,
+      "wacc": 0.085,
+      "terminalGrowth": 0.02,
+      "terminalROIC": 0.1,
+      "otherAssets": 0,
+      "otherClaims": 333.5,
+      "yearlyOverrides": [
+        {
+          "growth": 0.18,
+          "margin": 0.28,
+          "taxRate": 0.1,
+          "salesCapital": 2,
+          "wacc": 0.105
+        },
+        {
+          "growth": -0.1,
+          "margin": 0.23,
+          "taxRate": 0.12,
+          "salesCapital": 2,
+          "wacc": 0.105
+        },
+        {
+          "growth": 0.05,
+          "margin": 0.24,
+          "taxRate": 0.14,
+          "salesCapital": 2,
+          "wacc": 0.105
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.26,
+          "taxRate": 0.16,
+          "salesCapital": 2,
+          "wacc": 0.105
+        },
+        {
+          "growth": 0.08,
+          "margin": 0.27,
+          "taxRate": 0.18,
+          "salesCapital": 2,
+          "wacc": 0.105
+        },
+        {
+          "growth": 0.07,
+          "margin": 0.27,
+          "taxRate": 0.2,
+          "salesCapital": 2,
+          "wacc": 0.1
+        },
+        {
+          "growth": 0.06,
+          "margin": 0.27,
+          "taxRate": 0.21,
+          "salesCapital": 2,
+          "wacc": 0.095
+        },
+        {
+          "growth": 0.04,
+          "margin": 0.27,
+          "taxRate": 0.21,
+          "salesCapital": 2,
+          "wacc": 0.09
+        },
+        {
+          "growth": 0.03,
+          "margin": 0.27,
+          "taxRate": 0.21,
+          "salesCapital": 2,
+          "wacc": 0.0875
+        },
+        {
+          "growth": 0.02,
+          "margin": 0.27,
+          "taxRate": 0.21,
+          "salesCapital": 2,
+          "wacc": 0.085
+        }
+      ]
+    },
+    "result": {
+      "enterprise": 52956.474778604104,
+      "equity": 57220.974778604104,
+      "perShare": 92.29189480420017,
+      "terminalShare": 0.5325157316740095,
+      "terminalPV": 28200.155913604594,
+      "terminalNopat": 5847.612358845159,
+      "terminalReinvestment": 1169.5224717690319,
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 19676.5,
+          "ebit": 5509.42,
+          "nopat": 4958.478,
+          "reinvestment": 1500.75,
+          "fcff": 3457.728,
+          "discountFactor": 1.105
+        },
+        {
+          "year": 2,
+          "revenue": 17708.850000000002,
+          "ebit": 4073.035500000001,
+          "nopat": 3584.271240000001,
+          "reinvestment": 0,
+          "fcff": 3584.271240000001,
+          "discountFactor": 1.221025
+        },
+        {
+          "year": 3,
+          "revenue": 18594.292500000003,
+          "ebit": 4462.6302000000005,
+          "nopat": 3837.8619720000006,
+          "reinvestment": 442.7212500000005,
+          "fcff": 3395.140722,
+          "discountFactor": 1.349232625
+        },
+        {
+          "year": 4,
+          "revenue": 20081.835900000005,
+          "ebit": 5221.277334000001,
+          "nopat": 4385.872960560001,
+          "reinvestment": 743.7717000000011,
+          "fcff": 3642.10126056,
+          "discountFactor": 1.490902050625
+        },
+        {
+          "year": 5,
+          "revenue": 21688.382772000008,
+          "ebit": 5855.8633484400025,
+          "nopat": 4801.807945720802,
+          "reinvestment": 803.2734360000013,
+          "fcff": 3998.534509720801,
+          "discountFactor": 1.647446765940625
+        },
+        {
+          "year": 6,
+          "revenue": 23206.56956604001,
+          "ebit": 6265.773782830803,
+          "nopat": 5012.619026264642,
+          "reinvestment": 759.0933970200003,
+          "fcff": 4253.525629244642,
+          "discountFactor": 1.8121914425346874
+        },
+        {
+          "year": 7,
+          "revenue": 24598.96374000241,
+          "ebit": 6641.720209800652,
+          "nopat": 5246.958965742515,
+          "reinvestment": 696.1970869812012,
+          "fcff": 4550.761878761314,
+          "discountFactor": 1.9843496295754828
+        },
+        {
+          "year": 8,
+          "revenue": 25582.92228960251,
+          "ebit": 6907.389018192678,
+          "nopat": 5456.837324372216,
+          "reinvestment": 491.9792748000491,
+          "fcff": 4964.858049572167,
+          "discountFactor": 2.1629410962372764
+        },
+        {
+          "year": 9,
+          "revenue": 26350.409958290584,
+          "ebit": 7114.6106887384585,
+          "nopat": 5620.542444103382,
+          "reinvestment": 383.74383434403717,
+          "fcff": 5236.798609759345,
+          "discountFactor": 2.3521984421580378
+        },
+        {
+          "year": 10,
+          "revenue": 26877.418157456395,
+          "ebit": 7256.902902513228,
+          "nopat": 5732.95329298545,
+          "reinvestment": 263.50409958290584,
+          "fcff": 5469.449193402545,
+          "discountFactor": 2.552135309741471
+        }
+      ]
+    },
+    "rationale": "FY2021 filing historical platform table shows FY2020 Gaming5,518 versusFY2019 6,246 (about-11.7%). Disclosed cryptocurrency resale/pandemic normalization risks support considering aggregate contraction. Change original bear year2 from+2% to-10%, retaining original23% margin and no capital release. This is an additional stress, not empirically calibrated probability or revision to original bear."
+  },
+  "capitalConsistency": "Original mature incremental return implied by30% margin*.79 aftertax*3sales/capital=71.1%, versus16% terminalROIC. Separate capital-fade stress already lowers year6\u201310 sales/capital to0.6751 byyear10; base value243.62 vs247.06. The small value effect does not excuse failing to flag the abrupt original regime change.",
+  "awardClaims": "Existing awards unresolved, so all per-share values remain conditional. The0\u20135% equity haircut is only a stress, not a derived claim valuation. Future GAAP SBC is fully expensed. Cannot convert unavailable option/RSU fair value into a zero claim.",
+  "wacc": "All historical WACC paths are assumed, not verified. Pending independently sourced vintage risk-free/ERP/beta reconstruction should produce a distinct version and explicit bridge, never mutate originals."
+}

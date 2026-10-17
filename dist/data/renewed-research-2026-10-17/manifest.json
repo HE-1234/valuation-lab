@@ -1,0 +1,2179 @@
+{
+  "schemaVersion": 1,
+  "researchAsOf": "2026-10-17",
+  "frozenResearchVersion": "cd77a567cfaf77e98567cf772b70c6bb858c0cda",
+  "originalExecutableSHA256": "02c8e133893cff642369ba58d29b7e5ad091c204e08a6b37acbff28f13072bd2",
+  "counts": {
+    "companies": 14,
+    "sourceRecords": 320,
+    "managementCapabilityRecords": 70
+  },
+  "transformationPolicy": "Copy numerical values without recalculation. Replace local provenance locations with stable bundled evidence links or artifact IDs. Omit machine-local retrieval fields. Preserve original public URLs, meaningful research, classifications, reading scope and limitations. Do not redistribute original filing or transcript copies.",
+  "originalInputHashesSHA256": {
+    "scenario-index": "3f8eb3fee551a8703150a2814baa47830ee77b058acce5642883cd634b295068",
+    "equity-bridge-register": "2e4d2c3c745c8ed3ecf68b8de87763b610687fcb39452716a741bd5f0ee5e968",
+    "source-corrections": "dec7631cb73def5838d2d0801e86d5660c3787aa7c120fbb3062c7478836c5c8",
+    "cloud-funding-reconciliation": "6ff94f433b53c1ed33ee0d603073eb827cef9515ea7420393d574e3564273c12",
+    "optics-funding-reconciliation": "cc8bd67317b8638e55d9e41c2f022ba298f5f05f35292addaa8f678af1a51b84",
+    "meta-tesla-funding-reconciliation": "6464beb3a52cee984f6b4a9848a320e30dfb4a08694fcb4ec7c80d042a10b539",
+    "AAPL:judgment": "85a115b2e6faa23c332398046eab73ea2967c82344325d8c8cb24b40da3b574a",
+    "AAPL:facts": "650e7502a3a37a020602ba828ffef0285032c31f7ee9aa5b8941ce5fbe45a0db",
+    "AAPL:sources": "ceaa6beb7bb58bf4fef573de81ab8c4b3de880a02ff2d7d1d82ac1ff974caf0f",
+    "MSFT:judgment": "5beffb5235bdf47028c61cf2be1792fc066042085ff2a528ff3dcd54ef5a8403",
+    "MSFT:facts": "e1fb4c4a60b4fec0b8ff897d6afcb1504d2a50faf997b58723fc759667d5b3cd",
+    "MSFT:sources": "8eb9d34fb66bcd8bd3f6af0f7bc96f0365d6afe4cf93f945b73e5d7b3e73108b",
+    "AMZN:judgment": "3c130085cfb00679b649143896377e22c00cc88036d8a6e8badc0cfa65b69f5b",
+    "AMZN:facts": "8d506e1a9147d2e56abb4a5b3b2426ce3a184a0daf1451575ebcf861300e7dbf",
+    "AMZN:sources": "5e95b378f35de4cb815e3a9b95c22501e82be94be60c30c1747cf80997b19c47",
+    "GOOG:judgment": "ae3e2705a5606ebffdd022c5cab86834e3172c7904c830138c102dbd3fb4050f",
+    "GOOG:facts": "cef503e70aecd590d8d240b4bbcff7a087d1e71421b979b8ec65da174c15c9d6",
+    "GOOG:sources": "2e9b36c7a7c740f785f6d8ee815eefb7c79cc06fdeb6e4f939a3a24b670f1ce7",
+    "META:judgment": "1c8b13b7c91814fdc4869053c09782ac7bb139ae620d90c798dbca49c3c864df",
+    "META:facts": "ab53e0ce88454dc0bc89a33824337d7e60007e65ab00b6b1e4853872f727ad94",
+    "META:sources": "f0efd0b0cf1aa29047d9d6d7842898b2324b16eeb0231b9ff34c5275382bdc8d",
+    "NVDA:judgment": "e7a451f6c45a25354cad2acdb223a0c2afcea4a2cdbf0371f94e8c4698ec2563",
+    "NVDA:facts": "4d892e166917514b37c9068e576b7de33e16206159ca7613ef719773d401c92e",
+    "NVDA:sources": "01b1d50ae935ba6fb86e72ec55c7026275b8032873f53ae2c3f3d036c6280d92",
+    "TSLA:judgment": "7e865e3004d7026c485ecabcdbc0712e019f654b0aa5187e4ffa5136de59e5aa",
+    "TSLA:facts": "67c51d8466535422c55ef07fb21adf77743e906047efe6977247f4dfa3d8872d",
+    "TSLA:sources": "f13ee02074a59d9ec6ea0527c7c6f5db84dc4c8457e75d321acb1c1c8b8fea31",
+    "COHR:judgment": "dc8f2615c3124114e56b2a2e9c2a54a63a220a94c333e8699e52d95c169bdd21",
+    "COHR:facts": "f48c7e8d8d1937c650032a0e60717b6473c1323da677e734571b23d6a6aafcb6",
+    "COHR:sources": "e9566948a30d4b1efd782048267525b8b69f2b6e54fa63efd8760f95c4e165a2",
+    "LITE:judgment": "d704f0f9b41d143718d87045ccef1eec040cc30548aa21962be1fab4e3151a74",
+    "LITE:facts": "89dec692b23a6e5b0e185a08940fd68ba343299a40948eb83fc3564958c74308",
+    "LITE:sources": "e4932c16675215bafd8a1ae23a3c4b48dff31c07088b96e56807d03f441cf123",
+    "AAOI:judgment": "841f8dd940943cd9492746dcf400582643305477b9209dcba09868782db493c6",
+    "AAOI:facts": "c7fcc4c2cdf31786c2cdd48f8b0d0bb6b48d07130365ea870089f671850a4905",
+    "AAOI:sources": "32ff4712084dfcf0f8ee9eb65070fe2391adcfd6da492bf7c2239d11b347d724",
+    "NBIS:judgment": "12d5e03cc11bdf07d78d9d407d3164cf41f81559b645986ad0b291a0dbf14330",
+    "NBIS:facts": "35e73b0d206ad4fe8cc61ccceedd1c960fd9db04f358fb1c3438a6c19e8ad664",
+    "NBIS:sources": "29cb3c427c6af5402f359765783dc56c86de80d3baa29dfafb15178081d169be",
+    "MU:judgment": "efcbd0febf1d6c44975b7b0f97711940cfd08aa92fffa9acb0c2eec1278d8e21",
+    "MU:facts": "72a2d7af052ac875f78b91d1434567fb7044e7896abb070363adbba123806eda",
+    "MU:sources": "e432a7a7e72fe0f5db5fe58cb378fac7b3029ae2c0d2d7a8955463190d5cff9b",
+    "AVGO:judgment": "96e0e71701bb9c4400e91214ada81450ac2df6d6e16543a82d359aa7b974dd02",
+    "AVGO:facts": "cd0449e00f4116a016433aa20f5b9f90e0454a05a2914dcf55314468913412a8",
+    "AVGO:sources": "a6adef95d5f8cf73dc6a9ff0875def641b537ff672b4f0dbca72d2f5179a1a8b",
+    "TSM:judgment": "ddd399a8cf0d0ac27d9336113842bd6427c7c152274f65cd41ae6d43f436328a",
+    "TSM:facts": "edeed8458058cc48b5fbe1b0da72b9263f7af2878fdbd3db8dfcf8fed55f3348",
+    "TSM:sources": "732539e6291684b29ec04cd334881cc17bafac220ef56a49714a7b5131fb2282"
+  },
+  "artifacts": [
+    {
+      "id": "AAOI:baseline-reference",
+      "originalName": "baseline-reference.json",
+      "sha256": "8d0ffaff50e91a37ba3ed35a9495a534576c70ba5b33f818b29a29f976e64ced",
+      "bundleTarget": "evidence-AAOI.html#baseline-reference"
+    },
+    {
+      "id": "AAOI:capital-funding-reconciliation",
+      "originalName": "capital-funding-reconciliation.json",
+      "sha256": "2b7ddb55431820e275a07f11023279859b01190c459d81410822d2ac02b0c8ae",
+      "bundleTarget": "evidence-AAOI.html#capital-funding-reconciliation"
+    },
+    {
+      "id": "AAOI:dossier",
+      "originalName": "dossier.md",
+      "sha256": "65a239dffc10e5cf8904a7e4b26af243b26b52f91192a29cf7d44f80a4e8fd9a",
+      "bundleTarget": "dossiers.html#AAOI"
+    },
+    {
+      "id": "AAOI:existing-claims-reference",
+      "originalName": "existing-claims-reference.json",
+      "sha256": "159bf62b4d27174cf43c3e2a5ee6bb323c883cc8081cb9a066a7e90e9f45c4d4",
+      "bundleTarget": "evidence-AAOI.html#existing-claims-reference"
+    },
+    {
+      "id": "AAOI:facts",
+      "originalName": "facts.json",
+      "sha256": "c7fcc4c2cdf31786c2cdd48f8b0d0bb6b48d07130365ea870089f671850a4905",
+      "bundleTarget": "evidence-AAOI.html#facts"
+    },
+    {
+      "id": "AAOI:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "6e5c3cafde2d301c2ec78ab1e532daac13e68664e7004a4404791c43afa35033",
+      "bundleTarget": "evidence-AAOI.html#guidance"
+    },
+    {
+      "id": "AAOI:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "841f8dd940943cd9492746dcf400582643305477b9209dcba09868782db493c6",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    {
+      "id": "AAOI:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "14d43f5367735949d50ef7f799c65954d18be0816c3d7eec35b15d8be6b9a9fd",
+      "bundleTarget": "evidence-AAOI.html#management"
+    },
+    {
+      "id": "AAOI:obligation-asset-register",
+      "originalName": "obligation-asset-register.json",
+      "sha256": "13147ac062250090958918d7baf42bcda577b4f1474a40ae842491d02e47cd13",
+      "bundleTarget": "evidence-AAOI.html#obligation-asset-register"
+    },
+    {
+      "id": "AAOI:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "32ff4712084dfcf0f8ee9eb65070fe2391adcfd6da492bf7c2239d11b347d724",
+      "bundleTarget": "evidence-AAOI.html#sources"
+    },
+    {
+      "id": "AAPL:dossier",
+      "originalName": "dossier.md",
+      "sha256": "1b164ac3d3436312145b530634f3848c643f48b53753b369f120554821d8cf51",
+      "bundleTarget": "dossiers.html#AAPL"
+    },
+    {
+      "id": "AAPL:existing-companies",
+      "originalName": "existing-companies.json",
+      "sha256": "eb40c5eb546ec4237bacecfea5a194456a52da4c91b5ff9bbe8086dae7e6865e",
+      "bundleTarget": "evidence-AAPL.html#existing-companies"
+    },
+    {
+      "id": "AAPL:existing-company-base-cases",
+      "originalName": "existing-company-base-cases.json",
+      "sha256": "6e426b562b142cfa2935f3b63524e29cdedf184c152ee489c71ce2a0fa33301b",
+      "bundleTarget": "evidence-AAPL.html#existing-company-base-cases"
+    },
+    {
+      "id": "AAPL:existing-company-history",
+      "originalName": "existing-company-history.json",
+      "sha256": "5f8cfa5922a3974eb52f062e644d7b8570e4e34fa90b6b7f65b79d6bd02da6e7",
+      "bundleTarget": "evidence-AAPL.html#existing-company-history"
+    },
+    {
+      "id": "AAPL:facts",
+      "originalName": "facts.json",
+      "sha256": "650e7502a3a37a020602ba828ffef0285032c31f7ee9aa5b8941ce5fbe45a0db",
+      "bundleTarget": "evidence-AAPL.html#facts"
+    },
+    {
+      "id": "AAPL:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "7e987133b19bc6fbc152085f69b6cda658498748d5edba8175030ef0373f568a",
+      "bundleTarget": "evidence-AAPL.html#guidance"
+    },
+    {
+      "id": "AAPL:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "85a115b2e6faa23c332398046eab73ea2967c82344325d8c8cb24b40da3b574a",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    {
+      "id": "AAPL:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "fa83dcd1dc54e3680222e9333d6529e0f80671eafb9c2b8fa7a77d547854e7de",
+      "bundleTarget": "evidence-AAPL.html#management"
+    },
+    {
+      "id": "AAPL:quarterly-financials",
+      "originalName": "quarterly-financials.json",
+      "sha256": "35d5c84387cffe58dfbf9eb75538550a04617fbec860a966e4aa779c326dbdd0",
+      "bundleTarget": "evidence-AAPL.html#quarterly-financials"
+    },
+    {
+      "id": "AAPL:quarterly-revenue-evidence",
+      "originalName": "quarterly-revenue-evidence.json",
+      "sha256": "65247da99e6865caf24223eb8bb77d6fc8825d05a7ccde63c2e8c4f9a1fc8d9d",
+      "bundleTarget": "evidence-AAPL.html#quarterly-revenue-evidence"
+    },
+    {
+      "id": "AAPL:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "ceaa6beb7bb58bf4fef573de81ab8c4b3de880a02ff2d7d1d82ac1ff974caf0f",
+      "bundleTarget": "evidence-AAPL.html#sources"
+    },
+    {
+      "id": "AMZN:capital-funding-reconciliation",
+      "originalName": "capital-funding-reconciliation.json",
+      "sha256": "21e29d599ca9c85bdb4a89351e8709708d1d38a905764e450dfda5d1dba6e010",
+      "bundleTarget": "evidence-AMZN.html#capital-funding-reconciliation"
+    },
+    {
+      "id": "AMZN:dossier",
+      "originalName": "dossier.md",
+      "sha256": "57eb81c9aa77ff1828ec1665826292127705aa35acdcd861a8b42df6d38a2160",
+      "bundleTarget": "dossiers.html#AMZN"
+    },
+    {
+      "id": "AMZN:existing-companies",
+      "originalName": "existing-companies.json",
+      "sha256": "0112669ff10aabee1a648079b0415e7c527701cd48ecf659f43791712e06b0b0",
+      "bundleTarget": "evidence-AMZN.html#existing-companies"
+    },
+    {
+      "id": "AMZN:existing-company-base-cases",
+      "originalName": "existing-company-base-cases.json",
+      "sha256": "8f1b55bb9369fb8a8e37f827352aa057ef39c245252329c5734b55f552c551ad",
+      "bundleTarget": "evidence-AMZN.html#existing-company-base-cases"
+    },
+    {
+      "id": "AMZN:existing-company-history",
+      "originalName": "existing-company-history.json",
+      "sha256": "2a562c35550925bdbfcb1672c75b7e0af14b026dd93dfb756efab1d3bc968b45",
+      "bundleTarget": "evidence-AMZN.html#existing-company-history"
+    },
+    {
+      "id": "AMZN:facts",
+      "originalName": "facts.json",
+      "sha256": "8d506e1a9147d2e56abb4a5b3b2426ce3a184a0daf1451575ebcf861300e7dbf",
+      "bundleTarget": "evidence-AMZN.html#facts"
+    },
+    {
+      "id": "AMZN:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "1fc6ce5a1c8f4ef7c17044310fd48202b5ce3b933a9d8cb6bee350640f0af7fa",
+      "bundleTarget": "evidence-AMZN.html#guidance"
+    },
+    {
+      "id": "AMZN:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "3c130085cfb00679b649143896377e22c00cc88036d8a6e8badc0cfa65b69f5b",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    {
+      "id": "AMZN:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "7666259f2225217ea1ffa7a4502cf7e3c7126d5c3fa7134c0d20e336eaf52fdd",
+      "bundleTarget": "evidence-AMZN.html#management"
+    },
+    {
+      "id": "AMZN:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "5e95b378f35de4cb815e3a9b95c22501e82be94be60c30c1747cf80997b19c47",
+      "bundleTarget": "evidence-AMZN.html#sources"
+    },
+    {
+      "id": "AVGO:dossier",
+      "originalName": "dossier.md",
+      "sha256": "0d971c3a65ac132cfbfcf95f8e9f5cd233325830fc13c35941615428828b5883",
+      "bundleTarget": "dossiers.html#AVGO"
+    },
+    {
+      "id": "AVGO:facts",
+      "originalName": "facts.json",
+      "sha256": "cd0449e00f4116a016433aa20f5b9f90e0454a05a2914dcf55314468913412a8",
+      "bundleTarget": "evidence-AVGO.html#facts"
+    },
+    {
+      "id": "AVGO:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "c0223c8f44022f52f1d1cf18f86fb9a307301ce12fc238ebd881b12e5acd23aa",
+      "bundleTarget": "evidence-AVGO.html#guidance"
+    },
+    {
+      "id": "AVGO:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "96e0e71701bb9c4400e91214ada81450ac2df6d6e16543a82d359aa7b974dd02",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    {
+      "id": "AVGO:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "f53a7480225cfed1f08a13f10bc58ff5b9a3e0d74fafe224ad00c55fc0c74f0e",
+      "bundleTarget": "evidence-AVGO.html#management"
+    },
+    {
+      "id": "AVGO:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "a6adef95d5f8cf73dc6a9ff0875def641b537ff672b4f0dbca72d2f5179a1a8b",
+      "bundleTarget": "evidence-AVGO.html#sources"
+    },
+    {
+      "id": "COHR:baseline-reference",
+      "originalName": "baseline-reference.json",
+      "sha256": "530f741444cb3e226183d56e0765d37f86af1b2e316f2f3cf170934b851b1207",
+      "bundleTarget": "evidence-COHR.html#baseline-reference"
+    },
+    {
+      "id": "COHR:dossier",
+      "originalName": "dossier.md",
+      "sha256": "1d23024117736e0fd9ec48e02a94f2ec3e64dc5446e7e852627261bc4b08861e",
+      "bundleTarget": "dossiers.html#COHR"
+    },
+    {
+      "id": "COHR:facts",
+      "originalName": "facts.json",
+      "sha256": "f48c7e8d8d1937c650032a0e60717b6473c1323da677e734571b23d6a6aafcb6",
+      "bundleTarget": "evidence-COHR.html#facts"
+    },
+    {
+      "id": "COHR:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "7918271e486c65eaacc2b53a9ca7c4bd3d1f968c1845307a95df52b865c29127",
+      "bundleTarget": "evidence-COHR.html#guidance"
+    },
+    {
+      "id": "COHR:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "dc8f2615c3124114e56b2a2e9c2a54a63a220a94c333e8699e52d95c169bdd21",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    {
+      "id": "COHR:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "07510cd863398162673d2576997ce25c40641c436e979584f17e68e2f58e2fbf",
+      "bundleTarget": "evidence-COHR.html#management"
+    },
+    {
+      "id": "COHR:obligation-asset-register",
+      "originalName": "obligation-asset-register.json",
+      "sha256": "4108adb89cc57976e856afbe1f06cb48add4a1ffef49801958c65460ba7ed0b2",
+      "bundleTarget": "evidence-COHR.html#obligation-asset-register"
+    },
+    {
+      "id": "COHR:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "e9566948a30d4b1efd782048267525b8b69f2b6e54fa63efd8760f95c4e165a2",
+      "bundleTarget": "evidence-COHR.html#sources"
+    },
+    {
+      "id": "GOOG:capital-funding-reconciliation",
+      "originalName": "capital-funding-reconciliation.json",
+      "sha256": "31854c10ff330f6c39e4979a2e7cd6b5ffcadb088981b3281aa02c87b7d99f5f",
+      "bundleTarget": "evidence-GOOG.html#capital-funding-reconciliation"
+    },
+    {
+      "id": "GOOG:dossier",
+      "originalName": "dossier.md",
+      "sha256": "f74c81d81839e52aa32bed108356c18e67c653e24e02e1d343041c490f61b4f7",
+      "bundleTarget": "dossiers.html#GOOG"
+    },
+    {
+      "id": "GOOG:existing-companies",
+      "originalName": "existing-companies.json",
+      "sha256": "ab13c069e751e62f585ee566fe6bb9405c8a490d37210adeb9d7a5acd3333666",
+      "bundleTarget": "evidence-GOOG.html#existing-companies"
+    },
+    {
+      "id": "GOOG:existing-company-base-cases",
+      "originalName": "existing-company-base-cases.json",
+      "sha256": "727151cf6adda401678b98b891fa0a3e5043af45b0259a9f5247fbcc66b75513",
+      "bundleTarget": "evidence-GOOG.html#existing-company-base-cases"
+    },
+    {
+      "id": "GOOG:existing-company-history",
+      "originalName": "existing-company-history.json",
+      "sha256": "baab60ddd83edb3853bf65eb9fd62b8c794a6cbbba123497d79443e6886a7a48",
+      "bundleTarget": "evidence-GOOG.html#existing-company-history"
+    },
+    {
+      "id": "GOOG:existing-current-claims-research",
+      "originalName": "existing-current-claims-research.json",
+      "sha256": "c1e0486468e49e485ced4719436aecd8af4cdbff5d9e92c1321dd280965b5701",
+      "bundleTarget": "evidence-GOOG.html#existing-current-claims-research"
+    },
+    {
+      "id": "GOOG:facts",
+      "originalName": "facts.json",
+      "sha256": "cef503e70aecd590d8d240b4bbcff7a087d1e71421b979b8ec65da174c15c9d6",
+      "bundleTarget": "evidence-GOOG.html#facts"
+    },
+    {
+      "id": "GOOG:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "5515065cc7627511581acd21b33b6b2426f8bf915dff8d7d4cd025e277125991",
+      "bundleTarget": "evidence-GOOG.html#guidance"
+    },
+    {
+      "id": "GOOG:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "ae3e2705a5606ebffdd022c5cab86834e3172c7904c830138c102dbd3fb4050f",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    {
+      "id": "GOOG:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "a8c03110d5ebb27ec96032592e615ca063aef99964050089cf957f16e46358cc",
+      "bundleTarget": "evidence-GOOG.html#management"
+    },
+    {
+      "id": "GOOG:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "2e9b36c7a7c740f785f6d8ee815eefb7c79cc06fdeb6e4f939a3a24b670f1ce7",
+      "bundleTarget": "evidence-GOOG.html#sources"
+    },
+    {
+      "id": "LITE:baseline-reference",
+      "originalName": "baseline-reference.json",
+      "sha256": "f1ea460ca10895d0df75eacf133a832e5911206e423dcb9f45bd11d70328302e",
+      "bundleTarget": "evidence-LITE.html#baseline-reference"
+    },
+    {
+      "id": "LITE:dossier",
+      "originalName": "dossier.md",
+      "sha256": "c7bf4cb793f5f7ead3e406b114ccf71299864859d1d59223640708c34d15548a",
+      "bundleTarget": "dossiers.html#LITE"
+    },
+    {
+      "id": "LITE:facts",
+      "originalName": "facts.json",
+      "sha256": "89dec692b23a6e5b0e185a08940fd68ba343299a40948eb83fc3564958c74308",
+      "bundleTarget": "evidence-LITE.html#facts"
+    },
+    {
+      "id": "LITE:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "95e302305c3c9cd60476898c35631e2329b34006f3fa4b65fc0b2dd499277e0b",
+      "bundleTarget": "evidence-LITE.html#guidance"
+    },
+    {
+      "id": "LITE:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "d704f0f9b41d143718d87045ccef1eec040cc30548aa21962be1fab4e3151a74",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    {
+      "id": "LITE:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "e25501d77e84d042d4ed2495427e5ab7bb634c37b7a79ec97378cb7ae721f850",
+      "bundleTarget": "evidence-LITE.html#management"
+    },
+    {
+      "id": "LITE:obligation-asset-register",
+      "originalName": "obligation-asset-register.json",
+      "sha256": "960986e4f952b22a1fde5bf51a4fa6b7da6dd6d1e656592227a7e58469cd00e6",
+      "bundleTarget": "evidence-LITE.html#obligation-asset-register"
+    },
+    {
+      "id": "LITE:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "e4932c16675215bafd8a1ae23a3c4b48dff31c07088b96e56807d03f441cf123",
+      "bundleTarget": "evidence-LITE.html#sources"
+    },
+    {
+      "id": "META:capital-funding-reconciliation",
+      "originalName": "capital-funding-reconciliation.json",
+      "sha256": "e0a085fe953d6ef0440ff2ede96d0ad7b8e01e21c3da32de3fd970c570ea2e4d",
+      "bundleTarget": "evidence-META.html#capital-funding-reconciliation"
+    },
+    {
+      "id": "META:dossier",
+      "originalName": "dossier.md",
+      "sha256": "1db3cbb080c42f3e98707aaaa7e056e2f05db0c3f74d1ca3d8808527fed6fa22",
+      "bundleTarget": "dossiers.html#META"
+    },
+    {
+      "id": "META:facts",
+      "originalName": "facts.json",
+      "sha256": "ab53e0ce88454dc0bc89a33824337d7e60007e65ab00b6b1e4853872f727ad94",
+      "bundleTarget": "evidence-META.html#facts"
+    },
+    {
+      "id": "META:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "cb6de04eb98921293c7a708878cc4795c52aac4491544a7ff8c733505b360123",
+      "bundleTarget": "evidence-META.html#guidance"
+    },
+    {
+      "id": "META:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "1c8b13b7c91814fdc4869053c09782ac7bb139ae620d90c798dbca49c3c864df",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    {
+      "id": "META:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "fc643dfd82a19952b264bf0e2dfb0eba9be96756436b8d68c2d2b3e9f22fca71",
+      "bundleTarget": "evidence-META.html#management"
+    },
+    {
+      "id": "META:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "f0efd0b0cf1aa29047d9d6d7842898b2324b16eeb0231b9ff34c5275382bdc8d",
+      "bundleTarget": "evidence-META.html#sources"
+    },
+    {
+      "id": "MSFT:dossier",
+      "originalName": "dossier.md",
+      "sha256": "92502bba6ac6229532ccf220bf8290258b4f8a4e59e1f128d4da14e132ecf3e4",
+      "bundleTarget": "dossiers.html#MSFT"
+    },
+    {
+      "id": "MSFT:existing-companies",
+      "originalName": "existing-companies.json",
+      "sha256": "28bed2bf74ad58e7ddd93d0e54bad0a2704e6d7d8806f0ec36f381687ef0d33d",
+      "bundleTarget": "evidence-MSFT.html#existing-companies"
+    },
+    {
+      "id": "MSFT:existing-company-base-cases",
+      "originalName": "existing-company-base-cases.json",
+      "sha256": "3508436bb5b69dc0d5b8b839e66be808b217107ca3c332209d8017ffa6766dec",
+      "bundleTarget": "evidence-MSFT.html#existing-company-base-cases"
+    },
+    {
+      "id": "MSFT:existing-company-history",
+      "originalName": "existing-company-history.json",
+      "sha256": "f2e913b771b865d0dcabd719f086aa6aedda0463acb8bcb1c2f949620bdb780b",
+      "bundleTarget": "evidence-MSFT.html#existing-company-history"
+    },
+    {
+      "id": "MSFT:facts",
+      "originalName": "facts.json",
+      "sha256": "e1fb4c4a60b4fec0b8ff897d6afcb1504d2a50faf997b58723fc759667d5b3cd",
+      "bundleTarget": "evidence-MSFT.html#facts"
+    },
+    {
+      "id": "MSFT:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "01a8318ce533e660865d8a16cc0d9c7132a7574561c1abc53c2a2e0c10743bde",
+      "bundleTarget": "evidence-MSFT.html#guidance"
+    },
+    {
+      "id": "MSFT:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "5beffb5235bdf47028c61cf2be1792fc066042085ff2a528ff3dcd54ef5a8403",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    {
+      "id": "MSFT:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "bae265cccc13618c2a8a981df90fb87f785f71d3024a7cdbe0b4a62ef0fb105e",
+      "bundleTarget": "evidence-MSFT.html#management"
+    },
+    {
+      "id": "MSFT:quarterly-financials",
+      "originalName": "quarterly-financials.json",
+      "sha256": "185fcba55160430eec144edc57705de2c7c29d4efab65e9f74c3e4c36bed0d4c",
+      "bundleTarget": "evidence-MSFT.html#quarterly-financials"
+    },
+    {
+      "id": "MSFT:quarterly-revenue-evidence",
+      "originalName": "quarterly-revenue-evidence.json",
+      "sha256": "8b64e9f0c6c9e71b109e7cea43b0f25861d5968ce76048332097b8a81d78b363",
+      "bundleTarget": "evidence-MSFT.html#quarterly-revenue-evidence"
+    },
+    {
+      "id": "MSFT:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "8eb9d34fb66bcd8bd3f6af0f7bc96f0365d6afe4cf93f945b73e5d7b3e73108b",
+      "bundleTarget": "evidence-MSFT.html#sources"
+    },
+    {
+      "id": "MU:dossier",
+      "originalName": "dossier.md",
+      "sha256": "246439cb0928821ce0fb953a9429824de106d3594439316705a2917740214947",
+      "bundleTarget": "dossiers.html#MU"
+    },
+    {
+      "id": "MU:facts",
+      "originalName": "facts.json",
+      "sha256": "72a2d7af052ac875f78b91d1434567fb7044e7896abb070363adbba123806eda",
+      "bundleTarget": "evidence-MU.html#facts"
+    },
+    {
+      "id": "MU:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "fe545fac73aa930c7408cd5c7aa52a64967ef57e5242f0b52ec9f61fc20281c6",
+      "bundleTarget": "evidence-MU.html#guidance"
+    },
+    {
+      "id": "MU:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "efcbd0febf1d6c44975b7b0f97711940cfd08aa92fffa9acb0c2eec1278d8e21",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    {
+      "id": "MU:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "026023783fa4c1659f28fc0af82a52651d2a97d4cb82f988fa41cbcadb604062",
+      "bundleTarget": "evidence-MU.html#management"
+    },
+    {
+      "id": "MU:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "e432a7a7e72fe0f5db5fe58cb378fac7b3029ae2c0d2d7a8955463190d5cff9b",
+      "bundleTarget": "evidence-MU.html#sources"
+    },
+    {
+      "id": "NBIS:baseline-reference",
+      "originalName": "baseline-reference.json",
+      "sha256": "a3a4f2d1128baf3e370ffba68be82c0a7d0e651c991b9bf40c537eb01c60e2f3",
+      "bundleTarget": "evidence-NBIS.html#baseline-reference"
+    },
+    {
+      "id": "NBIS:capital-funding-reconciliation",
+      "originalName": "capital-funding-reconciliation.json",
+      "sha256": "b79e367ed5636deba465538efe2c36bcfd5afb12725abad6eb7890e71b4b1396",
+      "bundleTarget": "evidence-NBIS.html#capital-funding-reconciliation"
+    },
+    {
+      "id": "NBIS:dossier",
+      "originalName": "dossier.md",
+      "sha256": "e8203c156303d23c173148fc9a676c9a0383b70cfa77be7be40ebd1938849f16",
+      "bundleTarget": "dossiers.html#NBIS"
+    },
+    {
+      "id": "NBIS:facts",
+      "originalName": "facts.json",
+      "sha256": "35e73b0d206ad4fe8cc61ccceedd1c960fd9db04f358fb1c3438a6c19e8ad664",
+      "bundleTarget": "evidence-NBIS.html#facts"
+    },
+    {
+      "id": "NBIS:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "aaee92865f50ec0c7e0988c3b2542b77dfabc32ca0ec5d11c54b7b2ef320c621",
+      "bundleTarget": "evidence-NBIS.html#guidance"
+    },
+    {
+      "id": "NBIS:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "12d5e03cc11bdf07d78d9d407d3164cf41f81559b645986ad0b291a0dbf14330",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    {
+      "id": "NBIS:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "a0049592a9f465f38fde6607d3914bd32f08de134503355b10fa84556045c166",
+      "bundleTarget": "evidence-NBIS.html#management"
+    },
+    {
+      "id": "NBIS:obligation-asset-register",
+      "originalName": "obligation-asset-register.json",
+      "sha256": "f288a7ad1004deb0daebab950969882b01696702cd741c12aaf397eae47d035e",
+      "bundleTarget": "evidence-NBIS.html#obligation-asset-register"
+    },
+    {
+      "id": "NBIS:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "29cb3c427c6af5402f359765783dc56c86de80d3baa29dfafb15178081d169be",
+      "bundleTarget": "evidence-NBIS.html#sources"
+    },
+    {
+      "id": "NVDA:dossier",
+      "originalName": "dossier.md",
+      "sha256": "6e2cdd360ba669d6182235155612ea7b782ed40fa0c0ec075222e2108fb4ae77",
+      "bundleTarget": "dossiers.html#NVDA"
+    },
+    {
+      "id": "NVDA:facts",
+      "originalName": "facts.json",
+      "sha256": "4d892e166917514b37c9068e576b7de33e16206159ca7613ef719773d401c92e",
+      "bundleTarget": "evidence-NVDA.html#facts"
+    },
+    {
+      "id": "NVDA:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "986643ae843d6b3e040bdbce70010df5bd649fe729c4516b16e2547ad8564537",
+      "bundleTarget": "evidence-NVDA.html#guidance"
+    },
+    {
+      "id": "NVDA:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "e7a451f6c45a25354cad2acdb223a0c2afcea4a2cdbf0371f94e8c4698ec2563",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    {
+      "id": "NVDA:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "e2ca94fdeae94d578b5c2a4369ff9cfe9f31bcca5a40024508064345e5089470",
+      "bundleTarget": "evidence-NVDA.html#management"
+    },
+    {
+      "id": "NVDA:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "01b1d50ae935ba6fb86e72ec55c7026275b8032873f53ae2c3f3d036c6280d92",
+      "bundleTarget": "evidence-NVDA.html#sources"
+    },
+    {
+      "id": "TSLA:capital-funding-reconciliation",
+      "originalName": "capital-funding-reconciliation.json",
+      "sha256": "4ce378b7b15af6f2b8e99022bfbd85597a0915183fb2e69340b97faecaa5abfc",
+      "bundleTarget": "evidence-TSLA.html#capital-funding-reconciliation"
+    },
+    {
+      "id": "TSLA:dossier",
+      "originalName": "dossier.md",
+      "sha256": "707aefec286967bbc66a5a3025b00697e35ef9a6fb7cbf3be8026b32636ca32a",
+      "bundleTarget": "dossiers.html#TSLA"
+    },
+    {
+      "id": "TSLA:facts",
+      "originalName": "facts.json",
+      "sha256": "67c51d8466535422c55ef07fb21adf77743e906047efe6977247f4dfa3d8872d",
+      "bundleTarget": "evidence-TSLA.html#facts"
+    },
+    {
+      "id": "TSLA:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "2bfa193fe932933d2aa09bc826a9c46dd684a031ca31db2b6c22971ef6adb1f4",
+      "bundleTarget": "evidence-TSLA.html#guidance"
+    },
+    {
+      "id": "TSLA:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "7e865e3004d7026c485ecabcdbc0712e019f654b0aa5187e4ffa5136de59e5aa",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    {
+      "id": "TSLA:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "242da0c43adad8373fc3627945294d743fbb33e36fc766397be0ceb38d790052",
+      "bundleTarget": "evidence-TSLA.html#management"
+    },
+    {
+      "id": "TSLA:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "f13ee02074a59d9ec6ea0527c7c6f5db84dc4c8457e75d321acb1c1c8b8fea31",
+      "bundleTarget": "evidence-TSLA.html#sources"
+    },
+    {
+      "id": "TSM:dossier",
+      "originalName": "dossier.md",
+      "sha256": "2cc70b103fcf59dff46cc47c11c52537295d5693e7ba448ce59fe91cf327084a",
+      "bundleTarget": "dossiers.html#TSM"
+    },
+    {
+      "id": "TSM:facts",
+      "originalName": "facts.json",
+      "sha256": "edeed8458058cc48b5fbe1b0da72b9263f7af2878fdbd3db8dfcf8fed55f3348",
+      "bundleTarget": "evidence-TSM.html#facts"
+    },
+    {
+      "id": "TSM:guidance",
+      "originalName": "guidance-track-record.json",
+      "sha256": "99fc914e7f282165d5afa0f07eb614be873cb58ad9f4ab4f771a07148638481d",
+      "bundleTarget": "evidence-TSM.html#guidance"
+    },
+    {
+      "id": "TSM:judgment",
+      "originalName": "proposed-assumptions.json",
+      "sha256": "ddd399a8cf0d0ac27d9336113842bd6427c7c152274f65cd41ae6d43f436328a",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    {
+      "id": "TSM:management",
+      "originalName": "management-capabilities.json",
+      "sha256": "576379493d906b6336306e72ebf5273d33b41302012d05f8c7d515fdc7ce9da6",
+      "bundleTarget": "evidence-TSM.html#management"
+    },
+    {
+      "id": "TSM:sources",
+      "originalName": "source-ledger.json",
+      "sha256": "732539e6291684b29ec04cd334881cc17bafac220ef56a49714a7b5131fb2282",
+      "bundleTarget": "evidence-TSM.html#sources"
+    },
+    {
+      "id": "capital-reconciliation-review",
+      "originalName": "capital-reconciliation-audit.md",
+      "sha256": "0279b5ede3b5943610d29d79d3793f7505e03f307403685cd931ccfa593939d2",
+      "bundleTarget": "shared-evidence.html#capital-reconciliation-review"
+    },
+    {
+      "id": "cloud-funding-reconciliation",
+      "originalName": "funding-reconciliation.json",
+      "sha256": "6ff94f433b53c1ed33ee0d603073eb827cef9515ea7420393d574e3564273c12",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    {
+      "id": "cloud-funding-reconciliation-narrative",
+      "originalName": "funding-reconciliation.md",
+      "sha256": "1bca57679ae431fe11ae1fba02eb3d975a279d3510422a30ca8ae12e8305e756",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation-narrative"
+    },
+    {
+      "id": "cloud-goog-funding-reconciliation-notes",
+      "originalName": "goog-funding-reconciliation-notes.json",
+      "sha256": "aa68cc71fcac1db2e585a8149b487f5b3960f1f91d23a7a229d914b73578600f",
+      "bundleTarget": "shared-evidence.html#cloud-goog-funding-reconciliation-notes"
+    },
+    {
+      "id": "cloud-goog-funding-reconciliation-notes-narrative",
+      "originalName": "goog-funding-reconciliation-notes.md",
+      "sha256": "799e82192cfee206199a49fbde0c02f13395e89b31015d0a7331efa3bb03f20e",
+      "bundleTarget": "shared-evidence.html#cloud-goog-funding-reconciliation-notes-narrative"
+    },
+    {
+      "id": "common-market-inputs",
+      "originalName": "common-market-inputs.json",
+      "sha256": "5aba1220a4fe0539fc1b5bf05c0f3795e5f9477307e544250c15a9aaab39a412",
+      "bundleTarget": "shared-evidence.html#common-market-inputs"
+    },
+    {
+      "id": "equity-bridge-register",
+      "originalName": "equity-bridge-register.json",
+      "sha256": "2e4d2c3c745c8ed3ecf68b8de87763b610687fcb39452716a741bd5f0ee5e968",
+      "bundleTarget": "claims.json"
+    },
+    {
+      "id": "management-capability-matrix",
+      "originalName": "management-capability-matrix.json",
+      "sha256": "274ec393f70f316de75d7508d86d604c6c17f3f75fc3365bf96e0011065e77d9",
+      "bundleTarget": "dossiers.html#management-policy"
+    },
+    {
+      "id": "meta-tesla-funding-reconciliation",
+      "originalName": "funding-reconciliation.json",
+      "sha256": "6464beb3a52cee984f6b4a9848a320e30dfb4a08694fcb4ec7c80d042a10b539",
+      "bundleTarget": "shared-evidence.html#meta-tesla-funding-reconciliation"
+    },
+    {
+      "id": "meta-tesla-funding-reconciliation-narrative",
+      "originalName": "funding-reconciliation.md",
+      "sha256": "e120e1167a70c0c89e0496fa01e298c4fff99971915d770893f509a42deb6dc0",
+      "bundleTarget": "shared-evidence.html#meta-tesla-funding-reconciliation-narrative"
+    },
+    {
+      "id": "optics-existing-research-extract",
+      "originalName": "existing-research-extract.json",
+      "sha256": "b4d0900d03b580d6efbfc02c289e6992a22934e3ca794ec411630e2f8ab78a45",
+      "bundleTarget": "shared-evidence.html#optics-existing-research-extract"
+    },
+    {
+      "id": "optics-funding-reconciliation",
+      "originalName": "funding-reconciliation.json",
+      "sha256": "cc8bd67317b8638e55d9e41c2f022ba298f5f05f35292addaa8f678af1a51b84",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    {
+      "id": "optics-funding-reconciliation-narrative",
+      "originalName": "funding-reconciliation.md",
+      "sha256": "0d149c989b430a8ff6c05c507eec9f828d19aacac6cd7efc238b5513e004aaea",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation-narrative"
+    },
+    {
+      "id": "prior-assumption-comparison",
+      "originalName": "baseline-assumptions-reference.json",
+      "sha256": "e5066407bb6dbb4c2409fabac0a71a0a5d8777f559e7b9c3d0d6d872a63efa23",
+      "bundleTarget": "shared-evidence.html#prior-assumption-comparison"
+    },
+    {
+      "id": "research-coherence-review",
+      "originalName": "research-coherence-audit.md",
+      "sha256": "a6b648ff3a3022f394fe35f808f2cf21f4bc9a30e725cad4eda91830c17b493f",
+      "bundleTarget": "shared-evidence.html#research-coherence-review"
+    },
+    {
+      "id": "research-protocol",
+      "originalName": "research-protocol.md",
+      "sha256": "e41e49bfa54e68e1bdae8e12162d8cccf3bf81f4dd5a573a88fca8c803d1970d",
+      "bundleTarget": "shared-evidence.html#research-protocol"
+    },
+    {
+      "id": "scenario-index",
+      "originalName": "renewed-base-case-proposals.json",
+      "sha256": "3f8eb3fee551a8703150a2814baa47830ee77b058acce5642883cd634b295068",
+      "bundleTarget": "shared-evidence.html#scenario-index"
+    },
+    {
+      "id": "selected-operating-cases",
+      "originalName": "executable-base-cases-2026-10-17.json",
+      "sha256": "02c8e133893cff642369ba58d29b7e5ad091c204e08a6b37acbff28f13072bd2",
+      "bundleTarget": "cases.json"
+    },
+    {
+      "id": "semis-AVGO-existing-input",
+      "originalName": "AVGO-existing-input.json",
+      "sha256": "7e9be57bafd23d5a29c781d9781abe487c86f20969e81282c28f571190b6e8d3",
+      "bundleTarget": "shared-evidence.html#semis-AVGO-existing-input"
+    },
+    {
+      "id": "semis-MU-existing-input",
+      "originalName": "MU-existing-input.json",
+      "sha256": "271b05b768364e4b0dea596d2fce4502a469612b0005c93d6b568809434ac292",
+      "bundleTarget": "shared-evidence.html#semis-MU-existing-input"
+    },
+    {
+      "id": "semis-NVDA-existing-input",
+      "originalName": "NVDA-existing-input.json",
+      "sha256": "77f4ed8eddd566174aea7b90717acd871fd3d9604d93899478f715a5443b885d",
+      "bundleTarget": "shared-evidence.html#semis-NVDA-existing-input"
+    },
+    {
+      "id": "semis-TSM-existing-input",
+      "originalName": "TSM-existing-input.json",
+      "sha256": "a378b2b3de8eaca07e209f8cd2d931dcd298a7a2945930d564703cd940de15d3",
+      "bundleTarget": "shared-evidence.html#semis-TSM-existing-input"
+    },
+    {
+      "id": "semis-quarterly-revenue-comparison",
+      "originalName": "quarterly-revenue-comparison.json",
+      "sha256": "9e35eaf1418723475245925e4a12429203f9aecc169b32cff16529ed90d54478",
+      "bundleTarget": "shared-evidence.html#semis-quarterly-revenue-comparison"
+    },
+    {
+      "id": "source-corrections",
+      "originalName": "source-corrections.json",
+      "sha256": "dec7631cb73def5838d2d0801e86d5660c3787aa7c120fbb3062c7478836c5c8",
+      "bundleTarget": "corrections.json"
+    },
+    {
+      "id": "source-ledger",
+      "originalName": "source-ledger-2026-10-17.json",
+      "sha256": "645faf2be26bba3f037de671ce5db1f45cfcfead99b58e8254c165cc4974a3c3",
+      "bundleTarget": "dossiers.html#source-policy"
+    }
+  ],
+  "recordSelectors": {
+    "00e1eaf1a9359539": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "01a80c8b758aaaab": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "04ff5e6e0bb2f162": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "05228981971ce8ff": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "06160bab3d192e1d": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "07da490b5ed89ed3": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "0bc09a67fefa50a6": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[4]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "0cafffcca671cd65": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "0d79108d19b8517c": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "0dc8afcfb023e7b5": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=TSM]",
+      "bundleTarget": "claims.json"
+    },
+    "0f0af6f979aab2ac": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[1]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "0f2a230383ee7f8f": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[14]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "103a9de544328879": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "11a1d60fc5b90bd0": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[9]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "126754e48d9983eb": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "12684bf59ec8df72": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "137d848898fc2585": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-15",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "1437e7c752c0c46c": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "claim_and_obligation_register",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "15558b1f314978db": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[3]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "167c6b104ce57c0a": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "172517a479302ee7": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "178f554a7e470d05": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=META]",
+      "bundleTarget": "claims.json"
+    },
+    "1a992c564a37ba9c": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "1b71e1910fe5ffb7": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-13",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "1d71e6570d201114": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "1e129b5d0bd7055c": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "1e4217ac5dbd0cb6": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "1f1702283d649225": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[0]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "1f2ae98e5b8791b1": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "1fe6459e247c4bdd": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-14",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "201fe162a84dbe39": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=NBIS]",
+      "bundleTarget": "claims.json"
+    },
+    "217e01ef3e1a6972": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "2266183a1bdd1ecc": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "2280a1f55d23ac95": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=AMZN]",
+      "bundleTarget": "claims.json"
+    },
+    "22ba6b3ee4a1fbee": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "253c3c21b683b139": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "269802dd80b87eb1": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[3]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "2804926ca5ed3466": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "285a889a37f03ab7": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[5]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "29e3daaa95970b5a": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-15",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "2a0b29d1011efd22": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[5]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "2c54513433dfad1b": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "2e2a5b67217cf49e": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "2e2bd393356e1130": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=LITE]",
+      "bundleTarget": "claims.json"
+    },
+    "2f6e5434f0866b66": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[7]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "307f18783d7d8f4e": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "322c5c5253947380": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "333de008892744fd": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "33c141abc4d1986b": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "349e272f3668134c": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "35edca1f31721558": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "361661447f3d612c": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "36ad63ef1c729892": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-14",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "390063bbca2a4cc7": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "39c646c9533ea294": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[3]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "39e09627086a9c3f": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "3b74a67795223392": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "3c2adf7f48e87b8e": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "3c619a0e45117a4a": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "3d3980a4092fa90f": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "3d9e2f27823afdf7": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "3f164e954f61a968": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "3fc44b71f0ec7a67": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "423a7b4b5409720d": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "42d1521f1d127f2d": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "42d714997e9f2094": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "45fd5f6842581b62": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "4630c104a1a08617": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-12",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "466b13b23ff2c8ce": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-11",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "47aafd397ca6f71e": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "47cc97b3dd582987": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "4922c5ea01cf246c": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[1]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "4c202229ede5e2b5": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "4c53c760a847e1bc": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[9]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "4c8ecea608f6edd1": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[6]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "4ca14c7129826523": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "4dfd934085b9150b": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "502d02d19b8e8bba": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "5065d52214d3c6bd": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "52776dd994b27a09": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=MSFT]",
+      "bundleTarget": "claims.json"
+    },
+    "528c0915280c44ca": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[5]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "52f07c9d662f392e": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[13]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "54237d78742cff47": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "569d34c870862a9b": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[8]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "57337ee634d090ad": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "575538de0239a0f0": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-11",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "5860c7947dd9cd9b": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "58a3eab832d99ff1": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "58eba44cad5ba34b": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-14",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "5b99da82e3878497": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "5c7fda705b3dd612": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "5e2b4e2e3ee281e7": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "5f2cc70b57b90646": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[11]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "5f7996086a4c4ed9": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "60a2d1b91ff5a234": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "6136af3b8810bc44": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "635708272daf8294": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "63ae5246270c61a6": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-12",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "6588be7f32b06c17": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "664cf9760f96badf": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "66a9c4480170d5f1": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "6814cf4a55292b30": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "6b11b875d5886e84": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-15",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "6cc76cf16847879e": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "6d3def51395ae137": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "6dd0c5ec53ab8cba": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "6efc3dd6756aa0af": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[9]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "702521d10e466ed6": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "7056febdd1f62006": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-12",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "70ce66ee78fc67e6": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-15",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "73ca8d5c707258cb": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[10]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "77770cfd77a9861d": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "77bab8c72b490b64": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "77bf37643cabf273": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "77eab29b85eca06d": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "7915ff05279451a6": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[4]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "794c053326dce687": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "7b0c70b998c07b50": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[2]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "7c7e6fc2040e4b69": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "804a052929c75992": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-12",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "85b057c640f74663": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=NVDA]",
+      "bundleTarget": "claims.json"
+    },
+    "867429dbcf82d119": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "86a2745281b7e21c": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "876cd09f94a90912": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "890381f741cfd2b7": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "89c6b24f7f5822fc": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "89e898620f86794e": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-13",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "8afd5ca65e6fe400": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "8cd2afb7db94740a": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "8cd8ee785363cf9e": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "8edd336ef004418c": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[2]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "8fd5f35737229e16": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "901869254084b320": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "91855f9a917cc1d6": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "91eb4205b5d4ae0c": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=GOOG]",
+      "bundleTarget": "claims.json"
+    },
+    "94221ba69be637c7": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[0]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "9597ba1511d48abe": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=AAOI]",
+      "bundleTarget": "claims.json"
+    },
+    "97905441aaaed0f9": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[2]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "981e47509ebf3bea": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "9935a67c3519d4dd": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "9969bf27a1ec9e43": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-11",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "9aed76bd8b19ea37": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "9d07d468e58567b2": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "a017824014d46ef8": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "a122839dae2902fc": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "a14abb33f2584fb5": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "a19c56d8191a2687": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "a28a7457a879dfe9": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "a3ae6fcda37f98ee": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "a41b5c35dd734b42": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "a501e93fe9f7a658": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "a578353a9b286619": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "a5b73e663b8d4a87": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "a6d7b9f6664deaf5": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[0]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "a709537d931e26ac": {
+      "artifactId": "meta-tesla-funding-reconciliation",
+      "recordSelector": "companies.TSLA.selectedFullBaseCapitalBridge",
+      "bundleTarget": "shared-evidence.html#meta-tesla-funding-reconciliation"
+    },
+    "a7357a59ef6e2b71": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "a77bf173449d6dc2": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "a87adf774e82f76f": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[12]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "aae9cd6db7a9dfc5": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[1]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "ab4061884aaf54cf": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=AAPL]",
+      "bundleTarget": "claims.json"
+    },
+    "ab50df94353f8878": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "abf62fb9158b1be8": {
+      "artifactId": "AAOI:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-AAOI.html#judgment"
+    },
+    "acc7cd2d3f91d976": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "adc1e3daf1fbf7a1": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "afe46ad5b4c712e8": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-13",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "b11eda190afb71ac": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-11",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "b20dc788213e2434": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=AVGO]",
+      "bundleTarget": "claims.json"
+    },
+    "b36c9c78682db048": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[6]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "b4d71c840215353a": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "b5df91e13a1e95e1": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "b6cb444dc5163d40": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "b87303a8ddb239b1": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "bc13ed1776f98019": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[11]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "bd40274d05b7e5de": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "be037a4cc820f843": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-14",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "bec6b483afa0dc7f": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "bfcfe105038ac4f6": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "c04e273f4c72304e": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[8]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "c0a61e63d7847b42": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=TSLA]",
+      "bundleTarget": "claims.json"
+    },
+    "c0a94b9e4d5ea5fd": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "c0c63bd9da5061f3": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "c1b58bbb7c7efa72": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "c22f04d8d132c764": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "c256de5a355e9ebf": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "c3123eb311b64ba6": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "c672d04539954e8c": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=COHR]",
+      "bundleTarget": "claims.json"
+    },
+    "c95f0c6b39aa7fdf": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "ca02ee3264ebe014": {
+      "artifactId": "TSM:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-TSM.html#judgment"
+    },
+    "ca5cf953e4504285": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "ce56771c255b819a": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "d024e5e96f676d1a": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "d0ece3825e5821ce": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "d154dc91619f2e24": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-13",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "d1aa7ca8970a4c9c": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[7]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "d22f049102383a40": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "d25395598482edbc": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[8]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "d4bbc292ec83de6d": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[6]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "d77902ac0712b8d7": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[9]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "d797ed378c9cc432": {
+      "artifactId": "equity-bridge-register",
+      "recordSelector": "companies[ticker=MU]",
+      "bundleTarget": "claims.json"
+    },
+    "d898205c0f6523ec": {
+      "artifactId": "MSFT:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-MSFT.html#judgment"
+    },
+    "d9c22b8cebd6dfae": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[12]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "da2162ac0c3d859e": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[4]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "da7845bee04f199f": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "dc4791bccfe6522a": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[6]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "df102f552dde911b": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "e180c1948d136ac5": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[7]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "e49e70a34963dcc7": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[3]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "e4cb03f56b3281cb": {
+      "artifactId": "AMZN:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-AMZN.html#judgment"
+    },
+    "e5847cc8bbffa7f4": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "claim_and_obligation_register",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "e5d617b82803d3eb": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "e7d11f00ae304e4e": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[5]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "e97764c36c9f586a": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "e9d03850722a4a5e": {
+      "artifactId": "LITE:judgment",
+      "recordSelector": "selected-base-annual-row-4",
+      "bundleTarget": "evidence-LITE.html#judgment"
+    },
+    "ead5bcc261de77fa": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "NBIS.investmentScenarios[scenario=company_build_central].annual[4]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "eb243773f635d285": {
+      "artifactId": "NBIS:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-NBIS.html#judgment"
+    },
+    "ec3890c05cd4d14f": {
+      "artifactId": "META:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-META.html#judgment"
+    },
+    "efa4fe19735936bf": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-5",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "efa84c45976e3050": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "efd6e642249bb35b": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[8]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "f05ed3abbeb30067": {
+      "artifactId": "NVDA:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-NVDA.html#judgment"
+    },
+    "f09dfb6085870248": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[7]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "f107d40a803a7e46": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-7",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "f10b0ed6f0d7173a": {
+      "artifactId": "optics-funding-reconciliation",
+      "recordSelector": "AAOI.investmentScenarios[scenario=central_explicit].annual[1]",
+      "bundleTarget": "shared-evidence.html#optics-funding-reconciliation"
+    },
+    "f234bbefbdb9435c": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-9",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "f3257e60297eecfc": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-6",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "f3ed0f3fa651684f": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[13]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "f44829aa48b923eb": {
+      "artifactId": "TSLA:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-TSLA.html#judgment"
+    },
+    "f767a9f2191a0149": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[2]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "f781b23353630b4e": {
+      "artifactId": "AAPL:judgment",
+      "recordSelector": "selected-base-annual-row-3",
+      "bundleTarget": "evidence-AAPL.html#judgment"
+    },
+    "f93905b11c569320": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[10]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "fa4d198fa7abecf8": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-2",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "fa77d194a6c5a1ff": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "AMZN.executable_base_capital_override.rows[14]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    },
+    "fdc700d6bfa6955e": {
+      "artifactId": "GOOG:judgment",
+      "recordSelector": "selected-base-annual-row-1",
+      "bundleTarget": "evidence-GOOG.html#judgment"
+    },
+    "fde0f853a07d317f": {
+      "artifactId": "AVGO:judgment",
+      "recordSelector": "selected-base-annual-row-8",
+      "bundleTarget": "evidence-AVGO.html#judgment"
+    },
+    "fe0532909a5be5df": {
+      "artifactId": "COHR:judgment",
+      "recordSelector": "selected-base-annual-row-10",
+      "bundleTarget": "evidence-COHR.html#judgment"
+    },
+    "fef8829a00de8dde": {
+      "artifactId": "MU:judgment",
+      "recordSelector": "selected",
+      "bundleTarget": "evidence-MU.html#judgment"
+    },
+    "ff8f8d20f730dc8d": {
+      "artifactId": "cloud-funding-reconciliation",
+      "recordSelector": "GOOG.executable_base_capital_override.rows[0]",
+      "bundleTarget": "shared-evidence.html#cloud-funding-reconciliation"
+    }
+  },
+  "outputs": {
+    "cases.json": {
+      "sha256": "f92f32f7d805cf50e3a873996eac57d307123bbe6aae1ac0cda8bdb597a46ead",
+      "bytes": 484821
+    },
+    "claims.json": {
+      "sha256": "f9f7f542dfb07515bfb655024645d5fee3805a9532719dfe5f8903f11eeb8e99",
+      "bytes": 118077
+    },
+    "corrections.json": {
+      "sha256": "7c30fb37d3882c14644ed0a100e76b1f1965d19557762095f1add77afedc551a",
+      "bytes": 2010
+    },
+    "dossiers.html": {
+      "sha256": "f55bb630d0779b8d59a5d14668f9f4b8bcd4acc133826b17d69c4fc84d87672c",
+      "bytes": 271782
+    },
+    "evidence-AAOI.html": {
+      "sha256": "d472e05964dacf309fa535154716093227f1649764fcea1b2460f82b02051da4",
+      "bytes": 472374
+    },
+    "evidence-AAPL.html": {
+      "sha256": "c0ae912f6b41646c9e65d2952f2ad7ee63516b9e92ce8e29319ba158fc023a43",
+      "bytes": 889803
+    },
+    "evidence-AMZN.html": {
+      "sha256": "de1c8cec5ba4b0ed2bb86e97335ca8484b6a3ccfd8840f86d536c5b810071137",
+      "bytes": 970199
+    },
+    "evidence-AVGO.html": {
+      "sha256": "20f12915d7bbe85e1aeb4b2a799749fc5ec33532fd8bc1cbacfa237506ddda8c",
+      "bytes": 210496
+    },
+    "evidence-COHR.html": {
+      "sha256": "52cd7078f401249d7bf1b48f7f1a5d83a4c2c622c04525da01ff9dd41f213e70",
+      "bytes": 287160
+    },
+    "evidence-GOOG.html": {
+      "sha256": "4c1cea54fd97c9086a54f95341d0d995e0f64f5e0fc48b067a58ec1744a2d95f",
+      "bytes": 959208
+    },
+    "evidence-LITE.html": {
+      "sha256": "dde454188ea6c0cacac27624cdab42ba80bcc00a4c9f5662f173ca39f0a75c05",
+      "bytes": 275310
+    },
+    "evidence-META.html": {
+      "sha256": "4fe6acf12fc86c3a07baa9158f4bf30f4bbe7f8e632d6e7634a056795fc7193c",
+      "bytes": 253567
+    },
+    "evidence-MSFT.html": {
+      "sha256": "3b9167a3fe31d6a375449c5d371e2a9a2228956dbd33d49460401c4628951a0e",
+      "bytes": 822565
+    },
+    "evidence-MU.html": {
+      "sha256": "dc149aa8fdda71692570843024df071f84aad9054dfa52c83a8807466229318b",
+      "bytes": 226357
+    },
+    "evidence-NBIS.html": {
+      "sha256": "61e25c89a2482f79725eebdf6134603cdd5da9b8e2d45f57820f8a2c442bae30",
+      "bytes": 539607
+    },
+    "evidence-NVDA.html": {
+      "sha256": "a6d303b08ceeb855d10f2da57b7ee478458f2b0bf36cdf6b47f3583629eacdc2",
+      "bytes": 223295
+    },
+    "evidence-TSLA.html": {
+      "sha256": "f0f0d1ed4fabd16f9ea72b8f3b2652b17b918891abf3724690a90b8497ffb889",
+      "bytes": 270389
+    },
+    "evidence-TSM.html": {
+      "sha256": "7a0bf96f09449774b43d5198efc376b9aefa6eaf496d982da6eb70aa89151cb1",
+      "bytes": 258712
+    },
+    "evidence.json": {
+      "sha256": "773d68ce7681c8391b0582bf28b816089fed924e1595722025754f74ba6760d7",
+      "bytes": 8548450
+    },
+    "shared-evidence.html": {
+      "sha256": "31530ad71f1919fae58c52c35a7c6cc16f90dca92fac34fe93b160367554d07b",
+      "bytes": 5198055
+    }
+  }
+}

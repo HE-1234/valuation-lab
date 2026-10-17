@@ -1,0 +1,40 @@
+{
+  "asOf": "2026-10-17",
+  "retrievedAt": "2026-10-17T05:18:59.184699+00:00",
+  "riskFreeReference": {
+    "observationDate": "2026-10-16",
+    "percentPerYear": 5.09,
+    "decimal": 0.0509,
+    "currency": "USD",
+    "instrument": "US Treasury 10-year par yield / constant maturity",
+    "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+    "rawSourceSHA256": "92ed3641cab423ed4797a1d00446935d9ee9f2f6358b1cb082fc09ef49135e95",
+    "sourceHTTPDate": "Sat, 17 Oct 2026 05:18:59 GMT",
+    "selectedColumn": "bc-10year",
+    "selectionRule": "Latest available published observation on or before 2026-10-17.",
+    "classification": "Observed market-reference input; a Treasury rate is not company WACC.",
+    "crossCheck": {
+      "sourceURL": "https://fred.stlouisfed.org/data/DGS10",
+      "latestAvailableObservationDate": "2026-10-15",
+      "percentPerYear": 5.1,
+      "status": "FRED one observation behind Treasury at retrieval; Treasury Oct 15 also 5.10."
+    }
+  },
+  "equityRiskPremiumReference": {
+    "referenceDate": "2026-01-01",
+    "publishedAt": "2026-01-23T11:26:00.003-05:00",
+    "updatedAt": "2026-03-03T16:52:05.317-05:00",
+    "percentPerYear": 4.23,
+    "decimal": 0.0423,
+    "sourceURL": "https://aswathdamodaran.blogspot.com/2026/01/data-update-2-for-2026-equities-get.html",
+    "estimator": "Damodaran January 2026 implied US ERP using Treasury as risk-free anchor",
+    "classification": "Dated model/forecast-dependent estimate, not current October ERP or an observed realized return.",
+    "pairedJanuaryTreasuryPercent": 4.18,
+    "alternativeDefaultAdjustedRiskFreePercent": 3.95,
+    "alternativeDefaultAdjustedERPPercent": 4.46,
+    "caution": "Do not mix default-adjusted ERP and unadjusted risk-free conventions or silently apply this January premium to October. Analyst must choose and disclose consistent inputs."
+  },
+  "beta": null,
+  "WACC": null,
+  "guidance": "Use references separately from analyst judgments. Company beta, debt spread, marginal tax, market-value capital weights, geography/country risk and valuation currency still require choices. Never silently set WACC."
+}
