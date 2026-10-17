@@ -1,0 +1,1276 @@
+{
+  "version": "market-anchor-stress-v1",
+  "timestampUTC": "2026-10-17T04:35:36.202183+00:00",
+  "classification": "Post-freeze rate-anchor sensitivity, not replacement valuation and not a hindsight-fitted revision",
+  "method": "Use prior-session USD10y yield plus assumed operating-beta times dated January impliedERP as a hypothetical all-equity operating discount rate; beta1.2/1.6/2.0 years1\u20135 fades to1 byyear10. Hold rf/ERP unchanged through forecast solely for isolation. Retain original growth/margins/capital/taxes. Use original actual debt bridge, but this proxy omits financing tax-shield effects and is not a reconstructed levered WACC.",
+  "limitations": [
+    "Beta values are analyst stress coordinates, not historical measured betas.",
+    "January ERP is a stale dated proxy, not exact cutoff-day premium.",
+    "Treasury history is currently published historical data, not certified as-released archive.",
+    "No debt market weights, credit-spread reconstruction or bottom-up comparable beta supplied.",
+    "Mature beta1 is an assumption, not demonstrated business convergence.",
+    "Results reflect the rate mechanism alone; greater uncertainty would warrant broader business states as well."
+  ],
+  "cases": [
+    {
+      "snapshotId": "NVDA-FY2021",
+      "originalInitialWACC": 0.09,
+      "originalTerminalWACC": 0.08,
+      "impliedInitialBetaAllEquityApproximation": 1.6016949152542372,
+      "rateEvidence": {
+        "caseId": "NVDA-FY2021",
+        "decisionCutoff": "2021-03-01T14:30:00Z",
+        "riskFree": {
+          "instrument": "10-year US Treasury constant-maturity/par yield",
+          "observationDate": "2021-02-26",
+          "percentPerYear": 1.44,
+          "decimal": 0.0144,
+          "series": "DGS10",
+          "sourceURL": "https://fred.stlouisfed.org/data/DGS10",
+          "seriesMetadataURL": "https://fred.stlouisfed.org/series/DGS10",
+          "treasuryCrossCheckURL": null,
+          "selectionRule": "Previous trading-day closing observation; decision-day close would be unavailable at the morning cutoff.",
+          "vintageCaveat": "Verified historical-date observation in current official history, not an archived as-released vintage; exact original public dissemination timestamp not independently captured. Historical corrections cannot be excluded.",
+          "rights": "FRED series tagged Public Domain: Citation Requested; source Board of Governors H.15."
+        },
+        "equityRiskPremium": {
+          "referenceDate": "2021-01-01",
+          "percentPerYear": 4.72,
+          "decimal": 0.0472,
+          "estimator": "Damodaran implied US equity risk premium, January annual update",
+          "sourceURL": "https://aswathdamodaran.blogspot.com/2021/01/data-update-2-for-2021-price-of-risk.html",
+          "publishedAt": "2021-01-20T17:38:00.006-05:00",
+          "updatedAt": "2021-02-14T14:13:54.142-05:00",
+          "cachedTextSha256": "4e3fc3c9887b06d77df78ceed8a846baecc4bbb9ad71e13ce365731d51725c5a",
+          "useLimitation": "January estimate, not the cutoff-day ERP. Forecast-dependent estimate, not an observed guaranteed premium. Cited numeric fact only; no general license to redistribute the full post is claimed."
+        },
+        "beta": null,
+        "betaStatus": "No verified contemporaneous company/industry beta provided. Beta and leverage remain explicit analyst assumptions.",
+        "waccStatus": "Risk-free and ERP anchors alone do not establish WACC. Need beta, cost of debt, market-value weights, marginal tax rate and consistent currency."
+      },
+      "stresses": [
+        {
+          "assumedInitialOperatingBeta": 1.2,
+          "initialUnleveredDiscountRate": 0.07103999999999999,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0616,
+          "perShare": 371.46255446459514,
+          "terminalShare": 0.7177887793942301,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.325,
+            "targetMargin": 0.3,
+            "tax": 0.21,
+            "salesCapital": 3,
+            "wacc": 0.0616,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.16,
+            "otherAssets": 0,
+            "otherClaims": 333.5,
+            "yearlyOverrides": [
+              {
+                "growth": 0.325,
+                "margin": 0.32,
+                "taxRate": 0.1,
+                "salesCapital": 3,
+                "wacc": 0.07103999999999999
+              },
+              {
+                "growth": 0.2,
+                "margin": 0.33,
+                "taxRate": 0.12,
+                "salesCapital": 3,
+                "wacc": 0.07103999999999999
+              },
+              {
+                "growth": 0.18,
+                "margin": 0.34,
+                "taxRate": 0.14,
+                "salesCapital": 3,
+                "wacc": 0.07103999999999999
+              },
+              {
+                "growth": 0.16,
+                "margin": 0.34,
+                "taxRate": 0.16,
+                "salesCapital": 3,
+                "wacc": 0.07103999999999999
+              },
+              {
+                "growth": 0.14,
+                "margin": 0.34,
+                "taxRate": 0.18,
+                "salesCapital": 3,
+                "wacc": 0.07103999999999999
+              },
+              {
+                "growth": 0.11,
+                "margin": 0.33,
+                "taxRate": 0.2,
+                "salesCapital": 3,
+                "wacc": 0.06915199999999999
+              },
+              {
+                "growth": 0.08,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.06726399999999999
+              },
+              {
+                "growth": 0.06,
+                "margin": 0.31,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.065376
+              },
+              {
+                "growth": 0.04,
+                "margin": 0.3,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.063488
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.3,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.0616
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 1.6,
+          "initialUnleveredDiscountRate": 0.08992,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0616,
+          "perShare": 332.65060371670484,
+          "terminalShare": 0.7106423666150951,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.325,
+            "targetMargin": 0.3,
+            "tax": 0.21,
+            "salesCapital": 3,
+            "wacc": 0.0616,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.16,
+            "otherAssets": 0,
+            "otherClaims": 333.5,
+            "yearlyOverrides": [
+              {
+                "growth": 0.325,
+                "margin": 0.32,
+                "taxRate": 0.1,
+                "salesCapital": 3,
+                "wacc": 0.08992
+              },
+              {
+                "growth": 0.2,
+                "margin": 0.33,
+                "taxRate": 0.12,
+                "salesCapital": 3,
+                "wacc": 0.08992
+              },
+              {
+                "growth": 0.18,
+                "margin": 0.34,
+                "taxRate": 0.14,
+                "salesCapital": 3,
+                "wacc": 0.08992
+              },
+              {
+                "growth": 0.16,
+                "margin": 0.34,
+                "taxRate": 0.16,
+                "salesCapital": 3,
+                "wacc": 0.08992
+              },
+              {
+                "growth": 0.14,
+                "margin": 0.34,
+                "taxRate": 0.18,
+                "salesCapital": 3,
+                "wacc": 0.08992
+              },
+              {
+                "growth": 0.11,
+                "margin": 0.33,
+                "taxRate": 0.2,
+                "salesCapital": 3,
+                "wacc": 0.084256
+              },
+              {
+                "growth": 0.08,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.078592
+              },
+              {
+                "growth": 0.06,
+                "margin": 0.31,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.07292799999999999
+              },
+              {
+                "growth": 0.04,
+                "margin": 0.3,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.067264
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.3,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.0616
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 2.0,
+          "initialUnleveredDiscountRate": 0.1088,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0616,
+          "perShare": 298.64978810160403,
+          "terminalShare": 0.7032405552134638,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.325,
+            "targetMargin": 0.3,
+            "tax": 0.21,
+            "salesCapital": 3,
+            "wacc": 0.0616,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.16,
+            "otherAssets": 0,
+            "otherClaims": 333.5,
+            "yearlyOverrides": [
+              {
+                "growth": 0.325,
+                "margin": 0.32,
+                "taxRate": 0.1,
+                "salesCapital": 3,
+                "wacc": 0.1088
+              },
+              {
+                "growth": 0.2,
+                "margin": 0.33,
+                "taxRate": 0.12,
+                "salesCapital": 3,
+                "wacc": 0.1088
+              },
+              {
+                "growth": 0.18,
+                "margin": 0.34,
+                "taxRate": 0.14,
+                "salesCapital": 3,
+                "wacc": 0.1088
+              },
+              {
+                "growth": 0.16,
+                "margin": 0.34,
+                "taxRate": 0.16,
+                "salesCapital": 3,
+                "wacc": 0.1088
+              },
+              {
+                "growth": 0.14,
+                "margin": 0.34,
+                "taxRate": 0.18,
+                "salesCapital": 3,
+                "wacc": 0.1088
+              },
+              {
+                "growth": 0.11,
+                "margin": 0.33,
+                "taxRate": 0.2,
+                "salesCapital": 3,
+                "wacc": 0.09935999999999999
+              },
+              {
+                "growth": 0.08,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.08992
+              },
+              {
+                "growth": 0.06,
+                "margin": 0.31,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.08048
+              },
+              {
+                "growth": 0.04,
+                "margin": 0.3,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.07103999999999999
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.3,
+                "taxRate": 0.21,
+                "salesCapital": 3,
+                "wacc": 0.0616
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "snapshotId": "NVDA-FY2022",
+      "originalInitialWACC": 0.1,
+      "originalTerminalWACC": 0.085,
+      "impliedInitialBetaAllEquityApproximation": 1.8396226415094339,
+      "rateEvidence": {
+        "caseId": "NVDA-FY2022",
+        "decisionCutoff": "2022-03-18T13:30:00Z",
+        "riskFree": {
+          "instrument": "10-year US Treasury constant-maturity/par yield",
+          "observationDate": "2022-03-17",
+          "percentPerYear": 2.2,
+          "decimal": 0.022000000000000002,
+          "series": "DGS10",
+          "sourceURL": "https://fred.stlouisfed.org/data/DGS10",
+          "seriesMetadataURL": "https://fred.stlouisfed.org/series/DGS10",
+          "treasuryCrossCheckURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202203&type=daily_treasury_yield_curve",
+          "selectionRule": "Previous trading-day closing observation; decision-day close would be unavailable at the morning cutoff.",
+          "vintageCaveat": "Verified historical-date observation in current official history, not an archived as-released vintage; exact original public dissemination timestamp not independently captured. Historical corrections cannot be excluded.",
+          "rights": "FRED series tagged Public Domain: Citation Requested; source Board of Governors H.15."
+        },
+        "equityRiskPremium": {
+          "referenceDate": "2022-01-01",
+          "percentPerYear": 4.24,
+          "decimal": 0.0424,
+          "estimator": "Damodaran implied US equity risk premium, January annual update",
+          "sourceURL": "https://aswathdamodaran.blogspot.com/2022/01/data-update-2-for-2022-us-stocks-kept.html",
+          "publishedAt": "2022-01-19T17:57:00.003-05:00",
+          "updatedAt": "2022-01-19T18:26:17.953-05:00",
+          "cachedTextSha256": "34ac60290698131196f5601e1964c2006a7e0fb538e4cb45028599e49f6d4f1b",
+          "useLimitation": "January estimate, not the cutoff-day ERP. Forecast-dependent estimate, not an observed guaranteed premium. Cited numeric fact only; no general license to redistribute the full post is claimed."
+        },
+        "beta": null,
+        "betaStatus": "No verified contemporaneous company/industry beta provided. Beta and leverage remain explicit analyst assumptions.",
+        "waccStatus": "Risk-free and ERP anchors alone do not establish WACC. Need beta, cost of debt, market-value weights, marginal tax rate and consistent currency."
+      },
+      "stresses": [
+        {
+          "assumedInitialOperatingBeta": 1.2,
+          "initialUnleveredDiscountRate": 0.07288,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0644,
+          "perShare": 119.65986571493758,
+          "terminalShare": 0.6748454527314125,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.22,
+            "targetMargin": 0.31,
+            "tax": 0.21,
+            "salesCapital": 2.8,
+            "wacc": 0.0644,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.16,
+            "otherAssets": 0,
+            "otherClaims": 538.28,
+            "yearlyOverrides": [
+              {
+                "growth": 0.22,
+                "margin": 0.38,
+                "taxRate": 0.11,
+                "salesCapital": 2.8,
+                "wacc": 0.07288
+              },
+              {
+                "growth": 0.17,
+                "margin": 0.38,
+                "taxRate": 0.13,
+                "salesCapital": 2.8,
+                "wacc": 0.07288
+              },
+              {
+                "growth": 0.15,
+                "margin": 0.38,
+                "taxRate": 0.15,
+                "salesCapital": 2.8,
+                "wacc": 0.07288
+              },
+              {
+                "growth": 0.13,
+                "margin": 0.37,
+                "taxRate": 0.17,
+                "salesCapital": 2.8,
+                "wacc": 0.07288
+              },
+              {
+                "growth": 0.11,
+                "margin": 0.36,
+                "taxRate": 0.19,
+                "salesCapital": 2.8,
+                "wacc": 0.07288
+              },
+              {
+                "growth": 0.09,
+                "margin": 0.35,
+                "taxRate": 0.2,
+                "salesCapital": 2.8,
+                "wacc": 0.071184
+              },
+              {
+                "growth": 0.07,
+                "margin": 0.34,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.069488
+              },
+              {
+                "growth": 0.05,
+                "margin": 0.33,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.067792
+              },
+              {
+                "growth": 0.035,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.066096
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.31,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.0644
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 1.6,
+          "initialUnleveredDiscountRate": 0.08984,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0644,
+          "perShare": 108.79610407383562,
+          "terminalShare": 0.6671534636922555,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.22,
+            "targetMargin": 0.31,
+            "tax": 0.21,
+            "salesCapital": 2.8,
+            "wacc": 0.0644,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.16,
+            "otherAssets": 0,
+            "otherClaims": 538.28,
+            "yearlyOverrides": [
+              {
+                "growth": 0.22,
+                "margin": 0.38,
+                "taxRate": 0.11,
+                "salesCapital": 2.8,
+                "wacc": 0.08984
+              },
+              {
+                "growth": 0.17,
+                "margin": 0.38,
+                "taxRate": 0.13,
+                "salesCapital": 2.8,
+                "wacc": 0.08984
+              },
+              {
+                "growth": 0.15,
+                "margin": 0.38,
+                "taxRate": 0.15,
+                "salesCapital": 2.8,
+                "wacc": 0.08984
+              },
+              {
+                "growth": 0.13,
+                "margin": 0.37,
+                "taxRate": 0.17,
+                "salesCapital": 2.8,
+                "wacc": 0.08984
+              },
+              {
+                "growth": 0.11,
+                "margin": 0.36,
+                "taxRate": 0.19,
+                "salesCapital": 2.8,
+                "wacc": 0.08984
+              },
+              {
+                "growth": 0.09,
+                "margin": 0.35,
+                "taxRate": 0.2,
+                "salesCapital": 2.8,
+                "wacc": 0.08475200000000001
+              },
+              {
+                "growth": 0.07,
+                "margin": 0.34,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.07966400000000001
+              },
+              {
+                "growth": 0.05,
+                "margin": 0.33,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.074576
+              },
+              {
+                "growth": 0.035,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.06948800000000001
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.31,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.0644
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 2.0,
+          "initialUnleveredDiscountRate": 0.1068,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0644,
+          "perShare": 99.14041083135993,
+          "terminalShare": 0.6592345223584637,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.22,
+            "targetMargin": 0.31,
+            "tax": 0.21,
+            "salesCapital": 2.8,
+            "wacc": 0.0644,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.16,
+            "otherAssets": 0,
+            "otherClaims": 538.28,
+            "yearlyOverrides": [
+              {
+                "growth": 0.22,
+                "margin": 0.38,
+                "taxRate": 0.11,
+                "salesCapital": 2.8,
+                "wacc": 0.1068
+              },
+              {
+                "growth": 0.17,
+                "margin": 0.38,
+                "taxRate": 0.13,
+                "salesCapital": 2.8,
+                "wacc": 0.1068
+              },
+              {
+                "growth": 0.15,
+                "margin": 0.38,
+                "taxRate": 0.15,
+                "salesCapital": 2.8,
+                "wacc": 0.1068
+              },
+              {
+                "growth": 0.13,
+                "margin": 0.37,
+                "taxRate": 0.17,
+                "salesCapital": 2.8,
+                "wacc": 0.1068
+              },
+              {
+                "growth": 0.11,
+                "margin": 0.36,
+                "taxRate": 0.19,
+                "salesCapital": 2.8,
+                "wacc": 0.1068
+              },
+              {
+                "growth": 0.09,
+                "margin": 0.35,
+                "taxRate": 0.2,
+                "salesCapital": 2.8,
+                "wacc": 0.09832
+              },
+              {
+                "growth": 0.07,
+                "margin": 0.34,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.08984
+              },
+              {
+                "growth": 0.05,
+                "margin": 0.33,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.08136
+              },
+              {
+                "growth": 0.035,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.07288
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.31,
+                "taxRate": 0.21,
+                "salesCapital": 2.8,
+                "wacc": 0.0644
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "snapshotId": "NVDA-FY2023",
+      "originalInitialWACC": 0.105,
+      "originalTerminalWACC": 0.085,
+      "impliedInitialBetaAllEquityApproximation": 1.1026936026936027,
+      "rateEvidence": {
+        "caseId": "NVDA-FY2023",
+        "decisionCutoff": "2023-02-27T14:30:00Z",
+        "riskFree": {
+          "instrument": "10-year US Treasury constant-maturity/par yield",
+          "observationDate": "2023-02-24",
+          "percentPerYear": 3.95,
+          "decimal": 0.0395,
+          "series": "DGS10",
+          "sourceURL": "https://fred.stlouisfed.org/data/DGS10",
+          "seriesMetadataURL": "https://fred.stlouisfed.org/series/DGS10",
+          "treasuryCrossCheckURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202302&type=daily_treasury_yield_curve",
+          "selectionRule": "Previous trading-day closing observation; decision-day close would be unavailable at the morning cutoff.",
+          "vintageCaveat": "Verified historical-date observation in current official history, not an archived as-released vintage; exact original public dissemination timestamp not independently captured. Historical corrections cannot be excluded.",
+          "rights": "FRED series tagged Public Domain: Citation Requested; source Board of Governors H.15."
+        },
+        "equityRiskPremium": {
+          "referenceDate": "2023-01-01",
+          "percentPerYear": 5.94,
+          "decimal": 0.0594,
+          "estimator": "Damodaran implied US equity risk premium, January annual update",
+          "sourceURL": "https://aswathdamodaran.blogspot.com/2023/01/data-update-2-for-2023-rocky-year-for.html",
+          "publishedAt": "2023-01-21T19:54:00.005-05:00",
+          "updatedAt": "2023-01-29T12:09:50.730-05:00",
+          "cachedTextSha256": "f3f1a9a5f249973ecb453627d9a0303c39ddbe77845aa86160cc0e4364cf8e1c",
+          "useLimitation": "January estimate, not the cutoff-day ERP. Forecast-dependent estimate, not an observed guaranteed premium. Cited numeric fact only; no general license to redistribute the full post is claimed."
+        },
+        "beta": null,
+        "betaStatus": "No verified contemporaneous company/industry beta provided. Beta and leverage remain explicit analyst assumptions.",
+        "waccStatus": "Risk-free and ERP anchors alone do not establish WACC. Need beta, cost of debt, market-value weights, marginal tax rate and consistent currency."
+      },
+      "stresses": [
+        {
+          "assumedInitialOperatingBeta": 1.2,
+          "initialUnleveredDiscountRate": 0.11077999999999999,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0989,
+          "perShare": 76.28153617689128,
+          "terminalShare": 0.5442289223161756,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.17,
+            "targetMargin": 0.32,
+            "tax": 0.21,
+            "salesCapital": 2.5,
+            "wacc": 0.0989,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.18,
+            "otherAssets": 0,
+            "otherClaims": 539.48,
+            "yearlyOverrides": [
+              {
+                "growth": 0.17,
+                "margin": 0.28,
+                "taxRate": 0.13,
+                "salesCapital": 2.5,
+                "wacc": 0.11077999999999999
+              },
+              {
+                "growth": 0.23,
+                "margin": 0.33,
+                "taxRate": 0.15,
+                "salesCapital": 2.5,
+                "wacc": 0.11077999999999999
+              },
+              {
+                "growth": 0.22,
+                "margin": 0.36,
+                "taxRate": 0.17,
+                "salesCapital": 2.5,
+                "wacc": 0.11077999999999999
+              },
+              {
+                "growth": 0.19,
+                "margin": 0.38,
+                "taxRate": 0.19,
+                "salesCapital": 2.5,
+                "wacc": 0.11077999999999999
+              },
+              {
+                "growth": 0.16,
+                "margin": 0.39,
+                "taxRate": 0.2,
+                "salesCapital": 2.5,
+                "wacc": 0.11077999999999999
+              },
+              {
+                "growth": 0.13,
+                "margin": 0.38,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.108404
+              },
+              {
+                "growth": 0.1,
+                "margin": 0.37,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.10602799999999998
+              },
+              {
+                "growth": 0.07,
+                "margin": 0.35,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.103652
+              },
+              {
+                "growth": 0.045,
+                "margin": 0.33,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.101276
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.0989
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 1.6,
+          "initialUnleveredDiscountRate": 0.13454000000000002,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0989,
+          "perShare": 67.10944502342211,
+          "terminalShare": 0.5339397176524219,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.17,
+            "targetMargin": 0.32,
+            "tax": 0.21,
+            "salesCapital": 2.5,
+            "wacc": 0.0989,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.18,
+            "otherAssets": 0,
+            "otherClaims": 539.48,
+            "yearlyOverrides": [
+              {
+                "growth": 0.17,
+                "margin": 0.28,
+                "taxRate": 0.13,
+                "salesCapital": 2.5,
+                "wacc": 0.13454000000000002
+              },
+              {
+                "growth": 0.23,
+                "margin": 0.33,
+                "taxRate": 0.15,
+                "salesCapital": 2.5,
+                "wacc": 0.13454000000000002
+              },
+              {
+                "growth": 0.22,
+                "margin": 0.36,
+                "taxRate": 0.17,
+                "salesCapital": 2.5,
+                "wacc": 0.13454000000000002
+              },
+              {
+                "growth": 0.19,
+                "margin": 0.38,
+                "taxRate": 0.19,
+                "salesCapital": 2.5,
+                "wacc": 0.13454000000000002
+              },
+              {
+                "growth": 0.16,
+                "margin": 0.39,
+                "taxRate": 0.2,
+                "salesCapital": 2.5,
+                "wacc": 0.13454000000000002
+              },
+              {
+                "growth": 0.13,
+                "margin": 0.38,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.127412
+              },
+              {
+                "growth": 0.1,
+                "margin": 0.37,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.120284
+              },
+              {
+                "growth": 0.07,
+                "margin": 0.35,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.113156
+              },
+              {
+                "growth": 0.045,
+                "margin": 0.33,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.10602800000000001
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.0989
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 2.0,
+          "initialUnleveredDiscountRate": 0.1583,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0989,
+          "perShare": 59.262985985932886,
+          "terminalShare": 0.5233740266521271,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.17,
+            "targetMargin": 0.32,
+            "tax": 0.21,
+            "salesCapital": 2.5,
+            "wacc": 0.0989,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.18,
+            "otherAssets": 0,
+            "otherClaims": 539.48,
+            "yearlyOverrides": [
+              {
+                "growth": 0.17,
+                "margin": 0.28,
+                "taxRate": 0.13,
+                "salesCapital": 2.5,
+                "wacc": 0.1583
+              },
+              {
+                "growth": 0.23,
+                "margin": 0.33,
+                "taxRate": 0.15,
+                "salesCapital": 2.5,
+                "wacc": 0.1583
+              },
+              {
+                "growth": 0.22,
+                "margin": 0.36,
+                "taxRate": 0.17,
+                "salesCapital": 2.5,
+                "wacc": 0.1583
+              },
+              {
+                "growth": 0.19,
+                "margin": 0.38,
+                "taxRate": 0.19,
+                "salesCapital": 2.5,
+                "wacc": 0.1583
+              },
+              {
+                "growth": 0.16,
+                "margin": 0.39,
+                "taxRate": 0.2,
+                "salesCapital": 2.5,
+                "wacc": 0.1583
+              },
+              {
+                "growth": 0.13,
+                "margin": 0.38,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.14642
+              },
+              {
+                "growth": 0.1,
+                "margin": 0.37,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.13454000000000002
+              },
+              {
+                "growth": 0.07,
+                "margin": 0.35,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.12265999999999999
+              },
+              {
+                "growth": 0.045,
+                "margin": 0.33,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.11077999999999999
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.32,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.0989
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "snapshotId": "NVDA-FY2024",
+      "originalInitialWACC": 0.1,
+      "originalTerminalWACC": 0.09,
+      "impliedInitialBetaAllEquityApproximation": 1.2347826086956524,
+      "rateEvidence": {
+        "caseId": "NVDA-FY2024",
+        "decisionCutoff": "2024-02-22T14:30:00Z",
+        "riskFree": {
+          "instrument": "10-year US Treasury constant-maturity/par yield",
+          "observationDate": "2024-02-21",
+          "percentPerYear": 4.32,
+          "decimal": 0.0432,
+          "series": "DGS10",
+          "sourceURL": "https://fred.stlouisfed.org/data/DGS10",
+          "seriesMetadataURL": "https://fred.stlouisfed.org/series/DGS10",
+          "treasuryCrossCheckURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202402&type=daily_treasury_yield_curve",
+          "selectionRule": "Previous trading-day closing observation; decision-day close would be unavailable at the morning cutoff.",
+          "vintageCaveat": "Verified historical-date observation in current official history, not an archived as-released vintage; exact original public dissemination timestamp not independently captured. Historical corrections cannot be excluded.",
+          "rights": "FRED series tagged Public Domain: Citation Requested; source Board of Governors H.15."
+        },
+        "equityRiskPremium": {
+          "referenceDate": "2024-01-01",
+          "percentPerYear": 4.6,
+          "decimal": 0.046,
+          "estimator": "Damodaran implied US equity risk premium, January annual update",
+          "sourceURL": "https://aswathdamodaran.blogspot.com/2024/01/data-update-2-for-2024-stock-comeback.html",
+          "publishedAt": "2024-01-17T13:06:00.008-05:00",
+          "updatedAt": "2024-01-17T13:40:21.651-05:00",
+          "cachedTextSha256": "daca94554e6d464ba1cd4b88d36703e050214b9e0a7b765fdc6c9372cd1aba9a",
+          "useLimitation": "January estimate, not the cutoff-day ERP. Forecast-dependent estimate, not an observed guaranteed premium. Cited numeric fact only; no general license to redistribute the full post is claimed."
+        },
+        "beta": null,
+        "betaStatus": "No verified contemporaneous company/industry beta provided. Beta and leverage remain explicit analyst assumptions.",
+        "waccStatus": "Risk-free and ERP anchors alone do not establish WACC. Need beta, cost of debt, market-value weights, marginal tax rate and consistent currency."
+      },
+      "stresses": [
+        {
+          "assumedInitialOperatingBeta": 1.2,
+          "initialUnleveredDiscountRate": 0.0984,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0892,
+          "perShare": 412.6694146885394,
+          "terminalShare": 0.5653725920960074,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.7,
+            "targetMargin": 0.4,
+            "tax": 0.21,
+            "salesCapital": 3,
+            "wacc": 0.0892,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.22,
+            "otherAssets": 0,
+            "otherClaims": 1218.44,
+            "yearlyOverrides": [
+              {
+                "growth": 0.7,
+                "margin": 0.6,
+                "taxRate": 0.17,
+                "salesCapital": 3,
+                "wacc": 0.0984
+              },
+              {
+                "growth": 0.3,
+                "margin": 0.59,
+                "taxRate": 0.18,
+                "salesCapital": 3,
+                "wacc": 0.0984
+              },
+              {
+                "growth": 0.25,
+                "margin": 0.57,
+                "taxRate": 0.19,
+                "salesCapital": 3,
+                "wacc": 0.0984
+              },
+              {
+                "growth": 0.2,
+                "margin": 0.54,
+                "taxRate": 0.2,
+                "salesCapital": 2.8,
+                "wacc": 0.0984
+              },
+              {
+                "growth": 0.15,
+                "margin": 0.51,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.0984
+              },
+              {
+                "growth": 0.12,
+                "margin": 0.48,
+                "taxRate": 0.21,
+                "salesCapital": 2,
+                "wacc": 0.09656
+              },
+              {
+                "growth": 0.09,
+                "margin": 0.45,
+                "taxRate": 0.21,
+                "salesCapital": 1.6,
+                "wacc": 0.09472
+              },
+              {
+                "growth": 0.06,
+                "margin": 0.43,
+                "taxRate": 0.21,
+                "salesCapital": 1.2,
+                "wacc": 0.09288
+              },
+              {
+                "growth": 0.04,
+                "margin": 0.41,
+                "taxRate": 0.21,
+                "salesCapital": 0.9,
+                "wacc": 0.09104000000000001
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.4,
+                "taxRate": 0.21,
+                "salesCapital": 0.6962025316,
+                "wacc": 0.0892
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 1.6,
+          "initialUnleveredDiscountRate": 0.1168,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0892,
+          "perShare": 373.9766954157395,
+          "terminalShare": 0.5561063184294395,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.7,
+            "targetMargin": 0.4,
+            "tax": 0.21,
+            "salesCapital": 3,
+            "wacc": 0.0892,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.22,
+            "otherAssets": 0,
+            "otherClaims": 1218.44,
+            "yearlyOverrides": [
+              {
+                "growth": 0.7,
+                "margin": 0.6,
+                "taxRate": 0.17,
+                "salesCapital": 3,
+                "wacc": 0.1168
+              },
+              {
+                "growth": 0.3,
+                "margin": 0.59,
+                "taxRate": 0.18,
+                "salesCapital": 3,
+                "wacc": 0.1168
+              },
+              {
+                "growth": 0.25,
+                "margin": 0.57,
+                "taxRate": 0.19,
+                "salesCapital": 3,
+                "wacc": 0.1168
+              },
+              {
+                "growth": 0.2,
+                "margin": 0.54,
+                "taxRate": 0.2,
+                "salesCapital": 2.8,
+                "wacc": 0.1168
+              },
+              {
+                "growth": 0.15,
+                "margin": 0.51,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.1168
+              },
+              {
+                "growth": 0.12,
+                "margin": 0.48,
+                "taxRate": 0.21,
+                "salesCapital": 2,
+                "wacc": 0.11128
+              },
+              {
+                "growth": 0.09,
+                "margin": 0.45,
+                "taxRate": 0.21,
+                "salesCapital": 1.6,
+                "wacc": 0.10576
+              },
+              {
+                "growth": 0.06,
+                "margin": 0.43,
+                "taxRate": 0.21,
+                "salesCapital": 1.2,
+                "wacc": 0.10024
+              },
+              {
+                "growth": 0.04,
+                "margin": 0.41,
+                "taxRate": 0.21,
+                "salesCapital": 0.9,
+                "wacc": 0.09472
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.4,
+                "taxRate": 0.21,
+                "salesCapital": 0.6962025316,
+                "wacc": 0.0892
+              }
+            ]
+          }
+        },
+        {
+          "assumedInitialOperatingBeta": 2.0,
+          "initialUnleveredDiscountRate": 0.1352,
+          "matureBeta": 1,
+          "terminalUnleveredDiscountRate": 0.0892,
+          "perShare": 339.7379967328843,
+          "terminalShare": 0.5466482129447856,
+          "assumptions": {
+            "years": 10,
+            "growth": 0.7,
+            "targetMargin": 0.4,
+            "tax": 0.21,
+            "salesCapital": 3,
+            "wacc": 0.0892,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.22,
+            "otherAssets": 0,
+            "otherClaims": 1218.44,
+            "yearlyOverrides": [
+              {
+                "growth": 0.7,
+                "margin": 0.6,
+                "taxRate": 0.17,
+                "salesCapital": 3,
+                "wacc": 0.1352
+              },
+              {
+                "growth": 0.3,
+                "margin": 0.59,
+                "taxRate": 0.18,
+                "salesCapital": 3,
+                "wacc": 0.1352
+              },
+              {
+                "growth": 0.25,
+                "margin": 0.57,
+                "taxRate": 0.19,
+                "salesCapital": 3,
+                "wacc": 0.1352
+              },
+              {
+                "growth": 0.2,
+                "margin": 0.54,
+                "taxRate": 0.2,
+                "salesCapital": 2.8,
+                "wacc": 0.1352
+              },
+              {
+                "growth": 0.15,
+                "margin": 0.51,
+                "taxRate": 0.21,
+                "salesCapital": 2.5,
+                "wacc": 0.1352
+              },
+              {
+                "growth": 0.12,
+                "margin": 0.48,
+                "taxRate": 0.21,
+                "salesCapital": 2,
+                "wacc": 0.126
+              },
+              {
+                "growth": 0.09,
+                "margin": 0.45,
+                "taxRate": 0.21,
+                "salesCapital": 1.6,
+                "wacc": 0.1168
+              },
+              {
+                "growth": 0.06,
+                "margin": 0.43,
+                "taxRate": 0.21,
+                "salesCapital": 1.2,
+                "wacc": 0.1076
+              },
+              {
+                "growth": 0.04,
+                "margin": 0.41,
+                "taxRate": 0.21,
+                "salesCapital": 0.9,
+                "wacc": 0.0984
+              },
+              {
+                "growth": 0.025,
+                "margin": 0.4,
+                "taxRate": 0.21,
+                "salesCapital": 0.6962025316,
+                "wacc": 0.0892
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

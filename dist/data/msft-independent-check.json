@@ -1,0 +1,352 @@
+{
+  "verifiedAt": "2026-10-17T04:42:34.917348+00:00",
+  "freezeCreatedAt": "2026-10-17T04:40:33.726023+00:00",
+  "originalFreezeSHA256": "437167e8e7655cd7421972c7b05a1f4d29cbbc694cb4ac63355448c5ab7c37a0",
+  "engineSHA256": "324e1beb886b09ddd745b7f53f0bf2a10ef150d22af7888c15963dea20ebd66d",
+  "sourceHashesVerified": true,
+  "checksPassed": 237,
+  "maximumSummaryAbsoluteDifference": 4.656612873077393e-10,
+  "results": {
+    "base": {
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 142202.59,
+          "ebit": 48543.67,
+          "nopat": 40291.2461,
+          "reinvestment": 8179.794999999998,
+          "fcff": 32111.4511,
+          "pv": 29732.82509259259
+        },
+        {
+          "year": 2,
+          "revenue": 159266.9008,
+          "ebit": 54947.080775999995,
+          "nopat": 45056.606236319996,
+          "reinvestment": 9893.08240610905,
+          "fcff": 35163.52383021095,
+          "pv": 30162.569763433647
+        },
+        {
+          "year": 3,
+          "revenue": 176786.25988800003,
+          "ebit": 61875.190960800006,
+          "nopat": 50118.90467824801,
+          "reinvestment": 11776.980559985215,
+          "fcff": 38341.92411826279,
+          "pv": 30484.082752575156
+        },
+        {
+          "year": 4,
+          "revenue": 194464.88587680005,
+          "ebit": 69035.03448626402,
+          "nopat": 55228.02758901122,
+          "reinvestment": 13779.616203889384,
+          "fcff": 41448.411385121835,
+          "pv": 30560.05194027525
+        },
+        {
+          "year": 5,
+          "revenue": 211966.72560571207,
+          "ebit": 76308.02121805634,
+          "nopat": 60283.33676226451,
+          "reinvestment": 15817.767435803715,
+          "fcff": 44465.5693264608,
+          "pv": 30418.71267741397
+        },
+        {
+          "year": 6,
+          "revenue": 227864.23002614046,
+          "ebit": 82031.12280941056,
+          "nopat": 63984.27579134024,
+          "reinvestment": 16659.55158569416,
+          "fcff": 47324.72420564608,
+          "pv": 30053.825548907607
+        },
+        {
+          "year": 7,
+          "revenue": 241536.0838277089,
+          "ebit": 86952.9901779752,
+          "nopat": 66953.8024370409,
+          "reinvestment": 16612.4860255175,
+          "fcff": 50341.316411523396,
+          "pv": 29693.060959798837
+        },
+        {
+          "year": 8,
+          "revenue": 252405.2075999558,
+          "ebit": 90865.87473598408,
+          "nopat": 69966.72354670774,
+          "reinvestment": 15313.505788996687,
+          "fcff": 54653.217757711056,
+          "pv": 29956.358736418206
+        },
+        {
+          "year": 9,
+          "revenue": 261239.38986595423,
+          "ebit": 94046.18035174352,
+          "nopat": 72415.5588708425,
+          "reinvestment": 14431.76066114356,
+          "fcff": 57983.79820969894,
+          "pv": 29549.29329080291
+        },
+        {
+          "year": 10,
+          "revenue": 267770.37461260305,
+          "ebit": 96397.3348605371,
+          "nopat": 74225.94784261356,
+          "reinvestment": 12370.991307102184,
+          "fcff": 61854.956535511374,
+          "pv": 29322.87035090419
+        }
+      ],
+      "terminalNopat": 76081.59653867889,
+      "terminalReinvestment": 12680.266089779816,
+      "terminalPV": 601118.8421935351,
+      "forecastPV": 299933.65111312235,
+      "enterprise": 901052.4933066574,
+      "equity": 935695.2011801925,
+      "perShare": 120.11491671119288,
+      "terminalShare": 0.6671296585480451,
+      "terminalToYear10ReinvestmentRatio": 1.0250000000000064,
+      "legacyAwardFutureServiceCredit": 6065.567873535112
+    },
+    "bear": {
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 138427.30000000002,
+          "ebit": 46373.145500000006,
+          "nopat": 38489.710765,
+          "reinvestment": 8389.533333333346,
+          "fcff": 30100.177431666656,
+          "pv": 27614.841680428122
+        },
+        {
+          "year": 2,
+          "revenue": 149501.48400000003,
+          "ebit": 48587.98230000001,
+          "nopat": 39356.26566300001,
+          "reinvestment": 8687.141233990631,
+          "fcff": 30669.124429009382,
+          "pv": 25839.928839270215
+        },
+        {
+          "year": 3,
+          "revenue": 158471.57304000005,
+          "ebit": 49918.545507600014,
+          "nopat": 39435.65095100401,
+          "reinvestment": 8279.770656280398,
+          "fcff": 31155.880294723614,
+          "pv": 24131.803483264765
+        },
+        {
+          "year": 4,
+          "revenue": 166395.15169200004,
+          "ebit": 51582.49702452002,
+          "nopat": 39718.52270888042,
+          "reinvestment": 8605.96018866135,
+          "fcff": 31112.562520219068,
+          "pv": 22176.305225354954
+        },
+        {
+          "year": 5,
+          "revenue": 173050.95775968005,
+          "ebit": 52780.54211670242,
+          "nopat": 39585.40658752681,
+          "reinvestment": 8506.18893747678,
+          "fcff": 31079.217650050035,
+          "pv": 20406.636648117143
+        },
+        {
+          "year": 6,
+          "revenue": 179107.74128126883,
+          "ebit": 53732.32238438065,
+          "nopat": 40299.241788285486,
+          "reinvestment": 9108.205558514852,
+          "fcff": 31191.036229770634,
+          "pv": 18885.29828600522
+        },
+        {
+          "year": 7,
+          "revenue": 184480.9735197069,
+          "ebit": 55344.29205591207,
+          "nopat": 41508.21904193405,
+          "reinvestment": 9507.860251747576,
+          "fcff": 32000.358790186474,
+          "pv": 17884.911151839544
+        },
+        {
+          "year": 8,
+          "revenue": 189092.99785769955,
+          "ebit": 56727.89935730986,
+          "nopat": 42545.9245179824,
+          "reinvestment": 9602.740096378182,
+          "fcff": 32943.184421604215,
+          "pv": 17013.006558070767
+        },
+        {
+          "year": 9,
+          "revenue": 193820.32280414202,
+          "ebit": 58146.09684124261,
+          "nopat": 43609.57263093196,
+          "reinvestment": 11581.78360186253,
+          "fcff": 32027.789029069427,
+          "pv": 15299.319709095202
+        },
+        {
+          "year": 10,
+          "revenue": 198665.83087424556,
+          "ebit": 59599.74926227366,
+          "nopat": 44699.811946705246,
+          "reinvestment": 13968.69123334534,
+          "fcff": 30731.120713359905,
+          "pv": 13592.51447367675
+        }
+      ],
+      "terminalNopat": 45817.307245372875,
+      "terminalReinvestment": 14317.908514179024,
+      "terminalPV": 253315.04246397538,
+      "forecastPV": 202844.56605512268,
+      "enterprise": 456159.608519098,
+      "equity": 490630.0971062955,
+      "perShare": 62.98204070684153,
+      "terminalShare": 0.555321071250371,
+      "terminalToYear10ReinvestmentRatio": 1.0250000000000037,
+      "legacyAwardFutureServiceCredit": 5893.348587197528
+    },
+    "bull": {
+      "rows": [
+        {
+          "year": 1,
+          "revenue": 144719.44999999998,
+          "ebit": 50651.80749999999,
+          "nopat": 42041.00022499999,
+          "reinvestment": 7550.579999999993,
+          "fcff": 34490.420224999994,
+          "pv": 32234.037593457935
+        },
+        {
+          "year": 2,
+          "revenue": 166427.36749999996,
+          "ebit": 59913.852299999984,
+          "nopat": 49129.35888599999,
+          "reinvestment": 10113.951960713159,
+          "fcff": 39015.40692528683,
+          "pv": 34077.56740788438
+        },
+        {
+          "year": 3,
+          "revenue": 189727.19895,
+          "ebit": 70199.0636115,
+          "nopat": 56861.241525314996,
+          "reinvestment": 12644.40029499362,
+          "fcff": 44216.84123032138,
+          "pv": 36094.113619131225
+        },
+        {
+          "year": 4,
+          "revenue": 214391.73481349996,
+          "ebit": 81468.85922912999,
+          "nopat": 65175.087383303995,
+          "reinvestment": 15590.539250465727,
+          "fcff": 49584.54813283827,
+          "pv": 37827.81436208236
+        },
+        {
+          "year": 5,
+          "revenue": 237974.82564298497,
+          "ebit": 92810.18200076414,
+          "nopat": 73320.04378060366,
+          "reinvestment": 17363.2750957982,
+          "fcff": 55956.768684805465,
+          "pv": 39896.40272083082
+        },
+        {
+          "year": 6,
+          "revenue": 259392.55995085364,
+          "ebit": 103757.02398034146,
+          "nopat": 80930.47870466634,
+          "reinvestment": 18367.378763296314,
+          "fcff": 62563.09994137003,
+          "pv": 41688.43514378722
+        },
+        {
+          "year": 7,
+          "revenue": 277550.0391474134,
+          "ebit": 111020.01565896536,
+          "nopat": 85485.41205740333,
+          "reinvestment": 18137.27104485701,
+          "fcff": 67348.14101254632,
+          "pv": 41941.03743197025
+        },
+        {
+          "year": 8,
+          "revenue": 291427.54110478406,
+          "ebit": 116571.01644191363,
+          "nopat": 89759.6826602735,
+          "reinvestment": 16146.203355242713,
+          "fcff": 73613.47930503078,
+          "pv": 42843.715174237936
+        },
+        {
+          "year": 9,
+          "revenue": 301627.5050434515,
+          "ebit": 120651.00201738061,
+          "nopat": 92901.27155338308,
+          "reinvestment": 13822.9421288201,
+          "fcff": 79078.32942456298,
+          "pv": 43013.371681204684
+        },
+        {
+          "year": 10,
+          "revenue": 309168.19266953773,
+          "ebit": 123667.2770678151,
+          "nopat": 95223.80334221762,
+          "reinvestment": 11902.975417777117,
+          "fcff": 83320.8279244405,
+          "pv": 42356.083895467935
+        }
+      ],
+      "terminalNopat": 97604.39842577306,
+      "terminalReinvestment": 12200.549803221633,
+      "terminalPV": 964777.4665078798,
+      "forecastPV": 391972.57903005474,
+      "enterprise": 1356750.0455379346,
+      "equity": 1391499.468524464,
+      "perShare": 178.62637593382078,
+      "terminalShare": 0.7110944788104705,
+      "terminalToYear10ReinvestmentRatio": 1.0250000000000075,
+      "legacyAwardFutureServiceCredit": 6172.282986529179
+    }
+  },
+  "transitionTaxPVSensitivity": [
+    {
+      "discountRate": 0.019,
+      "interpretation": "Illustrative liability discount rate, not estimated market value; quarter-year and seven-year timing bounds from fiscal balance date",
+      "transitionTaxPVLower": 14518.050001067517,
+      "transitionTaxPVUpper": 16323.012080625882,
+      "transferTaxPV": 3483.5696513530847,
+      "valueUpliftPerShareLower": 0.011992075484086435,
+      "valueUpliftPerShareUpper": 0.24369452472136052
+    },
+    {
+      "discountRate": 0.035,
+      "interpretation": "Illustrative liability discount rate, not estimated market value; quarter-year and seven-year timing bounds from fiscal balance date",
+      "transitionTaxPVLower": 13136.786427105912,
+      "transitionTaxPVUpper": 16259.558937728729,
+      "transferTaxPV": 3470.0278220762534,
+      "valueUpliftPerShareLower": 0.021875897329270578,
+      "valueUpliftPerShareUpper": 0.4227452825183357
+    }
+  ],
+  "otherClaimsSensitivity": {
+    "eachAdditionalBillionReducesPerShare": 0.12836970474967907,
+    "noLegacyAwardServiceCreditBasePerShare": 119.33628155412804
+  },
+  "limitations": [
+    "Original immutable case subtracts undiscounted $19.9bn legacy taxes; PV bounds are post-freeze accounting diagnostics only.",
+    "No market price, implied margin of safety, realized investment return, or investment recommendation.",
+    "Independent mathematical verification validates implementation, not economic assumptions."
+  ]
+}

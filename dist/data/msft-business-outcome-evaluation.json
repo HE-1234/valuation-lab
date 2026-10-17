@@ -1,0 +1,94 @@
+{
+  "evaluatedAt": "2026-10-17T04:42:34.946173+00:00",
+  "freezeSHA256": "437167e8e7655cd7421972c7b05a1f4d29cbbc694cb4ac63355448c5ab7c37a0",
+  "freezeCreatedAt": "2026-10-17T04:40:33.726023+00:00",
+  "outcomeSourceSHA256": "bf487549573f474bb1f79b2720ff3b933cc0d0744e8c91640ddbdf963727528c",
+  "classification": "Retrospective, point-in-time-input constrained; exploratory normal-business comparator, not blind holdout",
+  "businessForecastOnly": true,
+  "priceReturnEvaluated": false,
+  "evaluations": [
+    {
+      "fiscalYear": 2020,
+      "sourceURL": "https://www.sec.gov/Archives/edgar/data/789019/000156459020034944/msft-10k_20200630.htm",
+      "comparison": {
+        "base": {
+          "forecastRevenue": 142202.59,
+          "actualRevenue": 143015.0,
+          "revenueErrorPct": -0.5680592944796059,
+          "forecastEBIT": 48543.67,
+          "actualEBIT": 52959.0,
+          "ebitErrorPct": -8.337260899941468,
+          "forecastMargin": 0.3413698020549415,
+          "actualMargin": 0.37030381428521486,
+          "marginErrorPercentagePoints": -2.8934012230273365
+        },
+        "bear": {
+          "forecastRevenue": 138427.30000000002,
+          "actualRevenue": 143015.0,
+          "revenueErrorPct": -3.2078453309093313,
+          "forecastEBIT": 46373.145500000006,
+          "actualEBIT": 52959.0,
+          "ebitErrorPct": -12.43576068279234,
+          "forecastMargin": 0.335,
+          "actualMargin": 0.37030381428521486,
+          "marginErrorPercentagePoints": -3.5303814285214843
+        },
+        "bull": {
+          "forecastRevenue": 144719.44999999998,
+          "actualRevenue": 143015.0,
+          "revenueErrorPct": 1.1917980631402258,
+          "forecastEBIT": 50651.80749999999,
+          "actualEBIT": 52959.0,
+          "ebitErrorPct": -4.356563568043226,
+          "forecastMargin": 0.35,
+          "actualMargin": 0.37030381428521486,
+          "marginErrorPercentagePoints": -2.0303814285214883
+        }
+      },
+      "revenueWithinScenarioRange": true,
+      "ebitWithinScenarioRange": false
+    },
+    {
+      "fiscalYear": 2021,
+      "sourceURL": "https://www.sec.gov/Archives/edgar/data/789019/000156459021039151/msft-10k_20210630.htm",
+      "comparison": {
+        "base": {
+          "forecastRevenue": 159266.9008,
+          "actualRevenue": 168088.0,
+          "revenueErrorPct": -5.247905382894668,
+          "forecastEBIT": 54947.080775999995,
+          "actualEBIT": 69916.0,
+          "ebitErrorPct": -21.40986215458551,
+          "forecastMargin": 0.345,
+          "actualMargin": 0.415948788729713,
+          "marginErrorPercentagePoints": -7.0948788729713055
+        },
+        "bear": {
+          "forecastRevenue": 149501.48400000003,
+          "actualRevenue": 168088.0,
+          "revenueErrorPct": -11.057610299366981,
+          "forecastEBIT": 48587.98230000001,
+          "actualEBIT": 69916.0,
+          "ebitErrorPct": -30.5052029578351,
+          "forecastMargin": 0.325,
+          "actualMargin": 0.415948788729713,
+          "marginErrorPercentagePoints": -9.094878872971302
+        },
+        "bull": {
+          "forecastRevenue": 166427.36749999996,
+          "actualRevenue": 168088.0,
+          "revenueErrorPct": -0.9879542263576457,
+          "forecastEBIT": 59913.852299999984,
+          "actualEBIT": 69916.0,
+          "ebitErrorPct": -14.305949568053112,
+          "forecastMargin": 0.36,
+          "actualMargin": 0.415948788729713,
+          "marginErrorPercentagePoints": -5.594878872971304
+        }
+      },
+      "revenueWithinScenarioRange": false,
+      "ebitWithinScenarioRange": false
+    }
+  ],
+  "interpretation": "FY2020 base revenue was close, but EBIT and margin were underestimated. FY2021 revenue and EBIT exceeded even the bull path. Two years do not validate ten-year terminal economics. This surviving-company comparator is neither representative nor blind; subsequent exceptional conditions can affect results, but forecast misses remain misses."
+}

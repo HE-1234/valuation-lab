@@ -1,0 +1,364 @@
+[
+  {
+    "id": "MSFT-FY2019-researched-v1",
+    "snapshotId": "MSFT-FY2019",
+    "asOf": "2019-08-02T13:30:00Z",
+    "classification": "Retrospective, point-in-time-input constrained; exploratory normal-business comparator, not blind holdout",
+    "thesis": "Diversified enterprise software and cloud recurring demand supports another year of double-digit growth, followed by scale-driven deceleration, modest margin leverage and fading capital productivity.",
+    "sourceUrls": [
+      "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+      "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/TranscriptFY19Q4"
+    ],
+    "sourceAssumptionLedger": [
+      {
+        "fact": "Original FY2019 revenue $125843m and EBIT $42959m; FY2018 revenue $110360m and EBIT $35058m.",
+        "source": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+        "inference": "Revenue grew14.03%; GAAP EBIT margin34.14%. Base FY20 growth13%, initial margin unchanged; no extrapolation of entire Azure growth to total company."
+      },
+      {
+        "fact": "FY20 management expected double-digit revenue and operating-income growth, stable operating margin, opex growth11\u201312%, tax17%, rising cloud capital expenditure.",
+        "source": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/TranscriptFY19Q4",
+        "inference": "Base FY20 revenue13% and EBIT13%, tax17%; bear10% revenue with margin pressure; bull15% with modest operating leverage. Management guidance is a conditional expectation."
+      },
+      {
+        "fact": "FY19 Azure revenue grew72%; cloud mix diluted gross margin while scale/efficiency improved Azure margins; commercial commitments supported renewal demand.",
+        "source": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+        "inference": "Recurring enterprise/software demand supports moderate base growth and durability; competitive/physical cloud investment curbs terminal margins and excess returns. Bull40% EBIT margin is upside judgment, not guidance."
+      },
+      {
+        "fact": "FY19 R&D16876m and SBC4652m are already operating expenses. Capex cash13925m; finance-lease additions2532m; cash-flow D&A and OTHER11682m is not pure depreciation.",
+        "source": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+        "inference": "Retain GAAP R&D and recurring SBC expenses; net additional investment includes physical assets, finance-leased additions, acquisitions and noncash operating working-capital needs, but excludes R&D already expensed. Initial sales/capital2.0 base is judgment, not a ratio backed out of an incomplete cashflow line."
+      },
+      {
+        "fact": "FY19 tax10% distorted by $2.6bn benefit; FY20 forecast tax17%; legacy transition tax16.4bn remains, plus3.5bn intangible-transfer payment.",
+        "source": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+        "inference": "Model17% first-year ordinary tax, fade toward23% base/bull or25% bear. Deduct19.9bn undiscounted legacy obligations outside normalized operating taxes; conservative to a discounted liability."
+      },
+      {
+        "fact": "Debt fair value78.9bn; finance-lease liabilities6.574bn; operating-lease liabilities7.703bn and operating lease cost1.707bn.",
+        "source": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+        "inference": "Deduct fair debt plus finance leases. Operating leases remain operating expenses, with no second lease debt deduction. Future capital funding includes finance-lease investment; debt financing itself is outside FCFF."
+      },
+      {
+        "fact": "June30 common7643m; July29 cover7635.4094m; June30 nonvested awards147m and unrecognized compensation8.6bn over weighted average3years.",
+        "source": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+        "inference": "Use aligned June30 claims and reserve every existing award, no forfeitures. Credit only discounted after-tax future service expense of these awards to avoid full dilution plus duplicate future legacy expense. Uniform3year expense pattern is approximation; future new compensation remains expense."
+      },
+      {
+        "fact": "Cash plus short-term investments133.819bn; separately reported equityinvestments2.649bn.",
+        "source": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+        "inference": "Reserve2% of revenue as operatingcash, add remaining131.30214bn plus equity investments at carrying value. No extra goodwill asset or capitalized R&D addback."
+      },
+      {
+        "fact": "Previous-session2019-08-01 US10y CMT1.90% verified in current FRED historical series; original-release archive not verified. ERP and beta not verified.",
+        "source": "https://fred.stlouisfed.org/data/DGS10",
+        "inference": "Base WACC8% fades7.5%, bear9% fades8%, bull7% flat. Illustrative initial base composition is rounded Rf2% (historical anchor1.90%), beta1.15, ERP5.5%, debtweight6%, pretax debt3.5%, tax17% ->8.0% rounded. Other components are scenario judgments, NOT measured2019 market values; the quoted CMT is a contemporary-date historical-series check, not an original-vintage source."
+      },
+      {
+        "fact": "Terminal growth2.5%; returns on new net investment15% base,8% bear,20% bull.",
+        "source": "Analyst judgment; Damodaran FCFF identities",
+        "inference": "Sales/capital fades geometrically to ROC/[margin*(1-tax)*(1+g)]. In year10 g/margin/tax equal terminal; reinvestment from year10 to11 grows exactly2.5%. Terminal ROC is a cash-funding return parameter in this uncapitalized-R&D model, not reported or economically adjusted accounting ROIC."
+      }
+    ],
+    "assumptions": {
+      "years": 10,
+      "growth": 0.13,
+      "targetMargin": 0.36,
+      "tax": 0.23,
+      "salesCapital": 2,
+      "wacc": 0.075,
+      "terminalGrowth": 0.025,
+      "terminalROIC": 0.15,
+      "otherAssets": 8714.567873535112,
+      "otherClaims": 19900,
+      "yearlyOverrides": [
+        {
+          "growth": 0.13,
+          "margin": 0.3413698020549415,
+          "taxRate": 0.17,
+          "salesCapital": 2.0,
+          "wacc": 0.08
+        },
+        {
+          "growth": 0.12,
+          "margin": 0.345,
+          "taxRate": 0.18,
+          "salesCapital": 1.7248730071694007,
+          "wacc": 0.07944444444444444
+        },
+        {
+          "growth": 0.11,
+          "margin": 0.35,
+          "taxRate": 0.19,
+          "salesCapital": 1.4875934454308057,
+          "wacc": 0.07888888888888888
+        },
+        {
+          "growth": 0.1,
+          "margin": 0.355,
+          "taxRate": 0.2,
+          "salesCapital": 1.2829548898328618,
+          "wacc": 0.07833333333333334
+        },
+        {
+          "growth": 0.09,
+          "margin": 0.36,
+          "taxRate": 0.21,
+          "salesCapital": 1.1064671294443478,
+          "wacc": 0.07777777777777778
+        },
+        {
+          "growth": 0.075,
+          "margin": 0.36,
+          "taxRate": 0.22,
+          "salesCapital": 0.9542576424493832,
+          "wacc": 0.07722222222222222
+        },
+        {
+          "growth": 0.06,
+          "margin": 0.36,
+          "taxRate": 0.23,
+          "salesCapital": 0.8229866246730252,
+          "wacc": 0.07666666666666666
+        },
+        {
+          "growth": 0.045,
+          "margin": 0.36,
+          "taxRate": 0.23,
+          "salesCapital": 0.7097737070799779,
+          "wacc": 0.07611111111111112
+        },
+        {
+          "growth": 0.035,
+          "margin": 0.36,
+          "taxRate": 0.23,
+          "salesCapital": 0.6121347542704074,
+          "wacc": 0.07555555555555556
+        },
+        {
+          "growth": 0.025,
+          "margin": 0.36,
+          "taxRate": 0.23,
+          "salesCapital": 0.5279273571956499,
+          "wacc": 0.075
+        }
+      ]
+    },
+    "scenarios": {
+      "bear": {
+        "years": 10,
+        "growth": 0.1,
+        "targetMargin": 0.3,
+        "tax": 0.25,
+        "salesCapital": 1.5,
+        "wacc": 0.08,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.08,
+        "otherAssets": 8542.348587197528,
+        "otherClaims": 19900,
+        "yearlyOverrides": [
+          {
+            "growth": 0.1,
+            "margin": 0.335,
+            "taxRate": 0.17,
+            "salesCapital": 1.5,
+            "wacc": 0.09
+          },
+          {
+            "growth": 0.08,
+            "margin": 0.325,
+            "taxRate": 0.19,
+            "salesCapital": 1.2747788601236816,
+            "wacc": 0.08888888888888889
+          },
+          {
+            "growth": 0.06,
+            "margin": 0.315,
+            "taxRate": 0.21,
+            "salesCapital": 1.0833740948121553,
+            "wacc": 0.08777777777777777
+          },
+          {
+            "growth": 0.05,
+            "margin": 0.31,
+            "taxRate": 0.23,
+            "salesCapital": 0.9207082624481095,
+            "wacc": 0.08666666666666667
+          },
+          {
+            "growth": 0.04,
+            "margin": 0.305,
+            "taxRate": 0.25,
+            "salesCapital": 0.7824662862067043,
+            "wacc": 0.08555555555555555
+          },
+          {
+            "growth": 0.035,
+            "margin": 0.3,
+            "taxRate": 0.25,
+            "salesCapital": 0.664980986943862,
+            "wacc": 0.08444444444444445
+          },
+          {
+            "growth": 0.03,
+            "margin": 0.3,
+            "taxRate": 0.25,
+            "salesCapital": 0.5651358030268114,
+            "wacc": 0.08333333333333333
+          },
+          {
+            "growth": 0.025,
+            "margin": 0.3,
+            "taxRate": 0.25,
+            "salesCapital": 0.4802821165317333,
+            "wacc": 0.08222222222222222
+          },
+          {
+            "growth": 0.025,
+            "margin": 0.3,
+            "taxRate": 0.25,
+            "salesCapital": 0.40816899270007484,
+            "wacc": 0.0811111111111111
+          },
+          {
+            "growth": 0.025,
+            "margin": 0.3,
+            "taxRate": 0.25,
+            "salesCapital": 0.3468834688346884,
+            "wacc": 0.08
+          }
+        ]
+      },
+      "bull": {
+        "years": 10,
+        "growth": 0.15,
+        "targetMargin": 0.4,
+        "tax": 0.23,
+        "salesCapital": 2.5,
+        "wacc": 0.07,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.2,
+        "otherAssets": 8821.282986529179,
+        "otherClaims": 19900,
+        "yearlyOverrides": [
+          {
+            "growth": 0.15,
+            "margin": 0.35,
+            "taxRate": 0.17,
+            "salesCapital": 2.5,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.15,
+            "margin": 0.36,
+            "taxRate": 0.18,
+            "salesCapital": 2.1463338548890345,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.14,
+            "margin": 0.37,
+            "taxRate": 0.19,
+            "salesCapital": 1.8426996066571288,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.13,
+            "margin": 0.38,
+            "taxRate": 0.2,
+            "salesCapital": 1.5820194200635609,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.11,
+            "margin": 0.39,
+            "taxRate": 0.21,
+            "salesCapital": 1.358216736149735,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.09,
+            "margin": 0.4,
+            "taxRate": 0.22,
+            "salesCapital": 1.166074625230025,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.07,
+            "margin": 0.4,
+            "taxRate": 0.23,
+            "salesCapital": 1.0011141781832982,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.05,
+            "margin": 0.4,
+            "taxRate": 0.23,
+            "salesCapital": 0.8594901012976903,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.035,
+            "margin": 0.4,
+            "taxRate": 0.23,
+            "salesCapital": 0.7379010809428954,
+            "wacc": 0.07
+          },
+          {
+            "growth": 0.025,
+            "margin": 0.4,
+            "taxRate": 0.23,
+            "salesCapital": 0.63351282863478,
+            "wacc": 0.07
+          }
+        ]
+      }
+    },
+    "snapshotOverride": {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "currency": "USD",
+      "units": "millions",
+      "periodEnd": "2019-06-30",
+      "filedAt": "2019-08-01",
+      "acceptedAt": "2019-08-01T20:09:55Z",
+      "availableFrom": "2019-08-02T13:30:00Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+      "revenue": 125843.0,
+      "ebit": 42959.0,
+      "cash": 131302.14,
+      "debt": 85474,
+      "shares": 7790,
+      "shareBasis": "June 30 common 7643m plus full 147m nonvested stock-award reserve; see future-service credit",
+      "coverShareDate": "2019-06-30"
+    },
+    "accounting": {
+      "sbc": "GAAP recurring expense retained. Existing full-award dilution separately charged; future-service overlap explicitly credited.",
+      "researchAndDevelopment": "Expensed throughout; no intangible asset or amortization restatement, no duplicate reinvestment charge.",
+      "shares": "Period-end common plus147m awards; uniform3year legacy service credit; no assumptions of future buybacks.",
+      "leases": "Finance leases financing; operating leases operating.",
+      "taxes": "Normalized future operating taxes plus distinct undiscounted legacy tax claim.",
+      "cash": "2% revenue reserve; remainder plus separate equity investments added."
+    },
+    "uncertainty": [
+      "Modern model pretraining may contain later Microsoft history. This is not a genuinely blind historical forecast or out-of-sample strategy.",
+      "Single successful surviving company is a comparator, not representative sample; no probabilities or scenario weights calibrated.",
+      "WACC components, terminal ROC, margin, growth and capital productivity are analyst judgments with no later return calibration.",
+      "Full award reserve, future-service timing/tax deduction and historical grant-price accounting versus future compensation economics are approximations.",
+      "June30 balance sheet used at August2 cutoff; July29 lower cover shares disclosed but no unsupported post-balance-sheet cash adjustment.",
+      "Fiscal year-end FCFF is discounted in full annual periods from fiscal base despite August2 decision date; a 33-day timing approximation, not exact trade-date valuation.",
+      "Deferred/uncertain tax exposures beyond specifically isolated19.9bn are not separately fair-valued; reserve sensitivities must remain visible.",
+      "Annual aggregate model cannot separately price granular cloud replacement cohorts, acquisitions, NOLs or contingent legal claims."
+    ],
+    "diagnosticFlags": [
+      "No outcome/price inputs opened by valuation worker before freeze.",
+      "No pure-D&A inference from D&A-and-other line.",
+      "No terminal reinvestment discontinuity.",
+      "No probabilities assigned."
+    ],
+    "originalFreezeSHA256": "437167e8e7655cd7421972c7b05a1f4d29cbbc694cb4ac63355448c5ab7c37a0",
+    "freezeTimestampUTC": "2026-10-17T04:40:33.726023+00:00",
+    "snapshotAdjustmentNotes": "Cash excludes a 2% revenue operating reserve; debt uses fair debt plus finance leases; shares include all 147m existing nonvested awards. Future-service overlap is credited in other assets; legacy tax obligations remain separate claims. See accounting notes and immutable freeze."
+  }
+]

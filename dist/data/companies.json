@@ -3116,6 +3116,497 @@
             "standardFactsCrossCheckedAgainstOriginalFiling": 13,
             "status": "passed"
           }
+        },
+        {
+          "id": "MSFT-FY2019",
+          "ticker": "MSFT",
+          "fiscalYear": 2019,
+          "periodEnd": "2019-06-30",
+          "fiscalPeriodEnd": "2019-06-30",
+          "filingDate": "2019-08-01",
+          "filedAt": "2019-08-01",
+          "acceptedAt": "2019-08-01T20:09:55Z",
+          "decisionCutoff": "2019-08-02T13:30:00Z",
+          "availableFrom": "2019-08-02T13:30:00Z",
+          "accession": "0001564590-19-027952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/789019/000156459019027952/msft-10k_20190630.htm",
+          "currency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "facts": {
+            "revenue": 125843.0,
+            "operatingIncome": 42959.0,
+            "cashAndEquivalents": 11356.0,
+            "shortTermInvestments": 122463.0,
+            "cash": 133819.0,
+            "debtCurrent": 5516.0,
+            "debtNoncurrent": 66662.0,
+            "commercialPaper": 0.0,
+            "financeLeaseLiability": 6574.0,
+            "operatingLeaseLiability": 7703.0,
+            "operatingLeaseCost": 1707.0,
+            "financeLeaseInterestExpense": 247.0,
+            "researchAndDevelopment": 16876.0,
+            "stockBasedCompensation": 4652.0,
+            "capitalExpenditure": 13925.0,
+            "depreciationAmortization": null,
+            "operatingCashFlow": 52185.0,
+            "netIncome": 39240.0,
+            "incomeTaxExpense": 4448.0,
+            "interestExpense": 2686.0,
+            "grossProfit": 82933.0,
+            "receivables": 29524.0,
+            "inventory": 2063.0,
+            "accountsPayable": 9382.0,
+            "shares": 7635.4094,
+            "debt": 72178.0,
+            "EBIT": 42959.0,
+            "debtIncludingFinanceLeases": 78752.0,
+            "allDebtAndLeaseLiabilities": 86455.0,
+            "depreciationAmortizationAndOther": 11682,
+            "nonvestedAwardsMillions": 147,
+            "unrecognizedFutureCompensationUSDmillions": 8600,
+            "debtFairValueUSDmillions": 78900
+          },
+          "fieldMapping": {
+            "revenue": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "operatingIncome": "OperatingIncomeLoss",
+            "cashAndEquivalents": "CashAndCashEquivalentsAtCarryingValue",
+            "shortTermInvestments": "ShortTermInvestments",
+            "cash": "CashCashEquivalentsAndShortTermInvestments",
+            "debtCurrent": "LongTermDebtCurrent",
+            "debtNoncurrent": "LongTermDebtNoncurrent",
+            "commercialPaper": "CommercialPaper",
+            "financeLeaseLiability": "FinanceLeaseLiability",
+            "operatingLeaseLiability": "OperatingLeaseLiability",
+            "operatingLeaseCost": "OperatingLeaseCost",
+            "financeLeaseInterestExpense": "FinanceLeaseInterestExpense",
+            "researchAndDevelopment": "ResearchAndDevelopmentExpense",
+            "stockBasedCompensation": "ShareBasedCompensation",
+            "capitalExpenditure": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "depreciationAmortization": "DepreciationDepletionAndAmortization",
+            "operatingCashFlow": "NetCashProvidedByUsedInOperatingActivities",
+            "netIncome": "NetIncomeLoss",
+            "incomeTaxExpense": "IncomeTaxExpenseBenefit",
+            "interestExpense": "InterestExpense",
+            "grossProfit": "GrossProfit",
+            "receivables": "AccountsReceivableNetCurrent",
+            "inventory": "InventoryNet",
+            "accountsPayable": "AccountsPayableCurrent",
+            "shares": "dei:EntityCommonStockSharesOutstanding"
+          },
+          "factEvidence": {
+            "revenue": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 125843000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingIncome": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 42959000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "cashAndEquivalents": {
+              "end": "2019-06-30",
+              "val": 11356000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "shortTermInvestments": {
+              "end": "2019-06-30",
+              "val": 122463000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "cash": {
+              "end": "2019-06-30",
+              "val": 133819000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "debtCurrent": {
+              "end": "2019-06-30",
+              "val": 5516000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "debtNoncurrent": {
+              "end": "2019-06-30",
+              "val": 66662000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "commercialPaper": {
+              "end": "2019-06-30",
+              "val": 0,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01",
+              "frame": "CY2019Q2I"
+            },
+            "financeLeaseLiability": {
+              "end": "2019-06-30",
+              "val": 6574000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingLeaseLiability": {
+              "end": "2019-06-30",
+              "val": 7703000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingLeaseCost": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 1707000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "financeLeaseInterestExpense": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 247000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "researchAndDevelopment": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 16876000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "stockBasedCompensation": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 4652000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "capitalExpenditure": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 13925000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "operatingCashFlow": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 52185000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "netIncome": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 39240000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "incomeTaxExpense": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 4448000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "interestExpense": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 2686000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "grossProfit": {
+              "start": "2018-07-01",
+              "end": "2019-06-30",
+              "val": 82933000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "receivables": {
+              "end": "2019-06-30",
+              "val": 29524000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "inventory": {
+              "end": "2019-06-30",
+              "val": 2063000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "accountsPayable": {
+              "end": "2019-06-30",
+              "val": 9382000000,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01"
+            },
+            "shares": {
+              "end": "2019-07-29",
+              "val": 7635409400,
+              "accn": "0001564590-19-027952",
+              "fy": 2019,
+              "fp": "FY",
+              "form": "10-K",
+              "filed": "2019-08-01",
+              "frame": "CY2019Q2I"
+            }
+          },
+          "coverShareDate": "2019-07-29",
+          "sharesAsOf": "2019-07-29",
+          "shareBasis": "Original contemporary cover-page outstanding common shares; no future corporate actions applied",
+          "cashDefinition": "Cash and cash equivalents plus short-term investments; assess operating cash needs and restrictions before full add-back",
+          "debtDefinition": "Current plus noncurrent debt carrying values plus reported commercial paper. Finance and operating lease liabilities separately disclosed; lease treatment must be consistent with operating cash flows.",
+          "priorHistoryAsReportedInOriginalFiling": {
+            "revenue": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 96571000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 96571.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 110360000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 110360.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 125843000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 125843.0
+              }
+            ],
+            "operatingIncome": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 29025000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 29025.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 35058000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 35058.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 42959000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 42959.0
+              }
+            ],
+            "researchAndDevelopment": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 13037000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 13037.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 14726000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 14726.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 16876000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 16876.0
+              }
+            ],
+            "stockBasedCompensation": [
+              {
+                "start": "2016-07-01",
+                "end": "2017-06-30",
+                "val": 3266000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "frame": "CY2017",
+                "valueUSDmillions": 3266.0
+              },
+              {
+                "start": "2017-07-01",
+                "end": "2018-06-30",
+                "val": 3940000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 3940.0
+              },
+              {
+                "start": "2018-07-01",
+                "end": "2019-06-30",
+                "val": 4652000000,
+                "accn": "0001564590-19-027952",
+                "fy": 2019,
+                "fp": "FY",
+                "form": "10-K",
+                "filed": "2019-08-01",
+                "valueUSDmillions": 4652.0
+              }
+            ]
+          },
+          "vintage": "Original FY2019 10-K only",
+          "missingFields": [
+            "depreciationAmortization"
+          ],
+          "interpretationNotes": [
+            "FY2019 GAAP tax rate affected by $2.6bn tax benefit from intangible-property transfers; do not extrapolate as marginal rate.",
+            "SBC is already an operating expense in GAAP EBIT; do not add back without dilution charge.",
+            "Debt excludes leases by default; alternative totals provided. Do not add operating lease debt without corresponding operating-profit/cash-flow adjustment.",
+            "Review employee option/RSU claims in original stock-based compensation note before claiming fully diluted common value.",
+            "Capex cash purchases omit finance-lease right-of-use additions; separate lease additions matter for reinvestment analysis."
+          ],
+          "revenue": 125843.0,
+          "EBIT": 42959.0,
+          "cash": 133819.0,
+          "debt": 72178.0,
+          "shares": 7635.4094,
+          "backtestEligible": true,
+          "snapshotMode": "historical-case",
+          "splitBasis": "Original contemporary cover-page outstanding common shares; no future corporate actions applied",
+          "fiscalLabel": "FY2019 ended June 30, 2019",
+          "supplementalEvidence": {
+            "depreciationAmortizationAndOther": "Original consolidated cash-flow statement; includes other adjustments, not pure D&A.",
+            "nonvestedAwardsMillions": "Original stock-based compensation note stock-based compensation; 147m nonvested shares, grant-date weighted average fair value $78.49.",
+            "unrecognizedFutureCompensationUSDmillions": "Original stock-based compensation note: $8.6bn unrecognized compensation over weighted average3yrs.",
+            "debtFairValueUSDmillions": "Original debt note, rounded $78.9bn fair value; not carrying value."
+          }
         }
       ]
     }

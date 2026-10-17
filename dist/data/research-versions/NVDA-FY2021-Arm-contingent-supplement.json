@@ -1,0 +1,57 @@
+{
+  "snapshotId": "NVDA-FY2021",
+  "type": "Post-freeze contingent-acquisition algebra; not a revised blind valuation",
+  "createdAtUTC": "2026-10-17T04:32:47.649416+00:00",
+  "exposureDisclosure": "Prepared after FY2022 packet revealed transaction outcome. Uses only FY2021 disclosed deal terms to expose omitted contingent economics; no probability is assigned, no original freeze changed, and no claim of outcome-blind supplemental analysis.",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm",
+  "sourceSections": [
+    "Pending Acquisition of Arm Limited",
+    "MD&A Recent Developments"
+  ],
+  "originalFreezeSHA256": "52e83dbdf658f0ca8b76eae1e26aaecb4d706024e16b2f13ced07b4aa933061a",
+  "knownTerms": {
+    "announcedTotalTransactionValue": 40000,
+    "signingCashAlreadyPaid": 2000,
+    "closingCash": 10000,
+    "closingSharesMillions": 44.3,
+    "cashEarnoutMaximum": 5000,
+    "alternativeStockEarnoutSharesMillions": 10.3,
+    "announcedEmployeeAwardsUpTo": 1500,
+    "conditionalSigningRefund": 1250
+  },
+  "convention": "Amounts USDmillions; shares original contemporary basis. Algebra assumes immediate closing to isolate deal economics, not a full closing-date DCF. Vadd equals incremental Arm operating value plus net synergy AFTER integration costs and incremental compensation. Do not subtract the same employee compensation twice. Earnout scenarios are alternatives, not cumulative.",
+  "standaloneBasePerShare": 247.05985003282254,
+  "rows": [
+    {
+      "incrementalArmPlusSynergyValueNetOfEmployeeCompensation": 0,
+      "noEarnoutPerShare": 215.53079485225047,
+      "cashEarnout5000PerShare": 208.00407499676348,
+      "stockEarnout10_3mPerShare": 212.24000447724575
+    },
+    {
+      "incrementalArmPlusSynergyValueNetOfEmployeeCompensation": 10000,
+      "noEarnoutPerShare": 230.5842345632244,
+      "cashEarnout5000PerShare": 223.05751470773743,
+      "stockEarnout10_3mPerShare": 227.0636036471242
+    },
+    {
+      "incrementalArmPlusSynergyValueNetOfEmployeeCompensation": 20000,
+      "noEarnoutPerShare": 245.6376742741984,
+      "cashEarnout5000PerShare": 238.1109544187114,
+      "stockEarnout10_3mPerShare": 241.88720281700265
+    },
+    {
+      "incrementalArmPlusSynergyValueNetOfEmployeeCompensation": 30000,
+      "noEarnoutPerShare": 260.6911139851723,
+      "cashEarnout5000PerShare": 253.16439412968535,
+      "stockEarnout10_3mPerShare": 256.7108019868811
+    }
+  ],
+  "breakEvenAddedValue": {
+    "noEarnout": 20944.75135645404,
+    "maxCashEarnout": 25944.75135645404,
+    "maxStockEarnout": 23489.46781179211
+  },
+  "conditionalRefundMaximumPerShareIfAvailableAndNotAlreadyInBridge": 2.0161290322580645,
+  "residual": "Arm standalone dated financial forecasts, cost of capital, credible synergies/integration costs, employee-award valuation, closing date/probability, and regulatory-state probabilities are not established in the provided NVDA packet. Announced transaction value is a price, not intrinsic value. Cannot honestly produce a probability-weighted consolidated valuation without these. Refund depends on termination circumstances and is not automatically credited."
+}
