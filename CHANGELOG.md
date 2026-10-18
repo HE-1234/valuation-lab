@@ -1,5 +1,11 @@
 # Change log
 
+## 2026-10-18 · Accurate investment-policy instructions
+
+- Corrected English and Chinese explanations of fixed versus revenue-responsive investment. Annual factors, legacy scalar multipliers, protected fixed funding and separately derived operating cash are now distinguished explicitly.
+- No financial formulas, source inputs, uncertainty defaults or saved cases changed. Protected runtime comparisons permit only two exact explanatory-prose replacements.
+- Combined release checks: 1,575 passed, zero failed, one existing raw-cache skip, including 13 new capital-policy checks. Static text-layout review is recorded separately; these checks are not an accessibility conformance certificate.
+
 ## 2026-10-18 · Fabrinet display and compact result card
 
 - Shows the verified Fabrinet company name in the ready selector and name-based search without changing source identity or saved cases.

@@ -38,5 +38,5 @@ test('full metric engine disclosures avoid stale unchanged-scalar description an
  const guided=fs.readFileSync(new URL('../dist/simulation.js',import.meta.url),'utf8');
  assert.match(guided,/metricSamplers\?'Annual operating primitives use separate Gaussian AR\(1\)/);
  const adapter=fs.readFileSync(new URL('../dist/research-simulation-view.js',import.meta.url),'utf8');assert.match(adapter,/annualTextHTML\(r.method.capitalDescription\)/);
- assert.ok(Object.keys(annualMetricMessageKeys).some(s=>s.includes('Fixed years fix the coefficient, not the resulting currency investment')));
+ assert.ok(Object.keys(annualMetricMessageKeys).some(s=>s.includes('At factor 1, fixed-schedule retains edited pre-reserve investment; revenue-responsive policies may change it')));
 });
