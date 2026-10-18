@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
+import {reverseOntoIntegration} from './onto-integration-preservation.mjs';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url)),sha=x=>createHash('sha256').update(x).digest('hex');
+const fixture=JSON.parse(read('tests/fixtures/onto-integration-v66.json'));
+test('ONTO additions retain exact hashes and exclude raw documents',()=>{for(const [p,h]of Object.entries(fixture.additions)){assert.equal(sha(read(p)),h,p);assert.doesNotMatch(p,/\/raw\//);}assert.equal(Object.keys(fixture.files).length,9);});
+test('ONTO shared hooks reverse to the exact serialized baseline and reject extra mutations',()=>{for(const [p,f]of Object.entries(fixture.files)){const bytes=read(p);assert.equal(sha(reverseOntoIntegration(p,bytes)),f.beforeSHA256,p);assert.throws(()=>reverseOntoIntegration(p,Buffer.concat([bytes,Buffer.from('\n/* mutation */')])),/exact reviewed ONTO integration bytes/);}});

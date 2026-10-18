@@ -29,7 +29,7 @@ test('NVMI immutable public package hashes, ten years and corrected share units'
  assert.equal(json(r.identity.auditPath.slice(2)).check_count,337);assert.equal(r.history.length,10);assert.equal(r.history[0].fiscalEnd,'2016-12-31');assert.equal(r.history.at(-1).fiscalEnd,'2025-12-31');
  const f=r.history.at(-1).facts;near(f.diluted_weighted_shares.value,32.8);assert.equal(r.bridge.shares,31.780111);assert.equal(r.bridge.quotedConvertibleFairValue,936.270);assert.deepEqual(r.bridge.options,[]);
  for(const row of r.history){assert.ok(row.facts.revenue.source_url);assert.ok(row.facts.revenue.unit);}
- assert.equal(incrementalPresets(incrementalPackages.at(-1),catalog)[0].ticker,'NVMI');assert.ok(Object.isFrozen(r.annualCase));const bad=structuredClone(incrementalPackages.at(-1));bad.companies[0].annualCase.annual[0].revenue++;assert.throws(()=>validateIncrementalResearch(bad));
+ assert.equal(incrementalPresets(incrementalPackages.find(x=>x.companies.some(c=>c.identity.ticker==='NVMI')),catalog)[0].ticker,'NVMI');assert.ok(Object.isFrozen(r.annualCase));const bad=structuredClone(incrementalPackages.find(x=>x.companies.some(c=>c.identity.ticker==='NVMI')));bad.companies[0].annualCase.annual[0].revenue++;assert.throws(()=>validateIncrementalResearch(bad));
 });
 test('NVMI source identity and unsupported price assumptions fail closed',()=>{
  for(const mutate of [d=>d.discountOrigin='2026-10-18',d=>d.incrementalResearch.auditSHA256='bad',d=>d.bridgeInputs.cappedCallValue=51.826]){const d=draft();mutate(d);assert.ok(researchDraftIssues(d).length);assert.ok(restoreResearchDraft(d,r.annualCase).error);}
