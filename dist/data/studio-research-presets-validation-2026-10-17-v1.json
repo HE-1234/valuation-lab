@@ -68,7 +68,7 @@
       "pass": true
     },
     {
-      "name": "AAPL: default 4,000-trial simulation executes",
+      "name": "AAPL: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -124,7 +124,7 @@
       "pass": true
     },
     {
-      "name": "MSFT: default 4,000-trial simulation executes",
+      "name": "MSFT: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -180,7 +180,7 @@
       "pass": true
     },
     {
-      "name": "AMZN: default 4,000-trial simulation executes",
+      "name": "AMZN: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -236,7 +236,7 @@
       "pass": true
     },
     {
-      "name": "GOOG: default 4,000-trial simulation executes",
+      "name": "GOOG: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -292,7 +292,7 @@
       "pass": true
     },
     {
-      "name": "META: default 4,000-trial simulation executes",
+      "name": "META: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -348,7 +348,7 @@
       "pass": true
     },
     {
-      "name": "NVDA: default 4,000-trial simulation executes",
+      "name": "NVDA: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -404,7 +404,7 @@
       "pass": true
     },
     {
-      "name": "TSLA: default 4,000-trial simulation executes",
+      "name": "TSLA: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -460,7 +460,7 @@
       "pass": true
     },
     {
-      "name": "COHR: default 4,000-trial simulation executes",
+      "name": "COHR: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -516,7 +516,7 @@
       "pass": true
     },
     {
-      "name": "LITE: default 4,000-trial simulation executes",
+      "name": "LITE: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -572,7 +572,7 @@
       "pass": true
     },
     {
-      "name": "AAOI: default 4,000-trial simulation executes",
+      "name": "AAOI: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -628,7 +628,7 @@
       "pass": true
     },
     {
-      "name": "NBIS: default 4,000-trial simulation executes",
+      "name": "NBIS: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -684,7 +684,7 @@
       "pass": true
     },
     {
-      "name": "MU: default 4,000-trial simulation executes",
+      "name": "MU: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -740,7 +740,7 @@
       "pass": true
     },
     {
-      "name": "AVGO: default 4,000-trial simulation executes",
+      "name": "AVGO: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -796,7 +796,7 @@
       "pass": true
     },
     {
-      "name": "TSM: default 4,000-trial simulation executes",
+      "name": "TSM: default 5,000-trial simulation executes",
       "pass": true
     },
     {
@@ -871,7 +871,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "aapl-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -1385,26 +1385,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 1941624.2446652504,
-        "median": 1936483.7156330487,
+        "mean": 1941739.465528029,
+        "median": 1933719.875464302,
         "quantiles": {
-          "p5": 1580180.882693296,
-          "p10": 1647448.7192203454,
-          "p25": 1776608.1640629633,
-          "p50": 1936483.7156330487,
-          "p75": 2100758.8700472726,
-          "p90": 2242573.1187968315,
-          "p95": 2314094.9193203878
+          "p5": 1580693.7584968365,
+          "p10": 1650965.9409068543,
+          "p25": 1774793.6191566156,
+          "p50": 1933719.875464302,
+          "p75": 2101237.379119799,
+          "p90": 2242425.265260407,
+          "p95": 2317652.1609937106
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -1440,7 +1440,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "msft-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -1954,26 +1954,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 2331949.623026908,
-        "median": 2316867.30673939,
+        "mean": 2333201.878479258,
+        "median": 2319722.718469892,
         "quantiles": {
-          "p5": 1743815.1498576442,
-          "p10": 1842731.0239988808,
-          "p25": 2057770.7339455178,
-          "p50": 2316867.30673939,
-          "p75": 2583962.736808327,
-          "p90": 2824432.1341718286,
-          "p95": 2968910.219408416
+          "p5": 1738242.0486967762,
+          "p10": 1838819.5948850908,
+          "p25": 2058660.758602222,
+          "p50": 2319722.718469892,
+          "p75": 2591152.0717986347,
+          "p90": 2828199.2386948476,
+          "p95": 2971721.4212802057
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -2008,7 +2008,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "amzn-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -2522,26 +2522,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 1084954.3229990476,
-        "median": 1078361.4576839576,
+        "mean": 1081688.6395381158,
+        "median": 1077713.0521542083,
         "quantiles": {
-          "p5": 513877.7109377142,
-          "p10": 613048.5663789172,
-          "p25": 813941.8295497107,
-          "p50": 1078361.4576839576,
-          "p75": 1335377.3962103399,
-          "p90": 1560832.719330163,
-          "p95": 1708444.4520058096
+          "p5": 506206.22243426804,
+          "p10": 606338.8986560301,
+          "p25": 811081.0489789767,
+          "p50": 1077713.0521542083,
+          "p75": 1331102.0210833792,
+          "p90": 1560362.9900799892,
+          "p95": 1704302.5767350453
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -2582,7 +2582,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "goog-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -3096,26 +3096,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 2066379.5474262922,
-        "median": 1996102.5488442837,
+        "mean": 2065579.7493592452,
+        "median": 2000533.936516834,
         "quantiles": {
-          "p5": 911428.6704886172,
-          "p10": 1106636.7135552212,
-          "p25": 1479801.8114740006,
-          "p50": 1996102.5488442837,
-          "p75": 2563631.1822067657,
-          "p90": 3157575.780888364,
-          "p95": 3469264.8792956555
+          "p5": 912831.8614030019,
+          "p10": 1104031.7784041918,
+          "p25": 1481238.7055331627,
+          "p50": 2000533.936516834,
+          "p75": 2563808.7545450795,
+          "p90": 3141130.542927717,
+          "p95": 3459330.113035959
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -3152,7 +3152,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "meta-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -3666,26 +3666,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 676406.3260665932,
+        "mean": 676763.4687255558,
         "median": 673485.3286922923,
         "quantiles": {
-          "p5": 368054.010432252,
-          "p10": 423451.7065157534,
+          "p5": 368676.41609529033,
+          "p10": 425879.9939285425,
           "p25": 540227.8850206519,
           "p50": 673485.3286922923,
-          "p75": 806097.5313780045,
-          "p90": 926851.8424298413,
-          "p95": 994029.6290330979
+          "p75": 807497.9809167595,
+          "p90": 926934.293241269,
+          "p95": 992254.7600864667
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -3721,7 +3721,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "nvda-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -4367,26 +4367,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 4491018.707796773,
-        "median": 4397393.007239498,
+        "mean": 4500461.582485239,
+        "median": 4409373.56453593,
         "quantiles": {
-          "p5": 2313944.3018033504,
-          "p10": 2625836.0530731403,
-          "p25": 3352364.6218875423,
-          "p50": 4397393.007239498,
-          "p75": 5432143.0755415335,
-          "p90": 6460390.550981918,
-          "p95": 7216914.596755858
+          "p5": 2303532.6358099254,
+          "p10": 2628836.381212593,
+          "p25": 3370547.552777908,
+          "p50": 4409373.56453593,
+          "p75": 5438161.250603342,
+          "p90": 6489957.963581094,
+          "p95": 7219559.857595964
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -4422,7 +4422,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "tsla-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -4936,26 +4936,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 9640.810207932116,
-        "median": 6977.426581591542,
+        "mean": 9461.553435214173,
+        "median": 6699.263059164026,
         "quantiles": {
-          "p5": -24067.237781121217,
-          "p10": -17661.41726059232,
-          "p25": -7754.754059200366,
-          "p50": 6977.426581591542,
-          "p75": 24045.707830389976,
-          "p90": 41525.92393020539,
-          "p95": 52625.41333797352
+          "p5": -24107.780543666755,
+          "p10": -17743.233530902715,
+          "p25": -7756.44530225042,
+          "p50": 6699.263059164026,
+          "p75": 23893.482258806,
+          "p90": 41322.32850348056,
+          "p95": 52222.980145141286
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -4990,7 +4990,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "cohr-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -5636,26 +5636,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 18423.641641311962,
-        "median": 17973.211541713994,
+        "mean": 18431.68008740512,
+        "median": 18004.058768814306,
         "quantiles": {
-          "p5": 10527.228757455325,
-          "p10": 11854.512065069992,
-          "p25": 14480.591718843923,
-          "p50": 17973.211541713994,
-          "p75": 21867.720143165363,
-          "p90": 25663.451223146818,
-          "p95": 27575.760557767077
+          "p5": 10514.878672534753,
+          "p10": 11853.371081908477,
+          "p25": 14505.142797294382,
+          "p50": 18004.058768814306,
+          "p75": 21877.187902647638,
+          "p90": 25566.73985927635,
+          "p95": 27588.984255407915
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -5692,7 +5692,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "lite-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -6338,26 +6338,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 14925.003373463744,
-        "median": 14432.438493083158,
+        "mean": 14860.175696779963,
+        "median": 14367.86620280687,
         "quantiles": {
-          "p5": 7301.495780546284,
-          "p10": 8451.949888345784,
-          "p25": 10902.397603138495,
-          "p50": 14432.438493083158,
-          "p75": 18287.602865070687,
-          "p90": 22132.523390337006,
-          "p95": 24514.858591059634
+          "p5": 7274.464381970116,
+          "p10": 8453.15055952574,
+          "p25": 10886.645092581397,
+          "p50": 14367.86620280687,
+          "p75": 18127.979632324947,
+          "p90": 21997.051067379332,
+          "p95": 24437.378046588346
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -6396,7 +6396,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "aaoi-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -6910,32 +6910,30 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 3095.0528845640965,
-        "median": 2542.113342622458,
+        "mean": 2754.1063502240904,
+        "median": 2212.4277194069873,
         "quantiles": {
-          "p5": -1689.6719343096604,
-          "p10": -1220.609213695293,
-          "p25": 215.29965250312262,
-          "p50": 2542.113342622458,
-          "p75": 5197.369446682058,
-          "p90": 8262.417793780749,
-          "p95": 10145.619129034874
+          "p5": -1944.4407223537046,
+          "p10": -1452.3896040827556,
+          "p25": -43.2597766333342,
+          "p50": 2212.4277194069873,
+          "p75": 4784.144874689377,
+          "p90": 7832.961511927378,
+          "p95": 9641.201296239655
         },
         "bridgeCoverage": {
-          "accepted": 0,
-          "eligible": 0,
-          "blocked": 4000,
-          "total": 4000,
-          "complete": false,
-          "share": 0,
-          "reasons": {
-            "June capital cannot be allocated against the December 31 forecast-origin EV without the missing 2026 operating/capital bridge.": 4000
-          },
-          "baselineEligible": false
+          "accepted": 5000,
+          "eligible": 5000,
+          "blocked": 0,
+          "total": 5000,
+          "complete": true,
+          "share": 1,
+          "reasons": {},
+          "baselineEligible": true
         },
         "hasNegativeEV": true
       },
@@ -6966,7 +6964,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "nbis-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -7348,33 +7346,32 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": -9882.594584534552,
-        "median": -9747.529333675226,
+        "mean": -14018.11521760894,
+        "median": -13935.454117576488,
         "quantiles": {
-          "p5": -22133.085070296416,
-          "p10": -19459.82193565368,
-          "p25": -14932.031390318627,
-          "p50": -9747.529333675226,
-          "p75": -4853.651783777651,
-          "p90": -554.5018247532471,
-          "p95": 1752.8709281028391
+          "p5": -25710.752780824387,
+          "p10": -23269.74409713403,
+          "p25": -18876.964630428374,
+          "p50": -13935.454117576488,
+          "p75": -9147.030882315146,
+          "p90": -5148.154908780958,
+          "p95": -2753.2246819694856
         },
         "bridgeCoverage": {
           "accepted": 0,
           "eligible": 0,
-          "blocked": 4000,
-          "total": 4000,
+          "blocked": 5000,
+          "total": 5000,
           "complete": false,
           "share": 0,
           "reasons": {
-            "Reconcile the December forecast origin with 2026 operating FCFF, capex, cash and customer advances.": 4000,
-            "Per-series June/August convertible principal, accretion, extinguishment, option value and settlement shares.": 4000,
-            "Actual secured-facility draws, collateral/restricted cash, August financing proceeds/fees and acquisition consideration.": 4000,
-            "Common shares including pre-funded warrants once, employee awards, subsidiary SAFE/earnouts and noncore stakes.": 4000
+            "Positive residual before unresolved claims; common-equity value remains uncomputed until those claims are valued.": 1337,
+            "Convertible debt option values, conflicting historical maturity figures, accrued-interest allocation, acquisition consideration, existing awards and subsidiary claims are unresolved. The subtotal is explicitly BEFORE these claims.": 5000,
+            "No positive residual before unresolved claims under these operating and capital assumptions. This is not a zero-dollar stock valuation.": 3663
           },
           "baselineEligible": false
         },
@@ -7410,7 +7407,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "mu-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -7924,26 +7921,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 545018.1386803624,
-        "median": 535577.7864453159,
+        "mean": 545076.6179773699,
+        "median": 536394.8443835985,
         "quantiles": {
-          "p5": 390943.0742917096,
-          "p10": 416897.8329884358,
-          "p25": 472033.14532562264,
-          "p50": 535577.7864453159,
-          "p75": 612171.6846137613,
-          "p90": 682126.6941069862,
-          "p95": 728107.7201622279
+          "p5": 390566.5919654938,
+          "p10": 417691.54069623526,
+          "p25": 472362.3348663874,
+          "p50": 536394.8443835985,
+          "p75": 611407.5735935974,
+          "p90": 681452.0691428747,
+          "p95": 727156.4398860655
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -7979,7 +7976,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "avgo-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -8625,26 +8622,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 1404406.7034869841,
-        "median": 1387568.9536965068,
+        "mean": 1406164.8208437362,
+        "median": 1387358.1538523599,
         "quantiles": {
-          "p5": 669326.7466162723,
-          "p10": 781482.4308039747,
-          "p25": 1024698.5463599628,
-          "p50": 1387568.9536965068,
-          "p75": 1736308.2983803588,
-          "p90": 2059678.6051758907,
-          "p95": 2238771.4444285696
+          "p5": 670180.9637464739,
+          "p10": 779769.0613385964,
+          "p25": 1025811.579316126,
+          "p50": 1387358.1538523599,
+          "p75": 1738749.4968151296,
+          "p90": 2064522.0994074012,
+          "p95": 2242355.234750823
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},
@@ -8682,7 +8679,7 @@
       },
       "simulation": {
         "config": {
-          "trials": 4000,
+          "trials": 5000,
           "seed": "tsm-research-2026-10-17-v1",
           "binCount": 36,
           "dependence": "independent",
@@ -9328,26 +9325,26 @@
             "parameterMeaning": "Bounds and parameters describe the selected input distribution; they are analyst assumptions, not calibrated probabilities."
           }
         },
-        "attempts": 4000,
-        "accepted": 4000,
+        "attempts": 5000,
+        "accepted": 5000,
         "excluded": 0,
         "exclusions": {},
-        "mean": 41388533.121952005,
-        "median": 40653891.908386685,
+        "mean": 41366502.20540065,
+        "median": 40622568.08144502,
         "quantiles": {
-          "p5": 29041423.887672227,
-          "p10": 31297587.55407107,
-          "p25": 35368881.28188793,
-          "p50": 40653891.908386685,
-          "p75": 46687478.23859496,
-          "p90": 52476753.42143636,
-          "p95": 56251014.128558636
+          "p5": 29076608.206546262,
+          "p10": 31296148.166104745,
+          "p25": 35329065.63822931,
+          "p50": 40622568.08144502,
+          "p75": 46661664.01329355,
+          "p90": 52591874.5987003,
+          "p95": 56395874.46626313
         },
         "bridgeCoverage": {
-          "accepted": 4000,
-          "eligible": 4000,
+          "accepted": 5000,
+          "eligible": 5000,
           "blocked": 0,
-          "total": 4000,
+          "total": 5000,
           "complete": true,
           "share": 1,
           "reasons": {},

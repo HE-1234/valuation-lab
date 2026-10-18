@@ -61,7 +61,8 @@ const protectedHashes={
   "dist/data/research-versions/market-anchor-stress-v1.json": "34847cb0eec11e81249af9395d1908730c6056fcd0235d2d9e87a6dc703b0c0a",
   "dist/data/research-versions/operating-miss-diagnosis-v1.json": "4d89b7c505e8c3cf58646cdc3f2f566aa2874a2ed23ab772ed31a5c3aea1c57d",
   "dist/data/reverse-dcf-diagnostics.json": "3d6649d8a4eb2f0b898eede646f08e4bf766095b9834f434daadec0c1c09adfe",
-  "dist/data/simulation-methodology.html": "b7861207bf07c1459f7fc4d3a48134e8b870313e702dfe5e033dd8478770218f",
+  // Default attempted-scenario count moved from 4,000 to 5,000.
+  "dist/data/simulation-methodology.html": "3786be0555b1275ffbb2c9d8eb5b39a592b249ad9c1383963e190634ca40636e",
   "dist/engine.js": "3229a8fcc63a64b34051be19e375484445878c9cd7ada030fa8b3397dac8e8f7",
 };
 function numericLeaves(x,p='',a=[]){if(typeof x==='number'||x===null||typeof x==='boolean')a.push([p,x]);else if(x&&typeof x==='object')for(const k of Object.keys(x).sort())numericLeaves(x[k],p+'/'+k,a);return a;}

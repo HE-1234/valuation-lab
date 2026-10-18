@@ -24,7 +24,7 @@ export function simulationDefaults(assumptions = defaults) {
  const a = {...defaults,...assumptions};
  const bounds = (mode, width, low, high) => ({type:'triangular',low:Math.max(low,mode-width),mode,high:Math.min(high,mode+width)});
  return {
-  trials:4000, seed:'valuation-lab', binCount:36, dependence:'independent', method:'annual-path', annualPath:annualPathDefaults(a.years),annualMetrics:annualMetricDefaults(a.years),annualTerminal:annualTerminalDefaults({growth:a.terminalGrowth,taxRate:a.tax,roic:a.terminalROIC}),
+  trials:5000, seed:'valuation-lab', binCount:36, dependence:'independent', method:'annual-path', annualPath:annualPathDefaults(a.years),annualMetrics:annualMetricDefaults(a.years),annualTerminal:annualTerminalDefaults({growth:a.terminalGrowth,taxRate:a.tax,roic:a.terminalROIC}),
   drivers:{
    growth:bounds(a.growth,.05,-.5,1),
    targetMargin:bounds(a.targetMargin,.05,0,1),
@@ -204,7 +204,7 @@ export function validateSimulationConfig(config, assumptions = defaults) {
  assertObject(config,'Simulation settings');
  const unknown = Object.keys(config).filter(k => !['trials','seed','binCount','dependence','drivers','method','annualPath','annualMetrics','annualTerminal'].includes(k));
  if (unknown.length) throw new Error(`Unknown simulation setting: ${unknown.join(', ')}.`);
- const c = {trials:4000,seed:'valuation-lab',binCount:36,dependence:'independent',...config,drivers:{}};
+ const c = {trials:5000,seed:'valuation-lab',binCount:36,dependence:'independent',...config,drivers:{}};
  if (!Number.isInteger(c.trials) || c.trials < 1 || c.trials > 50000) throw new Error('Trials must be an integer from 1 to 50,000.');
  if (!Number.isInteger(c.binCount) || c.binCount < 1 || c.binCount > 200) throw new Error('Histogram bin count must be an integer from 1 to 200.');
  if (!(typeof c.seed === 'string' && c.seed.trim().length > 0 && c.seed.length <= 128) && !Number.isSafeInteger(c.seed)) throw new Error('Seed must be a nonempty string of at most 128 characters or a safe integer.');

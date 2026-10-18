@@ -23,7 +23,7 @@ test('complete presets: all fourteen validate against unchanged full annual sour
   assert.equal(d.forecastHorizonYears,source.forecastHorizonYears);assert.equal(d.researchPreset.version,STUDIO_PRESETS_VERSION);
   for(const option of researchBridgeDefinition(preset.ticker).optionDefinitions)assert.ok(Object.hasOwn(d.bridgeInputs,option.key),preset.ticker+' '+option.key);
   assert.ok(preset.rationale.growthDuration);assert.ok(preset.parameterRationale);assert.ok(preset.simulationRationale);
-  assert.equal(preset.simulationConfig.dependence,'independent');assert.equal(preset.simulationConfig.trials,4000);
+  assert.equal(preset.simulationConfig.dependence,'independent');assert.equal(preset.simulationConfig.trials,5000);
  }
 });
 
