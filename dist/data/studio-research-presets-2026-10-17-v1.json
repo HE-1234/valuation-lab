@@ -39,7 +39,7 @@
     "units": "Money in company-currency millions. Rates are decimals; growth/margin/WACC stresses are additive percentage-point fractions; investment factor is a unitless multiple. TSM is TWD, all other names USD.",
     "timing": "Forecast-origin operating values are available. Date and claim gates remain intact; no current share price or current equity value is manufactured.",
     "terminal": "Exact source terminal policy and disclosed transition mismatches remain. No hidden smoothing, financial plug or double-counted investment.",
-    "sampling": "5,000 attempted trials, deterministic ticker seed, one vector per full annual path, 36 display bins, independent subjective stress draws, no clipping/redraw of invalid outcomes.",
+    "sampling": "4,000 attempted trials, deterministic ticker seed, one vector per full annual path, 36 display bins, independent subjective stress draws, no clipping/redraw of invalid outcomes.",
     "noPriceFit": true
   },
   "inputHashes": {
@@ -671,7 +671,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "aapl-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -740,7 +740,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'aapl-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -1757,7 +1757,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "msft-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -1825,7 +1825,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'msft-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -2999,7 +2999,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "amzn-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -3069,7 +3069,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'amzn-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -4323,7 +4323,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "goog-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -4391,7 +4391,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'goog-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -5278,7 +5278,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "meta-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -5348,7 +5348,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'meta-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -6182,7 +6182,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "nvda-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -6254,7 +6254,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'nvda-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -7168,7 +7168,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "tsla-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -7238,7 +7238,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'tsla-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -8039,7 +8039,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "cohr-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -8111,7 +8111,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'cohr-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -8936,7 +8936,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "lite-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -9007,7 +9007,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'lite-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -9986,7 +9986,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "aaoi-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -10056,7 +10056,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'aaoi-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -11037,7 +11037,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "nbis-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -11106,7 +11106,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'nbis-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -12110,7 +12110,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "mu-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -12180,7 +12180,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'mu-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -13040,7 +13040,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "avgo-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -13111,7 +13111,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'avgo-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",
@@ -14252,7 +14252,7 @@
         "reason": ""
       },
       "simulationConfig": {
-        "trials": 5000,
+        "trials": 4000,
         "seed": "tsm-research-2026-10-17-v1",
         "binCount": 36,
         "dependence": "independent",
@@ -14324,7 +14324,7 @@
       },
       "simulationRationale": {
         "classification": "Subjective conditional scenario uncertainty, authored 2026-10-17. Ranges and frequencies are not empirically calibrated probabilities, stock-price forecasts, expected returns, or complete downside/funding probabilities.",
-        "trials": "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+        "trials": "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
         "seed": "Fixed ticker-specific seed 'tsm-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",
         "binCount": "36 equal-width histogram bins are a display choice only; underlying draws and quantiles do not depend on the bin count.",
         "dependence": "Independent stress draws are an explicit simplification, not measured economic independence. No evidence-backed company correlation matrix is available. Growth, margins and capital can co-move, so joint-tail results are incomplete; Fixed inputs have no defined correlation.",

@@ -22,7 +22,7 @@ test('early and later inputs update exact modeled efficiency and live diagnostic
  const input=h.get('#guided-capital-laterSalesCapital');input.focus();const before=h.state();h.input('#guided-capital-laterSalesCapital','4.987654321');
  assert.equal(h.get('#guided-capital-laterSalesCapital'),input);assert.equal(h.focus(),input);assert.equal(input.value,'4.987654321');assert.equal(h.state().capitalPath.laterSalesCapital,4.987654321);assert.equal(h.state().assumptions.salesCapital,2.123456789);
  const v=value(h);assert.equal(v.operatingProfile.annualPath[0].salesCapital,2.123456789);assert.equal(v.operatingProfile.annualPath[5].salesCapital,4.987654321);
- const panel=h.get('#guided-capital-diagnostics');assert.match(panel.innerHTML,/Early sales \/ capital: <b>2.123×<\/b>/);assert.match(panel.innerHTML,/Later sales \/ capital: <b>4.988×<\/b>/);assert.match(panel.textContent,/later phase’s start in year 6/);assert.match(panel.textContent,/over 15 years/);
+ const panel=h.get('#guided-capital-diagnostics');assert.match(panel.innerHTML,/Early sales \/ capital: <b>2.12×<\/b>/);assert.match(panel.innerHTML,/Later sales \/ capital: <b>4.99×<\/b>/);assert.match(panel.textContent,/later phase’s start in year 6/);assert.match(panel.textContent,/over 15 years/);
  h.get('#guided-capital-annual-detail').open=true;h.input('#guided-capital-laterSalesCapital','3.75');assert.equal(h.get('#guided-capital-annual-detail').open,true);assert.equal(h.get('#guided-capital-laterSalesCapital'),input);
  h.get('#undo-input').click();assert.deepEqual(h.state(),before);
 });
@@ -46,8 +46,8 @@ test('invalid capital text and ordering withhold value, diagnostics, export and 
 
 test('capital inputs persist per company and research reset plus undo restores the entire phase draft',async()=>{
  const h=await startStudio();h.step(4);h.change('#guided-capital-mode','phased');h.input('#guided-capital-laterSalesCapital','6.123456789');const initial=h.state();
- const reloaded=await startStudio({storage:h.storage});assert.deepEqual(unstamped(reloaded.state()),unstamped(initial));assert.equal(reloaded.get('#guided-capital-laterSalesCapital').value,'6.123456789');
- h.change('#current-company','MSFT');assert.equal(h.state('MSFT').capitalPath,undefined);h.change('#current-company','AAPL');assert.equal(h.state().capitalPath.laterSalesCapital,6.123456789);const before=h.state();h.get('#load-base-case').click();assert.equal(h.state().capitalPath,undefined);assert.equal(h.get('#guided-capital-mode').value,'existing');h.get('#undo-base-case').click();assert.deepEqual(unstamped(h.state()),unstamped(before));assert.equal(h.get('#guided-capital-laterSalesCapital').value,'6.123456789');
+ const reloaded=await startStudio({storage:h.storage});assert.deepEqual(unstamped(reloaded.state()),unstamped(initial));assert.equal(reloaded.get('#guided-capital-laterSalesCapital').value,'6.12');reloaded.get('#guided-capital-laterSalesCapital').onfocus();assert.equal(reloaded.get('#guided-capital-laterSalesCapital').value,'6.123456789');
+ h.change('#current-company','MSFT');assert.equal(h.state('MSFT').capitalPath,undefined);h.change('#current-company','AAPL');assert.equal(h.state().capitalPath.laterSalesCapital,6.123456789);const before=h.state();h.get('#load-base-case').click();assert.equal(h.state().capitalPath,undefined);assert.equal(h.get('#guided-capital-mode').value,'existing');h.get('#undo-base-case').click();assert.deepEqual(unstamped(h.state()),unstamped(before));assert.equal(h.get('#guided-capital-laterSalesCapital').value,'6.12');h.get('#guided-capital-laterSalesCapital').onfocus();assert.equal(h.get('#guided-capital-laterSalesCapital').value,'6.123456789');
 });
 
 test('diagnostic values use actual annual margins, taxes, investment and ratios, with no fictitious capital denominator',()=>{

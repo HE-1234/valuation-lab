@@ -49,13 +49,27 @@ function hiddenByAncestor(node) {
  return false;
 }
 
+function canReceiveFocus(node) {
+ if (!node?.focus || node.isConnected === false || hiddenByAncestor(node) || node.disabled ||
+  node.getAttribute?.('aria-disabled') === 'true' || node.matches?.(':disabled')) return false;
+ for (let ancestor = node; ancestor; ancestor = ancestor.parentElement) {
+  if (ancestor.inert || ancestor.getAttribute?.('inert') != null) return false;
+ }
+ // Native geometry covers CSS-hidden controls and closed disclosure contents;
+ // synthetic DOMs omit these browser-only checks rather than inventing layout.
+ if (node.getClientRects && !node.getClientRects().length) return false;
+ const visibility = node.ownerDocument?.defaultView?.getComputedStyle?.(node)?.visibility;
+ return visibility !== 'hidden' && visibility !== 'collapse';
+}
+
 function focusWithoutScrolling(node) {
- if (!node?.focus || node.isConnected === false || hiddenByAncestor(node)) return;
+ if (!canReceiveFocus(node)) return false;
  node.focus({preventScroll: true});
+ return node.ownerDocument?.activeElement === node;
 }
 
 /**
- * createContextualEvidencePanel({host, id?, title?, onOpen?, onClose?})
+ * createContextualEvidencePanel({host, id?, title?, onOpen?, onClose?, getFocusFallback?})
  *
  * open({invoker, title?, nodes?: Node[], html?: string, key?: string}) opens in
  * one action. `html` is for application-owned markup only; prefer existing nodes.
@@ -68,7 +82,7 @@ function focusWithoutScrolling(node) {
  * Call close({restoreFocus:false}) before replacing an editor's markup.
  * Callbacks receive {element, invoker, key}; onClose also receives reason.
  */
-export function createContextualEvidencePanel({host, id, title = 'Evidence', onOpen, onClose} = {}) {
+export function createContextualEvidencePanel({host, id, title = 'Evidence', onOpen, onClose, getFocusFallback} = {}) {
  if (!host?.ownerDocument || !host.appendChild) throw new TypeError('An evidence panel needs a DOM host.');
  const document = host.ownerDocument;
  const panelId = id || `contextual-evidence-${++nextPanelId}`;
@@ -133,12 +147,35 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   animation.onfinish = () => { if (version === animationVersion) animation = null; };
  }
 
+ const originalHeaderTop = header.style?.top || '';
+ function updateStickyHeader() {
+  if (!header.style) return;
+  // Read the stylesheet's current breakpoint before applying an offset. Never
+  // make Guided's static header sticky or retain a stale mobile/desktop top.
+  header.style.top = originalHeaderTop;
+  const style = view?.getComputedStyle?.(header);
+  if (style?.position !== 'sticky') return;
+  const nav = document.querySelector?.('body > aside'), navStyle = nav && view?.getComputedStyle?.(nav), navBounds = nav?.getBoundingClientRect?.();
+  if (!navBounds || ![navBounds.top, navBounds.bottom].every(Number.isFinite) || !['sticky', 'fixed'].includes(navStyle?.position) || navBounds.bottom <= 0) return;
+  const padding = Math.max(0, parseFloat(view.getComputedStyle?.(document.documentElement)?.scrollPaddingTop) || 0);
+  if (navBounds.top > Math.max(padding, parseFloat(style.top) || 0)) return;
+  header.style.top = Math.max(parseFloat(style.top) || 0, padding, navBounds.bottom + 8) + 'px';
+ }
  function revealHeader() {
   // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.
-  const bounds = header.getBoundingClientRect?.();
-  if (bounds && Number.isFinite(view?.innerHeight) && (bounds.top < 0 || bounds.bottom > view.innerHeight)) {
-   element.scrollIntoView?.({block: 'start', behavior: 'auto'});
-  }
+  updateStickyHeader();
+  const bounds = header.getBoundingClientRect?.(), height = view?.innerHeight;
+  if (!bounds || ![bounds.top, bounds.bottom, height].every(Number.isFinite) || height <= 0) return;
+  const pageStyle = view.getComputedStyle?.(document.documentElement);
+  let top = Math.max(0, parseFloat(pageStyle?.scrollPaddingTop) || 0);
+  const bottom = height - Math.max(0, parseFloat(pageStyle?.scrollPaddingBottom) || 0);
+  const nav = document.querySelector?.('body > aside'), navStyle = nav && view.getComputedStyle?.(nav), navBounds = nav?.getBoundingClientRect?.();
+  if (navBounds && [navBounds.top, navBounds.bottom].every(Number.isFinite) && ['sticky', 'fixed'].includes(navStyle?.position) && navBounds.top <= top && navBounds.bottom > 0) top = Math.max(top, navBounds.bottom + 8);
+  if (bottom <= top || bounds.top >= top && bounds.bottom <= bottom) return;
+  // Match the quiz reveal policy: respect the actual wrapping navigation and
+  // bypass global smooth scrolling, including for reduced-motion users.
+  if (view.scrollBy) view.scrollBy({top: bounds.top - top, behavior: 'instant'});
+  else element.scrollIntoView?.({block: 'start', behavior: 'auto'});
  }
 
  function rememberPosition(current) {
@@ -178,13 +215,21 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   if (!session) return false;
   cancelMotion();
   const current = session;
+  const focusLeavingPanel = element.contains(document.activeElement);
   session = null;
   restoreContent(current);
   element.hidden = true;
   element.setAttribute('data-state', 'closed');
   // Layout mode must return before restoring focus (especially on mobile).
   onClose?.({element, invoker: current.invoker, key: current.key, reason});
-  if (restoreFocus) focusWithoutScrolling(current.invoker);
+  if (restoreFocus && !focusWithoutScrolling(current.invoker) &&
+   (focusLeavingPanel || document.activeElement === document.body ||
+    document.activeElement === document.documentElement || !canReceiveFocus(document.activeElement))) {
+   // Resolve after onClose restores the active workspace/mobile layout. A
+   // visible input outside this nonmodal panel keeps its focus on Escape.
+   const candidates = getFocusFallback?.({invoker: current.invoker, key: current.key, reason});
+   for (const candidate of [candidates].flat()) if (focusWithoutScrolling(candidate)) break;
+  }
   if (restorePosition) restoreScroll(current.context);
   return true;
  }
@@ -262,6 +307,11 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   event.preventDefault();
   close({reason: 'escape'});
  };
+ const onHeaderResize = () => { if (session && !destroyed) updateStickyHeader(); };
+ const navigation = document.querySelector?.('body > aside');
+ const Resize = view?.ResizeObserver;
+ const headerObserver = navigation && typeof Resize === 'function' ? new Resize(onHeaderResize) : null;
+ headerObserver?.observe(navigation);
  const onCloseClick = () => close();
  const onMotionChange = () => { if (media.matches) cancelMotion(); };
  const onRouteChange = event => {
@@ -276,6 +326,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
  closeButton.addEventListener('click', onCloseClick);
  document.addEventListener('keydown', onKeydown);
  view?.addEventListener?.('valuation:tab-change', onRouteChange);
+ view?.addEventListener?.('resize', onHeaderResize);
  media?.addEventListener?.('change', onMotionChange);
  if (!media?.addEventListener) media?.addListener?.(onMotionChange);
 
@@ -286,6 +337,9 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   cancelMotion();
   document.removeEventListener('keydown', onKeydown);
   view?.removeEventListener?.('valuation:tab-change', onRouteChange);
+  view?.removeEventListener?.('resize', onHeaderResize);
+  headerObserver?.disconnect();
+  if (header.style) header.style.top = originalHeaderTop;
   closeButton.removeEventListener('click', onCloseClick);
   media?.removeEventListener?.('change', onMotionChange);
   if (!media?.removeEventListener) media?.removeListener?.(onMotionChange);

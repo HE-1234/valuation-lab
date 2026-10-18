@@ -1,3 +1,4 @@
+import {jointErrorDescriptor} from './joint-simulation-view.js';
 import {annualMetricMessageKeys} from './annual-metric-messages.js';
 import {t,registerCatalog,bindText,localizedText,escapeLocalizedText} from './i18n.js';
 import en from './locales/simulation-errors.en.js';
@@ -9,6 +10,7 @@ const patterns=[
 [/^(.+) must be an object\.$/,"simulation-errors.object",["name"]],[/^(.+): unsupported distribution type\.$/,"simulation-errors.type",["driver"]],[/^(.+): (.+) must be finite numbers\.$/,"simulation-errors.finite",["driver", "fields"]],[/^(.+): (.+) supports only (.+)\.$/,"simulation-errors.fields",["driver", "type", "fields"]],[/^(.+): require low ≤ mode ≤ high\.$/,"simulation-errors.triangle",["driver"]],[/^(.+): require low < high; use Fixed for a constant input\.$/,"simulation-errors.bounds",["driver"]],[/^(.+): numerical range is too wide\.$/,"simulation-errors.width",["driver"]],[/^(.+): distribution outside supported bounds \((.+)\)\.$/,"simulation-errors.support",["driver", "bounds"]],[/^(.+): normal SD must be strictly positive; use Fixed for zero uncertainty\.$/,"simulation-errors.sd",["driver"]],[/^Unknown simulation setting: (.+)\.$/,"simulation-errors.unknown",["setting"]],[/^Unsupported uncertain driver: (.+)\.$/,"simulation-errors.driver",["driver"]]];
 export function simulationErrorDescriptor(message){
  const key=exact[message];if(key)return {key,params:{}};
+ const joint=jointErrorDescriptor(message);if(joint)return joint;
  for(const [pattern,key,names]of patterns){const match=pattern.exec(message);if(match)return {key,params:Object.fromEntries(names.map((name,i)=>[name,match[i+1]]))};}
  for(const [prefix,key]of [['Saved uncertainty settings are invalid. Starting ranges are shown below; edit them or reset to calculate. ','simulation-errors.saved'],['Restored uncertainty settings are invalid. ','simulation-errors.restored']])if(message.startsWith(prefix))return {key,params:{reason:translateSimulationError(message.slice(prefix.length))}};
  return null;

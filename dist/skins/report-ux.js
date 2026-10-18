@@ -8,6 +8,24 @@ const on = () => root.dataset.skin === 'report';
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 const EASE = 'cubic-bezier(.16, 1, .3, 1)';
 import {t, getLocale, onLocaleChange} from '../i18n.js';
+const presentationAnimations = new Set();
+let activeLocaleTransition;
+export function animatePresentation(element, frames, options) {
+  if (reduced() || document.hidden || typeof element.animate !== 'function') return null;
+  const animation = element.animate(frames, options);
+  animation.id = 'rx-presentation';
+  presentationAnimations.add(animation);
+  animation.finished?.then(() => presentationAnimations.delete(animation), () => presentationAnimations.delete(animation));
+  return animation;
+}
+function cancelPresentationMotion() {
+  if (!reduced() && !document.hidden) return;
+  for (const animation of presentationAnimations) animation.cancel();
+  presentationAnimations.clear();
+  activeLocaleTransition?.skipTransition?.();
+}
+matchMedia('(prefers-reduced-motion: reduce)').addEventListener?.('change', cancelPresentationMotion);
+document.addEventListener('visibilitychange', cancelPresentationMotion);
 let lastEdit = 0;
 document.addEventListener('input', () => { lastEdit = performance.now(); }, true);
 
@@ -24,11 +42,11 @@ function panelFor(tab) {
 function animatePanel(panel, dir) {
   if (!panel || reduced()) return;
   panel.getAnimations?.().forEach(a => a.id === 'rx-tab' && a.cancel());
-  const a = panel.animate([
+  const a = animatePresentation(panel, [
     {opacity: 0, transform: `translateX(${dir * 22}px)`},
     {opacity: 1, transform: 'none'}
   ], {duration: 420, easing: EASE});
-  a.id = 'rx-tab';
+  if (a) a.id = 'rx-tab';
 }
 new MutationObserver(records => {
   if (!on()) return;
@@ -117,11 +135,26 @@ function syncChoice(select, group) {
   if (group.classList.contains('is-disabled') !== select.disabled) group.classList.toggle('is-disabled', select.disabled);
   placeIndicator(group);
 }
-function choose(select, value) {
+function choose(select, value, origin) {
   if (select.disabled || select.value === value) return;
+  const active = document.activeElement, id = select.id;
   select.value = value;
   select.dispatchEvent(new Event('input', {bubbles: true}));
   select.dispatchEvent(new Event('change', {bubbles: true}));
+  if (origin) requestAnimationFrame(() => {
+    const current = document.getElementById(id);
+    if (!current) return;
+    // Native mode handlers may rebuild their section and focus the select.
+    // Keep the equivalent visible control keyboard-operable after that update,
+    // without stealing focus if the person has already moved elsewhere.
+    const focus = document.activeElement;
+    if (focus && focus !== active && focus !== document.body && focus !== current && focus.isConnected) return;
+    scanChoices();
+    scanRunBar();
+    const group = origin.classList.contains('rx-remote-choice')
+      ? document.querySelector(`.rx-remote-choice[data-for="${CSS.escape(id)}"]`) : groups.get(id);
+    group?.querySelector('[aria-checked="true"]')?.focus({preventScroll: true});
+  });
 }
 function buildChoice(select, insert = null) {
   if (select.options.length < 2 || select.options.length > 4) return;
@@ -139,7 +172,7 @@ function buildChoice(select, insert = null) {
     const b = e.target.closest('button[role="radio"]');
     if (!b || b.disabled) return;
     const target = document.getElementById(group.dataset.for);
-    if (target) choose(target, b.dataset.value);
+    if (target) choose(target, b.dataset.value, group);
   });
   group.addEventListener('keydown', e => {
     const keys = {ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1};
@@ -151,7 +184,7 @@ function buildChoice(select, insert = null) {
     if (!next) return;
     next.focus();
     const target = document.getElementById(group.dataset.for);
-    if (target) choose(target, next.dataset.value);
+    if (target) choose(target, next.dataset.value, group);
   });
   sizes.observe(group);
   // A second, remote control for the same select (e.g. in the Run bar).
@@ -189,10 +222,10 @@ const growObserver = new IntersectionObserver(entries => {
     growObserver.unobserve(entry.target);
     if (reduced() || performance.now() - lastEdit < 700) continue;
     entry.target.querySelectorAll('.approved-growth-bar').forEach((bar, i) => {
-      bar.animate([{transform: 'scaleY(0)', opacity: .2}, {transform: 'scaleY(1)', opacity: 1}], {duration: 620, delay: i * 38, easing: EASE, fill: 'backwards'});
+      animatePresentation(bar, [{transform: 'scaleY(0)', opacity: .2}, {transform: 'scaleY(1)', opacity: 1}], {duration: 620, delay: i * 38, easing: EASE, fill: 'backwards'});
     });
     entry.target.querySelectorAll('.approved-growth-value').forEach((v, i) => {
-      v.animate([{opacity: 0, transform: 'translateY(6px)'}, {opacity: 1, transform: 'none'}], {duration: 380, delay: 240 + i * 38, easing: EASE, fill: 'backwards'});
+      animatePresentation(v, [{opacity: 0, transform: 'translateY(6px)'}, {opacity: 1, transform: 'none'}], {duration: 380, delay: 240 + i * 38, easing: EASE, fill: 'backwards'});
     });
   }
 }, {threshold: .35});
@@ -222,10 +255,15 @@ function parseOption(option) {
   return {ticker: ticker.trim(), name: name.trim(), status: rest.join(' · ').trim()};
 }
 function escapeHTML(v) { return String(v).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c])); }
+const catalogFocusRestoring = new WeakSet();
 function enhanceCatalog(picker) {
   const input = picker.querySelector('#catalog-search'), select = picker.querySelector('#research-company');
   if (!input || !select) return;
   if (!picker.classList.contains('rx-catalog')) picker.classList.add('rx-catalog');
+  setAttr(select, 'tabindex', '-1');
+  setAttr(select, 'aria-hidden', 'true');
+  const nativeLabel = picker.querySelector('label[for="research-company"]');
+  if (nativeLabel) setAttr(nativeLabel, 'aria-hidden', 'true');
   let list = picker.querySelector(':scope > .rx-results');
   if (!list) {
     list = document.createElement('div');
@@ -237,7 +275,8 @@ function enhanceCatalog(picker) {
     input.setAttribute('role', 'combobox');
     input.setAttribute('aria-autocomplete', 'list');
     input.setAttribute('aria-expanded', 'false');
-    input.setAttribute('aria-owns', list.id);
+    input.setAttribute('aria-controls', list.id);
+    input.removeAttribute('aria-owns');
     let current = select.value;
     const rows = () => [...list.querySelectorAll('[role="option"]')];
     const activate = row => {
@@ -265,32 +304,51 @@ function enhanceCatalog(picker) {
       if (!list.hidden) return;
       list.hidden = false;
       input.setAttribute('aria-expanded', 'true');
-      if (!reduced()) list.animate([{opacity: 0, transform: 'translateY(-6px) scale(.985)'}, {opacity: 1, transform: 'none'}], {duration: 240, easing: EASE});
+      animatePresentation(list, [{opacity: 0, transform: 'translateY(-6px) scale(.985)'}, {opacity: 1, transform: 'none'}], {duration: 240, easing: EASE});
     };
     const close = () => { list.hidden = true; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); };
     const pick = row => {
       if (!row) return;
+      const priorFocus = document.activeElement;
       close();
-      input.blur();
       if (select.value !== row.dataset.value || !select.value) {
         if (![...select.options].some(o => o.value === row.dataset.value)) return;
         select.value = row.dataset.value;
         select.dispatchEvent(new Event('change', {bubbles: true}));
       }
+      const restoreSearchFocus = () => {
+        const currentInput = document.getElementById(input.id);
+        const currentSelect = document.getElementById(select.id);
+        if (!currentInput) return;
+        const focused = document.activeElement;
+        if (focused && focused !== priorFocus && focused !== currentInput && focused !== currentSelect && focused !== document.body && focused.isConnected) return;
+        const currentPicker = currentInput.closest?.('.catalog-picker') || currentInput.parentElement;
+        enhanceCatalog(currentPicker);
+        catalogFocusRestoring.add(currentInput);
+        try { currentInput.focus({preventScroll: true}); }
+        finally { catalogFocusRestoring.delete(currentInput); }
+        const currentList = currentPicker.querySelector('.rx-results');
+        if (currentList) currentList.hidden = true;
+        currentInput.setAttribute('aria-expanded', 'false');
+        currentInput.removeAttribute('aria-activedescendant');
+      };
+      restoreSearchFocus();
+      requestAnimationFrame(restoreSearchFocus);
     };
-    input.addEventListener('focus', () => { input.placeholder = copy('hint'); open(); });
+    input.addEventListener('focus', () => { input.placeholder = copy('hint'); if (!catalogFocusRestoring.has(input)) open(); });
     input.addEventListener('blur', () => { input.placeholder = picker.dataset.current || copy('hint'); });
     input.addEventListener('click', open);
     // The application filters on 'input'; render after it has.
     input.addEventListener('input', () => queueMicrotask(open));
     input.addEventListener('keydown', e => {
-      const all = rows(), at = all.findIndex(r => r.classList.contains('is-active'));
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault();
         if (list.hidden) open();
+        const all = rows(), at = all.findIndex(r => r.classList.contains('is-active'));
         const step = e.key === 'ArrowDown' ? 1 : -1;
         activate(all[Math.max(0, Math.min(all.length - 1, at + step))]);
       } else if (e.key === 'Enter' && !list.hidden) {
+        const all = rows(), at = all.findIndex(r => r.classList.contains('is-active'));
         e.preventDefault(); pick(all[at] || all[0]);
       } else if (e.key === 'Escape' && !list.hidden) {
         e.preventDefault(); close();
@@ -321,10 +379,19 @@ function scanSimulation() {
       cta.type = 'button';
       cta.className = 'rx-el rx-run-cta';
       cta.textContent = run.textContent.trim();
-      cta.addEventListener('click', () => { const real = lab.querySelector('.mc-run-button'); if (real && !real.disabled) real.click(); });
+      cta.addEventListener('click', () => {
+        const real = lab.querySelector('.mc-run-button');
+        if (!real || real.disabled) return;
+        // Native Run replaces the placeholder. Move focus before it detaches.
+        real.focus({preventScroll: true});
+        real.click();
+        const cancel = lab.querySelector('[id$="mc-cancel"]');
+        if (real.disabled && cancel && !cancel.hidden && !cancel.disabled) cancel.focus({preventScroll: true});
+      });
       empty.append(cta);
     }
     const cta = empty?.querySelector('.rx-run-cta');
+    if (cta && empty.getAttribute('aria-hidden') === 'true') empty.removeAttribute('aria-hidden');
     if (cta && run) { const label = run.textContent.trim(); if (cta.textContent !== label) cta.textContent = label; if (cta.disabled !== run.disabled) cta.disabled = run.disabled; }
     // The annual intro repeats the scope note word for word.
     const intro = lab.querySelector('.mc-intro'), scope = lab.querySelector('[id$="mc-annual-scope"]');
@@ -419,8 +486,8 @@ document.addEventListener('click', e => {
   e.stopImmediatePropagation();
   const swap = button.onclick;
   root.setAttribute('data-locale-swipe', '');
-  let edge;
-  const done = () => { root.removeAttribute('data-locale-swipe'); edge?.remove(); };
+  let edge, finished = false;
+  const done = () => { if (finished) return; finished = true; root.removeAttribute('data-locale-swipe'); edge?.remove(); activeLocaleTransition = null; };
   try {
     const vt = document.startViewTransition(async () => {
       swap.call(button, e);
@@ -428,7 +495,9 @@ document.addEventListener('click', e => {
       // (a timer: frame callbacks are paused while the old page is captured).
       await new Promise(r => setTimeout(r, 60));
     });
+    activeLocaleTransition = vt;
     vt.ready.then(() => {
+      if (finished || reduced() || document.hidden) return;
       // The edge lives in the new (live) page, so it shows exactly where the
       // old page has already been wiped away.
       edge = document.createElement('div');
@@ -436,7 +505,7 @@ document.addEventListener('click', e => {
       edge.setAttribute('aria-hidden', 'true');
       document.body.append(edge);
       // Same easing and travel as the outgoing page's clip edge (width + its 48px push).
-      edge.animate([{transform: 'translateX(0)', opacity: 1}, {opacity: 1, offset: .82}, {transform: `translateX(${innerWidth + 48}px)`, opacity: 0}], {duration: SWIPE_MS, easing: 'cubic-bezier(.65, 0, .35, 1)', fill: 'forwards'});
+      animatePresentation(edge, [{transform: 'translateX(0)', opacity: 1}, {opacity: 1, offset: .82}, {transform: `translateX(${innerWidth + 48}px)`, opacity: 0}], {duration: SWIPE_MS, easing: 'cubic-bezier(.65, 0, .35, 1)', fill: 'forwards'});
     }, done);
     vt.finished.then(done, done);
     setTimeout(done, SWIPE_MS + 1500);

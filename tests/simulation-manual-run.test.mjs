@@ -53,3 +53,9 @@ test('annual primitives live in matching tabs and can be edited without sampling
   assert.match(h.get('#mc-panel-taxTerminal').innerHTML,/id="mc-terminal-roic-type"/);assert.equal(h.get('#mc-driver-salesCapital').disabled,true);assert.equal(h.get('#mc-output').getAttribute('aria-busy'),'false');
  }finally{h.cleanup();}
 });
+
+test('idle simulation reserves chart space with one accessible localized status, not duplicate text',()=>{
+ for(const locale of ['en','zh-Hans']){setLocale(locale);const h=fixture({ticker:'SINGLE-IDLE-'+locale,runOnMount:false,autoplay:false});try{
+  const status=h.get('#mc-run-progress'),empty=h.get('[class="mc-empty-state"]');assert.ok(empty);assert.equal(empty.textContent,'');assert.equal(empty.getAttribute('aria-hidden'),'true');assert.equal(status.hidden,false);assert.equal(status.getAttribute('role'),'status');assert.equal(status.getAttribute('aria-live'),'polite');assert.equal(status.textContent,t('simulationManual.idle'));assert.equal(h.get('#mc-output').getAttribute('data-result-state'),'idle');assert.equal(h.get('#mc-chart'),null);h.runTimers();assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-run').disabled,false);
+ }finally{h.cleanup();setLocale('en');}}
+});

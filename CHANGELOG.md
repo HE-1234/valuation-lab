@@ -1,5 +1,129 @@
 # Change log
 
+## 2026-10-18 · Keep the current Learn question in view
+
+- Corrected a live-browser navigation defect where Next focused a prompt entirely above the viewport, leaving its answer choices visible without the question.
+- Previous/Next, Review and New 10 now reveal an offscreen prompt with only the necessary instant whole-document movement, accounting for the sticky header. Already visible prompts keep their position.
+- Feedback, language switches, shuffled questions/options, first-answer scoring, saved deck progress, six themes and the Annual Report layout remain unchanged. No financial data or calculations changed.
+- Focused Learn verification: 72 passed, zero failed, including 36 new checks. Exact V57 preservation covers all 354 shipped files outside six reviewed quiz-only substitutions. Aggregate and post-change native checks are reported separately.
+
+
+## 2026-10-18 · Keep keyboard position after completing chart replay
+
+- Finishing a replay with the focused Show full chart button now returns focus to the adjacent Replay simulation button. A naturally completed, still-current replay does the same only while Show full chart owns focus.
+- Recovery preserves scroll position and leaves the chart, inputs and other controls alone. Stale results, cancellation, teardown, reduced motion, viewport exit, backgrounding and route departure do not invoke recovery.
+- Full suite: 1,775 passed, zero failed, one existing raw-cache skip.
+- Focused verification: 47 new replay-focus checks, 28 existing replay/focus checks and two earlier whole-dist preservation checks passed. A V56 comparison preserves all 354 shipped files after reversing four exact focus fragments on three source lines. Aggregate and post-change native-browser verification are recorded separately.
+- Replay timing, completed samples, exported results, calculation/source files, all six themes and the approved Annual Report design are unchanged.
+
+## 2026-10-18 · Keep keyboard position in Monte Carlo controls
+
+- Cancelling a simulation from its focused Cancel button now returns focus to Run. Changing the annual chart from operating value to conditional per-share value keeps focus on the replacement selector.
+- Both recoveries preserve scroll position and leave focus elsewhere alone. Manual Run, cancellation, stale-result gates, sample draws, exports, assumptions and visual styles are unchanged.
+- Full suite: 1,728 passed, zero failed, one existing raw-cache skip. Independent audit verified eight exported results byte-for-byte against V55 and all 354 shipped files outside the two exact focus substitutions.
+- Added focused regression coverage for repeated actions, both supported languages, passive cancellation and exact V55 source preservation.
+
+## 2026-10-18 · Keep a useful keyboard position after closing evidence
+
+- Fixed a verified Annual/Historical navigation edge: when the original evidence button becomes hidden after changing input groups, Close or Escape now recovers focus to the current usable workspace control instead of losing it to the page body.
+- Kept normal return to the original button, newer outside-input focus, source-node state, whole-page scrolling and passive refresh behavior. No controls, styles, financial assumptions or calculations changed.
+- Full suite: 1,710 passed, zero failed, one existing raw-cache skip. Independent focus and preserved-source audits passed; native phone/screen-reader coverage remains unverified.
+- Added regression coverage for hidden, removed, disabled, inert and CSS-hidden destinations, callback timing, and all reviewed annual companies. Original V54 bytes are protected outside exact reviewed substitutions.
+
+## 2026-10-18 · Find full-case Undo from the toolbar
+
+- The existing Case actions disclosure now shows “Undo available” when a research load, named scenario or operating-path reload can be reversed. The cue follows the saved, company-specific case history and has matching Simplified Chinese wording.
+- Preserved separate field-edit and full-case recovery, input focus, draft persistence, model calculations, source data, themes and layout. Retained Traditional catalog coverage remains compatible.
+- Final full suite: 1,692 passed, zero failed, one pre-existing raw-cache skip; all 1,693 tests included. Exact V53 preservation checks allow only the four reviewed wording substitutions.
+- Source-linked design review applies visible recovery and recognition guidance. Twenty-four matched static desktop/mobile captures show no new overflow or changed open-menu dimensions; native phone interaction is not certified.
+
+## 2026-10-18 · Explicit uncertainty reference settings
+
+- Fresh or explicitly reset research settings for KLAC, AMAT, LRCX, ASML, FN, CDNS and SNPS no longer preselect forecast years as exact user anchors. Zero-width reference assumptions, mandatory terminal conditions and fixed source stubs remain intact.
+- Added English/Simplified Chinese status explaining when settings are an uncalibrated single-value reference, contain analyst-defined uncertainty, or require correction. It follows only active parameters and distinguishes annual and scalar methods.
+- Placed this explanation in normal flow above Run, avoiding the chart's idle-status overlay. Input edits retain focus and require explicit Run; stale result behavior is unchanged.
+- Existing saved anchors/settings, seeds, notes, explicit research loading and Undo remain intact. Original fourteen company defaults, frozen research data and sampler mathematics are unchanged.
+- Final full suite: 1,685 passed, zero failed, one pre-existing raw-cache skip. Duplicate aggregate attempts encountered process contention; the complete final suite passed with concurrency two and no test exclusions. Independent source, numerical and state checks passed; browser and static verification are reported separately.
+
+## 2026-10-18 · Synopsys dated research and investment-floor clarity
+
+- Added SNPS's reviewed July-origin scenarios with historical references and explicitly conditional allocations of approximately $50.10/$188.12/$364.31. Assumed award inventories, asset recovery and residual claims remain visible; current-price comparisons stay gated.
+- Preserved the exact 92-day fiscal-quarter stub and ACT/365.25 annual payment intervals. Annual editing and simulation affect the future annual path without rewriting the fixed opening quarter.
+- Separated entered annual investment, the selected FY2027 analyst investment-floor top-up and funded total. The input stays intact; a capacity assumption is not described as a contractual liability.
+- Labels FY2026 as a mixed actual/forecast reference in English and Simplified Chinese. Historical captions explain acquisition, discontinued-operation, accounting and fiscal-length limitations. Unsupported timing controls are disabled with explanation and recoverable saved drafts retained.
+- Final aggregate: 1,665 passed, zero failed, one existing raw-cache skip. Independent source, financial, UI and preservation checks passed. Native browser and static mobile checks are reported separately.
+
+## 2026-10-18 · Cadence dated research and transparent period timing
+
+- Added CDNS with ten-year references, reviewed assumptions and explicitly conditional June-origin allocation. The three source cases reproduce approximately $39.28/$86.51/$169.51 per assumed common-equivalent unit; current-price comparisons remain gated.
+- Separately shows the fixed six-month H2 2026 cash-flow stub, its discount rate and the forecast FY2026 reference. Annual editing, growth horizons and Monte Carlo apply to FY2027 onward; selected named cases update the source stub and baseline together.
+- Keeps the unverified residual-claim budget, assumed award inventory and dates, asset-recovery assumptions and capital constraints visible. Does not imply complete actual liabilities or current share counts.
+- Disables unsupported CDNS date-shift controls with a persistent explanation while preserving invalid saved drafts, export and explicit reversible recovery. Corrected related Simplified Chinese period/scenario descriptions.
+- Final aggregate: 1,624 passed, zero failed, one existing raw-cache skip. Independent financial, source, adverse-input, prior-case and UI checks passed. Source-driven mobile/desktop review is separate from native-browser verification.
+
+## 2026-10-18 · Accurate investment-policy instructions
+
+- Corrected English and Chinese explanations of fixed versus revenue-responsive investment. Annual factors, legacy scalar multipliers, protected fixed funding and separately derived operating cash are now distinguished explicitly.
+- No financial formulas, source inputs, uncertainty defaults or saved cases changed. Protected runtime comparisons permit only two exact explanatory-prose replacements.
+- Combined release checks: 1,575 passed, zero failed, one existing raw-cache skip, including 13 new capital-policy checks. Static text-layout review is recorded separately; these checks are not an accessibility conformance certificate.
+
+## 2026-10-18 · Fabrinet display and compact result card
+
+- Shows the verified Fabrinet company name in the ready selector and name-based search without changing source identity or saved cases.
+- Keeps the original compact two-value card and places the same five FN risk conditions immediately below it, always visible in the result column. Full allocation arithmetic remains in Value & limitations.
+- No numerical, source-data, stylesheet, quiz or security-identity changes. Full suite: 1,562 passed, zero failed, one existing skip; 246 focused tests, 380 independent checks and eight matched bilingual mobile/desktop static captures passed.
+
+## 2026-10-18 · Fabrinet conditional research and simulation clarity
+
+- Added FN with three audited fiscal-origin scenarios, ten-year references, explicit capital claims and a coupled ordinary-share/customer-warrant allocation. Base/downside/upside reproduce approximately $184.96/$82.09/$344.67 at the June 26, 2026 origin using later research information; current-price comparisons remain unavailable.
+- Funds the 3% next-year-sales operating-cash reserve dynamically in edited and simulated paths. The opening payable is funded once, while terminal investment and generated horizon rows avoid double-counting the cash reserve.
+- Keeps selected vesting, volatility-proxy, Raytek-realization, unpriced Casix and optional-claim assumptions visible in a compact result summary, with full arithmetic in Value & limitations.
+- Removed the duplicate idle Monte Carlo instruction that overlapped on narrow screens, preserving the accessible live status, chart space, manual Run/Cancel and stale/error behavior.
+- Independent verification includes source parity, a coupled option solver, edited/horizon paths, nonzero Monte Carlo uncertainty and original-case/quiz protection. Static bilingual mobile/desktop checks passed; native smoke follows publication.
+
+## 2026-10-18 · ASML dated EUR valuation
+
+- Added ASML with EUR financial forecasts, audited conditional claims and three customer-advance funding paths. The base reproduces EUR745.971695 per registered ordinary share at the December 31, 2025 origin using October 18, 2026 research information.
+- Displays USD876.516742 only as a separate historical currency illustration at 1 EUR = 1.175 USD on the financial-origin date. It is not a current exchange-rate translation or market-price comparison.
+- Preserves fixed customer-advance runoff in years one through five when operating-investment factors, forecast horizons or annual uncertainty change. Null claims and mismatched dates, security identity or FX fail closed.
+- Full suite: 1,509 passed, zero failed, one existing skip. Independent review: 630 core checks, 74 source-fidelity checks and 156 focused tests. Existing case data, earlier registries, quiz and styles remain unchanged.
+
+## 2026-10-18 · Lam Research incremental case
+
+- Added LRCX with three independently reviewed June 28, 2026-origin scenarios using October 18 information, historical references, bilingual evidence and seven conditional capital-claim controls. Base/downside/upside allocations reproduce approximately $109.18/$53.78/$147.62; current-price comparisons remain unavailable.
+- Isolated the $119.605m opening capex-payable settlement as fixed year-one funding. Operating-investment multipliers, horizon changes and annual simulation uncertainty cannot move or duplicate this obligation.
+- Capital diagnostics now distinguish operating S:C (1.8× in the base case) from total cash funding, with a visible operating investment + fixed settlement reconciliation.
+- Independent replay includes 300 nontrivial simulation trials, missing-claim/date/overlap gates and preservation of prior case records. Thirty-seven static views passed, spanning three cases, bilingual mobile/desktop Result/Claims/Capital and a dark-theme mobile sample. Native browser smoke follows publication.
+
+## 2026-10-18 · 120-question learning bank
+
+- Added 120 independently reviewed English/Simplified Chinese valuation questions, including 65 independently recomputed numeric questions. Each has four distinct options, answer-specific feedback, an explanation and primary-source references. Exact bank bytes are bound to the completed review manifest.
+- Every explicit Learn click draws ten fresh questions, including clicking Learn while already there. A shuffled local-device deck exhausts the bank before repeating; cycle boundaries contain no duplicate question. New 10 provides the same action, while language changes and history navigation preserve the active set.
+- Added scoring, review, stable randomized options, accessible feedback and storage-failure recovery. Kept all six original interactive examples separately accessible. No company assumptions, valuation engines or simulations are changed by quizzes.
+- Independent runtime stress covered 94,050 draws and 12,060 complete cycles; every bank question was rendered in both languages. Static mobile/desktop and worst-case text checks passed; native browser smoke follows publication.
+
+## 2026-10-18 · Applied Materials incremental case
+
+- Added AMAT with a separate versioned research package, three funded scenarios, ten-year reference history and ten editable capital-claim assumptions. Values reproduce $220.98869002 base, $108.97969775 downcycle and $316.12505686 upside at the July 26, 2026 financial origin using October 18 information. These are conditional dated scenarios, not current price targets or point-in-time backtests.
+- Preserved award/ESPP estimates, unknown inputs and overlapping-claim guards. Existing original datasets, selected GOOG, KLAC and six themes are unchanged.
+- Corrected alternative-case chart labels and live English/Simplified Chinese switching so downside/upside paths never inherit the base-case caption.
+- Full regression suite: 1,392 passed, zero failed, one existing skip. Independent adapter replay and 62 focused tests passed. Sixteen static mobile/desktop captures passed; native browser smoke follows publication.
+
+## 2026-10-18 · KLA incremental research case
+
+- Added KLAC as the first independently reviewed incremental company, with ten annual forecasts, corrected historical references, dated capital assumptions, bilingual evidence and explicit uncertainty controls. Original fourteen research records remain byte-identical.
+- Base and downside conditional allocations reproduce $75.4116719333 and $42.2550529813 per split-adjusted share at the June 30, 2026 origin using October 18 research information. Current-price comparison and as-known backtesting are disabled for this retrospective information set.
+- Added versioned identity, storage/export, bounded claim controls and deterministic manual-Monte-Carlo defaults. Unknown claims are not silently treated as known zeros.
+- Regression suite: 1,355 passed, zero failed, one pre-existing skip. Independent methodology/adapter review passed. Static English/Simplified Chinese Result/Claims views at 390/1440 passed eight overflow checks; native browser smoke follows publication.
+
+## 2026-10-18 · U.S.-listed company scope
+
+- Limited the active directory to 45 additional U.S.-exchange-listed equities with individually verified public Robinhood support, alongside the original fourteen researched companies. U.S.-listed foreign issuers and ADRs remain eligible; nationality is not a filter.
+- Removed 54 foreign-exchange-only selections and twenty private/unresolved coverage entries from search and presentation. Runtime admission also rejects stale unsupported entries.
+- Made the AAOI missing-debt-review regression self-contained using only already-published raw facts in a temporary test fixture. All original withholding assertions remain, with added positive controls and explicit seven-year coverage; no production model or source data changed.
+- Broker support links disclose that public product availability does not verify a particular account’s eligibility. No new valuation numbers were invented.
+- Removed six exclusively foreign-listing local research files from active research storage into recoverable storage, with hashes and a recovery manifest. No foreign-company valuation dossiers existed; shared source records remain intact. This relocation does not reclaim disk space.
+
 ## 2026-10-18 · Selected Google case and terminal-growth review
 
 - Applied the requested selected Google case: exact funded 20-year annual schedule, 35% mature operating margin, 10% WACC, 16% terminal ROIC and reviewed 3% terminal growth. Conditional common-share allocation is $306.616907 at the unchanged June 30 valuation/capital date. The label is “Selected Google case,” with assumptions visible.
@@ -350,3 +474,24 @@ Validation recorded for v7: 254 automated checks passed. Static previews were in
 ## Final verification for persistent history and navigation polish
 
 The frozen application completed 865 tests: 863 passed, one existing AAOI raw-source rebuild test failed because its external cache is unavailable, and one existing raw-cache equivalence test skipped. Exact numerical captures for all 14 Annual presets, all 14 Guided companies and 10 Historical companies remain unchanged. Independent checks cover editing with evidence open, direct metric switching, saved precision, 154 primary/secondary-history cases and six-theme contrast. A subsequent CSS-only spacing correction keeps full-history disclosure labels separated outside the editor; affected contextual and navigation checks were rerun. Source-driven static layouts were inspected; native-browser layout, hover painting and recording remain unverified.
+
+
+## 18 October 2026 · Current simulation-method documentation
+
+- Added current-method guidance above an explicitly dated historical scalar reference. Annual path/primitive scope, independent innovations, exact anchors, endpoint effects at zero SD, reference defaults, capital responses, accepted-outcome conditioning and manual Run now match shipped behavior.
+- Preserved the complete older explanation as a historical record, with a warning that its company gates, floor and four-scalar statements do not describe every current mode. Added concise in-page links; retained existing layout, typography, palettes and return link.
+- Updated English and Simplified Chinese presentation catalogs plus retained Traditional source translations. No financial sources, algorithms, defaults, UI handlers or six-theme assets changed.
+- Verification: 80 focused content/localization/runtime checks and 422 company/prior-release preservation and behavior checks passed, including exact reversal of all 354 V58 shipped files. Git whitespace checks pass. Aggregate, publication and native post-change checks remain separate.
+
+## 18 October 2026 · Clear simulation-help navigation
+
+- Sampler help now explicitly announces that it opens in a new tab. The help page explains how to continue in the original Valuation Lab tab and labels its unchanged fallback “Open the valuation workspace.”
+- Preserved new-tab isolation, link destinations, all handlers and saved-state behavior. No changes to current/historical methodology, financial data or calculations, styles, six themes or the approved Annual Report layout.
+- Updated English and Simplified Chinese wording with retained Traditional compatibility. Exact V59 reversal protects all 354 shipped files. Focused verification: 222 passed, zero failed or skipped, including 18 new checks. Aggregate and native verification are recorded separately.
+
+## Owner UI polish integration · 2026-10-18 (unpublished)
+
+- Merged compatible Annual Report presentation from GitHub `714e7c3` onto V59, retaining all later research/features and the reviewed help-navigation patch.
+- Fresh/reset simulations use 5,000 attempts as a separately dated application policy; saved counts, frozen research inputs and original validation records remain intact.
+- Preserved authoritative native handlers and added focus, reduced-motion and repeated-language-transition safety for the new presentation controls.
+- 356 focused automated checks passed in three bounded runs; full regression and browser visual QA remain pending. No commit, push or publication is included.

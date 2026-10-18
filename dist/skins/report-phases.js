@@ -5,7 +5,7 @@
 // arrow keys on it) writes the original field and fires its native 'input' and
 // 'change' events, so validation, drafts, Undo and the model behave exactly as
 // if the number had been typed. The fields stay below for exact entry.
-import {onScan} from './report-ux.js';
+import {onScan, animatePresentation} from './report-ux.js';
 import {getLocale} from '../i18n.js';
 
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -70,13 +70,22 @@ function bounds(kind, years, index) {
 }
 
 function write(input, year) {
-  if (!input || Number(input.value) === year) return;
+  if (!input || input.disabled || input.readOnly || Number(input.value) === year) return;
   input.value = String(year);
   input.dispatchEvent(new Event('input', {bubbles: true}));
   input.dispatchEvent(new Event('change', {bubbles: true}));
 }
 
 const timelines = new WeakMap();   // section -> state
+let activeDrag = null;
+const handledPointerMoves = new WeakSet();
+const validYears = (kind, years) => years.every(v => Number.isInteger(v) && v >= 1 && v <= 30) && years.every((v, i) => i === 0 || (kind.strict ? v > years[i - 1] : v >= years[i - 1]));
+document.addEventListener('pointermove', e => activeDrag?.pointerMove(e));
+document.addEventListener('pointerup', e => activeDrag?.endDrag(e));
+document.addEventListener('pointercancel', e => activeDrag?.endDrag(e));
+document.addEventListener('lostpointercapture', e => {
+  if (e.target === activeDrag?.drag?.capture) activeDrag.endDrag(e);
+});
 function build(section, kind) {
   const el = document.createElement('div');
   el.className = 'rx-el rx-phases';
@@ -97,15 +106,37 @@ function build(section, kind) {
   const yearsNow = () => kind.keys.map(k => num(kind.field(section, k)));
   const move = (index, year) => {
     const years = yearsNow();
-    if (!years.every(Number.isInteger)) return;
+    if (!validYears(kind, years)) return;
     const [lo, hi] = bounds(kind, years, index);
-    write(kind.field(section, kind.keys[index]), Math.max(lo, Math.min(hi, Math.round(year))));
-    paint(section);
+    const input = kind.field(section, kind.keys[index]);
+    const restoreHandle = handles.includes(document.activeElement) || !!state.drag;
+    write(input, Math.max(lo, Math.min(hi, Math.round(year))));
+    // Annual handlers may focus the authoritative field or rebuild the section
+    // when its forecast length changes. Keep keyboard control on the same handle.
+    if (restoreHandle) {
+      const currentSection = document.getElementById(input.id)?.closest(kind.section);
+      if (currentSection) {
+        const current = timelines.get(currentSection) || build(currentSection, kind);
+        if (current !== state && state.drag) {
+          // Capture belongs to the stable document element. Transfer only the
+          // active editor and fixed drag calendar when native code rebuilds it.
+          current.drag = state.drag;
+          current.span = state.span;
+          state.drag = null;
+          el.classList.remove('is-dragging');
+          current.el.classList.add('is-dragging');
+          activeDrag = current;
+        }
+        current.handles[index].focus({preventScroll: true});
+        paint(currentSection);
+      }
+    }
+    if (section.isConnected) paint(section);
   };
 
   el.addEventListener('keydown', e => {
     const h = e.target.closest('.rx-ph-handle');
-    if (!h) return;
+    if (!h || h.disabled || h.getAttribute('aria-readonly') === 'true') return;
     const index = Number(h.dataset.index), year = yearsNow()[index];
     const step = {ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1}[e.key];
     if (step) { e.preventDefault(); move(index, year + step); }
@@ -124,28 +155,37 @@ function build(section, kind) {
   track.addEventListener('pointerdown', e => {
     if (e.button !== 0) return;
     const years = yearsNow();
-    if (!years.every(Number.isInteger)) return;
+    if (!validYears(kind, years)) return;
     let h = e.target.closest('.rx-ph-handle');
     // A press on the bar grabs the nearest boundary.
     if (!h) {
       const y = yearAt(e.clientX);
-      let best = 0;
-      years.forEach((v, i) => { if (Math.abs(v - y) < Math.abs(years[best] - y)) best = i; });
+      let best = -1;
+      years.forEach((v, i) => { const input = kind.field(section, kind.keys[i]); if (!input.disabled && !input.readOnly && (best < 0 || Math.abs(v - y) < Math.abs(years[best] - y))) best = i; });
+      if (best < 0) return;
       h = handles[best];
     }
+    const field = kind.field(section, kind.keys[Number(h.dataset.index)]);
+    if (field.disabled || field.readOnly) return;
     e.preventDefault();
-    track.setPointerCapture(e.pointerId);
+    activeDrag?.endDrag();
+    const capture = typeof document.documentElement?.setPointerCapture === 'function' ? document.documentElement : track;
+    capture.setPointerCapture(e.pointerId);
     h.focus({preventScroll: true});
     // Coinciding markers: the first movement decides which one you meant.
     const index = Number(h.dataset.index);
-    const twins = years.map((v, i) => i).filter(i => years[i] === years[index]);
-    state.drag = {index, twins, x: e.clientX, decided: twins.length < 2};
+    const twins = years.map((v, i) => i).filter(i => years[i] === years[index] && !kind.field(section, kind.keys[i]).disabled && !kind.field(section, kind.keys[i]).readOnly);
+    state.drag = {index, twins, x: e.clientX, pointerId: e.pointerId, capture, decided: twins.length < 2};
+    activeDrag = state;
     el.classList.add('is-dragging');
     if (!e.target.closest('.rx-ph-handle')) move(index, yearAt(e.clientX));
   });
-  track.addEventListener('pointermove', e => {
+  const pointerMove = e => {
+    if (handledPointerMoves.has(e)) return;
+    handledPointerMoves.add(e);
     const d = state.drag;
-    if (!d) return;
+    if (!d || e.pointerId != null && e.pointerId !== d.pointerId) return;
+    if (!section.isConnected) { end(); return; }
     if (!d.decided) {
       if (Math.abs(e.clientX - d.x) < 4) return;
       d.index = e.clientX > d.x ? Math.max(...d.twins) : Math.min(...d.twins);
@@ -154,18 +194,25 @@ function build(section, kind) {
     }
     const y = yearAt(e.clientX);
     if (y !== yearsNow()[d.index]) move(d.index, y);
-  });
-  const end = () => {
+  };
+  const end = e => {
     if (!state.drag) return;
+    if (e?.pointerId != null && e.pointerId !== state.drag.pointerId) return;
+    const drag = state.drag;
     state.drag = null;
+    if (activeDrag === state) activeDrag = null;
+    if (drag.capture.hasPointerCapture?.(drag.pointerId)) drag.capture.releasePointerCapture(drag.pointerId);
     el.classList.remove('is-dragging');
     paint(section);   // the span may grow or shrink once you let go
   };
+  state.pointerMove = pointerMove;
+  state.endDrag = end;
+  track.addEventListener('pointermove', pointerMove);
   track.addEventListener('pointerup', end);
   track.addEventListener('pointercancel', end);
-  track.addEventListener('lostpointercapture', end);
+  track.addEventListener('lostpointercapture', e => { if (state.drag?.capture === track) end(e); });
   kind.place(section, el);
-  if (!reduced()) el.animate([{opacity: 0, transform: 'translateY(6px)'}, {opacity: 1, transform: 'none'}], {duration: 360, easing: 'cubic-bezier(.16,1,.3,1)'});
+  animatePresentation(el, [{opacity: 0, transform: 'translateY(6px)'}, {opacity: 1, transform: 'none'}], {duration: 360, easing: 'cubic-bezier(.16,1,.3,1)'});
   return state;
 }
 
@@ -174,8 +221,21 @@ function paint(section) {
   if (!state) return;
   const {el, kind, handles} = state;
   const years = kind.keys.map(k => num(kind.field(section, k)));
-  const valid = years.every(v => Number.isInteger(v) && v >= 1 && v <= 30) && years.every((v, i) => i === 0 || (kind.strict ? v > years[i - 1] : v >= years[i - 1]));
+  const valid = validYears(kind, years);
   el.classList.toggle('is-invalid', !valid);
+  handles.forEach((h, i) => {
+    const field = kind.field(section, kind.keys[i]), disabled = !valid || !!field.disabled;
+    const label = section.querySelector(`label[for="${field?.id}"]`)?.textContent.trim() || kind.keys[i];
+    if (h.getAttribute('aria-label') !== label) h.setAttribute('aria-label', label);
+    if (h.disabled !== disabled) h.disabled = disabled;
+    h.tabIndex = disabled || field.readOnly ? -1 : 0;
+    for (const [name, value] of [['aria-disabled', String(disabled)], ['aria-readonly', String(!!field.readOnly)], ['aria-invalid', String(!valid)]]) if (h.getAttribute(name) !== value) h.setAttribute(name, value);
+    if (!valid) {
+      for (const name of ['aria-valuemin', 'aria-valuemax', 'aria-valuenow', 'aria-valuetext']) h.removeAttribute(name);
+      const tag = h.querySelector('.rx-ph-tag');
+      if (tag.textContent !== '—') tag.textContent = '—';
+    }
+  });
   if (!valid) return;
   // The calendar shows a few years past the last boundary. It only rescales
   // between drags so the bar never shifts under your pointer.

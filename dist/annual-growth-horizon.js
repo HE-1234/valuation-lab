@@ -1,3 +1,6 @@
+import {operatingCashChange,operatingCashPolicy} from './fn-operating-cash.js';
+import {fixedCapitalSettlement,operatingInvestment,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
+import {incrementalCaseVersion,incrementalIdentityValid} from './incremental-research-identity.js';
 // Explicit, editable horizon sensitivities. Frozen research cases are never changed.
 import {marginPathIssues,marginAtYear} from './margin-path.js';
 import {RESEARCH_PROFILE_ID,RESEARCH_VERSION} from './annual-research-identity.js';
@@ -63,18 +66,20 @@ export function calculateDerivedReinvestment(d,revenueRows,{baselineAnnual=d.der
    const scale=Math.max(1,revenue/base.revenue);
    // Retain the signed explicit release once, never amplify it. Positive source
    // investment is a committed floor; reduced sales never release it automatically.
-   const floor=Math.min(base.reinvestment,0)+Math.max(base.reinvestment,0)*scale;
+   const operating=operatingInvestment(d,base),fixed=fixedCapitalSettlement(d,base.year);
+   const floor=Math.min(operating,0)+Math.max(operating,0)*scale+fixed;
    const extraExpansion=Math.max(0,delta-Math.max(0,baseDelta)*scale);
    investment=floor+extraExpansion/p.marginalSalesCapital;
-  }else investment=Math.max(0,delta)*intensity;
+  }else investment=Math.max(0,delta)*intensity-operatingCashChange(d,i,revenueRows);
   if(!finite(investment))throw Error(`Year ${i+1}: derived investment exceeded the finite numerical range.`);
   return investment;
  });
 }
 
 function requireAnnualIdentity(d,c){
+ const fundingIssues=fixedCapitalFundingIssues(d);if(fundingIssues.length)throw Error(fundingIssues.join(' '));
  if(!object(d)||![1,2].includes(d.schemaVersion)||!validRows(d.annual)||!validTerminal(d.terminal)||!finite(d.anchor?.revenue)||d.anchor.revenue<=0)throw Error('Complete valid annual and terminal inputs before deriving a growth horizon.');
- if(!c||d.profileId!==RESEARCH_PROFILE_ID||d.version!==RESEARCH_VERSION||d.sourceScenario!==c.scenario||d.caseId!==`${RESEARCH_VERSION}:${c.ticker}:${c.scenario}`||(d.schemaVersion===2&&d.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||d.forecastHorizonYears!==d.annual.length||(d.schemaVersion===1&&d.forecastHorizonYears!==c.forecastHorizonYears)||d.ticker!==c.ticker||d.currency!==c.currency||d.discountOrigin!==c.valuationTiming?.discountOrigin||d.anchor.revenue!==c.anchor?.revenue)throw Error('The derived forecast must retain its original dated research identity.');
+ if((d.incrementalResearch&&!incrementalIdentityValid(d))||!c||d.profileId!==RESEARCH_PROFILE_ID||d.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||d.sourceScenario!==c.scenario||d.caseId!==`${incrementalCaseVersion(c)||RESEARCH_VERSION}:${c.ticker}:${c.scenario}`||(d.schemaVersion===2&&d.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||d.forecastHorizonYears!==d.annual.length||(d.schemaVersion===1&&d.forecastHorizonYears!==c.forecastHorizonYears)||d.ticker!==c.ticker||d.currency!==c.currency||d.discountOrigin!==c.valuationTiming?.discountOrigin||(!d.incrementalResearch&&d.anchor.revenue!==c.anchor?.revenue))throw Error('The derived forecast must retain its original dated research identity.');
 
 }
 
@@ -137,6 +142,7 @@ export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyY
  const investments=calculateDerivedReinvestment(next,next.annual);
  next.derivedForecast.generatedReinvestment=investments;
  next.annual.forEach((r,i)=>{r.reinvestment=Object.prototype.hasOwnProperty.call(investmentOverrides,r.year)?investmentOverrides[r.year]:investments[i];});
+ if(next.ticker==='SNPS')next.annual.forEach((r,i)=>{r.period=`FY${2027+i}`;});
  const issues=annualHorizonIssues(next);if(issues.length)throw Error(issues.join(' '));
  return next;
 }
@@ -174,11 +180,12 @@ export function extendAnnualForMargin(d,c,terminalYear){
  next.derivedForecast.marginExtensionYears=Math.max(next.derivedForecast.marginExtensionYears||0,terminalYear);
  let prior=next.annual.at(-1).revenue;
  for(let year=oldLength+1;year<=terminalYear;year++){
-  const revenue=prior*(1+next.terminal.growth),reinvestment=Math.max(0,revenue-prior)*intensity;
+  const revenue=prior*(1+next.terminal.growth),reinvestment=Math.max(0,revenue-prior)*intensity-(operatingCashPolicy(next)?.ratio||0)*revenue*next.terminal.growth;
   if(!finite(revenue)||!finite(reinvestment))throw Error('Margin extension exceeded the finite numerical range.');
   next.annual.push({year,period:`Year ${year} · margin-path extension`,revenue,margin:next.terminal.margin,taxRate:next.terminal.taxRate,reinvestment,wacc:next.terminal.wacc});
   next.derivedForecast.generatedReinvestment.push(reinvestment);prior=revenue;
  }
  next.forecastHorizonYears=next.annual.length;next.userEdited=true;
+ if(next.ticker==='SNPS')next.annual.forEach((r,i)=>{r.period=`FY${2027+i}`;});
  return next;
 }

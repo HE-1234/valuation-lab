@@ -1,0 +1,3146 @@
+{
+  "baseline": "d1b22ae00b80bbd1d0124ded31cdc0925fd772ee",
+  "originalDefaults": {
+    "AAPL": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.2
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "MSFT": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.22
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.16
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "AMZN": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.24
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "GOOG": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.22
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.16
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "META": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "NVDA": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.25
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "TSLA": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.25
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "COHR": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.24
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "LITE": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.22
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.14
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "AAOI": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.25
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.11
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "NBIS": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.25
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "MU": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.02
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "AVGO": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.2
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "TSM": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.02
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.18
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    }
+  },
+  "studioDefaults": {
+    "AAPL": {
+      "trials": 4000,
+      "seed": "aapl-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "revenue-scaled",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.2
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.07,
+          "mode": 0,
+          "high": 0.04
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.03,
+          "mode": 0,
+          "high": 0.02
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.005,
+          "mode": 0,
+          "high": 0.015
+        }
+      }
+    },
+    "MSFT": {
+      "trials": 4000,
+      "seed": "msft-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.22
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.16
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.06,
+          "mode": 0,
+          "high": 0.04
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.04,
+          "mode": 0,
+          "high": 0.02
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.005,
+          "mode": 0,
+          "high": 0.01
+        }
+      }
+    },
+    "AMZN": {
+      "trials": 4000,
+      "seed": "amzn-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.24
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.08,
+          "mode": 0,
+          "high": 0.04
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.03,
+          "mode": 0,
+          "high": 0.02
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.01,
+          "mode": 0,
+          "high": 0.0125
+        }
+      }
+    },
+    "GOOG": {
+      "trials": 4000,
+      "seed": "goog-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.22
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.16
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.1,
+          "mode": 0,
+          "high": 0.08
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.04,
+          "mode": 0,
+          "high": 0.02
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.0075,
+          "mode": 0,
+          "high": 0.015
+        }
+      }
+    },
+    "META": {
+      "trials": 4000,
+      "seed": "meta-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.1,
+          "mode": 0,
+          "high": 0.05
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.05,
+          "mode": 0,
+          "high": 0.03
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.01,
+          "mode": 0,
+          "high": 0.015
+        }
+      }
+    },
+    "NVDA": {
+      "trials": 4000,
+      "seed": "nvda-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "revenue-scaled",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.25
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.3,
+          "mode": 0,
+          "high": 0.15
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.1,
+          "mode": 0,
+          "high": 0.03
+        },
+        "investmentMultiplier": {
+          "type": "triangular",
+          "low": 0.8333333333333334,
+          "mode": 1,
+          "high": 1.3333333333333333
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.01,
+          "mode": 0,
+          "high": 0.02
+        }
+      }
+    },
+    "TSLA": {
+      "trials": 4000,
+      "seed": "tsla-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.25
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.1,
+          "mode": 0,
+          "high": 0.13
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.02,
+          "mode": 0,
+          "high": 0.02
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.015,
+          "mode": 0,
+          "high": 0.015
+        }
+      }
+    },
+    "COHR": {
+      "trials": 4000,
+      "seed": "cohr-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "revenue-scaled",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.24
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.15,
+          "mode": 0,
+          "high": 0.1
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.04,
+          "mode": 0,
+          "high": 0.02
+        },
+        "investmentMultiplier": {
+          "type": "triangular",
+          "low": 0.83,
+          "mode": 1,
+          "high": 1.25
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.01,
+          "mode": 0,
+          "high": 0.015
+        }
+      }
+    },
+    "LITE": {
+      "trials": 4000,
+      "seed": "lite-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "revenue-scaled",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.22
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.14
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.25,
+          "mode": 0,
+          "high": 0.15
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.05,
+          "mode": 0,
+          "high": 0.03
+        },
+        "investmentMultiplier": {
+          "type": "triangular",
+          "low": 0.8,
+          "mode": 1,
+          "high": 1.3
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.015,
+          "mode": 0,
+          "high": 0.015
+        }
+      }
+    },
+    "AAOI": {
+      "trials": 4000,
+      "seed": "aaoi-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.25
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.11
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.4,
+          "mode": 0,
+          "high": 0.3
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.07,
+          "mode": 0,
+          "high": 0.04
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.015,
+          "mode": 0,
+          "high": 0.02
+        }
+      }
+    },
+    "NBIS": {
+      "trials": 4000,
+      "seed": "nbis-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.25
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.08,
+          "mode": 0,
+          "high": 0.05
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.025,
+          "mode": 0,
+          "high": 0.025
+        }
+      }
+    },
+    "MU": {
+      "trials": 4000,
+      "seed": "mu-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.02
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.1,
+          "mode": 0,
+          "high": 0.1
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.13,
+          "mode": 0,
+          "high": 0.01
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.015,
+          "mode": 0,
+          "high": 0.02
+        }
+      }
+    },
+    "AVGO": {
+      "trials": 4000,
+      "seed": "avgo-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "revenue-scaled",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.2
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.35,
+          "mode": 0,
+          "high": 0.1
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.15,
+          "mode": 0,
+          "high": 0.07
+        },
+        "investmentMultiplier": {
+          "type": "triangular",
+          "low": 0.8,
+          "mode": 1,
+          "high": 1.5384615384615383
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.01,
+          "mode": 0,
+          "high": 0.02
+        }
+      }
+    },
+    "TSM": {
+      "trials": 4000,
+      "seed": "tsm-research-2026-10-17-v1",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "revenue-scaled",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0.03,
+        "persistence": 0.6
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.02
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.18
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "triangular",
+          "low": -0.08,
+          "mode": 0,
+          "high": 0.06
+        },
+        "marginShift": {
+          "type": "triangular",
+          "low": -0.05,
+          "mode": 0,
+          "high": 0.02
+        },
+        "investmentMultiplier": {
+          "type": "triangular",
+          "low": 0.8666666666666667,
+          "mode": 1,
+          "high": 1.4444444444444444
+        },
+        "waccShift": {
+          "type": "triangular",
+          "low": -0.015,
+          "mode": 0,
+          "high": 0.03
+        }
+      }
+    }
+  },
+  "incrementalDefaults": {
+    "KLAC": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0,
+        "persistence": 0
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.035
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.21
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.2
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "AMAT": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0,
+        "persistence": 0
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.03
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.23
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.2
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "LRCX": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0,
+        "persistence": 0
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.03
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.21
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.18
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "ASML": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0,
+        "persistence": 0
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.258
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.25
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "FN": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0,
+        "persistence": 0
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.2
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.2
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "CDNS": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0,
+        "persistence": 0
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.24
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.15
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    },
+    "SNPS": {
+      "trials": 4000,
+      "seed": "annual-research",
+      "binCount": 36,
+      "dependence": "independent",
+      "capitalPolicy": "fixed-schedule",
+      "method": "annual-path",
+      "annualPath": {
+        "fixedYears": [
+          1,
+          2,
+          3
+        ],
+        "innovationSD": 0,
+        "persistence": 0
+      },
+      "annualMetrics": {
+        "margin": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "taxRate": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "wacc": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        },
+        "investmentFactor": {
+          "fixedYears": [
+            1,
+            2,
+            3
+          ],
+          "innovationSD": 0,
+          "persistence": 0.6
+        }
+      },
+      "annualTerminal": {
+        "growth": {
+          "type": "fixed",
+          "value": 0.025
+        },
+        "taxRate": {
+          "type": "fixed",
+          "value": 0.24
+        },
+        "roic": {
+          "type": "fixed",
+          "value": 0.12
+        }
+      },
+      "drivers": {
+        "growthPremium": {
+          "type": "fixed",
+          "value": 0
+        },
+        "marginShift": {
+          "type": "fixed",
+          "value": 0
+        },
+        "investmentMultiplier": {
+          "type": "fixed",
+          "value": 1
+        },
+        "waccShift": {
+          "type": "fixed",
+          "value": 0
+        }
+      }
+    }
+  }
+}

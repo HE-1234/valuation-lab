@@ -5,7 +5,7 @@ This app models uncertainty around the edited operating forecast. It is not a st
 ## Inputs and derived quantities
 
 - Guided: annual growth, EBIT margin, operating tax rate, WACC, and incremental sales / capital.
-- Year-by-year: annual growth, EBIT margin, operating tax rate, WACC, and a net-investment response factor. The factor multiplies the existing signed investment schedule after the selected fixed-schedule, revenue-scaled, or committed-floor-plus-growth response. Fixing a factor does not fix investment dollars when growth changes. Direct signed dollar-investment paths are supported only for an exogenous fixed-schedule policy.
+- Year-by-year: annual growth, EBIT margin, operating tax rate, WACC, and a net-investment response factor. The factor multiplies the existing signed investment schedule after the selected fixed-schedule, revenue-scaled, or committed-floor-plus-growth response. At factor 1, fixed-schedule preserves edited pre-reserve investment; revenue-responsive policies may change it. Selected fixed funding is not multiplied. Required operating-cash changes are derived separately from revenue. Direct signed dollar-investment paths are supported only for an exogenous fixed-schedule policy.
 - Revenue, EBIT, cash tax, NOPAT, reinvestment in Guided, FCFF, discount factors and implied capital returns are derived once. They do not receive independent duplicate shocks.
 - Source financials, opening historical anchors, dated security/claims inputs, horizon and timing remain fixed. Existing scenario-dependent claim repricing and incomplete-share/claim gates remain in force. No missing fact becomes zero. Losses receive no automatic tax credits or loss carryforward.
 

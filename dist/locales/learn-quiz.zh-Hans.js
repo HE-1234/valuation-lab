@@ -1,0 +1,21 @@
+export default {
+ title:'十道新题，换个角度思考',
+ description:'每次点击“学习”，都会从 {count} 道题中抽取 10 道新题。题库全部抽完后才会重复。下方仍保留六个互动范例。',
+ newSet:'再来 10 道新题',
+ previous:'← 上一题',next:'下一题 →',review:'回顾本组题目',
+ question:'第 {current} 题，共 10 题',progress:'已回答 {answered} / 10 题',score:'得分：{score} / {answered}',
+ correct:'回答正确。',incorrect:'还不太对。',correctAnswer:'正确答案：{answer}',yourAnswer:'你的答案',correctOption:'正确答案',
+ explanation:'为什么选这个答案？',sources:'来源与核验',verification:'核验思路',
+ complete:'本组已完成',completeDetail:'你答对了 10 题中的 {score} 题。可以回顾解析，也可以再抽一组新题。',
+ hint:'选择一个答案。本组将记录你的首次作答。',answeredHint:'答案已记录。阅读解析后继续下一题。',
+ saved:'抽题顺序保存在此浏览器中，答案保留至本页关闭。浏览器的后退和前进会保留本组题目；点击“学习”会开始新一组。',
+ memory:'浏览器存储不可用。抽题顺序仅在本页打开期间保留；重新加载可能出现重复题目。',
+ reset:'不兼容的已存抽题顺序已安全重置。公司模型没有改变。',
+ announced:'第 {set} 组已准备好：共 10 道新题。',positionAnnouncement:'第 {current} 题，共 10 题。',
+ examples:'六个互动范例',examplesNote:'原有课程及可调节参数的教学范例，其进度与随机测验相互独立。',
+ loading:'正在加载已核验的题库…',failure:'无法核验或加载题库。请重试；下方六个互动范例仍然可用。',
+ retry:'重新加载',idle:'打开“学习”，开始一组 10 道新题。',
+ beginner:'基础',intermediate:'进阶',advanced:'高级',
+ 'discounting':'折现','fcff-fcfe':'现金流模型','reinvestment':'再投资','working-capital':'营运资本','sales-to-capital':'营收资本比','margins':'营业利润率','tax':'经营税负','growth-roic':'增长与资本回报','growth':'增长','terminal-value':'终值','currency-inflation':'货币与通胀',
+ 'claims':'所有权请求权','cash':'现金与股权价值桥接','leases':'租赁','options':'期权','sbc':'股权薪酬','banks':'银行','segments':'业务分部','guidance':'管理层指引','distributions':'分布','correlation':'相关性','monte-carlo':'蒙特卡洛模拟','sensitivity':'敏感性','backtesting':'回测','evidence':'证据'
+};

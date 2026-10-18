@@ -1,3 +1,5 @@
+import {jointDefaults} from './joint-simulation-config.js';
+import {incrementalResearchDraft} from './incremental-research.js';
 import selectedGOOG,{selectedGrowthPercentages} from './goog-selected-scenario-data.js';
 import {annualPathDefaults} from './annual-path-sampling.js';
 import review from './terminal-growth-review-data.js';
@@ -19,6 +21,7 @@ export function terminalReviewedResearchDraft(preset,bundle){
  // Existing research distributions remain; terminal fields are fixed at this
  // reviewed deterministic baseline until the user explicitly selects uncertainty.
  draft.researchSimulationConfig.annualTerminal=annualTerminalDefaults(draft.terminal);
+ draft.researchSimulationConfig=jointDefaults(draft.researchSimulationConfig,{horizon:draft.annual.length,capital:'investmentFactor'});
  draft.researchPreset.defaultSimulationConfig=structuredClone(draft.researchSimulationConfig);
  draft.researchPreset.originalSimulationRationale=structuredClone(draft.researchPreset.simulationRationale);
  for(const key of ['sampling','constraints','terminal','fixedInputs'])draft.researchPreset.simulationRationale[key]=review.classification;
@@ -26,6 +29,7 @@ export function terminalReviewedResearchDraft(preset,bundle){
  return draft;
 }
 export function currentResearchDraft(preset,bundle){
+ if(preset?.incrementalResearch)return incrementalResearchDraft(preset);
  const reviewed=terminalReviewedResearchDraft(preset,bundle);
  if(preset.ticker!=='GOOG')return reviewed;
  const draft=structuredClone(selectedGOOG.draft);
@@ -41,6 +45,7 @@ export function currentResearchDraft(preset,bundle){
  draft.researchSimulationConfig=structuredClone(reviewed.researchSimulationConfig);
  draft.researchSimulationConfig.capitalPolicy=draft.capitalPolicy;
  draft.researchSimulationConfig.annualPath=annualPathDefaults(20);
+ draft.researchSimulationConfig=jointDefaults(draft.researchSimulationConfig,{horizon:draft.annual.length,capital:'investmentFactor'});
  draft.researchPreset.defaultSimulationConfig=structuredClone(draft.researchSimulationConfig);
  const issues=researchDraftIssues(draft);if(issues.length)throw Error(issues.join(' '));
  return draft;
@@ -51,6 +56,7 @@ export function loadCurrentResearchPreset(previous,preset,bundle){
  return {draft,undo:structuredClone(previous)};
 }
 export function currentResearchPresetStatus(draft,bundle){
+ if(draft?.incrementalResearch){const p=studioPresetFor(bundle,draft.ticker);if(!p)return 'Research preset unavailable';const baseline=incrementalResearchDraft(p);return ['annual','terminal','timing','bridgeInputs','researchSimulationConfig','derivedForecast','marginPath','selectedIncrementalScenario'].some(k=>JSON.stringify(draft[k])!==JSON.stringify(baseline[k]))?'Your changes · based on the complete research preset':'Complete research preset · annual model';}
  if(!draft?.terminalGrowthReview){const status=researchPresetStatus(draft,bundle);return status==='Complete research preset · annual model'?'Saved preset version retained · newer research available':status;}
  const preset=studioPresetFor(bundle,draft?.ticker);if(!preset)return 'Research preset unavailable';
  const baseline=currentResearchDraft(preset,bundle);

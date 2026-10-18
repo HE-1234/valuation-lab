@@ -1,0 +1,118 @@
+{
+  "baseline": "b020e31060fd54a54b254d924bb672f66ce1fc17",
+  "scope": "Only reviewed simulation-help navigation wording and localized presentation metadata. No handler, navigation, storage, calculation, source-data or style changes.",
+  "files": {
+    "dist/simulation-view.js": {
+      "beforeSHA256": "05aa4f5425c93ce11b705bf3f0b64b9a1826a50b5a4f55d94cc2c8d92748ee42",
+      "afterSHA256": "6643618fc570494bdc52715ef62e1c4df6abee457cb5b71a905d77b5e546c647",
+      "fragments": [
+        {
+          "before": "data-i18n=\"simulation.t44\">How the sampler works ↗</a>",
+          "after": "data-i18n=\"simulation.t44\">How the sampler works (opens in a new tab) ↗</a>"
+        }
+      ]
+    },
+    "dist/locales/simulation.en.js": {
+      "beforeSHA256": "764db90aae5fc5a1138e169401eebe3688d44c379a45d7d63600d0c2b2d6ad73",
+      "afterSHA256": "59b3ab2141f2b27a8f51f239b02834519748bff54f4a6be7fc99da6e491ece36",
+      "fragments": [
+        {
+          "before": "\"t44\": \"How the sampler works ↗\"",
+          "after": "\"t44\": \"How the sampler works (opens in a new tab) ↗\""
+        }
+      ]
+    },
+    "dist/locales/simulation.zh-Hans.js": {
+      "beforeSHA256": "c6a58f577d7e7f7fb262a6ad41877edaba73a1e2c1fd9993c9a06f1e239efaaf",
+      "afterSHA256": "13d8fc8a99777a57c0b4a421cf8f4b3e3c55da25ec9738c205bd06af0374ba2a",
+      "fragments": [
+        {
+          "before": "\"t44\": \"抽样方法说明 ↗\"",
+          "after": "\"t44\": \"抽样方法说明（在新标签页打开）↗\""
+        }
+      ]
+    },
+    "dist/locales/simulation.zh-Hant.js": {
+      "beforeSHA256": "267a33f5672248b39bde64cb3520dca0db4ffdbe843f62203cd6e79d4487ad58",
+      "afterSHA256": "7fdf804e6a0f431c7904098dc1ca9d049ea161282e5c36eb046cd11609baad3a",
+      "fragments": [
+        {
+          "before": "\"t44\": \"抽樣方法說明 ↗\"",
+          "after": "\"t44\": \"抽樣方法說明（在新分頁開啟）↗\""
+        }
+      ]
+    },
+    "dist/data/simulation-methodology.html": {
+      "beforeSHA256": "5e7062b0ddd19f7e8e0decbe5eea275c5fe568f42d170984177186ae4dc28432",
+      "afterSHA256": "d16e7b44eb94ab29a16021b0c511acb0ca04062aabbb05bf5531d1f99b63893f",
+      "fragments": [
+        {
+          "before": "<p><a href=\"../index.html\"><span data-research-i18n=\"true\" data-i18n=\"research-pages.text.18c50f1151c8eaef8ee3\">← Return to the valuation workspace</span></a></p>",
+          "after": "<p><span data-research-i18n=\"true\" data-i18n=\"research-pages.text.8898e50825f32ba99739\">Opened this help from a simulation? Switch back to the original Valuation Lab tab to continue where you left off.</span></p>\n<p><a href=\"../index.html\"><span data-research-i18n=\"true\" data-i18n=\"research-pages.text.7f3710083613ac45cdcf\">Open the valuation workspace</span></a></p>"
+        }
+      ]
+    },
+    "dist/locales/research-pages.en.json": {
+      "beforeSHA256": "6c2df3fd87bae8f916f947bb3aef33680af31ff82a850f1265468785b0a6e75e",
+      "afterSHA256": "9de3fe5cb49687aaf8514a7cfadf098337ddb8eb2bf07b4cd7fe71a9dd2a319b",
+      "fragments": [
+        {
+          "before": "  \"text.cc6aaebb5b76a970e086\": \"A distribution of values, conditional on a business story\",\n  \"text.18c50f1151c8eaef8ee3\": \"← Return to the valuation workspace\",\n  \"text.7ad86efd3a1042290412\": \"This is an educational uncertainty analysis of discounted cash flow (DCF). The frequencies describe the assumptions you entered. They are not calibrated probabilities of real-world outcomes, investment profit, expected returns, or future stock prices. Attractive animation cannot make unsupported assumptions reliable.\",\n",
+          "after": "  \"text.cc6aaebb5b76a970e086\": \"A distribution of values, conditional on a business story\",\n  \"text.7ad86efd3a1042290412\": \"This is an educational uncertainty analysis of discounted cash flow (DCF). The frequencies describe the assumptions you entered. They are not calibrated probabilities of real-world outcomes, investment profit, expected returns, or future stock prices. Attractive animation cannot make unsupported assumptions reliable.\",\n"
+        },
+        {
+          "before": "  \"text.53f4f021bdebbcefcd9b\": \"The Annual model retains the selected fixed-schedule, revenue-scaled or committed-floor-plus-growth capital response. Annual investment factors apply after that response. A factor of 1 preserves edited pre-reserve investment under fixed-schedule; revenue-responsive policies can change it. Protected fixed funding is not multiplied, and required operating-cash changes are derived separately. Direct signed dollar-investment paths are supported only with fixed-schedule. A selected company funding floor can add a top-up after the investment response; see that case’s funding explanation.\",\n  \"text.c6d0060f771d8ccb264d\": \"Annual growth replaces the scalar growth distribution. With annual operating inputs enabled, annual capital replaces the scalar capital distribution or investment multiplier; scalar margin and WACC draws set terminal endpoints only. Optional terminal growth, tax and marginal ROIC are drawn once per scenario and start Fixed. Scalar controls offer Fixed, Triangular, Uniform and Bounded normal distributions; annual innovations remain Gaussian, regardless of that scalar family choice. Guided terminal sales/capital is derived from terminal growth, margin, tax and ROIC rather than drawn independently.\"\n}\n",
+          "after": "  \"text.53f4f021bdebbcefcd9b\": \"The Annual model retains the selected fixed-schedule, revenue-scaled or committed-floor-plus-growth capital response. Annual investment factors apply after that response. A factor of 1 preserves edited pre-reserve investment under fixed-schedule; revenue-responsive policies can change it. Protected fixed funding is not multiplied, and required operating-cash changes are derived separately. Direct signed dollar-investment paths are supported only with fixed-schedule. A selected company funding floor can add a top-up after the investment response; see that case’s funding explanation.\",\n  \"text.c6d0060f771d8ccb264d\": \"Annual growth replaces the scalar growth distribution. With annual operating inputs enabled, annual capital replaces the scalar capital distribution or investment multiplier; scalar margin and WACC draws set terminal endpoints only. Optional terminal growth, tax and marginal ROIC are drawn once per scenario and start Fixed. Scalar controls offer Fixed, Triangular, Uniform and Bounded normal distributions; annual innovations remain Gaussian, regardless of that scalar family choice. Guided terminal sales/capital is derived from terminal growth, margin, tax and ROIC rather than drawn independently.\",\n  \"text.8898e50825f32ba99739\": \"Opened this help from a simulation? Switch back to the original Valuation Lab tab to continue where you left off.\",\n  \"text.7f3710083613ac45cdcf\": \"Open the valuation workspace\"\n}\n"
+        }
+      ]
+    },
+    "dist/locales/research-pages.zh-Hans.json": {
+      "beforeSHA256": "66c30de8ed1a51b94b0e1323e116ca6cb863b648fba01b7144ed9db7a198c4c7",
+      "afterSHA256": "cb0083c942eeda01aeca6d7a832a018d10d03b2e05ebb71d7f103ba79dc80650",
+      "fragments": [
+        {
+          "before": "  \"text.cc6aaebb5b76a970e086\": \"以商业叙事为条件的价值分布\",\n  \"text.18c50f1151c8eaef8ee3\": \"← 返回估值工作区\",\n  \"text.7ad86efd3a1042290412\": \"这是现金流折现法（DCF）的教育性不确定性分析。频率描述的是您输入的假设，并非经校准的现实结果、投资获利、预期报酬或未来股价概率。吸引人的动画无法让欠缺支持的假设变得可靠。\",\n",
+          "after": "  \"text.cc6aaebb5b76a970e086\": \"以商业叙事为条件的价值分布\",\n  \"text.7ad86efd3a1042290412\": \"这是现金流折现法（DCF）的教育性不确定性分析。频率描述的是您输入的假设，并非经校准的现实结果、投资获利、预期报酬或未来股价概率。吸引人的动画无法让欠缺支持的假设变得可靠。\",\n"
+        },
+        {
+          "before": "  \"text.53f4f021bdebbcefcd9b\": \"年度模型保留所选的固定排程、随营收缩放或承诺投入底线加成长资本反应。年度投资因子在该反应之后套用。固定排程下，因子为 1 会保留编辑后、准备金变动前的投资额；随营收反应的政策则可能改变该金额。受保护的固定资金安排不乘以因子，必要营运现金的变动另外推导。直接的带正负号投资金额路径，仅支援固定排程。 所选公司的资金投入底线可在投资反应之后增加补足额；请参阅该情境的资金安排说明。\",\n  \"text.c6d0060f771d8ccb264d\": \"年度成长路径取代纯量成长率分布。启用年度营运输入时，年度资本路径取代纯量资本分布或投资乘数；纯量利润率及 WACC 抽样只设定终值端点。可选的永续成长率、税率及边际 ROIC 每个情境抽样一次，初始为 Fixed。纯量控制项提供 Fixed、Triangular、Uniform 及 Bounded normal 分布；无论选择哪种纯量分布，年度新冲击仍为高斯分布。 引导估值的终值销售额／资本比率由永续成长率、利润率、税率及 ROIC 推导，不另行独立抽样。\"\n}\n",
+          "after": "  \"text.53f4f021bdebbcefcd9b\": \"年度模型保留所选的固定排程、随营收缩放或承诺投入底线加成长资本反应。年度投资因子在该反应之后套用。固定排程下，因子为 1 会保留编辑后、准备金变动前的投资额；随营收反应的政策则可能改变该金额。受保护的固定资金安排不乘以因子，必要营运现金的变动另外推导。直接的带正负号投资金额路径，仅支援固定排程。 所选公司的资金投入底线可在投资反应之后增加补足额；请参阅该情境的资金安排说明。\",\n  \"text.c6d0060f771d8ccb264d\": \"年度成长路径取代纯量成长率分布。启用年度营运输入时，年度资本路径取代纯量资本分布或投资乘数；纯量利润率及 WACC 抽样只设定终值端点。可选的永续成长率、税率及边际 ROIC 每个情境抽样一次，初始为 Fixed。纯量控制项提供 Fixed、Triangular、Uniform 及 Bounded normal 分布；无论选择哪种纯量分布，年度新冲击仍为高斯分布。 引导估值的终值销售额／资本比率由永续成长率、利润率、税率及 ROIC 推导，不另行独立抽样。\",\n  \"text.8898e50825f32ba99739\": \"从模拟页面打开了这份说明？请切换回原来的 Valuation Lab 标签页，继续之前的操作。\",\n  \"text.7f3710083613ac45cdcf\": \"打开估值工作区\"\n}\n"
+        }
+      ]
+    },
+    "dist/locales/research-pages.zh-Hant.json": {
+      "beforeSHA256": "2160736efb90f6f5def1a2796fa574b2849878f19332fb0cc4aeaec27fdd2bbf",
+      "afterSHA256": "89e3e9fd3fbfd27632fa5ca43364dadb35c7469e2870962a2dc61a62ff804c5b",
+      "fragments": [
+        {
+          "before": "  \"text.cc6aaebb5b76a970e086\": \"以商業敘事為條件的價值分布\",\n  \"text.18c50f1151c8eaef8ee3\": \"← 返回估值工作區\",\n  \"text.7ad86efd3a1042290412\": \"這是現金流折現法（DCF）的教育性不確定性分析。頻率描述的是您輸入的假設，並非經校準的現實結果、投資獲利、預期報酬或未來股價機率。吸引人的動畫無法讓欠缺支持的假設變得可靠。\",\n",
+          "after": "  \"text.cc6aaebb5b76a970e086\": \"以商業敘事為條件的價值分布\",\n  \"text.7ad86efd3a1042290412\": \"這是現金流折現法（DCF）的教育性不確定性分析。頻率描述的是您輸入的假設，並非經校準的現實結果、投資獲利、預期報酬或未來股價機率。吸引人的動畫無法讓欠缺支持的假設變得可靠。\",\n"
+        },
+        {
+          "before": "  \"text.53f4f021bdebbcefcd9b\": \"年度模型保留所選的固定排程、隨營收縮放或承諾投入底線加成長資本反應。年度投資因子在該反應之後套用。固定排程下，因子為 1 會保留編輯後、準備金變動前的投資額；隨營收反應的政策則可能改變該金額。受保護的固定資金安排不乘以因子，必要營運現金的變動另外推導。直接的帶正負號投資金額路徑，僅支援固定排程。 所選公司的資金投入底線可在投資反應之後增加補足額；請參閱該情境的資金安排說明。\",\n  \"text.c6d0060f771d8ccb264d\": \"年度成長路徑取代純量成長率分布。啟用年度營運輸入時，年度資本路徑取代純量資本分布或投資乘數；純量利潤率及 WACC 抽樣只設定終值端點。可選的永續成長率、稅率及邊際 ROIC 每個情境抽樣一次，初始為 Fixed。純量控制項提供 Fixed、Triangular、Uniform 及 Bounded normal 分布；無論選擇哪種純量分布，年度新衝擊仍為高斯分布。 引導估值的終值銷售額／資本比率由永續成長率、利潤率、稅率及 ROIC 推導，不另行獨立抽樣。\"\n}\n",
+          "after": "  \"text.53f4f021bdebbcefcd9b\": \"年度模型保留所選的固定排程、隨營收縮放或承諾投入底線加成長資本反應。年度投資因子在該反應之後套用。固定排程下，因子為 1 會保留編輯後、準備金變動前的投資額；隨營收反應的政策則可能改變該金額。受保護的固定資金安排不乘以因子，必要營運現金的變動另外推導。直接的帶正負號投資金額路徑，僅支援固定排程。 所選公司的資金投入底線可在投資反應之後增加補足額；請參閱該情境的資金安排說明。\",\n  \"text.c6d0060f771d8ccb264d\": \"年度成長路徑取代純量成長率分布。啟用年度營運輸入時，年度資本路徑取代純量資本分布或投資乘數；純量利潤率及 WACC 抽樣只設定終值端點。可選的永續成長率、稅率及邊際 ROIC 每個情境抽樣一次，初始為 Fixed。純量控制項提供 Fixed、Triangular、Uniform 及 Bounded normal 分布；無論選擇哪種純量分布，年度新衝擊仍為高斯分布。 引導估值的終值銷售額／資本比率由永續成長率、利潤率、稅率及 ROIC 推導，不另行獨立抽樣。\",\n  \"text.8898e50825f32ba99739\": \"從模擬頁面開啟了這份說明？請切換回原來的 Valuation Lab 分頁，繼續先前的操作。\",\n  \"text.7f3710083613ac45cdcf\": \"開啟估值工作區\"\n}\n"
+        }
+      ]
+    },
+    "dist/locales/research-pages-coverage.json": {
+      "beforeSHA256": "0b1f6e04203091fbfebfcb461618cf5e3cad06cf4a7183efc2d1ae5628303f66",
+      "afterSHA256": "715ac247f025e1722745a49bac3f6055f1352b9372a0c3a1f30124782b79580b",
+      "fragments": [
+        {
+          "before": "      \"page\": \"data/simulation-methodology.html\",\n      \"uniqueAuthoredSegments\": 132,\n      \"translatedSegments\": 130,\n      \"preservedOriginalSegments\": 2,\n      \"coveredSegments\": 132,\n      \"missingKeys\": [],\n",
+          "after": "      \"page\": \"data/simulation-methodology.html\",\n      \"uniqueAuthoredSegments\": 133,\n      \"translatedSegments\": 131,\n      \"preservedOriginalSegments\": 2,\n      \"coveredSegments\": 133,\n      \"missingKeys\": [],\n"
+        }
+      ]
+    },
+    "dist/locales/research-presentation-manifest.json": {
+      "beforeSHA256": "f454f94a02f35ced7417e2881098c4263b4e14dd56a920846046b336c7ac51e1",
+      "afterSHA256": "e5eea9104fe4ed8e8f8eb88dbd4e49ca161e3feb898a3c826108399cc0353c9e",
+      "fragments": [
+        {
+          "before": "    \"data/simulation-methodology.html\": {\n      \"originalEnglishSHA256\": \"b32578fc42df65aaf408296b817904b1838ef5229fa560639d2af560bcdb607b\",\n      \"originalEnglishBytes\": 27935,\n      \"presentationSHA256\": \"5e7062b0ddd19f7e8e0decbe5eea275c5fe568f42d170984177186ae4dc28432\",\n      \"presentationBytes\": 40240\n    },\n",
+          "after": "    \"data/simulation-methodology.html\": {\n      \"originalEnglishSHA256\": \"53b037f2158543bbc44688faf0b879639043a19f2c22bb9e309b09f27a321377\",\n      \"originalEnglishBytes\": 28047,\n      \"presentationSHA256\": \"d16e7b44eb94ab29a16021b0c511acb0ca04062aabbb05bf5531d1f99b63893f\",\n      \"presentationBytes\": 40444\n    },\n"
+        }
+      ]
+    }
+  }
+}

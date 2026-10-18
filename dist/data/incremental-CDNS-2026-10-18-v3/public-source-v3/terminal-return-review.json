@@ -1,0 +1,30 @@
+{
+  "diagnostic": [
+    {
+      "year": 2024,
+      "book_ic_equity_plus_debt_minus_cash": 4505.731,
+      "rd_asset_5y": 4113.9134,
+      "rd_amortization_5y": 1159.4574,
+      "rd_adjusted_ebit": 1740.3985999999998,
+      "rd_adjusted_yearend_roic_at_24pct_tax": 0.15345214658739284,
+      "note": "Diagnostic denominator includes goodwill and acquired intangibles; excludes subtracting noncash investments, so conservative. End-year, not average capital. Not a reported metric; not used to add back R&D to DCF."
+    },
+    {
+      "year": 2025,
+      "book_ic_equity_plus_debt_minus_cash": 4953.014,
+      "rd_asset_5y": 4600.597,
+      "rd_amortization_5y": 1282.0884,
+      "rd_adjusted_ebit": 1978.7255999999998,
+      "rd_adjusted_yearend_roic_at_24pct_tax": 0.15740974339440864,
+      "note": "Diagnostic denominator includes goodwill and acquired intangibles; excludes subtracting noncash investments, so conservative. End-year, not average capital. Not a reported metric; not used to add back R&D to DCF."
+    }
+  ],
+  "terminal_incremental_roic": {
+    "down": 0.1,
+    "base": 0.15,
+    "up": 0.2
+  },
+  "rationale": "Five-year R&D-capitalized, acquisition-inclusive diagnostic tempers superficially high asset-light book returns. Base 15% is below recent diagnostic; upside 20% requires durable moat/monetization; downside 10% is below the 12% downside WACC by 2 percentage points, so incremental terminal growth destroys value relative to capital cost. Terminal reinvestment g/ROIC is charged, never assumed zero.",
+  "limitations": "Five-year life is analyst assumption, not proof of economic research life; terminal return remains an explicit scenario input.",
+  "v3_comparability": "Historical return diagnostic uses reported amortized SBC, while v3 economic margins charge annual new-grant value. It is therefore a reasonableness anchor rather than an exact same-compensation-basis ROIC. Neither the recent Hexagon purchase nor its future returns are proven by the2024\u201325 diagnostic. Terminal assumptions remain conditional."
+}

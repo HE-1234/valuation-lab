@@ -1,0 +1,100 @@
+{
+  "baseline": "2acd579252577e359c1862d9e4c8761941b7c32d",
+  "scope": "Exact SNPS-only ACT/365.25 stub, source-policy floor, claims dispatch and export hooks. Reverse these exact additions before the existing CDNS and FN protections; no wildcard exclusions.",
+  "files": {
+    "dist/incremental-registry.js": [
+      {
+        "reviewedAdditiveLine": "import {snpsRegistry} from './snps-research-registry.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": "export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry,cdnsRegistry,snpsRegistry]);\n",
+        "originalLine": "export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry,cdnsRegistry]);\n"
+      }
+    ],
+    "dist/incremental-research-claims.js": [
+      {
+        "reviewedAdditiveLine": "import {calculateSnpsBridge} from './snps-research-claims.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " if(incrementalRecord(d?.ticker)?.bridge.type==='snps-v3')return calculateSnpsBridge(d,enterprise,options);\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " return b.options.flatMap(field=>(['cdns-v3','snps-v3'].includes(b.type)?field.listedStressValues:[field.min,field.max]).filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));\n",
+        "originalLine": " return b.options.flatMap(field=>(b.type==='cdns-v3'?field.listedStressValues:[field.min,field.max]).filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));\n"
+      }
+    ],
+    "dist/research-model.js": [
+      {
+        "reviewedAdditiveLine": "import {calculateSnpsOperating,snpsOpeningStubIssues} from './snps-opening-stub.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),...(c.openingStub?{openingStub:copy(c.openingStub)}:{}),...(c.annualFundingPolicy?{annualFundingPolicy:copy(c.annualFundingPolicy)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};\n",
+        "originalLine": " return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),...(c.openingStub?{openingStub:copy(c.openingStub)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};\n"
+      },
+      {
+        "reviewedAdditiveLine": " errors.push(...incrementalDraftIssues(d),...(d.ticker==='SNPS'?snpsOpeningStubIssues(d):cdnsOpeningStubIssues(d)));\n",
+        "originalLine": " errors.push(...incrementalDraftIssues(d),...cdnsOpeningStubIssues(d));\n"
+      },
+      {
+        "reviewedAdditiveLine": " if(!object(value)||!terminalReviewIdentityValid(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||(value.anchor?.revenue!==c.anchor.revenue&&!((value.ticker==='CDNS'&&!cdnsOpeningStubIssues(value).length)||(value.ticker==='SNPS'&&!snpsOpeningStubIssues(value).length))))return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};\n",
+        "originalLine": " if(!object(value)||!terminalReviewIdentityValid(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||(value.anchor?.revenue!==c.anchor.revenue&&!(value.ticker==='CDNS'&&!cdnsOpeningStubIssues(value).length)))return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};\n"
+      },
+      {
+        "reviewedAdditiveLine": " if(d.ticker==='SNPS')return calculateSnpsOperating(d);\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " if(d.ticker==='SNPS')return {status:'incomplete',enterprise:null,message:'SNPS source Q4 timing is fixed. A different valuation date requires a newly reviewed partial-period operating and capital bridge.'};\n",
+        "originalLine": ""
+      }
+    ],
+    "dist/research-simulation-view.js": [
+      {
+        "reviewedAdditiveLine": "import {SNPS_STUB_NOTE,SNPS_FUNDING_NOTE} from './snps-research-view.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": "  fixedNote:draft.ticker==='SNPS'?SNPS_STUB_NOTE:draft.openingStub?CDNS_STUB_NOTE:`Taxes, terminal growth, terminal ROIC, the forecast horizon, timing-stub inputs and selected capital assumptions remain fixed. ${fnClaims?fnNote:optionClaims?'AAOI note and customer-warrant claim values are repriced from operating value in every trial.':'Selected claim amounts remain fixed in this bridge.'} Terminal investment still follows NOPAT \u00d7 growth / ROIC. Funding deficits are never deducted again as debt.`,\n",
+        "originalLine": "  fixedNote:draft.openingStub?CDNS_STUB_NOTE:`Taxes, terminal growth, terminal ROIC, the forecast horizon, timing-stub inputs and selected capital assumptions remain fixed. ${fnClaims?fnNote:optionClaims?'AAOI note and customer-warrant claim values are repriced from operating value in every trial.':'Selected claim amounts remain fixed in this bridge.'} Terminal investment still follows NOPAT \u00d7 growth / ROIC. Funding deficits are never deducted again as debt.`,\n"
+      },
+      {
+        "reviewedAdditiveLine": " const originalRelationships=adapter.relationshipsMarkup;adapter.relationshipsMarkup=config=>{let html=originalRelationships(config);if(fnClaims)html=html.replace(/<p class=\"micro\" data-i18n=\"annual.copy.117dfa8850c4\">[\\s\\S]*?<\\/p>/,`<p class=\"micro\">${annualTextHTML('FN investment factors apply to pre-reserve investment excluding the fixed opening payable. Required-cash changes are derived separately from the same sampled revenue path.')}</p>`).replace(/<p class=\"micro\" data-i18n=\"annual.copy.8a63274d15ce\">[\\s\\S]*?<\\/p>/,`<p class=\"micro\">${annualTextHTML('Investment inputs and draws are before required-cash changes. The fixed 3% reserve policy can fund cash growth or release cash as next-year sales change; the opening payable settlement remains fixed.')}</p>`);if(draft.ticker==='SNPS')html=html.replace(/<p class=\"micro\" data-i18n=\"annual.copy.8a63274d15ce\">[\\s\\S]*?<\\/p>/,`<p class=\"micro\">${annualTextHTML('SNPS capital responses and draws change entered investment before the separate FY2027 floor top-up. Entered releases retain their sign, but funded FY2027 investment cannot fall below the selected analyst floor. Later years have no such floor; falling revenue does not automatically create a capital release.')}</p>`);return (draft.ticker==='SNPS'?`<p class=\"research-warning\">${annualTextHTML(SNPS_FUNDING_NOTE)}</p>`:'')+incrementalFundingHTML(draft)+html;};\n",
+        "originalLine": " const originalRelationships=adapter.relationshipsMarkup;adapter.relationshipsMarkup=config=>{let html=originalRelationships(config);if(fnClaims)html=html.replace(/<p class=\"micro\" data-i18n=\"annual.copy.117dfa8850c4\">[\\s\\S]*?<\\/p>/,`<p class=\"micro\">${annualTextHTML('FN investment factors apply to pre-reserve investment excluding the fixed opening payable. Required-cash changes are derived separately from the same sampled revenue path.')}</p>`).replace(/<p class=\"micro\" data-i18n=\"annual.copy.8a63274d15ce\">[\\s\\S]*?<\\/p>/,`<p class=\"micro\">${annualTextHTML('Investment inputs and draws are before required-cash changes. The fixed 3% reserve policy can fund cash growth or release cash as next-year sales change; the opening payable settlement remains fixed.')}</p>`);return incrementalFundingHTML(draft)+html;};\n"
+      },
+      {
+        "reviewedAdditiveLine": "  if(draft.openingStub&&field==='fixedNote')return annualMessage(draft.ticker==='SNPS'?SNPS_STUB_NOTE:CDNS_STUB_NOTE);\n",
+        "originalLine": "  if(draft.openingStub&&field==='fixedNote')return annualMessage(CDNS_STUB_NOTE);\n"
+      }
+    ],
+    "dist/research-simulation.js": [
+      {
+        "reviewedAdditiveLine": "import {SNPS_FUNDING_NOTE} from './snps-opening-stub.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": "  state.scenarios.push({trial,...stress,...(d.annualFundingPolicy?{annualFunding:operating.rows.map(r=>({year:r.year,periodEnd:r.periodEnd,enteredReinvestment:r.enteredReinvestment,investmentFloor:r.investmentFloor,investmentFloorTopUp:r.investmentFloorTopUp,reinvestment:r.reinvestment}))}:{}),...(growthPath?{growthPath}:{}),...(metricPaths?{metricPaths}:{}),...(state.pathSampler?{terminal}:{}),enterprise,originEnterprise:operating.enterprise,forecastPV:operating.forecastPV,terminalPV:operating.terminalPV,\n",
+        "originalLine": "  state.scenarios.push({trial,...stress,...(growthPath?{growthPath}:{}),...(metricPaths?{metricPaths}:{}),...(state.pathSampler?{terminal}:{}),enterprise,originEnterprise:operating.enterprise,forecastPV:operating.forecastPV,terminalPV:operating.terminalPV,\n"
+      },
+      {
+        "reviewedAdditiveLine": "   bridgeStatus:bridge.status,...(bridgeEligible?{claims:{allocationShares:bridge.allocationShares,assetTotal:bridge.assetTotal,claimTotal:bridge.claimTotal,warrantClaim:bridge.warrantClaim,...(['cdns-conditional-full-participation-v3','snps-conditional-full-participation-v3'].includes(bridge.claimAllocationModel)?{claimAllocationModel:bridge.claimAllocationModel,allocationUnits:bridge.allocationUnits,assumedAwardUnits:bridge.assumedAwardUnits,assumedAwardEquity:bridge.assumedAwardEquity,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,allocationResidual:bridge.allocationResidual}:{}),...(bridge.claimAllocationModel==='fn-joint-european-v1'?{claimAllocationModel:bridge.claimAllocationModel,awardClaim:bridge.awardClaim,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,openingOperatingCashReserve:bridge.openingOperatingCashReserve,allocationResidual:bridge.allocation.residual}:{})}}:{})});\n",
+        "originalLine": "   bridgeStatus:bridge.status,...(bridgeEligible?{claims:{allocationShares:bridge.allocationShares,assetTotal:bridge.assetTotal,claimTotal:bridge.claimTotal,warrantClaim:bridge.warrantClaim,...(bridge.claimAllocationModel==='cdns-conditional-full-participation-v3'?{claimAllocationModel:bridge.claimAllocationModel,allocationUnits:bridge.allocationUnits,assumedAwardUnits:bridge.assumedAwardUnits,assumedAwardEquity:bridge.assumedAwardEquity,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,allocationResidual:bridge.allocationResidual}:{}),...(bridge.claimAllocationModel==='fn-joint-european-v1'?{claimAllocationModel:bridge.claimAllocationModel,awardClaim:bridge.awardClaim,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,openingOperatingCashReserve:bridge.openingOperatingCashReserve,allocationResidual:bridge.allocation.residual}:{})}}:{})});\n"
+      },
+      {
+        "reviewedAdditiveLine": " const capitalDescription=d.annualFundingPolicy?SNPS_FUNDING_NOTE:d.fixedCapitalFunding?incrementalRecord(d.ticker).prose.funding.en:state.metricSamplers?.investmentFactor?'Annual investment factors apply after the selected capital response. At factor 1, fixed-schedule retains edited pre-reserve investment; revenue-responsive policies may change it. Selected fixed funding is not multiplied, and required operating-cash changes are derived separately. No independent dollar-investment draw is added; the scalar investment multiplier is inactive.':state.metricSamplers?.reinvestment?'Annual net investment is sampled directly in native-currency millions around the edited signed schedule. It replaces the scalar investment multiplier and revenue-response policy; fixed investment years remain exact even when revenue varies. Revenue and investment are distinct primitive assumptions; implied returns are derived.':d.schemaVersion===2\n",
+        "originalLine": " const capitalDescription=d.fixedCapitalFunding?incrementalRecord(d.ticker).prose.funding.en:state.metricSamplers?.investmentFactor?'Annual investment factors apply after the selected capital response. At factor 1, fixed-schedule retains edited pre-reserve investment; revenue-responsive policies may change it. Selected fixed funding is not multiplied, and required operating-cash changes are derived separately. No independent dollar-investment draw is added; the scalar investment multiplier is inactive.':state.metricSamplers?.reinvestment?'Annual net investment is sampled directly in native-currency millions around the edited signed schedule. It replaces the scalar investment multiplier and revenue-response policy; fixed investment years remain exact even when revenue varies. Revenue and investment are distinct primitive assumptions; implied returns are derived.':d.schemaVersion===2\n"
+      },
+      {
+        "reviewedAdditiveLine": "  warnings,method:{...(d.openingStub?{openingStub:structuredClone(d.openingStub),annualReference:structuredClone(d.anchor),openingStubPolicy:d.ticker==='SNPS'?'Selected fiscal Q4 cash flows, restructuring settlement and WACC fixed; annual intervals use actual days / 365.25. Only FY2027 onward is edited or sampled; source whole-curve WACC sensitivities differ.':'Selected H2 cash flows and WACC fixed; only FY2027 onward is edited or sampled. Source whole-curve WACC sensitivities differ.'}:{}),distribution:'Shared fixed, triangular, uniform or conditionally truncated normal inverse CDF',random:'FNV-1a seed hash / Mulberry32',\n",
+        "originalLine": "  warnings,method:{...(d.openingStub?{openingStub:structuredClone(d.openingStub),annualReference:structuredClone(d.anchor),openingStubPolicy:'Selected H2 cash flows and WACC fixed; only FY2027 onward is edited or sampled. Source whole-curve WACC sensitivities differ.'}:{}),distribution:'Shared fixed, triangular, uniform or conditionally truncated normal inverse CDF',random:'FNV-1a seed hash / Mulberry32',\n"
+      },
+      {
+        "reviewedAdditiveLine": "   capitalPolicy:c.capitalPolicy,capitalDescription,...(d.annualFundingPolicy?{annualFundingPolicy:structuredClone(d.annualFundingPolicy)}:{}),...(d.operatingCashFunding?{operatingCashFunding:structuredClone(d.operatingCashFunding)}:{}),...(d.fixedCapitalFunding?{fixedCapitalFunding:structuredClone(d.fixedCapitalFunding),fixedCapitalFundingNote:'Only operating investment is scaled or sampled; registry-backed opening funding remains fixed in its specified years.'}:{}),...(d.schemaVersion===2?{capitalResponseBaseline:'Current edited annual schedule',marginalSalesCapital:d.derivedForecast.marginalSalesCapital,investmentMultiplierOrder:'After derived capital response'}:{}),terminal:'Final explicit revenue \u00d7 (1+sampled g), scalar terminal margin and WACC, selected terminal tax and NOPAT \u00d7 g / ROIC reinvestment; optional terminal distributions are drawn once per trial',\n",
+        "originalLine": "   capitalPolicy:c.capitalPolicy,capitalDescription,...(d.operatingCashFunding?{operatingCashFunding:structuredClone(d.operatingCashFunding)}:{}),...(d.fixedCapitalFunding?{fixedCapitalFunding:structuredClone(d.fixedCapitalFunding),fixedCapitalFundingNote:'Only operating investment is scaled or sampled; registry-backed opening funding remains fixed in its specified years.'}:{}),...(d.schemaVersion===2?{capitalResponseBaseline:'Current edited annual schedule',marginalSalesCapital:d.derivedForecast.marginalSalesCapital,investmentMultiplierOrder:'After derived capital response'}:{}),terminal:'Final explicit revenue \u00d7 (1+sampled g), scalar terminal margin and WACC, selected terminal tax and NOPAT \u00d7 g / ROIC reinvestment; optional terminal distributions are drawn once per trial',\n"
+      }
+    ]
+  }
+}

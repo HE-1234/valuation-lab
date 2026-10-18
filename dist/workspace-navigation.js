@@ -7,9 +7,9 @@ export const workspacePages={
 const sectionLabels={studio:'Studio',research:'Research',learn:'Learn'};
 export function mountWorkspaceNavigation({document=globalThis.document,window=globalThis.window,history=globalThis.history,location=globalThis.location,enter=()=>{}}={}){
  const releaseDocumentFlow=mountDocumentFlow(document);
- const last={studio:'renewed',research:'history',learn:'learn'};let current='renewed';
- function show(page,{record=true,animate=true}={}){
-  if(!Object.hasOwn(workspacePages,page))return false;
+ const last={studio:'renewed',research:'history',learn:'learn'};let current='renewed',active=true;
+ function show(page,{record=true,animate=true,reason='programmatic'}={}){
+  if(!active||!Object.hasOwn(workspacePages,page))return false;
   const info=workspacePages[page],changed=page!==current;current=page;last[info.section]=page;
   if(document.body)document.body.dataset.workspacePage=page;
   document.querySelectorAll('.page').forEach(el=>el.classList.toggle('hidden',el.id!==page));
@@ -19,13 +19,14 @@ export function mountWorkspaceNavigation({document=globalThis.document,window=gl
   const breadcrumb=document.querySelector('#breadcrumb');if(breadcrumb)breadcrumb.textContent=info.section==='learn'?'Workspace / Learn':`${sectionLabels[info.section]} / ${info.label}`;
   if(record&&location.hash!=='#'+page)history.pushState(null,'','#'+page);
   if(changed){window.dispatchEvent(new CustomEvent('valuation:tab-change',{detail:page}));if(animate)enter(document.getElementById(page));}
+  window.dispatchEvent(new CustomEvent('valuation:page-activate',{detail:{page,reason,changed}}));
   return true;
  }
- document.querySelectorAll('[data-tab]').forEach(el=>el.onclick=()=>show(el.dataset.tab));
- document.querySelectorAll('[data-primary]').forEach(el=>el.onclick=()=>show(last[el.dataset.primary]));
- document.querySelectorAll('[data-page-link]').forEach(el=>el.onclick=e=>{e.preventDefault();show(el.dataset.pageLink);});
- const onLocation=()=>show(location.hash?location.hash.slice(1):'renewed',{record:false,animate:false});
+ document.querySelectorAll('[data-tab]').forEach(el=>el.onclick=()=>show(el.dataset.tab,{reason:'explicit'}));
+ document.querySelectorAll('[data-primary]').forEach(el=>el.onclick=()=>show(last[el.dataset.primary],{reason:'explicit'}));
+ document.querySelectorAll('[data-page-link]').forEach(el=>el.onclick=e=>{e.preventDefault();show(el.dataset.pageLink,{reason:'explicit'});});
+ const onLocation=()=>show(location.hash?location.hash.slice(1):'renewed',{record:false,animate:false,reason:'history'});
  window.addEventListener('popstate',onLocation);window.addEventListener('hashchange',onLocation);
- show(Object.hasOwn(workspacePages,location.hash.slice(1))?location.hash.slice(1):'renewed',{record:false,animate:false});
- return {show,getPage:()=>current,destroy(){releaseDocumentFlow();window.removeEventListener('popstate',onLocation);window.removeEventListener('hashchange',onLocation);}};
+ show(Object.hasOwn(workspacePages,location.hash.slice(1))?location.hash.slice(1):'renewed',{record:false,animate:false,reason:'initial'});
+ return {show,getPage:()=>current,destroy(){active=false;releaseDocumentFlow();window.removeEventListener('popstate',onLocation);window.removeEventListener('hashchange',onLocation);}};
 }

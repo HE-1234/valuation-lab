@@ -28,7 +28,7 @@ test('special claims UI: switching the AAOI capital basis refreshes the quote ba
 });
 
 test('special claims UI: claims persist independently by company and financial baseline and reset only when requested',async()=>{
- const h=await startStudio();h.change('#current-company','AAOI');h.step(6);h.input('#claim-noteFairValue','512');h.change('#current-snapshot','AAOI-CURRENT-2025-12-31');h.step(6);assert.equal(Number(h.get('#claim-noteFairValue').value),145.231);h.input('#claim-noteFairValue','180');
+ const h=await startStudio();h.change('#current-company','AAOI');h.step(6);h.input('#claim-noteFairValue','512');h.change('#current-snapshot','AAOI-CURRENT-2025-12-31');h.step(6);assert.equal(Number(h.get('#claim-noteFairValue').value),145.23);assert.equal(h.state('AAOI').claims.noteFairValue,145.231);h.get('#claim-noteFairValue').onfocus();assert.equal(h.get('#claim-noteFairValue').value,'145.231');h.input('#claim-noteFairValue','180');
  h.change('#current-company','GOOG');h.step(6);h.change('#claim-conversionCase','minimum');h.change('#current-company','AAOI');h.change('#current-snapshot','AAOI-TTM-2026-06-30');h.step(6);assert.equal(Number(h.get('#claim-noteFairValue').value),512);h.get('#reset-claims').click();assert.equal(Number(h.get('#claim-noteFairValue').value),445.1);
  const restored=await startStudio({storage:h.storage});restored.change('#current-company','AAOI');restored.change('#current-snapshot','AAOI-CURRENT-2025-12-31');restored.step(6);assert.equal(Number(restored.get('#claim-noteFairValue').value),180);restored.change('#current-company','GOOG');restored.step(6);assert.equal(restored.get('#claim-conversionCase').value,'minimum');
 });

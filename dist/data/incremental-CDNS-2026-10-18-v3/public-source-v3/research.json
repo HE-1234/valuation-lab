@@ -1,0 +1,134 @@
+{
+  "information_cutoff": "2026-10-18",
+  "financial_origin": "2026-06-30",
+  "issuer": "Cadence Design Systems, Inc.",
+  "ticker": "CDNS",
+  "exchange": "Nasdaq Global Select Market",
+  "currency": "USD",
+  "security": "Common stock, $0.01 par value",
+  "robinhood_verification": {
+    "url": "https://robinhood.com/us/en/stocks/CDNS/",
+    "observed": "Official buy/trade security page verified; does not establish eligibility in a particular account. Quote not used, due to inconsistent Sunday session date."
+  },
+  "latest_actuals_usd_m": {
+    "quarter_revenue": 1584.451,
+    "h1_revenue": 3058.671,
+    "quarter_gaap_ebit": 450.315,
+    "h1_gaap_ebit": 881.644,
+    "h1_rd": 1039.71,
+    "h1_sbc": 285.073,
+    "h1_da": 201.611,
+    "h1_acquired_amortization": 130.871,
+    "h1_cfo": 990.711,
+    "h1_capex": 101.448,
+    "h1_purchased_intangibles": 6.975,
+    "h1_cash_acquisitions_net": 2100.292,
+    "h1_buybacks": 400.006,
+    "h1_employee_withholding_cash": 140.722,
+    "h1_share_issuance_proceeds": 88.84
+  },
+  "revenue_quality": {
+    "gaap_operating_segments": 1,
+    "q2_product_pct": {
+      "core_eda": 68,
+      "ip": 15,
+      "sda": 17
+    },
+    "q2_recognition_pct": {
+      "recognized_over_time": 72,
+      "other_recurring": 6,
+      "upfront": 22
+    },
+    "ttm_recurring_pct": 79,
+    "FY2025_recurring_pct": 80,
+    "FY2024_recurring_pct": 83,
+    "arr": "Not disclosed; do not annualize backlog or recurring revenue into ARR.",
+    "backlog_usd_m": 8100,
+    "noncancelable_customer_selection_commitments_usd_m": 900,
+    "eligible_rpo_excluding_selection_usd_m": 7200,
+    "next_12m_pct_of_eligible_rpo": 58,
+    "next_13_to_36m_pct": 40,
+    "computed_next12m_usd_m": 4176,
+    "reported_next12m_rounded_usd_m": 4200,
+    "future_royalties": "Excluded from RPO; recognize contingent royalties when earned; prepaid nonrefundable royalties can be upfront.",
+    "deferred_revenue_usd_m": 1169.571,
+    "contract_assets_usd_m": 39.824,
+    "net_receivables_including_longterm_usd_m": 1125.208,
+    "unbilled_receivables_usd_m": 564.614,
+    "cash_conversion_risk": "Hardware/IP delivery and product selection can shift revenue; 65-day DSO and higher inventory require cash despite contractual visibility."
+  },
+  "guidance_as_of": "2026-07-27",
+  "guidance": {
+    "FY2026_revenue_usd_m": [
+      6260,
+      6340
+    ],
+    "FY2026_gaap_margin": [
+      0.2775,
+      0.2875
+    ],
+    "FY2026_non_gaap_margin": [
+      0.4375,
+      0.4475
+    ],
+    "FY2026_gaap_eps": [
+      4.76,
+      4.86
+    ],
+    "FY2026_non_gaap_eps": [
+      8.05,
+      8.15
+    ],
+    "FY2026_cfo_usd_m": 2000,
+    "FY2026_capex_usd_m": 240,
+    "FY2026_sbc_usd_m": 569,
+    "FY2026_acquired_amortization_usd_m": 289,
+    "FY2026_acquisition_integration_cost_usd_m": 122,
+    "Q3_revenue_usd_m": [
+      1595,
+      1625
+    ],
+    "assumption": "Export rules remain substantially similar for remainder of year; not a guarantee."
+  },
+  "operating_thesis": {
+    "drivers": [
+      "More custom silicon and design complexity increase verification/simulation requirements.",
+      "Agent products can monetize new workflow layers and increase underlying tool usage; independent incremental revenue remains unquantified.",
+      "Hardware capacity expands verification throughput; manufacturing and inventory make it less purely asset-light.",
+      "Advanced-node interfaces and foundry enablement support IP; customer milestones and licensing can be lumpy.",
+      "SDA expansion combines electrical and mechanical simulation, with acquisition integration and license-model transition risks."
+    ],
+    "risks": [
+      "China export changes; H1 China growth contains weak 2025 comparison.",
+      "AI efficiency might reduce per-design effort; management assumes expanded design exploration more than offsets it.",
+      "Large foundry partnerships increase execution and R&D obligations; do not book announced partnership TAM as revenue.",
+      "Hexagon operating and revenue-recognition model transition can dilute earnings before growth.",
+      "Reported non-GAAP earnings remove SBC and integration costs that remain economic expenses in this model."
+    ]
+  },
+  "public_interview_synthesis": "At the September 9 Goldman Sachs event, Devgan described AI agents as an additional subscription/consumption layer above physics-based tools. His thesis is that more design experiments and growing chip complexity sustain tool demand even when individual workflows accelerate. Hardware capacity and advanced-node interfaces were presented as additional drivers. These are management expectations; the interview does not supply a separately auditable AI revenue forecast. Source is a third-party transcript, with official event identity verified; audio was not independently transcribed.",
+  "call_QA_synthesis": "Q2 discussion emphasized broad software/add-on demand, delivery timing in IP, hardware supply constraints, and investment in Intel opportunities and Hexagon integration. Management did not quantify an abrupt agentic-AI revenue step-up. The model therefore fades growth rather than treating product demonstrations or customer engagement counts as contracted sales.",
+  "limitations": [
+    "No current market price comparison or current-date equity target.",
+    "Exact June award inventory and residual non-operating claims remain unverified; conditional analyst counts/budgets now support research-only allocation.",
+    "Management interview and Q&A transcription is secondary; official prepared remarks and filed numerical disclosures take precedence.",
+    "Ten-year financial history is reported-basis with explicit comparability breaks, not fabricated like-for-like organic history."
+  ],
+  "version": "v3",
+  "revision_status": "v2 research corrections independently closed; v3 compensation and conditional capital allocation await independent review. No current-date target or external approval.",
+  "conditional_allocation": {
+    "down": {
+      "ev_usd_m": 12722.787484748043,
+      "usd_per_share": 39.275318007459234
+    },
+    "base": {
+      "ev_usd_m": 26002.716739935844,
+      "usd_per_share": 86.50741944486921
+    },
+    "up": {
+      "ev_usd_m": 49340.76817779166,
+      "usd_per_share": 169.512772235712
+    }
+  },
+  "conditional_allocation_caveat": "June30 origin, information throughOctober18, explicit assumedJune legacycounts and500 all-in residualclaimbudget; no market quote comparison/current target."
+}

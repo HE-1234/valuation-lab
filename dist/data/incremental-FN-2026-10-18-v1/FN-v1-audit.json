@@ -1,0 +1,2333 @@
+{
+  "as_of": "2026-10-18",
+  "scope": "Independent accounting/arithmetic/claims review of listed snapshots; not a full source audit or prediction validation.",
+  "core_file_sha256": {
+    "claim_allocation.py": "743e46c46dcb7c7cabc63124d752e9eeb8372cdf75b5bf1e318d9ff835147f36",
+    "forecast-defaults-v1.json": "a4d7a17957d3ccc4873c85a6e2ce26bd8d8eed2cd285cb25ad6c5dd707096f69",
+    "capital-claims-v1.json": "9a93c9bd6cbf746e0a1c5b7c7399544ab54cf4f14fcbe89c321e36d893169693",
+    "research.json": "55b867227b75bb6e7d7216b3a09e5d51f66c5756ce7e712d5dec16c76fd09775",
+    "normalized-capital-v1.json": "8a4c821b24c6ed327e9d983e5d3620ae0ccc1727a409e33faca2616b7601b66a"
+  },
+  "checks": 574,
+  "passed": 574,
+  "failed": [],
+  "zero_strike_edge_result": "handled",
+  "capital_policy_fix_status": "Accepted: opening payables netted, annual operating-cash funding explicit, capital and asset roll-forwards reconcile. Historical IC remains separately defined.",
+  "capital_diagnostics": {
+    "opening_ic_includes_unpaid_ppe": 1652.549,
+    "opening_fixed_asset_payable": 86.018,
+    "cash_funded_opening_ic_if_payable_net": 1566.531,
+    "reserve_diagnostics": {
+      "base": {
+        "initial_3pct_next_sales": 186.8159865,
+        "terminal_3pct_next_sales": 444.5397873060365
+      },
+      "downside": {
+        "initial_3pct_next_sales": 168.3351528,
+        "terminal_3pct_next_sales": 218.73429751911414
+      },
+      "upside": {
+        "initial_3pct_next_sales": 202.7724795,
+        "terminal_3pct_next_sales": 634.0709395240413
+      }
+    }
+  },
+  "details": [
+    {
+      "test": "base opening funded capital",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2027 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2028 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2029 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2030 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2031 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2032 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2033 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2034 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2035 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 economic margin",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 FCFF",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "base FY2036 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "base terminal beginning-capital ROIC",
+      "passed": true
+    },
+    {
+      "test": "base terminal growth funding",
+      "passed": true
+    },
+    {
+      "test": "base terminal FCFF",
+      "passed": true
+    },
+    {
+      "test": "base perpetuity valid",
+      "passed": true
+    },
+    {
+      "test": "base legacy total RSU",
+      "passed": true
+    },
+    {
+      "test": "base legacy total PSU",
+      "passed": true
+    },
+    {
+      "test": "base legacy total warrant",
+      "passed": true
+    },
+    {
+      "test": "downside opening funded capital",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2027 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2028 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2029 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2030 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2031 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2032 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2033 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2034 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2035 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 economic margin",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "downside FY2036 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "downside terminal beginning-capital ROIC",
+      "passed": true
+    },
+    {
+      "test": "downside terminal growth funding",
+      "passed": true
+    },
+    {
+      "test": "downside terminal FCFF",
+      "passed": true
+    },
+    {
+      "test": "downside perpetuity valid",
+      "passed": true
+    },
+    {
+      "test": "downside legacy total RSU",
+      "passed": true
+    },
+    {
+      "test": "downside legacy total PSU",
+      "passed": true
+    },
+    {
+      "test": "downside legacy total warrant",
+      "passed": true
+    },
+    {
+      "test": "upside opening funded capital",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2027 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2028 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2029 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2030 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2031 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2032 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2033 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2034 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2035 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 category revenue sum",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 revenue growth",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 economic margin",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 NOPAT",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 cash reinvestment",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 NWC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 declared IC movement",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 new grants charged",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 GAAP reconciliation neutral",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 finite positive cash capex",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 reserve movement funded",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 reserve next sales ratio",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 accrued additions",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 fixed asset roll",
+      "passed": true
+    },
+    {
+      "test": "upside FY2036 funded capital decomposition",
+      "passed": true
+    },
+    {
+      "test": "upside terminal beginning-capital ROIC",
+      "passed": true
+    },
+    {
+      "test": "upside terminal growth funding",
+      "passed": true
+    },
+    {
+      "test": "upside terminal FCFF",
+      "passed": true
+    },
+    {
+      "test": "upside perpetuity valid",
+      "passed": true
+    },
+    {
+      "test": "upside legacy total RSU",
+      "passed": true
+    },
+    {
+      "test": "upside legacy total PSU",
+      "passed": true
+    },
+    {
+      "test": "upside legacy total warrant",
+      "passed": true
+    },
+    {
+      "test": "allocation E=1 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=1 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "allocation E=1 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=1 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "allocation E=1 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=1 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "volatility monotonic E=1",
+      "passed": true
+    },
+    {
+      "test": "warrant count monotonic E=1",
+      "passed": true
+    },
+    {
+      "test": "expiry treasury stock identity E=1",
+      "passed": true
+    },
+    {
+      "test": "allocation E=100 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=100 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "allocation E=100 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=100 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "allocation E=100 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=100 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "volatility monotonic E=100",
+      "passed": true
+    },
+    {
+      "test": "warrant count monotonic E=100",
+      "passed": true
+    },
+    {
+      "test": "expiry treasury stock identity E=100",
+      "passed": true
+    },
+    {
+      "test": "allocation E=1000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=1000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "allocation E=1000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=1000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "allocation E=1000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=1000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "volatility monotonic E=1000",
+      "passed": true
+    },
+    {
+      "test": "warrant count monotonic E=1000",
+      "passed": true
+    },
+    {
+      "test": "expiry treasury stock identity E=1000",
+      "passed": true
+    },
+    {
+      "test": "allocation E=5000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=5000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "allocation E=5000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=5000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "allocation E=5000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=5000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "volatility monotonic E=5000",
+      "passed": true
+    },
+    {
+      "test": "warrant count monotonic E=5000",
+      "passed": true
+    },
+    {
+      "test": "expiry treasury stock identity E=5000",
+      "passed": true
+    },
+    {
+      "test": "allocation E=10000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=10000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "allocation E=10000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=10000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "allocation E=10000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=10000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "volatility monotonic E=10000",
+      "passed": true
+    },
+    {
+      "test": "warrant count monotonic E=10000",
+      "passed": true
+    },
+    {
+      "test": "expiry treasury stock identity E=10000",
+      "passed": true
+    },
+    {
+      "test": "allocation E=20000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=20000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "allocation E=20000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=20000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "allocation E=20000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=20000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "volatility monotonic E=20000",
+      "passed": true
+    },
+    {
+      "test": "warrant count monotonic E=20000",
+      "passed": true
+    },
+    {
+      "test": "expiry treasury stock identity E=20000",
+      "passed": true
+    },
+    {
+      "test": "allocation E=100000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=100000 sigma=0.35",
+      "passed": true
+    },
+    {
+      "test": "allocation E=100000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=100000 sigma=0.452",
+      "passed": true
+    },
+    {
+      "test": "allocation E=100000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "option bounds E=100000 sigma=0.6",
+      "passed": true
+    },
+    {
+      "test": "volatility monotonic E=100000",
+      "passed": true
+    },
+    {
+      "test": "warrant count monotonic E=100000",
+      "passed": true
+    },
+    {
+      "test": "expiry treasury stock identity E=100000",
+      "passed": true
+    },
+    {
+      "test": "negative pool shows shortfall",
+      "passed": true
+    },
+    {
+      "test": "zero strike award count",
+      "passed": true
+    },
+    {
+      "test": "ordinary issued less treasury",
+      "passed": true
+    },
+    {
+      "test": "cash investment sum",
+      "passed": true
+    },
+    {
+      "test": "financial-origin date consistent",
+      "passed": true
+    },
+    {
+      "test": "current date gate retained",
+      "passed": true
+    },
+    {
+      "test": "zero strike equal dilution",
+      "passed": true
+    }
+  ]
+}

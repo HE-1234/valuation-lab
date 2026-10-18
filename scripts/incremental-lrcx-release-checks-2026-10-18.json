@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "release": "LRCX incremental dated-origin v2",
+  "sourceBase": "fce6fa776146730d1d13ec12f5d11488bdae394c",
+  "preparedAsOf": "2026-10-18",
+  "company": "LRCX",
+  "scope": "Separate LRCX source/audit/history package and conditional bridge. Preserve original fourteen, selected GOOG, KLAC, AMAT, V46 quiz bank and approved CSS. No other new company added.",
+  "testResults": {
+    "fullSuite": {
+      "command": "npm test",
+      "total": 1462,
+      "passed": 1461,
+      "failed": 0,
+      "skipped": 1,
+      "skip": "Pre-existing SEC research-cache check; raw research cache is not bundled."
+    },
+    "focused": {
+      "command": "node --test tests/incremental-lrcx.test.mjs tests/incremental-amat.test.mjs tests/incremental-klac.test.mjs tests/annual-capital-diagnostics.test.mjs tests/annual-capital-diagnostics-view.test.mjs",
+      "total": 135,
+      "passed": 135,
+      "failed": 0,
+      "LRCXTests": 46
+    },
+    "independentReview": {
+      "researchSourceChecks": 416,
+      "adapterChecks": 145,
+      "nontrivialMonteCarloTrialsReconstructed": 300,
+      "finalLRCXTestsIndependentlyRerun": 46,
+      "frozenDistFingerprint": "fe90b911bd0877fdae7b25747b82a576eb87f77f9c569f5250dc5d448946d9f1",
+      "preexistingDataFilesByteIdentical": 92
+    },
+    "staticVisual": {
+      "captures": 37,
+      "passed": 37,
+      "sizes": [
+        390,
+        1440
+      ],
+      "locales": [
+        "en",
+        "zh-Hans"
+      ],
+      "views": [
+        "Result",
+        "Claims",
+        "Capital"
+      ],
+      "scenarios": 3,
+      "viewportOverflow": 0,
+      "duplicateIDs": 0,
+      "note": "Source-driven static WeasyPrint render, not native browser verification. Parent owns native post-publication smoke."
+    },
+    "diffCheck": "git diff --check passed"
+  },
+  "benchmarks": {
+    "baseEV": 140028.42930793238,
+    "basePerShare": 109.17739027381938,
+    "downsideEV": 70300.70786838119,
+    "downsidePerShare": 53.782211111652835,
+    "upsideEV": 188418.38110548377,
+    "upsidePerShare": 147.62078113949997,
+    "netCapitalBridge": -2603.282,
+    "allocationSharesMillions": 1258.732664,
+    "discountOrigin": "2026-06-28",
+    "informationAsOf": "2026-10-18",
+    "fixedOpeningCapexSettlementYear1": 119.605,
+    "baseYear1OperatingInvestment": 4467.219833333333,
+    "baseYear1TotalCashInvestment": 4586.824833333332,
+    "baseYear1OperatingSalesCapital": 1.8
+  },
+  "gates": {
+    "currentPriceComparison": false,
+    "asKnownBacktest": false,
+    "sourceAuditHistoryIdentityValidated": true,
+    "USListingAndRobinhoodPublicPageRequired": true,
+    "accountSpecificTradeabilityAsserted": false,
+    "fixedManualSimulationDefaults": true,
+    "nullClaimsBlockOnlyEquity": true,
+    "dateChangesBlockEquity": true,
+    "atMostOnePositiveOverlappingClaimStress": true,
+    "ESPPAndResidualRangesAreAssumptionsNotBounds": true,
+    "fixedOpeningFundingRegistryBacked": true,
+    "fixedSettlementExcludedFromEquityClaimsAndOperatingNWC": true,
+    "fixedSettlementNotScaledByMCOrHorizon": true,
+    "directDollarMCDerivedHorizonUnsupportedGuardRetained": true,
+    "terminalNormalizationPreservesFixedSettlement": true,
+    "capitalEfficiencyExcludesOpeningSettlement": true,
+    "legacySBCAddsNoValue": true,
+    "separateVersionedDraftStorage": true,
+    "bilingualFundingReconciliation": true
+  },
+  "changedFiles": [
+    {
+      "path": "dist/annual-capital-diagnostics.js",
+      "sha256": "138a3024f25c5dea635514772e5641d8f6d541a29777cc8dc22ff04fbab6cc4b"
+    },
+    {
+      "path": "dist/annual-growth-horizon.js",
+      "sha256": "3c8da58004fb91b5332cbd79ddd31355169f1d4d7badaed8f8a8e6826d806091"
+    },
+    {
+      "path": "dist/data/incremental-LRCX-2026-10-18-v2/LRCX-normalized-history-v2.json",
+      "sha256": "483d72ba77f72a25e141e346e1d01e1df71eaacc608f064f7a924d9e008e5aaf"
+    },
+    {
+      "path": "dist/data/incremental-LRCX-2026-10-18-v2/LRCX-v2-audit.json",
+      "sha256": "872eb36019c5af036de1a77326c2c2ef579234a1fb90154916551709d0625fb5"
+    },
+    {
+      "path": "dist/data/incremental-LRCX-2026-10-18-v2/LRCX-v2-source.json",
+      "sha256": "fcbb95263851c6274c27293920d21278fb1fdd63a4ca8ff490ba3ddf3197824a"
+    },
+    {
+      "path": "dist/data/incremental-LRCX-2026-10-18-v2/LRCX-v2.html",
+      "sha256": "bf0091db88fb7e3b335748e3d9ba5fa059d9bbcb0267c8a9947d512f618af075"
+    },
+    {
+      "path": "dist/data/incremental-LRCX-2026-10-18-v2/cases.json",
+      "sha256": "8b2dc73b3ed62191d3d9ce611e838d01c9f9eeea93bdb02bc0e7d22e43b6075d"
+    },
+    {
+      "path": "dist/fixed-capital-funding.js",
+      "sha256": "bb2b37ef0cf3b6693f9022b0b077a209fc8a247834d5fd209a1e511eba4b8195"
+    },
+    {
+      "path": "dist/incremental-messages.js",
+      "sha256": "14cb449f8fb411d87e8324d14a8fc0269d3312703861d5d6567553b1fedf3bd4"
+    },
+    {
+      "path": "dist/incremental-registry.js",
+      "sha256": "f56535366d17766b9b9b6d2739a40fc048b5e825201825bb0446c973e027c650"
+    },
+    {
+      "path": "dist/incremental-research-claims.js",
+      "sha256": "5fe6408c7b6fb56126ac721ee6faa60ba96b8eb56ab325d64a3a7982d4986a55"
+    },
+    {
+      "path": "dist/incremental-research-identity.js",
+      "sha256": "74e15b0a15c15af62b607f7122e4683284c46eb3ca9261b699f1c6586e412c36"
+    },
+    {
+      "path": "dist/incremental-research-view.js",
+      "sha256": "630a295ed01fe61fa20a604a3c17d605732782eb193879f6bd5bea862123f52c"
+    },
+    {
+      "path": "dist/incremental-research.js",
+      "sha256": "00291a3dba64f997a77aded3971922d20d68d9708f9dddf268f2bb7ee7732ad8"
+    },
+    {
+      "path": "dist/lrcx-research-claims.js",
+      "sha256": "9a86686e3642ace34585fb8e276a14fe0542aa3c0cd21af85b0a31eb0053735e"
+    },
+    {
+      "path": "dist/lrcx-research-registry.js",
+      "sha256": "b02387fa591d4da86441cb89fbb148e548421ff38927dd1dd965eed87d099c05"
+    },
+    {
+      "path": "dist/research-model.js",
+      "sha256": "59c57d1ba5c49769cc9c8396208870ef46cf6dbb0fb291a18a9b07a044ffab44"
+    },
+    {
+      "path": "dist/research-simulation-view.js",
+      "sha256": "55be0bcd0b7da1c5a485dbef9ab675fa326131868388f2777319a31a860d2e75"
+    },
+    {
+      "path": "dist/research-simulation.js",
+      "sha256": "7b069f48b7948874b247e41d87be5bdbff4977d667cb8c27011010b0144a6127"
+    },
+    {
+      "path": "dist/research-view.js",
+      "sha256": "52c0b189d911de45ae054aced4c02be779fb1b076c2ba3bc059a6185ff1a71b7"
+    },
+    {
+      "path": "scripts/build-lrcx-incremental.py",
+      "sha256": "da82459b8f3557185b93a8573065517a224c3850e2417bf00fdaa3cdeeb23557"
+    },
+    {
+      "path": "tests/incremental-lrcx.test.mjs",
+      "sha256": "7cb1517303577a854ff394286e50fae7f6cf74fdb8ca3e5ccfe2380610ab3350"
+    }
+  ]
+}

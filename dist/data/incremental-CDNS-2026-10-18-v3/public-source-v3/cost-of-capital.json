@@ -1,0 +1,27 @@
+{
+  "information_as_of": "2026-10-18",
+  "observed": {
+    "riskfree_10y": 0.0509,
+    "riskfree_date": "2026-10-16",
+    "ERP": 0.042,
+    "ERP_date": "2026-10-01",
+    "ERP_variant": "Trailing twelve-month adjusted payout using unadjusted Treasury; no double default-spread adjustment",
+    "US_software_cash_adjusted_asset_beta": 1.25,
+    "industry_date": "January 2026",
+    "firms": 309
+  },
+  "analyst": {
+    "target_debt_weight": 0.05,
+    "tax": 0.24,
+    "credit_spread": 0.01,
+    "relevered_beta": 1.3,
+    "cost_equity": 0.10550000000000001,
+    "pretax_cost_debt": 0.0609,
+    "computed_wacc": 0.10253920000000001,
+    "rounded_base_wacc": 0.105,
+    "down_wacc": 0.12,
+    "up_wacc": 0.0925
+  },
+  "evidence": "Treasury October 16 yield and Damodaran October ERP/January US system-and-application software asset beta. 5% target debt weight and 1% credit spread are analyst assumptions; actual bonds 4.2/4.3/4.7% coupons are not today’s cost of borrowing. No current stock price used.",
+  "date_caveat": "October opportunity costs applied to June 30 financial-origin reconstruction, not a contemporaneous June valuation or a current equity target."
+}

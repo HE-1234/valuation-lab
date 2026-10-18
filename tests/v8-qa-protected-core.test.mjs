@@ -1,3 +1,4 @@
+import {reverseDecimalDisplay} from './decimal-display-preservation.mjs';
 import {originalResearchBytes} from './research-presentation-original.mjs';
 // Independent v8 regression contract. This is source/numerical QA, not browser QA.
 import test from 'node:test';
@@ -44,8 +45,17 @@ test('feedback preservation: historical app logic outside authorized presentatio
  const simplified="import appChinese from './locales/historical-app.zh-Hans.js';\nregisterCatalog('historical-app',{en:appEnglish,'zh-Hans':appChinese});";
  const traditional="import appChinese from './locales/historical-app.zh-Hant.js';\nregisterCatalog('historical-app',{en:appEnglish,'zh-Hant':appChinese});";
  const restoreApprovedLocalization=source=>{assert.equal(source.split(simplified).length-1,1);source=source.replace(simplified,traditional);for(const change of approved.changes){assert.equal(source.split(change.presentation).length-1,1,'Reviewed presentation block changed');source=source.replace(change.presentation,change.original);}return source;};
- const normalize=source=>restoreApprovedThemePresentation(restoreApprovedLocalization(source)).split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
- assert.equal(createHash('sha256').update(normalize(read('dist/app.js').toString())).digest('hex'),'3dd3826561e371f46b58af041b8088e69b20add0aae3bebb72cb03737360f6cc');
+ // The requested random-quiz workspace changes exactly one import and one mount call.
+ // Reverse only those exact strings before applying the unchanged historical source pin.
+ const restoreLearningIntegration=source=>{
+  const changes=[
+   ["import {mountLearningWorkspace} from './learn-workspace.js';", "import {mountLearning} from './learn-view.js';"],
+   ["mountLearningWorkspace($('#quizzes'),questions,{initialPage:workspaceNavigation.getPage()});", "mountLearning($('#quizzes'),questions);"]
+  ];
+  for(const [current,previous] of changes){assert.equal(source.split(current).length-1,1,'Reviewed quiz integration changed');source=source.replace(current,previous);}return source;
+ };
+ const normalize=source=>restoreApprovedThemePresentation(restoreApprovedLocalization(restoreLearningIntegration(source))).split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
+ assert.equal(createHash('sha256').update(normalize(reverseDecimalDisplay('dist/app.js',read('dist/app.js')).toString())).digest('hex'),'3dd3826561e371f46b58af041b8088e69b20add0aae3bebb72cb03737360f6cc');
 });
 test('v8 QA: prior annual economics remain fixed except the exact source-reviewed AAOI debt corrections',()=>{
  const history=json('dist/data/company-history.json'),corrections=JSON.parse(fs.readFileSync(new URL('./fixtures/v8-aaoi-source-corrections.json',import.meta.url)));let count=0,corrected=0;

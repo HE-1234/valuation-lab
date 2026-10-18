@@ -1,4 +1,5 @@
 export default {
+  "samplingCountPolicy": "Application policy dated 2026-10-18: fresh settings and explicit resets use 5,000 attempted scenarios. Saved counts stay unchanged until reset or Use research. This is a numerical sampling choice, not greater forecast confidence; dated research files retain their original counts.",
   "t0": "Revenue growth",
   "t1": "Mature margin",
   "t2": "Sales / capital",
@@ -43,7 +44,7 @@ export default {
   "t41": "Reset uncertainty to current assumptions",
   "t42": "Undo uncertainty reset",
   "t43": "Simulation details & exact values",
-  "t44": "How the sampler works ↗",
+  "t44": "How the sampler works (opens in a new tab) ↗",
   "t45": "Export simulation ↓",
   "t46": "Inspected value",
   "t47": "No valid scenarios. Review the input ranges and model constraints, especially WACC versus stable growth.",

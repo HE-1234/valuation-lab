@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-18",
+  "status": "Completed by parent; recovery paths and hashes independently verified. No permanent deletion.",
+  "excludedValuationDossiersFound": [],
+  "existingOnboardingDirectories": [
+    "AMAT",
+    "ASML",
+    "CIEN",
+    "FN",
+    "KLAC",
+    "LRCX"
+  ],
+  "recoverableCleanupCandidates": [
+    {
+      "originalPath": "/workspace/shared/atlas-research/verification/japan_europe-input.json",
+      "bytes": 4193,
+      "sha256": "dbe5ef42fbdf4cfe2ec34af82a0faa17fddd551456a9a18c6de86e31d4d5b73c",
+      "scope": "Exclusively foreign-exchange-only and excluded ambiguous regional identities. No retained US-listed issuer source records.",
+      "proposedAction": "Move recoverably to a parent-managed workspace trash directory; do not permanently delete.",
+      "recoveryPath": "/workspace/shared/recoverable-trash/foreign-only-company-files-2026-10-18/japan_europe-input.json",
+      "action": "Moved recoverably by parent; hashes verified."
+    },
+    {
+      "originalPath": "/workspace/shared/atlas-research/verification/japan_europe-verified.json",
+      "bytes": 22524,
+      "sha256": "8cc859b64bb451c78ddb6b6621b4eef046340476c63fefce9cd993f7839ab8fd",
+      "scope": "Exclusively foreign-exchange-only and excluded ambiguous regional identities. No retained US-listed issuer source records.",
+      "proposedAction": "Move recoverably to a parent-managed workspace trash directory; do not permanently delete.",
+      "recoveryPath": "/workspace/shared/recoverable-trash/foreign-only-company-files-2026-10-18/japan_europe-verified.json",
+      "action": "Moved recoverably by parent; hashes verified."
+    },
+    {
+      "originalPath": "/workspace/shared/atlas-research/verification/build-japan-europe.py",
+      "bytes": 6890,
+      "sha256": "6859225912a19981b356ad91eec87d4933eae17660f7f2a86b1397a77ce93f46",
+      "scope": "Exclusively foreign-exchange-only and excluded ambiguous regional identities. No retained US-listed issuer source records.",
+      "proposedAction": "Move recoverably to a parent-managed workspace trash directory; do not permanently delete.",
+      "recoveryPath": "/workspace/shared/recoverable-trash/foreign-only-company-files-2026-10-18/build-japan-europe.py",
+      "action": "Moved recoverably by parent; hashes verified."
+    },
+    {
+      "originalPath": "/workspace/shared/atlas-research/verification/taiwan_korea-input.json",
+      "bytes": 4586,
+      "sha256": "1704f56c8aff51c36f316a465b258b95d1430177688187f9b1604f59d66659e0",
+      "scope": "Exclusively foreign-exchange-only and excluded ambiguous regional identities. No retained US-listed issuer source records.",
+      "proposedAction": "Move recoverably to a parent-managed workspace trash directory; do not permanently delete.",
+      "recoveryPath": "/workspace/shared/recoverable-trash/foreign-only-company-files-2026-10-18/taiwan_korea-input.json",
+      "action": "Moved recoverably by parent; hashes verified."
+    },
+    {
+      "originalPath": "/workspace/shared/atlas-research/verification/taiwan_korea-verified.json",
+      "bytes": 30258,
+      "sha256": "9c8b78347e6e8e702fb5d6df26472a8471326ae585e68886b55cbb914ccff2f5",
+      "scope": "Exclusively foreign-exchange-only and excluded ambiguous regional identities. No retained US-listed issuer source records.",
+      "proposedAction": "Move recoverably to a parent-managed workspace trash directory; do not permanently delete.",
+      "recoveryPath": "/workspace/shared/recoverable-trash/foreign-only-company-files-2026-10-18/taiwan_korea-verified.json",
+      "action": "Moved recoverably by parent; hashes verified."
+    },
+    {
+      "originalPath": "/workspace/shared/atlas-research/verification/taiwan_korea-exchange-evidence.json",
+      "bytes": 3138,
+      "sha256": "de54509366a5f1c93585617db26e122234e8bcf046ec2742bd88960078572f74",
+      "scope": "Exclusively foreign-exchange-only and excluded ambiguous regional identities. No retained US-listed issuer source records.",
+      "proposedAction": "Move recoverably to a parent-managed workspace trash directory; do not permanently delete.",
+      "recoveryPath": "/workspace/shared/recoverable-trash/foreign-only-company-files-2026-10-18/taiwan_korea-exchange-evidence.json",
+      "action": "Moved recoverably by parent; hashes verified."
+    }
+  ],
+  "candidateBytes": 71589,
+  "retainSharedInputs": [
+    "ticker-inventory.json",
+    "ticker-inventory.csv",
+    "source-evidence.txt",
+    "sector-01-chart-evidence.txt",
+    "verification/china_special-input.json",
+    "verification/china_special-verified.json",
+    "verification/us-input.json",
+    "verification/us-verified.json",
+    "verification/iso-mics.csv",
+    "verification/sec-tickers.json",
+    "verification/nasdaqlisted.txt",
+    "verification/otherlisted.txt"
+  ],
+  "retentionReason": "Mixed/shared source files support retained US listings, shared provenance and audit. Canonical Git history and all original14 valuation sources remain untouched.",
+  "regenerationNote": "Current US catalog build tolerates missing regional verified files; remaining unverified inventory entities are excluded rather than published. Keep the initial 54-listed/20-coverage exclusion manifest as the audit record before any rebuild after source relocation.",
+  "diskSpaceClaim": "No disk space reclaimed; recoverable relocation retains bytes.",
+  "cleanupPerformed": true,
+  "recoveryDirectory": "/workspace/shared/recoverable-trash/foreign-only-company-files-2026-10-18"
+}

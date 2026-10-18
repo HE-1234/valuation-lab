@@ -1,3 +1,4 @@
+import {displayNumber} from '../dist/number-display.js';
 import {currentResearchDraft} from '../dist/current-research-defaults.js';
 // Independent minimal-DOM runtime QA of the actual shipped annual workspace.
 // No browser, external network, layout, or financial-forecast assurance is implied.
@@ -132,12 +133,12 @@ test('renewed workspace: original saved capital cases render their equity contro
   h.select(c.ticker);const definition=researchBridgeDefinition(c.ticker);
   for(const option of definition.optionDefinitions){
    const selector=option.type==='select'?`[data-research-claim-select="${option.key}"]`:h.field('bridge',option.key),control=h.get(selector);
-   const expected=option.default===null?'':option.type==='select'?option.default:String(Number((option.default*(option.max===1?100:1)).toPrecision(12)));
-   assert.ok(control,c.ticker+' '+option.key);assert.equal(control.value,expected,c.ticker+' '+option.key);
+   const expected=option.default===null?'':option.type==='select'?option.default:displayNumber(option.default*(option.max===1?100:1),2);
+   assert.ok(control,c.ticker+' '+option.key);assert.equal(control.value,expected,c.ticker+' '+option.key);if(option.type!=='select'){const before=JSON.stringify(h.getState().draft);control.onfocus();assert.equal(control.value,option.default===null?'':String(option.default*(option.max===1?100:1)));control.onblur();assert.equal(JSON.stringify(h.getState().draft),before);}
   }
   assert.ok(h.get('.research-big-value'),c.ticker);
  }
- h.select('LITE');assert.equal(h.get(h.field('bridge','convertiblePremiumClaim')).value,'6052.9');assert.equal(h.get(h.field('bridge','cappedCallAssetValue')).value,'200');assert.ok(h.get('.research-equity-value'));assert.match(h.get('#research-results').textContent,/June-dated market-claims/);
+ h.select('LITE');assert.equal(h.get(h.field('bridge','convertiblePremiumClaim')).value,'6,052.9');assert.equal(h.get(h.field('bridge','cappedCallAssetValue')).value,'200');assert.ok(h.get('.research-equity-value'));assert.match(h.get('#research-results').textContent,/June-dated market-claims/);
  h.input(h.field('bridge','convertiblePremiumClaim'),'0');assert.equal(h.getState().draft.bridgeInputs.convertiblePremiumClaim,0);assert.ok(h.get('.research-equity-value'));assert.match(h.get('#research-results').textContent,/principal-only/);
  h.input(h.field('bridge','convertiblePremiumClaim'),'');assert.equal(h.getState().draft.bridgeInputs.convertiblePremiumClaim,null);assert.equal(h.get('.research-equity-value'),null);assert.ok(h.get('.research-big-value'));
 });

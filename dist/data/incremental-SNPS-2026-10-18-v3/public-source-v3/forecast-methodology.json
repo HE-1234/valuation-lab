@@ -1,0 +1,15 @@
+{
+  "financial_origin": "2026-07-31",
+  "information_as_of": "2026-10-18",
+  "scope": "Q4 stub plus ten fiscal years, ACT/365.25 end-period discounting. Conditional dated allocation only. No past actual cash flow revalued.",
+  "stub_profit": "Start with direct Q4 revenue less GAAP expense plus acquired amortization; remove accounting SBC240/235/230 in downside/base/upside, then charge economic future grants15%/12%/10% of Q4 revenue. Base EBIT695+235-306.6=623.4. R&D, restructuring and integration expense remain.",
+  "future_profit": "Hold v2 pre-SBC margins constant and replace old SBC percentage by future-new-grant cost. FY27base EBIT3860+970-1338=3492. No future grant units added to share denominator. R&D functional disclosure receives50% of the grant cost change; total EBIT already contains all cost.",
+  "legacy_compensation": "Full assumed existing unissued awards allocated separately. Illustrative1400 and105.6 legacy accounting recognition is subtracted and reversed identically; no PV benefit or extra claim. Acquisition award components and already-paid consideration are not deducted again.",
+  "reinvestment": "Retain Q4 capex/D&A/NWC and64.9 legacy restructuring cash. Annual investment=max(positive delta revenue*new economic margin*(1-tax)/incrementalROIC, FY27known floor500-210+8%positive delta revenue). Recompute after grant normalization, so baseFY27investment682.353 versus404.672 floor. Margin expansion is funded by expensed R&D/restructuring/integration, not separately multiplied into investment in the default.",
+  "funding_stress": "Separate all-positive-NOPAT-growth stress uses a full-FY26 grant-normalized earnings reference for comparability only; does not create or value historical cash flows.",
+  "terminal": "Unchanged g/ROIC policy and scenarioWACC. Next-year NOPAT*(1-g/ROIC)/(WACC-g). Terminal earnings/investment both reflect future grant cost.",
+  "claims": "July reported debt10110.449, interest170.462 and current tax88.454 deducted once; additional350 residual allowance explicitly unverified. Ordinary operating claims, matched NQDC, leases and Q4funded restructuring excluded from extra claims.",
+  "assets": "Operating cash reserve291.45;10% haircut on assumed46% foreign excesscash;75% liquid investment recovery; zero private/contingent credit. Distribution haircut assumptions are not reported tax bills.",
+  "awards": "191.605 legalcommon plus assumedJuly4.318 unissuedRSUs,1.154options,1.0ESPP=198.077units. The historical source dates remainOctober2025. No extraAnsys or issuedrestricted-stock addition. No exerciseproceeds credit.",
+  "current_gate": "October ASR excluded from July bridge. ExactJuly balance/count and currenttarget outputs remain null; conditional outputs carry assumptions and origin."
+}

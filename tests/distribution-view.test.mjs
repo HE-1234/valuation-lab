@@ -15,8 +15,8 @@ test('distribution view: invalid shape preview never draws a misleading graphic'
 });
 test('distribution view: family switch and parameter edits save shapes until Run',()=>{
  const changes=[],h=fixture({ticker:'V8-FAMILIES',reduced:true,onConfigChange:c=>changes.push(c)});try{
-  for(const type of ['uniform','normal','fixed','triangular']){h.get('#mc-growth-type').value=type;h.get('#mc-growth-type').onchange();assert.ok(h.get('#mc-chart'),type);assert.equal(changes.at(-1).drivers.growth.type,type);assert.equal(h.get('#mc-error').textContent,'');}
-  h.get('#mc-growth-type').value='normal';h.get('#mc-growth-type').onchange();const input=h.get('#mc-growth-sd');input.value='2';input.oninput();assert.equal(h.get('#mc-growth-sd'),input);assert.equal(changes.at(-1).drivers.growth.sd,.02);assert.match(h.get('#mc-shape-growth').innerHTML,/Relative density/);assert.ok(h.get('#mc-run'));assert.equal(h.get('#mc-output').getAttribute('data-result-state'),'stale');
+  for(const type of ['uniform','normal','fixed','triangular']){h.get('#mc-growth-type').value=type;h.get('#mc-growth-type').onchange();assert.ok(h.get('#mc-chart'),type);assert.equal(changes.at(-1).method,'joint-annual-path');assert.equal(changes.at(-1).jointAnnual.drivers.growth.type,type);assert.equal(changes.at(-1).drivers.growth.type,'triangular');assert.equal(h.get('#mc-error').textContent,'');}
+  h.get('#mc-growth-type').value='normal';h.get('#mc-growth-type').onchange();const input=h.get('#mc-growth-sd');input.value='2';input.oninput();assert.equal(h.get('#mc-growth-sd'),input);assert.equal(changes.at(-1).jointAnnual.drivers.growth.sd,.02);assert.match(h.get('#mc-shape-growth').innerHTML,/Relative density/);assert.ok(h.get('#mc-run'));assert.equal(h.get('#mc-output').getAttribute('data-result-state'),'stale');
  }finally{h.cleanup()}
 });
 test('distribution view: invalid normal settings clear all prior output and recover in place',()=>{

@@ -1,3 +1,4 @@
+import {applyFreshSimulationCountPolicy} from './simulation-count-policy.js';
 import {annualPathDefaults} from './annual-path-sampling.js';
 import {getCurrentCapitalPreset} from './current-capital-presets.js';
 // Research presets are a versioned overlay. Frozen source cases and both engines
@@ -50,7 +51,7 @@ export function studioResearchDraft(preset,bundle){
   rationale:structuredClone(preset.rationale),parameterRationale:structuredClone(preset.parameterRationale||{}),simulationRationale:structuredClone(preset.simulationRationale||{}),
   methodologySources:structuredClone(bundle.methodology?.damodaranSources||[]),sourceRecords:structuredClone(preset.sourceRecords||[]),timelineSummary:structuredClone(preset.timelineSummary||{}),
   guidedCompatibility:structuredClone(preset.guidedCompatibility||{}),defaultSimulationConfig:structuredClone(draft.researchSimulationConfig)};
- return draft;
+ return applyFreshSimulationCountPolicy(draft);
 }
 
 export function loadStudioResearchPreset(previous,preset,bundle){

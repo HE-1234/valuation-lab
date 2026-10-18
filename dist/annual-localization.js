@@ -1,3 +1,4 @@
+import {incrementalMessageKeys,incrementalTranslatedMessageKeys} from './incremental-messages.js';
 import {annualMetricMessageKeys} from './annual-metric-messages.js';
 // Only explicitly authored, complete messages are eligible. User content is never scanned.
 import {registerCatalog,t,localizedText,bindText,localizeMarkedNodes} from './i18n.js';
@@ -7,7 +8,7 @@ import en from './locales/annual.en.js';
 import zh from './locales/annual.zh-Hans.js';
 registerCatalog('annual', {en, 'zh-Hans':zh});
 const keys=new Map(Object.entries(en).map(([key,value])=>[value,'annual.'+key]));
-for(const [text,key]of Object.entries(annualMetricMessageKeys))keys.set(text,key);
+for(const [text,key]of Object.entries({...annualMetricMessageKeys,...incrementalMessageKeys}))keys.set(text,key);
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const escapeRegex=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const patterns=Object.entries(en).filter(([key,message])=>/[A-Za-z]{2}/.test(message.replace(/\{\w+\}/g,''))&&/\{\w+\}/.test(message)).map(([key,message])=>{
@@ -20,7 +21,7 @@ export const annualLabel=(source,depth=0)=>{const message=annualMessage(source);
 export const annualTextHTML=source=>{const message=annualMessage(source);return message?localizedText(message.key,Object.fromEntries(Object.entries(message.params).map(([key,value])=>[key,annualLabel(value)]))):authoredResearchTextHTML(source);};
 export const annualAttribute=(name,source)=>{const message=annualMessage(source);return message?` data-i18n-${name}="${message.key}" data-i18n-params="${escape(JSON.stringify(message.params))}"`:'';};
 const statusNodes=new WeakMap();
-const translatedKeys=new Map(Object.entries(zh).map(([key,value])=>[value,'annual.'+key]));
+const translatedKeys=new Map([...Object.entries(zh).map(([key,value])=>[value,'annual.'+key]),...Object.entries(incrementalTranslatedMessageKeys)]);
 const localizedParameters=new Set(['label','status','scenario','name','share','claims','unit','basis']);
 const sharedBindings=new WeakMap(),parameterSources=new WeakMap();
 export function releaseAnnualPresentation(root){const bindings=sharedBindings.get(root);if(bindings){for(const dispose of bindings.values())dispose();bindings.clear();sharedBindings.delete(root);}}

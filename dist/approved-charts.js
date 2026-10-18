@@ -1,7 +1,8 @@
+import {displayNumber} from './number-display.js';
 /** Approved presentation components. Annual engine rows remain the only forecast source. */
 const finite=Number.isFinite;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const number=(v,d=1)=>finite(v)?v.toLocaleString('en-US',{maximumFractionDigits:d}):'—';
+const number=(value,digits=1)=>displayNumber(value,digits);
 const percent=v=>finite(v)?number(v*100)+'%':'Unavailable';
 const url=s=>/^https?:\/\//.test(s||'')?s:null;
 

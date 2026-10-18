@@ -1093,3 +1093,17 @@
   & body .guided-screen #guided-results .approved-summary-details :is(p, small, .micro) { text-align: left !important; line-height: 1.6; }
   & body .guided-screen #guided-results .live-value { margin: 0 !important; }
 }
+
+/* New presentation-only motion also stops when reduced motion changes mid-flow. */
+@media (prefers-reduced-motion: reduce) {
+  :root[data-skin="report"] .sk-route-enter,
+  :root[data-skin="report"][data-locale-swipe]::view-transition-old(root),
+  :root[data-skin="report"][data-locale-swipe]::view-transition-new(root) { animation: none !important; }
+}
+
+/* Full-width joint year-target values on narrow screens; retain the Report skin. */
+@media (max-width: 380px) {
+  html[data-skin="report"] [id*="mc-joint-target-"].mc-driver-parameters {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}

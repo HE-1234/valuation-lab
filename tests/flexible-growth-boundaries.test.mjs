@@ -1,3 +1,4 @@
+import {preJointAnnualDefaults} from './joint-default-contract.mjs';
 // Complementary independent QA: restoration, provenance, source gates and exact
 // pre-feature economics. Numerical/path oracles live in the separately owned
 // flexible-growth-oracle.test.mjs; these tests never derive goldens from new code.
@@ -37,7 +38,7 @@ test('flexible boundaries: all 24 legacy generic/researched valuations and seede
  assert.equal(goldens.length,24);
  for(const record of goldens){
   const {snapshot,draft}=context(record.ticker,{researched:record.kind==='research'});
-  const config={...simulationDefaults(draft.assumptions),trials:31,seed:'v19-boundary-exact-'+record.ticker+'-'+record.kind};
+  const config={...preJointAnnualDefaults(simulationDefaults(draft.assumptions)),trials:31,seed:'v19-boundary-exact-'+record.ticker+'-'+record.kind};
   // Replay the exact saved pre-annual-method configuration, including export shape.
   delete config.method;delete config.annualPath;delete config.annualMetrics;delete config.annualTerminal;
   assert.equal(hash(calculateCurrent(snapshot,draft)),record.valuation,`${record.ticker} ${record.kind} valuation`);

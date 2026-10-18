@@ -1,3 +1,4 @@
+import {assertFreshJointDefaults} from './joint-default-contract.mjs';
 import {currentResearchDraft} from '../dist/current-research-defaults.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -23,7 +24,7 @@ test('complete presets: all fourteen validate against unchanged full annual sour
   assert.equal(d.forecastHorizonYears,source.forecastHorizonYears);assert.equal(d.researchPreset.version,STUDIO_PRESETS_VERSION);
   for(const option of researchBridgeDefinition(preset.ticker).optionDefinitions)assert.ok(Object.hasOwn(d.bridgeInputs,option.key),preset.ticker+' '+option.key);
   assert.ok(preset.rationale.growthDuration);assert.ok(preset.parameterRationale);assert.ok(preset.simulationRationale);
-  assert.equal(preset.simulationConfig.dependence,'independent');assert.equal(preset.simulationConfig.trials,5000);
+  assert.equal(preset.simulationConfig.dependence,'independent');assert.equal(preset.simulationConfig.trials,4000);
  }
 });
 
@@ -59,7 +60,7 @@ test('complete presets: one explicit load replaces every valuation setting and U
  h.change('#research-timing-mode','as-of-scenario');h.input(h.field('timing','stubFCFF'),'100');h.input('#research-stub-reason','My stub');
  const before=h.getState().draft;
  h.useResearch('LITE',{originPage:'current'});const selected=readBundle().presets.find(p=>p.ticker==='LITE'),loaded=h.getState().draft;
- assert.deepEqual(loaded.annual,studioResearchDraft(selected,readBundle()).annual);assert.deepEqual(loaded.bridgeInputs,selected.bridgeInputs);assert.equal(loaded.researchSimulationConfig.method,'annual-path');assert.deepEqual(loaded.researchSimulationConfig.drivers,selected.simulationConfig.drivers);assert.equal(loaded.timing.mode,'origin');assert.equal(loaded.notes,'Keep this note');assert.equal(loaded.bridgeInputs.convertiblePremiumClaim,6052.9);
+ assert.deepEqual(loaded.annual,studioResearchDraft(selected,readBundle()).annual);assert.deepEqual(loaded.bridgeInputs,selected.bridgeInputs);assertFreshJointDefaults(loaded.researchSimulationConfig);assert.deepEqual(loaded.researchSimulationConfig.drivers,selected.simulationConfig.drivers);assert.equal(loaded.timing.mode,'origin');assert.equal(loaded.notes,'Keep this note');assert.equal(loaded.bridgeInputs.convertiblePremiumClaim,6052.9);
  const again=await startResearchWorkspace({storage:h.storage});again.action('undo');assert.deepEqual(again.getState().draft,before);assert.deepEqual(again.saved(),before);assert.equal(again.navigations.at(-1),'current');
  const third=await startResearchWorkspace({storage:again.storage});assert.equal(third.get('[data-research-action="undo"]').disabled,true);
 });
@@ -130,7 +131,7 @@ test('complete presets: all fourteen deterministic baselines match Monte Carlo, 
 
 test('complete presets: MC reset uses versioned research distributions and leaves legacy Fixed reset alone',()=>{
  const bundle=readBundle(),preset=bundle.presets[0],d=studioResearchDraft(preset,bundle),adapter=annualResearchSimulationAdapter(d);
- assert.equal(adapter.defaults().method,'annual-path');assert.deepEqual(adapter.defaults().drivers,preset.simulationConfig.drivers);assert.match(adapter.defaultNote,/Research preset/);
+ assertFreshJointDefaults(adapter.defaults());assert.deepEqual(adapter.defaults().drivers,preset.simulationConfig.drivers);assert.match(adapter.defaultNote,/Research preset/);
  const copy=adapter.defaults();copy.seed='changed';assert.notEqual(adapter.defaults().seed,'changed');
  const legacy=researchDraftFor(preset.annualCase);assert.deepEqual(annualResearchSimulationAdapter(legacy).defaults(),simulationResearchDefaults(legacy));
 });

@@ -1,0 +1,161 @@
+{
+  "date": "2026-06-30",
+  "unit": "USD millions, shares millions",
+  "current_price_target_eligible": false,
+  "dated_equity_value_eligible": false,
+  "reason": "Exact June common-equity allocation is unverified. Conditional June-origin scenarios are now calculated with explicit assumed residual claims and legacy award inventories. Neither an exact June value nor an October target.",
+  "known": {
+    "cash": 1440.443,
+    "marketable_equity": 11.165,
+    "marketable_debt_securities": 80.227,
+    "equity_method_investment_book": 46.6,
+    "other_private_investments_book": 43.0,
+    "debt_face": 2500,
+    "debt_book": 2482.2,
+    "debt_fair_value_total": 2468.0,
+    "revolver_drawn": 0,
+    "revolver_capacity": 1250,
+    "legal_common_shares": 275.393,
+    "quarter_basic_weighted_shares": 273.955,
+    "quarter_diluted_weighted_shares": 276.163,
+    "quarter_antidilutive_potential_shares": 1.548,
+    "unrecognized_award_compensation": 970.8,
+    "unrecognized_award_weighted_years": 2.2,
+    "longterm_lease_liability": 169.159,
+    "deferred_tax_assets_balance_sheet": 832.566,
+    "deferred_tax_liabilities": 349.873,
+    "fx_derivative_liability": 13.818,
+    "nqdc_trust_assets": 126.317,
+    "other_longterm_accrued_liabilities": 227.835,
+    "accounts_payable_and_accrued_current_liabilities": 823.724
+  },
+  "bridge_policy": {
+    "operating_cash_reserve": 189,
+    "reserve_basis": "Analyst 3% of $6.3B FY26 revenue, included in operating investment rather than excess cash.",
+    "excess_cash": 1251.443,
+    "liquid_nonoperating_assets": 91.392,
+    "private_investments": "No unconditional credit; book total $89.6M, scenario recovery 0/50/100% with tax and liquidity uncertainty.",
+    "debt": "Deduct $2.5B face conservatively; $2.4822B carrying value nets issuance costs, not repayment obligation. Fair value sensitivity +$32M versus face.",
+    "operating_leases": "Rental cost remains in economic EBIT. Do not also subtract operating lease liability. Reconcile current lease liability if switching to financing treatment.",
+    "tax": "Cash tax-rate scenarios fund recurring operating taxes. Do not add full deferred-tax assets on top. Opening non-operating uncertain tax claims and transaction-tax settlement require explicit review.",
+    "nqdc": "Exclude trust asset credit because corresponding employee liability is embedded in other accrued liabilities.",
+    "awards": "Allocate assumed June unissued legacy RSU/PSU/LTP, options and ESPP rights once. Already-issued restricted shares are inside275.393 legal shares. Future new-grant economic value remains an operating expense. No deduction of970.8 unrecognized accounting expense.",
+    "acquisitions": "Hexagon closed before origin. Its cash and shares are already reflected; no second purchase-price deduction. July 2026 forecast includes integrated business. Future M&A has no growth contribution and no unfunded spend assumption.",
+    "buybacks": "No arbitrary future share shrinkage. Repurchases are capital allocation, not operating value creation."
+  },
+  "cash_rollforward_h1": {
+    "opening_cash": 3001.317,
+    "cfo": 990.711,
+    "investing": -2085.706,
+    "financing": -451.888,
+    "fx": -13.991,
+    "closing_cash": 1440.443
+  },
+  "hexagon": {
+    "closed": "2026-02-23",
+    "gross_purchase_consideration": 3101.008,
+    "cash_paid_approx": 2200,
+    "shares_issued_approx": 3.2,
+    "stock_consideration_fv": 902.2,
+    "cash_acquired": 154.6,
+    "goodwill": 2147.191,
+    "intangibles": 1248,
+    "source": "Q2 2026 10-Q Note 2",
+    "remaining_claims": "Closing release purchase price included estimated EUR150M transaction-related tax owed by acquired entities. June filing does not separately identify remaining cash settlement; do not equate acquired DTL with this amount. Gate exact equity bridge."
+  },
+  "legacy_reference_not_current": {
+    "date": "2025-12-31",
+    "options_outstanding": 1.007,
+    "option_weighted_exercise": 191.75,
+    "vested_options": 0.806,
+    "vested_weighted_exercise": 176.62,
+    "restricted_unvested_shares": 4.646,
+    "unvested_market_based_awards": 2.6,
+    "warning": "Market awards may overlap restricted-share table; do not sum without confirming source scope.",
+    "gross_unrecognized_tax_benefits": 100.941,
+    "longterm_tax_liability_contractual_schedule": 47.6,
+    "lease_liability_total": 186.178
+  },
+  "gates": [
+    "Reconstruct June 30 earned/vested options and unvested shares from exact grant/vesting/forfeiture facts, including market-condition award treatment.",
+    "Identify June 30 acquisition-related transaction taxes, retention liabilities and pension deficit separately; distinguish from recurring expenses and deferred-tax reversals.",
+    "If output is advanced to October 18, bridge actual or explicitly estimated July\u2013October cash, debt, shares and claims with dated uncertainty.",
+    "Verify liquid asset availability and tax leakage before applying cash/securities credits."
+  ],
+  "conditional_dated_equity_research_eligible": true,
+  "conditional_assumptions": {
+    "financial_origin": "2026-06-30",
+    "information_as_of": "2026-10-18",
+    "review_status": "Research submitted for independent review; no approval implied",
+    "base": {
+      "operating_cash_reserve": 189,
+      "marketable_asset_recovery": 0.75,
+      "private_asset_credit": 0,
+      "all_in_residual_nonoperating_claim_budget": 500,
+      "assumed_unissued_legacy_rsu_max_shares": 4.475463,
+      "assumed_legacy_options_full_share_equivalents": 0.994747,
+      "assumed_existing_espp_rights_full_share_equivalents": 0.3,
+      "option_and_espp_exercise_proceeds_credit": 0
+    },
+    "sensitivity_intervals": {
+      "claim_budget": [
+        250,
+        500,
+        800
+      ],
+      "unissued_rsu_max_shares": [
+        3.547462,
+        4.475463,
+        6.0
+      ],
+      "option_full_share_equivalents": [
+        0.8,
+        0.994747,
+        1.2
+      ],
+      "existing_espp_full_share_equivalents": [
+        0,
+        0.3,
+        0.6
+      ],
+      "marketable_asset_recovery": [
+        0.5,
+        0.75,
+        1
+      ],
+      "cash_reserve": [
+        189,
+        378,
+        630
+      ],
+      "private_asset_recovery": [
+        0,
+        44.8,
+        89.6
+      ]
+    },
+    "interval_status": "Analyst stress intervals, not verified population bounds or statistical confidence intervals. Real claims/awards may fall outside them. No probability or completeness assertion.",
+    "claim_budget_rationale": {
+      "preacquisition_legacy_tax_pension_acquisition_anchor_asof_2025_12_31": 167.1,
+      "anchor_detail": "70.2 current income tax payable +96.9 other long-term contractual obligations, the latter including47.6 uncertain-tax liability and49.3 primarily pensions/acquisitions. They are historical reference amounts, not June balances.",
+      "hexagon_transaction_tax_scenario": 195,
+      "transaction_tax_detail": "Entire estimated EUR150M treated as still unpaid at an analyst conversion of1.30USD/EUR. No claim that1.30 is a contemporaneous FX quote or that any amount remains unpaid. This is inside, not in addition to, the500 budget.",
+      "interest_reference": 55.5,
+      "interest_detail": "Half of111 annual coupon cash on500 at4.2%,1000 at4.3%,1000 at4.7%. Not exact accrued June interest.",
+      "fx_derivative_liability_reference": 13.818,
+      "sum_reference_components": 431.418,
+      "unallocated_budget_headroom": 68.582
+    },
+    "claim_budget_scope": "All opening non-operating tax/transaction-tax, pension deficit, unpaid acquisition/retention, accrued financing interest, unmatched deferred-compensation and other non-operating derivative/contingent claims not already paid or funded elsewhere. No other listed claim is deducted outside this budget. Ordinary trade payables, recurring compensation, deferred revenue, operating leases and future integration/service cost remain in operating cash flow; they are not deducted as extra claims.",
+    "overlap_policy": "Gross UTB100.941 and9.941 accrued interest/penalties are not separately added on top of tax accrual reference amounts. NQDC trust is not credited; its matched liability is not separately deducted. Only any unmatched shortfall belongs within the budget. Hexagon consideration already paid is never charged again.",
+    "budget_conditions": "The500 default is an assumed aggregate settlement allowance, not a verified liability valuation. It assumes operating FCFF contains no additional settlement of the same opening non-operating claims and that ordinary liabilities are covered through operating costs/NWC. Unknown amounts and overlaps prevent proof that500 suffices.",
+    "award_conditions": "February19 unissued maximum award and option quantities are explicitly assumed unchanged at June30 for the base. Actual intervening grants, settlements and forfeitures are not reconstructed. Existing ESPP rights0.30M are an assumption anchored to0.284404M January purchases, not a June count. This is conditional alignment, not a source-dated June inventory.",
+    "full_share_allocation": "Treat all assumed legacy performance units as vesting at maximum. Options and ESPP rights are conservatively allocated as zero-price full shares with no proceeds credit; this is an upper participation convention for that assumed inventory, not option fair value and not proof of inventory completeness. Issued restricted shares are already in legal common and never added again.",
+    "irreducible_gaps": [
+      "Exact June grant/vesting/forfeiture and issued-versus-unissued award rollforward, including current ESPP offering.",
+      "June current and long-term non-operating tax, pension, employee-retention and acquisition claims disaggregation; closing transaction-tax estimate is not an unpaid balance.",
+      "Asset cost basis, foreign distribution leakage and unrestricted availability;75% marketable recovery and operating reserve are assumptions.",
+      "Actual post-June cash, debt, share, award and claim movements required before an October valuation. Unrecorded litigation losses have no verified finite ceiling."
+    ]
+  }
+}

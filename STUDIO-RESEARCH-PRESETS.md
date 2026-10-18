@@ -64,7 +64,7 @@ All additive values in this table are percentage points. Triangular entries are 
 | AVGO | Triangular -35 / 0 / 10 | Triangular -15 / 0 / 7 | Triangular 0.8 / 1 / 1.53846 | Triangular -1 / 0 / 2 | revenue-scaled |
 | TSM | Triangular -8 / 0 / 6 | Triangular -5 / 0 / 2 | Triangular 0.866667 / 1 / 1.44444 | Triangular -1.5 / 0 / 3 | revenue-scaled |
 
-- 5,000 attempted trials; deterministic ticker-specific seed; 36 histogram bins. Those are reproducibility/display choices, not forecast-precision claims.
+- 4,000 attempted trials; deterministic ticker-specific seed; 36 histogram bins. Those are reproducibility/display choices, not forecast-precision claims.
 - One driver vector generates a full annual path. Growth shocks fade to zero in the final explicit year; they are not independently redrawn each year. Margin and WACC shifts persist across the explicit and terminal periods.
 - The base is the neutral mode, not the simulation mean or median. Asymmetric triangular distributions have different means, and nonlinear valuation adds another difference.
 - Independent draws are a disclosed simplifying assumption. No source-calibrated correlation matrix was available. Economic demand, utilization, margins, capital and financing co-move; joint-tail risk is therefore incomplete. Damodaran’s Apple +0.50 is not copied to other companies.
@@ -392,7 +392,7 @@ Uncertainty: Company-specific bounded triangular uncertainty is centered at the 
 
 ## Validation
 
-210/210 checks passed across all 14 companies. The 160 annual source rows and terminal objects are unchanged; all 368 source-file hashes match. All 70,000 default attempted trials were accepted, with no invalid exclusions. Zero exclusions means the selected bounded settings passed mathematical constraints; it does not establish economic feasibility or calibrate their probabilities.
+210/210 checks passed across all 14 companies. The 160 annual source rows and terminal objects are unchanged; all 368 source-file hashes match. All 56,000 default attempted trials were accepted, with no invalid exclusions. Zero exclusions means the selected bounded settings passed mathematical constraints; it does not establish economic feasibility or calibrate their probabilities.
 
 The validator also checks every model/simulation rationale field, explicit bridge defaults, native currency, neutral-draw reproduction, serialization and seed replay. UI load/undo/save/restore integration is tested separately by the application work.
 

@@ -1,0 +1,3762 @@
+{
+  "operating": {
+    "down": {
+      "parameters": {
+        "fy26_revenue": 6260,
+        "fy26_gaap_margin": 0.2775,
+        "growth": [
+          0.08,
+          0.07,
+          0.06,
+          0.05,
+          0.045,
+          0.04,
+          0.035,
+          0.03,
+          0.025,
+          0.02
+        ],
+        "reference_v2_economic_margins": [
+          0.32,
+          0.31,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "cash_tax": 0.28,
+        "wacc": 0.12,
+        "terminal_g": 0.02,
+        "terminal_roic": 0.1,
+        "incremental_roic": [
+          0.3,
+          0.28,
+          0.25,
+          0.22,
+          0.2,
+          0.18,
+          0.16,
+          0.14,
+          0.12,
+          0.1
+        ],
+        "rd_pct": [
+          0.34,
+          0.34,
+          0.34,
+          0.34,
+          0.34,
+          0.34,
+          0.34,
+          0.34,
+          0.34,
+          0.34
+        ],
+        "reference_v2_sbc_pct": [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "future_new_grant_pct": 0.12
+      },
+      "origin": "2026-06-30",
+      "information_as_of": "2026-10-18",
+      "cashflow_timing": "Period-end: six-month stub then ten calendar fiscal years; no first-half actual cashflow included in PV.",
+      "FY2026_economic_ebit_usd_m": 1925.9175200000002,
+      "rows": [
+        {
+          "period": "2026-H2",
+          "end": "2026-12-31",
+          "years_from_origin": 0.5,
+          "revenue": 3201.329,
+          "growth": null,
+          "economic_ebit": 913.4025200000002,
+          "economic_margin": 0.28531979062445634,
+          "cash_tax_rate": 0.28,
+          "nopat": 657.6498144000001,
+          "net_reinvestment": 86.22464000000005,
+          "fcff": 571.4251744000001,
+          "rd_pct": null,
+          "sbc_pct": 0.12,
+          "discount_factor": 0.944911182523068,
+          "accounting_sbc_removed": 283.927,
+          "future_new_grant_cost": 384.15948000000003,
+          "sbc_economic_expense_embedded_in_ebit": 384.15948000000003,
+          "pre_future_grant_ebit": 1297.5620000000004,
+          "pv_fcff": 539.9460372657544,
+          "illustrative_legacy_award_amortization": 220.6363636363636,
+          "illustrative_accounting_like_ebit": 692.7661563636366,
+          "legacy_reversal_to_economic_ebit": 220.6363636363636
+        },
+        {
+          "period": "2027",
+          "end": "2027-12-31",
+          "years_from_origin": 1.5,
+          "revenue": 6760.8,
+          "growth": 0.08,
+          "economic_ebit": 2028.2400000000005,
+          "economic_margin": 0.30000000000000004,
+          "cash_tax_rate": 0.28,
+          "nopat": 1460.3328000000004,
+          "net_reinvestment": 245.57395200000127,
+          "incremental_roic": 0.3,
+          "fcff": 1214.758847999999,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 2298.672,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 811.2959999999999,
+          "pre_future_grant_ebit": 2839.5360000000005,
+          "discount_factor": 0.8436706986813106,
+          "pv_fcff": 1024.8564460214632,
+          "illustrative_legacy_award_amortization": 441.2727272727272,
+          "illustrative_accounting_like_ebit": 1586.9672727272732,
+          "legacy_reversal_to_economic_ebit": 441.2727272727272
+        },
+        {
+          "period": "2028",
+          "end": "2028-12-31",
+          "years_from_origin": 2.5,
+          "revenue": 7234.0560000000005,
+          "growth": 0.07,
+          "economic_ebit": 2097.8762400000005,
+          "economic_margin": 0.29000000000000004,
+          "cash_tax_rate": 0.28,
+          "nopat": 1510.4708928000002,
+          "net_reinvestment": 179.06461714285666,
+          "incremental_roic": 0.28,
+          "fcff": 1331.4062756571436,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 2459.5790400000005,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 868.08672,
+          "pre_future_grant_ebit": 2965.9629600000003,
+          "discount_factor": 0.7532774095368845,
+          "pv_fcff": 1002.9182703681643,
+          "illustrative_legacy_award_amortization": 308.89090909090913,
+          "illustrative_accounting_like_ebit": 1788.9853309090913,
+          "legacy_reversal_to_economic_ebit": 308.89090909090913
+        },
+        {
+          "period": "2029",
+          "end": "2029-12-31",
+          "years_from_origin": 3.5,
+          "revenue": 7668.099360000001,
+          "growth": 0.06,
+          "economic_ebit": 2147.0678208000004,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1545.8888309760002,
+          "net_reinvestment": 141.67175270400003,
+          "incremental_roic": 0.25,
+          "fcff": 1404.2170782720002,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 2607.1537824000006,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 920.1719232000002,
+          "pre_future_grant_ebit": 3067.2397440000004,
+          "discount_factor": 0.6725691156579324,
+          "pv_fcff": 944.4330385251649,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2147.0678208000004,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2030",
+          "end": "2030-12-31",
+          "years_from_origin": 4.5,
+          "revenue": 8051.504328000002,
+          "growth": 0.05,
+          "economic_ebit": 2254.4212118400005,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1623.1832725248003,
+          "net_reinvestment": 351.33837067636375,
+          "incremental_roic": 0.22,
+          "fcff": 1271.8449018484366,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 2737.5114715200007,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 966.1805193600002,
+          "pre_future_grant_ebit": 3220.601731200001,
+          "discount_factor": 0.6005081389802968,
+          "pv_fcff": 763.7532150805829,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2254.4212118400005,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2031",
+          "end": "2031-12-31",
+          "years_from_origin": 5.5,
+          "revenue": 8413.822022760001,
+          "growth": 0.045,
+          "economic_ebit": 2355.8701663728007,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1696.2265197884165,
+          "net_reinvestment": 365.216236318081,
+          "incremental_roic": 0.2,
+          "fcff": 1331.0102834703355,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 2860.699487738401,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 1009.6586427312001,
+          "pre_future_grant_ebit": 3365.5288091040006,
+          "discount_factor": 0.5361679812324078,
+          "pv_fcff": 713.6450966878647,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2355.8701663728007,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2032",
+          "end": "2032-12-31",
+          "years_from_origin": 6.5,
+          "revenue": 8750.374903670401,
+          "growth": 0.04,
+          "economic_ebit": 2450.1049730277127,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1764.075580579953,
+          "net_reinvestment": 376.93922661964814,
+          "incremental_roic": 0.18,
+          "fcff": 1387.1363539603049,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 2975.1274672479367,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 1050.0449884404482,
+          "pre_future_grant_ebit": 3500.1499614681607,
+          "discount_factor": 0.4787214118146498,
+          "pv_fcff": 664.0518737473029,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2450.1049730277127,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2033",
+          "end": "2033-12-31",
+          "years_from_origin": 7.5,
+          "revenue": 9056.638025298864,
+          "growth": 0.035,
+          "economic_ebit": 2535.858647083682,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1825.818225900251,
+          "net_reinvestment": 385.89153325186203,
+          "incremental_roic": 0.16,
+          "fcff": 1439.926692648389,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 3079.2569286016137,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 1086.7965630358635,
+          "pre_future_grant_ebit": 3622.6552101195457,
+          "discount_factor": 0.42742983197736584,
+          "pv_fcff": 615.467624298425,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2535.858647083682,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2034",
+          "end": "2034-12-31",
+          "years_from_origin": 8.5,
+          "revenue": 9328.33716605783,
+          "growth": 0.03,
+          "economic_ebit": 2611.934406496193,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1880.5927726772588,
+          "net_reinvestment": 391.2467626929128,
+          "incremental_roic": 0.14,
+          "fcff": 1489.346009984346,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 3171.6346364596625,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 1119.4004599269397,
+          "pre_future_grant_ebit": 3731.3348664231326,
+          "discount_factor": 0.38163377855121944,
+          "pv_fcff": 568.3847453605082,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2611.934406496193,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2035",
+          "end": "2035-12-31",
+          "years_from_origin": 9.5,
+          "revenue": 9561.545595209276,
+          "growth": 0.025,
+          "economic_ebit": 2677.2327666585975,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1927.6075919941902,
+          "net_reinvestment": 391.7901609744282,
+          "incremental_roic": 0.12,
+          "fcff": 1535.817431019762,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 3250.925502371154,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 1147.385471425113,
+          "pre_future_grant_ebit": 3824.618238083711,
+          "discount_factor": 0.34074444513501734,
+          "pv_fcff": 523.3212583615166,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2677.2327666585975,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2036",
+          "end": "2036-12-31",
+          "years_from_origin": 10.5,
+          "revenue": 9752.776507113462,
+          "growth": 0.02,
+          "economic_ebit": 2730.7774219917696,
+          "economic_margin": 0.28,
+          "cash_tax_rate": 0.28,
+          "nopat": 1966.159743834074,
+          "net_reinvestment": 385.5215183988389,
+          "incremental_roic": 0.1,
+          "fcff": 1580.6382254352352,
+          "rd_pct": 0.34,
+          "rd_expense_embedded_in_ebit": 3315.944012418577,
+          "sbc_pct": 0.12,
+          "sbc_economic_expense_embedded_in_ebit": 1170.3331808536154,
+          "pre_future_grant_ebit": 3901.110602845385,
+          "discount_factor": 0.30423611172769405,
+          "pv_fcff": 480.88722775457825,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 2730.7774219917696,
+          "legacy_reversal_to_economic_ebit": 0.0
+        }
+      ],
+      "terminal": {
+        "year": 2037,
+        "nopat": 2005.4829387107557,
+        "reinvestment_rate": 0.19999999999999998,
+        "net_reinvestment": 401.0965877421511,
+        "fcff": 1604.3863509686046,
+        "enterprise_value": 16043.863509686047,
+        "pv": 4881.122651276718
+      },
+      "operating_enterprise_value_usd_m": 12722.787484748043,
+      "terminal_pct_ev": 0.38365198327238914,
+      "unconditional_equity_value": null,
+      "unconditional_per_share_value": null,
+      "bridge_diagnostic_before_unresolved_claims_usd_m": 11565.622484748043,
+      "bridge_diagnostic_warning": "Excludes uncertain claims/awards/private-investment credit and is NOT common equity value.",
+      "conditional_equity_allocation": {
+        "financial_origin": "2026-06-30",
+        "information_as_of": "2026-10-18",
+        "status": "conditional analyst allocation; exact June inventory/claims unverified; not October target",
+        "operating_ev": 12722.787484748043,
+        "excess_cash_credit": 1251.443,
+        "marketable_asset_credit": 68.544,
+        "private_asset_credit": 0,
+        "debt_principal_deduction": 2500,
+        "all_in_residual_claim_budget": 500,
+        "pool_for_common_and_assumed_legacy_awards": 11042.774484748043,
+        "legal_common_shares": 275.393,
+        "assumed_unissued_rsu_psu_ltp_maximum": 4.475463,
+        "assumed_options_full_shares": 0.994747,
+        "assumed_existing_espp_full_shares": 0.3,
+        "total_allocation_units": 281.16321,
+        "conditional_usd_per_share": 39.275318007459234,
+        "allocation_to_legal_common_equity": 10816.14765202822,
+        "allocation_to_assumed_unissued_legacy_awards": 226.62683271982135,
+        "option_espp_exercise_proceeds_credit": 0,
+        "conditions": "Capital-claims.json records assumptions, sensitivity intervals and irreducible gaps. No claim that the residual budget suffices or award count is complete."
+      }
+    },
+    "base": {
+      "parameters": {
+        "fy26_revenue": 6300,
+        "fy26_gaap_margin": 0.2825,
+        "growth": [
+          0.14,
+          0.13,
+          0.12,
+          0.11,
+          0.1,
+          0.09,
+          0.08,
+          0.07,
+          0.06,
+          0.05
+        ],
+        "reference_v2_economic_margins": [
+          0.335,
+          0.34,
+          0.345,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.35,
+          0.35
+        ],
+        "cash_tax": 0.24,
+        "wacc": 0.105,
+        "terminal_g": 0.025,
+        "terminal_roic": 0.15,
+        "incremental_roic": [
+          0.4,
+          0.37,
+          0.34,
+          0.31,
+          0.28,
+          0.25,
+          0.22,
+          0.2,
+          0.175,
+          0.15
+        ],
+        "rd_pct": [
+          0.33,
+          0.33,
+          0.325,
+          0.32,
+          0.32,
+          0.32,
+          0.32,
+          0.32,
+          0.32,
+          0.32
+        ],
+        "reference_v2_sbc_pct": [
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09
+        ],
+        "future_new_grant_pct": 0.102
+      },
+      "origin": "2026-06-30",
+      "information_as_of": "2026-10-18",
+      "cashflow_timing": "Period-end: six-month stub then ten calendar fiscal years; no first-half actual cashflow included in PV.",
+      "FY2026_economic_ebit_usd_m": 2022.0614420000002,
+      "rows": [
+        {
+          "period": "2026-H2",
+          "end": "2026-12-31",
+          "years_from_origin": 0.5,
+          "revenue": 3241.329,
+          "growth": null,
+          "economic_ebit": 1009.5464420000002,
+          "economic_margin": 0.3114606514796863,
+          "cash_tax_rate": 0.24,
+          "nopat": 767.2552959200001,
+          "net_reinvestment": 89.42464000000005,
+          "fcff": 677.83065592,
+          "rd_pct": null,
+          "sbc_pct": 0.102,
+          "discount_factor": 0.9513029883089882,
+          "accounting_sbc_removed": 283.927,
+          "future_new_grant_cost": 330.615558,
+          "sbc_economic_expense_embedded_in_ebit": 330.615558,
+          "pre_future_grant_ebit": 1340.1620000000003,
+          "pv_fcff": 644.8223285441376,
+          "illustrative_legacy_award_amortization": 220.6363636363636,
+          "illustrative_accounting_like_ebit": 788.9100783636366,
+          "legacy_reversal_to_economic_ebit": 220.6363636363636
+        },
+        {
+          "period": "2027",
+          "end": "2027-12-31",
+          "years_from_origin": 1.5,
+          "revenue": 7182.000000000001,
+          "growth": 0.14,
+          "economic_ebit": 2319.786000000001,
+          "economic_margin": 0.32300000000000006,
+          "cash_tax_rate": 0.24,
+          "nopat": 1763.0373600000007,
+          "net_reinvestment": 565.6766602000016,
+          "incremental_roic": 0.4,
+          "fcff": 1197.360699799999,
+          "rd_pct": 0.33,
+          "rd_expense_embedded_in_ebit": 2370.0600000000004,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 732.5640000000001,
+          "pre_future_grant_ebit": 3052.350000000001,
+          "discount_factor": 0.8609076817275911,
+          "pv_fcff": 1030.8170242565434,
+          "illustrative_legacy_award_amortization": 441.2727272727272,
+          "illustrative_accounting_like_ebit": 1878.5132727272737,
+          "legacy_reversal_to_economic_ebit": 441.2727272727272
+        },
+        {
+          "period": "2028",
+          "end": "2028-12-31",
+          "years_from_origin": 2.5,
+          "revenue": 8115.66,
+          "growth": 0.13,
+          "economic_ebit": 2661.9364800000003,
+          "economic_margin": 0.32800000000000007,
+          "cash_tax_rate": 0.24,
+          "nopat": 2023.0717248000003,
+          "net_reinvestment": 702.7955805405395,
+          "incremental_roic": 0.37,
+          "fcff": 1320.2761442594608,
+          "rd_pct": 0.33,
+          "rd_expense_embedded_in_ebit": 2678.1678,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 827.7973199999999,
+          "pre_future_grant_ebit": 3489.7338000000004,
+          "discount_factor": 0.7791019744141097,
+          "pv_fcff": 1028.6297507643937,
+          "illustrative_legacy_award_amortization": 308.89090909090913,
+          "illustrative_accounting_like_ebit": 2353.045570909091,
+          "legacy_reversal_to_economic_ebit": 308.89090909090913
+        },
+        {
+          "period": "2029",
+          "end": "2029-12-31",
+          "years_from_origin": 3.5,
+          "revenue": 9089.539200000001,
+          "growth": 0.12,
+          "economic_ebit": 3026.8165536,
+          "economic_margin": 0.33299999999999996,
+          "cash_tax_rate": 0.24,
+          "nopat": 2300.380580736,
+          "net_reinvestment": 815.6142821647048,
+          "incremental_roic": 0.34,
+          "fcff": 1484.766298571295,
+          "rd_pct": 0.325,
+          "rd_expense_embedded_in_ebit": 2954.1002400000007,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 927.1329984,
+          "pre_future_grant_ebit": 3953.949552,
+          "discount_factor": 0.7050696601032667,
+          "pv_fcff": 1046.8636694664483,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 3026.8165536,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2030",
+          "end": "2030-12-31",
+          "years_from_origin": 4.5,
+          "revenue": 10089.388512000001,
+          "growth": 0.11,
+          "economic_ebit": 3410.213317056,
+          "economic_margin": 0.33799999999999997,
+          "cash_tax_rate": 0.24,
+          "nopat": 2591.76212096256,
+          "net_reinvestment": 939.9404523437419,
+          "incremental_roic": 0.31,
+          "fcff": 1651.821668618818,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 3228.6043238400007,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 1029.117628224,
+          "pre_future_grant_ebit": 4439.33094528,
+          "discount_factor": 0.6380720905911915,
+          "pv_fcff": 1053.9813053794396,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 3410.213317056,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2031",
+          "end": "2031-12-31",
+          "years_from_origin": 5.5,
+          "revenue": 11098.327363200002,
+          "growth": 0.1,
+          "economic_ebit": 3751.2346487616,
+          "economic_margin": 0.33799999999999997,
+          "cash_tax_rate": 0.24,
+          "nopat": 2850.938333058816,
+          "net_reinvestment": 925.6293289152007,
+          "incremental_roic": 0.28,
+          "fcff": 1925.3090041436153,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 3551.4647562240007,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 1132.0293910464002,
+          "pre_future_grant_ebit": 4883.264039808,
+          "discount_factor": 0.5774408059648792,
+          "pv_fcff": 1111.7519830841281,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 3751.2346487616,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2032",
+          "end": "2032-12-31",
+          "years_from_origin": 6.5,
+          "revenue": 12097.176825888004,
+          "growth": 0.09,
+          "economic_ebit": 4088.845767150145,
+          "economic_margin": 0.33799999999999997,
+          "cash_tax_rate": 0.24,
+          "nopat": 3107.5227830341105,
+          "net_reinvestment": 1026.3377999011773,
+          "incremental_roic": 0.25,
+          "fcff": 2081.184983132933,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 3871.0965842841615,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 1233.9120362405763,
+          "pre_future_grant_ebit": 5322.757803390721,
+          "discount_factor": 0.5225708651265876,
+          "pv_fcff": 1087.5666371242394,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 4088.845767150145,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2033",
+          "end": "2033-12-31",
+          "years_from_origin": 7.5,
+          "revenue": 13064.950971959044,
+          "growth": 0.08,
+          "economic_ebit": 4415.953428522156,
+          "economic_margin": 0.33799999999999997,
+          "cash_tax_rate": 0.24,
+          "nopat": 3356.1246056768387,
+          "net_reinvestment": 1130.0082847396734,
+          "incremental_roic": 0.22,
+          "fcff": 2226.1163209371653,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 4180.784311026894,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 1332.6249991398224,
+          "pre_future_grant_ebit": 5748.578427661979,
+          "discount_factor": 0.47291481006931,
+          "pv_fcff": 1052.7633771081908,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 4415.953428522156,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2034",
+          "end": "2034-12-31",
+          "years_from_origin": 8.5,
+          "revenue": 13979.497539996179,
+          "growth": 0.07,
+          "economic_ebit": 4725.070168518708,
+          "economic_margin": 0.33799999999999997,
+          "cash_tax_rate": 0.24,
+          "nopat": 3591.053328074218,
+          "net_reinvestment": 1174.6436119868963,
+          "incremental_roic": 0.2,
+          "fcff": 2416.4097160873216,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 4473.439212798778,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 1425.90874907961,
+          "pre_future_grant_ebit": 6150.978917598318,
+          "discount_factor": 0.4279772036826335,
+          "pv_fcff": 1034.1682732425982,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 4725.070168518708,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2035",
+          "end": "2035-12-31",
+          "years_from_origin": 9.5,
+          "revenue": 14818.26739239595,
+          "growth": 0.06,
+          "economic_ebit": 5008.574378629831,
+          "economic_margin": 0.33799999999999997,
+          "cash_tax_rate": 0.24,
+          "nopat": 3806.5165277586716,
+          "net_reinvestment": 1231.218283911164,
+          "incremental_roic": 0.175,
+          "fcff": 2575.2982438475074,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 4741.845565566704,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 1511.463274024387,
+          "pre_future_grant_ebit": 6520.037652654217,
+          "discount_factor": 0.38730968659061854,
+          "pv_fcff": 997.4379557019485,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 5008.574378629831,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2036",
+          "end": "2036-12-31",
+          "years_from_origin": 10.5,
+          "revenue": 15559.180762015749,
+          "growth": 0.05,
+          "economic_ebit": 5259.003097561323,
+          "economic_margin": 0.33799999999999997,
+          "cash_tax_rate": 0.24,
+          "nopat": 3996.8423541466054,
+          "net_reinvestment": 1268.8388425862256,
+          "incremental_roic": 0.15,
+          "fcff": 2728.0035115603796,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 4978.937843845039,
+          "sbc_pct": 0.102,
+          "sbc_economic_expense_embedded_in_ebit": 1587.0364377256062,
+          "pre_future_grant_ebit": 6846.039535286928,
+          "discount_factor": 0.35050650370191727,
+          "pv_fcff": 956.1829729235815,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 5259.003097561323,
+          "legacy_reversal_to_economic_ebit": 0.0
+        }
+      ],
+      "terminal": {
+        "year": 2037,
+        "nopat": 4096.76341300027,
+        "reinvestment_rate": 0.16666666666666669,
+        "net_reinvestment": 682.7939021667116,
+        "fcff": 3413.969510833558,
+        "enterprise_value": 42674.618885419484,
+        "pv": 14957.731462340193
+      },
+      "operating_enterprise_value_usd_m": 26002.716739935844,
+      "terminal_pct_ev": 0.5752372573965553,
+      "unconditional_equity_value": null,
+      "unconditional_per_share_value": null,
+      "bridge_diagnostic_before_unresolved_claims_usd_m": 24845.551739935843,
+      "bridge_diagnostic_warning": "Excludes uncertain claims/awards/private-investment credit and is NOT common equity value.",
+      "conditional_equity_allocation": {
+        "financial_origin": "2026-06-30",
+        "information_as_of": "2026-10-18",
+        "status": "conditional analyst allocation; exact June inventory/claims unverified; not October target",
+        "operating_ev": 26002.716739935844,
+        "excess_cash_credit": 1251.443,
+        "marketable_asset_credit": 68.544,
+        "private_asset_credit": 0,
+        "debt_principal_deduction": 2500,
+        "all_in_residual_claim_budget": 500,
+        "pool_for_common_and_assumed_legacy_awards": 24322.703739935845,
+        "legal_common_shares": 275.393,
+        "assumed_unissued_rsu_psu_ltp_maximum": 4.475463,
+        "assumed_options_full_shares": 0.994747,
+        "assumed_existing_espp_full_shares": 0.3,
+        "total_allocation_units": 281.16321,
+        "conditional_usd_per_share": 86.50741944486921,
+        "allocation_to_legal_common_equity": 23823.537763180866,
+        "allocation_to_assumed_unissued_legacy_awards": 499.16597675497883,
+        "option_espp_exercise_proceeds_credit": 0,
+        "conditions": "Capital-claims.json records assumptions, sensitivity intervals and irreducible gaps. No claim that the residual budget suffices or award count is complete."
+      }
+    },
+    "up": {
+      "parameters": {
+        "fy26_revenue": 6340,
+        "fy26_gaap_margin": 0.2875,
+        "growth": [
+          0.18,
+          0.17,
+          0.16,
+          0.15,
+          0.14,
+          0.12,
+          0.1,
+          0.09,
+          0.08,
+          0.07
+        ],
+        "reference_v2_economic_margins": [
+          0.34,
+          0.35,
+          0.36,
+          0.37,
+          0.38,
+          0.38,
+          0.38,
+          0.38,
+          0.38,
+          0.38
+        ],
+        "cash_tax": 0.21,
+        "wacc": 0.0925,
+        "terminal_g": 0.03,
+        "terminal_roic": 0.2,
+        "incremental_roic": [
+          0.5,
+          0.46,
+          0.42,
+          0.38,
+          0.34,
+          0.3,
+          0.27,
+          0.24,
+          0.22,
+          0.2
+        ],
+        "rd_pct": [
+          0.33,
+          0.325,
+          0.32,
+          0.315,
+          0.31,
+          0.31,
+          0.31,
+          0.31,
+          0.31,
+          0.31
+        ],
+        "reference_v2_sbc_pct": [
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.0875,
+          0.0875,
+          0.0875,
+          0.085,
+          0.085
+        ],
+        "future_new_grant_pct": 0.09
+      },
+      "origin": "2026-06-30",
+      "information_as_of": "2026-10-18",
+      "cashflow_timing": "Period-end: six-month stub then ten calendar fiscal years; no first-half actual cashflow included in PV.",
+      "FY2026_economic_ebit_usd_m": 2100.35739,
+      "rows": [
+        {
+          "period": "2026-H2",
+          "end": "2026-12-31",
+          "years_from_origin": 0.5,
+          "revenue": 3281.329,
+          "growth": null,
+          "economic_ebit": 1087.84239,
+          "economic_margin": 0.33152493699961205,
+          "cash_tax_rate": 0.21,
+          "nopat": 859.3954881000001,
+          "net_reinvestment": 92.62464000000006,
+          "fcff": 766.7708481,
+          "rd_pct": null,
+          "sbc_pct": 0.09,
+          "discount_factor": 0.9567297464698797,
+          "accounting_sbc_removed": 283.927,
+          "future_new_grant_cost": 295.31961,
+          "sbc_economic_expense_embedded_in_ebit": 295.31961,
+          "pre_future_grant_ebit": 1383.162,
+          "pv_fcff": 733.5924791032077,
+          "illustrative_legacy_award_amortization": 220.6363636363636,
+          "illustrative_accounting_like_ebit": 867.2060263636364,
+          "legacy_reversal_to_economic_ebit": 220.6363636363636
+        },
+        {
+          "period": "2027",
+          "end": "2027-12-31",
+          "years_from_origin": 1.5,
+          "revenue": 7481.2,
+          "growth": 0.18,
+          "economic_ebit": 2543.6080000000006,
+          "economic_margin": 0.3400000000000001,
+          "cash_tax_rate": 0.21,
+          "nopat": 2009.4503200000006,
+          "net_reinvestment": 700.3359638000011,
+          "incremental_roic": 0.5,
+          "fcff": 1309.1143561999995,
+          "rd_pct": 0.33,
+          "rd_expense_embedded_in_ebit": 2468.7960000000003,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 673.308,
+          "pre_future_grant_ebit": 3216.916,
+          "discount_factor": 0.8757251683934826,
+          "pv_fcff": 1146.42439002957,
+          "illustrative_legacy_award_amortization": 441.2727272727272,
+          "illustrative_accounting_like_ebit": 2102.3352727272736,
+          "legacy_reversal_to_economic_ebit": 441.2727272727272
+        },
+        {
+          "period": "2028",
+          "end": "2028-12-31",
+          "years_from_origin": 2.5,
+          "revenue": 8753.003999999999,
+          "growth": 0.17,
+          "economic_ebit": 3063.5513999999994,
+          "economic_margin": 0.35,
+          "cash_tax_rate": 0.21,
+          "nopat": 2420.2056059999995,
+          "net_reinvestment": 892.9462739130411,
+          "incremental_roic": 0.46,
+          "fcff": 1527.2593320869585,
+          "rd_pct": 0.325,
+          "rd_expense_embedded_in_ebit": 2844.7263,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 787.7703599999999,
+          "pre_future_grant_ebit": 3851.321759999999,
+          "discount_factor": 0.8015791015043319,
+          "pv_fcff": 1224.21916317837,
+          "illustrative_legacy_award_amortization": 308.89090909090913,
+          "illustrative_accounting_like_ebit": 2754.66049090909,
+          "legacy_reversal_to_economic_ebit": 308.89090909090913
+        },
+        {
+          "period": "2029",
+          "end": "2029-12-31",
+          "years_from_origin": 3.5,
+          "revenue": 10153.484639999999,
+          "growth": 0.16,
+          "economic_ebit": 3655.2544703999993,
+          "economic_margin": 0.36,
+          "cash_tax_rate": 0.21,
+          "nopat": 2887.6510316159997,
+          "net_reinvestment": 1112.9652990857148,
+          "incremental_roic": 0.42,
+          "fcff": 1774.685732530285,
+          "rd_pct": 0.32,
+          "rd_expense_embedded_in_ebit": 3249.1150847999997,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 913.8136175999998,
+          "pre_future_grant_ebit": 4569.068087999999,
+          "discount_factor": 0.733710848058885,
+          "pv_fcff": 1302.1061738527987,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 3655.2544703999993,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2030",
+          "end": "2030-12-31",
+          "years_from_origin": 4.5,
+          "revenue": 11676.507335999997,
+          "growth": 0.15,
+          "economic_ebit": 4320.307714319999,
+          "economic_margin": 0.37,
+          "cash_tax_rate": 0.21,
+          "nopat": 3413.0430943127994,
+          "net_reinvestment": 1382.6106913073677,
+          "incremental_roic": 0.38,
+          "fcff": 2030.4324030054318,
+          "rd_pct": 0.315,
+          "rd_expense_embedded_in_ebit": 3678.099810839999,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 1050.8856602399997,
+          "pre_future_grant_ebit": 5371.193374559998,
+          "discount_factor": 0.6715888769417712,
+          "pv_fcff": 1363.6158172405997,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 4320.307714319999,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2031",
+          "end": "2031-12-31",
+          "years_from_origin": 5.5,
+          "revenue": 13311.218363039998,
+          "growth": 0.14,
+          "economic_ebit": 5058.262977955199,
+          "economic_margin": 0.38,
+          "cash_tax_rate": 0.21,
+          "nopat": 3996.0277525846072,
+          "net_reinvestment": 1714.660759622964,
+          "incremental_roic": 0.34,
+          "fcff": 2281.3669929616435,
+          "rd_pct": 0.31,
+          "rd_expense_embedded_in_ebit": 4126.477692542399,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 1198.0096526735997,
+          "pre_future_grant_ebit": 6256.272630628799,
+          "discount_factor": 0.6147266608162665,
+          "pv_fcff": 1402.4171136797581,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 5058.262977955199,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2032",
+          "end": "2032-12-31",
+          "years_from_origin": 6.5,
+          "revenue": 14908.564566604799,
+          "growth": 0.12,
+          "economic_ebit": 5627.983123893312,
+          "economic_margin": 0.37750000000000006,
+          "cash_tax_rate": 0.21,
+          "nopat": 4446.106667875717,
+          "net_reinvestment": 1500.2630509703658,
+          "incremental_roic": 0.3,
+          "fcff": 2945.843616905351,
+          "rd_pct": 0.31,
+          "rd_expense_embedded_in_ebit": 4621.655015647488,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 1341.7708109944317,
+          "pre_future_grant_ebit": 6969.7539348877435,
+          "discount_factor": 0.562678865735713,
+          "pv_fcff": 1657.5639449950934,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 5627.983123893312,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2033",
+          "end": "2033-12-31",
+          "years_from_origin": 7.5,
+          "revenue": 16399.42102326528,
+          "growth": 0.1,
+          "economic_ebit": 6190.781436282644,
+          "economic_margin": 0.37750000000000006,
+          "cash_tax_rate": 0.21,
+          "nopat": 4890.717334663289,
+          "net_reinvestment": 1646.7061732873035,
+          "incremental_roic": 0.27,
+          "fcff": 3244.0111613759855,
+          "rd_pct": 0.31,
+          "rd_expense_embedded_in_ebit": 5083.820517212237,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 1475.9478920938752,
+          "pre_future_grant_ebit": 7666.729328376519,
+          "discount_factor": 0.5150378633736503,
+          "pv_fcff": 1670.7885773153614,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 6190.781436282644,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2034",
+          "end": "2034-12-31",
+          "years_from_origin": 8.5,
+          "revenue": 17875.36891535916,
+          "growth": 0.09,
+          "economic_ebit": 6747.951765548083,
+          "economic_margin": 0.37750000000000006,
+          "cash_tax_rate": 0.21,
+          "nopat": 5330.881894782986,
+          "net_reinvestment": 1834.0190004987373,
+          "incremental_roic": 0.24,
+          "fcff": 3496.862894284249,
+          "rd_pct": 0.31,
+          "rd_expense_embedded_in_ebit": 5541.3643637613395,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 1608.7832023823241,
+          "pre_future_grant_ebit": 8356.734967930408,
+          "discount_factor": 0.471430538557117,
+          "pv_fcff": 1648.5279575128222,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 6747.951765548083,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2035",
+          "end": "2035-12-31",
+          "years_from_origin": 9.5,
+          "revenue": 19305.398428587894,
+          "growth": 0.08,
+          "economic_ebit": 7239.52441072046,
+          "economic_margin": 0.375,
+          "cash_tax_rate": 0.21,
+          "nopat": 5719.224284469164,
+          "net_reinvestment": 1765.192680391717,
+          "incremental_roic": 0.22,
+          "fcff": 3954.031604077447,
+          "rd_pct": 0.31,
+          "rd_expense_embedded_in_ebit": 5984.673512862247,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 1737.4858585729105,
+          "pre_future_grant_ebit": 8977.01026929337,
+          "discount_factor": 0.4315153671003359,
+          "pv_fcff": 1706.2253991598095,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 7239.52441072046,
+          "legacy_reversal_to_economic_ebit": 0.0
+        },
+        {
+          "period": "2036",
+          "end": "2036-12-31",
+          "years_from_origin": 10.5,
+          "revenue": 20656.776318589047,
+          "growth": 0.07,
+          "economic_ebit": 7746.291119470892,
+          "economic_margin": 0.375,
+          "cash_tax_rate": 0.21,
+          "nopat": 6119.569984382005,
+          "net_reinvestment": 2001.7284995642058,
+          "incremental_roic": 0.2,
+          "fcff": 4117.841484817799,
+          "rd_pct": 0.31,
+          "rd_expense_embedded_in_ebit": 6403.600658762604,
+          "sbc_pct": 0.09,
+          "sbc_economic_expense_embedded_in_ebit": 1859.1098686730143,
+          "pre_future_grant_ebit": 9605.400988143907,
+          "discount_factor": 0.39497974105293904,
+          "pv_fcff": 1626.4639633703844,
+          "illustrative_legacy_award_amortization": 0.0,
+          "illustrative_accounting_like_ebit": 7746.291119470892,
+          "legacy_reversal_to_economic_ebit": 0.0
+        }
+      ],
+      "terminal": {
+        "year": 2037,
+        "nopat": 6303.157083913465,
+        "reinvestment_rate": 0.15,
+        "net_reinvestment": 945.4735625870196,
+        "fcff": 5357.683521326445,
+        "enterprise_value": 85722.93634122312,
+        "pv": 33858.823198353886
+      },
+      "operating_enterprise_value_usd_m": 49340.76817779166,
+      "terminal_pct_ev": 0.6862240789674974,
+      "unconditional_equity_value": null,
+      "unconditional_per_share_value": null,
+      "bridge_diagnostic_before_unresolved_claims_usd_m": 48183.60317779166,
+      "bridge_diagnostic_warning": "Excludes uncertain claims/awards/private-investment credit and is NOT common equity value.",
+      "conditional_equity_allocation": {
+        "financial_origin": "2026-06-30",
+        "information_as_of": "2026-10-18",
+        "status": "conditional analyst allocation; exact June inventory/claims unverified; not October target",
+        "operating_ev": 49340.76817779166,
+        "excess_cash_credit": 1251.443,
+        "marketable_asset_credit": 68.544,
+        "private_asset_credit": 0,
+        "debt_principal_deduction": 2500,
+        "all_in_residual_claim_budget": 500,
+        "pool_for_common_and_assumed_legacy_awards": 47660.75517779166,
+        "legal_common_shares": 275.393,
+        "assumed_unissued_rsu_psu_ltp_maximum": 4.475463,
+        "assumed_options_full_shares": 0.994747,
+        "assumed_existing_espp_full_shares": 0.3,
+        "total_allocation_units": 281.16321,
+        "conditional_usd_per_share": 169.512772235712,
+        "allocation_to_legal_common_equity": 46682.63088430943,
+        "allocation_to_assumed_unissued_legacy_awards": 978.1242934822278,
+        "option_espp_exercise_proceeds_credit": 0,
+        "conditions": "Capital-claims.json records assumptions, sensitivity intervals and irreducible gaps. No claim that the residual budget suffices or award count is complete."
+      }
+    }
+  },
+  "capital": {
+    "date": "2026-06-30",
+    "unit": "USD millions, shares millions",
+    "current_price_target_eligible": false,
+    "dated_equity_value_eligible": false,
+    "reason": "Exact June common-equity allocation is unverified. Conditional June-origin scenarios are now calculated with explicit assumed residual claims and legacy award inventories. Neither an exact June value nor an October target.",
+    "known": {
+      "cash": 1440.443,
+      "marketable_equity": 11.165,
+      "marketable_debt_securities": 80.227,
+      "equity_method_investment_book": 46.6,
+      "other_private_investments_book": 43.0,
+      "debt_face": 2500,
+      "debt_book": 2482.2,
+      "debt_fair_value_total": 2468.0,
+      "revolver_drawn": 0,
+      "revolver_capacity": 1250,
+      "legal_common_shares": 275.393,
+      "quarter_basic_weighted_shares": 273.955,
+      "quarter_diluted_weighted_shares": 276.163,
+      "quarter_antidilutive_potential_shares": 1.548,
+      "unrecognized_award_compensation": 970.8,
+      "unrecognized_award_weighted_years": 2.2,
+      "longterm_lease_liability": 169.159,
+      "deferred_tax_assets_balance_sheet": 832.566,
+      "deferred_tax_liabilities": 349.873,
+      "fx_derivative_liability": 13.818,
+      "nqdc_trust_assets": 126.317,
+      "other_longterm_accrued_liabilities": 227.835,
+      "accounts_payable_and_accrued_current_liabilities": 823.724
+    },
+    "bridge_policy": {
+      "operating_cash_reserve": 189,
+      "reserve_basis": "Analyst 3% of $6.3B FY26 revenue, included in operating investment rather than excess cash.",
+      "excess_cash": 1251.443,
+      "liquid_nonoperating_assets": 91.392,
+      "private_investments": "No unconditional credit; book total $89.6M, scenario recovery 0/50/100% with tax and liquidity uncertainty.",
+      "debt": "Deduct $2.5B face conservatively; $2.4822B carrying value nets issuance costs, not repayment obligation. Fair value sensitivity +$32M versus face.",
+      "operating_leases": "Rental cost remains in economic EBIT. Do not also subtract operating lease liability. Reconcile current lease liability if switching to financing treatment.",
+      "tax": "Cash tax-rate scenarios fund recurring operating taxes. Do not add full deferred-tax assets on top. Opening non-operating uncertain tax claims and transaction-tax settlement require explicit review.",
+      "nqdc": "Exclude trust asset credit because corresponding employee liability is embedded in other accrued liabilities.",
+      "awards": "Allocate assumed June unissued legacy RSU/PSU/LTP, options and ESPP rights once. Already-issued restricted shares are inside275.393 legal shares. Future new-grant economic value remains an operating expense. No deduction of970.8 unrecognized accounting expense.",
+      "acquisitions": "Hexagon closed before origin. Its cash and shares are already reflected; no second purchase-price deduction. July 2026 forecast includes integrated business. Future M&A has no growth contribution and no unfunded spend assumption.",
+      "buybacks": "No arbitrary future share shrinkage. Repurchases are capital allocation, not operating value creation."
+    },
+    "cash_rollforward_h1": {
+      "opening_cash": 3001.317,
+      "cfo": 990.711,
+      "investing": -2085.706,
+      "financing": -451.888,
+      "fx": -13.991,
+      "closing_cash": 1440.443
+    },
+    "hexagon": {
+      "closed": "2026-02-23",
+      "gross_purchase_consideration": 3101.008,
+      "cash_paid_approx": 2200,
+      "shares_issued_approx": 3.2,
+      "stock_consideration_fv": 902.2,
+      "cash_acquired": 154.6,
+      "goodwill": 2147.191,
+      "intangibles": 1248,
+      "source": "Q2 2026 10-Q Note 2",
+      "remaining_claims": "Closing release purchase price included estimated EUR150M transaction-related tax owed by acquired entities. June filing does not separately identify remaining cash settlement; do not equate acquired DTL with this amount. Gate exact equity bridge."
+    },
+    "legacy_reference_not_current": {
+      "date": "2025-12-31",
+      "options_outstanding": 1.007,
+      "option_weighted_exercise": 191.75,
+      "vested_options": 0.806,
+      "vested_weighted_exercise": 176.62,
+      "restricted_unvested_shares": 4.646,
+      "unvested_market_based_awards": 2.6,
+      "warning": "Market awards may overlap restricted-share table; do not sum without confirming source scope.",
+      "gross_unrecognized_tax_benefits": 100.941,
+      "longterm_tax_liability_contractual_schedule": 47.6,
+      "lease_liability_total": 186.178
+    },
+    "gates": [
+      "Reconstruct June 30 earned/vested options and unvested shares from exact grant/vesting/forfeiture facts, including market-condition award treatment.",
+      "Identify June 30 acquisition-related transaction taxes, retention liabilities and pension deficit separately; distinguish from recurring expenses and deferred-tax reversals.",
+      "If output is advanced to October 18, bridge actual or explicitly estimated July–October cash, debt, shares and claims with dated uncertainty.",
+      "Verify liquid asset availability and tax leakage before applying cash/securities credits."
+    ],
+    "conditional_dated_equity_research_eligible": true,
+    "conditional_assumptions": {
+      "financial_origin": "2026-06-30",
+      "information_as_of": "2026-10-18",
+      "review_status": "Research submitted for independent review; no approval implied",
+      "base": {
+        "operating_cash_reserve": 189,
+        "marketable_asset_recovery": 0.75,
+        "private_asset_credit": 0,
+        "all_in_residual_nonoperating_claim_budget": 500,
+        "assumed_unissued_legacy_rsu_max_shares": 4.475463,
+        "assumed_legacy_options_full_share_equivalents": 0.994747,
+        "assumed_existing_espp_rights_full_share_equivalents": 0.3,
+        "option_and_espp_exercise_proceeds_credit": 0
+      },
+      "sensitivity_intervals": {
+        "claim_budget": [
+          250,
+          500,
+          800
+        ],
+        "unissued_rsu_max_shares": [
+          3.547462,
+          4.475463,
+          6.0
+        ],
+        "option_full_share_equivalents": [
+          0.8,
+          0.994747,
+          1.2
+        ],
+        "existing_espp_full_share_equivalents": [
+          0,
+          0.3,
+          0.6
+        ],
+        "marketable_asset_recovery": [
+          0.5,
+          0.75,
+          1
+        ],
+        "cash_reserve": [
+          189,
+          378,
+          630
+        ],
+        "private_asset_recovery": [
+          0,
+          44.8,
+          89.6
+        ]
+      },
+      "interval_status": "Analyst stress intervals, not verified population bounds or statistical confidence intervals. Real claims/awards may fall outside them. No probability or completeness assertion.",
+      "claim_budget_rationale": {
+        "preacquisition_legacy_tax_pension_acquisition_anchor_asof_2025_12_31": 167.1,
+        "anchor_detail": "70.2 current income tax payable +96.9 other long-term contractual obligations, the latter including47.6 uncertain-tax liability and49.3 primarily pensions/acquisitions. They are historical reference amounts, not June balances.",
+        "hexagon_transaction_tax_scenario": 195,
+        "transaction_tax_detail": "Entire estimated EUR150M treated as still unpaid at an analyst conversion of1.30USD/EUR. No claim that1.30 is a contemporaneous FX quote or that any amount remains unpaid. This is inside, not in addition to, the500 budget.",
+        "interest_reference": 55.5,
+        "interest_detail": "Half of111 annual coupon cash on500 at4.2%,1000 at4.3%,1000 at4.7%. Not exact accrued June interest.",
+        "fx_derivative_liability_reference": 13.818,
+        "sum_reference_components": 431.418,
+        "unallocated_budget_headroom": 68.582
+      },
+      "claim_budget_scope": "All opening non-operating tax/transaction-tax, pension deficit, unpaid acquisition/retention, accrued financing interest, unmatched deferred-compensation and other non-operating derivative/contingent claims not already paid or funded elsewhere. No other listed claim is deducted outside this budget. Ordinary trade payables, recurring compensation, deferred revenue, operating leases and future integration/service cost remain in operating cash flow; they are not deducted as extra claims.",
+      "overlap_policy": "Gross UTB100.941 and9.941 accrued interest/penalties are not separately added on top of tax accrual reference amounts. NQDC trust is not credited; its matched liability is not separately deducted. Only any unmatched shortfall belongs within the budget. Hexagon consideration already paid is never charged again.",
+      "budget_conditions": "The500 default is an assumed aggregate settlement allowance, not a verified liability valuation. It assumes operating FCFF contains no additional settlement of the same opening non-operating claims and that ordinary liabilities are covered through operating costs/NWC. Unknown amounts and overlaps prevent proof that500 suffices.",
+      "award_conditions": "February19 unissued maximum award and option quantities are explicitly assumed unchanged at June30 for the base. Actual intervening grants, settlements and forfeitures are not reconstructed. Existing ESPP rights0.30M are an assumption anchored to0.284404M January purchases, not a June count. This is conditional alignment, not a source-dated June inventory.",
+      "full_share_allocation": "Treat all assumed legacy performance units as vesting at maximum. Options and ESPP rights are conservatively allocated as zero-price full shares with no proceeds credit; this is an upper participation convention for that assumed inventory, not option fair value and not proof of inventory completeness. Issued restricted shares are already in legal common and never added again.",
+      "irreducible_gaps": [
+        "Exact June grant/vesting/forfeiture and issued-versus-unissued award rollforward, including current ESPP offering.",
+        "June current and long-term non-operating tax, pension, employee-retention and acquisition claims disaggregation; closing transaction-tax estimate is not an unpaid balance.",
+        "Asset cost basis, foreign distribution leakage and unrestricted availability;75% marketable recovery and operating reserve are assumptions.",
+        "Actual post-June cash, debt, share, award and claim movements required before an October valuation. Unrecorded litigation losses have no verified finite ceiling."
+      ]
+    }
+  },
+  "compensation": {
+    "purpose": "Separate already-granted award allocation from recurring economic cost of grants made after the June 30 origin. All amounts USD millions/shares millions unless stated.",
+    "historical_new_grant_value_proxies": [
+      {
+        "year": 2023,
+        "restricted_granted": 1.546,
+        "restricted_grant_fv_per_share": 233.78,
+        "options_granted": 0.261837,
+        "option_grant_fv": 71.83,
+        "espp_shares_purchased": 0.647,
+        "espp_right_fv": 50.95,
+        "revenue": 4089.986,
+        "sources": [
+          "CDNS-033 restricted rollforward",
+          "CDNS-046 Note 9 options and ESPP",
+          "CDNS-023 p34 options count"
+        ],
+        "gross_value_proxy": 413.19628171,
+        "pct_revenue": 0.10102633155957014
+      },
+      {
+        "year": 2024,
+        "restricted_granted": 1.573,
+        "restricted_grant_fv_per_share": 310.81,
+        "options_granted": 0.212114,
+        "option_grant_fv": 103.79,
+        "espp_shares_purchased": 0.548,
+        "espp_right_fv": 65.5,
+        "revenue": 4641.264,
+        "sources": [
+          "CDNS-032 restricted rollforward",
+          "CDNS-046 Note 9 options and ESPP",
+          "CDNS-023 p34 options count"
+        ],
+        "gross_value_proxy": 546.8134420599999,
+        "pct_revenue": 0.11781562997924702
+      },
+      {
+        "year": 2025,
+        "restricted_granted": 2.341,
+        "restricted_grant_fv_per_share": 181.08,
+        "options_granted": 0,
+        "option_grant_fv": 0,
+        "espp_shares_purchased": 0.507,
+        "espp_right_fv": 87.92,
+        "revenue": 5296.759,
+        "sources": [
+          "CDNS-046 Note 9"
+        ],
+        "gross_value_proxy": 468.48372000000006,
+        "pct_revenue": 0.0884472410392846
+      }
+    ],
+    "proxy_limitations": "Gross quantity times weighted grant-date fair value, before forfeitures. ESPP purchase quantities proxy grant quantities across overlapping offerings; performance accounting quantities are not maximum contractual settlement units. These are approximate annual grant-value proxies, neither exact total grants nor amortized GAAP expense.",
+    "reported_2026_02_19": {
+      "issued_unvested_incentive_stock": 1.686228,
+      "unissued_rsu_psu_ltp_maximum": 4.475463,
+      "including_vested_unsettled_ltp": 0.338474,
+      "options_outstanding": 0.994747,
+      "weighted_option_strike_usd": 193.12,
+      "weighted_remaining_option_life_years": 3.37,
+      "common_excluding_unvested_issued_stock": 271.187419,
+      "source": "CDNS-023 proxy printed pp34–35"
+    },
+    "reported_2025_12_31": {
+      "unissued_time_rsu": 0.895873,
+      "unissued_performance_rsu_maximum": 2.651589,
+      "options": 1.006746,
+      "option_strike": 191.75,
+      "espp_purchased_2026_01_31": 0.284404,
+      "source": "CDNS-023 p94"
+    },
+    "future_grant_cost_policy": "Post-origin new-grant value is an economic labor expense at 12%/10.2%/9% of revenue for downside/base/upside. The base approximates the three-year revenue-weighted proxy. No future-grant units are added again to the denominator. R&D remains expensed and includes its allocated grant cost; overlapping R&D and SBC percentages must not be summed.",
+    "stub_policy": "FY26 guidance accounting SBC569 less H1 actual285.073 gives H2 accounting SBC283.927. Add that accounting amount back, then charge post-origin economic new-grant cost against H2 revenue. This is a replacement, never a free SBC add-back. Existing awards are allocated separately. H1 actual earnings/cash are not restated or valued twice.",
+    "annual_policy": "Hold each v2 pre-SBC operating margin fixed. Replace its embedded SBC percentage with the new future-grant percentage, reducing base margins by1.2 percentage points. No offsetting cut to other costs. Recompute NOPAT and funded reinvestment under the unchanged incremental-return policy.",
+    "legacy_recognition_diagnostic": {
+      "unrecognized_at_2026_06_30": 970.8,
+      "weighted_recognition_years": 2.2,
+      "schedule": "Straight-line diagnostic only; weighted period is not a contractual amortization schedule. In an illustrative accounting reconciliation, subtract and reverse identical legacy recognition. Both entries cancel; no incremental EV credit, cash payment or separate970.8 claim is added. Full legacy awards receive denominator allocation once.",
+      "alternative_years": [
+        1,
+        2.2,
+        3
+      ],
+      "valuation_effect_of_recognition_timing": 0
+    },
+    "tax_policy": "Scenario normalized cash-tax rates apply to economic operating profit. No separate legacy-vesting tax windfall or deferred-tax asset credit.",
+    "three_year_revenue_weighted_pct": 0.10183151748548207
+  },
+  "research": {
+    "information_cutoff": "2026-10-18",
+    "financial_origin": "2026-06-30",
+    "issuer": "Cadence Design Systems, Inc.",
+    "ticker": "CDNS",
+    "exchange": "Nasdaq Global Select Market",
+    "currency": "USD",
+    "security": "Common stock, $0.01 par value",
+    "robinhood_verification": {
+      "url": "https://robinhood.com/us/en/stocks/CDNS/",
+      "observed": "Official buy/trade security page verified; does not establish eligibility in a particular account. Quote not used, due to inconsistent Sunday session date."
+    },
+    "latest_actuals_usd_m": {
+      "quarter_revenue": 1584.451,
+      "h1_revenue": 3058.671,
+      "quarter_gaap_ebit": 450.315,
+      "h1_gaap_ebit": 881.644,
+      "h1_rd": 1039.71,
+      "h1_sbc": 285.073,
+      "h1_da": 201.611,
+      "h1_acquired_amortization": 130.871,
+      "h1_cfo": 990.711,
+      "h1_capex": 101.448,
+      "h1_purchased_intangibles": 6.975,
+      "h1_cash_acquisitions_net": 2100.292,
+      "h1_buybacks": 400.006,
+      "h1_employee_withholding_cash": 140.722,
+      "h1_share_issuance_proceeds": 88.84
+    },
+    "revenue_quality": {
+      "gaap_operating_segments": 1,
+      "q2_product_pct": {
+        "core_eda": 68,
+        "ip": 15,
+        "sda": 17
+      },
+      "q2_recognition_pct": {
+        "recognized_over_time": 72,
+        "other_recurring": 6,
+        "upfront": 22
+      },
+      "ttm_recurring_pct": 79,
+      "FY2025_recurring_pct": 80,
+      "FY2024_recurring_pct": 83,
+      "arr": "Not disclosed; do not annualize backlog or recurring revenue into ARR.",
+      "backlog_usd_m": 8100,
+      "noncancelable_customer_selection_commitments_usd_m": 900,
+      "eligible_rpo_excluding_selection_usd_m": 7200,
+      "next_12m_pct_of_eligible_rpo": 58,
+      "next_13_to_36m_pct": 40,
+      "computed_next12m_usd_m": 4176,
+      "reported_next12m_rounded_usd_m": 4200,
+      "future_royalties": "Excluded from RPO; recognize contingent royalties when earned; prepaid nonrefundable royalties can be upfront.",
+      "deferred_revenue_usd_m": 1169.571,
+      "contract_assets_usd_m": 39.824,
+      "net_receivables_including_longterm_usd_m": 1125.208,
+      "unbilled_receivables_usd_m": 564.614,
+      "cash_conversion_risk": "Hardware/IP delivery and product selection can shift revenue; 65-day DSO and higher inventory require cash despite contractual visibility."
+    },
+    "guidance_as_of": "2026-07-27",
+    "guidance": {
+      "FY2026_revenue_usd_m": [
+        6260,
+        6340
+      ],
+      "FY2026_gaap_margin": [
+        0.2775,
+        0.2875
+      ],
+      "FY2026_non_gaap_margin": [
+        0.4375,
+        0.4475
+      ],
+      "FY2026_gaap_eps": [
+        4.76,
+        4.86
+      ],
+      "FY2026_non_gaap_eps": [
+        8.05,
+        8.15
+      ],
+      "FY2026_cfo_usd_m": 2000,
+      "FY2026_capex_usd_m": 240,
+      "FY2026_sbc_usd_m": 569,
+      "FY2026_acquired_amortization_usd_m": 289,
+      "FY2026_acquisition_integration_cost_usd_m": 122,
+      "Q3_revenue_usd_m": [
+        1595,
+        1625
+      ],
+      "assumption": "Export rules remain substantially similar for remainder of year; not a guarantee."
+    },
+    "operating_thesis": {
+      "drivers": [
+        "More custom silicon and design complexity increase verification/simulation requirements.",
+        "Agent products can monetize new workflow layers and increase underlying tool usage; independent incremental revenue remains unquantified.",
+        "Hardware capacity expands verification throughput; manufacturing and inventory make it less purely asset-light.",
+        "Advanced-node interfaces and foundry enablement support IP; customer milestones and licensing can be lumpy.",
+        "SDA expansion combines electrical and mechanical simulation, with acquisition integration and license-model transition risks."
+      ],
+      "risks": [
+        "China export changes; H1 China growth contains weak 2025 comparison.",
+        "AI efficiency might reduce per-design effort; management assumes expanded design exploration more than offsets it.",
+        "Large foundry partnerships increase execution and R&D obligations; do not book announced partnership TAM as revenue.",
+        "Hexagon operating and revenue-recognition model transition can dilute earnings before growth.",
+        "Reported non-GAAP earnings remove SBC and integration costs that remain economic expenses in this model."
+      ]
+    },
+    "public_interview_synthesis": "At the September 9 Goldman Sachs event, Devgan described AI agents as an additional subscription/consumption layer above physics-based tools. His thesis is that more design experiments and growing chip complexity sustain tool demand even when individual workflows accelerate. Hardware capacity and advanced-node interfaces were presented as additional drivers. These are management expectations; the interview does not supply a separately auditable AI revenue forecast. Source is a third-party transcript, with official event identity verified; audio was not independently transcribed.",
+    "call_QA_synthesis": "Q2 discussion emphasized broad software/add-on demand, delivery timing in IP, hardware supply constraints, and investment in Intel opportunities and Hexagon integration. Management did not quantify an abrupt agentic-AI revenue step-up. The model therefore fades growth rather than treating product demonstrations or customer engagement counts as contracted sales.",
+    "limitations": [
+      "No current market price comparison or current-date equity target.",
+      "Exact June award inventory and residual non-operating claims remain unverified; conditional analyst counts/budgets now support research-only allocation.",
+      "Management interview and Q&A transcription is secondary; official prepared remarks and filed numerical disclosures take precedence.",
+      "Ten-year financial history is reported-basis with explicit comparability breaks, not fabricated like-for-like organic history."
+    ],
+    "version": "v3",
+    "revision_status": "v2 research corrections independently closed; v3 compensation and conditional capital allocation await independent review. No current-date target or external approval.",
+    "conditional_allocation": {
+      "down": {
+        "ev_usd_m": 12722.787484748043,
+        "usd_per_share": 39.275318007459234
+      },
+      "base": {
+        "ev_usd_m": 26002.716739935844,
+        "usd_per_share": 86.50741944486921
+      },
+      "up": {
+        "ev_usd_m": 49340.76817779166,
+        "usd_per_share": 169.512772235712
+      }
+    },
+    "conditional_allocation_caveat": "June30 origin, information throughOctober18, explicit assumedJune legacycounts and500 all-in residualclaimbudget; no market quote comparison/current target."
+  },
+  "sources": [
+    {
+      "url": "https://investor.cadence.com/feed/FinancialReport.svc/GetLatestFinancialReportsByQuarter?LanguageId=1&reportTypes=First+Quarter%7CSecond+Quarter%7CThird+Quarter%7CFourth+Quarter&pageSize=10&pageNumber=0&year=2026",
+      "status": 200,
+      "sha256": "c5e039e90e32704a26dfd52b4089bc8a746f63733a77bc641e8d3d80b2d0aebe",
+      "bytes": 33794,
+      "retrieved_utc": "2026-10-18T06:46:13.944806+00:00",
+      "redirected_url": "https://investor.cadence.com/feed/FinancialReport.svc/GetLatestFinancialReportsByQuarter?LanguageId=1&reportTypes=First+Quarter%7CSecond+Quarter%7CThird+Quarter%7CFourth+Quarter&pageSize=10&pageNumber=0&year=2026",
+      "source_id": "CDNS-001",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q2/Q2-2026-CFO-Commentary-FINAL.pdf",
+      "status": 200,
+      "sha256": "cbf5411308efffd494b00787c242d8f231807ca30e4977cfcd140c09f716e9f7",
+      "bytes": 185910,
+      "retrieved_utc": "2026-10-18T06:46:43.947298+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q2/Q2-2026-CFO-Commentary-FINAL.pdf",
+      "source_id": "CDNS-002",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q2/CDNS-Q2-2026-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "a31fcb4fdc3b5006fcfd82b234805eee04650a2c7c9f19fbaf78efc7d58cc563",
+      "bytes": 176038,
+      "retrieved_utc": "2026-10-18T06:46:43.886707+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q2/CDNS-Q2-2026-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-003",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q1/Q1-2026-CFO-Commentary-FINAL.pdf",
+      "status": 200,
+      "sha256": "d1f9b16362029d01ba8a691d4afd04b2a1bd3a35e378bfa8c30d1beabc21ef3c",
+      "bytes": 186018,
+      "retrieved_utc": "2026-10-18T06:46:43.946095+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q1/Q1-2026-CFO-Commentary-FINAL.pdf",
+      "source_id": "CDNS-004",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q1/CDNS-Q1-2026-Earnings-Conference-Call-Prepared-Remarks-Final.pdf",
+      "status": 200,
+      "sha256": "429c21476a4bb0b4c65c7890d1a7ea45925c4e51a14b0fabd3f9b906d83fc98a",
+      "bytes": 182343,
+      "retrieved_utc": "2026-10-18T06:46:43.946869+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2026/q1/CDNS-Q1-2026-Earnings-Conference-Call-Prepared-Remarks-Final.pdf",
+      "source_id": "CDNS-005",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q4/Q4-2025-CFO-Commentary-FINAL.pdf",
+      "status": 200,
+      "sha256": "f449746eeea07bf0f8a8b4b76896f2356ba929ffc9c5dd5ee21e8afe8099f065",
+      "bytes": 201676,
+      "retrieved_utc": "2026-10-18T06:46:43.932176+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q4/Q4-2025-CFO-Commentary-FINAL.pdf",
+      "source_id": "CDNS-006",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q4/CDNS-Q4-2025-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "41766cab480f7f3250a047603955117fbbb3cbd43804b78356704d4e1d19e533",
+      "bytes": 308545,
+      "retrieved_utc": "2026-10-18T06:46:47.007876+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q4/CDNS-Q4-2025-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-007",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q3/Q3-2025-CFO-Commentary-Final.pdf",
+      "status": 200,
+      "sha256": "a9deaeae9496408ec8544a1f3491c05b8a2b8a95a92ee417d7638f6d78e5a62f",
+      "bytes": 202503,
+      "retrieved_utc": "2026-10-18T06:46:46.961084+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q3/Q3-2025-CFO-Commentary-Final.pdf",
+      "source_id": "CDNS-008",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q3/CDNS-Q3-2025-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "2011ea402241a9688df1a2f6c35b1fdc99f7f4fe5c3eebd15a2c85cfbd457fe7",
+      "bytes": 155033,
+      "retrieved_utc": "2026-10-18T06:46:47.041003+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q3/CDNS-Q3-2025-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-009",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q2/CFO-Commentary-Q2-2025-Final-Updated.pdf",
+      "status": 200,
+      "sha256": "d6e7d628a2f29576af0d7c2c35b4b2a647c584cc87683914e988eb658e0a59a0",
+      "bytes": 206157,
+      "retrieved_utc": "2026-10-18T06:46:47.149949+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q2/CFO-Commentary-Q2-2025-Final-Updated.pdf",
+      "source_id": "CDNS-010",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q2/CDNS-Q2-2025-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "96e7c1e2b3539d6eb2b08bad0d78acb66187b78f0081d7ef3fb9cca5bb299c4f",
+      "bytes": 131796,
+      "retrieved_utc": "2026-10-18T06:46:47.123613+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q2/CDNS-Q2-2025-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-011",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q1/1q25-cfo-commentary.pdf",
+      "status": 200,
+      "sha256": "f0aedfd3fcf42ad6e59d91fd4069048d879021124ec39707889244b2d40ebb7a",
+      "bytes": 201999,
+      "retrieved_utc": "2026-10-18T06:46:49.296101+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q1/1q25-cfo-commentary.pdf",
+      "source_id": "CDNS-012",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q1/1q25-earnings-conference-call-prepared-remarks.pdf",
+      "status": 200,
+      "sha256": "0f79983aa6803d277e1722ef08071319bb6db5df0169ac3572c5afe57993d0df",
+      "bytes": 128055,
+      "retrieved_utc": "2026-10-18T06:46:49.324934+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/q1/1q25-earnings-conference-call-prepared-remarks.pdf",
+      "source_id": "CDNS-013",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q4/4q24-cfo-commentary.pdf",
+      "status": 200,
+      "sha256": "24737037b9dc49d6ee7cfae6a603242e934e4e0c9559f9c11f539fda7ddddb07",
+      "bytes": 301904,
+      "retrieved_utc": "2026-10-18T06:46:49.506142+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q4/4q24-cfo-commentary.pdf",
+      "source_id": "CDNS-014",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q4/CDNS-Q4-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "2412d769745fb21a35e702b2484d321e088e316781a5334bea7d7a68452a9b9a",
+      "bytes": 111993,
+      "retrieved_utc": "2026-10-18T06:46:49.416663+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q4/CDNS-Q4-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-015",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q3/3q24-cfo-commentary.pdf",
+      "status": 200,
+      "sha256": "0f88d554d790d796224abb176645fc2020c34f841281f69f46cf9758fcef9f24",
+      "bytes": 203404,
+      "retrieved_utc": "2026-10-18T06:46:49.491923+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q3/3q24-cfo-commentary.pdf",
+      "source_id": "CDNS-016",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q3/CDNS-Q3-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "79d6593b4f2d4321b122b9c61598df06c7dd751f669098848d49b4a963520cc1",
+      "bytes": 169889,
+      "retrieved_utc": "2026-10-18T06:46:53.228065+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q3/CDNS-Q3-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-017",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q2/2q24-cfo-commentary.pdf",
+      "status": 200,
+      "sha256": "304d3bc18d331da81b6fd30475117670a37af4b0cad16e57fedd98a4e49927b2",
+      "bytes": 248935,
+      "retrieved_utc": "2026-10-18T06:46:53.139966+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q2/2q24-cfo-commentary.pdf",
+      "source_id": "CDNS-018",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q2/CDNS-Q2-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "895a00c0a65ab55fa55d1856c7d5c7d976b296734ce6768c8f48b3d9dac4887b",
+      "bytes": 153465,
+      "retrieved_utc": "2026-10-18T06:46:53.209180+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q2/CDNS-Q2-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-019",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q1/1q24-cfo-commentary.pdf",
+      "status": 200,
+      "sha256": "0045871100a71849a09a24845787c926a45f1217ec7db1d8d9a13c4ca8e59f51",
+      "bytes": 200660,
+      "retrieved_utc": "2026-10-18T06:46:53.269431+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q1/1q24-cfo-commentary.pdf",
+      "source_id": "CDNS-020",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q1/CDNS-Q1-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "status": 200,
+      "sha256": "7ff99c9450eb4db3deeea0ed111c80070612dd0f4fced0e6b57aa644742bc29e",
+      "bytes": 155137,
+      "retrieved_utc": "2026-10-18T06:46:53.202935+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2024/q1/CDNS-Q1-2024-Earnings-Conference-Call-Prepared-Remarks.pdf",
+      "source_id": "CDNS-021",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000813672-submissions-001.json",
+      "status": 200,
+      "sha256": "be69b5bd42b41efb693a6723124c11f69f46e8e8c6859972bffa194b739d1f16",
+      "bytes": 275977,
+      "retrieved_utc": "2026-10-18T06:44:33.869800+00:00",
+      "redirected_url": "https://data.sec.gov/submissions/CIK0000813672-submissions-001.json",
+      "source_id": "CDNS-022",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/ar/CDNS-2026-Proxy.pdf",
+      "status": 200,
+      "sha256": "582392a713d380ce19001ab51df6144066edccb0f36c0068803b473f9d2be8f6",
+      "bytes": 4971763,
+      "retrieved_utc": "2026-10-18T06:44:35.460989+00:00",
+      "redirected_url": "https://s206.q4cdn.com/597110084/files/doc_financials/2025/ar/CDNS-2026-Proxy.pdf",
+      "source_id": "CDNS-023",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review",
+      "v3_additional_review_scope": "Printed pp34–35 and94: issued restricted stock versus unissued awards, maximum performance quantities, options, ESPP. Original file/hash/retrieval unchanged."
+    },
+    {
+      "url": "https://stockanalysis.com/stocks/cdns/transcripts/744387-goldman-sachs-communacopia-technology-conference-2026/",
+      "status": 200,
+      "sha256": "ee8de1b0d9c3739066ea520ab01f703dffb274ed870f62b4fdb0983e1e9f8ed1",
+      "bytes": 256347,
+      "retrieved_utc": "2026-10-18T06:44:35.775812+00:00",
+      "redirected_url": "https://stockanalysis.com/stocks/cdns/transcripts/744387-goldman-sachs-communacopia-technology-conference-2026/",
+      "source_id": "CDNS-024",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "third-party transcript",
+      "review_scope": "Management Q&A passages on AI monetization, software demand, IP, hardware and incremental investment; third-party transcription not verified against audio"
+    },
+    {
+      "url": "https://gloom.sh/stocks/cdns/transcripts/q2-2026",
+      "status": 200,
+      "sha256": "6b1140f06bc01a0f60a249615947c2c08544c9940c03e56e64a9204343c7926d",
+      "bytes": 407971,
+      "retrieved_utc": "2026-10-18T06:44:39.451637+00:00",
+      "redirected_url": "https://gloom.sh/stocks/cdns/transcripts/q2-2026",
+      "source_id": "CDNS-025",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "third-party transcript",
+      "review_scope": "Management Q&A passages on AI monetization, software demand, IP, hardware and incremental investment; third-party transcription not verified against audio"
+    },
+    {
+      "url": "https://investor.cadence.com/news/news-details/2026/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Financial-Results/default.aspx",
+      "status": 200,
+      "sha256": "c6d8c367509d871db7c86c9c2cfa096bc9b0bc1bdb3a2f885304dc93a0c15a32",
+      "bytes": 388718,
+      "retrieved_utc": "2026-10-18T06:44:33.693111+00:00",
+      "redirected_url": "https://investor.cadence.com/news/news-details/2026/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Financial-Results/default.aspx",
+      "source_id": "CDNS-026",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://investor.cadence.com/news/news-details/2025/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2024-Financial-Results/default.aspx",
+      "status": 200,
+      "sha256": "ff24c6974cd933bdb124b6bc1d51df5d94d6b0b40b244c64620d849c767eb4f5",
+      "bytes": 393456,
+      "retrieved_utc": "2026-10-18T06:44:39.767805+00:00",
+      "redirected_url": "https://investor.cadence.com/news/news-details/2025/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2024-Financial-Results/default.aspx",
+      "source_id": "CDNS-027",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://investor.cadence.com/news/news-details/2024/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2023-Financial-Results/default.aspx",
+      "status": 200,
+      "sha256": "3e2a0081487143f2bd77e1bc77ab88f84d61f9f5001886de7187c9984933b179",
+      "bytes": 460032,
+      "retrieved_utc": "2026-10-18T06:44:39.772610+00:00",
+      "redirected_url": "https://investor.cadence.com/news/news-details/2024/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2023-Financial-Results/default.aspx",
+      "source_id": "CDNS-028",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://investor.cadence.com/news/news-details/2023/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results/default.aspx",
+      "status": 200,
+      "sha256": "2d112471f928f516960baaea6193e5fb3fa83788c4eee2bb7ab77f4201be4e10",
+      "bytes": 332751,
+      "retrieved_utc": "2026-10-18T06:44:39.967761+00:00",
+      "redirected_url": "https://investor.cadence.com/news/news-details/2023/Cadence-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results/default.aspx",
+      "source_id": "CDNS-029",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://investor.cadence.com/news/news-details/2026/Cadence-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+      "status": 200,
+      "sha256": "f8707322d884dfa0332c0b34638c9387f173c395c8afe171ba5cc1cc34d42702",
+      "bytes": 299005,
+      "retrieved_utc": "2026-10-18T06:44:38.855833+00:00",
+      "redirected_url": "https://investor.cadence.com/news/news-details/2026/Cadence-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+      "source_id": "CDNS-030",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://investor.cadence.com/js/module/widgets/dist/evergreen.q4FinancialDetails.1.0.0.min.js",
+      "status": 200,
+      "sha256": "27b92bd7c3136e4a03f0215a69c3d697299be533a7d71f3e7c3699305b478eb0",
+      "bytes": 18131,
+      "retrieved_utc": "2026-10-18T06:44:41.987421+00:00",
+      "redirected_url": "https://investor.cadence.com/js/module/widgets/dist/evergreen.q4FinancialDetails.1.0.0.min.js",
+      "source_id": "CDNS-031",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367225000024/cdns-20241231.htm",
+      "status": 200,
+      "sha256": "3b47e4bc78a2564d162871d341c4c375b4f39886cf9e413d00d25da17ed18202",
+      "bytes": 2552139,
+      "retrieved_utc": "2026-10-18T06:44:42.336093+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367225000024/cdns-20241231.htm",
+      "source_id": "CDNS-032",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367224000034/cdns-20231231.htm",
+      "status": 200,
+      "sha256": "6379305d48ecb19829714797bd94e0bcecf5368dff02b1993f626e6bf20a9fe1",
+      "bytes": 2384956,
+      "retrieved_utc": "2026-10-18T06:44:42.403575+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367224000034/cdns-20231231.htm",
+      "source_id": "CDNS-033",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367223000011/cdns-20221231.htm",
+      "status": 200,
+      "sha256": "0768a30aebd1474c9c1057ac5d3e55210bf744cf083516f54900877b26300a64",
+      "bytes": 2845734,
+      "retrieved_utc": "2026-10-18T06:44:42.371132+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367223000011/cdns-20221231.htm",
+      "source_id": "CDNS-034",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367222000012/cdns-20220101.htm",
+      "status": 200,
+      "sha256": "3f38addbe429ad036049a66223370d7a1cdab6c249a7807df847252b53ebadef",
+      "bytes": 2658358,
+      "retrieved_utc": "2026-10-18T06:44:42.413081+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367222000012/cdns-20220101.htm",
+      "source_id": "CDNS-035",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367221000009/cdns-20210102.htm",
+      "status": 200,
+      "sha256": "b838ab78eef5b4123df9f50fe57544538010a59440e9a94aeaae77e560c61226",
+      "bytes": 2694249,
+      "retrieved_utc": "2026-10-18T06:44:45.047339+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367221000009/cdns-20210102.htm",
+      "source_id": "CDNS-036",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367220000007/cdns1228201910-k.htm",
+      "status": 200,
+      "sha256": "ffaa9608e81380f2b81ed8f7843ff2d67de0609242c2344ec9a74db85b9047eb",
+      "bytes": 2861948,
+      "retrieved_utc": "2026-10-18T06:44:44.970582+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367220000007/cdns1228201910-k.htm",
+      "source_id": "CDNS-037",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367219000008/cdns1229201810-k.htm",
+      "status": 200,
+      "sha256": "7352eb0c0692702772dcf90ffe0920d95338bc742f6373a66a95daf452563ce2",
+      "bytes": 2556579,
+      "retrieved_utc": "2026-10-18T06:45:04.629865+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367219000008/cdns1229201810-k.htm",
+      "source_id": "CDNS-038",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367218000008/cdns1230201710-k.htm",
+      "status": 200,
+      "sha256": "a0fc78957fc3c55a0266db0a877676bedb45352a024af8af901fa7ba9c86a5cb",
+      "bytes": 2650185,
+      "retrieved_utc": "2026-10-18T06:45:04.632672+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367218000008/cdns1230201710-k.htm",
+      "source_id": "CDNS-039",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367217000006/cdns1231201610-k.htm",
+      "status": 200,
+      "sha256": "11c7cf2cdc3541223881577bc9ab0f335db7b2e9c9d8e0213ea47a7d237d5de8",
+      "bytes": 2644349,
+      "retrieved_utc": "2026-10-18T06:45:04.618150+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367217000006/cdns1231201610-k.htm",
+      "source_id": "CDNS-040",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+      "status": 200,
+      "sha256": "45c12c3d16a4155d6b83b844c204178c52f63387d461616d9fd73d91f8f7cd94",
+      "bytes": 194432,
+      "retrieved_utc": "2026-10-18T06:45:03.502394+00:00",
+      "redirected_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+      "source_id": "CDNS-041",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary market/methodology",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "status": 200,
+      "sha256": "755ad4d972431c7852bc0a723630d86cbfc84b14febb259858d1938458c0e0c7",
+      "bytes": 17069,
+      "retrieved_utc": "2026-10-18T06:45:02.154675+00:00",
+      "redirected_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "source_id": "CDNS-042",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary market/methodology",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+      "status": 200,
+      "sha256": "10993bab71504e2449ccdd9e3d67fa4da983bed380b2f4486e5200a7b258616b",
+      "bytes": 464334,
+      "retrieved_utc": "2026-10-18T06:45:05.808719+00:00",
+      "redirected_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+      "source_id": "CDNS-043",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary market/methodology",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000813672.json",
+      "status": 200,
+      "sha256": "0bfb80dcfb082f1368b0f19c256ca5b35585e20bda411cea2163627b55f0955b",
+      "bytes": 3598635,
+      "retrieved_utc": "2026-10-18T06:41:56.172052+00:00",
+      "redirected_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000813672.json",
+      "source_id": "CDNS-044",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000813672.json",
+      "status": 200,
+      "sha256": "fb5a4fa8b1cc2bf08890563bafca3e2924edadda05d4ee59e39900f3493a0bdb",
+      "bytes": 157435,
+      "retrieved_utc": "2026-10-18T06:41:56.038857+00:00",
+      "redirected_url": "https://data.sec.gov/submissions/CIK0000813672.json",
+      "source_id": "CDNS-045",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000016/cdns-20251231.htm",
+      "status": 200,
+      "sha256": "caf2d5e77e81d54a0856d97f86cfde4600ebc01ebed5c37f6a5f137da607b05e",
+      "bytes": 2689275,
+      "retrieved_utc": "2026-10-18T06:41:55.054595+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000016/cdns-20251231.htm",
+      "source_id": "CDNS-046",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Financial statements and relevant business, revenue recognition, acquisitions, debt, awards, tax, commitments and risk sections",
+      "v3_additional_review_scope": "Notes9 and19, tax footnote and liquidity table: grant-value proxies, employee claims and tax/pension/acquisition disclosure. Original file/hash/retrieval unchanged."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000092/cdns-20260630.htm",
+      "status": 200,
+      "sha256": "f40999a049d7aced1e81fb173b0aeb8856adc22bf698cb0ac64d1a9465f3d5a7",
+      "bytes": 1611885,
+      "retrieved_utc": "2026-10-18T06:41:55.113760+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000092/cdns-20260630.htm",
+      "source_id": "CDNS-047",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review",
+      "v3_additional_review_scope": "Notes5,7,13: note coupons, unrecognized award compensation and aggregate current/long-term accrued liabilities. Original file/hash/retrieval unchanged."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000089/cdns07272026ex9901.htm",
+      "status": 200,
+      "sha256": "8a193b69764ea1442b9dd1e043bbecb4f08dd816e6bc26e77d65020e5fb46467",
+      "bytes": 303492,
+      "retrieved_utc": "2026-10-18T06:41:58.458590+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000089/cdns07272026ex9901.htm",
+      "source_id": "CDNS-048",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000089/cfocommentary07272026ex9902.htm",
+      "status": 200,
+      "sha256": "5c6c5f43e00ee35adaa541b021f9da30d8b37ab77eb3ef806da9c91f2ea93fd5",
+      "bytes": 759838,
+      "retrieved_utc": "2026-10-18T06:41:58.517289+00:00",
+      "redirected_url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000089/cfocommentary07272026ex9902.htm",
+      "source_id": "CDNS-049",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Full prepared remarks/CFO tables"
+    },
+    {
+      "url": "https://investor.cadence.com/financials/quarterly-results/",
+      "status": 200,
+      "sha256": "8caf5c023c0c7a417ae899844021a0e6ded5587a7fe0496ed933619f81206b8f",
+      "bytes": 147183,
+      "retrieved_utc": "2026-10-18T06:42:00.113427+00:00",
+      "redirected_url": "https://investor.cadence.com/financials/quarterly-results/",
+      "source_id": "CDNS-050",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://investor.cadence.com/financials/annual-reports/default.aspx",
+      "status": 200,
+      "sha256": "1f54bcffb9176a4ff30d0c9332c9088f39dd0c501cacec40e0d07003351f71e2",
+      "bytes": 119201,
+      "retrieved_utc": "2026-10-18T06:41:58.362770+00:00",
+      "redirected_url": "https://investor.cadence.com/financials/annual-reports/default.aspx",
+      "source_id": "CDNS-051",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary issuer/SEC",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://robinhood.com/us/en/stocks/CDNS/",
+      "status": 200,
+      "sha256": "1ddd662d10fa56dcd70898b860224585eeceb3892d031307c24783c62092419a",
+      "bytes": 250916,
+      "retrieved_utc": "2026-10-18T06:42:01.490023+00:00",
+      "redirected_url": "https://robinhood.com/us/en/stocks/CDNS/",
+      "source_id": "CDNS-052",
+      "public_redistribution": "link and original analysis only; raw files excluded",
+      "type": "primary market/methodology",
+      "review_scope": "Extracted relevant facts, metadata or source links; not claimed full document review"
+    },
+    {
+      "url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-completes-acquisition-of-hexagons-design-and-engineering.html",
+      "status": 200,
+      "sha256": "27f8a6db53d17f2eeb088d20145933284ab7fabf1fcca165d740f246decf5167",
+      "bytes": 185614,
+      "retrieved_utc": "2026-10-18T07:09:39.733938+00:00",
+      "redirected_url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-completes-acquisition-of-hexagons-design-and-engineering.html",
+      "source_id": "CDNS-053",
+      "public_redistribution": "link and original analysis only; raw excluded",
+      "type": "primary issuer",
+      "review_scope": "Closing consideration, tax estimate, initial revenue and EPS contribution"
+    }
+  ],
+  "historyBasis": "USD millions except EPS, ratios; annual periods match issuer dates; latest comparative source available before cutoff, no split adjustment fabricated; cash acquisition cost not total consideration; null is not zero v2 net_intangibles now consistently total acquired intangibles; finite-lived and in-process components preserved separately. FY2025 total equals finite-lived table and amortization schedule.",
+  "publicExportManifest": [
+    {
+      "file": "README.md",
+      "sha256": "e1fe2628f7547188e9aa13df0fee976dfc48f24d603fb5185ecb16845b661f33",
+      "bytes": 433
+    },
+    {
+      "file": "acquisition-comparability.json",
+      "sha256": "755a9e050ab26591e3986be60e6a18a27a5865fdf78d695f0a5d9bd671625bae",
+      "bytes": 2449
+    },
+    {
+      "file": "capital-claims.json",
+      "sha256": "6c42771718141d0e56199bf7575cdc8a7557879d5b04fb8d833ac937c451df23",
+      "bytes": 10128
+    },
+    {
+      "file": "compensation-allocation.json",
+      "sha256": "4996795446a461d72b01b92e4c5ca4e5168317348c5442b8974967d7d0eeb399",
+      "bytes": 4536
+    },
+    {
+      "file": "conditional-allocation-sensitivity.json",
+      "sha256": "3cd02a404852d718e57f0c4c7730d2f3d1e481a9ef222b04b80c4f63b69ec674",
+      "bytes": 3863
+    },
+    {
+      "file": "cost-of-capital.json",
+      "sha256": "1170707fc27f8f8f2dbd5fcffc07ff9ca607049abe8c62b5a51d0eb2fadd2d45",
+      "bytes": 1168
+    },
+    {
+      "file": "forecast-dated.csv",
+      "sha256": "12bdea8afbfac3ef784497b7573473c44c57609cc6f5f2cf0978f2c9bcfb28e6",
+      "bytes": 9619
+    },
+    {
+      "file": "forecast-methodology.json",
+      "sha256": "f578a7f89481df1d944107e918006bf2f204eaf37395c599863ce5e78380bc8e",
+      "bytes": 1697
+    },
+    {
+      "file": "future-grant-sensitivity.json",
+      "sha256": "54b632770dc4e96504f78802a464bc143c942be27829a3fc355b161491e3b2a8",
+      "bytes": 696
+    },
+    {
+      "file": "history-10fy.csv",
+      "sha256": "1066b7023dfc1c32bef67c3915c1a27f1649ad975fc5d4002e26cbaf21f21538",
+      "bytes": 3751
+    },
+    {
+      "file": "history-10fy.json",
+      "sha256": "6a090cf9fc02aa0afccb69e422fd672f325a80d16b69fd97610db17c7776f49d",
+      "bytes": 133546
+    },
+    {
+      "file": "management-track-record.json",
+      "sha256": "2c99cfb9c28fa0716661a08b9133fe032ac6643fa6fbd64df1265c0eccc83431",
+      "bytes": 3981
+    },
+    {
+      "file": "product-history.json",
+      "sha256": "519530755770ac88e8c92b59e36e6f8b7f1590e725ce3d7b499ad6a6e33c7d13",
+      "bytes": 3659
+    },
+    {
+      "file": "research-report.md",
+      "sha256": "3d4662d04f5d10eb1f017661a019715ab450914a08907eb8b7349f7a889b4647",
+      "bytes": 22836
+    },
+    {
+      "file": "research.json",
+      "sha256": "0df8f7f68cb89a5d29337b5f00b59aa6b1fa4f5572d85894b171fd8aab731be6",
+      "bytes": 6462
+    },
+    {
+      "file": "revision-log.json",
+      "sha256": "bd16108cf229e09105a066115608bec30ec6674f1d403f327937ad280d95019a",
+      "bytes": 1172
+    },
+    {
+      "file": "sensitivity.json",
+      "sha256": "049c9482ea160f6b8deb02dd89e5913ea24d11abae8d2acee8dbd9ac58c4716c",
+      "bytes": 5545
+    },
+    {
+      "file": "source-ledger.json",
+      "sha256": "e8894ccf50c331315c6c0c3a08ada2363398254adc2c2b395e2bae4b6de86402",
+      "bytes": 38479
+    },
+    {
+      "file": "terminal-return-review.json",
+      "sha256": "e8b3785d0a33a0bfb4f0c814e94404201dc9fd98daa82e5fac7fb593ea8a1a0f",
+      "bytes": 2051
+    },
+    {
+      "file": "validation-report.json",
+      "sha256": "ce165a037430912ff4bd05de4755bbfd12a7735bfc5808e3a34c60da40c714a5",
+      "bytes": 12036
+    },
+    {
+      "file": "valuation-results.json",
+      "sha256": "8a0a482eaf5a9432dacdd045f8be963ed62346b957867b00f2e0eca201d0bc77",
+      "bytes": 40154
+    },
+    {
+      "file": "valuation_model.py",
+      "sha256": "4168f826b0e4cd603dfdc792d9bf0c45bbab5fd84f9b15fc9690b1f0dbabf48c",
+      "bytes": 9975
+    }
+  ],
+  "publicExportManifestSHA256": "bb0703290ebc6840546bee5759fca7572e376161f4a1b90e58ad178f59764214",
+  "laterIndependentReview": {
+    "status": "independently-cleared-conditional-June-origin-research",
+    "reviewDate": "2026-10-18",
+    "sourceStatusPreserved": true,
+    "laterReviewNote": {
+      "en": "The original v3 research files retain their submitted/pending-review wording. The separate October 18 independent review later cleared explicitly conditional June-origin research, with no new blocking correction. This note does not rewrite the original sources or certify the claim budget or award inventory. Current-date, unconditional equity and market-price comparisons remain blocked.",
+      "zh-Hans": "原始 v3 研究文件保留提交时的待复核措辞。另附的 10 月 18 日独立复核随后批准了明确标注为六月基准日的条件性研究，未发现新的阻断性修正。本说明不改写原文，也不证明请求权预算或奖励库存完整。当前日期、无条件股权价值及市场价格比较仍被禁用。"
+    },
+    "decision": "ready_for_explicitly_conditional_June_origin_research",
+    "auditSHA256": "44cc056bb08be90e759a132986be466eba65b7a5a5c71e114bb659770c81c373",
+    "auditReportSHA256": "2ee0e9f0a27bf33e5728b89c9d5fa400dd34ffb0f3f5cd7f45fc290130b86643",
+    "independenceScope": "Separate research/model review; not external accounting assurance.",
+    "remainingFactualGates": [
+      "Same-date complete awards and instrument allocation",
+      "Disaggregated opening non-operating claims and no settlement overlap in FCFF",
+      "Available assets, tax leakage and matched liabilities",
+      "Post-June cash/debt/share/claim bridge for a current valuation"
+    ]
+  },
+  "costOfCapital": {
+    "information_as_of": "2026-10-18",
+    "observed": {
+      "riskfree_10y": 0.0509,
+      "riskfree_date": "2026-10-16",
+      "ERP": 0.042,
+      "ERP_date": "2026-10-01",
+      "ERP_variant": "Trailing twelve-month adjusted payout using unadjusted Treasury; no double default-spread adjustment",
+      "US_software_cash_adjusted_asset_beta": 1.25,
+      "industry_date": "January 2026",
+      "firms": 309
+    },
+    "analyst": {
+      "target_debt_weight": 0.05,
+      "tax": 0.24,
+      "credit_spread": 0.01,
+      "relevered_beta": 1.3,
+      "cost_equity": 0.10550000000000001,
+      "pretax_cost_debt": 0.0609,
+      "computed_wacc": 0.10253920000000001,
+      "rounded_base_wacc": 0.105,
+      "down_wacc": 0.12,
+      "up_wacc": 0.0925
+    },
+    "evidence": "Treasury October 16 yield and Damodaran October ERP/January US system-and-application software asset beta. 5% target debt weight and 1% credit spread are analyst assumptions; actual bonds 4.2/4.3/4.7% coupons are not today’s cost of borrowing. No current stock price used.",
+    "date_caveat": "October opportunity costs applied to June 30 financial-origin reconstruction, not a contemporaneous June valuation or a current equity target."
+  },
+  "forecastMethodology": {
+    "basis": "USD millions; June30 origin, October18 information. Analyst assumptions; no price fit.",
+    "stub": "GAAP revenue/margin midpoint plus289 acquired amortization; remove283.927 H2 accounting SBC and substitute economic post-origin new-grant cost at scenario rate. Keep R&D, integration and recurring rent expensed.",
+    "future_grants": "12% downside,10.2% base,9% upside. Gross-grant proxy, not GAAP expense. Full existing legacy awards allocated separately; no future-grant denominator dilution. Hold pre-SBC margins fixed relative to v2.",
+    "legacy_awards": "The970.8 unrecognized accounting balance is neither a new cash deduction nor a PV benefit. Illustrative legacy recognition is subtracted and reversed identically. Its timing has zero valuation effect.",
+    "reinvestment": "H2 capex240 minus H1capex101.448, less ordinaryDA70.740, plus8% positive sequential revenue growth and7 purchasedtechnology. FY27 onward positive incremental NOPAT divided by declining incremental ROIC. Annual net investment is recomputed after grant normalization.",
+    "terminal": "Next-year NOPAT times(1-g/ROIC); unchanged scenario WACC/g/terminal ROIC. Lower margin changes terminal earnings and funded reinvestment together.",
+    "tax": "24% base,28% down,21% up. No incremental legacy vesting tax windfall, no DTA credit.",
+    "allocation": "EV+excesscash+haircut marketableassets-debtface-all-in non-operating claim budget; allocate among June legalcommon plus assumed unissued legacyawards. Already-issued restricted stock included only once.",
+    "gates": "Conditional dated allocation only. Exact June inventory and aggregateclaim adequacy unverified. Current-date target/import remain gated."
+  },
+  "productHistory": {
+    "rows": [
+      {
+        "year": 2016,
+        "functional_verification_pct": 25,
+        "digital_pct": 29,
+        "custom_pct": 25,
+        "sda_or_system_interconnect_pct": 10,
+        "ip_pct": 11,
+        "derived_core_eda_pct": 79,
+        "source": "FY2016 10-K revenue categories",
+        "flag": "SDA predecessor label is System Interconnect and Analysis before 2020; not strictly like-for-like."
+      },
+      {
+        "year": 2017,
+        "functional_verification_pct": 22,
+        "digital_pct": 29,
+        "custom_pct": 27,
+        "sda_or_system_interconnect_pct": 10,
+        "ip_pct": 12,
+        "derived_core_eda_pct": 78,
+        "source": "FY2017 10-K revenue categories",
+        "flag": "SDA predecessor label is System Interconnect and Analysis before 2020; not strictly like-for-like."
+      },
+      {
+        "year": 2018,
+        "functional_verification_pct": 24,
+        "digital_pct": 29,
+        "custom_pct": 26,
+        "sda_or_system_interconnect_pct": 9,
+        "ip_pct": 12,
+        "derived_core_eda_pct": 79,
+        "source": "FY2018 10-K revenue categories",
+        "flag": "SDA predecessor label is System Interconnect and Analysis before 2020; not strictly like-for-like."
+      },
+      {
+        "year": 2019,
+        "functional_verification_pct": 23,
+        "digital_pct": 30,
+        "custom_pct": 25,
+        "sda_or_system_interconnect_pct": 9,
+        "ip_pct": 13,
+        "derived_core_eda_pct": 78,
+        "source": "FY2020 10-K revenue categories",
+        "flag": "FY2019 uses recast FY2020 comparison; original 2019 note and MD&A disagree by 1 point between verification and digital."
+      },
+      {
+        "year": 2020,
+        "functional_verification_pct": 22,
+        "digital_pct": 29,
+        "custom_pct": 25,
+        "sda_or_system_interconnect_pct": 10,
+        "ip_pct": 14,
+        "derived_core_eda_pct": 76,
+        "source": "FY2020 10-K revenue categories",
+        "flag": "Rounded issuer percentages; not segment operating results."
+      },
+      {
+        "year": 2021,
+        "functional_verification_pct": 24,
+        "digital_pct": 29,
+        "custom_pct": 23,
+        "sda_or_system_interconnect_pct": 11,
+        "ip_pct": 13,
+        "derived_core_eda_pct": 76,
+        "source": "FY2021 10-K revenue categories",
+        "flag": "Rounded issuer percentages; not segment operating results."
+      },
+      {
+        "year": 2022,
+        "functional_verification_pct": 26,
+        "digital_pct": 28,
+        "custom_pct": 22,
+        "sda_or_system_interconnect_pct": 12,
+        "ip_pct": 12,
+        "derived_core_eda_pct": 76,
+        "source": "FY2022 10-K revenue categories",
+        "flag": "Rounded issuer percentages; not segment operating results."
+      },
+      {
+        "year": 2023,
+        "functional_verification_pct": 27,
+        "digital_pct": 27,
+        "custom_pct": 22,
+        "sda_or_system_interconnect_pct": 12,
+        "ip_pct": 12,
+        "derived_core_eda_pct": 76,
+        "source": "FY2023 10-K revenue categories",
+        "flag": "Rounded issuer percentages; not segment operating results."
+      },
+      {
+        "year": 2024,
+        "core_eda_pct": 71,
+        "ip_pct": 13,
+        "sda_pct": 16,
+        "source": "FY2024 10-K",
+        "flag": "Core EDA aggregation replaces separate verification/digital/custom categories; hardware remains in Core EDA."
+      },
+      {
+        "year": 2025,
+        "core_eda_pct": 70,
+        "ip_pct": 14,
+        "sda_pct": 16,
+        "source": "FY2025 10-K",
+        "flag": "Core EDA aggregation replaces separate verification/digital/custom categories; hardware remains in Core EDA."
+      }
+    ],
+    "operating_segments": 1,
+    "important": "Do not infer Core EDA software-only revenue; hardware embedded. Rounded category percentages cannot support exact dollar growth bridge."
+  },
+  "acquisitionComparability": {
+    "timeline": [
+      {
+        "fy": 2016,
+        "changes": "Two business combinations; $42.4M net cash consideration stated in acquisition note. Historical cash-flow cash-paid measure differs slightly in timing."
+      },
+      {
+        "fy": 2017,
+        "changes": "Two business combinations, $142.8M net cash consideration; significant in-process technology; employee service payments separate."
+      },
+      {
+        "fy": 2018,
+        "changes": "ASC606 adoption changes revenue timing; no annual acquisitions cash outflow in extracted statement. Do not read absence of cash as proof of no noncash activity."
+      },
+      {
+        "fy": 2019,
+        "changes": "AWR and Integrand were subsequent 2020 closes, not 2019 operations; ASC842 and tax effects distort financial comparisons."
+      },
+      {
+        "fy": 2020,
+        "changes": "AWR and Integrand expand RF/microwave portfolio; 53-week fiscal year."
+      },
+      {
+        "fy": 2021,
+        "changes": "NUMECA and Pointwise expand CFD/SDA; continuing service payments are expense."
+      },
+      {
+        "fy": 2022,
+        "changes": "OpenEye $461.3M net consideration, Future Facilities $100.1M, three additional businesses $53.6M; cash-flow cash-paid amount differs from aggregated purchase consideration."
+      },
+      {
+        "fy": 2023,
+        "changes": "Rambus interface IP $108.6M, Pulsic $56.1M net cash, Intrinsix $34.6M net cash."
+      },
+      {
+        "fy": 2024,
+        "changes": "BETA CAE gross consideration $1.140B: $638.2M cash and 1.74M shares valued $501.8M; $55.8M additional employee-service escrow is compensation, not purchase consideration."
+      },
+      {
+        "fy": 2025,
+        "changes": "Secure-IC $152.719M gross, Artisan $128.491M, VLAB $126.313M gross; three smaller deals $38.9M net cash. $11.5M IP/asset sale gain is other income, excluded from operating forecast."
+      },
+      {
+        "fy": 2026,
+        "changes": "Hexagon D&E February 23 close, gross $3.101008B, then smaller businesses. June opening bridge already funds consideration; current FY incorporates consolidation. Pro forma organic growth is not fully separable."
+      }
+    ],
+    "source_basis": "Acquisition footnotes of retained issuer 10-K/10-Q filings. Amounts use stated net/gross labels; do not combine different bases. Not a complete legal entity transaction catalog.",
+    "divestiture_policy": "No discontinued-business adjustment manufactured. Asset-sale/investment gains excluded from recurring operating margin."
+  },
+  "managementTrackRecord": {
+    "completed_years": [
+      {
+        "fy": 2023,
+        "guidance_source": "release-2022q4.html",
+        "guidance_basis": "Initial FY outlook in prior Q4 earnings release",
+        "revenue_initial_usd_m": [
+          4000,
+          4060
+        ],
+        "revenue_actual_usd_m": 4089.986,
+        "revenue_vs_initial_midpoint_pct": 1.488486352357321,
+        "non_gaap_eps_initial": [
+          4.9,
+          5.0
+        ],
+        "non_gaap_eps_actual": 5.15,
+        "gaap_margin_initial": [
+          0.305,
+          0.32
+        ],
+        "gaap_margin_actual": 0.3059240300578046,
+        "non_gaap_margin_initial": [
+          0.405,
+          0.42
+        ],
+        "non_gaap_margin_actual": 0.42,
+        "interpretation": "Revenue exceeded initial upper bound; GAAP profitability did not invariably meet initial guide. Acquisitions, export settlement, tax and mix complicate a skill inference."
+      },
+      {
+        "fy": 2024,
+        "guidance_source": "release-2023q4.html",
+        "guidance_basis": "Initial FY outlook in prior Q4 earnings release",
+        "revenue_initial_usd_m": [
+          4550,
+          4610
+        ],
+        "revenue_actual_usd_m": 4641.264,
+        "revenue_vs_initial_midpoint_pct": 1.3376419213973811,
+        "non_gaap_eps_initial": [
+          5.87,
+          5.97
+        ],
+        "non_gaap_eps_actual": 5.97,
+        "gaap_margin_initial": [
+          0.32,
+          0.33
+        ],
+        "gaap_margin_actual": 0.2910334339955667,
+        "non_gaap_margin_initial": [
+          0.42,
+          0.43
+        ],
+        "non_gaap_margin_actual": 0.425,
+        "interpretation": "Revenue exceeded initial upper bound; GAAP profitability did not invariably meet initial guide. Acquisitions, export settlement, tax and mix complicate a skill inference."
+      },
+      {
+        "fy": 2025,
+        "guidance_source": "release-2024q4.html",
+        "guidance_basis": "Initial FY outlook in prior Q4 earnings release",
+        "revenue_initial_usd_m": [
+          5140,
+          5220
+        ],
+        "revenue_actual_usd_m": 5296.759,
+        "revenue_vs_initial_midpoint_pct": 2.254034749034739,
+        "non_gaap_eps_initial": [
+          6.65,
+          6.75
+        ],
+        "non_gaap_eps_actual": 7.14,
+        "gaap_margin_initial": [
+          0.3025,
+          0.3125
+        ],
+        "gaap_margin_actual": 0.28168961434718853,
+        "non_gaap_margin_initial": [
+          0.4325,
+          0.4425
+        ],
+        "non_gaap_margin_actual": 0.446,
+        "interpretation": "Revenue exceeded initial upper bound; GAAP profitability did not invariably meet initial guide. Acquisitions, export settlement, tax and mix complicate a skill inference."
+      }
+    ],
+    "FY2026_revisions": [
+      {
+        "date": "2026-02-17",
+        "rev": [
+          5900,
+          6000
+        ],
+        "non_gaap_eps": [
+          8.05,
+          8.15
+        ],
+        "scope": "Excludes pending Hexagon D&E"
+      },
+      {
+        "date": "2026-02-23",
+        "rev_increment": 160,
+        "non_gaap_eps_dilution": 0.28,
+        "scope": "Acquisition close estimates, not standalone whole-year revised guidance"
+      },
+      {
+        "date": "2026-04-27",
+        "rev": [
+          6125,
+          6225
+        ],
+        "non_gaap_eps": [
+          7.85,
+          7.95
+        ],
+        "scope": "Includes acquisition"
+      },
+      {
+        "date": "2026-07-27",
+        "rev": [
+          6260,
+          6340
+        ],
+        "non_gaap_eps": [
+          8.05,
+          8.15
+        ],
+        "scope": "Includes acquisition; not yet actual"
+      }
+    ],
+    "Q2_2026_prior_guide": {
+      "revenue": [
+        1555,
+        1595
+      ],
+      "actual_revenue": 1584.451,
+      "finding": "Actual exceeded midpoint, did not exceed upper bound. CFO claim of exceeding revenue guidance should not be repeated as exceeding its high end."
+    },
+    "coverage": "Three completed FY comparisons plus current-year revisions; not a ten-year guidance accuracy study.",
+    "v2_addition": {
+      "quarter": "2026Q2",
+      "gaap_operating_margin_actual": 0.284209,
+      "prior_floor": 0.285,
+      "result": "below floor; both EPS measures above prior upper bounds"
+    }
+  },
+  "terminalReturnReview": {
+    "diagnostic": [
+      {
+        "year": 2024,
+        "book_ic_equity_plus_debt_minus_cash": 4505.731,
+        "rd_asset_5y": 4113.9134,
+        "rd_amortization_5y": 1159.4574,
+        "rd_adjusted_ebit": 1740.3985999999998,
+        "rd_adjusted_yearend_roic_at_24pct_tax": 0.15345214658739284,
+        "note": "Diagnostic denominator includes goodwill and acquired intangibles; excludes subtracting noncash investments, so conservative. End-year, not average capital. Not a reported metric; not used to add back R&D to DCF."
+      },
+      {
+        "year": 2025,
+        "book_ic_equity_plus_debt_minus_cash": 4953.014,
+        "rd_asset_5y": 4600.597,
+        "rd_amortization_5y": 1282.0884,
+        "rd_adjusted_ebit": 1978.7255999999998,
+        "rd_adjusted_yearend_roic_at_24pct_tax": 0.15740974339440864,
+        "note": "Diagnostic denominator includes goodwill and acquired intangibles; excludes subtracting noncash investments, so conservative. End-year, not average capital. Not a reported metric; not used to add back R&D to DCF."
+      }
+    ],
+    "terminal_incremental_roic": {
+      "down": 0.1,
+      "base": 0.15,
+      "up": 0.2
+    },
+    "rationale": "Five-year R&D-capitalized, acquisition-inclusive diagnostic tempers superficially high asset-light book returns. Base 15% is below recent diagnostic; upside 20% requires durable moat/monetization; downside 10% is below the 12% downside WACC by 2 percentage points, so incremental terminal growth destroys value relative to capital cost. Terminal reinvestment g/ROIC is charged, never assumed zero.",
+    "limitations": "Five-year life is analyst assumption, not proof of economic research life; terminal return remains an explicit scenario input.",
+    "v3_comparability": "Historical return diagnostic uses reported amortized SBC, while v3 economic margins charge annual new-grant value. It is therefore a reasonableness anchor rather than an exact same-compensation-basis ROIC. Neither the recent Hexagon purchase nor its future returns are proven by the2024–25 diagnostic. Terminal assumptions remain conditional."
+  },
+  "conditionalAllocationSensitivity": [
+    {
+      "case": "down",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 40.29748626179247
+    },
+    {
+      "case": "down",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 40.16448128027861
+    },
+    {
+      "case": "down",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 39.947873951353266
+    },
+    {
+      "case": "down",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 39.405378518114915
+    },
+    {
+      "case": "down",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 39.275318007459234
+    },
+    {
+      "case": "down",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 39.06350594229343
+    },
+    {
+      "case": "down",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 38.33484922570184
+    },
+    {
+      "case": "down",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 38.208322080075995
+    },
+    {
+      "case": "down",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 38.002264331421635
+    },
+    {
+      "case": "base",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 87.68599715796542
+    },
+    {
+      "case": "base",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 87.39658271768859
+    },
+    {
+      "case": "base",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 86.92525233481678
+    },
+    {
+      "case": "base",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 86.79388941428786
+    },
+    {
+      "case": "base",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 86.50741944486921
+    },
+    {
+      "case": "base",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 86.04088432575695
+    },
+    {
+      "case": "base",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 85.72336012187478
+    },
+    {
+      "case": "base",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 85.44042351748597
+    },
+    {
+      "case": "base",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 84.97964271488514
+    },
+    {
+      "case": "up",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 170.96622279819115
+    },
+    {
+      "case": "up",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 170.40193550853135
+    },
+    {
+      "case": "up",
+      "claim_budget": 250,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 169.48295667654693
+    },
+    {
+      "case": "up",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 170.07411505451358
+    },
+    {
+      "case": "up",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 169.512772235712
+    },
+    {
+      "case": "up",
+      "claim_budget": 500,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 168.5985886674871
+    },
+    {
+      "case": "up",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 3.547462,
+      "conditional_usd_per_share": 169.0035857621005
+    },
+    {
+      "case": "up",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 4.475463,
+      "conditional_usd_per_share": 168.44577630832876
+    },
+    {
+      "case": "up",
+      "claim_budget": 800,
+      "rsu_maximum_assumption": 6.0,
+      "conditional_usd_per_share": 167.5373470566153
+    }
+  ],
+  "futureGrantSensitivity": [
+    {
+      "future_new_grant_cost_pct": 0.09,
+      "operating_ev": 26882.163021488428,
+      "conditional_usd_per_share": 89.6353047807657
+    },
+    {
+      "future_new_grant_cost_pct": 0.1,
+      "operating_ev": 26149.291120194608,
+      "conditional_usd_per_share": 87.02873366751862
+    },
+    {
+      "future_new_grant_cost_pct": 0.102,
+      "operating_ev": 26002.716739935844,
+      "conditional_usd_per_share": 86.50741944486921
+    },
+    {
+      "future_new_grant_cost_pct": 0.11,
+      "operating_ev": 25416.419218900784,
+      "conditional_usd_per_share": 84.42216255427154
+    },
+    {
+      "future_new_grant_cost_pct": 0.12,
+      "operating_ev": 24683.547317606964,
+      "conditional_usd_per_share": 81.81559144102447
+    }
+  ],
+  "sourceSensitivities": [
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 33565.98978795706
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 35341.40658352501
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 36229.11498130898
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 34004.94853612597
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 36420.94412445756
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 37628.94191862334
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 34508.28987865289
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 37686.47582686876
+    },
+    {
+      "wacc": 0.085,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 39275.5688009767
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 28398.524197220908
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 29795.910290493794
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 30494.603337130236
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 28555.950309094344
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 30436.623556999686
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 31376.960180952352
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 28725.740171550646
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 31168.00432777984
+    },
+    {
+      "wacc": 0.095,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 32389.136405894435
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 24493.809975832453
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 25614.545367352188
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 26174.913063112057
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 24506.943593701824
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 26002.716739935844
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 26750.603313052852
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 24512.48889902445
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 26436.417987799992
+    },
+    {
+      "wacc": 0.105,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 27398.382532187763
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 21449.28933118782
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 22361.544260609262
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 22817.671725319982
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 21388.360539945825
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 22597.93058014752
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 23202.715600248368
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 21312.766750919734
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 22857.129118461045
+    },
+    {
+      "wacc": 0.115,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 23629.3103022317
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 19016.113333724683
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 19767.623996324983
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.02,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 20143.379327625138
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 18918.7208673399
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 19909.91369898644
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.025,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 20405.51011480971
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.1,
+      "operating_ev_usd_m": 18804.969084093176
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.15,
+      "operating_ev_usd_m": 20063.109612889195
+    },
+    {
+      "wacc": 0.125,
+      "terminal_g": 0.03,
+      "terminal_roic": 0.2,
+      "operating_ev_usd_m": 20692.1798772872
+    }
+  ],
+  "originalValidation": {
+    "status": "PASS",
+    "checks_passed": 152,
+    "checks_total": 152,
+    "checks": [
+      {
+        "check": "down EV recomputes",
+        "pass": true
+      },
+      {
+        "check": "down legacy recognition reconciles",
+        "pass": true
+      },
+      {
+        "check": "down 2026-H2 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2026-H2 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2026-H2 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2026-H2 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2027 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2027 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2027 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2027 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2028 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2028 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2028 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2028 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2029 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2029 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2029 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2029 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2030 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2030 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2030 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2030 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2031 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2031 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2031 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2031 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2032 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2032 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2032 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2032 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2033 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2033 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2033 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2033 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2034 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2034 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2034 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2034 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2035 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2035 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2035 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2035 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down 2036 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "down 2036 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "down 2036 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "down 2036 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "down pool allocation",
+        "pass": true
+      },
+      {
+        "check": "down denominator",
+        "pass": true
+      },
+      {
+        "check": "down unqualified output gated",
+        "pass": true
+      },
+      {
+        "check": "base EV recomputes",
+        "pass": true
+      },
+      {
+        "check": "base legacy recognition reconciles",
+        "pass": true
+      },
+      {
+        "check": "base 2026-H2 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2026-H2 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2026-H2 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2026-H2 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2027 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2027 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2027 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2027 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2028 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2028 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2028 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2028 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2029 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2029 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2029 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2029 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2030 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2030 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2030 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2030 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2031 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2031 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2031 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2031 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2032 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2032 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2032 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2032 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2033 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2033 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2033 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2033 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2034 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2034 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2034 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2034 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2035 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2035 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2035 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2035 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base 2036 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "base 2036 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "base 2036 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "base 2036 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "base pool allocation",
+        "pass": true
+      },
+      {
+        "check": "base denominator",
+        "pass": true
+      },
+      {
+        "check": "base unqualified output gated",
+        "pass": true
+      },
+      {
+        "check": "up EV recomputes",
+        "pass": true
+      },
+      {
+        "check": "up legacy recognition reconciles",
+        "pass": true
+      },
+      {
+        "check": "up 2026-H2 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2026-H2 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2026-H2 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2026-H2 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2027 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2027 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2027 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2027 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2028 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2028 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2028 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2028 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2029 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2029 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2029 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2029 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2030 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2030 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2030 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2030 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2031 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2031 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2031 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2031 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2032 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2032 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2032 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2032 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2033 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2033 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2033 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2033 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2034 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2034 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2034 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2034 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2035 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2035 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2035 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2035 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up 2036 FCFF funding",
+        "pass": true
+      },
+      {
+        "check": "up 2036 future grant expensed",
+        "pass": true
+      },
+      {
+        "check": "up 2036 legacy cancels",
+        "pass": true
+      },
+      {
+        "check": "up 2036 no free reinvestment",
+        "pass": true
+      },
+      {
+        "check": "up pool allocation",
+        "pass": true
+      },
+      {
+        "check": "up denominator",
+        "pass": true
+      },
+      {
+        "check": "up unqualified output gated",
+        "pass": true
+      },
+      {
+        "check": "historical annual grants independent from amortized expense",
+        "pass": true
+      },
+      {
+        "check": "claim reference budget reconciles",
+        "pass": true
+      },
+      {
+        "check": "all source frozen hashes still match",
+        "pass": true
+      },
+      {
+        "check": "source ids correct for historical grants",
+        "pass": true
+      },
+      {
+        "check": "grant sensitivity decreases EV",
+        "pass": true
+      }
+    ],
+    "qualification": "Internal mechanical validation only; does not validate inventory completeness, claim budget adequacy, forecast accuracy or current-date target eligibility."
+  },
+  "originalRevisionLog": {
+    "version": "v3",
+    "previous": "v2",
+    "preserved_previous_versions": true,
+    "prior_review": "v2 four bounded corrections independently closed; heading subsequently fixed and manifest regenerated without financial changes.",
+    "v3_changes": [
+      "Replaces amortized-SBC proxy with funded future-new-grant cost of12%/10.2%/9%, holding pre-SBC margins fixed; operatingEV changes accordingly.",
+      "Full legacy-award allocation distinguishes already-issued restricted stock from unissued RSU/PSU/LTP; assumedJune inventory expressly sourced toFeb19 with sensitivity.",
+      "Adds500 all-in residualclaimbudget with visible historical anchors, headroom, overlap exclusions and250–800 stress interval, not a verified bound.",
+      "Adds conditionalJune per-share allocation, source/provenance detail and reproducible sensitivities; current-date/exactbalance gates retained.",
+      "Corrects three zero in-process-intangible provenance pointers from quarterly snapshots to original annual sources, with no numeric history change."
+    ],
+    "independent_review_status": "v3 pending; internal validation is not independent approval",
+    "source_originals_unchanged": true
+  }
+}

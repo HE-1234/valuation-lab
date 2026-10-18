@@ -1,3 +1,5 @@
+import {isJoint,jointDefaults,jointEffectiveConfig,validateJointState,prepareJointSimulation,jointEndpoints,jointResultMetadata,JOINT_NOTE} from './joint-simulation-config.js';
+import {DEFAULT_SIMULATION_TRIALS} from './simulation-count-policy.js';
 import {ANNUAL_GROWTH_PATH,ANNUAL_METRIC_PATHS,annualPathDefaults,validateAnnualPathConfig,prepareAnnualPath,annualPathAudit,annualMetricDefaults,validateAnnualMetrics,prepareAnnualMetrics,sampleAnnualMetrics,annualMetricsAudit,annualMetricConstraint,conditionedGrowthContext} from './annual-path-sampling.js';
 // Conditional uncertainty in DCF inputs, never a stock-price process.
 // Existing deterministic/historical engine and research records remain unchanged.
@@ -23,15 +25,15 @@ function assertObject(value, name) {
 export function simulationDefaults(assumptions = defaults) {
  const a = {...defaults,...assumptions};
  const bounds = (mode, width, low, high) => ({type:'triangular',low:Math.max(low,mode-width),mode,high:Math.min(high,mode+width)});
- return {
-  trials:5000, seed:'valuation-lab', binCount:36, dependence:'independent', method:'annual-path', annualPath:annualPathDefaults(a.years),annualMetrics:annualMetricDefaults(a.years),annualTerminal:annualTerminalDefaults({growth:a.terminalGrowth,taxRate:a.tax,roic:a.terminalROIC}),
+ return jointDefaults({
+  trials:DEFAULT_SIMULATION_TRIALS, seed:'valuation-lab', binCount:36, dependence:'independent', method:'annual-path', annualPath:annualPathDefaults(a.years),annualMetrics:annualMetricDefaults(a.years),annualTerminal:annualTerminalDefaults({growth:a.terminalGrowth,taxRate:a.tax,roic:a.terminalROIC}),
   drivers:{
    growth:bounds(a.growth,.05,-.5,1),
    targetMargin:bounds(a.targetMargin,.05,0,1),
    salesCapital:bounds(a.salesCapital,a.salesCapital*.25,Number.MIN_VALUE,Infinity),
    wacc:bounds(a.wacc,.015,Number.MIN_VALUE,1)
   }
- };
+ },{horizon:a.years});
 }
 
 export const SIMULATION_DISTRIBUTIONS = Object.freeze(['fixed','triangular','uniform','normal']);
@@ -202,16 +204,17 @@ export function validateAnnualTerminal(spec){
 
 export function validateSimulationConfig(config, assumptions = defaults) {
  assertObject(config,'Simulation settings');
- const unknown = Object.keys(config).filter(k => !['trials','seed','binCount','dependence','drivers','method','annualPath','annualMetrics','annualTerminal'].includes(k));
+ const unknown = Object.keys(config).filter(k => !['trials','seed','binCount','dependence','drivers','method','annualPath','annualMetrics','annualTerminal','jointAnnual'].includes(k));
  if (unknown.length) throw new Error(`Unknown simulation setting: ${unknown.join(', ')}.`);
- const c = {trials:5000,seed:'valuation-lab',binCount:36,dependence:'independent',...config,drivers:{}};
+ const c = {trials:DEFAULT_SIMULATION_TRIALS,seed:'valuation-lab',binCount:36,dependence:'independent',...config,drivers:{}};
  if (!Number.isInteger(c.trials) || c.trials < 1 || c.trials > 50000) throw new Error('Trials must be an integer from 1 to 50,000.');
  if (!Number.isInteger(c.binCount) || c.binCount < 1 || c.binCount > 200) throw new Error('Histogram bin count must be an integer from 1 to 200.');
  if (!(typeof c.seed === 'string' && c.seed.trim().length > 0 && c.seed.length <= 128) && !Number.isSafeInteger(c.seed)) throw new Error('Seed must be a nonempty string of at most 128 characters or a safe integer.');
  c.seed = String(c.seed);
  if (!['independent','operating-linked'].includes(c.dependence)) throw new Error('Dependence must be independent or operating-linked.');
- if (own(config,'method') && !['legacy','annual-path'].includes(config.method)) throw Error('Unsupported simulation method.');
+ if (own(config,'method') && !['legacy','annual-path','joint-annual-path'].includes(config.method)) throw Error('Unsupported simulation method.');
  c.method=config.method??'legacy';
+ if(isJoint(c)||own(config,'jointAnnual'))c.jointAnnual=validateJointState(config.jointAnnual,c,value=>validateSimulationConfig(value,assumptions));
  if(c.method==='annual-path'||own(config,'annualPath'))c.annualPath=validateAnnualPathConfig(own(config,'annualPath')?config.annualPath:annualPathDefaults());
  if(own(config,'annualMetrics'))c.annualMetrics=validateAnnualMetrics(config.annualMetrics);
  if(own(config,'annualTerminal'))c.annualTerminal=validateAnnualTerminal(config.annualTerminal);
@@ -358,9 +361,10 @@ function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
  if (!finite(draft.normalizationDelta)) throw new Error('EBIT normalization must be a finite number.');
  const baseline = calculateCurrent(snapshot,draft);
  if (!finiteValuation(baseline)) throw new Error('Baseline valuation is numerically nonfinite; revise the scale or assumptions before simulating.');
- const c = validateSimulationConfig(config ?? simulationDefaults(draft.assumptions),baseline.assumptions);
+ const authored = validateSimulationConfig(config ?? simulationDefaults(draft.assumptions),baseline.assumptions),c=jointEffectiveConfig(authored);
  const context=c.method==='annual-path'?conditionedGrowthContext(currentAnnualPathContext(snapshot,draft),c.annualTerminal):null;
  const pathSampler=context?prepareAnnualPath(context.baseline,c.annualPath,context):null;
+ const jointSampler=isJoint(authored)?prepareJointSimulation(context,authored):null;
  const metricSamplers=pathSampler&&c.annualMetrics?prepareAnnualMetrics(context,c.annualMetrics):null;
  const terminalSamplers=pathSampler?Object.fromEntries(Object.entries(c.annualTerminal||{}).map(([k,v])=>[k,prepareDistribution(v)])):{};
  const random = createSeededRandom(c.seed), draws = [], rawDraws = [], scenarios = [], exclusions = {};
@@ -375,8 +379,10 @@ function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
   if(terminal.growth!==undefined)a.terminalGrowth=terminal.growth;
   if(terminal.taxRate!==undefined)a.tax=terminal.taxRate;
   if(terminal.roic!==undefined)a.terminalROIC=terminal.roic;
-  const growthPath=pathSampler?.sample(random,a.terminalGrowth);
-  const metricPaths=metricSamplers?sampleAnnualMetrics(metricSamplers,random,{margin:a.targetMargin,taxRate:a.tax,wacc:a.wacc,salesCapital:a.targetMargin>0?a.terminalROIC/((1+a.terminalGrowth)*a.targetMargin*(1-a.tax)):a.salesCapital}):null;
+  const endpoints={growth:a.terminalGrowth,margin:a.targetMargin,taxRate:a.tax,wacc:a.wacc,salesCapital:a.targetMargin>0?a.terminalROIC/((1+a.terminalGrowth)*a.targetMargin*(1-a.tax)):a.salesCapital};
+  let jointDraw;try{jointDraw=jointSampler?.sample(random,jointEndpoints(jointSampler,endpoints));}catch(error){if(!jointSampler)throw error;exclude('joint-'+(error.code||'sampling-rejected'));continue;}
+  const growthPath=jointDraw?.growthPath??pathSampler?.sample(random,a.terminalGrowth);
+  const metricPaths=jointDraw?jointDraw.metricPaths:metricSamplers?sampleAnnualMetrics(metricSamplers,random,endpoints):null;
   const metricIssue=annualMetricConstraint(metricPaths);if(metricIssue){exclude(metricIssue);continue;}
   if(metricPaths)a[ANNUAL_METRIC_PATHS]=metricPaths;
   if(growthPath){
@@ -423,17 +429,19 @@ function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
   ?{id:'independent',label:'Independent annual growth and other drivers',description:'The conditioned annual growth process is independent of margin, sales/capital and WACC draws. Annual deviations are serially correlated according to the entered persistence. These are modeling assumptions, not evidence of independence.',latentCorrelations:null}
   :{id:'operating-linked',label:'Linked margin and capital inputs; separate annual growth',description:'Margin and sales/capital retain their illustrative Gaussian factor correlation of 0.28. Annual growth is a separate conditioned AR(1) process, independent of these inputs and WACC; the scalar growth loading is inactive.',factorLoadings:{targetMargin:.7,salesCapital:.4,wacc:0},latentCorrelations:null};
  if(metricSamplers){warnings.push('Annual margin, operating tax, WACC and capital efficiency follow separate conditioned Gaussian paths around the edited baseline. Revenue, NOPAT, reinvestment, FCFF and implied returns are derived, never sampled twice. Fixed annual years override endpoint effects. Terminal margin and WACC use their scalar distributions; optional terminal growth, tax and ROIC are drawn once. Historical anchors, horizon, timing and dated claims inputs stay fixed.');dependence={id:'independent-annual-primitives',label:'Independent annual primitive paths',description:'Each annual primitive has its own serial persistence; innovations are independent across metrics. Operating-linked applies only to remaining scalar terminal inputs, not the annual innovations.',latentCorrelations:null};}
- const exportedConfig=clone(c);
+ if(jointSampler){for(let i=warnings.length-1;i>=0;i--)if(/separate Gaussian|separate conditioned|independent across metrics/.test(warnings[i]))warnings.splice(i,1);warnings.push(JOINT_NOTE);}
+ const exportedConfig=clone(authored);
  if(c.method==='legacy'&&config&&!own(config,'method'))delete exportedConfig.method;
  return {
+  ...(jointSampler?jointResultMetadata(jointSampler,scenarios):{}),
   version:SIMULATION_VERSION,status:accepted ? 'ready' : 'empty',classification:'Conditional educational DCF simulation',
   config:exportedConfig,baseline,draws,samples,rawSamples,scenarios,...(pathSampler?{annualPaths:{...annualPathAudit(pathSampler,scenarios),...(metricSamplers?{metrics:annualMetricsAudit(metricSamplers,scenarios)}:{})}}:{}),
   inputDistributions:Object.fromEntries(SIMULATION_DRIVER_KEYS.map(key=>[key,{...distributionSummary(c.drivers[key],key),...(pathSampler&&key==='growth'?{active:false,inactiveReason:'Annual growth path replaces this scalar growth distribution.'}:metricSamplers?.salesCapital&&key==='salesCapital'?{active:false,inactiveReason:'Annual capital efficiency replaces this scalar distribution.'}:metricSamplers&&(key==='targetMargin'||key==='wacc')?{active:true,scope:'terminal endpoint only'}:{})}])),
   attempts:c.trials,accepted,excluded,exclusions,zeroEquityCount,zeroEquityShare:accepted ? zeroEquityCount/accepted : null,
   mean,median:quantiles.p50,quantiles,histogram:histogram(samples,c.binCount),
   units:{currency:snapshot.currency,perShare:`${snapshot.currency} per common share`,financials:'millions',shares:'millions'},
-  quote:comparison(snapshot,draft,baseline,samples),dependence,warnings,
-  method:{distribution:'per-driver fixed, triangular, uniform or conditionally truncated normal',normal:'inverse conditional CDF using stable log tails; no clipping or rejection resampling; mean/SD are underlying normal parameters',inputUnits:'growth, targetMargin and wacc are fractions (0.10 = 10%); salesCapital is a ratio',quantiles:'linear interpolation at (n−1)p (type 7)',ecdf:'right-continuous; count(value ≤ price) / accepted trials',histogram:'equal-width bins; left-closed/right-open except final bin includes its upper edge',sampling:'exact attempted-trial count; invalid draws excluded without replacement',random:'FNV-1a seed hash / Mulberry32',path:pathSampler?'Exact Gaussian annual-growth bridge; existing margins, capital calendars, claims and FCFF engine':'one driver vector per trial, existing deterministic transition and FCFF engine'}
+  quote:comparison(snapshot,draft,baseline,samples),dependence:jointSampler?jointResultMetadata(jointSampler,[]).dependence:dependence,warnings,
+  method:{distribution:'per-driver fixed, triangular, uniform or conditionally truncated normal',normal:'inverse conditional CDF using stable log tails; no clipping or rejection resampling; mean/SD are underlying normal parameters',inputUnits:'growth, targetMargin and wacc are fractions (0.10 = 10%); salesCapital is a ratio',quantiles:'linear interpolation at (n−1)p (type 7)',ecdf:'right-continuous; count(value ≤ price) / accepted trials',histogram:'equal-width bins; left-closed/right-open except final bin includes its upper edge',sampling:'exact attempted-trial count; invalid draws excluded without replacement',random:'FNV-1a seed hash / Mulberry32',path:jointSampler?JOINT_NOTE:pathSampler?'Exact Gaussian annual-growth bridge; existing margins, capital calendars, claims and FCFF engine':'one driver vector per trial, existing deterministic transition and FCFF engine'}
  };
 }
 

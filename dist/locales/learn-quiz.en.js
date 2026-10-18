@@ -1,0 +1,21 @@
+export default {
+ title:'Ten questions, a fresh perspective',
+ description:'Each Learn click draws 10 questions from a bank of {count}. Work through the bank before questions repeat. The six interactive examples remain below.',
+ newSet:'New 10 questions',
+ previous:'← Previous',next:'Next question →',review:'Review this set',
+ question:'Question {current} of 10',progress:'{answered} of 10 answered',score:'Score: {score} / {answered}',
+ correct:'Correct.',incorrect:'Not quite.',correctAnswer:'Correct answer: {answer}',yourAnswer:'Your answer',correctOption:'Correct answer',
+ explanation:'Why this answer?',sources:'Sources and verification',verification:'Checked reasoning',
+ complete:'Set complete',completeDetail:'You answered {score} of 10 correctly. Review the explanations, or draw another set.',
+ hint:'Choose one answer. Your first answer is saved for this set.',answeredHint:'Answer saved. Read the explanation, then continue.',
+ saved:'Question order is saved in this browser. Answers stay for this open page. Browser Back and Forward preserve this set; clicking Learn starts a new one.',
+ memory:'Browser storage is unavailable. Question order is remembered only for this open page; a reload may repeat questions.',
+ reset:'An incompatible saved question order was reset safely. Your company models were not changed.',
+ announced:'Set {set} ready: 10 new questions.',positionAnnouncement:'Question {current} of 10.',
+ examples:'Six interactive examples',examplesNote:'The original lessons and their adjustable teaching examples. Their progress is separate from the random quiz.',
+ loading:'Loading the reviewed question bank…',failure:'The reviewed question bank could not be verified or loaded. Try again; the six interactive examples are still available below.',
+ retry:'Try loading again',idle:'Open Learn to start a fresh set of 10 questions.',
+ beginner:'Foundation',intermediate:'Intermediate',advanced:'Advanced',
+ 'discounting':'Discounting','fcff-fcfe':'Cash-flow models','reinvestment':'Reinvestment','working-capital':'Working capital','sales-to-capital':'Sales to capital','margins':'Operating margins','tax':'Operating tax','growth-roic':'Growth and returns on capital','growth':'Growth','terminal-value':'Terminal value','currency-inflation':'Currency and inflation',
+ 'claims':'Ownership claims','cash':'Cash and equity bridges','leases':'Leases','options':'Options','sbc':'Share-based compensation','banks':'Banks','segments':'Business segments','guidance':'Management guidance','distributions':'Distributions','correlation':'Correlation','monte-carlo':'Monte Carlo','sensitivity':'Sensitivity','backtesting':'Backtesting','evidence':'Evidence'
+};

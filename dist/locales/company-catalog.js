@@ -1,236 +1,76 @@
-// Exact authored display overlays. Source originals remain in the identity artifact.
+// Exact authored display overlays for the active US-listed directory only.
 export const catalogProsePairs=[
   [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\nLive issuer page checked 2026-10-18: Nasdaq registered ordinary shares; ticker ASML; trading currency US Dollar.",
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。\n2026-10-18 检查发行人现行网页：纳斯达克登记普通股，代码 ASML，交易货币为美元。"
   ],
   [
+    "Registered ordinary shares, not an ADS/ADR; no ADS ratio applies. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+    "登记普通股，并非 ADS／ADR，不适用 ADS 换股比例。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
+  ],
+  [
+    "Nasdaq",
+    "纳斯达克"
+  ],
+  [
+    "New York Registry Shares (registered ordinary shares)",
+    "纽约登记股（登记普通股）"
+  ],
+  [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。"
   ],
   [
-    "Issuer lists code 7731 on Tokyo Prime.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nIssuer financial statements present consolidated amounts in yen.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人列明东京 Prime 市场代码为 7731。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\n发行人财务报表以日元列示合并金额。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
+    "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+    "已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
   ],
   [
-    "September 2026 issuer disclosure identifies Canon Inc., 7751, Tokyo Prime and common stock.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "2026 年 9 月发行人披露确认 Canon Inc.、代码 7751、东京 Prime 市场及普通股。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
+    "Common stock",
+    "普通股"
   ],
   [
-    "Issuer stock overview dated June 2026 lists 6920 on Tokyo Prime.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人 2026 年 6 月股票概览列明东京 Prime 市场代码为 6920。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
+    "New York Stock Exchange",
+    "纽约证券交易所"
   ],
   [
-    "Issuer lists 8035, Tokyo Prime and common stock, updated for October 2026.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人更新至 2026 年 10 月的资料列明代码 8035、东京 Prime 市场及普通股。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Issuer annual report identifies NAURA, code 002371 and Shenzhen listing. Exchange rules establish RMB quotation for A shares.",
-    "发行人年报确认 NAURA、代码 002371 及深圳上市。交易所规则确认 A 股以人民币报价。"
-  ],
-  [
-    "2026 issuer announcement and exchange restructuring record identify AMEC legal name and listing code 688012.",
-    "2026 年发行人公告及交易所重组记录确认 AMEC 的法定名称和上市代码 688012。"
-  ],
-  [
-    "Euronext identifies issuer, Amsterdam stock listing, ASM symbol, EUR currency and ordinary share subtype for ISIN NL0000334118.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "泛欧交易所确认发行人、阿姆斯特丹股票上市、代码 ASM、欧元交易货币及 ISIN NL0000334118 的普通股类别。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Issuer identifies code 6525 and Tokyo Prime.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nIssuer financial statements present consolidated amounts in yen.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人确认代码 6525 及东京 Prime 市场。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\n发行人财务报表以日元列示合并金额。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Issuer listing table identifies Common Shares / Common Stock, Korea Exchange KOSDAQ Market and code 036930. Same page labels current price KRW and identifies Jusung Engineering Co., Ltd. ISO MIC register identifies XKOS as the KOSDAQ segment of XKRX.",
-    "发行人上市表列明普通股、韩国交易所 KOSDAQ 市场及代码 036930。同页以韩元标示当前价格，并列明 Jusung Engineering Co., Ltd.。ISO MIC 登记册确认 XKOS 为 XKRX 的 KOSDAQ 细分市场。"
-  ],
-  [
-    "Exchange listing notice identifies Piotech legal name and A shares 688072, listing April 20, 2022.",
-    "交易所上市通知确认 Piotech 的法定名称、A 股代码 688072，上市日期为 2022 年 4 月 20 日。"
+    "Ordinary shares",
+    "普通股"
   ],
   [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2023 IPO prospectus: One ADS represents one ordinary share.\nLive issuer page checked 2026-10-18: Current FAQ confirms Nasdaq Global Select ARM ADSs and no post-IPO split.",
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。\n2023 年首次公开发行招股书：每份 ADS 代表一股普通股。\n2026-10-18 检查发行人现行网页：最新常见问题确认 ARM 的 ADS 在纳斯达克全球精选市场上市，首次公开发行后未拆股。"
   ],
   [
-    "Issuer confirms Xetra trading, SIE symbol, EUR currency and registered no-par-value ordinary shares.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人确认在 Xetra 交易，代码 SIE，以欧元计价，证券为无面值记名普通股。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "SZSE listing notice identifies Empyrean legal entity and RMB ordinary shares 301269; later issuer filing confirms same listing.",
-    "深圳证券交易所上市通知确认 Empyrean 法律实体及人民币普通股代码 301269；后续发行人文件确认同一上市身份。"
-  ],
-  [
-    "Exchange-hosted issuer filing identifies Shanghai Primarius legal name and stock code 688206.SH.",
-    "交易所托管的发行人文件确认上海 Primarius 的法定名称和股票代码 688206.SH。"
-  ],
-  [
-    "Current exchange company record identifies legal issuer, A share code 688521 and listed status; share data dated October 16, 2026.",
-    "现行交易所公司记录确认法律实体、A 股代码 688521 及上市状态；股本数据日期为 2026 年 10 月 16 日。"
-  ],
-  [
-    "Issuer listing table explicitly distinguishes KRX common 005930 / KR7005930003 from preferred 005935. Investor page quotes common shares in won. 2026 first-quarter report identifies Samsung Electronics Co., Ltd. and statements in Korean won. ISO register identifies XKRX.",
-    "发行人上市表明确区分 KRX 普通股 005930／KR7005930003 与优先股 005935。投资者网页以韩元报价普通股。2026 年第一季度报告确认 Samsung Electronics Co., Ltd. 及以韩元编制的报表。ISO 登记册确认 XKRX。"
-  ],
-  [
-    "HKEX issuer records identify 00981 SMIC and ordinary shares; disclosure prices use HKD. This is the HK ordinary listing, not mainland 688981.",
-    "香港交易所发行人记录确认 SMIC 的普通股代码为 00981；披露价格以港元计价。这是香港普通股上市，并非内地代码 688981。"
+    "American depositary shares",
+    "美国存托股份"
   ],
   [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2025 Form 20-F filed 2026: NYSE UMC is an ADS; each ADS represents five common shares.",
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。\n2026 年提交的 2025 年 20-F 表格：纽约证券交易所 UMC 为 ADS，每份代表五股普通股。"
   ],
   [
-    "Current HKEX quote and September 2026 issuer disclosures identify HUA HONG GRACE and code 01347. Current legal name differs from prior Hua Hong Semiconductor label. Interim report confirms company name changed in May 2026; HKEX disclosure transaction prices use HKD.",
-    "香港交易所当前报价页面及 2026 年 9 月发行人披露确认 HUA HONG GRACE 和代码 01347。现行法定名称不同于先前的 Hua Hong Semiconductor 名称。中期报告确认公司于 2026 年 5 月更名；香港交易所披露中的交易价格以港元计价。"
-  ],
-  [
-    "Issuer/exchange source identifies Vanguard International Semiconductor Corporation with local code 5347.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0005347009, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Vanguard International Semiconductor Corporation，本地代码为 5347。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0005347009、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "SSE confirms Nexchip A shares 688249 listed May 5, 2023; April 2026 filing confirms legal issuer and separate HK listing application.",
-    "上海证券交易所确认 Nexchip 的 A 股代码 688249 于 2023 年 5 月 5 日上市；2026 年 4 月文件确认法律实体及另行申请香港上市。"
-  ],
-  [
-    "Issuer/exchange source identifies Powerchip Semiconductor Manufacturing Corp. with local code 6770.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0006770001, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Powerchip Semiconductor Manufacturing Corp.，本地代码为 6770。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0006770001、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer filing identifies code 600584 and Chinese legal issuer; official site identifies JCET group business.",
-    "发行人文件确认代码 600584 和中文法定名称；官方网站确认 JCET 集团业务。"
-  ],
-  [
-    "2026 issuer notice identifies legal name and code 002156; issuer transaction document explicitly identifies Shenzhen listing.",
-    "2026 年发行人通知确认法定名称和代码 002156；发行人交易文件明确确认深圳上市。"
-  ],
-  [
-    "Issuer/exchange source identifies Powertech Technology Inc. with local code 6239.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0006239007, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Powertech Technology Inc.，本地代码为 6239。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0006239007、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "SZSE identifies legal issuer and RMB ordinary stock 002185; June 2026 issuer notice confirms ongoing equity activity.",
-    "深圳证券交易所确认法律实体及人民币普通股 002185；2026 年 6 月发行人通知确认持续的股权活动。"
-  ],
-  [
-    "SSE listing notice confirms Cambricon legal entity and A share 688256, listed July 20, 2020.",
-    "上海证券交易所上市通知确认 Cambricon 法律实体及 A 股 688256，上市日期为 2020 年 7 月 20 日。"
-  ],
-  [
-    "April 2026 issuer report confirms Hygon legal entity, SSE STAR listing and code 688041; articles identify RMB ordinary shares.",
-    "2026 年 4 月发行人报告确认 Hygon 法律实体、上海证券交易所科创板上市及代码 688041；公司章程确认其为人民币普通股。"
-  ],
-  [
-    "Issuer/exchange source identifies MediaTek Inc. with local code 2454.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002454006, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 MediaTek Inc.，本地代码为 2454。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0002454006、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer/exchange source identifies Alchip Technologies, Limited with local code 3661.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies KYG022421088, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Alchip Technologies, Limited，本地代码为 3661。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 KYG022421088、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer/exchange source identifies Global Unichip Corp. with local code 3443.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0003443008, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Global Unichip Corp.，本地代码为 3443。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0003443008、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer listing table identifies original common shares of SK hynix Inc. on Korea Stock Exchange, KS 000660 / KR7000660001, separately from depositary receipts. Investor page labels prices KRW and annual/quarterly operating reports Billion KRW. ISO register identifies XKRX.",
-    "发行人上市表确认 SK hynix Inc. 在韩国证券交易所的原始普通股 KS 000660／KR7000660001，并与存托凭证分开列示。投资者网页以韩元标示股价，并以十亿韩元标示年度及季度营运报告。ISO 登记册确认 XKRX。"
-  ],
-  [
-    "Issuer identifies 285A on Tokyo Prime and ordinary shares.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人确认东京 Prime 市场普通股代码为 285A。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
+    "Directory generic Common Stock label overridden by issuer 20-F confirming ADS instrument. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+    "发行人的 20-F 文件确认其为 ADS，优先于目录中的笼统普通股标签。 已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
   ],
   [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2025-02-24: Sandisk common stock began regular-way Nasdaq SNDK trading on February 24, 2025.",
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。\n2025-02-24：Sandisk 普通股于当日在纳斯达克以 SNDK 开始常规交易。"
   ],
   [
-    "Issuer/exchange source identifies Nanya Technology Corporation with local code 2408.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002408002, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Nanya Technology Corporation，本地代码为 2408。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0002408002、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer/exchange source identifies Winbond Electronics Corporation with local code 2344.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002344009, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Winbond Electronics Corporation，本地代码为 2344。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0002344009、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer identifies Tokyo Stock Exchange stock code 6503.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人确认东京证券交易所股票代码为 6503。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Issuer/exchange source identifies LandMark Optoelectronics Corporation with local code 3081.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0003081006, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 LandMark Optoelectronics Corporation，本地代码为 3081。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0003081006、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Exchange record identifies Yuanjie legal name, A share 688498 and listed status; September 2026 filings confirm ongoing listing.",
-    "交易所记录确认 Yuanjie 法定名称、A 股 688498 及上市状态；2026 年 9 月文件确认继续上市。"
-  ],
-  [
-    "Current issuer site identifies Shenzhen share stock code 300308. It also displays an HK listing; retain one issuer with original Shenzhen listing.",
-    "发行人现行网站确认深圳股票代码 300308。该网站同时显示香港上市；此处为同一发行人保留原有深圳上市证券。"
-  ],
-  [
-    "Issuer identifies legal entity, Shenzhen listing 300502.SZ and 2016 IPO.",
-    "发行人确认法律实体、深圳上市代码 300502.SZ 及 2016 年首次公开发行。"
-  ],
-  [
-    "Issuer/exchange source identifies Hon Hai Precision Ind. Co. Ltd. with local code 2317.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002317005, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Hon Hai Precision Ind. Co. Ltd.，本地代码为 2317。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0002317005、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer/exchange source identifies Quanta Computer Inc. with local code 2382.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002382009, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Quanta Computer Inc.，本地代码为 2382。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0002382009、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer/exchange source identifies Wiwynn Corporation with local code 6669.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0006669005, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Wiwynn Corporation，本地代码为 6669。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0006669005、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer/exchange source identifies Wistron Corporation with local code 3231.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0003231007, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Wistron Corporation，本地代码为 3231。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0003231007、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer ESG report identifies legal entity and A share code 002281; current company website retains same legal entity.",
-    "发行人 ESG 报告确认法律实体及 A 股代码 002281；当前公司网站保留相同法律实体。"
-  ],
-  [
-    "Issuer/exchange source identifies Inventec Corporation with local code 2356.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002356003, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Inventec Corporation，本地代码为 2356。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0002356003、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
-  ],
-  [
-    "Issuer share page updated October 13, 2026 identifies ENR, Xetra, EUR and registered no-par-value shares; current earnings are reported in euros.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人于 2026 年 10 月 13 日更新的股票网页确认 ENR、Xetra、欧元及无面值记名股；当前盈利以欧元报告。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Euronext identifies Schneider Electric SE, Paris stock listing, SU and EUR; issuer accounts describe ordinary shares.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "泛欧交易所确认 Schneider Electric SE 在巴黎股票市场上市、代码 SU 及欧元计价；发行人报表说明其为普通股。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
+    "Nasdaq directory retains When-Issued in security title; SEC spin-off filing establishes regular-way SNDK trading since February 24, 2025. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+    "纳斯达克目录证券名称仍保留“发行前交易”字样；SEC 分拆文件确认 SNDK 自 2025 年 2 月 24 日起进行常规交易。 已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
   ],
   [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2026 Q1 Form 10-Q: Vertiv Holdings Co registers Class A common stock as VRT on NYSE.",
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。\n2026 年第一季度 10-Q 表格：Vertiv Holdings Co 的 A 类普通股以 VRT 在纽约证券交易所登记上市。"
   ],
   [
-    "Issuer identifies Tokyo listing and code 7011.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nIssuer financial statements present consolidated amounts in yen.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人确认东京上市及代码 7011。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\n发行人财务报表以日元列示合并金额。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Issuer identifies ABBN as SIX registered shares; SIX issuer list confirms ABB Ltd, ABBN, registered share type and CHF trading currency.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人确认 ABBN 为 SIX 记名股；SIX 发行人名单确认 ABB Ltd、ABBN、记名股类别及瑞士法郎交易货币。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Euronext issuer notice identifies Legrand SA and LR. Derivative page underlying section identifies Paris share ISIN FR0010307819 in EUR. Issuer report confirms ordinary shares; no futures instrument is selected.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "泛欧交易所发行人通知确认 Legrand SA 和 LR。衍生品网页的标的部分确认巴黎股票 ISIN FR0010307819 及欧元计价。发行人报告确认其为普通股；所选证券不是期货。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
-  ],
-  [
-    "Issuer/exchange source identifies Delta Electronics, Inc. with local code 2308.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002308004, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
-    "发行人／交易所来源确认 Delta Electronics, Inc.，本地代码为 2308。\n交易所日期为 2026-10-17 的公司数据确认本地法定名称、上市日期及已发行普通股。ISIN 登记册确认 TW0002308004、上市市场及 CFI ESVUFR（有投票权的记名普通股）。\n交易所交易规则以新台币规定股票最小变动价位。ISO 10383 登记册确认交易所 MIC。"
+    "Directory uses stale Holdings, LLC issuer wording; SEC issuer and filing identify Vertiv Holdings Co. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+    "目录仍使用过时的 Holdings, LLC 发行人名称；SEC 发行人记录及文件确认名称为 Vertiv Holdings Co。 已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
   ],
   [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2025 Form 10-K filed 2026-02-05: Trane Technologies plc registers ordinary shares as TT on NYSE.",
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。\n2026-02-05 提交的 2025 年 10-K 表格：Trane Technologies plc 普通股以 TT 在纽约证券交易所登记上市。"
-  ],
-  [
-    "Issuer identifies Tokyo Stock Exchange listing and code 6367.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
-    "发行人确认东京证券交易所上市及代码 6367。\nJPX 2026 年 4 月报价表佐证普通股类别及日元计价。\nISO MIC 登记册确认交易所代码；相关条目早于本次核查。"
   ],
   [
     "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\nLive issuer page checked 2026-10-18: NYSE BABA ADSs each represent eight ordinary shares.",
@@ -241,271 +81,31 @@ export const catalogProsePairs=[
     "2026-10-18 获取的现行文件：SEC 记录中的发行人、股票代码、交易所和 CIK 相符。\n2026-10-16 21:31（文件时间戳，未注明时区）：已检查有效、非测试的股票目录条目，并以证券名称判定类别。\n2026-10-18 获取：已检查有效的运营市场及细分市场 MIC 记录。\n2026-10-18 检查发行人现行网页：纽约证券交易所 SAP 的 ADR 以美元计价，每份 ADR 代表一股普通股。"
   ],
   [
-    "SEC quarterly report confirms Alphawave acquisition completed December 18, 2025. Cover identifies QCOM Nasdaq common stock. Qualcomm is listed parent exposure, not a standalone Alphawave listing.",
-    "SEC 季报确认 Alphawave 收购于 2025 年 12 月 18 日完成。封面列明 QCOM 为纳斯达克普通股。Qualcomm 是上市母公司的投资敞口，不能视为 Alphawave 独立上市。"
-  ],
-  [
-    "High-Tech issuer history confirms May 2020 delisting and wholly owned status under Hitachi. Parent FAQ identifies Tokyo listing 6501; repurchase notice identifies common stock and yen price.",
-    "High-Tech 发行人历史确认其于 2020 年 5 月退市，并成为 Hitachi 全资子公司。母公司常见问题确认东京上市代码 6501；回购通知确认普通股及日元价格。"
-  ],
-  [
-    "SSE July 24, 2026 notice explicitly confirms CXMT A share listing starts July 27, 2026 under 688825. Current company page includes September 2026 articles.",
-    "上海证券交易所 2026 年 7 月 24 日通知明确确认 CXMT 的 A 股于 2026 年 7 月 27 日开始上市，代码 688825。当前公司网页包含 2026 年 9 月文章。"
-  ],
-  [
-    "Issuer IR confirms 9856.HK, Main Board and September 22, 2026 listing. HKEX new-listing page independently names Ligent Technologies, Inc. (9856). HKEX-hosted ownership disclosure identifies Hisense Group Holding ownership. HKEX October 6 substantial-shareholder summary explicitly identifies 09856 ordinary shares and Hisense Group Holding interest.",
-    "发行人投资者关系网页确认 9856.HK、主板及 2026 年 9 月 22 日上市。香港交易所新上市网页独立列明 Ligent Technologies, Inc.（9856）。香港交易所托管的权益披露确认 Hisense Group Holding 持股。香港交易所 10 月 6 日主要股东摘要明确列明 09856 普通股及 Hisense Group Holding 权益。"
-  ],
-  [
-    "SpaceX IR confirms June 12, 2026 IPO and SPCX trading on Nasdaq Global Select and Nasdaq Texas; offering identifies Class A common stock. xAI issuer acquisition notice establishes SpaceX relationship. This is parent exposure, not TSLA or standalone xAI.\nSEC August 14, 2026 Form 8-K states Anysphere merger became effective that day and Cursor survived as wholly owned SpaceX subsidiary. Map only as explicit parent exposure and deduplicate against xAI/SpaceX row; no standalone Cursor ticker.",
-    "SpaceX 投资者关系资料确认 2026 年 6 月 12 日首次公开发行，以及 SPCX 在纳斯达克全球精选市场和 Nasdaq Texas 交易；发行文件确认 A 类普通股。xAI 发行人的收购通知确认与 SpaceX 的关系。此处为母公司投资敞口，不是 TSLA 或独立的 xAI。\nSEC 2026 年 8 月 14 日 8-K 表格说明 Anysphere 合并于当日生效，Cursor 作为 SpaceX 全资子公司继续存在。仅明确映射至上市母公司，并与 xAI／SpaceX 条目合并；不设 Cursor 独立代码。"
-  ],
-  [
-    "Registered ordinary shares, not an ADS/ADR; no ADS ratio applies. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "登记普通股，并非 ADS／ADR，不适用 ADS 换股比例。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
-  ],
-  [
-    "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
-  ],
-  [
     "Provider-style ticker notation is an identifier only; no live quote integration is established.",
     "供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
   ],
   [
-    "Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Reporting/presentation currency not independently established from a current financial statement; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "供应商后缀仅为输入格式，并不表示 Valuation Lab 已确认接入该供应商。 尚未根据当前财务报表独立核实报告／列报货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
-  ],
-  [
-    "Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "供应商后缀仅为输入格式，并不表示 Valuation Lab 已确认接入该供应商。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
-  ],
-  [
-    "Directory generic Common Stock label overridden by issuer 20-F confirming ADS instrument. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "发行人的 20-F 文件确认其为 ADS，优先于目录中的笼统普通股标签。 已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
-  ],
-  [
-    "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "尚未根据当前财务报表独立核实报告／列报货币，因此保留为空值。 供应商后缀仅为输入格式，并不表示 Valuation Lab 已确认接入该供应商。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
-  ],
-  [
-    "Nasdaq directory retains When-Issued in security title; SEC spin-off filing establishes regular-way SNDK trading since February 24, 2025. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "纳斯达克目录证券名称仍保留“发行前交易”字样；SEC 分拆文件确认 SNDK 自 2025 年 2 月 24 日起进行常规交易。 已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
-  ],
-  [
-    "Directory uses stale Holdings, LLC issuer wording; SEC issuer and filing identify Vertiv Holdings Co. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "目录仍使用过时的 Holdings, LLC 发行人名称；SEC 发行人记录及文件确认名称为 Vertiv Holdings Co。 已查阅的原始来源未明确证实该证券的报价货币，因此保留为空值。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
+    "SEC quarterly report confirms Alphawave acquisition completed December 18, 2025. Cover identifies QCOM Nasdaq common stock. Qualcomm is listed parent exposure, not a standalone Alphawave listing.",
+    "SEC 季报确认 Alphawave 收购于 2025 年 12 月 18 日完成。封面列明 QCOM 为纳斯达克普通股。Qualcomm 是上市母公司的投资敞口，不能视为 Alphawave 独立上市。"
   ],
   [
     "Atlas names a subsidiary; this entry is explicitly the listed parent, not a standalone subsidiary security. Provider-style ticker notation is an identifier only; no live quote integration is established.",
     "Atlas 提及的是子公司；此条目明确代表上市母公司，而非子公司的独立证券。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
   ],
   [
-    "Quote currency not explicitly extracted from primary source. Confirm using final prospectus or supported quote metadata before live quotes. Provider-style ticker notation is an identifier only; no live quote integration is established.",
-    "尚未从原始来源明确提取报价货币。使用实时报价前，应根据最终招股书或受支持的报价元数据予以确认。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
+    "SpaceX IR confirms June 12, 2026 IPO and SPCX trading on Nasdaq Global Select and Nasdaq Texas; offering identifies Class A common stock. xAI issuer acquisition notice establishes SpaceX relationship. This is parent exposure, not TSLA or standalone xAI.\nSEC August 14, 2026 Form 8-K states Anysphere merger became effective that day and Cursor survived as wholly owned SpaceX subsidiary. Map only as explicit parent exposure and deduplicate against xAI/SpaceX row; no standalone Cursor ticker.",
+    "SpaceX 投资者关系资料确认 2026 年 6 月 12 日首次公开发行，以及 SPCX 在纳斯达克全球精选市场和 Nasdaq Texas 交易；发行文件确认 A 类普通股。xAI 发行人的收购通知确认与 SpaceX 的关系。此处为母公司投资敞口，不是 TSLA 或独立的 xAI。\nSEC 2026 年 8 月 14 日 8-K 表格说明 Anysphere 合并于当日生效，Cursor 作为 SpaceX 全资子公司继续存在。仅明确映射至上市母公司，并与 xAI／SpaceX 条目合并；不设 Cursor 独立代码。"
   ],
   [
     "Atlas names a subsidiary; this entry is explicitly the listed parent, not a standalone subsidiary security. Provider-style ticker notation is an identifier only; no live quote integration is established. Atlas names a subsidiary; this entry is explicitly the listed parent, not a standalone subsidiary security. Provider-style ticker notation is an identifier only; no live quote integration is established.",
     "Atlas 提及的是子公司；此条目明确代表上市母公司，而非子公司的独立证券。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。 Atlas 提及的是子公司；此条目明确代表上市母公司，而非子公司的独立证券。 供应商格式的股票代码仅作标识；尚未建立实时报价连接。"
   ],
   [
-    "Current issuer stock page identifies code 5802, Tokyo listing and common shares.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check. 5802 listing is verified, but the Atlas shorthand Sumitomo does not uniquely identify this issuer. Confirm source-company mapping before automatic addition.",
-    "发行人现行股票网页确认代码 5802、东京上市及普通股。JPX 2026 年 4 月报价表佐证普通股类别及日元计价。ISO MIC 登记册确认交易所代码；相关条目早于本次核查。5802 的上市身份已核实，但 Atlas 的简称 Sumitomo 无法唯一指向此发行人。自动加入前仍需确认来源公司映射。"
-  ],
-  [
-    "Official group pages distinguish Wonik IPS, Wonik Holdings, Wonik QnC and other entities. Atlas only says Wonik; group membership does not prove the intended legal issuer. Atlas entity identity unresolved. Do not import candidate 240810.KQ without specific evidence that Atlas means Wonik IPS.",
-    "集团官网区分 Wonik IPS、Wonik Holdings、Wonik QnC 等实体。Atlas 仅写 Wonik；集团成员身份不足以证明所指法律实体。Atlas 实体身份仍待厘清。没有明确证据证明其指向 Wonik IPS 前，不应导入候选代码 240810.KQ。"
-  ],
-  [
-    "Official company profile identifies SMEE legal entity and semiconductor equipment business; no listed instrument established. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "官方公司简介确认 SMEE 法律实体及半导体设备业务；尚未确认上市证券。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Issuer report identifies Carl Zeiss Foundation as sole shareholder and explains Carl Zeiss AG shares are not exchange-listed. Semiconductor equipment is not Carl Zeiss Meditec.",
-    "发行人报告确认 Carl Zeiss Foundation 为唯一股东，并说明 Carl Zeiss AG 股份未在交易所上市。半导体设备业务不是 Carl Zeiss Meditec。"
-  ],
-  [
-    "Companies House current record identifies active private limited company, number 02920061. No current standalone exchange ticker.",
-    "英国公司注册处现行记录确认其为存续的私人有限公司，编号 02920061。当前没有独立交易所代码。"
-  ],
-  [
-    "Issuer explicitly states it is privately owned and not a public company. Ascend does not have a standalone traded ordinary share.",
-    "发行人明确声明其为私人持有，非上市公司。Ascend 没有独立交易的普通股。"
-  ],
-  [
-    "Current official profile identifies YMTC legal entity and memory business. No exchange-traded share established; do not substitute another memory company. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "当前官方简介确认 YMTC 法律实体及存储业务。尚未确认交易所上市股份；不可替换为其他存储公司。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Issuer investor overview includes October 2026 financing update and describes August 2026 facility as financing by a private neocloud. No public ticker confirmed.",
-    "发行人投资者概览包含 2026 年 10 月融资更新，并将 2026 年 8 月融资安排描述为私人新兴云服务公司的融资。未确认公开股票代码。"
-  ],
-  [
-    "Issuer announced September 17, 2026 Series F initial closing. This is private fundraising evidence, not an exchange listing. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "发行人宣布 2026 年 9 月 17 日 F 轮融资首次交割。这是私人融资证据，不是交易所上市。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Issuer July 20, 2026 announcement describes January Series A funding. No public listing or ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "发行人 2026 年 7 月 20 日公告说明 1 月的 A 轮融资。尚未核实公开上市或股票代码。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Issuer July 1, 2026 announcement describes Series C funding. It does not establish public listing. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "发行人 2026 年 7 月 1 日公告说明 C 轮融资，并不能证明公开上市。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Current issuer material explicitly describes privately held cloud infrastructure company.",
-    "发行人当前资料明确说明其为私人持有的云基础设施公司。"
-  ],
-  [
-    "SEC registration filing proposes applying to NYSE for symbol NSCL; proposal is not a trading commencement notice. Direct fetch returned error; indexed SEC filing text verified proposed wording. Issuer September 25, 2026 announcement still describes financing as pre-IPO. No primary trading commencement or completed IPO evidence found. Do not enable NSCL as a live security.",
-    "SEC 注册文件拟申请纽约证券交易所代码 NSCL；该提议不是开始交易通知。直接获取文件时出现错误；已通过索引中的 SEC 文件文本核实拟申请措辞。发行人 2026 年 9 月 25 日公告仍将融资描述为首次公开发行前融资。未找到开始交易或首次公开发行完成的原始证据。不得将 NSCL 启用为可选上市证券。"
-  ],
-  [
-    "Official company profile describes mission and capital foundation; no current exchange listing verified. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "官方公司简介说明其使命及资本基础；尚未核实当前交易所上市。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Official structure page describes OpenAI Foundation control and OpenAI Group equity structure. Equity ownership alone does not establish a public listing; no public ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "官方组织架构网页说明 OpenAI Foundation 的控制权及 OpenAI Group 股权结构。仅有股权所有权不能证明公开上市；尚未核实公开股票代码。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Issuer Series G announcement establishes private financing, not a public listing. No live symbol verified. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "发行人 G 轮公告证明私人融资，而非公开上市。尚未核实可交易代码。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Official terms identify DeepSeek operating entity. No public share ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "官方条款确认 DeepSeek 运营实体。尚未核实公开股票代码。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Issuer announcement describes Series D fundraising. No public exchange listing established. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "发行人公告说明 D 轮融资。尚未确认公开交易所上市。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Official company blog lists Series A and Series B funding. No current public listing identified; similarly named private investment vehicles are not Perplexity shares. No current public listing verified from primary sources; exclude from live ticker universe.",
-    "官方公司博客列出 A 轮和 B 轮融资。尚未确认当前公开上市；同名私人投资工具不等于 Perplexity 股份。未能从原始来源核实当前公开上市，因此不纳入可选证券范围。"
-  ],
-  [
-    "Issuer Annual Highlights 2026 explicitly identifies JetBrains as privately owned.",
-    "发行人《2026 年年度重点》明确确认 JetBrains 为私人持有。"
-  ],
-  [
-    "Nasdaq",
-    "纳斯达克"
-  ],
-  [
-    "New York Stock Exchange",
-    "纽约证券交易所"
-  ],
-  [
-    "Tokyo Stock Exchange",
-    "东京证券交易所"
-  ],
-  [
-    "Shenzhen Stock Exchange",
-    "深圳证券交易所"
-  ],
-  [
-    "Shanghai Stock Exchange",
-    "上海证券交易所"
-  ],
-  [
-    "Euronext Amsterdam",
-    "泛欧交易所阿姆斯特丹市场"
-  ],
-  [
-    "Korea Exchange KOSDAQ Market",
-    "韩国交易所 KOSDAQ 市场"
-  ],
-  [
-    "Xetra",
-    "Xetra 电子交易市场"
-  ],
-  [
-    "Korea Exchange",
-    "韩国交易所"
-  ],
-  [
-    "Hong Kong Stock Exchange",
-    "香港联合交易所"
-  ],
-  [
-    "Taipei Exchange",
-    "台北证券柜台买卖中心"
-  ],
-  [
-    "Taiwan Stock Exchange",
-    "台湾证券交易所"
-  ],
-  [
-    "Euronext Paris",
-    "泛欧交易所巴黎市场"
-  ],
-  [
-    "SIX Swiss Exchange",
-    "瑞士证券交易所"
-  ],
-  [
     "Nasdaq Global Select Market",
     "纳斯达克全球精选市场"
   ],
   [
-    "New York Registry Shares (registered ordinary shares)",
-    "纽约登记股（登记普通股）"
-  ],
-  [
-    "Common stock",
-    "普通股"
-  ],
-  [
-    "equity · common shares",
-    "权益证券 · 普通股"
-  ],
-  [
-    "Ordinary shares",
-    "普通股"
-  ],
-  [
-    "A ordinary shares",
-    "A 股普通股"
-  ],
-  [
-    "equity · ordinary shares",
-    "权益证券 · 普通股"
-  ],
-  [
-    "Equity · Common / ordinary shares",
-    "权益证券 · 普通股"
-  ],
-  [
-    "American depositary shares",
-    "美国存托股份"
-  ],
-  [
-    "equity · registered no-par-value ordinary shares",
-    "权益证券 · 无面值记名普通股"
-  ],
-  [
-    "equity · registered no-par-value shares",
-    "权益证券 · 无面值记名股"
-  ],
-  [
-    "equity · registered shares",
-    "权益证券 · 记名股"
-  ],
-  [
     "Class A common stock",
     "A 类普通股"
-  ],
-  [
-    "Sumitomo Electric Industries (likely Sumitomo laser entity)",
-    "Sumitomo Electric Industries （可能对应 Sumitomo 激光业务实体）"
-  ],
-  [
-    "Wonik IPS (likely Wonik equipment entity)",
-    "Wonik IPS （可能对应 Wonik 设备业务实体）"
-  ],
-  [
-    "Carl Zeiss semiconductor equipment",
-    "Carl Zeiss 半导体设备"
   ]
 ];

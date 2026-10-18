@@ -1,0 +1,40 @@
+{
+  "opening_acquisition_inclusive_capital_diagnostic": {
+    "formula": "July equityincludingNCI + debtface -cash/STinvestments +operatingcashreserve",
+    "amount": 37945.609,
+    "fy27_base_NOPAT": 2653.9199999999996,
+    "fy27_base_no_RD_capitalization_return": 0.06994010822174444,
+    "interpretation": "Ansysacquisitionmakespastasset-lightreturnsunrepresentative; fullyearFY2025numeratorhasonlyacquiredstub. Do notstripgoodwilltoprovehighreturns.",
+    "v3_note": "After the12% future-grant charge, initial acquisition-inclusive return is lower than v2. Opening book-like capital is unchanged; the foreign cash valuation haircut is not a change to the operating capital diagnostic."
+  },
+  "terminal_incremental_roic": {
+    "down": 0.08,
+    "base": 0.12,
+    "up": 0.15
+  },
+  "terminal_wacc_spread": {
+    "down": -0.04,
+    "base": 0.015,
+    "up": 0.055
+  },
+  "rationale": "Base12% is an analystscenario abovepostacquisitioninitialreturn, requiresgrowthandmarginexecution; cappedwellbelowsoftwareunleveredbookreturnclaims. Down8%below12%costofcapitalmodelsvalue-destructivegrowth. Up15%requirespersistentsynergiesandroyaltyvaluecapture. Explicitannualincrementalreturnsfadefrom35/50/60%to8/12/15%.",
+  "funding_crosscheck": {
+    "down": {
+      "end_FY2036_cumulative_booklike_capital": 44351.82609664544,
+      "end_FY2036_NOPAT_to_capital": 0.06619371213242108,
+      "terminal_reinvestment_rate": 0.25
+    },
+    "base": {
+      "end_FY2036_cumulative_booklike_capital": 55990.60103586747,
+      "end_FY2036_NOPAT_to_capital": 0.1286972395811224,
+      "terminal_reinvestment_rate": 0.20833333333333334
+    },
+    "up": {
+      "end_FY2036_cumulative_booklike_capital": 60828.23989306524,
+      "end_FY2036_NOPAT_to_capital": 0.17325628603494703,
+      "terminal_reinvestment_rate": 0.2
+    }
+  },
+  "limitations": "BooklikecapitalrollforwardisnotGAAPforecastanddoesnotcapitalizeR&D. IncrementalRORisnotsameaswholefirmROIC; noclaimhistoricalnumbersproveassumptions. R&DstaysfullyexpensedinDCF; maintenance/replacementR&Dnotfree. NoDCFstockpricefit.",
+  "v3_compensation_scope": "Future-grant economic cost differs from historical amortized accounting SBC. Terminal ROIC remains a judgment; neither acquisition purchase price nor accounting returns prove it achievable."
+}

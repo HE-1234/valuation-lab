@@ -1,6 +1,7 @@
+import {displayNumber} from './number-display.js';
 // Presentation only. No formatted value is ever written into a valuation draft.
 export const isFiniteNumber=value=>typeof value==='number'&&Number.isFinite(value);
-export function formatNumber(value,digits=1){return isFiniteNumber(value)?value.toLocaleString('en-US',{maximumFractionDigits:digits}):'Not computed';}
+export function formatNumber(value,digits=1){return displayNumber(value,digits,{missing:'Not computed'});}
 export function formatMoneyMillions(value,currency='USD'){
  if(!isFiniteNumber(value))return 'Not computed';
  const magnitude=Math.abs(value),unit=magnitude>=1e6?['T',1e6]:magnitude>=1e3?['B',1e3]:['M',1];

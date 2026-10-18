@@ -49828,8 +49828,8 @@ export default [
     "尝试次数"
   ],
   [
-    ", default 5,000, supported from 1 to 50,000. A trial with sampled WACC ≤ stable growth is excluded under “terminal-constraints”; numerical overflow is counted separately. There is no clamping of bad WACC to an artificially valid rate and no silent replacement drawing until the requested count is reached. The run reports attempts, accepted count, total excluded and reason counts.",
-    "，预设5,000，支援1至50,000。抽样WACC ≤ 稳定成长率的试算，以「terminal-constraints」排除；数值溢位另行计数。不会将不合格WACC夹制为人为有效的利率，也不会默默补抽直到达到要求次数。执行结果会回报尝试次数、接受次数、排除总数及各原因次数。"
+    ", default 4,000, supported from 1 to 50,000. A trial with sampled WACC ≤ stable growth is excluded under “terminal-constraints”; numerical overflow is counted separately. There is no clamping of bad WACC to an artificially valid rate and no silent replacement drawing until the requested count is reached. The run reports attempts, accepted count, total excluded and reason counts.",
+    "，预设4,000，支援1至50,000。抽样WACC ≤ 稳定成长率的试算，以「terminal-constraints」排除；数值溢位另行计数。不会将不合格WACC夹制为人为有效的利率，也不会默默补抽直到达到要求次数。执行结果会回报尝试次数、接受次数、排除总数及各原因次数。"
   ],
   [
     "All summary statistics, histogram shares and quote ranks use ",
@@ -50284,8 +50284,8 @@ export default [
     "三角分布 -1.5 / 0 / 3"
   ],
   [
-    "5,000 attempted trials; deterministic ticker-specific seed; 36 histogram bins. Those are reproducibility/display choices, not forecast-precision claims.",
-    "尝试 5,000 次试验；使用各股票专属的确定性随机种子；直方图分为 36 组。这些是重现性与显示方式的选择，并非预测精确度的宣称。"
+    "4,000 attempted trials; deterministic ticker-specific seed; 36 histogram bins. Those are reproducibility/display choices, not forecast-precision claims.",
+    "尝试 4,000 次试验；使用各股票专属的确定性随机种子；直方图分为 36 组。这些是重现性与显示方式的选择，并非预测精确度的宣称。"
   ],
   [
     "One driver vector generates a full annual path. Growth shocks fade to zero in the final explicit year; they are not independently redrawn each year. Margin and WACC shifts persist across the explicit and terminal periods.",
@@ -50892,8 +50892,8 @@ export default [
     "验证"
   ],
   [
-    "210/210 checks passed across all 14 companies. The 160 annual source rows and terminal objects are unchanged; all 368 source-file hashes match. All 70,000 default attempted trials were accepted, with no invalid exclusions. Zero exclusions means the selected bounded settings passed mathematical constraints; it does not establish economic feasibility or calibrate their probabilities.",
-    "全部 14 家公司的 210/210 项检查均通过。160 列年度来源资料与终值物件未变更；全部 368 个来源档案杂凑均相符。预设尝试的 70,000 次试验全部接受，未排除任何无效试验。零排除表示所选有界设定符合数学限制，并不代表经济上可行，也不代表其概率已经校准。"
+    "210/210 checks passed across all 14 companies. The 160 annual source rows and terminal objects are unchanged; all 368 source-file hashes match. All 56,000 default attempted trials were accepted, with no invalid exclusions. Zero exclusions means the selected bounded settings passed mathematical constraints; it does not establish economic feasibility or calibrate their probabilities.",
+    "全部 14 家公司的 210/210 项检查均通过。160 列年度来源资料与终值物件未变更；全部 368 个来源档案杂凑均相符。预设尝试的 56,000 次试验全部接受，未排除任何无效试验。零排除表示所选有界设定符合数学限制，并不代表经济上可行，也不代表其概率已经校准。"
   ],
   [
     "The validator also checks every model/simulation rationale field, explicit bridge defaults, native currency, neutral-draw reproduction, serialization and seed replay. UI load/undo/save/restore integration is tested separately by the application work.",
@@ -51092,8 +51092,8 @@ export default [
     "主观、有条件的情境不确定性，撰写于 2026-10-17。区间与频率并非实证校准概率、股价预测、预期报酬，或完整的下行情境／融资概率。"
   ],
   [
-    "5,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
-    "尝试抽样 5,000 次，在互动回应速度与合理稳定的中央分布之间取得平衡。这是数值抽样选择，并非宣称预测精准；尾端估计仍有杂讯。"
+    "4,000 attempted draws balance interactive responsiveness and a reasonably stable central distribution. This is a numerical sampling choice, not a claim of forecast precision; tail estimates remain noisy.",
+    "尝试抽样 4,000 次，在互动回应速度与合理稳定的中央分布之间取得平衡。这是数值抽样选择，并非宣称预测精准；尾端估计仍有杂讯。"
   ],
   [
     "Fixed ticker-specific seed 'aapl-research-2026-10-17-v1' makes the selected model reproducible. The seed was not selected for a preferred valuation result.",

@@ -1,3 +1,5 @@
+import {incrementalRecord} from './incremental-registry.js';
+import {incrementalBridgeDefinition,calculateIncrementalBridge,incrementalBridgeSensitivity} from './incremental-research-claims.js';
 import {calculateCurrentCapitalScenario} from './current-capital-presets.js';
 // Standalone dated capital allocations for the October 17 research operating cases.
 // This module never computes operating EV, fetches prices, or mutates raw filings.
@@ -102,7 +104,7 @@ const definitions = [
 ].map(d=>({currency:'USD',...d,sourceUrl:sources[d.ticker],informationAsOf:'2026-10-17',moneyUnit:'millions',shareUnit:'millions',classification:'Source-dated conditional capital allocation; retrospective October 17 research, not information knowable at the capital date',claimCompleteness:'partial',shareBasis:d.ticker==='TSM'?'TWD ordinary share, issuer-rounded common count':'Dated common-share allocation; additional contingent claims remain as listed'}));
 
 const sharedOptions=[numberOption('assetValueFactor','Value factor on separately listed investment assets',1,0,1),numberOption('operatingCashReserve','Cash retained outside the equity allocation',0),numberOption('additionalClaimAllowance','Explicit additional unvalued-claim sensitivity',0),numberOption('additionalDilutionShares','Explicit additional dilution sensitivity, millions',0)];
-export function researchBridgeDefinition(ticker){const d=definitions.find(x=>x.ticker===ticker);return d?clone({...d,optionDefinitions:[...sharedOptions,...(d.options||[])]}):null;}
+export function researchBridgeDefinition(ticker){if(incrementalRecord(ticker))return incrementalBridgeDefinition(ticker);const d=definitions.find(x=>x.ticker===ticker);return d?clone({...d,optionDefinitions:[...sharedOptions,...(d.options||[])]}):null;}
 export function researchBridgeDefinitions(){return definitions.map(d=>researchBridgeDefinition(d.ticker));}
 export function researchBridgeOptionDefinitions(ticker){return researchBridgeDefinition(ticker)?.optionDefinitions||[];}
 function readOptions(d,options){
@@ -125,6 +127,7 @@ export function researchPreferredDividendSchedule(discountRate=.0625){
  return rows.sort((a,b)=>a.date.localeCompare(b.date)).map(row=>({...row,presentValue:row.amount/(1+discountRate)**((Date.parse(row.date)-Date.parse('2026-06-30'))/(365.25*86400000))}));
 }
 export function calculateResearchBridge(operatingCase,operatingEV,options={}){
+ if(operatingCase?.incrementalResearch||incrementalRecord(operatingCase?.ticker))return calculateIncrementalBridge(operatingCase,operatingEV,options);
  // Opt-in current capital stays separate from every frozen source-date gate.
  // Invalid supplied scenarios fail closed; never fall back to old economics.
  if(Object.prototype.hasOwnProperty.call(operatingCase||{},'currentCapitalScenario')){
@@ -210,6 +213,7 @@ export function calculateResearchBridge(operatingCase,operatingEV,options={}){
  return {status:'conditional',eligible:true,modelId:`${d.ticker}-${d.bridgeVersion||RESEARCH_BRIDGE_VERSION}`,ticker:d.ticker,currency:d.currency,moneyUnit:'millions',operatingEV,enterprise:operatingEV,equity,rawPerShare,perShare:rawPerShare,flooredPerShare:Math.max(0,rawPerShare),equityFloor:Math.max(0,equity),allocationShares:shares,basicShares:d.shares,referenceDate:d.referenceDate,capitalReferenceDate:d.referenceDate,shareReferenceDate:d.shareDate,discountOrigin:origin,calculationDate,informationAsOf:d.informationAsOf,basisMismatch,classification:d.classification,claimCompleteness:d.claimCompleteness,securityBasis:d.shareBasis,rows,dividends,warrantClaim,assetTotal:sum('asset'),claimTotal:sum('claim'),warnings,unresolved:[...d.unresolved],sources:sourcesUsed,inputs:values,optionDefinitions:d.optionDefinitions,sourceCorrection:d.sourceCorrection||null,...(d.ticker==='LITE'?{allocationLabel:values.convertiblePremiumClaim===0?'June-dated principal-only convertible stress':d.allocationLabel,reviewPath:d.reviewPath,claimValuationMethod:'fixed-june-market-claims',claimRepricedPerTrial:false}:{}),currentCapitalVerified:false,priceComparisonEligible:false};
 }
 export function researchBridgeSensitivity(operatingCase,operatingEV,options={}){
+ if(operatingCase?.incrementalResearch||incrementalRecord(operatingCase?.ticker))return incrementalBridgeSensitivity(operatingCase,operatingEV,options);
  if(Object.prototype.hasOwnProperty.call(operatingCase||{},'currentCapitalScenario'))return []; // Legacy option variants do not describe this separate scenario.
  const d=researchBridgeDefinition(operatingCase?.ticker);if(!d)return [];
  const variants=[['Source-date reference',{}],['No credit for separately listed investment assets',{assetValueFactor:0}]];

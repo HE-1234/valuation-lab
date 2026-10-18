@@ -1,0 +1,26 @@
+{
+  "information_as_of": "2026-10-18",
+  "market_inputs": {
+    "riskfree_10y": 0.0509,
+    "date": "2026-10-16",
+    "ERP": 0.042,
+    "ERP_date": "2026-10-01",
+    "ERP_variant": "Trailing12monthadjusted payout usingunadjustedTreasury; no defaultspread doubled",
+    "software_cash_adjusted_asset_beta": 1.25,
+    "industry_date": "January2026",
+    "firms": 309
+  },
+  "analyst_inputs": {
+    "target_debt_weight": 0.2,
+    "tax_rate": 0.24,
+    "debt_spread": 0.0125,
+    "relevered_beta": 1.4874999999999998,
+    "cost_equity": 0.113375,
+    "cost_debt_pretax": 0.0634,
+    "computed_WACC": 0.1003368,
+    "selected_base": 0.105,
+    "down": 0.12,
+    "up": 0.095
+  },
+  "rationale": "System/applicationsoftwareindustryrisk proxy withlargecustomer/export/integration exposure.20%long-runfundingweight and125bpcreditspread are analystchoices, notactualmarketweight orbondcoupon. Roundedbaseup from10.03%; no sharepriceinput. NominalUSDdiscounting. OctoberopportunitycostappliedtoJulyfinancialorigin, notclaimcontemporaneousJulyWACC."
+}

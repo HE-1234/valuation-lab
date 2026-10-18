@@ -1,3 +1,4 @@
+import {assertFreshJointDefaults,preJointAnnualDefaults} from './joint-default-contract.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -13,11 +14,20 @@ const fixedCurrent=d=>Object.fromEntries(SIMULATION_DRIVER_KEYS.map(k=>[k,{type:
 const near=(a,b,tol=1e-10)=>assert.ok(Math.abs(a-b)<=tol,`${a} != ${b}`);
 
 test('annual paths: fresh defaults opt in, absent saved method stays legacy, malformed fails closed',()=>{
- assert.equal(simulationDefaults().method,'annual-path');assert.equal(simulationResearchDefaults().method,'annual-path');
+ assertFreshJointDefaults(simulationDefaults());assertFreshJointDefaults(simulationResearchDefaults());
  assert.equal(validateSimulationConfig({}).method,'legacy');assert.equal(validateResearchSimulationConfig({}).method,'legacy');
  for(const method of [null,undefined,'annual',4]){assert.throws(()=>validateSimulationConfig({method}));assert.throws(()=>validateResearchSimulationConfig({method}));}
  for(const patch of [{fixedYears:[1,1]},{fixedYears:[0]},{fixedYears:[31]},{fixedYears:[NaN]},{fixedYears:Array(2)},{innovationSD:NaN},{innovationSD:-1},{innovationSD:2.1},{persistence:1.01},{persistence:Infinity},{surprise:1}])assert.throws(()=>validateAnnualPathConfig({...annualPathDefaults(),...patch}));
  assert.throws(()=>prepareAnnualPath([.1,.03],annualPathDefaults(),{terminalGrowth:.03,terminalYear:2}));
+});
+
+test('joint default replay normalization rejects unapproved nested changes or shared annual settings',()=>{
+ const original=simulationDefaults(),before=structuredClone(original),prior=preJointAnnualDefaults(original);
+ assert.deepEqual(original,before);
+ assert.deepEqual(prior,{...Object.fromEntries(Object.entries(before).filter(([key])=>key!=='jointAnnual')),method:'annual-path'});
+ for(const change of [c=>c.jointAnnual.version=2,c=>c.jointAnnual.terminalMode='different',c=>c.jointAnnual.loadings.growth=.2,c=>c.jointAnnual.observations.push({metric:'growth',year:4,value:.1,sd:.02}),c=>c.jointAnnual.annualPath.innovationSD=.2,c=>c.jointAnnual.extra=true,c=>c.jointAnnual.annualPath.fixedYears=c.annualPath.fixedYears]){
+  const config=simulationDefaults();change(config);assert.throws(()=>preJointAnnualDefaults(config));
+ }
 });
 
 test('annual paths: exact fixed anchors, terminal holds and SD zero across 10/15/20/30 years',()=>{
@@ -46,7 +56,7 @@ test('annual paths: future conditioning matches independent Gaussian covariance 
 });
 
 test('annual paths: current sampled growth replays through full claims adapter; no scalar double sampling',async()=>{
- const s=snapshot(),d=draft(),c={...simulationDefaults(d.assumptions),trials:60,drivers:fixedCurrent(d)};
+ const s=snapshot(),d=draft(),c={...simulationDefaults(d.assumptions),method:'annual-path',trials:60,drivers:fixedCurrent(d)};
  const r=simulateCurrent(s,d,c);assert.equal(r.accepted,60);assert.equal(r.annualPaths.preview.length,12);
  for(const x of r.scenarios){const a={...d.assumptions,[ANNUAL_GROWTH_PATH]:x.growthPath};const v=valueCurrentWithClaims(s,d,a);assert.equal(x.perShare,v.perShare);for(const year of [1,2,3,10])assert.equal(x.growthPath[year-1],r.baseline.rows[year-1].growth);}
  const alternate=structuredClone(c);alternate.drivers.growth={type:'uniform',low:-.5,high:1};
@@ -58,25 +68,25 @@ test('annual paths: current sampled growth replays through full claims adapter; 
 
 test('annual paths: research SD zero preserves every reviewed revenue and value exactly; terminal continuation separate',async()=>{
  for(const company of companies){
-  const d=researchDraftFor(company),c={...simulationResearchDefaults(),trials:2,annualPath:{...annualPathDefaults(),innovationSD:0}};
+  const d=researchDraftFor(company),c={...simulationResearchDefaults(),method:'annual-path',trials:2,annualPath:{...annualPathDefaults(),innovationSD:0}};
   const r=simulateResearch(d,c);assert.equal(r.accepted,2);assert.equal(r.mean,calculateResearchOperating(d).enterprise,company.ticker);
   assert.equal(r.annualPaths.terminalYear,d.annual.length+1);assert.equal(r.annualPaths.terminalGrowth,d.terminal.growth);
  }
- const d=researchDraftFor(companies[0]),c={...simulationResearchDefaults(),trials:50},r=simulateResearch(d,c);
+ const d=researchDraftFor(companies[0]),c={...simulationResearchDefaults(),method:'annual-path',trials:50},r=simulateResearch(d,c);
  assert.equal(r.accepted,50);assert.deepEqual(await simulateResearchAsync(d,c,{chunkSize:7,yieldControl:async()=>{}}),r);
  const alternate=structuredClone(c);alternate.drivers.growthPremium={type:'uniform',low:-2,high:2};assert.deepEqual(simulateResearch(d,alternate).samples,r.samples);
  assert.deepEqual(researchAnnualPathContext(d).baseline,r.annualPaths.baseline);
 });
 
 test('annual paths: invalid growth draws excluded without replacement and seed replay exact',()=>{
- const s=snapshot(),d=draft(),c={...simulationDefaults(d.assumptions),trials:300,drivers:fixedCurrent(d),annualPath:{fixedYears:[],innovationSD:2,persistence:0}};
+ const s=snapshot(),d=draft(),c={...simulationDefaults(d.assumptions),method:'annual-path',trials:300,drivers:fixedCurrent(d),annualPath:{fixedYears:[],innovationSD:2,persistence:0}};
  const a=simulateCurrent(s,d,c),b=simulateCurrent(s,d,c);assert.deepEqual(a,b);assert.equal(a.attempts,300);assert.ok(a.excluded>0);assert.equal(a.accepted+a.excluded,300);assert.ok(a.exclusions['annual-growth-bounds']>0);
 });
 
 test('annual paths: short current horizons get valid fresh fixed years and a terminal continuation when required',()=>{
  for(const years of [1,2]){
   const d=draft();d.assumptions.years=years;
-  const c={...simulationDefaults(d.assumptions),trials:2,drivers:fixedCurrent(d)};
+  const c={...simulationDefaults(d.assumptions),method:'annual-path',trials:2,drivers:fixedCurrent(d)};
   assert.deepEqual(c.annualPath.fixedYears,Array.from({length:years},(_,i)=>i+1));
   const r=simulateCurrent(snapshot(),d,c);assert.equal(r.accepted,2);assert.equal(r.mean,calculateCurrent(snapshot(),d).perShare);
   if(years===1)assert.equal(r.annualPaths.terminalYear,2);
@@ -93,7 +103,7 @@ test('annual paths: research derived horizons hold stable growth beyond maturity
  assert.equal(researchAnnualPathContext(margin).terminalYear,source.annual.length+1);
  for(const maturity of [10,15,20]){
   const d=deriveAnnualGrowthHorizon(margin,company,{growthMaturityYear:maturity});
-  const config={...simulationResearchDefaults(d),trials:3};
+  const config={...simulationResearchDefaults(d),method:'annual-path',trials:3};
   const r=simulateResearch(d,config);assert.equal(r.accepted,3);assert.equal(r.annualPaths.terminalYear,maturity);
   for(const scenario of r.scenarios){
    for(let i=maturity-1;i<d.annual.length;i++)assert.equal(scenario.growthPath[i],r.annualPaths.baseline[i]);
@@ -108,7 +118,7 @@ test('annual paths: research derived horizons hold stable growth beyond maturity
 
 test('annual paths: fixing every research year exactly reproduces deterministic value even with nonzero SD',()=>{
  for(const company of companies){
-  const d=researchDraftFor(company),c={...simulationResearchDefaults(d),trials:2};
+  const d=researchDraftFor(company),c={...simulationResearchDefaults(d),method:'annual-path',trials:2};
   c.annualPath.fixedYears=d.annual.map((_,i)=>i+1);
   const r=simulateResearch(d,c);assert.equal(r.mean,calculateResearchOperating(d).enterprise,company.ticker);
  }

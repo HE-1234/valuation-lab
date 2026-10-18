@@ -35,7 +35,8 @@ function unitFor(input) {
   const legend = input.closest('fieldset')?.querySelector('legend')?.textContent || input.closest('label')?.textContent || '';
   return /%/.test(legend) ? '%' : /×/.test(legend) ? '×' : '';
 }
-const signed = (d, dec) => (d > 0 ? '+' : d < 0 ? '−' : '±') + fmt(Math.abs(d), dec);
+const display = value => Number(value).toLocaleString('en-US', {maximumFractionDigits: 2, useGrouping: false, notation: value !== 0 && Math.abs(value) < .01 ? 'scientific' : 'standard'}).replace('E', 'e');
+const signed = (d, dec) => (d > 0 ? '+' : d < 0 ? '−' : '±') + display(Math.abs(d));
 
 /* ---------- drag-to-adjust numbers ---------- */
 const SCRUB = [
@@ -59,17 +60,17 @@ function scrubSpec(input) {
     const digits = Number(input.dataset.displayDigits) || 0;
     return {
       start, step, dec: Math.max(pct ? 2 : 0, decimals(start)), min: -Infinity, max: Infinity, unit: pct ? '%' : '',
-      settle: () => { input.value = Number(input.dataset.raw).toLocaleString('en-US', {maximumFractionDigits: digits}); }
+      settle: () => { input.value = Number(input.dataset.raw).toLocaleString('en-US', {maximumFractionDigits: Math.min(2, digits)}); }
     };
   }
   return {
-    start: Number(input.value) || 0,
+    start: input.dataset?.precisionValue !== undefined && input.dataset.precisionValue !== '' ? Number(input.dataset.precisionValue) * Number(input.dataset.precisionScale || 1) : Number(input.value) || 0,
     step: Number(input.step) || 1,
-    dec: Math.max(decimals(input.step || 1), decimals(Number(input.value) || 0)),
+    dec: Math.max(decimals(input.step || 1), decimals(input.dataset?.precisionValue !== undefined && input.dataset.precisionValue !== '' ? Number(input.dataset.precisionValue) * Number(input.dataset.precisionScale || 1) : Number(input.value) || 0)),
     min: input.min === '' ? -Infinity : Number(input.min),
     max: input.max === '' ? Infinity : Number(input.max),
     unit: unitFor(input),
-    settle: () => {}
+    settle: () => { if (input.dataset?.precisionValue !== undefined) input.onblur?.(); }
   };
 }
 
@@ -92,7 +93,7 @@ document.addEventListener('pointerdown', e => {
     const next = Math.min(max, Math.max(min, start + Math.round(dx / perStep) * step));
     const text = fmt(next, dec);
     const r = input.getBoundingClientRect();
-    showBubble(r.left + r.width / 2, r.top, `${fmt(next, dec)}${unit}`, next !== start ? signed(next - start, dec) : '');
+    showBubble(r.left + r.width / 2, r.top, `${display(next)}${unit}`, next !== start ? signed(next - start, dec) : '');
     if (input.value !== text) {
       input.value = text;
       input.dispatchEvent(new Event('input', {bubbles: true}));
@@ -122,7 +123,7 @@ function bubbleForRange(range, delta = true) {
   const x = r.left + 9 + t * (r.width - 18);
   const dec = decimals(range.step || 1);
   const s = rangeStart.get(range);
-  showBubble(x, r.top - 4, `${fmt(v, dec)}${unitFor(range)}`, delta && s !== undefined && s !== v ? signed(v - s, dec) : '');
+  showBubble(x, r.top - 4, `${display(v)}${unitFor(range)}`, delta && s !== undefined && s !== v ? signed(v - s, dec) : '');
 }
 document.addEventListener('pointerdown', e => {
   const range = on() && e.target.closest?.(RANGES);
@@ -199,7 +200,7 @@ function drawHistory(card) {
   const bw = W / points.length;
   const bars = points.map((p, i) => {
     const top = Math.min(y(p.value), y(0)), h = Math.max(1, Math.abs(y(p.value) - y(0)));
-    return `<rect x="${(i * bw + bw * .2).toFixed(1)}" y="${top.toFixed(1)}" width="${(bw * .6).toFixed(1)}" height="${h.toFixed(1)}" class="${i === points.length - 1 ? 'is-latest' : ''}"><title>${p.label}: ${p.value}${unit}</title></rect>`;
+    return `<rect x="${(i * bw + bw * .2).toFixed(1)}" y="${top.toFixed(1)}" width="${(bw * .6).toFixed(1)}" height="${h.toFixed(1)}" class="${i === points.length - 1 ? 'is-latest' : ''}"><title>${p.label}: ${display(p.value)}${unit}</title></rect>`;
   }).join('');
   const uy = y(user).toFixed(1);
   const dec = decimals(input.step || 1);
@@ -212,9 +213,9 @@ function drawHistory(card) {
         ${bars}
         <line x1="0" x2="${W}" y1="${uy}" y2="${uy}" class="rx-you"/>
       </svg>
-      <span class="rx-you-label${uy < 20 ? ' is-below' : ''}" style="top:${(uy / H * 100).toFixed(1)}%">You ${fmt(user, dec)}${unit}</span>
+      <span class="rx-you-label${uy < 20 ? ' is-below' : ''}" style="top:${(uy / H * 100).toFixed(1)}%">You ${display(user)}${unit}</span>
     </span>
-    <span class="rx-history-foot"><span>${short(points[0].label)}</span><span>${short(latest.label)} <b>${latest.value}${unit}</b> · ${Math.abs(above) < 1e-9 ? 'same as you' : `you are ${fmt(Math.abs(above), 1)}${unit === '%' ? ' pts' : unit} ${above > 0 ? 'above' : 'below'}`}</span></span>`;
+    <span class="rx-history-foot"><span>${short(points[0].label)}</span><span>${short(latest.label)} <b>${display(latest.value)}${unit}</b> · ${Math.abs(above) < 1e-9 ? 'same as you' : `you are ${fmt(Math.abs(above), 1)}${unit === '%' ? ' pts' : unit} ${above > 0 ? 'above' : 'below'}`}</span></span>`;
 }
 
 /* ---------- result feedback: a change chip on the key-figures panel ---------- */
