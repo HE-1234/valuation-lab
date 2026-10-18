@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · 120-question learning bank
+
+- Added 120 independently reviewed English/Simplified Chinese valuation questions, including 65 independently recomputed numeric questions. Each has four distinct options, answer-specific feedback, an explanation and primary-source references. Exact bank bytes are bound to the completed review manifest.
+- Every explicit Learn click draws ten fresh questions, including clicking Learn while already there. A shuffled local-device deck exhausts the bank before repeating; cycle boundaries contain no duplicate question. New 10 provides the same action, while language changes and history navigation preserve the active set.
+- Added scoring, review, stable randomized options, accessible feedback and storage-failure recovery. Kept all six original interactive examples separately accessible. No company assumptions, valuation engines or simulations are changed by quizzes.
+- Independent runtime stress covered 94,050 draws and 12,060 complete cycles; every bank question was rendered in both languages. Static mobile/desktop and worst-case text checks passed; native browser smoke follows publication.
+
 ## 2026-10-18 · Applied Materials incremental case
 
 - Added AMAT with a separate versioned research package, three funded scenarios, ten-year reference history and ten editable capital-claim assumptions. Values reproduce $220.98869002 base, $108.97969775 downcycle and $316.12505686 upside at the July 26, 2026 financial origin using October 18 information. These are conditional dated scenarios, not current price targets or point-in-time backtests.

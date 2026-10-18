@@ -15,6 +15,7 @@ For a loopback-only local preview, run `python3 -m http.server 8080 --bind 127.0
 ## Current interface and uncertainty model
 
 - The approved Annual Report design supports English and Simplified Chinese with a corner language button and six themes.
+- Learn draws ten fresh questions on every explicit Learn click, with a reviewed bilingual bank, browser-local nonrepeating progress and the six original interactive examples preserved separately. See [learning questions](LEARNING-QUIZ.md).
 - Monte Carlo runs only through Run simulation. Editing, reset and Undo leave results stale until explicitly rerun; Cancel invalidates in-flight results.
 - Future annual growth, margin, tax, WACC and capital inputs have separate uncertainty controls. Derived revenue/cash flow is not sampled twice. See [annual uncertainty](ANNUAL-METRIC-UNCERTAINTY.md).
 - Year-by-year charts show revenue and unlevered FCFF growth for every forecast year. Zero/negative cash-flow transitions have explicit labels. OCF is not separately forecast and is not inferred from net reinvestment.
