@@ -80,7 +80,7 @@ test('research: standalone locale changes restore original accessible labels wit
  const attrs={'aria-label':'Evidence records'},node={isConnected:true,getAttribute:k=>attrs[k]??null,setAttribute:(k,v)=>attrs[k]=v};
  let button;
  globalThis.document={documentElement:{lang:'en'},body:{append:n=>button=n},getElementById:()=>button,createElement:()=>({dataset:{},setAttribute(){}}),querySelector:()=>null,querySelectorAll:s=>s==='[aria-label]'?[node]:[]};
- globalThis.location={pathname:new URL('../dist/data/test.html',import.meta.url).pathname};
+ globalThis.location={pathname:new URL('../dist/data/test',import.meta.url).pathname};
  globalThis.fetch=async url=>({ok:true,json:async()=>String(url).endsWith('coverage.json')?{pages:[{page:'data/test.html',complete:true}]}:{}});
  try{
   setLocale('en');await import('../dist/research-page-i18n.js?accessible-label-test');
@@ -115,4 +115,12 @@ test('research: failed translation loading keeps English body language and Chine
  globalThis.location={pathname:'/data/test.html'};globalThis.fetch=async()=>{throw Error('Offline');};console.warn=()=>{};
  try{setLocale('zh-Hant');await import('../dist/research-page-i18n.js?failed-load-test');assert.equal(source.textContent,'Original research remains readable');assert.equal(bodyAttrs.lang,'en');assert.equal(notices[0].attrs.lang,'zh-Hant');assert.match(notices[0].textContent,/無法載入/);setLocale('en');assert.equal(notices[0].hidden,true);assert.equal(bodyAttrs.lang,'en');}
  finally{console.warn=warn;setLocale(previous);for(const [key,value]of Object.entries(saved))if(value===undefined)delete globalThis[key];else globalThis[key]=value;}
+});
+
+test('research: coverage matches only exact known HTML or extensionless routes, including encoded paths',async()=>{
+ const {researchPageCoverageForPath:find}=await import('../dist/research-page-route.js');
+ const page={page:'data/renewed-research-2026-10-17/evidence-NBIS.html',complete:true};
+ for(const path of ['/site/data/renewed-research-2026-10-17/evidence-NBIS.html','/site/data/renewed-research-2026-10-17/evidence-NBIS','/site/data/renewed-research-2026-10-17/evidence-%4eBIS','/site/data/renewed-research-2026-10-17/evidence-NBIS%2Ehtml'])assert.equal(find([page],path,'/site/'),page);
+ assert.equal(find([page],'/my%20site/data/renewed-research-2026-10-17/evidence-NBIS','/my%20site/'),page);
+ for(const path of ['/other/data/renewed-research-2026-10-17/evidence-NBIS','/site/data/renewed-research-2026-10-17/evidence-NBIS-extra','/site/data/renewed-research-2026-10-17/evidence-NBIS/','/site/data/renewed-research-2026-10-17/evidence-nbis','/site/data/renewed-research-2026-10-17/evidence-NBIS%'])assert.equal(find([page],path,'/site/'),undefined);
 });

@@ -3,6 +3,7 @@ import {registerCatalog,localizeMarkedNodes,bindText,bindAttribute,getLocale,onL
 import {mountLocaleControl} from './i18n-control.js';
 import attributePairs from './locales/research-page-attributes.js';
 import {markOriginalResearchLanguage} from './research-page-language.js';
+import {researchPageCoverageForPath} from './research-page-route.js';
 const attributeEntries=Object.entries(attributePairs);
 registerCatalog('research-page-attributes',{en:Object.fromEntries(attributeEntries.map(([en],i)=>['label'+i,en])),'zh-Hant':Object.fromEntries(attributeEntries.map(([,zh],i)=>['label'+i,zh]))});
 const attributeKeys=new Map(attributeEntries.map(([en],i)=>[en,'research-page-attributes.label'+i]));
@@ -29,8 +30,7 @@ try {
  const titleKey=title&&Object.keys(en).find(key=>en[key]===title.textContent);
  if(titleKey)bindText(title,`research-pages.${titleKey}`);
  const rootURL=new URL('./',import.meta.url);
- const page=decodeURIComponent(location.pathname).slice(decodeURIComponent(rootURL.pathname).length);
- const pageCoverage=coverage.pages.find(item=>item.page===page);
+ const pageCoverage=researchPageCoverageForPath(coverage.pages,location.pathname,rootURL.pathname);
  partial=pageCoverage?.complete!==true;
  if(title&&!titleKey&&pageCoverage?.missingEnglishText?.includes(title.textContent))title.setAttribute('lang','en');
  originalQuotations=markOriginalResearchLanguage(document,pageCoverage?.missingEnglishText||[],Object.keys(en).filter(key=>en[key]===zh[key]).map(key=>en[key]));

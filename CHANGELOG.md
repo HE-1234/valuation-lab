@@ -1,5 +1,9 @@
 # Change log
 
+## 2026-10-18 · Canonical research-route status fix
+
+Native cloud-browser verification found that Sites removes `.html` from research URLs. Added exact inventoried extensionless-route matching so fully translated pages no longer show an incorrect incomplete-translation notice. English/Chinese research round trips preserve original numeric values. All 32 affected locale, source-preservation and route tests pass; no financial data or calculation changes.
+
 ## 2026-10-18 · Complete authored research translation and accessibility review
 
 - Completed Traditional Chinese overlays for all 26 research pages: all 12,750 inventoried segments covered, with 11,294 translations and 1,456 reviewed retained names, identifiers, formulas and original evidence. Original source quotations remain clearly identified; external source documents and user notes stay original.
