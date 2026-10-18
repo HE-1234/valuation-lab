@@ -4,6 +4,7 @@
 
 - Limited the active directory to 45 additional U.S.-exchange-listed equities with individually verified public Robinhood support, alongside the original fourteen researched companies. U.S.-listed foreign issuers and ADRs remain eligible; nationality is not a filter.
 - Removed 54 foreign-exchange-only selections and twenty private/unresolved coverage entries from search and presentation. Runtime admission also rejects stale unsupported entries.
+- Made the AAOI missing-debt-review regression self-contained using only already-published raw facts in a temporary test fixture. All original withholding assertions remain, with added positive controls and explicit seven-year coverage; no production model or source data changed.
 - Broker support links disclose that public product availability does not verify a particular account’s eligibility. No new valuation numbers were invented.
 - Removed six exclusively foreign-listing local research files from active research storage into recoverable storage, with hashes and a recovery manifest. No foreign-company valuation dossiers existed; shared source records remain intact. This relocation does not reclaim disk space.
 
