@@ -1,3 +1,5 @@
+import {hasResearchReferencePolicy} from './research-reference-defaults.js';
+import {referenceStatusMessage} from './research-reference-status.js';
 import {SNPS_STUB_NOTE,SNPS_FUNDING_NOTE} from './snps-research-view.js';
 import {CDNS_STUB_NOTE} from './cdns-research-view.js';
 import {incrementalFundingHTML} from './incremental-research-view.js';
@@ -25,6 +27,7 @@ export function annualResearchSimulationAdapter(draft){
  const effectiveConfig=config=>derived&&config&&typeof config==='object'&&!Array.isArray(config)?{...config,capitalPolicy:DERIVED_CAPITAL_POLICY}:config;
  const descriptions=draft.marginPath?.enabled===true?{...RESEARCH_SIMULATION_DRIVER_DESCRIPTIONS,marginShift:'Keep the starting margin fixed; shift interim and terminal targets together. Each annual margin receives its calendar-year curve change, preserving manual row offsets and margin dates.'}:RESEARCH_SIMULATION_DRIVER_DESCRIPTIONS;
  const adapter={
+  ...(hasResearchReferencePolicy(draft)?{referenceStatusMessage:config=>referenceStatusMessage(config,researchAnnualPathContext(draft),value=>{const checked=effectiveConfig(validateResearchSimulationConfig(value));if(!derived&&checked.capitalPolicy===DERIVED_CAPITAL_POLICY)throw Error('Derived capital policy requires a version-2 annual horizon draft.');return checked;})}:{}),
   id:'annual-research',idPrefix:'research-',savedConfig:draft.researchSimulationConfig,captureDraft:()=>structuredClone(draft),
   labels:RESEARCH_SIMULATION_DRIVER_LABELS,annualPathContext:()=>researchAnnualPathContext(draft),
   tabNames:{growthPremium:'Growth',marginShift:'Margin shift',investmentMultiplier:'Investment',waccShift:'WACC shift'},
@@ -58,6 +61,7 @@ export function annualResearchSimulationAdapter(draft){
  };
  const originalRelationships=adapter.relationshipsMarkup;adapter.relationshipsMarkup=config=>{let html=originalRelationships(config);if(fnClaims)html=html.replace(/<p class="micro" data-i18n="annual.copy.117dfa8850c4">[\s\S]*?<\/p>/,`<p class="micro">${annualTextHTML('FN investment factors apply to pre-reserve investment excluding the fixed opening payable. Required-cash changes are derived separately from the same sampled revenue path.')}</p>`).replace(/<p class="micro" data-i18n="annual.copy.8a63274d15ce">[\s\S]*?<\/p>/,`<p class="micro">${annualTextHTML('Investment inputs and draws are before required-cash changes. The fixed 3% reserve policy can fund cash growth or release cash as next-year sales change; the opening payable settlement remains fixed.')}</p>`);if(draft.ticker==='SNPS')html=html.replace(/<p class="micro" data-i18n="annual.copy.8a63274d15ce">[\s\S]*?<\/p>/,`<p class="micro">${annualTextHTML('SNPS capital responses and draws change entered investment before the separate FY2027 floor top-up. Entered releases retain their sign, but funded FY2027 investment cannot fall below the selected analyst floor. Later years have no such floor; falling revenue does not automatically create a capital release.')}</p>`);return (draft.ticker==='SNPS'?`<p class="research-warning">${annualTextHTML(SNPS_FUNDING_NOTE)}</p>`:'')+incrementalFundingHTML(draft)+html;};
  function presentationMessage(field){
+  if(hasResearchReferencePolicy(draft)&&['introduction','defaultNote'].includes(field))return {key:'annualReference.'+field.replace('defaultNote','defaults'),params:{}};
   if(draft.openingStub&&field==='fixedNote')return annualMessage(draft.ticker==='SNPS'?SNPS_STUB_NOTE:CDNS_STUB_NOTE);
   if(fnClaims&&field==='fixedNote')return annualMessage(fnNote);
   if(draft.incrementalResearch&&['introduction','defaultNote'].includes(field))return annualMessage(adapter[field]);

@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-18 · Explicit uncertainty reference settings
+
+- Fresh or explicitly reset research settings for KLAC, AMAT, LRCX, ASML, FN, CDNS and SNPS no longer preselect forecast years as exact user anchors. Zero-width reference assumptions, mandatory terminal conditions and fixed source stubs remain intact.
+- Added English/Simplified Chinese status explaining when settings are an uncalibrated single-value reference, contain analyst-defined uncertainty, or require correction. It follows only active parameters and distinguishes annual and scalar methods.
+- Placed this explanation in normal flow above Run, avoiding the chart's idle-status overlay. Input edits retain focus and require explicit Run; stale result behavior is unchanged.
+- Existing saved anchors/settings, seeds, notes, explicit research loading and Undo remain intact. Original fourteen company defaults, frozen research data and sampler mathematics are unchanged.
+- Final full suite: 1,685 passed, zero failed, one pre-existing raw-cache skip. Duplicate aggregate attempts encountered process contention; the complete final suite passed with concurrency two and no test exclusions. Independent source, numerical and state checks passed; browser and static verification are reported separately.
+
 ## 2026-10-18 · Synopsys dated research and investment-floor clarity
 
 - Added SNPS's reviewed July-origin scenarios with historical references and explicitly conditional allocations of approximately $50.10/$188.12/$364.31. Assumed award inventories, asset recovery and residual claims remain visible; current-price comparisons stay gated.
