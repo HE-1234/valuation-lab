@@ -1,0 +1,80 @@
+{
+  "baseline": "119fc37e694b557ef88831b21ef5cfc04b1731c0",
+  "scope": "Exact reviewed CDNS-only dispatch, immutable stub and export hooks. Every changed line is locked; no wildcard stripping. Existing FN prose substitutions remain independently required.",
+  "files": {
+    "dist/incremental-registry.js": [
+      {
+        "reviewedAdditiveLine": "import {cdnsRegistry} from './cdns-research-registry.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": "export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry,cdnsRegistry]);\n",
+        "originalLine": "export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry]);\n"
+      }
+    ],
+    "dist/incremental-research-claims.js": [
+      {
+        "reviewedAdditiveLine": "import {calculateCdnsBridge} from './cdns-research-claims.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " if(incrementalRecord(d?.ticker)?.bridge.type==='cdns-v3')return calculateCdnsBridge(d,enterprise,options);\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " return b.options.flatMap(field=>(b.type==='cdns-v3'?field.listedStressValues:[field.min,field.max]).filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));\n",
+        "originalLine": " return b.options.flatMap(field=>[field.min,field.max].filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));\n"
+      }
+    ],
+    "dist/research-model.js": [
+      {
+        "reviewedAdditiveLine": "import {calculateCdnsOperating,cdnsOpeningStubIssues} from './cdns-opening-stub.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),...(c.openingStub?{openingStub:copy(c.openingStub)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};\n",
+        "originalLine": " return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};\n"
+      },
+      {
+        "reviewedAdditiveLine": " errors.push(...incrementalDraftIssues(d),...cdnsOpeningStubIssues(d));\n",
+        "originalLine": " errors.push(...incrementalDraftIssues(d));\n"
+      },
+      {
+        "reviewedAdditiveLine": " if(!object(value)||!terminalReviewIdentityValid(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||(value.anchor?.revenue!==c.anchor.revenue&&!(value.ticker==='CDNS'&&!cdnsOpeningStubIssues(value).length)))return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};\n",
+        "originalLine": " if(!object(value)||!terminalReviewIdentityValid(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};\n"
+      },
+      {
+        "reviewedAdditiveLine": " if(d.openingStub)return calculateCdnsOperating(d);\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": " if(d.openingStub)return {status:'incomplete',enterprise:null,message:'CDNS source H2 timing is fixed. A different valuation date requires a newly reviewed partial-period operating and capital bridge.'};\n",
+        "originalLine": ""
+      }
+    ],
+    "dist/research-simulation.js": [
+      {
+        "reviewedAdditiveLine": "   bridgeStatus:bridge.status,...(bridgeEligible?{claims:{allocationShares:bridge.allocationShares,assetTotal:bridge.assetTotal,claimTotal:bridge.claimTotal,warrantClaim:bridge.warrantClaim,...(bridge.claimAllocationModel==='cdns-conditional-full-participation-v3'?{claimAllocationModel:bridge.claimAllocationModel,allocationUnits:bridge.allocationUnits,assumedAwardUnits:bridge.assumedAwardUnits,assumedAwardEquity:bridge.assumedAwardEquity,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,allocationResidual:bridge.allocationResidual}:{}),...(bridge.claimAllocationModel==='fn-joint-european-v1'?{claimAllocationModel:bridge.claimAllocationModel,awardClaim:bridge.awardClaim,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,openingOperatingCashReserve:bridge.openingOperatingCashReserve,allocationResidual:bridge.allocation.residual}:{})}}:{})});\n",
+        "originalLine": "   bridgeStatus:bridge.status,...(bridgeEligible?{claims:{allocationShares:bridge.allocationShares,assetTotal:bridge.assetTotal,claimTotal:bridge.claimTotal,warrantClaim:bridge.warrantClaim,...(bridge.claimAllocationModel==='fn-joint-european-v1'?{claimAllocationModel:bridge.claimAllocationModel,awardClaim:bridge.awardClaim,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,openingOperatingCashReserve:bridge.openingOperatingCashReserve,allocationResidual:bridge.allocation.residual}:{})}}:{})});\n"
+      },
+      {
+        "reviewedAdditiveLine": "  warnings,method:{...(d.openingStub?{openingStub:structuredClone(d.openingStub),annualReference:structuredClone(d.anchor),openingStubPolicy:'Selected H2 cash flows and WACC fixed; only FY2027 onward is edited or sampled. Source whole-curve WACC sensitivities differ.'}:{}),distribution:'Shared fixed, triangular, uniform or conditionally truncated normal inverse CDF',random:'FNV-1a seed hash / Mulberry32',\n",
+        "originalLine": "  warnings,method:{distribution:'Shared fixed, triangular, uniform or conditionally truncated normal inverse CDF',random:'FNV-1a seed hash / Mulberry32',\n"
+      }
+    ],
+    "dist/research-simulation-view.js": [
+      {
+        "reviewedAdditiveLine": "import {CDNS_STUB_NOTE} from './cdns-research-view.js';\n",
+        "originalLine": ""
+      },
+      {
+        "reviewedAdditiveLine": "  fixedNote:draft.openingStub?CDNS_STUB_NOTE:`Taxes, terminal growth, terminal ROIC, the forecast horizon, timing-stub inputs and selected capital assumptions remain fixed. ${fnClaims?fnNote:optionClaims?'AAOI note and customer-warrant claim values are repriced from operating value in every trial.':'Selected claim amounts remain fixed in this bridge.'} Terminal investment still follows NOPAT \u00d7 growth / ROIC. Funding deficits are never deducted again as debt.`,\n",
+        "originalLine": "  fixedNote:`Taxes, terminal growth, terminal ROIC, the forecast horizon, timing-stub inputs and selected capital assumptions remain fixed. ${fnClaims?fnNote:optionClaims?'AAOI note and customer-warrant claim values are repriced from operating value in every trial.':'Selected claim amounts remain fixed in this bridge.'} Terminal investment still follows NOPAT \u00d7 growth / ROIC. Funding deficits are never deducted again as debt.`,\n"
+      },
+      {
+        "reviewedAdditiveLine": "  if(draft.openingStub&&field==='fixedNote')return annualMessage(CDNS_STUB_NOTE);\n",
+        "originalLine": ""
+      }
+    ]
+  }
+}

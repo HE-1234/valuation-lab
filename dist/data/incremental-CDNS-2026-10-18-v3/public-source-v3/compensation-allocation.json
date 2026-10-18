@@ -1,0 +1,89 @@
+{
+  "purpose": "Separate already-granted award allocation from recurring economic cost of grants made after the June 30 origin. All amounts USD millions/shares millions unless stated.",
+  "historical_new_grant_value_proxies": [
+    {
+      "year": 2023,
+      "restricted_granted": 1.546,
+      "restricted_grant_fv_per_share": 233.78,
+      "options_granted": 0.261837,
+      "option_grant_fv": 71.83,
+      "espp_shares_purchased": 0.647,
+      "espp_right_fv": 50.95,
+      "revenue": 4089.986,
+      "sources": [
+        "CDNS-033 restricted rollforward",
+        "CDNS-046 Note 9 options and ESPP",
+        "CDNS-023 p34 options count"
+      ],
+      "gross_value_proxy": 413.19628171,
+      "pct_revenue": 0.10102633155957014
+    },
+    {
+      "year": 2024,
+      "restricted_granted": 1.573,
+      "restricted_grant_fv_per_share": 310.81,
+      "options_granted": 0.212114,
+      "option_grant_fv": 103.79,
+      "espp_shares_purchased": 0.548,
+      "espp_right_fv": 65.5,
+      "revenue": 4641.264,
+      "sources": [
+        "CDNS-032 restricted rollforward",
+        "CDNS-046 Note 9 options and ESPP",
+        "CDNS-023 p34 options count"
+      ],
+      "gross_value_proxy": 546.8134420599999,
+      "pct_revenue": 0.11781562997924702
+    },
+    {
+      "year": 2025,
+      "restricted_granted": 2.341,
+      "restricted_grant_fv_per_share": 181.08,
+      "options_granted": 0,
+      "option_grant_fv": 0,
+      "espp_shares_purchased": 0.507,
+      "espp_right_fv": 87.92,
+      "revenue": 5296.759,
+      "sources": [
+        "CDNS-046 Note 9"
+      ],
+      "gross_value_proxy": 468.48372000000006,
+      "pct_revenue": 0.0884472410392846
+    }
+  ],
+  "proxy_limitations": "Gross quantity times weighted grant-date fair value, before forfeitures. ESPP purchase quantities proxy grant quantities across overlapping offerings; performance accounting quantities are not maximum contractual settlement units. These are approximate annual grant-value proxies, neither exact total grants nor amortized GAAP expense.",
+  "reported_2026_02_19": {
+    "issued_unvested_incentive_stock": 1.686228,
+    "unissued_rsu_psu_ltp_maximum": 4.475463,
+    "including_vested_unsettled_ltp": 0.338474,
+    "options_outstanding": 0.994747,
+    "weighted_option_strike_usd": 193.12,
+    "weighted_remaining_option_life_years": 3.37,
+    "common_excluding_unvested_issued_stock": 271.187419,
+    "source": "CDNS-023 proxy printed pp34\u201335"
+  },
+  "reported_2025_12_31": {
+    "unissued_time_rsu": 0.895873,
+    "unissued_performance_rsu_maximum": 2.651589,
+    "options": 1.006746,
+    "option_strike": 191.75,
+    "espp_purchased_2026_01_31": 0.284404,
+    "source": "CDNS-023 p94"
+  },
+  "future_grant_cost_policy": "Post-origin new-grant value is an economic labor expense at 12%/10.2%/9% of revenue for downside/base/upside. The base approximates the three-year revenue-weighted proxy. No future-grant units are added again to the denominator. R&D remains expensed and includes its allocated grant cost; overlapping R&D and SBC percentages must not be summed.",
+  "stub_policy": "FY26 guidance accounting SBC569 less H1 actual285.073 gives H2 accounting SBC283.927. Add that accounting amount back, then charge post-origin economic new-grant cost against H2 revenue. This is a replacement, never a free SBC add-back. Existing awards are allocated separately. H1 actual earnings/cash are not restated or valued twice.",
+  "annual_policy": "Hold each v2 pre-SBC operating margin fixed. Replace its embedded SBC percentage with the new future-grant percentage, reducing base margins by1.2 percentage points. No offsetting cut to other costs. Recompute NOPAT and funded reinvestment under the unchanged incremental-return policy.",
+  "legacy_recognition_diagnostic": {
+    "unrecognized_at_2026_06_30": 970.8,
+    "weighted_recognition_years": 2.2,
+    "schedule": "Straight-line diagnostic only; weighted period is not a contractual amortization schedule. In an illustrative accounting reconciliation, subtract and reverse identical legacy recognition. Both entries cancel; no incremental EV credit, cash payment or separate970.8 claim is added. Full legacy awards receive denominator allocation once.",
+    "alternative_years": [
+      1,
+      2.2,
+      3
+    ],
+    "valuation_effect_of_recognition_timing": 0
+  },
+  "tax_policy": "Scenario normalized cash-tax rates apply to economic operating profit. No separate legacy-vesting tax windfall or deferred-tax asset credit.",
+  "three_year_revenue_weighted_pct": 0.10183151748548207
+}

@@ -1,0 +1,67 @@
+{
+  "decision": "ready_for_explicitly_conditional_June_origin_research",
+  "blocking_corrections": [],
+  "financial_origin": "2026-06-30",
+  "information_as_of": "2026-10-18",
+  "verified_June_equity_value_approved": false,
+  "current_price_target_approved": false,
+  "unconditional_per_share_approved": false,
+  "application_writes": false,
+  "claim_budget_adequacy_verified": false,
+  "inventory_completeness_verified": false,
+  "stress_intervals_are_verified_bounds": false,
+  "default_assumptions": {
+    "residual_claim_budget_usd_m": 500,
+    "allocation_units_m": 281.16321,
+    "marketable_recovery": 0.75,
+    "operating_cash_reserve_usd_m": 189,
+    "private_credit_usd_m": 0,
+    "future_grant_rate": {
+      "down": 0.12,
+      "base": 0.102,
+      "up": 0.09
+    }
+  },
+  "independent_results": {
+    "down": {
+      "operating_ev_usd_m": 12722.787484748042,
+      "conditional_usd_per_share": 39.275318007459234
+    },
+    "base": {
+      "operating_ev_usd_m": 26002.716739935837,
+      "conditional_usd_per_share": 86.50741944486919
+    },
+    "up": {
+      "operating_ev_usd_m": 49340.76817779166,
+      "conditional_usd_per_share": 169.512772235712
+    }
+  },
+  "new_blocking_correction_found": false,
+  "display_conditions": [
+    "Label amounts conditional June-origin scenario outputs alongside the numbers.",
+    "State the assumed residual budget and inventory are unverified; no conservative-completeness or actual-bound claim.",
+    "Keep current-price and unconditional equity outputs gated.",
+    "Do not infer statistical confidence, trade readiness or account eligibility."
+  ],
+  "published_sensitivities_recomputed": {
+    "wacc_g_roic": 45,
+    "claims_rsu": 27,
+    "future_grants": 5
+  },
+  "additional_listed_interval_checks": {
+    "one_variable_at_a_time": 63,
+    "joint": 6561
+  },
+  "remaining_factual_gates": [
+    "Same-date complete awards and instrument allocation",
+    "Disaggregated opening non-operating claims and no settlement overlap in FCFF",
+    "Available assets, tax leakage and matched liabilities",
+    "Post-June cash/debt/share/claim bridge for a current valuation"
+  ],
+  "nonblocking_model_choice_note": "The FY2027 reinvestment baseline retains H1 reported SBC and normalizes H2. A like-for-like H1 normalization used only in the annual baseline changes base EV by about -44.02 USD M or -0.157 per default allocation unit; the supplied model is retained.",
+  "zip_sha256": "dc88d14ad35e39ff3ef0189614e9370c9f434d319b7db01cb7f2670bc80c1956",
+  "source_hashes_verified": 53,
+  "public_manifest_entries_verified": 22,
+  "zip_members_verified": 23,
+  "independence_scope": "Separate research/model review; not external accounting assurance."
+}

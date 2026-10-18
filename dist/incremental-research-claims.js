@@ -1,3 +1,4 @@
+import {calculateCdnsBridge} from './cdns-research-claims.js';
 import {calculateFnBridge} from './fn-research-claims.js';
 import {calculateAsmlBridge} from './asml-research-claims.js';
 import {calculateLrcxBridge} from './lrcx-research-claims.js';
@@ -7,6 +8,7 @@ import {incrementalIdentityValid} from './incremental-research-identity.js';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
 export function incrementalBridgeDefinition(ticker){const r=incrementalRecord(ticker);return r?structuredClone({...r.bridge,optionDefinitions:r.bridge.options,lines:[],bridgeVersion:r.identity.version}):null;}
 export function calculateIncrementalBridge(d,enterprise,options={}){
+ if(incrementalRecord(d?.ticker)?.bridge.type==='cdns-v3')return calculateCdnsBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='fn-v1')return calculateFnBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='asml-v4')return calculateAsmlBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='lrcx-v2')return calculateLrcxBridge(d,enterprise,options);
@@ -39,5 +41,5 @@ export function calculateIncrementalBridge(d,enterprise,options={}){
 }
 export function incrementalBridgeSensitivity(d,enterprise,options={}){
  const b=incrementalRecord(d?.ticker)?.bridge;if(!b)return [];
- return b.options.flatMap(field=>[field.min,field.max].filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));
+ return b.options.flatMap(field=>(b.type==='cdns-v3'?field.listedStressValues:[field.min,field.max]).filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));
 }

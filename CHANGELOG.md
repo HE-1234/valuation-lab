@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-18 · Cadence dated research and transparent period timing
+
+- Added CDNS with ten-year references, reviewed assumptions and explicitly conditional June-origin allocation. The three source cases reproduce approximately $39.28/$86.51/$169.51 per assumed common-equivalent unit; current-price comparisons remain gated.
+- Separately shows the fixed six-month H2 2026 cash-flow stub, its discount rate and the forecast FY2026 reference. Annual editing, growth horizons and Monte Carlo apply to FY2027 onward; selected named cases update the source stub and baseline together.
+- Keeps the unverified residual-claim budget, assumed award inventory and dates, asset-recovery assumptions and capital constraints visible. Does not imply complete actual liabilities or current share counts.
+- Disables unsupported CDNS date-shift controls with a persistent explanation while preserving invalid saved drafts, export and explicit reversible recovery. Corrected related Simplified Chinese period/scenario descriptions.
+- Final aggregate: 1,624 passed, zero failed, one existing raw-cache skip. Independent financial, source, adverse-input, prior-case and UI checks passed. Source-driven mobile/desktop review is separate from native-browser verification.
+
 ## 2026-10-18 · Accurate investment-policy instructions
 
 - Corrected English and Chinese explanations of fixed versus revenue-responsive investment. Annual factors, legacy scalar multipliers, protected fixed funding and separately derived operating cash are now distinguished explicitly.

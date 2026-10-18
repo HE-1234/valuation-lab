@@ -1,0 +1,39 @@
+{
+  "sourceManifestEntriesVerified": 22,
+  "originalPublicFilesCopiedByteForByte": 23,
+  "auditHashesVerified": {
+    "release-readiness.json": "44cc056bb08be90e759a132986be466eba65b7a5a5c71e114bb659770c81c373",
+    "independent-audit-v3-report.md": "2ee0e9f0a27bf33e5728b89c9d5fa400dd34ffb0f3f5cd7f45fc290130b86643"
+  },
+  "sourceManifestSHA256": "bb0703290ebc6840546bee5759fca7572e376161f4a1b90e58ad178f59764214",
+  "sourceHashesVerifiedByIndependentAudit": 53,
+  "rawSourceHashScope": "53 raw-source hashes were verified by the independent audit; this public-only builder verifies the audit hashes and all 22 public manifest entries and does not open or export raw/private sources.",
+  "historyYears": 10,
+  "annualFullYearsPerCase": 10,
+  "openingStubYears": 0.5,
+  "annualNumbering": "1-10; FY2027-FY2036",
+  "openingStubPolicy": "fixed selected source cash flows and WACC; full-year tail-only stresses",
+  "canonicalHistoryEBIT": "reported operating_income; zero SBC add-back",
+  "defaultAllocationUnits": 281.16321,
+  "sourceStatusUnmodified": true,
+  "conditionalAllocationChecks": {
+    "base": {
+      "operatingEV": 26002.716739935844,
+      "conditionalPerShare": 86.50741944486921,
+      "allocationUnits": 281.16321,
+      "sourceReproduced": true
+    },
+    "down": {
+      "operatingEV": 12722.787484748042,
+      "conditionalPerShare": 39.275318007459234,
+      "allocationUnits": 281.16321,
+      "sourceReproduced": true
+    },
+    "up": {
+      "operatingEV": 49340.76817779167,
+      "conditionalPerShare": 169.51277223571205,
+      "allocationUnits": 281.16321,
+      "sourceReproduced": true
+    }
+  }
+}

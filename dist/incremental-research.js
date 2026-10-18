@@ -3,7 +3,7 @@ import {researchDraftFor,researchDraftIssues} from './research-model.js';
 import {simulationResearchDefaults,validateResearchSimulationConfig} from './research-simulation.js';
 import {isUSRobinhoodCandidate} from './company-catalog.js';
 export const INCREMENTAL_RESEARCH_PATH='./data/incremental-research-2026-10-18/cases.json';
-export const INCREMENTAL_RESEARCH_PATHS=Object.freeze([INCREMENTAL_RESEARCH_PATH,'./data/incremental-AMAT-2026-10-18-v3/cases.json','./data/incremental-LRCX-2026-10-18-v2/cases.json','./data/incremental-ASML-2026-10-18-v4/cases.json','./data/incremental-FN-2026-10-18-v1/cases.json']);
+export const INCREMENTAL_RESEARCH_PATHS=Object.freeze([INCREMENTAL_RESEARCH_PATH,'./data/incremental-AMAT-2026-10-18-v3/cases.json','./data/incremental-LRCX-2026-10-18-v2/cases.json','./data/incremental-ASML-2026-10-18-v4/cases.json','./data/incremental-FN-2026-10-18-v1/cases.json','./data/incremental-CDNS-2026-10-18-v3/cases.json']);
 export function validateIncrementalResearch(bundle){
  // The separately audited payload must match the shipped immutable registry.
  // Imported edits belong in drafts; they cannot rewrite source or audit identity.
@@ -32,6 +32,7 @@ export function incrementalAlternative(previous,name){
  const r=incrementalRecord(previous?.ticker),alternative=r?.alternatives.find(x=>x.name===name);if(!alternative)throw Error('Reviewed named alternative unavailable.');
  const draft=incrementalResearchDraft({ticker:r.identity.ticker,presetId:r.identity.version,incrementalResearch:r.identity,annualCase:r.annualCase});
  const c=alternative.annualCase;
+ if(c.openingStub){draft.openingStub=structuredClone(c.openingStub);draft.anchor=structuredClone(c.anchor);}
  draft.annual=c.annual.map(row=>({year:row.year,period:row.period,revenue:row.revenue,margin:row.operatingMargin,taxRate:row.taxRate,reinvestment:row.reinvestment,wacc:row.wacc}));
  draft.terminal={growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc};
  draft.selectedIncrementalScenario=name;if(c.fixedCapitalFunding)draft.fixedCapitalFunding=structuredClone(c.fixedCapitalFunding);draft.notes=typeof previous.notes==='string'?previous.notes:'';

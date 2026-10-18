@@ -1,3 +1,4 @@
+import {calculateCdnsOperating,cdnsOpeningStubIssues} from './cdns-opening-stub.js';
 import {operatingCashChange} from './fn-operating-cash.js';
 import {fixedCapitalSettlement,operatingInvestment,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
 import {incrementalRecord} from './incremental-registry.js';
@@ -24,7 +25,7 @@ export function researchDraftFor(c){
  if(!object(c)||!Array.isArray(c.annual)||!c.annual.length)throw Error('A complete dated annual research case is required.');
  const lite=c.ticker==='LITE'?researchBridgeDefinition('LITE'):null,incremental=incrementalRecord(c.ticker),id=c.incrementalResearch;
  if(incremental&&JSON.stringify(c)!==JSON.stringify(incremental.annualCase))throw Error('Load the reviewed incremental source case before editing its draft.');
- return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
+ return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),...(c.openingStub?{openingStub:copy(c.openingStub)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
 }
 export function researchDraftIssues(d,{includeTiming=true}={}){
  const errors=[];
@@ -32,7 +33,7 @@ export function researchDraftIssues(d,{includeTiming=true}={}){
  if(d.schemaVersion===2)errors.push(...annualHorizonIssues(d));
  errors.push(...annualMarginPathIssues(d));
  if(d.schemaVersion===1&&d.derivedForecast!==undefined)errors.push('Derived horizon metadata requires a version-2 annual draft.');
- errors.push(...incrementalDraftIssues(d));
+ errors.push(...incrementalDraftIssues(d),...cdnsOpeningStubIssues(d));
  if(!d.incrementalResearch&&(d.version!==RESEARCH_VERSION||typeof d.sourceScenario!=='string'||d.caseId!==`${RESEARCH_VERSION}:${d.ticker}:${d.sourceScenario}`))errors.push('Annual research version and source-case identity must match the reviewed profile.');
  if(!/^[A-Z0-9.-]{1,12}$/.test(d.ticker||'')||!(['USD','TWD'].includes(d.currency)||(d.currency==='EUR'&&incrementalRecord(d.ticker)?.identity.currency==='EUR')))errors.push('A supported ticker and explicit nominal currency are required.');
  if(!date(d.informationAsOf)||!date(d.discountOrigin)||!object(d.anchor)||!finite(d.anchor.revenue)||d.anchor.revenue<=0)errors.push('Valid information date, forecast origin and positive source revenue are required.');
@@ -57,7 +58,7 @@ export function restoreResearchDraft(value,c){
  if(value==null)return {draft:researchDraftFor(c),restored:false,error:null};
  // A malformed saved draft is never replaced by the new research numbers.
  // Return it intact so the user can export/recover it, with calculation withheld.
- if(!object(value)||!terminalReviewIdentityValid(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
+ if(!object(value)||!terminalReviewIdentityValid(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||(value.anchor?.revenue!==c.anchor.revenue&&!(value.ticker==='CDNS'&&!cdnsOpeningStubIssues(value).length)))return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
  const errors=researchDraftIssues(value);
  const draft=copy(value);
  if(!errors.length&&c.ticker==='LITE')preserveLegacyLiteBridge(draft);
@@ -83,6 +84,7 @@ export function loadAnnualResearchCase(previous,c){
 }
 export function calculateResearchOperating(d){
  const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
+ if(d.openingStub)return calculateCdnsOperating(d);
  let prior=d.anchor.revenue,discount=1,pv=0,cumulative=0,trough=0;
  const rows=d.annual.map((r,index)=>{
   const cashChange=operatingCashChange(d,index),totalInvestment=r.reinvestment+cashChange,operating=operatingInvestment(d,r)+cashChange;
@@ -124,6 +126,7 @@ export function researchTimingResult(d,operating=calculateResearchOperating(d)){
  const t=d.timing;
  if(!object(t))return {status:'incomplete',enterprise:null,message:'A valid explicit timing policy is required.'};
  if(t.mode==='origin')return {status:'origin',enterprise:operating.enterprise,date:d.discountOrigin,label:'Forecast-origin operating EV',warnings:d.incrementalResearch?[incrementalRecord(d.ticker).prose.scope.en]:['The information date is later than reported anchors and earlier than forecast anchors. No October 17 cash-flow or capital roll-forward is implied.']};
+ if(d.openingStub)return {status:'incomplete',enterprise:null,message:'CDNS source H2 timing is fixed. A different valuation date requires a newly reviewed partial-period operating and capital bridge.'};
  if(t.mode!=='as-of-scenario'||!date(t.asOf)||t.asOf<d.informationAsOf)return {status:'incomplete',enterprise:null,message:'Use an as-of date on or after the research information date.'};
  const elapsed=days(t.asOf,d.discountOrigin)/365.25;
  if(elapsed>=1)return {status:'incomplete',enterprise:null,message:'This timing bridge covers only the first partial annual period; a later date needs a new operating baseline.'};
