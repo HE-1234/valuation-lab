@@ -1,18 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
 import {supportedLocales,getLocale,setLocale,t} from '../dist/i18n.js';
 import {mountLocaleControl} from '../dist/i18n-control.js';
 const locales=new URL('../dist/locales/',import.meta.url);
 const nonHan=text=>text.replace(/\p{Script=Han}/gu,'');
 const readCatalog=async name=>name.endsWith('.json')?JSON.parse(fs.readFileSync(new URL(name,locales),'utf8')):(await import(new URL(name,locales))).default;
+const yearlyKeys=['yearlyMode', 'yearlyMarginHelp', 'yearlyMarginLegend', 'yearlyCount', 'yearlyFewer', 'yearlyMore', 'yearlyMarginTerminal', 'yearlyMarginExample', 'yearlyMarginSampling', 'yearlyCapitalLegend', 'yearlyCapitalTerminal', 'yearlyLinkedNote', 'yearlyHowItWorks', 'yearlyCapitalMethod', 'yearlyCapitalDescription', 'yearlyCapitalDescriptionOne', 'yearlyPanelLater', 'yearlyPanelRange', 'yearlyPanelNone', 'yearlyCapitalHeadlineHelp', 'yearlyMarginHeadlineHelp', 'yearlyProfileLabel', 'yearlyProfileNote', 'yearlyProfileSampling', 'yearlyIssueCount', 'yearlyIssueMargin', 'yearlyIssueTerminal', 'yearlyIssueCapitalCount', 'yearlyIssueCapital', 'yearlyIssueCapitalTerminal'];
 test('every retained Traditional catalog has full Simplified coverage and identical numbers, symbols, English and parameters',async()=>{
  const sources=fs.readdirSync(locales).filter(name=>name.includes('.zh-Hant.'));
  assert.equal(sources.length,11);
  let count=0;
  for(const name of sources){
   const original=await readCatalog(name),simplified=await readCatalog(name.replace('zh-Hant','zh-Hans'));
-  assert.deepEqual(Object.keys(simplified),Object.keys(original),name);
+  const additions=name==='guided.zh-Hant.js'?yearlyKeys:[];
+  assert.deepEqual(Object.keys(simplified),[...Object.keys(original),...additions],name);
   for(const [key,value]of Object.entries(original)){
    assert.equal(nonHan(simplified[key]),nonHan(value),`${name}:${key}`);
    assert.doesNotMatch(simplified[key],/蒙地卡罗|机率|变数/);
@@ -62,4 +65,24 @@ test('corner control announces Simplified Chinese and round trips without replac
  assert.equal(control.textContent,'中文');assert.equal(attrs.lang,'zh-Hans');assert.equal(attrs['aria-label'],'Switch to Simplified Chinese');
  for(let i=0;i<20;i++){control.onclick();assert.equal(button,control);assert.equal(control.focused,true);assert.equal(JSON.stringify(state),before);}
  control.onclick();assert.equal(getLocale(),'zh-Hans');assert.equal(control.textContent,'EN');assert.equal(t('shell.locale.english'),'切换为英文');setLocale('en');
+});
+
+test('new yearly-path English and Simplified catalogs have exact approved keys and financial token fidelity',async()=>{
+ const en=await readCatalog('guided.en.js'),zh=await readCatalog('guided.zh-Hans.js'),historical=await readCatalog('guided.zh-Hant.js');
+ assert.equal(createHash('sha256').update(fs.readFileSync(new URL('guided.zh-Hant.js',locales))).digest('hex'),'d2fe1823be191f02b58f8b82d0f92cf95e6a894b5ef7fcaea60685ef2943894e');
+ assert.deepEqual(Object.keys(en),Object.keys(zh));
+ assert.deepEqual(Object.keys(en).filter(k=>!Object.hasOwn(historical,k)),yearlyKeys);
+ const placeholders=s=>(s.match(/\{[^}]+\}/g)||[]).sort();
+ const withoutParams=s=>s.replace(/\{[^}]+\}/g,'');
+ const numbers=s=>(withoutParams(s).match(/\d+(?:\.\d+)?/g)||[]).sort();
+ const symbols=s=>(withoutParams(s).match(/[%×÷−]/g)||[]).sort();
+ const acronyms=s=>(s.match(/\b[A-Z]{2,}\b/g)||[]).sort();
+ for(const key of yearlyKeys){
+  assert.equal(typeof en[key],'string',key);assert.ok(en[key].length>0,key);assert.match(zh[key],/\p{Script=Han}/u,key);
+  assert.deepEqual(placeholders(zh[key]),placeholders(en[key]),key+' parameters');
+  assert.deepEqual(numbers(zh[key]),numbers(en[key]),key+' numeric constants');
+  assert.deepEqual(symbols(zh[key]),symbols(en[key]),key+' financial symbols');
+  assert.deepEqual(acronyms(zh[key]),acronyms(en[key]),key+' financial acronyms');
+  assert.doesNotMatch(zh[key],/蒙地卡罗|机率|变数/);
+ }
 });

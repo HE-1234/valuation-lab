@@ -93,3 +93,5 @@ import('./report-interactions.js');
 import('./report-simulation.js');
 import('./report-ux.js');
 import('./report-phases.js');
+import('./report-paths.js');
+import('./report-journey.js');

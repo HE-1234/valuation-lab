@@ -6,7 +6,7 @@ import {startStudio} from './v7-runtime-harness.mjs';
 
 const css=fs.readFileSync(new URL('../dist/studio.css',import.meta.url),'utf8');
 const themeCSS=fs.readFileSync(new URL('../dist/style.css',import.meta.url),'utf8').replace(/\/\*[\s\S]*?\*\//g,'');
-const categories=[[2,'Growth'],[3,'Profitability'],[4,'Investment'],[5,'Risk'],[6,'Equity'],[1,'Story'],[0,'Sources'],[7,'Details']];
+const categories=[[1,'Story'],[2,'Growth'],[3,'Profitability'],[4,'Investment'],[5,'Risk'],[6,'Equity'],[0,'Sources'],[7,'Details']];
 function checkSelection(h,id){
  const tabs=h.get('.assumption-tabs').querySelectorAll('button');
  assert.deepEqual(tabs.map(b=>[Number(b.dataset.step),b.textContent]),categories);
@@ -39,7 +39,7 @@ test('assumption navigation: all eight categories remain direct, named tabs for 
 
 test('assumption navigation: arrow, Home and End keys retain the existing focus order and wrap',async()=>{
  const h=await startStudio();const list=h.get('.assumption-tabs'),mounts=h.mounts.length;
- for(const [key,id] of [['ArrowLeft',7],['ArrowRight',2],['End',7],['Home',2],['ArrowRight',3],['ArrowRight',4]]){
+ for(const [key,id] of [['ArrowLeft',1],['ArrowRight',2],['End',7],['Home',1],['ArrowRight',2],['ArrowRight',3],['ArrowRight',4]]){
   let prevented=false;
   list.querySelectorAll('button').find(b=>b.getAttribute('aria-selected')==='true').onkeydown({key,preventDefault(){prevented=true}});
   assert.equal(prevented,true);checkSelection(h,id);assert.equal(h.focus(),h.get('#group-'+id));
