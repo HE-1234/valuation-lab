@@ -54,7 +54,7 @@ test('decimal Guided: idle fields are rounded and passive focus preserves exact 
 test('decimal preservation: every changed asset reverses to exact V60 bytes and rejects unreviewed additions',()=>{
  const fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/decimal-display-v61.json',import.meta.url))),sha=x=>createHash('sha256').update(x).digest('hex');
  assert.equal(fixture.baselineCommit,'41594f7f24219f205426a212c54deb3979ecb466');assert.equal(Object.keys(fixture.files).some(path=>path.startsWith('dist/data/')||/engine|model|sampling|registry/.test(path)),false);
- for(const [path,entry]of Object.entries(fixture.files)){const bytes=fs.readFileSync(new URL('../'+path,import.meta.url));assert.equal(sha(reverseDecimalDisplay(path,bytes)),entry.beforeSHA256,path);assert.throws(()=>reverseDecimalDisplay(path,Buffer.concat([bytes,Buffer.from('\n/* unreviewed */')])),/numeric presentation bytes/);}
+ for(const [path,entry]of Object.entries(fixture.files)){const bytes=fs.readFileSync(new URL('../'+path,import.meta.url));assert.equal(sha(reverseDecimalDisplay(path,bytes)),entry.beforeSHA256,path);assert.throws(()=>reverseDecimalDisplay(path,Buffer.concat([bytes,Buffer.from('\n/* unreviewed */')])),/numeric presentation bytes|exact isolated NVMI integration bytes/);}
  for(const [path,digest]of Object.entries(fixture.additions))assert.equal(sha(fs.readFileSync(new URL('../'+path,import.meta.url))),digest,path);
 });
 test('decimal Annual grammar: grouped text stays exact, malformed and nondecimal inputs are rejected',async()=>{

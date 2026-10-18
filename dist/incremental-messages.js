@@ -1,6 +1,7 @@
 import {registerCatalog} from './i18n.js';
 import {incrementalRecords} from './incremental-registry.js';
 const pairs=[
+ ['Operating value in currency millions','营业价值（货币单位：百万）'],
  ['Operating investment before advance runoff','预付款流失前的经营投资'],
  ['Fixed customer-advance runoff','固定客户预付款流失'],
  ['Capital-efficiency ratios exclude fixed customer-advance runoff.','资本效率比率不包含固定客户预付款流失。'],
