@@ -1,0 +1,6926 @@
+{
+  "audit_version": "CAMT-independent-audit-v1",
+  "research_cutoff": "2026-10-18",
+  "capital_and_discount_origin": "2026-06-30",
+  "units": "USD millions, shares millions unless explicitly stated",
+  "verdict": "ready_for_limited_dated_conditional_integration",
+  "independent_operating_model_audit_passed": true,
+  "ready_for_dated_operating_EV": true,
+  "ready_for_editable_dated_claim_sensitivities": true,
+  "exact_current_equity_approved": false,
+  "exact_current_per_share_approved": false,
+  "fixed_650_convertible_fair_value_approved": false,
+  "site_changes_or_publication": false,
+  "required_integration_conditions": [
+    "Prominently display June 30 origin and October 18 information cutoff.",
+    "Use dated operating EV or explicitly editable illustrative claims, not an accepted fixed convertible fair value.",
+    "Keep exact current equity/per-share null. Do not publish illustrative per-share results as price targets.",
+    "Retain preliminary/guidance/target/order-intake distinctions.",
+    "Apply the Visual Layer announcement/closing wording correction.",
+    "Preserve source-history depreciation and scope cautions."
+  ],
+  "test_summary": {
+    "total": 1648,
+    "passed": 1648,
+    "failed": 0,
+    "historical_facts": 289,
+    "printed_share_years": 10
+  },
+  "scenario_results": {
+    "downcycle": {
+      "operating_EV_USD_m": 1216.4981994163263,
+      "terminal_share": 0.5193085024332935,
+      "terminal_reinvestment_USD_m": 42.152898133678356,
+      "terminal_funding_floor_USD_m": 35.64656139744691,
+      "terminal_funding_cushion_USD_m": 6.506336736231447,
+      "year10_reinvestment_ratio": 0.20833333333333337
+    },
+    "base": {
+      "operating_EV_USD_m": 2917.659123883085,
+      "terminal_share": 0.6032979074154822,
+      "terminal_reinvestment_USD_m": 63.272592373566155,
+      "terminal_funding_floor_USD_m": 51.328473721667436,
+      "terminal_funding_cushion_USD_m": 11.94411865189872,
+      "year10_reinvestment_ratio": 0.16666666666666669
+    },
+    "upside": {
+      "operating_EV_USD_m": 4887.489906135494,
+      "terminal_share": 0.6615210948592083,
+      "terminal_reinvestment_USD_m": 95.47472982873175,
+      "terminal_funding_floor_USD_m": 73.38735025259558,
+      "terminal_funding_cushion_USD_m": 22.087379576136172,
+      "year10_reinvestment_ratio": 0.15909090909090912
+    }
+  },
+  "history_share_unit_checks": [
+    {
+      "year": 2016,
+      "printed_millions": 35.376,
+      "model_millions": 35.376,
+      "raw_xbrl": 35376000
+    },
+    {
+      "year": 2017,
+      "printed_millions": 35.964,
+      "model_millions": 35.964,
+      "raw_xbrl": 35964000
+    },
+    {
+      "year": 2018,
+      "printed_millions": 36.747,
+      "model_millions": 36.747,
+      "raw_xbrl": 36747000
+    },
+    {
+      "year": 2019,
+      "printed_millions": 38.432,
+      "model_millions": 38.432,
+      "raw_xbrl": 38432
+    },
+    {
+      "year": 2020,
+      "printed_millions": 40.372,
+      "model_millions": 40.372,
+      "raw_xbrl": 40372
+    },
+    {
+      "year": 2021,
+      "printed_millions": 45.035,
+      "model_millions": 45.035,
+      "raw_xbrl": 45035
+    },
+    {
+      "year": 2022,
+      "printed_millions": 48.229,
+      "model_millions": 48.229,
+      "raw_xbrl": 48229
+    },
+    {
+      "year": 2023,
+      "printed_millions": 48.863,
+      "model_millions": 48.863,
+      "raw_xbrl": 48863
+    },
+    {
+      "year": 2024,
+      "printed_millions": 49.369,
+      "model_millions": 49.369,
+      "raw_xbrl": 49369
+    },
+    {
+      "year": 2025,
+      "printed_millions": 49.97,
+      "model_millions": 49.97,
+      "raw_xbrl": 49970
+    }
+  ],
+  "primary_source_verification": [
+    {
+      "id": "october_update",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326004767/zk2636225.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "Q3 preliminary revenue 160\u2013161; closing incomplete.",
+        "Q4 approximately 180 and FY2026 approximately 595.",
+        "Initial FY2027 outlook above 800.",
+        "YTD orders above 800, deliveries across 2026\u201327; not an outstanding backlog balance."
+      ]
+    },
+    {
+      "id": "october_presentation",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326004769/zk2636226.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "1,200 organic revenue goal in about three years; expressly not guidance.",
+        "34\u201336% non-GAAP operating margin target.",
+        "Service/software 140 target and R&D 120 target are future model assumptions."
+      ]
+    },
+    {
+      "id": "q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326003975/zk2635905.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "June liquid assets 815.837 and outstanding common 46.668177m verified.",
+        "Issued 48.760553m less treasury 2.092376m.",
+        "Convertible carrying value 488.497 is not fair value.",
+        "Interim release lacks full cash-flow/debt/award rollforwards."
+      ]
+    },
+    {
+      "id": "annual",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326001561/zk2634678.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "2025 diluted weighted shares 49.970m, not 0.049970m.",
+        "2030 face 500, December fair value 579.848; old-note December face 32.933.",
+        "RSUs 649,397 and options 23,909 are December anchors only.",
+        "2025 reported SBC 16.892 verified to cash-flow/equity statements."
+      ]
+    },
+    {
+      "id": "indenture",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109138/000117891325003347/exhibit_4-1.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "Section 14.02 permits cash, stock or combination settlement; initially combination with 1,000 specified cash per 1,000 face.",
+        "Issuer may change default under notice rules. Cash/combination uses 40 trading-day observation.",
+        "Make-whole and corporate-action provisions may alter conversion shares."
+      ]
+    },
+    {
+      "id": "visual_layer",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326002105/zk2635069.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "April 14 announced signed definitive agreement, subject to closing; did not establish an April closing date."
+      ]
+    },
+    {
+      "id": "q1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326002569/zk2635285.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "May 12 release says Visual Layer acquisition had recently closed; supports before-June treatment."
+      ]
+    },
+    {
+      "id": "treasury",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026&field_tdr_date_value_month=202610",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "October 16 ten-year Treasury 5.09%."
+      ]
+    },
+    {
+      "id": "erp",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "October 1 trailing adjusted-payout implied ERP 4.20%, U.S. default spread 0.22%.",
+        "ERP source originally uses 5.29% Treasury; model intentionally combines monthly ERP with October 16 yield, not one simultaneously calibrated observation."
+      ]
+    },
+    {
+      "id": "beta",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+      "verified_on": "2026-10-18",
+      "findings": [
+        "January 2026 semiconductor equipment sample 31 firms; cash-corrected unlevered beta 1.39."
+      ]
+    }
+  ],
+  "limitations_and_corrections": [
+    {
+      "severity": "required_label",
+      "subject": "Valuation date",
+      "finding": "June 30 capital/discount origin with information through October 18, 2026. Ten full years end June 2036, end-year discounting. This is a retrospective-information analytical DCF, not an October 18 equity fair value or point-in-time June thesis."
+    },
+    {
+      "severity": "exact_equity_gate",
+      "subject": "Convertible and claims",
+      "finding": "650 full convertible claim, 5.324 finance lease, 25 residual claims, 2 legacy option claim and 0.85m RSUs remain illustrative. No fixed claim is independently certified. Full-note deduction and no extra face/conversion-share addition is arithmetically coherent; common allocation requires contract-aware scenario repricing and same-date claims."
+    },
+    {
+      "severity": "exact_equity_gate",
+      "subject": "Old notes and operating-capital claims",
+      "finding": "June carrying balance is consistent with only 2030 notes but cannot prove old-note settlement composition. Full interim cash flow, gross awards, leases, opening tax/acquisition/capital payables remain unresolved. This does not block dated operating EV or explicitly editable conditional allocation."
+    },
+    {
+      "severity": "source_reconciliation",
+      "subject": "Historical depreciation",
+      "finding": "Annual note/depreciation comparisons and 2023 cash-flow D&A do not fully reconcile; lease ROU is included in annual PPE. Do not convert this history into clean physical D&A or normalized historical ROIC. Forecast depreciation 1.7% is explicit and independent."
+    },
+    {
+      "severity": "minor_correction",
+      "subject": "Visual Layer timing",
+      "finding": "Replace acquired in April 2026 with acquisition announced April 14 and closed by May 12. No effect on the June-origin bridge; acquisition cash is already embedded."
+    },
+    {
+      "severity": "model_judgment",
+      "subject": "Terminal and funding economics",
+      "finding": "Terminal values contribute 51.9%/60.3%/66.2% of EV. Years 6\u20139 blend marginal-sales funding with terminal-growth reinvestment and retain a cash floor; this is an explicit policy, not demonstrated constant historical ROIC. Terminal investment covers the modeled floor and year-10 cash-flow continuity passes."
+    },
+    {
+      "severity": "model_judgment",
+      "subject": "Discount inputs",
+      "finding": "Monthly ERP, October 16 yield and January sector beta are deliberately mixed-date estimates. Debt weight 5%, Treasury spread 175bp and mature levered beta 1.15 are analyst assumptions. Verified inputs do not make them issuer-observed costs of capital."
+    },
+    {
+      "severity": "scope_limit",
+      "subject": "History audit scope",
+      "finding": "289 populated historical facts match frozen SEC companyfacts and scales; all ten diluted share counts match printed statements. This is source linkage and arithmetic testing, not a statutory audit or independent certification of every issuer disclosure. Early continuing CFO and potentially total-business capex remain non-comparable."
+    }
+  ],
+  "tests": [
+    {
+      "check": "downcycle.year1.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year1.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year2.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year3.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year4.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year5.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year6.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year7.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year8.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year9.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.year_ending",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.funded",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.revenue",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.margin",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.tax",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.g",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.ROIC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.WACC",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.reinvestment",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.FCFF",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.value",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.PV",
+      "passed": true
+    },
+    {
+      "check": "downcycle.operating_EV",
+      "passed": true
+    },
+    {
+      "check": "downcycle.PV_explicit",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal_share",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.discount_exceeds_growth",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10_actual_growth_matches_terminal",
+      "passed": true
+    },
+    {
+      "check": "downcycle.year10_investment_ratio_matches_terminal",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal_NOPAT_continuity",
+      "passed": true
+    },
+    {
+      "check": "downcycle.terminal_FCFF_continuity",
+      "passed": true
+    },
+    {
+      "check": "base.year1.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year1.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year1.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year1.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year1.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year1.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year1.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year1.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year1.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year1.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year1.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year1.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year1.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year1.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year1.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year1.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year1.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year1.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year1.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year1.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year1.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year1.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year1.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year1.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year1.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year1.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year1.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year2.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year2.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year2.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year2.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year2.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year2.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year2.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year2.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year2.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year2.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year2.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year2.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year2.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year2.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year2.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year2.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year2.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year2.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year2.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year2.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year2.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year2.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year2.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year2.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year2.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year2.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year2.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year3.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year3.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year3.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year3.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year3.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year3.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year3.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year3.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year3.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year3.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year3.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year3.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year3.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year3.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year3.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year3.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year3.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year3.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year3.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year3.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year3.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year3.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year3.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year3.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year3.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year3.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year3.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year4.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year4.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year4.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year4.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year4.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year4.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year4.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year4.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year4.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year4.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year4.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year4.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year4.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year4.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year4.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year4.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year4.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year4.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year4.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year4.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year4.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year4.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year4.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year4.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year4.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year4.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year4.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year5.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year5.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year5.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year5.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year5.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year5.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year5.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year5.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year5.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year5.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year5.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year5.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year5.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year5.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year5.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year5.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year5.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year5.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year5.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year5.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year5.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year5.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year5.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year5.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year5.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year5.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year5.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year6.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year6.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year6.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year6.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year6.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year6.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year6.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year6.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year6.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year6.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year6.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year6.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year6.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year6.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year6.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year6.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year6.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year6.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year6.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year6.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year6.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year6.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year6.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year6.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year6.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year6.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year6.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year7.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year7.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year7.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year7.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year7.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year7.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year7.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year7.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year7.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year7.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year7.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year7.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year7.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year7.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year7.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year7.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year7.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year7.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year7.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year7.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year7.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year7.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year7.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year7.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year7.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year7.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year7.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year8.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year8.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year8.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year8.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year8.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year8.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year8.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year8.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year8.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year8.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year8.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year8.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year8.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year8.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year8.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year8.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year8.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year8.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year8.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year8.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year8.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year8.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year8.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year8.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year8.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year8.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year8.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year9.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year9.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year9.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year9.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year9.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year9.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year9.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year9.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year9.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year9.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year9.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year9.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year9.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year9.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year9.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year9.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year9.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year9.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year9.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year9.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year9.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year9.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year9.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year9.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year9.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year9.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year9.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.year10.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "base.year10.year_ending",
+      "passed": true
+    },
+    {
+      "check": "base.year10.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.year10.growth",
+      "passed": true
+    },
+    {
+      "check": "base.year10.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "base.year10.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "base.year10.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "base.year10.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year10.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "base.year10.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "base.year10.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "base.year10.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "base.year10.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "base.year10.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.year10.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "base.year10.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "base.year10.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year10.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "base.year10.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year10.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.year10.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "base.year10.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year10.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.year10.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "base.year10.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.year10.funded",
+      "passed": true
+    },
+    {
+      "check": "base.year10.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.revenue",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.margin",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.tax",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.g",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.ROIC",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.WACC",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.reinvestment",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.FCFF",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.value",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.PV",
+      "passed": true
+    },
+    {
+      "check": "base.operating_EV",
+      "passed": true
+    },
+    {
+      "check": "base.PV_explicit",
+      "passed": true
+    },
+    {
+      "check": "base.terminal_share",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.discount_exceeds_growth",
+      "passed": true
+    },
+    {
+      "check": "base.terminal.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "base.year10_actual_growth_matches_terminal",
+      "passed": true
+    },
+    {
+      "check": "base.year10_investment_ratio_matches_terminal",
+      "passed": true
+    },
+    {
+      "check": "base.terminal_NOPAT_continuity",
+      "passed": true
+    },
+    {
+      "check": "base.terminal_FCFF_continuity",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year1.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year2.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year3.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year4.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year5.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year6.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year7.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year8.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year9.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.forecast_year",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.year_ending",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.growth",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.economic_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.fresh_grant_cost_ratio",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.fresh_grant_cost",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.residual_cost_including_RandD_and_physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.legacy_amortization_display_assumption",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.accounting_EBIT_display",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.legacy_addback",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.economic_EBIT",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.cash_tax",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.physical_cash_capex",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.physical_depreciation",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.incremental_NWC_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.incremental_operating_cash",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.net_reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.additional_growth_capacity_investment",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.discount_factor",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.PV_FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.funded",
+      "passed": true
+    },
+    {
+      "check": "upside.year10.legacy_cancels",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.revenue",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.margin",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.tax",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.g",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.ROIC",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.WACC",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.NOPAT",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.reinvestment",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.FCFF",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.value",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.PV",
+      "passed": true
+    },
+    {
+      "check": "upside.operating_EV",
+      "passed": true
+    },
+    {
+      "check": "upside.PV_explicit",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal_share",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.discount_exceeds_growth",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal.funding_floor",
+      "passed": true
+    },
+    {
+      "check": "upside.year10_actual_growth_matches_terminal",
+      "passed": true
+    },
+    {
+      "check": "upside.year10_investment_ratio_matches_terminal",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal_NOPAT_continuity",
+      "passed": true
+    },
+    {
+      "check": "upside.terminal_FCFF_continuity",
+      "passed": true
+    },
+    {
+      "check": "sensitivity.parallel_discount_shift.-0.015",
+      "passed": true
+    },
+    {
+      "check": "sensitivity.parallel_discount_shift.0",
+      "passed": true
+    },
+    {
+      "check": "sensitivity.parallel_discount_shift.0.015",
+      "passed": true
+    },
+    {
+      "check": "sensitivity.margin_shift.-0.02",
+      "passed": true
+    },
+    {
+      "check": "sensitivity.margin_shift.0",
+      "passed": true
+    },
+    {
+      "check": "sensitivity.margin_shift.0.02",
+      "passed": true
+    },
+    {
+      "check": "sensitivity.fresh_grants_plus100bp",
+      "passed": true
+    },
+    {
+      "check": "CSV.has_30_rows",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.1",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.2",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.3",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.4",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.5",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.6",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.7",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.8",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.9",
+      "passed": true
+    },
+    {
+      "check": "CSV.downcycle.10",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.1",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.2",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.3",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.4",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.5",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.6",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.7",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.8",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.9",
+      "passed": true
+    },
+    {
+      "check": "CSV.base.10",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.1",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.2",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.3",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.4",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.5",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.6",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.7",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.8",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.9",
+      "passed": true
+    },
+    {
+      "check": "CSV.upside.10",
+      "passed": true
+    },
+    {
+      "check": "history.2016.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.continuing_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.continuing_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.discontinued_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.discontinued_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.deferred_revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.deferred_revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2016.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2016.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2016.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2016.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2016.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2016.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2016.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2016.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2016.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2017.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.continuing_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.continuing_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.discontinued_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.discontinued_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.deferred_revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.deferred_revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2017.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2017.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2017.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2017.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2017.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2017.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2017.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2017.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2017.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2018.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.continuing_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.continuing_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.deferred_revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.deferred_revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2018.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2018.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2018.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2018.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2018.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2018.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2018.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2018.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2018.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2019.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.continuing_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.continuing_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.discontinued_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.discontinued_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.deferred_revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.deferred_revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.operating_leases_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.operating_leases_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.operating_leases_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2019.operating_leases_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2019.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2019.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2019.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2019.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2019.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2019.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2019.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2019.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2020.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.continuing_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.continuing_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.discontinued_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.discontinued_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.deferred_revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.deferred_revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.operating_leases_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2020.operating_leases_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2020.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2020.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2020.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2020.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2020.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2020.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2020.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2020.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2021.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.continuing_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.continuing_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.discontinued_net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.discontinued_net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.operating_leases_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2021.operating_leases_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2021.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2021.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2021.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2021.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2021.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2021.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2021.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2021.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2022.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.investments_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.investments_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.investments_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.investments_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.goodwill.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.goodwill.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.operating_leases_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2022.operating_leases_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2022.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2022.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2022.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2022.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2022.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2022.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2022.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2022.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2023.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.investments_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.investments_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.investments_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.investments_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.goodwill.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.goodwill.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.operating_leases_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.operating_leases_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.operating_leases_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2023.operating_leases_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2023.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2023.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2023.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2023.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2023.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2023.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2023.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2023.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2024.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.investments_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.investments_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.investments_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.investments_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.goodwill.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.goodwill.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.operating_leases_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.operating_leases_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.operating_leases_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2024.operating_leases_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2024.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2024.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2024.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2024.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2024.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2024.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2024.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2024.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2025.revenue.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.revenue.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.gross_profit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.gross_profit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ebit.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ebit.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.pretax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.pretax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.tax.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.tax.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.net_income.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.net_income.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.cfo.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.cfo.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.cfo_total.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.cfo_total.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.capex.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.capex.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.depreciation.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.depreciation.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.acquired_amortization.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.acquired_amortization.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.sbc.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.sbc.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.cash.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.cash.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.investments_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.investments_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.investments_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.investments_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ar.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ar.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.inventory.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.inventory.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.inventory_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.inventory_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.other_current_assets.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.other_current_assets.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ap.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ap.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.other_current_liabilities.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.other_current_liabilities.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ppe_net.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.ppe_net.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.goodwill.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.goodwill.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.intangibles.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.intangibles.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.equity.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.equity.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.rd.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.rd.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.diluted_weighted_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.diluted_weighted_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.common_shares.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.common_shares.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.operating_leases_current.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.operating_leases_current.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.operating_leases_noncurrent.raw_match",
+      "passed": true
+    },
+    {
+      "check": "history.2025.operating_leases_noncurrent.units",
+      "passed": true
+    },
+    {
+      "check": "history.2025.printed_diluted_shares",
+      "passed": true
+    },
+    {
+      "check": "history.2025.pretax_minus_tax",
+      "passed": true
+    },
+    {
+      "check": "history.2025.gross_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2025.gaap_operating_margin",
+      "passed": true
+    },
+    {
+      "check": "history.2025.effective_tax_rate",
+      "passed": true
+    },
+    {
+      "check": "history.2025.capex_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2025.depreciation_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.2025.sbc_ratio",
+      "passed": true
+    },
+    {
+      "check": "history.ten_complete_fiscal_years",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-01-13-000130.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-01-13-000130.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-02-10-000398.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-02-10-000398.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-02-18-000549.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-02-18-000549.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-03-30-001836.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-03-30-001836.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-04-14-002105.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-04-14-002105.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-05-12-002569.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-05-12-002569.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-06-02-003033.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-06-02-003033.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-06-24-003310.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-06-24-003310.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-06-24-003316.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-06-24-003316.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-07-29-003681.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-07-29-003681.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-08-10-003975.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-08-10-003975.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-10-14-004767.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-10-14-004767.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-10-14-004769.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.6k-2026-10-14-004769.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2015.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2015.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2016.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2016.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2017.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2017.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2018.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2018.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2019.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2019.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2020.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2020.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2021.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2021.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2022.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2022.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2023.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2023.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2024.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2024.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2025.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.annual-2025.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.companyfacts.json",
+      "passed": true
+    },
+    {
+      "check": "source_hash.indenture.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.robinhood.html",
+      "passed": true
+    },
+    {
+      "check": "source_hash.robinhood.txt",
+      "passed": true
+    },
+    {
+      "check": "source_hash.submissions.json",
+      "passed": true
+    },
+    {
+      "check": "June.cash_total",
+      "passed": true
+    },
+    {
+      "check": "June.shares_issued_less_treasury",
+      "passed": true
+    },
+    {
+      "check": "TTM.revenue",
+      "passed": true
+    },
+    {
+      "check": "June.operating_cash_reserve",
+      "passed": true
+    },
+    {
+      "check": "June.longterm_spares_included",
+      "passed": true
+    },
+    {
+      "check": "2030.underlying_units",
+      "passed": true
+    },
+    {
+      "check": "base.year1_quarter_bridge",
+      "passed": true
+    },
+    {
+      "check": "FY2026.approx_guide_bridge",
+      "passed": true
+    },
+    {
+      "check": "WACC.initial",
+      "passed": true
+    },
+    {
+      "check": "WACC.terminal",
+      "passed": true
+    },
+    {
+      "check": "annual.fresh_grant_value",
+      "passed": true
+    },
+    {
+      "check": "annual.operating_NWC",
+      "passed": true
+    },
+    {
+      "check": "conditional.downcycle.equity_algebra",
+      "passed": true
+    },
+    {
+      "check": "conditional.downcycle.per_share_algebra",
+      "passed": true
+    },
+    {
+      "check": "conditional.base.equity_algebra",
+      "passed": true
+    },
+    {
+      "check": "conditional.base.per_share_algebra",
+      "passed": true
+    },
+    {
+      "check": "conditional.upside.equity_algebra",
+      "passed": true
+    },
+    {
+      "check": "conditional.upside.per_share_algebra",
+      "passed": true
+    },
+    {
+      "check": "exact_equity_and_per_share_remain_null",
+      "passed": true
+    },
+    {
+      "check": "public_safe_equal.valuation-readiness-v1.json",
+      "passed": true
+    },
+    {
+      "check": "public_safe_equal.valuation-readiness-v1.md",
+      "passed": true
+    },
+    {
+      "check": "public_safe_equal.history-10fy-v1.json",
+      "passed": true
+    },
+    {
+      "check": "public_safe_equal.history-10fy-v1.csv",
+      "passed": true
+    },
+    {
+      "check": "public_safe_equal.forecast-scenarios-v1.csv",
+      "passed": true
+    },
+    {
+      "check": "originals_preserved",
+      "passed": true
+    }
+  ],
+  "original_input_sha256": {
+    "finalize-package-v1.py": "efbf40b1a97ff45c30077241d45b522a04cee02829c2b5737fccad0c9bb745c3",
+    "history-10fy-v1.json": "f91c9e34da493c52cd66bd64dc8a8b8ace4d7aa5881bba599bf8a76e8f6965b7",
+    "public-safe-v1-manifest.json": "6bd5cb8f8e8541eee28c4f58210b0d25745a6842bbdac5239020aa849c1dab01",
+    "README.md": "7b6a74531b52d89cba2c4b86dd0f11cdf1372557f6db9e3131f782ac98f17320",
+    "valuation-readiness-v1.json": "d5965afead23385be2fe85e9e9ddbb37af3de1cfca13c7589fad092273e8d99e",
+    "valuation-readiness-v1.md": "06c36e17f9c2010f6608fc2d57046f97d05123bab3e2605877675f3c2e1a1241",
+    "build-research-v1.py": "1671d07b05673413f704f98a55d5244c11f8fa80395199ae611148809d23a7a2",
+    "supplemental-contract-fetch.json": "6d130d8bc7aeebb02f469a234c5eb8e1e00f551180c0533e057f3d6f3bcb8818",
+    "source-fetch-manifest-v1.json": "5d3ca39a8586372af01ab26a045a4e412d5f9479062d7f048ef82b3ad8c4cd91",
+    "valuation-readiness-v1-validation.json": "27717eec43f9423d481fe1ce6627c3d7c1a0ed836b7ae9898e2d719a198a29d9",
+    "source-inventory.json": "75b04e81bcdb32aadefb7bb6c4721dc81b85110ecf5dbeda410d7f0f857147e1",
+    "extract-history-v1.py": "c42a8b8a237afe38bf838ae734f0e6d28571f786053e0bf534388b941ae09171",
+    "history-10fy-v1.csv": "269a2c8f396e9fe680e26f98da454ae2585dcf7371bce0320fed2d8ca52ceaff",
+    "forecast-scenarios-v1.csv": "328f5e1a00ed64e53f763ea5150dd0d09e018e2b7f549ad97c699e0ded043baa",
+    "raw/6k-2026-07-29-003681.html": "864998aa1e28c53359bcb46ad4ec432e2125a9ea196e2962a9d3a2ec422dc0d6",
+    "raw/annual-2015.html": "95c69df225c916b070fccebf83a3306ec63430dac1fedf855f9aeefe70d299c7",
+    "raw/6k-2026-10-14-004769.html": "b8390afb771450d83aaea7aac54c9e9e82d8f1c63fac00c8cfa29cfabe948f7f",
+    "raw/6k-2026-08-10-003975.html": "3909e2ba47d0b7ac10f350e20dd707899762f6c83f8f72c6b684263fc0f7f451",
+    "raw/indenture.html": "cf09c3b5d29eb4926cb83c6ee9404d712fcaa181fa0dac7636b74b5a86128da9",
+    "raw/annual-2015.txt": "4a7ed830714d38adabc5556f7c8883c4c1232fb25fa2252c1f178a27c2d17f49",
+    "raw/6k-2026-03-30-001836.html": "b4f590b67eea7b0e197dc816229f4837f77f19da3b4ea715f7539613a95a718c",
+    "raw/6k-2026-05-12-002569.html": "eaacda85ef97dade9a86213690b0c281e5578cd482f7bea150ed220d7d2931e8",
+    "raw/annual-2020.html": "3cab6bd59f9e9a5794d138d155b97f76ffeaabc8da21c59d018c9730358948db",
+    "raw/6k-2026-01-13-000130.txt": "190a5486bf7998b87050f28072d055fb7309d105020282065189e12a30279c90",
+    "raw/annual-2025.html": "e8e72e1665cbaae86b726c53ea1134eea80076536f686ee80d4e6295974babe9",
+    "raw/annual-2022.txt": "c034372e5223d262526c1a79ae992bf21a4ae5d95477ebb4408192ff9090ea7f",
+    "raw/robinhood.html": "ea661b39380f8ca8b93e17b3c6ef28abfc05dff7ade619ca18b48e828a515b8c",
+    "raw/6k-2026-02-10-000398.html": "425b720ad0e3b8cc6764b014521a7d897a8edc267b945d7624b7970fe92b3780",
+    "raw/6k-2026-01-13-000130.html": "37e7d7f18f7b6d26cbc7eec187c4e71b1a6a925c4c0fb69bd56114085eb288fb",
+    "raw/6k-2026-02-18-000549.txt": "320bc4c69ab04503fa2f2e2a3848c040a7fc62dba029f4799204c639b4ceca14",
+    "raw/6k-2026-06-02-003033.txt": "4902ba179b94d59f6777fc3dc1b6846c85972a74e1b499509fd4d6a20e1d09f6",
+    "raw/6k-2026-02-18-000549.html": "9856256ac131609e7b61edd2875ceb6ca0e2569921aacc0951ab0dda3d692e5f",
+    "raw/annual-2019.html": "8c03e5bbaddf1370ed897898ede6c0845c2497007978bed04961505f1d74083e",
+    "raw/annual-2020.txt": "ca2b03550c5e59090b61708b75854c6efbe471ea61cb28a9755926d83eb8e300",
+    "raw/annual-2019.txt": "2c8a2a6b2f5e4a480e3b51ae17e1de2ece3f7e7c9f5ff78382df2f074c9fdccd",
+    "raw/6k-2026-04-14-002105.txt": "b60e7a037475d614d396d1fe6c092241d14ca8b8dfd4f1e1f215715c446fdd59",
+    "raw/6k-2026-02-10-000398.txt": "c445009d9f332e5e1755a2d7131a9dbd1c91f625e489744451e4f46274b7f270",
+    "raw/annual-2023.txt": "cfc85526202a0058c0454c5d9f4a64a3b9f672c697da29e5df254c58ae0d9cf9",
+    "raw/annual-2023.html": "a983b6313c3496ad755719b74ef434df94db074789cc0fcd40a681c404f3d64b",
+    "raw/annual-2018.html": "da2cd7abe62ddc5741d047ef8441c83baaafb5642c873ce9994d4106d11ade7c",
+    "raw/6k-2026-06-24-003316.html": "5433e3ad1f22e8a2f796179542af827ca63bbde9bd0faa4b97ddf4ff92f71242",
+    "raw/companyfacts.json": "a66db0e34f942fc8015b5a58ac41c0c57a6d924f803c702c6aa268670963b664",
+    "raw/robinhood.txt": "546bbc5f0d99f2526f4da03ea45809d9621251bbfa899c558029fb7d2c1af9a0",
+    "raw/6k-2026-10-14-004769.txt": "04a2b887efb43d4db3f26d7b0fbc6a3df10a4b6b4c14bd6ce25b25601f1a5b73",
+    "raw/annual-2017.txt": "85d5afa3bfff1e24db89ffccbd6c43063060c020e500a7c51508553eda857f42",
+    "raw/6k-2026-06-24-003310.txt": "ddffa2753efdd17b807579256d43263a65e1c5faf63abca9548d6bcb5d2c8d53",
+    "raw/6k-2026-04-14-002105.html": "f6d4ceb2c98038bbc1a0f3b0a2f9f0af4adbc89950b3afffe82512c98eee15fa",
+    "raw/annual-2024.txt": "1e537d92bcd9b1d184b00209dc33110f6afe2c57a7b0837cf4cbe00a863f0fa7",
+    "raw/6k-2026-10-14-004767.html": "68fe5c88aa5b362768cc20ed8701654449b1f4728f04496e74d847c4a7c8bd1d",
+    "raw/annual-2016.txt": "5c0e116140269c2e816d11d44c6e07e841c52b2cb6656f9ccc194cdece500072",
+    "raw/6k-2026-06-02-003033.html": "ffb5c870264c1808fc13b29ded36852ca2f59ea9e70707cb1f759b7f5a25b449",
+    "raw/annual-2022.html": "fb97ea4caa41c6312b656d8c4c0be0daac9f2eb8e2238272db782c93393b92ac",
+    "raw/annual-2018.txt": "765f4591f107f11e8db11497e8ff6f9be22fe1e5dec9e20b7c7ad035810960f2",
+    "raw/6k-2026-06-24-003310.html": "344ddb5a09e75ab95dcd33477922894efddd91805c149683592fb81ed861592d",
+    "raw/6k-2026-05-12-002569.txt": "79ada0b5b5587842001196c42693fe805e162746545b127a03f0497e7b054e05",
+    "raw/6k-2026-06-24-003316.txt": "63512febbefe783d8ae82c687f3a1a6665149cca0bfd1965b939a4dbf22c77f2",
+    "raw/annual-2021.txt": "286d70cb7e737a56baf101c6a2a0dd62ea6c5f3429459f5a50cf6cdf3de9c76a",
+    "raw/6k-2026-07-29-003681.txt": "fab15c31fecdaa61e065a629e31de96c6b51a36059943b6b9c3e40601ccc11b4",
+    "raw/6k-2026-08-10-003975.txt": "a21c8b32e7ca3293edb5c7ebd57abff25dba9fe8283cb01a1a9fb080e4a1f105",
+    "raw/annual-2016.html": "dd806e4868065a5796137db5f5fdfad4e0b44fb8f2b737a3963264d767554d3d",
+    "raw/6k-2026-10-14-004767.txt": "f9e4a9fa6eea36ab3daf2907faff7c4e02aaa0cf33f758c366c0353f53e210c0",
+    "raw/annual-2025.txt": "a88accdcd83d795a4ffb729854c7568b54c7423786ad6c34dbc445287e47b826",
+    "raw/submissions.json": "b5b7270141dbd63e20932739320da3aadd9183e8ed8e4104e56a739935a7f181",
+    "raw/annual-2024.html": "ed835ea9c402692be08a0d4f0a4386504ff48f2f45fbb85b7a3521065b669943",
+    "raw/annual-2017.html": "0b584b7b41ba63b7b4c885bb77af6bc1b7aa289d3c1b7f5859f83ca53a6b1e43",
+    "raw/6k-2026-03-30-001836.txt": "8a48a642fc16f5a213b1b8a9a8147687270aedcf864fd56ec0af7b73253b396b",
+    "raw/annual-2021.html": "1c8a24a0668a361444a23f5b0430cf1b2de2c9c35b3761a9db41a10d161bb6a5",
+    "public-safe-v1/history-10fy-v1.json": "f91c9e34da493c52cd66bd64dc8a8b8ace4d7aa5881bba599bf8a76e8f6965b7",
+    "public-safe-v1/valuation-readiness-v1.json": "d5965afead23385be2fe85e9e9ddbb37af3de1cfca13c7589fad092273e8d99e",
+    "public-safe-v1/valuation-readiness-v1.md": "06c36e17f9c2010f6608fc2d57046f97d05123bab3e2605877675f3c2e1a1241",
+    "public-safe-v1/manifest.json": "6bd5cb8f8e8541eee28c4f58210b0d25745a6842bbdac5239020aa849c1dab01",
+    "public-safe-v1/valuation-readiness-v1-validation.json": "27717eec43f9423d481fe1ce6627c3d7c1a0ed836b7ae9898e2d719a198a29d9",
+    "public-safe-v1/history-10fy-v1.csv": "269a2c8f396e9fe680e26f98da454ae2585dcf7371bce0320fed2d8ca52ceaff",
+    "public-safe-v1/forecast-scenarios-v1.csv": "328f5e1a00ed64e53f763ea5150dd0d09e018e2b7f549ad97c699e0ded043baa"
+  },
+  "reproducibility": "Run python independent-audit-v1.py. Standard library only. Does not execute or alter source builders, v1 inputs, public-safe bundle or Site. Source web checks dated 2026-10-18 are not refreshed by script rerun."
+}

@@ -29,7 +29,7 @@ test('ONTO immutable public package hashes, ten years and corrected share units'
  assert.equal(json(r.identity.auditPath.slice(2)).check_count,148);assert.equal(r.history.length,10);assert.equal(r.history[0].fiscalEnd,'2016-12-31');assert.equal(r.history.at(-1).fiscalEnd,'2026-01-03');
  assert.equal(r.bridge.shares,49.033);assert.equal(r.bridge.quotedConvertibleFairValue,1982.250);assert.deepEqual(r.bridge.options,[]);
  for(const row of r.history){assert.ok(row.facts.revenue.source_url);assert.ok(row.facts.revenue.unit);}
- assert.equal(incrementalPresets(incrementalPackages.at(-1),catalog)[0].ticker,'ONTO');assert.ok(Object.isFrozen(r.annualCase));const bad=structuredClone(incrementalPackages.at(-1));bad.companies[0].annualCase.annual[0].revenue++;assert.throws(()=>validateIncrementalResearch(bad));
+ assert.equal(incrementalPresets(incrementalPackages.find(p=>p.companies.some(c=>c.identity.ticker==='ONTO')),catalog)[0].ticker,'ONTO');assert.ok(Object.isFrozen(r.annualCase));const bad=structuredClone(incrementalPackages.find(p=>p.companies.some(c=>c.identity.ticker==='ONTO')));bad.companies[0].annualCase.annual[0].revenue++;assert.throws(()=>validateIncrementalResearch(bad));
 });
 test('ONTO source identity and unsupported price assumptions fail closed',()=>{
  for(const mutate of [d=>d.discountOrigin='2026-10-18',d=>d.incrementalResearch.auditSHA256='bad',d=>d.bridgeInputs.cappedCallValue=51.826]){const d=draft();mutate(d);assert.ok(researchDraftIssues(d).length);assert.ok(restoreResearchDraft(d,r.annualCase).error);}
