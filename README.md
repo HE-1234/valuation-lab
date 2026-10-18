@@ -149,3 +149,12 @@ Every model and reading view now scrolls with the document. The application no l
 Real selection handlers now ship 280 ms opacity/8px panel transitions and drawing tab underlines. Input edits keep controls immediately usable and add 280 ms local result/chart feedback, without re-entering the editor. New actions, route departure, backgrounding and reduced-motion changes cancel motion safely. The six-second simulation replay, calculations, complete research presets, exact values, saved drafts and Undo are unchanged.
 
 `SCREEN-WORKSPACE.md` records the updated flow, accessibility and motion contracts. Validation includes the original 800 tests plus 19 focused tests; static document-renderer approximations remain distinct from browser screenshots. Native browser layout, motion painting, touch and screen-reader verification are still limited by the existing denied browser route, which was not retried or bypassed.
+
+
+## Dated capital scenarios
+
+Annual → Claims includes explicit researched October 17 capital scenarios for AAOI and NBIS. Use the complete **Use research** action or **Use researched capital scenario** to load them; the latter retains annual operating edits and has full Undo. Existing saved drafts retain their prior interpretation until loaded explicitly.
+
+AAOI uses a conditional option-inclusive approximation with separately editable current cash, current shares, existing awards and option assumptions. Option claim values reprice in each simulation draw. NBIS exposes its pre-claim diagnostic without pretending unknown senior claims are zero or presenting the limited-liability floor as stock fair value. See [source-linked explanation](dist/data/current-capital-scenarios-2026-10-17.html).
+
+The dated transaction engine pairs completed equity issuance with proceeds and completed conversion with claim removal. Future fundraising shares cannot be added again to the default negative-FCFF valuation. Raw forecasts remain frozen. These are explicit analyst estimates and simplifying claim models, not reported current balances or live quotes.

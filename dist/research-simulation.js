@@ -187,6 +187,7 @@ function finishRun(state){
   'One driver vector generates the complete annual path. The growth premium fades to zero in the final explicit year; reviewed growth and maturity shape are preserved around it.',
   capitalDescription,
   'Tax, terminal growth, terminal ROIC, anchor revenue, forecast horizon, timing stub inputs and selected capital/claims assumptions stay fixed. Terminal investment remains NOPAT × growth / ROIC.',
+  ...(baseline.bridge.claimRepricedPerTrial?['Selected capital assumptions stay fixed; AAOI note and customer-warrant claim values are repriced from each trial operating value using the selected option-inclusive approximation.']:[]),
   'Signed explicit net investment is preserved, including an explicit release or customer-advance assumption. Falling revenue never creates an investment release automatically.',
   'Future FCFF funding deficits remain inside operating value and are never deducted a second time as opening debt. This is not a financing, distress or recovery model.',
   'Negative operating EV, common equity and per-share values remain signed. No zero floor or clipping is applied.',
@@ -209,7 +210,7 @@ function finishRun(state){
    inputUnits:'growthPremium, marginShift and waccShift are fractions of one (0.01 = one percentage point); investmentMultiplier is a nonnegative multiple',
    growth:'growth[i] = reviewedGrowth[i] + growthPremium × (N−1−i)/(N−1); premium is zero when N=1; revenue is reconstructed sequentially from the anchor',
    capitalPolicy:c.capitalPolicy,capitalDescription,terminal:'Final explicit revenue × (1+g), stressed terminal margin, unchanged tax and g/ROIC reinvestment, stressed terminal WACC',
-   bridge:'Existing source-dated bridge applied independently to each accepted operating scenario; capital claims are not inferred from funding deficits',output:'Primary distribution is operating EV in native-currency millions; separate signed equity and native per-share distributions retain bridge coverage',
+   bridge:baseline.bridge.claimRepricedPerTrial?'Selected dated capital assumptions applied to each accepted operating scenario; AAOI option claim values are repriced per trial, never inferred from funding deficits':'Existing source-dated bridge applied independently to each accepted operating scenario; capital claims are not inferred from funding deficits',output:'Primary distribution is operating EV in native-currency millions; separate signed equity and native per-share distributions retain bridge coverage',
    timing:'Selected timing policy applied to each trial; timing inputs stay fixed and incomplete timing withholds calculation'}};
 }
 

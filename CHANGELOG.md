@@ -1,5 +1,16 @@
 # Change log
 
+## 2026-10-18 · Dated capital and dilution scenarios (research cutoff October 17)
+
+- Added explicit current-capital and existing-share controls in Annual → Claims, with matching remaining-year timing and full load/edit Undo. Saved drafts are never silently replaced.
+- AAOI now has a selected conditional option-inclusive scenario: dated/estimated cash and current shares, existing award sensitivity, discounted note cash flows and a joint dilution-adjusted European approximation for note/warrant claims. Volatility, credit spread, risk-free proxy and warrant coverage are editable; each simulation draw reprices the claims. The reference estimate is about $40/share, not a claim of exact security fair value.
+- NBIS now displays a dynamic pre-claim diagnostic with current cash/share estimates. Its selected owned-build case has a negative residual even before unresolved debt/option claims; common fair value remains explicitly unresolved rather than represented as zero. Lower-capex alternatives can change that result.
+- Completed financing cash and ownership are matched. Future financing dilution is not added again to negative FCFF; existing awards and option claims have separate treatments. Invalid capital inputs withhold equity output without hiding valid operating forecasts.
+- Added a source-linked explanation at `dist/data/current-capital-scenarios-2026-10-17.html`. Original frozen forecasts, raw research and all other twelve company calculations remain unchanged. No account, API, audience or GitHub permission change.
+
+The AAOI claim approximation omits contract-specific early exercise, calls, make-whole, averaging, default and vesting paths. The NBIS diagnostic is not a complete security appraisal. Verification: full regression run 906 checks, 904 passed, one unchanged external AAOI raw-cache rebuild failure and one existing cache skip. Final affected UI checks passed 77/77; subsequent narrow control/style checks passed 40/40; final pure-model/integration checks passed 44/44. Independent 50-draw simulation replay and all other twelve company defaults/outputs match expectations. Native browser execution remains unverified; source-driven static desktop/phone review is a separate check.
+
+
 ## 2026-10-17, 23:30 UTC · Keep history open while editing
 
 - Guided now shows every available annual observation for the selected metric by default, with secondary measures under Related historical comparisons. Risk displays source-linked, dated WACC components instead of an empty summary; terminal growth and ROIC retain their economic/proxy limitations.
