@@ -1,0 +1,50 @@
+{
+  "units": "USD millions",
+  "as_of": "2026-10-18",
+  "valuation_origin": "2026-06-27",
+  "scenarios": [
+    {
+      "scenario": "base",
+      "operating_ev_before_customer_claims": 347856.706130075,
+      "partner_net_funding_pv": 2337.406313502409,
+      "net_dated_asset_claim_bridge": 8847.105037169646,
+      "conditional_residual_pool_after_selected_espp_before_other_legacy_claims": 354366.4048537422,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "scenario": "deployment_delay",
+      "operating_ev_before_customer_claims": 85528.85531877783,
+      "partner_net_funding_pv": 3483.900285867174,
+      "net_dated_asset_claim_bridge": 5903.162446617201,
+      "conditional_residual_pool_after_selected_espp_before_other_legacy_claims": 87948.11747952786,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "scenario": "platform_scale_upside",
+      "operating_ev_before_customer_claims": 790813.2057228117,
+      "partner_net_funding_pv": 1041.5563884907106,
+      "net_dated_asset_claim_bridge": 10252.043205121661,
+      "conditional_residual_pool_after_selected_espp_before_other_legacy_claims": 800023.6925394427,
+      "common_equity_value": null,
+      "per_share_value": null
+    }
+  ],
+  "formulas": {
+    "ev": "sum forecast FCFF / (1+WACC)^t + terminal FCFF / (WACC-g) discounted to June 27",
+    "residual_pool": "EV - PV partner investment net funding + signed dated bridge components",
+    "borrowing_bridge": "estimated cash proceeds 4726 - principal 4750 = -24",
+    "refinancing_only_liquidity": "13111 + 4726 - 875 = 16962; excludes all other flows",
+    "named_awards": "36 + 9 + 10 + 7.5 + 8 = 70.5; target allocation value, not claim fair value",
+    "q4_normalization": "(10270 - 390)/9600 - 1 = 2.9167%"
+  },
+  "copied_reviewed_assumptions": {
+    "source_version": "v2-2026-10-18",
+    "operating_forecast_unchanged": true,
+    "base_return_sensitivity_12pct_operating_ev": 303363.99816984806,
+    "all_new_economic_investment_plus25pct_operating_ev": 321340.1408884058,
+    "sensitivity_precision": "Last amount rounded to $0.001M; full inherited file retained"
+  },
+  "not_a_current_common_equity_valuation": true
+}

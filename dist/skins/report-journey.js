@@ -238,7 +238,7 @@ function bridge() {
     bar.style.setProperty('--h', Math.max(h, .004).toFixed(4));
     const delta = s.to - s.from;
     setText(items[i].querySelector('dt'), s.name);
-    setText(items[i].querySelector('dd'), s.signed ? (delta >= 0 ? '+' : '') + money(delta, b.currency) : money(s.to, b.currency));
+    setText(items[i].querySelector('dd'), s.signed ? (delta >= 0 ? '+' : '') + money(delta, b.currency) : money(s.kind.startsWith('part') ? delta : s.to, b.currency));
     items[i].className = 'rx-bridge-item ' + s.kind;
   });
   setText(box.querySelector('.rx-bridge-head h3'), copy('bridge'));

@@ -1,0 +1,262 @@
+{
+  "source": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000123/amd-20260627.htm",
+  "maximum_origin_guarantee": 4100,
+  "guarantee_exposure_rolloff_known": false,
+  "received_partner_warrants_identified_and_valued": false,
+  "legal_netting_or_lease_overlap_confirmed": false,
+  "ordinary_purchase_cloud_commitment": 30276,
+  "uncommenced_lease_payments_origin": 4500,
+  "subsequent_lease_payments": 9500,
+  "subsequent_investments_up_to": 5000,
+  "selected_base_schedule": [
+    {
+      "period_end": "2026-12-26",
+      "new_rent": 125,
+      "gross_partner_funding": 1000,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 421
+    },
+    {
+      "period_end": "2027-12-25",
+      "new_rent": 700,
+      "gross_partner_funding": 2000,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2028-12-30",
+      "new_rent": 1150,
+      "gross_partner_funding": 2000,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2029-12-29",
+      "new_rent": 1200,
+      "gross_partner_funding": 0,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2030-12-28",
+      "new_rent": 1250,
+      "gross_partner_funding": 0,
+      "partner_recovery": 3000,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2031-12-27",
+      "new_rent": 1300,
+      "gross_partner_funding": 0,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2032-12-25",
+      "new_rent": 1350,
+      "gross_partner_funding": 0,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2033-12-31",
+      "new_rent": 1400,
+      "gross_partner_funding": 0,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2034-12-30",
+      "new_rent": 1450,
+      "gross_partner_funding": 0,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    },
+    {
+      "period_end": "2035-12-29",
+      "new_rent": 1500,
+      "gross_partner_funding": 0,
+      "partner_recovery": 0,
+      "fixed_opening_capital_payable": 0
+    }
+  ],
+  "guarantee_loss_grid": [
+    {
+      "payment_time_years": 0.5,
+      "fraction_of_initial_maximum_lost": 0.1,
+      "loss_at_payment": 410.0,
+      "pv_loss": 387.4135848344579,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 0.5,
+      "fraction_of_initial_maximum_lost": 0.35,
+      "loss_at_payment": 1435.0,
+      "pv_loss": 1355.9475469206025,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 0.5,
+      "fraction_of_initial_maximum_lost": 1,
+      "loss_at_payment": 4100,
+      "pv_loss": 3874.135848344579,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 3.5,
+      "fraction_of_initial_maximum_lost": 0.1,
+      "loss_at_payment": 410.0,
+      "pv_loss": 275.7533374197523,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 3.5,
+      "fraction_of_initial_maximum_lost": 0.35,
+      "loss_at_payment": 1435.0,
+      "pv_loss": 965.1366809691331,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 3.5,
+      "fraction_of_initial_maximum_lost": 1,
+      "loss_at_payment": 4100,
+      "pv_loss": 2757.5333741975232,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 7.5,
+      "fraction_of_initial_maximum_lost": 0.1,
+      "loss_at_payment": 410.0,
+      "pv_loss": 175.24623111072,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 7.5,
+      "fraction_of_initial_maximum_lost": 0.35,
+      "loss_at_payment": 1435.0,
+      "pv_loss": 613.3618088875199,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    },
+    {
+      "payment_time_years": 7.5,
+      "fraction_of_initial_maximum_lost": 1,
+      "loss_at_payment": 4100,
+      "pv_loss": 1752.4623111072,
+      "remaining_exposure_assumption": "Conservatively hold initial 4100 as the stressed exposure; actual rolloff not disclosed."
+    }
+  ],
+  "combined_stresses": [
+    {
+      "forward_incremental_return": 0.2,
+      "partner_recovery_FY2030": 3000,
+      "guarantee_loss_fraction": 0.1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 347856.706130075,
+      "pv_partner_net_funding": 2337.406313502409,
+      "guarantee_loss_pv": 275.7533374197523,
+      "conditional_pool_before_employee_customer_claims": 354366.4048537422,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "forward_incremental_return": 0.2,
+      "partner_recovery_FY2030": 3000,
+      "guarantee_loss_fraction": 1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 347856.706130075,
+      "pv_partner_net_funding": 2337.406313502409,
+      "guarantee_loss_pv": 2757.5333741975232,
+      "conditional_pool_before_employee_customer_claims": 351884.62481696444,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "forward_incremental_return": 0.2,
+      "partner_recovery_FY2030": 0,
+      "guarantee_loss_fraction": 0.1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 347856.706130075,
+      "pv_partner_net_funding": 4138.1623083579425,
+      "guarantee_loss_pv": 275.7533374197523,
+      "conditional_pool_before_employee_customer_claims": 352565.6488588867,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "forward_incremental_return": 0.2,
+      "partner_recovery_FY2030": 0,
+      "guarantee_loss_fraction": 1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 347856.706130075,
+      "pv_partner_net_funding": 4138.1623083579425,
+      "guarantee_loss_pv": 2757.5333741975232,
+      "conditional_pool_before_employee_customer_claims": 350083.8688221089,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "forward_incremental_return": 0.12,
+      "partner_recovery_FY2030": 3000,
+      "guarantee_loss_fraction": 0.1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 303363.99816984806,
+      "pv_partner_net_funding": 2337.406313502409,
+      "guarantee_loss_pv": 275.7533374197523,
+      "conditional_pool_before_employee_customer_claims": 309873.6968935153,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "forward_incremental_return": 0.12,
+      "partner_recovery_FY2030": 3000,
+      "guarantee_loss_fraction": 1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 303363.99816984806,
+      "pv_partner_net_funding": 2337.406313502409,
+      "guarantee_loss_pv": 2757.5333741975232,
+      "conditional_pool_before_employee_customer_claims": 307391.9168567375,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "forward_incremental_return": 0.12,
+      "partner_recovery_FY2030": 0,
+      "guarantee_loss_fraction": 0.1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 303363.99816984806,
+      "pv_partner_net_funding": 4138.1623083579425,
+      "guarantee_loss_pv": 275.7533374197523,
+      "conditional_pool_before_employee_customer_claims": 308072.94089865976,
+      "common_equity_value": null,
+      "per_share_value": null
+    },
+    {
+      "forward_incremental_return": 0.12,
+      "partner_recovery_FY2030": 0,
+      "guarantee_loss_fraction": 1,
+      "guarantee_payment_time_years": 3.5,
+      "operating_ev": 303363.99816984806,
+      "pv_partner_net_funding": 4138.1623083579425,
+      "guarantee_loss_pv": 2757.5333741975232,
+      "conditional_pool_before_employee_customer_claims": 305591.160861882,
+      "common_equity_value": null,
+      "per_share_value": null
+    }
+  ],
+  "caveat": "These are selected conditional loss amounts and cash dates, not probabilities or measured fair values. Original maximum guarantee declines as underlying lease payments are made, but the schedule is unknown. Undisclosed overlap among direct leases, cloud arrangements and guarantees prevents treating combined stress as a legal upper bound. No separate value is added for unidentified partner warrants.",
+  "correlated_asset_loss_overlay": {
+    "forward_incremental_return": 0.12,
+    "partner_recovery_FY2030": 0,
+    "guarantee_loss_fraction": 1,
+    "guarantee_payment_time_years": 3.5,
+    "operating_ev": 303363.99816984806,
+    "pv_partner_net_funding": 4138.1623083579425,
+    "guarantee_loss_pv": 2757.5333741975232,
+    "conditional_pool_before_employee_customer_claims": 305481.99491810764,
+    "common_equity_value": null,
+    "per_share_value": null,
+    "additional_loss_of_selected_loan_and_level3_values": 109.16594377432989,
+    "label": "12% return, no partner recovery, full guarantee loss, plus zero loan and Level 3 recovery"
+  },
+  "v3_presentation_safeguard": "June-origin conditional research. Any residual pool already includes selected ESPP reserve; it is before other legacy employee/customer claims, not common equity. Operating values exclude post-origin acquisitions and financing bridge; no current hurdle status is asserted."
+}

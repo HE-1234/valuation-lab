@@ -17,7 +17,7 @@ test('joint integration: every existing asset reverses exactly and rejects any a
  assert.deepEqual(Object.keys(fixture.files).filter(p=>p.startsWith('dist/data/')),['dist/data/simulation-methodology.html']);
  for(const [path,approved]of Object.entries(fixture.files)){
   const bytes=read(path);assert.equal(sha(reverseJointIntegration(path,bytes)),approved.beforeSHA256,path);
-  assert.throws(()=>reverseJointIntegration(path,Buffer.concat([bytes,Buffer.from('\n/* unreviewed */')])),/reviewed documentation bytes|exact isolated NVMI integration bytes/,path);
+  assert.throws(()=>reverseJointIntegration(path,Buffer.concat([bytes,Buffer.from('\n/* unreviewed */')])),/reviewed documentation bytes|exact isolated NVMI integration bytes|exact reviewed user UI integration bytes/,path);
  }
 });
 test('joint target narrow layout is confined to new Report controls',()=>{

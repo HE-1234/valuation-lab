@@ -104,6 +104,10 @@ pairs.push(['Occupancy cost-headroom stress','场地成本余量压力情景'],[
 pairs.push(['Nasdaq ordinary share; not ADR','纳斯达克普通股；并非 ADR']);
 pairs.push(['June-origin twelve-month periods, distinct from calendar fiscal history; end-year discounting.','六月基准的十二个月预测期，与日历财年历史区分；采用年末折现。']);
 pairs.push(['CAMT terminal g/ROIC investment is below the physical, working-capital and operating-cash funding floor. Revise the terminal assumptions.','CAMT 终值 g/ROIC 投资低于实物资本、营运资本及经营现金资金下限。请调整终值假设。']);
+pairs.push(...[["H2 FY2026", "2026 财年下半年"], ["Deployment delay", "部署延迟"], ["Platform scale", "平台扩展"], ["Load deployment delay", "载入部署延迟"], ["Load platform scale", "载入平台扩展"], ["AMD requires its reviewed dated standalone case.", "AMD 需要已复核的历史基准日独立经营情景。"], ["AMD retains H2 FY2026 then exact fiscal-year labels; restore the reviewed case before changing its period structure.", "AMD 保留 2026 财年下半年及后续精确财年标签；改变期间结构前请恢复已复核情景。"], ["AMD dated operating arithmetic exceeded the finite numerical range.", "AMD 历史经营计算超出有限数值范围。"], ["AMD terminal g/ROIC investment is below physical and working-capital funding needs. Revise terminal assumptions.", "AMD 终值 g/ROIC 投资低于实物及营运资本资金需求。请修改终值假设。"], ["AMD date changes require a newly reviewed partial-period operating and capital bridge.", "AMD 变更日期须重新复核部分期间经营及资本衔接。"], ["Nasdaq common stock; current ownership allocation unresolved", "纳斯达克普通股；当前所有权分配尚未解决"], ["Dated standalone operating EV only; current common allocation gated", "仅历史基准日独立经营企业价值；当前普通股分配受限"], ["Dated standalone operating EV before customer equity rebates and partner-asset flows.", "客户股权回扣及合作资产现金流前的历史基准日独立经营企业价值。"]]);
+pairs.push(['TTM to 2026-06-27','截至 2026-06-27 的过去十二个月'],['H2 FY2026 + subsequent full fiscal years','2026 财年下半年及后续完整财年']);
+pairs.push(['Reported trailing-twelve-month revenue; H2 forecast starts after June 27.','已报告过去十二个月收入；下半年预测从六月二十七日之后开始。']);
+for(let n=1;n<=29;n++)pairs.push([`H2 + ${n} full fiscal years`,`下半年 + ${n} 个完整财年`]);
 const en={},zh={},keys={};pairs.forEach(([a,b],i)=>{const key='copy'+i;en[key]=a;zh[key]=b;keys[a]='incremental.'+key;});
 registerCatalog('incremental',{en,'zh-Hans':zh});
 export const incrementalMessageKeys=Object.freeze(keys);

@@ -1,3 +1,4 @@
+import {amdH1Revenue,fullFiscalRevenue} from './amd-periods.js';
 import {isJoint,jointDefaults,jointEffectiveConfig,validateJointState,prepareJointSimulation,jointEndpoints,jointResultMetadata,JOINT_NOTE} from './joint-simulation-config.js';
 import {DEFAULT_SIMULATION_TRIALS} from './simulation-count-policy.js';
 import {applyResearchReferenceDefaults} from './research-reference-defaults.js';
@@ -81,12 +82,12 @@ function buildTrialDraft(d,stress,capitalPolicy,growthPath){
  // then add each curve delta to the edited row so manual offsets survive.
  const marginDelta=year=>phased?(stress.marginShift===0?0:marginAtYear(stressedPath,year)-marginAtYear(basePath,year)):stress.marginShift;
  const annual=d.annual.map((row,index)=>{
-  const reviewedGrowth=row.revenue/reviewedPrior-1;
+  const reviewedGrowth=fullFiscalRevenue(d,row,index)/reviewedPrior-1;
   const weight=n>1?(n-1-index)/(n-1):0;
   // Bypass reconstruction at zero premium to preserve reviewed amounts bit for
   // bit, including a nonconstant annual path and the final explicit-year rate.
-  const revenue=growthPath?trialPrior*(1+growthPath[index]):stress.growthPremium===0?row.revenue:trialPrior*(1+reviewedGrowth+stress.growthPremium*weight);
-  reviewedPrior=row.revenue;trialPrior=revenue;
+  const revenue=growthPath?trialPrior*(1+growthPath[index])-amdH1Revenue(d,index):stress.growthPremium===0?row.revenue:trialPrior*(1+reviewedGrowth+stress.growthPremium*weight)-amdH1Revenue(d,index);
+  reviewedPrior=fullFiscalRevenue(d,row,index);trialPrior=revenue+amdH1Revenue(d,index);
   const scale=!derived&&capitalPolicy==='revenue-scaled'?revenue/row.revenue:1;
   return {...row,revenue,margin:row.margin+marginDelta(row.year),reinvestment:scaleOperatingInvestment(d,row,stress.investmentMultiplier*scale),wacc:row.wacc+stress.waccShift};
  });
@@ -140,7 +141,7 @@ function requireTiming(d,operating){
 }
 export function researchAnnualPathContext(draft){
  let prior=draft.anchor.revenue;
- const baseline=draft.annual.map(row=>{const growth=row.revenue/prior-1;prior=row.revenue;return growth;});
+ const baseline=draft.annual.map((row,i)=>{const full=fullFiscalRevenue(draft,row,i),growth=full/prior-1;prior=full;return growth;});
  const derived=draft.schemaVersion===2?draft.derivedForecast:null;
  const candidate=derived?(derived.revenuePathPreserved===true?derived.sourceForecastHorizonYears+1:derived.growthMaturityYear):baseline.length+1;
  const plateauMatches=baseline.slice(candidate-1).every(g=>Math.abs(g-draft.terminal.growth)<=1e-12);
@@ -215,7 +216,7 @@ function step(state,count){
    const reasons=bridge.reasons?.length?bridge.reasons:['A valid source-dated common-equity bridge is unavailable.'];
    for(const reason of reasons)state.bridgeReasons[reason]=(state.bridgeReasons[reason]||0)+1;
   }
-  state.scenarios.push({trial,...stress,...(['NVMI','ONTO','CAMT','MRVL'].includes(d.ticker)?{annualFunding:operating.rows.map(r=>({year:r.year,revenue:r.revenue,margin:r.margin,taxRate:r.taxRate,enteredReinvestment:r.enteredReinvestment,physicalNetCapex:r.physicalNetCapex,incrementalSupplierDeposits:r.incrementalSupplierDeposits,incrementalNWC:r.incrementalNWC,incrementalOperatingCash:r.incrementalOperatingCash,fundingFloor:r.fundingFloor,requiredInvestment:r.requiredInvestment,investmentFloorTopUp:r.investmentFloorTopUp,reinvestment:r.reinvestment})),terminalFundingFloor:operating.terminal.fundingFloor}:{}),...(d.annualFundingPolicy?{annualFunding:operating.rows.map(r=>({year:r.year,periodEnd:r.periodEnd,enteredReinvestment:r.enteredReinvestment,investmentFloor:r.investmentFloor,investmentFloorTopUp:r.investmentFloorTopUp,reinvestment:r.reinvestment}))}:{}),...(growthPath?{growthPath}:{}),...(metricPaths?{metricPaths}:{}),...(state.pathSampler?{terminal}:{}),enterprise,originEnterprise:operating.enterprise,forecastPV:operating.forecastPV,terminalPV:operating.terminalPV,
+  state.scenarios.push({trial,...stress,...(d.ticker==='AMD'?{annualFunding:operating.rows.map(r=>({year:r.year,revenue:r.revenue,fullFiscalRevenue:r.fullFiscalRevenue,growth:r.growth,margin:r.margin,taxRate:r.taxRate,physicalNetCapex:r.physicalNetCapex,incrementalNWC:r.incrementalNWC,directFundingFloor:r.directFundingFloor,additionalEconomicReserve:r.additionalEconomicReserve,fixedOpeningFunding:r.fixedOpeningFunding,requiredInvestment:r.requiredInvestment,enteredReinvestment:r.enteredReinvestment,investmentFloorTopUp:r.investmentFloorTopUp,reinvestment:r.reinvestment})),terminalFundingFloor:operating.terminal.fundingFloor}:{}),...(['NVMI','ONTO','CAMT','MRVL'].includes(d.ticker)?{annualFunding:operating.rows.map(r=>({year:r.year,revenue:r.revenue,margin:r.margin,taxRate:r.taxRate,enteredReinvestment:r.enteredReinvestment,physicalNetCapex:r.physicalNetCapex,incrementalSupplierDeposits:r.incrementalSupplierDeposits,incrementalNWC:r.incrementalNWC,incrementalOperatingCash:r.incrementalOperatingCash,fundingFloor:r.fundingFloor,requiredInvestment:r.requiredInvestment,investmentFloorTopUp:r.investmentFloorTopUp,reinvestment:r.reinvestment})),terminalFundingFloor:operating.terminal.fundingFloor}:{}),...(d.annualFundingPolicy?{annualFunding:operating.rows.map(r=>({year:r.year,periodEnd:r.periodEnd,enteredReinvestment:r.enteredReinvestment,investmentFloor:r.investmentFloor,investmentFloorTopUp:r.investmentFloorTopUp,reinvestment:r.reinvestment}))}:{}),...(growthPath?{growthPath}:{}),...(metricPaths?{metricPaths}:{}),...(state.pathSampler?{terminal}:{}),enterprise,originEnterprise:operating.enterprise,forecastPV:operating.forecastPV,terminalPV:operating.terminalPV,
    peakEconomicDeficit:operating.peakEconomicDeficit,equity:bridgeEligible?bridge.equity:null,perShare:bridgeEligible?bridge.rawPerShare:null,rawPerShare:bridgeEligible?bridge.rawPerShare:null,
    bridgeStatus:bridge.status,...(bridgeEligible?{claims:{allocationShares:bridge.allocationShares,assetTotal:bridge.assetTotal,claimTotal:bridge.claimTotal,warrantClaim:bridge.warrantClaim,...(['cdns-conditional-full-participation-v3','snps-conditional-full-participation-v3'].includes(bridge.claimAllocationModel)?{claimAllocationModel:bridge.claimAllocationModel,allocationUnits:bridge.allocationUnits,assumedAwardUnits:bridge.assumedAwardUnits,assumedAwardEquity:bridge.assumedAwardEquity,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,allocationResidual:bridge.allocationResidual}:{}),...(bridge.claimAllocationModel==='fn-joint-european-v1'?{claimAllocationModel:bridge.claimAllocationModel,awardClaim:bridge.awardClaim,equityPoolBeforeExistingEquityClaims:bridge.equityPoolBeforeExistingEquityClaims,unallocatedShortfall:bridge.unallocatedShortfall,openingOperatingCashReserve:bridge.openingOperatingCashReserve,allocationResidual:bridge.allocation.residual}:{})}}:{})});
  }

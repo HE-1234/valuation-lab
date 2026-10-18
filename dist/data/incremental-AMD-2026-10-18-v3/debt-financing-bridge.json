@@ -1,0 +1,79 @@
+{
+  "units": "USD millions; source tables rounded to millions",
+  "information_cutoff": "2026-10-18",
+  "origin": "2026-06-27",
+  "scope": "Historical disclosure plus financing-only hypothetical; not an October cash or debt balance",
+  "august_offering": {
+    "closing_date": "2026-08-17",
+    "tranches": [
+      {
+        "maturity": "2029-08-17",
+        "principal": 1250,
+        "coupon": 0.046,
+        "annual_coupon_cash": 57.5
+      },
+      {
+        "maturity": "2031-08-17",
+        "principal": 1500,
+        "coupon": 0.05,
+        "annual_coupon_cash": 75.0
+      },
+      {
+        "maturity": "2033-08-17",
+        "principal": 1000,
+        "coupon": 0.0525,
+        "annual_coupon_cash": 52.5
+      },
+      {
+        "maturity": "2036-08-17",
+        "principal": 1000,
+        "coupon": 0.055,
+        "annual_coupon_cash": 55.0
+      }
+    ],
+    "principal": 4750,
+    "estimated_cash_proceeds_from_capitalization_table": 4726,
+    "principal_less_estimated_cash_proceeds": 24,
+    "annual_coupon_cash": 240.0,
+    "first_coupon_date": "2027-02-17",
+    "coupon_frequency": "semiannual",
+    "dated_source_as_adjusted_cash": 9812,
+    "dated_source_as_adjusted_debt_carrying": 7952,
+    "dated_source_as_adjusted_debt_principal": 8000,
+    "reported_amounts_estimated_and_rounded": true
+  },
+  "september_maturity": {
+    "contractual_date": "2026-09-24",
+    "principal": 875,
+    "coupon": 0.04212,
+    "annual_coupon_removed_if_retired": 36.855,
+    "semiannual_coupon_due": 18.4275,
+    "actual_payment_verified": false
+  },
+  "financing_only_if_all_proceeds_retained_and_maturity_paid": {
+    "cash_and_short_investments": 16962,
+    "senior_debt_principal": 7125,
+    "cash_minus_senior_principal": 9837,
+    "change_cash_minus_senior_principal": -24,
+    "change_annual_coupon_cash": 203.145,
+    "all_other_cash_flows_excluded": true,
+    "not_a_current_balance": true
+  },
+  "small_convertible_note": {
+    "prospectus_disclosed_principal": 0.065,
+    "source_rounding_note": "Approximately $65,000 outstanding in table footnote, rounded to zero in millions. No claimed current conversion/maturity outcome."
+  },
+  "no_double_count": [
+    "Add borrowing cash and debt together; fees/discount reduce the net principal-basis bridge once.",
+    "Debt retirement exchanges cash for an equal principal reduction; do not subtract $875M twice.",
+    "Do not deduct coupon interest from unlevered FCFF when debt is separately allocated; revisit WACC/financing tax treatment consistently for a current valuation.",
+    "The September coupon covers a period crossing the June origin; it is not wholly a new June-origin expense or an extra DCF principal claim.",
+    "No assumption that issuance proceeds were all spent on Anthropic or Taalas.",
+    "Proceeds are an estimated capitalization-table amount, not a subsequently reported actual net receipt."
+  ],
+  "sources": [
+    "S01",
+    "S02",
+    "S03"
+  ]
+}

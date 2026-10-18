@@ -323,6 +323,8 @@ function paint(section) {
   const {values, yearly, setYears, start, mature, roic, terminal} = read(section, kind);
   const valid = values.length > 0 && values.every(finite) && finite(mature);
   el.classList.toggle('is-invalid', !valid);
+  // Withhold old numeric geometry until the host publishes a valid path again.
+  el.hidden = !valid;
   if (!valid) return;
 
   // Same calendar as the phase band below: a few years past the settle year.
