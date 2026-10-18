@@ -31,7 +31,7 @@ test('guided runtime QA: complete WACC worksheet applies automatically, incomple
 });
 test('guided runtime QA: category tabs expose current state and keyboard navigation',async()=>{
  const h=await startStudio();for(let step=0;step<8;step++){h.step(step);assert.equal(h.get('#group-'+step).getAttribute('aria-selected'),'true');assert.equal(h.get('#group-'+step).getAttribute('tabindex'),'0');assert.equal(h.get('#assumption-editor').getAttribute('aria-labelledby'),'group-'+step);}
- let prevented=0;h.get('#group-7').onkeydown({key:'Home',preventDefault(){prevented++}});assert.equal(h.state().step,2);assert.equal(h.focus(),h.get('#group-2'));h.get('#group-2').onkeydown({key:'ArrowRight',preventDefault(){prevented++}});assert.equal(h.state().step,3);assert.equal(prevented,2);
+ let prevented=0;h.get('#group-7').onkeydown({key:'Home',preventDefault(){prevented++}});assert.equal(h.state().step,1);assert.equal(h.focus(),h.get('#group-1'));h.get('#group-1').onkeydown({key:'ArrowRight',preventDefault(){prevented++}});assert.equal(h.state().step,2);assert.equal(prevented,2);
 });
 test('guided runtime QA: session draft survives company switching with browser storage disabled',async()=>{
  const h=await startStudio({storageBlocked:true});h.input('#g-growth','17');h.change('#current-company','MSFT');h.change('#current-company','AAPL');assert.equal(h.get('#g-growth').value,'17');

@@ -4,11 +4,26 @@ const finite=x=>typeof x==='number'&&Number.isFinite(x);
 const object=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
 const validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x))&&new Date(x).toISOString().slice(0,10)===x;
 const fields=['earlyEndYear','laterSalesCapital','fadeStartYear','terminalYear'];
+// Version 2: year 1 is the initial sales / capital scalar; years 2…k are set
+// one by one; capital intensity then fades to the terminal-consistent level.
+export const YEARLY_CAPITAL_PATH_VERSION=2;
+export const MAX_YEARLY_CAPITAL_YEARS=15;
+export const isYearlyCapitalPath=p=>p?.version===YEARLY_CAPITAL_PATH_VERSION;
+function yearlyCapitalIssues(path){
+ const errors=[],r=path.yearlySalesCapital;
+ if(Object.keys(path).some(k=>!['enabled','version','yearlySalesCapital','terminalYear','inputText'].includes(k)))errors.push('The capital-efficiency path contains unsupported fields.');
+ if(!Array.isArray(r)||r.length>MAX_YEARLY_CAPITAL_YEARS-1)errors.push(`Set up to ${MAX_YEARLY_CAPITAL_YEARS-1} yearly sales / capital ratios after year 1.`);
+ else r.forEach((v,i)=>{if(!finite(v)||v<=0)errors.push(`Year ${i+2} sales / capital must be a positive finite number.`);});
+ const k=1+(Array.isArray(r)?r.length:0);
+ if(!Number.isInteger(path.terminalYear)||path.terminalYear<=k||path.terminalYear>30)errors.push(`Terminal capital efficiency year: choose a whole year after year ${k} and no later than 30.`);
+ return errors;
+}
 export function capitalPathDefaults(draft){
  return {enabled:true,version:1,earlyEndYear:5,laterSalesCapital:draft?.assumptions?.salesCapital,fadeStartYear:10,terminalYear:15};
 }
 export function capitalPathIssues(path){
  if(path===undefined||object(path)&&path.enabled===false)return [];
+ if(object(path)&&path.enabled===true&&isYearlyCapitalPath(path))return yearlyCapitalIssues(path);
  if(!object(path)||path.enabled!==true||path.version!==1)return ['Choose a valid optional early/later capital-efficiency path.'];
  const errors=[];
  if(Object.keys(path).some(k=>!['enabled','version',...fields,'inputText'].includes(k)))errors.push('The capital-efficiency path contains unsupported fields.');
@@ -25,13 +40,22 @@ export function resolvedCapitalPath(draft,assumptions=draft.assumptions){
  if(![a.targetMargin,a.tax,a.terminalGrowth,a.terminalROIC].every(finite)||a.targetMargin<=0||a.targetMargin>1||a.tax<0||a.tax>.6||a.terminalGrowth<0||a.terminalGrowth>.05||a.terminalROIC<=a.terminalGrowth)throw Error('A positive mature margin and valid terminal tax, growth and ROIC are required for the capital-efficiency path.');
  // One existing salesCapital draw shifts both authored ratios proportionally.
  // A fixed draw uses the authored later ratio exactly, avoiding round-trip drift.
- const laterSalesCapital=a.salesCapital===base.salesCapital?p.laterSalesCapital:p.laterSalesCapital*(a.salesCapital/base.salesCapital);
+ const scale=v=>a.salesCapital===base.salesCapital?v:v*(a.salesCapital/base.salesCapital);
  const terminalIntensity=(1+a.terminalGrowth)*a.targetMargin*(1-a.tax)/a.terminalROIC;
+ if(isYearlyCapitalPath(p)){
+  const yearlySalesCapital=p.yearlySalesCapital.map(scale),k=1+yearlySalesCapital.length;
+  if(!yearlySalesCapital.every(v=>finite(v)&&v>0&&finite(1/v))||!finite(1/a.salesCapital)||!finite(terminalIntensity)||terminalIntensity<=0||!finite(1/terminalIntensity))throw Error('Capital-efficiency arithmetic is nonfinite; revise the ratio or terminal assumptions.');
+  // Shared fields let existing diagnostics read the yearly path: the set years
+  // end at k, the last set ratio is the one that fades.
+  return {...p,earlySalesCapital:a.salesCapital,yearlySalesCapital,earlyEndYear:1,fadeStartYear:k,laterSalesCapital:k>1?yearlySalesCapital.at(-1):a.salesCapital,terminalIntensity,terminalSalesCapital:1/terminalIntensity};
+ }
+ const laterSalesCapital=scale(p.laterSalesCapital);
  if(!finite(laterSalesCapital)||laterSalesCapital<=0||!finite(1/a.salesCapital)||!finite(1/laterSalesCapital)||!finite(terminalIntensity)||terminalIntensity<=0||!finite(1/terminalIntensity))throw Error('Capital-efficiency arithmetic is nonfinite; revise the ratio or terminal assumptions.');
  return {...p,earlySalesCapital:a.salesCapital,laterSalesCapital,terminalIntensity,terminalSalesCapital:1/terminalIntensity};
 }
 export function capitalSalesCapitalAtYear(path,year){
  if(!Number.isInteger(year)||year<1||year>30)throw Error('Choose a forecast year from 1 to 30.');
+ if(isYearlyCapitalPath(path)&&year>1&&year<=path.fadeStartYear)return path.yearlySalesCapital[year-2];
  if(year<=path.earlyEndYear)return path.earlySalesCapital;
  if(year<=path.fadeStartYear)return path.laterSalesCapital;
  const weight=Math.min(1,(year-path.fadeStartYear)/(path.terminalYear-path.fadeStartYear));

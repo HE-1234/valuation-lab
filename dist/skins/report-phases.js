@@ -10,8 +10,8 @@ import {getLocale} from '../i18n.js';
 
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 const COPY = {
-  en: {early: 'Early', later: 'Later', fade: 'Fade', terminal: 'Terminal', reach: 'Move to', hold: 'Hold', fadeTo: 'Fade to', year: 'Year', drag: 'Drag a marker or use the arrow keys to move a phase boundary.'},
-  'zh-Hans': {early: '早期', later: '后期', fade: '过渡', terminal: '终值', reach: '调整至', hold: '维持', fadeTo: '降至', year: '第 {n} 年', drag: '拖动标记或使用方向键调整阶段分界。'}
+  en: {early: 'Early', later: 'Later', fade: 'Fade', terminal: 'Terminal', reach: 'Move to', hold: 'Hold', fadeTo: 'Fade to', yours: 'Your years', glide: 'Glide', mature: 'Mature', year: 'Year', dragYearly: 'Drag a bar to change that year. Drag a marker to set more or fewer years, or to change when the path settles.', drag: 'Drag a marker or use the arrow keys to move a phase boundary.'},
+  'zh-Hans': {early: '早期', later: '后期', fade: '过渡', terminal: '终值', reach: '调整至', hold: '维持', fadeTo: '降至', yours: '你设定的年度', glide: '收敛', mature: '成熟', year: '第 {n} 年', dragYearly: '拖动长条可调整该年度；拖动标记可增减设定年数，或调整路径稳定的年度。', drag: '拖动标记或使用方向键调整阶段分界。'}
 };
 const copy = key => (COPY[getLocale?.()] || COPY.en)[key];
 const yearLabel = n => getLocale?.() === 'zh-Hans' ? copy('year').replace('{n}', n) : `Y${n}`;
@@ -21,7 +21,7 @@ const fmt = (v, unit) => Number.isFinite(v) ? `${Number(v.toFixed(2))}${unit}` :
 /* Each kind names its three boundary fields, how they may order, and the phases. */
 const KINDS = {
   capital: {
-    section: '.capital-phase-controls',
+    section: '.capital-phase-controls:not([data-path-mode="yearly"])',
     anchor: s => s.querySelector('.operating-timing-controls'),
     place: (s, el) => s.querySelector('.operating-timing-controls')?.prepend(el),
     field: (s, k) => s.querySelector(`input[data-capital-control="${k}"]`),
@@ -40,7 +40,7 @@ const KINDS = {
     }
   },
   margin: {
-    section: '.margin-phase-controls',
+    section: '.margin-phase-controls:not([data-path-mode="yearly"])',
     anchor: s => s.querySelector('.margin-phase-grid'),
     place: (s, el) => s.querySelector('.margin-phase-grid')?.before(el),
     field: (s, k) => s.querySelector(`input[data-margin-control="${k}"]`),
@@ -57,15 +57,48 @@ const KINDS = {
         {from: t + 1, to: Infinity, tone: 'end', name: copy('hold'), value: fmt(terminal, '%')}
       ];
     }
-  }
+  },
+  marginYearly: yearlyKind('margin', '%', 'glide', 'mature'),
+  capitalYearly: yearlyKind('capital', '×', 'fade', 'terminal')
 };
+
+/* "Set each year": two boundaries, how many years you set and the year the
+   path settles. Sits under the path chart so both share one calendar. */
+function yearlyKind(name, unit, fadeName, endName) {
+  const settled = s => {
+    const scope = s.closest('[role="tabpanel"], .guided-screen') || document;
+    return name === 'margin' ? fmt(num(scope.querySelector('#g-targetMargin')), '%') : fmt(Number(s.dataset.mature), '×');
+  };
+  return {
+    section: `.${name}-phase-controls[data-path-mode="yearly"]`,
+    anchor: s => s.querySelector('.yearly-path-head'),
+    place: (s, el) => (s.querySelector('fieldset.yearly-path > .rx-path') || s.querySelector('fieldset.yearly-path > legend'))?.after(el),
+    field: (s, k) => s.querySelector(k === 'count' ? `input[data-yearly-count="${name}"]` : `input[data-${name}-control="terminalYear"]`),
+    keys: ['count', 'terminalYear'],
+    hint: 'dragYearly',
+    // Changing how many years you set rebuilds the editor, so a drag previews
+    // the new count and commits it once, when you let go.
+    deferred: [0],
+    max: [15, 30],
+    strict: true,
+    phases(s, [k, t]) {
+      const first = num(s.querySelector(`input[data-${name}-year="1"]`)), last = num(s.querySelector(`input[data-${name}-year="${k}"]`));
+      const range = k > 1 && Number.isFinite(first) && Number.isFinite(last) && first !== last ? `${fmt(first, '')}→${fmt(last, unit)}` : fmt(first, unit);
+      return [
+        {from: 1, to: k, tone: 'a', name: copy('yours'), value: range},
+        {from: k + 1, to: t, tone: 'fade', name: copy(fadeName), value: ''},
+        {from: t + 1, to: Infinity, tone: 'end', name: copy(endName), value: settled(s)}
+      ];
+    }
+  };
+}
 
 function bounds(kind, years, index) {
   // Capital needs a gap of at least one year between boundaries; margin
   // boundaries may coincide (an empty hold or fade phase).
   const gap = kind.strict ? 1 : 0;
   const lo = index === 0 ? 1 : years[index - 1] + gap;
-  const hi = index === years.length - 1 ? 30 : years[index + 1] - gap;
+  const hi = Math.min(kind.max?.[index] ?? 30, index === years.length - 1 ? 30 : years[index + 1] - gap);
   return [lo, hi];
 }
 
@@ -110,6 +143,11 @@ function build(section, kind) {
     const [lo, hi] = bounds(kind, years, index);
     const input = kind.field(section, kind.keys[index]);
     const restoreHandle = handles.includes(document.activeElement) || !!state.drag;
+    if (state.drag && kind.deferred?.includes(index)) {
+      state.preview = {index, year: Math.max(lo, Math.min(hi, Math.round(year)))};
+      paint(section);
+      return;
+    }
     write(input, Math.max(lo, Math.min(hi, Math.round(year))));
     // Annual handlers may focus the authoritative field or rebuild the section
     // when its forecast length changes. Keep keyboard control on the same handle.
@@ -193,7 +231,7 @@ function build(section, kind) {
       handles[d.index].focus({preventScroll: true});
     }
     const y = yearAt(e.clientX);
-    if (y !== yearsNow()[d.index]) move(d.index, y);
+    if (y !== (state.preview?.index === d.index ? state.preview.year : yearsNow()[d.index])) move(d.index, y);
   };
   const end = e => {
     if (!state.drag) return;
@@ -203,7 +241,18 @@ function build(section, kind) {
     if (activeDrag === state) activeDrag = null;
     if (drag.capture.hasPointerCapture?.(drag.pointerId)) drag.capture.releasePointerCapture(drag.pointerId);
     el.classList.remove('is-dragging');
-    paint(section);   // the span may grow or shrink once you let go
+    const preview = state.preview;
+    state.preview = null;
+    if (preview) {
+      delete section.dataset.previewSetYears;
+      const input = kind.field(section, kind.keys[preview.index]);
+      write(input, preview.year);
+      const current = document.getElementById(input.id)?.closest(kind.section);
+      const next = current && (timelines.get(current) || build(current, kind));
+      next?.handles[preview.index].focus({preventScroll: true});
+      if (current) paint(current);
+    }
+    if (section.isConnected) paint(section);   // the span may grow or shrink once you let go
   };
   state.pointerMove = pointerMove;
   state.endDrag = end;
@@ -221,6 +270,11 @@ function paint(section) {
   if (!state) return;
   const {el, kind, handles} = state;
   const years = kind.keys.map(k => num(kind.field(section, k)));
+  if (state.preview) {
+    years[state.preview.index] = state.preview.year;
+    const value = String(state.preview.year);
+    if (section.dataset.previewSetYears !== value) section.dataset.previewSetYears = value;
+  }
   const valid = validYears(kind, years);
   el.classList.toggle('is-invalid', !valid);
   handles.forEach((h, i) => {
@@ -275,7 +329,8 @@ function paint(section) {
   const axisMarkup = Array.from({length: span}, (_, k) => `<i style="left:${pct(k + 1)}"${(k + 1) % 5 === 0 || k === 0 ? ` data-y="${k + 1}"` : ''}></i>`).join('');
   if (axis.dataset.span !== String(span)) { axis.innerHTML = axisMarkup; axis.dataset.span = String(span); }
   const hint = el.querySelector('.rx-ph-hint');
-  if (hint.textContent !== copy('drag')) hint.textContent = copy('drag');
+  const hintText = copy(kind.hint || 'drag');
+  if (hint.textContent !== hintText) hint.textContent = hintText;
 }
 
 function scan() {
@@ -294,7 +349,5 @@ onScan(scan);
 document.addEventListener('input', e => {
   const section = e.target.closest?.('.capital-phase-controls, .margin-phase-controls');
   if (section && timelines.has(section)) requestAnimationFrame(() => paint(section));
-  else if (e.target.id === 'g-salesCapital' || e.target.id === 'g-targetMargin') {
-    document.querySelectorAll('.capital-phase-controls, .margin-phase-controls').forEach(s => timelines.has(s) && requestAnimationFrame(() => paint(s)));
-  }
+  if (e.target.id === 'g-targetMargin' || e.target.id === 'g-salesCapital') document.querySelectorAll('.capital-phase-controls, .margin-phase-controls').forEach(s => timelines.has(s) && requestAnimationFrame(() => paint(s)));
 }, true);

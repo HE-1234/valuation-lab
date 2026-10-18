@@ -1,6 +1,6 @@
 import {ANNUAL_GROWTH_PATH,ANNUAL_METRIC_PATHS} from './annual-path-sampling.js';
 import {defaults} from './engine.js';
-import {marginPathIssues,marginAtYear} from './margin-path.js';
+import {marginPathIssues,marginAtYear,isYearlyMarginPath} from './margin-path.js';
 import {capitalPathIssues,resolvedCapitalPath,applyCapitalEfficiency} from './capital-efficiency.js';
 // Current-only explicit operating paths. Scalars remain the four sampled
 // economic drivers; the same deterministic adapter constructs every annual path.
@@ -105,8 +105,11 @@ function legacyOperatingAssumptions(snapshot,draft,assumptions){
 // recomputed from normalized source EBIT; targetMargin remains the sole terminal
 // margin scalar. A sampled target shifts both future margin anchors together.
 export function resolvedMarginPath(snapshot,draft,assumptions=draft.assumptions){
- const p=draft?.marginPath;
- return {...p,startMargin:(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue,terminalMargin:assumptions.targetMargin,interimMargin:p?.interimMargin+(assumptions.targetMargin-draft.assumptions.targetMargin)};
+ const p=draft?.marginPath,shift=assumptions.targetMargin-draft.assumptions.targetMargin;
+ // Yearly near-term margins move with the sampled terminal margin, exactly as
+ // the interim target does; an unsampled draw leaves them byte-identical.
+ if(isYearlyMarginPath(p))return {...p,startMargin:(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue,terminalMargin:assumptions.targetMargin,nearTermMargins:Array.isArray(p.nearTermMargins)?p.nearTermMargins.map(m=>shift===0?m:m+shift):p.nearTermMargins};
+ return {...p,startMargin:(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue,terminalMargin:assumptions.targetMargin,interimMargin:p?.interimMargin+shift};
 }
 export function operatingIssues(snapshot,draft){
  const errors=[...legacyOperatingIssues(snapshot,draft),...capitalPathIssues(draft?.capitalPath)],p=draft?.marginPath;
@@ -119,7 +122,7 @@ export function operatingIssues(snapshot,draft){
  }
  if(p===undefined||p?.enabled===false)return errors;
  if(!p||typeof p!=='object'||Array.isArray(p))return [...errors,'Choose a valid optional margin path.'];
- if(Object.keys(p).some(k=>!['enabled','version','interimMargin','interimYear','declineStartYear','terminalYear'].includes(k)))errors.push('The optional margin path contains unsupported fields. Starting and terminal margins come from normalized EBIT and the terminal-margin assumption.');
+ if(Object.keys(p).some(k=>!(isYearlyMarginPath(p)?['enabled','version','nearTermMargins','terminalYear']:['enabled','version','interimMargin','interimYear','declineStartYear','terminalYear']).includes(k)))errors.push('The optional margin path contains unsupported fields. Starting and terminal margins come from normalized EBIT and the terminal-margin assumption.');
  for(const key of Object.keys(defaults))if(!finite(draft.assumptions?.[key]))errors.push(`${key} must be finite for the margin path.`);
  if(!boundedYear(draft.assumptions?.years))errors.push('Growth maturity must be a whole year from 1 to 30.');
  if(!finite(draft.normalizationDelta))errors.push('The margin path requires a finite starting EBIT normalization.');
@@ -131,7 +134,7 @@ function marginOperatingProfileDefinition(snapshot,draft,assumptions=draft.assum
  if(draft?.marginPath?.enabled!==true)return base;
  const p=draft.operatingProfile,marginPath=resolvedMarginPath(snapshot,draft,assumptions);
  const forecastYears=Math.max(draft.assumptions.years,draft.capitalPath?.enabled===true?draft.capitalPath.terminalYear:p?.schemaVersion===2?p.capitalMaturityYears:0,marginPath.terminalYear);
- return {...(base||{id:'margin-path-v1',label:'Independent interim margin path',classification:'User-selected analyst path, not issuer guidance or a fitted forecast'}),marginPath,marginMaturityYears:marginPath.terminalYear,forecastYears,note:'Margin moves from normalized starting EBIT to the interim target, holds through the selected decline-start year, then reaches the terminal target in its independent terminal year and holds. Growth and capital efficiency keep their existing calendars; extending margin timing does not delay either. The explicit forecast continues until all active transitions have finished. Terminal ROIC and snapshot capital claims remain separate judgments.',marginSampling:'One terminal-margin draw shifts interim and terminal margins by the same percentage-point difference. Starting normalized EBIT is unchanged. Infeasible draws are rejected, never clipped.'};
+ return {...(base||{id:'margin-path-v1',label:isYearlyMarginPath(draft.marginPath)?'Yearly margin path':'Independent interim margin path',classification:'User-selected analyst path, not issuer guidance or a fitted forecast'}),marginPath,marginMaturityYears:marginPath.terminalYear,forecastYears,note:isYearlyMarginPath(marginPath)?'Margins for the first years are set directly by the analyst; after the last set year the margin moves in a straight line to the terminal target in its independent terminal year and holds. Growth and capital efficiency keep their existing calendars. The explicit forecast continues until all active transitions have finished. Terminal ROIC and snapshot capital claims remain separate judgments.':'Margin moves from normalized starting EBIT to the interim target, holds through the selected decline-start year, then reaches the terminal target in its independent terminal year and holds. Growth and capital efficiency keep their existing calendars; extending margin timing does not delay either. The explicit forecast continues until all active transitions have finished. Terminal ROIC and snapshot capital claims remain separate judgments.',marginSampling:isYearlyMarginPath(marginPath)?'One terminal-margin draw shifts every set yearly margin and the terminal margin by the same percentage-point difference. Starting normalized EBIT is unchanged. Infeasible draws are rejected, never clipped.':'One terminal-margin draw shifts interim and terminal margins by the same percentage-point difference. Starting normalized EBIT is unchanged. Infeasible draws are rejected, never clipped.'};
 }
 function marginOperatingAssumptions(snapshot,draft,assumptions){
  const errors=operatingIssues(snapshot,draft);if(errors.length)throw Error(errors.join(' '));
