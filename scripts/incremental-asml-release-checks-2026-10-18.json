@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "release": "ASML incremental dated-origin EUR v4",
+  "sourceBase": "6c0403862102f67fe7cde01036bb6b913765f1bf",
+  "preparedAsOf": "2026-10-18",
+  "company": "ASML",
+  "scope": "Separate ASML source/capital/audit/history/report package with native EUR operating value and conditional dated common allocation. Preserve original fourteen, selected GOOG, KLAC, AMAT, LRCX, quiz120, catalog and approved UI/CSS. No other company added.",
+  "testResults": {
+    "fullSuite": {
+      "command": "npm test",
+      "total": 1510,
+      "passed": 1509,
+      "failed": 0,
+      "skipped": 1,
+      "skip": "Pre-existing SEC research-cache check; raw research cache is not bundled.",
+      "logSHA256": "7a81cbc257529d40f341ccec78a52affe50560f8cce7366460b962f5bb609eae"
+    },
+    "focused": {
+      "command": "node --test tests/incremental-asml.test.mjs tests/incremental-lrcx.test.mjs tests/incremental-amat.test.mjs tests/incremental-klac.test.mjs",
+      "total": 156,
+      "passed": 156,
+      "failed": 0,
+      "ASMLTests": 48
+    },
+    "independentReview": {
+      "researchSourceChecks": 147,
+      "adapterChecks": 630,
+      "sourceFidelityChecks": 74,
+      "focusedTestsIndependentlyRerun": 156,
+      "preexistingDataFilesByteIdentical": 92,
+      "finalDistFingerprint": "3df30663929cfe1e9f7c1489f30ce04374f726128a704bdda01bace2589e3751",
+      "fingerprintMethod": "SHA256 of lexicographically sorted relative dist path + space + file SHA256, joined with newline"
+    },
+    "staticVisual": {
+      "captures": 48,
+      "passed": 48,
+      "sizes": [
+        390,
+        1440
+      ],
+      "locales": [
+        "en",
+        "zh-Hans"
+      ],
+      "views": [
+        "Result",
+        "Claims",
+        "Capital",
+        "Capital evidence",
+        "Blank contingent claim"
+      ],
+      "scenarios": 3,
+      "viewportOverflow": 0,
+      "duplicateIDs": 0,
+      "note": "Source-driven static WeasyPrint, not native browser verification. Corrected ASML runoff label was recaptured in both languages; all Chinese and six representative Capital captures refreshed. Initial English captures retained only for unchanged geometry may show prior label. Parent owns native post-publication smoke.",
+      "snapshotContentChecks": "48/48 final geometry and date/funding/FX snapshot-content checks passed; corrected Capital wording inspected in both languages."
+    },
+    "diffCheck": "git diff --check passed",
+    "publicPackageLocalPathScan": "six files checked; no workspace or file:// paths"
+  },
+  "benchmarks": {
+    "baseEV_EUR_millions": 280842.0530586223,
+    "basePerShareEUR": 745.9716952833586,
+    "historicalUSDPerShare": 876.5167419579464,
+    "runoff50EV_EUR_millions": 273498.31348171807,
+    "runoff50PerShareEUR": 726.9566354876416,
+    "runoff100EV_EUR_millions": 266154.57390481385,
+    "runoff100PerShareEUR": 707.9415756919246,
+    "netCapitalBridgeEURMillions": 7257.06,
+    "allocationSharesMillions": 386.206494,
+    "discountOrigin": "2025-12-31",
+    "informationAsOf": "2026-10-18",
+    "historicalFX": 1.175,
+    "historicalFXDate": "2025-12-31",
+    "ordinaryShareEquivalent": 1
+  },
+  "guards": [
+    "EUR cash flows, WACC, claims and simulation remain native EUR. Separate historical USD object is never a currency relabel.",
+    "Current equity, current-price comparisons and as-known backtesting remain unavailable. Both native allocation and historical USD disappear when date or claim gate fails.",
+    "Customer-advance runoff stays fixed in years 1–5 under capital factors, annual innovations, horizon extension and terminal normalization; never deducted as debt.",
+    "Future economic grants remain in EBIT; legacy expense subtraction/reversal gives zero uplift. Old awards/options are allocated once.",
+    "Opening tax liabilities and current tax asset are included once; no noncurrent DTA credit or repeated forecast settlement.",
+    "Eight selected claim controls preserve explicit unknowns; unbounded maxima are not turned into zeros or fictitious finite limits.",
+    "Research defaults are fixed and Run is manual; runoff stresses have no assigned probabilities.",
+    "Source, bridge, history, report, audit, FX and timing identities are pinned. Earlier package bytes are unchanged."
+  ],
+  "implementationNotes": [
+    "Generalized existing registry-backed fixed funding to choose the reviewed alternative schedule. LRCX year-one funding remains unchanged.",
+    "Fixed the earlier LRCX loader test to use its explicit package path rather than whichever incremental path happens to be last.",
+    "Parent separately owns CHANGELOG.md, publication, native smoke and any GitHub actions."
+  ],
+  "publication": "Not published or pushed by integration worker; parent owns release.",
+  "changedFiles": [
+    {
+      "path": "dist/asml-research-claims.js",
+      "sha256": "118fe3cc91818534f6e75aa728be1b33c0a11c43279a560d8c7239b36b7367e1",
+      "bytes": 6202
+    },
+    {
+      "path": "dist/asml-research-registry.js",
+      "sha256": "7ec6bf08b6f489d4f13ec792d2b6904fa751eaa3e700cf0a6d41ab83250e2272",
+      "bytes": 287228
+    },
+    {
+      "path": "dist/data/incremental-ASML-2026-10-18-v4/ASML-curated-history-v1.json",
+      "sha256": "493992ba42e21a26b694de8b8b2e7a02eabb85a80dad00da4ba23cfa10a67df5",
+      "bytes": 159353
+    },
+    {
+      "path": "dist/data/incremental-ASML-2026-10-18-v4/ASML-full-research-v4.md",
+      "sha256": "cb59e4a2082eda34189abd46f52e97fd106e2c9277566a3b9a94fc8f379c628d",
+      "bytes": 26410
+    },
+    {
+      "path": "dist/data/incremental-ASML-2026-10-18-v4/ASML-v4-audit.json",
+      "sha256": "363dcc9d78c5ffe560c6bf5dd347d3799fc2931b3328400d81b9a0ea69fe8c8f",
+      "bytes": 7164
+    },
+    {
+      "path": "dist/data/incremental-ASML-2026-10-18-v4/ASML-v4-source.json",
+      "sha256": "acd33e93f0892d95fc26af2637b35e317547f4e7f8615637092edd463b6cd875",
+      "bytes": 70085
+    },
+    {
+      "path": "dist/data/incremental-ASML-2026-10-18-v4/ASML-v4.html",
+      "sha256": "85c9e49d2200cf933e23512e2b6b9663e9de803c4b42a76746f9655f6ea519b8",
+      "bytes": 24603
+    },
+    {
+      "path": "dist/data/incremental-ASML-2026-10-18-v4/cases.json",
+      "sha256": "97be4375adf712159b2f4db80004650b1a83846a9c21774cc9161395f2dc9ba9",
+      "bytes": 287001
+    },
+    {
+      "path": "dist/fixed-capital-funding.js",
+      "sha256": "d9710b9905d64b2e308a78f9766a67ed041232fb4318e5659b346e9c4dfb5d86",
+      "bytes": 2044
+    },
+    {
+      "path": "dist/incremental-messages.js",
+      "sha256": "5d41b7e02e6e4c7dff0349337e56ac1ba8dfbd9553f352210707fc2497ab3c84",
+      "bytes": 11935
+    },
+    {
+      "path": "dist/incremental-registry.js",
+      "sha256": "bbe4233a7c2a5a7b755e35999b018ca38b2a4227933b7489c800b3fe029e66d8",
+      "bytes": 675
+    },
+    {
+      "path": "dist/incremental-research-claims.js",
+      "sha256": "3bcd499be86c9d8d48038cc4efeef8b831f31c5c69278dc3b89d99ad2a71ce1e",
+      "bytes": 5908
+    },
+    {
+      "path": "dist/incremental-research-identity.js",
+      "sha256": "d9373031de0f53d5a5b83d0f8e35a48003ab48e6d88f9f7b7f7d82ba17193ad7",
+      "bytes": 2165
+    },
+    {
+      "path": "dist/incremental-research-view.js",
+      "sha256": "0b7f4e15179338b45b90a4d58976d64ccf66e660cf67f0202e53c6f3dc854c47",
+      "bytes": 5721
+    },
+    {
+      "path": "dist/incremental-research.js",
+      "sha256": "ec51da827e8672405607936e91b9bf1c8efae525a893c4877a6fb67067902ee5",
+      "bytes": 4378
+    },
+    {
+      "path": "dist/research-model.js",
+      "sha256": "46f36f30dec92b3a719c07d9d88563a4b9874811b8f00512cae36095df2f382a",
+      "bytes": 18927
+    },
+    {
+      "path": "dist/research-simulation-view.js",
+      "sha256": "76b5d994458099b99b7ec9ac6d55c441ad477bf0cc079cb75ead074838e5f6c2",
+      "bytes": 15476
+    },
+    {
+      "path": "dist/research-simulation.js",
+      "sha256": "a7306859ec4b1ee7bc0fd4d90c8e1da4fbf2b6c4bcdd77f5c17016dde6a1c54e",
+      "bytes": 33525
+    },
+    {
+      "path": "dist/research-view.js",
+      "sha256": "6f93e299926ee69a1d43d0c51efa47ce3da31999088b6a4374d4a10c15264eaa",
+      "bytes": 114253
+    },
+    {
+      "path": "scripts/build-asml-incremental.py",
+      "sha256": "b51b79d90d5371c4521cb5bea74e6b4de3917c0d328135bde862b4e2bf74289d",
+      "bytes": 21200
+    },
+    {
+      "path": "tests/incremental-asml.test.mjs",
+      "sha256": "c54febcf38ea8f91786468ebeb2f5c3f5748aace7fce1a1bfc298712f4ed8474",
+      "bytes": 23216
+    },
+    {
+      "path": "tests/incremental-lrcx.test.mjs",
+      "sha256": "fcf633a38767fdee6b17418a9280e9d6974a8992493f135926caffb09040072c",
+      "bytes": 23021
+    }
+  ],
+  "parentOwnedDocumentation": [
+    "CHANGELOG.md",
+    "DESIGN-NOTES.md"
+  ]
+}

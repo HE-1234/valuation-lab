@@ -1,4 +1,4 @@
-import {fixedCapitalFundingIssues} from './fixed-capital-funding.js';
+import {fixedCapitalFunding,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
 import {incrementalRecord} from './incremental-registry.js';
 const object=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
 export const incrementalCaseVersion=c=>c?.incrementalResearch?.version;
@@ -6,7 +6,7 @@ export function incrementalIdentityValid(d){
  const r=incrementalRecord(d?.ticker),id=r?.identity,c=r?.annualCase;
  if(!id||!object(d.incrementalResearch)||Object.keys(d.incrementalResearch).length!==Object.keys(id).length||!Object.entries(id).every(([k,v])=>d.incrementalResearch[k]===v))return false;
  if(d.version!==id.version||d.caseId!==`${id.version}:${id.ticker}:base`||d.sourceScenario!=='base'||d.currency!==id.currency||d.informationAsOf!==id.informationAsOf||d.discountOrigin!==id.discountOrigin||JSON.stringify(d.anchor)!==JSON.stringify(c.anchor))return false;
- if(JSON.stringify(d.fixedCapitalFunding)!==JSON.stringify(c.fixedCapitalFunding))return false;
+ if(JSON.stringify(d.fixedCapitalFunding)!==JSON.stringify(fixedCapitalFunding(d)))return false;
  if(['currentCapitalScenario','currentCapitalProvenance','terminalGrowthReview','selectedResearchScenario'].some(k=>d[k]!==undefined))return false;
  if(d.selectedIncrementalScenario!==undefined&&!r.alternatives.some(x=>x.name===d.selectedIncrementalScenario))return false;
  return true;

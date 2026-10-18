@@ -1,0 +1,1568 @@
+{
+  "operating": {
+    "schemaVersion": "asml-research-4.0",
+    "caseId": "ASML-EUR-dated2025-central-2026-10-18-v4",
+    "informationAsOf": "2026-10-18",
+    "annualCase": {
+      "ticker": "ASML",
+      "company": "ASML Holding N.V.",
+      "currency": "EUR",
+      "moneyUnit": "millions",
+      "scenario": "dated-2025-central-economic-grants-and-tax-reconciled",
+      "forecastHorizonYears": 10,
+      "informationAsOf": "2026-10-18",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+      "valuationTiming": {
+        "discountOrigin": "2025-12-31",
+        "classification": "Retrospective dated research origin, using information available October18 2026",
+        "valuationDateRequested": "2026-10-18",
+        "currentValuation": false,
+        "warning": "Not contemporaneously knowable atDecember31 2025. It contains later2026 results and management guidance. Current-price comparison prohibited without separate elapsed-FCFF/capital/share/dividend rollforward."
+      },
+      "anchor": {
+        "period": "FY2025",
+        "periodEnd": "2025-12-31",
+        "kind": "reported",
+        "revenue": 32667.3,
+        "EBIT": 11301.4,
+        "classification": "Audited USGAAP calendar-year actual",
+        "provenance": {
+          "primarySourceUrl": "https://ourbrand.asml.com/m/71076aaad607de4d/original/asml-2025-annual-report-based-on-us-gaap.pdf",
+          "field": "Total net sales and income from operations",
+          "period": "2025-01-01 to2025-12-31",
+          "locator": "Consolidated statements of operations p276",
+          "published": "2026-02-25"
+        }
+      },
+      "annual": [
+        {
+          "year": 1,
+          "period": "2026",
+          "revenue": 44455.4,
+          "operatingMargin": 0.41241562051988584,
+          "taxRate": 0.17,
+          "reinvestment": 3398.215,
+          "wacc": 0.1
+        },
+        {
+          "year": 2,
+          "period": "2027",
+          "revenue": 51695.702,
+          "operatingMargin": 0.42109800640104356,
+          "taxRate": 0.17,
+          "reinvestment": 3257.2648,
+          "wacc": 0.1
+        },
+        {
+          "year": 3,
+          "period": "2028",
+          "revenue": 58990.2722,
+          "operatingMargin": 0.43609800640104357,
+          "taxRate": 0.17,
+          "reinvestment": 3512.7867,
+          "wacc": 0.1
+        },
+        {
+          "year": 4,
+          "period": "2029",
+          "revenue": 64361.2353,
+          "operatingMargin": 0.4410980064010435,
+          "taxRate": 0.19,
+          "reinvestment": 3058.2877,
+          "wacc": 0.1
+        },
+        {
+          "year": 5,
+          "period": "2030",
+          "revenue": 69170.1323,
+          "operatingMargin": 0.44109800640104363,
+          "taxRate": 0.21,
+          "reinvestment": 2969.3639,
+          "wacc": 0.1
+        },
+        {
+          "year": 6,
+          "period": "2031",
+          "revenue": 73052.023,
+          "operatingMargin": 0.43609800640104357,
+          "taxRate": 0.23,
+          "reinvestment": 2700.7923,
+          "wacc": 0.0975
+        },
+        {
+          "year": 7,
+          "period": "2032",
+          "revenue": 76097.1218,
+          "operatingMargin": 0.4260980064010435,
+          "taxRate": 0.245,
+          "reinvestment": 2587.4842,
+          "wacc": 0.095
+        },
+        {
+          "year": 8,
+          "period": "2033",
+          "revenue": 78717.473,
+          "operatingMargin": 0.4160980064010435,
+          "taxRate": 0.258,
+          "reinvestment": 2489.0697746499054,
+          "wacc": 0.09
+        },
+        {
+          "year": 9,
+          "period": "2034",
+          "revenue": 80853.9816,
+          "operatingMargin": 0.40609800640104354,
+          "taxRate": 0.258,
+          "reinvestment": 2431.780165674081,
+          "wacc": 0.085
+        },
+        {
+          "year": 10,
+          "period": "2035",
+          "revenue": 82875.33114,
+          "operatingMargin": 0.3960980064010436,
+          "taxRate": 0.258,
+          "reinvestment": 2435.74510557302,
+          "wacc": 0.08
+        }
+      ],
+      "terminal": {
+        "growth": 0.025,
+        "operatingMargin": 0.3960980064010436,
+        "taxRate": 0.258,
+        "ROIC": 0.25,
+        "wacc": 0.08
+      },
+      "classification": "Conditional dated research valuation with explicit economic grant cost, legacy allocation, opening tax claims and advance funding policy; pending independent audit"
+    },
+    "compensationBridge": {
+      "method": "Future economic grant budget plus separately allocated legacy claims; old expense deduction and reversal cancel exactly",
+      "source": "https://ourbrand.asml.com/m/71076aaad607de4d/original/asml-2025-annual-report-based-on-us-gaap.pdf",
+      "sourceLocator": "Note20 pp303-305",
+      "FY2025NewGrantEvidence": {
+        "EURgrants": 261198,
+        "EURfairValuePerGrant": 636.49,
+        "EURgrantValueMillions": 166.24991502,
+        "USDgrants": 279674,
+        "USDfairValuePerGrant": 660.67,
+        "USDgrantValueMillions": 184.77222157999998,
+        "USDValueConvertedToEUR": 163.51768047519016,
+        "totalEURGrantValueMillions": 329.76759549519016,
+        "revenueEURMillions": 32667.3,
+        "economicGrantCostRatio": 0.010094730678543686
+      },
+      "FXConvention": {
+        "source": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.xml",
+        "observedPeriod": "2025-01-01 to2025-12-31",
+        "observations": 255,
+        "arithmeticMeanUSDPerEUR": 1.1299831372549018,
+        "method": "Aggregate USD grant-value proxy divided by arithmetic mean of daily2025ECB USD/EUR references; grant-date-specific conversion is unavailable, so this is an explicit average-FX proxy, not an exact EUR grant appraisal."
+      },
+      "futureExpensePolicy": "Use FY2025 gross grant-value/revenue ratio1.00947% as the future economic grant-cost budget, with no forfeiture credit. Hold this ratio in all annual rows and terminal margins. No future dilution is then added separately. Stress the ratio rather than forgetting the cost.",
+      "FY2026Normalization": "Management-derived EBIT18565.8 includes amortized reported compensation. Estimate that total as9M162.8 times4/3=217.0667, remove it and substitute the economic future-grant budget. This decreases rather than raises economic EBIT. Residual operating costs stay fixed. The Q4 reported-compensation estimate is not a published guidance item.",
+      "laterYearPolicy": "Starting with v2 normalized margins and the FY2025amortized SBC/revenue baseline0.619274%, reduce each2027-2035margin and terminal margin by economic-grant ratio minus that baseline. Residual non-SBC operating cost ratios including D&A are therefore held fixed; no unexplained cost recalibration preserves the old margin. The legacy schedule is synthetically deducted and reversed identically, with no uplift above the resulting economic margin.",
+      "baselineAmortizedSBCRatioReplaced": 0.006192737079587233,
+      "operatingMarginReductionFromEconomicGrantBudget": 0.0039019935989564533,
+      "legacyEvidence": {
+        "unrecognizedExpectedExpense": 215,
+        "weightedAverageRecognitionYears": 1.4,
+        "conditionalShares": 0.778707,
+        "fullyVestedOldOptions": 0.010122,
+        "sharesEntitledToDividendsWhileVesting": false
+      },
+      "legacyTimingAssumption": "For reconciliation only, allocate215 over1.4years:153.5714 in2026 and61.4286 in2027. Because deduction and reversal are equal within each year, this timing assumption creates no operating value. The matching old awards are allocated separately using the disclosed-count proxy.",
+      "optionPolicy": "Old options are fully vested. No legacy expense is reversed for them. Full-share allocation with zero exercise credit conservatively overstates their claim relative to an intrinsic allocation; it is not claimed to be Black-Scholes fair value.",
+      "ESPPPolicy": "Employee stock purchase plan retention bonus stays a cash personnel cost in residual operating costs. It is not removed, put into this LTI grant budget, or assigned separate future dilution.",
+      "taxPolicy": "Apply selected cash-tax rate to economic EBIT. No extra vesting tax windfall asset is added. Opening tax assets/liabilities have a separate explicit capital policy.",
+      "schedule": [
+        {
+          "period": "2026",
+          "revenue": 44455.4,
+          "sourceManagementDerivedEBIT": 18565.8,
+          "estimatedTotalReportedSBCReplaced": 217.0666666666667,
+          "futureGrantEconomicExpense": 448.765290206931,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 25672.533333333336,
+          "economicEBITBeforeLegacyClaims": 18334.101376459734,
+          "legacyExpectedExpenseSyntheticDeduction": 153.57142857142858,
+          "syntheticGaapLikeEBIT": 18180.529947888306,
+          "matchingLegacyExpenseReversal": 153.57142857142858,
+          "finalEBITForFCFF": 18334.101376459734,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": 0.0,
+          "taxRate": 0.17
+        },
+        {
+          "period": "2027",
+          "revenue": 51695.702,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 521.8541889282521,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 29404.890759369304,
+          "economicEBITBeforeLegacyClaims": 21768.95705170244,
+          "legacyExpectedExpenseSyntheticDeduction": 61.428571428571416,
+          "syntheticGaapLikeEBIT": 21707.528480273868,
+          "matchingLegacyExpenseReversal": 61.428571428571416,
+          "finalEBITForFCFF": 21768.95705170244,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": 0.0,
+          "taxRate": 0.17
+        },
+        {
+          "period": "2028",
+          "revenue": 58990.2722,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 595.4909105129827,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 32669.241186012114,
+          "economicEBITBeforeLegacyClaims": 25725.5401034749,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 25725.5401034749,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 25725.5401034749,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": 0.0,
+          "taxRate": 0.17
+        },
+        {
+          "period": "2029",
+          "revenue": 64361.2353,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 649.7093364918788,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 35321.91338316965,
+          "economicEBITBeforeLegacyClaims": 28389.61258033847,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 28389.612580338468,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 28389.612580338468,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": -3.637978807091713e-12,
+          "taxRate": 0.19
+        },
+        {
+          "period": "2030",
+          "revenue": 69170.1323,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 698.2538565677355,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 37961.07098340583,
+          "economicEBITBeforeLegacyClaims": 30510.80746002643,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 30510.807460026434,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 30510.807460026434,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": 3.637978807091713e-12,
+          "taxRate": 0.21
+        },
+        {
+          "period": "2031",
+          "revenue": 73052.023,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 737.440497707779,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 40456.74090842904,
+          "economicEBITBeforeLegacyClaims": 31857.841593863184,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 31857.84159386318,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 31857.84159386318,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": -3.637978807091713e-12,
+          "taxRate": 0.23
+        },
+        {
+          "period": "2032",
+          "revenue": 76097.1218,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 768.1799499833355,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 42904.10995817927,
+          "economicEBITBeforeLegacyClaims": 32424.831891837388,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 32424.831891837384,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 32424.831891837384,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": -3.637978807091713e-12,
+          "taxRate": 0.245
+        },
+        {
+          "period": "2033",
+          "revenue": 78717.473,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 794.6316896305343,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 45168.65772614149,
+          "economicEBITBeforeLegacyClaims": 32754.183584227972,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 32754.18358422797,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 32754.18358422797,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": -3.637978807091713e-12,
+          "taxRate": 0.258
+        },
+        {
+          "period": "2034",
+          "revenue": 80853.9816,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 816.1991685399267,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 47203.141694113416,
+          "economicEBITBeforeLegacyClaims": 32834.64073734666,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 32834.64073734666,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 32834.64073734666,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": 0.0,
+          "taxRate": 0.258
+        },
+        {
+          "period": "2035",
+          "revenue": 82875.33114,
+          "sourceManagementDerivedEBIT": null,
+          "estimatedTotalReportedSBCReplaced": null,
+          "futureGrantEconomicExpense": 836.6041477534249,
+          "futureGrantExpenseRatio": 0.010094730678543686,
+          "residualOtherOperatingCostsIncludingDandA": 49211.97354786625,
+          "economicEBITBeforeLegacyClaims": 32826.75344438032,
+          "legacyExpectedExpenseSyntheticDeduction": 0,
+          "syntheticGaapLikeEBIT": 32826.75344438032,
+          "matchingLegacyExpenseReversal": 0,
+          "finalEBITForFCFF": 32826.75344438032,
+          "netUpliftAboveEconomicMarginFromLegacyReversal": 0.0,
+          "taxRate": 0.258
+        }
+      ],
+      "sensitivity": {
+        "futureGrantCostRatioLow": 0.0075,
+        "futureGrantCostRatioBase": 0.010094730678543686,
+        "futureGrantCostRatioHigh": 0.015,
+        "interpretation": "Analyst range; change the future economic cost while holding residual costs fixed. Source-amortization ratios are not substitutes for the economic grant budget."
+      }
+    },
+    "annualInvestmentComponents": [
+      {
+        "fiscalYear": 2026,
+        "capitalExpenditurePPE": 1900,
+        "capitalExpenditureIntangibles": 180,
+        "depreciationAmortization": 1050,
+        "incrementalNoncashWorkingCapital": 1768.2150000000004,
+        "netStrategicSupplierFunding": 600,
+        "reinvestment": 3398.215,
+        "classification": "PPE capex uses company forecast p327; other amounts are explicit analyst forecast. Actual9Mcapex does not supply FYactuals."
+      },
+      {
+        "fiscalYear": 2027,
+        "segments": {
+          "EUV": 21250.0,
+          "nonEUV": 16739.03,
+          "installedBase": 13706.672
+        },
+        "segmentGrowth": {
+          "EUV": 0.25,
+          "nonEUV": 0.1,
+          "installedBase": 0.12
+        },
+        "totalRevenueGrowth": 0.16286664837117648,
+        "capitalExpenditureIncludingIntangibles": 2843.2636100000004,
+        "depreciationAmortization": 1189.001146,
+        "incrementalNoncashWorkingCapital": 1086.0453000000005,
+        "netStrategicSupplierFunding": 516.95702,
+        "reinvestment": 3257.264784000001,
+        "reinvestmentFormula": "capex - D&A + max(0, revenue change)*0.15 + net supplier funding",
+        "classification": "analyst assumption, not management guidance"
+      },
+      {
+        "fiscalYear": 2028,
+        "segments": {
+          "EUV": 25500.0,
+          "nonEUV": 18412.933,
+          "installedBase": 15077.3392
+        },
+        "segmentGrowth": {
+          "EUV": 0.2,
+          "nonEUV": 0.1,
+          "installedBase": 0.1
+        },
+        "totalRevenueGrowth": 0.14110593178519948,
+        "capitalExpenditureIncludingIntangibles": 3244.4649710000003,
+        "depreciationAmortization": 1415.7665328000003,
+        "incrementalNoncashWorkingCapital": 1094.1855300000002,
+        "netStrategicSupplierFunding": 589.902722,
+        "reinvestment": 3512.7866902000005,
+        "reinvestmentFormula": "capex - D&A + max(0, revenue change)*0.15 + net supplier funding",
+        "classification": "analyst assumption, not management guidance"
+      },
+      {
+        "fiscalYear": 2029,
+        "segments": {
+          "EUV": 28560.0,
+          "nonEUV": 19517.709,
+          "installedBase": 16283.5263
+        },
+        "segmentGrowth": {
+          "EUV": 0.12,
+          "nonEUV": 0.06,
+          "installedBase": 0.08
+        },
+        "totalRevenueGrowth": 0.09104828500859163,
+        "capitalExpenditureIncludingIntangibles": 3218.061765800001,
+        "depreciationAmortization": 1609.0308829000005,
+        "incrementalNoncashWorkingCapital": 805.644467400001,
+        "netStrategicSupplierFunding": 643.6123531600001,
+        "reinvestment": 3058.2877034600015,
+        "reinvestmentFormula": "capex - D&A + max(0, revenue change)*0.15 + net supplier funding",
+        "classification": "analyst assumption, not management guidance"
+      },
+      {
+        "fiscalYear": 2030,
+        "segments": {
+          "EUV": 31416.0,
+          "nonEUV": 20493.5944,
+          "installedBase": 17260.5379
+        },
+        "segmentGrowth": {
+          "EUV": 0.1,
+          "nonEUV": 0.05,
+          "installedBase": 0.06
+        },
+        "totalRevenueGrowth": 0.07471728915005027,
+        "capitalExpenditureIncludingIntangibles": 3285.581286395101,
+        "depreciationAmortization": 1729.2533086290005,
+        "incrementalNoncashWorkingCapital": 721.3345543740007,
+        "netStrategicSupplierFunding": 691.7013234516002,
+        "reinvestment": 2969.3638555917014,
+        "reinvestmentFormula": "capex - D&A + max(0, revenue change)*0.15 + net supplier funding",
+        "classification": "analyst assumption, not management guidance"
+      },
+      {
+        "fiscalYear": 2031,
+        "segments": {
+          "EUV": 33615.12,
+          "nonEUV": 21313.3382,
+          "installedBase": 18123.5648
+        },
+        "segmentGrowth": {
+          "EUV": 0.07,
+          "nonEUV": 0.04,
+          "installedBase": 0.05
+        },
+        "totalRevenueGrowth": 0.056120908567838246,
+        "capitalExpenditureIncludingIntangibles": 3287.3410358157607,
+        "depreciationAmortization": 1826.3005754532005,
+        "incrementalNoncashWorkingCapital": 582.2836009452003,
+        "netStrategicSupplierFunding": 657.4682071631521,
+        "reinvestment": 2700.792268470913,
+        "reinvestmentFormula": "capex - D&A + max(0, revenue change)*0.15 + net supplier funding",
+        "classification": "analyst assumption, not management guidance"
+      },
+      {
+        "fiscalYear": 2032,
+        "segments": {
+          "EUV": 35295.876,
+          "nonEUV": 21952.7384,
+          "installedBase": 18848.5074
+        },
+        "segmentGrowth": {
+          "EUV": 0.05,
+          "nonEUV": 0.03,
+          "installedBase": 0.04
+        },
+        "totalRevenueGrowth": 0.04168397551301051,
+        "capitalExpenditureIncludingIntangibles": 3424.3704790556194,
+        "depreciationAmortization": 1902.4280439197887,
+        "incrementalNoncashWorkingCapital": 456.7648107995286,
+        "netStrategicSupplierFunding": 608.7769740543324,
+        "reinvestment": 2587.484219989692,
+        "reinvestmentFormula": "capex - D&A + max(0, revenue change)*0.15 + net supplier funding",
+        "classification": "analyst assumption, not management guidance"
+      }
+    ],
+    "annualInvestmentComponentProvenance": {
+      "firstSevenYears": "Full original2026-2032component rows embedded here from dated-operating-case-v2.json annualDrivers; values unchanged by compensation revision.",
+      "finalThreeYears": "The2033-2035components and transition adjustments are embedded in terminalCapitalTransition.",
+      "2026PPECapexSource": "https://ourbrand.asml.com/m/71076aaad607de4d/original/asml-2025-annual-report-based-on-us-gaap.pdf",
+      "2026PPECapexLocator": "p327, company expectation approximatelyEUR1.9bn; other2026components explicitly analyst estimates."
+    },
+    "terminalCapitalTransition": [
+      {
+        "period": "2033",
+        "PPEAndIntangibleCapex": 3542.2862849999997,
+        "DandA": 1967.936825,
+        "netSupplierFunding": 551.022311,
+        "incrementalNoncashWorkingCapital": 393.0526800000007,
+        "originalComponentReinvestment": 2518.4244510000003,
+        "terminalConsistentReinvestmentTarget": 2430.360421949715,
+        "normalizationWeight": 0.3333333333333333,
+        "matureCapitalRetentionAdjustment": -29.354676350094906,
+        "selectedReinvestment": 2489.0697746499054,
+        "classification": "Analyst transition toward terminal25%ROIC; adjustment is explicit additional or released operating capital, not sourced actual capex."
+      },
+      {
+        "period": "2034",
+        "PPEAndIntangibleCapex": 3638.4291719999997,
+        "DandA": 2021.3495400000002,
+        "netSupplierFunding": 485.1238896,
+        "incrementalNoncashWorkingCapital": 320.4762900000001,
+        "originalComponentReinvestment": 2422.6798115999995,
+        "terminalConsistentReinvestmentTarget": 2436.330342711122,
+        "normalizationWeight": 0.6666666666666666,
+        "matureCapitalRetentionAdjustment": 9.100354074081679,
+        "selectedReinvestment": 2431.780165674081,
+        "classification": "Analyst transition toward terminal25%ROIC; adjustment is explicit additional or released operating capital, not sourced actual capex."
+      },
+      {
+        "period": "2035",
+        "PPEAndIntangibleCapex": 3729.3899012999996,
+        "DandA": 2071.8832785,
+        "netSupplierFunding": 414.37665569999996,
+        "incrementalNoncashWorkingCapital": 303.2024309999993,
+        "originalComponentReinvestment": 2375.0857094999988,
+        "terminalConsistentReinvestmentTarget": 2435.74510557302,
+        "normalizationWeight": 1.0,
+        "matureCapitalRetentionAdjustment": 60.65939607302107,
+        "selectedReinvestment": 2435.74510557302,
+        "classification": "Analyst transition toward terminal25%ROIC; adjustment is explicit additional or released operating capital, not sourced actual capex."
+      }
+    ],
+    "customerAdvancePolicy": {
+      "openingDate": "2025-12-31",
+      "openingContractLiabilities": 19372.6,
+      "current": 16006.3,
+      "noncurrent": 3366.3,
+      "source": "https://ourbrand.asml.com/m/71076aaad607de4d/original/asml-2025-annual-report-based-on-us-gaap.pdf",
+      "locator": "note2 pp286-287; balance sheet p278",
+      "basePolicy": "Hold the total opening customer-advance balance constant in nominal EUR throughout the explicit forecast. As advances are released against delivered tools/services, an equal amount of new advance receipts from new orders replaces them. Therefore delta advances=0, not a positive growth cash-flow contribution. Positive15%incremental noncash working-capital investment is measured excluding any assumed advance-growth credit.",
+      "whyNeeded": "Reported revenue on previously prepaid sales is not fresh cash collection. The constant-balance assumption explicitly supplies replacement advances from new orders; it is not receipt of the same customer payment twice. If replacement orders or customer deposits weaken, FCFF must absorb net advance runoff.",
+      "terminalPolicy": "The terminal10%NOPAT reinvestment requirement covers total net operating capital. No additional terminal advance-growth cash windfall is added.",
+      "exampleAnnualGrossFlow": {
+        "openingBalance": 19372.6,
+        "illustrativeReleaseAgainstDelivery": 11516.6,
+        "newAdvanceReceiptsRequiredToMaintainBalance": 11516.6,
+        "closingBalance": 19372.6,
+        "classification": "Illustration using2025actual release amount, not a forecast of2026release timing"
+      },
+      "replenishmentRisk": "Constant nominal advances become smaller relative to growing revenue; still, maintaining them depends on customer orders, delivery timing, export permissions and contractual deposits. The excess-cash allocation is conditional on this funding policy.",
+      "cashReservePolicy": "Subtract3bn analyst operating-liquidity reserve from reported cash before allocation. It is not a substitute for modelling advance runoff and does not imply all remaining cash is unrestricted surplus in every scenario."
+    },
+    "advanceRunoffStress": [
+      {
+        "runoffFraction": 0.5,
+        "annualNetRunoffFirstFiveYears": 1937.2599999999998,
+        "totalAdvanceRunoff": 9686.3,
+        "policy": "No replacement for selected share of opening advances; net runoff is additional working-capital investment, never a second debt claim. Remaining balance is held constant. Annual revenue/margins are otherwise unchanged, so this isolates financing dependency rather than a full downturn.",
+        "operatingEV": 273498.31348171807,
+        "deltaVersusBase": -7343.73957690422
+      },
+      {
+        "runoffFraction": 1.0,
+        "annualNetRunoffFirstFiveYears": 3874.5199999999995,
+        "totalAdvanceRunoff": 19372.6,
+        "policy": "No replacement for selected share of opening advances; net runoff is additional working-capital investment, never a second debt claim. Remaining balance is held constant. Annual revenue/margins are otherwise unchanged, so this isolates financing dependency rather than a full downturn.",
+        "operatingEV": 266154.57390481385,
+        "deltaVersusBase": -14687.47915380844
+      }
+    ],
+    "futureGrantCostSensitivity": [
+      {
+        "futureGrantCostRatio": 0.0075,
+        "operatingEV": 282743.5576086801,
+        "deltaVersusBase": 1901.5045500578126,
+        "policy": "Residual operating costs and explicit-period investment amounts are fixed. Terminal margin changes by the matching grant-cost delta, and terminal reinvestment changes with NOPAT under growth/ROIC."
+      },
+      {
+        "futureGrantCostRatio": 0.010094730678543686,
+        "operatingEV": 280842.0530586223,
+        "deltaVersusBase": 0.0,
+        "policy": "Residual operating costs and explicit-period investment amounts are fixed. Terminal margin changes by the matching grant-cost delta, and terminal reinvestment changes with NOPAT under growth/ROIC."
+      },
+      {
+        "futureGrantCostRatio": 0.015,
+        "operatingEV": 277247.3092915185,
+        "deltaVersusBase": -3594.7437671037624,
+        "policy": "Residual operating costs and explicit-period investment amounts are fixed. Terminal margin changes by the matching grant-cost delta, and terminal reinvestment changes with NOPAT under growth/ROIC."
+      }
+    ],
+    "calculationCheck": {
+      "discountOrigin": "2025-12-31",
+      "currency": "EUR",
+      "moneyUnit": "millions",
+      "rows": [
+        {
+          "period": "2026",
+          "NOPAT": 15217.304142461579,
+          "FCFF": 11819.089142461578,
+          "discountFactor": 1.1,
+          "PV": 10744.626493146889
+        },
+        {
+          "period": "2027",
+          "NOPAT": 18068.234352913023,
+          "FCFF": 14810.969552913022,
+          "discountFactor": 1.2100000000000002,
+          "PV": 12240.470704886793
+        },
+        {
+          "period": "2028",
+          "NOPAT": 21352.198285884166,
+          "FCFF": 17839.411585884165,
+          "discountFactor": 1.3310000000000004,
+          "PV": 13403.013963849857
+        },
+        {
+          "period": "2029",
+          "NOPAT": 22995.586190074162,
+          "FCFF": 19937.29849007416,
+          "discountFactor": 1.4641000000000006,
+          "PV": 13617.443132350354
+        },
+        {
+          "period": "2030",
+          "NOPAT": 24103.537893420882,
+          "FCFF": 21134.17399342088,
+          "discountFactor": 1.6105100000000008,
+          "PV": 13122.659277757277
+        },
+        {
+          "period": "2031",
+          "NOPAT": 24530.53802727465,
+          "FCFF": 21829.74572727465,
+          "discountFactor": 1.7675347250000006,
+          "PV": 12350.391434190717
+        },
+        {
+          "period": "2032",
+          "NOPAT": 24480.748078337227,
+          "FCFF": 21893.263878337228,
+          "discountFactor": 1.9354505238750006,
+          "PV": 11311.714563751455
+        },
+        {
+          "period": "2033",
+          "NOPAT": 24303.604219497152,
+          "FCFF": 21814.534444847246,
+          "discountFactor": 2.1096410710237508,
+          "PV": 10340.400907279101
+        },
+        {
+          "period": "2034",
+          "NOPAT": 24363.30342711122,
+          "FCFF": 21931.523261437138,
+          "discountFactor": 2.2889605620607694,
+          "PV": 9581.433435310923
+        },
+        {
+          "period": "2035",
+          "NOPAT": 24357.4510557302,
+          "FCFF": 21921.70595015718,
+          "discountFactor": 2.472077407025631,
+          "PV": 8867.726345403184
+        }
+      ],
+      "forecastPV": 115579.88025792656,
+      "terminalPV": 165262.1728006957,
+      "operatingEV": 280842.0530586223,
+      "terminalShare": 0.5884523738551337,
+      "terminalReinvestmentRate": 0.1,
+      "terminalFCFF": 22469.74859891111,
+      "terminalFCFFGrowth": 0.02499999999999991,
+      "finalRevenueGrowth": 0.02499999999999991
+    },
+    "capitalBridgeFile": "dated-capital-bridge-v4.json",
+    "sourceLedgerFile": "source-ledger-v2.json",
+    "changeLog": [
+      "v1 preserved as preliminary operating case.",
+      "v2 andv3 numerical shareholder allocations are superseded and must not be integrated.",
+      "v4 uses observed gross grant values to budget future economic compensation; no legacy-cost uplift above economic margins.",
+      "Opening tax claims are deducted once; current tax asset credited once, DTA realization not assumed.",
+      "Opening advance balance/replacement assumption is explicit and50%/100%runoff is stressed in FCFF, not as double-counted financial debt.",
+      "Later margins and terminal margin are mechanically reduced by incremental economic-grant cost, holding other cost ratios fixed. Final2035growth, margin, tax, capital and WACC match terminal assumptions; terminalFCFFgrowth exactly2.5%."
+    ]
+  },
+  "capital": {
+    "schemaVersion": 4,
+    "ticker": "ASML",
+    "referenceDate": "2025-12-31",
+    "shareDate": "2025-12-31",
+    "discountOrigin": "2025-12-31",
+    "informationAsOf": "2026-10-18",
+    "currency": "EUR",
+    "moneyUnit": "millions",
+    "shareUnit": "millions ordinary shares",
+    "classification": "Conditional dated claim allocation with economic future-grant cost, separate legacy claims and explicit opening tax settlement policy; pending independent audit",
+    "currentCapitalVerified": false,
+    "priceComparisonEligible": false,
+    "sourceUrl": "https://ourbrand.asml.com/m/71076aaad607de4d/original/asml-2025-annual-report-based-on-us-gaap.pdf",
+    "basicShares": 385.417665,
+    "cash": 12916.0,
+    "shortTermInvestments": 405.9,
+    "fundedDebtBook": 4390.9,
+    "fundedDebtMarketProxy": 4298.9,
+    "financeLeaseClaim": 16.5,
+    "interestRateSwapNetClaim": 47.9,
+    "publicFacts": [
+      {
+        "id": "cash",
+        "amount": 12916.0,
+        "field": "Cash and cash equivalents",
+        "locator": "p278"
+      },
+      {
+        "id": "shortInvestments",
+        "amount": 405.9,
+        "field": "Short-term investments",
+        "locator": "p278"
+      },
+      {
+        "id": "currentDebt",
+        "amount": 1681.9,
+        "field": "Short-term borrowings and current portion of long-term debt",
+        "locator": "p278"
+      },
+      {
+        "id": "noncurrentDebt",
+        "amount": 2709.0,
+        "field": "Long-term debt",
+        "locator": "p278"
+      },
+      {
+        "id": "bondFairValue",
+        "amount": 3590.8,
+        "field": "Disclosed fair value of outstanding Eurobonds",
+        "locator": "note16 p299",
+        "note": "Issuer disclosed quoted market value atDec31 2025; cannot reuse as current bond value"
+      },
+      {
+        "id": "commercialPaper",
+        "amount": 691.7,
+        "field": "Carrying amount of short-term commercial paper",
+        "locator": "note16 p299",
+        "note": "Face693.0; short maturity book-value proxy"
+      },
+      {
+        "id": "berlinMortgage",
+        "amount": 16.4,
+        "field": "Mortgage loan",
+        "locator": "note16 p299",
+        "note": "Book-value proxy, not independent fair value"
+      },
+      {
+        "id": "financeLease",
+        "amount": 16.5,
+        "field": "Finance lease within accrued and other liabilities",
+        "locator": "note14 p297",
+        "note": "Separate from funded-debt lines; operating leases remain rent-expensed"
+      },
+      {
+        "id": "swapAssets",
+        "amount": 0.2,
+        "field": "Interest rate swaps fair-value hedge assets",
+        "locator": "note25 p320"
+      },
+      {
+        "id": "swapLiabilities",
+        "amount": 48.1,
+        "field": "Interest rate swaps fair-value hedge liabilities",
+        "locator": "note25 p320"
+      },
+      {
+        "id": "equityInvestments",
+        "amount": 1320.7,
+        "field": "Equity investments",
+        "locator": "note9 p291"
+      },
+      {
+        "id": "zeissEquity",
+        "amount": 822.6,
+        "field": "Equity-method investment",
+        "locator": "note10 p291"
+      },
+      {
+        "id": "conditionalAwards",
+        "amount": 0.778707,
+        "field": "331366EUR+447341USD conditional shares",
+        "locator": "note20 p304"
+      },
+      {
+        "id": "options",
+        "amount": 0.010122,
+        "field": "5479EUR+4643USD outstanding exercisable options",
+        "locator": "note20 p305"
+      }
+    ],
+    "options": [
+      {
+        "key": "operatingCashReserve",
+        "default": 3000,
+        "min": 0,
+        "max": 13321.9,
+        "classification": "analyst liquidity reserve; neither reported restriction nor independent excess-cash appraisal"
+      },
+      {
+        "key": "privateEquityHaircut",
+        "default": 0.2,
+        "min": 0,
+        "max": 1,
+        "classification": "analyst illiquidity/realizability haircut; no claimed probability"
+      },
+      {
+        "key": "zeissEquityValue",
+        "default": 822.6,
+        "min": 0,
+        "max": null,
+        "classification": "reported book-value proxy; equity-method income/dividends excluded from operating EBIT forecast, so separate ownership value is not added twice"
+      },
+      {
+        "key": "awardShareMultiplier",
+        "default": 1,
+        "min": 0,
+        "max": 2.5,
+        "classification": "gross conditional-award allocation sensitivity;1 is disclosed-count proxy, not a grant-by-grant vesting probability"
+      },
+      {
+        "key": "optionShareMultiplier",
+        "default": 1,
+        "min": 0,
+        "max": 1,
+        "classification": "full-share dilution with zero exercise-proceeds credit; conservative simplified option allocation, not fair option valuation"
+      },
+      {
+        "key": "additionalContingentClaim",
+        "default": 0,
+        "min": 0,
+        "max": null,
+        "classification": "explicit zero incremental expected-loss assumption beyond operating expenses and disclosed claims; no claim that contingencies do not exist"
+      },
+      {
+        "key": "openingTaxClaim",
+        "default": 669.6,
+        "min": 0,
+        "max": null,
+        "classification": "Nominal opening tax liability proxy; reducing it requires settlement/timing support, not assuming normalized future taxes cover it."
+      },
+      {
+        "key": "currentTaxAssetRecovery",
+        "default": 88.9,
+        "min": 0,
+        "max": 88.9,
+        "classification": "Full current tax asset book recovery proxy."
+      }
+    ],
+    "claimPolicy": [
+      "Use3590.8 market bond value plus691.7commercial paper and16.4mortgage instead of4390.9funded book debt, never both.",
+      "Deduct16.5finance lease and47.9net interest-rate swap liability once. The57.5bond hedge carrying adjustment excludes accrued interest and is not substituted for the separately disclosed47.9net derivative fair value.",
+      "Operating leases stay in operating expenses; no second lease-liability claim.",
+      "Net FX derivative11.5 remains within operating treatment; do not also book a separate financial claim without revising operating working-capital treatment.",
+      "Customer advances19372.6 are operating funding; delivery/refund economics belong in FCFF. This allocation does not deduct them as financing debt.",
+      "Strategic loans and advances to Zeiss are not added to cash; net future supplier funding is included in reinvestment. The distinct24.9%equity ownership is a separate book-value proxy because associate profit is below EBIT.",
+      "Do not add future net-income revaluation gains to FCFF and also add private equity holdings.",
+      "Pension premiums remain operating. Annual note19 states no obligation to fill PME deficits; no fictitious unfunded plan claim is deducted. Deferred-compensation assets129.9 and liabilities127.7 are both excluded from this allocation, leaving a2.2net omission.",
+      "Future ordinary dividends are owner distributions, not additional senior claims at the2025origin; a current ex-dividend rollforward would differ.",
+      "Future economic grant cost uses the observed2025gross grant-value/revenue budget. Legacy215 expense is synthetically deducted and exactly reversed, giving zero operating-margin uplift; matching old award shares are a separate ownership claim.",
+      "Opening current and noncurrent tax liabilities669.6 are deducted once and current tax asset88.9 credited once. Do not include those settlements again in FCFF. No noncurrent DTA value is added.",
+      "Base FCFF maintains opening customer advances19372.6 through equal new-order replenishment as old advances are delivered. Advance runoff stresses reduce FCFF; no duplicate advance debt claim."
+    ],
+    "unresolved": [
+      "Private-equity/associate fair values and realization tax are unappraised.",
+      "Operating-cash need is an analyst assumption, particularly important with customer advances.",
+      "Capital reference isDecember31 2025, not the latest quarter. This deliberately avoids pretending unavailable current shares/debt are exact.",
+      "Contingent commitments and guarantees are not valued individually. Extra expected losses can be stressed without treating source maxima as certain debt.",
+      "Remaining legacy-expense timing uses the weighted-average1.4year aggregate source; exact individual vesting/performance schedule is not public here. Disclosed-count award dilution is conditional, not a fair-value appraisal.",
+      "Current-tax-asset recovery and disputed-tax-liability settlement timing remain proxy assumptions. Noncurrent DTAs omitted to avoid tax-benefit double counting.",
+      "Customer advance replenishment is a business assumption;50%/100%runoff is separately modelled as operating cash use."
+    ],
+    "defaultAllocation": {
+      "operatingEV": 280842.0530586223,
+      "cashPlusShortInvestments": 13321.9,
+      "operatingCashReserve": 3000,
+      "excessCashProxy": 10321.9,
+      "privateEquityValueProxy": 1056.5600000000002,
+      "zeissEquityValueProxy": 822.6,
+      "fundedDebtMarketProxy": 4298.9,
+      "financeLeaseClaim": 16.5,
+      "netInterestRateSwapClaim": 47.9,
+      "allocationShares": 386.206494,
+      "equity": 288099.1130586223,
+      "perShareEUR": 745.9716952833586,
+      "perShareUSDAtReferenceFX": 876.5167419579464,
+      "referenceFX": 1.175,
+      "referenceFXDate": "2025-12-31",
+      "referenceFXSource": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.xml",
+      "classification": "Conditional retrospective updated-information allocation with economic compensation and opening tax claims; not current price target",
+      "priceComparisonEligible": false,
+      "openingTaxClaims": 669.6,
+      "currentTaxAssetRecovery": 88.9,
+      "noncurrentDeferredTaxAssetCredit": 0
+    },
+    "operatingCaseId": "ASML-EUR-dated2025-central-2026-10-18-v4",
+    "compensationBridgeFile": "dated-operating-case-v4.json",
+    "compensationBridgePath": "compensationBridge",
+    "openingTaxPolicy": {
+      "source": "https://ourbrand.asml.com/m/71076aaad607de4d/original/asml-2025-annual-report-based-on-us-gaap.pdf",
+      "locators": [
+        "p278 balance sheet",
+        "note21 pp309-310"
+      ],
+      "currentTaxLiability": 486.6,
+      "currentTaxAsset": 88.9,
+      "noncurrentTaxLiability": 183.0,
+      "noncurrentComponents": {
+        "unrecognizedTaxBenefitsIncludingInterestAndPenalties": 174.5,
+        "deferredTaxLiability": 8.5
+      },
+      "grossOpeningTaxClaims": 669.6,
+      "netOpeningTaxClaim": 580.7,
+      "noncurrentDeferredTaxAssets": 1719.4,
+      "deferredTaxAssetCreditDefault": 0,
+      "policy": "Normalized future operating tax rates are for future profits and do not settle opening balances. Deduct486.6 current tax plus183 noncurrent tax at nominal book-value proxy once, credit88.9 current tax asset at book once, and exclude the same settlements from forecast working capital/taxes. Default zero credit for noncurrent DTA avoids capitalizing benefits that may already influence effective tax rates. A DTA realization sensitivity must remove overlapping rate benefits.",
+      "uncertainty": "UTB settlement timing/amount and recovery of current tax assets are uncertain; nominal book claims and full current-tax-asset recovery are conditional proxies, not an independent tax valuation."
+    },
+    "advanceRunoffEquitySensitivity": [
+      {
+        "runoffFraction": 0.5,
+        "annualNetRunoffFirstFiveYears": 1937.2599999999998,
+        "totalAdvanceRunoff": 9686.3,
+        "policy": "No replacement for selected share of opening advances; net runoff is additional working-capital investment, never a second debt claim. Remaining balance is held constant. Annual revenue/margins are otherwise unchanged, so this isolates financing dependency rather than a full downturn.",
+        "operatingEV": 273498.31348171807,
+        "deltaVersusBase": -7343.73957690422,
+        "equity": 280755.37348171807,
+        "perShareEUR": 726.9566354876416
+      },
+      {
+        "runoffFraction": 1.0,
+        "annualNetRunoffFirstFiveYears": 3874.5199999999995,
+        "totalAdvanceRunoff": 19372.6,
+        "policy": "No replacement for selected share of opening advances; net runoff is additional working-capital investment, never a second debt claim. Remaining balance is held constant. Annual revenue/margins are otherwise unchanged, so this isolates financing dependency rather than a full downturn.",
+        "operatingEV": 266154.57390481385,
+        "deltaVersusBase": -14687.47915380844,
+        "equity": 273411.63390481385,
+        "perShareEUR": 707.9415756919246
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "annual2025",
+      "url": "https://ourbrand.asml.com/m/71076aaad607de4d/original/asml-2025-annual-report-based-on-us-gaap.pdf",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "add58be9d9822ca12584b63c55c089b36e1ae5bf7a1825ebf1d1572628f2c52c",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "annual2018",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "ffcc7567f4f3533223e8fadd61b8cacdd75c1014bbe48b41b73add9b86855920",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "annual2021",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "b63411e0028de3ea7c150777feb0854e0d1bee70a1f362d48d96291b9fcf73ee",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "annual2022",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "b1efe5c7902837608940ecb433bcd706894ea5903449100a7b51e4d2aaf8ca73",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "facts",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000937966.json",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "28be6fd0f5608350ec396ae5d5097e45da95f4f29ad3fbd19aac328a15cce3d4",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q3financials",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "aab445e6059eb27267cfeeef44889b3ff1092abd2b23be4d457ed6a6494de91b",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q3release",
+      "url": "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "q3releaseSEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/pressreleasefinancialresul.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "9747b1da607ddb1a06947f4bcd3d52746b8917fb6f8132635a155b5df42a8982",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q3remarks",
+      "url": "https://investor.asml.com/static-files/40c56a6b-1460-4f69-9340-6a869560d24b",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "q3interview",
+      "url": "https://investor.asml.com/static-files/7ec38683-352c-4cc9-923e-c2af8199e876",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "q3slides",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/a2026_10x14xpresentation.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "a09cac666a4edc6dea40f6bf1cc804535d7ee85f297d77e731b7ac9caac68a23",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q2release",
+      "url": "https://investor.asml.com/static-files/4fe3450c-f56c-473d-809a-3a7ae2b7fab3",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "46af30754d38cb88805d48143479abf87746798b4642407580781d8292d8331a",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q2remarks",
+      "url": "https://ourbrand.asml.com/asset/1fd3908a-0381-47b5-9b69-a3094f656651/2026_07_15-ASML-Transcript-investor-call-Q2-2026.pdf",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "4d091fc8d1e3e7d48c941537b321c23ca2f14d6df69ffd4480e338c3c13d3719",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q2interview",
+      "url": "https://investor.asml.com/static-files/a452e966-8744-431f-a3e5-037108334785",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "1d8d370e34afb5da6b3ea6b6ad16fb97ba95493b0e177aae0e3421074f13741d",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q1release",
+      "url": "https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "73d9a6b66741ed48aa32606857941d3be317dd6e1fa209d5fe3bd37eb00adf1c",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q425release",
+      "url": "https://investor.asml.com/static-files/cb0839f6-8180-4c98-ba1a-a43348c3421d",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "b3cf875fe5116cbbd0bfd1a514708cf50e3e96dfa9539f64badda7cf1bb67ce1",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q324release",
+      "url": "https://investor.asml.com/static-files/e1cd57c6-c048-4dcc-993e-25902d6b3f8f",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "q424release",
+      "url": "https://investor.asml.com/news-releases/news-release-details/q4-2024-financial-results",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "51051c41b94fa54c2bc6d4b29de0fbf23c7fc982f1b1a9962d157a4e86da98ed",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q323release",
+      "url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu6.7-billion-net-sales-and-eu1.9-billion-net-income-q3-2023",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "q423release",
+      "url": "https://investor.asml.com/static-files/4c406bf0-dcb6-4d60-ae04-55889e9f456b",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "fb2401e23cd9e46e359197cd420b54341f1f5a0217b52d9c1404fdc4b5df2cdf",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q422release",
+      "url": "https://investor.asml.com/static-files/27fd78c4-46f7-4165-ab63-b2b5dadf8de4",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "6d395c5572d62ff5021434656a785db55f1a7db29138190ad601135630cf7c67",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q421release",
+      "url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu18.6-billion-net-sales-and-eu5.9-billion-net-income-2021",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "q421slides",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000004/q4presentationfromwebsit.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "cmd2021",
+      "url": "https://www.asml.com/en/news/press-releases/2021/asml-investor-day-2021",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "cmd2022",
+      "url": "https://www.investor.asml.com/news-releases/news-release-details/asml-provides-updated-view-demand-outlook-capacity-plans-and-business-model-investor-day-meeting",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "cmd2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000026/exhibit997.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "0a1d4428865965560d67f46caea77584f8898c47ff37a015e2a4956580cdf6b2",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "cmd2024release",
+      "url": "https://investor.asml.com/news-releases/news-release-details/asml-provides-updated-view-market-opportunities-2024-investor-day-meeting",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "interim2026",
+      "url": "https://investor.asml.com/static-files/ac9c2486-9fbd-43ba-90ea-87a731488396",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "614ec1d1397ff11dab7b2618af8e4e485f140d75ae27f947e4dd118b3ff23ccb",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "buybacks",
+      "url": "https://investor.asml.com/static-files/aeb92ee0-2334-49fb-ae04-e16efe19c0b8",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "5ba03e9cb7daaa09153df22127ebdcb4de9a6a1915851848a751e5c5cdf0503f",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "security",
+      "url": "https://investor.asml.com/share-information",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": null,
+      "retrievalMode": "web parsed content; original link retained",
+      "useRestriction": null
+    },
+    {
+      "id": "debt",
+      "url": "https://investor.asml.com/investor-resources/capital-return-and-financing",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "5b77e5bd178385acb21c26af3e7b1b6acb4ac35effbb0fb1563105223d675df3",
+      "retrievalMode": "downloaded original"
+    },
+    {
+      "id": "robinhood",
+      "url": "https://robinhood.com/us/en/stocks/ASML/",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "3f66f66621ce439a932bac5816323e9cdea7586c81f7326635d02f51162b319f",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "fx",
+      "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "4422161311c3c02cf2d1571db07bdf9884b3f42fdeb16a4926903236ae6ab42d",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "bund",
+      "url": "https://api.statistiken.bundesbank.de/rest/data/BBSSY/D.REN.EUR.A630.000000WT1010.A?format=csv&lang=en",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "10b106ed8c01014643323f7d1784534c9bc00d3b2dc43da2f3e05a23548f3b3c",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "erp",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "755ad4d972431c7852bc0a723630d86cbfc84b14febb259858d1938458c0e0c7",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "beta",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "10993bab71504e2449ccdd9e3d67fa4da983bed380b2f4486e5200a7b258616b",
+      "retrievalMode": "downloaded original",
+      "useRestriction": null
+    },
+    {
+      "id": "q3QandAsecondary",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/asml-asml-q3-2026-earnings-call-transcript/",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "secondary transcript",
+      "sha256": "3abd5d52b2d437c6bd3f02ffd82b2da289508d323b15935657c543fce1f14446",
+      "retrievalMode": "downloaded original",
+      "useRestriction": "Q&A corroboration only; primary issuer source governs discrepancies"
+    },
+    {
+      "id": "agm2026",
+      "url": "https://www.asml.com/en/company/governance/shareholders/shareholder-meetings/agm-2026",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "cd928a18f311ef9fa51a39429a7a708409d29422e4b112481c365cd765bb6e86",
+      "retrievalMode": "downloaded original"
+    },
+    {
+      "id": "fxHistory",
+      "url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.xml",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public data",
+      "sha256": "3cb610894f5098c82e39c476e1593033565565eb66570051c9304fbf708978e9",
+      "observations": {
+        "2025-12-31": 1.175,
+        "2026-06-26": 1.1401,
+        "2026-09-25": 1.1403,
+        "2026-10-16": 1.1253
+      },
+      "unit": "USD per EUR"
+    },
+    {
+      "id": "euronextNotices",
+      "url": "https://live.euronext.com/en/ajax/getNoticePublicData/NL0010273215-XAMS?alias=1&pageNum=1&pageSize=50",
+      "retrievedAt": "2026-10-18",
+      "sourceType": "primary public exchange notice index",
+      "sha256": "0094ff75563dc9970ba64d87ccb5b89cda6cdcf86a1c349981141ae394a88256",
+      "finding": "AMS_20261005_00873_EUR, issuedOct5effectiveOct8 2026, capital-increase event. Index alone does not establish amount or treasury-adjusted outstanding shares."
+    }
+  ],
+  "guidanceTrackRecord": [
+    {
+      "targetPeriod": "FY2022",
+      "guidanceDate": "2022-01-19",
+      "primarySourceUrl": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu18.6-billion-net-sales-and-eu5.9-billion-net-income-2021",
+      "locator": "Opening bullets; q421slides slide 14",
+      "guidance": {
+        "revenueGrowthApprox": 0.2
+      },
+      "actual": {
+        "revenue": 21173.4,
+        "revenueGrowth": 0.137682016012036,
+        "grossMargin": 0.505
+      },
+      "interpretation": "Revenue growth was about 6.23 percentage points below the approximate original outlook. Fast shipments deferred about EUR3.1bn into 2023 (Jan25 2023 release); timing and execution are real forecast risks.",
+      "shortVerbatimExcerpt": "Sales growth of around 20% expected for 2022",
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2023",
+      "guidanceDate": "2023-01-25",
+      "primarySourceUrl": "https://investor.asml.com/static-files/27fd78c4-46f7-4165-ab63-b2b5dadf8de4",
+      "locator": "PDF pages 1-2, CEO statement",
+      "guidance": {
+        "revenueGrowthLowerExclusive": 0.25,
+        "grossMargin": "slight improvement from 2022"
+      },
+      "actual": {
+        "revenue": 27558.5,
+        "revenueGrowth": 0.30156233765007023,
+        "grossMargin": 0.513
+      },
+      "interpretation": "Original annual direction achieved; the greater-than lower-bound language supplies no midpoint error.",
+      "shortVerbatimExcerpt": "a net sales increase of more than 25% and a slight improvement in gross margin",
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2024",
+      "guidanceDate": "2023-10-18",
+      "primarySourceUrl": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu6.7-billion-net-sales-and-eu1.9-billion-net-income-q3-2023",
+      "locator": "CEO statement and outlook",
+      "guidance": {
+        "revenue": "similar to FY2023"
+      },
+      "actual": {
+        "revenue": 28262.9,
+        "revenueGrowth": 0.02556017199775029,
+        "grossMargin": 0.513
+      },
+      "interpretation": "Original outlook, reiterated January24 2024. Actual growth +2.56%; no numeric tolerance was provided for similar.",
+      "shortVerbatimExcerpt": "expect a revenue number similar to 2023",
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2025",
+      "guidanceDate": "2024-10-15",
+      "primarySourceUrl": "https://investor.asml.com/static-files/e1cd57c6-c048-4dcc-993e-25902d6b3f8f",
+      "locator": "PDF pages 1-2, bullets and CEO outlook",
+      "guidance": {
+        "revenueLow": 30000,
+        "revenueHigh": 35000,
+        "grossMarginLow": 0.51,
+        "grossMarginHigh": 0.53
+      },
+      "actual": {
+        "revenue": 32667.3,
+        "grossMargin": 0.528
+      },
+      "interpretation": "Within first near-term annual revenue and gross-margin ranges. This does not erase the earlier multiyear gross-margin miss.",
+      "shortVerbatimExcerpt": "between €30 billion and €35 billion",
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2025 long-range scenario",
+      "guidanceDate": "2021-09-29",
+      "primarySourceUrl": "https://www.asml.com/en/news/press-releases/2021/asml-investor-day-2021",
+      "locator": "Updated financial model; reproduced q421slides slide4",
+      "guidance": {
+        "revenueLow": 24000,
+        "revenueHigh": 30000,
+        "grossMarginLow": 0.54,
+        "grossMarginHigh": 0.56
+      },
+      "actual": {
+        "revenue": 32667.3,
+        "grossMargin": 0.528
+      },
+      "interpretation": "Revenue exceeded this early scenario high end; gross margin missed its low end by 1.2 percentage points. Scenario, not an annual promise.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2025 revised long-range scenario",
+      "guidanceDate": "2022-11-10",
+      "primarySourceUrl": "https://www.investor.asml.com/news-releases/news-release-details/asml-provides-updated-view-demand-outlook-capacity-plans-and-business-model-investor-day-meeting",
+      "locator": "Updated scenarios; event held November11",
+      "guidance": {
+        "revenueLow": 30000,
+        "revenueHigh": 40000,
+        "grossMarginLow": 0.54,
+        "grossMarginHigh": 0.56
+      },
+      "actual": {
+        "revenue": 32667.3,
+        "grossMargin": 0.528
+      },
+      "interpretation": "Revenue within wide scenario but 6.67% below midpoint35bn; margin1.2ppt below low end. Original announcement was Nov10, event Nov11.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2026",
+      "guidanceDate": "2026-01-28",
+      "primarySourceUrl": "https://investor.asml.com/static-files/cb0839f6-8180-4c98-ba1a-a43348c3421d",
+      "locator": "PDF page1 bullets; page2 CEO outlook",
+      "guidance": {
+        "revenueLow": 34000,
+        "revenueHigh": 39000,
+        "grossMarginLow": 0.51,
+        "grossMarginHigh": 0.53
+      },
+      "actual": null,
+      "interpretation": "Original FY2026 guide; no full-year actual exists as of Oct18.",
+      "shortVerbatimExcerpt": "between €34 billion and €39 billion",
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2026",
+      "guidanceDate": "2026-04-15",
+      "primarySourceUrl": "https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results",
+      "locator": "CEO statement and outlook",
+      "guidance": {
+        "revenueLow": 36000,
+        "revenueHigh": 40000,
+        "grossMarginLow": 0.51,
+        "grossMarginHigh": 0.53
+      },
+      "actual": null,
+      "interpretation": "First update, not an actual.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2026",
+      "guidanceDate": "2026-07-15",
+      "primarySourceUrl": "https://investor.asml.com/static-files/4fe3450c-f56c-473d-809a-3a7ae2b7fab3",
+      "locator": "Page1 headline and CEO outlook",
+      "guidance": {
+        "revenueLow": 43000,
+        "revenueHigh": 45000,
+        "grossMarginLow": 0.54,
+        "grossMarginHigh": 0.56
+      },
+      "actual": null,
+      "interpretation": "Second update, not an actual.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "FY2026",
+      "guidanceDate": "2026-10-14",
+      "primarySourceUrl": "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+      "locator": "Opening guidance and CEO outlook; q3remarks page2",
+      "guidance": {
+        "revenueLow": 44000,
+        "revenueHigh": 45000,
+        "grossMarginApprox": 0.56
+      },
+      "actual": null,
+      "interpretation": "Latest update. Midpoint44.5bn versus initial36.5bn is +21.92%, but no annual guidance score until actual results.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "Q1 FY2026, ended2026-03-29",
+      "guidanceDate": "2026-01-28",
+      "primarySourceUrl": "https://investor.asml.com/static-files/cb0839f6-8180-4c98-ba1a-a43348c3421d",
+      "locator": "Page1 bullets",
+      "guidance": {
+        "revenueLow": 8200,
+        "revenueHigh": 8900,
+        "grossMarginLow": 0.51,
+        "grossMarginHigh": 0.53
+      },
+      "actual": {
+        "revenue": 8766.9,
+        "grossMargin": 0.53
+      },
+      "interpretation": "Sales inside range; margin at high end. Actual primary q3financials quarterly comparative table.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "Q2 FY2026, ended2026-06-28",
+      "guidanceDate": "2026-04-15",
+      "primarySourceUrl": "https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results",
+      "locator": "CEO outlook",
+      "guidance": {
+        "revenueLow": 8400,
+        "revenueHigh": 9000,
+        "grossMarginLow": 0.51,
+        "grossMarginHigh": 0.52
+      },
+      "actual": {
+        "revenue": 9326.5,
+        "grossMargin": 0.54
+      },
+      "interpretation": "Sales326.5m above high end; margin2ppt above high end. Upgrade mix contributed.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "Q3 FY2026, ended2026-09-27",
+      "guidanceDate": "2026-07-15",
+      "primarySourceUrl": "https://investor.asml.com/static-files/4fe3450c-f56c-473d-809a-3a7ae2b7fab3",
+      "locator": "Outlook; q2remarks page2",
+      "guidance": {
+        "revenueLow": 11000,
+        "revenueHigh": 12000,
+        "grossMarginLow": 0.55,
+        "grossMarginHigh": 0.57,
+        "installedBaseApprox": 2900
+      },
+      "actual": {
+        "revenue": 11662.0,
+        "grossMargin": 0.575,
+        "installedBase": 3288.8
+      },
+      "interpretation": "Revenue within range; margin0.5ppt above high; IBM388.8m above approximate guide.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    },
+    {
+      "targetPeriod": "Q4 FY2026",
+      "guidanceDate": "2026-10-14",
+      "primarySourceUrl": "https://investor.asml.com/static-files/40c56a6b-1460-4f69-9340-6a869560d24b",
+      "locator": "Page2, lines47-53",
+      "guidance": {
+        "revenueLow": 14200,
+        "revenueHigh": 15200,
+        "grossMarginApprox": 0.57,
+        "installedBaseApprox": 3700,
+        "rdApprox": 1200,
+        "sgaApprox": 400
+      },
+      "actual": null,
+      "interpretation": "Unfinished forecast; component midpoint produces full-year44455.4m, slightly below rounded44.5bn midpoint.",
+      "shortVerbatimExcerpt": null,
+      "retrievedAt": "2026-10-18"
+    }
+  ],
+  "integrationReview": {
+    "status": "independently-cleared-dated-conditional-scenario",
+    "checksPassed": 147,
+    "originalOperatingSHA256": "c4717c1a1b3420b9bdee932a391f6b77169b360d0725b8edd7c95ce4ee32f93b",
+    "originalBridgeSHA256": "d7bf3505fa36ef20532200ac7456712ceeb6dc2f200db4e4613a59dfd383c723",
+    "judgment": "PASS: reviewed December 31, 2025-origin conditional research scenario using October 18, 2026 information. Current equity, current-price comparison and as-known backtesting remain blocked."
+  }
+}

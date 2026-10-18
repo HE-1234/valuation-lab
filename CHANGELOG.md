@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · ASML dated EUR valuation
+
+- Added ASML with EUR financial forecasts, audited conditional claims and three customer-advance funding paths. The base reproduces EUR745.971695 per registered ordinary share at the December 31, 2025 origin using October 18, 2026 research information.
+- Displays USD876.516742 only as a separate historical currency illustration at 1 EUR = 1.175 USD on the financial-origin date. It is not a current exchange-rate translation or market-price comparison.
+- Preserves fixed customer-advance runoff in years one through five when operating-investment factors, forecast horizons or annual uncertainty change. Null claims and mismatched dates, security identity or FX fail closed.
+- Full suite: 1,509 passed, zero failed, one existing skip. Independent review: 630 core checks, 74 source-fidelity checks and 156 focused tests. Existing case data, earlier registries, quiz and styles remain unchanged.
+
 ## 2026-10-18 · Lam Research incremental case
 
 - Added LRCX with three independently reviewed June 28, 2026-origin scenarios using October 18 information, historical references, bilingual evidence and seven conditional capital-claim controls. Base/downside/upside allocations reproduce approximately $109.18/$53.78/$147.62; current-price comparisons remain unavailable.

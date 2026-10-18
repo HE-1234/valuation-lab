@@ -25,3 +25,7 @@ Verification: source contracts and synthetic-DOM checks cover labels, status mar
 ## 2026-10-18 · Explain fixed funding beside capital inputs
 
 Reviewed [W3C Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html). Applied its guidance to expose LRCX's fixed opening cash obligation and operating-versus-total investment equation next to Capital inputs. Rounded input values alone cannot explain which component changes. Thirty-seven source-driven static views showed readable bilingual labels, warnings and equations without horizontal overflow; this is not a native-device or WCAG conformance certificate.
+
+## 2026-10-18 · Currency and reusable labels
+
+Applied the previously reviewed [W3C Labels or Instructions guidance](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) to ASML: show EUR units at monetary inputs, keep the historical FX date and rate beside the secondary USD illustration, and name customer-advance runoff directly. Review caught an inherited “opening settlement” label that misdescribed the otherwise correct calculation; it was replaced with the domain-specific label. Forty-eight source-driven static states passed overflow checks. These are legibility checks, not native-device or accessibility certification.

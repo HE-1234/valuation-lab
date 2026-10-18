@@ -33,7 +33,7 @@ export function researchDraftIssues(d,{includeTiming=true}={}){
  if(d.schemaVersion===1&&d.derivedForecast!==undefined)errors.push('Derived horizon metadata requires a version-2 annual draft.');
  errors.push(...incrementalDraftIssues(d));
  if(!d.incrementalResearch&&(d.version!==RESEARCH_VERSION||typeof d.sourceScenario!=='string'||d.caseId!==`${RESEARCH_VERSION}:${d.ticker}:${d.sourceScenario}`))errors.push('Annual research version and source-case identity must match the reviewed profile.');
- if(!/^[A-Z0-9.-]{1,12}$/.test(d.ticker||'')||!['USD','TWD'].includes(d.currency))errors.push('A supported ticker and explicit nominal currency are required.');
+ if(!/^[A-Z0-9.-]{1,12}$/.test(d.ticker||'')||!(['USD','TWD'].includes(d.currency)||(d.currency==='EUR'&&incrementalRecord(d.ticker)?.identity.currency==='EUR')))errors.push('A supported ticker and explicit nominal currency are required.');
  if(!date(d.informationAsOf)||!date(d.discountOrigin)||!object(d.anchor)||!finite(d.anchor.revenue)||d.anchor.revenue<=0)errors.push('Valid information date, forecast origin and positive source revenue are required.');
  if(!Array.isArray(d.annual)||d.annual.length<1||d.annual.length>30)errors.push('Supply a complete annual schedule of 1–30 years.');
  else d.annual.forEach((r,i)=>{
@@ -88,7 +88,7 @@ export function calculateResearchOperating(d){
   discount*=1+r.wacc;const presentValue=fcff/discount;pv+=presentValue;cumulative+=fcff;trough=Math.min(trough,cumulative);
   const growth=r.revenue/prior-1,deltaRevenue=r.revenue-prior;prior=r.revenue;
   if(![ebit,tax,nopat,fcff,discount,presentValue,cumulative,growth,pv].every(finite))throw Error(`Year ${r.year}: forecast arithmetic exceeded the finite numerical range. Reduce the edited inputs.`);
-  return {...r,growth,ebit,tax,nopat,fcff,discountFactor:discount,pv:presentValue,cumulativeFCFF:cumulative,...(d.fixedCapitalFunding?{openingCapitalPayableSettlement:fixedCapitalSettlement(d,r.year),normalizedOperatingReinvestment:operatingInvestment(d,r)}:{}),derivedSalesCapital:operatingInvestment(d,r)!==0?deltaRevenue/operatingInvestment(d,r):null};
+  return {...r,growth,ebit,tax,nopat,fcff,discountFactor:discount,pv:presentValue,cumulativeFCFF:cumulative,...(d.fixedCapitalFunding?{fixedOpeningFunding:fixedCapitalSettlement(d,r.year),...(d.ticker==='LRCX'?{openingCapitalPayableSettlement:fixedCapitalSettlement(d,r.year)}:{}),normalizedOperatingReinvestment:operatingInvestment(d,r)}:{}),derivedSalesCapital:operatingInvestment(d,r)!==0?deltaRevenue/operatingInvestment(d,r):null};
  });
  const t=d.terminal,last=rows.at(-1),revenue=last.revenue*(1+t.growth),ebit=revenue*t.margin,nopat=ebit*(1-t.taxRate),reinvestment=nopat*t.growth/t.roic,fcff=nopat-reinvestment,value=fcff/(t.wacc-t.growth),terminalPV=value/discount,enterprise=pv+terminalPV;
  if(![revenue,ebit,nopat,reinvestment,fcff,value,terminalPV,enterprise].every(finite))throw Error('Terminal arithmetic exceeded the finite numerical range. Reduce the edited inputs.');
