@@ -1,0 +1,274 @@
+{
+  "status": "CONDITIONAL_TREASURY_SETTLEMENT_SENSITIVITIES",
+  "actual_liquidity_adequacy": null,
+  "company_common_equity_value": null,
+  "units": "USD millions",
+  "financial_origin": "2026-08-01",
+  "information_cutoff": "2026-10-18",
+  "purpose": "Translate an unchanged economic FCFF framework into explicitly assumed treasury cash paths. Do not add or subtract these outputs as a second valuation bridge.",
+  "opening_cash": 3932.8,
+  "operating_reserve": 1000.0,
+  "opening_claim_cash_earmarks": {
+    "technology_licenses": 220.0,
+    "restructuring": 238.4,
+    "income_tax_payables": 249.4,
+    "maximum_earnout_cash": 233.0
+  },
+  "opening_available_cash": 1992.0,
+  "earmark_policy": "Full license, restructuring, income tax and maximum cash earnout amounts reserved immediately, with no release. Actual settlement dates unknown. The economic bridge instead deducts the full reported earnout FV; do not stack this233cash reserve onto that749.5valuation deduction.",
+  "economic_future_grant_cost": "Unchanged model opportunity cost, charged once. No incremental future share count added on top of this expense.",
+  "compensation_policies": {
+    "cash_replacement": {
+      "classification": "Analyst counterfactual payment policy",
+      "cash_translation": "Retain the new-grant economic expense as literal cash compensation and its normalized tax deduction. Deduct separate legacy equity-settlement withholding. Future compensation creates no new equity-withholding cash in this policy."
+    },
+    "equity_settlement": {
+      "classification": "Analyst equity-cash translation sensitivity, not disclosed vesting",
+      "cash_translation": "Add back new-grant economic expense, reverse its modeled tax deduction, and deduct assumed future grant withholding at vesting. Do not add employee contributions, exercise proceeds, employer vesting deductions or excess tax benefits without evidence.",
+      "new_grant_cohort_vesting_lags_months": [
+        12,
+        24,
+        36,
+        48
+      ],
+      "fraction_each_lag": 0.25,
+      "withholding_rate": 0.35,
+      "settlement_value_vs_grant_cost_multiplier": 1.0,
+      "unknowns": [
+        "actual stock price on vesting",
+        "tax jurisdictions and employee rates",
+        "performance payouts, forfeiture and vesting dates",
+        "employee contributions/exercise cash",
+        "employer deductions and timing"
+      ],
+      "future_claim_rule": "Net-share value is still economically costly, captured by the original full grant-value cost in DCF; it does not disappear because treasury cash is lower."
+    }
+  },
+  "legacy_withholding": {
+    "classification": "Analyst run-rate and attrition assumption, not observed vesting schedule",
+    "annual_cash_assumption": {
+      "2027": 365.2,
+      "2028": 730.4,
+      "2029": 486.93333333333334,
+      "2030": 243.46666666666667
+    },
+    "rationale": "Use reported H1 365.2 as H2 cash sensitivity, annualize to730.4 in FY2028, then reduce to two-thirds and one-third in FY2029/2030. General3\u20134yearRSU and3\u20135yearPRSU service periods do not identify actual remaining cohorts. Exact quantities/dates withheld are still a gate.",
+    "historical_anchor_url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000025/mrvl-20260801.htm",
+    "stress_multiplier": 2.0,
+    "valuation_rule": "Cash use exists even when gross legacy claims are allocated in equity valuation. It is not deducted a second time from gross-claim economic EV."
+  },
+  "declared_dividend": {
+    "declaration_date": "2026-09-25",
+    "record_date": "2026-10-09",
+    "payment_date": "2026-10-29",
+    "rate": 0.06,
+    "common_inventory_date": "2026-08-18",
+    "common_shares_m": 876.926613,
+    "preferred_as_converted_m": 21.778,
+    "proxy_cash": 53.92227678,
+    "actual_payable": null,
+    "qualification": "Stale share inventory proxy includes participating preferred. No claim that October9 outstanding/eligible shares equal August18. Future undeclared dividends and buybacks set to zero as a conditional cash-preservation policy.",
+    "source_url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001628280-26-063592/mrvl-20260925.htm"
+  },
+  "forward": {
+    "reported_august1_asset": 131.0,
+    "reported_notional": 300.0,
+    "source_url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000025/mrvl-20260801.htm",
+    "source_location": "Note6 and risk factors",
+    "cash_outflow_assumption": 300.0,
+    "base_cash_month": "2027-03",
+    "early_termination_cash_stress_month": "2026-10",
+    "classification": "Notional-scale adverse cash sensitivity, not forecast, intrinsic value, contractual maximum or contractual exact maturity",
+    "actual_cash_settlement": null,
+    "terms_gap": "Q2 Note6 says April2026 twelve-month entry; risk factor describes approximately one year from March31. Original confirmation/strike/formula/collateral/early-termination mechanics not located in reviewed filing exhibits. Full contract terms still gated.",
+    "anti_double_count": "August131FV is not credited as spendable cash. Do not combine hypothetical settlement cash with that FV in an equity valuation."
+  },
+  "calendar": {
+    "monthly_window": "August2026\u2013January2042, half-yearstubplus15fullyears",
+    "fiscal_period_mapping": "Calendar Aug\u2013Jan for H2FY2027; calendarFeb\u2013Jan thereafter; approximation of actual fiscal-week calendar",
+    "default_operating_cash_timing": "Annual economic NOPAT and nonresearch investment spread evenly by month. Known contractual cash flows placed in stated calendar month. All modeled monthly outflows and negative NOPAT precede positive monthly NOPAT in a deliberately conservative within-month ordering.",
+    "stress_timing": "All annual nonresearch investment paid in first month of each forecast period; earnings uniform. Severe timing bound, not observed supplier schedule.",
+    "limits": "No transaction-level daily forecast or actual post-August cash roll-forward. Positive month-end cash cannot prove intra-month adequacy. After a negative balance, subsequent rows are unfunded budget arithmetic; financing gap excludes interest/fees on financing not identified."
+  },
+  "debt": {
+    "existing_bonds": [
+      {
+        "id": "MTG-MTI-2028",
+        "face": 499.9,
+        "coupon": 0.04875,
+        "due": "2028-06-22",
+        "coupon_months": [
+          6,
+          12
+        ],
+        "coupon_day": 22
+      },
+      {
+        "id": "2028",
+        "face": 750.0,
+        "coupon": 0.0245,
+        "due": "2028-04-15",
+        "coupon_months": [
+          4,
+          10
+        ],
+        "coupon_day": 15
+      },
+      {
+        "id": "2029",
+        "face": 500.0,
+        "coupon": 0.0575,
+        "due": "2029-02-15",
+        "coupon_months": [
+          2,
+          8
+        ],
+        "coupon_day": 15
+      },
+      {
+        "id": "2030",
+        "face": 500.0,
+        "coupon": 0.0475,
+        "due": "2030-07-15",
+        "coupon_months": [
+          1,
+          7
+        ],
+        "coupon_day": 15
+      },
+      {
+        "id": "2031",
+        "face": 750.0,
+        "coupon": 0.0295,
+        "due": "2031-04-15",
+        "coupon_months": [
+          4,
+          10
+        ],
+        "coupon_day": 15
+      },
+      {
+        "id": "2033",
+        "face": 500.0,
+        "coupon": 0.0595,
+        "due": "2033-09-15",
+        "coupon_months": [
+          3,
+          9
+        ],
+        "coupon_day": 15
+      },
+      {
+        "id": "2035",
+        "face": 500.0,
+        "coupon": 0.0545,
+        "due": "2035-07-15",
+        "coupon_months": [
+          1,
+          7
+        ],
+        "coupon_day": 15
+      },
+      {
+        "id": "2036",
+        "face": 1000.0,
+        "coupon": 0.053,
+        "due": "2036-04-15",
+        "coupon_months": [
+          4,
+          10
+        ],
+        "coupon_day": 15
+      }
+    ],
+    "face_total": 4999.9,
+    "source_basis": "Annual debtnote supplies outstanding face; indentures and April15 2026 filing supply exact maturity/coupon dates. Coupon-day business-day adjustments are not modeled within monthly buckets.",
+    "source_by_bond": {
+      "MTG-MTI-2028": [
+        "mtg-notes-2028",
+        "mti-notes-2028"
+      ],
+      "2028": [
+        "notes-2028-2031"
+      ],
+      "2031": [
+        "notes-2028-2031"
+      ],
+      "2029": [
+        "notes-2029-2033"
+      ],
+      "2033": [
+        "notes-2029-2033"
+      ],
+      "2030": [
+        "notes-2030-2035"
+      ],
+      "2035": [
+        "notes-2030-2035"
+      ],
+      "2036": [
+        "notes-2036-8k"
+      ]
+    },
+    "cash_repay_policy": "Principal paid at every disclosed maturity, no replacement debt.",
+    "refinance_all_policy": "Hypothetical replacement at every maturity including later replacement maturities, same face, five-year term, semiannual coupon dates inherited,6.39%coupon and0.5%issuance fee. No contractual commitment or assurance of markets/access.",
+    "new_debt_coupon_assumption": 0.0639,
+    "new_debt_fee_assumption": 0.005,
+    "interest_tax_credit": 0
+  },
+  "revolver": {
+    "nominal_commitment": 1500.0,
+    "disclosed_maturity": "2030-06-30",
+    "contractual_rule": "Fifth anniversary of June30,2025, preceding Business Day if not a Business Day. Availability excludes maturity; commitments terminate and loans become payable. Extensions require lender consent.",
+    "model_monthly_expiry_checkpoint": "2030-06",
+    "model_business_day_assumption": "2030-06-28, because June30isSunday; contractual holiday/business-day convention not legally certified. No new draws permitted in June2030monthlybucket or later.",
+    "opening_draw": 0.0,
+    "forecast_credit_access_verified": false,
+    "quarter_end_maximum_leverage": 4.0,
+    "covenant_definition": "Contractual Consolidated Total Indebtedness divided by trailing four-quarter contractual Consolidated EBITDA, not model economic EBIT/EBITDA.",
+    "compliance_observation": "Company disclosed compliance as of August1,2026 only.",
+    "source_id": "revolver-agreement-2025",
+    "source_sections": [
+      "definitions: Maturity Date, Availability Period, Consolidated EBITDA, Consolidated Total Indebtedness, Leverage Ratio",
+      "2.06 termination",
+      "2.07 repayment",
+      "2.18 extension",
+      "6.06 leverage covenant",
+      "2.09 commitment fee dates and day-count",
+      "2.10 interest and day-count",
+      "Applicable Rate rating grid"
+    ],
+    "unused_fee_annual": 0.00125,
+    "model_interest_rate": 0.0639,
+    "cash_interest_policy": "No tax credit. Full-month interest on beginning revolver and any new draw, including interest funded by the same draw; actual days/360 approximates the SOFR contractual basis. Expiry month uses a conservative28-day approximation. Fixed6.39% is an analyst rate, not current contractual SOFR pricing. Interest paid monthly under assumed one-month rollover; no default penalties modeled.",
+    "expiry_policy": "All remaining balance repaid in June2030; no renewal, extension, replacement facility or post-expiry availability assumed.",
+    "access_policy": "Only explicitly conditional cases allow draws up to nominal1500. No covenant-certified borrowing base or liquidity conclusion inferred.",
+    "unused_fee_policy": "Hold August1 reported 0.125% rate constant as an analyst assumption. Contract fee grid ranges 0.08%\u20130.20% with ratings; actual future fee not known. Accrue using beginning monthly unused capacity and actual days/360; pay in March, June, September and December or expiry. No fee credit for same-month draws.",
+    "opening_commitment_fee_accrual_proxy": 0.16145833333333334,
+    "opening_fee_proxy_basis": "Assumed undrawn July2026 accrual, paid with September fees. Not a reported or independently reconciled August payable; fiscal/calendar day alignment remains approximate."
+  },
+  "combined_stress": {
+    "legacy_withholding_multiple": 2.0,
+    "forward_outflow": 300.0,
+    "forward_month": "2026-10",
+    "additional_h2_capacity": 400.0,
+    "other_h2_investment": "Held unchanged versus operating baseline for the additional400capacity; future deposit balances may change later floors.",
+    "investment_timing": "All annual investment frontloaded; upper revenue case can have larger peak timing gap despite better economics.",
+    "conditional_revolver": true
+  },
+  "hard_gates": [
+    "Actual opening award vesting and settlement cash schedule",
+    "Current post-August cash/debt/share changes",
+    "Exact October dividend payable",
+    "Full forward contract formula, settlement and early-termination cash mechanics",
+    "Future credit covenant calculation, consent and refinancing pricing/access",
+    "Supplier investment cash dates and other undisclosed required cash uses",
+    "Scenario-linked employee/customer option and earnout values including correlation"
+  ],
+  "forecast_cash_is_not": [
+    "Management guidance",
+    "Certified funded forecast",
+    "October current equity valuation",
+    "Demonstrated insolvency when cash gap appears"
+  ]
+}

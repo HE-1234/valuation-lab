@@ -1,0 +1,46 @@
+{
+  "status": "READY_DATED_EV_ONLY_CONDITIONAL_CLAIMS",
+  "review_date": "2026-10-18",
+  "financial_origin": "2026-08-01",
+  "capital_inventory_date": "2026-08-18",
+  "ready_EV_only": true,
+  "ready_current_common_equity": false,
+  "current_common_equity": null,
+  "current_per_share": null,
+  "actual_liquidity_certification": false,
+  "checks_passed": 200,
+  "checks_failed": 0,
+  "operating_EV_m": {
+    "base": 100409.35804765804,
+    "downside": 30440.71279977198,
+    "management_delivery": 211790.16678180074
+  },
+  "blocking_defects": [],
+  "nonblocking_refinements": [
+    "Describe Google function as base contractual vesting/exercise arithmetic, not complete contract implementation."
+  ],
+  "remaining_gates": [
+    "Common-date capital reconciliation",
+    "Joint employee, customer warrant and earnout claim values",
+    "Forward settlement details",
+    "Future supplier cash timing, covenant access and refinancing"
+  ],
+  "site_edits_or_deployment": false,
+  "reviewed_v3_hashes": {
+    "build_v3.py": "7517fa4bdaf9ef53d316e1660dd417de91e06fe02d71a39d61c76ff2ce9b6922",
+    "readiness-v3.json": "b64f3851774781b6c99fe2c67b49d137bbb1446bcc0961651069eae0f899fa8a",
+    "covenant-gate.json": "b40a58906c67235970cf2b2940f5949f3a92a681d919c5dec70f1687d0b759e6",
+    "README.md": "6c1d163c73e981f7da179a5c2871fb63c76e6449713d95023eebafb2063a2d3d",
+    "RESEARCH-UPDATE.md": "1bc6b70836df707f192b9d6d0dcfadd8f357bd2ab7862efead425c20a25a1f7c",
+    "guidance-source-pairs.json": "1f9d7b919d8eb7de3f593819b2b16050dcde84df30390ce3a971708d7a4ec9e1",
+    "dated-conditional-valuation.json": "ef3301dd81ed05aeea1fd115f87f9d664b9f810b7540c16d4eb73fab2a84af54",
+    "guidance-contiguous-16q.csv": "45114cc467b80255254fdc4ec3c713ac214573315ace9e07c47dd11bec88e6c7",
+    "validation-v3.json": "74f5d241f6d25492f58e6de13c7909836a9c313ece17de0f7bfc5a49d9b8ac39",
+    "build_guidance_provenance.py": "a2e5f21c65a9ef0befc888c7aa3c17b961df0aa680c73db86769130facd52017",
+    "original-file-hashes.json": "1c98c0a356a12416742ed37f6eebc6543f4e9b1915f347c16427cb32a94e7142",
+    "file-manifest.json": "bec9aa6acc35775d385792d342a1be3372ce2a0f446a31eccc646b33e3d85ca5",
+    "source-ledger-v3.json": "6b3f46add48423a44ec3f097b9480fab8edbfd539d17deb669367097c92e9145",
+    "google-conditional-settlement.json": "482f6412a39f632cf2ea8432fb069e8a958cdde126b37df31399bd6242bef641",
+    "guidance-credibility.json": "cf0815e883a62d521810890130dc855ae384a7fdfb1d52097687be8c496cfba0"
+  }
+}

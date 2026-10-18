@@ -142,6 +142,7 @@ export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyY
  const investments=calculateDerivedReinvestment(next,next.annual);
  next.derivedForecast.generatedReinvestment=investments;
  next.annual.forEach((r,i)=>{r.reinvestment=Object.prototype.hasOwnProperty.call(investmentOverrides,r.year)?investmentOverrides[r.year]:investments[i];});
+ if(next.ticker==='MRVL')next.annual.forEach((r,i)=>{r.period=`FY${2028+i}`;});
  if(next.ticker==='SNPS')next.annual.forEach((r,i)=>{r.period=`FY${2027+i}`;});
  const issues=annualHorizonIssues(next);if(issues.length)throw Error(issues.join(' '));
  return next;
@@ -186,6 +187,7 @@ export function extendAnnualForMargin(d,c,terminalYear){
   next.derivedForecast.generatedReinvestment.push(reinvestment);prior=revenue;
  }
  next.forecastHorizonYears=next.annual.length;next.userEdited=true;
+ if(next.ticker==='MRVL')next.annual.forEach((r,i)=>{r.period=`FY${2028+i}`;});
  if(next.ticker==='SNPS')next.annual.forEach((r,i)=>{r.period=`FY${2027+i}`;});
  return next;
 }

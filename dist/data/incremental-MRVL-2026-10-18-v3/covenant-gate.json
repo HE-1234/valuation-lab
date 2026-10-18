@@ -1,0 +1,17 @@
+{
+  "reported_compliance_date": "2026-08-01",
+  "historical_fact_gate": "CLOSED: issuer Q2 filing explicitly states compliance",
+  "quarter_end_limit": 4.0,
+  "debt_basis": "Gross Consolidated Total Indebtedness, including capital leases and qualifying long-term/current debt. No general cash-netting provision. Unconsummated acquisition debt exception applies only as defined.",
+  "EBITDA_basis": "Trailing four-quarter contractual EBITDA, pro forma material acquisitions/dispositions; GAAP operating income plus specified nonduplicative adjustments. Not DCF EBIT, non-GAAP EPS, or cash balance.",
+  "cash_adjustment_caution": "Cash payments for prior noncash addbacks reduce EBITDA; cash restructuring addback subject to 15% cap; noncash income subtracted; earnout and acquisition costs follow explicit provisions.",
+  "nominal_revolver_m": 1500,
+  "expiry": "June 2030, contractual business-day adjustment",
+  "illustrative_face_debt_proxy_m": 4999.9,
+  "minimum_EBITDA_no_draw_m": 1249.975,
+  "minimum_EBITDA_full_draw_m": 1624.975,
+  "minimum_EBITDA_v2_base_peak_draw_m": 1546.1999999999998,
+  "headroom_formula": "max(0, min(1500 - existing revolver draw, 4 * contractual trailing EBITDA - other contractual debt - existing revolver draw))",
+  "threshold_qualification": "Face debt proxy only, not compliance certificate. Additional counted debt and covenant adjustments change thresholds. Must also satisfy borrowing conditions/no default; historical compliance does not guarantee full availability.",
+  "actual_current_or_future_headroom_m": null
+}

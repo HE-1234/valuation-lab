@@ -1,9 +1,10 @@
+import {selectedMrvlCase,mrvlOpeningStubIssues} from './mrvl-operating.js';
 import {selectedSnpsCase,snpsOpeningStubIssues} from './snps-opening-stub.js';
 import {selectedCdnsCase,cdnsOpeningStubIssues} from './cdns-opening-stub.js';
 import {operatingCashPolicy,operatingCashIssues} from './fn-operating-cash.js';
 import {fixedCapitalFunding,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
 import {incrementalRecord} from './incremental-registry.js';
-const openingIssues=d=>d?.ticker==='SNPS'?snpsOpeningStubIssues(d):cdnsOpeningStubIssues(d);
+const openingIssues=d=>d?.ticker==='MRVL'?mrvlOpeningStubIssues(d):d?.ticker==='SNPS'?snpsOpeningStubIssues(d):cdnsOpeningStubIssues(d);
 const object=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
 export const incrementalCaseVersion=c=>c?.incrementalResearch?.version;
 export function incrementalIdentityValid(d){
@@ -11,7 +12,7 @@ export function incrementalIdentityValid(d){
  if(openingIssues(d).length)return false;
  if(d.ticker!=='SNPS'&&d.annualFundingPolicy!==undefined)return false;
  if(!id||!object(d.incrementalResearch)||Object.keys(d.incrementalResearch).length!==Object.keys(id).length||!Object.entries(id).every(([k,v])=>d.incrementalResearch[k]===v))return false;
- if(d.version!==id.version||d.caseId!==`${id.version}:${id.ticker}:base`||d.sourceScenario!=='base'||d.currency!==id.currency||d.informationAsOf!==id.informationAsOf||d.discountOrigin!==id.discountOrigin||JSON.stringify(d.anchor)!==JSON.stringify((selectedSnpsCase(d)||selectedCdnsCase(d)||c).anchor))return false;
+ if(d.version!==id.version||d.caseId!==`${id.version}:${id.ticker}:base`||d.sourceScenario!=='base'||d.currency!==id.currency||d.informationAsOf!==id.informationAsOf||d.discountOrigin!==id.discountOrigin||JSON.stringify(d.anchor)!==JSON.stringify((selectedMrvlCase(d)||selectedSnpsCase(d)||selectedCdnsCase(d)||c).anchor))return false;
  if(JSON.stringify(d.operatingCashFunding)!==JSON.stringify(operatingCashPolicy(d)))return false;
  if(JSON.stringify(d.fixedCapitalFunding)!==JSON.stringify(fixedCapitalFunding(d)))return false;
  if(['currentCapitalScenario','currentCapitalProvenance','terminalGrowthReview','selectedResearchScenario'].some(k=>d[k]!==undefined))return false;

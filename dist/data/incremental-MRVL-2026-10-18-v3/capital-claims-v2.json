@@ -1,0 +1,377 @@
+{
+  "company": "Marvell Technology, Inc.",
+  "ticker": "MRVL",
+  "research_as_of": "2026-10-18",
+  "status": "research_only_no_app_changes",
+  "important_date_qualification": "Financial balances are August 1, 2026; exact common/award/warrant representation is August 18, 2026; later cover common count is rounded August 21. This is a dated last-reported bridge, not an assertion of exact October 18 balances.",
+  "primary_sources": {
+    "annual-2026": {
+      "url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000011/mrvl-20260131.htm",
+      "html_sha256": "489e97cd4196a0fca7d785d1a3aa5004ac703d4fa04c44542285c901a638dc0a"
+    },
+    "q2-2027": {
+      "url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000025/mrvl-20260801.htm",
+      "html_sha256": "0100d0db43d487786818859abaf9465c6285259ea4c520778a185b77a0f64af9"
+    },
+    "aug19-2026-agreement": {
+      "url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-356217/d412696dex41.htm",
+      "html_sha256": "f9cfde7908a9b34250b88e8f3427a860e73a0359371c29fd0bbff2ef9da28921"
+    }
+  },
+  "web_verification": {
+    "performed": true,
+    "results": "Primary Q2 filing and August warrant agreement reviewed; later issuer 8-K scan found September25 dividend declaration. Original forward contract and individual insider transactions not fully reviewed.",
+    "additional_primary_url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-032861/d45933d8ka.htm"
+  },
+  "units": "USD millions and shares millions unless exact_shares is specified",
+  "august_1_balance_facts": {
+    "cash_and_equivalents": 3932.8,
+    "current_debt_carrying": 0,
+    "long_term_debt_carrying": 4962.9,
+    "debt_face_value": 4999.9,
+    "debt_discount_and_issuance_cost": 37.0,
+    "debt_fair_value_approx": 4900,
+    "undrawn_revolver": 1500,
+    "accounts_receivable": 2218.4,
+    "inventory": 1360.6,
+    "prepaid_and_other_current_assets": 407.5,
+    "forward_asset_within_prepaid_current_assets": 131.0,
+    "total_current_assets": 7919.3,
+    "accounts_payable": 797.9,
+    "employee_compensation_accrual": 275.8,
+    "accrued_liabilities_total": 1425.8,
+    "current_liabilities_total": 2499.5,
+    "accrued_liabilities_components": {
+      "variable_consideration_mainly_ship_and_debit": 777.7,
+      "income_tax_payable": 163.7,
+      "technology_license": 96.2,
+      "operating_lease": 59.3,
+      "restructuring": 57.3,
+      "other": 271.6
+    },
+    "noncurrent_liability_components": {
+      "celestial_contingent_consideration": 749.5,
+      "operating_lease": 263.9,
+      "restructuring": 175.7,
+      "deferred_tax": 125.0,
+      "technology_license": 123.8,
+      "income_tax_payable": 85.7,
+      "other": 37.0,
+      "total": 1560.6
+    },
+    "noncurrent_asset_components": {
+      "prepaid_ship_and_debits": 588.0,
+      "supply_capacity_prepayments": 487.0,
+      "lease_right_of_use": 291.6,
+      "technology_licenses": 256.9,
+      "nonmarketable_equity_investments": 156.2,
+      "other": 241.8,
+      "total": 2021.5
+    },
+    "other_noncurrent_investment_disclosures": {
+      "marketable_equity": 25.5,
+      "NQDC_securities": 9.1,
+      "severance_fund": 0.8
+    },
+    "restructuring_components": {
+      "total": 238.4,
+      "current": 62.7,
+      "current_within_accrued": 57.3,
+      "current_within_accounts_payable": 5.4,
+      "noncurrent": 175.7
+    },
+    "aggregate_other_claim_candidates": {
+      "technology_license": 220.0,
+      "income_tax_payable": 249.4,
+      "operating_lease": 323.2,
+      "restructuring": 238.4
+    },
+    "source": "q2-2027, balance sheet pp 2, fair values pp 15-17, debt pp 17-18, restructuring p19, supplemental information pp25-26"
+  },
+  "share_and_claim_facts": {
+    "common_august_1_rounded": 876.8,
+    "common_augustust_18_exact_shares": 876926613,
+    "common_august_21_rounded": 876.9,
+    "nvidia_preferred": {
+      "issue_date": "2026-03-31",
+      "preferred_exact_shares": 2000000,
+      "cash_raised": 2000.0,
+      "as_converted_exact_shares": 21778000,
+      "initial_conversion_price_approx": 91.8355,
+      "rights": "Participates pro rata in dividends and liquidation as converted; no redemption rights; generally votes as converted except election of directors. GAAP two-class EPS treats as second class of common with no material preference.",
+      "conversion_gate": "Holder conversion subject to applicable regulatory waiting period; automatic immediately before sale to company or a nonaffiliate of NVIDIA. Economic as-converted treatment need not wait for legal conversion.",
+      "bridge_rule": "Include 21.778m economic common equivalents once. March cash proceeds are already inside reported August cash. Do not additionally deduct $2bn as preferred debt-like claim."
+    },
+    "employee_awards": {
+      "january_31_unvested_time_RSU": 12.2,
+      "january_31_unvested_performance_RSU": 4.8,
+      "january_31_total_RSU_PR_SU": 17.0,
+      "august_18_combined_outstanding_exact_shares": 30581074,
+      "august_18_scope": "Outstanding options, RSUs and PRSUs, with performance grants at target. Not just legacy January RSUs.",
+      "future_plan_reserve_exact_shares": 31932996,
+      "ESPP_plan_reserve_exact_shares": 37048025,
+      "celestial_assumed_options_registered_approx": 3.1,
+      "celestial_plan_future_awards_registered_approx": 0.8,
+      "gate": "Need option strikes, RSU/PRSU breakdown, vested status, performance outcomes, forfeitures, and post-August changes to compute a precise incremental diluted denominator. Do not add Jan 17m to August 30.581074m; do not add ungranted reserve/ESPP capacity wholesale.",
+      "performance_range_annual": "PRSUs actual number generally 0% to 250% of target; service generally 3-5 years; RSUs generally 3-4 years.",
+      "SBC_policy": "Existing-award economic cost and future service/replacement compensation must be reconciled. Do not add back all recurring SBC as costless merely because existing awards are included in denominator."
+    },
+    "legacy_customer_warrants": {
+      "august_18_aggregate_exact_shares": 5225854,
+      "fiscal_2025_issued_rounded": 4.2,
+      "fiscal_2025_strike": 87.77,
+      "fiscal_2025_exercise_years": 7,
+      "fiscal_2025_vesting_years": 5,
+      "fiscal_2026_issued_rounded": 1.0,
+      "fiscal_2026_strike": 87.0,
+      "fiscal_2026_exercise_years": 6,
+      "fiscal_2026_vesting_years": 5,
+      "vested_august_1_fiscal_2025_rounded": 1.2,
+      "vested_august_1_fiscal_2026": 0,
+      "gate": "Qualifying product revenue milestones; unvested claims are contingent. August exact aggregate is a cap, not proof all are vested or exercised. Exact tranche counts and cashless rights were not independently fetched. Annual activity table deducts vested units; do not mistake its 4.5m remaining unvested tally for all legal outstanding warrants.",
+      "revenue_accounting": "Grant-date warrant value is recognized as contra-revenue as qualifying sales recognized."
+    },
+    "august_18_google_warrant": {
+      "exact_shares_max": 58970907,
+      "strike": 206.58,
+      "issue_date": "2026-08-18",
+      "expiry": "2033-08-18 17:00 California time, subject to extension provisions",
+      "time_based_exact_shares": 1360867,
+      "performance_based_exact_shares": 57610040,
+      "time_based_vesting": [
+        {
+          "months_after_issue": 3,
+          "shares": 340216
+        },
+        {
+          "months_after_issue": 6,
+          "shares": 340217
+        },
+        {
+          "months_after_issue": 9,
+          "shares": 340217
+        },
+        {
+          "months_after_issue": 12,
+          "shares": 340217
+        }
+      ],
+      "performance_tranches": 240,
+      "qualifying_revenue_each_tranche": 500.0,
+      "first_239_tranches_exact_shares_each": 240042,
+      "last_tranche_exact_shares": 240002,
+      "max_revenue_to_vest_all_performance": 120000.0,
+      "time_based_vested_as_of_oct18": 0,
+      "performance_vested_as_of_oct18": "Not established from examined disclosures. Do not assume zero or full vesting.",
+      "qualifying_revenue_definition": "Revenue from Google/affiliates for qualifying products, GAAP recognized during Measuring Period, excluding contra-revenue effect of this warrant; adjusted for actual rebates/refunds/credits/returns.",
+      "measuring_period": {
+        "start": "2026-08-01",
+        "end": "2033-01-29",
+        "source_location": "Warrant exhibit definition (aa); inclusive dates. Distinct from expiry August18,2033.",
+        "quarterly_shorthand_not_exact": "Q3 FY2027 through FY2033"
+      },
+      "settlement": "Holder may pay cash or elect cashless net shares; automatic cashless exercise of vested earned shares at expiry if VWAP exceeds strike.",
+      "cashless_ratio": "(VWAP - exercise price) / VWAP",
+      "model_gate": "Eligibility/vesting, expected exercise date, price above strike for positive intrinsic dilution, and settlement choice. Long-dated option economic value may remain positive while spot is below strike. Performance vesting and common value are correlated; no company value may use unsupported independence or simple vesting fraction times a vanilla call.",
+      "full_cash_exercise_proceeds": 12182.209968060002,
+      "bridge_rule": "Full gross shares require matching exercise proceeds in same scenario. Net-share/cashless formula needs no exercise cash. Never add 58.970907m fully and ignore the $206.58 exercise price; do not label $12.1822bn potential proceeds current cash."
+    },
+    "celestial_earnout": {
+      "end_date": "FY2029",
+      "first_cumulative_revenue_gate": 500.0,
+      "full_gate": "Cumulative Celestial revenue exceeds $2.0bn by FY2029 per Feb2 8-K/A",
+      "cash_max_undiscounted": 233.0,
+      "share_cap_august18_exact_shares": 22378470,
+      "share_cap_Q2_note6_rounded": 22.4,
+      "stale_risk_factor_share_count": 24.4,
+      "acquisition_date_fair_value": 315.8,
+      "may2_fair_value": 647.6,
+      "august1_fair_value": 749.5,
+      "H1_mark_to_market_expense": 433.7,
+      "quarter_mark_to_market_expense": 101.9,
+      "bridge_rule": "Alternative A: deduct chosen earnout fair value once, with no earned-share denominator or extra $233m cap deduction. Alternative B: scenario-specific earned shares plus present value of earned cash; do not also deduct $749.5m. Match revenue-success scenarios to resulting earnout.",
+      "precision_warning": "August exhibit confirms exact 22.378470m cap, resolving note6 rounding. The 24.4m risk-factor sentence is inconsistent; explain rather than silently mixing. Full detailed payout function and cash/share conversion history remain unverified."
+    },
+    "celestial_forward": {
+      "notional": 300.0,
+      "august1_asset_fair_value": 131.0,
+      "H1_gain": 131.0,
+      "quarter_gain": 49.9,
+      "settlement": "Cash-settled; not a company share repurchase or extinguishment of earnout shares.",
+      "term": "Twelve months, described as entered in April 2026 in Note6 and approximately one year from March31 in risk factors.",
+      "risk": "Possible cash payment if share price falls relative to forward price; early termination, counterparty and registration-related settlement risks. Matures before earnout horizon.",
+      "bridge_rule": "Add $131m August asset separately only if excluded from NWC and not already modeled as future cash. Do not add $300m notional as cash and do not deduct hedged share quantity from diluted count. Do not net mechanically against cash cap: partial stock-price hedge is not settlement funding guarantee."
+    },
+    "EPS_cross_check": {
+      "Q2_common_weighted_average_basic": 875.6,
+      "Q2_preferred_as_converted_weighted_average": 21.8,
+      "Q2_consolidated_basic": 897.4,
+      "Q2_incremental_awards_warrants": 23.8,
+      "Q2_consolidated_diluted": 921.2,
+      "H1_consolidated_diluted": 907.1,
+      "warning": "GAAP weighted averages are not spot outstanding capitalization. Do not start at 921.2m and again add preferred/awards. Q2 treasury-stock method includes awards/warrants; consolidated basic already includes preferred."
+    }
+  },
+  "derived_capital_bridge": {
+    "cash_less_face_debt": -1067.0999999999995,
+    "cash_less_carrying_debt": -1030.0999999999995,
+    "base_common_plus_preferred_august18": 898.704613,
+    "base_plus_all_employee_target_awards_gross_ceiling": 929.285687,
+    "base_plus_employee_plus_all_legacy_warrants_gross_ceiling": 934.511541,
+    "all_listed_claims_gross_ceiling_including_earnout_and_google": 1015.860918,
+    "gross_ceiling_warning": "Ceilings are inventory checks, not a recommended fully diluted denominator: options/warrants need strikes and vesting, earnout success gates, performance awards may differ from target, and unknown later activity. Never use gross ceiling plus fair-value deductions for same claims.",
+    "illustrative_fair_value_bridge_before_policy_dependent_other_claims": -1685.5999999999995,
+    "formula": "Operating EV + surplus cash - face or market debt (consistent choice) + separable nonoperating assets - nonoperating claims, divided by eligible economic shares. Do not subtract operating liabilities already reflected in FCFF. Above illustrative amount is cash minus face debt minus earnout carrying fair value plus forward carrying fair value, all dated Aug1; not current valuation.",
+    "claim_inventory": "Other candidate deductions: $220m technology-license financing, $238.4m restructuring, $249.4m tax payables, $323.2m leases. Each requires forecast/NWC consistency; do not blanket subtract all. Marketable $25.5m and nonmarketable $156.2m investments may be separate assets only if nonoperating, realizable and not already capitalized in EV; NQDC/severance assets should be matched with obligations."
+  },
+  "NWC_policy": {
+    "current_noncash_NWC_unadjusted": 1487.0,
+    "illustrative_cleaned_current_operating_NWC": 1737.9,
+    "illustrative_expanded_operating_NWC_with_shipdebit_and_capacity_prepay": 2812.9,
+    "warning": "Cleaned figures are analyst classification illustrations, not fully verified recurring NWC. Current Other $271.6m includes unknown composition; annual prior balance separately disclosed $45.7m interest, $40.1m deferred revenue, $25.1m royalties. Do not carry those stale subamounts forward as exact. Other current assets may also require separation.",
+    "classification_rules": [
+      "Cash and forward derivative excluded from operating NWC.",
+      "Ordinary AR/inventory, AP excluding restructured contract amounts, employee accruals and ship/debit/discount liabilities are operating.",
+      "Treat $588m long-term ship/debit prepayments and $487m capacity prepayments consistently as operating investment, via expanded working capital or a separate operating-investment schedule; never as excess cash.",
+      "Remove current debt-like license/restructuring/tax/lease claims from NWC if separately deducted in bridge.",
+      "Lease liability deduction only if FCFF is before lease financing costs on a consistent lease-capitalized basis; operating rent in FCFF plus full lease debt deduction can double count.",
+      "Deferred tax assets/liabilities do not equal immediately collectible/payable cash; use forecast cash tax and realizability.",
+      "Accrued income taxes include ordinary and potentially nonrecurring divestiture tax. Separate cash settlement schedule from normalized future tax expense; do not subtract twice."
+    ]
+  },
+  "other_material_facts_and_risks": {
+    "purchase_commitments_foundry_assembly": 8518.9,
+    "technology_service_license_commitments": 666.3,
+    "capex_commitments": 351.6,
+    "purchase_commitment_rule": "Ordinary future purchases support future revenue and generally belong in operating cost/investment forecasts, not blanket debt. Tech fee commitment table explicitly includes recognized license liabilities; avoid double counting $220m plus all $666.3m. Review shortfall/cancellation losses separately.",
+    "H1_cashflows": {
+      "operating": 1244.3,
+      "capex": 282.4,
+      "technology_license_cash_investing": 5.0,
+      "technology_license_cash_financing": 56.6,
+      "SBC_expense": 533.8,
+      "employee_net_share_tax_withholding_financing": 365.2,
+      "buybacks": 400.0,
+      "dividends": 107.7,
+      "acquisition_cash_net": 1270.9
+    },
+    "cashflow_warning": "CFO less capex omits financing-classified license payments and employee tax-withholding cash. Quantify the latter under consistent SBC/dilution treatment; it is not costless. Earnout fair-value expense and forward gain are noncash financial marks, not recurring operating profit.",
+    "factoring": {
+      "H1_receivables_sold": 412.0,
+      "Q2_receivables_sold": 111.1,
+      "august1_receivables_still_serviced": 111.1,
+      "basis": "Nonrecourse",
+      "treatment": "Do not automatically add back as debt. Normalize working-capital financing benefits if comparing cash conversion; sold-receivable flow differs from outstanding balance."
+    },
+    "January31_unrecognized_tax_benefits_gross": 594.6,
+    "January31_gross_UTB_affecting_effective_tax_rate": 199.6,
+    "January31_UTB_related_to_DTA_with_valuation_allowance": 353.3,
+    "tax_warning": "Do not treat gross $594.6m unrecognized benefits as additional cash debt; much is DTA/valuation-allowance related and recorded tax payables may overlap. Q2 current+noncurrent cash tax claims total $249.4m. Updated UTB details not established.",
+    "undrawn_and_authorizations": "$1.5bn undrawn credit line and $5.1bn remaining repurchase authorization are neither assets nor existing liabilities; no automatic forecast repurchase/share reduction.",
+    "acquisition_double_count": "Celestial/XConn cash paid and common shares issued are already reflected in August balance/count. Do not re-add acquisition shares or re-deduct cash purchase prices. August award representation includes assumed outstanding awards."
+  },
+  "eligibility_gates_for_model": [
+    {
+      "id": "G1",
+      "requirement": "Choose valuation measurement date and clearly label mixed-date observations; roll forward only disclosed events.",
+      "status": "August snapshots verified; October current balance unverified"
+    },
+    {
+      "id": "G2",
+      "requirement": "Select mutually exclusive claim fair-value versus explicit shares/cash settlement treatment per instrument.",
+      "status": "Must be chosen by model"
+    },
+    {
+      "id": "G3",
+      "requirement": "Use exact common count plus preferred economic equivalents; avoid duplicate weighted-average EPS basis.",
+      "status": "Verified August18 baseline 898.704613m"
+    },
+    {
+      "id": "G4",
+      "requirement": "Reconcile options/RSUs/PRSUs, strikes and target performance before point diluted denominator.",
+      "status": "Combined exact cap verified; split unresolved"
+    },
+    {
+      "id": "G5",
+      "requirement": "Warrants require vesting and price-dependent economic treatment; cash versus net exercise mutually exclusive.",
+      "status": "New warrant terms verified; realized milestone achievement unknown"
+    },
+    {
+      "id": "G6",
+      "requirement": "Celestial valuation scenario must be internally consistent with earned shares/cash, forward value and noncash P&L adjustments.",
+      "status": "Caps and FV verified; precise detailed payout curve unresolved"
+    },
+    {
+      "id": "G7",
+      "requirement": "Remove any bridge claim from operating NWC and from duplicated future cash deductions.",
+      "status": "Classification inventory provided; forecast policy required"
+    }
+  ],
+  "explicit_gaps": [
+    "SEC successor recent-filings index scanned through October16; September25 dividend 8-K reviewed. Form4/144 records were not reconciled into a company-wide current count. Current cash, shares, grants, exercises and repurchases remain unverified.",
+    "Original cash-settled forward confirmation not retrieved: exact strike, share notional, dates, collateral and all termination/settlement mechanics not verified.",
+    "Exact legacy warrant tranche split and contractual cashless mechanics not retrieved.",
+    "August18 employee award category/strike/vesting breakdown and actual PRSU achievement unresolved.",
+    "Detailed Celestial payout interpolation/cash-vs-share elections and reason for 24.4m versus 22.378470m inconsistency not established; current exact cap takes precedence.",
+    "Earlier February2 8-K/A reports 24,601,976 acquisition common shares; May Q1 10-Q says 24,523,632. Difference not reconciled, but do not roll either into August common count again.",
+    "Current accrual Other, noncurrent Other and tax payable decomposition not fully available in Q2.",
+    "No fresh spot share price was fetched; no price target is forced."
+  ],
+  "recommendations": [
+    "Use August18 898.704613m common-plus-preferred base and keep award/warrant/earnout overlays explicit.",
+    "Use primary note/exhibit share caps, not rounded press wording or stale risk-factor counts.",
+    "Offer a reported-fair-value bridge and separate scenario dilution bridge; never combine both treatments for same earnout/option claims.",
+    "Normalize future operating cash flow including noncurrent operating prepayments and technology licensing, and choose a clear recurring SBC policy.",
+    "Label unresolved gates prominently and avoid claiming exact fully diluted shares or October net debt."
+  ],
+  "model_elections": {
+    "financial_origin": "2026-08-01",
+    "information_cutoff": "2026-10-18",
+    "current_equity_value": null,
+    "purpose": "Conditional bridge mechanics at the operating model financial origin, using August1 reported values. Not a current-date equity valuation.",
+    "operating_cash_reserve": 1000.0,
+    "reported_cash": 3932.8,
+    "surplus_cash": 2932.8,
+    "face_debt_deduction": 4999.9,
+    "debt_election": "Face debt approximates payoff claim; market-value debt alternative about 4,900 is disclosed, not added together.",
+    "forward_separate_asset": 131.0,
+    "earnout_fair_value_deduction": 749.5,
+    "earnout_share_addition": 0,
+    "license_financing_deduction": 220.0,
+    "restructuring_deduction": 238.4,
+    "opening_tax_payables_deduction": 249.4,
+    "lease_deduction": 0,
+    "lease_policy": "Operating lease expense remains in projected operating costs. No lease capitalization/debt deduction.",
+    "known_bridge_adjustment_before_equity_awards_and_warrants": -3393.4,
+    "excluded_investment_upside": {
+      "marketable": 25.5,
+      "nonmarketable": 156.2
+    },
+    "equity_options_warrants": "Require explicit option-aware allocation; unresolved inputs prevent actual company per-share output.",
+    "earnout_policy": "Reported August1 fair-value method is the provisional bridge election only. No 22.378470m earnout shares or 233m cash cap additionally deducted. A success-linked scenario method is required before using model outcomes as a company equity case, because stale market FV is not scenario-dependent.",
+    "opening_claim_cash_policy": "Opening license, restructuring and income-tax settlements are excluded from forecast FCFF because their entire opening claims are deducted here. Future ordinary licenses, restructuring friction and taxes remain funded through cost/reinvestment assumptions. No duplicated opening settlement deduction.",
+    "known_nwc_components": {
+      "ar": 2218.4,
+      "inventory": 1360.6,
+      "long_term_ship_debit_prepays": 588.0,
+      "capacity_prepays": 487.0,
+      "ap_ex_restructuring": 792.5,
+      "variable_consideration_liability": 777.7,
+      "employee_accrual": 275.8
+    },
+    "identified_operating_nwc": 2808.0,
+    "nwc_qualification": "Identified-component funding anchor, not complete GAAP noncash working capital. Ambiguous other assets and other liabilities excluded symmetrically; sensitivity is required. Forward asset excluded;5.4 restructuring removed from AP. No assertion unknown net balance equals zero.",
+    "later_dividend": {
+      "declaration_date": "2026-09-25",
+      "record_date": "2026-10-09",
+      "payment_date": "2026-10-29",
+      "per_share": 0.06,
+      "preferred_basis": "as converted",
+      "source_url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001628280-26-063592/mrvl-20260925.htm",
+      "policy": "Later than origin; do not silently subtract from August1 EV bridge. A current ex-dividend common value must separately reconcile dividend payable/distribution and current share count. The separate retrospective-information funding screen includes the October29 payment proxy; this is not an additional deduction from the August enterprise model.",
+      "treasury_cash_proxy_m": 53.92227678,
+      "proxy_basis": "August18 common876.926613m plus preferred21.778m, multiplied by0.06; stale inventory, not exact October9 eligible count or actual payable."
+    },
+    "treasury_policy": "Separate monthly cash-settlement sensitivities in treasury_v2.py recognize legacy withholding, the declared dividend, forward outflow, contractual debt service and revolver expiry. They do not alter this provisional equity bridge. Actual liquidity adequacy remains null."
+  }
+}

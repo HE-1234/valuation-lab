@@ -1,0 +1,1048 @@
+{
+  "review_date": "2026-10-18",
+  "status": "PASS",
+  "checks": 200,
+  "failures": [],
+  "guidance_recomputed": {
+    "quarters": 16,
+    "revenue_above_midpoint": 15,
+    "revenue_within_original_range": 16,
+    "mean_revenue_beat_pct": 1.0990802339043217,
+    "median_revenue_beat_pct": 0.9572463768116046,
+    "non_gaap_eps_at_or_above_midpoint": 15,
+    "non_gaap_gm_below_midpoint": 11
+  },
+  "operating_EV_m": {
+    "base": 100409.35804765804,
+    "downside": 30440.71279977198,
+    "management_delivery": 211790.16678180074
+  },
+  "sources": [
+    {
+      "period": "Q3 FY2023",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/215/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2023-financial-results",
+      "path": "source-evidence-v1/q2-fy23-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q3 FY2023",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/200/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2023-financial-results",
+      "path": "source-evidence-v1/q3-fy23-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2023",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/200/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2023-financial-results",
+      "path": "source-evidence-v1/q3-fy23-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2023",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/187/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2023-financial-results",
+      "path": "source-evidence-v1/q4-fy23-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2024",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/187/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2023-financial-results",
+      "path": "source-evidence-v1/q4-fy23-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2024",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/180/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2024-financial-results",
+      "path": "source-evidence-v1/q1-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2024",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/180/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2024-financial-results",
+      "path": "source-evidence-v1/q1-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2024",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/172/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2024-financial-results",
+      "path": "corrections/v3-2026-10-18/sources/q2-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q3 FY2024",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/172/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2024-financial-results",
+      "path": "corrections/v3-2026-10-18/sources/q2-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q3 FY2024",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/163/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2024-financial-results",
+      "path": "corrections/v3-2026-10-18/sources/q3-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2024",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/163/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2024-financial-results",
+      "path": "corrections/v3-2026-10-18/sources/q3-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2024",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/151/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2024-financial-results",
+      "path": "source-evidence-v1/q4-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2025",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/151/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2024-financial-results",
+      "path": "source-evidence-v1/q4-fy24-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2025",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/138/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q1-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2025",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/138/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q1-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2025",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/129/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q2-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q3 FY2025",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/129/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q2-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q3 FY2025",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/119/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q3-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2025",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/119/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q3-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2025",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/109/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q4-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2026",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/109/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2025-financial-results",
+      "path": "operating-evidence-v1/sources/q4-fy25-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2026",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/95/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q1-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2026",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/95/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q1-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2026",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/989/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q2-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q3 FY2026",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/989/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q2-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q3 FY2026",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/999/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q3-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2026",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/999/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q3-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q4 FY2026",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q4-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2027",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
+      "path": "operating-evidence-v1/sources/q4-fy26-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q1 FY2027",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1023/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2027-financial-results",
+      "path": "operating-evidence-v1/sources/q1-fy27-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2027",
+      "role": "guidance_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1023/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2027-financial-results",
+      "path": "operating-evidence-v1/sources/q1-fy27-release.html",
+      "sha256_matches": true
+    },
+    {
+      "period": "Q2 FY2027",
+      "role": "actual_primary_source",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1031/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2027-financial-results",
+      "path": "operating-evidence-v1/sources/q2-fy27-release.html",
+      "sha256_matches": true
+    }
+  ],
+  "check_details": [
+    {
+      "check": "Q3 FY2023 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2023 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2023 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2024 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2024 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2024 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2024 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2025 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2025 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2025 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2025 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2026 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2026 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q3 FY2026 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q4 FY2026 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q1 FY2027 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 CSV JSON agreement",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 revenue difference",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 rounded percent",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 contiguous period",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 guidance_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 source revenue guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 source EPS guide",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 actual_primary_source hash",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 source actual gross margin",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 exact actual revenue appears",
+      "pass": true
+    },
+    {
+      "check": "Q2 FY2027 source actual EPS",
+      "pass": true
+    },
+    {
+      "check": "guidance summary quarters",
+      "pass": true
+    },
+    {
+      "check": "guidance summary revenue_above_midpoint",
+      "pass": true
+    },
+    {
+      "check": "guidance summary revenue_within_original_range",
+      "pass": true
+    },
+    {
+      "check": "guidance summary mean_revenue_beat_pct",
+      "pass": true
+    },
+    {
+      "check": "guidance summary median_revenue_beat_pct",
+      "pass": true
+    },
+    {
+      "check": "guidance summary non_gaap_eps_at_or_above_midpoint",
+      "pass": true
+    },
+    {
+      "check": "guidance summary non_gaap_gm_below_midpoint",
+      "pass": true
+    },
+    {
+      "check": "base independent FCFF discount re-sum",
+      "pass": true
+    },
+    {
+      "check": "base pool bridge",
+      "pass": true
+    },
+    {
+      "check": "base provisional FV replaces earnout",
+      "pass": true
+    },
+    {
+      "check": "downside independent FCFF discount re-sum",
+      "pass": true
+    },
+    {
+      "check": "downside pool bridge",
+      "pass": true
+    },
+    {
+      "check": "downside provisional FV replaces earnout",
+      "pass": true
+    },
+    {
+      "check": "management_delivery independent FCFF discount re-sum",
+      "pass": true
+    },
+    {
+      "check": "management_delivery pool bridge",
+      "pass": true
+    },
+    {
+      "check": "management_delivery provisional FV replaces earnout",
+      "pass": true
+    },
+    {
+      "check": "bridge arithmetic",
+      "pass": true
+    },
+    {
+      "check": "all four missing claim values stay null",
+      "pass": true
+    },
+    {
+      "check": "Google cap split",
+      "pass": true
+    },
+    {
+      "check": "Google 240 exact tranches",
+      "pass": true
+    },
+    {
+      "check": "Google full exercise proceeds",
+      "pass": true
+    },
+    {
+      "check": "covenant threshold no_draw",
+      "pass": true
+    },
+    {
+      "check": "covenant threshold full_draw",
+      "pass": true
+    },
+    {
+      "check": "covenant threshold v2_base_peak_draw",
+      "pass": true
+    }
+  ]
+}

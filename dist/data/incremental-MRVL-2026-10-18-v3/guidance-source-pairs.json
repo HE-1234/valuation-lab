@@ -1,0 +1,501 @@
+{
+  "scope": "16 contiguous quarter-ahead original guidance-to-actual pairs. Fields preserve CSV values. No analyst consensus comparison.",
+  "rows": [
+    {
+      "period": "Q3 FY2023",
+      "period_end": "2022-10-29",
+      "guidance_date": "2022-08-25",
+      "guidance_source": "q2-fy23-release",
+      "actual_source": "q3-fy23-release",
+      "revenue_guidance_midpoint_m": "1560",
+      "revenue_guidance_range_pct": "3",
+      "revenue_actual_m": "1537.3",
+      "revenue_beat_m": "-22.7",
+      "revenue_beat_pct": "-1.4551",
+      "non_gaap_eps_guidance_midpoint": "0.59",
+      "non_gaap_eps_actual": "0.57",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "65",
+      "non_gaap_gross_margin_actual_pct": "64",
+      "caveat": "Revenue within range but below midpoint; non-GAAP gross margin64% missed64.75%lower guidance bound.",
+      "guidance_primary_source": {
+        "id": "q2-fy23-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/215/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2023-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q2-fy23-release.html",
+        "sha256": "cf1b31dabefd168fcd1eb3da03319c580152d8be33e7d9c5768fcf428c9bd647",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q3-fy23-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/200/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2023-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q3-fy23-release.html",
+        "sha256": "d5d6a7b52e7c82f4f5ea6ae8b753e3feb1ac7e2daa14af6c7948af0ef5af487f",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q4 FY2023",
+      "period_end": "2023-01-28",
+      "guidance_date": "2022-12-01",
+      "guidance_source": "q3-fy23-release",
+      "actual_source": "q4-fy23-release",
+      "revenue_guidance_midpoint_m": "1400",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1418.5",
+      "revenue_beat_m": "18.5",
+      "revenue_beat_pct": "1.3214",
+      "non_gaap_eps_guidance_midpoint": "0.46",
+      "non_gaap_eps_actual": "0.46",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "64",
+      "non_gaap_gross_margin_actual_pct": "63.5",
+      "caveat": "Compared with original December1 guidance; actual release references January11 guidance update not separately scored.",
+      "guidance_primary_source": {
+        "id": "q3-fy23-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/200/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2023-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q3-fy23-release.html",
+        "sha256": "d5d6a7b52e7c82f4f5ea6ae8b753e3feb1ac7e2daa14af6c7948af0ef5af487f",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q4-fy23-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/187/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2023-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q4-fy23-release.html",
+        "sha256": "627ede1b9a288bca38e51da0188d49f7934ba31567c04dc4d5f483909d84f2dc",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q1 FY2024",
+      "period_end": "2023-04-29",
+      "guidance_date": "2023-03-02",
+      "guidance_source": "q4-fy23-release",
+      "actual_source": "q1-fy24-release",
+      "revenue_guidance_midpoint_m": "1300",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1321.7",
+      "revenue_beat_m": "21.7",
+      "revenue_beat_pct": "1.6692",
+      "non_gaap_eps_guidance_midpoint": "0.29",
+      "non_gaap_eps_actual": "0.31",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "60",
+      "non_gaap_gross_margin_actual_pct": "60",
+      "caveat": "Inventory-correction period; actual revenue declined9%year over year despite beating sequential guide.",
+      "guidance_primary_source": {
+        "id": "q4-fy23-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/187/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2023-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q4-fy23-release.html",
+        "sha256": "627ede1b9a288bca38e51da0188d49f7934ba31567c04dc4d5f483909d84f2dc",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q1-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/180/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q1-fy24-release.html",
+        "sha256": "31cf034491b47306c34e02e9505e0880c1479e783c53d445eea95818816ba4cf",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q2 FY2024",
+      "period_end": "2023-07-29",
+      "guidance_date": "2023-05-25",
+      "guidance_source": "q1-fy24-release",
+      "actual_source": "q2-fy24-release",
+      "revenue_guidance_midpoint_m": "1330",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1340.9",
+      "revenue_beat_m": "10.9",
+      "revenue_beat_pct": "0.8195488721804534",
+      "non_gaap_eps_guidance_midpoint": "0.32",
+      "non_gaap_eps_actual": "0.33",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "60.5",
+      "non_gaap_gross_margin_actual_pct": "60.3",
+      "caveat": "Original quarter-ahead guidance. Exact revenue from financial statement table.",
+      "guidance_primary_source": {
+        "id": "q1-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/180/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q1-fy24-release.html",
+        "sha256": "31cf034491b47306c34e02e9505e0880c1479e783c53d445eea95818816ba4cf",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q2-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/172/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "corrections/v3-2026-10-18/sources/q2-fy24-release.html",
+        "sha256": "03c918e73b266abb4089246308f3f76daecd8b6d1c0e0267ea0db096ad3c1d05",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q3 FY2024",
+      "period_end": "2023-10-28",
+      "guidance_date": "2023-08-24",
+      "guidance_source": "q2-fy24-release",
+      "actual_source": "q3-fy24-release",
+      "revenue_guidance_midpoint_m": "1400",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1418.6",
+      "revenue_beat_m": "18.6",
+      "revenue_beat_pct": "1.3285714285714123",
+      "non_gaap_eps_guidance_midpoint": "0.4",
+      "non_gaap_eps_actual": "0.41",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "60.8",
+      "non_gaap_gross_margin_actual_pct": "60.6",
+      "caveat": "Original quarter-ahead guidance. Exact revenue from financial statement table.",
+      "guidance_primary_source": {
+        "id": "q2-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/172/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "corrections/v3-2026-10-18/sources/q2-fy24-release.html",
+        "sha256": "03c918e73b266abb4089246308f3f76daecd8b6d1c0e0267ea0db096ad3c1d05",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q3-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/163/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "corrections/v3-2026-10-18/sources/q3-fy24-release.html",
+        "sha256": "c4c943b9e9f48ade6b077cd92e765429b1cc47991ffaf492b53f86af657b3de2",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q4 FY2024",
+      "period_end": "2024-02-03",
+      "guidance_date": "2023-11-30",
+      "guidance_source": "q3-fy24-release",
+      "actual_source": "q4-fy24-release",
+      "revenue_guidance_midpoint_m": "1420",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1426.5",
+      "revenue_beat_m": "6.5",
+      "revenue_beat_pct": "0.4577464788732444",
+      "non_gaap_eps_guidance_midpoint": "0.46",
+      "non_gaap_eps_actual": "0.46",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "64",
+      "non_gaap_gross_margin_actual_pct": "63.9",
+      "caveat": "Original quarter-ahead guidance. Exact revenue from financial statement table.",
+      "guidance_primary_source": {
+        "id": "q3-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/163/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "corrections/v3-2026-10-18/sources/q3-fy24-release.html",
+        "sha256": "c4c943b9e9f48ade6b077cd92e765429b1cc47991ffaf492b53f86af657b3de2",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q4-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/151/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q4-fy24-release.html",
+        "sha256": "9a6c2e176704da74bf823d89e884d2208901190bdef8623d9be9ce38b2e9e4c9",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q1 FY2025",
+      "period_end": "2024-05-04",
+      "guidance_date": "2024-03-07",
+      "guidance_source": "q4-fy24-release",
+      "actual_source": "q1-fy25-release",
+      "revenue_guidance_midpoint_m": "1150",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1160.9",
+      "revenue_beat_m": "10.9",
+      "revenue_beat_pct": "0.9478260869565217",
+      "non_gaap_eps_guidance_midpoint": "0.23",
+      "non_gaap_eps_actual": "0.24",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "62.5",
+      "non_gaap_gross_margin_actual_pct": "62.4",
+      "caveat": "Continued non-data-center weakness; actual revenue declined12%year over year.",
+      "guidance_primary_source": {
+        "id": "q4-fy24-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/151/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2024-financial-results",
+        "archive_relative_to_company": "source-evidence-v1/q4-fy24-release.html",
+        "sha256": "9a6c2e176704da74bf823d89e884d2208901190bdef8623d9be9ce38b2e9e4c9",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q1-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/138/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q1-fy25-release.html",
+        "sha256": "f7ba2303511c28bdc9fb8b98b2675f0763bc766f0a793c36e17d0c0011a626c7",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q2 FY2025",
+      "period_end": "2024-08-03",
+      "guidance_date": "2024-05-30",
+      "guidance_source": "q1-fy25-release",
+      "actual_source": "q2-fy25-release",
+      "revenue_guidance_midpoint_m": "1250",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1272.9",
+      "revenue_beat_m": "22.9",
+      "revenue_beat_pct": "1.832",
+      "non_gaap_eps_guidance_midpoint": "0.29",
+      "non_gaap_eps_actual": "0.3",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "62",
+      "non_gaap_gross_margin_actual_pct": "61.9",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q1-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/138/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q1-fy25-release.html",
+        "sha256": "f7ba2303511c28bdc9fb8b98b2675f0763bc766f0a793c36e17d0c0011a626c7",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q2-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/129/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q2-fy25-release.html",
+        "sha256": "40a030bfc03adfe8d9ec91588b0429e114409c951fbb5b9a2e9c2e491e938c25",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q3 FY2025",
+      "period_end": "2024-11-02",
+      "guidance_date": "2024-08-29",
+      "guidance_source": "q2-fy25-release",
+      "actual_source": "q3-fy25-release",
+      "revenue_guidance_midpoint_m": "1450",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1516.1",
+      "revenue_beat_m": "66.1",
+      "revenue_beat_pct": "4.559",
+      "non_gaap_eps_guidance_midpoint": "0.4",
+      "non_gaap_eps_actual": "0.43",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "61",
+      "non_gaap_gross_margin_actual_pct": "60.5",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q2-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/129/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q2-fy25-release.html",
+        "sha256": "40a030bfc03adfe8d9ec91588b0429e114409c951fbb5b9a2e9c2e491e938c25",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q3-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/119/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q3-fy25-release.html",
+        "sha256": "8a66d07666356127f249a11d950785ab5ff91560787bdb0055e2329d745c9d0a",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q4 FY2025",
+      "period_end": "2025-02-01",
+      "guidance_date": "2024-12-03",
+      "guidance_source": "q3-fy25-release",
+      "actual_source": "q4-fy25-release",
+      "revenue_guidance_midpoint_m": "1800",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1817.4",
+      "revenue_beat_m": "17.4",
+      "revenue_beat_pct": "0.967",
+      "non_gaap_eps_guidance_midpoint": "0.59",
+      "non_gaap_eps_actual": "0.6",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "60",
+      "non_gaap_gross_margin_actual_pct": "60.1",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q3-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/119/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q3-fy25-release.html",
+        "sha256": "8a66d07666356127f249a11d950785ab5ff91560787bdb0055e2329d745c9d0a",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q4-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/109/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q4-fy25-release.html",
+        "sha256": "dcb9b2ec012d4ee4dffac3da09e5953d645147aa4be145d54cd1ff7dc1047f9f",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q1 FY2026",
+      "period_end": "2025-05-03",
+      "guidance_date": "2025-03-05",
+      "guidance_source": "q4-fy25-release",
+      "actual_source": "q1-fy26-release",
+      "revenue_guidance_midpoint_m": "1875",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "1895.3",
+      "revenue_beat_m": "20.3",
+      "revenue_beat_pct": "1.083",
+      "non_gaap_eps_guidance_midpoint": "0.61",
+      "non_gaap_eps_actual": "0.62",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "60",
+      "non_gaap_gross_margin_actual_pct": "59.8",
+      "caveat": "Q1 FY2026 result references a May 6 reaffirmation; original March 5 midpoint shown.",
+      "guidance_primary_source": {
+        "id": "q4-fy25-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/109/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2025-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q4-fy25-release.html",
+        "sha256": "dcb9b2ec012d4ee4dffac3da09e5953d645147aa4be145d54cd1ff7dc1047f9f",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q1-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/95/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q1-fy26-release.html",
+        "sha256": "1746f7b7ef64fa743cde4a17b62bb552c7a510a73140d733b3641f248e91685e",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q2 FY2026",
+      "period_end": "2025-08-02",
+      "guidance_date": "2025-05-29",
+      "guidance_source": "q1-fy26-release",
+      "actual_source": "q2-fy26-release",
+      "revenue_guidance_midpoint_m": "2000",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "2006.1",
+      "revenue_beat_m": "6.1",
+      "revenue_beat_pct": "0.305",
+      "non_gaap_eps_guidance_midpoint": "0.67",
+      "non_gaap_eps_actual": "0.67",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "59.5",
+      "non_gaap_gross_margin_actual_pct": "59.4",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q1-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/95/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q1-fy26-release.html",
+        "sha256": "1746f7b7ef64fa743cde4a17b62bb552c7a510a73140d733b3641f248e91685e",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q2-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/989/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q2-fy26-release.html",
+        "sha256": "fc528d7d585e07dac9ce5659f2f7a01a7e2a91fc1fe647cff4dd19456378dc4d",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q3 FY2026",
+      "period_end": "2025-11-01",
+      "guidance_date": "2025-08-28",
+      "guidance_source": "q2-fy26-release",
+      "actual_source": "q3-fy26-release",
+      "revenue_guidance_midpoint_m": "2060",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "2074.5",
+      "revenue_beat_m": "14.5",
+      "revenue_beat_pct": "0.704",
+      "non_gaap_eps_guidance_midpoint": "0.74",
+      "non_gaap_eps_actual": "0.76",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "59.75",
+      "non_gaap_gross_margin_actual_pct": "59.7",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q2-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/989/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q2-fy26-release.html",
+        "sha256": "fc528d7d585e07dac9ce5659f2f7a01a7e2a91fc1fe647cff4dd19456378dc4d",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q3-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/999/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q3-fy26-release.html",
+        "sha256": "10a8a78ee9697100da6d12dee0cbf5f688bedaa4f10b361288a301e0be85a413",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q4 FY2026",
+      "period_end": "2026-01-31",
+      "guidance_date": "2025-12-02",
+      "guidance_source": "q3-fy26-release",
+      "actual_source": "q4-fy26-release",
+      "revenue_guidance_midpoint_m": "2200",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "2218.7",
+      "revenue_beat_m": "18.7",
+      "revenue_beat_pct": "0.85",
+      "non_gaap_eps_guidance_midpoint": "0.79",
+      "non_gaap_eps_actual": "0.8",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "59",
+      "non_gaap_gross_margin_actual_pct": "59",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q3-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/999/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q3-fy26-release.html",
+        "sha256": "10a8a78ee9697100da6d12dee0cbf5f688bedaa4f10b361288a301e0be85a413",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q4-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q4-fy26-release.html",
+        "sha256": "b239e3243cc5d78e37c9d6126eee0feb4267d6ba72836b262ba2fac785018a9c",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q1 FY2027",
+      "period_end": "2026-05-02",
+      "guidance_date": "2026-03-05",
+      "guidance_source": "q4-fy26-release",
+      "actual_source": "q1-fy27-release",
+      "revenue_guidance_midpoint_m": "2400",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "2417.8",
+      "revenue_beat_m": "17.8",
+      "revenue_beat_pct": "0.742",
+      "non_gaap_eps_guidance_midpoint": "0.79",
+      "non_gaap_eps_actual": "0.8",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "58.75",
+      "non_gaap_gross_margin_actual_pct": "58.9",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q4-fy26-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/1011/marvell-technology-inc-reports-fourth-quarter-and-fiscal-year-2026-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q4-fy26-release.html",
+        "sha256": "b239e3243cc5d78e37c9d6126eee0feb4267d6ba72836b262ba2fac785018a9c",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q1-fy27-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/1023/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2027-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q1-fy27-release.html",
+        "sha256": "fcdd8ef76a7c8b441985dbdd79154087357f69f279ee85f35c743d9068558efc",
+        "primary_source": true
+      }
+    },
+    {
+      "period": "Q2 FY2027",
+      "period_end": "2026-08-01",
+      "guidance_date": "2026-05-27",
+      "guidance_source": "q1-fy27-release",
+      "actual_source": "q2-fy27-release",
+      "revenue_guidance_midpoint_m": "2700",
+      "revenue_guidance_range_pct": "5",
+      "revenue_actual_m": "2739.3",
+      "revenue_beat_m": "39.3",
+      "revenue_beat_pct": "1.456",
+      "non_gaap_eps_guidance_midpoint": "0.93",
+      "non_gaap_eps_actual": "0.94",
+      "non_gaap_gross_margin_guidance_midpoint_pct": "58.75",
+      "non_gaap_gross_margin_actual_pct": "58.9",
+      "caveat": "",
+      "guidance_primary_source": {
+        "id": "q1-fy27-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/1023/marvell-technology-inc-reports-first-quarter-of-fiscal-year-2027-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q1-fy27-release.html",
+        "sha256": "fcdd8ef76a7c8b441985dbdd79154087357f69f279ee85f35c743d9068558efc",
+        "primary_source": true
+      },
+      "actual_primary_source": {
+        "id": "q2-fy27-release",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/1031/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2027-financial-results",
+        "archive_relative_to_company": "operating-evidence-v1/sources/q2-fy27-release.html",
+        "sha256": "2f2edc74e2b53c13b7a101838f482b95d1688d0bf97a6834a60d5eb3fcb5a864",
+        "primary_source": true
+      }
+    }
+  ]
+}
