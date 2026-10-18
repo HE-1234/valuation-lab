@@ -82,7 +82,7 @@ addEventListener('valuation:tab-change', () => {
     page.classList.remove('sk-route-enter');
     void page.offsetWidth;
     page.classList.add('sk-route-enter');
-    setTimeout(() => page.classList.remove('sk-route-enter'), 320);
+    setTimeout(() => page.classList.remove('sk-route-enter'), 500);
   });
 });
 
@@ -91,3 +91,5 @@ refresh();
 /* The Annual Report interaction layers: scrubbing, history strips, live deltas, simulation rain. */
 import('./report-interactions.js');
 import('./report-simulation.js');
+import('./report-ux.js');
+import('./report-phases.js');

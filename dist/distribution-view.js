@@ -22,9 +22,10 @@ export function distributionForType(previous,type,fallback){
 }
 export function distributionPreviewData(spec,scale=1,key,previousDomain){
  const summary=distributionSummary(spec,key),density=summary.density||[];
- const defaultMax=scale===100?.5:5;
- let lo=Math.min(0,summary.low),hi=Math.max(defaultMax,summary.high);
- if(previousDomain&&previousDomain[0]<=summary.low&&previousDomain[1]>=summary.high){[lo,hi]=previousDomain;}
+ // The axis spans exactly your bounds, so every shape fills the preview and its
+ // labels are the bounds you typed. A fixed value gets a small window around it.
+ const width=summary.high-summary.low,around=Math.max(Math.abs(summary.low)*.1,scale===100?.005:.05);
+ const lo=width>0?summary.low:summary.low-around,hi=width>0?summary.high:summary.high+around;
  const step=(hi-lo)/25;
  const values=Array.from({length:25},(_,i)=>{
   const x=lo+(i+.5)*step,binLow=lo+i*step,binHigh=lo+(i+1)*step;
