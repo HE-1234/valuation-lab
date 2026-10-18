@@ -110,7 +110,7 @@ test('V46 original fourteen, GOOG, KLAC, AMAT, quiz bank and approved CSS remain
 });
 
 test('LRCX visible capital diagnostic excludes opening payable and retains live funding reconciliation',async()=>{
- const d=draft();near(annualCapitalDiagnostics(d).effectiveMarginalSalesCapital,1.8);near(annualCapitalDiagnostics(d).fixedOpeningFunding,119.605);const w=await start();try{w.choose('LRCX');assert.match(w.get('#annual-capital-diagnostics').textContent,/1.8×/);assert.match(w.get('#annual-capital-diagnostics').textContent,/119.605/);w.input('#annual-year-reinvestment','5000');assert.match(w.get('[data-annual-capital-diagnostic="funding"]').textContent,/4,880.395/);assert.match(w.get('[data-annual-capital-diagnostic="funding"]').textContent,/5,000/);}finally{w.destroy();}
+ const d=draft();near(annualCapitalDiagnostics(d).effectiveMarginalSalesCapital,1.8);near(annualCapitalDiagnostics(d).fixedOpeningFunding,119.605);const w=await start();try{w.choose('LRCX');assert.match(w.get('#annual-capital-diagnostics').textContent,/1.8×/);assert.match(w.get('#annual-capital-diagnostics').textContent,/119.61/);w.input('#annual-year-reinvestment','5000');assert.match(w.get('[data-annual-capital-diagnostic="funding"]').textContent,/4,880.4/);assert.match(w.get('[data-annual-capital-diagnostic="funding"]').textContent,/5,000/);}finally{w.destroy();}
 });
 
 test('LRCX actual simulation mount stays idle until Run and reset never auto-runs',()=>{

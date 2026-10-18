@@ -1,3 +1,4 @@
+import {displayNumber,precisionInputAttributes,bindPrecisionInputs} from '../dist/number-display.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -22,8 +23,8 @@ test('Historical app explicit localization changes presentation without recalcul
  const prefix=source.slice(0,source.indexOf("import {createThemeTransition}")).replace(/^import .*;\n/gm,'');
  const appBody=source.slice(source.indexOf('const n='),source.indexOf('const questions='));
  const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const harness=new Function('document','registerCatalog','t','localizedText','localizeMarkedNodes','onLocaleChange','appEnglish','appChinese','defaults','valueCompany','eligibleSnapshots','formatTimestamp','localStorage','esc',
-  `${prefix}\nconst $=s=>document.querySelector(s);${appBody}\nreturn {setupFields,render,renderPicker,chooseCompany,state:()=>JSON.stringify({a,selected,saved,activeCase,pathEditNotice}),chart};`)(document,i18n.registerCatalog,i18n.t,i18n.localizedText,i18n.localizeMarkedNodes,callback=>{unsubscribe=i18n.onLocaleChange(callback);return unsubscribe;},appEnglish,appChinese,defaults,(...args)=>{calculations++;return valueCompany(...args);},eligibleSnapshots,s=>s,{getItem:()=>null},esc);
+ const harness=new Function('document','registerCatalog','t','localizedText','localizeMarkedNodes','onLocaleChange','appEnglish','appChinese','defaults','valueCompany','eligibleSnapshots','formatTimestamp','localStorage','esc','displayNumber','precisionInputAttributes','bindPrecisionInputs',
+  `${prefix}\nconst $=s=>document.querySelector(s);${appBody}\nreturn {setupFields,render,renderPicker,chooseCompany,state:()=>JSON.stringify({a,selected,saved,activeCase,pathEditNotice}),chart};`)(document,i18n.registerCatalog,i18n.t,i18n.localizedText,i18n.localizeMarkedNodes,callback=>{unsubscribe=i18n.onLocaleChange(callback);return unsubscribe;},appEnglish,appChinese,defaults,(...args)=>{calculations++;return valueCompany(...args);},eligibleSnapshots,s=>s,{getItem:()=>null},esc,displayNumber,precisionInputAttributes,bindPrecisionInputs);
  harness.setupFields();harness.renderPicker();harness.render();
  const input=document.querySelector('#a-growth');input.focus();input.value='3.7';
  const state=harness.state(),count=calculations,chart=document.querySelector('#chart svg'),before=document.querySelector('#valuation-result').textContent;

@@ -513,6 +513,7 @@ export default {
   "diagnostic.formula": "有效增量營收／淨再投資比率 = 增量營收 / 淨投資。第 {year} 年：{revenue} / {investment} {currency}m。報酬替代指標 = EBIT 利潤率 × (1 − 營運稅率) × 有效增量營收／淨再投資比率。",
   "diagnostic.actual": "實際投入資本報酬率（ROIC）：N/A。{reason}",
   "diagnostic.terminal": "終值投入資本報酬率（ROIC）：{roic}。這是用於終值投資的獨立成熟期報酬假設，並非衡量目前資本的實際報酬。",
+  "input.edit": "選取以編輯完整精度。",
   "input.exact": "精確值：{value}",
   "path.year": "第 {year} 年・{growth}%",
   "path.yearAria": "第 {year} 年，基準成長率 {growth}%",

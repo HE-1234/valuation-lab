@@ -513,6 +513,7 @@ export default {
   "diagnostic.formula": "有效增量营收／净再投资比率 = 增量营收 / 净投资。第 {year} 年：{revenue} / {investment} {currency}m。报酬替代指标 = EBIT 利润率 × (1 − 营运税率) × 有效增量营收／净再投资比率。",
   "diagnostic.actual": "实际投入资本报酬率（ROIC）：N/A。{reason}",
   "diagnostic.terminal": "终值投入资本报酬率（ROIC）：{roic}。这是用于终值投资的独立成熟期报酬假设，并非衡量目前资本的实际报酬。",
+  "input.edit": "选择以编辑完整精度。",
   "input.exact": "精确值：{value}",
   "path.year": "第 {year} 年・{growth}%",
   "path.yearAria": "第 {year} 年，基准成长率 {growth}%",

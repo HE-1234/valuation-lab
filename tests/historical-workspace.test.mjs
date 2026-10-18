@@ -1,3 +1,4 @@
+import {precisionInputAttributes,bindPrecisionInputs} from '../dist/number-display.js';
 // Actual shipped markup and input handler, exercised with a small DOM fixture.
 // These tests verify identity/state contracts, not rendered layout or browser QA.
 import test from 'node:test';
@@ -29,8 +30,8 @@ function fixture({emptyForm = false} = {}) {
   revenue: 1000, ebit: 200, cash: 100, debt: 200, shares: 100};
  let renders = 0;
  const render = () => { renders++; get('#valuation-result').textContent = String(valueCompany(snapshot, assumptions).perShare); };
- const setupFields = new Function('a', '$', 'render', 'toast', 'appMark',
-  `let activeCase = null, pathEditNotice = ''; ${fieldsSource}\n${setupSource}\nreturn setupFields;`)(assumptions, get, render, () => {}, text => text);
+ const setupFields = new Function('a', '$', 'render', 'toast', 'appMark', 'precisionInputAttributes', 'bindPrecisionInputs',
+  `let activeCase = null, pathEditNotice = ''; ${fieldsSource}\n${setupSource}\nreturn setupFields;`)(assumptions, get, render, () => {}, text => text, precisionInputAttributes, bindPrecisionInputs);
  if (!emptyForm) setupFields(); render();
  const actionCalls = [];
  for (const id of ['load-case', 'reset', 'save', 'export', 'research-addenda', 'claim-scale']) get(`#${id}`).onclick = () => actionCalls.push(id);

@@ -1,8 +1,9 @@
+import {displayNumber} from './number-display.js';
 import {incrementalRecord} from './incremental-registry.js';
 import {annualTextHTML as a} from './annual-localization.js';
 import {cdnsStubCalculation} from './cdns-opening-stub.js';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const n=x=>Number.isFinite(x)?x.toLocaleString('en-US',{maximumFractionDigits:3}):'—';
+const n=(value,digits=2)=>displayNumber(value,digits);
 export const CDNS_STUB_NOTE='H2 2026 cash flows and its discount rate are fixed to the selected source case. Annual edits, simulations and horizon extensions affect FY2027 onward only; they do not reproduce source whole-curve WACC sensitivities.';
 export const CDNS_CLAIM_NOTE='The residual allowance and award inventory are conditional assumptions, not verified complete liabilities or June award counts. February 19 awards are assumed unchanged at June 30; October 18 information is used. Listed stresses are examples, not bounds or probabilities. Blank means unknown.';
 export function cdnsStubHTML(d,{id=false,detail=false}={}){
@@ -12,7 +13,7 @@ export function cdnsStubHTML(d,{id=false,detail=false}={}){
 export function cdnsAllocationHTML(b,{compact=false}={}){
  if(b?.claimAllocationModel!=='cdns-conditional-full-participation-v3'||!b.eligible)return '';
  if(compact)return `<p class="annual-summary-caveat incremental-cdns-claim-limits">${a('Residual claim allowance')}: ${n(b.inputs.residualClaimBudget)} USDm · ${a('adequacy unverified')}<br>${a('Allocation units')}: ${n(b.allocationUnits)}m · ${a('award inventory assumed, not reconciled')}<br>${a('Marketable-asset recovery')}: ${n(b.inputs.marketableRecovery*100)}% · ${a('conditional liquidity and tax assumption')}<br>${a('June 30 origin and cash/common shares; February 19 assumed award inventory; October 18 information. No current-price or as-known comparison.')}${b.unallocatedShortfall>0?`<br><b>${a('Signed pool deficit')}: ${n(b.unallocatedShortfall)} USDm</b>`:''}</p>`;
- return `<p class="annual-summary-caveat cdns-allocation-details">${a('Signed pool before assumed award participation')}: ${n(b.equityPoolBeforeExistingEquityClaims)} USDm<br>${a('Common-share allocation')}: ${n(b.equity)} USDm / ${n(b.basicShares)}m<br>${a('Assumed award allocation')}: ${n(b.assumedAwardEquity)} USDm / ${n(b.assumedAwardUnits)}m<br>${a('Total allocation units')}: ${b.allocationUnits.toLocaleString('en-US',{maximumFractionDigits:6})}m · ${a('Exercise proceeds')}: 0<br>${a('Options and ESPP use zero-price full participation, not option fair value. Signed source allocation and any deficit are retained. The residual allowance is deducted once; its reference components are not additional claims.')}</p><p>${a(CDNS_CLAIM_NOTE)}</p>`;
+ return `<p class="annual-summary-caveat cdns-allocation-details">${a('Signed pool before assumed award participation')}: ${n(b.equityPoolBeforeExistingEquityClaims)} USDm<br>${a('Common-share allocation')}: ${n(b.equity)} USDm / ${n(b.basicShares)}m<br>${a('Assumed award allocation')}: ${n(b.assumedAwardEquity)} USDm / ${n(b.assumedAwardUnits)}m<br>${a('Total allocation units')}: ${b.allocationUnits.toLocaleString('en-US',{maximumFractionDigits:2})}m · ${a('Exercise proceeds')}: 0<br>${a('Options and ESPP use zero-price full participation, not option fair value. Signed source allocation and any deficit are retained. The residual allowance is deducted once; its reference components are not additional claims.')}</p><p>${a(CDNS_CLAIM_NOTE)}</p>`;
 }
 export function cdnsHistoryHTML(d,group){
  const r=incrementalRecord(d?.ticker);if(r?.bridge.type!=='cdns-v3')return '';

@@ -1,3 +1,4 @@
+import {displayNumber} from './number-display.js';
 import {jointDefaults,jointEffectiveConfig,isJoint} from './joint-simulation-config.js';
 import {DEFAULT_SIMULATION_TRIALS} from './simulation-count-policy.js';
 import {hasResearchReferencePolicy} from './research-reference-defaults.js';
@@ -14,7 +15,7 @@ import {DERIVED_CAPITAL_POLICY} from './annual-growth-horizon.js';
 import {mountSimulation} from './simulation-view.js';
 import {simulationResearchDefaults,validateResearchSimulationConfig,simulateResearch,simulateResearchAsync,researchAnnualPathContext,RESEARCH_SIMULATION_DRIVER_LABELS,RESEARCH_SIMULATION_DRIVER_DESCRIPTIONS} from './research-simulation.js';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=(n,d=2)=>Number.isFinite(n)?n.toLocaleString('en-US',{maximumFractionDigits:d}):'—';
+const fmt=(value,digits=2)=>displayNumber(value,digits);
 const viewBases=new Map();
 export function annualResearchSimulationAdapter(draft){
  const key=draft.caseId;let basis=viewBases.get(key)||'enterprise',lastQuoteDate='';

@@ -1,8 +1,9 @@
+import {displayNumber} from './number-display.js';
 import {incrementalRecord} from './incremental-registry.js';
 import {annualTextHTML as a} from './annual-localization.js';
 import {snpsStubCalculation} from './snps-opening-stub.js';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const n=x=>Number.isFinite(x)?x.toLocaleString('en-US',{maximumFractionDigits:3}):'—';
+const n=(value,digits=2)=>displayNumber(value,digits);
 export const SNPS_STUB_NOTE='Selected Q4 2026 cash flows, the 64.9 USDm restructuring settlement and stub WACC remain fixed. Annual edits and simulation affect FY2027 onward with ACT/365.25 fiscal-date discounting; source whole-curve WACC sensitivities differ.';
 export const SNPS_CLAIM_NOTE='The residual budget and award units are assumptions. October 31, 2025 awards are assumed unchanged at July 31, 2026; actual July inventory and claim-budget adequacy remain unverified. October information is used. Listed stresses are examples without probabilities; blank means unknown.';
 export {SNPS_FUNDING_NOTE} from './snps-opening-stub.js';

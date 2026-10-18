@@ -1,3 +1,4 @@
+import {reverseDecimalDisplay} from './decimal-display-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -9,7 +10,7 @@ const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 test('joint integration: audited kernel and all new production modules have exact reviewed hashes',()=>{
  assert.equal(fixture.additions['dist/joint-annual-path.js'],'d2b1fc4c31565f4ff463036a74372bd92562ffa49ff566c423e642e9028b1d14');
  assert.equal(Object.keys(fixture.additions).length,3);
- for(const [path,expected]of Object.entries(fixture.additions))assert.equal(sha(read(path)),expected,path);
+ for(const [path,expected]of Object.entries(fixture.additions))assert.equal(sha(reverseDecimalDisplay(path,read(path))),expected,path);
 });
 test('joint integration: every existing asset reverses exactly and rejects any additional modification',()=>{
  assert.equal(Object.keys(fixture.files).length,18);

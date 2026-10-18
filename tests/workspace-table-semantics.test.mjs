@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {startStudio} from './v7-runtime-harness.mjs';
 import {currentSnapshot,calculateCurrent} from '../dist/current-model.js';
-const num=(v,d=1)=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('en-US',{maximumFractionDigits:d}):'—';
+const num=(v,d=1)=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString('en-US',{maximumFractionDigits:Math.min(2,d)}):'—';
 const tables=h=>h.app.querySelectorAll('.workspace-table');
 const named=(h,name)=>tables(h).find(t=>t.querySelector('caption').textContent===`${h.get('#current-company').value} · ${name}`);
 const cells=t=>t.querySelector('tbody').querySelectorAll('tr').map(r=>r.children.map(c=>c.textContent));

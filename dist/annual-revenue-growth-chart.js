@@ -1,3 +1,4 @@
+import {displayNumber} from './number-display.js';
 import {registerCatalog,t,localizedText} from './i18n.js';
 import {annualTextHTML} from './annual-localization.js';
 import {growthChartData} from './approved-charts.js';
@@ -5,7 +6,7 @@ registerCatalog('annualRevenueGrowth',{en:{fcfTitle:'Year-by-year unlevered FCF 
 // Complete messages keep translated statuses out of frozen interpolation parameters.
 registerCatalog('annualGrowthStatus', {en:{missingBase:'Year {year}: No prior value',loss:'Year {year}: Still negative',recovery:'Year {year}: Turns positive',negative:'Year {year}: Turns negative',toZero:'Year {year}: Reaches zero',fromZero:'Year {year}: From zero',unavailable:'Year {year}: Unavailable'},'zh-Hans':{missingBase:'第 {year} 年：无上年值',loss:'第 {year} 年：仍为负值',recovery:'第 {year} 年：转为正值',negative:'第 {year} 年：转为负值',toZero:'第 {year} 年：回到零',fromZero:'第 {year} 年：从零起步',unavailable:'第 {year} 年：不可用'}});
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=(value,digits=2)=>Number.isFinite(value)?(value*100).toLocaleString('en-US',{maximumFractionDigits:digits})+'%':t('annualRevenueGrowth.unavailable');
+const fmt=(value,digits=2)=>Number.isFinite(value)?displayNumber(value*100,digits)+'%':t('annualRevenueGrowth.unavailable');
 const text=(key,params)=>localizedText('annualRevenueGrowth.'+key,params);
 /** Presentation only. Never substitute rounded inputs or an independently generated growth curve. */
 export function annualRevenueGrowthData(rows,anchorRevenue){

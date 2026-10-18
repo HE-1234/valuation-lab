@@ -513,6 +513,7 @@ export default {
   "diagnostic.formula": "Effective marginal S:C = incremental revenue / net investment. Year {year}: {revenue} / {investment} {currency}m. Return proxy = EBIT margin × (1 − operating tax rate) × effective marginal S:C.",
   "diagnostic.actual": "Actual ROIC: N/A. {reason}",
   "diagnostic.terminal": "Terminal ROIC: {roic}. This is a separate mature-return assumption used for terminal investment, not a measured return on today's capital.",
+  "input.edit": "Select to edit full precision.",
   "input.exact": "Exact value: {value}",
   "path.year": "Y{year} · {growth}%",
   "path.yearAria": "Year {year}, {growth} percent baseline growth",

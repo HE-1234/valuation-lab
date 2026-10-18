@@ -1,3 +1,4 @@
+import {reverseDecimalDisplay} from './decimal-display-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -6,6 +7,7 @@ const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 // Exact reviewed joint integration and bounded accessibility repair layer.
 // Every prior UI, help, financial-source and methodology pin remains unchanged.
 export function reverseJointIntegration(path,bytes){
+ bytes=reverseDecimalDisplay(path,bytes);
  const approved=fixture.files[path];if(!approved)return bytes;
  assert.equal(sha(bytes),approved.afterSHA256,path+' reviewed documentation bytes / joint integration bytes');
  let text=bytes.toString();
