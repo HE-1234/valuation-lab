@@ -1,3 +1,4 @@
+import {operatingCashChange} from './fn-operating-cash.js';
 import {fixedCapitalSettlement,operatingInvestment,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
 import {incrementalRecord} from './incremental-registry.js';
 import {incrementalCaseVersion,incrementalDraftIssues} from './incremental-research-identity.js';
@@ -23,7 +24,7 @@ export function researchDraftFor(c){
  if(!object(c)||!Array.isArray(c.annual)||!c.annual.length)throw Error('A complete dated annual research case is required.');
  const lite=c.ticker==='LITE'?researchBridgeDefinition('LITE'):null,incremental=incrementalRecord(c.ticker),id=c.incrementalResearch;
  if(incremental&&JSON.stringify(c)!==JSON.stringify(incremental.annualCase))throw Error('Load the reviewed incremental source case before editing its draft.');
- return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
+ return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
 }
 export function researchDraftIssues(d,{includeTiming=true}={}){
  const errors=[];
@@ -83,12 +84,13 @@ export function loadAnnualResearchCase(previous,c){
 export function calculateResearchOperating(d){
  const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
  let prior=d.anchor.revenue,discount=1,pv=0,cumulative=0,trough=0;
- const rows=d.annual.map(r=>{
-  const ebit=r.revenue*r.margin,tax=Math.max(0,ebit)*r.taxRate,nopat=ebit-tax,fcff=nopat-r.reinvestment;
+ const rows=d.annual.map((r,index)=>{
+  const cashChange=operatingCashChange(d,index),totalInvestment=r.reinvestment+cashChange,operating=operatingInvestment(d,r)+cashChange;
+  const ebit=r.revenue*r.margin,tax=Math.max(0,ebit)*r.taxRate,nopat=ebit-tax,fcff=nopat-totalInvestment;
   discount*=1+r.wacc;const presentValue=fcff/discount;pv+=presentValue;cumulative+=fcff;trough=Math.min(trough,cumulative);
   const growth=r.revenue/prior-1,deltaRevenue=r.revenue-prior;prior=r.revenue;
   if(![ebit,tax,nopat,fcff,discount,presentValue,cumulative,growth,pv].every(finite))throw Error(`Year ${r.year}: forecast arithmetic exceeded the finite numerical range. Reduce the edited inputs.`);
-  return {...r,growth,ebit,tax,nopat,fcff,discountFactor:discount,pv:presentValue,cumulativeFCFF:cumulative,...(d.fixedCapitalFunding?{fixedOpeningFunding:fixedCapitalSettlement(d,r.year),...(d.ticker==='LRCX'?{openingCapitalPayableSettlement:fixedCapitalSettlement(d,r.year)}:{}),normalizedOperatingReinvestment:operatingInvestment(d,r)}:{}),derivedSalesCapital:operatingInvestment(d,r)!==0?deltaRevenue/operatingInvestment(d,r):null};
+  return {...r,reinvestment:totalInvestment,...(d.operatingCashFunding?{investmentBeforeOperatingCashReserve:r.reinvestment,changeRequiredOperatingCash:cashChange}:{}),growth,ebit,tax,nopat,fcff,discountFactor:discount,pv:presentValue,cumulativeFCFF:cumulative,...(d.fixedCapitalFunding?{fixedOpeningFunding:fixedCapitalSettlement(d,r.year),...(d.ticker==='LRCX'?{openingCapitalPayableSettlement:fixedCapitalSettlement(d,r.year)}:{}),normalizedOperatingReinvestment:operating}:{}),derivedSalesCapital:operating!==0?deltaRevenue/operating:null};
  });
  const t=d.terminal,last=rows.at(-1),revenue=last.revenue*(1+t.growth),ebit=revenue*t.margin,nopat=ebit*(1-t.taxRate),reinvestment=nopat*t.growth/t.roic,fcff=nopat-reinvestment,value=fcff/(t.wacc-t.growth),terminalPV=value/discount,enterprise=pv+terminalPV;
  if(![revenue,ebit,nopat,reinvestment,fcff,value,terminalPV,enterprise].every(finite))throw Error('Terminal arithmetic exceeded the finite numerical range. Reduce the edited inputs.');
@@ -98,7 +100,7 @@ export function calculateResearchOperating(d){
  if(Math.abs(terminal.revenueGrowthEndpointDifference)>1e-6)warnings.push('Final explicit revenue growth differs from terminal growth. The growth endpoint change is separate from the capital transition.');
  if(d.schemaVersion===2)warnings.push((d.derivedForecast?.revenuePathPreserved?'Margin-only schedule extension with retained existing revenue path:':'Derived revenue-horizon sensitivity:')+' calendar-year net investment floors and explicit additional growth funding are analyst assumptions. Source capital-component reconciliations do not describe changed rows. A longer growth runway does not guarantee higher value.');
  if(d.userEdited)warnings.push('Edited annual inputs are analyst assumptions. Original capital-component reconciliations may no longer match; check the investment evidence before relying on them.');
- if(rows.some(r=>r.reinvestment<0))warnings.push('A negative investment amount is an explicit asset or working-capital release assumption; it is not created automatically by falling revenue.');
+ if(rows.some(r=>r.reinvestment<0))warnings.push(d.operatingCashFunding?'Investment includes the explicit pre-reserve assumption plus the formula-driven required-cash change. Lower next-year sales can release required cash under the fixed 3% policy.':'A negative investment amount is an explicit asset or working-capital release assumption; it is not created automatically by falling revenue.');
  return {ticker:d.ticker,currency:d.currency,informationAsOf:d.informationAsOf,discountOrigin:d.discountOrigin,rows,terminal,forecastPV:pv,terminalPV,enterprise,terminalShare:enterprise>0?terminalPV/enterprise:null,peakEconomicDeficit:Math.max(0,-trough),negativeFCFFYears:rows.filter(r=>r.fcff<0).length,warnings,classification:'Conditional operating EV at the forecast origin, using research available on the information date. Not a contemporaneously knowable anchor-date valuation.'};
 }
 export function terminalNormalizedDraft(d,{years=3}={}){
@@ -112,7 +114,7 @@ export function terminalNormalizedDraft(d,{years=3}={}){
  for(let i=n-count;i<n;i++){
   const r=next.annual[i],weight=(i-(n-count)+1)/count;
   const ebit=r.revenue*r.margin,nopat=ebit-Math.max(0,ebit)*r.taxRate;
-  const target=nopat*t.growth/t.roic;
+  const target=nopat*t.growth/t.roic-operatingCashChange(d,i);
   r.reinvestment=operatingInvestment(d,r)*(1-weight)+target*weight+fixedCapitalSettlement(d,r.year);
  }
  next[next.schemaVersion===2?'capitalSensitivity':'capitalPolicy']=`terminal-normalization-${count}y-v1`;next.userEdited=true;

@@ -109,7 +109,7 @@ test('fresh research runtime and reset expose metric knobs without sampling or c
  try{
   assert.equal(h.get('#mc-annual-metrics-enabled').checked,true);
   for(const metric of ['margin','taxRate','wacc','investmentFactor']){assert.equal(h.get(`#mc-metric-${metric}-sd`).value,'0');assert.equal(h.get(`#mc-metric-panel-${metric}`).hidden,false);}
-  assert.equal(h.get('#mc-export').disabled,true);assert.match(h.get('#mc-output').innerHTML,/Run simulation/);
-  h.get('#mc-reset-distributions').click();assert.equal(h.get('#mc-export').disabled,true);assert.match(h.get('#mc-output').innerHTML,/Run simulation/);
+  assert.equal(h.get('#mc-export').disabled,true);assert.match(h.get('#mc-run-progress').textContent,/Run simulation/);assert.equal(h.get('#mc-run-progress').hidden,false);assert.doesNotMatch(h.get('#mc-output').innerHTML,/Run simulation/);
+  h.get('#mc-reset-distributions').click();assert.equal(h.get('#mc-export').disabled,true);assert.match(h.get('#mc-run-progress').textContent,/Run simulation/);assert.equal(h.get('#mc-run-progress').hidden,false);assert.doesNotMatch(h.get('#mc-output').innerHTML,/Run simulation/);
  }finally{h.cleanup();}
 });

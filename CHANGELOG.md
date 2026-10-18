@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-18 · Fabrinet conditional research and simulation clarity
+
+- Added FN with three audited fiscal-origin scenarios, ten-year references, explicit capital claims and a coupled ordinary-share/customer-warrant allocation. Base/downside/upside reproduce approximately $184.96/$82.09/$344.67 at the June 26, 2026 origin using later research information; current-price comparisons remain unavailable.
+- Funds the 3% next-year-sales operating-cash reserve dynamically in edited and simulated paths. The opening payable is funded once, while terminal investment and generated horizon rows avoid double-counting the cash reserve.
+- Keeps selected vesting, volatility-proxy, Raytek-realization, unpriced Casix and optional-claim assumptions visible in a compact result summary, with full arithmetic in Value & limitations.
+- Removed the duplicate idle Monte Carlo instruction that overlapped on narrow screens, preserving the accessible live status, chart space, manual Run/Cancel and stale/error behavior.
+- Independent verification includes source parity, a coupled option solver, edited/horizon paths, nonzero Monte Carlo uncertainty and original-case/quiz protection. Static bilingual mobile/desktop checks passed; native smoke follows publication.
+
 ## 2026-10-18 · ASML dated EUR valuation
 
 - Added ASML with EUR financial forecasts, audited conditional claims and three customer-advance funding paths. The base reproduces EUR745.971695 per registered ordinary share at the December 31, 2025 origin using October 18, 2026 research information.

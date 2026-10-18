@@ -29,3 +29,7 @@ Reviewed [W3C Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understandin
 ## 2026-10-18 · Currency and reusable labels
 
 Applied the previously reviewed [W3C Labels or Instructions guidance](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) to ASML: show EUR units at monetary inputs, keep the historical FX date and rate beside the secondary USD illustration, and name customer-advance runoff directly. Review caught an inherited “opening settlement” label that misdescribed the otherwise correct calculation; it was replaced with the domain-specific label. Forty-eight source-driven static states passed overflow checks. These are legibility checks, not native-device or accessibility certification.
+
+## 2026-10-18 · Compact claim conditions and one simulation status
+
+Reviewed [W3C Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html). Applied it by retaining one accessible idle/live status rather than repeating the same instruction over the Monte Carlo chart. FN's summary keeps concise, selected claim assumptions visible and places the full arithmetic in the adjacent limitations section. In the English 1440px static render, the summary content height fell from 651px to 373px without removing material conditions; at 390px it fell from 586px to 385px. These are source-driven static measurements, not native-browser or screen-reader certification.

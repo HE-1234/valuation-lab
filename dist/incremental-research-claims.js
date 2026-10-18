@@ -1,3 +1,4 @@
+import {calculateFnBridge} from './fn-research-claims.js';
 import {calculateAsmlBridge} from './asml-research-claims.js';
 import {calculateLrcxBridge} from './lrcx-research-claims.js';
 import {calculateAmatBridge} from './amat-research-claims.js';
@@ -6,6 +7,7 @@ import {incrementalIdentityValid} from './incremental-research-identity.js';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
 export function incrementalBridgeDefinition(ticker){const r=incrementalRecord(ticker);return r?structuredClone({...r.bridge,optionDefinitions:r.bridge.options,lines:[],bridgeVersion:r.identity.version}):null;}
 export function calculateIncrementalBridge(d,enterprise,options={}){
+ if(incrementalRecord(d?.ticker)?.bridge.type==='fn-v1')return calculateFnBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='asml-v4')return calculateAsmlBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='lrcx-v2')return calculateLrcxBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='amat-v3')return calculateAmatBridge(d,enterprise,options);

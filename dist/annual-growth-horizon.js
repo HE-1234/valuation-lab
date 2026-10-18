@@ -1,3 +1,4 @@
+import {operatingCashChange,operatingCashPolicy} from './fn-operating-cash.js';
 import {fixedCapitalSettlement,operatingInvestment,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
 import {incrementalCaseVersion,incrementalIdentityValid} from './incremental-research-identity.js';
 // Explicit, editable horizon sensitivities. Frozen research cases are never changed.
@@ -69,7 +70,7 @@ export function calculateDerivedReinvestment(d,revenueRows,{baselineAnnual=d.der
    const floor=Math.min(operating,0)+Math.max(operating,0)*scale+fixed;
    const extraExpansion=Math.max(0,delta-Math.max(0,baseDelta)*scale);
    investment=floor+extraExpansion/p.marginalSalesCapital;
-  }else investment=Math.max(0,delta)*intensity;
+  }else investment=Math.max(0,delta)*intensity-operatingCashChange(d,i,revenueRows);
   if(!finite(investment))throw Error(`Year ${i+1}: derived investment exceeded the finite numerical range.`);
   return investment;
  });
@@ -178,7 +179,7 @@ export function extendAnnualForMargin(d,c,terminalYear){
  next.derivedForecast.marginExtensionYears=Math.max(next.derivedForecast.marginExtensionYears||0,terminalYear);
  let prior=next.annual.at(-1).revenue;
  for(let year=oldLength+1;year<=terminalYear;year++){
-  const revenue=prior*(1+next.terminal.growth),reinvestment=Math.max(0,revenue-prior)*intensity;
+  const revenue=prior*(1+next.terminal.growth),reinvestment=Math.max(0,revenue-prior)*intensity-(operatingCashPolicy(next)?.ratio||0)*revenue*next.terminal.growth;
   if(!finite(revenue)||!finite(reinvestment))throw Error('Margin extension exceeded the finite numerical range.');
   next.annual.push({year,period:`Year ${year} · margin-path extension`,revenue,margin:next.terminal.margin,taxRate:next.terminal.taxRate,reinvestment,wacc:next.terminal.wacc});
   next.derivedForecast.generatedReinvestment.push(reinvestment);prior=revenue;
