@@ -1,6 +1,6 @@
 {
   "baseline": "d1b22ae00b80bbd1d0124ded31cdc0925fd772ee",
-  "scope": "Exact fresh-reference default, presentation, case-recovery wording, evidence/simulation focus and completed-replay focus hooks only. Reverse before prior byte checks. No sampler, formula, data, theme or source exclusions.",
+  "scope": "Exact fresh-reference default, presentation, case-recovery wording, evidence/simulation focus and completed-replay focus and explicit Learn-question visibility hooks only. Reverse before prior byte checks. No sampler, formula, data, theme or source exclusions.",
   "files": {
     "dist/research-simulation.js": [
       {
@@ -131,6 +131,38 @@
         "change": "evidence-focus-recovery",
         "reviewedAdditiveLine": " const evidence = createContextualEvidencePanel({host: evidenceHost, id: 'historical-contextual-evidence',\n  getFocusFallback: () => [groupTabs.buttons.get(group), viewTabs.buttons.get(view), find('#company')],\n",
         "originalLine": " const evidence = createContextualEvidencePanel({host: evidenceHost, id: 'historical-contextual-evidence',\n"
+      }
+    ],
+    "dist/learn-quiz-view.js": [
+      {
+        "change": "learn-question-visibility",
+        "reviewedAdditiveLine": " // Deliberate question navigation reveals its prompt in the document, never an inner pane.\n function focusQuestion(reveal){\n  const target=get('[data-quiz-prompt]'),document=target.ownerDocument;\n  target.focus({preventScroll:true});\n  if(!reveal||document.activeElement!==target)return;\n  const view=document.defaultView,rect=target.getBoundingClientRect?.(),height=view?.innerHeight;\n  if(!rect||![rect.top,rect.bottom,rect.height,height].every(Number.isFinite)||rect.height<=0||height<=0||!view.scrollBy)return;\n  const canvas=document.documentElement,style=canvas&&view.getComputedStyle?.(canvas);\n  let top=Math.max(0,Number.parseFloat(style?.scrollPaddingTop)||0),bottom=height-Math.max(0,Number.parseFloat(style?.scrollPaddingBottom)||0);\n  const header=document.querySelector('body > aside'),headerStyle=header&&view.getComputedStyle?.(header),headerRect=header?.getBoundingClientRect?.();\n  if(headerRect&&['sticky','fixed'].includes(headerStyle?.position)&&headerRect.top<=top&&headerRect.bottom>0)top=Math.max(top,headerRect.bottom+8);\n  if(top>=bottom)return;\n  const delta=rect.top<top||rect.height>bottom-top&&rect.bottom>bottom?rect.top-top:rect.bottom>bottom?rect.bottom-bottom:0;\n  if(Math.abs(delta)>1)view.scrollBy({top:delta,behavior:'instant'});\n }\n function renderQuestion(focus=false,reveal=false){\n",
+        "originalLine": " function renderQuestion(focus=false){\n"
+      },
+      {
+        "change": "learn-question-visibility",
+        "reviewedAdditiveLine": "  showFeedback();refreshQuestion();if(focus)focusQuestion(reveal);\n",
+        "originalLine": "  showFeedback();refreshQuestion();if(focus)get('[data-quiz-prompt]').focus({preventScroll:true});\n"
+      },
+      {
+        "change": "learn-question-visibility",
+        "reviewedAdditiveLine": " function startNewSet({focus=true,reveal=false}={}){if(!active)return false;session=createQuizSession(questions,deck.draw(10),{rng});renderQuestion(focus,reveal);",
+        "originalLine": " function startNewSet({focus=true}={}){if(!active)return false;session=createQuizSession(questions,deck.draw(10),{rng});renderQuestion(focus);"
+      },
+      {
+        "change": "learn-question-visibility",
+        "reviewedAdditiveLine": "if(session.move(next)){renderQuestion(true,true);announce('positionAnnouncement'",
+        "originalLine": "if(session.move(next)){renderQuestion(true);announce('positionAnnouncement'"
+      },
+      {
+        "change": "learn-question-visibility",
+        "reviewedAdditiveLine": "get('[data-quiz-action=\"new\"]').onclick=()=>startNewSet({reveal:true});",
+        "originalLine": "get('[data-quiz-action=\"new\"]').onclick=()=>startNewSet();"
+      },
+      {
+        "change": "learn-question-visibility",
+        "reviewedAdditiveLine": "session.review();renderQuestion(true,true);announce('positionAnnouncement'",
+        "originalLine": "session.review();renderQuestion(true);announce('positionAnnouncement'"
       }
     ]
   }

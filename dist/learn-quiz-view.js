@@ -51,7 +51,22 @@ export function mountQuizView(root,{questions,deck,rng=Math.random}={}){
   get('[data-quiz-feedback]').innerHTML=answer===null?'':'<p><strong data-quiz-verdict></strong></p><p data-quiz-correct-answer></p><p data-quiz-option-feedback></p><h3 data-quiz-explanation-title></h3><p data-quiz-explanation></p>';
   get('[data-quiz-sources]').innerHTML=answer===null?'':`<h3 data-quiz-sources-title></h3><ul>${question.sources.map(source=>`<li><a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.title)} ↗</a><span>${esc(source.section)}</span></li>`).join('')}</ul>`;
  }
- function renderQuestion(focus=false){
+ // Deliberate question navigation reveals its prompt in the document, never an inner pane.
+ function focusQuestion(reveal){
+  const target=get('[data-quiz-prompt]'),document=target.ownerDocument;
+  target.focus({preventScroll:true});
+  if(!reveal||document.activeElement!==target)return;
+  const view=document.defaultView,rect=target.getBoundingClientRect?.(),height=view?.innerHeight;
+  if(!rect||![rect.top,rect.bottom,rect.height,height].every(Number.isFinite)||rect.height<=0||height<=0||!view.scrollBy)return;
+  const canvas=document.documentElement,style=canvas&&view.getComputedStyle?.(canvas);
+  let top=Math.max(0,Number.parseFloat(style?.scrollPaddingTop)||0),bottom=height-Math.max(0,Number.parseFloat(style?.scrollPaddingBottom)||0);
+  const header=document.querySelector('body > aside'),headerStyle=header&&view.getComputedStyle?.(header),headerRect=header?.getBoundingClientRect?.();
+  if(headerRect&&['sticky','fixed'].includes(headerStyle?.position)&&headerRect.top<=top&&headerRect.bottom>0)top=Math.max(top,headerRect.bottom+8);
+  if(top>=bottom)return;
+  const delta=rect.top<top||rect.height>bottom-top&&rect.bottom>bottom?rect.top-top:rect.bottom>bottom?rect.bottom-bottom:0;
+  if(Math.abs(delta)>1)view.scrollBy({top:delta,behavior:'instant'});
+ }
+ function renderQuestion(focus=false,reveal=false){
   const {options}=session.current(),token=++renderToken;
   get('[data-quiz-question]').innerHTML=`<p class="learn-topic" data-quiz-topic></p><h2 id="${id}-question" data-quiz-prompt tabindex="-1"></h2><div class="learn-options" role="group" aria-labelledby="${id}-question">${options.map((option,index)=>`<button type="button" class="learn-answer" data-quiz-answer="${option}" aria-pressed="false"><span class="learn-option-letter" aria-hidden="true">${String.fromCharCode(65+index)}</span><span class="learn-option-text"><span data-quiz-option-text></span><small data-quiz-option-status></small></span></button>`).join('')}</div>`;
   const buttons=[...root.querySelectorAll('[data-quiz-answer]')];
@@ -59,12 +74,12 @@ export function mountQuizView(root,{questions,deck,rng=Math.random}={}){
    button.onclick=()=>{if(!active||token!==renderToken||!session.answer(button.dataset.quizAnswer))return;showFeedback();refreshQuestion();};
    button.onkeydown=event=>{if(!active||token!==renderToken)return;let target;if(event.key==='ArrowDown'||event.key==='ArrowRight')target=(index+1)%4;else if(event.key==='ArrowUp'||event.key==='ArrowLeft')target=(index+3)%4;else if(event.key==='Home')target=0;else if(event.key==='End')target=3;if(target!==undefined){event.preventDefault();buttons[target].focus({preventScroll:true});}};
   }
-  showFeedback();refreshQuestion();if(focus)get('[data-quiz-prompt]').focus({preventScroll:true});
+  showFeedback();refreshQuestion();if(focus)focusQuestion(reveal);
  }
- function startNewSet({focus=true}={}){if(!active)return false;session=createQuizSession(questions,deck.draw(10),{rng});renderQuestion(focus);announce('announced',{set:++setNumber});return true;}
- function navigate(delta){if(!active||!session)return;const next=session.getState().index+delta;if(session.move(next)){renderQuestion(true);announce('positionAnnouncement',{current:next+1});}}
- get('[data-quiz-action="new"]').onclick=()=>startNewSet();get('[data-quiz-action="previous"]').onclick=()=>navigate(-1);get('[data-quiz-action="next"]').onclick=()=>navigate(1);
- get('[data-quiz-action="review"]').onclick=()=>{if(active&&session){session.review();renderQuestion(true);announce('positionAnnouncement',{current:1});}};
+ function startNewSet({focus=true,reveal=false}={}){if(!active)return false;session=createQuizSession(questions,deck.draw(10),{rng});renderQuestion(focus,reveal);announce('announced',{set:++setNumber});return true;}
+ function navigate(delta){if(!active||!session)return;const next=session.getState().index+delta;if(session.move(next)){renderQuestion(true,true);announce('positionAnnouncement',{current:next+1});}}
+ get('[data-quiz-action="new"]').onclick=()=>startNewSet({reveal:true});get('[data-quiz-action="previous"]').onclick=()=>navigate(-1);get('[data-quiz-action="next"]').onclick=()=>navigate(1);
+ get('[data-quiz-action="review"]').onclick=()=>{if(active&&session){session.review();renderQuestion(true,true);announce('positionAnnouncement',{current:1});}};
  const unlocalize=onLocaleChange(()=>{if(active){refreshStatic();refreshQuestion();refreshAnnouncement();}});
  refreshStatic();
  const controller={startNewSet,getState:()=>session?.getState()||null,destroy(){active=false;renderToken++;unlocalize();}};mounted.set(root,controller);return controller;

@@ -1,3 +1,4 @@
+import {reverseLearnQuestionVisibility} from './reference-policy-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -105,7 +106,7 @@ test('LRCX live Chinese/English funding, named scenarios and claim labels preser
  setLocale('en');const w=await start();localize(w);try{w.choose('LRCX');w.get('[data-incremental-scenario="process-intensity-upside"]').click();const before=w.getState();clearTranslationDiagnostics();setLocale('zh-Hans');assert.match(w.get('.annual-path-heading').textContent,/工艺强度上行/);assert.match(w.get('.incremental-fixed-funding').textContent,/期初资本开支应付款/);assert.match(w.get('#annual-editor-panel-claims').textContent,/额外残余请求权压力/);assert.match(w.get('#research-results').textContent,/当前价格比较已禁用/);setLocale('en');assert.match(w.get('.annual-path-heading').textContent,/Process-intensity upside/);assert.deepEqual(w.getState(),before);assert.deepEqual(getMissingTranslations(),[]);}finally{setLocale('en');w.destroy();}
 });
 test('V46 original fourteen, GOOG, KLAC, AMAT, quiz bank and approved CSS remain byte-identical',()=>{
- const files=execFileSync('git',['ls-tree','-r','--name-only','fce6fa776146730d1d13ec12f5d11488bdae394c','dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/incremental-research-registry|amat-research-registry|incremental-AMAT|incremental-research-2026|renewed-research.*cases.json|studio-research-presets-2026-10-17-v1.json|goog-selected-case|quiz|learn|\.css$/.test(p));assert.ok(files.length>15);for(const p of files)assert.deepEqual(fs.readFileSync(new URL('../'+p,import.meta.url)),execFileSync('git',['show','fce6fa776146730d1d13ec12f5d11488bdae394c:'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
+ const files=execFileSync('git',['ls-tree','-r','--name-only','fce6fa776146730d1d13ec12f5d11488bdae394c','dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/incremental-research-registry|amat-research-registry|incremental-AMAT|incremental-research-2026|renewed-research.*cases.json|studio-research-presets-2026-10-17-v1.json|goog-selected-case|quiz|learn|\.css$/.test(p));assert.ok(files.length>15);for(const p of files)assert.deepEqual(reverseLearnQuestionVisibility(p,fs.readFileSync(new URL('../'+p,import.meta.url))),execFileSync('git',['show','fce6fa776146730d1d13ec12f5d11488bdae394c:'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
 });
 
 test('LRCX visible capital diagnostic excludes opening payable and retains live funding reconciliation',async()=>{

@@ -1,3 +1,4 @@
+import {reverseLearnQuestionVisibility} from './reference-policy-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -100,7 +101,7 @@ test('ASML actual simulation stays idle until manual Run and reset does not auto
  const d=choose('advance-runoff-100');d.researchSimulationConfig={...simulationResearchDefaults(d),trials:3};const h=fixture({runOnMount:false,reduced:true,autoplay:false,draftOverride:d,snapshotOverride:{ticker:d.ticker,currency:d.currency,periodEnd:d.discountOrigin,raw:{id:d.caseId}},adapter:annualResearchSimulationAdapter(d)});try{assert.equal(h.get('#mc-chart'),null);h.runTimers();assert.equal(h.get('#mc-chart'),null);h.get('#mc-run').click();assert.ok(h.get('#mc-chart'));h.get('#mc-reset-distributions').click();assert.equal(h.get('#mc-chart'),null);h.runTimers();assert.equal(h.get('#mc-chart'),null);assert.match(h.root.innerHTML,/EUR/);}finally{h.cleanup();}
 });
 test('V47 data, original fourteen, GOOG, earlier incremental registries, quiz120 and approved CSS remain byte-identical',()=>{
- const base='6c0403862102f67fe7cde01036bb6b913765f1bf',files=execFileSync('git',['ls-tree','-r','--name-only',base,'dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/\/data\/|incremental-research-registry|amat-research-registry|lrcx-research-registry|quiz|learn|\.css$/.test(p));assert.ok(files.length>90);for(const p of files)assert.deepEqual(fs.readFileSync(new URL('../'+p,import.meta.url)),execFileSync('git',['show',base+':'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
+ const base='6c0403862102f67fe7cde01036bb6b913765f1bf',files=execFileSync('git',['ls-tree','-r','--name-only',base,'dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/\/data\/|incremental-research-registry|amat-research-registry|lrcx-research-registry|quiz|learn|\.css$/.test(p));assert.ok(files.length>90);for(const p of files)assert.deepEqual(reverseLearnQuestionVisibility(p,fs.readFileSync(new URL('../'+p,import.meta.url))),execFileSync('git',['show',base+':'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
 });
 
 test('ASML simulation fixed-default note names funding stresses in both languages',()=>{

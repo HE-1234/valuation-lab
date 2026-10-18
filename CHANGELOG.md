@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-18 · Keep the current Learn question in view
+
+- Corrected a live-browser navigation defect where Next focused a prompt entirely above the viewport, leaving its answer choices visible without the question.
+- Previous/Next, Review and New 10 now reveal an offscreen prompt with only the necessary instant whole-document movement, accounting for the sticky header. Already visible prompts keep their position.
+- Feedback, language switches, shuffled questions/options, first-answer scoring, saved deck progress, six themes and the Annual Report layout remain unchanged. No financial data or calculations changed.
+- Focused Learn verification: 72 passed, zero failed, including 36 new checks. Exact V57 preservation covers all 354 shipped files outside six reviewed quiz-only substitutions. Aggregate and post-change native checks are reported separately.
+
+
 ## 2026-10-18 · Keep keyboard position after completing chart replay
 
 - Finishing a replay with the focused Show full chart button now returns focus to the adjacent Replay simulation button. A naturally completed, still-current replay does the same only while Show full chart owns focus.

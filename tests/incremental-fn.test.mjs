@@ -1,4 +1,4 @@
-import {reverseReferencePolicyHooks} from './reference-policy-preservation.mjs';
+import {reverseReferencePolicyHooks,reverseLearnQuestionVisibility} from './reference-policy-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -112,7 +112,7 @@ test('FN fixed simulation note has a bilingual dynamic funding and warrant polic
  const a=annualResearchSimulationAdapter(draft());assert.match(a.fixedNote,/Fabrinet warrants/);assert.ok(a.presentationMessage('fixedNote').key);setLocale('zh-Hans');try{assert.match(annualLabel('Fabrinet warrants are jointly repriced from intrinsic share value in each trial; required operating cash follows the same revenue path. Selected claim counts, rate, term and volatility stay fixed.'),/联立重估/);}finally{setLocale('en');}
 });
 test('V48 original data, all eighteen earlier cases, quiz120/deck and approved CSS remain byte-identical',()=>{
- const base='aecb9b4f878e57cb0b9f3e0d0b8fa9e439fb4f06',files=execFileSync('git',['ls-tree','-r','--name-only',base,'dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/\/data\/|incremental-research-registry|amat-research-registry|lrcx-research-registry|asml-research-registry|quiz|learn|\.css$/.test(p));assert.ok(files.length>100);for(const p of files)assert.deepEqual(fs.readFileSync(new URL('../'+p,import.meta.url)),execFileSync('git',['show',base+':'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
+ const base='aecb9b4f878e57cb0b9f3e0d0b8fa9e439fb4f06',files=execFileSync('git',['ls-tree','-r','--name-only',base,'dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/\/data\/|incremental-research-registry|amat-research-registry|lrcx-research-registry|asml-research-registry|quiz|learn|\.css$/.test(p));assert.ok(files.length>100);for(const p of files)assert.deepEqual(reverseLearnQuestionVisibility(p,fs.readFileSync(new URL('../'+p,import.meta.url))),execFileSync('git',['show',base+':'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
 });
 
 test('FN visible output names selected warrant and unpriced risks; details avoid other-company claim models',async()=>{

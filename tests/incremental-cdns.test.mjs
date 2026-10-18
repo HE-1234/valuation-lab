@@ -1,3 +1,4 @@
+import {reverseLearnQuestionVisibility} from './reference-policy-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -92,7 +93,7 @@ test('CDNS actual simulation stays idle until manual Run and reset does not auto
  const d=draft();d.researchSimulationConfig={...simulationResearchDefaults(d),trials:3};const h=fixture({runOnMount:false,reduced:true,autoplay:false,draftOverride:d,snapshotOverride:{ticker:'CDNS',currency:'USD',periodEnd:d.discountOrigin,raw:{id:d.caseId}},adapter:annualResearchSimulationAdapter(d)});try{assert.equal(h.get('#mc-chart'),null);h.runTimers();assert.equal(h.get('#mc-chart'),null);h.get('#mc-run').click();assert.ok(h.get('#mc-chart'));h.get('#mc-reset-distributions').click();assert.equal(h.get('#mc-chart'),null);h.runTimers();assert.equal(h.get('#mc-chart'),null);}finally{h.cleanup();}
 });
 test('CDNS all prior source packages, specific registries, quiz and approved CSS retain V50 bytes',()=>{
- const base='119fc37e694b557ef88831b21ef5cfc04b1731c0',files=execFileSync('git',['ls-tree','-r','--name-only',base,'dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/\/data\/|(?:incremental-research|amat-research|lrcx-research|asml-research|fn-research)-registry|quiz|learn|\.css$/.test(p));assert.ok(files.length>130);for(const p of files)assert.deepEqual(fs.readFileSync(new URL('../'+p,import.meta.url)),execFileSync('git',['show',base+':'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
+ const base='119fc37e694b557ef88831b21ef5cfc04b1731c0',files=execFileSync('git',['ls-tree','-r','--name-only',base,'dist'],{cwd:new URL('..',import.meta.url),encoding:'utf8'}).trim().split('\n').filter(p=>/\/data\/|(?:incremental-research|amat-research|lrcx-research|asml-research|fn-research)-registry|quiz|learn|\.css$/.test(p));assert.ok(files.length>130);for(const p of files)assert.deepEqual(reverseLearnQuestionVisibility(p,fs.readFileSync(new URL('../'+p,import.meta.url))),execFileSync('git',['show',base+':'+p],{cwd:new URL('..',import.meta.url),maxBuffer:20e6}),p);
 });
 
 test('CDNS all 22 public-safe files match source manifest; no raw transcript or private locator export',()=>{

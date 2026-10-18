@@ -24,7 +24,7 @@ All question answers are educational examples under the stated assumptions. Sour
 
 Only the first answer to each question counts toward the set's score. Choosing an answer reveals the chosen option's feedback, correct answer, full explanation and source links. Previous/Next retain answers. Review returns to the first question without resetting scores; only an explicit new set resets answers.
 
-Native buttons support Tab and Enter/Space. Arrow keys and Home/End move focus within the answer group without selecting an answer. Question navigation focuses the heading without forced scrolling. Persistent polite live regions report answer feedback and new sets. Language switches update text without replacing focused answer controls, questions, answers or option order. The approved six-theme tokens and natural whole-page scrolling remain in use.
+Native buttons support Tab and Enter/Space. Arrow keys and Home/End move focus within the answer group without selecting an answer. Previous/Next, Review and the New 10 button focus the question heading. If its prompt is outside the usable viewport, only the whole document moves enough to reveal it, respecting the sticky header; an already visible prompt keeps its scroll position. Answer feedback and language changes do not scroll. Persistent polite live regions report answer feedback and new sets. Language switches update text without replacing focused answer controls, questions, answers or option order. The approved six-theme tokens and natural whole-page scrolling remain in use.
 
 ## Verification
 
