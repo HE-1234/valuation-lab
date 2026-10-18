@@ -117,6 +117,7 @@ export default {
   "copy.7e5f0217c204": "复原编辑",
   "copy.80401d965dfa": "完整年度案例＋蒙特卡罗模拟",
   "copy.e05d3a59796a": "案例操作",
+  "toolbar.caseActionsUndo": "案例操作 · 可复原",
   "copy.f72136286722": "复原上次案例变更",
   "copy.ec7a21adbacc": "仅重新载入原始营运路径",
   "copy.fb31d62aea8c": "汇出年度案例",

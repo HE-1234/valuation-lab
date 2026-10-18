@@ -24,7 +24,7 @@ const sourceState=d=>structuredClone(Object.fromEntries(['anchor','annual','term
 const start=extra=>startResearchWorkspace({catalogBundle:catalog,incrementalBundle:incrementalPackages,...extra});
 const state=(d,c)=>researchReferenceState(c,researchAnnualPathContext(d));
 
-test('all V52 shipped files retain exact bytes outside the three locked application/presentation hooks',()=>{
+test('all V52 shipped files retain exact bytes outside the locked application/presentation hooks',()=>{
  const cwd=new URL('..',import.meta.url),baseline=previous.baseline,paths=execFileSync('git',['ls-tree','-r','--name-only',baseline,'dist'],{cwd,encoding:'utf8'}).trim().split('\n');
  assert.ok(paths.length>150);
  for(const path of paths)assert.deepEqual(reverseReferencePolicyHooks(path,fs.readFileSync(new URL('../'+path,import.meta.url))),execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);

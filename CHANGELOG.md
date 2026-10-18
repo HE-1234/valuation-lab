@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · Find full-case Undo from the toolbar
+
+- The existing Case actions disclosure now shows “Undo available” when a research load, named scenario or operating-path reload can be reversed. The cue follows the saved, company-specific case history and has matching Simplified Chinese wording.
+- Preserved separate field-edit and full-case recovery, input focus, draft persistence, model calculations, source data, themes and layout. Retained Traditional catalog coverage remains compatible.
+- Final full suite: 1,692 passed, zero failed, one pre-existing raw-cache skip; all 1,693 tests included. Exact V53 preservation checks allow only the four reviewed wording substitutions.
+- Source-linked design review applies visible recovery and recognition guidance. Twenty-four matched static desktop/mobile captures show no new overflow or changed open-menu dimensions; native phone interaction is not certified.
+
 ## 2026-10-18 · Explicit uncertainty reference settings
 
 - Fresh or explicitly reset research settings for KLAC, AMAT, LRCX, ASML, FN, CDNS and SNPS no longer preselect forecast years as exact user anchors. Zero-width reference assumptions, mandatory terminal conditions and fixed source stubs remain intact.

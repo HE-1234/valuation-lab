@@ -1,3 +1,11 @@
+## 2026-10-18 · Make available full-case recovery discoverable
+
+Reviewed the written Nielsen Norman Group [User Control and Freedom](https://www.nngroup.com/articles/user-control-and-freedom/) and [Recognition vs. Recall](https://www.nngroup.com/articles/recognition-and-recall/) guidance on 18 October 2026. The applicable lessons are to keep recovery discoverable and provide contextual cues rather than expecting people to remember a hidden command. These were accessible article reviews, not course or video completion claims.
+
+The existing Case actions disclosure now reads “Case actions · Undo available” when its full-case recovery is available, with matching Simplified Chinese wording. This resolves a discoverability ambiguity after Use research or a named-case load, when the nearby field-level Undo edit is correctly disabled. The existing Undo last case change command and both histories remain intact. No control, evidence panel, reset workflow, layout, typography, palette, financial calculation or scrolling behavior changed.
+
+Verification: 73 focused synthetic-DOM/state/localization checks passed, including seven new tests. The new V53 whole-dist comparison permits only four exact reversible wording substitutions; all other shipped bytes remain unchanged. The checks cover separate edit/case histories, persisted and per-company recovery, all seven incremental named cases, bilingual wording, input identity and focus. Static narrow/desktop review is recorded separately; these tests do not establish native-browser or screen-reader conformance.
+
 
 ## 2026-10-18, 04:42 UTC · Label uncertainty inputs and explicit actions
 

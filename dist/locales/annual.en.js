@@ -117,6 +117,7 @@ export default {
   "copy.7e5f0217c204": "Undo edit",
   "copy.80401d965dfa": "Full annual case + Monte Carlo",
   "copy.e05d3a59796a": "Case actions",
+  "toolbar.caseActionsUndo": "Case actions · Undo available",
   "copy.f72136286722": "Undo last case change",
   "copy.ec7a21adbacc": "Reload original operating path only",
   "copy.fb31d62aea8c": "Export annual case",

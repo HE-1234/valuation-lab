@@ -117,6 +117,7 @@ export default {
   "copy.7e5f0217c204": "復原編輯",
   "copy.80401d965dfa": "完整年度案例＋蒙地卡羅模擬",
   "copy.e05d3a59796a": "案例操作",
+  "toolbar.caseActionsUndo": "案例操作 · 可復原",
   "copy.f72136286722": "復原上次案例變更",
   "copy.ec7a21adbacc": "僅重新載入原始營運路徑",
   "copy.fb31d62aea8c": "匯出年度案例",
