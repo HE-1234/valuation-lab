@@ -1,3 +1,4 @@
+import {bindGuidedMessages} from './guided-localization.js';
 // A nonmodal evidence view. Move, never clone, existing content so form values,
 // details state, chart listeners, and source links survive a round trip.
 let nextPanelId = 0;
@@ -98,6 +99,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
  element.appendChild(header);
  element.appendChild(content);
  host.appendChild(element);
+ const releaseLocale=bindGuidedMessages(element);
 
  const view = document.defaultView;
  const media = view?.matchMedia?.('(prefers-reduced-motion: reduce)') ||
@@ -287,6 +289,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   closeButton.removeEventListener('click', onCloseClick);
   media?.removeEventListener?.('change', onMotionChange);
   if (!media?.removeEventListener) media?.removeListener?.(onMotionChange);
+  releaseLocale();
   keyedPositions.clear();
   element.remove();
  }

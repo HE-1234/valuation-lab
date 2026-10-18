@@ -1,0 +1,13 @@
+/* Additive directory surfaces inherit the approved typography and all six palettes. */
+.catalog-picker{display:grid;gap:.3rem;min-width:0;max-width:100%}
+.catalog-picker input,.catalog-picker select{width:100%;max-width:100%;min-width:0;font:inherit}
+.catalog-picker label{font-size:.75rem;color:var(--muted)}
+.catalog-picker #catalog-search-status:empty{display:none}
+.catalog-pending{padding:clamp(1rem,3vw,2rem);max-width:72rem;line-height:1.65}
+.catalog-pending h2{font-family:var(--font-display,serif);font-weight:400;font-size:clamp(2rem,4vw,3rem);margin:.3rem 0 1rem}
+.catalog-pending h3{margin-top:1.6rem}
+.catalog-pending li,.catalog-coverage li{margin:.5rem 0;overflow-wrap:anywhere}
+.catalog-coverage{padding:1rem;border-top:1px solid var(--line);overflow:visible}
+.catalog-coverage summary{cursor:pointer}
+.catalog-pending-workspace .workspace-toolbar{display:block}
+.catalog-pending-workspace .catalog-picker{max-width:42rem}

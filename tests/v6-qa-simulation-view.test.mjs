@@ -30,7 +30,7 @@ test('v6 QA: mobile limits particles and changing reduced-motion preference canc
  const h=fixture({mobile:true,ticker:'MOBILEQA'});try{assert.equal(h.animations.length,64);h.motion.matches=true;h.motion.dispatch('change');assert.ok(h.animations.every(a=>a.state==='canceled'));assert.equal(h.get('#mc-particles').children.length,0)}finally{h.cleanup()}
 });
 test('v6 QA: valid all-excluded settings remove chart and expose attempted/excluded accounting',()=>{
- const h=fixture({reduced:true,ticker:'EMPTYQA'});try{for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-growth-low').oninput();assert.equal(h.get('#mc-chart'),null);assert.match(h.get('#mc-output').innerHTML,/No valid scenarios/);assert.match(h.get('#mc-audit').textContent,/4,000 attempted · 4,000 excluded/);assert.match(h.get('#mc-audit').textContent,/terminal-constraints: 4000/)}finally{h.cleanup()}
+ const h=fixture({reduced:true,ticker:'EMPTYQA'});try{for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-growth-low').oninput();h.get('#mc-run').click();assert.equal(h.get('#mc-chart'),null);assert.match(h.get('#mc-output').innerHTML,/No valid scenarios/);assert.match(h.get('#mc-audit').textContent,/4,000 attempted · 4,000 excluded/);assert.match(h.get('#mc-audit').textContent,/terminal-constraints: 4000/)}finally{h.cleanup()}
 });
 test('v6 QA: all-zero equity distribution remains inspectable without claiming ECDF at median is 50%',()=>{
  const h=fixture({reduced:true,ticker:'ZEROQA',debt:1e9});try{assert.match(h.get('#mc-audit').textContent,/4,000 zero-equity/);assert.match(h.get('#mc-inspector').innerHTML,/100% of simulated values at or below/);assert.equal(Number(h.get('#mc-chart').getAttribute('aria-valuenow')),0)}finally{h.cleanup()}

@@ -406,6 +406,11 @@ def main():
         if FORBIDDEN_RE.search(content):
             raise SystemExit(f'Unsafe local-path or secret pattern in {name}.')
         (output / name).write_text(content)
+    # Frozen manifest remains a hash of original English; a separate presentation
+    # manifest validates the reversible language controls and leaf markers.
+    if output == DEFAULT_OUTPUT.resolve():
+        import sys
+        subprocess.run([sys.executable, str(ROOT / 'scripts/localize-research-pages.py'), '--apply'], check=True)
     print(dump({'outputFiles': len(files), 'companies': len(tickers), 'sourceRecords': 320, 'managementCapabilityRecords': 70, 'originalExecutableSHA256': EXECUTABLE_HASH}).strip())
 
 

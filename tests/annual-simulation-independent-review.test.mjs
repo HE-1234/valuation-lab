@@ -10,7 +10,7 @@ import {simulateResearch,simulationResearchDefaults} from '../dist/research-simu
 
 const library=bundledResearch(),company=ticker=>library.companies.find(c=>c.ticker===ticker);
 const close=(actual,expected,label)=>assert.ok(Number.isFinite(actual)&&Math.abs(actual-expected)<=Math.max(1,Math.abs(expected))*3e-12,`${label}: ${actual} != ${expected}`);
-const smallConfig=()=>({...simulationResearchDefaults(),trials:7,seed:'independent-integration'});
+const smallConfig=()=>({...simulationResearchDefaults(),method:'legacy',trials:7,seed:'independent-integration'});
 
 // Expected values use source fields and explicit arithmetic, never the production
 // DCF, path-transform or timing helper. Both timing branches are covered.
@@ -77,13 +77,13 @@ test('independent annual review: actual workspace and simulator preserve per-com
  for(const ticker of ['AAPL','MU']){const d=researchDraftFor(company(ticker));d.researchSimulationConfig=smallConfig();storage.set(RESEARCH_STORAGE_PREFIX+ticker,JSON.stringify(d));}
  let h=await integratedWorkspace(storage);
  try{
-  assert.ok(h.get('#research-mc-chart'));
+  h.get('#research-mc-run').click();assert.ok(h.get('#research-mc-chart'));
   h.input('#research-mc-growthPremium-value','1.5');
   h.change('#research-mc-capital-policy','revenue-scaled');
   assert.equal(h.getState().draft.researchSimulationConfig.drivers.growthPremium.value,.015);
   const before=structuredClone(h.getState().draft.researchSimulationConfig);
   h.input('[data-research-input="annual"][data-field="revenue"][data-index="0"]','567890');
-  assert.ok(h.get('#research-mc-chart'));assert.deepEqual(h.getState().draft.researchSimulationConfig,before);
+  h.get('#research-mc-run').click();assert.ok(h.get('#research-mc-chart'));assert.deepEqual(h.getState().draft.researchSimulationConfig,before);
   h.action('load');assert.deepEqual(h.getState().draft.researchSimulationConfig,before);
   h.action('undo');assert.equal(h.getState().draft.annual[0].revenue,567890);assert.deepEqual(h.getState().draft.researchSimulationConfig,before);
   h.choose('MU');h.input('#research-mc-investmentMultiplier-value','1.25');
@@ -96,7 +96,7 @@ test('independent annual review: actual workspace and simulator preserve per-com
  h=await integratedWorkspace(storage);
  try{
   assert.equal(h.getState().company.ticker,'MU');assert.equal(h.get('#research-mc-investmentMultiplier-value').value,'1.25');
-  h.choose('AAPL');assert.equal(h.getState().draft.researchSimulationConfig.drivers.growthPremium.value,.015);assert.equal(h.get('#research-mc-growthPremium-value').value,'1.5');assert.equal(h.get('#research-mc-capital-policy').value,'revenue-scaled');assert.ok(h.get('#research-mc-chart'));
+  h.choose('AAPL');assert.equal(h.getState().draft.researchSimulationConfig.drivers.growthPremium.value,.015);assert.equal(h.get('#research-mc-growthPremium-value').value,'1.5');assert.equal(h.get('#research-mc-capital-policy').value,'revenue-scaled');h.get('#research-mc-run').click();assert.ok(h.get('#research-mc-chart'));
  }finally{h.cleanup();}
 });
 
@@ -107,7 +107,7 @@ test('independent annual review: actual reset Undo preserves invalid saved value
   let h=await integratedWorkspace(storage);
   try{
    assert.equal(h.get('#research-mc-chart'),null);
-   h.get('#research-mc-reset-distributions').click();assert.ok(h.get('#research-mc-chart'));assert.equal(h.getState().draft.researchSimulationConfig,null);
+   h.get('#research-mc-reset-distributions').click();h.get('#research-mc-run').click();assert.ok(h.get('#research-mc-chart'));assert.equal(h.getState().draft.researchSimulationConfig,null);
    h.get('#research-mc-undo-reset').click();assert.equal(h.get('#research-mc-chart'),null);assert.deepEqual(h.getState().draft.researchSimulationConfig,config);
   }finally{h.cleanup();}
   h=await integratedWorkspace(storage);
@@ -121,11 +121,11 @@ test('independent annual review: claim edits immediately withhold and restore th
  const storage=new Map([[RESEARCH_STORAGE_PREFIX+'LITE',JSON.stringify(d)],[RESEARCH_STORAGE_PREFIX+'selection','LITE']]);
  const h=await integratedWorkspace(storage);
  try{
-  assert.ok(h.get('#research-mc-chart'));assert.equal(h.get('#research-mc-value-basis').querySelector('[value="perShare"]'),null);
+  h.get('#research-mc-run').click();assert.ok(h.get('#research-mc-chart'));assert.equal(h.get('#research-mc-value-basis').querySelector('[value="perShare"]'),null);
   h.input('[data-research-input="bridge"][data-field="convertiblePremiumClaim"]','0');
-  assert.ok(h.get('#research-mc-value-basis').querySelector('[value="perShare"]'));
+  h.get('#research-mc-run').click();assert.ok(h.get('#research-mc-value-basis').querySelector('[value="perShare"]'));
   h.change('#research-mc-value-basis','perShare');assert.match(h.get('#research-mc-output').innerHTML,/PER COMMON SHARE/);
   h.input('[data-research-input="bridge"][data-field="convertiblePremiumClaim"]','');
-  assert.equal(h.get('#research-mc-value-basis').querySelector('[value="perShare"]'),null);assert.match(h.get('#research-mc-output').innerHTML,/OPERATING EV/);
+  h.get('#research-mc-run').click();assert.equal(h.get('#research-mc-value-basis').querySelector('[value="perShare"]'),null);assert.match(h.get('#research-mc-output').innerHTML,/OPERATING EV/);
  }finally{h.cleanup();}
 });

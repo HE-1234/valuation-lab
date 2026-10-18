@@ -93,7 +93,7 @@ export function minimalDocument(){
 
 export const bundledResearch=()=>JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-research-2026-10-17/cases.json',import.meta.url),'utf8'));
 
-export async function startResearchWorkspace({storage=new Map(),storageBlocked=false,readBlocked=storageBlocked,writeBlocked=storageBlocked,library=bundledResearch(),fetcher,simulationMount,presetBundle,presetsMissing=false,navigate}={}){
+export async function startResearchWorkspace({storage=new Map(),storageBlocked=false,readBlocked=storageBlocked,writeBlocked=storageBlocked,library=bundledResearch(),fetcher,simulationMount,presetBundle,presetsMissing=false,catalogBundle=null,navigate}={}){
  const document=minimalDocument(),root=document.root,reads=[],writes=[],requests=[],downloads=[],navigations=[];
  const storageAPI={
   getItem(key){reads.push(key);if(readBlocked)throw Error('Storage read blocked');return storage.has(key)?storage.get(key):null;},
@@ -101,7 +101,7 @@ export async function startResearchWorkspace({storage=new Map(),storageBlocked=f
  };
  const workspace=await mountResearchWorkspace(root,{
   fetcher:fetcher|| (async path=>{requests.push(path);if(path===STUDIO_PRESETS_PATH){if(presetsMissing)return {ok:false};return {ok:true,json:async()=>JSON.parse(fs.readFileSync(new URL('../dist/data/studio-research-presets-2026-10-17-v1.json',import.meta.url),'utf8'))};}if(path!==RESEARCH_PATH)throw Error('Unexpected fetch '+path);return {ok:true,json:async()=>structuredClone(library)};}),
-  storage:storageAPI,simulationMount,presetBundle,navigate:navigate|| (page=>navigations.push(page)),download:(name,value)=>downloads.push({name,value:structuredClone(value)})
+  storage:storageAPI,simulationMount,presetBundle,catalogBundle,navigate:navigate|| (page=>navigations.push(page)),download:(name,value)=>downloads.push({name,value:structuredClone(value)})
  });
  const get=selector=>root.querySelector(selector);
  const requireElement=selector=>{const element=get(selector);if(!element)throw Error('Missing workspace control '+selector);return element;};

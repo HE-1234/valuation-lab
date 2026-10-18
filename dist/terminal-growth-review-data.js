@@ -1,0 +1,486 @@
+// Public, additive review provenance. Frozen presets are unchanged.
+export default {
+  "version": "2026-10-18-terminal-growth-review-v1",
+  "asOf": "2026-10-18",
+  "sourcePreset": "dist/data/studio-research-presets-2026-10-17-v1.json",
+  "sourceSHA256": "784775d9a6eb8f5d199b95f4c239b17e648ada8d04bc5cc8ef01976e2d7bec5d",
+  "classification": "Analyst scenario judgment, not a Damodaran prescription or issuer forecast. Optional annual and terminal uncertainty is supported; the research default holds terminal growth fixed at the reviewed rate. Review date is not a new valuation date.",
+  "sources": [
+    {
+      "id": "damodaran",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/stablegrowthrate.htm",
+      "date": null,
+      "role": "Methodology, undated historical examples; not a current macro forecast."
+    },
+    {
+      "id": "fed_sep",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "date": "2026-09-16",
+      "facts": {
+        "longRunRealGDP": 0.02,
+        "longRunPCEInflation": 0.02,
+        "longRunFedFunds": 0.032
+      },
+      "role": "Long-run USD inflation/US real-economy context; PCE inflation is not the GDP deflator and policy rate is not 10-year risk-free."
+    },
+    {
+      "id": "treasury",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+      "date": "2026-10-16",
+      "facts": {
+        "USD10YearParYield": 0.0509
+      },
+      "role": "Independently verified latest available observation as of October 18; ceiling reference, not a perpetual growth recommendation."
+    },
+    {
+      "id": "cbc",
+      "url": "https://www.cbc.gov.tw/en/cp-448-192883-c5fa1-2.html",
+      "date": "2026-09-17",
+      "facts": {
+        "Taiwan2026CPI": 0.0203,
+        "Taiwan2027CPI": 0.0183
+      },
+      "role": "Near-term inflation context only; does not validate a long-run 1.5% TWD assumption or establish a terminal growth forecast."
+    },
+    {
+      "id": "imf",
+      "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+      "date": "2026-10-13",
+      "facts": {
+        "globalRealGrowth2026": 0.031,
+        "globalRealGrowth2027": 0.034
+      },
+      "role": "Near-term global real-growth context only; neither number is a perpetual nominal USD/TWD rate. Do not add world aggregate inflation to USD cash flows."
+    }
+  ],
+  "recommendations": [
+    {
+      "ticker": "AAPL",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD: approximately 0.49% real at a 2% inflation anchor intentionally describes slow mature expansion. Services supports persistence, but product replacement and scale warrant lower real growth than the diversified enterprise/cloud group.",
+      "sensitivityRange": {
+        "low": 0.01,
+        "high": 0.035,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+        "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/",
+        "https://stockanalysis.com/stocks/aapl/transcripts/658553-q3-2026/"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.5%：以 2% 通胀为示例，实际增长约为 0.49%。服务业务支持持续经营，但硬件换机周期和规模限制支持较低的成熟期实际增长。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.500000%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF 2.144097%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "MSFT",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.03,
+      "reason": "Use 3.0% nominal USD: approximately 0.98% real growth better expresses enduring enterprise/cloud demand across regions and products after the long fade. The enormous mature scale still argues for declining relative economic share. 2.5% remains a credible conservative alternative; 3.5% requires stronger durable monetization.",
+      "sensitivityRange": {
+        "low": 0.02,
+        "high": 0.04,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+        "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+      ],
+      "reasonZhHans": "采用美元名义增长率 3.0%：以 2% 通胀为示例，实际增长约为 0.98%，体现长期企业软件和云需求。庞大规模仍意味着相对经济份额下降。2.5% 是可信的保守方案，3.5% 需要更强的持续变现能力。",
+      "transition": "Terminal-only review: the final explicit growth remains 2.5%, followed by 3.0% continuation. Annual rows and capital budgets are unchanged; reinvestment is recomputed as terminal NOPAT × g / ROIC. This is not an annual-path refade or an October-marked valuation.",
+      "transitionZhHans": "本次仅调整终值：最后一个明确预测年度仍增长 2.5%，随后永续增长 3.0%。年度行和资本预算保持原样；终值再投资按 NOPAT × g / ROIC 重算。这不是重新渐变年度路径，也不是按十月重新标定的估值。"
+    },
+    {
+      "ticker": "AMZN",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.03,
+      "reason": "Use 3.0% nominal USD: modest mature real growth across retail, cloud and advertising is a more balanced central thesis than approximately 0.49% real. Huge mature scale, retail competition and physical investment rule out extrapolating current growth. 2.5% is a conservative alternative and 3.5% a stronger durability case.",
+      "sensitivityRange": {
+        "low": 0.02,
+        "high": 0.04,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+        "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
+        "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+        "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders"
+      ],
+      "reasonZhHans": "采用美元名义增长率 3.0%：零售、云和广告业务在成熟期保持温和实际增长，比约 0.49% 实际增长更适合作为中心判断。庞大规模、竞争和实体投资需求限制增长；2.5% 为保守方案，3.5% 需要更持久的竞争力。",
+      "transition": "Terminal-only review: the final explicit growth remains 2.5%, followed by 3.0% continuation. Annual rows and capital budgets are unchanged; reinvestment is recomputed as terminal NOPAT × g / ROIC. This is not an annual-path refade or an October-marked valuation.",
+      "transitionZhHans": "本次仅调整终值：最后一个明确预测年度仍增长 2.5%，随后永续增长 3.0%。年度行和资本预算保持原样；终值再投资按 NOPAT × g / ROIC 重算。这不是重新渐变年度路径，也不是按十月重新标定的估值。"
+    },
+    {
+      "ticker": "GOOG",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.03,
+      "reason": "Use 3.0% nominal USD: approximately 0.98% real expansion captures broad global digital demand and cloud while recognizing search disruption, competition and large mature scale. 2.5% remains a credible erosion/low-real-growth case; 3.5% requires durable share and monetization. No market-price target enters the choice.",
+      "sensitivityRange": {
+        "low": 0.02,
+        "high": 0.04,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+        "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf"
+      ],
+      "reasonZhHans": "采用美元名义增长率 3.0%：以 2% 通胀为示例，实际增长约为 0.98%，反映全球数字及云需求，同时考虑搜索业务替代风险、竞争和成熟规模。2.5% 仍是可信的低增长方案；3.5% 需要持续份额和变现能力。选择不以市场股价为目标。",
+      "transition": "Terminal-only review: the final explicit growth remains 2.5%, followed by 3.0% continuation. Annual rows and capital budgets are unchanged; reinvestment is recomputed as terminal NOPAT × g / ROIC. This is not an annual-path refade or an October-marked valuation.",
+      "transitionZhHans": "本次仅调整终值：最后一个明确预测年度仍增长 2.5%，随后永续增长 3.0%。年度行和资本预算保持原样；终值再投资按 NOPAT × g / ROIC 重算。这不是重新渐变年度路径，也不是按十月重新标定的估值。"
+    },
+    {
+      "ticker": "META",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD: slow real expansion intentionally allows loss of relative economic share after audience and advertising maturity. A 3.0% alternative is reasonable, but global reach alone does not remove concentrated advertising/platform replacement risk.",
+      "sensitivityRange": {
+        "low": 0.01,
+        "high": 0.035,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": "META and TSLA presets reference missing original common-market-inputs file; the bundled current-market-references file supplies the independently verified common USD rate."
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+        "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx",
+        "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Follow-Up-Call-Transcript.pdf",
+        "https://investor.atmeta.com/investor-news/press-release-details/2026/Metas-Agreement-With-Bipartisan-Attorneys-General-Calling-on-TikTok-and-YouTube-to-Join-Us-in-Supporting-Teens/default.aspx"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.5%：用户及广告业务成熟后，缓慢实际增长允许相对经济份额下降。3.0% 可作为替代方案，但全球覆盖不能消除广告集中和平台替代风险。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.500000%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF 2.500000%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "NVDA",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD: global computing demand supports a positive mature franchise, but current AI growth and platform rents do not establish perpetual market-share growth. Existing 25% terminal ROIC already embeds strong durability; capital transition remains unresolved.",
+      "sensitivityRange": {
+        "low": 0.01,
+        "high": 0.035,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/",
+        "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+        "https://investor.nvidia.com/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.5%：全球计算需求支持成熟业务，但当前人工智能增长不代表永久份额增长。25% 终值 ROIC 已包含强韧性假设；资本过渡问题仍未解决。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.500000%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF -4.515428%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "TSLA",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD: modest real expansion after mature vehicle/energy economics. Do not capitalize a speculative autonomy outcome as a universal perpetual growth premium. Terminal ROIC equals WACC, so growth has no excess-return spread to exploit.",
+      "sensitivityRange": {
+        "low": 0,
+        "high": 0.035,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": "META and TSLA presets reference missing original common-market-inputs file; the bundled current-market-references file supplies the independently verified common USD rate."
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+        "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+        "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments",
+        "https://stockanalysis.com/stocks/tsla/transcripts/653184-q2-2026/"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.5%：汽车和能源业务成熟后温和实际增长，不将自动驾驶的推测性成功计入永久增长溢价。终值 ROIC 等于 WACC，增长不产生超额回报。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.500000%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF 2.500000%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "COHR",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD: a mature global optical franchise can expand slowly in real terms, while customer cycles and replacement architectures prevent using near-term AI ramps as stable growth.",
+      "sensitivityRange": {
+        "low": 0,
+        "high": 0.035,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/820318/000082031826000020/iivi-20260630.htm",
+        "https://ir.coherent.com/node/18091/pdf",
+        "https://earningscalls.dev/transcripts/coherent-corp_cohr_earnings_call_transcript_2026-08-12",
+        "https://www.sec.gov/Archives/edgar/data/820318/000119312526375462/d110649d8k.htm"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.5%：成熟全球光学业务可缓慢实际增长，但客户周期和架构替代限制将近期人工智能需求扩张外推至永续期。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.500001%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF 1.846293%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "LITE",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD: a continuing optical franchise with modest real growth, rather than permanent extrapolation of current datacenter demand. Pricing and technology transitions warrant the conservative central maturity thesis.",
+      "sensitivityRange": {
+        "low": 0,
+        "high": 0.035,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1633978/000162828026057358/lite-20260627.htm",
+        "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Results/default.aspx",
+        "https://earningscalls.dev/transcripts/lumentum-holdings-inc_lite_earnings_call_transcript_2026-08-11"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.5%：光学业务在成熟期温和实际增长，不永久外推当前数据中心需求。定价和技术转换支持保守的中心判断。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.499998%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF 1.959383%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "AAOI",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD conditional on reaching maturity. Customer ramps are finite; 11% terminal ROIC is below 13.5% WACC, so faster stable growth is not a free value enhancement. Failure and loss-of-customer scenarios require more than a terminal-g adjustment.",
+      "sensitivityRange": {
+        "low": 0,
+        "high": 0.03,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm",
+        "https://www.sec.gov/Archives/edgar/data/1158114/000168316826006055/aaoi_ex9901.htm",
+        "https://investors.ao-inc.com/static-files/93d502fe-1481-4462-9017-8ea05c43e7ce",
+        "https://appliedoptoelectronics.gcs-web.com/news-releases/news-release-details/applied-optoelectronics-announces-completion-previously"
+      ],
+      "reasonZhHans": "有条件地保留美元名义增长率 2.5%，前提是达到成熟期。客户放量有限；11% 终值 ROIC 低于 13.5% WACC，更快增长并非免费增值。失败及客户流失风险不能仅通过终值增长率表达。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.499996%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF 2.500000%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "NBIS",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD conditional on survival and normalized customer advances. Current expansion is not a mature growth forecast. 12% ROIC below 15.5% WACC makes additional growth economically costly; changing g must not create an unearned financing credit.",
+      "sensitivityRange": {
+        "low": 0,
+        "high": 0.03,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926059872/tm2614392d1_ex99-2.htm",
+        "https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf?cache-buster=2026-08-12T11%3A54%3A46.695Z",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926100347/tm2623863d1_ex99-1.htm",
+        "https://www.sec.gov/Archives/edgar/data/1513845/000110465926027886/tm268879d1_6k.htm"
+      ],
+      "reasonZhHans": "有条件地保留美元名义增长率 2.5%，前提是持续经营且客户预付款正常化。当前扩张不是成熟期预测；12% ROIC 低于 15.5% WACC，额外增长耗损价值，不能凭调整增长率创造融资收益。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.499999%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF 2.500000%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "MU",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.02,
+      "recommendedTerminalGrowth": 0.02,
+      "reason": "Retain 2.0% nominal USD: approximately zero real terminal growth at 2% inflation deliberately captures mature through-cycle memory economics. Do not treat a scarcity/AI memory boom as permanent real growth; terminal ROIC only modestly exceeds WACC.",
+      "sensitivityRange": {
+        "low": 0,
+        "high": 0.03,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+        "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/",
+        "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+        "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-26-Earnings-Deck.pdf"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.0%：以 2% 通胀为示例，实际增长约为零，体现成熟存储业务的完整周期经济性。供给紧缺或人工智能繁荣不应永久外推；终值 ROIC 仅略高于 WACC。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.500000%; terminal growth 2.000000%; terminal FCFF growth versus final explicit FCFF 6.683673%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "AVGO",
+      "currency": "USD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.025,
+      "recommendedTerminalGrowth": 0.025,
+      "reason": "Retain 2.5% nominal USD: a diversified mature franchise supports modest real expansion, but custom-silicon concentration, architectural replacement and acquired-software maturity do not warrant perpetuating current AI growth. Existing 20% terminal ROIC already assumes durable rents; unresolved capital normalization argues against an additional growth premium.",
+      "sensitivityRange": {
+        "low": 0.01,
+        "high": 0.035,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.0509,
+        "currency": "USD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "observed_USD_reference",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm",
+        "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+        "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026/"
+      ],
+      "reasonZhHans": "保留美元名义增长率 2.5%：多元化成熟业务支持温和实际增长，但定制芯片客户集中、架构替代和收购软件业务成熟限制永久外推人工智能增长。20% ROIC 已包含持久超额回报；资本正常化问题不支持再加增长溢价。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.500000%; terminal growth 2.500000%; terminal FCFF growth versus final explicit FCFF -7.167777%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    },
+    {
+      "ticker": "TSM",
+      "currency": "TWD",
+      "nominal": true,
+      "currentTerminalGrowth": 0.02,
+      "recommendedTerminalGrowth": 0.02,
+      "reason": "Retain 2.0% nominal TWD: approximately 0.49% real under the existing 1.5% long-run TWD inflation assumption. Currency consistency, global customers, mature node economics and capital demands matter more than Taiwan domestic near-term GDP. 2.5% is a reasonable higher-real-growth sensitivity, but no uniquely supported new TWD central rate is established.",
+      "sensitivityRange": {
+        "low": 0.01,
+        "high": 0.03,
+        "interpretation": "Judgmental scenario endpoints, not confidence interval or independent Monte Carlo distribution"
+      },
+      "resolvedRiskFreeReference": {
+        "rate": 0.040647317073170486,
+        "currency": "TWD",
+        "date": "2026-10-16",
+        "sourceURL": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+        "status": "synthetic_TWD_reference_from_existing_inflation_assumptions_not_observed_Taiwan_yield",
+        "localReference": "dist/data/current-market-references.json",
+        "caution": null
+      },
+      "companySourceURLs": [
+        "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/3a94d1034b9e6b22446b674f7aaf3d088a12a193/FS.pdf",
+        "https://investor.tsmc.com/english/quarterly-results/2026/q3",
+        "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+        "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf"
+      ],
+      "reasonZhHans": "保留新台币名义增长率 2.0%：在现有长期通胀假设 1.5% 下，实际增长约为 0.49%。币种一致性、全球客户、成熟制程及资本需求比台湾短期 GDP 更重要。2.5% 可作敏感性方案，但证据不足以唯一确定新的中心值。",
+      "transition": "Original terminal policy preserved. Final explicit revenue growth 2.000000%; terminal growth 2.000000%; terminal FCFF growth versus final explicit FCFF 1.750611%. No silent smoothing or extra capital subtraction.",
+      "transitionZhHans": "保留原终值政策及年度路径；资本过渡差异仍需单独检查。"
+    }
+  ]
+};

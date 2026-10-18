@@ -38,6 +38,8 @@ test('flexible boundaries: all 24 legacy generic/researched valuations and seede
  for(const record of goldens){
   const {snapshot,draft}=context(record.ticker,{researched:record.kind==='research'});
   const config={...simulationDefaults(draft.assumptions),trials:31,seed:'v19-boundary-exact-'+record.ticker+'-'+record.kind};
+  // Replay the exact saved pre-annual-method configuration, including export shape.
+  delete config.method;delete config.annualPath;delete config.annualMetrics;delete config.annualTerminal;
   assert.equal(hash(calculateCurrent(snapshot,draft)),record.valuation,`${record.ticker} ${record.kind} valuation`);
   assert.equal(hash(simulateCurrent(snapshot,draft,config)),record.simulation,`${record.ticker} ${record.kind} simulation`);
  }

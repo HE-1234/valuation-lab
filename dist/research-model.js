@@ -1,3 +1,4 @@
+import {terminalReviewIdentityValid} from './terminal-growth-review-identity.js';
 // Versioned annual research model. The historical and scalar engines are unchanged.
 import {researchBridgeDefinition} from './research-claims.js';
 import {annualHorizonIssues} from './annual-growth-horizon.js';
@@ -50,7 +51,7 @@ export function restoreResearchDraft(value,c){
  if(value==null)return {draft:researchDraftFor(c),restored:false,error:null};
  // A malformed saved draft is never replaced by the new research numbers.
  // Return it intact so the user can export/recover it, with calculation withheld.
- if(!object(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==RESEARCH_VERSION||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
+ if(!object(value)||!terminalReviewIdentityValid(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==RESEARCH_VERSION||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
  const errors=researchDraftIssues(value);
  const draft=copy(value);
  if(!errors.length&&c.ticker==='LITE')preserveLegacyLiteBridge(draft);

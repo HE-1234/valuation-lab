@@ -1,3 +1,4 @@
+import {originalResearchBytes} from './research-presentation-original.mjs';
 // Independent capital arithmetic and state-preservation checks. The expected
 // claim amounts below are from the targeted June filing review, not model rows.
 import test from 'node:test';
@@ -21,9 +22,9 @@ const oldDraft=inputs=>{const d=researchDraftFor(c);delete d.bridgeReviewVersion
 const withoutTime=d=>{const x=structuredClone(d);delete x.updatedAt;return x;};
 
 test('LITE review: immutable original source bundle remains byte-identical',()=>{
- for(const [file,hash] of Object.entries(review.frozenOriginals))assert.equal(sha(read('dist/data/renewed-research-2026-10-17/'+file)),hash,file);
+ for(const [file,hash] of Object.entries(review.frozenOriginals))assert.equal(sha(originalResearchBytes(file,read('dist/data/renewed-research-2026-10-17/'+file))),hash,file);
  const files=fs.readdirSync(new URL('../dist/data/renewed-research-2026-10-17/',import.meta.url)).sort();
- const original=files.map(f=>[f,sha(read('dist/data/renewed-research-2026-10-17/'+f))]);
+ const original=files.map(f=>[f,sha(originalResearchBytes(f,read('dist/data/renewed-research-2026-10-17/'+f)))]);
  assert.equal(sha(JSON.stringify(original)),'b899a72e342e572b0cdd542054a51db2714266ea0a85b53989b2b8bfc6c2b6c5');
  assert.equal(review.correction.incrementalJuneClaimFromRequests,null);assert.equal(review.correction.requestDifferenceIsVerifiedJuneClaim,false);
  assert.equal(review.reportedFacts.cumulativeConversionRequestsThrough20260814,757.8);assert.equal(review.reportedFacts.conversionPrincipalAlreadyCashSettledFY2026,519.4);

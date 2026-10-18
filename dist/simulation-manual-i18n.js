@@ -1,0 +1,5 @@
+import {registerCatalog} from './i18n.js';
+registerCatalog('simulationManual',{
+ en:{run:'Run simulation',cancel:'Cancel',idle:'Ready when you are. Choose your assumptions, then click Run simulation.',stale:'Previous completed distribution shown. It does not reflect the current inputs. Click Run simulation to update.',running:'Running simulation for the selected inputs…',cancelled:'Simulation cancelled. Click Run simulation when you are ready.',unavailable:'Inspection, replay and export are unavailable until you run the current inputs.',preview:'Run simulation to update the sampled annual paths. Input distribution shapes update as you edit.',invalid:'Simulation withheld. Correct the settings, then click Run simulation.'},
+ 'zh-Hans':{run:'运行模拟',cancel:'取消',idle:'选择假设后，点击“运行模拟”开始计算。',stale:'当前显示的是上一次完成的分布，不反映当前输入。点击“运行模拟”更新。',running:'正在使用选定的输入运行模拟…',cancelled:'模拟已取消。准备好后，点击“运行模拟”。',unavailable:'运行当前输入后，才能查看详情、回放和导出结果。',preview:'点击“运行模拟”更新年度抽样路径。输入分布的形状会随编辑即时更新。',invalid:'暂不运行模拟。请修正设置，然后点击“运行模拟”。'}
+});

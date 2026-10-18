@@ -8,3 +8,23 @@
 @media(max-width:650px){body>aside nav{display:flex;flex-wrap:wrap;overflow:visible;border-radius:16px}body>aside nav button{flex:1 0 calc(33.333% - 6px);min-width:0;min-height:44px;white-space:normal;padding:8px 6px}}
 /* Annual inputs are one vertical flow; do not inherit wrapping from global aside chrome. */
 .annual-workspace #research-editor{flex-wrap:nowrap}
+
+/* Annual revenue growth reuses the approved signed bar chart and theme tokens. */
+.annual-revenue-growth{border-top:1px solid var(--line);padding-top:16px;margin:18px 0 22px}
+.annual-revenue-growth .approved-plot-heading{flex-wrap:wrap;gap:8px}
+.annual-revenue-growth h3{margin:0;font-size:16px}
+.annual-revenue-growth .annual-revenue-growth-bars{grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:22px 12px;padding-top:20px}
+.annual-revenue-growth .approved-growth-column{height:156px;border-radius:3px}
+.annual-revenue-growth .approved-growth-column:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.annual-revenue-growth .approved-growth-track{height:108px}
+.annual-revenue-growth .approved-growth-bar{animation:annual-revenue-grow 460ms ease-out both}
+.annual-revenue-growth .approved-growth-value{font-size:11px;color:var(--ink)}
+.annual-growth-values{margin-top:10px;font-size:12px}
+.annual-growth-values summary{cursor:pointer;color:var(--accent)}
+.annual-growth-values table{width:100%;border-collapse:collapse;margin-top:10px;font-variant-numeric:tabular-nums}
+.annual-growth-values th,.annual-growth-values td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+.annual-growth-values td{text-align:right}
+@keyframes annual-revenue-grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){.annual-revenue-growth .approved-growth-bar{animation:none}}
+.annual-growth-status{display:block;text-align:center;font-size:10px;line-height:12px;color:var(--muted);margin-top:2px;overflow-wrap:anywhere}
+.annual-ocf-note{border-left:2px solid var(--line);padding-left:10px}

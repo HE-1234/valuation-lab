@@ -1,16 +1,25 @@
 # Valuation Lab
 
-Buildless browser application with an owner-private Sites deployment. Serve `dist/` with a local static HTTP host. No server credentials, broker connections, market trades or paid API calls.
+Buildless browser application with an owner-approved public Sites deployment. Serve `dist/` with a local static HTTP host. No server credentials, broker connections, market trades or paid API calls.
 
 ## Source and hosting
 
-The owner-approved source mirror is https://github.com/HE-1234/valuation-lab. Source visibility is separate from the live website's owner-private access. The static files do not implement authentication themselves; another host does not inherit Sites access controls. Font licenses and research-source provenance remain included.
+The owner-approved source mirror is https://github.com/HE-1234/valuation-lab. Source visibility and live website access are separate settings; the current Site is public by owner request. The static files do not implement authentication themselves; another host does not inherit Sites access controls. Font licenses and research-source provenance remain included.
 
 For a loopback-only local preview, run `python3 -m http.server 8080 --bind 127.0.0.1 --directory dist`, then open http://localhost:8080. Use a separate browser profile for demonstrations to keep existing local drafts untouched.
 
 ## Run and verify
 
-`npm test` runs pure-engine tests. `npm start` serves port 8080. `tests/browser_qa.py` is the integration test (requires Playwright and a launchable Chromium). Local headless browser QA was attempted but blocked by this executor's socket permissions; an escalation failed before launch due to executor setup. Do not report browser tests as passed. The deployed owner-private origin was opened in the supported cloud browser and displayed its normal owner sign-in gate; authenticated interactive QA remains unverified.
+`npm test` runs engine, source-integrity, presentation and synthetic-DOM regression tests. `npm start` serves port 8080. `tests/browser_qa.py` is the integration test (requires Playwright and a launchable Chromium). Local headless browser QA was attempted but blocked by this executor's socket permissions; an escalation failed before launch due to executor setup. Do not report browser tests as passed. The public origin is accessible in the supported cloud browser. Native checks and source-driven mobile renders are recorded separately; static renders are not real-device interaction tests.
+
+## Current interface and uncertainty model
+
+- The approved Annual Report design supports English and Simplified Chinese with a corner language button and six themes.
+- Monte Carlo runs only through Run simulation. Editing, reset and Undo leave results stale until explicitly rerun; Cancel invalidates in-flight results.
+- Future annual growth, margin, tax, WACC and capital inputs have separate uncertainty controls. Derived revenue/cash flow is not sampled twice. See [annual uncertainty](ANNUAL-METRIC-UNCERTAINTY.md).
+- Year-by-year charts show revenue and unlevered FCFF growth for every forecast year. Zero/negative cash-flow transitions have explicit labels. OCF is not separately forecast and is not inferred from net reinvestment.
+- The additive Atlas directory contains 99 verified additional listings and 20 coverage-only entities. New listings are research-pending; the fourteen reviewed valuation cases remain distinct. See [directory readiness](ATLAS-COMPANY-CATALOG.md).
+- Frozen source research and legacy numerical goldens remain intact. New metric SDs default to zero unless edited; these are modeling inputs, not estimated probabilities.
 
 ## Architecture
 
@@ -179,3 +188,7 @@ Disabled/default paths keep their existing values. Guided returns to its simple 
 ## Annual Report design and capital diagnostics
 
 The user-approved Annual Report UI is the current presentation baseline. See [integration provenance and modeling notes](UI-INTEGRATION.md). Guided optionally supports independently authored early/later incremental sales-to-capital assumptions; Year-by-year retains explicit investment schedules. Return diagnostics are labeled marginal proxies unless a reliable invested-capital stock is supplied.
+
+## Annual growth uncertainty
+
+Fresh Monte Carlo configurations use correlated annual growth paths with fixed-year anchors, configurable innovation SD and persistence. Previously saved simulations retain their method; the selector also offers the legacy single growth draw. [Read the method, limitations and source notes](ANNUAL-PATH-SIMULATION.md). The chart-wide rain replay visualizes already computed outcomes.

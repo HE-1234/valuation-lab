@@ -1,3 +1,4 @@
+import {currentResearchDraft} from '../dist/current-research-defaults.js';
 // Independent minimal-DOM runtime QA of the actual shipped annual workspace.
 // No browser, external network, layout, or financial-forecast assurance is implied.
 import test from 'node:test';
@@ -22,11 +23,12 @@ test('renewed workspace: fresh default and all fourteen companies use complete r
  for(const c of h.library.companies){
   h.get(`[data-research-company="${c.ticker}"]`).click();
   const {draft:d,identityError}=h.getState();
-  assert.equal(identityError,null,c.ticker);assert.equal(d.userEdited,false,c.ticker);
-  assert.equal(d.forecastHorizonYears,c.forecastHorizonYears,c.ticker);assert.equal(d.annual.length,c.annual.length,c.ticker);
-  assert.deepEqual(d.annual,c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),c.ticker);
-  assert.deepEqual(d.terminal,{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},c.ticker);
-  assert.equal(h.root.querySelectorAll('[data-research-input="annual"]').length,c.annual.length*5,c.ticker);
+  const bundle=JSON.parse(read('data/studio-research-presets-2026-10-17-v1.json')),expected=currentResearchDraft(bundle.presets.find(p=>p.ticker===c.ticker),bundle);
+  assert.equal(identityError,null,c.ticker);assert.equal(d.userEdited,expected.userEdited,c.ticker);
+  assert.equal(d.forecastHorizonYears,expected.forecastHorizonYears,c.ticker);assert.equal(d.annual.length,expected.annual.length,c.ticker);
+  assert.deepEqual(d.annual,expected.annual,c.ticker);
+  assert.deepEqual(d.terminal,expected.terminal,c.ticker);
+  assert.equal(h.root.querySelectorAll('[data-research-input="annual"]').length,expected.annual.length*5,c.ticker);
   assert.ok(h.get('.research-value'),c.ticker+' operating value missing');assert.ok(Number.isFinite(calculateResearchOperating(d).enterprise),c.ticker);
   assert.match(h.get('#research-results').textContent,d.timing.mode==='as-of-scenario'?/As-of operating scenario/:/Forecast-origin operating value/);
   assert.equal(h.get('.research-date-line').querySelector('time').getAttribute('datetime'),d.timing.mode==='as-of-scenario'?d.timing.asOf:c.valuationTiming.discountOrigin);

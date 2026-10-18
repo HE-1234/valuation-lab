@@ -9,7 +9,7 @@ const company={ticker:'QA',name:'Independent synthetic operating company',curren
 const raw={id:'QA-2025',snapshotMode:'annual-reference',periodEnd:'2025-12-31',filingDate:'2026-02-01',sourceUrl:'https://example.com/qa-filing',currency:'USD',revenue:1000,EBIT:120,cash:80,debt:140,shares:10,shareBasis:'common shares; same split basis'};
 const snapshot=currentSnapshot(company,raw);
 const draft=()=>({...draftFor(company,raw),cutoff:'2026-10-17',bridgeReviewed:true,modelReviewed:true});
-const config=d=>({...simulationDefaults(d.assumptions),trials:1000,seed:'independent-v6-QA'});
+const config=d=>({...simulationDefaults(d.assumptions),method:'legacy',trials:1000,seed:'independent-v6-QA'});
 const fixedConfig=d=>{const c=config(d);for(const k of Object.keys(c.drivers))c.drivers[k]={low:d.assumptions[k],mode:d.assumptions[k],high:d.assumptions[k]};return c;};
 const near=(a,b)=>assert.ok(Math.abs(a-b)<=Math.max(1e-10,Math.abs(b)*1e-10),`${a} != ${b}`);
 

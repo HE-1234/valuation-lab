@@ -11,7 +11,7 @@ const companies=JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-researc
 const presets=JSON.parse(fs.readFileSync(new URL('../dist/data/studio-research-presets-2026-10-17-v1.json',import.meta.url)));
 const company=ticker=>companies.find(c=>c.ticker===ticker);
 const draft=(ticker,horizon=15)=>deriveAnnualGrowthHorizon(researchDraftFor(company(ticker)),company(ticker),{growthMaturityYear:horizon});
-const config=(stress={},extra={})=>({...simulationResearchDefaults(),trials:7,...extra,drivers:Object.fromEntries(RESEARCH_SIMULATION_DRIVER_KEYS.map(k=>[k,{type:'fixed',value:{growthPremium:0,marginShift:0,investmentMultiplier:1,waccShift:0,...stress}[k]}]))});
+const config=(stress={},extra={})=>({...simulationResearchDefaults(),method:'legacy',trials:7,...extra,drivers:Object.fromEntries(RESEARCH_SIMULATION_DRIVER_KEYS.map(k=>[k,{type:'fixed',value:{growthPremium:0,marginShift:0,investmentMultiplier:1,waccShift:0,...stress}[k]}]))});
 const close=(a,b)=>assert.ok(Math.abs(a-b)<=Math.max(1,Math.abs(b))*2e-12,`${a} != ${b}`);
 
 for(const c of companies)for(const horizon of [10,15,20])test(`derived simulation: ${c.ticker} / ${horizon} zero stress exactly retains edited deterministic economics`,()=>{
@@ -93,8 +93,8 @@ test('derived simulation UI: pending and invalid edits withhold exports, superse
  const drain=async()=>{for(let i=0;i<50;i++){if(releases.length)releases.shift()();await ticks();if(!h.get('#mc-export').disabled)break;}};
  try{
   assert.equal(h.get('#mc-export').disabled,true);
-  h.get('#mc-seed').value='superseded';h.get('#mc-seed').oninput();h.runTimers();
-  h.get('#mc-seed').value='current-derived';h.get('#mc-seed').oninput();h.runTimers();
+  h.get('#mc-seed').value='superseded';h.get('#mc-seed').oninput();h.get('#mc-run').click();h.runTimers();
+  h.get('#mc-seed').value='current-derived';h.get('#mc-seed').oninput();h.get('#mc-run').click();h.runTimers();
   await drain();assert.equal(h.get('#mc-export').disabled,false);
   h.get('#mc-export').click();const exported=JSON.parse(await h.exports[0].text());
   assert.equal(exported.config.seed,'current-derived');assert.equal(exported.config.capitalPolicy,DERIVED_CAPITAL_POLICY);assert.equal(exported.draft.schemaVersion,2);

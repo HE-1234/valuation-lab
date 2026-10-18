@@ -1,0 +1,27 @@
+/* A full-viewport, left-to-right reveal of the actual new theme. No palette,
+   layout, cloned controls, focus changes or additional accessibility tree. */
+:root[data-theme-sweep]::view-transition { pointer-events: none; }
+:root[data-theme-sweep]::view-transition-group(root) { animation: none; }
+:root[data-theme-sweep]::view-transition-image-pair(root) { isolation: isolate; }
+:root[data-theme-sweep]::view-transition-old(root),
+:root[data-theme-sweep]::view-transition-new(root) {
+ animation: none;
+ mix-blend-mode: normal;
+ pointer-events: none;
+}
+:root[data-theme-sweep]::view-transition-old(root) { z-index: 1; }
+:root[data-theme-sweep]::view-transition-new(root) {
+ z-index: 2;
+ animation: theme-sweep-reveal 600ms cubic-bezier(.22, .61, .36, 1) both;
+}
+/* Capture final colors, rather than a partially interpolated button/surface. */
+:root[data-theme-sweep] *,
+:root[data-theme-sweep] *::before,
+:root[data-theme-sweep] *::after { transition: none !important; }
+@keyframes theme-sweep-reveal {
+ from { clip-path: inset(0 100% 0 0); }
+ to { clip-path: inset(0 0 0 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+ :root[data-theme-sweep]::view-transition-new(root) { animation: none !important; }
+}

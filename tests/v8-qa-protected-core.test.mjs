@@ -1,3 +1,4 @@
+import {originalResearchBytes} from './research-presentation-original.mjs';
 // Independent v8 regression contract. This is source/numerical QA, not browser QA.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -12,11 +13,11 @@ const manifest=JSON.parse(fs.readFileSync(new URL('./fixtures/v7-protected-sourc
 
 test('v8 QA: original 35 protected data files remain byte-identical to v7',()=>{
  assert.equal(Object.keys(manifest.data).length,35);
- for(const [file,sha] of Object.entries(manifest.data))assert.equal(createHash('sha256').update(read(file)).digest('hex'),sha,file);
+ for(const [file,sha] of Object.entries(manifest.data))assert.equal(createHash('sha256').update(originalResearchBytes(file,read(file))).digest('hex'),sha,file);
 });
 test('v8 QA: deterministic engine remains byte-identical; UI and motion have explicit bounded contracts',()=>{
  assert.equal(Object.keys(manifest.core).length,3);
- for(const [file,sha] of Object.entries(manifest.core).filter(([file])=>!['dist/app.js','dist/motion.js'].includes(file)))assert.equal(createHash('sha256').update(read(file)).digest('hex'),sha,file);
+ for(const [file,sha] of Object.entries(manifest.core).filter(([file])=>!['dist/app.js','dist/motion.js'].includes(file)))assert.equal(createHash('sha256').update(originalResearchBytes(file,read(file))).digest('hex'),sha,file);
 });
 // UI feedback explicitly authorizes navigation, Learn, and human-readable dates.
 // Strip only those known presentation lines/wrappers, then pin every remaining
@@ -26,11 +27,24 @@ test('feedback preservation: historical app logic outside authorized presentatio
  // (the Annual Report editions, then the earlier palette names).
  // Reverse exactly those substitutions before comparing the SAME protected hash.
  const restoreApprovedThemePresentation=source=>source
+  // Approved theme sweep changes only these exact presentation integration lines.
+  .replace("import {createThemeTransition} from './theme-transition.js';\n",'')
+  .replace("const themeTransition=createThemeTransition(setTheme);\n",'')
+  .replace("b.onclick=()=>themeTransition.select(b.dataset.themeChoice,true)","b.onclick=()=>setTheme(b.dataset.themeChoice,true)")
+  .replace("themeTransition.select(e.newValue,false,false)","setTheme(e.newValue)")
   .replace("{forest:'Glacier',slate:'Cobalt Ledger',midnight:'Night Edition',sand:'Graphite',plum:'Aubergine',ocean:'Pine'}","{forest:'Paper & Forest',slate:'Ivory & Teal',midnight:'Midnight',sand:'Sand & Terracotta',plum:'Plum & Rose',ocean:'Ocean & Teal'}")
   .replace("{forest:'#edf2f4',slate:'#f3f4f1',midnight:'#10141b',sand:'#f1f1ef',plum:'#f4f1f3',ocean:'#eff2ee'}","{forest:'#183b30',slate:'#f8f7f2',midnight:'#142024',sand:'#633b2c',plum:'#402642',ocean:'#123f49'}")
   .replace("slate:'Ivory & Teal'","slate:'Slate & Blue'")
   .replace("slate:'#f8f7f2',midnight:'#142024'","slate:'#172b4a',midnight:'#111a29'");
- const normalize=source=>restoreApprovedThemePresentation(source).split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
+ // Each entire reviewed block must still match; no generic omission of app code.
+ // Reverse exactly to V34, then retain the original pre-feedback logic hash.
+ const approved=JSON.parse(fs.readFileSync(new URL('./fixtures/v34-app-presentation-changes.json',import.meta.url)));
+ assert.equal(approved.baselineCommit,'5feb436ff916b7a5149b2590c6790d2edfa5741d');
+ // User-requested Simplified Chinese changes only this exact import/registration block.
+ const simplified="import appChinese from './locales/historical-app.zh-Hans.js';\nregisterCatalog('historical-app',{en:appEnglish,'zh-Hans':appChinese});";
+ const traditional="import appChinese from './locales/historical-app.zh-Hant.js';\nregisterCatalog('historical-app',{en:appEnglish,'zh-Hant':appChinese});";
+ const restoreApprovedLocalization=source=>{assert.equal(source.split(simplified).length-1,1);source=source.replace(simplified,traditional);for(const change of approved.changes){assert.equal(source.split(change.presentation).length-1,1,'Reviewed presentation block changed');source=source.replace(change.presentation,change.original);}return source;};
+ const normalize=source=>restoreApprovedThemePresentation(restoreApprovedLocalization(source)).split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
  assert.equal(createHash('sha256').update(normalize(read('dist/app.js').toString())).digest('hex'),'3dd3826561e371f46b58af041b8088e69b20add0aae3bebb72cb03737360f6cc');
 });
 test('v8 QA: prior annual economics remain fixed except the exact source-reviewed AAOI debt corrections',()=>{

@@ -1,3 +1,4 @@
+import {originalResearchBytes} from './research-presentation-original.mjs';
 // Independent annual-model oracle. Expected economics come from the frozen source,
 // not from the production calculator. Authorized schema-2 growth and simulation UI
 // changes have separate migration/golden coverage. Unchanged source/core hashes pin baseline ea930d21888d0c050eec20fd4789d3c4d992156b.
@@ -94,7 +95,7 @@ test('renewed source: frozen 14-company, 160-row numeric payload is preserved ex
 
 test('renewed source: frozen data and reviewed core module signatures remain pinned',()=>{
  assert.ok(Object.keys(protectedHashes).filter(p=>p.startsWith('dist/data/')).length>=35);
- for(const [path,hash] of Object.entries(protectedHashes))assert.equal(sha(read(path)),hash,path);
+ for(const [path,hash] of Object.entries(protectedHashes))assert.equal(sha(originalResearchBytes(path,read(path))),hash,path);
 });
 
 for(const c of cases)test(`annual independent oracle: ${c.ticker}, all ${c.annual.length} rows and terminal`,()=>{

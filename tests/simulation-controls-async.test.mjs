@@ -10,7 +10,7 @@ import {simulateResearch,simulationResearchDefaults} from '../dist/research-simu
 const cases=JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-research-2026-10-17/cases.json',import.meta.url)));
 const allCases=cases.companies;
 const baseCase=ticker=>allCases.find(c=>c.ticker===ticker);
-const annualFixture=ticker=>{const draft=researchDraftFor(baseCase(ticker));draft.researchSimulationConfig={...simulationResearchDefaults(),trials:20};return fixture({ticker,autoplay:false,draftOverride:draft,snapshotOverride:{ticker,currency:draft.currency,periodEnd:draft.discountOrigin,raw:{id:draft.caseId}},adapter:annualResearchSimulationAdapter(draft)});};
+const annualFixture=ticker=>{const draft=researchDraftFor(baseCase(ticker));draft.researchSimulationConfig={...simulationResearchDefaults(),method:'legacy',trials:20};return fixture({ticker,autoplay:false,draftOverride:draft,snapshotOverride:{ticker,currency:draft.currency,periodEnd:draft.discountOrigin,raw:{id:draft.caseId}},adapter:annualResearchSimulationAdapter(draft)});};
 const ticks=async()=>{await Promise.resolve();await Promise.resolve();};
 async function drain(h,releases){for(let n=0;n<1000;n++){if(releases.length)releases.shift()();await ticks();if(h.get('#mc-chart')||h.get('#mc-error').textContent)break;}await ticks();}
 
@@ -26,7 +26,7 @@ test('Monte Carlo setup is visible with six keyboard tabs and every driver famil
 });
 test('manual falling balls start clearly, pause/resume, and restore exact bins',()=>{
  const h=fixture({ticker:'MC-MANUAL',autoplay:false});try{
-  const full=h.bars().map(b=>b.getAttribute('height'));assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML,/>Replay simulation<\/button>/);
+  const full=h.bars().map(b=>b.getAttribute('height'));assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML.replace(/<\/?span\b[^>]*>/g,''),/>Replay simulation<\/button>/);
   h.get('#mc-play').click();assert.equal(h.animations.length,112);assert.match(h.get('#mc-play').textContent,/Pause replay/);h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Resume replay/);assert.ok(h.animations.every(a=>a.state==='paused'));h.get('#mc-play').click();
   h.get('#mc-skip').click();assert.match(h.get('#mc-play').textContent,/Replay simulation/);assert.deepEqual(h.bars().map(b=>b.getAttribute('height')),full);
  }finally{h.cleanup()}
@@ -34,7 +34,7 @@ test('manual falling balls start clearly, pause/resume, and restore exact bins',
 test('sampling count and seed persist per draft; saved arbitrary supported counts remain unchanged',()=>{
  const changes=[],config={...simulationDefaults(),trials:37,seed:'saved-count'},h=fixture({ticker:'MC-COUNT',reduced:true,autoplay:false,simulationConfig:config,onConfigChange:c=>changes.push(c)});try{
   assert.equal(h.get('#mc-trials').value,'37');assert.match(h.root.innerHTML,/37 · saved count/);h.get('#mc-trials').value='1000';h.get('#mc-trials').onchange();assert.equal(changes.at(-1).trials,1000);assert.equal(h.get('#mc-trial-count').textContent,'1,000');
-  h.get('#mc-seed').value='replay-me';h.get('#mc-seed').oninput();assert.equal(changes.at(-1).seed,'replay-me');h.get('#mc-export').click();assert.equal(h.exports.length,1);
+  h.get('#mc-seed').value='replay-me';h.get('#mc-seed').oninput();assert.equal(changes.at(-1).seed,'replay-me');h.get('#mc-run').click();h.get('#mc-export').click();assert.equal(h.exports.length,1);
   h.get('#mc-reset-distributions').click();assert.equal(changes.at(-1),null);assert.equal(h.get('#mc-trials').value,'4000');assert.equal(h.get('#mc-seed').value,'valuation-lab');
  }finally{h.cleanup()}
 });
@@ -51,9 +51,9 @@ test('superseded async runs never repaint or export stale results; controls rema
  const releases=[],h=fixture({ticker:'MC-STALE',autoplay:false,synchronous:false,yieldControl:()=>new Promise(resolve=>releases.push(resolve))});try{
   assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-export').disabled,true);assert.ok(h.get('#mc-seed'));h.get('#mc-tab-sampling').click();assert.equal(h.get('#mc-panel-sampling').hidden,false);
   h.get('#mc-growth-low').value='90';h.get('#mc-growth-low').oninput();assert.match(h.get('#mc-error').textContent,/low.*mode.*high/);releases.shift()();await ticks();assert.equal(h.get('#mc-chart'),null);
-  h.get('#mc-growth-low').value='1';h.get('#mc-trials').value='1000';h.get('#mc-seed').value='first';h.get('#mc-seed').oninput();h.runTimers();assert.equal(h.get('#mc-chart'),null);
-  h.get('#mc-seed').value='latest';h.get('#mc-seed').oninput();h.runTimers();await drain(h,releases);assert.ok(h.get('#mc-chart'));h.get('#mc-export').click();const exported=JSON.parse(await h.exports[0].text());assert.equal(exported.config.seed,'latest');assert.equal(exported.attempts,1000);assert.deepEqual(exported.samples,simulateCurrent(h.snapshot,h.draft,exported.config).samples);
-  h.get('#mc-seed').value='destroyed';h.get('#mc-seed').oninput();h.runTimers();const before=h.get('#mc-output').innerHTML;h.destroy();for(const resolve of releases.splice(0))resolve();await ticks();assert.equal(h.get('#mc-output').innerHTML,before);
+  h.get('#mc-growth-low').value='1';h.get('#mc-trials').value='1000';h.get('#mc-seed').value='first';h.get('#mc-seed').oninput();h.get('#mc-run').click();h.runTimers();assert.equal(h.get('#mc-chart'),null);
+  h.get('#mc-seed').value='latest';h.get('#mc-seed').oninput();h.get('#mc-run').click();h.runTimers();await drain(h,releases);assert.ok(h.get('#mc-chart'));h.get('#mc-export').click();const exported=JSON.parse(await h.exports[0].text());assert.equal(exported.config.seed,'latest');assert.equal(exported.attempts,1000);assert.deepEqual(exported.samples,simulateCurrent(h.snapshot,h.draft,exported.config).samples);
+  h.get('#mc-seed').value='destroyed';h.get('#mc-seed').oninput();h.get('#mc-run').click();h.runTimers();const before=h.get('#mc-output').innerHTML;h.destroy();for(const resolve of releases.splice(0))resolve();await ticks();assert.equal(h.get('#mc-output').innerHTML,before);
  }finally{h.cleanup()}
 });
 test('annual setup names direct investment, displays exact reviewed defaults and conditional share toggle',()=>{
@@ -86,17 +86,17 @@ test('saved high-resolution histogram replay stays bounded and completes exact b
 });
 test('uncertainty reset has one-step undo preserving distributions, count, seed and invalid saved data',()=>{
  const changes=[],config={...simulationDefaults(),trials:37,seed:'before-reset'},h=fixture({ticker:'MC-UNDO',reduced:true,simulationConfig:config,onConfigChange:c=>changes.push(c)});try{
-  h.get('#mc-reset-distributions').click();assert.equal(changes.at(-1),null);assert.equal(h.get('#mc-undo-reset').hidden,false);h.get('#mc-undo-reset').click();assert.deepEqual(changes.at(-1),config);assert.equal(h.get('#mc-trials').value,'37');assert.equal(h.get('#mc-seed').value,'before-reset');assert.equal(h.get('#mc-undo-reset').hidden,true);assert.ok(h.get('#mc-chart'));
+  h.get('#mc-reset-distributions').click();assert.equal(changes.at(-1),null);assert.equal(h.get('#mc-undo-reset').hidden,false);h.get('#mc-undo-reset').click();assert.deepEqual(changes.at(-1),config);assert.equal(h.get('#mc-trials').value,'37');assert.equal(h.get('#mc-seed').value,'before-reset');assert.equal(h.get('#mc-undo-reset').hidden,true);h.get('#mc-run').click();assert.ok(h.get('#mc-chart'));
  }finally{h.cleanup()}
  const invalid={trials:99,seed:'corrupt original',drivers:{growth:{type:'normal',sd:0}}},invalidChanges=[],broken=fixture({ticker:'MC-UNDO-INVALID',reduced:true,simulationConfig:invalid,onConfigChange:c=>invalidChanges.push(c)});try{
-  assert.equal(broken.get('#mc-chart'),null);broken.get('#mc-reset-distributions').click();assert.ok(broken.get('#mc-chart'));broken.get('#mc-undo-reset').click();assert.deepEqual(invalidChanges.at(-1),invalid);assert.equal(broken.get('#mc-chart'),null);assert.match(broken.get('#mc-error').textContent,/Restored uncertainty settings are invalid/);assert.equal(broken.get('#mc-export').disabled,true);
+  assert.equal(broken.get('#mc-chart'),null);broken.get('#mc-reset-distributions').click();broken.get('#mc-run').click();assert.ok(broken.get('#mc-chart'));broken.get('#mc-undo-reset').click();assert.deepEqual(invalidChanges.at(-1),invalid);assert.equal(broken.get('#mc-chart'),null);assert.match(broken.get('#mc-error').textContent,/Restored uncertainty settings are invalid/);assert.equal(broken.get('#mc-export').disabled,true);
  }finally{broken.cleanup()}
 });
 test('falsy persisted configs are withheld instead of silently replaced, in both models',()=>{
  for(const value of [false,0,'']){
   const legacy=fixture({ticker:'MC-FALSY-'+String(value),reduced:true,simulationConfig:value});try{assert.equal(legacy.get('#mc-chart'),null);assert.match(legacy.get('#mc-error').textContent,/Saved uncertainty settings are invalid/);}finally{legacy.cleanup()}
   const draft=researchDraftFor(baseCase('AAPL'));draft.researchSimulationConfig=value;const changes=[],annual=fixture({ticker:'ANNUAL-FALSY-'+String(value),reduced:true,adapter:annualResearchSimulationAdapter(draft),onConfigChange:c=>changes.push(c)});try{
-   assert.equal(annual.get('#mc-chart'),null);assert.match(annual.get('#mc-error').textContent,/Saved uncertainty settings are invalid/);annual.get('#mc-reset-distributions').click();assert.ok(annual.get('#mc-chart'));annual.get('#mc-undo-reset').click();assert.equal(changes.at(-1),value);assert.equal(annual.get('#mc-chart'),null);
+   assert.equal(annual.get('#mc-chart'),null);assert.match(annual.get('#mc-error').textContent,/Saved uncertainty settings are invalid/);annual.get('#mc-reset-distributions').click();annual.get('#mc-run').click();assert.ok(annual.get('#mc-chart'));annual.get('#mc-undo-reset').click();assert.equal(changes.at(-1),value);assert.equal(annual.get('#mc-chart'),null);
   }finally{annual.cleanup()}
  }
 });

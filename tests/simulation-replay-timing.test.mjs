@@ -102,7 +102,7 @@ test('replay timing: reduced motion starts with the exact static chart and sched
 test('replay timing: annual-path single-bin replay shares the six-second schedule',()=>{
  const cases=JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-research-2026-10-17/cases.json',import.meta.url)));
  const draft=researchDraftFor(cases.companies.find(c=>c.ticker==='AAPL'));
- draft.researchSimulationConfig={...simulationResearchDefaults(draft),trials:20};
+ draft.researchSimulationConfig={...simulationResearchDefaults(draft),method:'legacy',trials:20};
  const h=fixture({autoplay:false,draftOverride:draft,snapshotOverride:{ticker:draft.ticker,currency:draft.currency,periodEnd:draft.discountOrigin,raw:{id:draft.caseId}},adapter:annualResearchSimulationAdapter(draft)});
  try{
   const full=heights(h);assert.equal(full.length,1);h.get('#mc-play').click();

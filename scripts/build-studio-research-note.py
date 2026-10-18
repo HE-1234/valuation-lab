@@ -34,3 +34,7 @@ css='''*{box-sizing:border-box}body{margin:0;background:#f7f6f2;color:#182c48;fo
 page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Complete Studio research presets · Valuation Lab</title><style>{css}</style></head><body><main><nav aria-label="Research report navigation"><a href="../#renewed">← Annual model</a><a href="studio-research-presets-2026-10-17-v1.json">Complete preset JSON</a><a href="studio-research-presets-validation-2026-10-17-v1.json">Research validation results</a></nav>{body}<footer>Analytical source-linked scenarios as of 17 October 2026. Read dated claim and uncertainty limitations before using the values.</footer></main></body></html>'''
 (ROOT/'dist/data/studio-research-presets-2026-10-17-v1.html').write_text(page)
 print('Built readable Studio research preset report')
+
+# Apply reviewed presentation overlays after regenerating the English report.
+import subprocess, sys
+subprocess.run([sys.executable, str(ROOT / "scripts/localize-research-pages.py"), "--apply"], check=True)

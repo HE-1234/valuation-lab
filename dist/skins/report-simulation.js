@@ -1,18 +1,20 @@
-// Annual Report · simulation pour. Presentation only. The simulation's own
-// replay (its representative particles) still drives the bars and every
-// statistic; this layer only draws. While the replay runs, a canvas overlay
-// pours scenarios from a single point above the median: each one arcs out to
-// where its outcome lands, like a Galton board, and touches down on the live
-// bar top as the bar grows. It follows the replay's pause, skip and finish and
-// never changes the chart's data or DOM state.
+// Annual Report · simulation rain. Presentation only. Native representative
+// particles drive the bars, statistics and replay clock. Decorative drops start
+// across the chart roof and settle into those same outcomes; no extra sampling.
+// Pause, resume, skip and cancellation remain owned by the native replay.
 const root = document.documentElement;
 const on = () => root.dataset.skin === 'report';
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const VIEW_W = 960, VIEW_H = 420, TOP = 76, BOTTOM = 326;
+const VIEW_W = 960, VIEW_H = 420, LEFT = 48, RIGHT = 918, BOTTOM = 326;
 const runs = new WeakMap();
 
-const rand = (a, b) => a + Math.random() * (b - a);
+// Stateless visual noise: never consume the financial sampler or Math.random.
+function visualNoise(index, salt) {
+  let n = Math.imul(index + 1, 0x45d9f3b) ^ salt;
+  n = Math.imul(n ^ (n >>> 16), 0x45d9f3b);
+  return ((n ^ (n >>> 16)) >>> 0) / 4294967296;
+}
 function rgb(color) {
   const probe = document.createElement('i');
   probe.style.color = color;
@@ -33,12 +35,34 @@ function replayParticles(group) {
   }).filter(p => Number.isFinite(p.target) && p.animation && Number.isFinite(p.delay) && Number.isFinite(p.duration) && p.duration > 0);
 }
 function rainPlan(particles, phone) {
+  if (!particles.length) return [];
   const copies = Math.max(1, Math.floor((phone ? 300 : 680) / particles.length));
-  return particles.flatMap(p => Array.from({length: copies}, () => {
-    const land = p.delay + p.duration;
-    const flight = Math.min(land, p.duration * rand(.55, .75));
-    return {launch: Math.max(0, land - flight), flight, target: p.target};
-  })).sort((a, b) => a.launch - b.launch);
+  const plan = particles.flatMap((p, i) => Array.from({length: copies}, (_, j) => {
+    const id = i * copies + j, land = p.delay + p.duration;
+    const flight = Math.min(land, p.duration * (.55 + .2 * visualNoise(id, 11)));
+    return {
+      id, launch: Math.max(0, land - flight), flight, target: p.target,
+      y0: 18 + 24 * visualNoise(id, 23),
+      r: (phone ? 2.3 : 1.6) + 1.1 * visualNoise(id, 37),
+      tone: .55 + .45 * visualNoise(id, 53)
+    };
+  }));
+  // Roof lanes cover the entire plot, even for a concentrated/single-bin run.
+  // Destination ordering avoids crossing paths; jitter stays inside each lane.
+  plan.sort((a, b) => a.target - b.target || a.id - b.id);
+  plan.forEach((drop, rank) => {
+    const lane = (rank + .15 + .7 * visualNoise(drop.id, 71)) / plan.length;
+    drop.x0 = LEFT + 14 + lane * (RIGHT - LEFT - 28);
+  });
+  return plan.sort((a, b) => a.launch - b.launch);
+}
+function rainPosition(drop, floor, radius, progress) {
+  const t = Math.max(0, Math.min(1, progress));
+  const settle = t * t * (3 - 2 * t);
+  return {
+    x: drop.x0 + (drop.target - drop.x0) * settle,
+    y: drop.y0 + (floor - radius - drop.y0) * (.38 * t + .62 * t * t)
+  };
 }
 function replayElapsed(particles) {
   const times = particles.map(p => p.animation.currentTime).filter(time => typeof time === 'number' && Number.isFinite(time));
@@ -52,11 +76,7 @@ function startRun(group) {
   if (!chart || !svg) return;
   const particles = replayParticles(group);
   if (!particles.length) return;
-  const targets = particles.map(p => p.target);
   const bins = [...svg.querySelectorAll('.mc-bin')];
-  const sorted = [...targets].sort((a, b) => a - b);
-  const sourceX = sorted[sorted.length >> 1];
-  const sourceY = TOP - 36;
   const [r0, g0, b0] = rgb(getComputedStyle(chart).getPropertyValue('--chart-one').trim() || '#2343c4');
   const tint = a => `rgba(${r0},${g0},${b0},${a})`;
 
@@ -82,12 +102,8 @@ function startRun(group) {
     return null;
   }
   const surfaceAt = x => barAt(x)?.y ?? BOTTOM;
-  function launch({launch, flight, target}) {
-    const x0 = sourceX + rand(-5, 5), y0 = sourceY + rand(-4, 4);
-    balls.push({
-      x: x0, y: y0, x0, y0, target, launch, flight, vx: 0, vy: 0,
-      r: rand(phone ? 2.3 : 1.6, phone ? 3.4 : 2.7), tone: rand(.55, 1), life: 1, state: 'fly'
-    });
+  function launch(drop) {
+    balls.push({...drop, x: drop.x0, y: drop.y0, life: 1, state: 'fly'});
   }
   function resize() {
     const box = svg.getBoundingClientRect(), host = chart.getBoundingClientRect();
@@ -117,37 +133,22 @@ function startRun(group) {
     ctx.restore();
     const px = 1 / scale;
 
-    // The pour point: a soft bead that breathes while scenarios leave it.
-    const pouring = next < plan.length;
-    const glow = pouring ? 1 : Math.max(0, 1 - (elapsed - (plan.at(-1)?.launch || 0)) / 400);
-    if (glow > 0) {
-      const halo = ctx.createRadialGradient(sourceX, sourceY, 0, sourceX, sourceY, 16 * px);
-      halo.addColorStop(0, tint(.35 * glow));
-      halo.addColorStop(1, tint(0));
-      ctx.fillStyle = halo;
-      ctx.beginPath(); ctx.arc(sourceX, sourceY, 16 * px, 0, Math.PI * 2); ctx.fill();
-      ctx.fillStyle = tint(.9 * glow);
-      ctx.beginPath(); ctx.arc(sourceX, sourceY, (3.2 + Math.sin(elapsed / 90) * .5) * px, 0, Math.PI * 2); ctx.fill();
-    }
-
     for (let i = balls.length - 1; i >= 0; i--) {
       const b = balls[i];
       const r = b.r * px;
       if (b.state === 'fly') {
         const t = Math.max(0, Math.min(1, (elapsed - b.launch) / b.flight));
-        const priorX = b.x, priorY = b.y, floor = surfaceAt(b.target);
-        // Arc to the actual representative outcome, even as its bar rises.
-        b.x = b.x0 + (b.target - b.x0) * t;
-        b.y = b.y0 + (floor - r - b.y0) * (.38 * t + .62 * t * t);
-        b.vx = dt ? (b.x - priorX) / dt : 0;
-        b.vy = dt ? (b.y - priorY) / dt : 0;
+        const floor = surfaceAt(b.target);
+        // Gentle horizontal settling, with gravity-like downward acceleration.
+        Object.assign(b, rainPosition(b, floor, r, t));
         if (t >= 1) {
           b.state = 'melt';
           splashes.push({x: b.target, y: floor, age: 0, w: 1, bar: floor < BOTTOM ? barAt(b.target) : null});
         }
-        // A short comet tail along the arc, only while the ball descends.
-        if (b.vy > 0) {
-          const tx = b.x - b.vx * .06, ty = b.y - b.vy * .06;
+        // Sample the same bounded path for a short tail. Frame stalls cannot
+        // fling a velocity-extrapolated tail outside the chart.
+        const {x: tx, y: ty} = rainPosition(b, floor, r, t - .035);
+        if (b.y > ty) {
           const trail = ctx.createLinearGradient(tx, ty, b.x, b.y);
           trail.addColorStop(0, tint(0));
           trail.addColorStop(1, tint(.36 * b.tone * b.life));

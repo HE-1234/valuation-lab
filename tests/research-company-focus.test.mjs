@@ -3,6 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {startResearchWorkspace,bundledResearch} from './research-workspace-harness.mjs';
 import {RESEARCH_STORAGE_PREFIX,researchDraftFor} from '../dist/research-model.js';
+import selectedGoogleCase from '../dist/goog-selected-scenario-data.js';
 
 const key=ticker=>RESEARCH_STORAGE_PREFIX+ticker;
 const withoutSaveTime=draft=>{const copy=structuredClone(draft);delete copy.updatedAt;return copy;};
@@ -31,7 +32,7 @@ test('research company focus: every reviewed company retains the initiating sele
  for(const ticker of [...tickers,...tickers.toReversed()]){
   selectAndCheckFocus(h,ticker);
   const company=h.getState().company,draft=h.getState().draft;
-  assert.deepEqual(draft.annual,researchDraftFor(company).annual);
+  assert.deepEqual(draft.annual,ticker==='GOOG'?selectedGoogleCase.draft.annual:researchDraftFor(company).annual);
   assert.equal(h.getState().identityError,null);assert.ok(h.get('.research-big-value'));
  }
 });

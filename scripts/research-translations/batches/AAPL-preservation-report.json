@@ -1,0 +1,472 @@
+{
+  "scope": "AAPL evidence batches 01–05, Traditional Chinese; exact whole-message outputs only; no source data or model edits.",
+  "validation": {
+    "total_entries": 887,
+    "keys": "Exact keys and order preserved",
+    "whitespace": "Exact leading and trailing whitespace preserved",
+    "numbers": "All numeric token multisets preserved except canonical June-to-6 rendering documented below; one inventory sentence reorders FY25 without changing values.",
+    "placeholders_urls_formulas": "Original source identifiers, URL/file selectors and computational formulas preserved.",
+    "canonical_reuse": "Previously completed exact source-message translations reused."
+  },
+  "batches": [
+    {
+      "batch": "renewed-research-2026-10-17__evidence-AAPL-01.en.json",
+      "entries": 200,
+      "keys_exact": true,
+      "numeric_semantic_exceptions": [],
+      "preserved_entries": {
+        "text.a8822d196d594ea5a512": {
+          "source": "AAPL-TTM-2026-06-27",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.ba0e996efbc143b7be65": {
+          "source": "AAPL-CURRENT-2025-09-27",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.07a0d88e5c522274c09c": {
+          "source": "us-gaap:MarketableSecuritiesCurrent",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.cbc8234996c23128d84a": {
+          "source": "us-gaap:MarketableSecuritiesNoncurrent",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.c98c276496638453c599": {
+          "source": "us-gaap:CommercialPaper",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.6995341122cf4485d3fb": {
+          "source": "us-gaap:OperatingLeaseLiability",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.8542c60832562492a331": {
+          "source": "us-gaap:FinanceLeaseLiability",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.7ad9749c64e8eae38754": {
+          "source": "us-gaap:FinanceLeaseLiabilityCurrent",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.5d0e272d734d3bf3a4ea": {
+          "source": "us-gaap:FinanceLeaseLiabilityNoncurrent",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.0cef6dcc8b9c1f2dfa3d": {
+          "source": "dei:EntityCommonStockSharesOutstanding",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.5cb6adb1ea347c7ab0f3": {
+          "source": "marketableEquitySecurities",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.ebfa85644e21c3202430": {
+          "source": "otherLongTermInvestments",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.91bf4e2d1473b974210a": {
+          "source": "shortTermBorrowings",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.1929abc81eddb33d4122": {
+          "source": "preferredEquity",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.e79a37b95db9acc80e80": {
+          "source": "noncontrollingInterest",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.fa818d18bcf7098217f1": {
+          "source": "63d29bf57dcc4a938a3517f215a7ff18c6dcc1a43cfa3e874524d3e09f21235a",
+          "reason": "Exact source SHA256 hash"
+        },
+        "text.abf66ad491c01746ada1": {
+          "source": "AAPL-CURRENT-2026-06-27",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.223c3f49850aeb16bbc1": {
+          "source": "operatingLeaseLiabilityTotal",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.8704d31c8d5b4b3d1852": {
+          "source": "financeLeaseLiabilityTotal",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.4f7a6fde64b0558b781d": {
+          "source": "operatingLeaseLiabilityCurrent",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.024691b35d7864cc88d8": {
+          "source": "operatingLeaseLiabilityNoncurrent",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.c16eab0d76ba8a0f1bbf": {
+          "source": "financeLeaseLiabilityCurrent",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.51a6a4300bae39155d6b": {
+          "source": "financeLeaseLiabilityNoncurrent",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.b9035edd3def646d558b": {
+          "source": "cf00affe5df5bcc90fda64e157472888b7dddc0a4ceccdf27805e7380ff35913",
+          "reason": "Exact source SHA256 hash"
+        },
+        "text.66b4f99a3d6a0ca8c6c1": {
+          "source": "annual + currentYTD - priorYTD",
+          "reason": "Exact computational formula"
+        },
+        "text.1e79cdefa93ce638136b": {
+          "source": "dilutedShares",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.d99d4d5b944b6d2a82a9": {
+          "source": "evidence-AAPL.html#existing-company-history",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.8b3795aa25390811064d": {
+          "source": "Mac",
+          "reason": "Proper name or fiscal-period range"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-AAPL-02.en.json",
+      "entries": 200,
+      "keys_exact": true,
+      "numeric_semantic_exceptions": [],
+      "preserved_entries": {
+        "text.7ecbc151434c806c7839": {
+          "source": "FY2023Q4–FY2026Q3",
+          "reason": "Proper name or fiscal-period range"
+        },
+        "text.ed116ecf1e6438d1067f": {
+          "source": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.48da898604978015f920": {
+          "source": "GrossProfit",
+          "reason": "Exact source field identifier / taxonomy tag"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-AAPL-03.en.json",
+      "entries": 200,
+      "keys_exact": true,
+      "numeric_semantic_exceptions": [
+        {
+          "key": "text.db694128dbfc91aba956",
+          "source": "Rolling year ending June 2027",
+          "translation": "截至2027年6月的滾動年度",
+          "reason": "Reused canonical shared translation renders English month June as numeral 6; date meaning preserved."
+        }
+      ],
+      "preserved_entries": {
+        "text.487b7e81eab27cb6fdc8": {
+          "source": "reportedSnapshots[id=AAPL-TTM-2026-06-27].facts",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.5a24539593e34a2bc5e8": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-1#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.6817ec7f5412e307de5b": {
+          "source": "evidence-AAPL.html?record=selected#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.78bd8fc258300ca5deb2": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-2#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.f878fce399cdd58b58fa": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-3#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.46f31d8b6a1e79b59780": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-4#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.4db9bf89d24ed0557a55": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-5#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.36d7d13d188b7dc7c197": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-6#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.993c92345d62a94f9d72": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-7#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.82d0105712942dd67d15": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-8#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.7b963439b660bbaacfc3": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-9#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.af792ea8e91c2b14ef08": {
+          "source": "evidence-AAPL.html?record=selected-base-annual-row-10#judgment",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.da816475ad2aa02ff602": {
+          "source": "claims.json?record=companies%5Bticker%3DAAPL%5D#",
+          "reason": "Exact file URL or data selector"
+        },
+        "text.02649c8a0b659e64874a": {
+          "source": "Apple Inc.",
+          "reason": "Proper name or fiscal-period range"
+        },
+        "text.78ea4220a974da037425": {
+          "source": "cik",
+          "reason": "Exact source field identifier / taxonomy tag"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-AAPL-04.en.json",
+      "entries": 200,
+      "keys_exact": true,
+      "numeric_semantic_exceptions": [],
+      "preserved_entries": {
+        "text.c58fd8469a9c15372ac3": {
+          "source": "AAPL-filing",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.a64dbe534e031996f53d": {
+          "source": "AAPL-release",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.6e3565bae6aefc9a8f1a": {
+          "source": "AAPL-annual-filing",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.ed5995b0ecb5cc26a5a3": {
+          "source": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43",
+          "reason": "Exact source SHA256 hash"
+        },
+        "text.f181667a2fb72e3ded72": {
+          "source": "us-gaap:Revenues",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.f2c958eeb1abb0b1d7ab": {
+          "source": "us-gaap:DepreciationDepletionAndAmortization",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.ad13321f2aae42bf27a3": {
+          "source": "longTermDebtCurrent + longTermDebtNoncurrent + commercialPaper",
+          "reason": "Exact computational formula"
+        },
+        "text.bc83405e83ca652432d3": {
+          "source": "commercialPaper",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.a3fa3e8b4704e56e0a6c": {
+          "source": "us-gaap:SalesRevenueNet",
+          "reason": "Exact XBRL taxonomy identifier"
+        },
+        "text.5ee972c3fdab77d7359d": {
+          "source": "OperatingIncomeLoss",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.4e1ff7c35b736a39afbb": {
+          "source": "OperatingExpenses",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.1e444c4b72fa370a4ce7": {
+          "source": "ResearchAndDevelopmentExpense",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.8bfe686f4c3ac5c39e36": {
+          "source": "NetIncomeLoss",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.eb5b6cdfb360370a800f": {
+          "source": "AAPL 10-K 2025-09-27",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.221fafbfc99d65bf4904": {
+          "source": "AAPL-10-K-2025-09-27",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.00485d126a5efcf6e556": {
+          "source": "AAPL 10-Q 2026-06-27",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.7c0d9afd3f257b97fbcd": {
+          "source": "AAPL-10-Q-2026-06-27",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.15d6babcb1691e599911": {
+          "source": "AAPL-historical-0000320193-22-000070",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.364643505eae43a07e92": {
+          "source": "AAPL-historical-0000320193-23-000006",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.c79cb44167b201cbe3da": {
+          "source": "AAPL-historical-0000320193-23-000064",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.8459b8564c0862c643ed": {
+          "source": "AAPL-historical-0000320193-23-000077",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.52d8becc0eefd45d331f": {
+          "source": "AAPL-historical-0000320193-23-000106",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.4e14cc4c92cb0ee09f84": {
+          "source": "AAPL-historical-0000320193-24-000006",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.0285573fba0933f19dd3": {
+          "source": "AAPL-historical-0000320193-24-000069",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.70f966f451a592b76fd0": {
+          "source": "AAPL-historical-0000320193-24-000081",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.9bf5419565af1d07ba12": {
+          "source": "AAPL-historical-0000320193-24-000123",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.553600d47c8a3cc3f63c": {
+          "source": "AAPL-historical-0000320193-25-000008",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.5741add11934126efe95": {
+          "source": "AAPL-historical-0000320193-25-000057",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.bf25e05fd549d189fed2": {
+          "source": "AAPL-historical-0000320193-25-000073",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.bc1170a04fe78349065f": {
+          "source": "AAPL-historical-0000320193-26-000006",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.c5256b3f6782f8fbe2fa": {
+          "source": "AAPL-historical-0000320193-26-000013",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.c111e87378c0ade08244": {
+          "source": "AAPL-release-FY2025Q4",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.e9330d0ee7e705b50e55": {
+          "source": "AAPL-release-FY2026Q1",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.d5c2d54a06d2a675c2ea": {
+          "source": "AAPL-release-FY2026Q2",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.8a07525618417f62333d": {
+          "source": "AAPL-release-FY2026Q3",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.db088505fa6c1502cafd": {
+          "source": "AAPL-Q3-statements",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.a35cc569601acd680f6b": {
+          "source": "AAPL-call-FY2023Q3",
+          "reason": "Exact source or snapshot identifier"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-AAPL-05.en.json",
+      "entries": 87,
+      "keys_exact": true,
+      "numeric_semantic_exceptions": [],
+      "preserved_entries": {
+        "text.8951023c96eb0f7ce029": {
+          "source": "AAPL-call-FY2023Q4",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.89f61362ae63f2b1529f": {
+          "source": "AAPL-call-FY2024Q1",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.2de2d301119f5c635524": {
+          "source": "AAPL-call-FY2024Q2",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.ac27c89f33c9bf735b4f": {
+          "source": "AAPL-call-FY2024Q3",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.3f45a2a9ee3c6475301a": {
+          "source": "AAPL-call-FY2024Q4",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.08996dd9fca81d962c81": {
+          "source": "AAPL-call-FY2025Q1",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.ebb1cfb9558fad8e44c7": {
+          "source": "AAPL-call-FY2025Q2",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.1f193ef43af599274692": {
+          "source": "AAPL-call-FY2025Q3",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.207235f26853f91e1a21": {
+          "source": "AAPL-call-FY2025Q4",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.1359ca2cf48d0c44c050": {
+          "source": "AAPL-call-FY2026Q1",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.740e7d6043567ffeb80d": {
+          "source": "AAPL-call-FY2026Q2",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.4312ee720eb118e14cb2": {
+          "source": "AAPL-call-FY2026Q3",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.37c2b74b35b59ebc8214": {
+          "source": "AAPL-leadership-2026-04-20",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.42072d60eddf068bbacc": {
+          "source": "AAPL-interview-2026-10-15",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.1003db32ac43618c288a": {
+          "source": "AAPL-product-2026-10-15",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.7ba516f634c2fc0a4955": {
+          "source": "riskFree",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.6331e75490eb81e75ca8": {
+          "source": "AAPL-macro-riskFree",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.96953dc969d7dfa43852": {
+          "source": "equityRiskPremium",
+          "reason": "Exact source field identifier / taxonomy tag"
+        },
+        "text.602973c110d0b1741286": {
+          "source": "AAPL-macro-equityRiskPremium",
+          "reason": "Exact source or snapshot identifier"
+        },
+        "text.97916e529368131b0f9a": {
+          "source": "AMZN-counterparty-Globalstar",
+          "reason": "Exact source or snapshot identifier"
+        }
+      }
+    }
+  ]
+}

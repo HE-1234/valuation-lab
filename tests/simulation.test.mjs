@@ -140,7 +140,7 @@ test('simulation: invalid quote date, source, basis or currency withholds rank o
 });
 
 test('simulation: each accepted sample replays one deterministic coherent path',()=>{
- const d=draft(),s=snapshot(),r=simulateCurrent(s,d,{...simulationDefaults(d.assumptions),trials:100});
+ const d=draft(),s=snapshot(),r=simulateCurrent(s,d,{...simulationDefaults(d.assumptions),method:'legacy',trials:100});
  for(const x of r.scenarios) {
   const a={...d.assumptions,...Object.fromEntries(SIMULATION_DRIVER_KEYS.map(k=>[k,x[k]]))};
   const v=valueCompany({...s,bridgeReviewed:true},a);assert.equal(x.perShare,v.perShare);assert.equal(x.rawPerShare,v.rawPerShare);
@@ -201,7 +201,7 @@ function correlation(rows,a,b) {
 }
 
 test('simulation: operating dependence is disclosed and preserves bounded triangular marginals',()=>{
- const d=draft(),c={...simulationDefaults(),trials:16000,seed:'dependence check',dependence:'operating-linked'};
+ const d=draft(),c={...simulationDefaults(),method:'legacy',trials:16000,seed:'dependence check',dependence:'operating-linked'};
  const r=simulateCurrent(snapshot(),d,c);
  assert.equal(r.accepted,16000);assert.equal(r.dependence.latentCorrelations[0][1],.49);
  assert.match(r.dependence.description,/not fitted data|not.*exact Pearson/);
@@ -216,7 +216,7 @@ test('simulation: operating dependence is disclosed and preserves bounded triang
 });
 
 test('simulation: independent driver mode is explicit and unlinked in a seeded diagnostic sample',()=>{
- const r=simulateCurrent(snapshot(),draft(),{...simulationDefaults(),trials:10000,seed:'independence check'});
+ const r=simulateCurrent(snapshot(),draft(),{...simulationDefaults(),method:'legacy',trials:10000,seed:'independence check'});
  assert.equal(r.dependence.id,'independent');assert.match(r.dependence.description,/not evidence/);
  for(const [a,b]of [['growth','targetMargin'],['growth','salesCapital'],['targetMargin','wacc']])assert.ok(Math.abs(correlation(r.scenarios,a,b))<.04);
 });

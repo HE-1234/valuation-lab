@@ -28,3 +28,7 @@ changelog=render((ROOT/'CHANGELOG.md').read_text()).replace('<h1>Change log</h1>
 page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Design notebook · Valuation Lab</title><style>{css}</style></head><body><main><nav aria-label="Notebook navigation"><a href="../">← Valuation Lab</a><a href="#study">Study notes</a><a href="#changes">Change log</a><a href="company-base-cases.json">Company research ledger</a><a href="simulation-methodology.html">Simulation method</a></nav><section id="study">{body}</section><section id="changes">{changelog}</section><footer>Valuation Lab · Original design notes and implementation record · Updated 18 October 2026</footer></main></body></html>'''
 (ROOT/'dist/data/design-notebook.html').write_text(page)
 print('Built dist/data/design-notebook.html')
+
+# Apply reviewed presentation overlays after regenerating the English report.
+import subprocess, sys
+subprocess.run([sys.executable, str(ROOT / "scripts/localize-research-pages.py"), "--apply"], check=True)

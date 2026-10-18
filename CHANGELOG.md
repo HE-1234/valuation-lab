@@ -1,5 +1,54 @@
 # Change log
 
+## 2026-10-18 · Selected Google case and terminal-growth review
+
+- Applied the requested selected Google case: exact funded 20-year annual schedule, 35% mature operating margin, 10% WACC, 16% terminal ROIC and reviewed 3% terminal growth. Conditional common-share allocation is $306.616907 at the unchanged June 30 valuation/capital date. The label is “Selected Google case,” with assumptions visible.
+- Retained the original $210.132522 Google case and a terminal-only reviewed comparison of $214.860845. Explicit case loading supports Undo; saved custom inputs are not silently replaced.
+- Reviewed all fourteen terminal-growth choices. Current annual research defaults use 3% nominal USD for Google, Microsoft and Amazon; the other eleven remain unchanged. This is a documented analyst judgment, not a Damodaran-prescribed number. Terminal reinvestment adjusts with growth/ROIC. The terminal-only change versus the last explicit-year growth is disclosed.
+- Added a source-linked English/Simplified Chinese review page and sanitized source provenance. Frozen research cases, source preset JSON, original constructors and claims calculations remain unchanged.
+
+Verification: full suite 1,328 tests, 1,326 passed, one unchanged external AAOI raw-cache failure and one existing skip. Independent economic replay, export/restore, zero-uncertainty simulation and source-hash checks passed. Static 390/1440 review found no clipping or overflow in the selected-case status, comparison action or review page; native smoke verification follows publication.
+
+## 2026-10-18 · Simplified Chinese, explicit simulation runs and annual metric uncertainty
+
+- Switched runtime presentation to Simplified Chinese, with safe migration of the earlier language preference and exact source/number preservation.
+- Monte Carlo now runs only on an explicit Run simulation click. Edits, resets, Undo and remounts do not sample automatically; stale results cannot be exported or mistaken for current results. Added Cancel and preserved replay as animation of completed samples only.
+- Added annual margin, tax, WACC and capital uncertainty with independent fixed years, innovation SD and persistence; optional terminal growth/tax/ROIC distributions; mature growth plateaus remain at their selected horizon. Derived capital still funds sampled growth. New metric innovation SD defaults to zero; no calibrated confidence is implied.
+- Added revenue and unlevered FCFF growth charts beneath the operating-path chart, covering every forecast year and explicit zero/negative cash-flow transition labels. OCF is not separately modeled and remains explicitly unavailable.
+- Added 99 verified Atlas listings to an identity/research-pending directory, preserving all fourteen reviewed cases. Twenty ambiguous/unlisted/unresolved entities remain coverage disclosures. No invented valuations or generic company forecasts were added.
+- Preserved approved Annual Report design, palette definitions, whole-page flow, source evidence and public access. Named labels, button sizing, dark-theme Cancel contrast and language toggles were tested.
+
+Verification: 1,317 tests, 1,315 passed, one unchanged missing external AAOI source-cache failure and one existing skip. Independent Gaussian conditioning and DCF replay checks cover 800,000 draws and 2,850 sampled cases, 10/15/20-year paths, funded growth, exact legacy outputs and claims gates. Static mobile/desktop reviews cover new controls, directory and growth charts across all six themes; these are not native mobile-browser tests. Protected historical code hashes are unchanged after reversing only exact approved presentation substitutions.
+
+## 2026-10-18 · Canonical research-route status fix
+
+Native cloud-browser verification found that Sites removes `.html` from research URLs. Added exact inventoried extensionless-route matching so fully translated pages no longer show an incorrect incomplete-translation notice. English/Chinese research round trips preserve original numeric values. All 32 affected locale, source-preservation and route tests pass; no financial data or calculation changes.
+
+## 2026-10-18 · Complete authored research translation and accessibility review
+
+- Completed Traditional Chinese overlays for all 26 research pages: all 12,750 inventoried segments covered, with 11,294 translations and 1,456 reviewed retained names, identifiers, formulas and original evidence. Original source quotations remain clearly identified; external source documents and user notes stay original.
+- Localized standalone accessibility labels and every year in margin-chart descriptions. Theme controls now have explicit translated accessible names. Preserved English quotations carry appropriate language metadata; catalog-load failures leave original English content readable.
+- Reserved reliable space beside the corner language control on research notes, and fixed standalone-page box sizing so the control remains 44×44 pixels. Approved layout, typography, six palettes and all financial calculations remain unchanged.
+- Recorded dated W3C language-accessibility and MDN reduced-motion lessons. The requested Awwwards page timed out; no inaccessible course/video completion is claimed.
+
+Verification: full snapshot suite 1,216 tests, 1,214 passed, one unchanged missing-AAOI-source-cache failure and one existing skip. The final standalone box-sizing change and new assertion passed all 25 affected foundation/research/theme tests. All 26 research HTML files reverse exactly to their frozen original hashes; source financial JSON is unchanged. Static narrow-screen review supplements the earlier native cloud-browser interface checks and is not native mobile-browser testing.
+
+## 2026-10-18 · Traditional Chinese controls and theme sweep
+
+- Added an independent 44px corner language button, preserving English by default and remembering language separately from valuation drafts. Existing typography and six palette definitions remain intact, with Traditional Chinese glyph fallbacks.
+- Localized the valuation, simulation, learning and historical interface using explicit complete-message catalogs and live presentation bindings. Inputs, notes, Undo, source URLs, numerical exports and in-flight simulations retain their identities and values. Company summaries and research-assumption prose use separate overlays.
+- Added reversible annotations for research pages, separate presentation provenance, and a visible Chinese notice wherever archived authored research remains untranslated. This is a staged localization release, not a claim of complete translation of the entire archive.
+- Added a 600ms horizontal theme reveal with instant reduced-motion/unsupported-browser fallback and latest-choice-wins handling.
+
+Verification: aggregate 1,211 tests, 1,209 passed, one unchanged missing-AAOI-source-cache failure and one existing skip. Independent tests cover fourteen companies through twenty language toggles, exact protected source reconstruction, and numerical state preservation. Mobile/desktop checks use explicitly labeled source-driven static renders; native browser verification follows publication. Subsequent history-caption additions passed eight affected localization/state tests.
+
+## 2026-10-18 · Correlated annual growth paths and chart-wide rain
+
+- Fresh simulations use annual Gaussian growth deviations around the existing deterministic decay path, with user-selected fixed years, innovation SD and persistence. Future fixed anchors condition the intervening path. Previously saved unversioned configurations retain legacy behavior; a method selector keeps that approach available.
+- Added an actual completed-scenario path preview, explicit uncertainty units, fixed-year state and disclosures about illustrative assumptions. Stale/invalid settings withhold output. Source financial assumptions and the user-approved Annual Report skin remain intact.
+- Replay balls start across the chart roof instead of a central emitter. Decorative randomness is independent of financial sampling, with the existing replay clock and actual bin destinations preserved.
+- See [annual-path methodology](ANNUAL-PATH-SIMULATION.md). Verification: aggregate 1,159 tests: 1,157 passed, one unchanged missing-AAOI-source-cache failure and one existing skip. A subsequent all-fixed-path exactness correction passed all 68 affected core/research/preset tests. Independent review confirmed 26 legacy full-result comparisons, 90 cross-route financial cases and Gaussian conditional covariance. Source-driven static mobile/desktop checks and 16 actual-handler checks cover the new controls; these approximations are not native browser screenshots.
+
 ## 2026-10-18 · User Annual Report redesign and capital-efficiency phases
 
 - Integrated the user's GitHub Annual Report UI (commit `7e211252e3adf87fed61fe3caddbe210a3b71127`) with the latest growth-horizon, margin-phase and claims functionality. The user-supplied skin CSS, palettes, font, loader and motion layer are preserved; theme chooser labels/swatches now match those editions.

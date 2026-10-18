@@ -1,0 +1,3034 @@
+{
+  "schemaVersion": 1,
+  "source": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+  "scope": "Identity directory only. Reviewed Annual packages remain the original 14.",
+  "verificationFiles": [
+    "china_special-verified.json",
+    "japan_europe-verified.json",
+    "taiwan_korea-verified.json",
+    "us-verified.json"
+  ],
+  "companies": [
+    {
+      "id": "atlas:ASML",
+      "ticker": "ASML",
+      "company": "ASML Holding N.V.",
+      "aliases": [
+        "ASML"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "ASML",
+      "securityType": "New York Registry Shares (registered ordinary shares)",
+      "currency": "USD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://www.asml.com/en/investors/shares"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\nLive issuer page checked 2026-10-18: Nasdaq registered ordinary shares; ticker ASML; trading currency US Dollar.",
+      "note": "Registered ordinary shares, not an ADS/ADR; no ADS ratio applies. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:KLAC",
+      "ticker": "KLAC",
+      "company": "KLA Corporation",
+      "aliases": [
+        "KLA"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "KLAC",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:7731.T",
+      "ticker": "7731.T",
+      "company": "Nikon Corporation",
+      "aliases": [
+        "Nikon"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "7731",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": "JPY",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.nikon.com/company/ir/stock_info/status/",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.nikon.com/company/ir/stock_info/meeting/pdf/155/notice.pdf"
+      ],
+      "evidence": "Issuer lists code 7731 on Tokyo Prime.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nIssuer financial statements present consolidated amounts in yen.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:7751.T",
+      "ticker": "7751.T",
+      "company": "Canon Inc.",
+      "aliases": [
+        "Canon"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "7751",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://global.canon/en/ir/release/2026/p2026sep7e.pdf",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ],
+      "evidence": "September 2026 issuer disclosure identifies Canon Inc., 7751, Tokyo Prime and common stock.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6920.T",
+      "ticker": "6920.T",
+      "company": "Lasertec Corporation",
+      "aliases": [
+        "Lasertec"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "6920",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.lasertec.co.jp/en/ir/stock/outline.html",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ],
+      "evidence": "Issuer stock overview dated June 2026 lists 6920 on Tokyo Prime.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:AMAT",
+      "ticker": "AMAT",
+      "company": "Applied Materials, Inc.",
+      "aliases": [
+        "Applied Materials"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "AMAT",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1,2",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ONTO",
+      "ticker": "ONTO",
+      "company": "Onto Innovation Inc.",
+      "aliases": [
+        "Onto Innovation"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "ONTO",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:NVMI",
+      "ticker": "NVMI",
+      "company": "Nova Ltd.",
+      "aliases": [
+        "Nova"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "NVMI",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:CAMT",
+      "ticker": "CAMT",
+      "company": "Camtek Ltd.",
+      "aliases": [
+        "Camtek"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "CAMT",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:LRCX",
+      "ticker": "LRCX",
+      "company": "Lam Research Corporation",
+      "aliases": [
+        "Lam Research"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "LRCX",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:8035.T",
+      "ticker": "8035.T",
+      "company": "Tokyo Electron Limited",
+      "aliases": [
+        "Tokyo Electron"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "8035",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.tel.com/ir/stocks/info/",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.tel.com/ir/faq/"
+      ],
+      "evidence": "Issuer lists 8035, Tokyo Prime and common stock, updated for October 2026.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:002371.SZ",
+      "ticker": "002371.SZ",
+      "company": "北方华创科技集团股份有限公司 / NAURA Technology Group Co., Ltd.",
+      "aliases": [
+        "NAURA"
+      ],
+      "exchange": "Shenzhen Stock Exchange",
+      "nativeTicker": "002371",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.naura.com/Public/Upload/file/20230509/168362455144d4a3b9c0e6bcaf.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ],
+      "evidence": "Issuer annual report identifies NAURA, code 002371 and Shenzhen listing. Exchange rules establish RMB quotation for A shares.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XSHE",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688012.SS",
+      "ticker": "688012.SS",
+      "company": "中微半导体设备（上海）股份有限公司",
+      "aliases": [
+        "AMEC"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688012",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://big5.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-01-08/688012_20260108_FOZZ.pdf",
+        "https://www.sse.com.cn/listing/renewal/ma/index_listing_detail.shtml?auditId=d111c13e8f884c24bc2e5008c6337657&bussinesType=1",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "2026 issuer announcement and exchange restructuring record identify AMEC legal name and listing code 688012.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ASM.AS",
+      "ticker": "ASM.AS",
+      "company": "ASM International N.V.",
+      "aliases": [
+        "ASM International"
+      ],
+      "exchange": "Euronext Amsterdam",
+      "nativeTicker": "ASM",
+      "securityType": "equity · ordinary shares",
+      "currency": "EUR",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://live.euronext.com/de/product/equities/nl0000334118-xams",
+        "https://live.euronext.com/nb/product/equities/NL0000334118-MTAH/market-information"
+      ],
+      "evidence": "Euronext identifies issuer, Amsterdam stock listing, ASM symbol, EUR currency and ordinary share subtype for ISIN NL0000334118.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XAMS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6525.T",
+      "ticker": "6525.T",
+      "company": "KOKUSAI ELECTRIC CORPORATION",
+      "aliases": [
+        "Kokusai Electric"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "6525",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": "JPY",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.kokusai-electric.com/en/ir/stock",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www2.jpx.co.jp/disc/65250/140120260512526541.pdf"
+      ],
+      "evidence": "Issuer identifies code 6525 and Tokyo Prime.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nIssuer financial statements present consolidated amounts in yen.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:036930.KQ",
+      "ticker": "036930.KQ",
+      "company": "Jusung Engineering Co., Ltd.",
+      "aliases": [
+        "Jusung Engineering"
+      ],
+      "exchange": "Korea Exchange KOSDAQ Market",
+      "nativeTicker": "036930",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "KRW",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://jusung.com/eng/document/stock",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer listing table identifies Common Shares / Common Stock, Korea Exchange KOSDAQ Market and code 036930. Same page labels current price KRW and identifies Jusung Engineering Co., Ltd. ISO MIC register identifies XKOS as the KOSDAQ segment of XKRX.",
+      "note": "Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Reporting/presentation currency not independently established from a current financial statement; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XKOS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688072.SS",
+      "ticker": "688072.SS",
+      "company": "拓荆科技股份有限公司",
+      "aliases": [
+        "Piotech / 拓荆科技"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688072",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20220419_84923262.shtml",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "Exchange listing notice identifies Piotech legal name and A shares 688072, listing April 20, 2022.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "2",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:SNPS",
+      "ticker": "SNPS",
+      "company": "Synopsys, Inc.",
+      "aliases": [
+        "Synopsys (including Ansys)"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "SNPS",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:CDNS",
+      "ticker": "CDNS",
+      "company": "Cadence Design Systems, Inc.",
+      "aliases": [
+        "Cadence Design Systems"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "CDNS",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ARM",
+      "ticker": "ARM",
+      "company": "Arm Holdings plc",
+      "aliases": [
+        "Arm"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "ARM",
+      "securityType": "American depositary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://investors.arm.com/node/6581/html",
+        "https://investors.arm.com/investor-info/faqs"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2023 IPO prospectus: One ADS represents one ordinary share.\nLive issuer page checked 2026-10-18: Current FAQ confirms Nasdaq Global Select ARM ADSs and no post-IPO split.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": 1
+    },
+    {
+      "id": "atlas:SIE.DE",
+      "ticker": "SIE.DE",
+      "company": "Siemens AG",
+      "aliases": [
+        "Siemens (including Siemens EDA)"
+      ],
+      "exchange": "Xetra",
+      "nativeTicker": "SIE",
+      "securityType": "equity · registered no-par-value ordinary shares",
+      "currency": "EUR",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.siemens.com/de-de/company/investor-relations/share-bonds-rating/basic-data-key-share-figures/",
+        "https://www.siemens.com/de-de/company/investor-relations/investor-services/faq/"
+      ],
+      "evidence": "Issuer confirms Xetra trading, SIE symbol, EUR currency and registered no-par-value ordinary shares.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3,12",
+      "mic": "XETR",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:301269.SZ",
+      "ticker": "301269.SZ",
+      "company": "北京华大九天科技股份有限公司",
+      "aliases": [
+        "Empyrean / 华大九天"
+      ],
+      "exchange": "Shenzhen Stock Exchange",
+      "nativeTicker": "301269",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.szse.cn/www/disclosure/notice/company/t20220728_595066.html",
+        "https://disc.static.szse.cn/disc/disk03/finalpage/2025-03-31/81ff14e7-ee6b-4bce-a3aa-9557f47fd0e6.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ],
+      "evidence": "SZSE listing notice identifies Empyrean legal entity and RMB ordinary shares 301269; later issuer filing confirms same listing.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XSHE",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688206.SS",
+      "ticker": "688206.SS",
+      "company": "上海概伦电子股份有限公司",
+      "aliases": [
+        "Primarius / 概伦电子"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688206",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-12/688206_20250412_1RKI.pdf",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "Exchange-hosted issuer filing identifies Shanghai Primarius legal name and stock code 688206.SH.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:KEYS",
+      "ticker": "KEYS",
+      "company": "Keysight Technologies, Inc.",
+      "aliases": [
+        "Keysight Technologies"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "KEYS",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:SVCO",
+      "ticker": "SVCO",
+      "company": "Silvaco Group, Inc.",
+      "aliases": [
+        "Silvaco"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "SVCO",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:RMBS",
+      "ticker": "RMBS",
+      "company": "Rambus, Inc.",
+      "aliases": [
+        "Rambus"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "RMBS",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:CEVA",
+      "ticker": "CEVA",
+      "company": "CEVA, Inc.",
+      "aliases": [
+        "Ceva"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "CEVA",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688521.SS",
+      "ticker": "688521.SS",
+      "company": "芯原微电子（上海）股份有限公司 / Verisilicon Microelectronics (Shanghai) Co., Ltd.",
+      "aliases": [
+        "VeriSilicon / 芯原股份"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688521",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=688521&tabActive=1",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "Current exchange company record identifies legal issuer, A share code 688521 and listed status; share data dated October 16, 2026.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:005930.KS",
+      "ticker": "005930.KS",
+      "company": "Samsung Electronics Co., Ltd.",
+      "aliases": [
+        "Samsung Electronics (including Samsung Foundry)"
+      ],
+      "exchange": "Korea Exchange",
+      "nativeTicker": "005930",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "KRW",
+      "reportingCurrency": "KRW",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.samsung.com/global/ir/stock-information/listing-Info/",
+        "https://www.samsung.com/sec/ir/main/?msockid=2bf9a76f32106fb23983b1b433816e1f",
+        "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_1Q_Interim_Report.pdf",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer listing table explicitly distinguishes KRX common 005930 / KR7005930003 from preferred 005935. Investor page quotes common shares in won. 2026 first-quarter report identifies Samsung Electronics Co., Ltd. and statements in Korean won. ISO register identifies XKRX.",
+      "note": "Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4,5,8,9",
+      "mic": "XKRX",
+      "isin": "KR7005930003",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:INTC",
+      "ticker": "INTC",
+      "company": "Intel Corporation",
+      "aliases": [
+        "Intel (including Intel Foundry)"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "INTC",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4,6",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:0981.HK",
+      "ticker": "0981.HK",
+      "company": "Semiconductor Manufacturing International Corporation",
+      "aliases": [
+        "Semiconductor Manufacturing International (SMIC)"
+      ],
+      "exchange": "Hong Kong Stock Exchange",
+      "nativeTicker": "00981",
+      "securityType": "Ordinary shares",
+      "currency": "HKD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www1.hkexnews.hk/search/titlesearch.xhtml?category=0&from=20070625&lang=EN&market=SEHK&stockId=7249&t1code=20000&t2Gcode=-2&t2code=-2&to=20260928",
+        "https://di.hkex.com.hk/filing/di/NSForm2.aspx?cn=1&cname=Semiconductor+Manufacturing+International+Corporation&corpn=Semiconductor+Manufacturing+International+Corporation&ed=07%2F09%2F2017&fn=324008&g_lang=en&lang=EN&sa1=cl&sa2=as&sced=02%2F04%2F2025&scsd=02%2F04%2F2024&sd=07%2F09%2F2017&sid=50000111&src=Main"
+      ],
+      "evidence": "HKEX issuer records identify 00981 SMIC and ordinary shares; disclosure prices use HKD. This is the HK ordinary listing, not mainland 688981.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4,5",
+      "mic": "XHKG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:UMC",
+      "ticker": "UMC",
+      "company": "United Microelectronics Corporation",
+      "aliases": [
+        "United Microelectronics"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "UMC",
+      "securityType": "American depositary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526193757/d91630d20f.htm"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2025 Form 20-F filed 2026: NYSE UMC is an ADS; each ADS represents five common shares.",
+      "note": "Directory generic Common Stock label overridden by issuer 20-F confirming ADS instrument. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4,5",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": 5
+    },
+    {
+      "id": "atlas:GFS",
+      "ticker": "GFS",
+      "company": "GlobalFoundries Inc.",
+      "aliases": [
+        "GlobalFoundries"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "GFS",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4,5",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:1347.HK",
+      "ticker": "1347.HK",
+      "company": "Hua Hong Grace Semiconductor Limited",
+      "aliases": [
+        "Hua Hong Semiconductor"
+      ],
+      "exchange": "Hong Kong Stock Exchange",
+      "nativeTicker": "01347",
+      "securityType": "Ordinary shares",
+      "currency": "HKD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.hkex.com.hk/Market-Data/Securities-Prices/Equities/Equities-Quote?sc_lang=en&sym=1347",
+        "https://www1.hkexnews.hk/search/titlesearch.xhtml?category=0&lang=EN&market=SEHK&stockId=112822",
+        "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544104.PDF",
+        "https://di.hkex.com.hk/di/NSAllFormList.aspx?cid=0&corpn=Hua+Hong+Semiconductor+Ltd.&ed=21%2F07%2F2025&g_lang=en&lang=EN&sa1=cl&sa2=an&sc=01347&sced=21%2F07%2F2025&scsd=21%2F07%2F2024&sd=21%2F07%2F2024&sid=110440&src=MAIN"
+      ],
+      "evidence": "Current HKEX quote and September 2026 issuer disclosures identify HUA HONG GRACE and code 01347. Current legal name differs from prior Hua Hong Semiconductor label. Interim report confirms company name changed in May 2026; HKEX disclosure transaction prices use HKD.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4,5",
+      "mic": "XHKG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:TSEM",
+      "ticker": "TSEM",
+      "company": "Tower Semiconductor Ltd.",
+      "aliases": [
+        "Tower Semiconductor"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "TSEM",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:5347.TWO",
+      "ticker": "5347.TWO",
+      "company": "Vanguard International Semiconductor Corporation",
+      "aliases": [
+        "Vanguard International Semiconductor / 世界先进"
+      ],
+      "exchange": "Taipei Exchange",
+      "nativeTicker": "5347",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://links.sgx.com/FileOpen/Vanguard%20International%20Semiconductor%20Corporation%20-%20Final%20Offering%20Circular%20dated%2028%20January%202026.ashx?App=Prospectus&FileID=68506",
+        "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=4",
+        "https://www.tpex.org.tw/en-us/mainboard/trading/rules/system.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Vanguard International Semiconductor Corporation with local code 5347.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0005347009, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4",
+      "mic": "ROCO",
+      "isin": "TW0005347009",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688249.SS",
+      "ticker": "688249.SS",
+      "company": "合肥晶合集成电路股份有限公司",
+      "aliases": [
+        "Nexchip / 晶合集成"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688249",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20230504_89473619.shtml",
+        "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-02/688249_20260402_FI9T.pdf",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "SSE confirms Nexchip A shares 688249 listed May 5, 2023; April 2026 filing confirms legal issuer and separate HK listing application.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6770.TW",
+      "ticker": "6770.TW",
+      "company": "Powerchip Semiconductor Manufacturing Corp.",
+      "aliases": [
+        "Powerchip Semiconductor Manufacturing / 力积电"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "6770",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.twse.com.tw/IIH2/en/company/information.html?code=6770",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Powerchip Semiconductor Manufacturing Corp. with local code 6770.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0006770001, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "4",
+      "mic": "XTAI",
+      "isin": "TW0006770001",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ASX",
+      "ticker": "ASX",
+      "company": "ASE Technology Holding Co., Ltd.",
+      "aliases": [
+        "ASE Technology (including SPIL)"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "ASX",
+      "securityType": "American depositary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "5",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": 2
+    },
+    {
+      "id": "atlas:AMKR",
+      "ticker": "AMKR",
+      "company": "Amkor Technology, Inc.",
+      "aliases": [
+        "Amkor Technology"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "AMKR",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "5",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:600584.SS",
+      "ticker": "600584.SS",
+      "company": "江苏长电科技股份有限公司 / JCET Group Co., Ltd.",
+      "aliases": [
+        "JCET"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "600584",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.jcetglobal.com/uploads/6efcaa649d2b35f0.pdf",
+        "https://www.jcetglobal.com/en",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "Issuer filing identifies code 600584 and Chinese legal issuer; official site identifies JCET group business.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "5",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:002156.SZ",
+      "ticker": "002156.SZ",
+      "company": "通富微电子股份有限公司",
+      "aliases": [
+        "Tongfu Microelectronics"
+      ],
+      "exchange": "Shenzhen Stock Exchange",
+      "nativeTicker": "002156",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://static.cninfo.com.cn/finalpage/2026-04-17/1225112784.PDF",
+        "https://static.cninfo.com.cn/finalpage/2017-11-13/1204133154.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ],
+      "evidence": "2026 issuer notice identifies legal name and code 002156; issuer transaction document explicitly identifies Shenzhen listing.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "5",
+      "mic": "XSHE",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6239.TW",
+      "ticker": "6239.TW",
+      "company": "Powertech Technology Inc.",
+      "aliases": [
+        "Powertech Technology (PTI)"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "6239",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.pti.com.tw/en/ir/news/qa",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Powertech Technology Inc. with local code 6239.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0006239007, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "5",
+      "mic": "XTAI",
+      "isin": "TW0006239007",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:002185.SZ",
+      "ticker": "002185.SZ",
+      "company": "天水华天科技股份有限公司",
+      "aliases": [
+        "Huatian Technology"
+      ],
+      "exchange": "Shenzhen Stock Exchange",
+      "nativeTicker": "002185",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.szse.cn/disclosure/notice/company/t20071116_508217.html",
+        "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-06-11/4e196e35-8780-4fc7-bbaf-8f50630e9cd4.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ],
+      "evidence": "SZSE identifies legal issuer and RMB ordinary stock 002185; June 2026 issuer notice confirms ongoing equity activity.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "5",
+      "mic": "XSHE",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:AMD",
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices, Inc.",
+      "aliases": [
+        "Advanced Micro Devices"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "AMD",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "6",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688256.SS",
+      "ticker": "688256.SS",
+      "company": "中科寒武纪科技股份有限公司",
+      "aliases": [
+        "Cambricon / 寒武纪"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688256",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20200717_78749873.shtml",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "SSE listing notice confirms Cambricon legal entity and A share 688256, listed July 20, 2020.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "6",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688041.SS",
+      "ticker": "688041.SS",
+      "company": "海光信息技术股份有限公司",
+      "aliases": [
+        "Hygon / 海光"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688041",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-08/688041_20260408_235E.pdf",
+        "https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-05-01/688041_20250501_3S3P.pdf",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "April 2026 issuer report confirms Hygon legal entity, SSE STAR listing and code 688041; articles identify RMB ordinary shares.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "6",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:MRVL",
+      "ticker": "MRVL",
+      "company": "Marvell Technology, Inc.",
+      "aliases": [
+        "Marvell Technology"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "MRVL",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "7,10",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:2454.TW",
+      "ticker": "2454.TW",
+      "company": "MediaTek Inc.",
+      "aliases": [
+        "MediaTek"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "2454",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.mediatek.com/tek-talk-blogs/one-mediatek-evolving-our-brand-for-the-ai-edge-to-cloud-future",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies MediaTek Inc. with local code 2454.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002454006, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "7",
+      "mic": "XTAI",
+      "isin": "TW0002454006",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:3661.TW",
+      "ticker": "3661.TW",
+      "company": "Alchip Technologies, Limited",
+      "aliases": [
+        "Alchip Technologies"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "3661",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.alchip.com/en/Investors/financials",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Alchip Technologies, Limited with local code 3661.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies KYG022421088, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "7",
+      "mic": "XTAI",
+      "isin": "KYG022421088",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:3443.TW",
+      "ticker": "3443.TW",
+      "company": "Global Unichip Corp.",
+      "aliases": [
+        "Global Unichip (GUC)"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "3443",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.guc-asic.com/en/about/us",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Global Unichip Corp. with local code 3443.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0003443008, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "7",
+      "mic": "XTAI",
+      "isin": "TW0003443008",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:CSCO",
+      "ticker": "CSCO",
+      "company": "Cisco Systems, Inc.",
+      "aliases": [
+        "Cisco Systems (Silicon One)"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "CSCO",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "7",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:000660.KS",
+      "ticker": "000660.KS",
+      "company": "SK hynix Inc.",
+      "aliases": [
+        "SK hynix (including Solidigm)"
+      ],
+      "exchange": "Korea Exchange",
+      "nativeTicker": "000660",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "KRW",
+      "reportingCurrency": "KRW",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://m.skhynix.com/ir/UI-FR-IR03/",
+        "https://m.skhynix.com/ir/UI-FR-IR01/",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer listing table identifies original common shares of SK hynix Inc. on Korea Stock Exchange, KS 000660 / KR7000660001, separately from depositary receipts. Investor page labels prices KRW and annual/quarterly operating reports Billion KRW. ISO register identifies XKRX.",
+      "note": "Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "8,9",
+      "mic": "XKRX",
+      "isin": "KR7000660001",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:285A.T",
+      "ticker": "285A.T",
+      "company": "Kioxia Holdings Corporation",
+      "aliases": [
+        "Kioxia Holdings"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "285A",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.kioxia-holdings.com/ja-jp/ir/stock/outline.html",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ],
+      "evidence": "Issuer identifies 285A on Tokyo Prime and ordinary shares.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "9",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:SNDK",
+      "ticker": "SNDK",
+      "company": "Sandisk Corporation",
+      "aliases": [
+        "Sandisk"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "SNDK",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://www.sec.gov/Archives/edgar/data/106040/000119312525033383/d847507d8k.htm"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2025-02-24: Sandisk common stock began regular-way Nasdaq SNDK trading on February 24, 2025.",
+      "note": "Nasdaq directory retains When-Issued in security title; SEC spin-off filing establishes regular-way SNDK trading since February 24, 2025. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "9",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:2408.TW",
+      "ticker": "2408.TW",
+      "company": "Nanya Technology Corporation",
+      "aliases": [
+        "Nanya Technology"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "2408",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.nanya.com/en/IR/35",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Nanya Technology Corporation with local code 2408.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002408002, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "9",
+      "mic": "XTAI",
+      "isin": "TW0002408002",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:2344.TW",
+      "ticker": "2344.TW",
+      "company": "Winbond Electronics Corporation",
+      "aliases": [
+        "Winbond Electronics"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "2344",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.winbond.com/hq/amp.html?__locale=en&url=%2Fabout-winbond%2Fnews-and-events%2Fnews%2Fnews00577.html%3F",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Winbond Electronics Corporation with local code 2344.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002344009, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "9",
+      "mic": "XTAI",
+      "isin": "TW0002344009",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:CRDO",
+      "ticker": "CRDO",
+      "company": "Credo Technology Group Holding Ltd",
+      "aliases": [
+        "Credo Technology"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "CRDO",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "10",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:MXL",
+      "ticker": "MXL",
+      "company": "MaxLinear, Inc",
+      "aliases": [
+        "MaxLinear"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "MXL",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "10",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6503.T",
+      "ticker": "6503.T",
+      "company": "Mitsubishi Electric Corporation",
+      "aliases": [
+        "Mitsubishi Electric"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "6503",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.mitsubishielectric.com/investors/stock/info/",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ],
+      "evidence": "Issuer identifies Tokyo Stock Exchange stock code 6503.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "10",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:3081.TWO",
+      "ticker": "3081.TWO",
+      "company": "LandMark Optoelectronics Corporation",
+      "aliases": [
+        "LandMark Optoelectronics / 联亚光电"
+      ],
+      "exchange": "Taipei Exchange",
+      "nativeTicker": "3081",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.tpex.org.tw/storage/gretai50_tech/2025/07/1752129609_14068_20250710TPExIndexNotice.pdf",
+        "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=4",
+        "https://www.tpex.org.tw/en-us/mainboard/trading/rules/system.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies LandMark Optoelectronics Corporation with local code 3081.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0003081006, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "10",
+      "mic": "ROCO",
+      "isin": "TW0003081006",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688498.SS",
+      "ticker": "688498.SS",
+      "company": "陕西源杰半导体科技股份有限公司 / YUANJIE SEMICONDUCTOR TECHNOLOGY CO., LTD.",
+      "aliases": [
+        "Yuanjie Semiconductor / 源杰科技"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688498",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=688498&FULLNAME=XD%E6%BA%90%E6%9D%B0%E7%A7%91",
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688498",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "Exchange record identifies Yuanjie legal name, A share 688498 and listed status; September 2026 filings confirm ongoing listing.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "10",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:300308.SZ",
+      "ticker": "300308.SZ",
+      "company": "中际旭创股份有限公司 / Zhongji InnoLight Co., Ltd.",
+      "aliases": [
+        "Zhongji Innolight"
+      ],
+      "exchange": "Shenzhen Stock Exchange",
+      "nativeTicker": "300308",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.zj-innolight.com/en/index.html",
+        "https://www.zj-innolight.com/en/index/contact.html",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ],
+      "evidence": "Current issuer site identifies Shenzhen share stock code 300308. It also displays an HK listing; retain one issuer with original Shenzhen listing.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XSHE",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:300502.SZ",
+      "ticker": "300502.SZ",
+      "company": "成都新易盛通信技术股份有限公司 / Eoptolink Technology Inc., Ltd.",
+      "aliases": [
+        "Eoptolink"
+      ],
+      "exchange": "Shenzhen Stock Exchange",
+      "nativeTicker": "300502",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.eoptolink.com/cn/",
+        "https://eoptolink.com/Eoptolink-Catalog-2021.pdf",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ],
+      "evidence": "Issuer identifies legal entity, Shenzhen listing 300502.SZ and 2016 IPO.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XSHE",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:2317.TW",
+      "ticker": "2317.TW",
+      "company": "Hon Hai Precision Ind. Co. Ltd.",
+      "aliases": [
+        "Hon Hai Precision Industry (Foxconn)"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "2317",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2317_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Hon Hai Precision Ind. Co. Ltd. with local code 2317.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002317005, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XTAI",
+      "isin": "TW0002317005",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:2382.TW",
+      "ticker": "2382.TW",
+      "company": "Quanta Computer Inc.",
+      "aliases": [
+        "Quanta Computer"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "2382",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2382_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Quanta Computer Inc. with local code 2382.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002382009, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XTAI",
+      "isin": "TW0002382009",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6669.TW",
+      "ticker": "6669.TW",
+      "company": "Wiwynn Corporation",
+      "aliases": [
+        "Wiwynn"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "6669",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/6669_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Wiwynn Corporation with local code 6669.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0006669005, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XTAI",
+      "isin": "TW0006669005",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:3231.TW",
+      "ticker": "3231.TW",
+      "company": "Wistron Corporation",
+      "aliases": [
+        "Wistron"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "3231",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.wistron.com/en/AboutWistron/CompanyProfile",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Wistron Corporation with local code 3231.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0003231007, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XTAI",
+      "isin": "TW0003231007",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:SMCI",
+      "ticker": "SMCI",
+      "company": "Super Micro Computer, Inc.",
+      "aliases": [
+        "Super Micro Computer"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "SMCI",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:FN",
+      "ticker": "FN",
+      "company": "Fabrinet",
+      "aliases": [
+        "Fabrinet"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "FN",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:002281.SZ",
+      "ticker": "002281.SZ",
+      "company": "武汉光迅科技股份有限公司",
+      "aliases": [
+        "Accelink Technologies"
+      ],
+      "exchange": "Shenzhen Stock Exchange",
+      "nativeTicker": "002281",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.accelink.com/upload/1/cms/20240124/1706081906465.pdf",
+        "https://www.accelink.com/?lang=zh",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ],
+      "evidence": "Issuer ESG report identifies legal entity and A share code 002281; current company website retains same legal entity.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XSHE",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:DELL",
+      "ticker": "DELL",
+      "company": "Dell Technologies Inc.",
+      "aliases": [
+        "Dell Technologies"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "DELL",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:2356.TW",
+      "ticker": "2356.TW",
+      "company": "Inventec Corporation",
+      "aliases": [
+        "Inventec"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "2356",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2356_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Inventec Corporation with local code 2356.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002356003, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XTAI",
+      "isin": "TW0002356003",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:HPE",
+      "ticker": "HPE",
+      "company": "Hewlett Packard Enterprise Company",
+      "aliases": [
+        "Hewlett Packard Enterprise"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "HPE",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:GEV",
+      "ticker": "GEV",
+      "company": "GE Vernova Inc.",
+      "aliases": [
+        "GE Vernova"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "GEV",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ENR.DE",
+      "ticker": "ENR.DE",
+      "company": "Siemens Energy AG",
+      "aliases": [
+        "Siemens Energy"
+      ],
+      "exchange": "Xetra",
+      "nativeTicker": "ENR",
+      "securityType": "equity · registered no-par-value shares",
+      "currency": "EUR",
+      "reportingCurrency": "EUR",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.siemensenergy.com/global/en/home/investor-relations/share.html",
+        "https://www.siemensenergy.com/global/en/home/investor-relations.html"
+      ],
+      "evidence": "Issuer share page updated October 13, 2026 identifies ENR, Xetra, EUR and registered no-par-value shares; current earnings are reported in euros.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XETR",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:SU.PA",
+      "ticker": "SU.PA",
+      "company": "Schneider Electric SE",
+      "aliases": [
+        "Schneider Electric"
+      ],
+      "exchange": "Euronext Paris",
+      "nativeTicker": "SU",
+      "securityType": "equity · ordinary shares",
+      "currency": "EUR",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://live.euronext.com/en/product/equities/fr0000121972-xpar",
+        "https://www.se.com/ww/en/assets/564/document/528238/accounts-fy-results-2025.pdf?p_File_Name=2025+Full+Year+Financial+Results+Accounts&p_enDocType=EDMS"
+      ],
+      "evidence": "Euronext identifies Schneider Electric SE, Paris stock listing, SU and EUR; issuer accounts describe ordinary shares.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XPAR",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:VRT",
+      "ticker": "VRT",
+      "company": "Vertiv Holdings Co",
+      "aliases": [
+        "Vertiv Holdings"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "VRT",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://www.sec.gov/Archives/edgar/data/1674101/000162828026026556/vrt-20260331.htm"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2026 Q1 Form 10-Q: Vertiv Holdings Co registers Class A common stock as VRT on NYSE.",
+      "note": "Directory uses stale Holdings, LLC issuer wording; SEC issuer and filing identify Vertiv Holdings Co. Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ETN",
+      "ticker": "ETN",
+      "company": "Eaton Corporation plc",
+      "aliases": [
+        "Eaton"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "ETN",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:7011.T",
+      "ticker": "7011.T",
+      "company": "Mitsubishi Heavy Industries, Ltd.",
+      "aliases": [
+        "Mitsubishi Heavy Industries (Mitsubishi Power)"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "7011",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": "JPY",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.mhi.com/finance/faq",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.mhi.com/finance/library/annual/pdf/report_2026_financial.pdf"
+      ],
+      "evidence": "Issuer identifies Tokyo listing and code 7011.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nIssuer financial statements present consolidated amounts in yen.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ABBN.SW",
+      "ticker": "ABBN.SW",
+      "company": "ABB Ltd",
+      "aliases": [
+        "ABB"
+      ],
+      "exchange": "SIX Swiss Exchange",
+      "nativeTicker": "ABBN",
+      "securityType": "equity · registered shares",
+      "currency": "CHF",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://global.abb/group/en/investors/investor-and-shareholder-resources/share-listing",
+        "https://www.six-group.com/de/market-data/shares/companies.html"
+      ],
+      "evidence": "Issuer identifies ABBN as SIX registered shares; SIX issuer list confirms ABB Ltd, ABBN, registered share type and CHF trading currency.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XSWX",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:LR.PA",
+      "ticker": "LR.PA",
+      "company": "Legrand SA",
+      "aliases": [
+        "Legrand"
+      ],
+      "exchange": "Euronext Paris",
+      "nativeTicker": "LR",
+      "securityType": "equity · ordinary shares",
+      "currency": "EUR",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://live.euronext.com/en/products/equities/company-news/2026-05-27-legranddescription-share-buyback-program-approved",
+        "https://live.euronext.com/en/product/stock-futures/LR6-DPAR",
+        "https://www.legrand.com/sites/default/files/Documents_PDF_Legrand/Finance/2026/autre/DUE/Management_report_statutory_financial_statements_EN_1775651810.pdf"
+      ],
+      "evidence": "Euronext issuer notice identifies Legrand SA and LR. Derivative page underlying section identifies Paris share ISIN FR0010307819 in EUR. Issuer report confirms ordinary shares; no futures instrument is selected.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XPAR",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:2308.TW",
+      "ticker": "2308.TW",
+      "company": "Delta Electronics, Inc.",
+      "aliases": [
+        "Delta Electronics"
+      ],
+      "exchange": "Taiwan Stock Exchange",
+      "nativeTicker": "2308",
+      "securityType": "Equity · Common / ordinary shares",
+      "currency": "TWD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:30Z",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2308_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Issuer/exchange source identifies Delta Electronics, Inc. with local code 2308.\nExchange company data dated 2026-10-17 identifies the local legal name, listing date and issued common shares. ISIN registry identifies TW0002308004, the listed market and CFI ESVUFR (registered ordinary voting equity).\nExchange trading rules express equity price ticks in New Taiwan dollars. ISO 10383 register identifies the exchange MIC.",
+      "note": "Reporting/presentation currency not independently established from a current financial statement; left null. Provider suffix is input notation, not a confirmed Valuation Lab provider integration. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XTAI",
+      "isin": "TW0002308004",
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:TT",
+      "ticker": "TT",
+      "company": "Trane Technologies plc",
+      "aliases": [
+        "Trane Technologies"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "TT",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://www.sec.gov/Archives/edgar/data/1466258/000162828026005731/tt-20251231.htm"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\n2025 Form 10-K filed 2026-02-05: Trane Technologies plc registers ordinary shares as TT on NYSE.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6367.T",
+      "ticker": "6367.T",
+      "company": "Daikin Industries, Ltd.",
+      "aliases": [
+        "Daikin Industries"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "6367",
+      "securityType": "equity · common shares",
+      "currency": "JPY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.daikin.com/faq",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.daikin.com/-/media/E4D5DD8864E94FA99572A94CBB258E6D.ashx"
+      ],
+      "evidence": "Issuer identifies Tokyo Stock Exchange listing and code 6367.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "12",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:CRWV",
+      "ticker": "CRWV",
+      "company": "CoreWeave, Inc.",
+      "aliases": [
+        "CoreWeave"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "CRWV",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "13",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:IREN",
+      "ticker": "IREN",
+      "company": "IREN Limited",
+      "aliases": [
+        "IREN"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "IREN",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "13",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:APLD",
+      "ticker": "APLD",
+      "company": "Applied Digital Corporation",
+      "aliases": [
+        "Applied Digital"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "APLD",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "13",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ORCL",
+      "ticker": "ORCL",
+      "company": "Oracle Corporation",
+      "aliases": [
+        "Oracle (OCI)"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "ORCL",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "14,15,17",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:BABA",
+      "ticker": "BABA",
+      "company": "Alibaba Group Holding Limited",
+      "aliases": [
+        "Alibaba (Qwen / Alibaba Cloud)"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "BABA",
+      "securityType": "American depositary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://www.alibabagroup.com/en-US/faqs-investor-information"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\nLive issuer page checked 2026-10-18: NYSE BABA ADSs each represent eight ordinary shares.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "14,15,16",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": 8
+    },
+    {
+      "id": "atlas:CRM",
+      "ticker": "CRM",
+      "company": "Salesforce, Inc.",
+      "aliases": [
+        "Salesforce"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "CRM",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "17",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:NOW",
+      "ticker": "NOW",
+      "company": "ServiceNow, Inc.",
+      "aliases": [
+        "ServiceNow"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "NOW",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "17",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:ADBE",
+      "ticker": "ADBE",
+      "company": "Adobe Inc.",
+      "aliases": [
+        "Adobe"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "ADBE",
+      "securityType": "Common stock",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.",
+      "note": "Instrument-specific quote currency was not explicitly evidenced in inspected primary sources; left null. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "17",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:SAP",
+      "ticker": "SAP",
+      "company": "SAP SE",
+      "aliases": [
+        "SAP"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "SAP",
+      "securityType": "American depositary shares",
+      "currency": "USD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:03:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/files/company_tickers_exchange.json",
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv",
+        "https://www.sap.com/investors/en/stock/adr.html"
+      ],
+      "evidence": "Live file retrieved 2026-10-18: SEC issuer, ticker, exchange and CIK match.\n2026-10-16 21:31 (file timestamp; zone unstated): Active non-test equity directory entry inspected; security title used for classification.\nRetrieved 2026-10-18: Active operating and segment MIC records inspected.\nLive issuer page checked 2026-10-18: NYSE SAP ADRs are US-dollar priced; one ADR represents one ordinary share.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "17",
+      "mic": "XNYS",
+      "isin": null,
+      "ordinarySharesPerADS": 1
+    },
+    {
+      "id": "atlas:QCOM",
+      "ticker": "QCOM",
+      "company": "QUALCOMM Incorporated",
+      "aliases": [
+        "Qualcomm (Alphawave acquired subsidiary)"
+      ],
+      "exchange": "Nasdaq",
+      "nativeTicker": "QCOM",
+      "securityType": "Common stock",
+      "currency": "USD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/qcom-20251228.htm",
+        "https://investor.qualcomm.com/news-events/press-releases/news-details/2025/Qualcomm-to-Acquire-Alphawave-Semi/"
+      ],
+      "evidence": "SEC quarterly report confirms Alphawave acquisition completed December 18, 2025. Cover identifies QCOM Nasdaq common stock. Qualcomm is listed parent exposure, not a standalone Alphawave listing.",
+      "note": "Atlas names a subsidiary; this entry is explicitly the listed parent, not a standalone subsidiary security. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "3",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:6501.T",
+      "ticker": "6501.T",
+      "company": "Hitachi, Ltd.",
+      "aliases": [
+        "Hitachi (Hitachi High-Tech subsidiary)"
+      ],
+      "exchange": "Tokyo Stock Exchange",
+      "nativeTicker": "6501",
+      "securityType": "Common stock",
+      "currency": "JPY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.hitachi-hightech.com/global/en/company/history.html",
+        "https://www.hitachi.com/ja-jp/ir/faq/",
+        "https://www.hitachi.com/content/dam/hitachi/global/en/press/articles/2025/12/1219/f_251219.pdf"
+      ],
+      "evidence": "High-Tech issuer history confirms May 2020 delisting and wholly owned status under Hitachi. Parent FAQ identifies Tokyo listing 6501; repurchase notice identifies common stock and yen price.",
+      "note": "Atlas names a subsidiary; this entry is explicitly the listed parent, not a standalone subsidiary security. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "1,2",
+      "mic": "XTKS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:688825.SS",
+      "ticker": "688825.SS",
+      "company": "长鑫科技集团股份有限公司",
+      "aliases": [
+        "CXMT Corporation / 长鑫科技 (ChangXin Memory)"
+      ],
+      "exchange": "Shanghai Stock Exchange",
+      "nativeTicker": "688825",
+      "securityType": "A ordinary shares",
+      "currency": "CNY",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20260724_10826610.shtml",
+        "https://star.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688825",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ],
+      "evidence": "SSE July 24, 2026 notice explicitly confirms CXMT A share listing starts July 27, 2026 under 688825. Current company page includes September 2026 articles.",
+      "note": "Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "9",
+      "mic": "XSHG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:9856.HK",
+      "ticker": "9856.HK",
+      "company": "Ligent Technologies, Inc.",
+      "aliases": [
+        "Ligent Technologies / 纳真科技 (Hisense optical business)"
+      ],
+      "exchange": "Hong Kong Stock Exchange",
+      "nativeTicker": "09856",
+      "securityType": "Ordinary shares",
+      "currency": null,
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://www.ligent.com/index/list/4.html",
+        "https://www.hkex.com.hk/?sc_lang=zh-",
+        "https://www1.hkexnews.hk/app/sehk/2026/108264/documents/sehk26030502135.pdf",
+        "https://di.hkex.com.hk/di/summary/DSM20261006C1.htm"
+      ],
+      "evidence": "Issuer IR confirms 9856.HK, Main Board and September 22, 2026 listing. HKEX new-listing page independently names Ligent Technologies, Inc. (9856). HKEX-hosted ownership disclosure identifies Hisense Group Holding ownership. HKEX October 6 substantial-shareholder summary explicitly identifies 09856 ordinary shares and Hisense Group Holding interest.",
+      "note": "Quote currency not explicitly extracted from primary source. Confirm using final prospectus or supported quote metadata before live quotes. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "11",
+      "mic": "XHKG",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    },
+    {
+      "id": "atlas:SPCX",
+      "ticker": "SPCX",
+      "company": "Space Exploration Technologies Corp.",
+      "aliases": [
+        "SpaceX (xAI / Grok acquired subsidiary)",
+        "Anysphere (Cursor)"
+      ],
+      "exchange": "Nasdaq Global Select Market",
+      "nativeTicker": "SPCX",
+      "securityType": "Class A common stock",
+      "currency": "USD",
+      "reportingCurrency": null,
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "sourceURLs": [
+        "https://ir.spacex.com/faqs-and-contact/",
+        "https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Pricing-of-Initial-Public-Offering/default.aspx?linkId=95",
+        "https://x.ai/news/xai-joins-spacex",
+        "https://www.sec.gov/Archives/edgar/data/1181412/000162828026056945/spcx-20260814.htm"
+      ],
+      "evidence": "SpaceX IR confirms June 12, 2026 IPO and SPCX trading on Nasdaq Global Select and Nasdaq Texas; offering identifies Class A common stock. xAI issuer acquisition notice establishes SpaceX relationship. This is parent exposure, not TSLA or standalone xAI.\nSEC August 14, 2026 Form 8-K states Anysphere merger became effective that day and Cursor survived as wholly owned SpaceX subsidiary. Map only as explicit parent exposure and deduplicate against xAI/SpaceX row; no standalone Cursor ticker.",
+      "note": "Atlas names a subsidiary; this entry is explicitly the listed parent, not a standalone subsidiary security. Provider-style ticker notation is an identifier only; no live quote integration is established. Atlas names a subsidiary; this entry is explicitly the listed parent, not a standalone subsidiary security. Provider-style ticker notation is an identifier only; no live quote integration is established.",
+      "atlasSource": "https://ai-value-atlas-eh-261015.major-gem-5629.chatgpt.site/",
+      "atlasSectors": "16",
+      "mic": "XNAS",
+      "isin": null,
+      "ordinarySharesPerADS": null
+    }
+  ],
+  "coverage": [
+    {
+      "company": "Sumitomo Electric Industries (likely Sumitomo laser entity)",
+      "reason": "Current issuer stock page identifies code 5802, Tokyo listing and common shares.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check. 5802 listing is verified, but the Atlas shorthand Sumitomo does not uniquely identify this issuer. Confirm source-company mapping before automatic addition.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://sumitomoelectric.com/ir/stock-info/status",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ],
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "atlasClassification": "public",
+      "identityStatus": "unresolved"
+    },
+    {
+      "company": "Wonik IPS (likely Wonik equipment entity)",
+      "reason": "Official group pages distinguish Wonik IPS, Wonik Holdings, Wonik QnC and other entities. Atlas only says Wonik; group membership does not prove the intended legal issuer. Atlas entity identity unresolved. Do not import candidate 240810.KQ without specific evidence that Atlas means Wonik IPS.",
+      "sourceURLs": [
+        "https://www.wonik.com/",
+        "https://en.wonikholdings.kr/intro_06.do"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "ambiguous_public_mapping",
+      "identityStatus": "ambiguous"
+    },
+    {
+      "company": "Shanghai Micro Electronics Equipment (SMEE)",
+      "reason": "Official company profile identifies SMEE legal entity and semiconductor equipment business; no listed instrument established. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.smee.com.cn/eis.pub?method=indexinfo&onclicknodeno=1_2_1&service=homepageService"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Carl Zeiss semiconductor equipment",
+      "reason": "Issuer report identifies Carl Zeiss Foundation as sole shareholder and explains Carl Zeiss AG shares are not exchange-listed. Semiconductor equipment is not Carl Zeiss Meditec.",
+      "sourceURLs": [
+        "https://www.zeiss.com/content/dam/z/cco/annual-report/zeiss_group-annual-report-en-2021-22.pdf",
+        "https://www.zeiss.com/content/dam/smt/news-events/sms/semicon-taiwan/zeiss-smt-factsheet-english.pdf/_jcr_content/renditions/original./zeiss-smt-factsheet-english.pdf"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "company": "Imagination Technologies",
+      "reason": "Companies House current record identifies active private limited company, number 02920061. No current standalone exchange ticker.",
+      "sourceURLs": [
+        "https://find-and-update.company-information.service.gov.uk/company/02920061"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "company": "Huawei (Ascend)",
+      "reason": "Issuer explicitly states it is privately owned and not a public company. Ascend does not have a standalone traded ordinary share.",
+      "sourceURLs": [
+        "https://www.huawei.com/en/trust-center/trustworthy"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "company": "YMTC / 长江存储",
+      "reason": "Current official profile identifies YMTC legal entity and memory business. No exchange-traded share established; do not substitute another memory company. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.ymtc.com/en/intro.html"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Lambda",
+      "reason": "Issuer investor overview includes October 2026 financing update and describes August 2026 facility as financing by a private neocloud. No public ticker confirmed.",
+      "sourceURLs": [
+        "https://lambda.ai/investors"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "company": "Crusoe",
+      "reason": "Issuer announced September 17, 2026 Series F initial closing. This is private fundraising evidence, not an exchange listing. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Fluidstack",
+      "reason": "Issuer July 20, 2026 announcement describes January Series A funding. No public listing or ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://fluidstack.com/news/series-a-announcement"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Together AI",
+      "reason": "Issuer July 1, 2026 announcement describes Series C funding. It does not establish public listing. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.together.ai/blog/announcing-our-series-c?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Vultr",
+      "reason": "Current issuer material explicitly describes privately held cloud infrastructure company.",
+      "sourceURLs": [
+        "https://discover.vultr.com/private-equity-cpu-one-pager"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "company": "Nscale",
+      "reason": "SEC registration filing proposes applying to NYSE for symbol NSCL; proposal is not a trading commencement notice. Direct fetch returned error; indexed SEC filing text verified proposed wording. Issuer September 25, 2026 announcement still describes financing as pre-IPO. No primary trading commencement or completed IPO evidence found. Do not enable NSCL as a live security.",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+        "https://www.nscale.com/press-releases/pre-ipo-convertible-financing?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Voltage Park",
+      "reason": "Official company profile describes mission and capital foundation; no current exchange listing verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://voltagepark.com/about"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "OpenAI (ChatGPT / Codex)",
+      "reason": "Official structure page describes OpenAI Foundation control and OpenAI Group equity structure. Equity ownership alone does not establish a public listing; no public ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://openai.com/our-structure/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Anthropic (Claude / Claude Code)",
+      "reason": "Issuer Series G announcement establishes private financing, not a public listing. No live symbol verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "DeepSeek",
+      "reason": "Official terms identify DeepSeek operating entity. No public share ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://cdn.deepseek.com/policies/zh-CN/deepseek-terms-of-use.html"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Mistral",
+      "reason": "Issuer announcement describes Series D fundraising. No public exchange listing established. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "Perplexity",
+      "reason": "Official company blog lists Series A and Series B funding. No current public listing identified; similarly named private investment vehicles are not Perplexity shares. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://hub-prod.perplexity.ai/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "company": "JetBrains",
+      "reason": "Issuer Annual Highlights 2026 explicitly identifies JetBrains as privately owned.",
+      "sourceURLs": [
+        "https://www.jetbrains.com/lp/annualreport-2026/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    }
+  ]
+}

@@ -53,7 +53,8 @@ test('feedback annual: reading and focusing every cell does not round or save an
   for(const el of h.root.querySelectorAll('[data-research-input="annual"]')){const r=h.getState().draft.annual[+el.dataset.index],exact=r[el.dataset.field]*Number(el.dataset.scale);el.onfocus();assert.equal(el.value,String(exact));el.onblur();el.onfocus();assert.equal(el.value,String(exact));cells++;}
   assert.equal(JSON.stringify(h.getState().draft),before,c.ticker);assert.equal(h.writes.length,writes,c.ticker+' focus/blur must never save');
  }
- assert.equal(cells,800);
+ // The explicitly selected GOOG case adds five annual rows, each with five inputs.
+ assert.equal(cells,800+5*5);
 });
 test('feedback annual: grouped display, full precision edits, invalid text, blanks and recovery remain distinct',async()=>{
  const h=await startResearchWorkspace(),selector=h.field('annual','revenue',0),el=h.get(selector);
