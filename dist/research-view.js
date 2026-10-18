@@ -1,6 +1,6 @@
 import {currentResearchDraft as studioResearchDraft,loadCurrentResearchPreset as loadStudioResearchPreset,currentResearchPresetStatus as researchPresetStatus,terminalReviewFor,TERMINAL_REVIEW_PATH,terminalReviewedResearchDraft} from './current-research-defaults.js';
 import {annualRevenueGrowthChartHTML,annualFCFFGrowthChartHTML} from './annual-revenue-growth-chart.js';
-import {fetchCompanyCatalog,validateCompanyCatalog,directoryEntries,resolveCompany} from './company-catalog.js';
+import {fetchCompanyCatalog,validateCompanyCatalog,filterUSCompanyCatalog,directoryEntries,resolveCompany} from './company-catalog.js';
 import {refreshCompanyPicker,companyPickerHTML,pendingCompanyHTML,coverageHTML,bindCompanyPicker} from './company-catalog-view.js';
 import {t, onLocaleChange, localizedText} from './i18n.js';
 import {annualLabel,annualTextHTML,annualAttribute,annualTableCellHTML,annualSetText,localizeAnnualPresentation,releaseAnnualPresentation} from './annual-localization.js';
@@ -224,7 +224,7 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
  let presets=presetBundle||null,presetError=null;
  if(presetBundle===undefined)try{presets=await fetchStudioPresets(fetcher,library);}catch(error){presetError=error.message;}
  let catalog=null,catalogError=null,pendingCompany=null;
- try{catalog=catalogBundle===undefined?await fetchCompanyCatalog(fetcher):catalogBundle?validateCompanyCatalog(catalogBundle):null;}catch(error){catalogError=error.message;}
+ try{catalog=catalogBundle===undefined?await fetchCompanyCatalog(fetcher):catalogBundle?filterUSCompanyCatalog(validateCompanyCatalog(catalogBundle)):null;}catch(error){catalogError=error.message;}
  const entries=directoryEntries(library,catalog);
  const workspaceStates=new Map(),editUndo=new Map();let activeEdit=null,editingProxy=null,evidence=null,activeEvidence=null,passiveEvidenceOpen=false,viewAnimation=null;
  const session=new Map(),startingDrafts=new Map(),undo=new Map(),undoRaw=new Map(),undoErrors=new Map(),undoNavigation=new Map();let c,d,identityError=null,retainedRaw=null,storageOkay=true,releaseSimulation=()=>{},simulationGeneration=0;

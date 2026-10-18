@@ -1,0 +1,1057 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-18",
+  "policy": "us-exchange-robinhood-public-support-v1",
+  "preservedReviewedTickers": [
+    "AAPL",
+    "MSFT",
+    "AMZN",
+    "GOOG",
+    "META",
+    "NVDA",
+    "TSLA",
+    "COHR",
+    "LITE",
+    "AAOI",
+    "NBIS",
+    "MU",
+    "AVGO",
+    "TSM"
+  ],
+  "activeAdditionalTickers": [
+    "ASML",
+    "KLAC",
+    "AMAT",
+    "ONTO",
+    "NVMI",
+    "CAMT",
+    "LRCX",
+    "SNPS",
+    "CDNS",
+    "ARM",
+    "KEYS",
+    "SVCO",
+    "RMBS",
+    "CEVA",
+    "INTC",
+    "UMC",
+    "GFS",
+    "TSEM",
+    "ASX",
+    "AMKR",
+    "AMD",
+    "MRVL",
+    "CSCO",
+    "SNDK",
+    "CRDO",
+    "MXL",
+    "SMCI",
+    "FN",
+    "DELL",
+    "HPE",
+    "GEV",
+    "VRT",
+    "ETN",
+    "TT",
+    "CRWV",
+    "IREN",
+    "APLD",
+    "ORCL",
+    "BABA",
+    "CRM",
+    "NOW",
+    "ADBE",
+    "SAP",
+    "QCOM",
+    "SPCX"
+  ],
+  "counts": {
+    "activeAdditional": 45,
+    "excludedListed": 54,
+    "excludedCoverage": 20
+  },
+  "excludedListed": [
+    {
+      "id": "atlas:7731.T",
+      "ticker": "7731.T",
+      "company": "Nikon Corporation",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.nikon.com/company/ir/stock_info/status/",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.nikon.com/company/ir/stock_info/meeting/pdf/155/notice.pdf"
+      ]
+    },
+    {
+      "id": "atlas:7751.T",
+      "ticker": "7751.T",
+      "company": "Canon Inc.",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://global.canon/en/ir/release/2026/p2026sep7e.pdf",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ]
+    },
+    {
+      "id": "atlas:6920.T",
+      "ticker": "6920.T",
+      "company": "Lasertec Corporation",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.lasertec.co.jp/en/ir/stock/outline.html",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ]
+    },
+    {
+      "id": "atlas:8035.T",
+      "ticker": "8035.T",
+      "company": "Tokyo Electron Limited",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.tel.com/ir/stocks/info/",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.tel.com/ir/faq/"
+      ]
+    },
+    {
+      "id": "atlas:002371.SZ",
+      "ticker": "002371.SZ",
+      "company": "北方华创科技集团股份有限公司 / NAURA Technology Group Co., Ltd.",
+      "exchange": "Shenzhen Stock Exchange",
+      "mic": "XSHE",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.naura.com/Public/Upload/file/20230509/168362455144d4a3b9c0e6bcaf.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ]
+    },
+    {
+      "id": "atlas:688012.SS",
+      "ticker": "688012.SS",
+      "company": "中微半导体设备（上海）股份有限公司",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://big5.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-01-08/688012_20260108_FOZZ.pdf",
+        "https://www.sse.com.cn/listing/renewal/ma/index_listing_detail.shtml?auditId=d111c13e8f884c24bc2e5008c6337657&bussinesType=1",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:ASM.AS",
+      "ticker": "ASM.AS",
+      "company": "ASM International N.V.",
+      "exchange": "Euronext Amsterdam",
+      "mic": "XAMS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://live.euronext.com/de/product/equities/nl0000334118-xams",
+        "https://live.euronext.com/nb/product/equities/NL0000334118-MTAH/market-information"
+      ]
+    },
+    {
+      "id": "atlas:6525.T",
+      "ticker": "6525.T",
+      "company": "KOKUSAI ELECTRIC CORPORATION",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.kokusai-electric.com/en/ir/stock",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www2.jpx.co.jp/disc/65250/140120260512526541.pdf"
+      ]
+    },
+    {
+      "id": "atlas:036930.KQ",
+      "ticker": "036930.KQ",
+      "company": "Jusung Engineering Co., Ltd.",
+      "exchange": "Korea Exchange KOSDAQ Market",
+      "mic": "XKOS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://jusung.com/eng/document/stock",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:688072.SS",
+      "ticker": "688072.SS",
+      "company": "拓荆科技股份有限公司",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20220419_84923262.shtml",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:SIE.DE",
+      "ticker": "SIE.DE",
+      "company": "Siemens AG",
+      "exchange": "Xetra",
+      "mic": "XETR",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.siemens.com/de-de/company/investor-relations/share-bonds-rating/basic-data-key-share-figures/",
+        "https://www.siemens.com/de-de/company/investor-relations/investor-services/faq/"
+      ]
+    },
+    {
+      "id": "atlas:301269.SZ",
+      "ticker": "301269.SZ",
+      "company": "北京华大九天科技股份有限公司",
+      "exchange": "Shenzhen Stock Exchange",
+      "mic": "XSHE",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.szse.cn/www/disclosure/notice/company/t20220728_595066.html",
+        "https://disc.static.szse.cn/disc/disk03/finalpage/2025-03-31/81ff14e7-ee6b-4bce-a3aa-9557f47fd0e6.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ]
+    },
+    {
+      "id": "atlas:688206.SS",
+      "ticker": "688206.SS",
+      "company": "上海概伦电子股份有限公司",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-12/688206_20250412_1RKI.pdf",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:688521.SS",
+      "ticker": "688521.SS",
+      "company": "芯原微电子（上海）股份有限公司 / Verisilicon Microelectronics (Shanghai) Co., Ltd.",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=688521&tabActive=1",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:005930.KS",
+      "ticker": "005930.KS",
+      "company": "Samsung Electronics Co., Ltd.",
+      "exchange": "Korea Exchange",
+      "mic": "XKRX",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.samsung.com/global/ir/stock-information/listing-Info/",
+        "https://www.samsung.com/sec/ir/main/?msockid=2bf9a76f32106fb23983b1b433816e1f",
+        "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_1Q_Interim_Report.pdf",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:0981.HK",
+      "ticker": "0981.HK",
+      "company": "Semiconductor Manufacturing International Corporation",
+      "exchange": "Hong Kong Stock Exchange",
+      "mic": "XHKG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www1.hkexnews.hk/search/titlesearch.xhtml?category=0&from=20070625&lang=EN&market=SEHK&stockId=7249&t1code=20000&t2Gcode=-2&t2code=-2&to=20260928",
+        "https://di.hkex.com.hk/filing/di/NSForm2.aspx?cn=1&cname=Semiconductor+Manufacturing+International+Corporation&corpn=Semiconductor+Manufacturing+International+Corporation&ed=07%2F09%2F2017&fn=324008&g_lang=en&lang=EN&sa1=cl&sa2=as&sced=02%2F04%2F2025&scsd=02%2F04%2F2024&sd=07%2F09%2F2017&sid=50000111&src=Main"
+      ]
+    },
+    {
+      "id": "atlas:1347.HK",
+      "ticker": "1347.HK",
+      "company": "Hua Hong Grace Semiconductor Limited",
+      "exchange": "Hong Kong Stock Exchange",
+      "mic": "XHKG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.hkex.com.hk/Market-Data/Securities-Prices/Equities/Equities-Quote?sc_lang=en&sym=1347",
+        "https://www1.hkexnews.hk/search/titlesearch.xhtml?category=0&lang=EN&market=SEHK&stockId=112822",
+        "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544104.PDF",
+        "https://di.hkex.com.hk/di/NSAllFormList.aspx?cid=0&corpn=Hua+Hong+Semiconductor+Ltd.&ed=21%2F07%2F2025&g_lang=en&lang=EN&sa1=cl&sa2=an&sc=01347&sced=21%2F07%2F2025&scsd=21%2F07%2F2024&sd=21%2F07%2F2024&sid=110440&src=MAIN"
+      ]
+    },
+    {
+      "id": "atlas:5347.TWO",
+      "ticker": "5347.TWO",
+      "company": "Vanguard International Semiconductor Corporation",
+      "exchange": "Taipei Exchange",
+      "mic": "ROCO",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://links.sgx.com/FileOpen/Vanguard%20International%20Semiconductor%20Corporation%20-%20Final%20Offering%20Circular%20dated%2028%20January%202026.ashx?App=Prospectus&FileID=68506",
+        "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=4",
+        "https://www.tpex.org.tw/en-us/mainboard/trading/rules/system.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:688249.SS",
+      "ticker": "688249.SS",
+      "company": "合肥晶合集成电路股份有限公司",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20230504_89473619.shtml",
+        "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-02/688249_20260402_FI9T.pdf",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:6770.TW",
+      "ticker": "6770.TW",
+      "company": "Powerchip Semiconductor Manufacturing Corp.",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.twse.com.tw/IIH2/en/company/information.html?code=6770",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:600584.SS",
+      "ticker": "600584.SS",
+      "company": "江苏长电科技股份有限公司 / JCET Group Co., Ltd.",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.jcetglobal.com/uploads/6efcaa649d2b35f0.pdf",
+        "https://www.jcetglobal.com/en",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:002156.SZ",
+      "ticker": "002156.SZ",
+      "company": "通富微电子股份有限公司",
+      "exchange": "Shenzhen Stock Exchange",
+      "mic": "XSHE",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://static.cninfo.com.cn/finalpage/2026-04-17/1225112784.PDF",
+        "https://static.cninfo.com.cn/finalpage/2017-11-13/1204133154.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ]
+    },
+    {
+      "id": "atlas:6239.TW",
+      "ticker": "6239.TW",
+      "company": "Powertech Technology Inc.",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.pti.com.tw/en/ir/news/qa",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:002185.SZ",
+      "ticker": "002185.SZ",
+      "company": "天水华天科技股份有限公司",
+      "exchange": "Shenzhen Stock Exchange",
+      "mic": "XSHE",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.szse.cn/disclosure/notice/company/t20071116_508217.html",
+        "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-06-11/4e196e35-8780-4fc7-bbaf-8f50630e9cd4.PDF",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ]
+    },
+    {
+      "id": "atlas:688256.SS",
+      "ticker": "688256.SS",
+      "company": "中科寒武纪科技股份有限公司",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20200717_78749873.shtml",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:688041.SS",
+      "ticker": "688041.SS",
+      "company": "海光信息技术股份有限公司",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-08/688041_20260408_235E.pdf",
+        "https://star.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-05-01/688041_20250501_3S3P.pdf",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:2454.TW",
+      "ticker": "2454.TW",
+      "company": "MediaTek Inc.",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.mediatek.com/tek-talk-blogs/one-mediatek-evolving-our-brand-for-the-ai-edge-to-cloud-future",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:3661.TW",
+      "ticker": "3661.TW",
+      "company": "Alchip Technologies, Limited",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.alchip.com/en/Investors/financials",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:3443.TW",
+      "ticker": "3443.TW",
+      "company": "Global Unichip Corp.",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.guc-asic.com/en/about/us",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:000660.KS",
+      "ticker": "000660.KS",
+      "company": "SK hynix Inc.",
+      "exchange": "Korea Exchange",
+      "mic": "XKRX",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://m.skhynix.com/ir/UI-FR-IR03/",
+        "https://m.skhynix.com/ir/UI-FR-IR01/",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:285A.T",
+      "ticker": "285A.T",
+      "company": "Kioxia Holdings Corporation",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.kioxia-holdings.com/ja-jp/ir/stock/outline.html",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ]
+    },
+    {
+      "id": "atlas:2408.TW",
+      "ticker": "2408.TW",
+      "company": "Nanya Technology Corporation",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.nanya.com/en/IR/35",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:2344.TW",
+      "ticker": "2344.TW",
+      "company": "Winbond Electronics Corporation",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.winbond.com/hq/amp.html?__locale=en&url=%2Fabout-winbond%2Fnews-and-events%2Fnews%2Fnews00577.html%3F",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:6503.T",
+      "ticker": "6503.T",
+      "company": "Mitsubishi Electric Corporation",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.mitsubishielectric.com/investors/stock/info/",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ]
+    },
+    {
+      "id": "atlas:3081.TWO",
+      "ticker": "3081.TWO",
+      "company": "LandMark Optoelectronics Corporation",
+      "exchange": "Taipei Exchange",
+      "mic": "ROCO",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.tpex.org.tw/storage/gretai50_tech/2025/07/1752129609_14068_20250710TPExIndexNotice.pdf",
+        "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=4",
+        "https://www.tpex.org.tw/en-us/mainboard/trading/rules/system.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:688498.SS",
+      "ticker": "688498.SS",
+      "company": "陕西源杰半导体科技股份有限公司 / YUANJIE SEMICONDUCTOR TECHNOLOGY CO., LTD.",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=688498&FULLNAME=XD%E6%BA%90%E6%9D%B0%E7%A7%91",
+        "https://www.sse.com.cn/assortment/stock/list/info/announcement/index.shtml?productId=688498",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:300308.SZ",
+      "ticker": "300308.SZ",
+      "company": "中际旭创股份有限公司 / Zhongji InnoLight Co., Ltd.",
+      "exchange": "Shenzhen Stock Exchange",
+      "mic": "XSHE",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.zj-innolight.com/en/index.html",
+        "https://www.zj-innolight.com/en/index/contact.html",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ]
+    },
+    {
+      "id": "atlas:300502.SZ",
+      "ticker": "300502.SZ",
+      "company": "成都新易盛通信技术股份有限公司 / Eoptolink Technology Inc., Ltd.",
+      "exchange": "Shenzhen Stock Exchange",
+      "mic": "XSHE",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.eoptolink.com/cn/",
+        "https://eoptolink.com/Eoptolink-Catalog-2021.pdf",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ]
+    },
+    {
+      "id": "atlas:2317.TW",
+      "ticker": "2317.TW",
+      "company": "Hon Hai Precision Ind. Co. Ltd.",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2317_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:2382.TW",
+      "ticker": "2382.TW",
+      "company": "Quanta Computer Inc.",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2382_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:6669.TW",
+      "ticker": "6669.TW",
+      "company": "Wiwynn Corporation",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/6669_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:3231.TW",
+      "ticker": "3231.TW",
+      "company": "Wistron Corporation",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.wistron.com/en/AboutWistron/CompanyProfile",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:002281.SZ",
+      "ticker": "002281.SZ",
+      "company": "武汉光迅科技股份有限公司",
+      "exchange": "Shenzhen Stock Exchange",
+      "mic": "XSHE",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.accelink.com/upload/1/cms/20240124/1706081906465.pdf",
+        "https://www.accelink.com/?lang=zh",
+        "https://www.szse.cn/English/rules/siteRule/P020240911598586572526.pdf"
+      ]
+    },
+    {
+      "id": "atlas:2356.TW",
+      "ticker": "2356.TW",
+      "company": "Inventec Corporation",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2356_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:ENR.DE",
+      "ticker": "ENR.DE",
+      "company": "Siemens Energy AG",
+      "exchange": "Xetra",
+      "mic": "XETR",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.siemensenergy.com/global/en/home/investor-relations/share.html",
+        "https://www.siemensenergy.com/global/en/home/investor-relations.html"
+      ]
+    },
+    {
+      "id": "atlas:SU.PA",
+      "ticker": "SU.PA",
+      "company": "Schneider Electric SE",
+      "exchange": "Euronext Paris",
+      "mic": "XPAR",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://live.euronext.com/en/product/equities/fr0000121972-xpar",
+        "https://www.se.com/ww/en/assets/564/document/528238/accounts-fy-results-2025.pdf?p_File_Name=2025+Full+Year+Financial+Results+Accounts&p_enDocType=EDMS"
+      ]
+    },
+    {
+      "id": "atlas:7011.T",
+      "ticker": "7011.T",
+      "company": "Mitsubishi Heavy Industries, Ltd.",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.mhi.com/finance/faq",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.mhi.com/finance/library/annual/pdf/report_2026_financial.pdf"
+      ]
+    },
+    {
+      "id": "atlas:ABBN.SW",
+      "ticker": "ABBN.SW",
+      "company": "ABB Ltd",
+      "exchange": "SIX Swiss Exchange",
+      "mic": "XSWX",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://global.abb/group/en/investors/investor-and-shareholder-resources/share-listing",
+        "https://www.six-group.com/de/market-data/shares/companies.html"
+      ]
+    },
+    {
+      "id": "atlas:LR.PA",
+      "ticker": "LR.PA",
+      "company": "Legrand SA",
+      "exchange": "Euronext Paris",
+      "mic": "XPAR",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://live.euronext.com/en/products/equities/company-news/2026-05-27-legranddescription-share-buyback-program-approved",
+        "https://live.euronext.com/en/product/stock-futures/LR6-DPAR",
+        "https://www.legrand.com/sites/default/files/Documents_PDF_Legrand/Finance/2026/autre/DUE/Management_report_statutory_financial_statements_EN_1775651810.pdf"
+      ]
+    },
+    {
+      "id": "atlas:2308.TW",
+      "ticker": "2308.TW",
+      "company": "Delta Electronics, Inc.",
+      "exchange": "Taiwan Stock Exchange",
+      "mic": "XTAI",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.twse.com.tw/pdf/en/2308_en.pdf",
+        "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "https://isin.twse.com.tw/isin/e_C_public.jsp?strMode=2",
+        "https://www.twse.com.tw/en/products/system/trading.html",
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv"
+      ]
+    },
+    {
+      "id": "atlas:6367.T",
+      "ticker": "6367.T",
+      "company": "Daikin Industries, Ltd.",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://www.daikin.com/faq",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf",
+        "https://www.daikin.com/-/media/E4D5DD8864E94FA99572A94CBB258E6D.ashx"
+      ]
+    },
+    {
+      "id": "atlas:6501.T",
+      "ticker": "6501.T",
+      "company": "Hitachi, Ltd.",
+      "exchange": "Tokyo Stock Exchange",
+      "mic": "XTKS",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.hitachi-hightech.com/global/en/company/history.html",
+        "https://www.hitachi.com/ja-jp/ir/faq/",
+        "https://www.hitachi.com/content/dam/hitachi/global/en/press/articles/2025/12/1219/f_251219.pdf"
+      ]
+    },
+    {
+      "id": "atlas:688825.SS",
+      "ticker": "688825.SS",
+      "company": "长鑫科技集团股份有限公司",
+      "exchange": "Shanghai Stock Exchange",
+      "mic": "XSHG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.sse.com.cn/disclosure/announcement/listing/ipo/c/c_20260724_10826610.shtml",
+        "https://star.sse.com.cn/star/market/stocklist/info/company/index.shtml?COMPANY_CODE=688825",
+        "https://english.sse.com.cn/markets/equities/overview/"
+      ]
+    },
+    {
+      "id": "atlas:9856.HK",
+      "ticker": "9856.HK",
+      "company": "Ligent Technologies, Inc.",
+      "exchange": "Hong Kong Stock Exchange",
+      "mic": "XHKG",
+      "reason": "Selected security is not listed on an approved US exchange. No OTC or alternate security is inferred.",
+      "sourceURLs": [
+        "https://www.ligent.com/index/list/4.html",
+        "https://www.hkex.com.hk/?sc_lang=zh-",
+        "https://www1.hkexnews.hk/app/sehk/2026/108264/documents/sehk26030502135.pdf",
+        "https://di.hkex.com.hk/di/summary/DSM20261006C1.htm"
+      ]
+    }
+  ],
+  "excludedCoverage": [
+    {
+      "id": "coverage:0",
+      "originalTicker": "5802.T",
+      "company": "Sumitomo Electric Industries (likely Sumitomo laser entity)",
+      "reason": "Current issuer stock page identifies code 5802, Tokyo listing and common shares.\nJPX April 2026 quotation table corroborates common shares and yen pricing.\nISO MIC register confirms the exchange code; relevant entries predate this check. 5802 listing is verified, but the Atlas shorthand Sumitomo does not uniquely identify this issuer. Confirm source-company mapping before automatic addition.",
+      "sourceURLs": [
+        "https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf",
+        "https://sumitomoelectric.com/ir/stock-info/status",
+        "https://www.jpx.co.jp/markets/statistics-equities/price/t13vrt0000014f67-att/st_202604-2.pdf"
+      ],
+      "checkedAt": "2026-10-18T04:04:35Z",
+      "atlasClassification": "public",
+      "identityStatus": "unresolved"
+    },
+    {
+      "id": "coverage:1",
+      "originalTicker": "240810.KQ",
+      "company": "Wonik IPS (likely Wonik equipment entity)",
+      "reason": "Official group pages distinguish Wonik IPS, Wonik Holdings, Wonik QnC and other entities. Atlas only says Wonik; group membership does not prove the intended legal issuer. Atlas entity identity unresolved. Do not import candidate 240810.KQ without specific evidence that Atlas means Wonik IPS.",
+      "sourceURLs": [
+        "https://www.wonik.com/",
+        "https://en.wonikholdings.kr/intro_06.do"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "ambiguous_public_mapping",
+      "identityStatus": "ambiguous"
+    },
+    {
+      "id": "coverage:2",
+      "originalTicker": null,
+      "company": "Shanghai Micro Electronics Equipment (SMEE)",
+      "reason": "Official company profile identifies SMEE legal entity and semiconductor equipment business; no listed instrument established. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.smee.com.cn/eis.pub?method=indexinfo&onclicknodeno=1_2_1&service=homepageService"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:3",
+      "originalTicker": null,
+      "company": "Carl Zeiss semiconductor equipment",
+      "reason": "Issuer report identifies Carl Zeiss Foundation as sole shareholder and explains Carl Zeiss AG shares are not exchange-listed. Semiconductor equipment is not Carl Zeiss Meditec.",
+      "sourceURLs": [
+        "https://www.zeiss.com/content/dam/z/cco/annual-report/zeiss_group-annual-report-en-2021-22.pdf",
+        "https://www.zeiss.com/content/dam/smt/news-events/sms/semicon-taiwan/zeiss-smt-factsheet-english.pdf/_jcr_content/renditions/original./zeiss-smt-factsheet-english.pdf"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "id": "coverage:4",
+      "originalTicker": null,
+      "company": "Imagination Technologies",
+      "reason": "Companies House current record identifies active private limited company, number 02920061. No current standalone exchange ticker.",
+      "sourceURLs": [
+        "https://find-and-update.company-information.service.gov.uk/company/02920061"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "id": "coverage:5",
+      "originalTicker": null,
+      "company": "Huawei (Ascend)",
+      "reason": "Issuer explicitly states it is privately owned and not a public company. Ascend does not have a standalone traded ordinary share.",
+      "sourceURLs": [
+        "https://www.huawei.com/en/trust-center/trustworthy"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "id": "coverage:6",
+      "originalTicker": null,
+      "company": "YMTC / 长江存储",
+      "reason": "Current official profile identifies YMTC legal entity and memory business. No exchange-traded share established; do not substitute another memory company. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.ymtc.com/en/intro.html"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:7",
+      "originalTicker": null,
+      "company": "Lambda",
+      "reason": "Issuer investor overview includes October 2026 financing update and describes August 2026 facility as financing by a private neocloud. No public ticker confirmed.",
+      "sourceURLs": [
+        "https://lambda.ai/investors"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "id": "coverage:8",
+      "originalTicker": null,
+      "company": "Crusoe",
+      "reason": "Issuer announced September 17, 2026 Series F initial closing. This is private fundraising evidence, not an exchange listing. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:9",
+      "originalTicker": null,
+      "company": "Fluidstack",
+      "reason": "Issuer July 20, 2026 announcement describes January Series A funding. No public listing or ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://fluidstack.com/news/series-a-announcement"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:10",
+      "originalTicker": null,
+      "company": "Together AI",
+      "reason": "Issuer July 1, 2026 announcement describes Series C funding. It does not establish public listing. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.together.ai/blog/announcing-our-series-c?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:11",
+      "originalTicker": null,
+      "company": "Vultr",
+      "reason": "Current issuer material explicitly describes privately held cloud infrastructure company.",
+      "sourceURLs": [
+        "https://discover.vultr.com/private-equity-cpu-one-pager"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    },
+    {
+      "id": "coverage:12",
+      "originalTicker": null,
+      "company": "Nscale",
+      "reason": "SEC registration filing proposes applying to NYSE for symbol NSCL; proposal is not a trading commencement notice. Direct fetch returned error; indexed SEC filing text verified proposed wording. Issuer September 25, 2026 announcement still describes financing as pre-IPO. No primary trading commencement or completed IPO evidence found. Do not enable NSCL as a live security.",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+        "https://www.nscale.com/press-releases/pre-ipo-convertible-financing?trk=article-ssr-frontend-pulse_little-text-block"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:13",
+      "originalTicker": null,
+      "company": "Voltage Park",
+      "reason": "Official company profile describes mission and capital foundation; no current exchange listing verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://voltagepark.com/about"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:14",
+      "originalTicker": null,
+      "company": "OpenAI (ChatGPT / Codex)",
+      "reason": "Official structure page describes OpenAI Foundation control and OpenAI Group equity structure. Equity ownership alone does not establish a public listing; no public ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://openai.com/our-structure/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:15",
+      "originalTicker": null,
+      "company": "Anthropic (Claude / Claude Code)",
+      "reason": "Issuer Series G announcement establishes private financing, not a public listing. No live symbol verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:16",
+      "originalTicker": null,
+      "company": "DeepSeek",
+      "reason": "Official terms identify DeepSeek operating entity. No public share ticker verified. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://cdn.deepseek.com/policies/zh-CN/deepseek-terms-of-use.html"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:17",
+      "originalTicker": null,
+      "company": "Mistral",
+      "reason": "Issuer announcement describes Series D fundraising. No public exchange listing established. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:18",
+      "originalTicker": null,
+      "company": "Perplexity",
+      "reason": "Official company blog lists Series A and Series B funding. No current public listing identified; similarly named private investment vehicles are not Perplexity shares. No current public listing verified from primary sources; exclude from live ticker universe.",
+      "sourceURLs": [
+        "https://hub-prod.perplexity.ai/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted_or_unresolved"
+    },
+    {
+      "id": "coverage:19",
+      "originalTicker": null,
+      "company": "JetBrains",
+      "reason": "Issuer Annual Highlights 2026 explicitly identifies JetBrains as privately owned.",
+      "sourceURLs": [
+        "https://www.jetbrains.com/lp/annualreport-2026/"
+      ],
+      "checkedAt": "2026-10-18T04:05:40Z",
+      "atlasClassification": "unlisted_or_unresolved",
+      "identityStatus": "unlisted"
+    }
+  ],
+  "cleanupPerformed": false
+}

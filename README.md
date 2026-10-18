@@ -18,7 +18,7 @@ For a loopback-only local preview, run `python3 -m http.server 8080 --bind 127.0
 - Monte Carlo runs only through Run simulation. Editing, reset and Undo leave results stale until explicitly rerun; Cancel invalidates in-flight results.
 - Future annual growth, margin, tax, WACC and capital inputs have separate uncertainty controls. Derived revenue/cash flow is not sampled twice. See [annual uncertainty](ANNUAL-METRIC-UNCERTAINTY.md).
 - Year-by-year charts show revenue and unlevered FCFF growth for every forecast year. Zero/negative cash-flow transitions have explicit labels. OCF is not separately forecast and is not inferred from net reinvestment.
-- The additive Atlas directory contains 99 verified additional listings and 20 coverage-only entities. New listings are research-pending; the fourteen reviewed valuation cases remain distinct. See [directory readiness](ATLAS-COMPANY-CATALOG.md).
+- The additive Atlas directory contains 45 US-exchange-listed securities with dated public Robinhood buy/sell support. Foreign-only listings and private/unresolved coverage names are excluded. Public broker support does not establish account-specific eligibility. New listings are research-pending; the fourteen reviewed valuation cases remain distinct. See [directory readiness](ATLAS-COMPANY-CATALOG.md).
 - Frozen source research and legacy numerical goldens remain intact. New metric SDs default to zero unless edited; these are modeling inputs, not estimated probabilities.
 
 ## Architecture

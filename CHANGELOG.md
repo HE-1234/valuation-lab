@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · U.S.-listed company scope
+
+- Limited the active directory to 45 additional U.S.-exchange-listed equities with individually verified public Robinhood support, alongside the original fourteen researched companies. U.S.-listed foreign issuers and ADRs remain eligible; nationality is not a filter.
+- Removed 54 foreign-exchange-only selections and twenty private/unresolved coverage entries from search and presentation. Runtime admission also rejects stale unsupported entries.
+- Broker support links disclose that public product availability does not verify a particular account’s eligibility. No new valuation numbers were invented.
+- Removed six exclusively foreign-listing local research files from active research storage into recoverable storage, with hashes and a recovery manifest. No foreign-company valuation dossiers existed; shared source records remain intact. This relocation does not reclaim disk space.
+
 ## 2026-10-18 · Selected Google case and terminal-growth review
 
 - Applied the requested selected Google case: exact funded 20-year annual schedule, 35% mature operating margin, 10% WACC, 16% terminal ROIC and reviewed 3% terminal growth. Conditional common-share allocation is $306.616907 at the unchanged June 30 valuation/capital date. The label is “Selected Google case,” with assumptions visible.
