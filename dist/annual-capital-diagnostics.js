@@ -1,6 +1,8 @@
 import {ontoAnnualFunding} from './onto-funding.js';
 import {camtAnnualFunding} from './camt-funding.js';
 import {calculateMrvlOperating} from './mrvl-operating.js';
+import {amdAnnualFunding} from './amd-operating.js';
+import {fullFiscalRevenue,priorFiscalRevenue} from './amd-periods.js';
 import {nvmiAnnualFunding} from './nvmi-funding.js';
 import {snpsAnnualFunding} from './snps-opening-stub.js';
 import {operatingCashChange} from './fn-operating-cash.js';
@@ -11,12 +13,12 @@ const finite=value=>typeof value==='number'&&Number.isFinite(value);
 
 export function annualCapitalDiagnostics(d,index=0){
  const row=Number.isInteger(index)&&index>=0?d?.annual?.[index]:null;
- const previous=index===0?d?.anchor?.revenue:d?.annual?.[index-1]?.revenue;
+ const previous=d?.anchor&&d?.annual?priorFiscalRevenue(d,index):null;
  const validRevenue=finite(row?.revenue)&&row.revenue>0&&finite(previous)&&previous>0;
- const change=validRevenue?row.revenue-previous:null;
+ const change=validRevenue?fullFiscalRevenue(d,row,index)-previous:null;
  const cashChange=row?operatingCashChange(d,index):0;
- const funding=d?.ticker==='MRVL'&&finite(row?.reinvestment)&&finite(row?.revenue)?calculateMrvlOperating(d).rows[index]:d?.ticker==='CAMT'&&finite(row?.reinvestment)&&finite(row?.revenue)?camtAnnualFunding(d,index,row):d?.ticker==='ONTO'&&finite(row?.reinvestment)&&finite(row?.revenue)?ontoAnnualFunding(d,index,row):d?.ticker==='NVMI'&&finite(row?.reinvestment)&&finite(row?.revenue)?nvmiAnnualFunding(d,index,row):d?.ticker==='SNPS'&&finite(row?.reinvestment)&&finite(row?.revenue)?snpsAnnualFunding(d,index,row):null;
- const deltaRevenue=finite(change)?change:null,reinvestment=funding?funding.reinvestment:finite(row?.reinvestment)?operatingInvestment(d,row)+cashChange:null;
+ const funding=d?.ticker==='AMD'&&finite(row?.reinvestment)&&finite(row?.revenue)?amdAnnualFunding(d,index,row):d?.ticker==='MRVL'&&finite(row?.reinvestment)&&finite(row?.revenue)?calculateMrvlOperating(d).rows[index]:d?.ticker==='CAMT'&&finite(row?.reinvestment)&&finite(row?.revenue)?camtAnnualFunding(d,index,row):d?.ticker==='ONTO'&&finite(row?.reinvestment)&&finite(row?.revenue)?ontoAnnualFunding(d,index,row):d?.ticker==='NVMI'&&finite(row?.reinvestment)&&finite(row?.revenue)?nvmiAnnualFunding(d,index,row):d?.ticker==='SNPS'&&finite(row?.reinvestment)&&finite(row?.revenue)?snpsAnnualFunding(d,index,row):null;
+ const deltaRevenue=finite(change)?change:null,reinvestment=funding?(d.ticker==='AMD'?funding.normalizedOperatingReinvestment:funding.reinvestment):finite(row?.reinvestment)?operatingInvestment(d,row)+cashChange:null;
  let effectiveMarginalSalesCapital=null,marginalAfterTaxReturnProxy=null,ratioReason='',proxyReason='';
  if(deltaRevenue===null)ratioReason='Positive current and prior revenue are required.';
  else if(deltaRevenue<=0)ratioReason='Revenue must increase; flat or falling sales do not imply a useful marginal S:C.';
@@ -34,7 +36,7 @@ export function annualCapitalDiagnostics(d,index=0){
   else proxyReason='The return proxy is outside the finite numerical range.';
  }
  return {
-  year:row?.year??null,...(funding?funding:{}),...(d?.operatingCashFunding?{investmentBeforeOperatingCashReserve:row?.reinvestment,scalableInvestmentBeforeCash:row?operatingInvestment(d,row):null,changeRequiredOperatingCash:cashChange}:{}),deltaRevenue,reinvestment,...(d?.fixedCapitalFunding?{totalCashFunding:finite(row?.reinvestment)?row.reinvestment+cashChange:null,fixedOpeningFunding:fixedCapitalSettlement(d,row?.year)}:{}),effectiveMarginalSalesCapital,marginalAfterTaxReturnProxy,ratioReason,proxyReason,
+  year:row?.year??null,...(funding?funding:{}),...(d?.operatingCashFunding?{investmentBeforeOperatingCashReserve:row?.reinvestment,scalableInvestmentBeforeCash:row?operatingInvestment(d,row):null,changeRequiredOperatingCash:cashChange}:{}),deltaRevenue,reinvestment,...(d?.fixedCapitalFunding?{totalCashFunding:funding?funding.reinvestment:finite(row?.reinvestment)?row.reinvestment+cashChange:null,fixedOpeningFunding:fixedCapitalSettlement(d,row?.year)}:{}),effectiveMarginalSalesCapital,marginalAfterTaxReturnProxy,ratioReason,proxyReason,
   // The reviewed annual package supplies no verified invested-capital stock.
   // Revenue/S:C, cumulative forecast spending, cash or claims are not substitutes.
   actualROIC:null,

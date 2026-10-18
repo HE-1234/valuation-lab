@@ -1,6 +1,7 @@
 import {ontoAnnualFunding,ontoTerminalFunding} from './onto-funding.js';
 import {camtAnnualFunding,camtTerminalFunding} from './camt-funding.js';
 import {calculateMrvlOperating,mrvlOpeningStubIssues,MRVL_MESSAGES} from './mrvl-operating.js';
+import {calculateAmdOperating,amdOperatingIssues} from './amd-operating.js';
 import {nvmiAnnualFunding,nvmiTerminalFunding} from './nvmi-funding.js';
 import {calculateSnpsOperating,snpsOpeningStubIssues} from './snps-opening-stub.js';
 import {calculateCdnsOperating,cdnsOpeningStubIssues} from './cdns-opening-stub.js';
@@ -38,7 +39,7 @@ export function researchDraftIssues(d,{includeTiming=true}={}){
  if(d.schemaVersion===2)errors.push(...annualHorizonIssues(d));
  errors.push(...annualMarginPathIssues(d));
  if(d.schemaVersion===1&&d.derivedForecast!==undefined)errors.push('Derived horizon metadata requires a version-2 annual draft.');
- errors.push(...incrementalDraftIssues(d),...(d.ticker==='MRVL'?mrvlOpeningStubIssues(d):d.ticker==='SNPS'?snpsOpeningStubIssues(d):cdnsOpeningStubIssues(d)));
+ errors.push(...amdOperatingIssues(d),...incrementalDraftIssues(d),...(d.ticker==='MRVL'?mrvlOpeningStubIssues(d):d.ticker==='SNPS'?snpsOpeningStubIssues(d):cdnsOpeningStubIssues(d)));
  if(!d.incrementalResearch&&(d.version!==RESEARCH_VERSION||typeof d.sourceScenario!=='string'||d.caseId!==`${RESEARCH_VERSION}:${d.ticker}:${d.sourceScenario}`))errors.push('Annual research version and source-case identity must match the reviewed profile.');
  if(!/^[A-Z0-9.-]{1,12}$/.test(d.ticker||'')||!(['USD','TWD'].includes(d.currency)||(d.currency==='EUR'&&incrementalRecord(d.ticker)?.identity.currency==='EUR')))errors.push('A supported ticker and explicit nominal currency are required.');
  if(!date(d.informationAsOf)||!date(d.discountOrigin)||!object(d.anchor)||!finite(d.anchor.revenue)||d.anchor.revenue<=0)errors.push('Valid information date, forecast origin and positive source revenue are required.');
@@ -90,6 +91,7 @@ export function loadAnnualResearchCase(previous,c){
 export function calculateResearchOperating(d){
  const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
  if(d.ticker==='MRVL')return calculateMrvlOperating(d);
+ if(d.ticker==='AMD')return calculateAmdOperating(d);
  if(d.ticker==='SNPS')return calculateSnpsOperating(d);
  if(d.openingStub)return calculateCdnsOperating(d);
  let prior=d.anchor.revenue,discount=1,pv=0,cumulative=0,trough=0;
@@ -134,6 +136,7 @@ export function researchTimingResult(d,operating=calculateResearchOperating(d)){
  if(!object(t))return {status:'incomplete',enterprise:null,message:'A valid explicit timing policy is required.'};
  if(t.mode==='origin')return {status:'origin',enterprise:operating.enterprise,date:d.discountOrigin,label:'Forecast-origin operating EV',warnings:d.incrementalResearch?[incrementalRecord(d.ticker).prose.scope.en]:['The information date is later than reported anchors and earlier than forecast anchors. No October 17 cash-flow or capital roll-forward is implied.']};
  if(d.ticker==='MRVL')return {status:'incomplete',enterprise:null,message:MRVL_MESSAGES.timing[0]};
+ if(d.ticker==='AMD')return {status:'incomplete',enterprise:null,message:'AMD date changes require a newly reviewed partial-period operating and capital bridge.'};
  if(d.ticker==='SNPS')return {status:'incomplete',enterprise:null,message:'SNPS source Q4 timing is fixed. A different valuation date requires a newly reviewed partial-period operating and capital bridge.'};
  if(d.openingStub)return {status:'incomplete',enterprise:null,message:'CDNS source H2 timing is fixed. A different valuation date requires a newly reviewed partial-period operating and capital bridge.'};
  if(t.mode!=='as-of-scenario'||!date(t.asOf)||t.asOf<d.informationAsOf)return {status:'incomplete',enterprise:null,message:'Use an as-of date on or after the research information date.'};

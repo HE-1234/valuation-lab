@@ -1,0 +1,34 @@
+{
+  "information_as_of": "2026-10-18",
+  "observed": {
+    "treasury10y": 0.0509,
+    "treasurydate": "2026-10-16",
+    "impliedERP": 0.042,
+    "ERPdate": "2026-10-01",
+    "ERPvariant": "Trailing12month adjusted payout; consistent unadjustedTreasury convention",
+    "USsemiconductor_asset_beta_cash_adjusted": 1.5,
+    "industry_beta_date": "January2026",
+    "industry_firms": 66
+  },
+  "analyst_assumptions": {
+    "ERP": 0.045,
+    "asset_beta": 1.5,
+    "debt_weight": 0.01,
+    "tax_rate": 0.18,
+    "debt_spread": 0.01,
+    "relevered_beta": 1.5124242424242422,
+    "cost_equity": 0.1189590909090909,
+    "after_tax_debt_cost": 0.049938,
+    "computed_wacc": 0.11826887999999999,
+    "rounded_base_wacc": 0.12,
+    "downside_wacc": 0.135,
+    "upside_wacc": 0.105
+  },
+  "rationale": "Sector asset-beta reference, not an AMD regression. Target1%debtweight is selected and consistent with low financial gearing, not a claimed current market-value measure. ERP4.5% exceeds current4.2% reference. Actual company risk includes export, geopolitical, platform-ramp and customer-financing exposure; explicit operating cases and10\u201314%WACCsensitivity matter more than a precise point. No share price or market-cap target used.",
+  "date_caveat": "Octoberinformation used in a June27-origin analytical reconstruction; not contemporaneouslyknowable June27WACC/backtest.",
+  "sources": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html"
+  ]
+}

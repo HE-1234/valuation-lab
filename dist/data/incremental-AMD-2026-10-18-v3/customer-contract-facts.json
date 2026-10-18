@@ -1,0 +1,42 @@
+{
+  "as_of": "2026-10-18",
+  "contracts": {
+    "openai": {
+      "issued": "2025-10-05",
+      "maximum_original_shares_millions": 160,
+      "strike_usd": 0.01,
+      "expiration": "2030-10-05",
+      "binding_initial_purchase_gw": 1,
+      "initial_milestone_event": "delivery",
+      "full_vesting_purchase_gw": 6,
+      "six_gw_unconditional_purchase_order": false,
+      "public_final_tranche_stock_threshold_usd": 600,
+      "intermediate_tranche_counts_and_measurement_rules": null,
+      "other_conditions": "Specified market-price thresholds; technical and commercial exercise conditions. OpenAI additionally has disclosed stock-performance thresholds. Detailed intermediate schedules are redacted.",
+      "cash_or_cashless_exercise": true,
+      "source_8k": "https://ir.amd.com/financial-information/sec-filings/content/0001193125-25-230895/d28189d8k.htm",
+      "source_contract": "https://ir.amd.com/financial-information/sec-filings/content/0001193125-25-230895/d28189dex41.htm"
+    },
+    "meta": {
+      "issued": "2026-02-23",
+      "maximum_original_shares_millions": 160,
+      "strike_usd": 0.01,
+      "expiration": "2031-02-23",
+      "binding_initial_purchase_gw": 1,
+      "initial_milestone_event": "shipment",
+      "full_vesting_purchase_gw": 6,
+      "six_gw_unconditional_purchase_order": false,
+      "public_final_tranche_stock_threshold_usd": 600,
+      "intermediate_tranche_counts_and_measurement_rules": null,
+      "other_conditions": "Specified market-price thresholds; technical and commercial exercise conditions. OpenAI additionally has disclosed stock-performance thresholds. Detailed intermediate schedules are redacted.",
+      "cash_or_cashless_exercise": true,
+      "source_8k": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000045/amd-20260223.htm",
+      "source_contract": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000045/a41commonstockwarrantagree.htm",
+      "regulatory_extension": "Up to 180 days only for qualifying irrevocably committed exercise awaiting regulatory approval; no new vesting after the original expiration."
+    }
+  },
+  "market_price_is_not_intrinsic_dcf_value": true,
+  "origin_vested_or_exercisable_shares": 0,
+  "origin_accounting_zero_does_not_mean_economic_zero": true,
+  "expected_claim_value": null
+}

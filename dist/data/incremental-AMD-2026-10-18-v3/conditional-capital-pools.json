@@ -1,0 +1,107 @@
+{
+  "base": {
+    "scenario": "base",
+    "assumptions": {
+      "cash_reserve_ratio": 0.03,
+      "marketable_recovery": 0.85,
+      "private_recovery": 0.5,
+      "equity_method_recovery": 0.5,
+      "earnout_recovery": 0.8,
+      "guarantee_loss_fraction": 0.1,
+      "espp_claim": 100,
+      "other_unmapped_claim_reserve": 500
+    },
+    "components": {
+      "cash_and_short_investments": 13111,
+      "operating_cash_reserve": -1493.6699999999998,
+      "marketable_equity_after_recovery_and_selected_tax": 908.65,
+      "private_equity_selected_recovery": 850.0,
+      "equity_method_selected_recovery": 151.0,
+      "earnout_pv": 209.71243081506864,
+      "debt_principal": -3250,
+      "opening_uncertain_tax_liability": -873,
+      "guarantee_selected_expected_loss_pv": -275.7533374197523,
+      "current_espp_selected_claim": -100,
+      "other_unmapped_claim_reserve": -500,
+      "related_party_loan_selected_principal_pv": 96.16594377432989,
+      "level3_recurring_investment_selected_value": 13.0
+    },
+    "net_bridge_addition": 8847.105037169646,
+    "status": "Dated conditional residual pool after selected ESPP reserve, before remaining legacy employee/customer claims. Not common equity. June origin; excludes quantified post-June debt/acquisition updates.",
+    "unqualified_common_equity": null,
+    "unqualified_per_share": null,
+    "conditional_residual_pool_after_selected_espp_before_other_legacy_employee_and_customer_claims": 354366.4048537422,
+    "as_of_information_cutoff": "2026-10-18",
+    "valuation_origin": "2026-06-27"
+  },
+  "deployment_delay": {
+    "scenario": "deployment_delay",
+    "assumptions": {
+      "cash_reserve_ratio": 0.05,
+      "marketable_recovery": 0.7,
+      "private_recovery": 0.25,
+      "equity_method_recovery": 0.25,
+      "earnout_recovery": 0.4,
+      "guarantee_loss_fraction": 0.35,
+      "espp_claim": 150,
+      "other_unmapped_claim_reserve": 1000
+    },
+    "components": {
+      "cash_and_short_investments": 13111,
+      "operating_cash_reserve": -2399.4500000000003,
+      "marketable_equity_after_recovery_and_selected_tax": 729.55,
+      "private_equity_selected_recovery": 425.0,
+      "equity_method_selected_recovery": 75.5,
+      "earnout_pv": 101.42606613189366,
+      "debt_principal": -3250,
+      "opening_uncertain_tax_liability": -873,
+      "guarantee_selected_expected_loss_pv": -921.226422219273,
+      "current_espp_selected_claim": -150,
+      "other_unmapped_claim_reserve": -1000,
+      "related_party_loan_selected_principal_pv": 47.86280270458068,
+      "level3_recurring_investment_selected_value": 6.5
+    },
+    "net_bridge_addition": 5903.162446617201,
+    "status": "Dated conditional residual pool after selected ESPP reserve, before remaining legacy employee/customer claims. Not common equity. June origin; excludes quantified post-June debt/acquisition updates.",
+    "unqualified_common_equity": null,
+    "unqualified_per_share": null,
+    "conditional_residual_pool_after_selected_espp_before_other_legacy_employee_and_customer_claims": 87948.11747952786,
+    "as_of_information_cutoff": "2026-10-18",
+    "valuation_origin": "2026-06-27"
+  },
+  "platform_scale_upside": {
+    "scenario": "platform_scale_upside",
+    "assumptions": {
+      "cash_reserve_ratio": 0.025,
+      "marketable_recovery": 1,
+      "private_recovery": 0.75,
+      "equity_method_recovery": 0.75,
+      "earnout_recovery": 1,
+      "guarantee_loss_fraction": 0.03,
+      "espp_claim": 100,
+      "other_unmapped_claim_reserve": 250
+    },
+    "components": {
+      "cash_and_short_investments": 13111,
+      "operating_cash_reserve": -1282.2250000000001,
+      "marketable_equity_after_recovery_and_selected_tax": 1087.75,
+      "private_equity_selected_recovery": 1275.0,
+      "equity_method_selected_recovery": 226.5,
+      "earnout_pv": 271.12748709611014,
+      "debt_principal": -3250,
+      "opening_uncertain_tax_liability": -873,
+      "guarantee_selected_expected_loss_pv": -86.72356819270179,
+      "current_espp_selected_claim": -100,
+      "other_unmapped_claim_reserve": -250,
+      "related_party_loan_selected_principal_pv": 96.61428621825326,
+      "level3_recurring_investment_selected_value": 26
+    },
+    "net_bridge_addition": 10252.043205121661,
+    "status": "Dated conditional residual pool after selected ESPP reserve, before remaining legacy employee/customer claims. Not common equity. June origin; excludes quantified post-June debt/acquisition updates.",
+    "unqualified_common_equity": null,
+    "unqualified_per_share": null,
+    "conditional_residual_pool_after_selected_espp_before_other_legacy_employee_and_customer_claims": 800023.6925394427,
+    "as_of_information_cutoff": "2026-10-18",
+    "valuation_origin": "2026-06-27"
+  }
+}

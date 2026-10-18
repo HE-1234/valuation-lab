@@ -1,0 +1,523 @@
+{
+  "information_cutoff": "2026-10-18",
+  "valuation_origin": "2026-06-27",
+  "scope": "Joint scenario definitions with customer-specific volume, market and exercise conditions. Operating EV is quantified; contingent claim fair value and common-equity price are not. These are not probability-weighted scenarios or legally verified forecasts.",
+  "cashflow_policy": "Operating forecasts remain before customer equity rebates. Future grant costs remain in EBIT. Do not also deduct contra-revenue for the same customer claim.",
+  "retired_v1_grid": "The independent 0/160/320 grid is not used in this version. A combined 160 is no longer used without identifying which customer and conditions.",
+  "cases": {
+    "deployment_delay": {
+      "label": "Binding initial deployments fulfilled, no later expansion and all warrant exercise conditions fail",
+      "openai_count": 0,
+      "meta_count": 0,
+      "stock_path": "By each deadline at least one necessary vesting/exercise condition fails for every tranche. This is an assumed failure state, not an inference from current unvested status.",
+      "technical_commercial": "Assume remaining required exercise conditions never all become satisfied; initial binding purchases still fulfill.",
+      "final_delivery_dates": {
+        "openai": "2027-12-20",
+        "meta": "2027-12-20"
+      },
+      "exercise_date": null,
+      "purchase_path": [
+        {
+          "fiscal_year": 2026,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 0,
+            "meta": 0
+          },
+          "data_center_revenue": 29393,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2027,
+          "openai_qualifying_gw_assumption": 1,
+          "meta_qualifying_gw_assumption": 1,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 42619.85,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 21309.925,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2028,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 51143.82,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2029,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 58815.393,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2030,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 65873.24016,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2031,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 72460.56417600001,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2032,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 78257.40931008002,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2033,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 82952.85386868483,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2034,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 86270.96802343223,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2035,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 88427.74222401803,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        }
+      ],
+      "program_shares_millions_conditional": {
+        "openai": 0,
+        "meta": 0
+      },
+      "total_conditional_issued_shares_millions": 0,
+      "cash_exercise_proceeds_at_exercise_usd_millions": null,
+      "expected_warrant_fair_value": null,
+      "common_equity_value": null,
+      "per_share_value": null,
+      "operating_result": {
+        "operating_ev_before_customer_equity_rebates_and_partner_asset_flows": 85528.85531877783,
+        "pv_future_partner_net_funding": 3483.900285867174,
+        "ev_after_selected_partner_funding_before_current_bridge_and_warrant_claims": 82044.95503291066,
+        "unqualified_equity_value": null,
+        "unqualified_per_share_value": null
+      },
+      "unclosed_joint_valuation": "No customer-specific dollar recognition mapping, contingent market path probabilities, intermediate tranche rights, current employee ledger or date-consistent future claim valuation is selected. Even the full-exercise state is not valued by a current pro-rata grid. Cashless exercise would require the contract-defined market measure and is not mixed with the selected cash-exercise state."
+    },
+    "base": {
+      "label": "Staged customer purchases with unresolved partial warrant vesting",
+      "openai_count": null,
+      "meta_count": null,
+      "stock_path": "Final $600 hurdles assumed not achieved in their contractual windows. Some intermediate conditions may be achieved, but their undisclosed quantities and measurement rules prevent a selected share count. No claim value of zero is assigned.",
+      "technical_commercial": "Initial purchase milestones fulfilled; later technical/commercial outcomes and intermediate exercises remain unselected.",
+      "final_delivery_dates": {
+        "openai": "2030-09-30",
+        "meta": "2030-12-20"
+      },
+      "exercise_date": null,
+      "purchase_path": [
+        {
+          "fiscal_year": 2026,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 0,
+            "meta": 0
+          },
+          "data_center_revenue": 30693,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2027,
+          "openai_qualifying_gw_assumption": 1,
+          "meta_qualifying_gw_assumption": 1,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 58316.7,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 29158.35,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2028,
+          "openai_qualifying_gw_assumption": 1,
+          "meta_qualifying_gw_assumption": 1,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 2,
+            "meta": 2
+          },
+          "data_center_revenue": 84559.215,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 42279.6075,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2029,
+          "openai_qualifying_gw_assumption": 1,
+          "meta_qualifying_gw_assumption": 1,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 3,
+            "meta": 3
+          },
+          "data_center_revenue": 111618.1638,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 55809.0819,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2030,
+          "openai_qualifying_gw_assumption": 1,
+          "meta_qualifying_gw_assumption": 1,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 4,
+            "meta": 4
+          },
+          "data_center_revenue": 138406.523112,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 69203.261556,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2031,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 4,
+            "meta": 4
+          },
+          "data_center_revenue": 161935.63204104,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2032,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 4,
+            "meta": 4
+          },
+          "data_center_revenue": 181367.9078859648,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2033,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 4,
+            "meta": 4
+          },
+          "data_center_revenue": 195877.340516842,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2034,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 4,
+            "meta": 4
+          },
+          "data_center_revenue": 207629.98094785254,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2035,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 4,
+            "meta": 4
+          },
+          "data_center_revenue": 214897.03028102737,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        }
+      ],
+      "program_shares_millions_conditional": {
+        "openai": null,
+        "meta": null
+      },
+      "total_conditional_issued_shares_millions": null,
+      "cash_exercise_proceeds_at_exercise_usd_millions": null,
+      "expected_warrant_fair_value": null,
+      "common_equity_value": null,
+      "per_share_value": null,
+      "operating_result": {
+        "operating_ev_before_customer_equity_rebates_and_partner_asset_flows": 347856.706130075,
+        "pv_future_partner_net_funding": 2337.406313502409,
+        "ev_after_selected_partner_funding_before_current_bridge_and_warrant_claims": 345519.2998165726,
+        "unqualified_equity_value": null,
+        "unqualified_per_share_value": null
+      },
+      "unclosed_joint_valuation": "No customer-specific dollar recognition mapping, contingent market path probabilities, intermediate tranche rights, current employee ledger or date-consistent future claim valuation is selected. Even the full-exercise state is not valued by a current pro-rata grid. Cashless exercise would require the contract-defined market measure and is not mixed with the selected cash-exercise state."
+    },
+    "platform_scale_upside": {
+      "label": "Both programs fully completed and all exercise conditions satisfied before expiry",
+      "openai_count": 160,
+      "meta_count": 160,
+      "stock_path": "Assume AMD actual market price meets both final $600 thresholds and every applicable measurement/stock-performance condition by September 30, 2030. This is an explicit hypothetical market-path condition; the DCF intrinsic price is never substituted for the contractual market observation.",
+      "technical_commercial": "Assume all purchases, technical/commercial and regulatory conditions are satisfied in time, with cash exercise September 30, 2030. No Meta extension is needed.",
+      "final_delivery_dates": {
+        "openai": "2030-09-30",
+        "meta": "2030-09-30"
+      },
+      "exercise_date": "2030-09-30",
+      "purchase_path": [
+        {
+          "fiscal_year": 2026,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 0,
+            "meta": 0
+          },
+          "data_center_revenue": 31893,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2027,
+          "openai_qualifying_gw_assumption": 1,
+          "meta_qualifying_gw_assumption": 1,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 1,
+            "meta": 1
+          },
+          "data_center_revenue": 68569.95,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 34284.975,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2028,
+          "openai_qualifying_gw_assumption": 1.5,
+          "meta_qualifying_gw_assumption": 1.5,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 2.5,
+            "meta": 2.5
+          },
+          "data_center_revenue": 109711.92,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 36570.64,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2029,
+          "openai_qualifying_gw_assumption": 1.5,
+          "meta_qualifying_gw_assumption": 1.5,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 4.0,
+            "meta": 4.0
+          },
+          "data_center_revenue": 153596.688,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 51198.896,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2030,
+          "openai_qualifying_gw_assumption": 2,
+          "meta_qualifying_gw_assumption": 2,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 6.0,
+            "meta": 6.0
+          },
+          "data_center_revenue": 199675.6944,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": 49918.9236,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2031,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 6.0,
+            "meta": 6.0
+          },
+          "data_center_revenue": 243604.347168,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2032,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 6.0,
+            "meta": 6.0
+          },
+          "data_center_revenue": 280144.9992432,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2033,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 6.0,
+            "meta": 6.0
+          },
+          "data_center_revenue": 308159.49916752,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2034,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 6.0,
+            "meta": 6.0
+          },
+          "data_center_revenue": 328189.86661340884,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        },
+        {
+          "fiscal_year": 2035,
+          "openai_qualifying_gw_assumption": 0,
+          "meta_qualifying_gw_assumption": 0,
+          "cumulative_qualifying_gw_assumption": {
+            "openai": 6.0,
+            "meta": 6.0
+          },
+          "data_center_revenue": 341317.4612779452,
+          "general_revenue_constraint": "OpenAI recognized sales plus Meta recognized sales plus CPU and other GPU sales must equal total Data Center sales. Qualifying shipment/delivery is not automatically the accounting recognition date.",
+          "customer_revenue_mapping": "Unspecified. Purchases, shipment/delivery and accounting recognition must be reconciled; no universal dollars per GW is inferred.",
+          "same_year_recognition_feasibility_bound_usd_millions_per_gw": null,
+          "bound_caveat": "An upper feasibility bound only under an additional same-year, equal-unit-revenue assumption. It is not an estimated selling price and leaves zero residual CPU/other sales at the bound. Actual unit revenue must be below this bound to leave room for those businesses."
+        }
+      ],
+      "program_shares_millions_conditional": {
+        "openai": 160,
+        "meta": 160
+      },
+      "total_conditional_issued_shares_millions": 320,
+      "cash_exercise_proceeds_at_exercise_usd_millions": 3.2,
+      "expected_warrant_fair_value": null,
+      "common_equity_value": null,
+      "per_share_value": null,
+      "operating_result": {
+        "operating_ev_before_customer_equity_rebates_and_partner_asset_flows": 790813.2057228117,
+        "pv_future_partner_net_funding": 1041.5563884907106,
+        "ev_after_selected_partner_funding_before_current_bridge_and_warrant_claims": 789771.649334321,
+        "unqualified_equity_value": null,
+        "unqualified_per_share_value": null
+      },
+      "unclosed_joint_valuation": "No customer-specific dollar recognition mapping, contingent market path probabilities, intermediate tranche rights, current employee ledger or date-consistent future claim valuation is selected. Even the full-exercise state is not valued by a current pro-rata grid. Cashless exercise would require the contract-defined market measure and is not mixed with the selected cash-exercise state."
+    }
+  },
+  "v3_presentation_safeguard": "June-origin conditional research. Any residual pool already includes selected ESPP reserve; it is before other legacy employee/customer claims, not common equity. Operating values exclude post-origin acquisitions and financing bridge; no current hurdle status is asserted."
+}

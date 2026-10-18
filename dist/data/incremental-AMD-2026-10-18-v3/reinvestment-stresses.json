@@ -1,0 +1,134 @@
+{
+  "return_rebuilds": [
+    {
+      "selected_forward_incremental_return": 0.12,
+      "meaning": "After expensed R&D and new employee grants; not measured balance-sheet ROIC. Both explicit investment reserve and terminal reinvestment rebuilt.",
+      "operating_ev": 303363.99816984806,
+      "pv_partner_funding": 2337.406313502409,
+      "pv_explicit_reserve": 32289.495856229667,
+      "terminal_continuity": 1.034999999999999,
+      "terminal_investment": 17553.046516961458,
+      "terminal_fcff": 42628.82725547782
+    },
+    {
+      "selected_forward_incremental_return": 0.15,
+      "meaning": "After expensed R&D and new employee grants; not measured balance-sheet ROIC. Both explicit investment reserve and terminal reinvestment rebuilt.",
+      "operating_ev": 325610.35214996146,
+      "pv_partner_funding": 2337.406313502409,
+      "pv_explicit_reserve": 24107.04969485635,
+      "terminal_continuity": 1.0349999999999993,
+      "terminal_investment": 14042.437213569165,
+      "terminal_fcff": 46139.43655887011
+    },
+    {
+      "selected_forward_incremental_return": 0.2,
+      "meaning": "After expensed R&D and new employee grants; not measured balance-sheet ROIC. Both explicit investment reserve and terminal reinvestment rebuilt.",
+      "operating_ev": 347856.706130075,
+      "pv_partner_funding": 2337.406313502409,
+      "pv_explicit_reserve": 15924.603533483036,
+      "terminal_continuity": 1.0349999999999995,
+      "terminal_investment": 10531.827910176873,
+      "terminal_fcff": 49650.04586226241
+    },
+    {
+      "selected_forward_incremental_return": 0.25,
+      "meaning": "After expensed R&D and new employee grants; not measured balance-sheet ROIC. Both explicit investment reserve and terminal reinvestment rebuilt.",
+      "operating_ev": 361204.518518143,
+      "pv_partner_funding": 2337.406313502409,
+      "pv_explicit_reserve": 11015.135836659048,
+      "terminal_continuity": 1.0349999999999995,
+      "terminal_investment": 8425.462328141499,
+      "terminal_fcff": 51756.41144429778
+    },
+    {
+      "selected_forward_incremental_return": 0.3,
+      "meaning": "After expensed R&D and new employee grants; not measured balance-sheet ROIC. Both explicit investment reserve and terminal reinvestment rebuilt.",
+      "operating_ev": 370103.0601101883,
+      "pv_partner_funding": 2337.406313502409,
+      "pv_explicit_reserve": 7742.157372109723,
+      "terminal_continuity": 1.0349999999999997,
+      "terminal_investment": 7021.218606784582,
+      "terminal_fcff": 53160.655165654694
+    }
+  ],
+  "base_extra_reserve_nominal": 36305.702278219105,
+  "capex_only_25_percent_increase": {
+    "operating_ev": 342179.17056319606,
+    "pv_partner_funding": 2337.406313502409,
+    "pv_explicit_reserve": 13491.39760995728,
+    "terminal_continuity": 1.0349999999999995,
+    "terminal_investment": 10531.827910176873,
+    "terminal_fcff": 49650.04586226241
+  },
+  "total_new_economic_investment_25_percent_increase": {
+    "operating_ev": 321340.1408884058,
+    "terminal_reinvestment": 13164.78488772109,
+    "terminal_fcff": 47017.088884718185,
+    "implied_forward_incremental_terminal_return": 0.16,
+    "terminal_continuity": 1.0349999999999993,
+    "rows": [
+      {
+        "fiscal_year": 2026,
+        "reinvestment": 4472.25,
+        "fcff": 1199.4500000000016,
+        "fixed_opening_payable": 421
+      },
+      {
+        "fiscal_year": 2027,
+        "reinvestment": 12174.195500000002,
+        "fcff": 5282.117351999994,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2028,
+        "reinvestment": 12139.583856249996,
+        "fcff": 13618.331383819997,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2029,
+        "reinvestment": 12505.3740638,
+        "fcff": 23737.674721695985,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2030,
+        "reinvestment": 12130.775210278,
+        "fcff": 33767.49612654573,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2031,
+        "reinvestment": 19300.985627364236,
+        "fcff": 33424.61127710147,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2032,
+        "reinvestment": 22093.50625916215,
+        "fcff": 34167.012117027974,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2033,
+        "reinvestment": 20200.664612036227,
+        "fcff": 37575.16084069627,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2034,
+        "reinvestment": 18457.73523825994,
+        "fcff": 39700.329173919716,
+        "fixed_opening_payable": 0
+      },
+      {
+        "fiscal_year": 2035,
+        "reinvestment": 12719.59892533436,
+        "fcff": 45427.13901905142,
+        "fixed_opening_payable": 0
+      }
+    ]
+  },
+  "interpretation": "Higher explicit capex partly substitutes for the model extra reserve. Capex and reserve are not independent. The total funding stress scales direct investment and the reserve together, so it is not neutralized by that substitution; fixed opening payable remains 421. The 20% selected return has no measured capital-stock validation.",
+  "v3_presentation_safeguard": "June-origin conditional research. Any residual pool already includes selected ESPP reserve; it is before other legacy employee/customer claims, not common equity. Operating values exclude post-origin acquisitions and financing bridge; no current hurdle status is asserted."
+}

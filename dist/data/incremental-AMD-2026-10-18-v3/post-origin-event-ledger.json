@@ -1,0 +1,150 @@
+{
+  "units": "USD millions unless stated",
+  "information_cutoff": "2026-10-18",
+  "events": [
+    {
+      "id": "anthropic",
+      "event_date": "2026-07-22",
+      "status": "Announced strategic equity commitment and deployment plan",
+      "known": {
+        "equity_investment_up_to": 5000,
+        "deployment_up_to_gw": 2,
+        "first_gw_begins": "H1 2027"
+      },
+      "treatment": "Select the announced $5B as the same subsequent investment exposure already funded in v2; this is a supported matching assumption, not an explicit legal reconciliation. Do not add a second $5B. v2 cash draw 1/2/2B and 2030 recovery remain analyst choices.",
+      "unknown": [
+        "draw milestones",
+        "ownership/security terms",
+        "liquidation priority",
+        "valuation",
+        "recovery date",
+        "linkage to customer payments/guarantees"
+      ],
+      "source_ids": [
+        "S04",
+        "S05"
+      ]
+    },
+    {
+      "id": "taalas",
+      "event_date": "2026-08-06",
+      "status": "Definitive agreement; closing subject to conditions in reviewed release; completed closing not established",
+      "known": {
+        "price": null,
+        "payment_mix": null
+      },
+      "treatment": "Exclude target cash flows and acquisition payment/issuance from the standalone operating case. Carry as unsized event; headline wording is not proof of closing.",
+      "unknown": [
+        "purchase consideration",
+        "cash/equity mix",
+        "closing date",
+        "acquired cash/debt",
+        "retention awards",
+        "integration costs"
+      ],
+      "source_ids": [
+        "S06"
+      ]
+    },
+    {
+      "id": "august_bonds",
+      "event_date": "2026-08-17",
+      "status": "Offering closed",
+      "known": {
+        "principal": 4750,
+        "estimated_net_cash": 4726,
+        "annual_coupon_cash": 240
+      },
+      "treatment": "Paired cash/debt bridge; see debt-financing-bridge.json. Kept separate from June-origin residual pools.",
+      "unknown": [
+        "actual uses of proceeds",
+        "intervening operating cash and investment flows",
+        "current debt market value"
+      ],
+      "source_ids": [
+        "S01",
+        "S02"
+      ]
+    },
+    {
+      "id": "september_debt_maturity",
+      "event_date": "2026-09-24",
+      "status": "Contractual maturity passed; actual repayment not established from reviewed disclosures",
+      "known": {
+        "principal": 875
+      },
+      "treatment": "Conditional matched cash and principal reduction; not a verified event or $875M value loss.",
+      "unknown": [
+        "payment confirmation",
+        "financing source"
+      ],
+      "source_ids": [
+        "S03"
+      ]
+    },
+    {
+      "id": "world_labs",
+      "event_date": "2026-09-26",
+      "announcement_date": "2026-09-28",
+      "status": "Merger agreement; expected close by end 2026 subject to conditions",
+      "known": {
+        "announced_equity_consideration": 8200,
+        "payment": "AMD common shares",
+        "exchange_price_measurement": "Daily VWAP over ten consecutive trading days ending on and including the second trading day before closing",
+        "fixed_share_count": null
+      },
+      "treatment": "N_new = adjusted consideration / contractual pre-close VWAP. No current shares inserted. At closing add independently valued target operating/net assets and costs once, then allocate ownership using issued shares. Do not subtract $8.2B cash and dilute, or assume announced price equals acquired intrinsic value.",
+      "unknown": [
+        "final adjusted consideration",
+        "closing",
+        "VWAP",
+        "seller-share count",
+        "target economics",
+        "retention/replacement awards",
+        "existing investment overlap"
+      ],
+      "source_ids": [
+        "S07",
+        "S08"
+      ]
+    },
+    {
+      "id": "q3_reporting",
+      "event_date": "2026-10-06",
+      "status": "Q3 results scheduled Nov 3 after close",
+      "known": {
+        "latest_reported_balance_sheet": "2026-06-27",
+        "results_due": "2026-11-03"
+      },
+      "treatment": "Do not infer that September period-end financial statements are public on October 18. This is a current-value limitation, not a blocker to dated research.",
+      "source_ids": [
+        "S09",
+        "S10"
+      ]
+    },
+    {
+      "id": "helion",
+      "event_date": "2026-10-12",
+      "status": "Product announcement; configurations in development, availability planned November 2026",
+      "treatment": "Operating context only. No incremental revenue added on top of the existing segment forecast without a customer/product bridge. Helion is distinct from Helios.",
+      "source_ids": [
+        "S11"
+      ]
+    },
+    {
+      "id": "humain",
+      "event_date": "2026-08-31",
+      "status": "Issuer reports production systems live; further expansion planned",
+      "known": {
+        "next_phase_up_to_mw": 250,
+        "next_phase_begins": 2027,
+        "long_term_up_to_gw": 1,
+        "long_term_year": 2030
+      },
+      "treatment": "Execution evidence; not a quantified AMD cash-flow bridge or proof of all future buildouts. No extra equity asset credited without ownership/funding terms.",
+      "source_ids": [
+        "S12"
+      ]
+    }
+  ]
+}

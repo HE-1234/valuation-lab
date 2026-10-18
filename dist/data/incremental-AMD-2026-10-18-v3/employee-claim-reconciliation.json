@@ -1,0 +1,49 @@
+{
+  "origin": "2026-06-27",
+  "information_cutoff": "2026-10-18",
+  "complete_current_ledger": null,
+  "dated_public_facts": {
+    "q2_shares_common_rounded_millions": 1632,
+    "july29_common_cover_millions": 1632.475042,
+    "q2_diluted_eps_weighted_millions": 1659,
+    "plan_authorized_millions": 153,
+    "plan_available_millions": 107,
+    "h1_employee_issue_millions_rounded": 4,
+    "h1_sbc_expense": 990
+  },
+  "july_executive_disclosure": {
+    "board_approval_date": "2026-06-26",
+    "announced_grant_date": "2026-08-15",
+    "named_officer_target_award_values": {
+      "Lisa Su": 36,
+      "Jean Hu": 9,
+      "Mark Papermaster": 10,
+      "Darren Grasby": 7.5,
+      "Forrest Norrod": 8
+    },
+    "aggregate_target_award_value": 70.5,
+    "target_prsu_value": 47.7,
+    "time_rsu_target_value": 22.8,
+    "share_conversion": "Applicable target value divided by average closing stock price over 30 trading days ending on grant date",
+    "prsu_payout_range_of_target": [
+      0,
+      2.5
+    ],
+    "prsu_performance_end": "2029-08-15",
+    "rsu_vesting": "One quarter August 15 2027; quarterly thereafter through August 15 2030",
+    "not_a_fair_value_or_current_share_count": true,
+    "source": "S13"
+  },
+  "treatment": [
+    "153 minus 107 is cumulative plan usage, not a measured 46M outstanding claim.",
+    "The 27M diluted EPS difference is a weighted treasury-stock-method quantity, not current award fair value.",
+    "Existing v2 pools already subtract ESPP $100M base/scale or $150M delay. Replace this assumption when actual valuation arrives; never deduct another full ESPP claim on top.",
+    "Forward modeled employee costs are assumed to represent post-origin compensation grants. A proper award-generation bridge must separate legacy accrued service/value from future services and new grants before deducting a legacy award claim.",
+    "August announced grants may fall in post-origin service/grant assumptions: do not subtract $70.5M target value mechanically as a second legacy claim.",
+    "Scheduled insider grants do not establish a company-wide award roll-forward; attempted issuer Form 4 links failed and no exact current counts are claimed."
+  ],
+  "source_ids": [
+    "S05",
+    "S13"
+  ]
+}

@@ -1,3 +1,4 @@
+import {amdH1Revenue,fullFiscalRevenue} from './amd-periods.js';
 import {operatingCashChange,operatingCashPolicy} from './fn-operating-cash.js';
 import {fixedCapitalSettlement,operatingInvestment,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
 import {incrementalCaseVersion,incrementalIdentityValid} from './incremental-research-identity.js';
@@ -58,10 +59,10 @@ export function calculateDerivedReinvestment(d,revenueRows,{baselineAnnual=d.der
  return revenueRows.map((row,i)=>{
   const revenue=typeof row==='number'?row:row?.revenue;
   if(!finite(revenue)||revenue<=0)throw Error(`Year ${i+1}: a positive finite revenue is required.`);
-  const delta=revenue-prior;prior=revenue;
+  const full=revenue+amdH1Revenue(d,i),delta=full-prior;prior=full;
   let investment;
   if(i<baselineAnnual.length){
-   const base=baselineAnnual[i],baseDelta=base.revenue-basePrior;basePrior=base.revenue;
+   const base=baselineAnnual[i],baseDelta=fullFiscalRevenue(d,base,i)-basePrior;basePrior=fullFiscalRevenue(d,base,i);
    if(revenue===base.revenue&&delta===baseDelta)return base.reinvestment;
    const scale=Math.max(1,revenue/base.revenue);
    // Retain the signed explicit release once, never amplify it. Positive source
@@ -114,7 +115,7 @@ export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyY
   capitalTiming:'Added-year investment = max(0, current minus prior revenue) × (1 + stable growth) × mature margin × (1 − mature tax) / terminal ROIC. At stable growth this equals current-year NOPAT × stable growth / ROIC.',
   regenerationBasis:'The retained pre-change path. Applying another horizon rebuilds generated revenue and investment while preserving explicit manual investment overrides; full Undo retains the preceding edited draft.'};
  let prior=d.anchor.revenue;
- const growth=baselineAnnual.map(r=>{const g=r.revenue/prior-1;prior=r.revenue;return g;});
+ const growth=baselineAnnual.map((r,i)=>{const full=fullFiscalRevenue(d,r,i),g=full/prior-1;prior=full;return g;});
  prior=d.anchor.revenue;
  next.annual=Array.from({length:n},(_,i)=>{
   const year=i+1;
@@ -130,7 +131,7 @@ export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyY
    revenue=prior*(1+g);
   }
   if(!finite(revenue)||revenue<=0)throw Error(`Year ${year}: derived revenue exceeded the positive finite numerical range.`);
-  prior=revenue;
+  prior=revenue+amdH1Revenue(d,i);
   const base=baselineAnnual[i];
   return base?{...base,revenue}:{year,period:`Year ${year} · derived extension`,revenue,margin:d.terminal.margin,taxRate:d.terminal.taxRate,reinvestment:0,wacc:d.terminal.wacc,...economicOverrides[year]};
  });
@@ -143,6 +144,7 @@ export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyY
  next.derivedForecast.generatedReinvestment=investments;
  next.annual.forEach((r,i)=>{r.reinvestment=Object.prototype.hasOwnProperty.call(investmentOverrides,r.year)?investmentOverrides[r.year]:investments[i];});
  if(next.ticker==='MRVL')next.annual.forEach((r,i)=>{r.period=`FY${2028+i}`;});
+ if(next.ticker==='AMD')next.annual.forEach((r,i)=>{r.period=i?`FY${2026+i}`:'H2 FY2026';});
  if(next.ticker==='SNPS')next.annual.forEach((r,i)=>{r.period=`FY${2027+i}`;});
  const issues=annualHorizonIssues(next);if(issues.length)throw Error(issues.join(' '));
  return next;
@@ -188,6 +190,7 @@ export function extendAnnualForMargin(d,c,terminalYear){
  }
  next.forecastHorizonYears=next.annual.length;next.userEdited=true;
  if(next.ticker==='MRVL')next.annual.forEach((r,i)=>{r.period=`FY${2028+i}`;});
+ if(next.ticker==='AMD')next.annual.forEach((r,i)=>{r.period=i?`FY${2026+i}`:'H2 FY2026';});
  if(next.ticker==='SNPS')next.annual.forEach((r,i)=>{r.period=`FY${2027+i}`;});
  return next;
 }
