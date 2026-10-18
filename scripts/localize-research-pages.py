@@ -41,6 +41,26 @@ class Inventory(HTMLParser):
   k=key(english);self.entries[k]=english
   self.nodes.append({'start':start,'end':end,'key':k,'tag':self.stack[-1][0] if self.stack else None})
 def write_json(path,data):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+def write_provenance(path,data):
+ # Lossless, ordered shards keep each GitHub connector payload below its 16 MiB limit.
+ # The manifest records the hash of the exact reconstructed schema-v1 JSON bytes.
+ serialized=json.dumps(data,ensure_ascii=False,indent=2)+'\n'
+ chunks=[];current={};size=0
+ for name,entries in data['entries'].items():
+  entry_size=len(json.dumps({name:entries},ensure_ascii=False,indent=2).encode())
+  if current and size+entry_size>4_000_000:
+   chunks.append(current);current={};size=0
+  current[name]=entries;size+=entry_size
+ if current:chunks.append(current)
+ parts=[]
+ for index,entries in enumerate(chunks,1):
+  filename=f'research-prose-provenance.part-{index:03d}.json'
+  target=path.parent/filename;write_json(target,entries)
+  parts.append({'file':filename,'entryCount':len(entries),'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+ expected={part['file'] for part in parts}
+ for stale in path.parent.glob('research-prose-provenance.part-*.json'):
+  if stale.name not in expected:stale.unlink()
+ write_json(path,{'schemaVersion':2,'reconstructedSchemaVersion':data['schemaVersion'],'sourceFilesSHA256':data['sourceFilesSHA256'],'entryCount':len(data['entries']),'reconstructedSHA256':hashlib.sha256(serialized.encode()).hexdigest(),'parts':parts})
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--apply',action='store_true');args=ap.parse_args()
  TRANSLATIONS.mkdir(exist_ok=True)
@@ -96,7 +116,7 @@ def main():
  for source_file in sorted((ROOT/'dist/data').rglob('*.json')):
   raw=source_file.read_bytes();name=str(source_file.relative_to(ROOT/'dist'))
   source_hashes[name]=hashlib.sha256(raw).hexdigest();walk_json(json.loads(raw),name)
- write_json(ROOT/'dist/locales/research-prose-provenance.json',{'schemaVersion':1,'sourceFilesSHA256':source_hashes,'entries':provenance})
+ write_provenance(ROOT/'dist/locales/research-prose-provenance.json',{'schemaVersion':1,'sourceFilesSHA256':source_hashes,'entries':provenance})
 
  write_json(ROOT/'dist/locales/research-pages.en.json', {k:all_entries[k] for k in overlays if k in all_entries})
  write_json(ROOT/'dist/locales/research-pages.zh-Hant.json',{k:v for k,v in overlays.items() if k in all_entries})

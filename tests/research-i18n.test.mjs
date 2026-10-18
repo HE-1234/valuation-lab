@@ -49,7 +49,20 @@ test('research: all localized standalone pages reverse exactly to original Engli
  }
 });
 test('research: each data-prose overlay has verified immutable source-file and English-pointer provenance',()=>{
- const provenance=JSON.parse(fs.readFileSync(new URL('../dist/locales/research-prose-provenance.json',import.meta.url),'utf8'));
+ const manifest=JSON.parse(fs.readFileSync(new URL('../dist/locales/research-prose-provenance.json',import.meta.url),'utf8'));
+ assert.equal(manifest.schemaVersion,2);
+ const entries={};
+ for(const part of manifest.parts){
+  assert.match(part.file,/^research-prose-provenance\.part-\d{3}\.json$/);
+  const raw=fs.readFileSync(new URL('../dist/locales/'+part.file,import.meta.url),'utf8');
+  assert.ok(Buffer.byteLength(raw)<8_000_000,part.file);
+  assert.equal(sha(raw),part.sha256,part.file);
+  const values=JSON.parse(raw);assert.equal(Object.keys(values).length,part.entryCount);
+  for(const [key,value] of Object.entries(values)){assert.ok(!Object.hasOwn(entries,key),key);entries[key]=value;}
+ }
+ assert.equal(Object.keys(entries).length,manifest.entryCount);
+ const provenance={schemaVersion:manifest.reconstructedSchemaVersion,sourceFilesSHA256:manifest.sourceFilesSHA256,entries};
+ assert.equal(sha(JSON.stringify(provenance,null,2)+'\n'),manifest.reconstructedSHA256);
  const sources=new Map();
  for(const [file,hash]of Object.entries(provenance.sourceFilesSHA256)){
   const raw=fs.readFileSync(new URL('../dist/'+file,import.meta.url));assert.equal(sha(raw),hash,file);sources.set(file,JSON.parse(raw));
