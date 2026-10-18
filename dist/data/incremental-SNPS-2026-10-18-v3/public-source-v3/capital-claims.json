@@ -1,0 +1,241 @@
+{
+  "financial_origin": "2026-07-31",
+  "information_cutoff": "2026-10-18",
+  "unit": "USD millions, shares millions unless stated",
+  "cash": {
+    "cash_equivalents": 3606.286,
+    "restricted_cash_excluded": 4.49,
+    "short_term_investments": 1.383,
+    "marketable_equity": 0.684,
+    "analyst_operating_cash_reserve": 291.45,
+    "conditional_excess_cash": 3314.836,
+    "US_held_fraction_rounded": 0.54,
+    "availability_gate": "Jurisdictional distributability, taxes and subsidiary liquidity not proved; cash credit conditional."
+  },
+  "cash_rollforward": {
+    "opening_cash_including_restricted": 2893.721,
+    "cfo": 2298.603,
+    "cfi": 353.763,
+    "cff": -1901.902,
+    "fx": -33.409,
+    "ending_cash_including_restricted": 3610.776,
+    "financing_components": {
+      "debt_repayment": -3463.726,
+      "employee_stock_issuance": 124.585,
+      "award_withholding_taxes": -262.761,
+      "NVIDIA_private_placement": 2000,
+      "repurchases": -300
+    },
+    "treatment": "All closed acquisitions/divestitures and NVIDIA proceeds before July are already in opening bridge. No repeat credit or charge."
+  },
+  "debt": {
+    "notes_face": 10000,
+    "notes_book": 9926.911,
+    "notes_fair_approx": 9700,
+    "treasury_lock_deferred_settlement": 99.526,
+    "other_borrowings": 10.923,
+    "total_principal": 10110.449,
+    "total_book": 10037.36,
+    "current_book": 1020.247,
+    "noncurrent_book": 9017.113,
+    "accrued_interest_separate": 170.462,
+    "term_loan_remaining": 0,
+    "revolver_drawn": 0,
+    "committed_revolver": 850,
+    "uncommitted_incremental": 150,
+    "principal_maturities": {
+      "FY2026_remainder": 11.057,
+      "FY2027": 1024.848,
+      "FY2028": 1024.848,
+      "FY2029": 24.848,
+      "FY2030": 2024.848,
+      "FY2031_plus": 6000
+    },
+    "treatment": "Unlevered FCF excludes financing interest/principal. Deduct face principal and accrued interest in diagnostic; notes unamortizeddiscount73.089 not a cash asset. Treasurylock99.526 is already in totaldebt, not added twice. Revolver is not cash."
+  },
+  "shares": {
+    "legal_July31": 191.605,
+    "Q3_basic_weighted": 191.536,
+    "Q3_diluted_weighted": 192.319,
+    "Q3_antidilutive_awards": 1.523,
+    "opening_Oct31_2025": 185.994,
+    "NVIDIA_issuance": 4.822,
+    "prior_acquisition_issuance": 0.001,
+    "employee_net_issuance": 1.479,
+    "repurchased": 0.691,
+    "dated_inventory_Oct31_2025": {
+      "RSUs_maximum_conditions": 4.318,
+      "options_outstanding": 1.154,
+      "option_weighted_strike": 357.66,
+      "options_exercisable": 0.709,
+      "exercisable_weighted_strike": 279.76,
+      "assumed_Ansys_remaining_awards_approx": 0.9
+    },
+    "unrecognized_July31_equity_award_compensation": 1400,
+    "recognition_years": 1.9,
+    "unrecognized_ESPP_compensation": 105.6,
+    "ESPP_years": 2.0,
+    "Ansys_awards_at_close": {
+      "fair_value": 639.7,
+      "precombination_purchase_price": 130.963,
+      "postcombination_service_cost": 508.7
+    },
+    "treatment": "Conditional allocation uses assumed July unissued all-plan RSUs/options and active ESPP rights, with full participation and no exercise proceeds. October2025 reference counts are explicitly assumed at July, not falsely dated. Converted Ansys awards are already inside total counts. Issued directors restricted stock is not added. Future new grants are economic expense, and legacy unrecognized accounting cost is not an additional claim."
+  },
+  "leases": {
+    "current_liability": 137.837,
+    "longterm_liability": 666.592,
+    "total_liability": 804.429,
+    "undiscounted_payments": 900.258,
+    "sublease_receipts": 83.585,
+    "nine_month_rent_expense": 145.726,
+    "treatment": "Rent retained in EBIT and renewal-cost budget; no second lease-debt deduction. No standalone sublease credit without corresponding facility obligations."
+  },
+  "tax": {
+    "DTA_balance": 95.515,
+    "DTL_balance": 850.25,
+    "current_tax_accrual": 88.454,
+    "last_gross_UTB_Oct31_2025": 173.734,
+    "last_UTB_interest_penalties": 0.9,
+    "possible_next12m_UTB_release": [
+      0,
+      28
+    ],
+    "Q3_tax_rate": 0.202,
+    "nine_month_tax_rate": 0.198,
+    "management_normalized_FY27": 0.18,
+    "analyst_cash_rates": {
+      "down": 0.28,
+      "base": 0.24,
+      "up": 0.21
+    },
+    "treatment": "No lumpDTAcredit or mechanicalDTLdeduction; forecastcash-tax rate includes ordinary tax cost. Pastuncertainpositions need same-date cashsettlement/provision/credit offsets reconciled beforeequityallocation. Koreanwithholdingtax appeals mayhave foreigncreditoffset; grossclaimnotautomaticallynetcashclaim."
+  },
+  "other": {
+    "NQDC_asset": 471.484,
+    "NQDC_liability": 471.484,
+    "FX_derivative_net_liability": 20.401,
+    "Software_Integrity_contingent_receivable_book": 22.202,
+    "Software_Integrity_contingent_contract_max": 475,
+    "last_private_equity_Oct2025": 45,
+    "noncontrolling_book": -1.16,
+    "treatment": "NQDCmatchedpair excluded; operatingFXhedges handled throughoperatingcashassumptions, no grossnotional deduction. Privateequity andcontingentreceivable notcredited atbook/max withoutseparatevaluation. NegativeNCIbooknotcredited asasset. Litigationlossrangecannotbeestimated isunknown,notzero."
+  },
+  "restructuring": {
+    "total_program_range": [
+      425,
+      500
+    ],
+    "charges_YTD": 236.34,
+    "cash_paid_YTD": 171.4,
+    "accrued_origin": 64.9,
+    "Q4_charge_mid": 160,
+    "FY27_charge_mid": 75,
+    "treatment": "Futurecharges retained in economicEBIT; pay64.9 legacyaccrual as additionalQ4cashflow becauseoriginexpense occurred beforeforecast. Do not deduct64.9 again in equitybridge. Totalmidcharges471.34withinprogramrange; no additionalfull425\u2013500 reserve."
+  },
+  "post_origin_events": [
+    {
+      "date": "2026-09-30",
+      "event": "FY2027guidance and strategicannouncements",
+      "cash_or_share_effect": "No automatic cashcredit from licenses/royalties or AIclaims."
+    },
+    {
+      "date": "2026-10-05",
+      "event": "ASR executed withJPMorgan",
+      "contract_amount": 1000,
+      "initial_shares_expected_approx": 1.735,
+      "final_settlement_latest": "2027-01-05",
+      "treatment": "Forcurrent-datebridge reducecash1000 whenpaid andrecordactualinitialsharesdelivery plusresidualforwardclaim; no price-based assumedfinalsharecount. Pressrelease wording iswillreceive; exactdelivery/payment confirmationandallinterveningCFnotavailable. Currentbridgegated."
+    }
+  ],
+  "unconditional_equity_per_share": null,
+  "gates": [
+    "Exactdatedawardearned/serviceallocation",
+    "JulytoOctcash,debt,shares,taxandclaimsrollforward includingactualASRdelivery/payment",
+    "Private/contingentassetsandjurisdictionalcashtaxavailability",
+    "Same-datelegacytax,pension,litigationandnoncontrollingclaims netofoperatingprovisions"
+  ],
+  "sources": "July2026Q3filingnotes7\u201320 andstatements;FY202510Knotes3,4,15,19;October5officialreleaseand8K.",
+  "conditional_dated_allocation_eligible": true,
+  "conditional_assumptions": {
+    "status": "July31 fiscal-origin conditional research, October18 information; independent review pending. Not an exact July valuation or October target.",
+    "base": {
+      "legal_common_m": 191.605,
+      "assumed_unissued_rsu_maximum_m": 4.318,
+      "assumed_options_full_share_equivalents_m": 1.154,
+      "assumed_existing_espp_full_share_equivalents_m": 1.0,
+      "total_allocation_units_m": 198.077,
+      "operating_cash_reserve": 291.45,
+      "foreign_fraction_of_excess_cash_assumed": 0.46,
+      "foreign_cash_availability_tax_haircut": 0.1,
+      "marketable_asset_recovery": 0.75,
+      "private_and_contingent_asset_credit": 0,
+      "known_debt_principal": 10110.449,
+      "known_accrued_interest_deduction": 170.462,
+      "known_current_tax_accrual_deduction": 88.454,
+      "additional_residual_nonoperating_allowance": 350
+    },
+    "claim_allowance_rationale": {
+      "legacy_tax_pension_acquired_obligations_budget": 200,
+      "reference": "July other long-term liabilities excluding DTL and matched deferred compensation total215.654; fiscal2025 grossUTB173.734 plus0.9 interest/penalties is a historical overlapping reference. These amounts are not additive and not a proof of remaining settlement.",
+      "other_unmatched_legacy_retention_contingent_minority_and_nonoperating_claims_budget": 75,
+      "unallocated_headroom": 75,
+      "total": 350,
+      "status": "Selected analyst settlement allowance. Adequacy is unverified; it is neither a measured liability balance nor a verified upper bound."
+    },
+    "claim_scope": "The350 allowance covers residual opening non-operating uncertain-tax/acquisition obligations, pension deficits, legacy retention liabilities not paid through forecast costs, unmatched deferred-compensation, minority interests, and other non-operating contingencies. It excludes separately deducted current tax88.454, interest170.462 and debt10110.449. All references within the allowance are not further deductions.",
+    "operating_overlap_exclusions": "No deduction of the full837.594 payroll accrual,187.322 trade payables,196.766 other current accruals or215.654 noncurrentOther. Ordinary operating claims remain in operating costs/NWC. Operating FX hedges are included in operating cash assumptions;20.401 net derivative liability is a separate stress only if not already funded in operations. Full DTL850.250 is not separately deducted on top of cash-tax rates; no DTA credit95.515. Matched NQDC471.484 asset/liability is excluded symmetrically. Legacy restructuring64.9 is paid once in Q4 FCFF, not in the allowance or bridge.",
+    "known_tax_accrual_policy": "The88.454 opening current-tax accrual is deducted as an existing claim. Modeled noncash operating-capital investment excludes income taxes, and normalized forward cash taxes cover earnings after July. Do not schedule a second settlement of this opening accrual in forecast taxes.",
+    "cash_policy": "July unrestricted cash3606.286 minus operating reserve291.45 leaves3314.836 before haircut. Assume excess cash shares the reported rounded46% foreign mix; a10% haircut on that portion is a combined distribution-tax/availability valuation allowance, not a measured tax bill. Restricted cash4.490 excluded. No separate foreign-tax claim overlaps this haircut.",
+    "award_policy": "Assume prior October all-plan maximum RSUs4.318 and options1.154 persist at July after unobserved grants, settlements and forfeitures. This is explicitly conditional, not a factual roll-forward. ESPP1.0M assumes approximately two years of recent0.5M annual purchase volume remain across overlapping offerings; actual active rights unknown. Full-unit allocation is used without option/ESPP exercise proceeds, not instrument fair value. The assumed inventory may be incomplete.",
+    "stress_intervals": {
+      "residual_allowance": [
+        200,
+        350,
+        700
+      ],
+      "rsu_max_m": [
+        3.0,
+        4.318,
+        6.0
+      ],
+      "options_m": [
+        0.7,
+        1.154,
+        1.5
+      ],
+      "existing_espp_m": [
+        0.5,
+        1.0,
+        1.5
+      ],
+      "foreign_cash_haircut": [
+        0,
+        0.1,
+        0.25
+      ],
+      "marketable_recovery": [
+        0.5,
+        0.75,
+        1
+      ],
+      "cash_reserve": [
+        291.45,
+        500,
+        1000
+      ],
+      "extra_nonoperating_fx_if_unfunded": [
+        0,
+        20.401
+      ]
+    },
+    "interval_warning": "Analyst stress intervals only; not guaranteed bounds or probabilities. Litigation can exceed the range. Review passing arithmetic does not prove allowance adequacy or cohort completeness.",
+    "post_origin_asr": "The October5 ASR cash commitment1000, expected initial1.735M shares and residual forward are entirely excluded from July assets, units and future operating FCFF. It changes allocation after the origin. A later-date case must bridge actual payment, initial delivery, final settlement and every intervening cash/share movement together. No current-price-derived settlement estimate.",
+    "irreducible_inputs": [
+      "Actual July grant/vest/forfeiture roll-forward and performance settlement quantities, including acquired awards and active two-year ESPP offerings.",
+      "Disaggregation and overlap mapping of residual tax, pension, retention, minority and contingent claims; timing and credit offsets for Korean withholding matters.",
+      "Cash location/availability and distribution tax leakage; value of private/contingent assets and restrictions.",
+      "Actual July-to-current cash, debt, shares and claims, including ASR payment/delivery/residual forward. Unknown litigation has no verified finite ceiling."
+    ]
+  }
+}

@@ -1,3 +1,4 @@
+import {snpsAnnualFunding} from './snps-opening-stub.js';
 import {operatingCashChange} from './fn-operating-cash.js';
 import {fixedCapitalSettlement,operatingInvestment} from './fixed-capital-funding.js';
 // Read-only diagnostics for the direct-investment annual model. These values
@@ -10,7 +11,8 @@ export function annualCapitalDiagnostics(d,index=0){
  const validRevenue=finite(row?.revenue)&&row.revenue>0&&finite(previous)&&previous>0;
  const change=validRevenue?row.revenue-previous:null;
  const cashChange=row?operatingCashChange(d,index):0;
- const deltaRevenue=finite(change)?change:null,reinvestment=finite(row?.reinvestment)?operatingInvestment(d,row)+cashChange:null;
+ const funding=d?.ticker==='SNPS'&&finite(row?.reinvestment)&&finite(row?.revenue)?snpsAnnualFunding(d,index,row):null;
+ const deltaRevenue=finite(change)?change:null,reinvestment=funding?funding.reinvestment:finite(row?.reinvestment)?operatingInvestment(d,row)+cashChange:null;
  let effectiveMarginalSalesCapital=null,marginalAfterTaxReturnProxy=null,ratioReason='',proxyReason='';
  if(deltaRevenue===null)ratioReason='Positive current and prior revenue are required.';
  else if(deltaRevenue<=0)ratioReason='Revenue must increase; flat or falling sales do not imply a useful marginal S:C.';
@@ -28,7 +30,7 @@ export function annualCapitalDiagnostics(d,index=0){
   else proxyReason='The return proxy is outside the finite numerical range.';
  }
  return {
-  year:row?.year??null,...(d?.operatingCashFunding?{investmentBeforeOperatingCashReserve:row?.reinvestment,scalableInvestmentBeforeCash:row?operatingInvestment(d,row):null,changeRequiredOperatingCash:cashChange}:{}),deltaRevenue,reinvestment,...(d?.fixedCapitalFunding?{totalCashFunding:finite(row?.reinvestment)?row.reinvestment+cashChange:null,fixedOpeningFunding:fixedCapitalSettlement(d,row?.year)}:{}),effectiveMarginalSalesCapital,marginalAfterTaxReturnProxy,ratioReason,proxyReason,
+  year:row?.year??null,...(funding?funding:{}),...(d?.operatingCashFunding?{investmentBeforeOperatingCashReserve:row?.reinvestment,scalableInvestmentBeforeCash:row?operatingInvestment(d,row):null,changeRequiredOperatingCash:cashChange}:{}),deltaRevenue,reinvestment,...(d?.fixedCapitalFunding?{totalCashFunding:finite(row?.reinvestment)?row.reinvestment+cashChange:null,fixedOpeningFunding:fixedCapitalSettlement(d,row?.year)}:{}),effectiveMarginalSalesCapital,marginalAfterTaxReturnProxy,ratioReason,proxyReason,
   // The reviewed annual package supplies no verified invested-capital stock.
   // Revenue/S:C, cumulative forecast spending, cash or claims are not substitutes.
   actualROIC:null,

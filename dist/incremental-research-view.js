@@ -1,3 +1,4 @@
+import {snpsAllocationHTML} from './snps-research-view.js';
 import {cdnsAllocationHTML} from './cdns-research-view.js';
 import {incrementalRecord} from './incremental-registry.js';
 import {annualTextHTML} from './annual-localization.js';
@@ -29,6 +30,7 @@ export function incrementalQuoteTranslationHTML(bridge){
 }
 
 export function incrementalAllocationHTML(b,{compact=false}={}){
+ if(b?.claimAllocationModel==='snps-conditional-full-participation-v3')return snpsAllocationHTML(b,{compact});
  if(b?.claimAllocationModel==='cdns-conditional-full-participation-v3')return cdnsAllocationHTML(b,{compact});
  if(b?.claimAllocationModel!=='fn-joint-european-v1'||!b.eligible)return '';
  if(compact){const vesting=b.inputs.warrantShares===.381922?'full vesting assumed':b.inputs.warrantShares===.085942?'vested count only':'selected vesting assumption';return `<p class="annual-summary-caveat incremental-coupled-allocation incremental-fn-claim-limits">${annualTextHTML('Warrants')}: ${b.inputs.warrantShares.toLocaleString('en-US',{maximumFractionDigits:6})}m · ${annualTextHTML(vesting)}<br>${annualTextHTML('Volatility')}: ${n(b.inputs.warrantVolatility*100)}% · ${annualTextHTML(b.inputs.warrantVolatility===.452?'grant-date proxy':'analyst volatility assumption')}<br>Raytek: ${n(b.inputs.raytekValue)} USDm · ${annualTextHTML('illiquid; realization unverified')}<br>Casix: ${annualTextHTML('excluded, unpriced legal tail risk')}<br>${annualTextHTML('Other liabilities / repatriation')}: ${n(b.inputs.otherNoncurrentLiabilityClaim)} / ${n(b.inputs.repatriationTaxClaim)} USDm · ${annualTextHTML('conditional')}${b.unallocatedShortfall>0?`<br><b>${annualTextHTML('Unallocated capital shortfall')}: ${n(b.unallocatedShortfall)} USDm</b>`:''}</p>`;}

@@ -1,0 +1,109 @@
+{
+  "company": "Synopsys, Inc.",
+  "ticker": "SNPS",
+  "review_version": "independent-audit-v3",
+  "review_date_utc": "2026-10-18",
+  "financial_origin": "2026-07-31",
+  "information_cutoff": "2026-10-18",
+  "verdict": "Qualified pass for explicit conditional July-origin research. No exact dated equity or current-price target approval.",
+  "mechanical_checks": {
+    "passed": 3319,
+    "total": 3319,
+    "failed": 0
+  },
+  "conditional_dated_research_ready": true,
+  "headline_numeric_correction_required": false,
+  "unqualified_july_equity_ready": false,
+  "exact_award_allocation_ready": false,
+  "current_target_ready": false,
+  "current_price_comparison_ready": false,
+  "application_integration_technical_review": "Not performed by this research audit; separately validate adapter, labels, source-date gates and no duplicate claims.",
+  "publication_authorized": false,
+  "application_edited": false,
+  "published": false,
+  "source_completeness_certified": false,
+  "residual_allowance_adequacy_certified": false,
+  "stress_intervals_are_bounds": false,
+  "headline": {
+    "down": {
+      "operating_ev_usd_m": 17479.538404925243,
+      "conditional_usd_per_share": 50.102117857829235,
+      "allocation_units_m": 198.077,
+      "terminal_share": 0.4019897395343425
+    },
+    "base": {
+      "operating_ev_usd_m": 44817.93928774433,
+      "conditional_usd_per_share": 188.1211755112625,
+      "allocation_units_m": 198.077,
+      "terminal_share": 0.5858742168026094
+    },
+    "up": {
+      "operating_ev_usd_m": 79716.51244495872,
+      "conditional_usd_per_share": 364.30807836830485,
+      "allocation_units_m": 198.077,
+      "terminal_share": 0.6609018242986944
+    }
+  },
+  "required_presentation": [
+    "Show July 31, 2026 financial origin and October 18, 2026 information/discount-input date together. This is a reconstruction using later information, not a contemporaneous July appraisal.",
+    "Call per-share outputs conditional allocations; do not label them verified July equity values, fair-value bounds, October targets, current upside/downside, or probabilities.",
+    "Keep 191.605M reported legal shares separate from assumed 4.318M RSUs, 1.154M full option units, and 1.000M existing ESPP units. Source award inventory is October 31, 2025, not July 2026.",
+    "Show the $350M residual allowance, $291.450M operating reserve, 46% assumed foreign excess-cash mix, 10% haircut, 75% liquid-asset recovery, and zero private/contingent-asset credit.",
+    "Disclose option/ESPP full-unit participation with no exercise proceeds is a convention, not option valuation or proof of conservative overall equity value.",
+    "Keep the 15%/12%/10% future-new-grant charges embedded in profit and never add those future grants again to allocation units.",
+    "Retain exact/current equity fields as null and price-use flag false until the appropriate same-date bridge is independently verified.",
+    "Do not consume FY2026_reconstructed_economic_ebit as a fully normalized year; apply SNPS-V3-LABEL-01 if that diagnostic is exposed."
+  ],
+  "blockers": [
+    {
+      "id": "B1",
+      "blocks": [
+        "exact_july_equity",
+        "current_target"
+      ],
+      "missing": "Actual July RSU/option/ESPP cohorts, grants, vesting, forfeitures, strikes, performance settlements and service/earned allocation; reconcile the 0.153765M proxy-versus-annual-table difference.",
+      "allowed_conditional_substitute": "Explicit assumed inventory only, with completeness unverified."
+    },
+    {
+      "id": "B2",
+      "blocks": [
+        "exact_july_equity",
+        "current_target"
+      ],
+      "missing": "Same-date net settlement values and overlap mapping for uncertain taxes, pensions, acquired/retention obligations, minority and contingent/litigation claims. The $350M allowance has no verified sufficiency or finite upper bound.",
+      "allowed_conditional_substitute": "Explicit residual allowance and non-probabilistic stresses only."
+    },
+    {
+      "id": "B3",
+      "blocks": [
+        "exact_july_equity",
+        "current_target"
+      ],
+      "missing": "Cash jurisdiction/availability, distribution-tax leakage and privately held/contingent-asset recoverability.",
+      "allowed_conditional_substitute": "Disclosed asset haircuts and zero optional-asset credit; no factual distributability claim."
+    },
+    {
+      "id": "B4",
+      "blocks": [
+        "current_target",
+        "current_price_comparison"
+      ],
+      "missing": "Complete July-to-current cash, debt, common shares, awards, claims, ASR payment, actual initial delivery and residual forward/final settlement.",
+      "allowed_conditional_substitute": "None for current-date use. Exclude October ASR completely from the July case."
+    },
+    {
+      "id": "B5",
+      "blocks": [
+        "unqualified_forecast_economic_validation"
+      ],
+      "missing": "Detailed cash-tax/purchase-accounting runoff, ordinary D&A, NWC, AOIP/cloud and capacity funding schedules validating forecast assumptions.",
+      "allowed_conditional_substitute": "Scenario judgment with disclosed reinvestment rules, physical floor and all-positive-NOPAT-growth stress."
+    }
+  ],
+  "nonblocking_findings": [
+    "SNPS-V3-LABEL-01"
+  ],
+  "reviewed_report_sha256": "40817acef176bddf1f52e65d7daac47d060796cfd93c750afb63fd37160b8567",
+  "reviewed_archive_sha256": "8aab0890f487574333bfbcabb49e68d024ad2aa7dcd22e9f170971d40604abe4",
+  "stopping_condition": "The requested independent research audit and artifacts are complete. No app mutation or publication is included."
+}

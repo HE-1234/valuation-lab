@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-18 · Synopsys dated research and investment-floor clarity
+
+- Added SNPS's reviewed July-origin scenarios with historical references and explicitly conditional allocations of approximately $50.10/$188.12/$364.31. Assumed award inventories, asset recovery and residual claims remain visible; current-price comparisons stay gated.
+- Preserved the exact 92-day fiscal-quarter stub and ACT/365.25 annual payment intervals. Annual editing and simulation affect the future annual path without rewriting the fixed opening quarter.
+- Separated entered annual investment, the selected FY2027 analyst investment-floor top-up and funded total. The input stays intact; a capacity assumption is not described as a contractual liability.
+- Labels FY2026 as a mixed actual/forecast reference in English and Simplified Chinese. Historical captions explain acquisition, discontinued-operation, accounting and fiscal-length limitations. Unsupported timing controls are disabled with explanation and recoverable saved drafts retained.
+- Final aggregate: 1,665 passed, zero failed, one existing raw-cache skip. Independent source, financial, UI and preservation checks passed. Native browser and static mobile checks are reported separately.
+
 ## 2026-10-18 · Cadence dated research and transparent period timing
 
 - Added CDNS with ten-year references, reviewed assumptions and explicitly conditional June-origin allocation. The three source cases reproduce approximately $39.28/$86.51/$169.51 per assumed common-equivalent unit; current-price comparisons remain gated.

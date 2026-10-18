@@ -1,0 +1,129 @@
+{
+  "units": "USD millions; shares millions unless specified",
+  "historical_grant_value_proxies": [
+    {
+      "fiscal_year": 2023,
+      "rsu_grants_m": 2.083,
+      "rsu_weighted_grant_fv": 394.34,
+      "option_grants_m": 0.294,
+      "option_grant_fv": 120.33,
+      "directors_restricted_stock_grants_m": 0.005,
+      "directors_grant_fv": 387.79,
+      "espp_purchase_shares_m": 0.6,
+      "espp_right_fv": 120.82,
+      "matched_reported_revenue_m": 5842.619,
+      "gross_grant_value_proxy_m": 931.2181899999999,
+      "ratio": 0.15938369248448342,
+      "source": "SNPS-018 Note 15; FY2024 revenue equals continuing 6127.436 + discontinued 468.720 to match historical broad award scope."
+    },
+    {
+      "fiscal_year": 2024,
+      "rsu_grants_m": 1.62,
+      "rsu_weighted_grant_fv": 543.69,
+      "option_grants_m": 0.238,
+      "option_grant_fv": 178.67,
+      "directors_restricted_stock_grants_m": 0.003,
+      "directors_grant_fv": 561.23,
+      "espp_purchase_shares_m": 0.5,
+      "espp_right_fv": 179.1,
+      "matched_reported_revenue_m": 6596.156,
+      "gross_grant_value_proxy_m": 1014.5349500000001,
+      "ratio": 0.153806997590718,
+      "source": "SNPS-018 Note 15; FY2024 revenue equals continuing 6127.436 + discontinued 468.720 to match historical broad award scope."
+    },
+    {
+      "fiscal_year": 2025,
+      "rsu_grants_m": 1.28,
+      "rsu_weighted_grant_fv": 494.29,
+      "option_grants_m": 0.232,
+      "option_grant_fv": 170.77,
+      "directors_restricted_stock_grants_m": 0.006,
+      "directors_grant_fv": 419.34,
+      "espp_purchase_shares_m": 0.5,
+      "espp_right_fv": 166.64,
+      "matched_reported_revenue_m": 7054.178,
+      "gross_grant_value_proxy_m": 758.14588,
+      "ratio": 0.10747473057810564,
+      "source": "SNPS-018 Note 15; FY2024 revenue equals continuing 6127.436 + discontinued 468.720 to match historical broad award scope."
+    }
+  ],
+  "proxy_limitations": "Gross approximate quantities times weighted grant-date fair value, before forfeitures. RSU counts include maximum performance units. ESPP issued shares approximate grant cohorts under overlapping two-year offerings; quantities are rounded. Do not call these exact expected compensation values or GAAP expense. Acquired replacement awards are excluded from new-grant counts. Historical revenue includes Software Integrity through its disposal to match the broad historical grant scope, not a continuous organic perimeter.",
+  "fy2025_perimeter_sensitivity": {
+    "reported_revenue": 7054.178,
+    "ansys_postclose_revenue": 756.6,
+    "legacy_revenue_proxy": 6297.578,
+    "gross_grant_proxy_divided_by_legacy_revenue_proxy": 0.12038689794711555,
+    "limitation": "Not a clean legacy compensation ratio: grant recipients cannot be separated before/after the Ansys close. Only a perimeter sensitivity."
+  },
+  "ansys_2024_context": {
+    "revenue": 2544.809,
+    "new_rsu_grants_m": 0.948,
+    "weighted_rsu_grant_fv": 339.43,
+    "rsu_only_gross_value_proxy": 321.77964,
+    "rsu_only_ratio": 0.12644549748134337,
+    "options_granted": 0,
+    "gaap_sbc": 270.9,
+    "source": "SNPS-076 Note 15 and income statement",
+    "limitation": "Standalone calendar-year Ansys, no 2024 market-condition grants during pending merger. RSU-only gross proxy excludes ESPP and is not a consolidated current forecast."
+  },
+  "reported_inventory_2025_10_31": {
+    "all_plan_rsu_max_m": 4.318,
+    "all_plan_options_m": 1.154,
+    "option_weighted_strike": 357.66,
+    "option_remaining_life_years": 3.74,
+    "exercisable_options_m": 0.709,
+    "exercisable_weighted_strike": 279.76,
+    "director_issued_restricted_stock_m": 0.006,
+    "ansys_remaining_rsu_m_approx": 0.895,
+    "source": "SNPS-018 Note 15; SNPS-017 p95 for acquired RSU reference",
+    "overlap": "The 4.318 RSU total includes converted Ansys RSUs. The 1.154 option total includes acquired options. Neither the0.895 Ansys component nor235 other acquired option shares is added again. Director restricted stock is separate issued stock and already within legal common."
+  },
+  "proxy_table_scope_conflict": {
+    "plan_table_issuable_m": 4.423,
+    "explicitly_excluded_ansys_rsu_m": 0.895,
+    "other_acquired_options_m": 0.000235,
+    "sum": 5.318235,
+    "annual_all_plan_rsu_plus_options": 5.472,
+    "difference": 0.15376500000000082,
+    "treatment": "Use the broader annual maximum-condition all-plan tables, not the narrower proxy total. Proxy uses different plan/performance-count conventions, and full reconciliation of the0.153765M difference is unresolved. It is not silently added as another cohort or called a factual July inventory."
+  },
+  "acquired_conversion": {
+    "close_date": "2025-07-17",
+    "merger_common_stock_ratio": 0.3399,
+    "cash_per_ansys_common_share": 199.91,
+    "award_conversion_ratio_formula": "0.3399 +199.91 / five-trading-day SNPS VWAP ending July16,2025",
+    "rsu_assumed_at_close_snps_units_m": 1.116,
+    "options_assumed_at_close_snps_units_m": 0.005,
+    "total_award_fair_value": 639.7,
+    "precombination_purchase_component": 130.963,
+    "postcombination_service_component_rounded": 508.7,
+    "performance_conversion": "Continuing awards converted to Synopsys units; performance conditions removed and service vesting retained. Specified vested/director/departed-employee RSUs settled in merger consideration; do not count those as continuing unvested claims.",
+    "source": "SNPS-077 closing 8-K; SNPS-018 Note 15",
+    "policy": "Annual inventory is already converted into SNPS units. Do not multiply it by0.3399 or the award conversion ratio again. Full assumed legacy claims receive allocation once; neither639.7 nor130.963 nor508.7 is a second cash deduction. Acquisition consideration already funded before the origin."
+  },
+  "future_new_grant_policy": {
+    "down_pct": 0.15,
+    "base_pct": 0.12,
+    "up_pct": 0.1,
+    "base_rationale": "12% is near the recent SNPS grant-value/perimeter sensitivity12.04% and standalone Ansys RSU-only12.64%. It is below broad SNPS2023\u201324 gross proxies15.94%/15.38%. It is an analyst compensation budget, not a reported consolidated grant rate. Upside10% requires lower grant intensity; downside15% retains older grant pressure.",
+    "source_accounting_guidance": "FY2027 accounting SBC960\u2013980 and FY2030 ambition near8% do not establish the economic cost of future new grants. Do not simply use those accounting amounts as free owner cash."
+  },
+  "stub_replacement": {
+    "accounting_sbc_removed": {
+      "down": 240,
+      "base": 235,
+      "up": 230
+    },
+    "source": "Direct Q4 FY2026 SBC guidance230\u2013240, consistent with selected expense endpoints; SNPS-073 official Q3 results release. Do not subtract full-year/YTD figures to force inconsistent guidance."
+  },
+  "legacy_recognition": {
+    "unrecognized_awards_july": 1400,
+    "award_weighted_years": 1.9,
+    "unrecognized_espp_july": 105.6,
+    "espp_years": 2.0,
+    "method": "Illustrative straight-line schedules only. Subtract and reverse equal legacy accounting recognition. No extra EV benefit or deduction. Exact award count uncertainty remains separately in allocation. Alternative1/1.9/3-year legacy schedules cancel before taxes.",
+    "future_grants": "Post-July new grants remain an economic expense in every period and are not added again to future shares.",
+    "tax": "No separate tax windfall from legacy settlements; normalized cash-tax rates remain assumptions."
+  },
+  "rd_composition": "For display only, allocate50% of the increase in new-grant cost versus v2 to R&D, close to FY2025 reported R&D share456.804/893.294=51.14% of SBC. Hold non-SBC total costs fixed; full grant charge reduces EBIT regardless of functional allocation. R&D and grants overlap, so do not sum or subtract them twice."
+}

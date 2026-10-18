@@ -1,0 +1,75 @@
+{
+  "units": "USD millions",
+  "financial_period_end": "2026-07-31",
+  "formula": "FY2025 +nine months FY2026 -nine months FY2025",
+  "basis": "Reported-perimeter arithmetic diagnostic, not organic growth, acquisition-adjusted pro forma performance or unlevered owner cash flow. Ansys, divestitures, tax and working-capital timing remain. No TTM amount is added to the forward DCF.",
+  "data": {
+    "revenue": {
+      "fy2025": 7054.178,
+      "nine_months_2026": 7161.605,
+      "nine_months_2025": 4799.318,
+      "ttm": 9416.465
+    },
+    "operating_income": {
+      "fy2025": 914.927,
+      "nine_months_2026": 680.963,
+      "nine_months_2025": 793.534,
+      "ttm": 802.3559999999999
+    },
+    "research_and_development": {
+      "fy2025": 2479.338,
+      "nine_months_2026": 2134.849,
+      "nine_months_2025": 1732.496,
+      "ttm": 2881.691
+    },
+    "sbc": {
+      "fy2025": 893.294,
+      "nine_months_2026": 712.631,
+      "nine_months_2025": 655.909,
+      "ttm": 950.016
+    },
+    "cfo_including_discontinued": {
+      "fy2025": 1518.608,
+      "nine_months_2026": 2298.603,
+      "nine_months_2025": 878.87,
+      "ttm": 2938.3410000000003
+    },
+    "capex": {
+      "fy2025": 169.454,
+      "nine_months_2026": 156.089,
+      "nine_months_2025": 134.908,
+      "ttm": 190.63500000000002
+    },
+    "depreciation_amortization": {
+      "fy2025": 660.43,
+      "nine_months_2026": 1362.021,
+      "nine_months_2025": 211.307,
+      "ttm": 1811.144
+    },
+    "acquired_intangible_amortization_total_pnl": {
+      "fy2025": 504.38300000000004,
+      "nine_months_2026": 1210.292,
+      "nine_months_2025": 99.193,
+      "ttm": 1615.482
+    },
+    "derived": {
+      "economic_ebit_amortization_addback_only": 2417.8379999999997,
+      "fcf_before_sbc": 2747.706,
+      "fcf_after_sbc": 1797.69
+    }
+  },
+  "primary_sources": [
+    {
+      "id": "SNPS-009",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/snps-20260731.htm",
+      "sha256": "afdcef6786023e9912032ca84e31e0731db52e555bae5e133162ac5394b36ff0",
+      "locator": "Consolidated income/cash-flow statements; acquired amortization=sum cost-of-revenue and operating-expense rows"
+    },
+    {
+      "id": "SNPS-018",
+      "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324125000028/snps-20251031.htm",
+      "sha256": "d35cf1f6fc2fc2eab89d28aee0766db994ca1878ba27fc64d756547e898e89bf",
+      "locator": "Consolidated income/cash-flow statements; acquired amortization=sum cost-of-revenue and operating-expense rows"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "numeric_corrections_required": [],
+  "nonblocking_findings": [
+    {
+      "id": "SNPS-V3-LABEL-01",
+      "severity": "low",
+      "status": "open_recommendation",
+      "files": [
+        "public-safe/v3/valuation-results.json",
+        "public-safe/v3/valuation_model.py"
+      ],
+      "field": "FY2026_reconstructed_economic_ebit",
+      "finding": "The field combines nine-month GAAP EBIT plus acquired amortization, still after actual accounting SBC, with grant-normalized Q4 EBIT. It is a mixed-basis reconstruction, not full-year grant-normalized economic EBIT.",
+      "preserve_numeric_values": true,
+      "recommended_change": "Rename to FY2026_hybrid_actual_YTD_plus_grant_normalized_Q4_ebit or add an explicit basis label. If a full-year comparable grant-normalized measure is needed, use the existing FY2026_normalized_ebit_reference_only, still labeled a reference rather than valued historical cash flow.",
+      "hybrid_values_usd_m": {
+        "down": 2386.755,
+        "base": 2514.6549999999997,
+        "up": 2618.255
+      },
+      "normalized_reference_values_usd_m": {
+        "down": 2025.14525,
+        "base": 2367.8934,
+        "up": 2614.7255
+      },
+      "headline_ev_or_per_share_effect": 0,
+      "blocks_conditional_headline_research": false,
+      "blocks_import_as_fully_normalized_measure": true,
+      "closure_test": "Retain all headline valuations and sensitivities; rename or explicitly label the hybrid field in any consuming schema. Do not replace the all-NOPAT funding reference with the hybrid number."
+    }
+  ],
+  "no_originals_edited": true,
+  "readiness_dependency": "readiness.json"
+}

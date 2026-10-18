@@ -1,0 +1,86 @@
+{
+  "status": "independently-cleared-conditional-July-origin-research",
+  "reviewDate": "2026-10-18",
+  "sourceStatusPreserved": true,
+  "laterReviewNote": {
+    "en": "The original public v3 files retain their submitted/pending-review wording. The separate October 18 independent audit subsequently gave a qualified pass for explicit conditional July-origin research: 3,319 mechanical checks passed with no headline numeric correction. This does not certify award completeness, residual-claim adequacy, forecast economics, exact July equity, current-price comparison, app integration or publication. SNPS-V3-LABEL-01 is addressed in this consuming schema by labeling the FY2026 reconstructed EBIT as mixed-basis and keeping the fully grant-normalized reference separate; originals remain unchanged.",
+    "zh-Hans": "原始公开 v3 文件保留提交时的待复核措辞。另附的 10 月 18 日独立审计随后对明确标注七月基准日的条件性研究给予有保留通过：3,319 项机械检查通过，头条数值无需修正。这不证明奖励库存完整、剩余请求权预算充分或预测经济假设成立，也不批准精确七月股权价值、当前股价比较、应用集成或发布。本消费模式通过将 2026 财年重构 EBIT 明确标为混合口径，并另列全年新授予规范化参考值，落实 SNPS-V3-LABEL-01；原始文件不变。"
+  },
+  "verdict": "Qualified pass for explicit conditional July-origin research. No exact dated equity or current-price target approval.",
+  "auditSHA256": "a3bcfa18da762931ea2843f2a49b33af8392963df8e57c64c4b140e8a1844819",
+  "auditReportSHA256": "27bcc1b75218f6f5eaad59132a46a701fd7f18e3e797286f341f78d00197983c",
+  "auditManifestSHA256": "475f1502e7916e946805d5f611127de4b05ec7bc5a2b9ed76c05d07307585a62",
+  "remainingFactualGates": [
+    {
+      "id": "B1",
+      "blocks": [
+        "exact_july_equity",
+        "current_target"
+      ],
+      "missing": "Actual July RSU/option/ESPP cohorts, grants, vesting, forfeitures, strikes, performance settlements and service/earned allocation; reconcile the 0.153765M proxy-versus-annual-table difference.",
+      "allowed_conditional_substitute": "Explicit assumed inventory only, with completeness unverified."
+    },
+    {
+      "id": "B2",
+      "blocks": [
+        "exact_july_equity",
+        "current_target"
+      ],
+      "missing": "Same-date net settlement values and overlap mapping for uncertain taxes, pensions, acquired/retention obligations, minority and contingent/litigation claims. The $350M allowance has no verified sufficiency or finite upper bound.",
+      "allowed_conditional_substitute": "Explicit residual allowance and non-probabilistic stresses only."
+    },
+    {
+      "id": "B3",
+      "blocks": [
+        "exact_july_equity",
+        "current_target"
+      ],
+      "missing": "Cash jurisdiction/availability, distribution-tax leakage and privately held/contingent-asset recoverability.",
+      "allowed_conditional_substitute": "Disclosed asset haircuts and zero optional-asset credit; no factual distributability claim."
+    },
+    {
+      "id": "B4",
+      "blocks": [
+        "current_target",
+        "current_price_comparison"
+      ],
+      "missing": "Complete July-to-current cash, debt, common shares, awards, claims, ASR payment, actual initial delivery and residual forward/final settlement.",
+      "allowed_conditional_substitute": "None for current-date use. Exclude October ASR completely from the July case."
+    },
+    {
+      "id": "B5",
+      "blocks": [
+        "unqualified_forecast_economic_validation"
+      ],
+      "missing": "Detailed cash-tax/purchase-accounting runoff, ordinary D&A, NWC, AOIP/cloud and capacity funding schedules validating forecast assumptions.",
+      "allowed_conditional_substitute": "Scenario judgment with disclosed reinvestment rules, physical floor and all-positive-NOPAT-growth stress."
+    }
+  ],
+  "nonblockingLabelFinding": {
+    "id": "SNPS-V3-LABEL-01",
+    "severity": "low",
+    "status": "open_recommendation",
+    "files": [
+      "public-safe/v3/valuation-results.json",
+      "public-safe/v3/valuation_model.py"
+    ],
+    "field": "FY2026_reconstructed_economic_ebit",
+    "finding": "The field combines nine-month GAAP EBIT plus acquired amortization, still after actual accounting SBC, with grant-normalized Q4 EBIT. It is a mixed-basis reconstruction, not full-year grant-normalized economic EBIT.",
+    "preserve_numeric_values": true,
+    "recommended_change": "Rename to FY2026_hybrid_actual_YTD_plus_grant_normalized_Q4_ebit or add an explicit basis label. If a full-year comparable grant-normalized measure is needed, use the existing FY2026_normalized_ebit_reference_only, still labeled a reference rather than valued historical cash flow.",
+    "hybrid_values_usd_m": {
+      "down": 2386.755,
+      "base": 2514.6549999999997,
+      "up": 2618.255
+    },
+    "normalized_reference_values_usd_m": {
+      "down": 2025.14525,
+      "base": 2367.8934,
+      "up": 2614.7255
+    },
+    "headline_ev_or_per_share_effect": 0,
+    "blocks_conditional_headline_research": false,
+    "blocks_import_as_fully_normalized_measure": true,
+    "closure_test": "Retain all headline valuations and sensitivities; rename or explicitly label the hybrid field in any consuming schema. Do not replace the all-NOPAT funding reference with the hybrid number."
+  }
+}

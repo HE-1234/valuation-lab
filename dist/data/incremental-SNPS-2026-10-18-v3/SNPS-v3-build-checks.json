@@ -1,0 +1,59 @@
+{
+  "conditionalAllocationChecks": {
+    "base": {
+      "operatingEV": 44817.93928774434,
+      "pool": 37262.47808174434,
+      "allocationUnits": 198.077,
+      "conditionalPerShare": 188.1211755112625,
+      "sourceReproduced": true
+    },
+    "down": {
+      "operatingEV": 17479.538404925243,
+      "pool": 9924.077198925244,
+      "allocationUnits": 198.077,
+      "conditionalPerShare": 50.10211785782925,
+      "sourceReproduced": true
+    },
+    "up": {
+      "operatingEV": 79716.51244495867,
+      "pool": 72161.05123895867,
+      "allocationUnits": 198.077,
+      "conditionalPerShare": 364.30807836830456,
+      "sourceReproduced": true
+    }
+  },
+  "capitalSensitivityRowsReproduced": 17,
+  "conditionalAllocationSensitivityRowsReproduced": 27,
+  "invalidUnknownDomainChecks": 51,
+  "negativeSignedEVPreserved": true,
+  "claimAndShareInputsHaveNoFiniteMaximum": true,
+  "fixedAssumedForeignExcessCashFraction": 0.46,
+  "mixedBasisAnchorRetainedAndLabeled": true,
+  "fullYearNormalizedReferenceSeparate": true,
+  "sourceManifestEntriesVerified": 25,
+  "originalPublicFilesCopiedByteForByte": 26,
+  "auditManifestEntriesVerified": 11,
+  "sourceManifestSHA256": "e8c08bbbb5766445759cfa145c6c2bb72032700bf705a26ce63196b2cb80bca0",
+  "auditManifestSHA256": "475f1502e7916e946805d5f611127de4b05ec7bc5a2b9ed76c05d07307585a62",
+  "auditHashesVerified": {
+    "readiness.json": "a3bcfa18da762931ea2843f2a49b33af8392963df8e57c64c4b140e8a1844819",
+    "independent-audit-v3-report.md": "27bcc1b75218f6f5eaad59132a46a701fd7f18e3e797286f341f78d00197983c"
+  },
+  "independentMechanicalChecks": 3319,
+  "independentSourceHashRecords": 77,
+  "independentUniqueSourceURLs": 76,
+  "rawSourceHashScope": "The independent audit verified 77 archived source records. This public-only builder verifies its pinned audit manifest and every audit artifact, matches the public ledger to that verified hash inventory, and does not open or export raw/private captures.",
+  "sourceStatusUnmodified": true,
+  "historyYears": 10,
+  "historyLenses": 2,
+  "historyRowsPreserved": 20,
+  "canonicalHistoryEBIT": "as_reported operating_income; latest comparative separate; zero SBC/R&D/amortization add-back",
+  "historicalNullsPreserved": 35,
+  "annualFullYearsPerCase": 10,
+  "annualNumbering": "1–10, FY2027–FY2036",
+  "openingStubYears": 0.2518822724161533,
+  "openingStubPolicy": "fixed selected source Q4, separate 64.9 restructuring cash, exact ACT/365.25 and WACC",
+  "anchorLabelFindingClosedInConsumingSchema": "SNPS-V3-LABEL-01",
+  "currentPriceComparisonEligible": false,
+  "unconditionalEquityValueEligible": false
+}
