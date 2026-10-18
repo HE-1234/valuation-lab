@@ -341,3 +341,43 @@ test('evidence: passive teardown never restores an obsolete opening page positio
  h.document.documentElement.scrollTop=650;h.input.focus();h.panel.destroy();
  assert.equal(h.document.documentElement.scrollTop,650);assert.equal(h.document.activeElement,h.input);
 });
+
+function stickyRevealFixture({reduced=false,position='sticky',navTop=0,navBottom=64,padding=24,top=1200,bottom=1270}={}) {
+ const h=fixture({reduced}),view=h.document.defaultView,scrolls=[];
+ let bounds={top,bottom};const nav={getBoundingClientRect:()=>({top:navTop,bottom:navBottom})};
+ view.innerHeight=844;
+ view.getComputedStyle=node=>node===nav?{position}:{scrollPaddingTop:String(padding),scrollPaddingBottom:'0px'};
+ h.document.querySelector=selector=>selector==='body > aside'?nav:null;
+ h.panel.element.children[0].getBoundingClientRect=()=>({...bounds});
+ view.scrollBy=options=>{scrolls.push(options);bounds={top:bounds.top-options.top,bottom:bounds.bottom-options.top};h.document.scrollingElement.scrollTop+=options.top;};
+ h.panel.element.scrollIntoView=()=>assert.fail('native reveal uses the measured unobscured viewport');
+ return {...h,scrolls,bounds:()=>bounds};
+}
+for(const reduced of [false,true])for(const navBottom of [64,144])test(`evidence: offscreen reveal clears actual sticky navigation (${navBottom}px, reduced=${reduced})`,()=>{
+ const h=stickyRevealFixture({reduced,navBottom});try{
+  h.document.scrollingElement.scrollTop=180;
+  h.panel.open({invoker:h.invoker,key:'sticky',nodes:[h.evidence]});
+  assert.deepEqual(h.scrolls,[{top:1200-navBottom-8,behavior:'instant'}]);
+  assert.equal(h.bounds().top,navBottom+8);assert.equal(h.document.activeElement,h.closeButton);
+  h.panel.open({invoker:h.invoker,key:'sticky',nodes:[h.evidence]});assert.equal(h.scrolls.length,1);
+  h.panel.close();assert.equal(h.document.scrollingElement.scrollTop,180);assert.equal(h.document.activeElement,h.invoker);
+ }finally{h.panel.destroy();}
+});
+test('evidence: partially occluded positive header position is revealed, not mistaken for visible',()=>{
+ const h=stickyRevealFixture({top:24,bottom:94});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.deepEqual(h.scrolls,[{top:-48,behavior:'instant'}]);assert.equal(h.bounds().top,72);}finally{h.panel.destroy();}
+});
+test('evidence: genuinely visible header does not scroll under sticky navigation',()=>{
+ const h=stickyRevealFixture({top:150,bottom:220});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.deepEqual(h.scrolls,[]);}finally{h.panel.destroy();}
+});
+for(const position of ['static','relative'])test(`evidence: ${position} navigation does not reserve an overlay boundary`,()=>{
+ const h=stickyRevealFixture({position,padding:0,top:20,bottom:90});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.deepEqual(h.scrolls,[]);}finally{h.panel.destroy();}
+});
+test('evidence: offscreen navigation does not reserve an overlay boundary',()=>{
+ const h=stickyRevealFixture({navTop:-100,navBottom:-20,padding:0,top:20,bottom:90});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.deepEqual(h.scrolls,[]);}finally{h.panel.destroy();}
+});
+test('evidence: larger document scroll padding is retained',()=>{
+ const h=stickyRevealFixture({padding:100,top:24,bottom:94});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.deepEqual(h.scrolls,[{top:-76,behavior:'instant'}]);}finally{h.panel.destroy();}
+});
+test('evidence: passive refresh bypasses sticky-aware reveal and keeps current focus',()=>{
+ const h=stickyRevealFixture({top:24,bottom:94});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence],focus:false,reveal:false});assert.deepEqual(h.scrolls,[]);assert.equal(h.document.activeElement,h.invoker);}finally{h.panel.destroy();}
+});

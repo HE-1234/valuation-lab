@@ -1,0 +1,11 @@
+{
+  "baselineCommit": "84bd72ab467eefcda0793c30f51041bc88ad10bd",
+  "files": {
+    "dist/contextual-evidence.js": {
+      "beforeSHA256": "0d5f3dcca23b5ef5845bb2af00af56141f21c3c743cbd0881446f7ed4a07889f",
+      "afterSHA256": "c3357b5b078339be133c554c4e6c26645e10c7a8464ef2e165d4ebeb89d63a6c",
+      "before": " function revealHeader() {\n  // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.\n  const bounds = header.getBoundingClientRect?.();\n  if (bounds && Number.isFinite(view?.innerHeight) && (bounds.top < 0 || bounds.bottom > view.innerHeight)) {\n   element.scrollIntoView?.({block: 'start', behavior: 'auto'});\n  }\n }\n",
+      "after": " function revealHeader() {\n  // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.\n  const bounds = header.getBoundingClientRect?.(), height = view?.innerHeight;\n  if (!bounds || ![bounds.top, bounds.bottom, height].every(Number.isFinite) || height <= 0) return;\n  const pageStyle = view.getComputedStyle?.(document.documentElement);\n  let top = Math.max(0, parseFloat(pageStyle?.scrollPaddingTop) || 0);\n  const bottom = height - Math.max(0, parseFloat(pageStyle?.scrollPaddingBottom) || 0);\n  const nav = document.querySelector?.('body > aside'), navStyle = nav && view.getComputedStyle?.(nav), navBounds = nav?.getBoundingClientRect?.();\n  if (navBounds && [navBounds.top, navBounds.bottom].every(Number.isFinite) && ['sticky', 'fixed'].includes(navStyle?.position) && navBounds.top <= top && navBounds.bottom > 0) top = Math.max(top, navBounds.bottom + 8);\n  if (bottom <= top || bounds.top >= top && bounds.bottom <= bottom) return;\n  // Match the quiz reveal policy: respect the actual wrapping navigation and\n  // bypass global smooth scrolling, including for reduced-motion users.\n  if (view.scrollBy) view.scrollBy({top: bounds.top - top, behavior: 'instant'});\n  else element.scrollIntoView?.({block: 'start', behavior: 'auto'});\n }\n"
+    }
+  }
+}

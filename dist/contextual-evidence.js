@@ -149,10 +149,18 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
 
  function revealHeader() {
   // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.
-  const bounds = header.getBoundingClientRect?.();
-  if (bounds && Number.isFinite(view?.innerHeight) && (bounds.top < 0 || bounds.bottom > view.innerHeight)) {
-   element.scrollIntoView?.({block: 'start', behavior: 'auto'});
-  }
+  const bounds = header.getBoundingClientRect?.(), height = view?.innerHeight;
+  if (!bounds || ![bounds.top, bounds.bottom, height].every(Number.isFinite) || height <= 0) return;
+  const pageStyle = view.getComputedStyle?.(document.documentElement);
+  let top = Math.max(0, parseFloat(pageStyle?.scrollPaddingTop) || 0);
+  const bottom = height - Math.max(0, parseFloat(pageStyle?.scrollPaddingBottom) || 0);
+  const nav = document.querySelector?.('body > aside'), navStyle = nav && view.getComputedStyle?.(nav), navBounds = nav?.getBoundingClientRect?.();
+  if (navBounds && [navBounds.top, navBounds.bottom].every(Number.isFinite) && ['sticky', 'fixed'].includes(navStyle?.position) && navBounds.top <= top && navBounds.bottom > 0) top = Math.max(top, navBounds.bottom + 8);
+  if (bottom <= top || bounds.top >= top && bounds.bottom <= bottom) return;
+  // Match the quiz reveal policy: respect the actual wrapping navigation and
+  // bypass global smooth scrolling, including for reduced-motion users.
+  if (view.scrollBy) view.scrollBy({top: bounds.top - top, behavior: 'instant'});
+  else element.scrollIntoView?.({block: 'start', behavior: 'auto'});
  }
 
  function rememberPosition(current) {
