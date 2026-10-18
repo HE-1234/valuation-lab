@@ -187,11 +187,11 @@ test('renewed workspace: runtime actions never read or overwrite legacy Studio a
  assert.ok(h.reads.every(name=>name.startsWith(RESEARCH_STORAGE_PREFIX)));assert.ok(h.writes.every(({key:name})=>name.startsWith(RESEARCH_STORAGE_PREFIX)));
 });
 
-test('renewed workspace: index initially shows only Annual model with coherent navigation and the legacy Studio retained',()=>{
+test('renewed workspace: index initially shows only Year-by-year with coherent navigation and the legacy Studio retained',()=>{
  const document=minimalDocument();document.root.innerHTML=read('index.html');
  const active=document.querySelectorAll('[data-tab]').filter(el=>el.classList.contains('active'));
  assert.equal(active.length,1);assert.equal(active[0].dataset.tab,'renewed');assert.equal(active[0].getAttribute('aria-current'),'page');
- assert.equal(document.querySelector('#breadcrumb').textContent,'Studio / Annual model');
+ assert.equal(document.querySelector('#breadcrumb').textContent,'Studio / Year-by-year');
  const pages=document.querySelectorAll('.page').filter(el=>!el.classList.contains('hidden')&&!el.hidden);assert.equal(pages.length,1);assert.equal(pages[0].id,'renewed');
  assert.ok(document.querySelector('#renewed-research-app'));assert.ok(document.querySelector('#guided-app'));assert.ok(document.querySelector('#current').classList.contains('hidden'));
  assert.equal(document.querySelector('[data-tab="current"]').textContent,'Guided valuation');assert.equal(document.querySelector('[data-tab="current"]').getAttribute('aria-controls'),'current');

@@ -1,6 +1,8 @@
 // Conditional uncertainty around the dated annual research schedule. No stock-price
 // process, probability calibration, implicit capital release, or funding-debt plug.
 import {calculateResearchOperating,researchDraftIssues,researchTimingResult} from './research-model.js';
+import {marginAtYear} from './margin-path.js';
+import {calculateDerivedReinvestment,DERIVED_CAPITAL_POLICY} from './annual-growth-horizon.js';
 import {calculateResearchBridge} from './research-claims.js';
 import {createSeededRandom,distributionQuantile,distributionSummary,validateDriverDistribution,histogram,quantile} from './simulation.js';
 
@@ -23,7 +25,7 @@ const object=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
 const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
 const fixedStresses=Object.freeze({growthPremium:0,marginShift:0,investmentMultiplier:1,waccShift:0});
 const levels=Object.freeze({p5:.05,p10:.1,p25:.25,p50:.5,p75:.75,p90:.9,p95:.95});
-const capitalPolicies=Object.freeze(['fixed-schedule','revenue-scaled']);
+const capitalPolicies=Object.freeze(['fixed-schedule','revenue-scaled',DERIVED_CAPITAL_POLICY]);
 
 export function simulationResearchDefaults(){
  return {trials:4000,seed:'annual-research',binCount:36,dependence:'independent',capitalPolicy:'fixed-schedule',
@@ -58,7 +60,12 @@ export function validateResearchSimulationConfig(config=simulationResearchDefaul
 
 function buildTrialDraft(d,stress,capitalPolicy){
  let reviewedPrior=d.anchor.revenue,trialPrior=d.anchor.revenue;
- const n=d.annual.length;
+ const n=d.annual.length,derived=d.schemaVersion===2;
+ const phased=d.marginPath?.enabled===true,basePath=d.marginPath;
+ const stressedPath=phased&&stress.marginShift!==0?{...basePath,interimMargin:basePath.interimMargin+stress.marginShift,terminalMargin:basePath.terminalMargin+stress.marginShift}:basePath;
+ // The observed/assumed starting margin stays anchored. Stress future targets,
+ // then add each curve delta to the edited row so manual offsets survive.
+ const marginDelta=year=>phased?(stress.marginShift===0?0:marginAtYear(stressedPath,year)-marginAtYear(basePath,year)):stress.marginShift;
  const annual=d.annual.map((row,index)=>{
   const reviewedGrowth=row.revenue/reviewedPrior-1;
   const weight=n>1?(n-1-index)/(n-1):0;
@@ -66,10 +73,25 @@ function buildTrialDraft(d,stress,capitalPolicy){
   // bit, including a nonconstant annual path and the final explicit-year rate.
   const revenue=stress.growthPremium===0?row.revenue:trialPrior*(1+reviewedGrowth+stress.growthPremium*weight);
   reviewedPrior=row.revenue;trialPrior=revenue;
-  const scale=capitalPolicy==='revenue-scaled'?revenue/row.revenue:1;
-  return {...row,revenue,margin:row.margin+stress.marginShift,reinvestment:row.reinvestment*stress.investmentMultiplier*scale,wacc:row.wacc+stress.waccShift};
+  const scale=!derived&&capitalPolicy==='revenue-scaled'?revenue/row.revenue:1;
+  return {...row,revenue,margin:row.margin+marginDelta(row.year),reinvestment:row.reinvestment*stress.investmentMultiplier*scale,wacc:row.wacc+stress.waccShift};
  });
- return {...d,annual,terminal:{...d.terminal,margin:d.terminal.margin+stress.marginShift,wacc:d.terminal.wacc+stress.waccShift}};
+ if(derived&&annual.every(r=>finite(r.revenue)&&r.revenue>0)){
+  // Rebase the response on the current editable schedule, not the original source,
+  // so zero growth stress preserves manual investment edits exactly. Apply the
+  // independent signed investment multiplier only after the capital response.
+  const investments=calculateDerivedReinvestment(d,annual,{baselineAnnual:d.annual});
+  annual.forEach((row,i)=>{row.reinvestment=investments[i]*stress.investmentMultiplier;});
+ }
+ const next={...d,annual,terminal:{...d.terminal,margin:d.terminal.margin+stress.marginShift,wacc:d.terminal.wacc+stress.waccShift}};
+ if(d.marginPath?.enabled===true&&stress.marginShift!==0){
+  const p=d.marginPath;
+  next.marginPath={...stressedPath,
+   generatedMargins:p.generatedMargins.map((m,i)=>m+marginDelta(d.annual[i].year)),
+   ...(p.manualOverrides?{manualOverrides:Object.fromEntries(Object.entries(p.manualOverrides).map(([year,m])=>[year,m+marginDelta(Number(year))]))}:{}),
+   simulationMarginShift:(p.simulationMarginShift||0)+stress.marginShift};
+ }
+ return next;
 }
 
 // A replayable annual path for any exported trial. This helper preserves signed
@@ -80,6 +102,7 @@ export function researchStressDraft(draft,stresses={},capitalPolicy='fixed-sched
  const stress={...fixedStresses,...stresses};
  if(!RESEARCH_SIMULATION_DRIVER_KEYS.every(k=>finite(stress[k]))||stress.investmentMultiplier<0)throw Error('Stress inputs must be finite and the investment multiplier must be nonnegative.');
  if(!capitalPolicies.includes(capitalPolicy))throw Error('Capital policy must be fixed-schedule or revenue-scaled.');
+ if(draft.schemaVersion!==2&&capitalPolicy===DERIVED_CAPITAL_POLICY)throw Error('Derived capital policy requires a version-2 annual horizon draft.');
  return buildTrialDraft(structuredClone(draft),stress,capitalPolicy);
 }
 
@@ -98,6 +121,8 @@ function requireTiming(d,operating){
 function prepareRun(draft,config){
  // Capture before asynchronous yields: later edits cannot alter an in-flight run.
  const d=structuredClone(draft),c=validateResearchSimulationConfig(config??d?.researchSimulationConfig??simulationResearchDefaults());
+ if(d.schemaVersion===2)c.capitalPolicy=DERIVED_CAPITAL_POLICY;
+ else if(c.capitalPolicy===DERIVED_CAPITAL_POLICY)throw Error('Derived capital policy requires a version-2 annual horizon draft.');
  const operating=calculateResearchOperating(d),timing=requireTiming(d,operating),bridge=bridgeFor(d,timing.enterprise,timing.date);
  return {draft:d,config:c,baseline:{...operating,enterprise:timing.enterprise,originEnterprise:operating.enterprise,operating,timing,bridge},
   random:createSeededRandom(c.seed),completed:0,draws:[],equityDraws:[],perShareDraws:[],scenarios:[],exclusions:{},exclusionExamples:{},bridgeReasons:{},nonpositiveEquityCount:0,
@@ -126,7 +151,10 @@ function step(state,count){
   let stress;
   try{stress=Object.fromEntries(RESEARCH_SIMULATION_DRIVER_KEYS.map((k,i)=>[k,distributionQuantile(uniforms[i],c.drivers[k])]))}
   catch(error){reject(state,'sampling-rejected',error.message);continue;}
-  const next=buildTrialDraft(d,stress,c.capitalPolicy),constraint=trialConstraints(next);
+  let next;
+  try{next=buildTrialDraft(d,stress,c.capitalPolicy);}
+  catch(error){reject(state,/finite numerical range/.test(error.message)?'nonfinite-valuation':'valuation-rejected',error.message);continue;}
+  const constraint=trialConstraints(next);
   if(constraint){reject(state,constraint);continue;}
   let operating,timing;
   try{operating=calculateResearchOperating(next);timing=requireTiming(next,operating);}
@@ -178,7 +206,9 @@ function finishRun(state){
  const perShare=summarize(state.perShareDraws,c.binCount,'perShare',units.perShare);
  const eligible=state.equityDraws.length,zeroEquityShare=eligible?state.nonpositiveEquityCount/eligible:null;
  Object.assign(perShare,{zeroEquityCount:state.nonpositiveEquityCount,zeroEquityShare,nonpositiveEquityCount:state.nonpositiveEquityCount,nonpositiveEquityShare:zeroEquityShare});
- const capitalDescription=c.capitalPolicy==='fixed-schedule'
+ const capitalDescription=d.schemaVersion===2
+  ? 'Committed-spending-floor-plus-growth capital sensitivity: retain current edited positive annual investment as a floor, scale upward with revenue and fund additional expansion at the stated marginal sales / capital. Preserve explicit signed releases without amplification. Apply the optional investment multiplier separately after this response. This is an analyst sensitivity, not verified capacity economics; gross capex, maintenance, working capital and customer advances are not separately rebuilt.'
+  : c.capitalPolicy==='fixed-schedule'
   ? 'Fixed reviewed absolute net-investment schedule, multiplied by the sampled investment stress. This is a capacity/commitment stress; not every amount is contractual. Revenue changes alone do not change explicit investment.'
   : 'Each reviewed annual net-investment amount is scaled by trial revenue / reviewed revenue, then by the sampled investment multiplier. This is an analytical proportional-investment sensitivity, not verified capacity economics.';
  const warnings=[
@@ -209,7 +239,8 @@ function finishRun(state){
    sampling:'Exactly the requested attempted-trial count; invalid outcomes excluded without clipping or redraw',quantiles:'linear interpolation at (n−1)p (type 7)',histogram:'equal-width bins; left-closed/right-open except the inclusive final upper edge',
    inputUnits:'growthPremium, marginShift and waccShift are fractions of one (0.01 = one percentage point); investmentMultiplier is a nonnegative multiple',
    growth:'growth[i] = reviewedGrowth[i] + growthPremium × (N−1−i)/(N−1); premium is zero when N=1; revenue is reconstructed sequentially from the anchor',
-   capitalPolicy:c.capitalPolicy,capitalDescription,terminal:'Final explicit revenue × (1+g), stressed terminal margin, unchanged tax and g/ROIC reinvestment, stressed terminal WACC',
+   ...(d.marginPath?.enabled===true?{margin:'Anchored-start margin sensitivity: shift interim and terminal targets together; add each calendar-year curve delta to edited annual margins, generated margins and manual overrides. Starting margin, source provenance and margin dates stay fixed; manual row offsets are preserved.'}:{}),
+   capitalPolicy:c.capitalPolicy,capitalDescription,...(d.schemaVersion===2?{capitalResponseBaseline:'Current edited annual schedule',marginalSalesCapital:d.derivedForecast.marginalSalesCapital,investmentMultiplierOrder:'After derived capital response'}:{}),terminal:'Final explicit revenue × (1+g), stressed terminal margin, unchanged tax and g/ROIC reinvestment, stressed terminal WACC',
    bridge:baseline.bridge.claimRepricedPerTrial?'Selected dated capital assumptions applied to each accepted operating scenario; AAOI option claim values are repriced per trial, never inferred from funding deficits':'Existing source-dated bridge applied independently to each accepted operating scenario; capital claims are not inferred from funding deficits',output:'Primary distribution is operating EV in native-currency millions; separate signed equity and native per-share distributions retain bridge coverage',
    timing:'Selected timing policy applied to each trial; timing inputs stay fixed and incomplete timing withholds calculation'}};
 }

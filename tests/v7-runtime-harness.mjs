@@ -4,6 +4,7 @@ import * as engine from '../dist/engine.js';
 import * as current from '../dist/current-model.js';
 import * as history from '../dist/assumption-history.js';
 import * as historyView from '../dist/history-view.js';
+import * as marginPathView from '../dist/margin-path-view.js';
 import * as approvedCharts from '../dist/approved-charts.js';
 import {enterPanel as actualEnterPanel,cancelMotion,updateFeedback} from '../dist/motion.js';
 import {prepareFlowTables} from '../dist/document-flow.js';
@@ -55,7 +56,7 @@ export async function startStudio({storage=new Map(),storageBlocked=false,histor
  const baseCases=customBaseCases===undefined?JSON.parse(read('../dist/data/company-base-cases.json')):customBaseCases;
  const files={'company-base-cases':baseCases,'current-universe':library,'company-history':JSON.parse(read('../dist/data/company-history.json')),'current-market-references':JSON.parse(read('../dist/data/current-market-references.json'))};
  const fetch=async path=>({ok:!((historyMissing&&path.includes('company-history'))||(baseCasesMissing&&path.includes('company-base-cases'))),json:async()=>structuredClone(files[Object.keys(files).find(k=>path.includes(k))])});
- const deps={createContextualEvidencePanel,cancelMotion,updateFeedback,prepareFlowTables,...engine,...current,...history,...historyView,...approvedCharts,mountSimulation:(root,snapshot,draft,options)=>{const m={root,ticker:snapshot.ticker,sourceId:snapshot.raw.id,snapshot:structuredClone(snapshot),draft:structuredClone(draft),options,released:false};mounts.push(m);return()=>{m.released=true}},enterPanel:node=>{entrances.push(node);if(motion)return actualEnterPanel(node);},reducedMotion:()=>true,document,localStorage,fetch,URL:{createObjectURL:blob=>{downloads.push(blob);return'blob:fixture'},revokeObjectURL(){}},Blob,setTimeout:fn=>{timers.set(++timerId,fn);return timerId;},clearTimeout:id=>timers.delete(id)};
+ const deps={createContextualEvidencePanel,cancelMotion,updateFeedback,prepareFlowTables,...engine,...current,...history,...historyView,...approvedCharts,...marginPathView,mountSimulation:(root,snapshot,draft,options)=>{const m={root,ticker:snapshot.ticker,sourceId:snapshot.raw.id,snapshot:structuredClone(snapshot),draft:structuredClone(draft),options,released:false};mounts.push(m);return()=>{m.released=true}},enterPanel:node=>{entrances.push(node);if(motion)return actualEnterPanel(node);},reducedMotion:()=>true,document,localStorage,fetch,URL:{createObjectURL:blob=>{downloads.push(blob);return'blob:fixture'},revokeObjectURL(){}},Blob,setTimeout:fn=>{timers.set(++timerId,fn);return timerId;},clearTimeout:id=>timers.delete(id)};
  const source=read('../dist/guided.js').replace(/^import .*;\n/gm,'');
  const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
  await new AsyncFunction(...Object.keys(deps),source)(...Object.values(deps));

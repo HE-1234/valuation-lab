@@ -104,7 +104,7 @@ test('complete presets: absent preset data is disclosed and saved operating work
 test('complete presets: Guided explicitly loads selected complete Annual case without changing Guided inputs',async()=>{
  const calls=[],h=await startStudio({annualWorkspace:{useResearch:(...args)=>calls.push(args)}});h.change('#current-company','GOOG');h.input('#g-growth','23');const before=h.state('GOOG');
  h.get('#use-research').click();assert.deepEqual(calls,[['GOOG',{originPage:'current'}]]);assert.deepEqual(h.state('GOOG'),before);
- assert.match(h.get('.guided-research-preset').textContent,/opens Annual model/);assert.match(h.get('#load-base-case').textContent,/earlier Guided inputs/);
+ assert.match(h.get('.guided-research-preset').textContent,/opens Year-by-year/);assert.match(h.get('#load-base-case').textContent,/earlier Guided inputs/);
 });
 
 test('complete presets: real Guided-to-Annual handoff and Undo preserve both models across company selection',async()=>{

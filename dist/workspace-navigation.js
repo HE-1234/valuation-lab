@@ -1,7 +1,7 @@
 import {mountDocumentFlow} from './document-flow.js';
 // View navigation is separate from all model and saved-draft identities.
 export const workspacePages={
- current:{section:'studio',label:'Guided valuation'},renewed:{section:'studio',label:'Annual model'},workbench:{section:'studio',label:'Historical'},
+ current:{section:'studio',label:'Guided valuation'},renewed:{section:'studio',label:'Year-by-year'},workbench:{section:'studio',label:'Historical'},
  history:{section:'research',label:'Research library'},data:{section:'research',label:'Sources'},learn:{section:'learn',label:'Learn'}
 };
 const sectionLabels={studio:'Studio',research:'Research',learn:'Learn'};

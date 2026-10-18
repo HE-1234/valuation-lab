@@ -1,5 +1,26 @@
 # Change log
 
+## 2026-10-18 · Optional interim margin and final fade
+
+- Added opt-in interim margin, arrival year, plateau/fade start, terminal margin and independent terminal-margin year in Guided and Year-by-year. Actual all-year margin charts show the generated path, including equal start/end levels with an interim peak.
+- Kept normalized/source starting margins and explicitly labeled the AAOI/NBIS unavailable-anchor proxy. Repeated edits preserve source/proxy provenance. Disabled/default cases retain their previous economics.
+- Profitability and revenue maturity remain independent. Margin-only extensions preserve existing revenue/capital/tax/WACC; manual annual margin edits remain explicit overrides. Primary Undo restores the full preceding phase edit.
+- Active-phase Monte Carlo keeps the starting margin fixed, shifts future targets, preserves manual offsets and excludes infeasible draws without clipping. Effective metadata describes the sampled curve.
+- Updated two pinned code signatures for intentional margin provenance/reset and effective-path numeric checks; frozen financial-data and numeric-oracle hashes are unchanged.
+
+
+Verification for the combined margin/horizon release: 1,080 full-suite checks, 1,078 passed, one unchanged missing external AAOI raw-cache failure and one existing cache skip. Independent comparisons preserve all 14 original Annual defaults and all 14 Guided drafts, including seeded simulation outputs for valid cases. Final invalid-input/reload/Undo regression checks passed 57/57, followed by 13/13 focused presentation checks. Nine horizon and nine margin desktop/phone static renders were inspected without observed overflow. These are document-renderer approximations; native browser, touch and animation recording remain unverified. Invalid or unfinished phase edits now withhold stale valuation and simulation results until repaired.
+
+## 2026-10-18 · Independent revenue-growth horizons
+
+- Renamed the user-facing Annual mode to Year-by-year, preserving routes, saved model identities and annual historical-table terminology. Added a concise distinction from Guided.
+- Added immediate 10/15/20-year revenue-stability scenarios with an explicit capital assumption and full Undo. Near-term revenue paths remain; later growth fades over the selected duration. It does not hold the initial growth rate flat for 20 years.
+- Kept calendar-year margins, taxes and discount rates separate. The explicit cash-flow schedule retains original economic years and any retained later economic assumptions, so growth stable in year 10 can coexist with a 15-year cash-flow schedule.
+- Added a versioned derived-draft path rather than weakening frozen-source restoration. Original research cases and saved v1 drafts retain their exact numbers until the user deliberately derives another path.
+- Growth requires investment: derived scenarios preserve spending floors, scale positive investment upward with sales and fund additional expansion under an explicit marginal sales/capital assumption. Added mature years use terminal-ROIC-compatible capital intensity. This is a sensitivity, not a rebuilt company capacity, maintenance or customer-advance budget.
+- Monte Carlo uses the same capital response on the current edited schedule before any investment multiplier. Original v1 seeded results remain unchanged; claim pricing, date/currency policies and stale-result protections remain.
+
+
 ## 2026-10-18 · Dated capital and dilution scenarios (research cutoff October 17)
 
 - Added explicit current-capital and existing-share controls in Annual → Claims, with matching remaining-year timing and full load/edit Undo. Saved drafts are never silently replaced.

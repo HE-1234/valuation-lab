@@ -2,7 +2,7 @@ import {defaults,validateSnapshot,valueCompany,validDate} from './engine.js';
 import {genericProvenance,researchCaseFor,loadResearchedBaseCase,restoreDraftProvenance,isUntouchedGenericDraft} from './base-cases.js';
 import {currentClaimsEvidence} from './current-claims-gates.js';
 import {operatingIssues} from './current-operating.js';
-export {operatingProfileDefinition,operatingIssues,operatingAssumptions,independentGrowthProfile,FLEXIBLE_PROFILE_ID} from './current-operating.js';
+export {operatingProfileDefinition,operatingIssues,operatingAssumptions,independentGrowthProfile,resolvedMarginPath,FLEXIBLE_PROFILE_ID} from './current-operating.js';
 import {claimsDefaults,restoreClaims,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis} from './current-claims.js';
 export {claimsDefinition,claimsDefaults,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis,claimsSensitivity} from './current-claims.js';
 export {researchCaseFor,loadResearchedBaseCase,markDraftEdited,fetchBaseCases} from './base-cases.js';
@@ -47,13 +47,14 @@ export function safeDraft(value,company,raw,{baseCases}={}){
  const d={...base,...value,assumptions:{...base.assumptions},notes:{},quote:{...base.quote}};
  for(const k of Object.keys(base.assumptions))if(typeof value.assumptions?.[k]==='number'&&Number.isFinite(value.assumptions[k]))d.assumptions[k]=value.assumptions[k];
  for(const [k,v]of Object.entries(value.notes||{}))if(typeof v==='string')d.notes[k]=v;
- // Only the versioned flexible profile can restore a newly selected maturity.
- // Keep malformed flexible inputs invalid rather than silently replacing them.
- if(value.operatingProfile?.id==='flexible-growth-v1'){d.operatingProfile=structuredClone(value.operatingProfile);for(const k of Object.keys(base.assumptions))d.assumptions[k]=Object.prototype.hasOwnProperty.call(value.assumptions||{},k)?value.assumptions[k]:null;if(Object.prototype.hasOwnProperty.call(value.assumptions||{},'yearlyOverrides'))d.assumptions.yearlyOverrides=structuredClone(value.assumptions.yearlyOverrides);}
- else d.assumptions.years=10;d.reviewed=Array.isArray(value.reviewed)?value.reviewed.filter(v=>Number.isInteger(v)&&v>=0&&v<8):[];d.step=Number.isInteger(value.step)?Math.max(0,Math.min(7,value.step)):2;d.bridgeReviewed=value.bridgeReviewed===true;d.modelReviewed=value.modelReviewed===true;d.normalizationDelta=value.operatingProfile?.id==='flexible-growth-v1'?(Object.prototype.hasOwnProperty.call(value,'normalizationDelta')?value.normalizationDelta:null):typeof value.normalizationDelta==='number'&&Number.isFinite(value.normalizationDelta)?value.normalizationDelta:0;
+ // Authored flexible or margin paths restore their original scalar inputs.
+ // Keep malformed authored inputs invalid rather than silently replacing them.
+ if(value.operatingProfile?.id==='flexible-growth-v1'||value.marginPath!==undefined&&value.marginPath?.enabled!==false){if(value.operatingProfile!==undefined)d.operatingProfile=structuredClone(value.operatingProfile);for(const k of Object.keys(base.assumptions))d.assumptions[k]=Object.prototype.hasOwnProperty.call(value.assumptions||{},k)?value.assumptions[k]:null;if(Object.prototype.hasOwnProperty.call(value.assumptions||{},'yearlyOverrides'))d.assumptions.yearlyOverrides=structuredClone(value.assumptions.yearlyOverrides);}
+ else d.assumptions.years=10;d.reviewed=Array.isArray(value.reviewed)?value.reviewed.filter(v=>Number.isInteger(v)&&v>=0&&v<8):[];d.step=Number.isInteger(value.step)?Math.max(0,Math.min(7,value.step)):2;d.bridgeReviewed=value.bridgeReviewed===true;d.modelReviewed=value.modelReviewed===true;d.normalizationDelta=(value.operatingProfile?.id==='flexible-growth-v1'||value.marginPath!==undefined&&value.marginPath?.enabled!==false)?(Object.prototype.hasOwnProperty.call(value,'normalizationDelta')?value.normalizationDelta:null):typeof value.normalizationDelta==='number'&&Number.isFinite(value.normalizationDelta)?value.normalizationDelta:0;
  for(const k of ['cutoff','adjustmentReason','adjustmentSource'])if(typeof d[k]!=='string')d[k]=base[k];
  if(value.quote&&typeof value.quote==='object'){const q=value.quote;d.quote.price=typeof q.price==='number'&&Number.isFinite(q.price)?q.price:null;for(const k of ['date','currency','sourceUrl','shareBasis'])d.quote[k]=typeof q[k]==='string'?q[k]:'';d.quote.basisConfirmed=q.basisConfirmed===true;}
  d.waccWorksheet={...base.waccWorksheet};for(const k of Object.keys(base.waccWorksheet))if(typeof value.waccWorksheet?.[k]==='number'&&Number.isFinite(value.waccWorksheet[k]))d.waccWorksheet[k]=value.waccWorksheet[k];
+ if(Object.prototype.hasOwnProperty.call(value,'marginPath'))d.marginPath=structuredClone(value.marginPath);
  const restoredClaims=restoreClaims(value.claims,currentSnapshot(company,raw));if(restoredClaims!==null||Object.prototype.hasOwnProperty.call(value,'claims'))d.claims=restoredClaims;
  d.assumptionProvenance=restoreDraftProvenance(value,d,company,raw);
  const c=untouched?researchCaseFor(baseCases,company,raw):null;

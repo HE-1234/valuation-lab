@@ -105,3 +105,11 @@ body>aside nav,.page .table-wrap,.page .research-table-scroll,.page .claims-pane
 body>aside nav{max-width:none}.workspace-evidence-host{scroll-margin-top:64px}
 
 .contextual-evidence-panel{scroll-margin-top:64px}
+
+/* Revenue stability is distinct from the complete calendar-year calculation. */
+.annual-growth-horizon{min-width:0;padding:0 0 16px;margin:0 0 16px;border-bottom:1px solid var(--line)}
+.annual-growth-horizon>label{display:block;font-size:14px;line-height:1.5;margin:8px 0}
+.annual-growth-horizon select,.annual-growth-horizon input{width:100%;min-width:0;min-height:46px;font-size:16px;box-sizing:border-box}
+.annual-growth-horizon p,.annual-growth-horizon details{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.annual-growth-horizon details{margin-top:8px}.annual-growth-horizon summary{min-height:44px;padding:10px 0}
+.annual-derived-label{color:var(--ink)}

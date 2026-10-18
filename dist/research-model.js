@@ -1,7 +1,9 @@
 // Versioned annual research model. The historical and scalar engines are unchanged.
 import {researchBridgeDefinition} from './research-claims.js';
-export const RESEARCH_PROFILE_ID='annual-research-v1';
-export const RESEARCH_VERSION='2026-10-17-reviewed-v1';
+import {annualHorizonIssues} from './annual-growth-horizon.js';
+import {annualMarginPathIssues} from './annual-margin-path.js';
+import {RESEARCH_PROFILE_ID,RESEARCH_VERSION} from './annual-research-identity.js';
+export {RESEARCH_PROFILE_ID,RESEARCH_VERSION} from './annual-research-identity.js';
 export const RESEARCH_PATH='./data/renewed-research-2026-10-17/cases.json';
 export const RESEARCH_STORAGE_PREFIX='valuation-lab-annual-research-v1:';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
@@ -20,7 +22,10 @@ export function researchDraftFor(c){
 }
 export function researchDraftIssues(d,{includeTiming=true}={}){
  const errors=[];
- if(!object(d)||d.schemaVersion!==1||d.profileId!==RESEARCH_PROFILE_ID)return ['Unsupported annual-research draft.'];
+ if(!object(d)||![1,2].includes(d.schemaVersion)||d.profileId!==RESEARCH_PROFILE_ID)return ['Unsupported annual-research draft.'];
+ if(d.schemaVersion===2)errors.push(...annualHorizonIssues(d));
+ errors.push(...annualMarginPathIssues(d));
+ if(d.schemaVersion===1&&d.derivedForecast!==undefined)errors.push('Derived horizon metadata requires a version-2 annual draft.');
  if(d.version!==RESEARCH_VERSION||typeof d.sourceScenario!=='string'||d.caseId!==`${RESEARCH_VERSION}:${d.ticker}:${d.sourceScenario}`)errors.push('Annual research version and source-case identity must match the reviewed profile.');
  if(!/^[A-Z0-9.-]{1,12}$/.test(d.ticker||'')||!['USD','TWD'].includes(d.currency))errors.push('A supported ticker and explicit nominal currency are required.');
  if(!date(d.informationAsOf)||!date(d.discountOrigin)||!object(d.anchor)||!finite(d.anchor.revenue)||d.anchor.revenue<=0)errors.push('Valid information date, forecast origin and positive source revenue are required.');
@@ -31,7 +36,7 @@ export function researchDraftIssues(d,{includeTiming=true}={}){
   // Reinvestment can be negative only when the analyst explicitly models a release.
   // Revenue contraction never creates a release automatically.
  });
- if(!Number.isInteger(d.forecastHorizonYears)||!Array.isArray(d.annual)||d.annual.length!==d.forecastHorizonYears)errors.push('The full source forecast horizon must be preserved; annual rows cannot be truncated or appended silently.');
+ if(!Number.isInteger(d.forecastHorizonYears)||!Array.isArray(d.annual)||d.annual.length!==d.forecastHorizonYears)errors.push('The complete forecast horizon must be preserved; annual rows cannot be truncated or appended silently.');
  if(d.ticker==='LITE'&&d.bridgeInputs!==undefined&&!object(d.bridgeInputs))errors.push('Saved LITE bridge inputs must be an object; malformed claim settings are retained for recovery.');
  if(d.ticker==='LITE'&&d.bridgeReviewVersion!==undefined&&!['legacy-preserved-v1','2026-10-17-lite-v2'].includes(d.bridgeReviewVersion))errors.push('Unsupported saved LITE bridge review version; retain and export before recovery.');
  const t=d.terminal;
@@ -45,7 +50,7 @@ export function restoreResearchDraft(value,c){
  if(value==null)return {draft:researchDraftFor(c),restored:false,error:null};
  // A malformed saved draft is never replaced by the new research numbers.
  // Return it intact so the user can export/recover it, with calculation withheld.
- if(!object(value)||value.profileId!==RESEARCH_PROFILE_ID||value.schemaVersion!==1||value.version!==RESEARCH_VERSION||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||value.forecastHorizonYears!==c.forecastHorizonYears||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
+ if(!object(value)||value.profileId!==RESEARCH_PROFILE_ID||![1,2].includes(value.schemaVersion)||value.version!==RESEARCH_VERSION||value.ticker!==c.ticker||value.currency!==c.currency||value.caseId!==researchCaseId(c)||(value.schemaVersion===1?value.forecastHorizonYears!==c.forecastHorizonYears:value.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||value.discountOrigin!==c.valuationTiming.discountOrigin||value.anchor?.revenue!==c.anchor.revenue)return {draft:copy(value),restored:true,error:'Saved annual draft has an incompatible identity or source horizon. Export it before explicitly loading the reviewed research case.'};
  const errors=researchDraftIssues(value);
  const draft=copy(value);
  if(!errors.length&&c.ticker==='LITE')preserveLegacyLiteBridge(draft);
@@ -85,6 +90,7 @@ export function calculateResearchOperating(d){
  const warnings=[];
  if(terminal.fcffGrowth===null||Math.abs(terminal.fcffGrowth-t.growth)>1e-6)warnings.push('Final explicit FCFF and terminal FCFF do not grow at the stable revenue rate. Inspect the capital-transition sensitivity; the original research path is preserved.');
  if(Math.abs(terminal.revenueGrowthEndpointDifference)>1e-6)warnings.push('Final explicit revenue growth differs from terminal growth. The growth endpoint change is separate from the capital transition.');
+ if(d.schemaVersion===2)warnings.push((d.derivedForecast?.revenuePathPreserved?'Margin-only schedule extension with retained existing revenue path:':'Derived revenue-horizon sensitivity:')+' calendar-year net investment floors and explicit additional growth funding are analyst assumptions. Source capital-component reconciliations do not describe changed rows. A longer growth runway does not guarantee higher value.');
  if(d.userEdited)warnings.push('Edited annual inputs are analyst assumptions. Original capital-component reconciliations may no longer match; check the investment evidence before relying on them.');
  if(rows.some(r=>r.reinvestment<0))warnings.push('A negative investment amount is an explicit asset or working-capital release assumption; it is not created automatically by falling revenue.');
  return {ticker:d.ticker,currency:d.currency,informationAsOf:d.informationAsOf,discountOrigin:d.discountOrigin,rows,terminal,forecastPV:pv,terminalPV,enterprise,terminalShare:enterprise>0?terminalPV/enterprise:null,peakEconomicDeficit:Math.max(0,-trough),negativeFCFFYears:rows.filter(r=>r.fcff<0).length,warnings,classification:'Conditional operating EV at the forecast origin, using research available on the information date. Not a contemporaneously knowable anchor-date valuation.'};
@@ -94,7 +100,7 @@ export function terminalNormalizedDraft(d,{years=3}={}){
  const next=copy(d),n=next.annual.length,count=Math.min(years,n),t=next.terminal;
  if(!Number.isInteger(count)||count<1)throw Error('Choose a positive number of transition years.');
  const original=calculateResearchOperating(d);
- if(original.terminal.fcffGrowth!==null&&Math.abs(original.terminal.fcffGrowth-t.growth)<=1e-6){next.capitalPolicy='terminal-normalization-not-needed-v1';return next;}
+ if(original.terminal.fcffGrowth!==null&&Math.abs(original.terminal.fcffGrowth-t.growth)<=1e-6){next[next.schemaVersion===2?'capitalSensitivity':'capitalPolicy']='terminal-normalization-not-needed-v1';return next;}
  // Blend the original investment into terminal-consistent net investment.
  // No revision to source revenue, margin, tax, WACC, or earlier years is hidden.
  for(let i=n-count;i<n;i++){
@@ -103,7 +109,7 @@ export function terminalNormalizedDraft(d,{years=3}={}){
   const target=nopat*t.growth/t.roic;
   r.reinvestment=r.reinvestment*(1-weight)+target*weight;
  }
- next.capitalPolicy=`terminal-normalization-${count}y-v1`;next.userEdited=true;
+ next[next.schemaVersion===2?'capitalSensitivity':'capitalPolicy']=`terminal-normalization-${count}y-v1`;next.userEdited=true;
  return next;
 }
 export function researchTimingResult(d,operating=calculateResearchOperating(d)){
