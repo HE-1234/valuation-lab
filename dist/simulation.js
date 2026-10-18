@@ -1,3 +1,4 @@
+import {ANNUAL_GROWTH_PATH,annualPathDefaults,validateAnnualPathConfig,prepareAnnualPath,annualPathAudit} from './annual-path-sampling.js';
 // Conditional uncertainty in DCF inputs, never a stock-price process.
 // Existing deterministic/historical engine and research records remain unchanged.
 import {defaults, valueCompany, validDate} from './engine.js';
@@ -22,7 +23,7 @@ export function simulationDefaults(assumptions = defaults) {
  const a = {...defaults,...assumptions};
  const bounds = (mode, width, low, high) => ({type:'triangular',low:Math.max(low,mode-width),mode,high:Math.min(high,mode+width)});
  return {
-  trials:4000, seed:'valuation-lab', binCount:36, dependence:'independent',
+  trials:4000, seed:'valuation-lab', binCount:36, dependence:'independent', method:'annual-path', annualPath:annualPathDefaults(a.years),
   drivers:{
    growth:bounds(a.growth,.05,-.5,1),
    targetMargin:bounds(a.targetMargin,.05,0,1),
@@ -189,7 +190,7 @@ export function distributionSummary(spec, key) {
 
 export function validateSimulationConfig(config, assumptions = defaults) {
  assertObject(config,'Simulation settings');
- const unknown = Object.keys(config).filter(k => !['trials','seed','binCount','dependence','drivers'].includes(k));
+ const unknown = Object.keys(config).filter(k => !['trials','seed','binCount','dependence','drivers','method','annualPath'].includes(k));
  if (unknown.length) throw new Error(`Unknown simulation setting: ${unknown.join(', ')}.`);
  const c = {trials:4000,seed:'valuation-lab',binCount:36,dependence:'independent',...config,drivers:{}};
  if (!Number.isInteger(c.trials) || c.trials < 1 || c.trials > 50000) throw new Error('Trials must be an integer from 1 to 50,000.');
@@ -197,6 +198,9 @@ export function validateSimulationConfig(config, assumptions = defaults) {
  if (!(typeof c.seed === 'string' && c.seed.trim().length > 0 && c.seed.length <= 128) && !Number.isSafeInteger(c.seed)) throw new Error('Seed must be a nonempty string of at most 128 characters or a safe integer.');
  c.seed = String(c.seed);
  if (!['independent','operating-linked'].includes(c.dependence)) throw new Error('Dependence must be independent or operating-linked.');
+ if (own(config,'method') && !['legacy','annual-path'].includes(config.method)) throw Error('Unsupported simulation method.');
+ c.method=config.method??'legacy';
+ if(c.method==='annual-path'||own(config,'annualPath'))c.annualPath=validateAnnualPathConfig(own(config,'annualPath')?config.annualPath:annualPathDefaults());
  const given = config.drivers ?? {};
  assertObject(given,'Driver distributions');
  for (const key of Object.keys(given)) if (!SIMULATION_DRIVER_KEYS.includes(key)) throw new Error(`Unsupported uncertain driver: ${key}. Tax, stable growth, terminal ROIC, claims and shares stay fixed.`);
@@ -246,6 +250,7 @@ function scenario(assumptions, config, random, samplers) {
  const linked = config.dependence === 'operating-linked';
  const shared = linked ? standardNormal(random) : 0;
  for (const key of SIMULATION_DRIVER_KEYS) {
+  if(config.method==='annual-path'&&key==='growth')continue;
   const loading = operatingLoadings[key];
   const u = linked && loading !== 0
    ? normalCDF(loading*shared+Math.sqrt(1-loading*loading)*standardNormal(random))
@@ -320,6 +325,13 @@ function comparison(snapshot, draft, baseline, samples) {
   message:'Price percentile = share of accepted simulated DCF values at or below the entered price, including ties. Conditional model frequency, not a probability of investment profit or a stock-price forecast.'};
 }
 
+export function currentAnnualPathContext(snapshot,draft){
+ const baseline=calculateCurrent(snapshot,draft);
+ const growth=baseline.rows.map(r=>r.growth),stable=draft.assumptions.terminalGrowth,maturity=draft.assumptions.years;
+ const terminalYear=growth.slice(maturity-1).every(g=>Math.abs(g-stable)<=1e-12)?maturity:growth.length+1;
+ return {baseline:growth,terminalYear,terminalGrowth:stable};
+}
+
 function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
  assertObject(snapshot,'Snapshot');
  assertObject(draft,'Current valuation draft');
@@ -331,7 +343,9 @@ function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
  const baseline = calculateCurrent(snapshot,draft);
  if (!finiteValuation(baseline)) throw new Error('Baseline valuation is numerically nonfinite; revise the scale or assumptions before simulating.');
  const c = validateSimulationConfig(config ?? simulationDefaults(draft.assumptions),baseline.assumptions);
-  const random = createSeededRandom(c.seed), draws = [], rawDraws = [], scenarios = [], exclusions = {};
+ const context=c.method==='annual-path'?currentAnnualPathContext(snapshot,draft):null;
+ const pathSampler=context?prepareAnnualPath(context.baseline,c.annualPath,context):null;
+ const random = createSeededRandom(c.seed), draws = [], rawDraws = [], scenarios = [], exclusions = {};
  const samplers = Object.fromEntries(SIMULATION_DRIVER_KEYS.map(key=>[key,prepareDistribution(c.drivers[key])]));
  const exclude = reason => {exclusions[reason] = (exclusions[reason] || 0)+1;};
  let zeroEquityCount = 0;
@@ -339,13 +353,18 @@ function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
   if (trial % chunkSize === 0) yield {completed:trial,total:c.trials};
   // One draw per economic driver generates an entire coherent annual path.
   const a = scenario(baseline.assumptions,c,random,samplers);
+  const growthPath=pathSampler?.sample(random);
+  if(growthPath){
+   if(growthPath.some(g=>!finite(g)||g<-.5||g>2)){exclude('annual-growth-bounds');continue;}
+   a[ANNUAL_GROWTH_PATH]=growthPath;
+  }
   if (!(a.wacc > a.terminalGrowth && a.terminalGrowth >= 0 && a.terminalROIC > a.terminalGrowth)) {exclude('terminal-constraints');continue;}
   try {
    const value = valueCurrentWithClaims(snapshot,draft,a);
    if (!finiteValuation(value)) {exclude('nonfinite-valuation');continue;}
    draws.push(value.perShare); rawDraws.push(value.rawPerShare);
    if (value.equity <= 0) zeroEquityCount++;
-   scenarios.push({trial:trial+1,...Object.fromEntries(SIMULATION_DRIVER_KEYS.map(k=>[k,a[k]])),perShare:value.perShare,rawPerShare:value.rawPerShare,...(value.claimsBridge?{claims:{method:value.claimsBridge.method,allocationShares:value.claimsBridge.allocationShares,additionalClaims:value.claimsBridge.additionalClaims,additionalAssets:value.claimsBridge.additionalAssets,warrantClaim:value.claimsBridge.warrantClaim}}:{})});
+   scenarios.push({trial:trial+1,...(growthPath?{growthPath}:{}),...Object.fromEntries(SIMULATION_DRIVER_KEYS.map(k=>[k,a[k]])),perShare:value.perShare,rawPerShare:value.rawPerShare,...(value.claimsBridge?{claims:{method:value.claimsBridge.method,allocationShares:value.claimsBridge.allocationShares,additionalClaims:value.claimsBridge.additionalClaims,additionalAssets:value.claimsBridge.additionalAssets,warrantClaim:value.claimsBridge.warrantClaim}}:{})});
   } catch (error) {
    // Bounded driver validation is performed up front; no silent redraws.
    if (!(error instanceof Error)) throw error;
@@ -361,29 +380,34 @@ function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
   'Conditional distribution of DCF values under selected assumptions. Frequencies are not calibrated real-world outcome probabilities, expected returns, or stock-price forecasts.',
   'Initial ranges are illustrative teaching assumptions, not estimates fitted to company or market data. Review every distribution family, parameter and dependence against evidence.',
   'Tax, terminal growth, terminal marginal ROIC, forecast horizon, source financials and selected capital/claims assumptions are fixed. Any source-specific allocation rule is applied to each trial. Unmodeled uncertainty remains.',
-  'Each trial draws a whole-business growth/margin path once; annual growth is not independently resampled. WACC is nominal and currency-consistent; simulation does not remove the need for a risk-adjusted discount rate.',
+  pathSampler?'Annual growth uses a Gaussian AR(1) bridge around the deterministic baseline, exactly conditioned on fixed-year and terminal anchors. The scalar growth distribution is inactive. Other driver distributions are unchanged.':'Each trial draws a whole-business growth/margin path once; annual growth is not independently resampled. WACC is nominal and currency-consistent; simulation does not remove the need for a risk-adjusted discount rate.',
   'Negative modeled common-equity values are retained at the engine’s zero equity floor, with raw pre-floor values exported. This is not a distress/recovery or financing model.'
  ];
- if (baseline.operatingProfile?.id==='aaoi-capacity-ramp-v1'&&draft.marginPath?.enabled!==true&&draft.capitalPath?.enabled!==true) warnings.push('AAOI uses the documented staged capacity profile in every draw: initial growth, mature margin, initial sales/capital and WACC form a coherent annual path; terminal capital intensity follows terminal growth, margin, tax and ROIC.');
- if (baseline.operatingProfile?.id==='flexible-growth-v1') warnings.push(baseline.operatingProfile.growthSampling,baseline.operatingProfile.risk,baseline.operatingProfile.note);
+ if (!pathSampler&&baseline.operatingProfile?.id==='aaoi-capacity-ramp-v1'&&draft.marginPath?.enabled!==true&&draft.capitalPath?.enabled!==true) warnings.push('AAOI uses the documented staged capacity profile in every draw: initial growth, mature margin, initial sales/capital and WACC form a coherent annual path; terminal capital intensity follows terminal growth, margin, tax and ROIC.');
+ if (baseline.operatingProfile?.id==='flexible-growth-v1') warnings.push(...(pathSampler?[]:[baseline.operatingProfile.growthSampling]),baseline.operatingProfile.risk,baseline.operatingProfile.note);
  if (baseline.operatingProfile?.capitalSampling) warnings.push(baseline.operatingProfile.capitalSampling,...(baseline.operatingProfile.id==='flexible-growth-v1'?[]:[baseline.operatingProfile.note]));
  if (baseline.operatingProfile?.marginSampling) warnings.push(baseline.operatingProfile.marginSampling,...(baseline.operatingProfile.id==='flexible-growth-v1'?[]:[baseline.operatingProfile.note]));
  if (baseline.claimsBridge) warnings.push('Every trial uses the same explicit source-dated claims model as the deterministic value. Selected claims inputs are held fixed, but the AAOI intrinsic warrant allocation, where applicable, is recomputed from each trial’s equity value.',...baseline.claimsBridge.warnings);
  if (Object.values(c.drivers).some(d=>d.type==='normal')) warnings.push('Normal mean and SD are underlying unbounded parameters. The bounded input moments generally differ; exported input summaries label their numerical approximation. Truncation conditions on the bounds without clipping or replacement sampling.');
  if (excluded) warnings.push(`${excluded} of ${c.trials} attempted trials were excluded. Reported quantiles and frequencies are conditional on the ${accepted} valid trials; exclusions change the effective input distribution. Revise overlapping terminal bounds instead of interpreting this as unbiased sampling.`);
  if (!accepted) warnings.push('No valid trials remain. Revise the bounds; no distribution or market-price percentile is available.');
- const dependence = c.dependence === 'independent'
+ let dependence = c.dependence === 'independent'
   ? {id:'independent',label:'Independent input draws',description:'The four economic drivers are sampled independently. This is a modeling assumption, not evidence of independence.',latentCorrelations:null}
   : {id:'operating-linked',label:'Illustrative linked operating drivers',description:'One Gaussian operating factor links growth, mature margin and sales/capital. Latent correlations: growth–margin 0.49, growth–sales/capital 0.28, margin–sales/capital 0.28. WACC is independent. These are assumed factor correlations, not fitted data or exact Pearson correlations of the selected input distributions. Fixed inputs have no defined correlation.',factorLoadings:{...operatingLoadings},latentCorrelations:[[1,.49,.28,0],[.49,1,.28,0],[.28,.28,1,0],[0,0,0,1]]};
+ if(pathSampler)dependence=c.dependence==='independent'
+  ?{id:'independent',label:'Independent annual growth and other drivers',description:'The conditioned annual growth process is independent of margin, sales/capital and WACC draws. Annual deviations are serially correlated according to the entered persistence. These are modeling assumptions, not evidence of independence.',latentCorrelations:null}
+  :{id:'operating-linked',label:'Linked margin and capital inputs; separate annual growth',description:'Margin and sales/capital retain their illustrative Gaussian factor correlation of 0.28. Annual growth is a separate conditioned AR(1) process, independent of these inputs and WACC; the scalar growth loading is inactive.',factorLoadings:{targetMargin:.7,salesCapital:.4,wacc:0},latentCorrelations:null};
+ const exportedConfig=clone(c);
+ if(c.method==='legacy'&&config&&!own(config,'method'))delete exportedConfig.method;
  return {
   version:SIMULATION_VERSION,status:accepted ? 'ready' : 'empty',classification:'Conditional educational DCF simulation',
-  config:clone(c),baseline,draws,samples,rawSamples,scenarios,
-  inputDistributions:Object.fromEntries(SIMULATION_DRIVER_KEYS.map(key=>[key,distributionSummary(c.drivers[key],key)])),
+  config:exportedConfig,baseline,draws,samples,rawSamples,scenarios,...(pathSampler?{annualPaths:annualPathAudit(pathSampler,scenarios)}:{}),
+  inputDistributions:Object.fromEntries(SIMULATION_DRIVER_KEYS.map(key=>[key,{...distributionSummary(c.drivers[key],key),...(pathSampler&&key==='growth'?{active:false,inactiveReason:'Annual growth path replaces this scalar growth distribution.'}:{})}])),
   attempts:c.trials,accepted,excluded,exclusions,zeroEquityCount,zeroEquityShare:accepted ? zeroEquityCount/accepted : null,
   mean,median:quantiles.p50,quantiles,histogram:histogram(samples,c.binCount),
   units:{currency:snapshot.currency,perShare:`${snapshot.currency} per common share`,financials:'millions',shares:'millions'},
   quote:comparison(snapshot,draft,baseline,samples),dependence,warnings,
-  method:{distribution:'per-driver fixed, triangular, uniform or conditionally truncated normal',normal:'inverse conditional CDF using stable log tails; no clipping or rejection resampling; mean/SD are underlying normal parameters',inputUnits:'growth, targetMargin and wacc are fractions (0.10 = 10%); salesCapital is a ratio',quantiles:'linear interpolation at (n−1)p (type 7)',ecdf:'right-continuous; count(value ≤ price) / accepted trials',histogram:'equal-width bins; left-closed/right-open except final bin includes its upper edge',sampling:'exact attempted-trial count; invalid draws excluded without replacement',random:'FNV-1a seed hash / Mulberry32',path:'one driver vector per trial, existing deterministic transition and FCFF engine'}
+  method:{distribution:'per-driver fixed, triangular, uniform or conditionally truncated normal',normal:'inverse conditional CDF using stable log tails; no clipping or rejection resampling; mean/SD are underlying normal parameters',inputUnits:'growth, targetMargin and wacc are fractions (0.10 = 10%); salesCapital is a ratio',quantiles:'linear interpolation at (n−1)p (type 7)',ecdf:'right-continuous; count(value ≤ price) / accepted trials',histogram:'equal-width bins; left-closed/right-open except final bin includes its upper edge',sampling:'exact attempted-trial count; invalid draws excluded without replacement',random:'FNV-1a seed hash / Mulberry32',path:pathSampler?'Exact Gaussian annual-growth bridge; existing margins, capital calendars, claims and FCFF engine':'one driver vector per trial, existing deterministic transition and FCFF engine'}
  };
 }
 

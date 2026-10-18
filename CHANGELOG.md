@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · Correlated annual growth paths and chart-wide rain
+
+- Fresh simulations use annual Gaussian growth deviations around the existing deterministic decay path, with user-selected fixed years, innovation SD and persistence. Future fixed anchors condition the intervening path. Previously saved unversioned configurations retain legacy behavior; a method selector keeps that approach available.
+- Added an actual completed-scenario path preview, explicit uncertainty units, fixed-year state and disclosures about illustrative assumptions. Stale/invalid settings withhold output. Source financial assumptions and the user-approved Annual Report skin remain intact.
+- Replay balls start across the chart roof instead of a central emitter. Decorative randomness is independent of financial sampling, with the existing replay clock and actual bin destinations preserved.
+- See [annual-path methodology](ANNUAL-PATH-SIMULATION.md). Verification: aggregate 1,159 tests: 1,157 passed, one unchanged missing-AAOI-source-cache failure and one existing skip. A subsequent all-fixed-path exactness correction passed all 68 affected core/research/preset tests. Independent review confirmed 26 legacy full-result comparisons, 90 cross-route financial cases and Gaussian conditional covariance. Source-driven static mobile/desktop checks and 16 actual-handler checks cover the new controls; these approximations are not native browser screenshots.
+
 ## 2026-10-18 · User Annual Report redesign and capital-efficiency phases
 
 - Integrated the user's GitHub Annual Report UI (commit `7e211252e3adf87fed61fe3caddbe210a3b71127`) with the latest growth-horizon, margin-phase and claims functionality. The user-supplied skin CSS, palettes, font, loader and motion layer are preserved; theme chooser labels/swatches now match those editions.

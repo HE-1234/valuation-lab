@@ -179,3 +179,7 @@ Disabled/default paths keep their existing values. Guided returns to its simple 
 ## Annual Report design and capital diagnostics
 
 The user-approved Annual Report UI is the current presentation baseline. See [integration provenance and modeling notes](UI-INTEGRATION.md). Guided optionally supports independently authored early/later incremental sales-to-capital assumptions; Year-by-year retains explicit investment schedules. Return diagnostics are labeled marginal proxies unless a reliable invested-capital stock is supplied.
+
+## Annual growth uncertainty
+
+Fresh Monte Carlo configurations use correlated annual growth paths with fixed-year anchors, configurable innovation SD and persistence. Previously saved simulations retain their method; the selector also offers the legacy single growth draw. [Read the method, limitations and source notes](ANNUAL-PATH-SIMULATION.md). The chart-wide rain replay visualizes already computed outcomes.

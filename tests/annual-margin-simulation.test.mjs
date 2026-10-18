@@ -8,7 +8,7 @@ import {MARGIN_PATH_VERSION,marginAtYear} from '../dist/margin-path.js';
 import {researchStressDraft,simulateResearch,simulateResearchAsync,simulationResearchDefaults,RESEARCH_SIMULATION_DRIVER_KEYS} from '../dist/research-simulation.js';
 const companies=JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-research-2026-10-17/cases.json',import.meta.url))).companies;
 const company=ticker=>companies.find(c=>c.ticker===ticker);
-const config=(shift=0)=>({...simulationResearchDefaults(),trials:5,drivers:{marginShift:{type:'fixed',value:shift}}});
+const config=(shift=0)=>({...simulationResearchDefaults(),method:'legacy',trials:5,drivers:{marginShift:{type:'fixed',value:shift}}});
 function pathDraft(ticker,horizon){
  const c=company(ticker),base=researchDraftFor(c),d=horizon?deriveAnnualGrowthHorizon(base,c,{growthMaturityYear:horizon}):base;
  d.marginPath={enabled:true,version:MARGIN_PATH_VERSION,startMargin:.12,interimMargin:.32,interimYear:3,declineStartYear:6,terminalMargin:.18,terminalYear:10,startingMarginSource:annualMarginStartingPoint(d)};

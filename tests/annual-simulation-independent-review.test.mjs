@@ -10,7 +10,7 @@ import {simulateResearch,simulationResearchDefaults} from '../dist/research-simu
 
 const library=bundledResearch(),company=ticker=>library.companies.find(c=>c.ticker===ticker);
 const close=(actual,expected,label)=>assert.ok(Number.isFinite(actual)&&Math.abs(actual-expected)<=Math.max(1,Math.abs(expected))*3e-12,`${label}: ${actual} != ${expected}`);
-const smallConfig=()=>({...simulationResearchDefaults(),trials:7,seed:'independent-integration'});
+const smallConfig=()=>({...simulationResearchDefaults(),method:'legacy',trials:7,seed:'independent-integration'});
 
 // Expected values use source fields and explicit arithmetic, never the production
 // DCF, path-transform or timing helper. Both timing branches are covered.

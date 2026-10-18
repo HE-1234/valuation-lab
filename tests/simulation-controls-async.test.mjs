@@ -10,7 +10,7 @@ import {simulateResearch,simulationResearchDefaults} from '../dist/research-simu
 const cases=JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-research-2026-10-17/cases.json',import.meta.url)));
 const allCases=cases.companies;
 const baseCase=ticker=>allCases.find(c=>c.ticker===ticker);
-const annualFixture=ticker=>{const draft=researchDraftFor(baseCase(ticker));draft.researchSimulationConfig={...simulationResearchDefaults(),trials:20};return fixture({ticker,autoplay:false,draftOverride:draft,snapshotOverride:{ticker,currency:draft.currency,periodEnd:draft.discountOrigin,raw:{id:draft.caseId}},adapter:annualResearchSimulationAdapter(draft)});};
+const annualFixture=ticker=>{const draft=researchDraftFor(baseCase(ticker));draft.researchSimulationConfig={...simulationResearchDefaults(),method:'legacy',trials:20};return fixture({ticker,autoplay:false,draftOverride:draft,snapshotOverride:{ticker,currency:draft.currency,periodEnd:draft.discountOrigin,raw:{id:draft.caseId}},adapter:annualResearchSimulationAdapter(draft)});};
 const ticks=async()=>{await Promise.resolve();await Promise.resolve();};
 async function drain(h,releases){for(let n=0;n<1000;n++){if(releases.length)releases.shift()();await ticks();if(h.get('#mc-chart')||h.get('#mc-error').textContent)break;}await ticks();}
 

@@ -78,7 +78,7 @@ test('default completed chart and explicit replay retain full exact bins, with b
 });
 
 const companies=JSON.parse(fs.readFileSync(new URL('../dist/data/renewed-research-2026-10-17/cases.json',import.meta.url))).companies;
-const annualDraft=()=>{const d=researchDraftFor(companies.find(c=>c.ticker==='AAPL'));d.researchSimulationConfig={...simulationResearchDefaults(),trials:20,seed:'stable-annual'};return d;};
+const annualDraft=()=>{const d=researchDraftFor(companies.find(c=>c.ticker==='AAPL'));d.researchSimulationConfig={...simulationResearchDefaults(),method:'legacy',trials:20,seed:'stable-annual'};return d;};
 function annual(d,opts={}){return fixture({autoplay:false,draftOverride:d,snapshotOverride:{ticker:d.ticker,currency:d.currency,periodEnd:d.discountOrigin,raw:{id:d.caseId}},adapter:annualResearchSimulationAdapter(d),...opts});}
 
 test('annual remount keeps exact prior basis visibly stale, then reproduces the edited Fixed case',async()=>{

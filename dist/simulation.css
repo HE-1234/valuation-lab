@@ -86,3 +86,12 @@
 .simulation-lab .mc-chart .mc-svg-note,.value-column .simulation-lab .mc-chart .mc-svg-note,#research-simulation-root .mc-chart .mc-svg-note{font-size:calc(13px * var(--mc-label-scale,2.8));letter-spacing:0;font-variant-numeric:tabular-nums}
 .simulation-lab .mc-chart-caption,.simulation-lab .mc-axis-title{font-size:13px;line-height:1.5;color:var(--stage-text);opacity:.85;margin:8px 0 0;max-width:none!important}
 .simulation-lab .mc-axis-title{text-align:center;margin:-10px 0 12px}
+
+/* Annual-path year choices use the existing theme's compact control language. */
+.simulation-lab .mc-annual-years{display:grid;grid-template-columns:repeat(auto-fit,minmax(94px,1fr));gap:8px;max-width:520px;margin:10px 0 16px}
+.simulation-lab .mc-annual-year{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:48px;margin:0;padding:7px 6px;border:1px solid var(--control);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:12px;line-height:1.25;text-align:center}
+.simulation-lab .mc-annual-year small{font:inherit;font-size:11px;color:var(--muted)}
+.simulation-lab .mc-annual-year[aria-pressed=true]{border-color:var(--accent);background:var(--soft);font-weight:600}
+.simulation-lab .mc-annual-year[aria-pressed=true] small{color:var(--ink)}
+.simulation-lab .mc-annual-year:disabled{opacity:1;cursor:default}
+.simulation-lab .mc-annual-year:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
