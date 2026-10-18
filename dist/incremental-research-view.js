@@ -17,4 +17,6 @@ export function incrementalPresetHTML(d){
 }
 
 export function incrementalScenarioLabel(d){const r=incrementalRecord(d?.ticker),a=r?.alternatives.find(x=>x.name===d.selectedIncrementalScenario);return a?.label||(a?.name==='cycle-and-export-downside'?'Cycle and export downside':'Reviewed annual case');}
-export function incrementalAlternativeButtons(c){const r=incrementalRecord(c?.ticker);if(!r)return '';return r.alternatives.map(a=>`<button class="quiet" data-research-action="${c.ticker==='KLAC'?'incremental-downside':'incremental-alternative'}" data-incremental-scenario="${esc(a.name)}">${annualTextHTML(c.ticker==='KLAC'?'Load reviewed downside':a.name==='downcycle'?'Load reviewed downcycle':'Load reviewed upside')}</button>`).join('');}
+export function incrementalAlternativeButtons(c){const r=incrementalRecord(c?.ticker);if(!r)return '';return r.alternatives.map(a=>`<button class="quiet" data-research-action="${c.ticker==='KLAC'?'incremental-downside':'incremental-alternative'}" data-incremental-scenario="${esc(a.name)}">${annualTextHTML(c.ticker==='KLAC'?'Load reviewed downside':a.buttonLabel||(a.name==='downcycle'?'Load reviewed downcycle':'Load reviewed upside'))}</button>`).join('');}
+
+export function incrementalFundingHTML(c){const p=incrementalRecord(c?.ticker)?.prose.funding;return p?`<p class="research-warning incremental-fixed-funding">${annualTextHTML(p.en)}</p>`:'';}

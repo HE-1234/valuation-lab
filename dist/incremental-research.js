@@ -3,7 +3,7 @@ import {researchDraftFor,researchDraftIssues} from './research-model.js';
 import {simulationResearchDefaults,validateResearchSimulationConfig} from './research-simulation.js';
 import {isUSRobinhoodCandidate} from './company-catalog.js';
 export const INCREMENTAL_RESEARCH_PATH='./data/incremental-research-2026-10-18/cases.json';
-export const INCREMENTAL_RESEARCH_PATHS=Object.freeze([INCREMENTAL_RESEARCH_PATH,'./data/incremental-AMAT-2026-10-18-v3/cases.json']);
+export const INCREMENTAL_RESEARCH_PATHS=Object.freeze([INCREMENTAL_RESEARCH_PATH,'./data/incremental-AMAT-2026-10-18-v3/cases.json','./data/incremental-LRCX-2026-10-18-v2/cases.json']);
 export function validateIncrementalResearch(bundle){
  // The separately audited payload must match the shipped immutable registry.
  // Imported edits belong in drafts; they cannot rewrite source or audit identity.

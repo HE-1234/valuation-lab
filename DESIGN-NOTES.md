@@ -21,3 +21,7 @@ Applied lessons:
 - Let question text, long options, explanations and source references wrap into the natural page flow. Avoid fixed-height answer/feedback panes and nested scrollers. This is the quiz's implementation choice for readable one-directional flow, informed by the reflow guidance; W3C does not prohibit every nested scroller.
 
 Verification: source contracts and synthetic-DOM checks cover labels, status markup, focus identity, keyboard handlers and whole-page flow. Source-driven English/Simplified Chinese renders cover 390/1440 widths and worst-case long cards. Native browser reflow at zoom, touch, focus visibility and screen-reader announcement timing still require device/browser testing; these checks do not establish WCAG compliance.
+
+## 2026-10-18 · Explain fixed funding beside capital inputs
+
+Reviewed [W3C Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html). Applied its guidance to expose LRCX's fixed opening cash obligation and operating-versus-total investment equation next to Capital inputs. Rounded input values alone cannot explain which component changes. Thirty-seven source-driven static views showed readable bilingual labels, warnings and equations without horizontal overflow; this is not a native-device or WCAG conformance certificate.

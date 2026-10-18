@@ -1,3 +1,5 @@
+import {incrementalRecord} from './incremental-registry.js';
+import {fixedCapitalSettlement,operatingInvestment,scaleOperatingInvestment} from './fixed-capital-funding.js';
 import {annualPathDefaults,validateAnnualPathConfig,prepareAnnualPath,annualPathAudit,annualMetricDefaults,validateAnnualMetrics,prepareAnnualMetrics,sampleAnnualMetrics,annualMetricsAudit,annualMetricConstraint,conditionedGrowthContext} from './annual-path-sampling.js';
 // Conditional uncertainty around the dated annual research schedule. No stock-price
 // process, probability calibration, implicit capital release, or funding-debt plug.
@@ -81,14 +83,14 @@ function buildTrialDraft(d,stress,capitalPolicy,growthPath){
   const revenue=growthPath?trialPrior*(1+growthPath[index]):stress.growthPremium===0?row.revenue:trialPrior*(1+reviewedGrowth+stress.growthPremium*weight);
   reviewedPrior=row.revenue;trialPrior=revenue;
   const scale=!derived&&capitalPolicy==='revenue-scaled'?revenue/row.revenue:1;
-  return {...row,revenue,margin:row.margin+marginDelta(row.year),reinvestment:row.reinvestment*stress.investmentMultiplier*scale,wacc:row.wacc+stress.waccShift};
+  return {...row,revenue,margin:row.margin+marginDelta(row.year),reinvestment:scaleOperatingInvestment(d,row,stress.investmentMultiplier*scale),wacc:row.wacc+stress.waccShift};
  });
  if(derived&&annual.every(r=>finite(r.revenue)&&r.revenue>0)){
   // Rebase the response on the current editable schedule, not the original source,
   // so zero growth stress preserves manual investment edits exactly. Apply the
   // independent signed investment multiplier only after the capital response.
   const investments=calculateDerivedReinvestment(d,annual,{baselineAnnual:d.annual});
-  annual.forEach((row,i)=>{row.reinvestment=investments[i]*stress.investmentMultiplier;});
+  annual.forEach((row,i)=>{row.reinvestment=scaleOperatingInvestment(d,{...row,reinvestment:investments[i]},stress.investmentMultiplier);});
  }
  const next={...d,annual,terminal:{...d.terminal,margin:d.terminal.margin+stress.marginShift,wacc:d.terminal.wacc+stress.waccShift}};
  if(d.marginPath?.enabled===true&&stress.marginShift!==0){
@@ -138,7 +140,7 @@ export function researchAnnualPathContext(draft){
  const candidate=derived?(derived.revenuePathPreserved===true?derived.sourceForecastHorizonYears+1:derived.growthMaturityYear):baseline.length+1;
  const plateauMatches=baseline.slice(candidate-1).every(g=>Math.abs(g-draft.terminal.growth)<=1e-12);
  const terminalYear=plateauMatches?candidate:baseline.length+1;
- return {baseline,terminalYear,terminalGrowth:draft.terminal.growth,metrics:{...Object.fromEntries(['margin','taxRate','wacc','reinvestment'].map(k=>[k,draft.annual.map(r=>r[k])])),investmentFactor:draft.annual.map(()=>1)},terminals:{...draft.terminal,investmentFactor:1,reinvestment:draft.annual.at(-1).reinvestment},terminalScalars:{growth:draft.terminal.growth,taxRate:draft.terminal.taxRate,roic:draft.terminal.roic},capital:'investmentFactor',currency:draft.currency,...(!plateauMatches?{terminalAnchorNote:'Edited revenue departs from the prior stable-growth plateau. The edited baseline is retained; the fixed stable-growth anchor is the terminal continuation after the full explicit forecast.'}:{})};
+ return {baseline,terminalYear,terminalGrowth:draft.terminal.growth,metrics:{...Object.fromEntries(['margin','taxRate','wacc','reinvestment'].map(k=>[k,draft.annual.map(r=>k==='reinvestment'?operatingInvestment(draft,r):r[k])])),investmentFactor:draft.annual.map(()=>1)},terminals:{...draft.terminal,investmentFactor:1,reinvestment:draft.annual.at(-1).reinvestment},terminalScalars:{growth:draft.terminal.growth,taxRate:draft.terminal.taxRate,roic:draft.terminal.roic},capital:'investmentFactor',currency:draft.currency,...(!plateauMatches?{terminalAnchorNote:'Edited revenue departs from the prior stable-growth plateau. The edited baseline is retained; the fixed stable-growth anchor is the terminal continuation after the full explicit forecast.'}:{})};
 }
 function prepareRun(draft,config){
  // Capture before asynchronous yields: later edits cannot alter an in-flight run.
@@ -186,7 +188,7 @@ function step(state,count){
   let next;
   // An exactly baseline path (zero SD or every year fixed) retains reviewed revenue bit for bit.
   try{const annualStress=metricPaths?{...stress,...(metricPaths.margin?{marginShift:0}:{}),...(metricPaths.wacc?{waccShift:0}:{}),...((metricPaths.reinvestment||metricPaths.investmentFactor)?{investmentMultiplier:1}:{})}:stress;next=buildTrialDraft(d,annualStress,c.capitalPolicy,growthPath?.every((g,i)=>g===state.pathSampler.baseline[i])?undefined:growthPath);
-   if(metricPaths)for(const [k,path]of Object.entries(metricPaths))next.annual.forEach((row,i)=>{if(k==='investmentFactor')row.reinvestment*=path[i];else row[k]=path[i];});
+   if(metricPaths)for(const [k,path]of Object.entries(metricPaths))next.annual.forEach((row,i)=>{if(k==='investmentFactor')row.reinvestment=scaleOperatingInvestment(d,row,path[i]);else if(k==='reinvestment')row.reinvestment=path[i]+fixedCapitalSettlement(d,row.year);else row[k]=path[i];});
    next.terminal=terminal;
    if(next.marginPath?.enabled===true&&metricPaths?.margin)next.marginPath={...next.marginPath,terminalMargin:terminal.margin};}
   catch(error){reject(state,/finite numerical range/.test(error.message)?'nonfinite-valuation':'valuation-rejected',error.message);continue;}
@@ -242,7 +244,7 @@ function finishRun(state){
  const perShare=summarize(state.perShareDraws,c.binCount,'perShare',units.perShare);
  const eligible=state.equityDraws.length,zeroEquityShare=eligible?state.nonpositiveEquityCount/eligible:null;
  Object.assign(perShare,{zeroEquityCount:state.nonpositiveEquityCount,zeroEquityShare,nonpositiveEquityCount:state.nonpositiveEquityCount,nonpositiveEquityShare:zeroEquityShare});
- const capitalDescription=state.metricSamplers?.investmentFactor?'Annual investment factors multiply the existing signed capital-response schedule after revenue and committed-floor calculations. Fixed years fix the coefficient, not the resulting currency investment. No independent dollar-investment draw is added; the scalar investment multiplier is inactive.':state.metricSamplers?.reinvestment?'Annual net investment is sampled directly in native-currency millions around the edited signed schedule. It replaces the scalar investment multiplier and revenue-response policy; fixed investment years remain exact even when revenue varies. Revenue and investment are distinct primitive assumptions; implied returns are derived.':d.schemaVersion===2
+ const capitalDescription=d.fixedCapitalFunding?incrementalRecord(d.ticker).prose.funding.en:state.metricSamplers?.investmentFactor?'Annual investment factors multiply the existing signed capital-response schedule after revenue and committed-floor calculations. Fixed years fix the coefficient, not the resulting currency investment. No independent dollar-investment draw is added; the scalar investment multiplier is inactive.':state.metricSamplers?.reinvestment?'Annual net investment is sampled directly in native-currency millions around the edited signed schedule. It replaces the scalar investment multiplier and revenue-response policy; fixed investment years remain exact even when revenue varies. Revenue and investment are distinct primitive assumptions; implied returns are derived.':d.schemaVersion===2
   ? 'Committed-spending-floor-plus-growth capital sensitivity: retain current edited positive annual investment as a floor, scale upward with revenue and fund additional expansion at the stated marginal sales / capital. Preserve explicit signed releases without amplification. Apply the optional investment multiplier separately after this response. This is an analyst sensitivity, not verified capacity economics; gross capex, maintenance, working capital and customer advances are not separately rebuilt.'
   : c.capitalPolicy==='fixed-schedule'
   ? 'Fixed reviewed absolute net-investment schedule, multiplied by the sampled investment stress. This is a capacity/commitment stress; not every amount is contractual. Revenue changes alone do not change explicit investment.'
@@ -279,7 +281,7 @@ function finishRun(state){
    inputUnits:'growthPremium, marginShift and waccShift are fractions of one (0.01 = one percentage point); investmentMultiplier is a nonnegative multiple',
    growth:state.pathSampler?'Exact Gaussian AR(1) bridge around reviewed annual growth; all fixed years and terminal continuation anchor are conditioned exactly':'growth[i] = reviewedGrowth[i] + growthPremium × (N−1−i)/(N−1); premium is zero when N=1; revenue is reconstructed sequentially from the anchor',
    ...(d.marginPath?.enabled===true?{margin:state.metricSamplers?.margin?'Annual margin uses a conditioned Gaussian path around the edited calendar baseline; user-fixed years remain exact. Scalar margin shift controls only the terminal endpoint.':'Anchored-start margin sensitivity: shift interim and terminal targets together; add each calendar-year curve delta to edited annual margins, generated margins and manual overrides. Starting margin, source provenance and margin dates stay fixed; manual row offsets are preserved.'}:{}),
-   capitalPolicy:c.capitalPolicy,capitalDescription,...(d.schemaVersion===2?{capitalResponseBaseline:'Current edited annual schedule',marginalSalesCapital:d.derivedForecast.marginalSalesCapital,investmentMultiplierOrder:'After derived capital response'}:{}),terminal:'Final explicit revenue × (1+sampled g), scalar terminal margin and WACC, selected terminal tax and NOPAT × g / ROIC reinvestment; optional terminal distributions are drawn once per trial',
+   capitalPolicy:c.capitalPolicy,capitalDescription,...(d.fixedCapitalFunding?{fixedCapitalFunding:structuredClone(d.fixedCapitalFunding),fixedCapitalFundingNote:'Only operating investment is scaled or sampled; the registry-backed opening settlement remains fixed in year 1.'}:{}),...(d.schemaVersion===2?{capitalResponseBaseline:'Current edited annual schedule',marginalSalesCapital:d.derivedForecast.marginalSalesCapital,investmentMultiplierOrder:'After derived capital response'}:{}),terminal:'Final explicit revenue × (1+sampled g), scalar terminal margin and WACC, selected terminal tax and NOPAT × g / ROIC reinvestment; optional terminal distributions are drawn once per trial',
    bridge:baseline.bridge.claimRepricedPerTrial?'Selected dated capital assumptions applied to each accepted operating scenario; AAOI option claim values are repriced per trial, never inferred from funding deficits':'Existing source-dated bridge applied independently to each accepted operating scenario; capital claims are not inferred from funding deficits',output:'Primary distribution is operating EV in native-currency millions; separate signed equity and native per-share distributions retain bridge coverage',
    timing:'Selected timing policy applied to each trial; timing inputs stay fixed and incomplete timing withholds calculation'}};
 }

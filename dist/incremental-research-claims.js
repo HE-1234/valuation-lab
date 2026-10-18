@@ -1,9 +1,11 @@
+import {calculateLrcxBridge} from './lrcx-research-claims.js';
 import {calculateAmatBridge} from './amat-research-claims.js';
 import {incrementalRecord} from './incremental-registry.js';
 import {incrementalIdentityValid} from './incremental-research-identity.js';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
 export function incrementalBridgeDefinition(ticker){const r=incrementalRecord(ticker);return r?structuredClone({...r.bridge,optionDefinitions:r.bridge.options,lines:[],bridgeVersion:r.identity.version}):null;}
 export function calculateIncrementalBridge(d,enterprise,options={}){
+ if(incrementalRecord(d?.ticker)?.bridge.type==='lrcx-v2')return calculateLrcxBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='amat-v3')return calculateAmatBridge(d,enterprise,options);
  const r=incrementalRecord(d?.ticker),b=r?.bridge;
  if(!r||!incrementalIdentityValid(d))throw Error('Incremental research source, audit, dates and security identity must match the reviewed company package.');

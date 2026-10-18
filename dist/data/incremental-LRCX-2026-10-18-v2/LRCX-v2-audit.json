@@ -1,0 +1,3450 @@
+{
+  "asOf": "2026-10-18",
+  "originalVersion": "LRCX-2026-10-18-v1",
+  "reviewedVersion": "LRCX-2026-10-18-v2-independent-review",
+  "readiness": "accepted_conditional_research_only",
+  "manifestChecks": [
+    {
+      "file": "annual-2026.pdf",
+      "expected": "ab56a5486ee9f2435c40440850a37248b6804dddaa58a0509e5de849c5a6a315",
+      "actual": "ab56a5486ee9f2435c40440850a37248b6804dddaa58a0509e5de849c5a6a315",
+      "passed": true
+    },
+    {
+      "file": "valuation-readiness-v1.json",
+      "expected": "43df1c23c4fabaa356758a94158e75e9a6809d921f16338b4cc105dcce4ebeb0",
+      "actual": "43df1c23c4fabaa356758a94158e75e9a6809d921f16338b4cc105dcce4ebeb0",
+      "passed": true
+    },
+    {
+      "file": "research.json",
+      "expected": "8259344f87ec94802d0d3f4f251979ee65350426b9fed6dbc85fd17512aa1863",
+      "actual": "8259344f87ec94802d0d3f4f251979ee65350426b9fed6dbc85fd17512aa1863",
+      "passed": true
+    },
+    {
+      "file": "valuation-readiness-v1.md",
+      "expected": "a5d49397e03bde30c8745220487584c9aeb7abdd410ba52432e1a8aeed2a7dfb",
+      "actual": "a5d49397e03bde30c8745220487584c9aeb7abdd410ba52432e1a8aeed2a7dfb",
+      "passed": true
+    },
+    {
+      "file": "proxy-annual-2026.txt",
+      "expected": "c656e528cd3039414d0920dda25f6d75b826669e95666eeaf0511a6269ba2a2f",
+      "actual": "c656e528cd3039414d0920dda25f6d75b826669e95666eeaf0511a6269ba2a2f",
+      "passed": true
+    },
+    {
+      "file": "release-reading.txt",
+      "expected": "e6370e5af7a41b941a459ef7f9e1d3df9c104f92401089f37ac7ba6c2e0cf58e",
+      "actual": "e6370e5af7a41b941a459ef7f9e1d3df9c104f92401089f37ac7ba6c2e0cf58e",
+      "passed": true
+    },
+    {
+      "file": "research-notes.md",
+      "expected": "8db04d7bdedb6f2c05ca94fb32533d269cbb983f4b523ffa74d4dc25069b6dd8",
+      "actual": "8db04d7bdedb6f2c05ca94fb32533d269cbb983f4b523ffa74d4dc25069b6dd8",
+      "passed": true
+    },
+    {
+      "file": "history-10fy.csv",
+      "expected": "feb7c75e82f69df84e21b70a1cefcb4aed92c4f19b8d34ed3fb16c7a8a70ec56",
+      "actual": "feb7c75e82f69df84e21b70a1cefcb4aed92c4f19b8d34ed3fb16c7a8a70ec56",
+      "passed": true
+    },
+    {
+      "file": "historical-sec-extraction.json",
+      "expected": "57c5ff24020535c9b359170379a017556d71301a91c437da454c5822f7d7f3e1",
+      "actual": "57c5ff24020535c9b359170379a017556d71301a91c437da454c5822f7d7f3e1",
+      "passed": true
+    },
+    {
+      "file": "file_manifest.json",
+      "expected": "f526b1c78a5c9016823d7287a2c5ba9ef3ef43f2d0d670503201758c0ee2af1e",
+      "actual": "f526b1c78a5c9016823d7287a2c5ba9ef3ef43f2d0d670503201758c0ee2af1e",
+      "passed": true
+    },
+    {
+      "file": "annual-2026.txt",
+      "expected": "09a37596c0a40f66de103ddab98c19aa92da754ea2ef8f07d242e87cc93d0d40",
+      "actual": "09a37596c0a40f66de103ddab98c19aa92da754ea2ef8f07d242e87cc93d0d40",
+      "passed": true
+    },
+    {
+      "file": "history-10fy.json",
+      "expected": "0f6394a4c4a4699fbd98c67f7f5ef3c852152317aa579b66376a1b82d3dfa51a",
+      "actual": "0f6394a4c4a4699fbd98c67f7f5ef3c852152317aa579b66376a1b82d3dfa51a",
+      "passed": true
+    },
+    {
+      "file": "source_manifest.json",
+      "expected": "5b0b3a2dde74f8510886e8b1f41e546780c3e93fe605a6328022508ae7ed82ba",
+      "actual": "5b0b3a2dde74f8510886e8b1f41e546780c3e93fe605a6328022508ae7ed82ba",
+      "passed": true
+    },
+    {
+      "file": "sec-companyfacts.json",
+      "expected": "7ba34e55ee4bb0512afd14805895a554951f4d948ee28e2db41b44f44ad0b1dc",
+      "actual": "7ba34e55ee4bb0512afd14805895a554951f4d948ee28e2db41b44f44ad0b1dc",
+      "passed": true
+    },
+    {
+      "file": "valuation-readiness-v1-validation.json",
+      "expected": "62bd5cb50b8e3f719e0f4b8a1381cb99341960178b4ca823a6611ccb0d364b1e",
+      "actual": "62bd5cb50b8e3f719e0f4b8a1381cb99341960178b4ca823a6611ccb0d364b1e",
+      "passed": true
+    },
+    {
+      "file": "proxy-annual-2026.pdf",
+      "expected": "4152ff7da36ac890b317bd778ff41bc6498e3765d4ef4f2e968b3193dc1053e5",
+      "actual": "4152ff7da36ac890b317bd778ff41bc6498e3765d4ef4f2e968b3193dc1053e5",
+      "passed": true
+    }
+  ],
+  "independentMathChecks": [
+    {
+      "test": "base.year1.segments",
+      "passed": true,
+      "actual": 31273.685699999998,
+      "expected": 31273.685699999998,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.growth",
+      "passed": true,
+      "actual": 0.34610695963317206,
+      "expected": 0.34610695963317206,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.EBIT",
+      "passed": true,
+      "actual": 11884.000565999999,
+      "expected": 11884.000565999999,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.reinvestment",
+      "passed": true,
+      "actual": 4467.219833333333,
+      "expected": 4467.219833333333,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.cost bridge",
+      "passed": true,
+      "actual": 11884.000565999999,
+      "expected": 11884.000565999999,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.legacy cancellation",
+      "passed": true,
+      "actual": 11884.000565999999,
+      "expected": 11884.000565999999,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.NOPAT",
+      "passed": true,
+      "actual": 10101.4004811,
+      "expected": 10101.4004811,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.FCFF",
+      "passed": true,
+      "actual": 5634.180647766667,
+      "expected": 5634.180647766667,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.discountFactor",
+      "passed": true,
+      "actual": 1.1097332706,
+      "expected": 1.1097332706,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year1.PVFCFF",
+      "passed": true,
+      "actual": 5077.058422084103,
+      "expected": 5077.058422084103,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.segments",
+      "passed": true,
+      "actual": 36485.872244,
+      "expected": 36485.872244,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.growth",
+      "passed": true,
+      "actual": 0.1666636479626704,
+      "expected": 0.1666636479626704,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.EBIT",
+      "passed": true,
+      "actual": 14229.49017516,
+      "expected": 14229.49017516,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.reinvestment",
+      "passed": true,
+      "actual": 2895.6591911111113,
+      "expected": 2895.6591911111113,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.cost bridge",
+      "passed": true,
+      "actual": 14229.490175159997,
+      "expected": 14229.49017516,
+      "difference": -1.8189894035458565e-12
+    },
+    {
+      "test": "base.year2.legacy cancellation",
+      "passed": true,
+      "actual": 14229.49017516,
+      "expected": 14229.49017516,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.NOPAT",
+      "passed": true,
+      "actual": 12095.066648885999,
+      "expected": 12095.066648885999,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.FCFF",
+      "passed": true,
+      "actual": 9199.407457774887,
+      "expected": 9199.407457774887,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.discountFactor",
+      "passed": true,
+      "actual": 1.231507931876573,
+      "expected": 1.231507931876573,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year2.PVFCFF",
+      "passed": true,
+      "actual": 7470.035084351281,
+      "expected": 7470.035084351281,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.segments",
+      "passed": true,
+      "actual": 40864.17691328,
+      "expected": 40864.17691328,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.growth",
+      "passed": true,
+      "actual": 0.11999999999999988,
+      "expected": 0.11999999999999988,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.EBIT",
+      "passed": true,
+      "actual": 15937.028996179199,
+      "expected": 15937.028996179199,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.reinvestment",
+      "passed": true,
+      "actual": 2304.3708785684203,
+      "expected": 2304.3708785684203,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.cost bridge",
+      "passed": true,
+      "actual": 15937.0289961792,
+      "expected": 15937.028996179199,
+      "difference": 1.8189894035458565e-12
+    },
+    {
+      "test": "base.year3.legacy cancellation",
+      "passed": true,
+      "actual": 15937.028996179199,
+      "expected": 15937.028996179199,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.NOPAT",
+      "passed": true,
+      "actual": 13387.104356790527,
+      "expected": 13387.104356790527,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.FCFF",
+      "passed": true,
+      "actual": 11082.733478222108,
+      "expected": 11082.733478222108,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.discountFactor",
+      "passed": true,
+      "actual": 1.3666453250112314,
+      "expected": 1.3666453250112314,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year3.PVFCFF",
+      "passed": true,
+      "actual": 8109.443815008131,
+      "expected": 8109.443815008131,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.segments",
+      "passed": true,
+      "actual": 44404.4281873024,
+      "expected": 44404.4281873024,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.growth",
+      "passed": true,
+      "actual": 0.08663459150383379,
+      "expected": 0.08663459150383379,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.EBIT",
+      "passed": true,
+      "actual": 17095.704852111427,
+      "expected": 17095.704852111427,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.reinvestment",
+      "passed": true,
+      "actual": 1863.2901442223183,
+      "expected": 1863.2901442223183,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.cost bridge",
+      "passed": true,
+      "actual": 17095.704852111427,
+      "expected": 17095.704852111427,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.legacy cancellation",
+      "passed": true,
+      "actual": 17095.704852111427,
+      "expected": 17095.704852111427,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.NOPAT",
+      "passed": true,
+      "actual": 14189.435027252483,
+      "expected": 14189.435027252483,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.FCFF",
+      "passed": true,
+      "actual": 12326.144883030163,
+      "expected": 12326.144883030163,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.discountFactor",
+      "passed": true,
+      "actual": 1.5166117862749138,
+      "expected": 1.5166117862749138,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year4.PVFCFF",
+      "passed": true,
+      "actual": 8127.422584065177,
+      "expected": 8127.422584065177,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.segments",
+      "passed": true,
+      "actual": 47366.92271159655,
+      "expected": 47366.92271159655,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.growth",
+      "passed": true,
+      "actual": 0.06671619577664734,
+      "expected": 0.06671619577664734,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.EBIT",
+      "passed": true,
+      "actual": 17762.596016848707,
+      "expected": 17762.596016848707,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.reinvestment",
+      "passed": true,
+      "actual": 1559.2076443653405,
+      "expected": 1559.2076443653405,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.cost bridge",
+      "passed": true,
+      "actual": 17762.596016848707,
+      "expected": 17762.596016848707,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.legacy cancellation",
+      "passed": true,
+      "actual": 17762.596016848707,
+      "expected": 17762.596016848707,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.NOPAT",
+      "passed": true,
+      "actual": 14565.32873381594,
+      "expected": 14565.32873381594,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.FCFF",
+      "passed": true,
+      "actual": 13006.1210894506,
+      "expected": 13006.1210894506,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.discountFactor",
+      "passed": true,
+      "actual": 1.6830345578133683,
+      "expected": 1.6830345578133683,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year5.PVFCFF",
+      "passed": true,
+      "actual": 7727.7801748458505,
+      "expected": 7727.7801748458505,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.segments",
+      "passed": true,
+      "actual": 50133.1470305846,
+      "expected": 50133.1470305846,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.growth",
+      "passed": true,
+      "actual": 0.05839991624177898,
+      "expected": 0.05839991624177898,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.EBIT",
+      "passed": true,
+      "actual": 18047.932931010455,
+      "expected": 18047.932931010455,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.reinvestment",
+      "passed": true,
+      "actual": 1728.8901993675336,
+      "expected": 1728.8901993675336,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.cost bridge",
+      "passed": true,
+      "actual": 18047.932931010455,
+      "expected": 18047.932931010455,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.legacy cancellation",
+      "passed": true,
+      "actual": 18047.932931010455,
+      "expected": 18047.932931010455,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.NOPAT",
+      "passed": true,
+      "actual": 14618.825674118469,
+      "expected": 14618.825674118469,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.FCFF",
+      "passed": true,
+      "actual": 12889.935474750935,
+      "expected": 12889.935474750935,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.discountFactor",
+      "passed": true,
+      "actual": 1.8618846427448874,
+      "expected": 1.8618846427448874,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year6.PVFCFF",
+      "passed": true,
+      "actual": 6923.058055706351,
+      "expected": 6923.058055706351,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.segments",
+      "passed": true,
+      "actual": 52560.65004885141,
+      "expected": 52560.65004885141,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.growth",
+      "passed": true,
+      "actual": 0.048421117804271496,
+      "expected": 0.048421117804271496,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.EBIT",
+      "passed": true,
+      "actual": 18396.227517097992,
+      "expected": 18396.227517097992,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.reinvestment",
+      "passed": true,
+      "actual": 1798.1503839013371,
+      "expected": 1798.1503839013371,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.cost bridge",
+      "passed": true,
+      "actual": 18396.227517097992,
+      "expected": 18396.227517097992,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.legacy cancellation",
+      "passed": true,
+      "actual": 18396.227517097992,
+      "expected": 18396.227517097992,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.NOPAT",
+      "passed": true,
+      "actual": 14716.982013678395,
+      "expected": 14716.982013678395,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.FCFF",
+      "passed": true,
+      "actual": 12918.831629777058,
+      "expected": 12918.831629777058,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.discountFactor",
+      "passed": true,
+      "actual": 2.0532856436592524,
+      "expected": 2.0532856436592524,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year7.PVFCFF",
+      "passed": true,
+      "actual": 6291.784910527027,
+      "expected": 6291.784910527027,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.segments",
+      "passed": true,
+      "actual": 54753.5483153027,
+      "expected": 54753.5483153027,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.growth",
+      "passed": true,
+      "actual": 0.04172129272398939,
+      "expected": 0.04172129272398939,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.EBIT",
+      "passed": true,
+      "actual": 18616.20642720292,
+      "expected": 18616.20642720292,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.reinvestment",
+      "passed": true,
+      "actual": 1993.5438785920862,
+      "expected": 1993.5438785920862,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.cost bridge",
+      "passed": true,
+      "actual": 18616.206427202924,
+      "expected": 18616.20642720292,
+      "difference": 3.637978807091713e-12
+    },
+    {
+      "test": "base.year8.legacy cancellation",
+      "passed": true,
+      "actual": 18616.20642720292,
+      "expected": 18616.20642720292,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.NOPAT",
+      "passed": true,
+      "actual": 14706.803077490307,
+      "expected": 14706.803077490307,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.FCFF",
+      "passed": true,
+      "actual": 12713.25919889822,
+      "expected": 12713.25919889822,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.discountFactor",
+      "passed": true,
+      "actual": 2.257244190631376,
+      "expected": 2.257244190631376,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year8.PVFCFF",
+      "passed": true,
+      "actual": 5632.20375166507,
+      "expected": 5632.20375166507,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.segments",
+      "passed": true,
+      "actual": 56669.92250633829,
+      "expected": 56669.92250633829,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.growth",
+      "passed": true,
+      "actual": 0.03499999999999992,
+      "expected": 0.03499999999999992,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.EBIT",
+      "passed": true,
+      "actual": 18701.074427091637,
+      "expected": 18701.074427091637,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.reinvestment",
+      "passed": true,
+      "actual": 2129.30465670621,
+      "expected": 2129.30465670621,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.cost bridge",
+      "passed": true,
+      "actual": 18701.074427091633,
+      "expected": 18701.074427091637,
+      "difference": -3.637978807091713e-12
+    },
+    {
+      "test": "base.year9.legacy cancellation",
+      "passed": true,
+      "actual": 18701.074427091637,
+      "expected": 18701.074427091637,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.NOPAT",
+      "passed": true,
+      "actual": 14773.848797402394,
+      "expected": 14773.848797402394,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.FCFF",
+      "passed": true,
+      "actual": 12644.544140696184,
+      "expected": 12644.544140696184,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.discountFactor",
+      "passed": true,
+      "actual": 2.4736370135031964,
+      "expected": 2.4736370135031964,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year9.PVFCFF",
+      "passed": true,
+      "actual": 5111.721756939924,
+      "expected": 5111.721756939924,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.segments",
+      "passed": true,
+      "actual": 58370.020181528445,
+      "expected": 58370.020181528445,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.growth",
+      "passed": true,
+      "actual": 0.030000000000000027,
+      "expected": 0.030000000000000027,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.EBIT",
+      "passed": true,
+      "actual": 18678.406458089103,
+      "expected": 18678.406458089103,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.reinvestment",
+      "passed": true,
+      "actual": 2459.32351698174,
+      "expected": 2459.32351698174,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.cost bridge",
+      "passed": true,
+      "actual": 18678.40645808911,
+      "expected": 18678.406458089103,
+      "difference": 7.275957614183426e-12
+    },
+    {
+      "test": "base.year10.legacy cancellation",
+      "passed": true,
+      "actual": 18678.406458089103,
+      "expected": 18678.406458089103,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.NOPAT",
+      "passed": true,
+      "actual": 14755.941101890392,
+      "expected": 14755.941101890392,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.FCFF",
+      "passed": true,
+      "actual": 12296.617584908652,
+      "expected": 12296.617584908652,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.discountFactor",
+      "passed": true,
+      "actual": 2.7021988472775793,
+      "expected": 2.7021988472775793,
+      "difference": 0.0
+    },
+    {
+      "test": "base.year10.PVFCFF",
+      "passed": true,
+      "actual": 4550.596858294603,
+      "expected": 4550.596858294603,
+      "difference": 0.0
+    },
+    {
+      "test": "base.terminalRevenue",
+      "passed": true,
+      "actual": 60121.1207869743,
+      "expected": 60121.1207869743,
+      "difference": 0.0
+    },
+    {
+      "test": "base.terminalNOPAT",
+      "passed": true,
+      "actual": 15198.619334947105,
+      "expected": 15198.619334947105,
+      "difference": 0.0
+    },
+    {
+      "test": "base.terminalReinvestment",
+      "passed": true,
+      "actual": 2533.1032224911874,
+      "expected": 2533.1032224911874,
+      "difference": 0.0
+    },
+    {
+      "test": "base.terminalValue",
+      "passed": true,
+      "actual": 202975.94216031826,
+      "expected": 202975.94216031826,
+      "difference": 0.0
+    },
+    {
+      "test": "base.enterpriseValueOrigin",
+      "passed": true,
+      "actual": 140136.20745892476,
+      "expected": 140136.20745892476,
+      "difference": 0.0
+    },
+    {
+      "test": "base.equityValueOriginIllustrative",
+      "passed": true,
+      "actual": 137532.92545892476,
+      "expected": 137532.92545892476,
+      "difference": 0.0
+    },
+    {
+      "test": "base.USDPerShareOriginIllustrative",
+      "passed": true,
+      "actual": 109.26301461175456,
+      "expected": 109.26301461175456,
+      "difference": 0.0
+    },
+    {
+      "test": "base.terminalShareEV",
+      "passed": true,
+      "actual": 0.5360149486523973,
+      "expected": 0.5360149486523973,
+      "difference": 0.0
+    },
+    {
+      "test": "base.terminal same-period capital ratio",
+      "passed": true,
+      "actual": 0.6912867150055303,
+      "expected": 0.6912867150055303,
+      "difference": 0.0
+    },
+    {
+      "test": "base.terminal reinvestment continuity",
+      "passed": true,
+      "actual": 2533.1032224911924,
+      "expected": 2533.1032224911874,
+      "difference": 5.002220859751105e-12
+    },
+    {
+      "test": "base.terminal implied ROIC",
+      "passed": true,
+      "actual": 0.17999999999999977,
+      "expected": 0.18,
+      "difference": -2.220446049250313e-16
+    },
+    {
+      "test": "cycle-and-export-downside.year1.segments",
+      "passed": true,
+      "actual": 28206.1423,
+      "expected": 28206.1423,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.growth",
+      "passed": true,
+      "actual": 0.2140713064221147,
+      "expected": 0.2140713064221147,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.EBIT",
+      "passed": true,
+      "actual": 9872.149805,
+      "expected": 9872.149805,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.reinvestment",
+      "passed": true,
+      "actual": 3552.4659285714292,
+      "expected": 3552.4659285714292,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.cost bridge",
+      "passed": true,
+      "actual": 9872.149805000003,
+      "expected": 9872.149805,
+      "difference": 3.637978807091713e-12
+    },
+    {
+      "test": "cycle-and-export-downside.year1.legacy cancellation",
+      "passed": true,
+      "actual": 9872.149805,
+      "expected": 9872.149805,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.NOPAT",
+      "passed": true,
+      "actual": 8292.605836199999,
+      "expected": 8292.605836199999,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.FCFF",
+      "passed": true,
+      "actual": 4740.139907628569,
+      "expected": 4740.139907628569,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.discountFactor",
+      "passed": true,
+      "actual": 1.1097332706,
+      "expected": 1.1097332706,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year1.PVFCFF",
+      "passed": true,
+      "actual": 4271.422722205773,
+      "expected": 4271.422722205773,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.segments",
+      "passed": true,
+      "actual": 23362.441654,
+      "expected": 23362.441654,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.growth",
+      "passed": true,
+      "actual": -0.1717250304732385,
+      "expected": -0.1717250304732385,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.EBIT",
+      "passed": true,
+      "actual": 6541.4836631200005,
+      "expected": 6541.4836631200005,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.reinvestment",
+      "passed": true,
+      "actual": 300,
+      "expected": 300,
+      "difference": 0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.cost bridge",
+      "passed": true,
+      "actual": 6541.4836631200005,
+      "expected": 6541.4836631200005,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.legacy cancellation",
+      "passed": true,
+      "actual": 6541.4836631200005,
+      "expected": 6541.4836631200005,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.NOPAT",
+      "passed": true,
+      "actual": 5429.4314403896005,
+      "expected": 5429.4314403896005,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.FCFF",
+      "passed": true,
+      "actual": 5129.4314403896005,
+      "expected": 5129.4314403896005,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.discountFactor",
+      "passed": true,
+      "actual": 1.231507931876573,
+      "expected": 1.231507931876573,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year2.PVFCFF",
+      "passed": true,
+      "actual": 4165.163136686719,
+      "expected": 4165.163136686719,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.segments",
+      "passed": true,
+      "actual": 24157.387870159997,
+      "expected": 24157.387870159997,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.growth",
+      "passed": true,
+      "actual": 0.03402667529076053,
+      "expected": 0.03402667529076053,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.EBIT",
+      "passed": true,
+      "actual": 7005.6424823463985,
+      "expected": 7005.6424823463985,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.reinvestment",
+      "passed": true,
+      "actual": 529.9641441066657,
+      "expected": 529.9641441066657,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.cost bridge",
+      "passed": true,
+      "actual": 7005.6424823463985,
+      "expected": 7005.6424823463985,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.legacy cancellation",
+      "passed": true,
+      "actual": 7005.6424823463985,
+      "expected": 7005.6424823463985,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.NOPAT",
+      "passed": true,
+      "actual": 5744.626835524047,
+      "expected": 5744.626835524047,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.FCFF",
+      "passed": true,
+      "actual": 5214.662691417381,
+      "expected": 5214.662691417381,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.discountFactor",
+      "passed": true,
+      "actual": 1.3666453250112314,
+      "expected": 1.3666453250112314,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year3.PVFCFF",
+      "passed": true,
+      "actual": 3815.6664322358297,
+      "expected": 3815.6664322358297,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.segments",
+      "passed": true,
+      "actual": 25750.5691358696,
+      "expected": 25750.5691358696,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.growth",
+      "passed": true,
+      "actual": 0.06595006356947852,
+      "expected": 0.06595006356947852,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.EBIT",
+      "passed": true,
+      "actual": 7982.676432119575,
+      "expected": 7982.676432119575,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.reinvestment",
+      "passed": true,
+      "actual": 1062.1208438064011,
+      "expected": 1062.1208438064011,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.cost bridge",
+      "passed": true,
+      "actual": 7982.676432119573,
+      "expected": 7982.676432119575,
+      "difference": -1.8189894035458565e-12
+    },
+    {
+      "test": "cycle-and-export-downside.year4.legacy cancellation",
+      "passed": true,
+      "actual": 7982.676432119575,
+      "expected": 7982.676432119575,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.NOPAT",
+      "passed": true,
+      "actual": 6465.967910016856,
+      "expected": 6465.967910016856,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.FCFF",
+      "passed": true,
+      "actual": 5403.847066210455,
+      "expected": 5403.847066210455,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.discountFactor",
+      "passed": true,
+      "actual": 1.5166117862749138,
+      "expected": 1.5166117862749138,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year4.PVFCFF",
+      "passed": true,
+      "actual": 3563.1050181162896,
+      "expected": 3563.1050181162896,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.segments",
+      "passed": true,
+      "actual": 27295.603284021774,
+      "expected": 27295.603284021774,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.growth",
+      "passed": true,
+      "actual": 0.06000000000000005,
+      "expected": 0.06000000000000005,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.EBIT",
+      "passed": true,
+      "actual": 8734.593050886968,
+      "expected": 8734.593050886968,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.reinvestment",
+      "passed": true,
+      "actual": 1030.0227654347837,
+      "expected": 1030.0227654347837,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.cost bridge",
+      "passed": true,
+      "actual": 8734.593050886966,
+      "expected": 8734.593050886968,
+      "difference": -1.8189894035458565e-12
+    },
+    {
+      "test": "cycle-and-export-downside.year5.legacy cancellation",
+      "passed": true,
+      "actual": 8734.593050886968,
+      "expected": 8734.593050886968,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.NOPAT",
+      "passed": true,
+      "actual": 6987.674440709575,
+      "expected": 6987.674440709575,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.FCFF",
+      "passed": true,
+      "actual": 5957.651675274791,
+      "expected": 5957.651675274791,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.discountFactor",
+      "passed": true,
+      "actual": 1.6830345578133683,
+      "expected": 1.6830345578133683,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year5.PVFCFF",
+      "passed": true,
+      "actual": 3539.827300406172,
+      "expected": 3539.827300406172,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.segments",
+      "passed": true,
+      "actual": 28660.383448222863,
+      "expected": 28660.383448222863,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.growth",
+      "passed": true,
+      "actual": 0.050000000000000044,
+      "expected": 0.050000000000000044,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.EBIT",
+      "passed": true,
+      "actual": 9171.322703431317,
+      "expected": 9171.322703431317,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.reinvestment",
+      "passed": true,
+      "actual": 1049.8308955392993,
+      "expected": 1049.8308955392993,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.cost bridge",
+      "passed": true,
+      "actual": 9171.322703431317,
+      "expected": 9171.322703431317,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.legacy cancellation",
+      "passed": true,
+      "actual": 9171.322703431317,
+      "expected": 9171.322703431317,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.NOPAT",
+      "passed": true,
+      "actual": 7245.34493571074,
+      "expected": 7245.34493571074,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.FCFF",
+      "passed": true,
+      "actual": 6195.514040171441,
+      "expected": 6195.514040171441,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.discountFactor",
+      "passed": true,
+      "actual": 1.8618846427448874,
+      "expected": 1.8618846427448874,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year6.PVFCFF",
+      "passed": true,
+      "actual": 3327.5498910811634,
+      "expected": 3327.5498910811634,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.segments",
+      "passed": true,
+      "actual": 29864.51119647335,
+      "expected": 29864.51119647335,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.growth",
+      "passed": true,
+      "actual": 0.042013664975063314,
+      "expected": 0.042013664975063314,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.EBIT",
+      "passed": true,
+      "actual": 9407.321026889105,
+      "expected": 9407.321026889105,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.reinvestment",
+      "passed": true,
+      "actual": 1094.6615893186256,
+      "expected": 1094.6615893186256,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.cost bridge",
+      "passed": true,
+      "actual": 9407.321026889103,
+      "expected": 9407.321026889105,
+      "difference": -1.8189894035458565e-12
+    },
+    {
+      "test": "cycle-and-export-downside.year7.legacy cancellation",
+      "passed": true,
+      "actual": 9407.321026889105,
+      "expected": 9407.321026889105,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.NOPAT",
+      "passed": true,
+      "actual": 7431.783611242394,
+      "expected": 7431.783611242394,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.FCFF",
+      "passed": true,
+      "actual": 6337.122021923768,
+      "expected": 6337.122021923768,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.discountFactor",
+      "passed": true,
+      "actual": 2.0532856436592524,
+      "expected": 2.0532856436592524,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year7.PVFCFF",
+      "passed": true,
+      "actual": 3086.332406547245,
+      "expected": 3086.332406547245,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.segments",
+      "passed": true,
+      "actual": 30909.769088349916,
+      "expected": 30909.769088349916,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.growth",
+      "passed": true,
+      "actual": 0.03499999999999992,
+      "expected": 0.03499999999999992,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.EBIT",
+      "passed": true,
+      "actual": 9582.028417388474,
+      "expected": 9582.028417388474,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.reinvestment",
+      "passed": true,
+      "actual": 1100.2714651332262,
+      "expected": 1100.2714651332262,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.cost bridge",
+      "passed": true,
+      "actual": 9582.02841738847,
+      "expected": 9582.028417388474,
+      "difference": -3.637978807091713e-12
+    },
+    {
+      "test": "cycle-and-export-downside.year8.legacy cancellation",
+      "passed": true,
+      "actual": 9582.028417388474,
+      "expected": 9582.028417388474,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.NOPAT",
+      "passed": true,
+      "actual": 7569.802449736894,
+      "expected": 7569.802449736894,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.FCFF",
+      "passed": true,
+      "actual": 6469.530984603668,
+      "expected": 6469.530984603668,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.discountFactor",
+      "passed": true,
+      "actual": 2.257244190631376,
+      "expected": 2.257244190631376,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year8.PVFCFF",
+      "passed": true,
+      "actual": 2866.1192313420324,
+      "expected": 2866.1192313420324,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.segments",
+      "passed": true,
+      "actual": 31837.062161000416,
+      "expected": 31837.062161000416,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.growth",
+      "passed": true,
+      "actual": 0.030000000000000027,
+      "expected": 0.030000000000000027,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.EBIT",
+      "passed": true,
+      "actual": 9710.303959105127,
+      "expected": 9710.303959105127,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.reinvestment",
+      "passed": true,
+      "actual": 1159.1163408131251,
+      "expected": 1159.1163408131251,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.cost bridge",
+      "passed": true,
+      "actual": 9710.303959105126,
+      "expected": 9710.303959105127,
+      "difference": -1.8189894035458565e-12
+    },
+    {
+      "test": "cycle-and-export-downside.year9.legacy cancellation",
+      "passed": true,
+      "actual": 9710.303959105127,
+      "expected": 9710.303959105127,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.NOPAT",
+      "passed": true,
+      "actual": 7671.140127693051,
+      "expected": 7671.140127693051,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.FCFF",
+      "passed": true,
+      "actual": 6512.023786879926,
+      "expected": 6512.023786879926,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.discountFactor",
+      "passed": true,
+      "actual": 2.4736370135031964,
+      "expected": 2.4736370135031964,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year9.PVFCFF",
+      "passed": true,
+      "actual": 2632.570482787818,
+      "expected": 2632.570482787818,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.segments",
+      "passed": true,
+      "actual": 32632.98871502542,
+      "expected": 32632.98871502542,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.growth",
+      "passed": true,
+      "actual": 0.02499999999999991,
+      "expected": 0.02499999999999991,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.EBIT",
+      "passed": true,
+      "actual": 9789.896614507627,
+      "expected": 9789.896614507627,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.reinvestment",
+      "passed": true,
+      "actual": 1208.4403633532775,
+      "expected": 1208.4403633532775,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.cost bridge",
+      "passed": true,
+      "actual": 9789.896614507627,
+      "expected": 9789.896614507627,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.legacy cancellation",
+      "passed": true,
+      "actual": 9789.896614507627,
+      "expected": 9789.896614507627,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.NOPAT",
+      "passed": true,
+      "actual": 7734.018325461026,
+      "expected": 7734.018325461026,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.FCFF",
+      "passed": true,
+      "actual": 6525.577962107748,
+      "expected": 6525.577962107748,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.discountFactor",
+      "passed": true,
+      "actual": 2.7021988472775793,
+      "expected": 2.7021988472775793,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.year10.PVFCFF",
+      "passed": true,
+      "actual": 2414.9140499716223,
+      "expected": 2414.9140499716223,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.terminalRevenue",
+      "passed": true,
+      "actual": 33448.81343290106,
+      "expected": 33448.81343290106,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.terminalNOPAT",
+      "passed": true,
+      "actual": 7927.368783597551,
+      "expected": 7927.368783597551,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.terminalReinvestment",
+      "passed": true,
+      "actual": 1238.651372437117,
+      "expected": 1238.651372437117,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.terminalValue",
+      "passed": true,
+      "actual": 99240.45589867567,
+      "expected": 99240.45589867567,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.enterpriseValueOrigin",
+      "passed": true,
+      "actual": 70408.48601937358,
+      "expected": 70408.48601937358,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.equityValueOriginIllustrative",
+      "passed": true,
+      "actual": 67805.20401937357,
+      "expected": 67805.20401937357,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.USDPerShareOriginIllustrative",
+      "passed": true,
+      "actual": 53.86783544958802,
+      "expected": 53.86783544958802,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.terminalShareEV",
+      "passed": true,
+      "actual": 0.5216106384944486,
+      "expected": 0.5216106384944486,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.terminal same-period capital ratio",
+      "passed": true,
+      "actual": 0.6586394977873831,
+      "expected": 0.6586394977873831,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.terminal reinvestment continuity",
+      "passed": true,
+      "actual": 1238.6513724371093,
+      "expected": 1238.651372437117,
+      "difference": -7.73070496506989e-12
+    },
+    {
+      "test": "cycle-and-export-downside.terminal implied ROIC",
+      "passed": true,
+      "actual": 0.16000000000000003,
+      "expected": 0.16,
+      "difference": 2.7755575615628914e-17
+    },
+    {
+      "test": "process-intensity-upside.year1.segments",
+      "passed": true,
+      "actual": 32881.88484,
+      "expected": 32881.88484,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.growth",
+      "passed": true,
+      "actual": 0.4153283515598065,
+      "expected": 0.4153283515598065,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.EBIT",
+      "passed": true,
+      "actual": 12823.9350876,
+      "expected": 12823.9350876,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.reinvestment",
+      "passed": true,
+      "actual": 4824.59742,
+      "expected": 4824.59742,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.cost bridge",
+      "passed": true,
+      "actual": 12823.9350876,
+      "expected": 12823.9350876,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.legacy cancellation",
+      "passed": true,
+      "actual": 12823.9350876,
+      "expected": 12823.9350876,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.NOPAT",
+      "passed": true,
+      "actual": 10964.464499898,
+      "expected": 10964.464499898,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.FCFF",
+      "passed": true,
+      "actual": 6139.867079898,
+      "expected": 6139.867079898,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.discountFactor",
+      "passed": true,
+      "actual": 1.1097332706,
+      "expected": 1.1097332706,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year1.PVFCFF",
+      "passed": true,
+      "actual": 5532.741283478286,
+      "expected": 5532.741283478286,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.segments",
+      "passed": true,
+      "actual": 39898.8722528,
+      "expected": 39898.8722528,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.growth",
+      "passed": true,
+      "actual": 0.21339979283255706,
+      "expected": 0.21339979283255706,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.EBIT",
+      "passed": true,
+      "actual": 15959.54890112,
+      "expected": 15959.54890112,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.reinvestment",
+      "passed": true,
+      "actual": 3508.4937064000005,
+      "expected": 3508.4937064000005,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.cost bridge",
+      "passed": true,
+      "actual": 15959.54890112,
+      "expected": 15959.54890112,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.legacy cancellation",
+      "passed": true,
+      "actual": 15959.54890112,
+      "expected": 15959.54890112,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.NOPAT",
+      "passed": true,
+      "actual": 13565.616565952001,
+      "expected": 13565.616565952001,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.FCFF",
+      "passed": true,
+      "actual": 10057.122859552,
+      "expected": 10057.122859552,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.discountFactor",
+      "passed": true,
+      "actual": 1.231507931876573,
+      "expected": 1.231507931876573,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year2.PVFCFF",
+      "passed": true,
+      "actual": 8166.510827280623,
+      "expected": 8166.510827280623,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.segments",
+      "passed": true,
+      "actual": 46152.475462047994,
+      "expected": 46152.475462047994,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.growth",
+      "passed": true,
+      "actual": 0.1567363400555546,
+      "expected": 0.1567363400555546,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.EBIT",
+      "passed": true,
+      "actual": 18460.9901848192,
+      "expected": 18460.9901848192,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.reinvestment",
+      "passed": true,
+      "actual": 2977.9062901180923,
+      "expected": 2977.9062901180923,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.cost bridge",
+      "passed": true,
+      "actual": 18460.9901848192,
+      "expected": 18460.9901848192,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.legacy cancellation",
+      "passed": true,
+      "actual": 18460.9901848192,
+      "expected": 18460.9901848192,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.NOPAT",
+      "passed": true,
+      "actual": 15599.536706172223,
+      "expected": 15599.536706172223,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.FCFF",
+      "passed": true,
+      "actual": 12621.63041605413,
+      "expected": 12621.63041605413,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.discountFactor",
+      "passed": true,
+      "actual": 1.3666453250112314,
+      "expected": 1.3666453250112314,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year3.PVFCFF",
+      "passed": true,
+      "actual": 9235.48354870376,
+      "expected": 9235.48354870376,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.segments",
+      "passed": true,
+      "actual": 51690.77251749376,
+      "expected": 51690.77251749376,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.growth",
+      "passed": true,
+      "actual": 0.1200000000000001,
+      "expected": 0.1200000000000001,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.EBIT",
+      "passed": true,
+      "actual": 20676.309006997504,
+      "expected": 20676.309006997504,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.reinvestment",
+      "passed": true,
+      "actual": 2637.2843121170304,
+      "expected": 2637.2843121170304,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.cost bridge",
+      "passed": true,
+      "actual": 20676.309006997504,
+      "expected": 20676.309006997504,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.legacy cancellation",
+      "passed": true,
+      "actual": 20676.309006997504,
+      "expected": 20676.309006997504,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.NOPAT",
+      "passed": true,
+      "actual": 17368.099565877903,
+      "expected": 17368.099565877903,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.FCFF",
+      "passed": true,
+      "actual": 14730.815253760873,
+      "expected": 14730.815253760873,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.discountFactor",
+      "passed": true,
+      "actual": 1.5166117862749138,
+      "expected": 1.5166117862749138,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year4.PVFCFF",
+      "passed": true,
+      "actual": 9712.976904882527,
+      "expected": 9712.976904882527,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.segments",
+      "passed": true,
+      "actual": 56510.6607044138,
+      "expected": 56510.6607044138,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.growth",
+      "passed": true,
+      "actual": 0.0932446537781737,
+      "expected": 0.0932446537781737,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.EBIT",
+      "passed": true,
+      "actual": 22039.157674721384,
+      "expected": 22039.157674721384,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.reinvestment",
+      "passed": true,
+      "actual": 2409.9440934600207,
+      "expected": 2409.9440934600207,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.cost bridge",
+      "passed": true,
+      "actual": 22039.157674721384,
+      "expected": 22039.157674721384,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.legacy cancellation",
+      "passed": true,
+      "actual": 22039.157674721384,
+      "expected": 22039.157674721384,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.NOPAT",
+      "passed": true,
+      "actual": 18292.500870018746,
+      "expected": 18292.500870018746,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.FCFF",
+      "passed": true,
+      "actual": 15882.556776558726,
+      "expected": 15882.556776558726,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.discountFactor",
+      "passed": true,
+      "actual": 1.6830345578133683,
+      "expected": 1.6830345578133683,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year5.PVFCFF",
+      "passed": true,
+      "actual": 9436.857195133092,
+      "expected": 9436.857195133092,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.segments",
+      "passed": true,
+      "actual": 60650.89748010293,
+      "expected": 60650.89748010293,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.growth",
+      "passed": true,
+      "actual": 0.0732647030503708,
+      "expected": 0.0732647030503708,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.EBIT",
+      "passed": true,
+      "actual": 23047.341042439115,
+      "expected": 23047.341042439115,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.reinvestment",
+      "passed": true,
+      "actual": 2300.131542049518,
+      "expected": 2300.131542049518,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.cost bridge",
+      "passed": true,
+      "actual": 23047.34104243911,
+      "expected": 23047.341042439115,
+      "difference": -3.637978807091713e-12
+    },
+    {
+      "test": "process-intensity-upside.year6.legacy cancellation",
+      "passed": true,
+      "actual": 23047.341042439115,
+      "expected": 23047.341042439115,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.NOPAT",
+      "passed": true,
+      "actual": 18898.819654800074,
+      "expected": 18898.819654800074,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.FCFF",
+      "passed": true,
+      "actual": 16598.688112750555,
+      "expected": 16598.688112750555,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.discountFactor",
+      "passed": true,
+      "actual": 1.8618846427448874,
+      "expected": 1.8618846427448874,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year6.PVFCFF",
+      "passed": true,
+      "actual": 8914.992761463409,
+      "expected": 8914.992761463409,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.segments",
+      "passed": true,
+      "actual": 64185.94660999916,
+      "expected": 64185.94660999916,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.growth",
+      "passed": true,
+      "actual": 0.05828519076829708,
+      "expected": 0.05828519076829708,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.EBIT",
+      "passed": true,
+      "actual": 23748.80024569969,
+      "expected": 23748.80024569969,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.reinvestment",
+      "passed": true,
+      "actual": 2280.6768579975674,
+      "expected": 2280.6768579975674,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.cost bridge",
+      "passed": true,
+      "actual": 23748.800245699695,
+      "expected": 23748.80024569969,
+      "difference": 3.637978807091713e-12
+    },
+    {
+      "test": "process-intensity-upside.year7.legacy cancellation",
+      "passed": true,
+      "actual": 23748.80024569969,
+      "expected": 23748.80024569969,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.NOPAT",
+      "passed": true,
+      "actual": 19236.52819901675,
+      "expected": 19236.52819901675,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.FCFF",
+      "passed": true,
+      "actual": 16955.85134101918,
+      "expected": 16955.85134101918,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.discountFactor",
+      "passed": true,
+      "actual": 2.0532856436592524,
+      "expected": 2.0532856436592524,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year7.PVFCFF",
+      "passed": true,
+      "actual": 8257.91160298642,
+      "expected": 8257.91160298642,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.segments",
+      "passed": true,
+      "actual": 67180.41470917035,
+      "expected": 67180.41470917035,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.growth",
+      "passed": true,
+      "actual": 0.046653017635868155,
+      "expected": 0.046653017635868155,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.EBIT",
+      "passed": true,
+      "actual": 24184.949295301325,
+      "expected": 24184.949295301325,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.reinvestment",
+      "passed": true,
+      "actual": 2395.5744793369495,
+      "expected": 2395.5744793369495,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.cost bridge",
+      "passed": true,
+      "actual": 24184.949295301325,
+      "expected": 24184.949295301325,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.legacy cancellation",
+      "passed": true,
+      "actual": 24184.949295301325,
+      "expected": 24184.949295301325,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.NOPAT",
+      "passed": true,
+      "actual": 19347.95943624106,
+      "expected": 19347.95943624106,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.FCFF",
+      "passed": true,
+      "actual": 16952.384956904112,
+      "expected": 16952.384956904112,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.discountFactor",
+      "passed": true,
+      "actual": 2.257244190631376,
+      "expected": 2.257244190631376,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year8.PVFCFF",
+      "passed": true,
+      "actual": 7510.213129471979,
+      "expected": 7510.213129471979,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.segments",
+      "passed": true,
+      "actual": 69867.63129753715,
+      "expected": 69867.63129753715,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.growth",
+      "passed": true,
+      "actual": 0.039999999999999813,
+      "expected": 0.039999999999999813,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.EBIT",
+      "passed": true,
+      "actual": 24453.670954138004,
+      "expected": 24453.670954138004,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.reinvestment",
+      "passed": true,
+      "actual": 2687.216588366806,
+      "expected": 2687.216588366806,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.cost bridge",
+      "passed": true,
+      "actual": 24453.670954138004,
+      "expected": 24453.670954138004,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.legacy cancellation",
+      "passed": true,
+      "actual": 24453.670954138004,
+      "expected": 24453.670954138004,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.NOPAT",
+      "passed": true,
+      "actual": 19318.400053769023,
+      "expected": 19318.400053769023,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.FCFF",
+      "passed": true,
+      "actual": 16631.183465402217,
+      "expected": 16631.183465402217,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.discountFactor",
+      "passed": true,
+      "actual": 2.4736370135031964,
+      "expected": 2.4736370135031964,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year9.PVFCFF",
+      "passed": true,
+      "actual": 6723.372659212,
+      "expected": 6723.372659212,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.segments",
+      "passed": true,
+      "actual": 72312.99839295095,
+      "expected": 72312.99839295095,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.growth",
+      "passed": true,
+      "actual": 0.03499999999999992,
+      "expected": 0.03499999999999992,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.EBIT",
+      "passed": true,
+      "actual": 24586.419453603325,
+      "expected": 24586.419453603325,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.reinvestment",
+      "passed": true,
+      "actual": 3090.0658995096805,
+      "expected": 3090.0658995096805,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.cost bridge",
+      "passed": true,
+      "actual": 24586.419453603325,
+      "expected": 24586.419453603325,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.legacy cancellation",
+      "passed": true,
+      "actual": 24586.419453603325,
+      "expected": 24586.419453603325,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.NOPAT",
+      "passed": true,
+      "actual": 19423.271368346628,
+      "expected": 19423.271368346628,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.FCFF",
+      "passed": true,
+      "actual": 16333.205468836948,
+      "expected": 16333.205468836948,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.discountFactor",
+      "passed": true,
+      "actual": 2.7021988472775793,
+      "expected": 2.7021988472775793,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.year10.PVFCFF",
+      "passed": true,
+      "actual": 6044.412862248233,
+      "expected": 6044.412862248233,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.terminalRevenue",
+      "passed": true,
+      "actual": 74843.95333670423,
+      "expected": 74843.95333670423,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.terminalNOPAT",
+      "passed": true,
+      "actual": 20103.085866238758,
+      "expected": 20103.085866238758,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.terminalReinvestment",
+      "passed": true,
+      "actual": 3198.218205992531,
+      "expected": 3198.218205992531,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.terminalValue",
+      "passed": true,
+      "actual": 294514.50737461436,
+      "expected": 294514.50737461436,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.enterpriseValueOrigin",
+      "passed": true,
+      "actual": 188526.15925647615,
+      "expected": 188526.15925647615,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.equityValueOriginIllustrative",
+      "passed": true,
+      "actual": 185922.87725647615,
+      "expected": 185922.87725647615,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.USDPerShareOriginIllustrative",
+      "passed": true,
+      "actual": 147.70640547743514,
+      "expected": 147.70640547743514,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.terminalShareEV",
+      "passed": true,
+      "actual": 0.5781196992049359,
+      "expected": 0.5781196992049359,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.terminal same-period capital ratio",
+      "passed": true,
+      "actual": 0.7913640598415114,
+      "expected": 0.7913640598415114,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.terminal reinvestment continuity",
+      "passed": true,
+      "actual": 3198.218205992519,
+      "expected": 3198.218205992531,
+      "difference": -1.1823431123048067e-11
+    },
+    {
+      "test": "process-intensity-upside.terminal implied ROIC",
+      "passed": true,
+      "actual": 0.21999999999999995,
+      "expected": 0.22,
+      "difference": -5.551115123125783e-17
+    },
+    {
+      "test": "compensation sensitivity 0.025",
+      "passed": true,
+      "actual": 111.24885989195145,
+      "expected": 111.24885989195145,
+      "difference": 0.0
+    },
+    {
+      "test": "compensation sensitivity 0.03",
+      "passed": true,
+      "actual": 109.26301461175458,
+      "expected": 109.26301461175454,
+      "difference": 4.263256414560601e-14
+    },
+    {
+      "test": "compensation sensitivity 0.04",
+      "passed": true,
+      "actual": 105.29132405136076,
+      "expected": 105.29132405136076,
+      "difference": 0.0
+    },
+    {
+      "test": "adjusted risk free",
+      "passed": true,
+      "actual": 0.0487,
+      "expected": 0.0487,
+      "difference": 0.0
+    },
+    {
+      "test": "relevered beta",
+      "passed": true,
+      "actual": 1.423961855670103,
+      "expected": 1.423961855670103,
+      "difference": 0.0
+    },
+    {
+      "test": "initial WACC",
+      "passed": true,
+      "actual": 0.10973327059999999,
+      "expected": 0.10973327059999999,
+      "difference": 0.0
+    },
+    {
+      "test": "terminal WACC",
+      "passed": true,
+      "actual": 0.09239910000000001,
+      "expected": 0.09239910000000001,
+      "difference": 0.0
+    },
+    {
+      "test": "finance lease obligation derived from two statements",
+      "passed": true,
+      "actual": 12.501999999999498,
+      "expected": 12.502,
+      "difference": -5.027089855502709e-13
+    },
+    {
+      "test": "debt principal versus book reconciliation",
+      "passed": true,
+      "actual": 3722.061,
+      "expected": 3722.061,
+      "difference": 0.0
+    },
+    {
+      "test": "June share bridge",
+      "passed": true,
+      "actual": 1258.732664,
+      "expected": 1258.732664,
+      "difference": 0.0
+    },
+    {
+      "test": "repurchase payable cash/equity roll-forward",
+      "passed": true,
+      "actual": 34.34800000000041,
+      "expected": 34.348,
+      "difference": 4.121147867408581e-13
+    },
+    {
+      "test": "tax claims",
+      "passed": true,
+      "actual": 944.402,
+      "expected": 944.402,
+      "difference": 0.0
+    },
+    {
+      "test": "FY2025 identified NWC",
+      "passed": true,
+      "actual": 3382.4780000000005,
+      "expected": 3382.4780000000005,
+      "difference": 0.0
+    },
+    {
+      "test": "FY2026 identified NWC",
+      "passed": true,
+      "actual": 5048.947,
+      "expected": 5048.947,
+      "difference": 0.0
+    },
+    {
+      "test": "FY2026 RSU grant-value proxy",
+      "passed": true,
+      "actual": 475.58714,
+      "expected": 475.58714,
+      "difference": 0.0
+    },
+    {
+      "test": "legacy unrecognized compensation total",
+      "passed": true,
+      "actual": 640.2,
+      "expected": 640.2,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year1.normalized investment",
+      "passed": true,
+      "actual": 4467.219833333333,
+      "expected": 4467.219833333333,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year1.cash funding identity",
+      "passed": true,
+      "actual": 4586.824833333332,
+      "expected": 4586.824833333332,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year2.normalized investment",
+      "passed": true,
+      "actual": 2895.6591911111113,
+      "expected": 2895.6591911111113,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year2.cash funding identity",
+      "passed": true,
+      "actual": 2895.6591911111113,
+      "expected": 2895.6591911111113,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year3.normalized investment",
+      "passed": true,
+      "actual": 2304.3708785684203,
+      "expected": 2304.3708785684203,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year3.cash funding identity",
+      "passed": true,
+      "actual": 2304.3708785684203,
+      "expected": 2304.3708785684203,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year4.normalized investment",
+      "passed": true,
+      "actual": 1863.2901442223183,
+      "expected": 1863.2901442223183,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year4.cash funding identity",
+      "passed": true,
+      "actual": 1863.2901442223183,
+      "expected": 1863.2901442223183,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year5.normalized investment",
+      "passed": true,
+      "actual": 1559.2076443653405,
+      "expected": 1559.2076443653405,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year5.cash funding identity",
+      "passed": true,
+      "actual": 1559.2076443653405,
+      "expected": 1559.2076443653405,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year6.normalized investment",
+      "passed": true,
+      "actual": 1728.8901993675336,
+      "expected": 1728.8901993675336,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year6.cash funding identity",
+      "passed": true,
+      "actual": 1728.8901993675336,
+      "expected": 1728.8901993675336,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year7.normalized investment",
+      "passed": true,
+      "actual": 1798.1503839013371,
+      "expected": 1798.1503839013371,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year7.cash funding identity",
+      "passed": true,
+      "actual": 1798.1503839013371,
+      "expected": 1798.1503839013371,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year8.normalized investment",
+      "passed": true,
+      "actual": 1993.5438785920862,
+      "expected": 1993.5438785920862,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year8.cash funding identity",
+      "passed": true,
+      "actual": 1993.5438785920862,
+      "expected": 1993.5438785920862,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year9.normalized investment",
+      "passed": true,
+      "actual": 2129.30465670621,
+      "expected": 2129.30465670621,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year9.cash funding identity",
+      "passed": true,
+      "actual": 2129.30465670621,
+      "expected": 2129.30465670621,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year10.normalized investment",
+      "passed": true,
+      "actual": 2459.32351698174,
+      "expected": 2459.32351698174,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2.year10.cash funding identity",
+      "passed": true,
+      "actual": 2459.32351698174,
+      "expected": 2459.32351698174,
+      "difference": 0.0
+    },
+    {
+      "test": "base.v2 opening capex paid once",
+      "passed": true,
+      "actual": 119.605,
+      "expected": 119.605,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year1.normalized investment",
+      "passed": true,
+      "actual": 3552.4659285714292,
+      "expected": 3552.4659285714292,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year1.cash funding identity",
+      "passed": true,
+      "actual": 3672.0709285714292,
+      "expected": 3672.0709285714292,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year2.normalized investment",
+      "passed": true,
+      "actual": 300,
+      "expected": 300,
+      "difference": 0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year2.cash funding identity",
+      "passed": true,
+      "actual": 300.0,
+      "expected": 300.0,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year3.normalized investment",
+      "passed": true,
+      "actual": 529.9641441066657,
+      "expected": 529.9641441066657,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year3.cash funding identity",
+      "passed": true,
+      "actual": 529.9641441066657,
+      "expected": 529.9641441066657,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year4.normalized investment",
+      "passed": true,
+      "actual": 1062.1208438064011,
+      "expected": 1062.1208438064011,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year4.cash funding identity",
+      "passed": true,
+      "actual": 1062.1208438064011,
+      "expected": 1062.1208438064011,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year5.normalized investment",
+      "passed": true,
+      "actual": 1030.0227654347837,
+      "expected": 1030.0227654347837,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year5.cash funding identity",
+      "passed": true,
+      "actual": 1030.0227654347837,
+      "expected": 1030.0227654347837,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year6.normalized investment",
+      "passed": true,
+      "actual": 1049.8308955392993,
+      "expected": 1049.8308955392993,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year6.cash funding identity",
+      "passed": true,
+      "actual": 1049.8308955392993,
+      "expected": 1049.8308955392993,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year7.normalized investment",
+      "passed": true,
+      "actual": 1094.6615893186256,
+      "expected": 1094.6615893186256,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year7.cash funding identity",
+      "passed": true,
+      "actual": 1094.6615893186256,
+      "expected": 1094.6615893186256,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year8.normalized investment",
+      "passed": true,
+      "actual": 1100.2714651332262,
+      "expected": 1100.2714651332262,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year8.cash funding identity",
+      "passed": true,
+      "actual": 1100.2714651332262,
+      "expected": 1100.2714651332262,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year9.normalized investment",
+      "passed": true,
+      "actual": 1159.1163408131251,
+      "expected": 1159.1163408131251,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year9.cash funding identity",
+      "passed": true,
+      "actual": 1159.1163408131251,
+      "expected": 1159.1163408131251,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year10.normalized investment",
+      "passed": true,
+      "actual": 1208.4403633532775,
+      "expected": 1208.4403633532775,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2.year10.cash funding identity",
+      "passed": true,
+      "actual": 1208.4403633532775,
+      "expected": 1208.4403633532775,
+      "difference": 0.0
+    },
+    {
+      "test": "cycle-and-export-downside.v2 opening capex paid once",
+      "passed": true,
+      "actual": 119.605,
+      "expected": 119.605,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year1.normalized investment",
+      "passed": true,
+      "actual": 4824.59742,
+      "expected": 4824.59742,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year1.cash funding identity",
+      "passed": true,
+      "actual": 4944.20242,
+      "expected": 4944.20242,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year2.normalized investment",
+      "passed": true,
+      "actual": 3508.4937064000005,
+      "expected": 3508.4937064000005,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year2.cash funding identity",
+      "passed": true,
+      "actual": 3508.4937064000005,
+      "expected": 3508.4937064000005,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year3.normalized investment",
+      "passed": true,
+      "actual": 2977.9062901180923,
+      "expected": 2977.9062901180923,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year3.cash funding identity",
+      "passed": true,
+      "actual": 2977.9062901180923,
+      "expected": 2977.9062901180923,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year4.normalized investment",
+      "passed": true,
+      "actual": 2637.2843121170304,
+      "expected": 2637.2843121170304,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year4.cash funding identity",
+      "passed": true,
+      "actual": 2637.2843121170304,
+      "expected": 2637.2843121170304,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year5.normalized investment",
+      "passed": true,
+      "actual": 2409.9440934600207,
+      "expected": 2409.9440934600207,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year5.cash funding identity",
+      "passed": true,
+      "actual": 2409.9440934600207,
+      "expected": 2409.9440934600207,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year6.normalized investment",
+      "passed": true,
+      "actual": 2300.131542049518,
+      "expected": 2300.131542049518,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year6.cash funding identity",
+      "passed": true,
+      "actual": 2300.131542049518,
+      "expected": 2300.131542049518,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year7.normalized investment",
+      "passed": true,
+      "actual": 2280.6768579975674,
+      "expected": 2280.6768579975674,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year7.cash funding identity",
+      "passed": true,
+      "actual": 2280.6768579975674,
+      "expected": 2280.6768579975674,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year8.normalized investment",
+      "passed": true,
+      "actual": 2395.5744793369495,
+      "expected": 2395.5744793369495,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year8.cash funding identity",
+      "passed": true,
+      "actual": 2395.5744793369495,
+      "expected": 2395.5744793369495,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year9.normalized investment",
+      "passed": true,
+      "actual": 2687.216588366806,
+      "expected": 2687.216588366806,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year9.cash funding identity",
+      "passed": true,
+      "actual": 2687.216588366806,
+      "expected": 2687.216588366806,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year10.normalized investment",
+      "passed": true,
+      "actual": 3090.0658995096805,
+      "expected": 3090.0658995096805,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2.year10.cash funding identity",
+      "passed": true,
+      "actual": 3090.0658995096805,
+      "expected": 3090.0658995096805,
+      "difference": 0.0
+    },
+    {
+      "test": "process-intensity-upside.v2 opening capex paid once",
+      "passed": true,
+      "actual": 119.605,
+      "expected": 119.605,
+      "difference": 0.0
+    },
+    {
+      "test": "v2 no second capex payable bridge claim",
+      "passed": true,
+      "actual": 0,
+      "expected": 0,
+      "difference": 0
+    },
+    {
+      "test": "base.v2 capex settlement EV delta",
+      "passed": true,
+      "actual": 107.77815099238069,
+      "expected": 107.77815099238497,
+      "difference": -4.277467269275803e-12
+    },
+    {
+      "test": "cycle-and-export-downside.v2 capex settlement EV delta",
+      "passed": true,
+      "actual": 107.77815099239524,
+      "expected": 107.77815099238497,
+      "difference": 1.0274447959091049e-11
+    },
+    {
+      "test": "process-intensity-upside.v2 capex settlement EV delta",
+      "passed": true,
+      "actual": 107.77815099238069,
+      "expected": 107.77815099238497,
+      "difference": -4.277467269275803e-12
+    }
+  ],
+  "independentV1Replay": [
+    {
+      "scenario": "base",
+      "rows": [
+        {
+          "year": 1,
+          "NOPAT": 10101.4004811,
+          "FCFF": 5634.180647766667,
+          "discountFactor": 1.1097332706,
+          "PVFCFF": 5077.058422084103,
+          "normalizedOperatingReinvestment": 4467.219833333333,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 4467.219833333333
+        },
+        {
+          "year": 2,
+          "NOPAT": 12095.066648885999,
+          "FCFF": 9199.407457774887,
+          "discountFactor": 1.231507931876573,
+          "PVFCFF": 7470.035084351281,
+          "normalizedOperatingReinvestment": 2895.6591911111113,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2895.6591911111113
+        },
+        {
+          "year": 3,
+          "NOPAT": 13387.104356790527,
+          "FCFF": 11082.733478222108,
+          "discountFactor": 1.3666453250112314,
+          "PVFCFF": 8109.443815008131,
+          "normalizedOperatingReinvestment": 2304.3708785684203,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2304.3708785684203
+        },
+        {
+          "year": 4,
+          "NOPAT": 14189.435027252483,
+          "FCFF": 12326.144883030163,
+          "discountFactor": 1.5166117862749138,
+          "PVFCFF": 8127.422584065177,
+          "normalizedOperatingReinvestment": 1863.2901442223183,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1863.2901442223183
+        },
+        {
+          "year": 5,
+          "NOPAT": 14565.32873381594,
+          "FCFF": 13006.1210894506,
+          "discountFactor": 1.6830345578133683,
+          "PVFCFF": 7727.7801748458505,
+          "normalizedOperatingReinvestment": 1559.2076443653405,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1559.2076443653405
+        },
+        {
+          "year": 6,
+          "NOPAT": 14618.825674118469,
+          "FCFF": 12889.935474750935,
+          "discountFactor": 1.8618846427448874,
+          "PVFCFF": 6923.058055706351,
+          "normalizedOperatingReinvestment": 1728.8901993675336,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1728.8901993675336
+        },
+        {
+          "year": 7,
+          "NOPAT": 14716.982013678395,
+          "FCFF": 12918.831629777058,
+          "discountFactor": 2.0532856436592524,
+          "PVFCFF": 6291.784910527027,
+          "normalizedOperatingReinvestment": 1798.1503839013371,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1798.1503839013371
+        },
+        {
+          "year": 8,
+          "NOPAT": 14706.803077490307,
+          "FCFF": 12713.25919889822,
+          "discountFactor": 2.257244190631376,
+          "PVFCFF": 5632.20375166507,
+          "normalizedOperatingReinvestment": 1993.5438785920862,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1993.5438785920862
+        },
+        {
+          "year": 9,
+          "NOPAT": 14773.848797402394,
+          "FCFF": 12644.544140696184,
+          "discountFactor": 2.4736370135031964,
+          "PVFCFF": 5111.721756939924,
+          "normalizedOperatingReinvestment": 2129.30465670621,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2129.30465670621
+        },
+        {
+          "year": 10,
+          "NOPAT": 14755.941101890392,
+          "FCFF": 12296.617584908652,
+          "discountFactor": 2.7021988472775793,
+          "PVFCFF": 4550.596858294603,
+          "normalizedOperatingReinvestment": 2459.32351698174,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2459.32351698174
+        }
+      ],
+      "terminalRevenue": 60121.1207869743,
+      "terminalOperatingMargin": 0.32,
+      "terminalNOPAT": 15198.619334947105,
+      "terminalReinvestment": 2533.1032224911874,
+      "terminalImpliedROIC": 0.17999999999999977,
+      "terminalValue": 202975.94216031826,
+      "enterpriseValueOrigin": 140136.20745892476,
+      "equityValueOriginIllustrative": 137532.92545892476,
+      "USDPerShareOriginIllustrative": 109.26301461175456,
+      "terminalShareEV": 0.5360149486523973
+    },
+    {
+      "scenario": "cycle-and-export-downside",
+      "rows": [
+        {
+          "year": 1,
+          "NOPAT": 8292.605836199999,
+          "FCFF": 4740.139907628569,
+          "discountFactor": 1.1097332706,
+          "PVFCFF": 4271.422722205773,
+          "normalizedOperatingReinvestment": 3552.4659285714292,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 3552.4659285714292
+        },
+        {
+          "year": 2,
+          "NOPAT": 5429.4314403896005,
+          "FCFF": 5129.4314403896005,
+          "discountFactor": 1.231507931876573,
+          "PVFCFF": 4165.163136686719,
+          "normalizedOperatingReinvestment": 300,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 300
+        },
+        {
+          "year": 3,
+          "NOPAT": 5744.626835524047,
+          "FCFF": 5214.662691417381,
+          "discountFactor": 1.3666453250112314,
+          "PVFCFF": 3815.6664322358297,
+          "normalizedOperatingReinvestment": 529.9641441066657,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 529.9641441066657
+        },
+        {
+          "year": 4,
+          "NOPAT": 6465.967910016856,
+          "FCFF": 5403.847066210455,
+          "discountFactor": 1.5166117862749138,
+          "PVFCFF": 3563.1050181162896,
+          "normalizedOperatingReinvestment": 1062.1208438064011,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1062.1208438064011
+        },
+        {
+          "year": 5,
+          "NOPAT": 6987.674440709575,
+          "FCFF": 5957.651675274791,
+          "discountFactor": 1.6830345578133683,
+          "PVFCFF": 3539.827300406172,
+          "normalizedOperatingReinvestment": 1030.0227654347837,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1030.0227654347837
+        },
+        {
+          "year": 6,
+          "NOPAT": 7245.34493571074,
+          "FCFF": 6195.514040171441,
+          "discountFactor": 1.8618846427448874,
+          "PVFCFF": 3327.5498910811634,
+          "normalizedOperatingReinvestment": 1049.8308955392993,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1049.8308955392993
+        },
+        {
+          "year": 7,
+          "NOPAT": 7431.783611242394,
+          "FCFF": 6337.122021923768,
+          "discountFactor": 2.0532856436592524,
+          "PVFCFF": 3086.332406547245,
+          "normalizedOperatingReinvestment": 1094.6615893186256,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1094.6615893186256
+        },
+        {
+          "year": 8,
+          "NOPAT": 7569.802449736894,
+          "FCFF": 6469.530984603668,
+          "discountFactor": 2.257244190631376,
+          "PVFCFF": 2866.1192313420324,
+          "normalizedOperatingReinvestment": 1100.2714651332262,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1100.2714651332262
+        },
+        {
+          "year": 9,
+          "NOPAT": 7671.140127693051,
+          "FCFF": 6512.023786879926,
+          "discountFactor": 2.4736370135031964,
+          "PVFCFF": 2632.570482787818,
+          "normalizedOperatingReinvestment": 1159.1163408131251,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1159.1163408131251
+        },
+        {
+          "year": 10,
+          "NOPAT": 7734.018325461026,
+          "FCFF": 6525.577962107748,
+          "discountFactor": 2.7021988472775793,
+          "PVFCFF": 2414.9140499716223,
+          "normalizedOperatingReinvestment": 1208.4403633532775,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 1208.4403633532775
+        }
+      ],
+      "terminalRevenue": 33448.81343290106,
+      "terminalOperatingMargin": 0.3,
+      "terminalNOPAT": 7927.368783597551,
+      "terminalReinvestment": 1238.651372437117,
+      "terminalImpliedROIC": 0.16000000000000003,
+      "terminalValue": 99240.45589867567,
+      "enterpriseValueOrigin": 70408.48601937358,
+      "equityValueOriginIllustrative": 67805.20401937357,
+      "USDPerShareOriginIllustrative": 53.86783544958802,
+      "terminalShareEV": 0.5216106384944486
+    },
+    {
+      "scenario": "process-intensity-upside",
+      "rows": [
+        {
+          "year": 1,
+          "NOPAT": 10964.464499898,
+          "FCFF": 6139.867079898,
+          "discountFactor": 1.1097332706,
+          "PVFCFF": 5532.741283478286,
+          "normalizedOperatingReinvestment": 4824.59742,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 4824.59742
+        },
+        {
+          "year": 2,
+          "NOPAT": 13565.616565952001,
+          "FCFF": 10057.122859552,
+          "discountFactor": 1.231507931876573,
+          "PVFCFF": 8166.510827280623,
+          "normalizedOperatingReinvestment": 3508.4937064000005,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 3508.4937064000005
+        },
+        {
+          "year": 3,
+          "NOPAT": 15599.536706172223,
+          "FCFF": 12621.63041605413,
+          "discountFactor": 1.3666453250112314,
+          "PVFCFF": 9235.48354870376,
+          "normalizedOperatingReinvestment": 2977.9062901180923,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2977.9062901180923
+        },
+        {
+          "year": 4,
+          "NOPAT": 17368.099565877903,
+          "FCFF": 14730.815253760873,
+          "discountFactor": 1.5166117862749138,
+          "PVFCFF": 9712.976904882527,
+          "normalizedOperatingReinvestment": 2637.2843121170304,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2637.2843121170304
+        },
+        {
+          "year": 5,
+          "NOPAT": 18292.500870018746,
+          "FCFF": 15882.556776558726,
+          "discountFactor": 1.6830345578133683,
+          "PVFCFF": 9436.857195133092,
+          "normalizedOperatingReinvestment": 2409.9440934600207,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2409.9440934600207
+        },
+        {
+          "year": 6,
+          "NOPAT": 18898.819654800074,
+          "FCFF": 16598.688112750555,
+          "discountFactor": 1.8618846427448874,
+          "PVFCFF": 8914.992761463409,
+          "normalizedOperatingReinvestment": 2300.131542049518,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2300.131542049518
+        },
+        {
+          "year": 7,
+          "NOPAT": 19236.52819901675,
+          "FCFF": 16955.85134101918,
+          "discountFactor": 2.0532856436592524,
+          "PVFCFF": 8257.91160298642,
+          "normalizedOperatingReinvestment": 2280.6768579975674,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2280.6768579975674
+        },
+        {
+          "year": 8,
+          "NOPAT": 19347.95943624106,
+          "FCFF": 16952.384956904112,
+          "discountFactor": 2.257244190631376,
+          "PVFCFF": 7510.213129471979,
+          "normalizedOperatingReinvestment": 2395.5744793369495,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2395.5744793369495
+        },
+        {
+          "year": 9,
+          "NOPAT": 19318.400053769023,
+          "FCFF": 16631.183465402217,
+          "discountFactor": 2.4736370135031964,
+          "PVFCFF": 6723.372659212,
+          "normalizedOperatingReinvestment": 2687.216588366806,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 2687.216588366806
+        },
+        {
+          "year": 10,
+          "NOPAT": 19423.271368346628,
+          "FCFF": 16333.205468836948,
+          "discountFactor": 2.7021988472775793,
+          "PVFCFF": 6044.412862248233,
+          "normalizedOperatingReinvestment": 3090.0658995096805,
+          "openingCapitalPayableSettlement": 0.0,
+          "totalReinvestmentCashFunding": 3090.0658995096805
+        }
+      ],
+      "terminalRevenue": 74843.95333670423,
+      "terminalOperatingMargin": 0.34,
+      "terminalNOPAT": 20103.085866238758,
+      "terminalReinvestment": 3198.218205992531,
+      "terminalImpliedROIC": 0.21999999999999995,
+      "terminalValue": 294514.50737461436,
+      "enterpriseValueOrigin": 188526.15925647615,
+      "equityValueOriginIllustrative": 185922.87725647615,
+      "USDPerShareOriginIllustrative": 147.70640547743514,
+      "terminalShareEV": 0.5781196992049359
+    }
+  ],
+  "v2Changes": [
+    {
+      "field": "normalizedInvestment.FY2026.netInvestment",
+      "before": 2191.3409999999994,
+      "after": 2320.3399999999992,
+      "reason": "Known noncash capital transfers and financed lease additions."
+    },
+    {
+      "field": "normalizedInvestment.FY2026.incrementalSalesToCapital",
+      "before": 2.1891157058623008,
+      "after": 2.06741210339864
+    },
+    {
+      "field": "all scenarios FY2027.reinvestment",
+      "change": 119.605,
+      "reason": "Opening capex payable funded once, separate from forward operating capital."
+    }
+  ],
+  "v2Outputs": [
+    {
+      "scenario": "base",
+      "terminalRevenue": 60121.1207869743,
+      "terminalOperatingMargin": 0.32,
+      "terminalNOPAT": 15198.619334947105,
+      "terminalReinvestment": 2533.1032224911874,
+      "terminalImpliedROIC": 0.17999999999999977,
+      "terminalValue": 202975.94216031826,
+      "enterpriseValueOrigin": 140028.42930793238,
+      "equityValueOriginIllustrative": 137425.14730793238,
+      "USDPerShareOriginIllustrative": 109.17739027381938,
+      "terminalShareEV": 0.5364275127321028
+    },
+    {
+      "scenario": "cycle-and-export-downside",
+      "terminalRevenue": 33448.81343290106,
+      "terminalOperatingMargin": 0.3,
+      "terminalNOPAT": 7927.368783597551,
+      "terminalReinvestment": 1238.651372437117,
+      "terminalImpliedROIC": 0.16000000000000003,
+      "terminalValue": 99240.45589867567,
+      "enterpriseValueOrigin": 70300.70786838119,
+      "equityValueOriginIllustrative": 67697.42586838118,
+      "USDPerShareOriginIllustrative": 53.782211111652835,
+      "terminalShareEV": 0.5224103207716192
+    },
+    {
+      "scenario": "process-intensity-upside",
+      "terminalRevenue": 74843.95333670423,
+      "terminalOperatingMargin": 0.34,
+      "terminalNOPAT": 20103.085866238758,
+      "terminalReinvestment": 3198.218205992531,
+      "terminalImpliedROIC": 0.21999999999999995,
+      "terminalValue": 294514.50737461436,
+      "enterpriseValueOrigin": 188418.38110548377,
+      "equityValueOriginIllustrative": 185815.09910548377,
+      "USDPerShareOriginIllustrative": 147.62078113949997,
+      "terminalShareEV": 0.5784503923775818
+    }
+  ],
+  "repurchasePayable": {
+    "balance": 34.348,
+    "date": "2026-06-28",
+    "priorBalance": 38.525,
+    "equityRepurchasesFY2026": 3847.166,
+    "cashRepurchasesFY2026": 3851.343,
+    "reconciliation": "38.525 + 3847.166 - 3851.343 = 34.348",
+    "sourceId": "annual2026",
+    "sourceField": "Consolidated cash-flow p46 and equity p47 statements",
+    "classification": "Reported accrued repurchase payable including applicable excise tax; allocation to income/other-tax payable versus other accruals not disclosed.",
+    "referenceIncrementalClaim": 0,
+    "referenceCondition": "Conditional on this payable being covered by already-deducted booked tax claims or a funded obligation. This is not a verified mapping and is not an assertion the payable is zero.",
+    "incrementalClaimStress": [
+      0,
+      34.348
+    ],
+    "doubleCountPolicy": "The incremental portion is a component of any additional residual-claim stress, not an amount to add on top without checking overlap. Do not deduct the full tax claim and full repurchase payable while asserting the result is exact."
+  },
+  "remainingConditionalFacts": [
+    "ESPP150 is an analyst estimate, not fair value or proven conservative bound.",
+    "Repurchase-payable/excise-tax allocation can overlap tax claim; incremental0–34.348 remains unresolved.",
+    "Residual0–300 is a stress range; balances are not fully allocated and a 300 ceiling is not demonstrated.",
+    "Capital payable is funded once, but historical AP classification remains unresolved.",
+    "Gross annual lab capex versus net investment is not independently decomposed.",
+    "No matched October balance-sheet/share/award bridge; no current target."
+  ]
+}

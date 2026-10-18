@@ -1,6 +1,19 @@
 import {registerCatalog} from './i18n.js';
 import {incrementalRecords} from './incremental-registry.js';
 const pairs=[
+ ['Operating investment','经营投资'],['Fixed opening settlement','固定期初结算'],['Total cash investment','投资现金总额'],['Capital-efficiency ratios use operating investment only.','资本效率比率仅使用经营投资。'],
+ ["Process-intensity upside", "工艺强度上行情景"],
+ ["Load reviewed process-intensity upside", "载入已复核工艺强度上行情景"],
+ ["Debt including finance leases", "含融资租赁的债务"],
+ ["Additional residual-claim stress", "额外残余请求权压力"],
+ ["Incremental repurchase-payable stress", "额外回购应付款压力"],
+ ["Net deferred-compensation recovery", "净递延薪酬回收"],
+ ["Maximum existing awards and options", "最高现有奖励及期权"],
+ ["June common shares plus maximum existing awards/options; zero exercise proceeds", "六月普通股加最高现有奖励／期权；行权收入为零"],
+ ["Residual, tax-interest and repurchase stresses overlap. Select at most one positive stress; do not add them without a de-duplicated allocation.", "残余、税款利息及回购压力存在重叠。最多选一个正向压力值；未经去重分配不可相加。"],
+ ["Retain the reviewed fixed opening-capital funding amount and year.", "请保留已复核的固定期初资本投入金额及年份。"],
+ ["Year 1 total investment cannot be below the fixed opening capex-payable settlement.", "第 1 年投资总额不得低于固定期初资本开支应付款结算。"],
+ ["Fiscal years end on the last Sunday in June; 52/53 weeks use normalized annual discount intervals.", "财年于六月最后一个星期日结束；52／53 周采用规范年度折现间隔。"],
  ['Downcycle scenario','下行周期情景'],['Upside scenario','上行情景'],['Load reviewed downcycle','载入已复核下行周期情景'],['Load reviewed upside','载入已复核上行情景'],['Named research scenario loaded. Undo restores the previous complete case.','已载入研究情景。撤销可恢复此前完整情景。'],
  ['Listed-investment tax reserve','上市投资税款储备'],['Private-investment recovery','私募投资回收价值'],['Investment tax-credit collection fraction','投资税收抵免回收比例'],['Investment tax-credit collection fraction · %','投资税收抵免回收比例 · %'],['Investment tax-credit collection years','投资税收抵免回收年数'],['Prepaid-tax collection fraction','预付税款回收比例'],['Prepaid-tax collection fraction · %','预付税款回收比例 · %'],['Capital-credit and prepaid-tax overlap','资本抵免与预付税款重叠'],['Estimated existing ESPP claim','现有 ESPP 请求权估计'],['Estimated existing-award dilution','现有奖励稀释股数估计'],
  ['Opening tax claims','期初税款请求权'],['Pension and postretirement claim','养老金及退休后福利请求权'],['Opening restructuring claim','期初重组请求权'],['Declared dividend payable','已宣告应付股息'],['Dated cash','基准日现金'],['Fixed-income investments','固定收益投资'],['Listed investments before tax reserve','税款储备前上市投资'],['Investment tax-credit collection PV','投资税收抵免回收现值'],['Prepaid-tax collection PV','预付税款回收现值'],['Duplicate-tax-asset PV correction','重复税务资产现值调整'],

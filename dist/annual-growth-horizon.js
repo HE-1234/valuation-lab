@@ -1,3 +1,4 @@
+import {fixedCapitalSettlement,operatingInvestment,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
 import {incrementalCaseVersion,incrementalIdentityValid} from './incremental-research-identity.js';
 // Explicit, editable horizon sensitivities. Frozen research cases are never changed.
 import {marginPathIssues,marginAtYear} from './margin-path.js';
@@ -64,7 +65,8 @@ export function calculateDerivedReinvestment(d,revenueRows,{baselineAnnual=d.der
    const scale=Math.max(1,revenue/base.revenue);
    // Retain the signed explicit release once, never amplify it. Positive source
    // investment is a committed floor; reduced sales never release it automatically.
-   const floor=Math.min(base.reinvestment,0)+Math.max(base.reinvestment,0)*scale;
+   const operating=operatingInvestment(d,base),fixed=fixedCapitalSettlement(d,base.year);
+   const floor=Math.min(operating,0)+Math.max(operating,0)*scale+fixed;
    const extraExpansion=Math.max(0,delta-Math.max(0,baseDelta)*scale);
    investment=floor+extraExpansion/p.marginalSalesCapital;
   }else investment=Math.max(0,delta)*intensity;
@@ -74,6 +76,7 @@ export function calculateDerivedReinvestment(d,revenueRows,{baselineAnnual=d.der
 }
 
 function requireAnnualIdentity(d,c){
+ const fundingIssues=fixedCapitalFundingIssues(d);if(fundingIssues.length)throw Error(fundingIssues.join(' '));
  if(!object(d)||![1,2].includes(d.schemaVersion)||!validRows(d.annual)||!validTerminal(d.terminal)||!finite(d.anchor?.revenue)||d.anchor.revenue<=0)throw Error('Complete valid annual and terminal inputs before deriving a growth horizon.');
  if((d.incrementalResearch&&!incrementalIdentityValid(d))||!c||d.profileId!==RESEARCH_PROFILE_ID||d.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||d.sourceScenario!==c.scenario||d.caseId!==`${incrementalCaseVersion(c)||RESEARCH_VERSION}:${c.ticker}:${c.scenario}`||(d.schemaVersion===2&&d.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||d.forecastHorizonYears!==d.annual.length||(d.schemaVersion===1&&d.forecastHorizonYears!==c.forecastHorizonYears)||d.ticker!==c.ticker||d.currency!==c.currency||d.discountOrigin!==c.valuationTiming?.discountOrigin||d.anchor.revenue!==c.anchor?.revenue)throw Error('The derived forecast must retain its original dated research identity.');
 

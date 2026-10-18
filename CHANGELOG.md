@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · Lam Research incremental case
+
+- Added LRCX with three independently reviewed June 28, 2026-origin scenarios using October 18 information, historical references, bilingual evidence and seven conditional capital-claim controls. Base/downside/upside allocations reproduce approximately $109.18/$53.78/$147.62; current-price comparisons remain unavailable.
+- Isolated the $119.605m opening capex-payable settlement as fixed year-one funding. Operating-investment multipliers, horizon changes and annual simulation uncertainty cannot move or duplicate this obligation.
+- Capital diagnostics now distinguish operating S:C (1.8× in the base case) from total cash funding, with a visible operating investment + fixed settlement reconciliation.
+- Independent replay includes 300 nontrivial simulation trials, missing-claim/date/overlap gates and preservation of prior case records. Thirty-seven static views passed, spanning three cases, bilingual mobile/desktop Result/Claims/Capital and a dark-theme mobile sample. Native browser smoke follows publication.
+
 ## 2026-10-18 · 120-question learning bank
 
 - Added 120 independently reviewed English/Simplified Chinese valuation questions, including 65 independently recomputed numeric questions. Each has four distinct options, answer-specific feedback, an explanation and primary-source references. Exact bank bytes are bound to the completed review manifest.
