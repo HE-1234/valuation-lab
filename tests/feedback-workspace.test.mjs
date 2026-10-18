@@ -23,7 +23,7 @@ function navigationFixture(hash=''){
 test('feedback navigation: three primary destinations keep six distinct route IDs and model modes',()=>{
  const h=navigationFixture();assert.deepEqual(h.document.querySelectorAll('[data-primary]').map(x=>x.textContent),['Studio','Research','Learn']);
  assert.deepEqual(Object.keys(workspacePages).sort(),['current','data','history','learn','renewed','workbench']);
- assert.equal(h.nav.getPage(),'renewed');assert.equal(h.get('#breadcrumb').textContent,'Studio / Annual model');
+ assert.equal(h.nav.getPage(),'renewed');assert.equal(h.get('#breadcrumb').textContent,'Studio / Year-by-year');
  for(const page of Object.keys(workspacePages)){
   h.nav.show(page);assert.equal(h.nav.getPage(),page);const visible=h.document.querySelectorAll('.page').filter(x=>!x.classList.contains('hidden'));assert.deepEqual(visible.map(x=>x.id),[page]);
   assert.equal(h.get(`[data-tab="${page}"]`).getAttribute('aria-current'),'page');

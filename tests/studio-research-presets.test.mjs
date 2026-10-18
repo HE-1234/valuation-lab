@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {startResearchWorkspace,bundledResearch} from './research-workspace-harness.mjs';
 import {startStudio} from './v7-runtime-harness.mjs';
-import {RESEARCH_STORAGE_PREFIX,researchDraftFor,calculateResearchOperating} from '../dist/research-model.js';
+import {RESEARCH_STORAGE_PREFIX,researchDraftFor,calculateResearchOperating,researchTimingResult} from '../dist/research-model.js';
 import {researchBridgeDefinition} from '../dist/research-claims.js';
 import {simulateResearch,simulationResearchDefaults} from '../dist/research-simulation.js';
 import {annualResearchSimulationAdapter} from '../dist/research-simulation-view.js';
@@ -104,7 +104,7 @@ test('complete presets: absent preset data is disclosed and saved operating work
 test('complete presets: Guided explicitly loads selected complete Annual case without changing Guided inputs',async()=>{
  const calls=[],h=await startStudio({annualWorkspace:{useResearch:(...args)=>calls.push(args)}});h.change('#current-company','GOOG');h.input('#g-growth','23');const before=h.state('GOOG');
  h.get('#use-research').click();assert.deepEqual(calls,[['GOOG',{originPage:'current'}]]);assert.deepEqual(h.state('GOOG'),before);
- assert.match(h.get('.guided-research-preset').textContent,/opens Annual model/);assert.match(h.get('#load-base-case').textContent,/earlier Guided inputs/);
+ assert.match(h.get('.guided-research-preset').textContent,/opens Year-by-year/);assert.match(h.get('#load-base-case').textContent,/earlier Guided inputs/);
 });
 
 test('complete presets: real Guided-to-Annual handoff and Undo preserve both models across company selection',async()=>{
@@ -116,11 +116,12 @@ test('complete presets: real Guided-to-Annual handoff and Undo preserve both mod
 
 test('complete presets: all fourteen deterministic baselines match Monte Carlo, signed values and bridge gates remain',()=>{
  for(const preset of readBundle().presets){
-  const draft=studioResearchDraft(preset,readBundle()),expected=calculateResearchOperating(draft).enterprise;
+  const draft=studioResearchDraft(preset,readBundle()),operating=calculateResearchOperating(draft),expected=researchTimingResult(draft,operating).enterprise;
   const fixed=simulateResearch(draft,{...simulationResearchDefaults(),trials:2});assert.equal(fixed.baseline.enterprise,expected);assert.equal(fixed.draws[0],expected,preset.ticker);
   const sampled=simulateResearch(draft,{...draft.researchSimulationConfig,trials:64});assert.equal(sampled.baseline.enterprise,expected,preset.ticker);assert.equal(sampled.attempts,64);assert.equal(sampled.accepted+sampled.excluded,64);assert.ok(sampled.accepted>0,preset.ticker);
   assert.doesNotMatch(sampled.warnings.join(' '),/All four inputs start Fixed/);
-  if(['AAOI','NBIS'].includes(preset.ticker))assert.equal(sampled.bridgeCoverage.eligible,0);
+  if(preset.ticker==='NBIS')assert.equal(sampled.bridgeCoverage.eligible,0,'unresolved claims remain a pre-debt diagnostic');
+  if(preset.ticker==='AAOI')assert.equal(sampled.bridgeCoverage.complete,true,'explicit option-inclusive capital scenario is repriced in every accepted trial');
   if(preset.ticker==='TSM')assert.match(sampled.units.perShare,/TWD.*ordinary/);
   if(expected<0)assert.ok(fixed.draws[0]<0,'signed negative EV preserved');
  }

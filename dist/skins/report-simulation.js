@@ -10,9 +10,6 @@ const on = () => root.dataset.skin === 'report';
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const VIEW_W = 960, VIEW_H = 420, TOP = 76, BOTTOM = 326;
-// The replay schedule this layer mirrors (simulation-view.js): arrivals begin
-// at 2.2 s and the last lands at 6 s.
-const FIRST_LAND = 2200, LAST_LAND = 6000;
 const runs = new WeakMap();
 
 const rand = (a, b) => a + Math.random() * (b - a);
@@ -26,19 +23,37 @@ function rgb(color) {
   return m.slice(0, 3).map(Number);
 }
 
+// Native representative particles own both the outcome positions and replay
+// clock. Decorative duplicates have equal weight; no second outcome sampler.
+function replayParticles(group) {
+  return [...group.children].map(node => {
+    const animation = node.getAnimations?.()[0], timing = animation?.effect?.getTiming?.();
+    const target = node.tagName.toLowerCase() === 'circle' ? Number(node.getAttribute('cx')) : Number(node.getAttribute('x')) + 2.8;
+    return {node, animation, target, delay: Number(timing?.delay), duration: Number(timing?.duration)};
+  }).filter(p => Number.isFinite(p.target) && p.animation && Number.isFinite(p.delay) && Number.isFinite(p.duration) && p.duration > 0);
+}
+function rainPlan(particles, phone) {
+  const copies = Math.max(1, Math.floor((phone ? 300 : 680) / particles.length));
+  return particles.flatMap(p => Array.from({length: copies}, () => {
+    const land = p.delay + p.duration;
+    const flight = Math.min(land, p.duration * rand(.55, .75));
+    return {launch: Math.max(0, land - flight), flight, target: p.target};
+  })).sort((a, b) => a.launch - b.launch);
+}
+function replayElapsed(particles) {
+  const times = particles.map(p => p.animation.currentTime).filter(time => typeof time === 'number' && Number.isFinite(time));
+  return times.length ? Math.max(...times) : null;
+}
+
 function startRun(group) {
-  if (runs.has(group) || reduced()) return;
+  if (runs.has(group) || reduced() || document.hidden) return;
   const chart = group.closest('[id$="mc-chart"]');
   const svg = group.ownerSVGElement;
   if (!chart || !svg) return;
-  const scope = chart.closest('[id$="mc-output"]')?.parentElement || document;
-  const playButton = scope.querySelector('[id$="mc-play"]');
-
-  // The representative particles mark where the distribution lives.
-  const targets = [...group.children].map(n => n.tagName === 'circle' ? Number(n.getAttribute('cx')) : Number(n.getAttribute('x')) + 2.8).filter(Number.isFinite);
-  if (!targets.length) return;
+  const particles = replayParticles(group);
+  if (!particles.length) return;
+  const targets = particles.map(p => p.target);
   const bins = [...svg.querySelectorAll('.mc-bin')];
-  const binWidth = bins.length ? Math.max(4, Number(bins[0].getAttribute('width')) || 8) : 8;
   const sorted = [...targets].sort((a, b) => a - b);
   const sourceX = sorted[sorted.length >> 1];
   const sourceY = TOP - 36;
@@ -50,22 +65,13 @@ function startRun(group) {
   canvas.setAttribute('aria-hidden', 'true');
   chart.append(canvas);
   const ctx = canvas.getContext('2d');
+  if (!ctx) { canvas.remove(); return; }
 
   const phone = matchMedia('(max-width: 600px)').matches;
-  const total = phone ? 300 : 680;
-  // Landing times follow the replay: sparse at first, densest mid-run, every
-  // scenario down by the time the replay's last particle lands. Flights take
-  // 1.1–1.6 s, so the pour opens well before the first bar starts to rise.
-  const plan = Array.from({length: total}, () => {
-    const u = Math.random();
-    const land = FIRST_LAND + (LAST_LAND - 120 - FIRST_LAND) * (u < .5 ? Math.sqrt(u / 2) : 1 - Math.sqrt((1 - u) / 2));
-    const flight = 1500 - 380 * ((land - FIRST_LAND) / (LAST_LAND - FIRST_LAND)) + rand(-110, 110);
-    return {launch: Math.max(0, land - flight), flight};
-  }).sort((a, b) => a.launch - b.launch);
+  const plan = rainPlan(particles, phone);
   const balls = [], splashes = [];
-  let next = 0, elapsed = 0, last = performance.now(), ending = false, endAt = 0, frame = 0, frames = 0, scale = 1;
-
-  const run = {stop() { if (!ending) { ending = true; endAt = elapsed; } }};
+  let next = 0, elapsed = 0, frame = 0, frames = 0, scale = 1;
+  const run = {sources: new Set(particles.map(p => p.node)), stop: cleanup};
   runs.set(group, run);
 
   function barAt(x) {
@@ -76,17 +82,11 @@ function startRun(group) {
     return null;
   }
   const surfaceAt = x => barAt(x)?.y ?? BOTTOM;
-  function launch({flight}) {
-    const target = targets[(Math.random() * targets.length) | 0] + rand(-binWidth * .45, binWidth * .45);
-    const T = flight / 1000;
+  function launch({launch, flight, target}) {
     const x0 = sourceX + rand(-5, 5), y0 = sourceY + rand(-4, 4);
-    const drop = BOTTOM - 40 - y0;              // aim for the body of the chart
-    // Leave the pour point already moving down so the stream flows instead
-    // of hanging at the apex; gravity bends each path into its arc.
-    const vy = .38 * drop / T, g = 2 * (drop - vy * T) / (T * T);
     balls.push({
-      x: x0, y: y0, vx: (target - x0) / T, vy, g,
-      r: rand(phone ? 2.3 : 1.6, phone ? 3.4 : 2.7), tone: rand(.55, 1), life: 1, state: 'fly', bounced: false
+      x: x0, y: y0, x0, y0, target, launch, flight, vx: 0, vy: 0,
+      r: rand(phone ? 2.3 : 1.6, phone ? 3.4 : 2.7), tone: rand(.55, 1), life: 1, state: 'fly'
     });
   }
   function resize() {
@@ -100,16 +100,16 @@ function startRun(group) {
     ctx.setTransform(dpr * scale, 0, 0, dpr * scale, dpr * ox, dpr * oy);
   }
   resize();
-  const paused = () => /resume/i.test(playButton?.textContent || '');
 
-  function tick(now) {
-    if (!canvas.isConnected || !on()) return cleanup();
-    const dt = Math.min(0.05, (now - last) / 1000);
-    last = now;
-    if (paused()) { frame = requestAnimationFrame(tick); return; }
-    elapsed += dt * 1000;
+  function tick() {
+    if (!canvas.isConnected || !group.isConnected || !group.childElementCount || !on() || reduced() || document.hidden) return cleanup();
+    const time = replayElapsed(particles);
+    // The native Web Animations clock freezes on pause and advances on resume.
+    if (time === null || time === elapsed) { frame = requestAnimationFrame(tick); return; }
+    const dt = Math.max(0, Math.min(0.05, (time - elapsed) / 1000));
+    elapsed = time;
     if (++frames % 30 === 0) resize();
-    if (!ending) while (next < plan.length && plan[next].launch <= elapsed) launch(plan[next++]);
+    while (next < plan.length && plan[next].launch <= elapsed) launch(plan[next++]);
 
     ctx.save();
     ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -118,7 +118,7 @@ function startRun(group) {
     const px = 1 / scale;
 
     // The pour point: a soft bead that breathes while scenarios leave it.
-    const pouring = !ending && next < plan.length;
+    const pouring = next < plan.length;
     const glow = pouring ? 1 : Math.max(0, 1 - (elapsed - (plan.at(-1)?.launch || 0)) / 400);
     if (glow > 0) {
       const halo = ctx.createRadialGradient(sourceX, sourceY, 0, sourceX, sourceY, 16 * px);
@@ -134,14 +134,16 @@ function startRun(group) {
       const b = balls[i];
       const r = b.r * px;
       if (b.state === 'fly') {
-        b.vy += b.g * dt; b.x += b.vx * dt; b.y += b.vy * dt;
-        const floor = surfaceAt(b.x);
-        if (b.y >= floor - r) {
-          b.y = floor - r;
-          if (!b.bounced && b.vy > 90) {
-            b.bounced = true; b.vy = -b.vy * .2; b.vx *= .25;
-            splashes.push({x: b.x, y: floor, age: 0, w: Math.min(1, b.vy / -40), bar: floor < BOTTOM ? barAt(b.x) : null});
-          } else { b.state = 'melt'; }
+        const t = Math.max(0, Math.min(1, (elapsed - b.launch) / b.flight));
+        const priorX = b.x, priorY = b.y, floor = surfaceAt(b.target);
+        // Arc to the actual representative outcome, even as its bar rises.
+        b.x = b.x0 + (b.target - b.x0) * t;
+        b.y = b.y0 + (floor - r - b.y0) * (.38 * t + .62 * t * t);
+        b.vx = dt ? (b.x - priorX) / dt : 0;
+        b.vy = dt ? (b.y - priorY) / dt : 0;
+        if (t >= 1) {
+          b.state = 'melt';
+          splashes.push({x: b.target, y: floor, age: 0, w: 1, bar: floor < BOTTOM ? barAt(b.target) : null});
         }
         // A short comet tail along the arc, only while the ball descends.
         if (b.vy > 0) {
@@ -156,7 +158,6 @@ function startRun(group) {
         b.life -= dt * 4;
         b.y = surfaceAt(b.x) - r * Math.max(0, b.life);
       }
-      if (ending) b.life -= dt * 3;
       if (b.life <= 0) { balls.splice(i, 1); continue; }
       ctx.fillStyle = tint(b.tone * Math.min(1, b.life));
       ctx.beginPath(); ctx.arc(b.x, b.y, r * (b.state === 'melt' ? .6 + .4 * b.life : 1), 0, Math.PI * 2); ctx.fill();
@@ -177,14 +178,13 @@ function startRun(group) {
       ctx.beginPath(); ctx.moveTo(s.x - half, s.y - .5 * px); ctx.lineTo(s.x + half, s.y - .5 * px); ctx.stroke();
     }
 
-    if (ending && ((!balls.length && !splashes.length) || elapsed - endAt > 600)) return cleanup();
     frame = requestAnimationFrame(tick);
   }
   function cleanup() {
     cancelAnimationFrame(frame);
     canvas.remove();
     group.classList.remove('rx-poured');
-    runs.delete(group);
+    if (runs.get(group) === run) runs.delete(group);
   }
   // The overlay carries the motion; the representative dots stay in the DOM
   // (they drive the bars) but are no longer drawn twice.
@@ -199,9 +199,11 @@ function watch(group) {
   if (watched.has(group)) return;
   watched.add(group);
   new MutationObserver(() => {
-    if (!on()) return;
-    if (group.childElementCount && !runs.has(group)) startRun(group);
-    else if (!group.childElementCount) runs.get(group)?.stop();
+    const previous = runs.get(group);
+    if (!on() || reduced() || document.hidden || !group.childElementCount) { previous?.stop(); return; }
+    // Skip followed immediately by Replay can replace particles in one batch.
+    if (previous && [...group.children].some(node => !previous.sources.has(node))) previous.stop();
+    if (!runs.has(group)) startRun(group);
   }).observe(group, {childList: true});
   if (group.childElementCount) startRun(group);
 }

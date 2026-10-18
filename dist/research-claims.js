@@ -1,3 +1,4 @@
+import {calculateCurrentCapitalScenario} from './current-capital-presets.js';
 // Standalone dated capital allocations for the October 17 research operating cases.
 // This module never computes operating EV, fetches prices, or mutates raw filings.
 // A conditional allocation is not a complete claim appraisal or current capital observation.
@@ -124,6 +125,16 @@ export function researchPreferredDividendSchedule(discountRate=.0625){
  return rows.sort((a,b)=>a.date.localeCompare(b.date)).map(row=>({...row,presentValue:row.amount/(1+discountRate)**((Date.parse(row.date)-Date.parse('2026-06-30'))/(365.25*86400000))}));
 }
 export function calculateResearchBridge(operatingCase,operatingEV,options={}){
+ // Opt-in current capital stays separate from every frozen source-date gate.
+ // Invalid supplied scenarios fail closed; never fall back to old economics.
+ if(Object.prototype.hasOwnProperty.call(operatingCase||{},'currentCapitalScenario')){
+  const scenario=operatingCase.currentCapitalScenario;
+  if(scenario?.ticker!==operatingCase.ticker)throw Error('Capital scenario belongs to a different company.');
+  if(options.outputCurrency&&options.outputCurrency!==operatingCase.currency)throw Error('No verified FX mapping: retain native reporting-currency output.');
+  if(options.securityBasis&&options.securityBasis!=='ordinary-common')throw Error('No verified alternate-security mapping: retain ordinary/common-share output.');
+  const result=calculateCurrentCapitalScenario(scenario,{enterprise:operatingEV,currency:operatingCase.currency,date:options.calculationDate||originOf(operatingCase),status:operatingCase.timing?.mode==='as-of-scenario'?'scenario':'origin'});
+  return {...result,ticker:operatingCase.ticker,discountOrigin:originOf(operatingCase),informationAsOf:operatingCase.informationAsOf,referenceDate:scenario.asOf,sources:scenario.sources||[],unresolved:scenario.unresolved||[],provenance:operatingCase.currentCapitalProvenance||null};
+ }
  const d=researchBridgeDefinition(operatingCase?.ticker);if(!d)throw Error('No source-dated research bridge for this company.');
  if(!finite(operatingEV))throw Error('Operating EV must be finite; negative values are supported.');
  if(operatingCase.currency!==d.currency)throw Error('Operating EV currency must match the dated capital-reference currency.');
@@ -199,6 +210,7 @@ export function calculateResearchBridge(operatingCase,operatingEV,options={}){
  return {status:'conditional',eligible:true,modelId:`${d.ticker}-${d.bridgeVersion||RESEARCH_BRIDGE_VERSION}`,ticker:d.ticker,currency:d.currency,moneyUnit:'millions',operatingEV,enterprise:operatingEV,equity,rawPerShare,perShare:rawPerShare,flooredPerShare:Math.max(0,rawPerShare),equityFloor:Math.max(0,equity),allocationShares:shares,basicShares:d.shares,referenceDate:d.referenceDate,capitalReferenceDate:d.referenceDate,shareReferenceDate:d.shareDate,discountOrigin:origin,calculationDate,informationAsOf:d.informationAsOf,basisMismatch,classification:d.classification,claimCompleteness:d.claimCompleteness,securityBasis:d.shareBasis,rows,dividends,warrantClaim,assetTotal:sum('asset'),claimTotal:sum('claim'),warnings,unresolved:[...d.unresolved],sources:sourcesUsed,inputs:values,optionDefinitions:d.optionDefinitions,sourceCorrection:d.sourceCorrection||null,...(d.ticker==='LITE'?{allocationLabel:values.convertiblePremiumClaim===0?'June-dated principal-only convertible stress':d.allocationLabel,reviewPath:d.reviewPath,claimValuationMethod:'fixed-june-market-claims',claimRepricedPerTrial:false}:{}),currentCapitalVerified:false,priceComparisonEligible:false};
 }
 export function researchBridgeSensitivity(operatingCase,operatingEV,options={}){
+ if(Object.prototype.hasOwnProperty.call(operatingCase||{},'currentCapitalScenario'))return []; // Legacy option variants do not describe this separate scenario.
  const d=researchBridgeDefinition(operatingCase?.ticker);if(!d)return [];
  const variants=[['Source-date reference',{}],['No credit for separately listed investment assets',{assetValueFactor:0}]];
  if(d.ticker==='GOOG')variants.push(['Minimum preferred conversion',{conversionCase:'minimum'}],['Preferred liquidation proxy',{preferredMethod:'liquidation-proxy'}],['Noncurrent investment value: 25% haircut',{noncurrentInvestmentValue:145587*.75}],['Current equity: 25% haircut',{currentEquityHaircut:.25}]);

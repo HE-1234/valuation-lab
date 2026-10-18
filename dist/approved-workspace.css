@@ -242,3 +242,15 @@ body input:focus,body select:focus,body textarea:focus,.guided-screen .workspace
 /* Evidence can live outside the editor; retain readable disclosure spacing. */
 .contextual-evidence-content .history-years>summary{display:flex;flex-wrap:wrap;align-items:center;gap:10px;min-height:44px;line-height:1.5}
 .contextual-evidence-content .history-years>summary>span:first-child{flex:1 1 10em;min-width:0}
+
+/* Optional independent margin phases follow the document flow in every theme. */
+.margin-phase-controls{margin:1rem 0;padding:1rem 0;border-block:1px solid var(--border,#7774)}
+.margin-phase-controls>label{display:block;font-weight:600;margin-bottom:.4rem}
+.margin-phase-controls>select{width:100%;max-width:100%}
+.margin-phase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+.margin-phase-grid label{display:flex;flex-direction:column;gap:.35rem;font-size:.85rem;min-width:0}
+.margin-phase-grid input{width:100%;min-width:0;box-sizing:border-box}
+.margin-path-visual{margin-block:1.25rem;min-width:0;color:inherit}
+.margin-path-visual h3{font-size:1rem}
+.margin-path-chart{display:block;width:100%;height:auto;overflow:visible}
+@media(max-width:420px){.margin-phase-grid{grid-template-columns:1fr}}

@@ -6,8 +6,8 @@ const root = document.documentElement;
 const on = () => root.dataset.skin === 'report';
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Fixed to the field's precision, without trailing zeros: 12, 2.25, 9.5.
-const fmt = (v, dec) => String(Number(Number(v).toFixed(dec)));
-const decimals = step => (String(step).split('.')[1] || '').length;
+const fmt = (v, dec) => { const n = Number(v); return Number.isInteger(dec) && dec >= 0 && dec <= 100 ? String(Number(n.toFixed(dec))) : String(n); };
+const decimals = step => { const [mantissa, exponent = '0'] = String(step).toLowerCase().split('e'); return Math.max(0, (mantissa.split('.')[1] || '').length - Number(exponent)); };
 
 /* ---------- floating value bubble (slider drags and number scrubbing) ---------- */
 let bubble, bubbleTimer;
@@ -58,14 +58,14 @@ function scrubSpec(input) {
     const step = pct ? 0.25 : 10 ** Math.max(0, Math.floor(Math.log10(Math.abs(start) || 1)) - 2);
     const digits = Number(input.dataset.displayDigits) || 0;
     return {
-      start, step, dec: pct ? 2 : 0, min: -Infinity, max: Infinity, unit: pct ? '%' : '',
+      start, step, dec: Math.max(pct ? 2 : 0, decimals(start)), min: -Infinity, max: Infinity, unit: pct ? '%' : '',
       settle: () => { input.value = Number(input.dataset.raw).toLocaleString('en-US', {maximumFractionDigits: digits}); }
     };
   }
   return {
     start: Number(input.value) || 0,
     step: Number(input.step) || 1,
-    dec: decimals(input.step || 1),
+    dec: Math.max(decimals(input.step || 1), decimals(Number(input.value) || 0)),
     min: input.min === '' ? -Infinity : Number(input.min),
     max: input.max === '' ? Infinity : Number(input.max),
     unit: unitFor(input),
@@ -90,7 +90,7 @@ document.addEventListener('pointerdown', e => {
     if (!moved) { moved = true; root.classList.add('rx-scrubbing'); input.classList.add('rx-active'); }
     const perStep = ev.shiftKey ? 2 : 7;
     const next = Math.min(max, Math.max(min, start + Math.round(dx / perStep) * step));
-    const text = String(Number(next.toFixed(dec)));
+    const text = fmt(next, dec);
     const r = input.getBoundingClientRect();
     showBubble(r.left + r.width / 2, r.top, `${fmt(next, dec)}${unit}`, next !== start ? signed(next - start, dec) : '');
     if (input.value !== text) {
@@ -252,11 +252,21 @@ function currentCompany() {
 }
 
 /* ---------- maturity-year steppers and ramp ----------
-   Each "in year N" field gets − / + buttons. The tile gets a ten-year ramp:
+   Each "in year N" field gets − / + buttons. The tile gets a full-horizon ramp:
    flat through any hold years, converging until the maturity year, then
    holding. Clicking a year on the ramp makes it the maturity year. All
    changes go through the original inputs. */
-const HORIZON = 10;
+// Revenue, margin and capital have independent calendars. Read the existing
+// controls; this visual layer never sets the calculation horizon itself.
+function timingHorizon(tile) {
+  const scope = tile.closest('.guided-screen') || document;
+  const selectors = '#growth-maturity, input[data-operating-timing$="MaturityYears"], input[data-margin-control="terminalYear"], input[data-capital-control="terminalYear"]';
+  const years = [...scope.querySelectorAll(selectors)].map(input => Number(input.value)).filter(year => Number.isInteger(year) && year >= 1 && year <= 30);
+  return Math.max(10, ...years);
+}
+function timingProgress(year, hold, maturity) {
+  return year <= hold ? 0 : Math.max(0, Math.min(1, (year - hold) / (maturity - hold)));
+}
 function setYear(input, year) {
   const min = Number(input.min) || 0, max = Number(input.max) || 30;
   const next = Math.min(max, Math.max(min, Math.round(year)));
@@ -275,30 +285,38 @@ function paintTiming(tile) {
   for (const input of tile.querySelectorAll('input[data-operating-timing]')) {
     const v = Number(input.value);
     const field = input.parentElement;
-    field.querySelector('.rx-step-down')?.toggleAttribute('disabled', v <= (Number(input.min) || 0));
-    field.querySelector('.rx-step-up')?.toggleAttribute('disabled', v >= (Number(input.max) || 30));
+    const down = field.querySelector('.rx-step-down'), up = field.querySelector('.rx-step-up');
+    const atMin = v <= (Number(input.min) || 0), atMax = v >= (Number(input.max) || 30);
+    if (down && down.disabled !== atMin) down.disabled = atMin;
+    if (up && up.disabled !== atMax) up.disabled = atMax;
   }
   const ramp = tile.querySelector(':scope > .rx-ramp');
   if (!ramp || !maturity) return;
-  const h = Math.max(0, Number(hold?.value) || 0);
-  const n = Math.max(1, Number(maturity.value) || 1);
-  const span = Math.max(1, Math.min(n, HORIZON) - h);
-  ramp.querySelectorAll('i').forEach((bar, k) => {
-    const y = k + 1;
-    const t = y <= h ? 0 : Math.min(1, (y - h) / span);
-    bar.style.setProperty('--h', `${Math.round(28 + 72 * t)}%`);
-    bar.classList.toggle('is-hold', y <= h);
-    bar.classList.toggle('is-ramp', y > h && y < n);
-    bar.classList.toggle('is-target', y === n);
+  const h = hold ? Number(hold.value) : 0, n = Number(maturity.value);
+  const valid = (!hold || hold.value.trim() !== '') && maturity.value.trim() !== '' && Number.isInteger(h) && Number.isInteger(n) && h >= 0 && n > h && n <= 30;
+  const horizon = timingHorizon(tile), bars = ramp.querySelector('.rx-ramp-bars');
+  if (ramp.dataset.horizon !== String(horizon)) {
+    ramp.dataset.horizon = String(horizon);
+    bars.style.gridTemplateColumns = `repeat(${horizon}, minmax(0, 1fr))`;
+    bars.innerHTML = Array.from({length: horizon}, (_, k) => `<i data-year="${k + 1}" title="Year ${k + 1}"></i>`).join('');
+    ramp.querySelector('.rx-ramp-axis > span:last-child').textContent = `Y${horizon}`;
+  }
+  if (bars.hidden === valid) bars.hidden = !valid;
+  bars.querySelectorAll('i').forEach((bar, k) => {
+    const y = k + 1, height = `${Math.round(28 + 72 * (valid ? timingProgress(y, h, n) : 0))}%`;
+    if (bar.style.getPropertyValue('--h') !== height) bar.style.setProperty('--h', height);
+    for (const [name, selected] of [['is-hold', valid && y <= h], ['is-ramp', valid && y > h && y < n], ['is-target', valid && y === n]]) {
+      if (bar.classList.contains(name) !== selected) bar.classList.toggle(name, selected);
+    }
   });
   const lead = h ? `Holds ${h} ${h === 1 ? 'year' : 'years'}, ` : '';
-  ramp.querySelector('.rx-ramp-note').textContent = n > HORIZON
-    ? `${lead}${lead ? 'matures' : 'Matures'} in year ${n}, after the ${HORIZON}-year forecast`
-    : `${lead}${lead ? 'converges' : 'Converges'} by year ${n}, then holds`;
+  const note = valid ? `${lead}${lead ? 'converges' : 'Converges'} by year ${n}, then holds · ${horizon}-year forecast` : 'Enter valid whole years to preview timing';
+  const label = ramp.querySelector('.rx-ramp-note');
+  if (label.textContent !== note) label.textContent = note;
 }
 function enhanceTiming() {
   for (const tile of document.querySelectorAll('.guided-screen .operating-timing-controls')) {
-    if (tile.querySelector('.rx-step')) continue;
+    if (tile.querySelector('.rx-step')) { paintTiming(tile); continue; }
     for (const input of tile.querySelectorAll('input[data-operating-timing]')) {
       const label = input.parentElement.querySelector('label')?.textContent?.trim() || 'year';
       const step = (cls, sign, name) => {
@@ -318,7 +336,7 @@ function enhanceTiming() {
       const ramp = document.createElement('div');
       ramp.className = 'rx-el rx-ramp';
       ramp.setAttribute('aria-hidden', 'true');
-      ramp.innerHTML = `<div class="rx-ramp-bars">${Array.from({length: HORIZON}, (_, k) => `<i data-year="${k + 1}" title="Year ${k + 1}"></i>`).join('')}</div><div class="rx-ramp-axis"><span>Y1</span><span class="rx-ramp-note"></span><span>Y${HORIZON}</span></div>`;
+      ramp.innerHTML = '<div class="rx-ramp-bars"></div><div class="rx-ramp-axis"><span>Y1</span><span class="rx-ramp-note"></span><span></span></div>';
       ramp.addEventListener('click', e => {
         const bar = e.target.closest('i[data-year]');
         if (bar) setYear(maturity, Math.max(Number(bar.dataset.year), (Number(hold?.value) || 0) + 1));

@@ -149,3 +149,33 @@ Every model and reading view now scrolls with the document. The application no l
 Real selection handlers now ship 280 ms opacity/8px panel transitions and drawing tab underlines. Input edits keep controls immediately usable and add 280 ms local result/chart feedback, without re-entering the editor. New actions, route departure, backgrounding and reduced-motion changes cancel motion safely. The six-second simulation replay, calculations, complete research presets, exact values, saved drafts and Undo are unchanged.
 
 `SCREEN-WORKSPACE.md` records the updated flow, accessibility and motion contracts. Validation includes the original 800 tests plus 19 focused tests; static document-renderer approximations remain distinct from browser screenshots. Native browser layout, motion painting, touch and screen-reader verification are still limited by the existing denied browser route, which was not retried or bypassed.
+
+
+## Dated capital scenarios
+
+Annual → Claims includes explicit researched October 17 capital scenarios for AAOI and NBIS. Use the complete **Use research** action or **Use researched capital scenario** to load them; the latter retains annual operating edits and has full Undo. Existing saved drafts retain their prior interpretation until loaded explicitly.
+
+AAOI uses a conditional option-inclusive approximation with separately editable current cash, current shares, existing awards and option assumptions. Option claim values reprice in each simulation draw. NBIS exposes its pre-claim diagnostic without pretending unknown senior claims are zero or presenting the limited-liability floor as stock fair value. See [source-linked explanation](dist/data/current-capital-scenarios-2026-10-17.html).
+
+The dated transaction engine pairs completed equity issuance with proceeds and completed conversion with claim removal. Future fundraising shares cannot be added again to the default negative-FCFF valuation. Raw forecasts remain frozen. These are explicit analyst estimates and simplifying claim models, not reported current balances or live quotes.
+
+
+## Revenue-growth horizons
+
+The Year-by-year mode (formerly Annual, same `#renewed` route) now supports explicit 10/15/20-year revenue-stability scenarios. The selector generates an editable analyst sensitivity; it does not claim management supplied a twenty-year forecast. Guided uses broad assumptions to generate paths, whereas Year-by-year exposes each forecast year's inputs. Their assumptions are not automatically synchronized.
+
+Growth maturity and calculation length are different. A 10-year revenue endpoint does not discard a retained 15-year margin/investment schedule. Margins, tax and WACC retain calendar-year timing; growth-related investment amounts respond under a disclosed scenario policy. Original cases and saved drafts are unchanged until selected, and full Undo restores the preceding draft.
+
+A longer growth runway can raise or lower value. Inspect absolute revenue scale and required investment, not just percentage growth. The source's gross-capex/working-capital/customer-advance components remain original evidence and do not reconcile automatically to generated rows.
+
+
+## Optional margin phases
+
+Profitability can follow a starting → interim → hold → final path, with its own calendar. Both Guided and Year-by-year show actual yearly margin values. The terminal target is the sustainable long-run assumption; an interim peak is optional, not required. Changing revenue maturity does not stretch margin timing. See [method and source notes](MARGIN-PATHS.md).
+
+Disabled/default paths keep their existing values. Guided returns to its simple transition using edited inputs; Year-by-year manual mode retains explicit rows. Full Undo restores the prior case. Active-phase Monte Carlo holds the starting margin fixed and shifts the future targets together.
+
+
+## Annual Report design and capital diagnostics
+
+The user-approved Annual Report UI is the current presentation baseline. See [integration provenance and modeling notes](UI-INTEGRATION.md). Guided optionally supports independently authored early/later incremental sales-to-capital assumptions; Year-by-year retains explicit investment schedules. Return diagnostics are labeled marginal proxies unless a reliable invested-capital stock is supplied.

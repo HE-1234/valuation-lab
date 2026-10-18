@@ -1,0 +1,64 @@
+{
+  "asOf": "2026-10-17",
+  "status": "Conditional cash/stub and intrinsic-claim diagnostic only; NOT ready to replace blocked research fair-value default",
+  "phasing": "Actual July refund and September property occur before October17. Remaining H2 cap/CFO excluding those events split109/184 elapsed,75/184 future; CFO envelope assumed includes refund.",
+  "stubPolicy": "H1 expense/income proxies scaled75/184; SBC9.254,interest expense1.790,interest income4.985 assumed repeat H2. Assumed zero incremental tax benefit from interest reversal, zero other nonoperating adjustment.",
+  "claims": "June bank58.915/vendor33.940/principal124.925 held constant; post-Aug20 basic-share changes excluding completed ATM assumed0; all August1.719518 awards vest. Full warrant cap, intrinsic-only max(principal,conversion value). No future fundraising shares or funding-deficit deduction.",
+  "cashReserve": {
+    "central": 0,
+    "reason": "Cash is included with all operating investment charged in DCF; show100/150 sensitivity if cash classified as permanently unavailable, not as extra cash-burning capex."
+  },
+  "cases": [
+    {
+      "name": "lower_cash",
+      "H2CapitalCashAssumption": 800,
+      "H2CFOAssumption": -125,
+      "estimatedCurrentCash": 530.6920924117389,
+      "preDateCapex": 484.8302195652174,
+      "preDateCFO": -72.21467391304347,
+      "remainingCapitalCash": 315.1697804347826,
+      "remainingCFO": -52.785326086956516,
+      "remainingSBCExpense": 3.772010869565217,
+      "remainingInterestExpenseProxy": 0.7296195652173912,
+      "remainingInterestIncomeProxy": 2.031929347826087,
+      "remainingEconomicFCFF": -373.029427173913,
+      "operatingEV": 3482.0575869772188,
+      "commonPriceIntrinsicOnly": 39.72671344095677,
+      "yearEndCashBeforeOtherChanges": 162.73698588999986
+    },
+    {
+      "name": "central",
+      "H2CapitalCashAssumption": 625,
+      "H2CFOAssumption": -75,
+      "estimatedCurrentCash": 663.9801358899998,
+      "preDateCapex": 381.16174130434786,
+      "preDateCFO": -42.59510869565217,
+      "remainingCapitalCash": 243.83825869565217,
+      "remainingCFO": -32.40489130434782,
+      "remainingSBCExpense": 3.772010869565217,
+      "remainingInterestExpenseProxy": 0.7296195652173912,
+      "remainingInterestIncomeProxy": 2.031929347826087,
+      "remainingEconomicFCFF": -281.31747065217394,
+      "operatingEV": 3571.41553222512,
+      "commonPriceIntrinsicOnly": 41.94726552718747,
+      "yearEndCashBeforeOtherChanges": 387.7369858899998
+    },
+    {
+      "name": "higher_cash",
+      "H2CapitalCashAssumption": 450,
+      "H2CFOAssumption": -25,
+      "estimatedCurrentCash": 797.2681793682609,
+      "preDateCapex": 277.49326304347824,
+      "preDateCFO": -12.975543478260867,
+      "remainingCapitalCash": 172.50673695652173,
+      "remainingCFO": -12.024456521739129,
+      "remainingSBCExpense": 3.772010869565217,
+      "remainingInterestExpenseProxy": 0.7296195652173912,
+      "remainingInterestIncomeProxy": 2.031929347826087,
+      "remainingEconomicFCFF": -189.60551413043476,
+      "operatingEV": 3660.773477473021,
+      "commonPriceIntrinsicOnly": 44.14388122113695,
+      "yearEndCashBeforeOtherChanges": 612.73698589
+    }
+  ]
+}

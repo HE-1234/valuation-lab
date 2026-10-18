@@ -1,3 +1,4 @@
+import {getCurrentCapitalPreset} from './current-capital-presets.js';
 // Research presets are a versioned overlay. Frozen source cases and both engines
 // remain unchanged; a full preset is applied only to a fresh or explicitly loaded draft.
 import {researchDraftFor,restoreResearchDraft,researchDraftIssues} from './research-model.js';
@@ -41,6 +42,8 @@ export function studioResearchDraft(preset,bundle){
  draft.bridgeInputs=structuredClone(preset.bridgeInputs);
  if(preset.timingDefaults)draft.timing=structuredClone(preset.timingDefaults);
  if(preset.bridgeReviewVersion)draft.bridgeReviewVersion=preset.bridgeReviewVersion;
+ const capital=getCurrentCapitalPreset(preset.ticker);
+ if(capital){draft.currentCapitalScenario=structuredClone(capital.scenario);draft.currentCapitalProvenance=structuredClone(capital.provenance);draft.timing=structuredClone(capital.timing);}
  draft.researchSimulationConfig=validateResearchSimulationConfig(preset.simulationConfig);
  draft.researchPreset={version:bundle.version,presetId:preset.presetId,asOf:bundle.asOf,classification:bundle.classification,
   rationale:structuredClone(preset.rationale),parameterRationale:structuredClone(preset.parameterRationale||{}),simulationRationale:structuredClone(preset.simulationRationale||{}),
@@ -63,7 +66,7 @@ export function researchPresetStatus(draft,bundle){
  if(!draft?.researchPreset)return 'Saved annual inputs retained · complete research preset available';
  if(draft.researchPreset.version!==bundle.version||draft.researchPreset.presetId!==preset.presetId)return 'Saved preset version retained · newer research available';
  const baseline=studioResearchDraft(preset,bundle);
- const fields=['annual','terminal','timing','bridgeInputs','bridgeReviewVersion','researchSimulationConfig','forecastHorizonYears','capitalPolicy'];
+ const fields=['annual','terminal','timing','bridgeInputs','bridgeReviewVersion','researchSimulationConfig','forecastHorizonYears','capitalPolicy','currentCapitalScenario','currentCapitalProvenance'];
  const changed=fields.some(field=>JSON.stringify(draft[field])!==JSON.stringify(baseline[field]));
  return changed?'Your changes · based on the complete research preset':'Complete research preset · annual model';
 }

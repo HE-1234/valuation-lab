@@ -2,6 +2,16 @@
 
 A dated record of what was studied, what changed, and what still needs checking. The aim is a clearer valuation instrument, with evidence close to the assumptions and the core model preserved.
 
+## 2026-10-18, 00:49 UTC · Name the task and expose the growth horizon
+
+Read the written NN/G articles [Match Between the System and the Real World](https://www.nngroup.com/articles/match-system-real-world/) and [Recognition and Recall](https://www.nngroup.com/articles/recognition-and-recall/). This was an article review, not completion of a course or watching a video.
+
+Applied lesson: use the user's task language instead of an implementation label. “Year-by-year” explains the former “Annual” mode without implying a one-year horizon or superior accuracy. A short adjacent explanation distinguishes its individually editable forecasts from Guided's broader assumptions.
+
+The 10/15/20 selector is visible beside the inputs, along with the original path, selected revenue-stability year, retained near-term period and actual cash-flow schedule length. Users should not have to remember whether “15” moves revenue growth, profitability, or every timeline. Separate captions explain that margins and existing investment schedules retain their calendar-year timing.
+
+A horizon change immediately creates a clearly labeled analyst sensitivity and supports full Undo. Existing themes, input focus, historical context, whole-page scrolling and reduced-motion rules are retained. The approved visual design is preserved; no decorative redesign or new animation library is introduced. Static document rendering and shipped-handler tests remain distinct from unavailable native-browser verification.
+
 ## 2026-10-17, 22:37 UTC · The approved ivory and teal interface
 
 ### Approved source and implementation

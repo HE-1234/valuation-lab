@@ -28,8 +28,8 @@ test('renewed workspace: fresh default and all fourteen companies use complete r
   assert.deepEqual(d.terminal,{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},c.ticker);
   assert.equal(h.root.querySelectorAll('[data-research-input="annual"]').length,c.annual.length*5,c.ticker);
   assert.ok(h.get('.research-value'),c.ticker+' operating value missing');assert.ok(Number.isFinite(calculateResearchOperating(d).enterprise),c.ticker);
-  assert.match(h.get('#research-results').textContent,/Forecast-origin operating value/);
-  assert.equal(h.get('.research-date-line').querySelector('time').getAttribute('datetime'),c.valuationTiming.discountOrigin);
+  assert.match(h.get('#research-results').textContent,d.timing.mode==='as-of-scenario'?/As-of operating scenario/:/Forecast-origin operating value/);
+  assert.equal(h.get('.research-date-line').querySelector('time').getAttribute('datetime'),d.timing.mode==='as-of-scenario'?d.timing.asOf:c.valuationTiming.discountOrigin);
   if(c.anchor.fiscalCalendarCaution)assert.ok(h.get('#research-editor').textContent.includes(c.anchor.fiscalCalendarCaution),c.ticker+' fiscal caution missing');
   assert.ok(h.get('#research-editor').textContent.includes(c.anchor.classification),c.ticker+' anchor classification missing');
  }
@@ -123,8 +123,9 @@ test('renewed workspace: blocked local storage retains editable per-company stat
  h.action('export');assert.equal(h.downloads[0].value.draft.annual[0].revenue,567890);assert.match(h.get('#research-save-state').textContent,/Storage unavailable/);
 });
 
-test('renewed workspace: every company renders its actual equity option controls and required blanks remain unknown',async()=>{
- const h=await startResearchWorkspace();
+test('renewed workspace: original saved capital cases render their equity controls and required blanks remain unknown',async()=>{
+ const storage=new Map(['AAOI','NBIS'].map(ticker=>[key(ticker),JSON.stringify(researchDraftFor(company(ticker)))]));
+ const h=await startResearchWorkspace({storage});
  for(const c of h.library.companies){
   h.select(c.ticker);const definition=researchBridgeDefinition(c.ticker);
   for(const option of definition.optionDefinitions){
@@ -164,8 +165,9 @@ test('renewed workspace: export retains valid operating results when only timing
  }
 });
 
-test('renewed workspace: incomplete as-of timing preserves honest origin value and withholds equity',async()=>{
- const h=await startResearchWorkspace();
+test('renewed workspace: legacy incomplete as-of timing preserves honest origin value and withholds equity',async()=>{
+ const storage=new Map(['AAPL','AAOI','NBIS'].map(ticker=>[key(ticker),JSON.stringify(researchDraftFor(company(ticker)))]));
+ const h=await startResearchWorkspace({storage});
  for(const ticker of ['AAPL','AAOI','NBIS']){
   h.select(ticker);const original=displayedEV(h),origin=h.getState().draft.discountOrigin;
   h.change('#research-timing-mode','as-of-scenario');assert.equal(h.getState().draft.timing.stubFCFF,null);assert.equal(displayedEV(h),original);assert.equal(h.get('.research-equity-value'),null);
@@ -185,11 +187,11 @@ test('renewed workspace: runtime actions never read or overwrite legacy Studio a
  assert.ok(h.reads.every(name=>name.startsWith(RESEARCH_STORAGE_PREFIX)));assert.ok(h.writes.every(({key:name})=>name.startsWith(RESEARCH_STORAGE_PREFIX)));
 });
 
-test('renewed workspace: index initially shows only Annual model with coherent navigation and the legacy Studio retained',()=>{
+test('renewed workspace: index initially shows only Year-by-year with coherent navigation and the legacy Studio retained',()=>{
  const document=minimalDocument();document.root.innerHTML=read('index.html');
  const active=document.querySelectorAll('[data-tab]').filter(el=>el.classList.contains('active'));
  assert.equal(active.length,1);assert.equal(active[0].dataset.tab,'renewed');assert.equal(active[0].getAttribute('aria-current'),'page');
- assert.equal(document.querySelector('#breadcrumb').textContent,'Studio / Annual model');
+ assert.equal(document.querySelector('#breadcrumb').textContent,'Studio / Year-by-year');
  const pages=document.querySelectorAll('.page').filter(el=>!el.classList.contains('hidden')&&!el.hidden);assert.equal(pages.length,1);assert.equal(pages[0].id,'renewed');
  assert.ok(document.querySelector('#renewed-research-app'));assert.ok(document.querySelector('#guided-app'));assert.ok(document.querySelector('#current').classList.contains('hidden'));
  assert.equal(document.querySelector('[data-tab="current"]').textContent,'Guided valuation');assert.equal(document.querySelector('[data-tab="current"]').getAttribute('aria-controls'),'current');

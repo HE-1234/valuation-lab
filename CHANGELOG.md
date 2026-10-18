@@ -1,5 +1,47 @@
 # Change log
 
+## 2026-10-18 · User Annual Report redesign and capital-efficiency phases
+
+- Integrated the user's GitHub Annual Report UI (commit `7e211252e3adf87fed61fe3caddbe210a3b71127`) with the latest growth-horizon, margin-phase and claims functionality. The user-supplied skin CSS, palettes, font, loader and motion layer are preserved; theme chooser labels/swatches now match those editions.
+- Corrected decorative timing strips for independent 10–30-year forecasts, retained exact fractional values during number scrubbing, and bound simulation rain to native representative outcomes/playback rather than a second sampling clock.
+- Added optional independent early/later incremental sales-to-capital assumptions in Guided, with a separately timed terminal-consistent fade. Existing cases remain unchanged until selected. Monte Carlo uses the existing shared efficiency draw for both ratios.
+- Added live marginal-return proxy and investment diagnostics. Year-by-year keeps its direct investment schedule; no second investment deduction is introduced. Actual whole-company ROIC is withheld without a reliable opening invested-capital balance. Small/large ratios remain readable without false rounded zeros.
+- Preserved invalid-input gates, precise stored inputs, full Undo, original financial data, research provenance and public access. See `UI-INTEGRATION.md` for method and design provenance.
+
+Verification: final suite 1,140 tests, 1,138 passed, one unchanged missing-AAOI-raw-cache failure and one existing SEC-cache skip. Independent all-14-company default and seeded simulation captures match V32; all 72 existing data-file hashes are unchanged. Separate arithmetic checks cover 576 optional-capital paths, 160 direct-investment rows, invalid-state persistence and terminal continuity. Twenty-one labeled static desktop/phone captures cover all six user editions. Native-browser interaction is checked separately after publication; static captures are not browser screenshots.
+
+## 2026-10-18 · Optional interim margin and final fade
+
+- Added opt-in interim margin, arrival year, plateau/fade start, terminal margin and independent terminal-margin year in Guided and Year-by-year. Actual all-year margin charts show the generated path, including equal start/end levels with an interim peak.
+- Kept normalized/source starting margins and explicitly labeled the AAOI/NBIS unavailable-anchor proxy. Repeated edits preserve source/proxy provenance. Disabled/default cases retain their previous economics.
+- Profitability and revenue maturity remain independent. Margin-only extensions preserve existing revenue/capital/tax/WACC; manual annual margin edits remain explicit overrides. Primary Undo restores the full preceding phase edit.
+- Active-phase Monte Carlo keeps the starting margin fixed, shifts future targets, preserves manual offsets and excludes infeasible draws without clipping. Effective metadata describes the sampled curve.
+- Updated two pinned code signatures for intentional margin provenance/reset and effective-path numeric checks; frozen financial-data and numeric-oracle hashes are unchanged.
+
+
+Verification for the combined margin/horizon release: 1,080 full-suite checks, 1,078 passed, one unchanged missing external AAOI raw-cache failure and one existing cache skip. Independent comparisons preserve all 14 original Annual defaults and all 14 Guided drafts, including seeded simulation outputs for valid cases. Final invalid-input/reload/Undo regression checks passed 57/57, followed by 13/13 focused presentation checks. Nine horizon and nine margin desktop/phone static renders were inspected without observed overflow. These are document-renderer approximations; native browser, touch and animation recording remain unverified. Invalid or unfinished phase edits now withhold stale valuation and simulation results until repaired.
+
+## 2026-10-18 · Independent revenue-growth horizons
+
+- Renamed the user-facing Annual mode to Year-by-year, preserving routes, saved model identities and annual historical-table terminology. Added a concise distinction from Guided.
+- Added immediate 10/15/20-year revenue-stability scenarios with an explicit capital assumption and full Undo. Near-term revenue paths remain; later growth fades over the selected duration. It does not hold the initial growth rate flat for 20 years.
+- Kept calendar-year margins, taxes and discount rates separate. The explicit cash-flow schedule retains original economic years and any retained later economic assumptions, so growth stable in year 10 can coexist with a 15-year cash-flow schedule.
+- Added a versioned derived-draft path rather than weakening frozen-source restoration. Original research cases and saved v1 drafts retain their exact numbers until the user deliberately derives another path.
+- Growth requires investment: derived scenarios preserve spending floors, scale positive investment upward with sales and fund additional expansion under an explicit marginal sales/capital assumption. Added mature years use terminal-ROIC-compatible capital intensity. This is a sensitivity, not a rebuilt company capacity, maintenance or customer-advance budget.
+- Monte Carlo uses the same capital response on the current edited schedule before any investment multiplier. Original v1 seeded results remain unchanged; claim pricing, date/currency policies and stale-result protections remain.
+
+
+## 2026-10-18 · Dated capital and dilution scenarios (research cutoff October 17)
+
+- Added explicit current-capital and existing-share controls in Annual → Claims, with matching remaining-year timing and full load/edit Undo. Saved drafts are never silently replaced.
+- AAOI now has a selected conditional option-inclusive scenario: dated/estimated cash and current shares, existing award sensitivity, discounted note cash flows and a joint dilution-adjusted European approximation for note/warrant claims. Volatility, credit spread, risk-free proxy and warrant coverage are editable; each simulation draw reprices the claims. The reference estimate is about $40/share, not a claim of exact security fair value.
+- NBIS now displays a dynamic pre-claim diagnostic with current cash/share estimates. Its selected owned-build case has a negative residual even before unresolved debt/option claims; common fair value remains explicitly unresolved rather than represented as zero. Lower-capex alternatives can change that result.
+- Completed financing cash and ownership are matched. Future financing dilution is not added again to negative FCFF; existing awards and option claims have separate treatments. Invalid capital inputs withhold equity output without hiding valid operating forecasts.
+- Added a source-linked explanation at `dist/data/current-capital-scenarios-2026-10-17.html`. Original frozen forecasts, raw research and all other twelve company calculations remain unchanged. No account, API, audience or GitHub permission change.
+
+The AAOI claim approximation omits contract-specific early exercise, calls, make-whole, averaging, default and vesting paths. The NBIS diagnostic is not a complete security appraisal. Verification: full regression run 906 checks, 904 passed, one unchanged external AAOI raw-cache rebuild failure and one existing cache skip. Final affected UI checks passed 77/77; subsequent narrow control/style checks passed 40/40; final pure-model/integration checks passed 44/44. Independent 50-draw simulation replay and all other twelve company defaults/outputs match expectations. Native browser execution remains unverified; source-driven static desktop/phone review is a separate check.
+
+
 ## 2026-10-17, 23:30 UTC · Keep history open while editing
 
 - Guided now shows every available annual observation for the selected metric by default, with secondary measures under Related historical comparisons. Risk displays source-linked, dated WACC components instead of an empty summary; terminal growth and ROIC retain their economic/proxy limitations.
