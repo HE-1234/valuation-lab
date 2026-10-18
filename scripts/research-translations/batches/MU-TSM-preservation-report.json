@@ -1,0 +1,292 @@
+{
+  "scope": "MU and TSM evidence: five Traditional Chinese output batches only; no financial source/model/UI changes.",
+  "validation": {
+    "total_entries": 868,
+    "keys": "All exact keys and order preserved",
+    "edge_whitespace": "All exact leading and trailing whitespace preserved",
+    "numbers": "All numeric token multisets preserved, with no exceptions",
+    "canonical_reuse": "All five previously completed exact-message translations available at task start reused unchanged",
+    "formulas_urls": "Exact standalone formulas, URLs, query selectors and source IDs preserved; formula prefix preserved within translated TSM WACC and reinvestment commentary",
+    "financial_review": "No factual updates. Preserved native TWD nominal WACC and ADS conversion gates, TIFRS versus IASB IFRS distinction, cash-grant/net-capex reconciliation, refundable deposit claims, lease/dilution exclusions, and cyclical versus through-cycle assumptions. Acronyms retained or separated from generated camel-case labels; English plural suffixes retained for SCAs/CPUs."
+  },
+  "batches": [
+    {
+      "batch": "renewed-research-2026-10-17__evidence-MU-01.en.json",
+      "entries": 200,
+      "keys_exact": true,
+      "edge_whitespace_exact": true,
+      "numeric_token_multisets_exact": true,
+      "canonical_reused": 0,
+      "preserved_entries": {
+        "text.a9ab15414ee74cd58775": {
+          "source": "GAAP EBIT*(1-effective income tax rate)/average(equity+debt including finance leases-cash and all marketable investments)",
+          "reason": "Exact computational formula retained without altering operands or operators"
+        },
+        "text.3c08105352c5d3c74d0b": {
+          "source": "MU-FY26Q4-REMARKS",
+          "reason": "Exact raw machine/source identifier"
+        },
+        "text.b50e6e99ab86031f7acc": {
+          "source": "MU-FY26Q3-REMARKS",
+          "reason": "Exact raw machine/source identifier"
+        },
+        "text.4c9a1a56d7d55b95b2a2": {
+          "source": "Idaho ID2",
+          "reason": "Proper person or facility name retained"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-MU-02.en.json",
+      "entries": 200,
+      "keys_exact": true,
+      "edge_whitespace_exact": true,
+      "numeric_token_multisets_exact": true,
+      "canonical_reused": 0,
+      "preserved_entries": {
+        "text.a41eb74bb25f6c7dbfe3": {
+          "source": "Sanjay Mehrotra",
+          "reason": "Proper person or facility name retained"
+        },
+        "text.7abeeff91aca3fc642d5": {
+          "source": "Mark Murphy",
+          "reason": "Proper person or facility name retained"
+        },
+        "text.46029dca584a1578f9cb": {
+          "source": "Manish Bhatia / Scott DeBoer",
+          "reason": "Proper person or facility name retained"
+        },
+        "text.9ee88714b179b6639fd8": {
+          "source": "evidence-MU.html#sources",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.ab4468845ea45c19ffa5": {
+          "source": "gross capex - grants - D&A + change operating NWC",
+          "reason": "Exact computational formula retained without altering operands or operators"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-MU-03.en.json",
+      "entries": 97,
+      "keys_exact": true,
+      "edge_whitespace_exact": true,
+      "numeric_token_multisets_exact": true,
+      "canonical_reused": 4,
+      "preserved_entries": {
+        "text.73f77eacb7ad0323f297": {
+          "source": "evidence-MU.html#facts",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.880d82c5e620e318b4fb": {
+          "source": "latestAnnual",
+          "reason": "Exact raw machine/source identifier"
+        },
+        "text.36210be7a5aacfd63d53": {
+          "source": "evidence-MU.html#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.9cbd97dd00d5fb206062": {
+          "source": "grossCapitalCashSpending - governmentIncentiveCash - depreciationAmortization + changeCoreOperatingWorkingCapital",
+          "reason": "Exact computational formula retained without altering operands or operators"
+        },
+        "text.55b95085a7d60d5a572b": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-1#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.6b3ce8f6f489526e6a4d": {
+          "source": "evidence-MU.html?record=selected#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.2d28c7e7848a2ab73be2": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-2#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.7209db69895e430f9ee0": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-3#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.e4d6a7620a4b8444e082": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-4#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.e575b7074c3ec5ecc4e0": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-5#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.f921517bfec7f15c1a8b": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-6#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.1cd9da71dff58650f7e0": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-7#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.252df713879605ca82e7": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-8#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.bd98026497929300c130": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-9#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.18c2499e0da29f022a90": {
+          "source": "evidence-MU.html?record=selected-base-annual-row-10#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.752c4a9a23588fc1dba7": {
+          "source": "claims.json?record=companies%5Bticker%3DMU%5D#",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.cfd18b74e26a652b3861": {
+          "source": "FY2026 Form 10-K",
+          "reason": "Official SEC filing designation and fiscal-year label"
+        },
+        "text.ba608880f0e32dc1dbf8": {
+          "source": "MD&A",
+          "reason": "Standard financial disclosure acronym"
+        },
+        "text.7e6ba28d9c33f1c07ba9": {
+          "source": "COMMON-MARKET-20261017",
+          "reason": "Exact raw machine/source identifier"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-TSM-01.en.json",
+      "entries": 200,
+      "keys_exact": true,
+      "edge_whitespace_exact": true,
+      "numeric_token_multisets_exact": true,
+      "canonical_reused": 0,
+      "preserved_entries": {
+        "text.402b10441bf3287aeb26": {
+          "source": "FY2025 TIFRS + 9M2026 TIFRS - 9M2025 TIFRS",
+          "reason": "Exact computational formula retained without altering operands or operators"
+        },
+        "text.75be31d3f161f2ccd2be": {
+          "source": "2nm",
+          "reason": "Exact process-node notation"
+        },
+        "text.1f4f776c930d4a710aec": {
+          "source": "3nm",
+          "reason": "Exact process-node notation"
+        },
+        "text.cec543185d7efbbcb461": {
+          "source": "5nm",
+          "reason": "Exact process-node notation"
+        },
+        "text.401d23012185e231b8fb": {
+          "source": "7nm",
+          "reason": "Exact process-node notation"
+        },
+        "text.5be71427b1bc17d55536": {
+          "source": "C.C. Wei",
+          "reason": "Proper person or facility name retained"
+        },
+        "text.1aca89a9f213166e8450": {
+          "source": "Wendell Huang",
+          "reason": "Proper person or facility name retained"
+        }
+      }
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-TSM-02.en.json",
+      "entries": 171,
+      "keys_exact": true,
+      "edge_whitespace_exact": true,
+      "numeric_token_multisets_exact": true,
+      "canonical_reused": 1,
+      "preserved_entries": {
+        "text.fb08d85092cadbcf3273": {
+          "source": "evidence-TSM.html#sources",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.4437ce86b52101522279": {
+          "source": "(1 + USD WACC) * (1 + expected TWD inflation) / (1 + expected USD inflation) - 1",
+          "reason": "Exact computational formula retained without altering operands or operators"
+        },
+        "text.def8c8a65a1d3054257f": {
+          "source": "evidence-TSM.html#facts",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.0d62e30c92ab3236e6ea": {
+          "source": "latestTTM",
+          "reason": "Exact raw machine/source identifier"
+        },
+        "text.3e6034a8b639bb9d0ec3": {
+          "source": "evidence-TSM.html#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.ac116c8fd89c8796bc44": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-1#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.a84e28b7d081bec1a21f": {
+          "source": "evidence-TSM.html?record=selected#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.9af4798db21b81ed6aaa": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-2#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.bedb334d32a8422d54f2": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-3#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.2f1c3d9da858c603675a": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-4#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.f21ad219f985cd4cc521": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-5#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.1e89d379ed34e2eac441": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-6#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.91cb62cc0f01d400e29d": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-7#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.b7e2bbae9e60c8b30064": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-8#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.877f64dd23f6802a729a": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-9#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.3fa10dec0a99ba59c527": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-10#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.73211a02e52ae6fca327": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-11#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.4ad5bb555f397a69c758": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-12#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.849ed200bcbd85a1cbc7": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-13#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.2467b1f043b7ba02a155": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-14#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.f0ded32d96b70548a4b2": {
+          "source": "evidence-TSM.html?record=selected-base-annual-row-15#judgment",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        },
+        "text.0e14a63b05065271ba54": {
+          "source": "claims.json?record=companies%5Bticker%3DTSM%5D#",
+          "reason": "Exact file URL / fragment / query selector retained for navigation"
+        }
+      }
+    }
+  ]
+}

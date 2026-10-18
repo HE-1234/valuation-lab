@@ -11,11 +11,11 @@ The requested language control is a small corner button, separate from navigatio
 - Original research JSON, source records and frozen cases remain canonical. Separate catalogs provide Chinese analytical prose. Original quoted evidence, machine identifiers, file names and externally hosted source documents remain identifiable in their original form.
 - Standalone research HTML uses reversible presentation annotations. Removing exactly those annotations reconstructs the original source bytes and pinned hashes. A new presentation manifest is separate from the frozen evidence manifest.
 
-## Coverage and unfinished work
+## Coverage
 
 The dynamic valuation, simulation, learning and historical interfaces have bilingual catalogs and state-preservation tests. Company summaries, assumption rationales and methodology pages use separate prose overlays.
 
-The large standalone research corpus is being translated in reviewed batches. A Chinese-mode notice identifies pages with untranslated authored passages, which remain in English until their exact translation is available. The existence of the button is not a claim that the entire research corpus is complete. Per-surface coverage files under `dist/locales/` and per-page source catalogs under `scripts/research-translations/` record the current state.
+The standalone research corpus now covers all 26 inventoried pages and all 12,750 text segments: 11,294 Chinese translations and 1,456 reviewed preserved identifiers, formulas, names and original table evidence. Another 32 explicitly identified source-quotation nodes remain in their original language. These exceptions preserve evidence and are not translated analysis. Per-surface coverage files under `dist/locales/` and per-page source catalogs under `scripts/research-translations/` record the current state. External source documents and user-authored notes remain original. A fallback notice appears if a catalog cannot load, leaving original English research readable.
 
 ## Verification
 
@@ -24,3 +24,13 @@ Independent checks exercise all fourteen companies across repeated locale toggle
 ## Theme sweep
 
 Explicit theme selections reveal the new palette with a 600 ms left-to-right screen sweep when the browser supports View Transitions. Rapid changes retain only the latest intent. Reduced-motion preferences and unsupported browsers use the existing instant switch. No palette, model assumption or source data is changed by the animation.
+
+## Design study and application — 2026-10-18
+
+Read W3C's [Language of Page explanation](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html) (updated March 9, 2026). Its practical lesson is that a language switch must identify the document language for assistive technology, not merely replace visible words. Applied this to the existing locale lifecycle and extended the review to full margin-chart year descriptions and named theme controls. Tests check Chinese descriptions and English round trips without changing numeric paths.
+
+Read MDN's [prefers-reduced-motion reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) (updated June 10, 2026). Large panning effects can cause discomfort; preserve an immediate palette switch when reduced motion is requested. The existing sweep retains this fallback and the approved six palettes. Native cloud-browser review captured the actual sweep; narrow-screen layout checks used static renders and do not substitute for native mobile-browser interaction testing.
+
+These are accessible written reference lessons, not completed courses or watched videos. The changes refine the approved Annual Report design rather than replacing its layout or visual direction.
+
+The requested [Awwwards Lusion v3 example](https://www.awwwards.com/sites/lusion-v3) could not be fetched during this review (timeout). No lesson or completion claim is attributed to inaccessible content. The accessible-source review instead identified a specific language-of-parts gap in retained English source quotations; quotation-specific language metadata was added and tested without altering the original evidence.

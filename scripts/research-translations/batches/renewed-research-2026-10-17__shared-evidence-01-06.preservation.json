@@ -1,0 +1,1120 @@
+{
+  "scope": "Shared-evidence batches 01–06 only; 07–09 translated by integration worker",
+  "validation": {
+    "files": 6,
+    "keys": 1200,
+    "keysets": "exact ordered matches",
+    "edge_whitespace": "exact matches",
+    "urls_and_placeholders": "preserved",
+    "numeric_literals": "all financial numeric literals retained; all differences individually checked as localized month names or canonical Chinese quarter labels",
+    "unchanged_count": 97,
+    "canonical_policy": "Exact-key translations from completed catalogs were reused before custom translations. Integration worker performs final cross-catalog conflict review.",
+    "scope_control": "No model, financial source JSON, HTML, UI, build scripts, commits, or publication changed by this worker."
+  },
+  "unchanged_values": [
+    {
+      "batch": 2,
+      "key": "text.17b33bada987859f41fa",
+      "value": "Meta Platforms, Inc.",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.0aca191c7199411b5ddc",
+      "value": "META-TTM-2026-06-30",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.999af767e512bb01d42f",
+      "value": "META-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.919f1646e4f86d4a3df3",
+      "value": "META-release",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.5b96afc9d1b33c5cc3f3",
+      "value": "META-annual-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.48b218f1b2a543352af7",
+      "value": "NVIDIA CORP",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.5537d374f0c5832c08fa",
+      "value": "NVDA-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.1d7fdc589e33e3af6b95",
+      "value": "NVDA-release",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.6d90653b5f8c70cbd91a",
+      "value": "NVDA-annual-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.9b51591a695a4764fb12",
+      "value": "Tesla, Inc.",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.9c1911ed5f690ed337b7",
+      "value": "TSLA-TTM-2026-06-30",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.1069f325741b16657ff0",
+      "value": "TSLA-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.88dae9769b10de00b797",
+      "value": "TSLA-release",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.8e0bc42ed6e14670153a",
+      "value": "TSLA-annual-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.4445ed0ef173135da5f1",
+      "value": "Micron Technology, Inc.",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.4d9f3d6e3c6e00a373a4",
+      "value": "MU-CURRENT-2026-09-03",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.9915b59496289e560d9a",
+      "value": "MU-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.374e7498ec9cd27a9057",
+      "value": "MU-release",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.6b19406e4c01b7d05ee2",
+      "value": "MU-annual-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.d9dd03f49beb2147c03b",
+      "value": "Broadcom Inc.",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.55e6713a21b42939fc85",
+      "value": "AVGO-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.2220bbfa983227b4039d",
+      "value": "AVGO-release",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.4eaf47c8bb696727bbd5",
+      "value": "AVGO-annual-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.f6aafc72f7fb3267e0a3",
+      "value": "Taiwan Semiconductor Manufacturing Company Limited",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.50c38d9d4d18734ec037",
+      "value": "TSM-TTM-2026-09-30",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.d6d0caf415dce14826da",
+      "value": "TSM-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.97b1f665220817a18c8c",
+      "value": "TSM-release",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.bc50b82d1d32911b30c2",
+      "value": "TSM-annual-filing",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.6db9c903e13083f685f8",
+      "value": "(1 + USD WACC) × (1 + assumed TWD inflation) / (1 + assumed USD inflation) − 1",
+      "reason": "Exact currency-conversion formula retained."
+    },
+    {
+      "batch": 2,
+      "key": "text.d430147044ed247a0658",
+      "value": "dossiers.html#source-policy",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 4,
+      "key": "text.0221818c40c17f7d9b2a",
+      "value": "PPE D&A",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 4,
+      "key": "text.b13107662d0d6959b25a",
+      "value": "$bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 4,
+      "key": "text.d80e561c3d99ee56a0b8",
+      "value": "−$22.408bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 4,
+      "key": "text.85b6c8c4759a9a34aece",
+      "value": "$14.708bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 4,
+      "key": "text.a06d643602773f6a7400",
+      "value": "$12.056bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 4,
+      "key": "text.2cbf6cd17d5e5ab79173",
+      "value": "$2.652bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 4,
+      "key": "text.9cb17fba0be148ce4b2f",
+      "value": "$7.655bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.a33b630e2a3786de4a2b",
+      "value": "$58.23bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.af950245a59710bdd328",
+      "value": "$148.16bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.2039b680a993367babcb",
+      "value": "$322.16bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.4fc4400c48342019cd58",
+      "value": "$155.411bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.d53488ffa6771407450e",
+      "value": "$25.542bn",
+      "reason": "Numeric monetary amount or unit retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.4f749de7c24fe9679697",
+      "value": "Meta",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.f89f85382f9c9bd30a09",
+      "value": "Tesla",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.a35270cca689f733c5de",
+      "value": "Meta 1",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.91ad77ee11a2d1092838",
+      "value": "Meta 2",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.5be3d42a2157f718c177",
+      "value": "Meta 3",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.bf3d953571eb067c9015",
+      "value": "Tesla 1",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.f8184ab6a2ee91060cfe",
+      "value": "Tesla 2",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.4d0ebc228f808eed8743",
+      "value": "Tesla 3",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.e9bb0102c55839c1fae4",
+      "value": "marketableSecuritiesCurrent",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.48531ceafed27bdd38ab",
+      "value": "f0120babba2241d77d528471c4bb36564b637a1bdf6a48429624b198b036b800",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.cc1568317d8d8cc795ba",
+      "value": "As a result of the Coherent, Inc. acquisition on July 1, 2022",
+      "reason": "Explicitly labeled original source excerpt, retained verbatim for provenance."
+    },
+    {
+      "batch": 5,
+      "key": "text.4dd9b1ffc5adde8eb7e6",
+      "value": "e1b6f9e259e9e5fbb29258d09373474f8948b47ea2ab1e562c1e3eaee4d406f9",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.9d28c1f8534d24d26303",
+      "value": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.9fd3d2502b4c6b666d94",
+      "value": "convertibleDebtCurrent + convertibleDebtNoncurrent",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.bcf6a37996a2b0d5a61b",
+      "value": "convertibleDebtNoncurrent",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.9dfba9551d4c2aecff2b",
+      "value": "dee423e884585bda67e60239d09ac6651fb55a9fb91ec091d98c8dd54ce23986",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.8ec5c1a71205c84086ab",
+      "value": "NBIS_FY",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.cc8271d740a852671887",
+      "value": "NBIS FY",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.945fecf771f80f4a19d7",
+      "value": "TSM FY",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.cce8ca9b27993baa9227",
+      "value": "09ac896809ff0f3dcdf43e0837408d8d95039d4fa05372e9bd81b1e572a4c02e",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.cc640b0bf43907f04b91",
+      "value": "TSM FY2022",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.3a4cc26c7a9d78e7abd4",
+      "value": "f50a830f1b00d4e1d93d610e4a6e9c34990c74a38f673e339869ebcbe9c0ada3",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.a494efd2310782a68afa",
+      "value": "TSM FY2023",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.959fb783c63ab36924dd",
+      "value": "ce869cff0fdad1e72a8c5be12ba56ec28bc13d7ddbc3bccf7816ad60419992b4",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.01ec4a36e955eab72426",
+      "value": "TSM FY2024",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.829da3ae4819d8ee00cf",
+      "value": "6d433b39200bc2bc8dc894abbc533735290bbe3aaba0d3537ab9469a85bfcaa5",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.12776e988aa2d376bf3d",
+      "value": "TSM FY2021",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 5,
+      "key": "text.0b5d6ccf9c478fb5d600",
+      "value": "de7e7925f6329f4b03fc4a33727ee7b72944998b441ef839b845c51f4455b372",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.dd9cb720782e773a7f86",
+      "value": "TSM FY2020",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.9f0af14d99a897a13348",
+      "value": "c46ea128ec5e057109a8b764f0c62ce1d08a55c725b844d7e9f7371354c41f06",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.e0d14de3f9cdd0c9e7d1",
+      "value": "TSM FY2019",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.43b6d234da8e1f0aaebf",
+      "value": "be91dfda78df760fa6ea69c3b2c858bdaccb43bd56546b34fe489baf281c09b0",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.88bd0d8f5fbeab4ac0e1",
+      "value": "TSM FY2018",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.19efe55f27131a0bad95",
+      "value": "df8a7c4a42c2365c803bb1f44d175759351bf8ea5dc18b9b834e57404d6e06c8",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.6385dd4b56b603d5871f",
+      "value": "TSM FY2017",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.22dc09ce66f6e487e456",
+      "value": "1975a7a27b7ba363ac525a868eb0aff149bfcf92a445b8b2665d563487fbcfc0",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.12e35f4c9cb0c6346db1",
+      "value": "TSM FY2016",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.cff0d9aeaed5ea9386d4",
+      "value": "578af4594e14b1dd67cd6eb987b9d1309e0959c94dd4645bc4dfc3faae6c6416",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.ee3d0c9cb73a38aef5f5",
+      "value": "terminal-coherence-v2",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.04a22e86ccd849db163f",
+      "value": "1. AAOI",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.827c2824fc76ce603087",
+      "value": "AAOI FY2025 10-K",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.4627a1b8d3cbc170d41a",
+      "value": "2. NBIS",
+      "reason": "Proper company name, ticker/fiscal/source label, acronym, or numbered company heading retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.2b1da21da773d08b5dec",
+      "value": "3bdb6644c12addf1e63c4dc861008d7804fbf3d3f5aa6eb9b97f72c0e89a7adf",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.794eb9596a653431b883",
+      "value": "longTermDebtAndFinanceLeasesNoncurrent + longTermDebtAndFinanceLeasesCurrent",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.527a42b13ae850bd40ca",
+      "value": "longTermDebtAndFinanceLeasesNoncurrent",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.366d2b87bdb3516bdfa6",
+      "value": "longTermDebtAndFinanceLeasesCurrent",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.3ed5d4c5b704e852098e",
+      "value": "AVGO-CURRENT-2025-11-02",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.8de892f4f8e715cd474f",
+      "value": "us-gaap:EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.ecebc90cd05d36bc3766",
+      "value": "optionsOutstanding",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.331ba4d93fd612e213a1",
+      "value": "unvestedNonOptionAwards",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.4de197245ff87af9a6b8",
+      "value": "nonOptionAwardsOutstanding",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.6debdd6a83f48541b00f",
+      "value": "6b7d227d70aa4e0ddff36286c0332565f0bb1e2dedd1b5cc474031626ea407db",
+      "reason": "Exact source hash retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.50ce13f0c56d3e8ab24d",
+      "value": "manual-bridge-review-required",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.7d877a7d7c1a76c091e6",
+      "value": "AVGO-CURRENT-2026-08-02",
+      "reason": "Raw schema/source/version/status identifier or document anchor retained."
+    },
+    {
+      "batch": 6,
+      "key": "text.586461f77c7c9406205b",
+      "value": "ef419e2ddf9b941f651dae9d877dd1cbe3b35662cd22eefbfd74807ae57ce4ed",
+      "reason": "Exact source hash retained."
+    }
+  ],
+  "numeric_localization_exceptions": [
+    {
+      "batch": 1,
+      "key": "text.27d26d2ece97aa7e5a44",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 1,
+      "key": "text.bd8e121fd4ac0f008f66",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 1,
+      "key": "text.de9e200e02bb54d5de33",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 1,
+      "key": "text.7d8d1d3c42387e5bf64b",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 2,
+      "key": "text.37f8e8fdd64fab4f90e9",
+      "reason": "Exact canonical translation localizes Q2/Q3 as 第二季/第三季; financial figures unchanged."
+    },
+    {
+      "batch": 2,
+      "key": "text.0d36199d7c1da1686332",
+      "reason": "Exact canonical translation localizes Q2/Q3 as 第二季/第三季; financial figures unchanged."
+    },
+    {
+      "batch": 2,
+      "key": "text.cace59a56038dc725a77",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.664ff37afddce421a6a6",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.fb19a87834e95efe8418",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.027b2ea810757f043f84",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.5a7a9a6e70782c46e0f9",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.141d6e570a050afd777c",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.99ccbe5f7ebed17a36d6",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.78cb6aa5fb6ae9b1fa17",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.9c5d066a9c61c65d5f0f",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.4728886cf1756f260765",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.10e372a1853ade8e3f83",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.346e0fcaf5000d6c9692",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.3295056bcf5ab1a04def",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.48b1086729dad2e389cc",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.d5edcdf6c7e85b18b4a9",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.7b408cfb704ae5146f6a",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.bc8be5a578939998584b",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.aee3d5dcf4967e1713ce",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 3,
+      "key": "text.572649c07582f2db67bc",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.a154f708f6f9c69be88c",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.cbe32ab2c2e783145233",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.23818fac708aeb094278",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.55b79f2def093cbff986",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.db923696cc19f095aa6c",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.8b37082e1d1bc0752c93",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.5b0a849c667c59719a9a",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.eafcdf646e1be478f443",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.fcab01d875dd46b6b5bd",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.07c19b423f463cfaf6b0",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.3db58c99c5ef17455578",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.5bf827fc7c43d96211e9",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.7f13351d3678b54858a7",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.237253367ad9952fa274",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.0c7492d1e9f323771167",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.b5c2eeff19ea8b1d1fc5",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.715e825d6bd9a23776fa",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.6849b747f8014aa04e29",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.bb5dbd5f94d6cbda3a06",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.9517603b90f68a93dac6",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.a01c445a96342ec580aa",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.5d4997f521225034849b",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.7c8c0037781e6db183db",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.4e6d09847825e874f2fa",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.c5512534756683c3aa8c",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.919ee9652effe0018a6a",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 4,
+      "key": "text.781a9cad182f90374b22",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.555218fd63b106c4fa4b",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.920e69cf5c43d82d96cc",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.860ea53382997b59a0d2",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.aec2e8069957ea907f24",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.eb7b85d9f3c190dcdd69",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.2be9678ccd03787f877e",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.e0be6199afaceb0acf6c",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.1e3d7ae02111feb68013",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.fd61918c744f3be5341f",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.1a504fa0f5c27eff343a",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.173a3dc671695c32d64a",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.8f3b7ca02bfa8970e0b5",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.115c84cd540997ada0ed",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.8b8ed0360efd9255d387",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.8bdb24904e6beec4b9f9",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.a1555326c4cd2bb8437a",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.4891f5743f10e9144290",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.4afb1b8a4fa32394dd71",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.07004103f81b8a4f0b46",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.0ee073346d1bed28de04",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.546cbd7c9d4341bb2c87",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.99625b08701f971382ac",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.6e9d5bb3b897c4202151",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.c100626a46427613a094",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.e5046528c269b27e838e",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.e9b3770665db7d58c44c",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.18376007220a9f853dff",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.5f10bca8444729da1e70",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 5,
+      "key": "text.879a4371f5417ab555a4",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.5da2b12b609b0e98d917",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.6786fc5303e3d93c6433",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.4e0f4574f4283967d32b",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.f315f17a1aac50750e66",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.056d6cde0a76c49deaba",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.f43e48d48595d3b53ee7",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.a3d69e22e2490d6d94c4",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.8d1a93b45ee81667581e",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.3d929f8d84e0bdbf6dfd",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.9ee4086781a40051cff7",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.b320ec92ffee99aecee5",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.5ffe2da14eca649fd231",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.ca99ad39afab01feeb06",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.c9050c9842447729068e",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.802f6f512ce5c5069754",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.77ac265a24b6ab1420ea",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.9848b8ded67a8335ebea",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.83b9ae889e3417c4799f",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.e8dd5abd05b7bd75f95e",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.baa3ff2ff1fd8f687e8d",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.3c31bc948a348ec81d2a",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.bffa6b80e91ccd7c7e7c",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    },
+    {
+      "batch": 6,
+      "key": "text.236fc1b66eaed2d4dbe2",
+      "reason": "English month names localized to numeric Chinese month labels; dates and financial values unchanged."
+    }
+  ]
+}

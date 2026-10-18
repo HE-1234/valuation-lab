@@ -72,3 +72,10 @@ test('independent forecast tail and margin caption leaves round-trip without swa
  setLocale('zh-Hant');f.mutate();for(let i=0;i<sources.length;i++)assert.notEqual(leaves[i].node.data,sources[i],sources[i]);
  assert.match(leaves[1].node.data,/30/);setLocale('en');f.mutate();assert.deepEqual(leaves.map(x=>x.node.data),sources);dispose();
 });
+test('complete margin chart accessibility descriptions translate every year and preserve numbers',()=>{
+ const original='Year 0: 33.17%; Year 1: 31%; Year 2: 31.5%. Annual forecast margins; no missing historical margin is inferred.';
+ setLocale('zh-Hant');const translated=translateGuidedMessage(original);
+ assert.ok(translated.includes('第 0 年：33.17%'));assert.ok(translated.includes('第 1 年：31%'));assert.ok(translated.includes('第 2 年：31.5%'));
+ assert.ok(translated.includes('不推斷缺漏的歷史利潤率'));assert.ok(!translated.includes('Year'));assert.deepEqual(translated.match(/\d+(?:\.\d+)?/g),original.match(/\d+(?:\.\d+)?/g));
+ setLocale('en');assert.equal(translateGuidedMessage(original),original);
+});

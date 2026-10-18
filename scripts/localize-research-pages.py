@@ -60,7 +60,7 @@ def main():
   slug=path.relative_to(ROOT/'dist/data').as_posix().replace('/','__').removesuffix('.html')
   write_json(TRANSLATIONS/(slug+'.en.json'),entries);all_entries.update(entries)
   translated={k:overlays[k] for k in entries if k in overlays}
-  report.append({'page':str(path.relative_to(ROOT/'dist')),'uniqueAuthoredSegments':len(entries),'translatedSegments':sum(entries[k]!=v for k,v in translated.items()),'preservedOriginalSegments':sum(entries[k]==v for k,v in translated.items()),'coveredSegments':len(translated),'missingKeys':sorted(set(entries)-set(translated)),'originalQuotationSegments':len(parser.excluded),'complete':len(entries)==len(translated)})
+  report.append({'page':str(path.relative_to(ROOT/'dist')),'uniqueAuthoredSegments':len(entries),'translatedSegments':sum(entries[k]!=v for k,v in translated.items()),'preservedOriginalSegments':sum(entries[k]==v for k,v in translated.items()),'coveredSegments':len(translated),'missingKeys':sorted(set(entries)-set(translated)),'missingEnglishText':[entries[k] for k in sorted(set(entries)-set(translated))],'originalQuotationSegments':len(parser.excluded),'complete':len(entries)==len(translated)})
   if args.apply:
    pieces=[];cursor=0
    for node in parser.nodes:

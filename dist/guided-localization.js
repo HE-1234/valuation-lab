@@ -24,7 +24,10 @@ patterns.sort((a,b)=>b.specificity-a.specificity);
 const completeMessages=[...exact.keys()].filter(message=>message.length>18).sort((a,b)=>b.length-a.length);
 export function matchGuidedMessage(value,depth=0){
  if(typeof value!=='string')return null;
- const text=value.trim(),found=exact.get(text);if(found)return {...found,params:{}};
+ const text=value.trim();
+ const yearDescription=text.match(/^((?:Year \d+: -?[\d,]+(?:\.\d+)?%)(?:; Year \d+: -?[\d,]+(?:\.\d+)?%)*)\. (.+)$/s);
+ if(yearDescription)return {key:'guided.marginSequenceDescription',params:{years:yearDescription[1],source:yearDescription[2]}};
+ const found=exact.get(text);if(found)return {...found,params:{}};
  for(const entry of patterns){const match=entry.regex.exec(text);if(match)return {key:entry.key,params:Object.fromEntries(entry.names.map((name,i)=>[name,match[i+1]]))};}
  // A generated join is localized only when its ENTIRE content is a sequence
  // of registered complete messages. Never partially substitute unknown prose.
@@ -33,6 +36,7 @@ export function matchGuidedMessage(value,depth=0){
  return null;
 }
 export function translateGuidedMessage(value,depth=0){
+ if(typeof value==='string'&&/^Year \d+: -?[\d,]+(?:\.\d+)?%(?:; Year \d+: -?[\d,]+(?:\.\d+)?%)+$/.test(value))return value.split('; ').map(part=>translateGuidedMessage(part,depth+1)).join('; ');
  const match=matchGuidedMessage(value);if(!match)return value;
  const params=Object.fromEntries(Object.entries(match.params).map(([key,text])=>[key,depth<8?translateGuidedMessage(text,depth+1):text]));
  return t(match.key,params);

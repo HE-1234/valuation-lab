@@ -1110,5 +1110,7 @@ export default {
   "skinFullHistory": "Full history ↗",
   "skinSameAsYou": "same as you",
   "skinPointsAbove": "you are {amount} pts above",
-  "skinPointsBelow": "you are {amount} pts below"
+  "skinPointsBelow": "you are {amount} pts below",
+  "marginSequenceDescription": "{years}. {source}",
+  "annualMarginSourceDescription": "Annual forecast margins; no missing historical margin is inferred."
 };

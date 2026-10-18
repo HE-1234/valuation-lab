@@ -1,0 +1,59 @@
+{
+  "scope": "design-notebook-01–03 translations only",
+  "batches": [
+    {
+      "source": "design-notebook-01.en.json",
+      "translation": "design-notebook-01.zh-Hant.json",
+      "messages": 200,
+      "source_characters": 51457,
+      "translation_sha256": "3434dd3ad816fc2be94b22a19fbf94bfee3dfac91e54363a3fe53fb8e05bed1f",
+      "exact_key_order": true,
+      "numeric_literal_multisets_preserved": true,
+      "edge_whitespace_preserved": true,
+      "protected_tokens_preserved_except_documented": true,
+      "errors": []
+    },
+    {
+      "source": "design-notebook-02.en.json",
+      "translation": "design-notebook-02.zh-Hant.json",
+      "messages": 200,
+      "source_characters": 44818,
+      "translation_sha256": "aad07c4b4fa3d0965f408f1c80dcbf06310e5e108c27fd77ec0e4374775b1084",
+      "exact_key_order": true,
+      "numeric_literal_multisets_preserved": true,
+      "edge_whitespace_preserved": true,
+      "protected_tokens_preserved_except_documented": true,
+      "errors": []
+    },
+    {
+      "source": "design-notebook-03.en.json",
+      "translation": "design-notebook-03.zh-Hant.json",
+      "messages": 173,
+      "source_characters": 35018,
+      "translation_sha256": "be0a377299ae6711ef82d3df1b2c7b65bc4346073dbde2b0057c2fbfa2a46877",
+      "exact_key_order": true,
+      "numeric_literal_multisets_preserved": true,
+      "edge_whitespace_preserved": true,
+      "protected_tokens_preserved_except_documented": true,
+      "errors": []
+    }
+  ],
+  "exceptions": [
+    {
+      "source": "MDN Animation.cancel()",
+      "reason": "Exact documentation title composed of organization name and executable API identifier, intentionally retained."
+    },
+    {
+      "source": "Focus VS Selection",
+      "reason": "VS is a natural-language comparison in an article section title, translated as 與; it is not a financial acronym or code identifier."
+    }
+  ],
+  "preservation_notes": [
+    "Source dates retained in original literal order, including restored May 13, 2024 tutorial update date.",
+    "Proper names, product mode names, technical API identifiers, source file paths and code commands retained as appropriate.",
+    "Course/video completion and browser/accessibility verification limitations translated explicitly, without strengthening claims.",
+    "No financial JSON, models, HTML, UI, build files, commits, or publication modified."
+  ],
+  "total_messages": 573,
+  "passed": true
+}

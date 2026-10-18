@@ -1,0 +1,1360 @@
+{
+  "scope": "GOOG evidence batches 01–06",
+  "validation": {
+    "batches": 6,
+    "keys": 1014,
+    "identical_strings": 223,
+    "exact_key_order": true,
+    "edge_whitespace": true,
+    "numeric_figures_multiset": true,
+    "URLs_and_placeholders": true,
+    "errors": [],
+    "date_note": "Named months translated into Chinese month names; day and year figures preserved. Source comma-delimited dates interpreted as dates, not numeric thousands."
+  },
+  "preserved": [
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.a9ae194821f66d302307",
+      "value": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.ec537661499a254cc659",
+      "value": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.75f5e49231fa8ef9810f",
+      "value": "0001652044 | goog:GoogleSearchOtherMember | goog:GoogleServicesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.8b48a5106248395d68a6",
+      "value": "0001652044 | goog:GoogleSearchOtherMember | goog:GoogleServicesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.4eab69ec05894ea29e55",
+      "value": "0001652044 | goog:GoogleSearchOtherMember | goog:GoogleServicesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.8c6e9b0164a88ea6b957",
+      "value": "0001652044 | goog:YouTubeAdvertisingRevenueMember | goog:GoogleServicesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.80f99c509779945225e2",
+      "value": "0001652044 | goog:YouTubeAdvertisingRevenueMember | goog:GoogleServicesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.b0b2837bbe6f9da47b27",
+      "value": "0001652044 | goog:YouTubeAdvertisingRevenueMember | goog:GoogleServicesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.cf28e1e87c796222e282",
+      "value": "0001652044 | goog:GoogleNetworkMember | goog:GoogleServicesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.92cef4a34acaca9883ff",
+      "value": "0001652044 | goog:GoogleNetworkMember | goog:GoogleServicesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.6c583d1435bfce88aa16",
+      "value": "0001652044 | goog:GoogleNetworkMember | goog:GoogleServicesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.ffcde4f930382dfe464c",
+      "value": "0001652044 | goog:GoogleAdvertisingRevenueMember | goog:GoogleServicesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.b9c574fe97bd9dda0d34",
+      "value": "0001652044 | goog:GoogleAdvertisingRevenueMember | goog:GoogleServicesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.e7aa452ca9d6ec695ed1",
+      "value": "0001652044 | goog:GoogleAdvertisingRevenueMember | goog:GoogleServicesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.7901058f3aeed095bbf6",
+      "value": "0001652044 | goog:SubscriptionsPlatformsAndDevicesRevenueMember | goog:GoogleServicesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.5840017206e20aaf71f3",
+      "value": "0001652044 | goog:SubscriptionsPlatformsAndDevicesRevenueMember | goog:GoogleServicesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.01678753b635a4339cc7",
+      "value": "0001652044 | goog:SubscriptionsPlatformsAndDevicesRevenueMember | goog:GoogleServicesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.2c69c546829f80cf8bf1",
+      "value": "0001652044 | goog:GoogleServicesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.b9a995ced79f1124eca2",
+      "value": "0001652044 | goog:GoogleServicesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.16d851fc509e6138c00c",
+      "value": "0001652044 | goog:GoogleServicesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.4303d8fda16571526afa",
+      "value": "0001652044 | goog:GoogleCloudMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.4d78f1656d999cc1e89c",
+      "value": "0001652044 | goog:GoogleCloudMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.6db48a5e55ab935656d0",
+      "value": "0001652044 | goog:GoogleCloudMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c40cc061ebb3e829a2ca",
+      "value": "0001652044 | us-gaap:AllOtherSegmentsMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.a2d82346c1024894e127",
+      "value": "0001652044 | us-gaap:AllOtherSegmentsMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.d54b70c520bb9b02ac5c",
+      "value": "0001652044 | us-gaap:AllOtherSegmentsMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.476c1661d9867513b88b",
+      "value": "0001652044 | goog:AmericasExcludingUnitedStatesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.e212ffae3f6abb8b62c8",
+      "value": "0001652044 | goog:AmericasExcludingUnitedStatesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.353a8b385d9a948d4864",
+      "value": "0001652044 | goog:AmericasExcludingUnitedStatesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.74d33142d92f04a90a0a",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleServicesMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.ce0587e671d0e82dff6f",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleServicesMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.68e5e27fff49157af40c",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleServicesMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.21a4dc2a6911032f905e",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleCloudMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.5c2f33fb4ee86f15429d",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleCloudMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.21afef8b55df22bc621b",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleCloudMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.fb7543cb61471afcde17",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | us-gaap:AllOtherSegmentsMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.3915ac8192ef92430e7c",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | us-gaap:AllOtherSegmentsMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.e3d230c2126e78011527",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | us-gaap:AllOtherSegmentsMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.79c174a7678193f80cb7",
+      "value": "0001652044 | us-gaap:CorporateNonSegmentMember | 2023-01-01 | 2023-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.ef2f87c2e234b9a97c19",
+      "value": "0001652044 | us-gaap:CorporateNonSegmentMember | 2024-01-01 | 2024-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.d4b48c1a1a6a74d527b2",
+      "value": "0001652044 | us-gaap:CorporateNonSegmentMember | 2025-01-01 | 2025-12-31",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.e65618f45af0f937c34a",
+      "value": "0001652044 | goog:GoogleSearchOtherMember | goog:GoogleServicesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.e9dc07e3982ca092912f",
+      "value": "0001652044 | goog:GoogleSearchOtherMember | goog:GoogleServicesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.90127364227034033e3e",
+      "value": "0001652044 | goog:GoogleSearchOtherMember | goog:GoogleServicesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.09a09559da75499e9b15",
+      "value": "0001652044 | goog:GoogleSearchOtherMember | goog:GoogleServicesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.2963b5ce67449b597310",
+      "value": "0001652044 | goog:YouTubeAdvertisingRevenueMember | goog:GoogleServicesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.4569b76751179124256c",
+      "value": "0001652044 | goog:YouTubeAdvertisingRevenueMember | goog:GoogleServicesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.9c2d3d0b4e7c50b6d407",
+      "value": "0001652044 | goog:YouTubeAdvertisingRevenueMember | goog:GoogleServicesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.9839d95e3e5ae4a7b9e7",
+      "value": "0001652044 | goog:YouTubeAdvertisingRevenueMember | goog:GoogleServicesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.e75d56f734a321c918ad",
+      "value": "0001652044 | goog:GoogleNetworkMember | goog:GoogleServicesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.53dfd9735009586387e9",
+      "value": "0001652044 | goog:GoogleNetworkMember | goog:GoogleServicesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.6ba41363aa31740b7332",
+      "value": "0001652044 | goog:GoogleNetworkMember | goog:GoogleServicesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.818e36b237fef1c98eb6",
+      "value": "0001652044 | goog:GoogleNetworkMember | goog:GoogleServicesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.9a40070b83d0fbb3d0d2",
+      "value": "0001652044 | goog:GoogleAdvertisingRevenueMember | goog:GoogleServicesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.04b1296bdfc1643367e8",
+      "value": "0001652044 | goog:GoogleAdvertisingRevenueMember | goog:GoogleServicesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.822332fd739cf71d1495",
+      "value": "0001652044 | goog:GoogleAdvertisingRevenueMember | goog:GoogleServicesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.5bb0db50f8aae0eb306c",
+      "value": "0001652044 | goog:GoogleAdvertisingRevenueMember | goog:GoogleServicesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.a53d9bf2765ad1a155ef",
+      "value": "0001652044 | goog:SubscriptionsPlatformsAndDevicesRevenueMember | goog:GoogleServicesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.1d44f9ab750186cf539e",
+      "value": "0001652044 | goog:SubscriptionsPlatformsAndDevicesRevenueMember | goog:GoogleServicesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.2ce7a74c2ff7260107b3",
+      "value": "0001652044 | goog:SubscriptionsPlatformsAndDevicesRevenueMember | goog:GoogleServicesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c3439ff03f028088b19f",
+      "value": "0001652044 | goog:SubscriptionsPlatformsAndDevicesRevenueMember | goog:GoogleServicesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c5abe76946f505e31b11",
+      "value": "0001652044 | goog:GoogleServicesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.4c4adcccf29f41832fa6",
+      "value": "0001652044 | goog:GoogleServicesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.374d87d3fef56361a115",
+      "value": "0001652044 | goog:GoogleServicesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.507ef17a9cb4b3860b91",
+      "value": "0001652044 | goog:GoogleServicesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.506c9cc81dc07850ff00",
+      "value": "0001652044 | goog:GoogleCloudMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.27165089a9c359e9e9ee",
+      "value": "0001652044 | goog:GoogleCloudMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.464ad9529901e738e0f9",
+      "value": "0001652044 | goog:GoogleCloudMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.fa49a708c55c7040eaa5",
+      "value": "0001652044 | goog:GoogleCloudMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.6a29a13a9c48f5a328eb",
+      "value": "0001652044 | us-gaap:AllOtherSegmentsMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c2fa43d27c5dac11cbe5",
+      "value": "0001652044 | us-gaap:AllOtherSegmentsMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c0313b5ec44308a48cbc",
+      "value": "0001652044 | us-gaap:AllOtherSegmentsMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.37c13e7dc417667bcb79",
+      "value": "0001652044 | us-gaap:AllOtherSegmentsMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.f9b516896f7c3694e91a",
+      "value": "0001652044 | goog:AmericasExcludingUnitedStatesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c86a8b833cb24bfccd26",
+      "value": "0001652044 | goog:AmericasExcludingUnitedStatesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.147275d8f9507e2a8c6f",
+      "value": "0001652044 | goog:AmericasExcludingUnitedStatesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.1b4596b79dc847b10e6d",
+      "value": "0001652044 | goog:AmericasExcludingUnitedStatesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.cb3deb59d3b7371a2cf8",
+      "value": "0001652044 | goog:GoogleCloudMember | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.acec63cbc89dbf432cc7",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleServicesMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.f35419181ae56b38ef7c",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleServicesMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.199521534d811ec125d2",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleServicesMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.f06738c257737a97fec1",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleServicesMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.bdc6fdf7615ec6a12abd",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleCloudMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.de0a82c2eb4d411b33a9",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleCloudMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.7a29f1ff546d55c21cb1",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleCloudMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.1717900b101363a23ca9",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | goog:GoogleCloudMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.921663b1d7bd1a8f91fe",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | us-gaap:AllOtherSegmentsMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.a3297bb4acaafa312c5a",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | us-gaap:AllOtherSegmentsMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c40902fce0fe79bc34f2",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | us-gaap:AllOtherSegmentsMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.a58d444ec9b8065f7c4f",
+      "value": "0001652044 | us-gaap:OperatingSegmentsMember | us-gaap:AllOtherSegmentsMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.4157ac32e03491ad7f34",
+      "value": "0001652044 | us-gaap:CorporateNonSegmentMember | 2025-04-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.bf9dab052edac5a7788c",
+      "value": "0001652044 | us-gaap:CorporateNonSegmentMember | 2026-04-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.d9deaee9993c33c6e6e3",
+      "value": "0001652044 | us-gaap:CorporateNonSegmentMember | 2025-01-01 | 2025-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.602490e7cbf5c919f313",
+      "value": "0001652044 | us-gaap:CorporateNonSegmentMember | 2026-01-01 | 2026-06-30",
+      "reason": "Original XBRL entity, taxonomy member and reporting-period context"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.952c13ecf5932d516d2d",
+      "value": "evidence-GOOG.html?record=claim_and_obligation_register#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c7698fa48f34ee2668f7",
+      "value": "evidence-GOOG.html#guidance",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.767cab0e7774af1c07cf",
+      "value": "evidence-GOOG.html#sources",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.cd8df74fe34580d1c58e",
+      "value": "Cloud USDm",
+      "reason": "Product/acronym, date or financial day-count notation"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.8502ebb94f1112d23d33",
+      "value": "management_timing_estimate_on_reported_commitments",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.81c583e62d7d7efabe5f",
+      "value": "GOOG-2023Q4-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.0671f1db0bc09fc75bfa",
+      "value": "GOOG-2024Q1-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.35911ed28737656be01b",
+      "value": "GOOG-2024Q2-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c0c15f2885f31fecd750",
+      "value": "GOOG-2024Q3-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.8eeabfb2aa4e7b6918b8",
+      "value": "GOOG-2024Q4-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.fa6c99e1510aec455779",
+      "value": "GOOG-2025Q1-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.7c3d0d9101b39e830a7f",
+      "value": "GOOG-2025Q2-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.bdc02638ffe47335be6e",
+      "value": "GOOG-2025Q3-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.6273f884f5e4eb4dcb90",
+      "value": "GOOG-2025Q4-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.1d3b897da9d16eea9fcb",
+      "value": "GOOG-2026Q1-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.60c512de7bf682927343",
+      "value": "GOOG-2026Q2-call",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.b4126b3d0d1c0a8806a5",
+      "value": "cash_capex",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.c050f7b020ddbd36ce2c",
+      "value": "approximate_lower_bound",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.1e2c4c8c50ef29916d41",
+      "value": "at_or_above_approximate_floor",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.d72fd937e996223c334d",
+      "value": "approximate_point",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.d98de03fb9702ac89077",
+      "value": "above_point_no_range_hit_test",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.150fcdf6df515beba3fa",
+      "value": "above_approximate_point",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.89de12f9619d062386c5",
+      "value": "not_yet_observable_by_cutoff",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.84109c1b08d32e8ce021",
+      "value": "direction_met",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.5be2bf84225e35106953",
+      "value": "directional_guidance_not_numeric_range",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.e5c9e9d2463317fe21fb",
+      "value": "above_threshold",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-01.en.json",
+      "key": "text.896f47ef7fb6e19c7337",
+      "value": "quantified_management_operational_target",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.fe930a75dfddb659d387",
+      "value": "qualitative_timing_outlook",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.559bd158acdb1dd0ae6f",
+      "value": "GOOG-Kurian-20260908",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.196b480a3815b4d1918b",
+      "value": "additional_noncurrent_investments",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.22299227ce90d28067b7",
+      "value": "uncommenced_leases",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.1da8cc52d05b4a9631c7",
+      "value": "short_term_capacity_lease",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.098fc26094c48cb96737",
+      "value": "preferred_liquidation_preference",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.1ed6270f5cc369f2c619",
+      "value": "preferred_book_value",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.356a36e593dce4c05ca3",
+      "value": "preferred_conversion_share_range",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.325aa0dd8642faf27198",
+      "value": "noncontrolling_interests_rounded",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.aa82d4f23d592a0ca7ae",
+      "value": "unused_ATM_authorization",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.91957decb71a54c73943",
+      "value": "August_debt_event",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.7d7532d4caf934d22381",
+      "value": "GOOG-claims-Alphabet-August-10-senior-note-closing-8-K",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.0aa5231e576f826a743f",
+      "value": "credit_backstop_notional",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.5ec91a6fec28ee1a86b3",
+      "value": "deferred_tax_on_investment_marks",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.cb82ab3d402e615a8f57",
+      "value": "common_dilution",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.5cc62dbbef1120fd2fd6",
+      "value": "energy_infrastructure_guarantees",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.4ffa6d3ed7ef2254fb9a",
+      "value": "equity_forward_funding_notional",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.651f3446114ecb5f5f29",
+      "value": "evidence-GOOG.html#facts",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.2154b827d50d96e60a83",
+      "value": "evidence-GOOG.html#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.b19f634ae5efcba49791",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-1#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.dd3491b884e97243a823",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B0%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.74ed3d776ee5e03e909b",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-2#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.48c170151dfa7721b037",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B1%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.474884a307c4b097f46c",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-3#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.9676263cd2e7b8d12b66",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B2%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.71d743b20620f1146ba9",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-4#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.cc5b54b88709945de3c7",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B3%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.21e85c95aee13ac6d931",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-5#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.fec379e55aad428f32f9",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B4%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.e17f115b1b2ed3d40ef3",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-6#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.252f64ab88ee6902fd57",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B5%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.7a5296088ec1aec0b6c0",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-7#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.1b2bba3d7d5f66476a58",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B6%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.0be8b1a85d95cb0e4aad",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-8#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.bf5a8c7b86857facd512",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B7%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.4b75f1ff70691f8918bb",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-9#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.18ee77d7d76d8f3883e2",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B8%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.3c62f67e253ccf4906fc",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-10#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.2773f0545b30ad76145f",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B9%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.62aa20f3fde342ce4010",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-11#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.362becee653408d005c7",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B10%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.9a29c43ef5b9cb97316b",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-12#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.44828c4873444a810d4c",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B11%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.62ed8f61d485a126e262",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-13#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.19f57f993fc7dda434df",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B12%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.9aa465d7e9327643d0c2",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-14#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.0ed08723e843bc93bf10",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B13%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.4f2a4b59780b04de7e2c",
+      "value": "evidence-GOOG.html?record=selected-base-annual-row-15#judgment",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.5aef92add69b582aaff6",
+      "value": "shared-evidence.html?record=GOOG.executable_base_capital_override.rows%5B14%5D#cloud-funding-reconciliation",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.482319b370b9eac95fbd",
+      "value": "claims.json?record=companies%5Bticker%3DGOOG%5D#",
+      "reason": "Exact source URL or relative deep link"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.a07b98b02d47778fae50",
+      "value": "e6c930327ab7d8351f36679cdcc01f7322d6b5316b8b85c9ab3b0770aa437852",
+      "reason": "Source-file SHA-256 digest"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-02.en.json",
+      "key": "text.073e4167e4e9cb14dfa7",
+      "value": "094f82961a2100d00ffac1e6987a29f4501510a82fb6233bedd58f5e82a931bd",
+      "reason": "Source-file SHA-256 digest"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-03.en.json",
+      "key": "text.caefd4200a3baf6a69aa",
+      "value": "TTM 2026 06 30",
+      "reason": "Product/acronym, date or financial day-count notation"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-03.en.json",
+      "key": "text.de4c12042a2f0a9cec9d",
+      "value": "NI + PP&E depreciation + SBC + deferred tax adjustment - securities gains + other noncash + non-tax WC cash effect + income-tax WC cash effect",
+      "reason": "Formula retained verbatim to preserve computational meaning"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-03.en.json",
+      "key": "text.00a2a0a6fa56d1ba62e6",
+      "value": "CFO - cash capex - SBC - (OI&E - securities gains reversed in CFO) + tax provision - deferred tax adjustment - tax WC cash effect - EBIT*normalized_tax - other noncash",
+      "reason": "Formula retained verbatim to preserve computational meaning"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-03.en.json",
+      "key": "text.d6353d0f28b47f77a520",
+      "value": "EBIT*(1-normalized_tax) + PP&E depreciation - cash capex + non-tax WC cash effect",
+      "reason": "Formula retained verbatim to preserve computational meaning"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.adf4b359a1fe3d2bea7b",
+      "value": "delivery_led_illustration",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.9fa03fc6239bcde74629",
+      "value": "analyst_selected_investment_overlay_not_management_forecast",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.0b90d61b8a4b38d98733",
+      "value": "NOPAT - (gross cash capex - PPE proceeds + finance-lease assets - total operating D&A + non-PPE operating reinvestment)",
+      "reason": "Formula retained verbatim to preserve computational meaning"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.9faf493af028a880099c",
+      "value": "Alphabet Inc.",
+      "reason": "Proper issuer or regulatory filing title"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.dca987d5a9a5537a0c29",
+      "value": "us-gaap:CommonClassAMember",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.102416d04d69e1f9bb6e",
+      "value": "us-gaap:CommonClassBMember",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.91c2b78f27b6e798957a",
+      "value": "goog:CapitalClassCMember",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.d135c03befb9eec827f8",
+      "value": "GOOG-TTM-2026-06-30",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.afd54e41fcc4c0afbc72",
+      "value": "GOOG-filing",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.03f8d8bd3c0ac31dc014",
+      "value": "GOOG-release",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.fcc8734c5540330072c8",
+      "value": "GOOG-annual-filing",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.3b0ce5fcd514f7a37787",
+      "value": "a017f26ee88cb4a639d1c1ddb06d53b4afe22f0ac89cabec7cd67c88919fe1c5",
+      "reason": "Source-file SHA-256 digest"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.752d8150017eecffb60b",
+      "value": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.72f61870bea2dd728d25",
+      "value": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.5407eca73af3baa978c9",
+      "value": "longTermDebtTotal",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.c6426edc3ff90a034553",
+      "value": "us-gaap:EquitySecuritiesFvNi",
+      "reason": "Original XBRL taxonomy concept identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.ce7dacc898748cd15d02",
+      "value": "GOOG-JUNE2026-PREFERRED-CLAIMS-REVIEW-v1",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.f968448dac33ac90b2e4",
+      "value": "GOOG-CURRENT-2026-06-30",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.497325a08ddc1b016a98",
+      "value": "Alphabet Q2 2026 Form 10-Q",
+      "reason": "Proper issuer or regulatory filing title"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.1a9bbaf2fa6f7c0afb77",
+      "value": "seriesA",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-04.en.json",
+      "key": "text.61295281a96f2cc67004",
+      "value": "seriesB",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.2d11764b9f8e0ca56522",
+      "value": "ACT/365",
+      "reason": "Product/acronym, date or financial day-count notation"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.10700a5117ba5b0d43a6",
+      "value": "prospectusA",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.0820e93ee939a25e7d15",
+      "value": "prospectusB",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.8beaff9c4c5402957c58",
+      "value": "maximum-contractual-conversion-static-if-converted-proxy",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.ae855bf52399a5dfe8f5",
+      "value": "E = EV + reported cash/current marketables + analyst other-asset values - reported debt - finance leases - NCI value - additional non-preferred claims. v = (E - preferred-dividend PV) / (12230 + incremental preferred conversion shares).",
+      "reason": "Formula retained verbatim to preserve computational meaning"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.dd63fbcf2f3689bad9d0",
+      "value": "liquidation-priority-claim-proxy",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.aec1a7d2d461f2eca77b",
+      "value": "dated-security-fair-value-claim",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.2f4f16aa5eb1cfccb5ac",
+      "value": "augustDebt",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.613b758b12ab9274f78e",
+      "value": "GOOG FY2025 Form 10-K",
+      "reason": "Proper issuer or regulatory filing title"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.06eaafc667fbad1efe2b",
+      "value": "GOOG Q2 2026 Form 10-Q",
+      "reason": "Proper issuer or regulatory filing title"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.ce40e02203a219dae84e",
+      "value": "issuer_call_transcript",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.73f10076392777e74924",
+      "value": "issuer_hosted_interview_transcript",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.8bf50b9b8dbb04158799",
+      "value": "GOOG-claims-Alphabet-Q2-2026-Form-10-Q",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.d600cab6037821c36bc9",
+      "value": "prior_verified_research_reused",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.46f597d789ee42587bc6",
+      "value": "GOOG-claims-Alphabet-preferred-offering-closing-8-K",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.0b9e4f5fe666acfab2f7",
+      "value": "GOOG-claims-Series-A-certificate-of-designations",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.702582546304dd5cbb5b",
+      "value": "GOOG-claims-Series-B-certificate-of-designations",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.01599491461b870846f2",
+      "value": "GOOG-claims-Series-A-final-prospectus-supplement",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-05.en.json",
+      "key": "text.90e20d2017cf6426a6ac",
+      "value": "GOOG-claims-Series-B-final-prospectus-supplement",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-06.en.json",
+      "key": "text.f0a755630cfe597e4d0b",
+      "value": "GOOG-CFO-tenure",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-06.en.json",
+      "key": "text.0b02188cfb8262b452c9",
+      "value": "issuer_leadership_announcement",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-06.en.json",
+      "key": "text.57a590d7db5e35afc6da",
+      "value": "primary_search_excerpt_read",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-06.en.json",
+      "key": "text.d5fcfe37d7865d662a44",
+      "value": "GOOG-Pichai-tenure",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-06.en.json",
+      "key": "text.2f3581b0f4640770fce8",
+      "value": "GOOG-Kurian-tenure",
+      "reason": "Stable source, filing or snapshot identifier"
+    },
+    {
+      "batch": "renewed-research-2026-10-17__evidence-GOOG-06.en.json",
+      "key": "text.05bfcfdf3052d7a7147e",
+      "value": "issuer_page_read_date_and_transition_verified",
+      "reason": "Stable machine enum, source-reference or model-field identifier"
+    }
+  ],
+  "numeric_normalizations": [
+    {
+      "key": "text.e05320de3418dcac16d8",
+      "note": "Source concatenated Q22024 rendered as Q2 2024, preserving quarter and year."
+    }
+  ]
+}

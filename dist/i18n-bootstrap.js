@@ -7,14 +7,14 @@ export {mountLocaleControl};
 mountLocaleControl();
 
 // Edition names are presentation labels; stable theme keys/palettes never change.
-import {bindText,t} from './i18n.js';
+import {bindText,bindAttribute,t} from './i18n.js';
 registerCatalog('theme',{en:{forest:'Glacier',slate:'Cobalt Ledger',midnight:'Night Edition',sand:'Graphite',plum:'Aubergine',ocean:'Pine',current:'{label}'},'zh-Hant':{forest:'冰川',slate:'鈷藍帳冊',midnight:'夜色版',sand:'石墨',plum:'茄紫',ocean:'松綠',current:'{label}'}});
 export function mountThemeLabels(document=globalThis.document,window=globalThis.window){
  if(!document?.querySelectorAll)return ()=>{};
  const disposers=[];
  for(const button of document.querySelectorAll('[data-theme-choice]')){
   const key=button.dataset?.themeChoice,label=button.querySelectorAll?.('span')?.[1];
-  if(label&&['forest','slate','midnight','sand','plum','ocean'].includes(key))disposers.push(bindText(label,'theme.'+key));
+  if(label&&['forest','slate','midnight','sand','plum','ocean'].includes(key)){disposers.push(bindText(label,'theme.'+key));disposers.push(bindAttribute(button,'aria-label','theme.'+key));}
  }
  const current=document.querySelector?.('#current-theme-name');
  const binding=current?bindText(current,'theme.current',()=>({label:t('theme.'+(document.documentElement?.dataset?.theme||'slate'))})):null;

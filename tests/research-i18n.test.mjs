@@ -61,3 +61,58 @@ test('research: each data-prose overlay has verified immutable source-file and E
   assert.equal(value,proseEn[key],`${entry.file}#${entry.pointer}`);assert.equal(sha(value),entry.englishSHA256,key);
  }
 });
+
+test('research: every original standalone accessibility label has an exact Chinese overlay',async()=>{
+ const {default:pairs}=await import('../dist/locales/research-page-attributes.js');
+ const manifest=JSON.parse(fs.readFileSync(new URL('../dist/locales/research-presentation-manifest.json',import.meta.url),'utf8'));
+ let count=0;
+ for(const page of Object.keys(manifest.pages)){
+  const raw=fs.readFileSync(new URL('../dist/'+page,import.meta.url),'utf8');
+  for(const match of raw.matchAll(/\b(?:aria-label|alt|placeholder|title)="([^"]+)"/g)){
+   assert.ok(pairs[match[1]],`${page}: ${match[1]}`);assert.match(pairs[match[1]],/[\u3400-\u9fff]/);count++;
+  }
+ }
+ assert.ok(count>400);
+});
+
+test('research: standalone locale changes restore original accessible labels without replacing nodes',async()=>{
+ const previous=getLocale(),saved={document:globalThis.document,location:globalThis.location,fetch:globalThis.fetch};
+ const attrs={'aria-label':'Evidence records'},node={isConnected:true,getAttribute:k=>attrs[k]??null,setAttribute:(k,v)=>attrs[k]=v};
+ let button;
+ globalThis.document={documentElement:{lang:'en'},body:{append:n=>button=n},getElementById:()=>button,createElement:()=>({dataset:{},setAttribute(){}}),querySelector:()=>null,querySelectorAll:s=>s==='[aria-label]'?[node]:[]};
+ globalThis.location={pathname:new URL('../dist/data/test.html',import.meta.url).pathname};
+ globalThis.fetch=async url=>({ok:true,json:async()=>String(url).endsWith('coverage.json')?{pages:[{page:'data/test.html',complete:true}]}:{}});
+ try{
+  setLocale('en');await import('../dist/research-page-i18n.js?accessible-label-test');
+  assert.equal(attrs['aria-label'],'Evidence records');const original=button;
+  for(let i=0;i<20;i++){button.onclick();assert.equal(attrs['aria-label'],i%2?'Evidence records':'證據紀錄');assert.equal(button,original);}
+ }finally{
+  node.isConnected=false;setLocale(previous);
+  for(const [key,value]of Object.entries(saved))if(value===undefined)delete globalThis[key];else globalThis[key]=value;
+ }
+});
+
+test('research: original English quotations and exact missing prose keep language metadata across locale changes',async()=>{
+ const {markOriginalResearchLanguage}=await import('../dist/research-page-language.js');
+ const value=text=>({tagName:'DD',textContent:text,attrs:{},setAttribute(k,v){this.attrs[k]=v;}});
+ const quote=value('Original English evidence.'),raw=value('Revenue     100'),chinese=value('原始中文引文'),analysis=value('Authored analysis'),translatedRaw=value('Translatable source label');
+ const terms=[['source Excerpt',quote],['raw Line',raw],['raw Text',chinese],['rationale',analysis],['raw Text',translatedRaw]].map(([textContent,nextElementSibling])=>({textContent,nextElementSibling}));
+ const pending={data:'Exact pending English',replaceWith(node){this.wrapper=node;}},other={data:'Unrelated English'};
+ let cursor=0;
+ const root={body:{},querySelectorAll:s=>s==='dt'?terms:[],createTreeWalker:()=>({nextNode(){this.currentNode=[pending,other][cursor++];return Boolean(this.currentNode);}}),createElement:()=>({attrs:{},setAttribute(k,v){this.attrs[k]=v;},append(n){this.child=n;}})};
+ assert.equal(markOriginalResearchLanguage(root,['Exact pending English'],['Revenue     100']),2);
+ const previous=getLocale();
+ for(const locale of ['zh-Hant','en','zh-Hant']){setLocale(locale);assert.equal(quote.attrs.lang,'en');assert.equal(raw.attrs.lang,'en');assert.equal(pending.wrapper.attrs.lang,'en');assert.equal(pending.wrapper.child,pending);}
+ assert.deepEqual(chinese.attrs,{});assert.deepEqual(analysis.attrs,{});assert.deepEqual(translatedRaw.attrs,{});assert.equal(other.wrapper,undefined);setLocale(previous);
+});
+
+test('research: failed translation loading keeps English body language and Chinese warning language',async()=>{
+ const previous=getLocale(),saved={document:globalThis.document,location:globalThis.location,fetch:globalThis.fetch},warn=console.warn;
+ const bodyAttrs={},notices=[];let button;
+ const source={textContent:'Original research remains readable',getAttribute:k=>k==='data-i18n'?'research-pages.text.unavailable':null,hasAttribute:k=>k==='data-i18n'};
+ const make=()=>({dataset:{},style:{},attrs:{},setAttribute(k,v){this.attrs[k]=v;}});
+ globalThis.document={documentElement:{lang:'en'},body:{setAttribute:(k,v)=>bodyAttrs[k]=v,prepend:n=>notices.push(n),append:n=>button=n},getElementById:()=>button,createElement:make,querySelector:()=>null,querySelectorAll:s=>s.includes('data-i18n')?[source]:[]};
+ globalThis.location={pathname:'/data/test.html'};globalThis.fetch=async()=>{throw Error('Offline');};console.warn=()=>{};
+ try{setLocale('zh-Hant');await import('../dist/research-page-i18n.js?failed-load-test');assert.equal(source.textContent,'Original research remains readable');assert.equal(bodyAttrs.lang,'en');assert.equal(notices[0].attrs.lang,'zh-Hant');assert.match(notices[0].textContent,/無法載入/);setLocale('en');assert.equal(notices[0].hidden,true);assert.equal(bodyAttrs.lang,'en');}
+ finally{console.warn=warn;setLocale(previous);for(const [key,value]of Object.entries(saved))if(value===undefined)delete globalThis[key];else globalThis[key]=value;}
+});

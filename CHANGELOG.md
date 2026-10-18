@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-18 · Complete authored research translation and accessibility review
+
+- Completed Traditional Chinese overlays for all 26 research pages: all 12,750 inventoried segments covered, with 11,294 translations and 1,456 reviewed retained names, identifiers, formulas and original evidence. Original source quotations remain clearly identified; external source documents and user notes stay original.
+- Localized standalone accessibility labels and every year in margin-chart descriptions. Theme controls now have explicit translated accessible names. Preserved English quotations carry appropriate language metadata; catalog-load failures leave original English content readable.
+- Reserved reliable space beside the corner language control on research notes, and fixed standalone-page box sizing so the control remains 44×44 pixels. Approved layout, typography, six palettes and all financial calculations remain unchanged.
+- Recorded dated W3C language-accessibility and MDN reduced-motion lessons. The requested Awwwards page timed out; no inaccessible course/video completion is claimed.
+
+Verification: full snapshot suite 1,216 tests, 1,214 passed, one unchanged missing-AAOI-source-cache failure and one existing skip. The final standalone box-sizing change and new assertion passed all 25 affected foundation/research/theme tests. All 26 research HTML files reverse exactly to their frozen original hashes; source financial JSON is unchanged. Static narrow-screen review supplements the earlier native cloud-browser interface checks and is not native mobile-browser testing.
+
 ## 2026-10-18 · Traditional Chinese controls and theme sweep
 
 - Added an independent 44px corner language button, preserving English by default and remembering language separately from valuation drafts. Existing typography and six palette definitions remain intact, with Traditional Chinese glyph fallbacks.

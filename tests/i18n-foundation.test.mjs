@@ -85,3 +85,10 @@ test('attribute-only marked nodes receive and refresh named parameters',()=>{
  attrs['data-i18n-params']='{"name":"Year 5"}';localizeMarkedNodes(root);assert.equal(attrs['aria-label'],'你好，Year 5');
  assert.deepEqual(getMissingTranslations(),[]);dispose();setLocale('en');
 });
+
+test('corner target uses its own border-box sizing on standalone pages',async()=>{
+ const {readFileSync}=await import('node:fs');
+ const css=readFileSync(new URL('../dist/i18n.css',import.meta.url),'utf8');
+ const rule=css.match(/\.locale-corner\{([^}]+)\}/)[1];
+ assert.match(rule,/box-sizing:border-box/);assert.match(rule,/width:44px/);assert.match(rule,/height:44px/);
+});

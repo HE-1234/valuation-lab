@@ -1110,5 +1110,7 @@ export default {
   "skinFullHistory": "完整歷史資料 ↗",
   "skinSameAsYou": "與你的假設相同",
   "skinPointsAbove": "你的假設高出 {amount} 個百分點",
-  "skinPointsBelow": "你的假設低於歷史值 {amount} 個百分點"
+  "skinPointsBelow": "你的假設低於歷史值 {amount} 個百分點",
+  "marginSequenceDescription": "{years}。{source}",
+  "annualMarginSourceDescription": "年度預測利潤率；不推斷缺漏的歷史利潤率。"
 };
