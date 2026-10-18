@@ -93,8 +93,8 @@ test('derived simulation UI: pending and invalid edits withhold exports, superse
  const drain=async()=>{for(let i=0;i<50;i++){if(releases.length)releases.shift()();await ticks();if(!h.get('#mc-export').disabled)break;}};
  try{
   assert.equal(h.get('#mc-export').disabled,true);
-  h.get('#mc-seed').value='superseded';h.get('#mc-seed').oninput();h.runTimers();
-  h.get('#mc-seed').value='current-derived';h.get('#mc-seed').oninput();h.runTimers();
+  h.get('#mc-seed').value='superseded';h.get('#mc-seed').oninput();h.get('#mc-run').click();h.runTimers();
+  h.get('#mc-seed').value='current-derived';h.get('#mc-seed').oninput();h.get('#mc-run').click();h.runTimers();
   await drain();assert.equal(h.get('#mc-export').disabled,false);
   h.get('#mc-export').click();const exported=JSON.parse(await h.exports[0].text());
   assert.equal(exported.config.seed,'current-derived');assert.equal(exported.config.capitalPolicy,DERIVED_CAPITAL_POLICY);assert.equal(exported.draft.schemaVersion,2);

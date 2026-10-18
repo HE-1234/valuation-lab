@@ -5,7 +5,7 @@ import vm from 'node:vm';
 import {mountLearning} from '../dist/learn-view.js';
 import {setLocale,getMissingTranslations} from '../dist/i18n.js';
 import en from '../dist/locales/learn.en.js';
-import zh from '../dist/locales/learn.zh-Hant.js';
+import zh from '../dist/locales/learn.zh-Hans.js';
 import {minimalDocument} from './research-workspace-harness.mjs';
 const source=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
 const questions=JSON.parse(JSON.stringify(vm.runInNewContext(source.match(/const questions=(\[[\s\S]*?\]);/)[1])));
@@ -23,14 +23,14 @@ test('Learning switch preserves question, toy controls, answers and focused elem
   const choice=get('[data-learn-choice]');if(choice)choice.click();
   const controls=root.querySelectorAll('input,select,button'),state=controller.getState(),before=root.textContent;
   const focus=get('[data-learn-answer]');focus.focus();
-  setLocale('zh-Hant');
+  setLocale('zh-Hans');
   assert.deepEqual(controller.getState(),state);
   assert.equal(document.activeElement,focus);
   assert.equal(get('[data-learn-range]'),input);
   assert.equal(get('[data-learn-select]'),select);
-  assert.notEqual(root.textContent,before);assert.match(root.textContent,/教學範例/);
+  assert.notEqual(root.textContent,before);assert.match(root.textContent,/教学范例/);
   assert.ok(!root.textContent.includes(questions[index].q));
-  assert.equal(get('.learn-course').getAttribute('aria-label'),'估值學習題目');
+  assert.equal(get('.learn-course').getAttribute('aria-label'),'估值学习题目');
   setLocale('en');assert.deepEqual(controller.getState(),state);assert.equal(root.textContent,before);
   if(index<5)get('[data-learn-action="next"]').click();
  }
@@ -39,5 +39,5 @@ test('Learning switch preserves question, toy controls, answers and focused elem
 });
 test('Learning empty state translates and unregisters cleanly',()=>{
  setLocale('en');const document=minimalDocument(),controller=mountLearning(document.root,[]);
- setLocale('zh-Hant');assert.equal(document.root.textContent,'目前尚無學習題目。');controller.destroy();setLocale('en');
+ setLocale('zh-Hans');assert.equal(document.root.textContent,'目前尚无学习题目。');controller.destroy();setLocale('en');
 });

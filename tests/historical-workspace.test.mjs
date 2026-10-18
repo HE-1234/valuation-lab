@@ -212,12 +212,12 @@ test('historical: locale switch keeps workspace, evidence, inputs, notes and foc
  h.workspace.openEvidence(h.get('#historical-evidence-action'));
  const state=h.workspace.getState(),inputs=h.get('#assumptions'),evidence=h.workspace.evidence.element;
  const openDetails=h.get('#evidence-details').open;
- setLocale('zh-Hant');
+ setLocale('zh-Hans');
  assert.deepEqual(h.workspace.getState(),state);assert.equal(h.get('#assumptions'),inputs);
  assert.equal(h.workspace.evidence.element,evidence);assert.equal(h.workspace.evidence.isOpen,true);
  assert.equal(h.get('#evidence-details').open,openDetails);assert.equal(notes.value,'Keep my own English thesis.');
- assert.equal(h.get('#historical-evidence-action').textContent,'證據');
- assert.match(evidence.querySelector('.contextual-evidence-title').textContent,/證據/);
+ assert.equal(h.get('#historical-evidence-action').textContent,'证据');
+ assert.match(evidence.querySelector('.contextual-evidence-title').textContent,/证据/);
  setLocale('en');assert.deepEqual(h.workspace.getState(),state);
  assert.equal(h.get('#historical-evidence-action').textContent,'Evidence');
  h.workspace.destroy();

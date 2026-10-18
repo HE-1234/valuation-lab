@@ -103,4 +103,7 @@ def main():
  write_json(ROOT/'dist/locales/research-pages-coverage.json',{'schemaVersion':1,'translationPolicy':'Reviewed exact whole-text overlays only; source quotations, identifiers, URLs, code and raw JSON retained. Missing authored prose is incomplete, not an exception.','pages':report,'unusedTranslationKeys':sorted(set(overlays)-set(all_entries))})
  if args.apply:write_json(ROOT/'dist/locales/research-presentation-manifest.json',{'schemaVersion':1,'policy':'Frozen research source manifest and JSON remain unchanged. Original English HTML hashes refer to exact output before reversible localization-only leaf wrappers and asset references.','pages':presentation})
  print(json.dumps({'pages':len(report),'uniqueSegments':len(all_entries),'coveredUniqueSegments':len(set(overlays)&set(all_entries)),'completePages':sum(r['complete'] for r in report)}))
-if __name__=='__main__':main()
+if __name__=='__main__':
+ main()
+ import runpy
+ runpy.run_path(str(ROOT/'scripts/build-simplified-chinese.py'),run_name='__main__')

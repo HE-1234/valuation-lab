@@ -1,7 +1,7 @@
 import {registerCatalog,t,onLocaleChange} from './i18n.js';
 import en from './locales/learn.en.js';
-import zh from './locales/learn.zh-Hant.js';
-registerCatalog('learn',{en,'zh-Hant':zh});
+import zh from './locales/learn.zh-Hans.js';
+registerCatalog('learn',{en,'zh-Hans':zh});
 const copyKeys=new Map(Object.entries(en).map(([key,value])=>[value,`learn.${key}`]));
 const copy=(source,params={})=>copyKeys.has(source)?t(copyKeys.get(source),params):source;
 const mark=source=>copyKeys.has(source)?`<span data-learn-copy="${copyKeys.get(source)}">${esc(copy(source))}</span>`:esc(source);

@@ -1,24 +1,30 @@
 /** Explicit presentation-only localization. Never changes model or user state. */
-export const supportedLocales = Object.freeze(['en', 'zh-Hant']);
+export const supportedLocales = Object.freeze(['en', 'zh-Hans']);
 export const localeStorageKey = 'valuation-lab-locale';
 const catalogs = new Map(), listeners = new Set(), bindings = new Set(), diagnostics = new Map();
 const textBindings=new WeakMap(), attributeBindings=new WeakMap();
 let locale = 'en';
-try { const saved = globalThis.localStorage?.getItem(localeStorageKey); if (supportedLocales.includes(saved)) locale = saved; } catch {}
+try {
+ const saved = globalThis.localStorage?.getItem(localeStorageKey);
+ // A previous Chinese choice follows the corrected Simplified Chinese edition.
+ // Only the independent locale preference is migrated; financial state is untouched.
+ if (saved === 'zh-Hant') { locale = 'zh-Hans'; try { globalThis.localStorage?.setItem(localeStorageKey, locale); } catch {} }
+ else if (supportedLocales.includes(saved)) locale = saved;
+} catch {}
 const record = (kind, key, detail = '') => diagnostics.set(`${kind}:${key}:${detail}`, {kind,key,detail});
 const tokens = value => [...String(value).matchAll(/\{([A-Za-z][\w]*)\}/g)].map(match=>match[1]).sort();
 const equalTokens = (a,b) => JSON.stringify([...new Set(tokens(a))]) === JSON.stringify([...new Set(tokens(b))]);
 export function registerCatalog(namespace, entries) {
- if (!/^[a-z][a-z0-9-]*$/i.test(namespace) || !entries?.en || !entries?.['zh-Hant']) throw new TypeError('Invalid localization catalog');
- const previous = catalogs.get(namespace) || {en:{},'zh-Hant':{}};
- const next = {en:{...previous.en,...entries.en},'zh-Hant':{...previous['zh-Hant'],...entries['zh-Hant']}};
+ if (!/^[a-z][a-z0-9-]*$/i.test(namespace) || !entries?.en || !entries?.['zh-Hans']) throw new TypeError('Invalid localization catalog');
+ const previous = catalogs.get(namespace) || {en:{},'zh-Hans':{}};
+ const next = {en:{...previous.en,...entries.en},'zh-Hans':{...previous['zh-Hans'],...entries['zh-Hans']}};
  for (const [key, english] of Object.entries(next.en)) {
   if (typeof english !== 'string') throw new TypeError(`Non-string localization entry ${namespace}.${key}`);
-  const chinese = next['zh-Hant'][key];
+  const chinese = next['zh-Hans'][key];
   if (typeof chinese !== 'string') record('missing-translation',`${namespace}.${key}`);
   else if (!equalTokens(english,chinese)) throw new TypeError(`Localization parameter mismatch: ${namespace}.${key}`);
  }
- for(const key of Object.keys(next['zh-Hant'])) if(!Object.hasOwn(next.en,key)) throw new TypeError(`Missing English localization entry: ${namespace}.${key}`);
+ for(const key of Object.keys(next['zh-Hans'])) if(!Object.hasOwn(next.en,key)) throw new TypeError(`Missing English localization entry: ${namespace}.${key}`);
  catalogs.set(namespace,next);
  refreshBindings();
  return namespace;

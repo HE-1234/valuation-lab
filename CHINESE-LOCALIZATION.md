@@ -1,4 +1,6 @@
-# English / Traditional Chinese
+# Original Traditional Chinese localization record
+
+The user subsequently requested Simplified Chinese. Runtime now uses zh-Hans; see [current Simplified Chinese implementation](SIMPLIFIED-CHINESE.md). Retained Traditional catalogs are build-source artifacts. This document records the original localization work.
 
 The requested language control is a small corner button, separate from navigation. It is positioned at the top-right with safe-area spacing and a 44-pixel target. Appearance has reserved space beside it; the language control is separate from the navigation. It shows the target language, 中文 or EN. Fresh visits remain in English; the selected language is remembered separately from valuation drafts.
 

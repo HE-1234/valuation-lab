@@ -1,8 +1,8 @@
 import {translateSimulationError,simulationErrorMarkup,localizeSimulationErrors} from './simulation-error-i18n.js';
 import {t,localizedText,bindText,localizeMarkedNodes,registerCatalog} from './i18n.js';
 import en from './locales/distribution.en.js';
-import zh from './locales/distribution.zh-Hant.js';
-registerCatalog('distribution',{en,'zh-Hant':zh});
+import zh from './locales/distribution.zh-Hans.js';
+registerCatalog('distribution',{en,'zh-Hans':zh});
 const distributionKeys={"Fixed": "distribution.t0", "Triangular": "distribution.t1", "Uniform": "distribution.t2", "Truncated normal": "distribution.t3", "Fixed value": "distribution.t4", "Lower bound": "distribution.t5", "Most likely · mode": "distribution.t6", "Upper bound": "distribution.t7", "Underlying mean": "distribution.t8", "Underlying standard deviation": "distribution.t9", "Every draw uses this value.": "distribution.t10", "Equal density between the bounds.": "distribution.t11", "Underlying normal, cut off at your bounds.": "distribution.t12", "Peak at the mode; bounded on both sides.": "distribution.t13", "Relative density, not a probability scale.": "distribution.t14", "Distribution": "distribution.t15", "percentage points": "distribution.t16", "Mean and standard deviation describe the normal before truncation. The bounded draws can have different moments.": "distribution.t17", "This driver has no simulated variation.": "distribution.t18", "The endpoints are hard bounds; no central value is preferred.": "distribution.t19", "The mode is a judgment about the most likely input, not a fitted estimate.": "distribution.t20"};
 /** Presentation helpers for conditional input distributions; no sampling occurs here. */
 import {distributionSummary} from './simulation.js';

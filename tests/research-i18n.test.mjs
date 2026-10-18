@@ -5,9 +5,9 @@ import {createHash} from 'node:crypto';
 import {getLocale,setLocale,getMissingTranslations,clearTranslationDiagnostics} from '../dist/i18n.js';
 import {researchSummaries,getResearchSummary,researchTextHTML} from '../dist/research-summaries.js';
 import researchEn from '../dist/locales/research.en.js';
-import researchZh from '../dist/locales/research.zh-Hant.js';
+import researchZh from '../dist/locales/research.zh-Hans.js';
 import proseEn from '../dist/locales/research-prose.en.js';
-import proseZh from '../dist/locales/research-prose.zh-Hant.js';
+import proseZh from '../dist/locales/research-prose.zh-Hans.js';
 import {authoredResearchText,authoredResearchTextHTML,authoredResearchMessage} from '../dist/research-prose-i18n.js';
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const numeric=s=>(s.match(/\d+(?:[.,]\d+)*/g)||[]).sort();
@@ -18,7 +18,7 @@ test('research: all fourteen summaries translate without changing research recor
  clearTranslationDiagnostics();
  for(const ticker of Object.keys(researchSummaries)){
   setLocale('en');assert.equal(getResearchSummary(ticker),researchSummaries[ticker].summary);
-  setLocale('zh-Hant');assert.match(getResearchSummary(ticker),/[\u3400-\u9fff]/);
+  setLocale('zh-Hans');assert.match(getResearchSummary(ticker),/[\u3400-\u9fff]/);
   assert.deepEqual(numeric(getResearchSummary(ticker)),numeric(researchSummaries[ticker].summary),ticker);
   assert.match(researchTextHTML(ticker),new RegExp(`data-i18n="research.${ticker}.summary"`));
  }
@@ -29,7 +29,7 @@ test('research: source prose keys are content hashes and explicit presentation e
  assert.deepEqual(Object.keys(proseEn).sort(),Object.keys(proseZh).sort());
  for(const [key,value]of Object.entries(proseEn))assert.equal(key,'text.'+sha(value).slice(0,20),key);
  const value='No verified current market quote; price-dependent conclusions require a dated same-basis quote.';
- const previous=getLocale();setLocale('zh-Hant');assert.match(authoredResearchText(value),/報價/);
+ const previous=getLocale();setLocale('zh-Hans');assert.match(authoredResearchText(value),/报价/);
  assert.match(authoredResearchTextHTML(value),/data-i18n="research-prose.text\./);
  assert.ok(authoredResearchMessage(value)?.key.startsWith('research-prose.'));
  assert.equal(authoredResearchTextHTML('<img src=x onerror=alert(1)>'),'&lt;img src=x onerror=alert(1)&gt;');
@@ -85,7 +85,7 @@ test('research: standalone locale changes restore original accessible labels wit
  try{
   setLocale('en');await import('../dist/research-page-i18n.js?accessible-label-test');
   assert.equal(attrs['aria-label'],'Evidence records');const original=button;
-  for(let i=0;i<20;i++){button.onclick();assert.equal(attrs['aria-label'],i%2?'Evidence records':'證據紀錄');assert.equal(button,original);}
+  for(let i=0;i<20;i++){button.onclick();assert.equal(attrs['aria-label'],i%2?'Evidence records':'证据纪录');assert.equal(button,original);}
  }finally{
   node.isConnected=false;setLocale(previous);
   for(const [key,value]of Object.entries(saved))if(value===undefined)delete globalThis[key];else globalThis[key]=value;
@@ -102,7 +102,7 @@ test('research: original English quotations and exact missing prose keep languag
  const root={body:{},querySelectorAll:s=>s==='dt'?terms:[],createTreeWalker:()=>({nextNode(){this.currentNode=[pending,other][cursor++];return Boolean(this.currentNode);}}),createElement:()=>({attrs:{},setAttribute(k,v){this.attrs[k]=v;},append(n){this.child=n;}})};
  assert.equal(markOriginalResearchLanguage(root,['Exact pending English'],['Revenue     100']),2);
  const previous=getLocale();
- for(const locale of ['zh-Hant','en','zh-Hant']){setLocale(locale);assert.equal(quote.attrs.lang,'en');assert.equal(raw.attrs.lang,'en');assert.equal(pending.wrapper.attrs.lang,'en');assert.equal(pending.wrapper.child,pending);}
+ for(const locale of ['zh-Hans','en','zh-Hans']){setLocale(locale);assert.equal(quote.attrs.lang,'en');assert.equal(raw.attrs.lang,'en');assert.equal(pending.wrapper.attrs.lang,'en');assert.equal(pending.wrapper.child,pending);}
  assert.deepEqual(chinese.attrs,{});assert.deepEqual(analysis.attrs,{});assert.deepEqual(translatedRaw.attrs,{});assert.equal(other.wrapper,undefined);setLocale(previous);
 });
 
@@ -113,7 +113,7 @@ test('research: failed translation loading keeps English body language and Chine
  const make=()=>({dataset:{},style:{},attrs:{},setAttribute(k,v){this.attrs[k]=v;}});
  globalThis.document={documentElement:{lang:'en'},body:{setAttribute:(k,v)=>bodyAttrs[k]=v,prepend:n=>notices.push(n),append:n=>button=n},getElementById:()=>button,createElement:make,querySelector:()=>null,querySelectorAll:s=>s.includes('data-i18n')?[source]:[]};
  globalThis.location={pathname:'/data/test.html'};globalThis.fetch=async()=>{throw Error('Offline');};console.warn=()=>{};
- try{setLocale('zh-Hant');await import('../dist/research-page-i18n.js?failed-load-test');assert.equal(source.textContent,'Original research remains readable');assert.equal(bodyAttrs.lang,'en');assert.equal(notices[0].attrs.lang,'zh-Hant');assert.match(notices[0].textContent,/無法載入/);setLocale('en');assert.equal(notices[0].hidden,true);assert.equal(bodyAttrs.lang,'en');}
+ try{setLocale('zh-Hans');await import('../dist/research-page-i18n.js?failed-load-test');assert.equal(source.textContent,'Original research remains readable');assert.equal(bodyAttrs.lang,'en');assert.equal(notices[0].attrs.lang,'zh-Hans');assert.match(notices[0].textContent,/无法载入/);setLocale('en');assert.equal(notices[0].hidden,true);assert.equal(bodyAttrs.lang,'en');}
  finally{console.warn=warn;setLocale(previous);for(const [key,value]of Object.entries(saved))if(value===undefined)delete globalThis[key];else globalThis[key]=value;}
 });
 

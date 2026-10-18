@@ -1,4 +1,4 @@
-import {ANNUAL_GROWTH_PATH} from './annual-path-sampling.js';
+import {ANNUAL_GROWTH_PATH,ANNUAL_METRIC_PATHS} from './annual-path-sampling.js';
 import {defaults} from './engine.js';
 import {marginPathIssues,marginAtYear} from './margin-path.js';
 import {capitalPathIssues,resolvedCapitalPath,applyCapitalEfficiency} from './capital-efficiency.js';
@@ -161,11 +161,15 @@ export function operatingProfileDefinition(snapshot,draft,assumptions=draft.assu
  return {...(base||{id:'capital-efficiency-v1',label:'Early/later capital efficiency',classification:'User-selected analyst path, not issuer guidance or a fitted forecast'}),capitalPath,capitalMaturityYears:capitalPath.terminalYear,forecastYears,capitalSampling,note};
 }
 export function operatingAssumptions(snapshot,draft,assumptions){
- const path=assumptions[ANNUAL_GROWTH_PATH];
- const clean={...assumptions};delete clean[ANNUAL_GROWTH_PATH];
+ const path=assumptions[ANNUAL_GROWTH_PATH],metrics=assumptions[ANNUAL_METRIC_PATHS];
+ const clean={...assumptions};delete clean[ANNUAL_GROWTH_PATH];delete clean[ANNUAL_METRIC_PATHS];
  const base=applyCapitalEfficiency(snapshot,draft,marginOperatingAssumptions(snapshot,draft,clean),clean);
- if(path===undefined)return base;
- if(!Array.isArray(path)||path.length!==base.years||!path.every(g=>finite(g)&&g>=-.5&&g<=2))throw Error('Sampled annual growth path is outside supported bounds.');
+ if(path===undefined&&metrics===undefined)return base;
+ if(path!==undefined&&(!Array.isArray(path)||path.length!==base.years||!path.every(g=>finite(g)&&g>=-.5&&g<=2)))throw Error('Sampled annual growth path is outside supported bounds.');
  const start=(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue;
- return {...base,yearlyOverrides:path.map((growth,i)=>({...((base.yearlyOverrides?.[i])||{margin:start+(base.targetMargin-start)*(i+1)/base.years,taxRate:base.tax,salesCapital:base.salesCapital,wacc:base.wacc}),growth}))};
+ return {...base,yearlyOverrides:Array.from({length:base.years},(_,i)=>{
+  const row={...((base.yearlyOverrides?.[i])||{growth:base.growth+(base.terminalGrowth-base.growth)*i/Math.max(1,base.years-1),margin:start+(base.targetMargin-start)*(i+1)/base.years,taxRate:base.tax,salesCapital:base.salesCapital,wacc:base.wacc}),...(path?{growth:path[i]}:{})};
+  for(const [key,values]of Object.entries(metrics||{})){if(!['margin','taxRate','salesCapital','wacc'].includes(key)||!Array.isArray(values)||values.length!==base.years)throw Error('Invalid annual operating metric path.');row[key]=values[i];}
+  return row;
+ })};
 }

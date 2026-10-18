@@ -1,7 +1,7 @@
 import {registerCatalog,t,localizedText,localizeMarkedNodes,onLocaleChange} from './i18n.js';
 import appEnglish from './locales/historical-app.en.js';
-import appChinese from './locales/historical-app.zh-Hant.js';
-registerCatalog('historical-app',{en:appEnglish,'zh-Hant':appChinese});
+import appChinese from './locales/historical-app.zh-Hans.js';
+registerCatalog('historical-app',{en:appEnglish,'zh-Hans':appChinese});
 const appCopyKeys=new Map(Object.entries(appEnglish).map(([key,value])=>[value,`historical-app.${key}`]));
 const appCopy=(source,params={})=>appCopyKeys.has(source)?t(appCopyKeys.get(source),params):source;
 // Engine errors use a known semicolon-delimited list; preserve unknown messages verbatim.

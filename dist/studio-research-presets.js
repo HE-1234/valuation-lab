@@ -3,7 +3,7 @@ import {getCurrentCapitalPreset} from './current-capital-presets.js';
 // Research presets are a versioned overlay. Frozen source cases and both engines
 // remain unchanged; a full preset is applied only to a fresh or explicitly loaded draft.
 import {researchDraftFor,restoreResearchDraft,researchDraftIssues} from './research-model.js';
-import {validateResearchSimulationConfig} from './research-simulation.js';
+import {validateResearchSimulationConfig,simulationResearchDefaults} from './research-simulation.js';
 
 export const STUDIO_PRESETS_PATH='./data/studio-research-presets-2026-10-17-v1.json';
 export const STUDIO_PRESETS_VERSION='2026-10-17-studio-presets-v1';
@@ -45,7 +45,7 @@ export function studioResearchDraft(preset,bundle){
  if(preset.bridgeReviewVersion)draft.bridgeReviewVersion=preset.bridgeReviewVersion;
  const capital=getCurrentCapitalPreset(preset.ticker);
  if(capital){draft.currentCapitalScenario=structuredClone(capital.scenario);draft.currentCapitalProvenance=structuredClone(capital.provenance);draft.timing=structuredClone(capital.timing);}
- draft.researchSimulationConfig=validateResearchSimulationConfig({...preset.simulationConfig,method:'annual-path',annualPath:annualPathDefaults(draft.annual.length)});
+ draft.researchSimulationConfig=validateResearchSimulationConfig({...simulationResearchDefaults(draft),...preset.simulationConfig,method:'annual-path',annualPath:annualPathDefaults(draft.annual.length)});
  draft.researchPreset={version:bundle.version,presetId:preset.presetId,asOf:bundle.asOf,classification:bundle.classification,
   rationale:structuredClone(preset.rationale),parameterRationale:structuredClone(preset.parameterRationale||{}),simulationRationale:structuredClone(preset.simulationRationale||{}),
   methodologySources:structuredClone(bundle.methodology?.damodaranSources||[]),sourceRecords:structuredClone(preset.sourceRecords||[]),timelineSummary:structuredClone(preset.timelineSummary||{}),

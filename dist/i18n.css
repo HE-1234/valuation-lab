@@ -1,8 +1,8 @@
 /* Compact independent corner control; no navigation or model layout changes. */
 .locale-corner{box-sizing:border-box;position:fixed;inset-block-start:max(8px,env(safe-area-inset-top));inset-inline-end:max(8px,env(safe-area-inset-right));z-index:80;width:44px;height:44px;min-width:44px;min-height:44px;padding:8px 10px;font:500 11px/1.2 var(--font-sans,Arial,sans-serif);letter-spacing:0;text-transform:none;color:var(--ink,#14181e);background:var(--paper,#f3f4f1);border:1px solid var(--line,#d7d9dd);border-radius:6px;cursor:pointer;box-shadow:none;}
 .locale-corner:focus-visible{outline:2px solid var(--focus,var(--accent,#2343c4));outline-offset:3px;}
-.locale-corner[data-locale="en"] [lang="en"],.locale-corner[data-locale="zh-Hant"] [lang="zh-Hant"]{font-weight:750;text-decoration:underline;text-underline-offset:3px;}
-html[lang="zh-Hant"]{font-family:var(--font-sans,Arial),"PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",sans-serif;}
+.locale-corner[data-locale="en"] [lang="en"],.locale-corner[data-locale="zh-Hans"] [lang="zh-Hans"]{font-weight:750;text-decoration:underline;text-underline-offset:3px;}
+html[lang="zh-Hans"]{font-family:var(--font-sans,Arial),"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;}
 @media print{.locale-corner{display:none!important;}}
 
 /* Reserve one compact independent corner slot; leave navigation untouched. */
@@ -10,10 +10,10 @@ html body .appearance-disclosure{right:calc(var(--sk-gutter,var(--approved-gutte
 /* Anchor the expanded panel to the viewport, not the shifted trigger. */
 html body .appearance-disclosure[open] .appearance{position:fixed;right:16px!important;left:auto;top:62px;max-width:calc(100vw - 32px);box-sizing:border-box;}
 @media(max-width:760px){html body>aside{padding-right:124px!important;}}
-/* Keep the approved Latin face; add explicit Traditional Chinese fallbacks. */
-:root[data-skin="report"][lang="zh-Hant"]{
- --font-ui:'Report Grotesk','Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',sans-serif;
- --font-editorial:'Report Grotesk','Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',sans-serif;
- --sk-ui:'Report Grotesk','Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',sans-serif;
- --sk-display:'Report Grotesk','Helvetica Neue',Arial,'PingFang TC','Microsoft JhengHei','Noto Sans CJK TC',sans-serif;
+/* Keep the approved Latin face; add explicit Simplified Chinese fallbacks. */
+:root[data-skin="report"][lang="zh-Hans"]{
+ --font-ui:'Report Grotesk','Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;
+ --font-editorial:'Report Grotesk','Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;
+ --sk-ui:'Report Grotesk','Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;
+ --sk-display:'Report Grotesk','Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;
 }

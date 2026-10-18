@@ -18,10 +18,10 @@ test('valid edits retain the exact completed graphic, disable stale interactions
   await drain(h,releases);const oldChart=h.get('#mc-chart'),oldHeights=heights(h),height=h.get('#mc-output').style.minHeight;
   h.get('#mc-seed').value='after';h.get('#mc-seed').oninput();
   assert.equal(h.get('#mc-chart'),oldChart);assert.deepEqual(heights(h),oldHeights);assert.equal(h.get('#mc-output').style.minHeight,height);
-  assert.equal(h.get('#mc-output').getAttribute('aria-busy'),'true');assert.equal(h.get('#mc-output').getAttribute('aria-hidden'),'true');assert.equal(h.get('#mc-output').inert,true);
+  assert.equal(h.get('#mc-output').getAttribute('aria-busy'),'false');assert.equal(h.get('#mc-output').getAttribute('aria-hidden'),'true');assert.equal(h.get('#mc-output').inert,true);
   assert.match(h.get('#mc-run-progress').textContent,/Previous completed distribution.*does not reflect the current inputs/);
   assert.equal(h.get('#mc-chart').getAttribute('tabindex'),'-1');assert.equal(h.get('#mc-play').disabled,true);assert.equal(h.get('#mc-scrubber').disabled,true);assert.equal(h.get('#mc-summary-content').innerHTML,'');
-  h.get('#mc-export').click();assert.equal(h.exports.length,0);h.runTimers();await drain(h,releases);
+  h.get('#mc-export').click();assert.equal(h.exports.length,0);h.get('#mc-run').click();h.runTimers();await drain(h,releases);
   assert.notEqual(h.get('#mc-chart'),oldChart);assert.equal(h.get('#mc-output').inert,false);assert.equal(h.get('#mc-run-progress').hidden,true);assert.equal(h.get('#mc-export').disabled,false);
   h.get('#mc-export').click();const saved=JSON.parse(await h.exports[0].text());assert.equal(saved.config.seed,'after');assert.deepEqual(saved.samples,simulateCurrent(h.snapshot,h.draft,saved.config).samples);
  }finally{h.cleanup()}
@@ -52,7 +52,7 @@ test('all-excluded results preserve dimensions and accounting while withholding 
  const releases=[],h=fixture({ticker:'STABLE-EMPTY',autoplay:false,synchronous:false,simulationConfig:config('empty'),yieldControl:()=>new Promise(resolve=>releases.push(resolve))});
  try{
   await drain(h,releases);const height=h.get('#mc-output').style.minHeight;
-  for(const part of ['low','mode','high'])h.get('#mc-wacc-'+part).value='1';h.get('#mc-wacc-high').oninput();assert.ok(h.get('#mc-chart'));assert.equal(h.get('#mc-output').inert,true);h.runTimers();await drain(h,releases);
+  for(const part of ['low','mode','high'])h.get('#mc-wacc-'+part).value='1';h.get('#mc-wacc-high').oninput();assert.ok(h.get('#mc-chart'));assert.equal(h.get('#mc-output').inert,true);h.get('#mc-run').click();h.runTimers();await drain(h,releases);
   assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-output').style.minHeight,height);assert.equal(h.get('#mc-summary-content').innerHTML,'');assert.match(h.get('#mc-audit').textContent,/37 attempted · 37 excluded/);assert.equal(h.get('#mc-export').disabled,true);h.get('#mc-export').click();assert.equal(h.exports.length,0);
  }finally{h.cleanup()}
 });
@@ -62,7 +62,7 @@ test('cancelled particle callbacks cannot change a pending view or a later compl
  try{
   const full=heights(h);h.get('#mc-play').click();const oldCallbacks=h.animations.map(a=>a.onfinish).filter(Boolean);assert.ok(oldCallbacks.length>0);h.destroy.pending();
   for(const callback of oldCallbacks)callback();assert.deepEqual(heights(h),full);assert.equal(h.get('#mc-output').inert,true);assert.match(h.get('#mc-animation-status').textContent,/Previous/);
-  h.get('#mc-seed').value='new-value';h.get('#mc-seed').oninput();const current=heights(h);for(const callback of oldCallbacks)callback();assert.deepEqual(heights(h),current);assert.equal(h.get('#mc-output').getAttribute('data-result-state'),'current');
+  h.get('#mc-seed').value='new-value';h.get('#mc-seed').oninput();h.get('#mc-run').click();const current=heights(h);for(const callback of oldCallbacks)callback();assert.deepEqual(heights(h),current);assert.equal(h.get('#mc-output').getAttribute('data-result-state'),'current');
   h.destroy();for(const callback of oldCallbacks)callback();assert.deepEqual(heights(h),current);
  }finally{h.cleanup()}
 });
@@ -71,9 +71,9 @@ test('default completed chart and explicit replay retain full exact bins, with b
  const h=fixture({ticker:'STABLE-DEFAULT',autoplay:null,simulationConfig:config('default')});
  try{
   const full=heights(h);assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML.replace(/<\/?span\b[^>]*>/g,''),/>Replay simulation<\/button>/);assert.ok(full.some(n=>n>0));
-  h.get('#mc-tab-sampling').click();assert.equal(h.animations.at(-1).options.duration,240);h.get('#mc-seed').value='new';h.get('#mc-seed').oninput();const changed=heights(h);assert.ok(h.animations.some(a=>a.options.duration===460));
+  h.get('#mc-tab-sampling').click();assert.equal(h.animations.at(-1).options.duration,240);h.get('#mc-seed').value='new';h.get('#mc-seed').oninput();h.get('#mc-run').click();const changed=heights(h);assert.ok(h.animations.some(a=>a.options.duration===460));
   h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Pause replay/);h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Resume replay/);h.get('#mc-play').click();h.get('#mc-skip').click();assert.deepEqual(heights(h),changed);
-  h.motion.matches=true;h.motion.dispatch('change');const count=h.animations.length;h.get('#mc-tab-growth').click();h.get('#mc-seed').value='reduced';h.get('#mc-seed').oninput();assert.equal(h.animations.length,count);assert.equal(h.get('#mc-play').disabled,true);assert.ok(heights(h).some(n=>n>0));
+  h.motion.matches=true;h.motion.dispatch('change');const count=h.animations.length;h.get('#mc-tab-growth').click();h.get('#mc-seed').value='reduced';h.get('#mc-seed').oninput();h.get('#mc-run').click();assert.equal(h.animations.length,count);assert.equal(h.get('#mc-play').disabled,true);assert.ok(heights(h).some(n=>n>0));
  }finally{h.cleanup()}
 });
 
@@ -100,7 +100,7 @@ test('failed async annual replacement hides cached values and preserves output g
 
 test('transition geometry is used only for matching histogram bounds and basis; fresh axes use an exact-mark fade',()=>{
  const h=fixture({ticker:'STABLE-TRANSITION',autoplay:false,simulationConfig:config('bounds')});
- try{h.get('#mc-growth-high').value='25';h.get('#mc-growth-high').oninput();const changes=h.animations.filter(a=>a.options.duration===460);assert.ok(changes.length);assert.ok(changes.every(a=>a.frames[0].transform==='scaleY(1)'));}finally{h.cleanup()}
+ try{h.get('#mc-growth-high').value='25';h.get('#mc-growth-high').oninput();h.get('#mc-run').click();const changes=h.animations.filter(a=>a.options.duration===460);assert.ok(changes.length);assert.ok(changes.every(a=>a.frames[0].transform==='scaleY(1)'));}finally{h.cleanup()}
 });
 
 test('pending charts remain explicitly previous through visibility and reduced-motion changes',()=>{
@@ -122,7 +122,7 @@ test('chart labels keep physical text size on resize and label observers disconn
 
 test('an active run that reports cancellation leaves an honest non-busy, non-exportable state',async()=>{
  const d=annualDraft(),adapter=annualResearchSimulationAdapter(d);adapter.simulateAsync=async()=>{const e=Error('cancelled');e.name='AbortError';throw e;};const h=annual(d,{synchronous:false,adapter});
- try{await ticks();assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-output').getAttribute('aria-busy'),'false');assert.equal(h.get('#mc-export').disabled,true);assert.match(h.get('#mc-output').innerHTML,/Simulation cancelled/);}finally{h.cleanup()}
+ try{await ticks();assert.notEqual(h.get('#mc-output').getAttribute('data-result-state'),'current');assert.equal(h.get('#mc-output').getAttribute('aria-busy'),'false');assert.equal(h.get('#mc-export').disabled,true);assert.match(h.get('#mc-run-progress').textContent,/Simulation cancelled/);}finally{h.cleanup()}
 });
 
 test('a result export preserves the exact run inputs even if a caller mutates its draft during a yield',async()=>{

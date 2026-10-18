@@ -4,11 +4,11 @@
  */
 import {registerCatalog,t,getLocale,bindText,bindAttribute} from './i18n.js';
 import en from './locales/guided.en.js';
-import zh from './locales/guided.zh-Hant.js';
+import zh from './locales/guided.zh-Hans.js';
 import researchProsePairs from './locales/research-prose-pairs.js';
 const english={...en,...Object.fromEntries(researchProsePairs.map(([english],index)=>['prose'+index,english]))};
 const chinese={...zh,...Object.fromEntries(researchProsePairs.map(([,chinese],index)=>['prose'+index,chinese]))};
-registerCatalog('guided',{en:{...english,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗'},'zh-Hant':{...chinese,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗'}});
+registerCatalog('guided',{en:{...english,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗'},'zh-Hans':{...chinese,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗'}});
 const escapeRegExp=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const exact=new Map(),patterns=[];
 for(const [key,message] of Object.entries(english)){

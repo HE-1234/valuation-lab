@@ -1,5 +1,16 @@
 # Change log
 
+## 2026-10-18 · Simplified Chinese, explicit simulation runs and annual metric uncertainty
+
+- Switched runtime presentation to Simplified Chinese, with safe migration of the earlier language preference and exact source/number preservation.
+- Monte Carlo now runs only on an explicit Run simulation click. Edits, resets, Undo and remounts do not sample automatically; stale results cannot be exported or mistaken for current results. Added Cancel and preserved replay as animation of completed samples only.
+- Added annual margin, tax, WACC and capital uncertainty with independent fixed years, innovation SD and persistence; optional terminal growth/tax/ROIC distributions; mature growth plateaus remain at their selected horizon. Derived capital still funds sampled growth. New metric innovation SD defaults to zero; no calibrated confidence is implied.
+- Added revenue and unlevered FCFF growth charts beneath the operating-path chart, covering every forecast year and explicit zero/negative cash-flow transition labels. OCF is not separately modeled and remains explicitly unavailable.
+- Added 99 verified Atlas listings to an identity/research-pending directory, preserving all fourteen reviewed cases. Twenty ambiguous/unlisted/unresolved entities remain coverage disclosures. No invented valuations or generic company forecasts were added.
+- Preserved approved Annual Report design, palette definitions, whole-page flow, source evidence and public access. Named labels, button sizing, dark-theme Cancel contrast and language toggles were tested.
+
+Verification: 1,317 tests, 1,315 passed, one unchanged missing external AAOI source-cache failure and one existing skip. Independent Gaussian conditioning and DCF replay checks cover 800,000 draws and 2,850 sampled cases, 10/15/20-year paths, funded growth, exact legacy outputs and claims gates. Static mobile/desktop reviews cover new controls, directory and growth charts across all six themes; these are not native mobile-browser tests. Protected historical code hashes are unchanged after reversing only exact approved presentation substitutions.
+
 ## 2026-10-18 · Canonical research-route status fix
 
 Native cloud-browser verification found that Sites removes `.html` from research URLs. Added exact inventoried extensionless-route matching so fully translated pages no longer show an incorrect incomplete-translation notice. English/Chinese research round trips preserve original numeric values. All 32 affected locale, source-preservation and route tests pass; no financial data or calculation changes.

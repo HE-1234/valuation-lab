@@ -131,7 +131,7 @@ test('complete presets: MC reset uses versioned research distributions and leave
  const bundle=readBundle(),preset=bundle.presets[0],d=studioResearchDraft(preset,bundle),adapter=annualResearchSimulationAdapter(d);
  assert.equal(adapter.defaults().method,'annual-path');assert.deepEqual(adapter.defaults().drivers,preset.simulationConfig.drivers);assert.match(adapter.defaultNote,/Research preset/);
  const copy=adapter.defaults();copy.seed='changed';assert.notEqual(adapter.defaults().seed,'changed');
- const legacy=researchDraftFor(preset.annualCase);assert.deepEqual(annualResearchSimulationAdapter(legacy).defaults(),simulationResearchDefaults());
+ const legacy=researchDraftFor(preset.annualCase);assert.deepEqual(annualResearchSimulationAdapter(legacy).defaults(),simulationResearchDefaults(legacy));
 });
 
 test('complete presets: edit state and export show selected values, provenance and rationale',async()=>{

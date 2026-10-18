@@ -1,7 +1,7 @@
 import {bindText as i18nBindText,bindAttribute as i18nBindAttribute,onLocaleChange,t,registerCatalog} from './i18n.js';
 import en from './locales/historical.en.js';
-import zh from './locales/historical.zh-Hant.js';
-registerCatalog('historical',{en,'zh-Hant':zh});
+import zh from './locales/historical.zh-Hans.js';
+registerCatalog('historical',{en,'zh-Hans':zh});
 const historicalLabels={"Evidence": "historical.label0", "Historical workspace views": "historical.label1", "Result": "historical.label2", "Inputs": "historical.label3", "Tables": "historical.label4", "Cash flows": "historical.label5", "Scenarios": "historical.label6", "Sensitivity": "historical.label7", "Equity bridge": "historical.label8", "Operating": "historical.label9", "Risk": "historical.label10", "Bridge": "historical.label11", "Case": "historical.label12", "Historical analysis": "historical.label13", "Result visualization": "historical.label14", "Assumption groups": "historical.label15", "Historical evidence": "historical.label16", "Why this assumption?": "historical.label17", "Assumption": "historical.label18", "About historical and imported snapshots": "historical.label19", "Dated inputs · industrial FCFF model. Stress cases are illustrative, not probabilities.": "historical.label20", "Original filing facts, dated research assumptions, accounting judgments, and source checks. Editing your inputs does not revise the original research case.": "historical.label21", "Filing & research evidence": "historical.label22"};
 import {createContextualEvidencePanel} from './contextual-evidence.js';
 import {enterPanel,cancelMotion,updateFeedback} from './motion.js';

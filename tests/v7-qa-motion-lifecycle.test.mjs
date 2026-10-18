@@ -29,16 +29,16 @@ test('v7 QA: assumption edits use bounded chart feedback without replaying repre
   h.motion.matches=true;h.motion.dispatch('change');assert.ok(h.animations.every(a=>a.state==='canceled'));assert.match(h.get('#mc-play').textContent,/Reduced motion/);
  }finally{h.cleanup()}
 });
-test('v7 QA: simulation ranges recalculate without an apply button and invalid ranges remove every old result',()=>{
+test('v7 QA: simulation ranges recalculate only with Run and invalid ranges remove every old result',()=>{
  const h=fixture({ticker:'V7-RANGE-AUTO',reduced:true});try{
-  assert.equal(h.get('#mc-run'),null);assert.ok(h.get('#mc-median'));h.get('#mc-growth-low').value='90';h.get('#mc-growth-low').oninput();
+  assert.ok(h.get('#mc-run'));assert.ok(h.get('#mc-median'));h.get('#mc-growth-low').value='90';h.get('#mc-growth-low').oninput();
   assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-median'),null);assert.equal(h.get('#mc-market'),null);assert.equal(h.get('#mc-summary-content').innerHTML,'');assert.match(h.get('#mc-error').textContent,/low.*mode.*high/);h.get('#mc-export').click();assert.equal(h.exports.length,0);
-  h.get('#mc-growth-low').value='1';h.get('#mc-growth-low').oninput();assert.ok(h.get('#mc-chart'));assert.ok(h.get('#mc-median'));assert.equal(h.get('#mc-error').textContent,'');
+  h.get('#mc-growth-low').value='1';h.get('#mc-growth-low').oninput();h.get('#mc-run').click();assert.ok(h.get('#mc-chart'));assert.ok(h.get('#mc-median'));assert.equal(h.get('#mc-error').textContent,'');
  }finally{h.cleanup()}
 });
 test('v7 QA: zero accepted scenarios remove old summary tables and preserve complete exclusion accounting',()=>{
  const h=fixture({ticker:'V7-NO-ACCEPTED',reduced:true});try{
-  for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-wacc-high').oninput();assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-median'),null);assert.equal(h.get('#mc-summary-content').innerHTML,'');assert.match(h.get('#mc-audit').textContent,/4,000 attempted · 4,000 excluded/);
+  for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-wacc-high').oninput();h.get('#mc-run').click();assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-median'),null);assert.equal(h.get('#mc-summary-content').innerHTML,'');assert.match(h.get('#mc-audit').textContent,/4,000 attempted · 4,000 excluded/);
  }finally{h.cleanup()}
 });
 test('v7 QA: chart replacement rebinds viewport observation to the new visible graphic',()=>{

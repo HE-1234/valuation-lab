@@ -1,8 +1,8 @@
 /** Only call at authored research presentation boundaries. Never translate user inputs or source quotes. */
 import {registerCatalog,localizedText,escapeLocalizedText,t} from './i18n.js';
 import en from './locales/research-prose.en.js';
-import zh from './locales/research-prose.zh-Hant.js';
-registerCatalog('research-prose',{en,'zh-Hant':zh});
+import zh from './locales/research-prose.zh-Hans.js';
+registerCatalog('research-prose',{en,'zh-Hans':zh});
 const keys=new Map(Object.entries(en).map(([key,value])=>[value,key]));
 export function authoredResearchTextHTML(value) {
  const text=String(value??''),key=keys.get(text);

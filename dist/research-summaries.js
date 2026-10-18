@@ -75,8 +75,8 @@ export const researchSummaries={
 // Presentation overlays are separate from the frozen English research records.
 import {registerCatalog,t,localizedText} from './i18n.js';
 import researchEn from './locales/research.en.js';
-import researchZh from './locales/research.zh-Hant.js';
-registerCatalog('research',{en:researchEn,'zh-Hant':researchZh});
+import researchZh from './locales/research.zh-Hans.js';
+registerCatalog('research',{en:researchEn,'zh-Hans':researchZh});
 export function getResearchSummary(ticker,field='summary') {
  return researchSummaries[ticker] && ['summary','classification'].includes(field) ? t(`research.${ticker}.${field}`) : '';
 }

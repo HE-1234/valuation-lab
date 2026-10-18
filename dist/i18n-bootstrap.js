@@ -1,14 +1,14 @@
 import {registerCatalog} from './i18n.js';
 import {mountLocaleControl} from './i18n-control.js';
 import {en as indexEn,zh as indexZh,attributeEn,attributeZh} from './locales/index.js';
-registerCatalog('index',{en:indexEn,'zh-Hant':indexZh});
-registerCatalog('index-attribute',{en:attributeEn,'zh-Hant':attributeZh});
+registerCatalog('index',{en:indexEn,'zh-Hans':indexZh});
+registerCatalog('index-attribute',{en:attributeEn,'zh-Hans':attributeZh});
 export {mountLocaleControl};
 mountLocaleControl();
 
 // Edition names are presentation labels; stable theme keys/palettes never change.
 import {bindText,bindAttribute,t} from './i18n.js';
-registerCatalog('theme',{en:{forest:'Glacier',slate:'Cobalt Ledger',midnight:'Night Edition',sand:'Graphite',plum:'Aubergine',ocean:'Pine',current:'{label}'},'zh-Hant':{forest:'冰川',slate:'鈷藍帳冊',midnight:'夜色版',sand:'石墨',plum:'茄紫',ocean:'松綠',current:'{label}'}});
+registerCatalog('theme',{en:{forest:'Glacier',slate:'Cobalt Ledger',midnight:'Night Edition',sand:'Graphite',plum:'Aubergine',ocean:'Pine',current:'{label}'},'zh-Hans':{forest:'冰川',slate:'钴蓝帐册',midnight:'夜色版',sand:'石墨',plum:'茄紫',ocean:'松绿',current:'{label}'}});
 export function mountThemeLabels(document=globalThis.document,window=globalThis.window){
  if(!document?.querySelectorAll)return ()=>{};
  const disposers=[];

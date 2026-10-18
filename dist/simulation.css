@@ -97,3 +97,15 @@
 .simulation-lab .mc-annual-year:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 /* Keep the method caption separate from its selected label at compact widths. */
 .simulation-lab label[for$="mc-growth-method"]{display:grid;gap:8px;margin-bottom:12px}
+/* Explicit sampling lifecycle: input edits are cheap; only Run starts Monte Carlo. */
+.simulation-lab .mc-run-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:18px 0}
+.simulation-lab .mc-run-actions button{min-height:44px;padding:10px 20px;border-radius:7px;font:inherit;cursor:pointer}
+.simulation-lab .mc-run-actions .mc-run-button{background:var(--accent);color:var(--on-accent);border:1px solid var(--accent);font-weight:650}
+.simulation-lab .mc-run-actions button:disabled{opacity:.5;cursor:default}
+.simulation-lab .mc-output[data-result-state="stale"]{pointer-events:none;user-select:none}
+.simulation-lab .mc-output[data-result-state="stale"] .mc-chart-wrap,
+.simulation-lab .mc-output[data-result-state="stale"] .mc-output-choice{opacity:.42}
+.simulation-lab .mc-run-actions button:not(.mc-run-button){background:var(--surface);color:var(--ink);border:1px solid var(--control)}
+/* Keep native checkbox geometry independent of numeric-input and mobile sizing. */
+.simulation-lab .mc-setup label:has(>input[type="checkbox"]){display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer}
+.simulation-lab .mc-setup input[type="checkbox"]{appearance:auto;flex:0 0 20px;width:20px;min-width:20px;max-width:20px;height:20px;min-height:20px;max-height:20px;margin:0;padding:0;accent-color:var(--accent)}

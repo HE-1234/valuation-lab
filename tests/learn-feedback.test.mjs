@@ -150,7 +150,7 @@ test('Malformed controls remain finite; empty and invalid lesson inputs are hand
 test('Learning module has no model, storage, network or forced-scroll dependency',()=>{
  const source=fs.readFileSync(new URL('../dist/learn-view.js',import.meta.url),'utf8'),css=fs.readFileSync(new URL('../dist/learn.css',import.meta.url),'utf8');
  assert.doesNotMatch(source,/\blocalStorage\b|\bfetch\s*\(|\bscrollIntoView\b|\bscrollTo\b|\bwindow\b/);
- assert.deepEqual([...source.matchAll(/from '([^']+)'/g)].map(match=>match[1]),['./i18n.js','./locales/learn.en.js','./locales/learn.zh-Hant.js']);
+ assert.deepEqual([...source.matchAll(/from '([^']+)'/g)].map(match=>match[1]),['./i18n.js','./locales/learn.en.js','./locales/learn.zh-Hans.js']);
  assert.match(css,/@media\(max-width:600px\)/);
  assert.ok([...css.matchAll(/font-size:(\d+)px/g)].every(match=>Number(match[1])>=13),'learning support typography is at least 13px');
  assert.match(css,/\.learn-answer\{[^}]*font-size:16px/);
