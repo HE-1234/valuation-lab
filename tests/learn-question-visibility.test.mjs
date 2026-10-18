@@ -1,3 +1,4 @@
+import {reverseMethodologyDocumentation} from './simulation-methodology-preservation.mjs';
 // Real shipped quiz handlers with synthetic viewport geometry. Not native-browser or AT proof.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -81,6 +82,6 @@ test('question visibility: stale buttons and destroyed quiz cannot reveal or alt
 test('question visibility preservation: every V57 shipped byte is unchanged after six exact quiz-only substitutions',()=>{
  const cwd=new URL('..',import.meta.url),baseline='f68cd24ef6fcb75a7d367f22e8eb9389f24298ba',hooks=JSON.parse(fs.readFileSync(new URL('./fixtures/reference-defaults-reviewed-hooks.json',import.meta.url))).files;
  const paths=execFileSync('git',['ls-tree','-r','--name-only',baseline,'dist'],{cwd,encoding:'utf8'}).trim().split('\n');let count=0;
- for(const path of paths){let bytes=fs.readFileSync(new URL('../'+path,import.meta.url));const changes=(hooks[path]||[]).filter(h=>h.change==='learn-question-visibility');if(changes.length){assert.equal(path,'dist/learn-quiz-view.js');let text=bytes.toString();for(const h of changes){assert.equal(text.split(h.reviewedAdditiveLine).length-1,1,path);text=text.replace(h.reviewedAdditiveLine,h.originalLine);count++;}bytes=Buffer.from(text);}assert.deepEqual(bytes,execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);}
+ for(const path of paths){let bytes=reverseMethodologyDocumentation(path,fs.readFileSync(new URL('../'+path,import.meta.url)));const changes=(hooks[path]||[]).filter(h=>h.change==='learn-question-visibility');if(changes.length){assert.equal(path,'dist/learn-quiz-view.js');let text=bytes.toString();for(const h of changes){assert.equal(text.split(h.reviewedAdditiveLine).length-1,1,path);text=text.replace(h.reviewedAdditiveLine,h.originalLine);count++;}bytes=Buffer.from(text);}assert.deepEqual(bytes,execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);}
  assert.equal(count,6);assert.equal(paths.length,354);
 });

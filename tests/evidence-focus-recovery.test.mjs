@@ -1,3 +1,4 @@
+import {reverseMethodologyDocumentation} from './simulation-methodology-preservation.mjs';
 // Shipped handlers and source preservation, not native-browser/AT certification.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -70,7 +71,7 @@ test('annual evidence focus recovery: a hidden or disabled selected group falls 
 test('evidence focus preservation: every V54 shipped byte is unchanged after seven exact evidence-focus substitutions and exact simulation-focus hooks',()=>{
  const cwd=new URL('..',import.meta.url),baseline='b61154d932479546dfa4fe0aa42d567a6f8e4f74',hooks=JSON.parse(fs.readFileSync(new URL('./fixtures/reference-defaults-reviewed-hooks.json',import.meta.url))).files;
  const paths=execFileSync('git',['ls-tree','-r','--name-only',baseline,'dist'],{cwd,encoding:'utf8'}).trim().split('\n');let count=0;
- for(const path of paths){let bytes=fs.readFileSync(new URL('../'+path,import.meta.url));const replacements=(hooks[path]||[]).filter(h=>['evidence-focus-recovery','simulation-focus-continuity','simulation-replay-focus','learn-question-visibility'].includes(h.change));if(replacements.length){let source=bytes.toString();for(const replacement of replacements){assert.equal(source.split(replacement.reviewedAdditiveLine).length-1,1,path);source=source.replace(replacement.reviewedAdditiveLine,replacement.originalLine);if(replacement.change==='evidence-focus-recovery')count++;}bytes=Buffer.from(source);}assert.deepEqual(bytes,execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);}
+ for(const path of paths){let bytes=reverseMethodologyDocumentation(path,fs.readFileSync(new URL('../'+path,import.meta.url)));const replacements=(hooks[path]||[]).filter(h=>['evidence-focus-recovery','simulation-focus-continuity','simulation-replay-focus','learn-question-visibility'].includes(h.change));if(replacements.length){let source=bytes.toString();for(const replacement of replacements){assert.equal(source.split(replacement.reviewedAdditiveLine).length-1,1,path);source=source.replace(replacement.reviewedAdditiveLine,replacement.originalLine);if(replacement.change==='evidence-focus-recovery')count++;}bytes=Buffer.from(source);}assert.deepEqual(bytes,execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);}
  assert.equal(count,7);assert.ok(paths.length>150);
 });
 test('evidence focus recovery: browser body/html focus after a removed outside input recovers logically',()=>{

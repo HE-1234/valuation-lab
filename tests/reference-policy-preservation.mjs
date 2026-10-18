@@ -1,17 +1,21 @@
+import {reverseMethodologyDocumentation} from './simulation-methodology-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {annualTerminalDefaults} from '../dist/simulation.js';
 const baseline=JSON.parse(fs.readFileSync(new URL('./fixtures/reference-defaults-v52.json',import.meta.url)));
 const hooks=JSON.parse(fs.readFileSync(new URL('./fixtures/reference-defaults-reviewed-hooks.json',import.meta.url)));
 export function reverseReferencePolicyHooks(path,bytes){
+ bytes=reverseMethodologyDocumentation(path,bytes);
  if(!hooks.files[path])return bytes;
  let text=bytes.toString();
  for(const hook of hooks.files[path]||[]){assert.equal(text.split(hook.reviewedAdditiveLine).length-1,1,path+' exact reference-policy hook');text=text.replace(hook.reviewedAdditiveLine,hook.originalLine);}
  return Buffer.from(text);
 }
-// Earlier company releases protected the same quiz bytes. Normalize only the
-// six reviewed navigation fragments; retain their original baseline bytes/hashes.
+// Earlier company releases protected the same quiz and documentation bytes.
+// Reverse exact reviewed documentation first, then the six navigation fragments;
+// retain every original baseline byte/hash.
 export function reverseLearnQuestionVisibility(path,bytes){
+ bytes=reverseMethodologyDocumentation(path,bytes);
  if(path!=='dist/learn-quiz-view.js')return bytes;
  const approved=(hooks.files[path]||[]).filter(hook=>hook.change==='learn-question-visibility');
  assert.equal(approved.length,6,'exactly six reviewed Learn visibility fragments');

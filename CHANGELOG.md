@@ -474,3 +474,11 @@ Validation recorded for v7: 254 automated checks passed. Static previews were in
 ## Final verification for persistent history and navigation polish
 
 The frozen application completed 865 tests: 863 passed, one existing AAOI raw-source rebuild test failed because its external cache is unavailable, and one existing raw-cache equivalence test skipped. Exact numerical captures for all 14 Annual presets, all 14 Guided companies and 10 Historical companies remain unchanged. Independent checks cover editing with evidence open, direct metric switching, saved precision, 154 primary/secondary-history cases and six-theme contrast. A subsequent CSS-only spacing correction keeps full-history disclosure labels separated outside the editor; affected contextual and navigation checks were rerun. Source-driven static layouts were inspected; native-browser layout, hover painting and recording remain unverified.
+
+
+## 18 October 2026 · Current simulation-method documentation
+
+- Added current-method guidance above an explicitly dated historical scalar reference. Annual path/primitive scope, independent innovations, exact anchors, endpoint effects at zero SD, reference defaults, capital responses, accepted-outcome conditioning and manual Run now match shipped behavior.
+- Preserved the complete older explanation as a historical record, with a warning that its company gates, floor and four-scalar statements do not describe every current mode. Added concise in-page links; retained existing layout, typography, palettes and return link.
+- Updated English and Simplified Chinese presentation catalogs plus retained Traditional source translations. No financial sources, algorithms, defaults, UI handlers or six-theme assets changed.
+- Verification: 80 focused content/localization/runtime checks and 422 company/prior-release preservation and behavior checks passed, including exact reversal of all 354 V58 shipped files. Git whitespace checks pass. Aggregate, publication and native post-change checks remain separate.
