@@ -188,3 +188,26 @@ test('each shuffled option retains its own feedback and an incorrect first answe
   h.get(`[data-quiz-answer="${question.answer}"]`).click();assert.equal(h.controller.getState().answers[question.id],optionId);assert.equal(h.controller.getState().score,Number(optionId===question.answer));h.controller.destroy();
  }
 });
+
+test('live status translates its current set or navigation message without drawing or moving focus',()=>{
+ const h=startQuiz(),live=h.get('[data-quiz-live]'),button=h.get('[data-quiz-answer]');button.focus();
+ const checkLocale=(locale,expected)=>{const state=h.controller.getState(),deckState=h.deck.getState(),focused=h.document.activeElement;setLocale(locale);assert.equal(live.textContent,expected);assert.equal(h.get('[data-quiz-live]'),live);assert.deepEqual(h.controller.getState(),state);assert.deepEqual(h.deck.getState(),deckState);assert.equal(h.document.activeElement,focused);};
+ assert.equal(live.textContent,'Set 1 ready: 10 new questions.');
+ checkLocale('zh-Hans','第 1 组已准备好：共 10 道新题。');checkLocale('en','Set 1 ready: 10 new questions.');
+ h.get('[data-quiz-action="next"]').click();assert.equal(live.textContent,'Question 2 of 10.');checkLocale('zh-Hans','第 2 题，共 10 题。');checkLocale('en','Question 2 of 10.');
+ h.get('[data-quiz-action="previous"]').click();checkLocale('zh-Hans','第 1 题，共 10 题。');
+ h.get('[data-quiz-action="new"]').click();assert.equal(live.textContent,'第 2 组已准备好：共 10 道新题。');checkLocale('en','Set 2 ready: 10 new questions.');checkLocale('zh-Hans','第 2 组已准备好：共 10 道新题。');
+ h.controller.destroy();const last=live.textContent;setLocale('en');assert.equal(live.textContent,last);
+});
+
+test('review status and correct/incorrect score feedback stay localized without resetting answers',()=>{
+ for(const correct of [true,false]){
+  const h=startQuiz(),question=h.questions.find(question=>question.id===h.controller.getState().items[0].id),chosen=correct?question.answer:question.options.find(option=>option.id!==question.answer).id;
+  const button=h.get(`[data-quiz-answer="${chosen}"]`);button.click();button.focus();const saved=h.controller.getState(),cursor=h.deck.getState().cursor;
+  setLocale('zh-Hans');assert.equal(h.get('[data-quiz-verdict]').textContent,`${correct?'回答正确。':'还不太对。'} 得分：${Number(correct)} / 1`);assert.equal(h.get('[data-quiz-score]').textContent,`得分：${Number(correct)} / 1`);assert.equal(h.get('[data-quiz-option-feedback]').textContent,question.options.find(option=>option.id===chosen).feedback.zhHans);assert.deepEqual(h.controller.getState(),saved);assert.equal(h.document.activeElement,button);
+  setLocale('en');assert.equal(h.get('[data-quiz-verdict]').textContent,`${correct?'Correct.':'Not quite.'} Score: ${Number(correct)} / 1`);assert.deepEqual(h.controller.getState(),saved);assert.equal(h.deck.getState().cursor,cursor);h.controller.destroy();
+ }
+ const h=startQuiz();for(let index=0;index<10;index++){h.get('[data-quiz-answer]').click();if(index<9)h.get('[data-quiz-action="next"]').click();}
+ assert.equal(h.get('[data-quiz-live]').textContent,'Question 10 of 10.');h.get('[data-quiz-action="review"]').click();assert.equal(h.get('[data-quiz-live]').textContent,'Question 1 of 10.');const state=h.controller.getState(),focused=h.document.activeElement,cursor=h.deck.getState().cursor;
+ setLocale('zh-Hans');assert.equal(h.get('[data-quiz-live]').textContent,'第 1 题，共 10 题。');assert.match(h.get('[data-quiz-complete-detail]').textContent,/你答对了 10 题/);assert.deepEqual(h.controller.getState(),state);assert.equal(h.document.activeElement,focused);assert.equal(h.deck.getState().cursor,cursor);h.controller.destroy();setLocale('en');
+});

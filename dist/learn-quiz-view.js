@@ -10,9 +10,12 @@ const mounted=new WeakMap();let nextId=0;
 export function mountQuizView(root,{questions,deck,rng=Math.random}={}){
  if(!root?.querySelector||!deck?.draw||!Array.isArray(questions))throw new TypeError('The quiz needs a root, a reviewed bank and a deck.');
  mounted.get(root)?.destroy();
- let active=true,session=null,renderToken=0,setNumber=0;const id=`quiz-${++nextId}`,get=selector=>root.querySelector(selector);
+ let active=true,session=null,renderToken=0,setNumber=0,announcement=null;const id=`quiz-${++nextId}`,get=selector=>root.querySelector(selector);
  root.innerHTML=`<section class="learn-course learn-random-quiz" aria-labelledby="${id}-title"><div class="learn-quiz-heading"><div><h2 id="${id}-title" data-quiz-copy="title"></h2><p data-quiz-description></p></div><button type="button" class="primary" data-quiz-action="new" data-quiz-copy="newSet"></button></div><div class="learn-progress"><div><span data-quiz-position></span><span data-quiz-progress-text></span><span data-quiz-score></span></div><progress data-quiz-progress max="10" value="0"></progress></div><article class="learn-card" data-quiz-card><div data-quiz-question></div><div class="learn-feedback" data-quiz-feedback role="status" aria-live="polite" aria-atomic="true"></div><div class="learn-quiz-sources" data-quiz-sources></div><div class="learn-footer"><button type="button" class="quiet" data-quiz-action="previous" data-quiz-copy="previous"></button><span data-quiz-hint></span><button type="button" data-quiz-action="next" data-quiz-copy="next"></button></div></article><section class="learn-quiz-complete" data-quiz-complete hidden><h3 data-quiz-copy="complete"></h3><p data-quiz-complete-detail></p><button type="button" class="quiet" data-quiz-action="review" data-quiz-copy="review"></button></section><p class="learn-session-note" data-quiz-storage></p><p class="learn-session-note" data-quiz-reset></p><span class="sr-only" data-quiz-live aria-live="polite" aria-atomic="true"></span></section>`;
  function refreshStatic(){for(const node of root.querySelectorAll('[data-quiz-copy]'))node.textContent=quizCopy(node.dataset.quizCopy);get('[data-quiz-description]').textContent=quizCopy('description',{count:questions.length});}
+ // Retain the current announcement's identity; locale changes must not replay a new-set action.
+ function refreshAnnouncement(){const node=get('[data-quiz-live]'),text=announcement?quizCopy(announcement.key,announcement.params):'';if(node.textContent!==text)node.textContent=text;}
+ function announce(key,params){announcement={key,params:{...params}};refreshAnnouncement();}
  function progress(){
   const state=session?.getState();if(!state)return;
   get('[data-quiz-position]').textContent=quizCopy('question',{current:state.index+1});
@@ -58,11 +61,11 @@ export function mountQuizView(root,{questions,deck,rng=Math.random}={}){
   }
   showFeedback();refreshQuestion();if(focus)get('[data-quiz-prompt]').focus({preventScroll:true});
  }
- function startNewSet({focus=true}={}){if(!active)return false;session=createQuizSession(questions,deck.draw(10),{rng});renderQuestion(focus);get('[data-quiz-live]').textContent=quizCopy('announced',{set:++setNumber});return true;}
- function navigate(delta){if(!active||!session)return;const next=session.getState().index+delta;if(session.move(next)){renderQuestion(true);get('[data-quiz-live]').textContent=quizCopy('positionAnnouncement',{current:next+1});}}
+ function startNewSet({focus=true}={}){if(!active)return false;session=createQuizSession(questions,deck.draw(10),{rng});renderQuestion(focus);announce('announced',{set:++setNumber});return true;}
+ function navigate(delta){if(!active||!session)return;const next=session.getState().index+delta;if(session.move(next)){renderQuestion(true);announce('positionAnnouncement',{current:next+1});}}
  get('[data-quiz-action="new"]').onclick=()=>startNewSet();get('[data-quiz-action="previous"]').onclick=()=>navigate(-1);get('[data-quiz-action="next"]').onclick=()=>navigate(1);
- get('[data-quiz-action="review"]').onclick=()=>{if(active&&session){session.review();renderQuestion(true);}};
- const unlocalize=onLocaleChange(()=>{if(active){refreshStatic();refreshQuestion();}});
+ get('[data-quiz-action="review"]').onclick=()=>{if(active&&session){session.review();renderQuestion(true);announce('positionAnnouncement',{current:1});}};
+ const unlocalize=onLocaleChange(()=>{if(active){refreshStatic();refreshQuestion();refreshAnnouncement();}});
  refreshStatic();
  const controller={startNewSet,getState:()=>session?.getState()||null,destroy(){active=false;renderToken++;unlocalize();}};mounted.set(root,controller);return controller;
 }
