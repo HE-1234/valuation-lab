@@ -71,9 +71,9 @@ for(const locale of ['en','zh-Hans'])test(`simulation focus: a programmatic basi
   const input=h.get('#mc-seed');input.focus();const old=h.get('#mc-value-basis');old.value='perShare';old.onchange();assert.notEqual(h.get('#mc-value-basis'),old);assert.equal(h.doc.activeElement,input);assert.equal(h.get('#mc-value-basis').focusOptions,undefined);assert.equal(h.calls.length,1);
  }finally{h.cleanup();setLocale('en');}
 });
-test('simulation focus preservation: every V55 shipped byte is unchanged after two exact focus substitutions',()=>{
+test('simulation focus preservation: every V55 shipped byte is unchanged after two exact focus substitutions and exact completed-replay focus hooks',()=>{
  const cwd=new URL('..',import.meta.url),baseline='00f250ea4ed4f0a33fc3254d0edf85125b8d6d51',hooks=JSON.parse(fs.readFileSync(new URL('./fixtures/reference-defaults-reviewed-hooks.json',import.meta.url))).files;
  const paths=execFileSync('git',['ls-tree','-r','--name-only',baseline,'dist'],{cwd,encoding:'utf8'}).trim().split('\n');let count=0;
- for(const path of paths){let bytes=fs.readFileSync(new URL('../'+path,import.meta.url));const replacements=(hooks[path]||[]).filter(h=>h.change==='simulation-focus-continuity');if(replacements.length){let source=bytes.toString();for(const h of replacements){assert.equal(source.split(h.reviewedAdditiveLine).length-1,1,path);source=source.replace(h.reviewedAdditiveLine,h.originalLine);count++;}bytes=Buffer.from(source);}assert.deepEqual(bytes,execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);}
+ for(const path of paths){let bytes=fs.readFileSync(new URL('../'+path,import.meta.url));const replacements=(hooks[path]||[]).filter(h=>['simulation-focus-continuity','simulation-replay-focus'].includes(h.change));if(replacements.length){let source=bytes.toString();for(const h of replacements){assert.equal(source.split(h.reviewedAdditiveLine).length-1,1,path);source=source.replace(h.reviewedAdditiveLine,h.originalLine);if(h.change==='simulation-focus-continuity')count++;}bytes=Buffer.from(source);}assert.deepEqual(bytes,execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);}
  assert.equal(count,2);assert.ok(paths.length>150);
 });

@@ -1,5 +1,13 @@
 # Change log
 
+## 2026-10-18 · Keep keyboard position after completing chart replay
+
+- Finishing a replay with the focused Show full chart button now returns focus to the adjacent Replay simulation button. A naturally completed, still-current replay does the same only while Show full chart owns focus.
+- Recovery preserves scroll position and leaves the chart, inputs and other controls alone. Stale results, cancellation, teardown, reduced motion, viewport exit, backgrounding and route departure do not invoke recovery.
+- Full suite: 1,775 passed, zero failed, one existing raw-cache skip.
+- Focused verification: 47 new replay-focus checks, 28 existing replay/focus checks and two earlier whole-dist preservation checks passed. A V56 comparison preserves all 354 shipped files after reversing four exact focus fragments on three source lines. Aggregate and post-change native-browser verification are recorded separately.
+- Replay timing, completed samples, exported results, calculation/source files, all six themes and the approved Annual Report design are unchanged.
+
 ## 2026-10-18 · Keep keyboard position in Monte Carlo controls
 
 - Cancelling a simulation from its focused Cancel button now returns focus to Run. Changing the annual chart from operating value to conditional per-share value keeps focus on the replacement selector.

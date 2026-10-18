@@ -83,7 +83,7 @@ test('case recovery: live bilingual wording preserves disclosure, input nodes, f
 test('case recovery: every V53 shipped byte is unchanged after reversing four wording substitutions and exact evidence/simulation-focus hooks',()=>{
  const cwd=new URL('..',import.meta.url),baseline='b687a7f',hooks=JSON.parse(fs.readFileSync(new URL('./fixtures/reference-defaults-reviewed-hooks.json',import.meta.url))).files;
  const files=execFileSync('git',['ls-tree','-r','--name-only',baseline,'dist'],{cwd,encoding:'utf8'}).trim().split('\n');let count=0;
- for(const path of files){let actual=fs.readFileSync(new URL('../'+path,import.meta.url));const approved=(hooks[path]||[]).filter(h=>['case-recovery-discoverability','evidence-focus-recovery','simulation-focus-continuity'].includes(h.change));
+ for(const path of files){let actual=fs.readFileSync(new URL('../'+path,import.meta.url));const approved=(hooks[path]||[]).filter(h=>['case-recovery-discoverability','evidence-focus-recovery','simulation-focus-continuity','simulation-replay-focus'].includes(h.change));
   if(approved.length){let source=actual.toString();for(const h of approved){assert.equal(source.split(h.reviewedAdditiveLine).length-1,1,path);source=source.replace(h.reviewedAdditiveLine,h.originalLine);if(h.change==='case-recovery-discoverability')count++;}actual=Buffer.from(source);}
   assert.deepEqual(actual,execFileSync('git',['show',baseline+':'+path],{cwd,maxBuffer:20e6}),path);
  }

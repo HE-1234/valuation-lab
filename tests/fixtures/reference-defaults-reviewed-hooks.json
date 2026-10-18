@@ -1,6 +1,6 @@
 {
   "baseline": "d1b22ae00b80bbd1d0124ded31cdc0925fd772ee",
-  "scope": "Exact fresh-reference default, presentation, case-recovery wording and nonmodal evidence focus-recovery hooks only. Reverse before prior byte checks. No sampler, formula, data, theme or source exclusions.",
+  "scope": "Exact fresh-reference default, presentation, case-recovery wording, evidence/simulation focus and completed-replay focus hooks only. Reverse before prior byte checks. No sampler, formula, data, theme or source exclusions.",
   "files": {
     "dist/research-simulation.js": [
       {
@@ -44,6 +44,26 @@
         "change": "simulation-focus-continuity",
         "reviewedAdditiveLine": " find('#mc-cancel').onclick=()=>{const restoreFocus=document.activeElement===find('#mc-cancel');pending();simMessage(find('#mc-run-progress'),'simulationManual.cancelled');if(restoreFocus)find('#mc-run')?.focus?.({preventScroll:true});};\n",
         "originalLine": " find('#mc-cancel').onclick=()=>{pending();simMessage(find('#mc-run-progress'),'simulationManual.cancelled');};\n"
+      },
+      {
+        "change": "simulation-replay-focus",
+        "reviewedAdditiveLine": " const finish=(restoreReplayFocus=false)=>{const restoreFocus=restoreReplayFocus&&!destroyed&&result?.accepted&&motionKind==='replay'&&document.activeElement===find('#mc-skip');animationVersion++;",
+        "originalLine": " const finish=()=>{animationVersion++;"
+      },
+      {
+        "change": "simulation-replay-focus",
+        "reviewedAdditiveLine": "b.setAttribute('aria-pressed','false')}paused=false;if(restoreFocus)b?.focus?.({preventScroll:true});};",
+        "originalLine": "b.setAttribute('aria-pressed','false')}paused=false;};"
+      },
+      {
+        "change": "simulation-replay-focus",
+        "reviewedAdditiveLine": "const skip=find('#mc-skip');skip.onclick=()=>finish(document.activeElement===skip);",
+        "originalLine": "find('#mc-skip').onclick=()=>finish();"
+      },
+      {
+        "change": "simulation-replay-focus",
+        "reviewedAdditiveLine": "if(!animations.length)finish(true)};",
+        "originalLine": "if(!animations.length)finish()};"
       }
     ],
     "dist/research-view.js": [
