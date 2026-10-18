@@ -70,7 +70,7 @@ test('cancelled particle callbacks cannot change a pending view or a later compl
 test('default completed chart and explicit replay retain full exact bins, with brief chart/tab motion and immediate reduced motion',()=>{
  const h=fixture({ticker:'STABLE-DEFAULT',autoplay:null,simulationConfig:config('default')});
  try{
-  const full=heights(h);assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML,/>Replay simulation<\/button>/);assert.ok(full.some(n=>n>0));
+  const full=heights(h);assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML.replace(/<\/?span\b[^>]*>/g,''),/>Replay simulation<\/button>/);assert.ok(full.some(n=>n>0));
   h.get('#mc-tab-sampling').click();assert.equal(h.animations.at(-1).options.duration,240);h.get('#mc-seed').value='new';h.get('#mc-seed').oninput();const changed=heights(h);assert.ok(h.animations.some(a=>a.options.duration===460));
   h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Pause replay/);h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Resume replay/);h.get('#mc-play').click();h.get('#mc-skip').click();assert.deepEqual(heights(h),changed);
   h.motion.matches=true;h.motion.dispatch('change');const count=h.animations.length;h.get('#mc-tab-growth').click();h.get('#mc-seed').value='reduced';h.get('#mc-seed').oninput();assert.equal(h.animations.length,count);assert.equal(h.get('#mc-play').disabled,true);assert.ok(heights(h).some(n=>n>0));
@@ -115,7 +115,7 @@ test('chart labels keep physical text size on resize and label observers disconn
  const h=fixture({ticker:'STABLE-TEXT-SIZE',autoplay:false,simulationConfig:config('labels')});
  try{
   const chart=h.get('#mc-chart');assert.equal(chart.style['--mc-label-scale'],'1');chart.getBoundingClientRect=()=>({left:0,width:320,height:140});h.windowEvents.dispatch('resize');assert.equal(chart.style['--mc-label-scale'],'3');
-  assert.match(h.get('#mc-output').innerHTML,/class="mc-chart-caption">Share of accepted scenarios/);assert.match(h.get('#mc-output').innerHTML,/class="mc-axis-title">USD PER ECONOMIC SHARE/);
+  assert.match(h.get('#mc-output').innerHTML,/class="mc-chart-caption"[^>]*>Share of accepted scenarios/);assert.match(h.get('#mc-output').innerHTML.replace(/<\/?span\b[^>]*>/g,''),/class="mc-axis-title">USD PER ECONOMIC SHARE/);
   assert.equal(h.resizeObservers.length,1);assert.equal(h.resizeObservers[0].targets.at(-1),chart);h.destroy();assert.equal(h.resizeObservers[0].disconnected,true);
  }finally{h.cleanup()}
 });

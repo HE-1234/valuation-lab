@@ -1,0 +1,29 @@
+{
+  "scope": "Foundation and static index only; not full-site completion",
+  "defaultLocale": "en",
+  "chineseLocale": "zh-Hant",
+  "staticIndexTextCatalogEntries": 160,
+  "staticIndexAttributeCatalogEntries": 13,
+  "controlPosition": "bottom-right, separate from navigation, safe-area-aware",
+  "remainingDynamicOwners": [
+    "breadcrumb and selected theme summary",
+    "six theme labels",
+    "all renderer-generated text and states",
+    "authored research HTML and data-backed prose"
+  ],
+  "preserved": [
+    "Valuation Lab brand",
+    "download filename identifiers",
+    "JSON example schema placeholder",
+    "original source URLs",
+    "numeric values and formulas",
+    "user input values"
+  ],
+  "verification": [
+    "14 foundation unit tests",
+    "29 prior targeted regression/foundation tests",
+    "English authored index text identical after stripping markup",
+    "all original href/src/id/name/route/theme identities retained"
+  ],
+  "nativeBrowserVerified": false
+}

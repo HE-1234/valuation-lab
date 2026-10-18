@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-18 · Traditional Chinese controls and theme sweep
+
+- Added an independent 44px corner language button, preserving English by default and remembering language separately from valuation drafts. Existing typography and six palette definitions remain intact, with Traditional Chinese glyph fallbacks.
+- Localized the valuation, simulation, learning and historical interface using explicit complete-message catalogs and live presentation bindings. Inputs, notes, Undo, source URLs, numerical exports and in-flight simulations retain their identities and values. Company summaries and research-assumption prose use separate overlays.
+- Added reversible annotations for research pages, separate presentation provenance, and a visible Chinese notice wherever archived authored research remains untranslated. This is a staged localization release, not a claim of complete translation of the entire archive.
+- Added a 600ms horizontal theme reveal with instant reduced-motion/unsupported-browser fallback and latest-choice-wins handling.
+
+Verification: aggregate 1,211 tests, 1,209 passed, one unchanged missing-AAOI-source-cache failure and one existing skip. Independent tests cover fourteen companies through twenty language toggles, exact protected source reconstruction, and numerical state preservation. Mobile/desktop checks use explicitly labeled source-driven static renders; native browser verification follows publication. Subsequent history-caption additions passed eight affected localization/state tests.
+
 ## 2026-10-18 · Correlated annual growth paths and chart-wide rain
 
 - Fresh simulations use annual Gaussian growth deviations around the existing deterministic decay path, with user-selected fixed years, innovation SD and persistence. Future fixed anchors condition the intervening path. Previously saved unversioned configurations retain legacy behavior; a method selector keeps that approach available.

@@ -26,7 +26,7 @@ test('Monte Carlo setup is visible with six keyboard tabs and every driver famil
 });
 test('manual falling balls start clearly, pause/resume, and restore exact bins',()=>{
  const h=fixture({ticker:'MC-MANUAL',autoplay:false});try{
-  const full=h.bars().map(b=>b.getAttribute('height'));assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML,/>Replay simulation<\/button>/);
+  const full=h.bars().map(b=>b.getAttribute('height'));assert.equal(h.animations.length,0);assert.match(h.get('#mc-output').innerHTML.replace(/<\/?span\b[^>]*>/g,''),/>Replay simulation<\/button>/);
   h.get('#mc-play').click();assert.equal(h.animations.length,112);assert.match(h.get('#mc-play').textContent,/Pause replay/);h.get('#mc-play').click();assert.match(h.get('#mc-play').textContent,/Resume replay/);assert.ok(h.animations.every(a=>a.state==='paused'));h.get('#mc-play').click();
   h.get('#mc-skip').click();assert.match(h.get('#mc-play').textContent,/Replay simulation/);assert.deepEqual(h.bars().map(b=>b.getAttribute('height')),full);
  }finally{h.cleanup()}

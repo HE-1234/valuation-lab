@@ -14,6 +14,11 @@ const json = name => JSON.parse(read(name));
 const manifest = json('manifest.json'), evidence = json('evidence.json'), cases = json('cases.json');
 const tickers = ['AAPL','MSFT','AMZN','GOOG','META','NVDA','TSLA','COHR','LITE','AAOI','NBIS','MU','AVGO','TSM'];
 const sha = value => createHash('sha256').update(value).digest('hex');
+const presentationManifest=JSON.parse(fs.readFileSync(path.join(root,'dist/locales/research-presentation-manifest.json'),'utf8'));
+function originalResearchHTML(text) {
+  return text.replace(/<span data-research-i18n="true" data-i18n="research-pages\.text\.[a-f0-9]{20}">([\s\S]*?)<\/span>/g,'$1')
+    .replace('<link data-research-locale="true" rel="stylesheet" href="../../i18n.css">\n<script data-research-locale="true" type="module" src="../../research-page-i18n.js"></script>','');
+}
 const frozenSHA = '02c8e133893cff642369ba58d29b7e5ad091c204e08a6b37acbff28f13072bd2';
 const fingerprints = {
   AAPL: 'e902784870f2f06fb96c0e508ae71050d2c2216b6191ba1c4dd184d1c0c77e2b',
@@ -171,10 +176,17 @@ test('research package: published assets match their manifest and exclude local/
   for (const name of files) {
     const raw=fs.readFileSync(path.join(dir,name)), text=raw.toString('utf8');
     assert.doesNotMatch(text,/(?:file:\/\/|\/(?:workspace|home|tmp|Users|private|mnt)\/|\.git\/|__pycache__|dream_notes|agent_notes|user_notes|action_items\.md|sk-(?:proj-)?[A-Za-z0-9_-]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[A-Z0-9]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)/,name);
-    assert.doesNotMatch(text,/<script\b|\bon(?:click|load|error)\s*=|javascript:/i,name);
+    const original=name.endsWith('.html')?originalResearchHTML(text):text;
+    assert.doesNotMatch(original,/<script\b|\bon(?:click|load|error)\s*=|javascript:/i,name);
+    if(name.endsWith('.html')){
+      const presentation=presentationManifest.pages[`data/renewed-research-2026-10-17/${name}`];
+      assert.equal(sha(raw),presentation.presentationSHA256,`${name}: localized presentation hash`);
+      assert.equal(raw.length,presentation.presentationBytes,`${name}: localized presentation length`);
+      assert.equal(sha(original),presentation.originalEnglishSHA256,`${name}: reversible English hash`);
+    }
     if (name!=='manifest.json') {
-      assert.equal(raw.length,manifest.outputs[name].bytes,name);
-      assert.equal(sha(raw),manifest.outputs[name].sha256,name);
+      assert.equal(Buffer.byteLength(original),manifest.outputs[name].bytes,name);
+      assert.equal(sha(original),manifest.outputs[name].sha256,name);
     }
   }
 });

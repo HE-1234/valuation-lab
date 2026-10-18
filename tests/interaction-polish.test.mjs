@@ -48,7 +48,9 @@ const selected = rule(`${tab}[aria-selected="true"]`, r => !r.conditions.length)
 test('interaction layer is included exactly once and after every legacy sheet', () => {
   const sheets = [...read('index.html').matchAll(/<link\b[^>]*rel="stylesheet"[^>]*href="([^"]+)"/g)].map(m => m[1]);
   assert.equal(sheets.filter(x => x === 'interaction-polish.css').length, 1);
-  assert.equal(sheets.at(-1), 'interaction-polish.css');
+  // Explicit presentation enhancements may follow; every legacy sheet remains earlier.
+  const enhancements = new Set(['theme-transition.css', 'i18n.css']);
+  assert.equal(sheets.filter(sheet => !enhancements.has(sheet)).at(-1), 'interaction-polish.css');
   assert.ok(sheets.includes('approved-foundation.css'));
   assert.ok(sheets.includes('approved-workspace.css'));
 });

@@ -1,3 +1,4 @@
+import {originalResearchBytes} from './research-presentation-original.mjs';
 // Independent v6 QA: protect dated sources and frozen historical research.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -45,7 +46,7 @@ const baselineHashes={
 };
 const read=f=>fs.readFileSync(new URL('../dist/'+f,import.meta.url));
 for(const [file,expected] of Object.entries(baselineHashes))test(`v6 QA: protected source bytes ${file}`,()=>{
- assert.equal(createHash('sha256').update(read(file)).digest('hex'),expected,`Protected engine/data changed unexpectedly (v7 engine permits explicit provisional bridge only): ${file}`);
+ assert.equal(createHash('sha256').update(originalResearchBytes(file,read(file))).digest('hex'),expected,`Protected engine/data changed unexpectedly (v7 engine permits explicit provisional bridge only): ${file}`);
 });
 test('v6 QA: every requested company retains current-only dated sources',()=>{
  const library=JSON.parse(read('data/current-universe.json'));

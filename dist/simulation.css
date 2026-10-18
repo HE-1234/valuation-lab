@@ -95,3 +95,5 @@
 .simulation-lab .mc-annual-year[aria-pressed=true] small{color:var(--ink)}
 .simulation-lab .mc-annual-year:disabled{opacity:1;cursor:default}
 .simulation-lab .mc-annual-year:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+/* Keep the method caption separate from its selected label at compact widths. */
+.simulation-lab label[for$="mc-growth-method"]{display:grid;gap:8px;margin-bottom:12px}

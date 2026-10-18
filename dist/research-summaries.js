@@ -71,3 +71,15 @@ export const researchSummaries={
     "source": "./data/renewed-research-2026-10-17/dossiers.html#TSM"
   }
 };
+
+// Presentation overlays are separate from the frozen English research records.
+import {registerCatalog,t,localizedText} from './i18n.js';
+import researchEn from './locales/research.en.js';
+import researchZh from './locales/research.zh-Hant.js';
+registerCatalog('research',{en:researchEn,'zh-Hant':researchZh});
+export function getResearchSummary(ticker,field='summary') {
+ return researchSummaries[ticker] && ['summary','classification'].includes(field) ? t(`research.${ticker}.${field}`) : '';
+}
+export function researchTextHTML(ticker,field='summary') {
+ return researchSummaries[ticker] && ['summary','classification'].includes(field) ? localizedText(`research.${ticker}.${field}`) : '';
+}

@@ -1,0 +1,23 @@
+{
+  "text.671febab18aee8723fdf": "Margin paths · Valuation Lab",
+  "text.e37c8593effc3cf16c00": "Back to valuation",
+  "text.6a29b20d354cbd7b0781": "Interim and sustainable margins",
+  "text.9446340f4577b8ed23b8": "Implemented October 18, 2026. This optional analyst curve does not replace any original researched margin schedule unless selected.",
+  "text.70e037fb7d9e6a57c647": "What the controls mean",
+  "text.6fefae738eef0ceb7fdd": "Starting margin: Guided uses the current normalized operating margin. Year-by-year uses the source anchor's EBIT/revenue when present. AAOI and NBIS lack anchor EBIT, so the first forecast margin is explicitly labeled as a year-0 assumption, not reported history. Its original source/proxy label survives subsequent edits.",
+  "text.c233fc4fa60f65083e77": "Interim margin and year reached: move from the starting margin to this target.",
+  "text.e31744d38f00524c3f4c": "Final transition begins: hold the interim target until this year.",
+  "text.9a04bef9a7c3edfdec68": "Long-run terminal margin and year reached: move to the sustainable final level by its own year, then hold it. This margin timeline does not stretch when the revenue-growth horizon changes.",
+  "text.33f651653dc02561af37": "An illustrative path is 20% at year 0, 30% by year 5, held through year 8, then 22% by year 12 and thereafter. The current and terminal levels can instead both be 20% while retaining a 30% interim peak. These are examples, not company forecasts.",
+  "text.ee9c6db09279795b50d5": "The transitions are linear between specified endpoints. The model also permits a lower interim target or a later recovery; the chart shows actual calculated rows. Distinct interim and terminal margins need a nonzero transition interval. Dates are whole model years and invalid/empty assumptions do not silently become zero.",
+  "text.4275defd9c1fbee67545": "Independence and editing",
+  "text.cb98549c87bff96b8004": "Revenue, profitability and capital have separate calendars. The cash-flow schedule extends far enough to include all required years. Existing revenue, investment, tax and discount-rate rows are retained when adding a margin-only extension; new years are explicitly generated assumptions. Original research remains available through Use research, and full Undo restores the preceding draft.",
+  "text.b2e56fd1ced6072e8184": "Guided's Simple transition mode uses current edited scalar inputs; switching out of the phased mode does not restore old input values. Year-by-year's manual mode keeps its explicit margin rows when the phase generator is turned off. Phase settings are retained for reuse. In Year-by-year, applying phase controls regenerates margin rows; subsequent individual-year edits are identified as manual overrides. Growth-only changes preserve those calendar-year overrides.",
+  "text.dcc38346ef29a7cd96c0": "Monte Carlo keeps the starting margin fixed and shifts the interim and final targets together. The induced calendar-year change is added to each forecast margin, preserving manual row offsets. Invalid targets are excluded, not clipped. No change to the old absent/disabled-path Monte Carlo behavior is made.",
+  "text.25245739c356b9dbeb71": "Damodaran principles and our implementation",
+  "text.a693406b7b36d5f20c50": "Damodaran separates the sustainable target margin from the path to it, with mature businesses providing a reference. ",
+  "text.be7db709e3a81205bb26": "Young-growth value drivers",
+  "text.2f4295d851f8e3fb2e44": "His discussion also allows unusually high margins to decline as competition or loss of protection changes the business. ",
+  "text.9efa66d844b873a01e6b": "Growth-company value drivers",
+  "text.7cb7762e8ae3517ce47d": "In a standard steady-state setup, a target described as genuinely sustainable usually serves as the terminal margin. An additional peak-and-decay stage should express a separate business assumption, not an automatic rule. This application's piecewise curve is a modeling convenience, not a required Damodaran template or a claim that every company has the same margin life cycle."
+}

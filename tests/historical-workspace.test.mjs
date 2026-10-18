@@ -29,8 +29,8 @@ function fixture({emptyForm = false} = {}) {
   revenue: 1000, ebit: 200, cash: 100, debt: 200, shares: 100};
  let renders = 0;
  const render = () => { renders++; get('#valuation-result').textContent = String(valueCompany(snapshot, assumptions).perShare); };
- const setupFields = new Function('a', '$', 'render', 'toast',
-  `let activeCase = null, pathEditNotice = ''; ${fieldsSource}\n${setupSource}\nreturn setupFields;`)(assumptions, get, render, () => {});
+ const setupFields = new Function('a', '$', 'render', 'toast', 'appMark',
+  `let activeCase = null, pathEditNotice = ''; ${fieldsSource}\n${setupSource}\nreturn setupFields;`)(assumptions, get, render, () => {}, text => text);
  if (!emptyForm) setupFields(); render();
  const actionCalls = [];
  for (const id of ['load-case', 'reset', 'save', 'export', 'research-addenda', 'claim-scale']) get(`#${id}`).onclick = () => actionCalls.push(id);
@@ -201,5 +201,24 @@ test('historical: evidence stays open while original controls in different group
  assert.equal(h.get('#a-growth'),growth);assert.equal(h.get('#a-targetMargin'),margin);assert.equal(form.oninput,handler);
  assert.equal(h.document.activeElement,margin);assert.equal(Boolean(h.get('.historical-editor').inert),false);
  assert.equal(Number(h.get('#valuation-result').textContent),valueCompany(h.snapshot,h.assumptions).perShare);
+ h.workspace.destroy();
+});
+
+test('historical: locale switch keeps workspace, evidence, inputs, notes and focus intact', async()=>{
+ const {setLocale}=await import('../dist/i18n.js');setLocale('en');
+ const h=fixture();
+ h.workspace.setGroup('case');h.workspace.setResultView('bridge');
+ const notes=h.get('#thesis');notes.value='Keep my own English thesis.';notes.focus();
+ h.workspace.openEvidence(h.get('#historical-evidence-action'));
+ const state=h.workspace.getState(),inputs=h.get('#assumptions'),evidence=h.workspace.evidence.element;
+ const openDetails=h.get('#evidence-details').open;
+ setLocale('zh-Hant');
+ assert.deepEqual(h.workspace.getState(),state);assert.equal(h.get('#assumptions'),inputs);
+ assert.equal(h.workspace.evidence.element,evidence);assert.equal(h.workspace.evidence.isOpen,true);
+ assert.equal(h.get('#evidence-details').open,openDetails);assert.equal(notes.value,'Keep my own English thesis.');
+ assert.equal(h.get('#historical-evidence-action').textContent,'證據');
+ assert.match(evidence.querySelector('.contextual-evidence-title').textContent,/證據/);
+ setLocale('en');assert.deepEqual(h.workspace.getState(),state);
+ assert.equal(h.get('#historical-evidence-action').textContent,'Evidence');
  h.workspace.destroy();
 });
