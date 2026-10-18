@@ -1,0 +1,2100 @@
+{
+  "audit_date": "2026-10-18",
+  "company": "NVMI",
+  "package_reviewed": "v2",
+  "capital_discount_origin": "2025-12-31",
+  "information_cutoff": "2026-10-18",
+  "verdict": "PASS_SCOPED_DATED_CONDITIONAL_RESEARCH",
+  "current_equity_value_approved": false,
+  "current_per_share_value": null,
+  "publication_approved": false,
+  "ready_for_dated_EV_integration": true,
+  "ready_for_current_price_target": false,
+  "scope": "Independent arithmetic reconstruction and targeted primary-source checks. Not an assurance audit of every historical XBRL field or an endorsement of forecast probabilities.",
+  "original_sha256": {
+    "valuation-readiness-v2.json": "8a613df46ed5bd7960819260ea99bc3706829b8ddba1ed9b6afbe8aa3ae18695",
+    "valuation-readiness-v2.md": "01fbe5ec9ce3414210639508be1e31b60792fabcb892f3db75805c9220093c94",
+    "forecast-scenarios-v2.csv": "e7d21534e030257ffd460cffe6c968e241f06d17472d8b39a47b68ae43e1f595",
+    "history-10fy-v2.json": "89a75f086400e800d03939b94d1cb9ac7b25bd4005b6c823d10bda9715d6eda8",
+    "history-10fy-v2.csv": "06b339f89bd45279eddba8a0021dc990f2f20a4cc466dafff62e897144ce5e8c",
+    "build-research-v1.py": "23577b77e58e55951760c1480e20c82f8260ea03e5c888389f59b86478426bd2",
+    "revise-v2.py": "77f03aeb3121cd14c296ca8ee9ec6cac400d0c60ccdd4ef951483f8709c5d7dc"
+  },
+  "results": {
+    "downcycle": {
+      "EV_USD_m": 2019.5650232582489,
+      "explicit_PV_USD_m": 1090.2091197953268,
+      "terminal_PV_USD_m": 929.355903462922,
+      "terminal_share": 0.4601762719991819,
+      "reinvestment_rate": 0.19230769230769232,
+      "illustrative_fixed_claim_equity_USD_m": 2680.6197132582492,
+      "illustrative_fixed_claim_per_share_USD": 83.31018891589333
+    },
+    "base": {
+      "EV_USD_m": 4071.1628453888156,
+      "explicit_PV_USD_m": 1762.417623934975,
+      "terminal_PV_USD_m": 2308.7452214538407,
+      "terminal_share": 0.5670972420248015,
+      "reinvestment_rate": 0.16666666666666666,
+      "illustrative_fixed_claim_equity_USD_m": 4732.217535388816,
+      "illustrative_fixed_claim_per_share_USD": 147.07119212562634
+    },
+    "upside": {
+      "EV_USD_m": 6316.266457572657,
+      "explicit_PV_USD_m": 2296.4229480960653,
+      "terminal_PV_USD_m": 4019.8435094765914,
+      "terminal_share": 0.6364271577962243,
+      "reinvestment_rate": 0.15909090909090912,
+      "illustrative_fixed_claim_equity_USD_m": 6977.321147572657,
+      "illustrative_fixed_claim_per_share_USD": 216.8461046735335
+    }
+  },
+  "all_computational_checks_pass": true,
+  "check_count": 337,
+  "checks": [
+    {
+      "check": "initial WACC",
+      "passed": true,
+      "actual": 0.10977536780000001,
+      "expected": 0.10977536780000001
+    },
+    {
+      "check": "terminal WACC",
+      "passed": true,
+      "actual": 0.09592269,
+      "expected": 0.09592269
+    },
+    {
+      "check": "downcycle 2026 year",
+      "passed": true,
+      "actual": 2026,
+      "expected": 2026
+    },
+    {
+      "check": "downcycle 2026 revenue",
+      "passed": true,
+      "actual": 1042.266,
+      "expected": 1042.266
+    },
+    {
+      "check": "downcycle 2026 NOPAT",
+      "passed": true,
+      "actual": 248.03325135,
+      "expected": 248.03325135
+    },
+    {
+      "check": "downcycle 2026 funding_floor",
+      "passed": true,
+      "actual": 77.54345200000004,
+      "expected": 77.54345200000003
+    },
+    {
+      "check": "downcycle 2026 net_reinvestment",
+      "passed": true,
+      "actual": 101.05562500000005,
+      "expected": 101.05562500000005
+    },
+    {
+      "check": "downcycle 2026 FCFF",
+      "passed": true,
+      "actual": 146.97762634999995,
+      "expected": 146.97762634999995
+    },
+    {
+      "check": "downcycle 2026 discount_factor",
+      "passed": true,
+      "actual": 1.1217753678,
+      "expected": 1.1217753678
+    },
+    {
+      "check": "downcycle 2026 PV_FCFF",
+      "passed": true,
+      "actual": 131.0223334982378,
+      "expected": 131.0223334982378
+    },
+    {
+      "check": "downcycle 2026 legacy single reversal",
+      "passed": true,
+      "actual": 297.04581,
+      "expected": 297.04581
+    },
+    {
+      "check": "downcycle 2026 fresh cost inside margin",
+      "passed": true,
+      "actual": 1042.266,
+      "expected": 1042.266
+    },
+    {
+      "check": "downcycle 2027 year",
+      "passed": true,
+      "actual": 2027,
+      "expected": 2027
+    },
+    {
+      "check": "downcycle 2027 revenue",
+      "passed": true,
+      "actual": 1030,
+      "expected": 1030
+    },
+    {
+      "check": "downcycle 2027 NOPAT",
+      "passed": true,
+      "actual": 195.6117142857143,
+      "expected": 195.6117142857143
+    },
+    {
+      "check": "downcycle 2027 funding_floor",
+      "passed": true,
+      "actual": 17.51,
+      "expected": 17.51
+    },
+    {
+      "check": "downcycle 2027 net_reinvestment",
+      "passed": true,
+      "actual": 17.51,
+      "expected": 17.51
+    },
+    {
+      "check": "downcycle 2027 FCFF",
+      "passed": true,
+      "actual": 178.1017142857143,
+      "expected": 178.1017142857143
+    },
+    {
+      "check": "downcycle 2027 discount_factor",
+      "passed": true,
+      "actual": 1.2566533543879241,
+      "expected": 1.2566533543879241
+    },
+    {
+      "check": "downcycle 2027 PV_FCFF",
+      "passed": true,
+      "actual": 141.7270034443683,
+      "expected": 141.7270034443683
+    },
+    {
+      "check": "downcycle 2027 legacy single reversal",
+      "passed": true,
+      "actual": 236.9,
+      "expected": 236.9
+    },
+    {
+      "check": "downcycle 2027 fresh cost inside margin",
+      "passed": true,
+      "actual": 1030.0,
+      "expected": 1030
+    },
+    {
+      "check": "downcycle 2028 year",
+      "passed": true,
+      "actual": 2028,
+      "expected": 2028
+    },
+    {
+      "check": "downcycle 2028 revenue",
+      "passed": true,
+      "actual": 1110,
+      "expected": 1110
+    },
+    {
+      "check": "downcycle 2028 NOPAT",
+      "passed": true,
+      "actual": 217.4965714285714,
+      "expected": 217.4965714285714
+    },
+    {
+      "check": "downcycle 2028 funding_floor",
+      "passed": true,
+      "actual": 48.470000000000006,
+      "expected": 48.47
+    },
+    {
+      "check": "downcycle 2028 net_reinvestment",
+      "passed": true,
+      "actual": 50.0,
+      "expected": 50.0
+    },
+    {
+      "check": "downcycle 2028 FCFF",
+      "passed": true,
+      "actual": 167.4965714285714,
+      "expected": 167.4965714285714
+    },
+    {
+      "check": "downcycle 2028 discount_factor",
+      "passed": true,
+      "actual": 1.4058143312545897,
+      "expected": 1.4058143312545897
+    },
+    {
+      "check": "downcycle 2028 PV_FCFF",
+      "passed": true,
+      "actual": 119.14558537690577,
+      "expected": 119.14558537690577
+    },
+    {
+      "check": "downcycle 2028 legacy single reversal",
+      "passed": true,
+      "actual": 266.4,
+      "expected": 266.4
+    },
+    {
+      "check": "downcycle 2028 fresh cost inside margin",
+      "passed": true,
+      "actual": 1110.0,
+      "expected": 1110
+    },
+    {
+      "check": "downcycle 2029 year",
+      "passed": true,
+      "actual": 2029,
+      "expected": 2029
+    },
+    {
+      "check": "downcycle 2029 revenue",
+      "passed": true,
+      "actual": 1200,
+      "expected": 1200
+    },
+    {
+      "check": "downcycle 2029 NOPAT",
+      "passed": true,
+      "actual": 242.14285714285714,
+      "expected": 242.14285714285714
+    },
+    {
+      "check": "downcycle 2029 funding_floor",
+      "passed": true,
+      "actual": 53.7,
+      "expected": 53.7
+    },
+    {
+      "check": "downcycle 2029 net_reinvestment",
+      "passed": true,
+      "actual": 56.25,
+      "expected": 56.25
+    },
+    {
+      "check": "downcycle 2029 FCFF",
+      "passed": true,
+      "actual": 185.89285714285714,
+      "expected": 185.89285714285714
+    },
+    {
+      "check": "downcycle 2029 discount_factor",
+      "passed": true,
+      "actual": 1.570516457509131,
+      "expected": 1.570516457509131
+    },
+    {
+      "check": "downcycle 2029 PV_FCFF",
+      "passed": true,
+      "actual": 118.36415737895975,
+      "expected": 118.36415737895975
+    },
+    {
+      "check": "downcycle 2029 legacy single reversal",
+      "passed": true,
+      "actual": 300.0,
+      "expected": 300.0
+    },
+    {
+      "check": "downcycle 2029 fresh cost inside margin",
+      "passed": true,
+      "actual": 1200.0,
+      "expected": 1200
+    },
+    {
+      "check": "downcycle 2030 year",
+      "passed": true,
+      "actual": 2030,
+      "expected": 2030
+    },
+    {
+      "check": "downcycle 2030 revenue",
+      "passed": true,
+      "actual": 1296,
+      "expected": 1296
+    },
+    {
+      "check": "downcycle 2030 NOPAT",
+      "passed": true,
+      "actual": 263.67582857142855,
+      "expected": 263.67582857142855
+    },
+    {
+      "check": "downcycle 2030 funding_floor",
+      "passed": true,
+      "actual": 57.552,
+      "expected": 57.55199999999999
+    },
+    {
+      "check": "downcycle 2030 net_reinvestment",
+      "passed": true,
+      "actual": 60.0,
+      "expected": 60.0
+    },
+    {
+      "check": "downcycle 2030 FCFF",
+      "passed": true,
+      "actual": 203.67582857142855,
+      "expected": 203.67582857142855
+    },
+    {
+      "check": "downcycle 2030 discount_factor",
+      "passed": true,
+      "actual": 1.7520974063291601,
+      "expected": 1.7520974063291601
+    },
+    {
+      "check": "downcycle 2030 PV_FCFF",
+      "passed": true,
+      "actual": 116.24686380773326,
+      "expected": 116.24686380773326
+    },
+    {
+      "check": "downcycle 2030 legacy single reversal",
+      "passed": true,
+      "actual": 330.48,
+      "expected": 330.48
+    },
+    {
+      "check": "downcycle 2030 fresh cost inside margin",
+      "passed": true,
+      "actual": 1296.0,
+      "expected": 1296
+    },
+    {
+      "check": "downcycle 2031 year",
+      "passed": true,
+      "actual": 2031,
+      "expected": 2031
+    },
+    {
+      "check": "downcycle 2031 revenue",
+      "passed": true,
+      "actual": 1385.424,
+      "expected": 1385.424
+    },
+    {
+      "check": "downcycle 2031 NOPAT",
+      "passed": true,
+      "actual": 270.94143414857143,
+      "expected": 270.94143414857143
+    },
+    {
+      "check": "downcycle 2031 funding_floor",
+      "passed": true,
+      "actual": 56.639087999999994,
+      "expected": 56.639087999999994
+    },
+    {
+      "check": "downcycle 2031 net_reinvestment",
+      "passed": true,
+      "actual": 56.639087999999994,
+      "expected": 56.639087999999994
+    },
+    {
+      "check": "downcycle 2031 FCFF",
+      "passed": true,
+      "actual": 214.30234614857144,
+      "expected": 214.30234614857144
+    },
+    {
+      "check": "downcycle 2031 discount_factor",
+      "passed": true,
+      "actual": 1.9519756897151563,
+      "expected": 1.9519756897151563
+    },
+    {
+      "check": "downcycle 2031 PV_FCFF",
+      "passed": true,
+      "actual": 109.78740528261584,
+      "expected": 109.78740528261584
+    },
+    {
+      "check": "downcycle 2031 legacy single reversal",
+      "passed": true,
+      "actual": 343.585152,
+      "expected": 343.585152
+    },
+    {
+      "check": "downcycle 2031 fresh cost inside margin",
+      "passed": true,
+      "actual": 1385.424,
+      "expected": 1385.424
+    },
+    {
+      "check": "downcycle 2032 year",
+      "passed": true,
+      "actual": 2032,
+      "expected": 2032
+    },
+    {
+      "check": "downcycle 2032 revenue",
+      "passed": true,
+      "actual": 1465.7785920000001,
+      "expected": 1465.7785920000001
+    },
+    {
+      "check": "downcycle 2032 NOPAT",
+      "passed": true,
+      "actual": 275.2847364093943,
+      "expected": 275.2847364093943
+    },
+    {
+      "check": "downcycle 2032 funding_floor",
+      "passed": true,
+      "actual": 54.649435104000055,
+      "expected": 54.64943510400005
+    },
+    {
+      "check": "downcycle 2032 net_reinvestment",
+      "passed": true,
+      "actual": 54.649435104000055,
+      "expected": 54.64943510400005
+    },
+    {
+      "check": "downcycle 2032 FCFF",
+      "passed": true,
+      "actual": 220.63530130539428,
+      "expected": 220.63530130539428
+    },
+    {
+      "check": "downcycle 2032 discount_factor",
+      "passed": true,
+      "actual": 2.1716515203981737,
+      "expected": 2.1716515203981737
+    },
+    {
+      "check": "downcycle 2032 PV_FCFF",
+      "passed": true,
+      "actual": 101.59793099076073,
+      "expected": 101.59793099076073
+    },
+    {
+      "check": "downcycle 2032 legacy single reversal",
+      "passed": true,
+      "actual": 353.25264067200004,
+      "expected": 353.25264067200004
+    },
+    {
+      "check": "downcycle 2032 fresh cost inside margin",
+      "passed": true,
+      "actual": 1465.7785920000001,
+      "expected": 1465.7785920000001
+    },
+    {
+      "check": "downcycle 2033 year",
+      "passed": true,
+      "actual": 2033,
+      "expected": 2033
+    },
+    {
+      "check": "downcycle 2033 revenue",
+      "passed": true,
+      "actual": 1534.670185824,
+      "expected": 1534.670185824
+    },
+    {
+      "check": "downcycle 2033 NOPAT",
+      "passed": true,
+      "actual": 276.5168740817684,
+      "expected": 276.5168740817684
+    },
+    {
+      "check": "downcycle 2033 funding_floor",
+      "passed": true,
+      "actual": 51.579282873888005,
+      "expected": 51.579282873888
+    },
+    {
+      "check": "downcycle 2033 net_reinvestment",
+      "passed": true,
+      "actual": 52.53750631283617,
+      "expected": 52.537506312836165
+    },
+    {
+      "check": "downcycle 2033 FCFF",
+      "passed": true,
+      "actual": 223.9793677689322,
+      "expected": 223.9793677689322
+    },
+    {
+      "check": "downcycle 2033 discount_factor",
+      "passed": true,
+      "actual": 2.4127071472901247,
+      "expected": 2.4127071472901247
+    },
+    {
+      "check": "downcycle 2033 PV_FCFF",
+      "passed": true,
+      "actual": 92.83321766609704,
+      "expected": 92.83321766609704
+    },
+    {
+      "check": "downcycle 2033 legacy single reversal",
+      "passed": true,
+      "actual": 359.11282348281605,
+      "expected": 359.11282348281605
+    },
+    {
+      "check": "downcycle 2033 fresh cost inside margin",
+      "passed": true,
+      "actual": 1534.6701858240003,
+      "expected": 1534.670185824
+    },
+    {
+      "check": "downcycle 2034 year",
+      "passed": true,
+      "actual": 2034,
+      "expected": 2034
+    },
+    {
+      "check": "downcycle 2034 revenue",
+      "passed": true,
+      "actual": 1589.9183125136642,
+      "expected": 1589.9183125136642
+    },
+    {
+      "check": "downcycle 2034 NOPAT",
+      "passed": true,
+      "actual": 277.9018218442634,
+      "expected": 277.9018218442634
+    },
+    {
+      "check": "downcycle 2034 funding_floor",
+      "passed": true,
+      "actual": 47.47041818790802,
+      "expected": 47.47041818790801
+    },
+    {
+      "check": "downcycle 2034 net_reinvestment",
+      "passed": true,
+      "actual": 52.24821007516059,
+      "expected": 52.248210075160586
+    },
+    {
+      "check": "downcycle 2034 FCFF",
+      "passed": true,
+      "actual": 225.6536117691028,
+      "expected": 225.6536117691028
+    },
+    {
+      "check": "downcycle 2034 discount_factor",
+      "passed": true,
+      "actual": 2.6768065988898084,
+      "expected": 2.6768065988898084
+    },
+    {
+      "check": "downcycle 2034 PV_FCFF",
+      "passed": true,
+      "actual": 84.29955748864765,
+      "expected": 84.29955748864765
+    },
+    {
+      "check": "downcycle 2034 legacy single reversal",
+      "passed": true,
+      "actual": 360.9114569406018,
+      "expected": 360.9114569406018
+    },
+    {
+      "check": "downcycle 2034 fresh cost inside margin",
+      "passed": true,
+      "actual": 1589.9183125136642,
+      "expected": 1589.9183125136642
+    },
+    {
+      "check": "downcycle 2035 year",
+      "passed": true,
+      "actual": 2035,
+      "expected": 2035
+    },
+    {
+      "check": "downcycle 2035 revenue",
+      "passed": true,
+      "actual": 1629.6662703265056,
+      "expected": 1629.6662703265056
+    },
+    {
+      "check": "downcycle 2035 NOPAT",
+      "passed": true,
+      "actual": 276.06546619331004,
+      "expected": 276.06546619331004
+    },
+    {
+      "check": "downcycle 2035 funding_floor",
+      "passed": true,
+      "actual": 42.41107098630191,
+      "expected": 42.41107098630191
+    },
+    {
+      "check": "downcycle 2035 net_reinvestment",
+      "passed": true,
+      "actual": 53.0895127294827,
+      "expected": 53.0895127294827
+    },
+    {
+      "check": "downcycle 2035 FCFF",
+      "passed": true,
+      "actual": 222.97595346382735,
+      "expected": 222.97595346382735
+    },
+    {
+      "check": "downcycle 2035 discount_factor",
+      "passed": true,
+      "actual": 2.965694767651748,
+      "expected": 2.965694767651748
+    },
+    {
+      "check": "downcycle 2035 PV_FCFF",
+      "passed": true,
+      "actual": 75.1850648610008,
+      "expected": 75.1850648610008
+    },
+    {
+      "check": "downcycle 2035 legacy single reversal",
+      "passed": true,
+      "actual": 358.5265794718312,
+      "expected": 358.5265794718312
+    },
+    {
+      "check": "downcycle 2035 fresh cost inside margin",
+      "passed": true,
+      "actual": 1629.6662703265054,
+      "expected": 1629.6662703265056
+    },
+    {
+      "check": "downcycle operating EV",
+      "passed": true,
+      "actual": 2019.5650232582489,
+      "expected": 2019.5650232582489
+    },
+    {
+      "check": "downcycle terminal reinvestment",
+      "passed": true,
+      "actual": 54.416750547719765,
+      "expected": 54.416750547719765
+    },
+    {
+      "check": "downcycle year10 g/ROIC",
+      "passed": true,
+      "actual": 0.1923076923076923,
+      "expected": 0.19230769230769232
+    },
+    {
+      "check": "downcycle terminal funded",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "check": "base 2026 year",
+      "passed": true,
+      "actual": 2026,
+      "expected": 2026
+    },
+    {
+      "check": "base 2026 revenue",
+      "passed": true,
+      "actual": 1072.266,
+      "expected": 1072.266
+    },
+    {
+      "check": "base 2026 NOPAT",
+      "passed": true,
+      "actual": 264.12592244999996,
+      "expected": 264.12592244999996
+    },
+    {
+      "check": "base 2026 funding_floor",
+      "passed": true,
+      "actual": 79.34136000000002,
+      "expected": 79.34136000000001
+    },
+    {
+      "check": "base 2026 net_reinvestment",
+      "passed": true,
+      "actual": 106.49388888888893,
+      "expected": 106.49388888888893
+    },
+    {
+      "check": "base 2026 FCFF",
+      "passed": true,
+      "actual": 157.63203356111103,
+      "expected": 157.63203356111103
+    },
+    {
+      "check": "base 2026 discount_factor",
+      "passed": true,
+      "actual": 1.1097753678,
+      "expected": 1.1097753678
+    },
+    {
+      "check": "base 2026 PV_FCFF",
+      "passed": true,
+      "actual": 142.03958578896749,
+      "expected": 142.03958578896749
+    },
+    {
+      "check": "base 2026 legacy single reversal",
+      "passed": true,
+      "actual": 316.31847,
+      "expected": 316.31847
+    },
+    {
+      "check": "base 2026 fresh cost inside margin",
+      "passed": true,
+      "actual": 1072.266,
+      "expected": 1072.266
+    },
+    {
+      "check": "base 2027 year",
+      "passed": true,
+      "actual": 2027,
+      "expected": 2027
+    },
+    {
+      "check": "base 2027 revenue",
+      "passed": true,
+      "actual": 1260,
+      "expected": 1260
+    },
+    {
+      "check": "base 2027 NOPAT",
+      "passed": true,
+      "actual": 312.12,
+      "expected": 312.12
+    },
+    {
+      "check": "base 2027 funding_floor",
+      "passed": true,
+      "actual": 80.85221999999997,
+      "expected": 80.85221999999996
+    },
+    {
+      "check": "base 2027 net_reinvestment",
+      "passed": true,
+      "actual": 104.29666666666662,
+      "expected": 104.29666666666662
+    },
+    {
+      "check": "base 2027 FCFF",
+      "passed": true,
+      "actual": 207.82333333333338,
+      "expected": 207.82333333333338
+    },
+    {
+      "check": "base 2027 discount_factor",
+      "passed": true,
+      "actual": 1.2298932157977907,
+      "expected": 1.2298932157977907
+    },
+    {
+      "check": "base 2027 PV_FCFF",
+      "passed": true,
+      "actual": 168.97672957609197,
+      "expected": 168.97672957609197
+    },
+    {
+      "check": "base 2027 legacy single reversal",
+      "passed": true,
+      "actual": 378.0,
+      "expected": 378.0
+    },
+    {
+      "check": "base 2027 fresh cost inside margin",
+      "passed": true,
+      "actual": 1260.0,
+      "expected": 1260
+    },
+    {
+      "check": "base 2028 year",
+      "passed": true,
+      "actual": 2028,
+      "expected": 2028
+    },
+    {
+      "check": "base 2028 revenue",
+      "passed": true,
+      "actual": 1449,
+      "expected": 1449
+    },
+    {
+      "check": "base 2028 NOPAT",
+      "passed": true,
+      "actual": 360.81652499999996,
+      "expected": 360.81652499999996
+    },
+    {
+      "check": "base 2028 funding_floor",
+      "passed": true,
+      "actual": 84.105,
+      "expected": 84.10499999999999
+    },
+    {
+      "check": "base 2028 net_reinvestment",
+      "passed": true,
+      "actual": 105.0,
+      "expected": 105.0
+    },
+    {
+      "check": "base 2028 FCFF",
+      "passed": true,
+      "actual": 255.81652499999996,
+      "expected": 255.81652499999996
+    },
+    {
+      "check": "base 2028 discount_factor",
+      "passed": true,
+      "actual": 1.3611191260396396,
+      "expected": 1.3611191260396396
+    },
+    {
+      "check": "base 2028 PV_FCFF",
+      "passed": true,
+      "actual": 187.94572797190264,
+      "expected": 187.94572797190264
+    },
+    {
+      "check": "base 2028 legacy single reversal",
+      "passed": true,
+      "actual": 441.945,
+      "expected": 441.945
+    },
+    {
+      "check": "base 2028 fresh cost inside margin",
+      "passed": true,
+      "actual": 1449.0000000000002,
+      "expected": 1449
+    },
+    {
+      "check": "base 2029 year",
+      "passed": true,
+      "actual": 2029,
+      "expected": 2029
+    },
+    {
+      "check": "base 2029 revenue",
+      "passed": true,
+      "actual": 1637,
+      "expected": 1637
+    },
+    {
+      "check": "base 2029 NOPAT",
+      "passed": true,
+      "actual": 396.3878571428571,
+      "expected": 396.3878571428571
+    },
+    {
+      "check": "base 2029 funding_floor",
+      "passed": true,
+      "actual": 86.595,
+      "expected": 86.595
+    },
+    {
+      "check": "base 2029 net_reinvestment",
+      "passed": true,
+      "actual": 104.44444444444444,
+      "expected": 104.44444444444444
+    },
+    {
+      "check": "base 2029 FCFF",
+      "passed": true,
+      "actual": 291.94341269841266,
+      "expected": 291.94341269841266
+    },
+    {
+      "check": "base 2029 discount_factor",
+      "passed": true,
+      "actual": 1.504251430486774,
+      "expected": 1.504251430486774
+    },
+    {
+      "check": "base 2029 PV_FCFF",
+      "passed": true,
+      "actual": 194.07886659209632,
+      "expected": 194.07886659209632
+    },
+    {
+      "check": "base 2029 legacy single reversal",
+      "passed": true,
+      "actual": 491.09999999999997,
+      "expected": 491.09999999999997
+    },
+    {
+      "check": "base 2029 fresh cost inside margin",
+      "passed": true,
+      "actual": 1637.0,
+      "expected": 1637
+    },
+    {
+      "check": "base 2030 year",
+      "passed": true,
+      "actual": 2030,
+      "expected": 2030
+    },
+    {
+      "check": "base 2030 revenue",
+      "passed": true,
+      "actual": 1817,
+      "expected": 1817
+    },
+    {
+      "check": "base 2030 NOPAT",
+      "passed": true,
+      "actual": 427.6633964285714,
+      "expected": 427.6633964285714
+    },
+    {
+      "check": "base 2030 funding_floor",
+      "passed": true,
+      "actual": 86.655,
+      "expected": 86.65499999999999
+    },
+    {
+      "check": "base 2030 net_reinvestment",
+      "passed": true,
+      "actual": 100.0,
+      "expected": 100.0
+    },
+    {
+      "check": "base 2030 FCFF",
+      "passed": true,
+      "actual": 327.6633964285714,
+      "expected": 327.6633964285714
+    },
+    {
+      "check": "base 2030 discount_factor",
+      "passed": true,
+      "actual": 1.6601198910224813,
+      "expected": 1.6601198910224813
+    },
+    {
+      "check": "base 2030 PV_FCFF",
+      "passed": true,
+      "actual": 197.37333321556724,
+      "expected": 197.37333321556724
+    },
+    {
+      "check": "base 2030 legacy single reversal",
+      "passed": true,
+      "actual": 536.015,
+      "expected": 536.015
+    },
+    {
+      "check": "base 2030 fresh cost inside margin",
+      "passed": true,
+      "actual": 1817.0,
+      "expected": 1817
+    },
+    {
+      "check": "base 2031 year",
+      "passed": true,
+      "actual": 2031,
+      "expected": 2031
+    },
+    {
+      "check": "base 2031 revenue",
+      "passed": true,
+      "actual": 1987.7358423946243,
+      "expected": 1987.7358423946243
+    },
+    {
+      "check": "base 2031 NOPAT",
+      "passed": true,
+      "actual": 448.2969041578916,
+      "expected": 448.2969041578916
+    },
+    {
+      "check": "base 2031 funding_floor",
+      "passed": true,
+      "actual": 86.1588656261454,
+      "expected": 86.1588656261454
+    },
+    {
+      "check": "base 2031 net_reinvestment",
+      "passed": true,
+      "actual": 90.82582675842944,
+      "expected": 90.82582675842944
+    },
+    {
+      "check": "base 2031 FCFF",
+      "passed": true,
+      "actual": 357.47107739946216,
+      "expected": 357.47107739946216
+    },
+    {
+      "check": "base 2031 discount_factor",
+      "passed": true,
+      "actual": 1.829583992673956,
+      "expected": 1.829583992673956
+    },
+    {
+      "check": "base 2031 PV_FCFF",
+      "passed": true,
+      "actual": 195.38380245501298,
+      "expected": 195.38380245501298
+    },
+    {
+      "check": "base 2031 legacy single reversal",
+      "passed": true,
+      "actual": 568.4924509248625,
+      "expected": 568.4924509248625
+    },
+    {
+      "check": "base 2031 fresh cost inside margin",
+      "passed": true,
+      "actual": 1987.735842394624,
+      "expected": 1987.7358423946243
+    },
+    {
+      "check": "base 2032 year",
+      "passed": true,
+      "actual": 2032,
+      "expected": 2032
+    },
+    {
+      "check": "base 2032 revenue",
+      "passed": true,
+      "actual": 2142.7282393809523,
+      "expected": 2142.7282393809523
+    },
+    {
+      "check": "base 2032 NOPAT",
+      "passed": true,
+      "actual": 462.5339093132853,
+      "expected": 462.5339093132853
+    },
+    {
+      "check": "base 2032 funding_floor",
+      "passed": true,
+      "actual": 83.28841459620253,
+      "expected": 83.28841459620253
+    },
+    {
+      "check": "base 2032 net_reinvestment",
+      "passed": true,
+      "actual": 83.28841459620253,
+      "expected": 83.28841459620253
+    },
+    {
+      "check": "base 2032 FCFF",
+      "passed": true,
+      "actual": 379.24549471708275,
+      "expected": 379.24549471708275
+    },
+    {
+      "check": "base 2032 discount_factor",
+      "passed": true,
+      "actual": 2.013530823351699,
+      "expected": 2.013530823351699
+    },
+    {
+      "check": "base 2032 PV_FCFF",
+      "passed": true,
+      "actual": 188.34849226981055,
+      "expected": 188.34849226981055
+    },
+    {
+      "check": "base 2032 legacy single reversal",
+      "passed": true,
+      "actual": 593.5357223085238,
+      "expected": 593.5357223085238
+    },
+    {
+      "check": "base 2032 fresh cost inside margin",
+      "passed": true,
+      "actual": 2142.7282393809523,
+      "expected": 2142.7282393809523
+    },
+    {
+      "check": "base 2033 year",
+      "passed": true,
+      "actual": 2033,
+      "expected": 2033
+    },
+    {
+      "check": "base 2033 revenue",
+      "passed": true,
+      "actual": 2275.5407400144454,
+      "expected": 2275.5407400144454
+    },
+    {
+      "check": "base 2033 NOPAT",
+      "passed": true,
+      "actual": 469.580587109381,
+      "expected": 469.580587109381
+    },
+    {
+      "check": "base 2033 funding_floor",
+      "passed": true,
+      "actual": 77.96123630926938,
+      "expected": 77.9612363092694
+    },
+    {
+      "check": "base 2033 net_reinvestment",
+      "passed": true,
+      "actual": 78.14255323464585,
+      "expected": 78.14255323464586
+    },
+    {
+      "check": "base 2033 FCFF",
+      "passed": true,
+      "actual": 391.43803387473514,
+      "expected": 391.43803387473514
+    },
+    {
+      "check": "base 2033 discount_factor",
+      "passed": true,
+      "actual": 2.2128725149335664,
+      "expected": 2.2128725149335664
+    },
+    {
+      "check": "base 2033 PV_FCFF",
+      "passed": true,
+      "actual": 176.89136235057205,
+      "expected": 176.89136235057205
+    },
+    {
+      "check": "base 2033 legacy single reversal",
+      "passed": true,
+      "actual": 609.8449183238714,
+      "expected": 609.8449183238714
+    },
+    {
+      "check": "base 2033 fresh cost inside margin",
+      "passed": true,
+      "actual": 2275.5407400144454,
+      "expected": 2275.5407400144454
+    },
+    {
+      "check": "base 2034 year",
+      "passed": true,
+      "actual": 2034,
+      "expected": 2034
+    },
+    {
+      "check": "base 2034 revenue",
+      "passed": true,
+      "actual": 2380.196153108036,
+      "expected": 2380.196153108036
+    },
+    {
+      "check": "base 2034 NOPAT",
+      "passed": true,
+      "actual": 474.6825188143356,
+      "expected": 474.6825188143356
+    },
+    {
+      "check": "base 2034 funding_floor",
+      "passed": true,
+      "actual": 70.23922861750545,
+      "expected": 70.23922861750543
+    },
+    {
+      "check": "base 2034 net_reinvestment",
+      "passed": true,
+      "actual": 77.33884823207916,
+      "expected": 77.33884823207916
+    },
+    {
+      "check": "base 2034 FCFF",
+      "passed": true,
+      "actual": 397.34367058225644,
+      "expected": 397.34367058225644
+    },
+    {
+      "check": "base 2034 discount_factor",
+      "passed": true,
+      "actual": 2.4285432225221535,
+      "expected": 2.4285432225221535
+    },
+    {
+      "check": "base 2034 PV_FCFF",
+      "passed": true,
+      "actual": 163.61399990632935,
+      "expected": 163.61399990632935
+    },
+    {
+      "check": "base 2034 legacy single reversal",
+      "passed": true,
+      "actual": 616.4708036549813,
+      "expected": 616.4708036549813
+    },
+    {
+      "check": "base 2034 fresh cost inside margin",
+      "passed": true,
+      "actual": 2380.196153108036,
+      "expected": 2380.196153108036
+    },
+    {
+      "check": "base 2035 year",
+      "passed": true,
+      "actual": 2035,
+      "expected": 2035
+    },
+    {
+      "check": "base 2035 revenue",
+      "passed": true,
+      "actual": 2451.6020377012774,
+      "expected": 2451.6020377012774
+    },
+    {
+      "check": "base 2035 NOPAT",
+      "passed": true,
+      "actual": 471.9333922574959,
+      "expected": 471.9333922574959
+    },
+    {
+      "check": "base 2035 funding_floor",
+      "passed": true,
+      "actual": 60.33797248128881,
+      "expected": 60.3379724812888
+    },
+    {
+      "check": "base 2035 net_reinvestment",
+      "passed": true,
+      "actual": 78.65556537624931,
+      "expected": 78.65556537624931
+    },
+    {
+      "check": "base 2035 FCFF",
+      "passed": true,
+      "actual": 393.2778268812466,
+      "expected": 393.2778268812466
+    },
+    {
+      "check": "base 2035 discount_factor",
+      "passed": true,
+      "actual": 2.6614956212077474,
+      "expected": 2.6614956212077474
+    },
+    {
+      "check": "base 2035 PV_FCFF",
+      "passed": true,
+      "actual": 147.76572380862416,
+      "expected": 147.76572380862416
+    },
+    {
+      "check": "base 2035 legacy single reversal",
+      "passed": true,
+      "actual": 612.9005094253193,
+      "expected": 612.9005094253193
+    },
+    {
+      "check": "base 2035 fresh cost inside margin",
+      "passed": true,
+      "actual": 2451.6020377012774,
+      "expected": 2451.6020377012774
+    },
+    {
+      "check": "base operating EV",
+      "passed": true,
+      "actual": 4071.1628453888156,
+      "expected": 4071.1628453888156
+    },
+    {
+      "check": "base terminal reinvestment",
+      "passed": true,
+      "actual": 81.0152323375368,
+      "expected": 81.0152323375368
+    },
+    {
+      "check": "base year10 g/ROIC",
+      "passed": true,
+      "actual": 0.16666666666666666,
+      "expected": 0.16666666666666666
+    },
+    {
+      "check": "base terminal funded",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "check": "upside 2026 year",
+      "passed": true,
+      "actual": 2026,
+      "expected": 2026
+    },
+    {
+      "check": "upside 2026 revenue",
+      "passed": true,
+      "actual": 1102.266,
+      "expected": 1102.266
+    },
+    {
+      "check": "upside 2026 NOPAT",
+      "passed": true,
+      "actual": 280.71959355,
+      "expected": 280.71959355
+    },
+    {
+      "check": "upside 2026 funding_floor",
+      "passed": true,
+      "actual": 85.25758000000003,
+      "expected": 85.25758000000003
+    },
+    {
+      "check": "upside 2026 net_reinvestment",
+      "passed": true,
+      "actual": 110.84450000000004,
+      "expected": 110.84450000000004
+    },
+    {
+      "check": "upside 2026 FCFF",
+      "passed": true,
+      "actual": 169.87509354999997,
+      "expected": 169.87509354999997
+    },
+    {
+      "check": "upside 2026 discount_factor",
+      "passed": true,
+      "actual": 1.1067753678,
+      "expected": 1.1067753678
+    },
+    {
+      "check": "upside 2026 PV_FCFF",
+      "passed": true,
+      "actual": 153.48651451077222,
+      "expected": 153.48651451077222
+    },
+    {
+      "check": "upside 2026 legacy single reversal",
+      "passed": true,
+      "actual": 336.19113000000004,
+      "expected": 336.19113000000004
+    },
+    {
+      "check": "upside 2026 fresh cost inside margin",
+      "passed": true,
+      "actual": 1102.266,
+      "expected": 1102.266
+    },
+    {
+      "check": "upside 2027 year",
+      "passed": true,
+      "actual": 2027,
+      "expected": 2027
+    },
+    {
+      "check": "upside 2027 revenue",
+      "passed": true,
+      "actual": 1378,
+      "expected": 1378
+    },
+    {
+      "check": "upside 2027 NOPAT",
+      "passed": true,
+      "actual": 358.4178,
+      "expected": 358.4178
+    },
+    {
+      "check": "upside 2027 funding_floor",
+      "passed": true,
+      "actual": 106.14753999999999,
+      "expected": 106.14753999999999
+    },
+    {
+      "check": "upside 2027 net_reinvestment",
+      "passed": true,
+      "actual": 137.86699999999996,
+      "expected": 137.86699999999996
+    },
+    {
+      "check": "upside 2027 FCFF",
+      "passed": true,
+      "actual": 220.55080000000004,
+      "expected": 220.55080000000004
+    },
+    {
+      "check": "upside 2027 discount_factor",
+      "passed": true,
+      "actual": 1.2232481811502576,
+      "expected": 1.2232481811502576
+    },
+    {
+      "check": "upside 2027 PV_FCFF",
+      "passed": true,
+      "actual": 180.2993075310436,
+      "expected": 180.2993075310436
+    },
+    {
+      "check": "upside 2027 legacy single reversal",
+      "passed": true,
+      "actual": 434.07,
+      "expected": 434.07
+    },
+    {
+      "check": "upside 2027 fresh cost inside margin",
+      "passed": true,
+      "actual": 1378.0000000000002,
+      "expected": 1378
+    },
+    {
+      "check": "upside 2028 year",
+      "passed": true,
+      "actual": 2028,
+      "expected": 2028
+    },
+    {
+      "check": "upside 2028 revenue",
+      "passed": true,
+      "actual": 1681,
+      "expected": 1681
+    },
+    {
+      "check": "upside 2028 NOPAT",
+      "passed": true,
+      "actual": 439.1732571428571,
+      "expected": 439.1732571428571
+    },
+    {
+      "check": "upside 2028 funding_floor",
+      "passed": true,
+      "actual": 119.14500000000001,
+      "expected": 119.14500000000002
+    },
+    {
+      "check": "upside 2028 net_reinvestment",
+      "passed": true,
+      "actual": 151.5,
+      "expected": 151.5
+    },
+    {
+      "check": "upside 2028 FCFF",
+      "passed": true,
+      "actual": 287.6732571428571,
+      "expected": 287.6732571428571
+    },
+    {
+      "check": "upside 2028 discount_factor",
+      "passed": true,
+      "actual": 1.3500953416203882,
+      "expected": 1.3500953416203882
+    },
+    {
+      "check": "upside 2028 PV_FCFF",
+      "passed": true,
+      "actual": 213.07625341302995,
+      "expected": 213.07625341302995
+    },
+    {
+      "check": "upside 2028 legacy single reversal",
+      "passed": true,
+      "actual": 537.92,
+      "expected": 537.92
+    },
+    {
+      "check": "upside 2028 fresh cost inside margin",
+      "passed": true,
+      "actual": 1681.0,
+      "expected": 1681
+    },
+    {
+      "check": "upside 2029 year",
+      "passed": true,
+      "actual": 2029,
+      "expected": 2029
+    },
+    {
+      "check": "upside 2029 revenue",
+      "passed": true,
+      "actual": 1984,
+      "expected": 1984
+    },
+    {
+      "check": "upside 2029 NOPAT",
+      "passed": true,
+      "actual": 504.432,
+      "expected": 504.432
+    },
+    {
+      "check": "upside 2029 funding_floor",
+      "passed": true,
+      "actual": 123.69,
+      "expected": 123.69000000000003
+    },
+    {
+      "check": "upside 2029 net_reinvestment",
+      "passed": true,
+      "actual": 151.5,
+      "expected": 151.5
+    },
+    {
+      "check": "upside 2029 FCFF",
+      "passed": true,
+      "actual": 352.932,
+      "expected": 352.932
+    },
+    {
+      "check": "upside 2029 discount_factor",
+      "passed": true,
+      "actual": 1.488018123031389,
+      "expected": 1.488018123031389
+    },
+    {
+      "check": "upside 2029 PV_FCFF",
+      "passed": true,
+      "actual": 237.18259511584935,
+      "expected": 237.18259511584935
+    },
+    {
+      "check": "upside 2029 legacy single reversal",
+      "passed": true,
+      "actual": 624.96,
+      "expected": 624.96
+    },
+    {
+      "check": "upside 2029 fresh cost inside margin",
+      "passed": true,
+      "actual": 1984.0,
+      "expected": 1984
+    },
+    {
+      "check": "upside 2030 year",
+      "passed": true,
+      "actual": 2030,
+      "expected": 2030
+    },
+    {
+      "check": "upside 2030 revenue",
+      "passed": true,
+      "actual": 2262,
+      "expected": 2262
+    },
+    {
+      "check": "upside 2030 NOPAT",
+      "passed": true,
+      "actual": 559.4733857142857,
+      "expected": 559.4733857142857
+    },
+    {
+      "check": "upside 2030 funding_floor",
+      "passed": true,
+      "actual": 120.11000000000001,
+      "expected": 120.11000000000001
+    },
+    {
+      "check": "upside 2030 net_reinvestment",
+      "passed": true,
+      "actual": 139.0,
+      "expected": 139.0
+    },
+    {
+      "check": "upside 2030 FCFF",
+      "passed": true,
+      "actual": 420.47338571428566,
+      "expected": 420.47338571428566
+    },
+    {
+      "check": "upside 2030 discount_factor",
+      "passed": true,
+      "actual": 1.6377404562471691,
+      "expected": 1.6377404562471691
+    },
+    {
+      "check": "upside 2030 PV_FCFF",
+      "passed": true,
+      "actual": 256.7399395370541,
+      "expected": 256.7399395370541
+    },
+    {
+      "check": "upside 2030 legacy single reversal",
+      "passed": true,
+      "actual": 701.22,
+      "expected": 701.22
+    },
+    {
+      "check": "upside 2030 fresh cost inside margin",
+      "passed": true,
+      "actual": 2262.0,
+      "expected": 2262
+    },
+    {
+      "check": "upside 2031 year",
+      "passed": true,
+      "actual": 2031,
+      "expected": 2031
+    },
+    {
+      "check": "upside 2031 revenue",
+      "passed": true,
+      "actual": 2531.3969032258065,
+      "expected": 2531.3969032258065
+    },
+    {
+      "check": "upside 2031 NOPAT",
+      "passed": true,
+      "actual": 604.8447434941935,
+      "expected": 604.8447434941935
+    },
+    {
+      "check": "upside 2031 funding_floor",
+      "passed": true,
+      "actual": 121.4839935483871,
+      "expected": 121.4839935483871
+    },
+    {
+      "check": "upside 2031 net_reinvestment",
+      "passed": true,
+      "actual": 127.00382131059237,
+      "expected": 127.00382131059237
+    },
+    {
+      "check": "upside 2031 FCFF",
+      "passed": true,
+      "actual": 477.84092218360115,
+      "expected": 477.84092218360115
+    },
+    {
+      "check": "upside 2031 discount_factor",
+      "passed": true,
+      "actual": 1.800006856457002,
+      "expected": 1.800006856457002
+    },
+    {
+      "check": "upside 2031 PV_FCFF",
+      "passed": true,
+      "actual": 265.4661677923535,
+      "expected": 265.4661677923535
+    },
+    {
+      "check": "upside 2031 legacy single reversal",
+      "passed": true,
+      "actual": 767.0132616774193,
+      "expected": 767.0132616774193
+    },
+    {
+      "check": "upside 2031 fresh cost inside margin",
+      "passed": true,
+      "actual": 2531.3969032258065,
+      "expected": 2531.3969032258065
+    },
+    {
+      "check": "upside 2032 year",
+      "passed": true,
+      "actual": 2032,
+      "expected": 2032
+    },
+    {
+      "check": "upside 2032 revenue",
+      "passed": true,
+      "actual": 2779.6575301623307,
+      "expected": 2779.6575301623307
+    },
+    {
+      "check": "upside 2032 NOPAT",
+      "passed": true,
+      "actual": 641.1796315432159,
+      "expected": 641.1796315432159
+    },
+    {
+      "check": "upside 2032 funding_floor",
+      "passed": true,
+      "actual": 118.65565730275748,
+      "expected": 118.65565730275748
+    },
+    {
+      "check": "upside 2032 net_reinvestment",
+      "passed": true,
+      "actual": 118.65565730275748,
+      "expected": 118.65565730275748
+    },
+    {
+      "check": "upside 2032 FCFF",
+      "passed": true,
+      "actual": 522.5239742404584,
+      "expected": 522.5239742404584
+    },
+    {
+      "check": "upside 2032 discount_factor",
+      "passed": true,
+      "actual": 1.9755799739175268,
+      "expected": 1.9755799739175268
+    },
+    {
+      "check": "upside 2032 PV_FCFF",
+      "passed": true,
+      "actual": 264.491430941318,
+      "expected": 264.491430941318
+    },
+    {
+      "check": "upside 2032 legacy single reversal",
+      "passed": true,
+      "actual": 822.7786289280498,
+      "expected": 822.7786289280498
+    },
+    {
+      "check": "upside 2032 fresh cost inside margin",
+      "passed": true,
+      "actual": 2779.6575301623307,
+      "expected": 2779.6575301623307
+    },
+    {
+      "check": "upside 2033 year",
+      "passed": true,
+      "actual": 2033,
+      "expected": 2033
+    },
+    {
+      "check": "upside 2033 revenue",
+      "passed": true,
+      "actual": 2993.825659542741,
+      "expected": 2993.825659542741
+    },
+    {
+      "check": "upside 2033 NOPAT",
+      "passed": true,
+      "actual": 666.2160240180463,
+      "expected": 666.2160240180463
+    },
+    {
+      "check": "upside 2033 funding_floor",
+      "passed": true,
+      "actual": 111.29950500106833,
+      "expected": 111.29950500106834
+    },
+    {
+      "check": "upside 2033 net_reinvestment",
+      "passed": true,
+      "actual": 111.29950500106833,
+      "expected": 111.29950500106834
+    },
+    {
+      "check": "upside 2033 FCFF",
+      "passed": true,
+      "actual": 554.9165190169779,
+      "expected": 554.9165190169779
+    },
+    {
+      "check": "upside 2033 discount_factor",
+      "passed": true,
+      "actual": 2.1652377511478096,
+      "expected": 2.1652377511478096
+    },
+    {
+      "check": "upside 2033 PV_FCFF",
+      "passed": true,
+      "actual": 256.2843358531008,
+      "expected": 256.2843358531008
+    },
+    {
+      "check": "upside 2033 legacy single reversal",
+      "passed": true,
+      "actual": 865.2156156078522,
+      "expected": 865.2156156078522
+    },
+    {
+      "check": "upside 2033 fresh cost inside margin",
+      "passed": true,
+      "actual": 2993.825659542741,
+      "expected": 2993.825659542741
+    },
+    {
+      "check": "upside 2034 year",
+      "passed": true,
+      "actual": 2034,
+      "expected": 2034
+    },
+    {
+      "check": "upside 2034 revenue",
+      "passed": true,
+      "actual": 3161.5523277430916,
+      "expected": 3161.5523277430916
+    },
+    {
+      "check": "upside 2034 NOPAT",
+      "passed": true,
+      "actual": 686.499472446135,
+      "expected": 686.499472446135
+    },
+    {
+      "check": "upside 2034 funding_floor",
+      "passed": true,
+      "actual": 99.41855205825505,
+      "expected": 99.41855205825505
+    },
+    {
+      "check": "upside 2034 net_reinvestment",
+      "passed": true,
+      "actual": 107.25637054115911,
+      "expected": 107.25637054115911
+    },
+    {
+      "check": "upside 2034 FCFF",
+      "passed": true,
+      "actual": 579.2431019049759,
+      "expected": 579.2431019049759
+    },
+    {
+      "check": "upside 2034 discount_factor",
+      "passed": true,
+      "actual": 2.3697701720214646,
+      "expected": 2.3697701720214646
+    },
+    {
+      "check": "upside 2034 PV_FCFF",
+      "passed": true,
+      "actual": 244.4300754325341,
+      "expected": 244.4300754325341
+    },
+    {
+      "check": "upside 2034 legacy single reversal",
+      "passed": true,
+      "actual": 891.557756423552,
+      "expected": 891.557756423552
+    },
+    {
+      "check": "upside 2034 fresh cost inside margin",
+      "passed": true,
+      "actual": 3161.5523277430916,
+      "expected": 3161.5523277430916
+    },
+    {
+      "check": "upside 2035 year",
+      "passed": true,
+      "actual": 2035,
+      "expected": 2035
+    },
+    {
+      "check": "upside 2035 revenue",
+      "passed": true,
+      "actual": 3272.2066592140995,
+      "expected": 3272.2066592140995
+    },
+    {
+      "check": "upside 2035 NOPAT",
+      "passed": true,
+      "actual": 692.8897600885856,
+      "expected": 692.8897600885856
+    },
+    {
+      "check": "upside 2035 funding_floor",
+      "passed": true,
+      "actual": 83.38594264422396,
+      "expected": 83.38594264422396
+    },
+    {
+      "check": "upside 2035 net_reinvestment",
+      "passed": true,
+      "actual": 110.23246183227499,
+      "expected": 110.23246183227499
+    },
+    {
+      "check": "upside 2035 FCFF",
+      "passed": true,
+      "actual": 582.6572982563106,
+      "expected": 582.6572982563106
+    },
+    {
+      "check": "upside 2035 discount_factor",
+      "passed": true,
+      "actual": 2.5899755910874616,
+      "expected": 2.5899755910874616
+    },
+    {
+      "check": "upside 2035 PV_FCFF",
+      "passed": true,
+      "actual": 224.96632796900928,
+      "expected": 224.96632796900928
+    },
+    {
+      "check": "upside 2035 legacy single reversal",
+      "passed": true,
+      "actual": 899.8568312838775,
+      "expected": 899.8568312838775
+    },
+    {
+      "check": "upside 2035 fresh cost inside margin",
+      "passed": true,
+      "actual": 3272.206659214099,
+      "expected": 3272.2066592140995
+    },
+    {
+      "check": "upside operating EV",
+      "passed": true,
+      "actual": 6316.266457572657,
+      "expected": 6316.266457572657
+    },
+    {
+      "check": "upside terminal reinvestment",
+      "passed": true,
+      "actual": 114.09059799640463,
+      "expected": 114.09059799640463
+    },
+    {
+      "check": "upside year10 g/ROIC",
+      "passed": true,
+      "actual": 0.15909090909090912,
+      "expected": 0.15909090909090912
+    },
+    {
+      "check": "upside terminal funded",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "check": "eligible dated liquid assets",
+      "passed": true,
+      "actual": 1633.241,
+      "expected": 1633.241
+    },
+    {
+      "check": "common shares in millions",
+      "passed": true,
+      "actual": 31.780111,
+      "expected": 31.780111
+    },
+    {
+      "check": "2021 corrected diluted shares millions",
+      "passed": true,
+      "actual": 29.816,
+      "expected": 29.816
+    },
+    {
+      "check": "2022 corrected diluted shares millions",
+      "passed": true,
+      "actual": 31.87,
+      "expected": 31.87
+    },
+    {
+      "check": "2023 corrected diluted shares millions",
+      "passed": true,
+      "actual": 32.089,
+      "expected": 32.089
+    },
+    {
+      "check": "2024 corrected diluted shares millions",
+      "passed": true,
+      "actual": 32.138,
+      "expected": 32.138
+    },
+    {
+      "check": "2025 corrected diluted shares millions",
+      "passed": true,
+      "actual": 32.800000000000004,
+      "expected": 32.8
+    },
+    {
+      "check": "2016 income identity",
+      "passed": true,
+      "actual": 9.644,
+      "expected": 9.644
+    },
+    {
+      "check": "2017 income identity",
+      "passed": true,
+      "actual": 46.459,
+      "expected": 46.459
+    },
+    {
+      "check": "2018 income identity",
+      "passed": true,
+      "actual": 54.375,
+      "expected": 54.375
+    },
+    {
+      "check": "2019 income identity",
+      "passed": true,
+      "actual": 35.171,
+      "expected": 35.171
+    },
+    {
+      "check": "2020 income identity",
+      "passed": true,
+      "actual": 47.907000000000004,
+      "expected": 47.907
+    },
+    {
+      "check": "2021 income identity",
+      "passed": true,
+      "actual": 93.101,
+      "expected": 93.101
+    },
+    {
+      "check": "2022 income identity",
+      "passed": true,
+      "actual": 140.213,
+      "expected": 140.213
+    },
+    {
+      "check": "2023 income identity",
+      "passed": true,
+      "actual": 136.31,
+      "expected": 136.31
+    },
+    {
+      "check": "2024 income identity",
+      "passed": true,
+      "actual": 183.762,
+      "expected": 183.762
+    },
+    {
+      "check": "2025 income identity",
+      "passed": true,
+      "actual": 259.223,
+      "expected": 259.223
+    },
+    {
+      "check": "downcycle conditional equity arithmetic",
+      "passed": true,
+      "actual": 2680.619713258249,
+      "expected": 2680.6197132582492
+    },
+    {
+      "check": "downcycle conditional share arithmetic",
+      "passed": true,
+      "actual": 83.31018891589332,
+      "expected": 83.31018891589333
+    },
+    {
+      "check": "base conditional equity arithmetic",
+      "passed": true,
+      "actual": 4732.217535388816,
+      "expected": 4732.217535388816
+    },
+    {
+      "check": "base conditional share arithmetic",
+      "passed": true,
+      "actual": 147.07119212562634,
+      "expected": 147.07119212562634
+    },
+    {
+      "check": "upside conditional equity arithmetic",
+      "passed": true,
+      "actual": 6977.321147572657,
+      "expected": 6977.321147572657
+    },
+    {
+      "check": "upside conditional share arithmetic",
+      "passed": true,
+      "actual": 216.8461046735335,
+      "expected": 216.8461046735335
+    }
+  ],
+  "source_verification": {
+    "annual": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+    "q2": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+    "treasury": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026&field_tdr_date_value_month=202610",
+    "ERP": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+    "beta": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+    "latest_event_local_primary_capture": "raw/6k-2026-10-15-004775.txt",
+    "latest_event_web_recheck": "SEC URL returned internal error; local previously retrieved filing confirms Nov 5 reporting date. No invented successful live recheck."
+  },
+  "conditions": [
+    "Label all EVs December 31 2025 discount-origin values using October 18 2026 information; not current October values or a December contemporaneous backtest.",
+    "Treat full quoted 936.270m convertible as a fixed dated claim only. Contract allows issuer cash/share/mixed election; no cash-principal mandate. Scenario-specific fair values require joint derivative/convert repricing.",
+    "Capped-call 51.826m is historical premium assumed illustratively, not observed fair value. Option 5m and residual 5m are assumptions.",
+    "Performance-award payout completeness, restricted deposits, derivatives, repatriation and possible overlap of conservatively deducted government/tax claims remain unresolved.",
+    "No market quote, upside percentage, exact equity value or current fair-value target is approved."
+  ],
+  "improvements": [
+    "Add a literal primary source link to the October 15 earnings-date filing when presenting the November 5 date.",
+    "Generic ERP home-page citation is live and mutable: retain dated source observation in any release manifest.",
+    "Do not imply EPS equals unadjusted net income divided by diluted shares: if-converted EPS uses adjusted numerator.",
+    "Government institutions and UTB claims need liability-account mapping before claiming exact equity; conservative deductions can overlap."
+  ]
+}

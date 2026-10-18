@@ -1,3 +1,4 @@
+import {nvmiAnnualFunding,nvmiTerminalFunding} from './nvmi-funding.js';
 import {calculateSnpsOperating,snpsOpeningStubIssues} from './snps-opening-stub.js';
 import {calculateCdnsOperating,cdnsOpeningStubIssues} from './cdns-opening-stub.js';
 import {operatingCashChange} from './fn-operating-cash.js';
@@ -89,16 +90,16 @@ export function calculateResearchOperating(d){
  if(d.openingStub)return calculateCdnsOperating(d);
  let prior=d.anchor.revenue,discount=1,pv=0,cumulative=0,trough=0;
  const rows=d.annual.map((r,index)=>{
-  const cashChange=operatingCashChange(d,index),totalInvestment=r.reinvestment+cashChange,operating=operatingInvestment(d,r)+cashChange;
+  const funding=nvmiAnnualFunding(d,index,r),cashChange=operatingCashChange(d,index),totalInvestment=funding?funding.reinvestment:r.reinvestment+cashChange,operating=funding?funding.reinvestment:operatingInvestment(d,r)+cashChange;
   const ebit=r.revenue*r.margin,tax=Math.max(0,ebit)*r.taxRate,nopat=ebit-tax,fcff=nopat-totalInvestment;
   discount*=1+r.wacc;const presentValue=fcff/discount;pv+=presentValue;cumulative+=fcff;trough=Math.min(trough,cumulative);
   const growth=r.revenue/prior-1,deltaRevenue=r.revenue-prior;prior=r.revenue;
   if(![ebit,tax,nopat,fcff,discount,presentValue,cumulative,growth,pv].every(finite))throw Error(`Year ${r.year}: forecast arithmetic exceeded the finite numerical range. Reduce the edited inputs.`);
-  return {...r,reinvestment:totalInvestment,...(d.operatingCashFunding?{investmentBeforeOperatingCashReserve:r.reinvestment,changeRequiredOperatingCash:cashChange}:{}),growth,ebit,tax,nopat,fcff,discountFactor:discount,pv:presentValue,cumulativeFCFF:cumulative,...(d.fixedCapitalFunding?{fixedOpeningFunding:fixedCapitalSettlement(d,r.year),...(d.ticker==='LRCX'?{openingCapitalPayableSettlement:fixedCapitalSettlement(d,r.year)}:{}),normalizedOperatingReinvestment:operating}:{}),derivedSalesCapital:operating!==0?deltaRevenue/operating:null};
+  return {...r,...(funding||{}),reinvestment:totalInvestment,...(d.operatingCashFunding?{investmentBeforeOperatingCashReserve:r.reinvestment,changeRequiredOperatingCash:cashChange}:{}),growth,ebit,tax,nopat,fcff,discountFactor:discount,pv:presentValue,cumulativeFCFF:cumulative,...(d.fixedCapitalFunding?{fixedOpeningFunding:fixedCapitalSettlement(d,r.year),...(d.ticker==='LRCX'?{openingCapitalPayableSettlement:fixedCapitalSettlement(d,r.year)}:{}),normalizedOperatingReinvestment:operating}:{}),derivedSalesCapital:operating!==0?deltaRevenue/operating:null};
  });
  const t=d.terminal,last=rows.at(-1),revenue=last.revenue*(1+t.growth),ebit=revenue*t.margin,nopat=ebit*(1-t.taxRate),reinvestment=nopat*t.growth/t.roic,fcff=nopat-reinvestment,value=fcff/(t.wacc-t.growth),terminalPV=value/discount,enterprise=pv+terminalPV;
  if(![revenue,ebit,nopat,reinvestment,fcff,value,terminalPV,enterprise].every(finite))throw Error('Terminal arithmetic exceeded the finite numerical range. Reduce the edited inputs.');
- const terminal={...t,revenue,ebit,nopat,reinvestment,fcff,value,pv:terminalPV,discountFactor:discount,fcffGrowth:last.fcff!==0?fcff/last.fcff-1:null,revenueGrowthEndpointDifference:last.growth-t.growth};
+ const terminal={...t,...(nvmiTerminalFunding(d,revenue,reinvestment)||{}),revenue,ebit,nopat,reinvestment,fcff,value,pv:terminalPV,discountFactor:discount,fcffGrowth:last.fcff!==0?fcff/last.fcff-1:null,revenueGrowthEndpointDifference:last.growth-t.growth};
  const warnings=[];
  if(terminal.fcffGrowth===null||Math.abs(terminal.fcffGrowth-t.growth)>1e-6)warnings.push('Final explicit FCFF and terminal FCFF do not grow at the stable revenue rate. Inspect the capital-transition sensitivity; the original research path is preserved.');
  if(Math.abs(terminal.revenueGrowthEndpointDifference)>1e-6)warnings.push('Final explicit revenue growth differs from terminal growth. The growth endpoint change is separate from the capital transition.');
