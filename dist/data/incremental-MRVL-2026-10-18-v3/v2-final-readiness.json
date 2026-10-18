@@ -1,0 +1,44 @@
+{
+  "review_date": "2026-10-18",
+  "reviewed_version": "v2",
+  "verdict": "QUALIFIED_READY_CONDITIONAL_RESEARCH",
+  "ready_for_dated_operating_research": true,
+  "ready_for_explicit_conditional_treasury_sensitivities": true,
+  "ready_for_current_common_equity_value": false,
+  "ready_for_actual_liquidity_adequacy_claim": false,
+  "C1_C2_C3": "CLOSED",
+  "prior_method_findings": "CLOSED_WITH_ACTUAL_FACT_GATES_RETAINED",
+  "new_blocking_numeric_or_double_counting_defect_found": false,
+  "current_equity": null,
+  "per_share": null,
+  "actual_liquidity_adequacy": null,
+  "independent_checks": {
+    "status": "PASS",
+    "checks": 125859,
+    "passed": 125859,
+    "failed": 0,
+    "operating_EV_m": {
+      "base": 100409.35804765804,
+      "downside": 30440.71279977198,
+      "management_delivery": 211790.1667818007
+    },
+    "treasury_paths_independently_replayed": 21,
+    "months_each": 186,
+    "archived_source_hashes": 90,
+    "current_equity_and_actual_liquidity_remain_null": true,
+    "meaning": "Independent numerical/source closure checks. Counts reflect repeated monthly arithmetic, not certainty of assumed economic states."
+  },
+  "author_internal_assertions_reproduced": 46134,
+  "original_v1_and_v2_preserved": true,
+  "application_writes": false,
+  "report": "FINAL-INDEPENDENT-REVIEW.md",
+  "remaining_gates": [
+    "Post-August common-date capital/cash reconciliation",
+    "Actual employee vesting, withholding, performance and tax cash",
+    "Exact October dividend payable",
+    "Original forward confirmation and settlement mechanics",
+    "Actual supplier and other cash-use timing",
+    "Future contractual covenant calculations and refinancing access",
+    "Joint-state employee/customer option and Celestial earnout valuation"
+  ]
+}

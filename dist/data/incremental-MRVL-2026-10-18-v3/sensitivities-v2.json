@@ -1,0 +1,602 @@
+[
+  {
+    "scenario": "base",
+    "change": "base assumptions",
+    "parameters": {},
+    "operating_EV_m": 100409.35804765804,
+    "change_from_case_m": 0.0,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "future grants +2pp",
+    "parameters": {
+      "future_grants_delta": 0.02
+    },
+    "operating_EV_m": 92547.56517972017,
+    "change_from_case_m": -7861.792867937867,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "future grants -2pp",
+    "parameters": {
+      "future_grants_delta": -0.02
+    },
+    "operating_EV_m": 108292.79214853255,
+    "change_from_case_m": 7883.4341008745105,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "non-SBC cash costs +2pp",
+    "parameters": {
+      "cash_cost_delta": 0.02
+    },
+    "operating_EV_m": 92181.0144770151,
+    "change_from_case_m": -8228.343570642945,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "capital efficiency -25%",
+    "parameters": {
+      "sales_to_capital_multiplier": 0.75
+    },
+    "operating_EV_m": 93339.83224760595,
+    "change_from_case_m": -7069.525800052084,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 2124.7499999999986,
+    "h2_other_net_investment": 845.7499999999986,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "H2 capacity allocation/floor: net deposits1000, residual other investment may fall",
+    "parameters": {
+      "h2_capacity_net_investment": 1000
+    },
+    "operating_EV_m": 100328.4243535388,
+    "change_from_case_m": -80.93369411924505,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1679.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "H2 capacity allocation/floor: net deposits200, residual other investment may rise",
+    "parameters": {
+      "h2_capacity_net_investment": 200
+    },
+    "operating_EV_m": 100409.35804765804,
+    "change_from_case_m": 0.0,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 714.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "H2 additional capacity400 with H2 other investment fixed; later floors may adjust",
+    "parameters": {
+      "additional_h2_capacity_stress": 400
+    },
+    "operating_EV_m": 100030.44389816049,
+    "change_from_case_m": -378.91414949754835,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1993.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "Coupled WACC+1pp and terminal ROIC10%",
+    "parameters": {
+      "start_wacc": 0.12439289999999999,
+      "terminal_wacc": 0.1
+    },
+    "operating_EV_m": 86728.7113090721,
+    "change_from_case_m": -13680.646738585943,
+    "terminal_ROIC": 0.1,
+    "terminal_WACC": 0.1,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "Coupled WACC-1pp and terminal ROIC8%",
+    "parameters": {
+      "start_wacc": 0.1043929,
+      "terminal_wacc": 0.08
+    },
+    "operating_EV_m": 117859.86642747911,
+    "change_from_case_m": 17450.50837982107,
+    "terminal_ROIC": 0.08,
+    "terminal_WACC": 0.08,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "Pure WACC+1pp with terminal ROIC fixed9%",
+    "parameters": {
+      "start_wacc": 0.12439289999999999,
+      "terminal_wacc": 0.1,
+      "terminal_roic": 0.09
+    },
+    "operating_EV_m": 83731.5229867558,
+    "change_from_case_m": -16677.835060902245,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.1,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "Pure WACC-1pp with terminal ROIC fixed9%",
+    "parameters": {
+      "start_wacc": 0.1043929,
+      "terminal_wacc": 0.08,
+      "terminal_roic": 0.09
+    },
+    "operating_EV_m": 123880.09577493535,
+    "change_from_case_m": 23470.737727277316,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.08,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "terminal incremental ROIC12%, WACC unchanged",
+    "parameters": {
+      "terminal_roic": 0.12
+    },
+    "operating_EV_m": 109916.05131324084,
+    "change_from_case_m": 9506.693265582799,
+    "terminal_ROIC": 0.12,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "base",
+    "change": "grant charge held at10% all forecast years",
+    "parameters": {
+      "all_future_grant_ratios": 0.1
+    },
+    "operating_EV_m": 88050.16444557099,
+    "change_from_case_m": -12359.193602087049,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1593.5624999999993,
+    "h2_other_net_investment": 314.5624999999993,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "base assumptions",
+    "parameters": {},
+    "operating_EV_m": 30440.71279977198,
+    "change_from_case_m": 0.0,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "future grants +2pp",
+    "parameters": {
+      "future_grants_delta": 0.02
+    },
+    "operating_EV_m": 26970.091710237648,
+    "change_from_case_m": -3470.621089534332,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "future grants -2pp",
+    "parameters": {
+      "future_grants_delta": -0.02
+    },
+    "operating_EV_m": 33938.02957763638,
+    "change_from_case_m": 3497.3167778643983,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "non-SBC cash costs +2pp",
+    "parameters": {
+      "cash_cost_delta": 0.02
+    },
+    "operating_EV_m": 26811.449210097766,
+    "change_from_case_m": -3629.263589674214,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "capital efficiency -25%",
+    "parameters": {
+      "sales_to_capital_multiplier": 0.75
+    },
+    "operating_EV_m": 27193.961573423818,
+    "change_from_case_m": -3246.751226348162,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 2166.333333333332,
+    "h2_other_net_investment": 467.3333333333321,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "H2 capacity allocation/floor: net deposits1000, residual other investment may fall",
+    "parameters": {
+      "h2_capacity_net_investment": 1000
+    },
+    "operating_EV_m": 30061.79865027443,
+    "change_from_case_m": -378.91414949754835,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 2099.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "H2 capacity allocation/floor: net deposits200, residual other investment may rise",
+    "parameters": {
+      "h2_capacity_net_investment": 200
+    },
+    "operating_EV_m": 30511.04873877246,
+    "change_from_case_m": 70.33593900048072,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1624.749999999999,
+    "h2_other_net_investment": 325.7499999999991,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "H2 additional capacity400 with H2 other investment fixed; later floors may adjust",
+    "parameters": {
+      "additional_h2_capacity_stress": 400
+    },
+    "operating_EV_m": 30061.79865027443,
+    "change_from_case_m": -378.91414949754835,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 2099.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "Coupled WACC+1pp and terminal ROIC10%",
+    "parameters": {
+      "start_wacc": 0.12439289999999999,
+      "terminal_wacc": 0.1
+    },
+    "operating_EV_m": 25842.30429902522,
+    "change_from_case_m": -4598.408500746758,
+    "terminal_ROIC": 0.1,
+    "terminal_WACC": 0.1,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "Coupled WACC-1pp and terminal ROIC8%",
+    "parameters": {
+      "start_wacc": 0.1043929,
+      "terminal_wacc": 0.08
+    },
+    "operating_EV_m": 36373.05558644098,
+    "change_from_case_m": 5932.3427866690035,
+    "terminal_ROIC": 0.08,
+    "terminal_WACC": 0.08,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "Pure WACC+1pp with terminal ROIC fixed9%",
+    "parameters": {
+      "start_wacc": 0.12439289999999999,
+      "terminal_wacc": 0.1,
+      "terminal_roic": 0.09
+    },
+    "operating_EV_m": 24861.884974418834,
+    "change_from_case_m": -5578.827825353146,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.1,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "Pure WACC-1pp with terminal ROIC fixed9%",
+    "parameters": {
+      "start_wacc": 0.1043929,
+      "terminal_wacc": 0.08,
+      "terminal_roic": 0.09
+    },
+    "operating_EV_m": 38194.70267380824,
+    "change_from_case_m": 7753.989874036262,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.08,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "terminal incremental ROIC12%, WACC unchanged",
+    "parameters": {
+      "terminal_roic": 0.12
+    },
+    "operating_EV_m": 33515.4824457145,
+    "change_from_case_m": 3074.7696459425206,
+    "terminal_ROIC": 0.12,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "downside",
+    "change": "grant charge held at10% all forecast years",
+    "parameters": {
+      "all_future_grant_ratios": 0.1
+    },
+    "operating_EV_m": 27601.807478895942,
+    "change_from_case_m": -2838.905320876038,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1699.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "base assumptions",
+    "parameters": {},
+    "operating_EV_m": 211790.16678180074,
+    "change_from_case_m": 0.0,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "future grants +2pp",
+    "parameters": {
+      "future_grants_delta": 0.02
+    },
+    "operating_EV_m": 197307.97328874393,
+    "change_from_case_m": -14482.19349305681,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "future grants -2pp",
+    "parameters": {
+      "future_grants_delta": -0.02
+    },
+    "operating_EV_m": 226319.65592748823,
+    "change_from_case_m": 14529.48914568749,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "non-SBC cash costs +2pp",
+    "parameters": {
+      "cash_cost_delta": 0.02
+    },
+    "operating_EV_m": 196455.8010913048,
+    "change_from_case_m": -15334.365690495935,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "capital efficiency -25%",
+    "parameters": {
+      "sales_to_capital_multiplier": 0.75
+    },
+    "operating_EV_m": 197743.64305302256,
+    "change_from_case_m": -14046.523728778178,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 2259.037037037036,
+    "h2_other_net_investment": 855.037037037036,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "H2 capacity allocation/floor: net deposits1000, residual other investment may fall",
+    "parameters": {
+      "h2_capacity_net_investment": 1000
+    },
+    "operating_EV_m": 211686.22852551495,
+    "change_from_case_m": -103.93825628579361,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1804.0,
+    "h2_other_net_investment": 0.0,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "H2 capacity allocation/floor: net deposits200, residual other investment may rise",
+    "parameters": {
+      "h2_capacity_net_investment": 200
+    },
+    "operating_EV_m": 211790.16678180074,
+    "change_from_case_m": 0.0,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 690.2777777777771,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "H2 additional capacity400 with H2 other investment fixed; later floors may adjust",
+    "parameters": {
+      "additional_h2_capacity_stress": 400
+    },
+    "operating_EV_m": 211411.25263230322,
+    "change_from_case_m": -378.91414949751925,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 2094.2777777777774,
+    "h2_other_net_investment": 290.2777777777774,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "Coupled WACC+1pp and terminal ROIC10%",
+    "parameters": {
+      "start_wacc": 0.12439289999999999,
+      "terminal_wacc": 0.1
+    },
+    "operating_EV_m": 182464.5795166033,
+    "change_from_case_m": -29325.58726519745,
+    "terminal_ROIC": 0.1,
+    "terminal_WACC": 0.1,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "Coupled WACC-1pp and terminal ROIC8%",
+    "parameters": {
+      "start_wacc": 0.1043929,
+      "terminal_wacc": 0.08
+    },
+    "operating_EV_m": 249275.53875956705,
+    "change_from_case_m": 37485.37197776631,
+    "terminal_ROIC": 0.08,
+    "terminal_WACC": 0.08,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "Pure WACC+1pp with terminal ROIC fixed9%",
+    "parameters": {
+      "start_wacc": 0.12439289999999999,
+      "terminal_wacc": 0.1,
+      "terminal_roic": 0.09
+    },
+    "operating_EV_m": 174325.20931531483,
+    "change_from_case_m": -37464.95746648591,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.1,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "Pure WACC-1pp with terminal ROIC fixed9%",
+    "parameters": {
+      "start_wacc": 0.1043929,
+      "terminal_wacc": 0.08,
+      "terminal_roic": 0.09
+    },
+    "operating_EV_m": 266158.8083824399,
+    "change_from_case_m": 54368.64160063915,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.08,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "terminal incremental ROIC12%, WACC unchanged",
+    "parameters": {
+      "terminal_roic": 0.12
+    },
+    "operating_EV_m": 237926.21700436412,
+    "change_from_case_m": 26136.050222563383,
+    "terminal_ROIC": 0.12,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  },
+  {
+    "scenario": "management_delivery",
+    "change": "grant charge held at10% all forecast years",
+    "parameters": {
+      "all_future_grant_ratios": 0.1
+    },
+    "operating_EV_m": 184288.2095135572,
+    "change_from_case_m": -27501.95726824354,
+    "terminal_ROIC": 0.09,
+    "terminal_WACC": 0.09,
+    "h2_nonresearch_investment": 1694.2777777777771,
+    "h2_other_net_investment": 290.27777777777715,
+    "per_share": null
+  }
+]

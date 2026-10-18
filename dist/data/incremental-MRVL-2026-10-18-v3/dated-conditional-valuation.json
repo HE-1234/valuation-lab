@@ -1,0 +1,46 @@
+{
+  "financial_origin": "2026-08-01",
+  "information_cutoff": "2026-10-18",
+  "capital_inventory_date": "2026-08-18",
+  "units": "USD millions, shares millions; do not label as current October value or historical backtest",
+  "recommended_display": "EV-only; optional editable allocation module with missing claim values left null",
+  "scenarios": {
+    "base": {
+      "operating_EV_m": 100409.35804765804,
+      "pool_before_employee_customer_and_earnout_claims_m": 97765.45804765804,
+      "pool_after_provisional_reported_earnout_FV_before_employee_customer_claims_m": 97015.95804765804
+    },
+    "downside": {
+      "operating_EV_m": 30440.71279977198,
+      "pool_before_employee_customer_and_earnout_claims_m": 27796.81279977198,
+      "pool_after_provisional_reported_earnout_FV_before_employee_customer_claims_m": 27047.31279977198
+    },
+    "management_delivery": {
+      "operating_EV_m": 211790.1667818007,
+      "pool_before_employee_customer_and_earnout_claims_m": 209146.26678180072,
+      "pool_after_provisional_reported_earnout_FV_before_employee_customer_claims_m": 208396.76678180072
+    }
+  },
+  "base_common_plus_participating_preferred_m": 898.704613,
+  "bridge_before_all_equity_contingent_claims_m": -2643.9,
+  "bridge_formula": "surplus cash 2932.8 - face debt 4999.9 + separate forward FV 131 - licenses 220 - restructuring 238.4 - opening tax payable 249.4",
+  "claim_allocation": {
+    "mode": "fair_value",
+    "earnout_joint_fair_value_m": null,
+    "employee_legacy_joint_fair_value_m": null,
+    "legacy_customer_warrant_joint_fair_value_m": null,
+    "google_warrant_joint_fair_value_m": null,
+    "remaining_equity_value_formula": "pool_before_all_contingent_claims - sum(selected joint claim fair values)",
+    "per_unit_formula": "remaining equity value / 898.704613; common and participating preferred share same economic unit",
+    "missing_input_behavior": "No default zero; show unresolved, no company target. Selected claim FVs must match operating scenario, date, service cost policy and correlated revenue/share outcomes.",
+    "reported_earnout_alternative": "749.5 August carrying FV is a separate provisional illustration; replaces earnout variable, never added to an explicit earned-share/cash approach."
+  },
+  "no_double_count": [
+    "NVIDIA 2000 proceeds already in August cash; 21.778m participating equivalents included once, no preferred debt deduction.",
+    "Celestial acquired common shares already in base; earnout FV or earned shares/cash, never both.",
+    "Forward 131 asset excluded from NWC; notional 300 is not an extra asset or share reduction.",
+    "Existing warrant contra-revenue excluded from cash-equivalent operating revenue; existing warrant claim charged in allocation. Future incentive cost retained in forecast.",
+    "Future recurring compensation remains an economic operating charge; legacy claim allocation does not justify adding recurring SBC back.",
+    "Future funding cash-screen gaps are not automatically deducted from DCF; financing cost/dilution needs explicit new model."
+  ]
+}

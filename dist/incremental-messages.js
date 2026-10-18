@@ -1,6 +1,18 @@
+import {MRVL_MESSAGES} from './mrvl-operating.js';
 import {registerCatalog} from './i18n.js';
 import {incrementalRecords} from './incremental-registry.js';
 const pairs=[
+ ...Object.values(MRVL_MESSAGES),
+ ['FY2027 full-year reference','2027 财年全年参考值'],
+ ['Fixed source H2 FY2027 plus fifteen full fiscal years; not calendar years.','固定来源的 2027 财年下半年加十五个完整财年；并非日历年。'],
+ ['Common share plus NVIDIA economic common equivalents; dated inventory only','普通股加 NVIDIA 经济普通股等价单位；仅为指定日期盘点'],
+ ['Dated operating EV only; common allocation gated','仅提供指定日期经营企业价值；普通股分配受限'],
+ ['Analyst scenario; no assigned probability','分析情景；未指定概率'],
+ ['analyst_forecast','分析者预测'],
+ ['R&D-capitalized economic NOPAT','研发资本化经济税后营业利润'],
+ ['Total investment including net R&D','包含净研发的总投资'],
+ ['Load management delivery','载入管理层兑现情景'],
+ ['Management-delivery scenario','管理层兑现情景'],
  ['Operating value in currency millions','营业价值（货币单位：百万）'],
  ['Operating investment before advance runoff','预付款流失前的经营投资'],
  ['Fixed customer-advance runoff','固定客户预付款流失'],

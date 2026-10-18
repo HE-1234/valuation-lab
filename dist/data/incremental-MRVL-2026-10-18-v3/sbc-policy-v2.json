@@ -1,0 +1,64 @@
+{
+  "status": "Analyst economic future-grant policy, separately identified from existing legal award claims",
+  "historical_grant_proxy": [
+    {
+      "fiscal_year": 2024,
+      "time_rsu_granted_m": 14.2,
+      "time_rsu_grant_fv": 41.5,
+      "target_performance_rsu_granted_m": 3.3,
+      "performance_grant_fv": 37.78,
+      "espp_shares_issued_m": 2.4,
+      "espp_estimated_fv": 21.44,
+      "gross_grant_value_proxy_m": 765.43,
+      "revenue": 5507.7,
+      "proxy_revenue_ratio": 0.13897452657189024,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563224000009/mrvl-20240203.htm",
+      "location": "Share-based compensation note: restricted-stock activity and ESPP valuation tables"
+    },
+    {
+      "fiscal_year": 2025,
+      "time_rsu_granted_m": 7.3,
+      "time_rsu_grant_fv": 69.93,
+      "target_performance_rsu_granted_m": 1.2,
+      "performance_grant_fv": 72.61,
+      "espp_shares_issued_m": 2.3,
+      "espp_estimated_fv": 38.68,
+      "gross_grant_value_proxy_m": 686.585,
+      "revenue": 5767.3,
+      "proxy_revenue_ratio": 0.1190479080332218,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563225000057/mrvl-20250201.htm",
+      "location": "Share-based compensation note: restricted-stock activity and ESPP valuation tables"
+    },
+    {
+      "fiscal_year": 2026,
+      "time_rsu_granted_m": 10.9,
+      "time_rsu_grant_fv": 61.92,
+      "target_performance_rsu_granted_m": 1.7,
+      "performance_grant_fv": 55.84,
+      "espp_shares_issued_m": 1.3,
+      "espp_estimated_fv": 31.45,
+      "gross_grant_value_proxy_m": 810.741,
+      "revenue": 8194.6,
+      "proxy_revenue_ratio": 0.09893600663851804,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+      "location": "Share-based compensation note: restricted-stock activity and ESPP valuation tables"
+    }
+  ],
+  "proxy_limits": [
+    "Rounded counts; target PRSUs, not maximum actual payout.",
+    "Gross grants before future forfeitures; not GAAP expense, actual cash compensation, or exact economic cost.",
+    "ESPP issued shares multiplied by annual estimated fair value is an approximation; issue and grant cohorts need not match.",
+    "Acquisition-retention awards can elevate particular years; post-acquisition annual recurring budget is not fully disclosed."
+  ],
+  "future_policy": "Annual grant-date economic-value charge approximates replacement compensation as if cash-paid. Base 10% of revenue initially fades to 6% only by FY2037; management_delivery 10% to 6%; downside 11% to 7%. This charges new service/grants, never the old unamortized expense ledger again. Absolute annual grant budgets rise with scale; no assumption grants become costless.",
+  "legacy_policy": "All awards outstanding at the chosen date belong in equity claim allocation according to instrument terms. Do not add January 17m unvested units to August 30.581074m combined stock/options. Future tax withholding on those gross award claims represents cash-versus-net-share settlement of the same award; do not deduct again from FCFF while retaining gross award dilution. This equity-valuation rule does not fund or eliminate actual withholding cash. Separate treasury sensitivities schedule legacy withholding under BOTH future compensation policies. No actual vesting schedule is inferred from H1 cash.",
+  "tax_policy": "Normalized cash tax applies to expensed-R&D EBIT after new-grant economic cost; this smooths eventual ordinary compensation deductions and is not an assertion of immediate grant-date tax deductibility. No excess exercise windfall/DTA cash added. Tax/payable uncertainty is separately gated.",
+  "margin_policy": "Cost starts from ex-SBC operating-cost budgets and subtracts future grant charge once. No subsequent annual dilution from the same newly charged grants in a fixed current-claim model; future buybacks are not a substitute for compensation expense.",
+  "sensitivity_policy": "Hold non-SBC gross margin, cash R&D, cash SG&A and revenue fixed when varying grant ratio. Incremental research allocation responds only for the 70% of new compensation attributed to R&D; FCFF capitalization identity remains exact.",
+  "treasury_translation": {
+    "file": "treasury-settlement-assumptions-v2.json",
+    "cash_replacement": "The economic new-grant budget is literally cash-paid in this counterfactual policy; legacy equity-settlement cash remains additional treasury use.",
+    "equity_settlement": "Reverse new-grant economic expense and its modeled tax benefit, then pay assumed future-cohort withholding. Do not add the same future awards as new valuation claims. Employee contributions and employer deductions on vesting are not credited without evidence.",
+    "scope_warning": "The treasury cash screen is a conditional financing analysis, not a second equity valuation or an assertion about actual grant timing."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "max_shares": 58970907,
+  "time_based_max": 1360867,
+  "performance_based_max": 57610040,
+  "strike": 206.58,
+  "time_vested_as_of_2026_10_18": 0,
+  "first_time_tranche_date": "2026-11-18",
+  "performance_revenue_measuring_period": [
+    "2026-08-01",
+    "2033-01-29"
+  ],
+  "performance_vesting_formula": "floor(qualifying revenue USD millions / 500), capped at 240; first 239 tranches 240042 each, last 240002",
+  "cash_exercise": "earned shares added gross; add same-date earned shares * 206.58 cash proceeds",
+  "cashless": "earned shares * max(0, 1 - 206.58 / contractual settlement VWAP); no exercise cash",
+  "full_cash_proceeds_m": 12182.209968060002,
+  "warning": "These are conditional settlement functions, not grant/current fair values. Spot below strike does not make unexpired option fair value zero; no assumption of independent revenue vesting and stock value. Performance vesting realized by cutoff is unknown.",
+  "tests": {
+    "zero_revenue": 0,
+    "first_tranche": 240042,
+    "last_tranche": 57610040,
+    "at_strike_net_shares": 0
+  }
+}

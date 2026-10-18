@@ -1,0 +1,50 @@
+{
+  "new_or_reverified": [
+    {
+      "id": "q2-fy24-release",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/172/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2024-financial-results",
+      "retrieved": "2026-10-18",
+      "file": "sources/q2-fy24-release.html",
+      "sha256": "03c918e73b266abb4089246308f3f76daecd8b6d1c0e0267ea0db096ad3c1d05",
+      "use": "Close FY2024 guidance sample gaps"
+    },
+    {
+      "id": "q3-fy24-release",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/163/marvell-technology-inc-reports-third-quarter-of-fiscal-year-2024-financial-results",
+      "retrieved": "2026-10-18",
+      "file": "sources/q3-fy24-release.html",
+      "sha256": "c4c943b9e9f48ade6b077cd92e765429b1cc47991ffaf492b53f86af657b3de2",
+      "use": "Close FY2024 guidance sample gaps"
+    },
+    {
+      "id": "q2-fy27",
+      "url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000025/mrvl-20260801.htm",
+      "archive_relative_to_company": "source-evidence-v1/q2-2027.html",
+      "sha256": "0100d0db43d487786818859abaf9465c6285259ea4c520778a185b77a0f64af9",
+      "use": "Reported covenant compliance; last reported capital facts",
+      "verification": "Primary document read; Q2 filing freshly web verified"
+    },
+    {
+      "id": "revolver",
+      "url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-25-152676/d859414dex101.htm",
+      "archive_relative_to_company": "source-evidence-v2/revolver-agreement-2025.html",
+      "sha256": "3b49219804ad34c420735399cfb385688ed3c2597860f98faf6cf971326e800c",
+      "use": "Definitions, section 6.06, 5.01 compliance certificate requirement",
+      "verification": "Primary document read; Q2 filing freshly web verified"
+    },
+    {
+      "id": "google",
+      "url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-356217/d412696dex41.htm",
+      "archive_relative_to_company": "source-evidence-v1/aug19-2026-agreement.html",
+      "sha256": "f9cfde7908a9b34250b88e8f3427a860e73a0359371c29fd0bbff2ef9da28921",
+      "use": "Exact share count, strike, tranche and cashless functions",
+      "verification": "Primary document read; Q2 filing freshly web verified"
+    }
+  ],
+  "inherited_ledger": "../../public-safe-v2/source-ledger-v2.json",
+  "search_log": [
+    "Fresh issuer filings page and financial-results index reviewed: latest financial period remains August 1.",
+    "Targeted primary-source search for original forward confirmation and full Celestial payout schedule did not locate sufficient public terms; no missing parameters invented."
+  ],
+  "evidence_limit": "No claim of exhaustive disclosure proof or exact current share count from individual Form 4s."
+}

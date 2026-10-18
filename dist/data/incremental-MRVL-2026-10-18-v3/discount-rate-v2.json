@@ -1,0 +1,28 @@
+{
+  "units": "decimal rates",
+  "observation_dates": {
+    "treasury": "2026-10-16",
+    "erp": "2026-10-01",
+    "industry_beta": "January 2026"
+  },
+  "treasury_10yr": 0.0509,
+  "sovereign_default_spread": 0.0022,
+  "adjusted_rf": 0.0487,
+  "published_treasury_based_erp": 0.042,
+  "adjusted_erp": 0.0442,
+  "cash_adjusted_unlevered_US_semiconductor_beta": 1.5,
+  "number_firms": 66,
+  "target_debt_weight": 0.05,
+  "target_debt_weight_classification": "Analyst judgment, not current market-capitalization weight",
+  "tax_shield": 0.21,
+  "debt_credit_spread": 0.013,
+  "credit_spread_classification": "Analyst judgment over observed US Treasury, not a quote from Marvell bonds",
+  "terminal_wacc": 0.09,
+  "terminal_wacc_classification": "Analyst long-run maturity assumption, not current market quote",
+  "source_urls": [
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html"
+  ],
+  "archive_note": "Dated official public-site snapshots retained. Monthly ERP and annual beta are not represented as October16 contemporaneous measurements. No inferred company stock price used."
+}

@@ -1,0 +1,63 @@
+{
+  "status": "REPORTED_HISTORICAL_CASH_NOT_A_FORECAST",
+  "units": "USD millions",
+  "period_start": "2026-02-01",
+  "period_end": "2026-08-01",
+  "source_url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000025/mrvl-20260801.htm",
+  "source_location": "Unaudited condensed consolidated cash flows and stockholders equity; Note10 restricted-stock withholdings",
+  "opening_cash": 2638.8,
+  "cfo": 1244.3,
+  "investing_lines": {
+    "technology_licenses": -5.0,
+    "property_plant_equipment": -282.4,
+    "acquisitions_net_cash": -1270.9,
+    "other": 6.6
+  },
+  "investing_total": -1551.7,
+  "financing_lines": {
+    "common_repurchases": -400.0,
+    "employee_stock_plan_proceeds": 57.5,
+    "preferred_issuance": 2000.0,
+    "employee_net_share_withholding": -365.2,
+    "dividends": -107.7,
+    "technology_license_obligations": -56.6,
+    "borrowings": 998.9,
+    "debt_principal": -500.0,
+    "other": -25.5
+  },
+  "financing_total": 1601.4,
+  "net_change_cash": 1294.0,
+  "closing_cash": 3932.8,
+  "reported_sbc_non_cash_addback_in_cfo": 533.8,
+  "sbc_note": "This CFO noncash adjustment is not new treasury cash; actual withholding and employee proceeds are in financing. Economic new-grant cost is a different measure.",
+  "quarterly_employee_withholding": {
+    "FY2027Q1": 227.2,
+    "FY2027Q2": 138.0
+  },
+  "prior_fiscal_year_employee_withholding": {
+    "FY2024": 223.7,
+    "FY2025": 274.9,
+    "FY2026": 240.7,
+    "source_url": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000011/mrvl-20260131.htm",
+    "source_location": "Stockholders equity note: restricted stock unit withholdings"
+  },
+  "cash_subtotals_not_economic_owner_fcf": [
+    {
+      "label": "CFO less PPE",
+      "amount": 961.9
+    },
+    {
+      "label": "Also less technology license purchases and financing payments",
+      "amount": 900.3
+    },
+    {
+      "label": "Also less employee withholding plus employee stock-plan proceeds",
+      "amount": 592.6
+    },
+    {
+      "label": "Also less dividends and repurchases",
+      "amount": 84.9
+    }
+  ],
+  "limitation": "These are reported classification-reconciled cash subtotals, not unlevered economic FCFF or a future vesting forecast. Historical CFO already reflects reported interest, tax and working capital."
+}

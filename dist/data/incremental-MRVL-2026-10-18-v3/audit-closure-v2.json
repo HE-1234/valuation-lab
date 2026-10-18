@@ -1,0 +1,59 @@
+{
+  "version": "v2",
+  "research_date": "2026-10-18",
+  "financial_origin": "2026-08-01",
+  "status": "AUTHOR_CLOSURE_READY_FOR_INDEPENDENT_REREVIEW",
+  "prior_review": "V1 qualified approval for dated operating research/core DCF only; current equity and complete funding not approved.",
+  "default_operating_model_changed": false,
+  "default_operating_EV_m": {
+    "base": 100409.35804765804,
+    "downside": 30440.71279977198,
+    "management_delivery": 211790.16678180074
+  },
+  "current_equity_value": null,
+  "per_share_value": null,
+  "actual_liquidity_adequacy": null,
+  "application_writes": false,
+  "v1_preserved": true,
+  "corrections": {
+    "C1": "Closed: Q1FY2025 exact1160.9 revenue,10.9 beat,0.9478260869565217 percent.",
+    "C2": "Closed: dividend declaration2026-09-25, record2026-10-09, payment2026-10-29.",
+    "C3": "Closed: Google measuring2026-08-01 through2033-01-29; expiry2033-08-18 distinct."
+  },
+  "method_closure": {
+    "legacy_withholding": "Explicit cash use under both future-compensation policies; no duplicate valuation deduction. Actual schedule gated.",
+    "new_awards": "Literal-cash and equity-settlement translations separated. Cohorts, withholding and tax reversal explicit, all assumptions labeled.",
+    "forward": "Possible negative cash settlement and early timing stress included. Notional not claimed as maximum; exact contract gated.",
+    "declared_dividend": "Payment proxy explicitly included; exact record-date eligible count/payable gated.",
+    "debt_and_revolver": "Exact existing maturity/coupon inventory, cash repay versus hypothetical refinancing, contractual expiry and mandatory repayment, no perpetual availability; future covenant/market access gated.",
+    "intra_year_timing": "186-month paths with conservative within-month ordering and combined frontloading stress; not actual daily cash forecast.",
+    "capacity_sensitivity": "Old allocation/floor label corrected; separate400H2deposit stress holds H2othercapital fixed.",
+    "rate_sensitivity": "Coupled default WACC/ROIC labels corrected; pure-rate cases hold terminal ROIC9% and FCFFfixed.",
+    "contingent_claims": "Correlation warning and joint-state gate explicit; synthetic allocator not approved company value."
+  },
+  "independent_v2_audit_status": "PENDING",
+  "internal_assertions_passed": 46134,
+  "source_count": 63,
+  "original_source_records_unchanged": 56,
+  "new_primary_sources": 7,
+  "original_unhashed_sources": 8,
+  "remaining_gates": [
+    "Actual legacy vesting/withholding schedule and performance outcomes",
+    "Post-August cash/share/award/debt reconciliation",
+    "Exact October dividend payable",
+    "Original forward confirmation and settlement mechanics",
+    "Future contractual covenant calculation, credit access and refinancing terms",
+    "Actual supplier investment/tax/other required cash timing",
+    "Joint operating/employee/customer warrant/Celestial earnout state valuation"
+  ],
+  "review_files": [
+    "AUDIT-CLOSURE-v2.md",
+    "TREASURY-FUNDING-v2.md",
+    "treasury_v2.py",
+    "validate_v2.py",
+    "treasury-settlement-assumptions-v2.json",
+    "historical-cash-reconciliation-v2.json",
+    "funding-summary-v2.csv"
+  ],
+  "archived_source_hash_entries_verified": 90
+}
