@@ -1,0 +1,31 @@
+{
+  "baselineCommit": "6ce752167aef8805a84a6452e3600531aed1bafe",
+  "files": {
+    "dist/contextual-evidence.js": {
+      "beforeSHA256": "c3357b5b078339be133c554c4e6c26645e10c7a8464ef2e165d4ebeb89d63a6c",
+      "afterSHA256": "0829b9ffa2e339a7dc4f04a86eb44d5c5461b83323ae860a6adb57e36febe13e",
+      "fragments": [
+        {
+          "before": "\n",
+          "after": "\n const originalHeaderTop = header.style?.top || '';\n function updateStickyHeader() {\n  if (!header.style) return;\n  // Read the stylesheet's current breakpoint before applying an offset. Never\n  // make Guided's static header sticky or retain a stale mobile/desktop top.\n  header.style.top = originalHeaderTop;\n  const style = view?.getComputedStyle?.(header);\n  if (style?.position !== 'sticky') return;\n  const nav = document.querySelector?.('body > aside'), navStyle = nav && view?.getComputedStyle?.(nav), navBounds = nav?.getBoundingClientRect?.();\n  if (!navBounds || ![navBounds.top, navBounds.bottom].every(Number.isFinite) || !['sticky', 'fixed'].includes(navStyle?.position) || navBounds.bottom <= 0) return;\n  const padding = Math.max(0, parseFloat(view.getComputedStyle?.(document.documentElement)?.scrollPaddingTop) || 0);\n  if (navBounds.top > Math.max(padding, parseFloat(style.top) || 0)) return;\n  header.style.top = Math.max(parseFloat(style.top) || 0, padding, navBounds.bottom + 8) + 'px';\n }\n"
+        },
+        {
+          "before": "  // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.\n",
+          "after": "  // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.\n  updateStickyHeader();\n"
+        },
+        {
+          "before": " };\n",
+          "after": " };\n const onHeaderResize = () => { if (session && !destroyed) updateStickyHeader(); };\n const navigation = document.querySelector?.('body > aside');\n const Resize = view?.ResizeObserver;\n const headerObserver = navigation && typeof Resize === 'function' ? new Resize(onHeaderResize) : null;\n headerObserver?.observe(navigation);\n"
+        },
+        {
+          "before": " view?.addEventListener?.('valuation:tab-change', onRouteChange);\n",
+          "after": " view?.addEventListener?.('valuation:tab-change', onRouteChange);\n view?.addEventListener?.('resize', onHeaderResize);\n"
+        },
+        {
+          "before": "  view?.removeEventListener?.('valuation:tab-change', onRouteChange);\n",
+          "after": "  view?.removeEventListener?.('valuation:tab-change', onRouteChange);\n  view?.removeEventListener?.('resize', onHeaderResize);\n  headerObserver?.disconnect();\n  if (header.style) header.style.top = originalHeaderTop;\n"
+        }
+      ]
+    }
+  }
+}

@@ -147,8 +147,23 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   animation.onfinish = () => { if (version === animationVersion) animation = null; };
  }
 
+ const originalHeaderTop = header.style?.top || '';
+ function updateStickyHeader() {
+  if (!header.style) return;
+  // Read the stylesheet's current breakpoint before applying an offset. Never
+  // make Guided's static header sticky or retain a stale mobile/desktop top.
+  header.style.top = originalHeaderTop;
+  const style = view?.getComputedStyle?.(header);
+  if (style?.position !== 'sticky') return;
+  const nav = document.querySelector?.('body > aside'), navStyle = nav && view?.getComputedStyle?.(nav), navBounds = nav?.getBoundingClientRect?.();
+  if (!navBounds || ![navBounds.top, navBounds.bottom].every(Number.isFinite) || !['sticky', 'fixed'].includes(navStyle?.position) || navBounds.bottom <= 0) return;
+  const padding = Math.max(0, parseFloat(view.getComputedStyle?.(document.documentElement)?.scrollPaddingTop) || 0);
+  if (navBounds.top > Math.max(padding, parseFloat(style.top) || 0)) return;
+  header.style.top = Math.max(parseFloat(style.top) || 0, padding, navBounds.bottom + 8) + 'px';
+ }
  function revealHeader() {
   // Explicit evidence navigation may reveal its header. Ordinary edits and tabs never scroll.
+  updateStickyHeader();
   const bounds = header.getBoundingClientRect?.(), height = view?.innerHeight;
   if (!bounds || ![bounds.top, bounds.bottom, height].every(Number.isFinite) || height <= 0) return;
   const pageStyle = view.getComputedStyle?.(document.documentElement);
@@ -292,6 +307,11 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   event.preventDefault();
   close({reason: 'escape'});
  };
+ const onHeaderResize = () => { if (session && !destroyed) updateStickyHeader(); };
+ const navigation = document.querySelector?.('body > aside');
+ const Resize = view?.ResizeObserver;
+ const headerObserver = navigation && typeof Resize === 'function' ? new Resize(onHeaderResize) : null;
+ headerObserver?.observe(navigation);
  const onCloseClick = () => close();
  const onMotionChange = () => { if (media.matches) cancelMotion(); };
  const onRouteChange = event => {
@@ -306,6 +326,7 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
  closeButton.addEventListener('click', onCloseClick);
  document.addEventListener('keydown', onKeydown);
  view?.addEventListener?.('valuation:tab-change', onRouteChange);
+ view?.addEventListener?.('resize', onHeaderResize);
  media?.addEventListener?.('change', onMotionChange);
  if (!media?.addEventListener) media?.addListener?.(onMotionChange);
 
@@ -316,6 +337,9 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   cancelMotion();
   document.removeEventListener('keydown', onKeydown);
   view?.removeEventListener?.('valuation:tab-change', onRouteChange);
+  view?.removeEventListener?.('resize', onHeaderResize);
+  headerObserver?.disconnect();
+  if (header.style) header.style.top = originalHeaderTop;
   closeButton.removeEventListener('click', onCloseClick);
   media?.removeEventListener?.('change', onMotionChange);
   if (!media?.removeEventListener) media?.removeListener?.(onMotionChange);

@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createContextualEvidencePanel, mountEvidencePanel} from '../dist/contextual-evidence.js';
 
-function fixture({reduced = false, animationSupport = true, legacyMedia = false} = {}) {
+function fixture({reduced = false, animationSupport = true, legacyMedia = false, configure} = {}) {
  class Events {
   events = new Map();
   addEventListener(type, listener) {
@@ -23,7 +23,7 @@ function fixture({reduced = false, animationSupport = true, legacyMedia = false}
   constructor(document, tag = 'div', nodeType = 1) {
    super(); this.ownerDocument = document; this.tagName = tag.toUpperCase();
    this.nodeType = nodeType; this.parentNode = null; this.childNodes = [];
-   this.attributes = new Map(); this.hidden = false; this.scrollTop = 0;
+   this.style = {}; this.attributes = new Map(); this.hidden = false; this.scrollTop = 0;
    this.scrollLeft = 0; this._text = ''; this._html = ''; this.value = '';
    if (animationSupport) this.animate = (frames, options) => {
     const animation = {target: this, frames, options, canceled: false, onfinish: null,
@@ -91,6 +91,7 @@ function fixture({reduced = false, animationSupport = true, legacyMedia = false}
  details.open = true; input.value = 'unsaved source note';
  document.activeElement = invoker;
  const callbackEvents = [];
+ configure?.(document);
  const panel = createContextualEvidencePanel({host, id: 'test-evidence', title: 'Assumption evidence',
   onOpen: value => callbackEvents.push({type: 'open', ...value}),
   onClose: value => callbackEvents.push({type: 'close', ...value})});
@@ -380,4 +381,43 @@ test('evidence: larger document scroll padding is retained',()=>{
 });
 test('evidence: passive refresh bypasses sticky-aware reveal and keeps current focus',()=>{
  const h=stickyRevealFixture({top:24,bottom:94});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence],focus:false,reveal:false});assert.deepEqual(h.scrolls,[]);assert.equal(h.document.activeElement,h.invoker);}finally{h.panel.destroy();}
+});
+
+function pinnedHeaderFixture({position='sticky',reduced=false}={}) {
+ let navBottom=64,cssTop=8,headerPosition=position,observer,disconnects=0;
+ const nav={getBoundingClientRect:()=>({top:0,bottom:navBottom})},scrolls=[];
+ const h=fixture({reduced,configure(document){
+  document.querySelector=selector=>selector==='body > aside'?nav:null;
+  const view=document.defaultView;view.innerHeight=757;
+  view.getComputedStyle=node=>node===nav?{position:'sticky'}:node===document.documentElement?{scrollPaddingTop:'24px'}:{position:headerPosition,top:node.style?.top||cssTop+'px'};
+  view.scrollBy=options=>scrolls.push(options);
+  view.ResizeObserver=class {constructor(callback){observer=callback;}observe(node){assert.equal(node,nav);}disconnect(){disconnects++;}};
+ }});
+ const header=h.panel.element.children[0];
+ // A real sticky header's position stays pinned when the document scrolls.
+ header.getBoundingClientRect=()=>{const top=headerPosition==='sticky'?Number.parseFloat(header.style.top||cssTop):-202.47;return {top,bottom:top+81.78125};};
+ return {...h,header,scrolls,resize(bottom,top=cssTop){navBottom=bottom;cssTop=top;h.document.defaultView.dispatch('resize');},observe(bottom){navBottom=bottom;observer();},setPosition(value){headerPosition=value;},disconnects:()=>disconnects};
+}
+for(const reduced of [false,true])test(`evidence: pinned sticky header clears navigation without ineffective document scroll (reduced=${reduced})`,()=>{
+ const h=pinnedHeaderFixture({reduced});try{
+  h.panel.open({invoker:h.invoker,nodes:[h.evidence],key:'pinned'});
+  assert.equal(h.header.style.top,'72px');assert.equal(h.header.getBoundingClientRect().top,72);assert.deepEqual(h.scrolls,[]);
+  assert.equal(h.document.activeElement,h.closeButton);
+  h.panel.open({invoker:h.invoker,nodes:[h.evidence],key:'pinned'});assert.deepEqual(h.scrolls,[]);
+ }finally{h.panel.destroy();assert.equal(h.header.style.top,'');assert.equal(h.disconnects(),1);}
+});
+test('evidence: open pinned header follows wrapped navigation and CSS breakpoint changes without scrolling',()=>{
+ const h=pinnedHeaderFixture();try{
+  h.panel.open({invoker:h.invoker,nodes:[h.evidence]});
+  h.resize(144,52);assert.equal(h.header.style.top,'152px');
+  h.resize(64,8);assert.equal(h.header.style.top,'72px');
+  h.observe(96);assert.equal(h.header.style.top,'104px');assert.deepEqual(h.scrolls,[]);
+  h.setPosition('static');h.resize(64);assert.equal(h.header.style.top,'');
+ }finally{h.panel.destroy();}
+});
+test('evidence: Guided static header retains stylesheet positioning',()=>{
+ const h=pinnedHeaderFixture({position:'static'});try{h.panel.open({invoker:h.invoker,nodes:[h.evidence]});assert.equal(h.header.style.top,'');h.resize(144);assert.equal(h.header.style.top,'');}finally{h.panel.destroy();}
+});
+test('evidence: closed and destroyed panels ignore resize notifications',()=>{
+ const h=pinnedHeaderFixture();h.panel.open({invoker:h.invoker,nodes:[h.evidence]});h.panel.close();h.resize(144);assert.equal(h.header.style.top,'72px');h.panel.destroy();h.resize(200);h.observe(200);assert.equal(h.header.style.top,'');assert.equal(h.document.defaultView.events.get('resize').size,0);assert.equal(h.disconnects(),1);
 });
