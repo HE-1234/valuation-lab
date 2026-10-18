@@ -14,13 +14,13 @@ const sha=s=>createHash('sha256').update(s).digest('hex');
 
 test('methodology: current annual behavior precedes and explicitly scopes the dated historical record',()=>{
  assert.ok(html.indexOf('id="current-method"')<html.indexOf('id="legacy-method"'));
- for(const pattern of [/Fresh configurations use annual paths/,/Saved configurations without a method retain legacy scalar sampling/,/saved growth-only annual configurations retain that scope/,/Gaussian AR\(1\)/,/not a description of every current run/])assert.match(text(active),pattern);
+ for(const pattern of [/Fresh configurations use joint annual paths/,/Saved configurations without a method retain legacy scalar sampling/,/saved growth-only annual configurations retain that scope/,/Gaussian AR\(1\)/,/not a description of every current run/])assert.match(text(active),pattern);
  for(const pattern of [/dated historical implementation record/,/not be read as the current annual method/,/today’s legacy-mode behavior/,/company gates/,/17 October 2026/])assert.match(text(legacy),pattern);
  for(const pattern of [/One driver draw defines an entire path/,/Explicit annual overrides are rejected/,/sampled constant nominal WACC/]){assert.doesNotMatch(text(active),pattern);assert.match(text(legacy),pattern);}
 });
 
-test('methodology: independent annual primitives, scalar scope and derived outputs are explicit',()=>{
- for(const pattern of [/independent across primitives/,/Persistence connects years within one primitive/,/remaining scalar draws only, never annual innovations/,/Annual model supports independent scalar draws only/,/do not receive duplicate independent shocks/,/scalar margin and WACC draws set terminal endpoints only/,/annual innovations remain Gaussian/,/terminal sales\/capital is derived/,/growth, tax and marginal ROIC are drawn once/])assert.match(text(active),pattern);
+test('methodology: joint innovation assumptions, old methods, terminal mixture and derived outputs are explicit',()=>{
+ for(const pattern of [/one common factor plus independent residual factors/,/b_i × b_j before conditioning/,/Loadings start at zero/,/zero innovation SD has no realized innovation correlation/,/older annual-path method keeps independent innovations across primitives/,/scalar draws only, never annual innovations/,/Annual model retains independent scalar terminal draws/,/do not receive duplicate independent shocks/,/scalar margin and WACC draws define terminal endpoints/,/annual innovations remain Gaussian/,/terminal sales\/capital is derived/,/growth, tax and marginal ROIC are drawn once/,/Noisy yearly targets do not reweight this imposed terminal mixture/,/not a posterior distribution over terminal endpoints/])assert.match(text(active),pattern);
 });
 
 test('methodology: innovation units, zero-SD endpoint motion and distinct anchor scopes are explicit',()=>{

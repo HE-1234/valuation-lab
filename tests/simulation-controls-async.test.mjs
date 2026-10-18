@@ -35,7 +35,7 @@ test('sampling count and seed persist per draft; saved arbitrary supported count
  const changes=[],config={...simulationDefaults(),trials:37,seed:'saved-count'},h=fixture({ticker:'MC-COUNT',reduced:true,autoplay:false,simulationConfig:config,onConfigChange:c=>changes.push(c)});try{
   assert.equal(h.get('#mc-trials').value,'37');assert.match(h.root.innerHTML,/37 · saved count/);h.get('#mc-trials').value='1000';h.get('#mc-trials').onchange();assert.equal(changes.at(-1).trials,1000);assert.equal(h.get('#mc-trial-count').textContent,'1,000');
   h.get('#mc-seed').value='replay-me';h.get('#mc-seed').oninput();assert.equal(changes.at(-1).seed,'replay-me');h.get('#mc-run').click();h.get('#mc-export').click();assert.equal(h.exports.length,1);
-  h.get('#mc-reset-distributions').click();assert.equal(changes.at(-1),null);assert.equal(h.get('#mc-trials').value,'4000');assert.equal(h.get('#mc-seed').value,'valuation-lab');
+  h.get('#mc-reset-distributions').click();assert.equal(changes.at(-1),null);assert.equal(h.get('#mc-trials').value,'5000');assert.equal(h.get('#mc-seed').value,'valuation-lab');
  }finally{h.cleanup()}
 });
 test('chunked legacy runner preserves every output and snapshots inputs before yields',async()=>{

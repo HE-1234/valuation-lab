@@ -1,3 +1,4 @@
+import {isJoint,jointEffectiveConfig,prepareJointSimulation} from './joint-simulation-config.js';
 import {registerCatalog,t} from './i18n.js';
 import {researchReferenceState,hasInactiveReferencePersistence} from './research-reference-defaults.js';
 import {conditionedGrowthContext,prepareAnnualPath,prepareAnnualMetrics} from './annual-path-sampling.js';
@@ -26,7 +27,7 @@ registerCatalog('annualReference',{en:{
 }});
 export function referenceStatusMessage(config,context,validate){
  let state,c;try{
-  c=validate(config);
+  const authored=validate(config);if(isJoint(authored))prepareJointSimulation(context,authored);c=jointEffectiveConfig(authored);
   if(c.annualMetrics?.reinvestment&&c.capitalPolicy!=='fixed-schedule')throw Error('Direct annual investment requires the fixed-schedule policy.');
   if(c.method==='annual-path'){
    const conditioned=conditionedGrowthContext(context,c.annualTerminal);

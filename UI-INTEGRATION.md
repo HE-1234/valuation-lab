@@ -22,3 +22,13 @@ The displayed marginal-return proxy combines modeled after-tax operating margin 
 - [Growth company value drivers](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/growthvaluedrivers.htm): reinvestment/revenue timing, existing spare capacity and stable-growth reinvestment.
 
 These are implementation choices informed by the framework, not an endorsement or a claim of completing a course.
+
+## Owner UI polish merge · 2026-10-18
+
+The compatible UI from GitHub commits `48fb4af` and `714e7c360fcade0af9dc9aa48c6ebaec862ff5f6` is layered onto the V59 source (`b020e31060fd54a54b254d924bb672f66ce1fc17`) plus the reviewed help-navigation copy. This preserves the 120-question Learn bank, seven incremental research cases, current controls, source-specific gates and saved drafts.
+
+Imported presentation includes phase timelines, native-control choice pills, company-search results, a Run-bar scenario selector, density previews fitted to authored bounds, layout polish and language swipes. Compatibility corrections restore focus after native Annual/Guided controls rebuild, respect disabled/read-only phase fields, cancel presentation motion on reduced-motion/background changes, and make old locale-swipe cleanup idempotent. Native input/change handlers still own validation and saved-model updates; Run remains the only simulation trigger.
+
+The requested 5,000 attempted-scenario default is an application policy dated 2026-10-18. Fresh settings, explicit reset and Use research use it; existing saved counts remain intact until those actions. The fourteen frozen preset JSON records and their original 4,000-trial validation reports are unchanged. Current runtime provenance retains the source count/rationale and separately records the application policy. No regenerated upstream historical result or changed research-source hash is imported.
+
+Verification at handoff: 96 focused runtime/preset/distribution/skin checks, 247 preservation/reference/company/terminal checks, and 13 new UI-adapter/policy checks passed. These are synthetic/source/engine checks, not browser visual QA. Full aggregate regression and real-browser desktop/mobile, phase interaction, locale-swipe and accessibility review remain separate release steps.

@@ -1,3 +1,4 @@
+import {reverseSimulationHelpNavigation} from './simulation-help-navigation-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -6,6 +7,7 @@ const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 // Only exact reviewed documentation fragments can be reversed. Hashes reject
 // additional changes to these pages/catalogs; every other file passes unchanged.
 export function reverseMethodologyDocumentation(path,bytes){
+ bytes=reverseSimulationHelpNavigation(path,bytes);
  const approved=fixture.files[path];if(!approved)return bytes;
  assert.equal(sha(bytes),approved.afterSHA256,path+' reviewed documentation bytes');
  let text=bytes.toString();

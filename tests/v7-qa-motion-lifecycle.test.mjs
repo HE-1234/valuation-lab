@@ -38,7 +38,7 @@ test('v7 QA: simulation ranges recalculate only with Run and invalid ranges remo
 });
 test('v7 QA: zero accepted scenarios remove old summary tables and preserve complete exclusion accounting',()=>{
  const h=fixture({ticker:'V7-NO-ACCEPTED',reduced:true});try{
-  for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-wacc-high').oninput();h.get('#mc-run').click();assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-median'),null);assert.equal(h.get('#mc-summary-content').innerHTML,'');assert.match(h.get('#mc-audit').textContent,/4,000 attempted · 4,000 excluded/);
+  for(const p of ['low','mode','high'])h.get('#mc-wacc-'+p).value='1';h.get('#mc-wacc-high').oninput();h.get('#mc-run').click();assert.equal(h.get('#mc-chart'),null);assert.equal(h.get('#mc-median'),null);assert.equal(h.get('#mc-summary-content').innerHTML,'');assert.match(h.get('#mc-audit').textContent,/5,000 attempted · 5,000 excluded/);
  }finally{h.cleanup()}
 });
 test('v7 QA: chart replacement rebinds viewport observation to the new visible graphic',()=>{

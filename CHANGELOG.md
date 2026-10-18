@@ -482,3 +482,16 @@ The frozen application completed 865 tests: 863 passed, one existing AAOI raw-so
 - Preserved the complete older explanation as a historical record, with a warning that its company gates, floor and four-scalar statements do not describe every current mode. Added concise in-page links; retained existing layout, typography, palettes and return link.
 - Updated English and Simplified Chinese presentation catalogs plus retained Traditional source translations. No financial sources, algorithms, defaults, UI handlers or six-theme assets changed.
 - Verification: 80 focused content/localization/runtime checks and 422 company/prior-release preservation and behavior checks passed, including exact reversal of all 354 V58 shipped files. Git whitespace checks pass. Aggregate, publication and native post-change checks remain separate.
+
+## 18 October 2026 · Clear simulation-help navigation
+
+- Sampler help now explicitly announces that it opens in a new tab. The help page explains how to continue in the original Valuation Lab tab and labels its unchanged fallback “Open the valuation workspace.”
+- Preserved new-tab isolation, link destinations, all handlers and saved-state behavior. No changes to current/historical methodology, financial data or calculations, styles, six themes or the approved Annual Report layout.
+- Updated English and Simplified Chinese wording with retained Traditional compatibility. Exact V59 reversal protects all 354 shipped files. Focused verification: 222 passed, zero failed or skipped, including 18 new checks. Aggregate and native verification are recorded separately.
+
+## Owner UI polish integration · 2026-10-18 (unpublished)
+
+- Merged compatible Annual Report presentation from GitHub `714e7c3` onto V59, retaining all later research/features and the reviewed help-navigation patch.
+- Fresh/reset simulations use 5,000 attempts as a separately dated application policy; saved counts, frozen research inputs and original validation records remain intact.
+- Preserved authoritative native handlers and added focus, reduced-motion and repeated-language-transition safety for the new presentation controls.
+- 356 focused automated checks passed in three bounded runs; full regression and browser visual QA remain pending. No commit, push or publication is included.

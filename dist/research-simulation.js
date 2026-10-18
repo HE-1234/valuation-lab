@@ -1,3 +1,5 @@
+import {isJoint,jointDefaults,jointEffectiveConfig,validateJointState,prepareJointSimulation,jointEndpoints,jointResultMetadata,JOINT_NOTE} from './joint-simulation-config.js';
+import {DEFAULT_SIMULATION_TRIALS} from './simulation-count-policy.js';
 import {applyResearchReferenceDefaults} from './research-reference-defaults.js';
 import {SNPS_FUNDING_NOTE} from './snps-opening-stub.js';
 import {incrementalRecord} from './incremental-registry.js';
@@ -33,13 +35,13 @@ const levels=Object.freeze({p5:.05,p10:.1,p25:.25,p50:.5,p75:.75,p90:.9,p95:.95}
 const capitalPolicies=Object.freeze(['fixed-schedule','revenue-scaled',DERIVED_CAPITAL_POLICY]);
 
 export function simulationResearchDefaults(draft){
- return applyResearchReferenceDefaults(draft,{trials:4000,seed:'annual-research',binCount:36,dependence:'independent',capitalPolicy:'fixed-schedule',method:'annual-path',annualPath:{...annualPathDefaults(draft?.annual?.length??30),...(draft?.incrementalResearch?{innovationSD:0,persistence:0}:{})},annualMetrics:annualMetricDefaults(draft?.annual?.length??30,'investmentFactor'),...(draft?{annualTerminal:annualTerminalDefaults(draft.terminal)}:{}),
-  drivers:Object.fromEntries(RESEARCH_SIMULATION_DRIVER_KEYS.map(k=>[k,{type:'fixed',value:fixedStresses[k]}]))});
+ return jointDefaults(applyResearchReferenceDefaults(draft,{trials:DEFAULT_SIMULATION_TRIALS,seed:'annual-research',binCount:36,dependence:'independent',capitalPolicy:'fixed-schedule',method:'annual-path',annualPath:{...annualPathDefaults(draft?.annual?.length??30),...(draft?.incrementalResearch?{innovationSD:0,persistence:0}:{})},annualMetrics:annualMetricDefaults(draft?.annual?.length??30,'investmentFactor'),...(draft?{annualTerminal:annualTerminalDefaults(draft.terminal)}:{}),
+  drivers:Object.fromEntries(RESEARCH_SIMULATION_DRIVER_KEYS.map(k=>[k,{type:'fixed',value:fixedStresses[k]}]))}),{horizon:draft?.annual?.length??30,capital:'investmentFactor'});
 }
 
 export function validateResearchSimulationConfig(config=simulationResearchDefaults()){
  if(!object(config))throw Error('Annual simulation settings must be an object.');
- const allowed=['trials','seed','binCount','dependence','capitalPolicy','drivers','method','annualPath','annualMetrics','annualTerminal'];
+ const allowed=['trials','seed','binCount','dependence','capitalPolicy','drivers','method','annualPath','annualMetrics','annualTerminal','jointAnnual'];
  const unknown=Object.keys(config).filter(k=>!allowed.includes(k));
  if(unknown.length)throw Error(`Unknown annual simulation setting: ${unknown.join(', ')}.`);
  const c={...simulationResearchDefaults(),...config,drivers:{}};
@@ -49,8 +51,9 @@ export function validateResearchSimulationConfig(config=simulationResearchDefaul
  c.seed=String(c.seed);
  if(c.dependence!=='independent')throw Error('Annual stress inputs support independent draws only; no correlation estimates are implied.');
  if(!capitalPolicies.includes(c.capitalPolicy))throw Error('Capital policy must be fixed-schedule or revenue-scaled.');
- if(own(config,'method')&&!['legacy','annual-path'].includes(config.method))throw Error('Unsupported annual simulation method.');
+ if(own(config,'method')&&!['legacy','annual-path','joint-annual-path'].includes(config.method))throw Error('Unsupported annual simulation method.');
  c.method=config.method??'legacy';
+ delete c.jointAnnual;if(isJoint(c)||own(config,'jointAnnual'))c.jointAnnual=validateJointState(config.jointAnnual,c,validateResearchSimulationConfig);
  if(c.method==='annual-path'||own(config,'annualPath'))c.annualPath=validateAnnualPathConfig(own(config,'annualPath')?config.annualPath:annualPathDefaults());
  else delete c.annualPath;
  if(own(config,'annualMetrics'))c.annualMetrics=validateAnnualMetrics(config.annualMetrics);else delete c.annualMetrics;
@@ -146,15 +149,17 @@ export function researchAnnualPathContext(draft){
 }
 function prepareRun(draft,config){
  // Capture before asynchronous yields: later edits cannot alter an in-flight run.
- const d=structuredClone(draft),supplied=config??d?.researchSimulationConfig??simulationResearchDefaults(d),c=validateResearchSimulationConfig(supplied);
+ const d=structuredClone(draft),supplied=config??d?.researchSimulationConfig??simulationResearchDefaults(d),authored=validateResearchSimulationConfig(supplied),c=jointEffectiveConfig(authored);
  if(d.schemaVersion===2)c.capitalPolicy=DERIVED_CAPITAL_POLICY;
  else if(c.capitalPolicy===DERIVED_CAPITAL_POLICY)throw Error('Derived capital policy requires a version-2 annual horizon draft.');
  const context=c.method==='annual-path'?conditionedGrowthContext(researchAnnualPathContext(d),c.annualTerminal):null;
+ if(isJoint(authored)&&context?.metrics?.reinvestment)context.terminals.reinvestment=operatingInvestment(d,d.annual.at(-1));
  const pathSampler=context?prepareAnnualPath(context.baseline,c.annualPath,context):null;
+ const jointSampler=isJoint(authored)?prepareJointSimulation(context,authored):null;
  const operating=calculateResearchOperating(d),timing=requireTiming(d,operating),bridge=bridgeFor(d,timing.enterprise,timing.date);
  if(c.annualMetrics?.reinvestment&&c.capitalPolicy!=='fixed-schedule')throw Error('Direct annual investment requires the fixed-schedule policy; use annual investmentFactor with a revenue-response policy.');
  const metricSamplers=pathSampler&&c.annualMetrics?prepareAnnualMetrics(context,c.annualMetrics):null;
- return {draft:d,config:c,pathSampler,metricSamplers,omitMethod:!own(supplied,'method'),baseline:{...operating,enterprise:timing.enterprise,originEnterprise:operating.enterprise,operating,timing,bridge},
+ return {draft:d,config:c,authored,jointSampler,pathSampler,metricSamplers,omitMethod:!own(supplied,'method'),baseline:{...operating,enterprise:timing.enterprise,originEnterprise:operating.enterprise,operating,timing,bridge},
   random:createSeededRandom(c.seed),completed:0,draws:[],equityDraws:[],perShareDraws:[],scenarios:[],exclusions:{},exclusionExamples:{},bridgeReasons:{},nonpositiveEquityCount:0,
   inputDistributions:Object.fromEntries(RESEARCH_SIMULATION_DRIVER_KEYS.map(k=>[k,{...distributionSummary(c.drivers[k]),...(pathSampler&&k==='growthPremium'?{active:false,inactiveReason:'Annual growth path replaces this growth premium distribution.'}:metricSamplers&&(metricSamplers.investmentFactor||metricSamplers.reinvestment)&&k==='investmentMultiplier'?{active:false,inactiveReason:'Annual capital paths replace this scalar investment multiplier.'}:metricSamplers&&(k==='marginShift'||k==='waccShift')?{active:true,scope:'terminal endpoint only'}:{})}]))};
 }
@@ -183,8 +188,9 @@ function step(state,count){
   catch(error){reject(state,'sampling-rejected',error.message);continue;}
   const terminal={...d.terminal,margin:d.terminal.margin+stress.marginShift,wacc:d.terminal.wacc+stress.waccShift};
   if(state.pathSampler)for(const [k,spec]of Object.entries(c.annualTerminal||{}))terminal[k]=distributionQuantile(state.random(),spec);
-  const growthPath=state.pathSampler?.sample(state.random,terminal.growth);
-  const metricPaths=state.metricSamplers?sampleAnnualMetrics(state.metricSamplers,state.random,terminal):null;
+  let jointDraw;try{jointDraw=state.jointSampler?.sample(state.random,jointEndpoints(state.jointSampler,{...terminal,investmentFactor:1,reinvestment:operatingInvestment(d,d.annual.at(-1))}));}catch(error){if(!state.jointSampler)throw error;reject(state,'joint-'+(error.code||'sampling-rejected'),error.message);continue;}
+  const growthPath=jointDraw?.growthPath??state.pathSampler?.sample(state.random,terminal.growth);
+  const metricPaths=jointDraw?jointDraw.metricPaths:state.metricSamplers?sampleAnnualMetrics(state.metricSamplers,state.random,terminal):null;
   const metricIssue=annualMetricConstraint(metricPaths);if(metricIssue){reject(state,metricIssue);continue;}
   if(growthPath?.some(g=>!finite(g)||g<=-1)){reject(state,'annual-growth-bounds');continue;}
   let next;
@@ -269,19 +275,20 @@ function finishRun(state){
  if(excluded)warnings.push(`${excluded} of ${c.trials} attempted trials were excluded without replacement. Quantiles and frequencies are conditional on the ${accepted} valid operating trials; exclusions change the effective input distribution.`);
  if(!accepted)warnings.push('No valid trials remain. No operating or common-equity distribution is available; revise the assumptions.');
  if(state.metricSamplers)warnings.push('Annual margin, operating tax, WACC and signed net investment have separate conditioned paths. New metric SD defaults are zero until explicitly edited; they are analyst judgments, not sourced volatility estimates. Terminal margin and WACC use scalar stresses; optional terminal growth, tax and ROIC are sampled once. Fixed years retain baseline values; zero SD removes residual noise but retains deterministic conditional-mean movement toward a changed terminal endpoint. Derived revenue, earnings, FCFF, discount factors and implied returns are not sampled again.');
- const exportedConfig=structuredClone(c);if(state.omitMethod&&c.method==='legacy')delete exportedConfig.method;
- return {version:RESEARCH_SIMULATION_VERSION,...enterprise,basis:'enterprise',units,enterprise,equity,perShare,
+ if(state.jointSampler){for(let i=warnings.length-1;i>=0;i--)if(/separate Gaussian|separate conditioned|independent across metrics/.test(warnings[i]))warnings.splice(i,1);warnings.push(JOINT_NOTE);}
+ const exportedConfig=structuredClone(state.authored);if(d.schemaVersion===2)exportedConfig.capitalPolicy=c.capitalPolicy;if(state.omitMethod&&c.method==='legacy')delete exportedConfig.method;
+ return {...(state.jointSampler?jointResultMetadata(state.jointSampler,state.scenarios):{}),version:RESEARCH_SIMULATION_VERSION,...enterprise,basis:'enterprise',units,enterprise,equity,perShare,
   classification:'Conditional annual-research DCF simulation; analyst stresses, not calibrated probabilities',config:exportedConfig,baseline,
   scenarios:state.scenarios,...(state.pathSampler?{annualPaths:{...annualPathAudit(state.pathSampler,state.scenarios),...(state.metricSamplers?{metrics:annualMetricsAudit(state.metricSamplers,state.scenarios)}:{})}}:{}),inputDistributions:state.inputDistributions,attempts:c.trials,accepted,excluded,exclusions:state.exclusions,exclusionExamples:state.exclusionExamples,
   zeroEquityCount:state.nonpositiveEquityCount,zeroEquityShare,
   bridgeCoverage:{accepted:eligible,eligible,blocked:accepted-eligible,total:accepted,complete:accepted>0&&eligible===accepted,share:accepted?eligible/accepted:null,reasons:state.bridgeReasons,baselineEligible:baseline.bridge.eligible===true},
   timing:{status:baseline.timing.status,date:baseline.timing.date,discountOrigin:d.discountOrigin,label:baseline.timing.label},
   quote:{status:'blocked',message:'No verified current market-price comparison is supplied for this source-dated annual-research simulation.'},
-  dependence:{id:'independent',label:'Independent analyst stress draws',description:state.metricSamplers?'Annual primitive innovations are independent across metrics, with each metric’s own serial persistence. Scalar terminal draws are independent. These are explicit modeling assumptions, not estimated correlations.':'The four stress inputs are sampled independently. This is a modeling assumption, not evidence of independence.',latentCorrelations:null},
+  dependence:state.jointSampler?jointResultMetadata(state.jointSampler,[]).dependence:{id:'independent',label:'Independent analyst stress draws',description:state.metricSamplers?'Annual primitive innovations are independent across metrics, with each metric’s own serial persistence. Scalar terminal draws are independent. These are explicit modeling assumptions, not estimated correlations.':'The four stress inputs are sampled independently. This is a modeling assumption, not evidence of independence.',latentCorrelations:null},
   warnings,method:{...(d.openingStub?{openingStub:structuredClone(d.openingStub),annualReference:structuredClone(d.anchor),openingStubPolicy:d.ticker==='SNPS'?'Selected fiscal Q4 cash flows, restructuring settlement and WACC fixed; annual intervals use actual days / 365.25. Only FY2027 onward is edited or sampled; source whole-curve WACC sensitivities differ.':'Selected H2 cash flows and WACC fixed; only FY2027 onward is edited or sampled. Source whole-curve WACC sensitivities differ.'}:{}),distribution:'Shared fixed, triangular, uniform or conditionally truncated normal inverse CDF',random:'FNV-1a seed hash / Mulberry32',
    sampling:'Exactly the requested attempted-trial count; invalid outcomes excluded without clipping or redraw',quantiles:'linear interpolation at (n−1)p (type 7)',histogram:'equal-width bins; left-closed/right-open except the inclusive final upper edge',
    inputUnits:'growthPremium, marginShift and waccShift are fractions of one (0.01 = one percentage point); investmentMultiplier is a nonnegative multiple',
-   growth:state.pathSampler?'Exact Gaussian AR(1) bridge around reviewed annual growth; all fixed years and terminal continuation anchor are conditioned exactly':'growth[i] = reviewedGrowth[i] + growthPremium × (N−1−i)/(N−1); premium is zero when N=1; revenue is reconstructed sequentially from the anchor',
+   growth:state.jointSampler?JOINT_NOTE:state.pathSampler?'Exact Gaussian AR(1) bridge around reviewed annual growth; all fixed years and terminal continuation anchor are conditioned exactly':'growth[i] = reviewedGrowth[i] + growthPremium × (N−1−i)/(N−1); premium is zero when N=1; revenue is reconstructed sequentially from the anchor',
    ...(d.marginPath?.enabled===true?{margin:state.metricSamplers?.margin?'Annual margin uses a conditioned Gaussian path around the edited calendar baseline; user-fixed years remain exact. Scalar margin shift controls only the terminal endpoint.':'Anchored-start margin sensitivity: shift interim and terminal targets together; add each calendar-year curve delta to edited annual margins, generated margins and manual overrides. Starting margin, source provenance and margin dates stay fixed; manual row offsets are preserved.'}:{}),
    capitalPolicy:c.capitalPolicy,capitalDescription,...(d.annualFundingPolicy?{annualFundingPolicy:structuredClone(d.annualFundingPolicy)}:{}),...(d.operatingCashFunding?{operatingCashFunding:structuredClone(d.operatingCashFunding)}:{}),...(d.fixedCapitalFunding?{fixedCapitalFunding:structuredClone(d.fixedCapitalFunding),fixedCapitalFundingNote:'Only operating investment is scaled or sampled; registry-backed opening funding remains fixed in its specified years.'}:{}),...(d.schemaVersion===2?{capitalResponseBaseline:'Current edited annual schedule',marginalSalesCapital:d.derivedForecast.marginalSalesCapital,investmentMultiplierOrder:'After derived capital response'}:{}),terminal:'Final explicit revenue × (1+sampled g), scalar terminal margin and WACC, selected terminal tax and NOPAT × g / ROIC reinvestment; optional terminal distributions are drawn once per trial',
    bridge:d.ticker==='FN'?'Each trial recomputes opening operating cash and jointly solves ordinary equity, legacy awards and Amazon warrants; no market-price plug or second exercise-proceeds credit':baseline.bridge.claimRepricedPerTrial?'Selected dated capital assumptions applied to each accepted operating scenario; AAOI option claim values are repriced per trial, never inferred from funding deficits':'Existing source-dated bridge applied independently to each accepted operating scenario; capital claims are not inferred from funding deficits',output:d.ticker==='FN'?'Signed operating EV and conditional coupled ordinary allocation; nonpositive allocation pools retain an explicit shortfall with zero ordinary value':'Primary distribution is operating EV in native-currency millions; separate signed equity and native per-share distributions retain bridge coverage',

@@ -28,10 +28,11 @@ test('only three terminal growth assumptions change; all annual, capital, claim 
  for(const p of b.presets){const old=studioResearchDraft(p,b),d=terminalReviewedResearchDraft(p,b),changed=['GOOG','MSFT','AMZN'].includes(p.ticker);
   for(const key of ['annual','timing','bridgeInputs','bridgeReviewVersion','currentCapitalScenario','currentCapitalProvenance','anchor','discountOrigin','informationAsOf','caseId','forecastHorizonYears','capitalPolicy'])assert.deepEqual(d[key],old[key],p.ticker+':'+key);
   assert.deepEqual(d.terminal,{...old.terminal,growth:changed?.03:old.terminal.growth});
-  assert.deepEqual(d.researchSimulationConfig,{...old.researchSimulationConfig,annualTerminal:{...old.researchSimulationConfig.annualTerminal,growth:{type:'fixed',value:d.terminal.growth}}});
+  assert.deepEqual(d.researchSimulationConfig,{...old.researchSimulationConfig,annualTerminal:{...old.researchSimulationConfig.annualTerminal,growth:{type:'fixed',value:d.terminal.growth}},jointAnnual:{...old.researchSimulationConfig.jointAnnual,annualTerminal:{...old.researchSimulationConfig.jointAnnual.annualTerminal,growth:{type:'fixed',value:d.terminal.growth}}}});
   if(!changed)assert.deepEqual(calculateResearchOperating(d),calculateResearchOperating(old),p.ticker);
   assert.equal(restoreResearchDraft(d,c(p.ticker)).error,null);
   assert.equal(d.researchPreset.defaultSimulationConfig.annualTerminal.growth.value,d.terminal.growth);
+  assert.equal(d.researchPreset.defaultSimulationConfig.jointAnnual.annualTerminal.growth.value,d.terminal.growth);
   if(p.ticker!=='GOOG')assert.equal(currentResearchPresetStatus(d,b),'Complete research preset · annual model');
  }
 });
@@ -52,10 +53,10 @@ test('funded terminal formula and guardrails remain active, with unchanged dated
  for(const mutate of [x=>x.terminal.growth=x.terminal.wacc,x=>x.terminal.roic=0,x=>x.terminal.growth=NaN,x=>x.terminal.growth=.051]){const bad=structuredClone(d);mutate(bad);assert.ok(researchDraftIssues(bad).length);assert.throws(()=>calculateResearchOperating(bad));}
 });
 test('fixed Monte Carlo parity and reset use the reviewed terminal value for all fourteen',()=>{
- for(const p of bundle().presets){const d=draft(p.ticker),config=simulationResearchDefaults(d);config.trials=2;config.annualPath.innovationSD=0;
+ for(const p of bundle().presets){const d=draft(p.ticker),config={...simulationResearchDefaults(d),method:'annual-path'};config.trials=2;config.annualPath.innovationSD=0;
   const expected=researchTimingResult(d,calculateResearchOperating(d)).enterprise,s=simulateResearch(d,config);
   assert.equal(s.baseline.enterprise,expected);assert.equal(s.draws[0],expected,p.ticker);assert.equal(s.draws[1],expected,p.ticker);
-  const defaults=annualResearchSimulationAdapter(d).defaults();assert.equal(defaults.annualTerminal.growth.value,d.terminal.growth);
+  const defaults=annualResearchSimulationAdapter(d).defaults();assert.equal(defaults.method,'joint-annual-path');assert.equal(defaults.annualTerminal.growth.value,d.terminal.growth);assert.equal(defaults.jointAnnual.annualTerminal.growth.value,d.terminal.growth);
  }
 });
 test('saved old presets and edits remain exact; explicit research applies review and Undo survives reload',async()=>{

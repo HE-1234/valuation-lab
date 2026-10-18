@@ -1,3 +1,4 @@
+import {assertFreshJointDefaults} from './joint-default-contract.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -56,7 +57,7 @@ test('sampled stable growth conditions maturity and holds plateau; explicit conf
 });
 
 test('Guided zero SD reproduces baseline and metric paths replay exact tax, margin, capital and discount equations',()=>{
- const d=makeCurrent(),c={...simulationDefaults(d.assumptions),trials:100,drivers:fixedDrivers(d)};c.annualPath.innovationSD=0;
+ const d=makeCurrent(),c={...simulationDefaults(d.assumptions),method:'annual-path',trials:100,drivers:fixedDrivers(d)};c.annualPath.innovationSD=0;
  const fixed=simulateCurrent(snapshot,d,c);assert.equal(fixed.accepted,100);for(const s of fixed.scenarios)assert.equal(s.perShare,calculateCurrent(snapshot,d).perShare);
  for(const [k,s]of Object.entries(c.annualMetrics)){s.innovationSD=k==='salesCapital'?.1:.01;s.fixedYears=[2,5];}
  const result=simulateCurrent(snapshot,d,c),context=currentAnnualPathContext(snapshot,d);
@@ -74,7 +75,7 @@ test('Guided zero SD reproduces baseline and metric paths replay exact tax, marg
 test('derived Year-by-year factor at zero SD preserves capital response; fixed factor is not fixed investment dollars',()=>{
  for(const maturity of [10,15,20]){
   const d=deriveAnnualGrowthHorizon(researchDraftFor(company),company,{growthMaturityYear:maturity});
-  const c={...simulationResearchDefaults(d),trials:10};
+  const c={...simulationResearchDefaults(d),method:'annual-path',trials:10};
   const result=simulateResearch(d,c);assert.equal(result.accepted,10);
   for(const s of result.scenarios){
    assert.ok(s.metricPaths.investmentFactor.every(v=>v===1));
@@ -86,13 +87,13 @@ test('derived Year-by-year factor at zero SD preserves capital response; fixed f
 
 test('annual margin sampling retains enabled peak/decay calendar and supports shifted terminal margin',()=>{
  const source=researchDraftFor(company),d=applyAnnualMarginPath(source,company,{...defaultAnnualMarginPath(source),enabled:true,interimYear:3,declineStartYear:5,terminalYear:20});
- const c={...simulationResearchDefaults(d),trials:5};c.drivers.marginShift={type:'fixed',value:.01};c.annualMetrics.margin.innovationSD=.01;
+ const c={...simulationResearchDefaults(d),method:'annual-path',trials:5};c.drivers.marginShift={type:'fixed',value:.01};c.annualMetrics.margin.innovationSD=.01;
  const r=simulateResearch(d,c);assert.equal(r.accepted,5);for(const s of r.scenarios){assert.equal(s.terminal.margin,d.terminal.margin+.01);for(const y of [1,2,3])assert.equal(s.metricPaths.margin[y-1],d.annual[y-1].margin);}
  assert.deepEqual(researchAnnualPathContext(d).metrics.margin,d.annual.map(r=>r.margin));
 });
 
 test('terminal-only upgrades export every scalar draw and invalid terminal combinations are excluded without redraw; async parity',async()=>{
- const d=researchDraftFor(company),c={...simulationResearchDefaults(d),trials:30};delete c.annualMetrics;c.annualTerminal.growth={type:'uniform',low:.02,high:.04};
+ const d=researchDraftFor(company),c={...simulationResearchDefaults(d),method:'annual-path',trials:30};delete c.annualMetrics;c.annualTerminal.growth={type:'uniform',low:.02,high:.04};
  const r=simulateResearch(d,c);assert.equal(r.accepted,30);assert.ok(r.scenarios.every(s=>s.terminal.growth>=.02&&s.terminal.growth<=.04));
  assert.deepEqual(await simulateResearchAsync(d,c,{chunkSize:7,yieldControl:async()=>{}}),r);
  c.drivers.waccShift={type:'fixed',value:-d.terminal.wacc+.01};const bad=simulateResearch(d,c);assert.equal(bad.accepted,0);assert.equal(bad.excluded,30);assert.equal(bad.exclusions['terminal-constraints'],30);
@@ -103,7 +104,7 @@ test('fresh research runtime and reset expose metric knobs without sampling or c
  const {annualResearchSimulationAdapter}=await import('../dist/research-simulation-view.js');
  const {fixture}=await import('./v7-simulation-harness.mjs');
  const bundle=JSON.parse(fs.readFileSync(new URL('../dist/data/studio-research-presets-2026-10-17-v1.json',import.meta.url))),before=JSON.stringify(bundle),preset=bundle.presets.find(p=>p.ticker==='AMZN'),d=studioResearchDraft(preset,bundle);
- assert.equal(JSON.stringify(bundle),before);assert.deepEqual(d.researchSimulationConfig.drivers,preset.simulationConfig.drivers);
+ assert.equal(JSON.stringify(bundle),before);assertFreshJointDefaults(d.researchSimulationConfig);assert.deepEqual(d.researchSimulationConfig.drivers,preset.simulationConfig.drivers);assert.deepEqual(d.researchSimulationConfig.jointAnnual.drivers,preset.simulationConfig.drivers);
  assert.ok(Object.values(d.researchSimulationConfig.annualMetrics).every(s=>s.innovationSD===0));
  const h=fixture({runOnMount:false,ticker:d.ticker,reduced:true,draftOverride:d,snapshotOverride:{ticker:d.ticker,currency:d.currency,periodEnd:d.discountOrigin,raw:{id:d.caseId}},adapter:annualResearchSimulationAdapter(d)});
  try{

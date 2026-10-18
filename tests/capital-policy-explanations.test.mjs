@@ -14,7 +14,7 @@ import en from '../dist/locales/annual.en.js';
 import zh from '../dist/locales/annual.zh-Hans.js';
 const draft=ticker=>{const r=incrementalRecord(ticker);return incrementalResearchDraft({ticker,presetId:r.identity.version,incrementalResearch:r.identity,annualCase:r.annualCase});};
 const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-9*Math.max(1,Math.abs(b)),`${a} != ${b}`);
-const annualConfig=d=>{const c={...simulationResearchDefaults(d),trials:3,seed:'capital-policy-copy'};c.annualPath.innovationSD=.01;return c;};
+const annualConfig=d=>{const c={...simulationResearchDefaults(d),method:'annual-path',trials:3,seed:'capital-policy-copy'};c.annualPath.innovationSD=.01;return c;};
 const scope=locale=>{setLocale(locale);return t('annualMetrics.scopeResearch');};
 
 for(const ticker of ['KLAC','AMAT','LRCX','ASML'])test(`${ticker} fixed schedule and factor 1 keep edited investment despite changed revenue`,()=>{

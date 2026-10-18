@@ -99,7 +99,7 @@ test('simulation: invalid deterministic WACC, growth, ROIC, tax and margins fail
 });
 
 test('simulation: WACC/stable growth overlap counts exclusions without redrawing',()=>{
- const d=draft(),c={...simulationDefaults(d.assumptions),trials:2000};c.drivers.wacc={low:.005,mode:.02,high:.06};
+ const d=draft(),c={...simulationDefaults(d.assumptions),method:'annual-path',trials:2000};c.drivers.wacc={low:.005,mode:.02,high:.06};
  const r=simulateCurrent(snapshot(),d,c);
  assert.equal(r.attempts,2000);assert.ok(r.accepted>0&&r.accepted<2000);assert.equal(r.accepted+r.excluded,2000);
  assert.equal(r.exclusions['terminal-constraints'],r.excluded);assert.equal(r.samples.length,r.accepted);

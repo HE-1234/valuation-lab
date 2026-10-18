@@ -22,9 +22,18 @@ for(const [key,message] of Object.entries(english)){
 }
 patterns.sort((a,b)=>b.specificity-a.specificity);
 const completeMessages=[...exact.keys()].filter(message=>message.length>18).sort((a,b)=>b.length-a.length);
+// The catalog is fixed after load, so a message's match depends only on its
+// text. Re-renders repeat the same strings; remember each verdict (bounded).
+const matchMemo=new Map();
 export function matchGuidedMessage(value,depth=0){
  if(typeof value!=='string')return null;
  const text=value.trim();
+ const id=depth+'\u0000'+text;
+ if(!matchMemo.has(id)){if(matchMemo.size>4000)matchMemo.clear();matchMemo.set(id,findGuidedMessage(text,depth));}
+ const memo=matchMemo.get(id);
+ return memo&&{key:memo.key,params:{...memo.params}};
+}
+function findGuidedMessage(text,depth){
  const yearDescription=text.match(/^((?:Year \d+: -?[\d,]+(?:\.\d+)?%)(?:; Year \d+: -?[\d,]+(?:\.\d+)?%)*)\. (.+)$/s);
  if(yearDescription)return {key:'guided.marginSequenceDescription',params:{years:yearDescription[1],source:yearDescription[2]}};
  const found=exact.get(text);if(found)return {...found,params:{}};

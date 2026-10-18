@@ -1,3 +1,4 @@
+import {jointEffectiveConfig} from './joint-simulation-config.js';
 // Application policy only. Frozen company research and saved configurations are
 // never rewritten. Call this solely when constructing fresh/reset defaults.
 export const REFERENCE_DEFAULT_TICKERS=Object.freeze(['KLAC','AMAT','LRCX','ASML','FN','CDNS','SNPS']);
@@ -13,6 +14,7 @@ export function applyResearchReferenceDefaults(draft,config){
 const hasWidth=spec=>!!spec&&spec.type!=='fixed'&&spec.high>spec.low;
 const hasFreeInnovation=(spec,length,terminalYear=length+1)=>!!spec&&spec.innovationSD>0&&Array.from({length},(_,i)=>i+1).some(year=>year<terminalYear&&!spec.fixedYears.includes(year));
 export function researchReferenceState(config,context){
+ config=jointEffectiveConfig(config);
  const annual=config.method==='annual-path',metrics=annual?config.annualMetrics:null;
  const activeDrivers=Object.entries(config.drivers).filter(([key])=>!annual||key!=='growthPremium'&&!(key==='investmentMultiplier'&&(metrics?.investmentFactor||metrics?.reinvestment)));
  const stochastic=activeDrivers.some(([,spec])=>hasWidth(spec))||annual&&(Object.values(config.annualTerminal||{}).some(hasWidth)||hasFreeInnovation(config.annualPath,context.baseline.length,context.terminalYear)||Object.values(metrics||{}).some(spec=>hasFreeInnovation(spec,context.baseline.length)));
@@ -20,6 +22,7 @@ export function researchReferenceState(config,context){
  return {annual,stochastic:!!stochastic,userFixed:!!userFixed};
 }
 export function hasInactiveReferencePersistence(config,context){
+ config=jointEffectiveConfig(config);
  if(config.method!=='annual-path')return false;
  const specs=[config.annualPath,...Object.values(config.annualMetrics||{})];
  return specs.every(s=>s.innovationSD===0&&s.persistence===0)&&Object.entries(config.annualTerminal||{}).every(([key,s])=>s.type==='fixed'&&s.value===context.terminalScalars[key])&&['marginShift','waccShift'].every(key=>config.drivers[key].type==='fixed'&&config.drivers[key].value===0);

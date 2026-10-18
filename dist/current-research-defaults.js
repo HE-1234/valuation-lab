@@ -1,3 +1,4 @@
+import {jointDefaults} from './joint-simulation-config.js';
 import {incrementalResearchDraft} from './incremental-research.js';
 import selectedGOOG,{selectedGrowthPercentages} from './goog-selected-scenario-data.js';
 import {annualPathDefaults} from './annual-path-sampling.js';
@@ -20,6 +21,7 @@ export function terminalReviewedResearchDraft(preset,bundle){
  // Existing research distributions remain; terminal fields are fixed at this
  // reviewed deterministic baseline until the user explicitly selects uncertainty.
  draft.researchSimulationConfig.annualTerminal=annualTerminalDefaults(draft.terminal);
+ draft.researchSimulationConfig=jointDefaults(draft.researchSimulationConfig,{horizon:draft.annual.length,capital:'investmentFactor'});
  draft.researchPreset.defaultSimulationConfig=structuredClone(draft.researchSimulationConfig);
  draft.researchPreset.originalSimulationRationale=structuredClone(draft.researchPreset.simulationRationale);
  for(const key of ['sampling','constraints','terminal','fixedInputs'])draft.researchPreset.simulationRationale[key]=review.classification;
@@ -43,6 +45,7 @@ export function currentResearchDraft(preset,bundle){
  draft.researchSimulationConfig=structuredClone(reviewed.researchSimulationConfig);
  draft.researchSimulationConfig.capitalPolicy=draft.capitalPolicy;
  draft.researchSimulationConfig.annualPath=annualPathDefaults(20);
+ draft.researchSimulationConfig=jointDefaults(draft.researchSimulationConfig,{horizon:draft.annual.length,capital:'investmentFactor'});
  draft.researchPreset.defaultSimulationConfig=structuredClone(draft.researchSimulationConfig);
  const issues=researchDraftIssues(draft);if(issues.length)throw Error(issues.join(' '));
  return draft;
