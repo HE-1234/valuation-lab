@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "release": "AMAT incremental dated-origin v3",
+  "sourceBase": "3d03f2a57e85d9fa7e8458c7132407b6fa89b330",
+  "preparedAsOf": "2026-10-18",
+  "company": "AMAT",
+  "scope": "Separate AMAT package and audited company-specific bridge. Original fourteen, selected GOOG and published KLAC packages remain byte-identical. No LRCX, FN, ASML or CIEN app addition.",
+  "testResults": {
+    "fullSuite": {
+      "command": "npm test",
+      "total": 1393,
+      "passed": 1392,
+      "failed": 0,
+      "skipped": 1,
+      "skip": "Pre-existing SEC research-cache check; raw research cache is not bundled."
+    },
+    "focused": {
+      "command": "node --test tests/incremental-amat.test.mjs tests/incremental-klac.test.mjs",
+      "total": 62,
+      "passed": 62,
+      "failed": 0
+    },
+    "diffCheck": "git diff --check passed",
+    "independentFinancialReview": {
+      "checksPassed": 302,
+      "researchAuditChecksPassed": 310,
+      "record": "AMAT/independent-audit/integration-review-v3.json"
+    },
+    "visual": "Static EN/Simplified Chinese 390/1440 Result/Claims review fits with no overflow. Reviewer caught named-scenario chart heading; corrected and bilingual/live-switch regressions pass. Final static recapture is separate from parent native post-publication smoke.",
+    "browser": "No local browser attempted. Parent owns native post-publication smoke."
+  },
+  "benchmarks": {
+    "baseEV": 170970.14491831098,
+    "basePerShare": 220.98869002158585,
+    "downcycleEV": 81105.6168261097,
+    "downcyclePerShare": 108.97969775037244,
+    "upsideEV": 247297.8087686637,
+    "upsidePerShare": 316.12505685948025,
+    "netCapitalBridge": 6328.516017926959,
+    "allocationSharesMillions": 802.297443,
+    "discountOrigin": "2026-07-26",
+    "informationAsOf": "2026-10-18"
+  },
+  "gates": {
+    "currentPriceComparison": false,
+    "asKnownBacktest": false,
+    "sourceHistoryAuditIdentityValidated": true,
+    "USListingAndRobinhoodPublicPageRequired": true,
+    "accountSpecificTradeabilityAsserted": false,
+    "fixedSimulationDefault": true,
+    "manualSimulationRunOnly": true,
+    "nullClaimsBlockPerShare": true,
+    "changedValuationDateBlocksPerShare": true,
+    "separateVersionedDraftStorage": true,
+    "ChineseScopeControlsAndLiveScenarioLabels": true,
+    "existingAwardAndESPPInputsRemainLabeledEstimates": true,
+    "taxAssetOverlapCompatibilityRequired": true,
+    "legacySBCAddsNoValue": true
+  },
+  "changedFiles": [
+    {
+      "path": "dist/amat-research-claims.js",
+      "sha256": "f9494ef24a18d93ca4fc8b12a4ba82c2635c58baaeb8a6a0d841b8e5b208987c"
+    },
+    {
+      "path": "dist/amat-research-registry.js",
+      "sha256": "a4912ab6750c416257be57a8081d94c22fdaf3d99e648e781c1d4b96049b58ee"
+    },
+    {
+      "path": "dist/annual-localization.js",
+      "sha256": "cf8335aec27ed5a63bad684d9aa7718014855deb3c9b1010f6061ec636924454"
+    },
+    {
+      "path": "dist/data/incremental-AMAT-2026-10-18-v3/AMAT-normalized-capital-v2.json",
+      "sha256": "2000ae7fdaa21d9202d238a0cefb61910811d31ab2f94a781ba260e4752bcb22"
+    },
+    {
+      "path": "dist/data/incremental-AMAT-2026-10-18-v3/AMAT-v3-audit.json",
+      "sha256": "b0f895c5003bc69ca26074f321b05c4a958a8c9d23ef08631d084dffbdd34c04"
+    },
+    {
+      "path": "dist/data/incremental-AMAT-2026-10-18-v3/AMAT-v3-source.json",
+      "sha256": "e7750256fd604487feb1f06e6464fbbb350246c9b85883269fa6e7dad854a337"
+    },
+    {
+      "path": "dist/data/incremental-AMAT-2026-10-18-v3/AMAT-v3.html",
+      "sha256": "03a3cecc5b7922bf1b7a4ec4dec89369202cceaa24a5d17bf548da51cd0161bd"
+    },
+    {
+      "path": "dist/data/incremental-AMAT-2026-10-18-v3/cases.json",
+      "sha256": "198f7abbde29c93cd7ac52ba488168a6904b0f7e000f68b3e67cecfa4dfdf7f7"
+    },
+    {
+      "path": "dist/incremental-messages.js",
+      "sha256": "3d35fc82a4c8a1ea085d280aae20bb900bcecb6d4631e5bb09ce1660281ea3d8"
+    },
+    {
+      "path": "dist/incremental-registry.js",
+      "sha256": "dc97740d8eed7373635138cd5b0396449cc6d34141f4e30c47409bb7ff6c02f0"
+    },
+    {
+      "path": "dist/incremental-research-claims.js",
+      "sha256": "e0fcb734248d3f078452277bf85dfe1771b7478f4df5adea877778d748d880f1"
+    },
+    {
+      "path": "dist/incremental-research-identity.js",
+      "sha256": "6c8c72c03c5ff4df3884c7d7eb80594dcec91309c26b615d95e4e205f25f4c40"
+    },
+    {
+      "path": "dist/incremental-research-view.js",
+      "sha256": "9606796300301ebd03cc61f4e76974c7c7f49290cab57b62506f7ade88b27f6f"
+    },
+    {
+      "path": "dist/incremental-research.js",
+      "sha256": "db5ec16ead7eaaccdf219f9102a3b7b6930adce82c8b89b1c52df83a21ba3f2a"
+    },
+    {
+      "path": "dist/research-claims.js",
+      "sha256": "7041e985d2ac38d121c2bfa8b928b8afb6d67efb4cbbd5c0af227eaba84bcb62"
+    },
+    {
+      "path": "dist/research-model.js",
+      "sha256": "c47b8c40fbb118c12e7f47427cf8f0b1a6a084ecc98c0f8e1a452a306c9baef9"
+    },
+    {
+      "path": "dist/research-view.js",
+      "sha256": "31a06ddaf600b536fda4687f3660e70b30aa9899ba071fac591dfbb4335c1e64"
+    },
+    {
+      "path": "scripts/build-amat-incremental.py",
+      "sha256": "4aa964aedf0508b8d48a0f8c90b3bf72fd0880a05f6c0918b41eac204bc799f5"
+    },
+    {
+      "path": "tests/incremental-amat.test.mjs",
+      "sha256": "4e7d2b0483b31fc587866dbd7df55e607f9ed2778174fb52ad76ebe74d033526"
+    }
+  ]
+}

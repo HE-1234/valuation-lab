@@ -1,4 +1,4 @@
-import {incrementalRecord} from './incremental-research-registry.js';
+import {incrementalRecord} from './incremental-registry.js';
 import {incrementalCaseVersion,incrementalDraftIssues} from './incremental-research-identity.js';
 import {terminalReviewIdentityValid} from './terminal-growth-review-identity.js';
 // Versioned annual research model. The historical and scalar engines are unchanged.

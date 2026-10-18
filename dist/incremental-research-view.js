@@ -1,4 +1,4 @@
-import {incrementalRecord} from './incremental-research-registry.js';
+import {incrementalRecord} from './incremental-registry.js';
 import {annualTextHTML} from './annual-localization.js';
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const link=(url,label)=>`<a href="${esc(url)}" target="_blank" rel="noopener">${annualTextHTML(label)} ↗</a>`;
@@ -13,5 +13,8 @@ export function incrementalEvidenceHTML(c,key='sources',{id=key!=='sources'}={})
 }
 export function incrementalPresetHTML(d){
  const r=incrementalRecord(d?.ticker);if(!r)return '';
- return `<section class="research-preset-context"><h2>${annualTextHTML('Reviewed incremental research')} · ${esc(d.ticker)}</h2><p>${esc(r.identity.version)}</p>${incrementalScopeHTML(d)}<p>${annualTextHTML(r.prose.summary.en)}</p><p>${annualTextHTML(r.prose.uncertainty.en)}</p><button class="quiet" data-research-action="incremental-downside">${annualTextHTML('Load reviewed downside')}</button><p>${annualTextHTML('No assigned scenario probability')}</p>${incrementalEvidenceHTML(d,'sources')}</section>`;
+ return `<section class="research-preset-context"><h2>${annualTextHTML('Reviewed incremental research')} · ${esc(d.ticker)}</h2><p>${esc(r.identity.version)}</p>${incrementalScopeHTML(d)}<p>${annualTextHTML(r.prose.summary.en)}</p><p>${annualTextHTML(r.prose.uncertainty.en)}</p>${incrementalAlternativeButtons(d)}<p>${annualTextHTML('No assigned scenario probability')}</p>${incrementalEvidenceHTML(d,'sources')}</section>`;
 }
+
+export function incrementalScenarioLabel(d){const r=incrementalRecord(d?.ticker),a=r?.alternatives.find(x=>x.name===d.selectedIncrementalScenario);return a?.label||(a?.name==='cycle-and-export-downside'?'Cycle and export downside':'Reviewed annual case');}
+export function incrementalAlternativeButtons(c){const r=incrementalRecord(c?.ticker);if(!r)return '';return r.alternatives.map(a=>`<button class="quiet" data-research-action="${c.ticker==='KLAC'?'incremental-downside':'incremental-alternative'}" data-incremental-scenario="${esc(a.name)}">${annualTextHTML(c.ticker==='KLAC'?'Load reviewed downside':a.name==='downcycle'?'Load reviewed downcycle':'Load reviewed upside')}</button>`).join('');}

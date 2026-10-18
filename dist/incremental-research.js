@@ -1,17 +1,18 @@
-import {incrementalRegistry,incrementalRecord} from './incremental-research-registry.js';
+import {incrementalRegistry,incrementalRecord,incrementalPackages} from './incremental-registry.js';
 import {researchDraftFor,researchDraftIssues} from './research-model.js';
 import {simulationResearchDefaults,validateResearchSimulationConfig} from './research-simulation.js';
 import {isUSRobinhoodCandidate} from './company-catalog.js';
 export const INCREMENTAL_RESEARCH_PATH='./data/incremental-research-2026-10-18/cases.json';
+export const INCREMENTAL_RESEARCH_PATHS=Object.freeze([INCREMENTAL_RESEARCH_PATH,'./data/incremental-AMAT-2026-10-18-v3/cases.json']);
 export function validateIncrementalResearch(bundle){
  // The separately audited payload must match the shipped immutable registry.
  // Imported edits belong in drafts; they cannot rewrite source or audit identity.
- if(JSON.stringify(bundle)!==JSON.stringify(incrementalRegistry))throw Error('Incremental research package does not match the independently reviewed source and audit registry.');
+ if(!incrementalPackages.some(expected=>JSON.stringify(bundle)===JSON.stringify(expected)))throw Error('Incremental research package does not match the independently reviewed source and audit registry.');
  return structuredClone(bundle);
 }
-export async function fetchIncrementalResearch(fetcher=globalThis.fetch,{timeoutMs=3000}={}){
+export async function fetchIncrementalResearch(fetcher=globalThis.fetch,{timeoutMs=3000,path=INCREMENTAL_RESEARCH_PATH}={}){
  const controller=typeof AbortController==='function'?new AbortController():null;let timer;
- const request=(async()=>{const response=await fetcher(INCREMENTAL_RESEARCH_PATH,controller?{signal:controller.signal}:undefined);if(!response?.ok)throw Error('Incremental research unavailable');return validateIncrementalResearch(await response.json());})();
+ const request=(async()=>{const response=await fetcher(path,controller?{signal:controller.signal}:undefined);if(!response?.ok)throw Error('Incremental research unavailable');return validateIncrementalResearch(await response.json());})();
  try{return await Promise.race([request,new Promise((_,reject)=>{timer=setTimeout(()=>{controller?.abort();reject(Error('Incremental research timed out'));},timeoutMs);})]);}finally{clearTimeout(timer);}
 }
 export function incrementalPresets(bundle,catalog){

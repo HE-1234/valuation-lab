@@ -1,4 +1,4 @@
-import {incrementalRecord} from './incremental-research-registry.js';
+import {incrementalRecord} from './incremental-registry.js';
 import {incrementalBridgeDefinition,calculateIncrementalBridge,incrementalBridgeSensitivity} from './incremental-research-claims.js';
 import {calculateCurrentCapitalScenario} from './current-capital-presets.js';
 // Standalone dated capital allocations for the October 17 research operating cases.

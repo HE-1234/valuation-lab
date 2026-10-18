@@ -1,8 +1,10 @@
-import {incrementalRecord} from './incremental-research-registry.js';
+import {calculateAmatBridge} from './amat-research-claims.js';
+import {incrementalRecord} from './incremental-registry.js';
 import {incrementalIdentityValid} from './incremental-research-identity.js';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
 export function incrementalBridgeDefinition(ticker){const r=incrementalRecord(ticker);return r?structuredClone({...r.bridge,optionDefinitions:r.bridge.options,lines:[],bridgeVersion:r.identity.version}):null;}
 export function calculateIncrementalBridge(d,enterprise,options={}){
+ if(incrementalRecord(d?.ticker)?.bridge.type==='amat-v3')return calculateAmatBridge(d,enterprise,options);
  const r=incrementalRecord(d?.ticker),b=r?.bridge;
  if(!r||!incrementalIdentityValid(d))throw Error('Incremental research source, audit, dates and security identity must match the reviewed company package.');
  if(!finite(enterprise))throw Error('Operating EV must be finite; negative values are supported.');
@@ -31,5 +33,5 @@ export function calculateIncrementalBridge(d,enterprise,options={}){
 }
 export function incrementalBridgeSensitivity(d,enterprise,options={}){
  const b=incrementalRecord(d?.ticker)?.bridge;if(!b)return [];
- return b.options.flatMap(field=>[field.min,field.max].filter(value=>value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,changes,...r};}catch(error){return {label,changes,status:'invalid',error:error.message};}}));
+ return b.options.flatMap(field=>[field.min,field.max].filter(value=>value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));
 }

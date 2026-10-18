@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · Applied Materials incremental case
+
+- Added AMAT with a separate versioned research package, three funded scenarios, ten-year reference history and ten editable capital-claim assumptions. Values reproduce $220.98869002 base, $108.97969775 downcycle and $316.12505686 upside at the July 26, 2026 financial origin using October 18 information. These are conditional dated scenarios, not current price targets or point-in-time backtests.
+- Preserved award/ESPP estimates, unknown inputs and overlapping-claim guards. Existing original datasets, selected GOOG, KLAC and six themes are unchanged.
+- Corrected alternative-case chart labels and live English/Simplified Chinese switching so downside/upside paths never inherit the base-case caption.
+- Full regression suite: 1,392 passed, zero failed, one existing skip. Independent adapter replay and 62 focused tests passed. Sixteen static mobile/desktop captures passed; native browser smoke follows publication.
+
 ## 2026-10-18 · KLA incremental research case
 
 - Added KLAC as the first independently reviewed incremental company, with ten annual forecasts, corrected historical references, dated capital assumptions, bilingual evidence and explicit uncertainty controls. Original fourteen research records remain byte-identical.

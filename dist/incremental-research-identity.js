@@ -1,4 +1,4 @@
-import {incrementalRecord} from './incremental-research-registry.js';
+import {incrementalRecord} from './incremental-registry.js';
 const object=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
 export const incrementalCaseVersion=c=>c?.incrementalResearch?.version;
 export function incrementalIdentityValid(d){
