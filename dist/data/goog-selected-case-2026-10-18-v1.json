@@ -1,0 +1,421 @@
+{
+  "version": "2026-10-18-user-selected-goog-case-v1",
+  "source": "Audited illustrative GOOG scenario, created 2026-10-17; selected by the user 2026-10-18.",
+  "draft": {
+    "schemaVersion": 2,
+    "profileId": "annual-research-v1",
+    "version": "2026-10-17-reviewed-v1",
+    "caseId": "2026-10-17-reviewed-v1:GOOG:selected_research_base",
+    "sourceScenario": "selected_research_base",
+    "forecastHorizonYears": 20,
+    "ticker": "GOOG",
+    "currency": "USD",
+    "informationAsOf": "2026-10-17",
+    "discountOrigin": "2026-06-30",
+    "anchor": {
+      "revenue": 445866,
+      "EBIT": 147628,
+      "period": "TTM ended 2026-06-30",
+      "periodEnd": "2026-06-30",
+      "kind": "source_derived_TTM_actual",
+      "classification": "Reported/source-derived accounting actual; not forecast.",
+      "provenance": {
+        "file": "evidence-GOOG.html#facts",
+        "field": "ttm_end_2026_06_30",
+        "primarySourceUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+      },
+      "firstModeledPeriod": "Rolling year ending June 2027",
+      "firstModeledPeriodStart": "2026-07-01",
+      "fiscalCalendarCaution": "Rolling annual periods from TTM; fiscal guidance is a cross-check, not the same forecast period."
+    },
+    "annual": [
+      {
+        "year": 1,
+        "period": "2027-06-30",
+        "revenue": 555435.25,
+        "margin": 0.3348831711769904,
+        "taxRate": 0.22,
+        "reinvestment": 239466.8052470903,
+        "wacc": 0.1
+      },
+      {
+        "year": 2,
+        "period": "2028-06-30",
+        "revenue": 687295.2339999999,
+        "margin": 0.33866237838274277,
+        "taxRate": 0.22,
+        "reinvestment": 261705.63425277063,
+        "wacc": 0.1
+      },
+      {
+        "year": 3,
+        "period": "2029-06-30",
+        "revenue": 827036.48468,
+        "margin": 0.3424415855884952,
+        "taxRate": 0.22,
+        "reinvestment": 231725.98531827627,
+        "wacc": 0.1
+      },
+      {
+        "year": 4,
+        "period": "2030-06-30",
+        "revenue": 974035.0637991762,
+        "margin": 0.34622079279424756,
+        "taxRate": 0.22,
+        "reinvestment": 243228.1793257697,
+        "wacc": 0.1
+      },
+      {
+        "year": 5,
+        "period": "2031-06-30",
+        "revenue": 1131599.561383152,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 257665.36657947072,
+        "wacc": 0.1
+      },
+      {
+        "year": 6,
+        "period": "2032-06-30",
+        "revenue": 1304334.8978414412,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 276856.9377479104,
+        "wacc": 0.1
+      },
+      {
+        "year": 7,
+        "period": "2033-06-30",
+        "revenue": 1491545.3189106893,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 294067.60912222846,
+        "wacc": 0.1
+      },
+      {
+        "year": 8,
+        "period": "2034-06-30",
+        "revenue": 1692026.5613993392,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 309963.94152673846,
+        "wacc": 0.1
+      },
+      {
+        "year": 9,
+        "period": "2035-06-30",
+        "revenue": 1904027.540361388,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 322425.0235575664,
+        "wacc": 0.1
+      },
+      {
+        "year": 10,
+        "period": "2036-06-30",
+        "revenue": 2125230.7398422225,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 330670.97839697654,
+        "wacc": 0.1
+      },
+      {
+        "year": 11,
+        "period": "2037-06-30",
+        "revenue": 2352755.442499783,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 336341.3125721157,
+        "wacc": 0.1
+      },
+      {
+        "year": 12,
+        "period": "2038-06-30",
+        "revenue": 2583187.0766189387,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 336030.3644725704,
+        "wacc": 0.1
+      },
+      {
+        "year": 13,
+        "period": "2039-06-30",
+        "revenue": 2812634.8642942463,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 328988.1021329796,
+        "wacc": 0.1
+      },
+      {
+        "year": 14,
+        "period": "2040-06-30",
+        "revenue": 3036818.4086430673,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 314620.6832947943,
+        "wacc": 0.1
+      },
+      {
+        "year": 15,
+        "period": "2041-06-30",
+        "revenue": 3251182.0606595622,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 292536.6910906331,
+        "wacc": 0.1
+      },
+      {
+        "year": 16,
+        "period": "Year 16 · derived extension",
+        "revenue": 3451034.1305409665,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 349522.5340910246,
+        "wacc": 0.1
+      },
+      {
+        "year": 17,
+        "period": "Year 17 · derived extension",
+        "revenue": 3631705.917188514,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 315978.01686656236,
+        "wacc": 0.1
+      },
+      {
+        "year": 18,
+        "period": "Year 18 · derived extension",
+        "revenue": 3788723.7962756166,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 274609.55009717797,
+        "wacc": 0.1
+      },
+      {
+        "year": 19,
+        "period": "Year 19 · derived extension",
+        "revenue": 3917986.1443305966,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 226067.7284030297,
+        "wacc": 0.1
+      },
+      {
+        "year": 20,
+        "period": "Year 20 · derived extension",
+        "revenue": 4015935.797938861,
+        "margin": 0.35,
+        "taxRate": 0.22,
+        "reinvestment": 171304.76138082866,
+        "wacc": 0.1
+      }
+    ],
+    "terminal": {
+      "growth": 0.025,
+      "margin": 0.35,
+      "taxRate": 0.22,
+      "roic": 0.16,
+      "wacc": 0.1
+    },
+    "timing": {
+      "mode": "origin",
+      "asOf": "2026-10-17",
+      "stubFCFF": null,
+      "stubDiscountRate": 0.1,
+      "reason": ""
+    },
+    "bridgeInputs": {},
+    "notes": "Audited source for the selected Google case, June 30 2026 forecast-origin and conditional capital allocation. 10% WACC unchanged; Cloud growth 70/55/40% and other revenue 15/14/12% in years 1–3; 20-year maturity; 35% EBIT margin by year 5 then sustained; 22% tax; terminal g 2.5%, ROIC 16%; source-calendar investment floors plus funded expansion. Existing employee-award and other listed claims remain incomplete. This retained source uses terminal growth 2.5%; the current selected-case overlay applies the reviewed 3% continuation without changing the annual rows.",
+    "userEdited": true,
+    "capitalPolicy": "committed-floor-plus-growth-v1",
+    "updatedAt": null,
+    "derivedForecast": {
+      "version": "annual-growth-horizon-v1",
+      "revenuePathPreserved": false,
+      "sourceForecastHorizonYears": 15,
+      "growthMaturityYear": 20,
+      "explicitEarlyYears": 3,
+      "baselineAnnual": [
+        {
+          "year": 1,
+          "period": "2027-06-30",
+          "revenue": 555435.25,
+          "margin": 0.3295177,
+          "taxRate": 0.22,
+          "reinvestment": 223000,
+          "wacc": 0.1
+        },
+        {
+          "year": 2,
+          "period": "2028-06-30",
+          "revenue": 687295.2339999999,
+          "margin": 0.3279314,
+          "taxRate": 0.22,
+          "reinvestment": 228000,
+          "wacc": 0.1
+        },
+        {
+          "year": 3,
+          "period": "2029-06-30",
+          "revenue": 827036.48468,
+          "margin": 0.3263451,
+          "taxRate": 0.22,
+          "reinvestment": 200000,
+          "wacc": 0.1
+        },
+        {
+          "year": 4,
+          "period": "2030-06-30",
+          "revenue": 965220.5051892538,
+          "margin": 0.32475879999999996,
+          "taxRate": 0.22,
+          "reinvestment": 215762.41,
+          "wacc": 0.1
+        },
+        {
+          "year": 5,
+          "period": "2031-06-30",
+          "revenue": 1114025.3247064096,
+          "margin": 0.3231726,
+          "taxRate": 0.22,
+          "reinvestment": 228895.26,
+          "wacc": 0.1
+        },
+        {
+          "year": 6,
+          "period": "2032-06-30",
+          "revenue": 1271381.4043444677,
+          "margin": 0.32158630000000005,
+          "taxRate": 0.22,
+          "reinvestment": 238506.92,
+          "wacc": 0.1
+        },
+        {
+          "year": 7,
+          "period": "2033-06-30",
+          "revenue": 1434542.0218390373,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 243738.11,
+          "wacc": 0.1
+        },
+        {
+          "year": 8,
+          "period": "2034-06-30",
+          "revenue": 1600112.0798663653,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 245032.71,
+          "wacc": 0.1
+        },
+        {
+          "year": 9,
+          "period": "2035-06-30",
+          "revenue": 1764123.5681600412,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 240486.44,
+          "wacc": 0.1
+        },
+        {
+          "year": 10,
+          "period": "2036-06-30",
+          "revenue": 1922159.6336246177,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 229606.19,
+          "wacc": 0.1
+        },
+        {
+          "year": 11,
+          "period": "2037-06-30",
+          "revenue": 2069525.2076117266,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 214103.32,
+          "wacc": 0.1
+        },
+        {
+          "year": 12,
+          "period": "2038-06-30",
+          "revenue": 2201457.436563672,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 191680.65,
+          "wacc": 0.1
+        },
+        {
+          "year": 13,
+          "period": "2039-06-30",
+          "revenue": 2313364.8565509357,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 162587.16,
+          "wacc": 0.1
+        },
+        {
+          "year": 14,
+          "period": "2040-06-30",
+          "revenue": 2401079.94655149,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 127438.79,
+          "wacc": 0.1
+        },
+        {
+          "year": 15,
+          "period": "2041-06-30",
+          "revenue": 2461106.9358200934,
+          "margin": 0.32,
+          "taxRate": 0.22,
+          "reinvestment": 87211.55,
+          "wacc": 0.1
+        }
+      ],
+      "baselineTerminal": {
+        "growth": 0.025,
+        "margin": 0.32,
+        "taxRate": 0.22,
+        "roic": 0.16,
+        "wacc": 0.1
+      },
+      "economicOverrides": {},
+      "investmentOverrides": {},
+      "generatedTerminal": {
+        "growth": 0.025,
+        "margin": 0.32,
+        "taxRate": 0.22,
+        "roic": 0.16,
+        "wacc": 0.1
+      },
+      "marginalSalesCapital": 0.8,
+      "capitalPolicy": "committed-floor-plus-growth-v1",
+      "classification": "Editable analyst sensitivity derived from the retained annual case; not an extended research forecast.",
+      "capitalAssumption": "Retain positive calendar-year net investment as a floor, scale it upward with revenue, and fund additional expansion at the stated marginal sales / capital. Preserve explicit releases without amplification. Added years use terminal-ROIC capital intensity. Explicit manual investment overrides take precedence and retain their calendar year. Gross capex, maintenance, working capital and customer advances are not separately rebuilt.",
+      "capitalTiming": "Added-year investment = max(0, current minus prior revenue) × (1 + stable growth) × mature margin × (1 − mature tax) / terminal ROIC. At stable growth this equals current-year NOPAT × stable growth / ROIC.",
+      "regenerationBasis": "The retained pre-change path. Applying another horizon rebuilds generated revenue and investment while preserving explicit manual investment overrides; full Undo retains the preceding edited draft.",
+      "generatedReinvestment": [
+        223000,
+        228000,
+        200000,
+        227173.58735065997,
+        240521.45403125836,
+        258814.7299793648,
+        275381.3634357461,
+        290858.5354802632,
+        303286.41967972624,
+        311952.279214393,
+        318393.77362975944,
+        319445.98310372606,
+        314412.35237187863,
+        302735.9544224425,
+        284041.7524297519,
+        319563.4597403654,
+        288894.1868494284,
+        251071.58866027702,
+        206690.49453991288,
+        156621.49611961475
+      ]
+    }
+  }
+}

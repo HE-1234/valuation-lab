@@ -1,5 +1,14 @@
 # Change log
 
+## 2026-10-18 · Selected Google case and terminal-growth review
+
+- Applied the requested selected Google case: exact funded 20-year annual schedule, 35% mature operating margin, 10% WACC, 16% terminal ROIC and reviewed 3% terminal growth. Conditional common-share allocation is $306.616907 at the unchanged June 30 valuation/capital date. The label is “Selected Google case,” with assumptions visible.
+- Retained the original $210.132522 Google case and a terminal-only reviewed comparison of $214.860845. Explicit case loading supports Undo; saved custom inputs are not silently replaced.
+- Reviewed all fourteen terminal-growth choices. Current annual research defaults use 3% nominal USD for Google, Microsoft and Amazon; the other eleven remain unchanged. This is a documented analyst judgment, not a Damodaran-prescribed number. Terminal reinvestment adjusts with growth/ROIC. The terminal-only change versus the last explicit-year growth is disclosed.
+- Added a source-linked English/Simplified Chinese review page and sanitized source provenance. Frozen research cases, source preset JSON, original constructors and claims calculations remain unchanged.
+
+Verification: full suite 1,328 tests, 1,326 passed, one unchanged external AAOI raw-cache failure and one existing skip. Independent economic replay, export/restore, zero-uncertainty simulation and source-hash checks passed. Static 390/1440 review found no clipping or overflow in the selected-case status, comparison action or review page; native smoke verification follows publication.
+
 ## 2026-10-18 · Simplified Chinese, explicit simulation runs and annual metric uncertainty
 
 - Switched runtime presentation to Simplified Chinese, with safe migration of the earlier language preference and exact source/number preservation.

@@ -1,3 +1,4 @@
+import {currentResearchDraft} from '../dist/current-research-defaults.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -37,7 +38,7 @@ test('complete presets: fresh defaults, company switches and reload retain full 
  const h=await startResearchWorkspace();
  for(const preset of readBundle().presets){
   h.select(preset.ticker);const d=h.getState().draft;
-  assert.deepEqual(withoutTime(d),withoutTime(studioResearchDraft(preset,readBundle())),preset.ticker);
+  assert.deepEqual(withoutTime(d),withoutTime(currentResearchDraft(preset,readBundle())),preset.ticker);
   assert.match(h.get('#research-preset-state').textContent,/Complete research preset/);
   assert.ok(h.get('[data-research-action="use-research"]'));
  }
@@ -110,7 +111,7 @@ test('complete presets: Guided explicitly loads selected complete Annual case wi
 test('complete presets: real Guided-to-Annual handoff and Undo preserve both models across company selection',async()=>{
  const storage=new Map(),annual=await startResearchWorkspace({storage});annual.select('GOOG');annual.input(annual.field('annual','revenue',0),'712345');const oldAnnual=annual.getState().draft;annual.select('AAPL');
  const guided=await startStudio({storage,annualWorkspace:{useResearch:annual.useResearch}});guided.change('#current-company','GOOG');guided.input('#g-growth','22');const oldGuided=structuredClone(guided.state('GOOG'));
- guided.get('#use-research').click();assert.equal(annual.getState().company.ticker,'GOOG');assert.equal(annual.getState().draft.forecastHorizonYears,15);assert.equal(annual.navigations.at(-1),'renewed');assert.deepEqual(guided.state('GOOG'),oldGuided);
+ guided.get('#use-research').click();assert.equal(annual.getState().company.ticker,'GOOG');assert.equal(annual.getState().draft.forecastHorizonYears,20);assert.equal(annual.navigations.at(-1),'renewed');assert.deepEqual(guided.state('GOOG'),oldGuided);
  annual.action('undo');assert.deepEqual(withoutTime(annual.getState().draft),withoutTime(oldAnnual));assert.equal(annual.navigations.at(-1),'current');assert.deepEqual(guided.state('GOOG'),oldGuided);
 });
 
