@@ -40,7 +40,9 @@ export async function fetchCompanyCatalog(fetcher=globalThis.fetch,{timeoutMs=30
 const legacyNames=Object.freeze({AAPL:'Apple',MSFT:'Microsoft',AMZN:'Amazon',GOOG:'Alphabet / Google',META:'Meta Platforms',NVDA:'NVIDIA',COHR:'Coherent',LITE:'Lumentum',AAOI:'Applied Optoelectronics',NBIS:'Nebius',MU:'Micron Technology',AVGO:'Broadcom',TSM:'Taiwan Semiconductor Manufacturing / TSMC',TSLA:'Tesla'});
 
 export function directoryEntries(library,catalog){
- const ready=library.companies.map(row=>({id:row.ticker,ticker:row.ticker,company:row.company||row.name||legacyNames[row.ticker]||row.ticker,aliases:[],readiness:'ready'}));
+ // Display-only fallback from the verified directory; source/security identity is unchanged.
+ const verifiedNames=new Map((catalog?.companies||[]).filter(isUSRobinhoodCandidate).map(row=>[row.ticker,row.company]));
+ const ready=library.companies.map(row=>({id:row.ticker,ticker:row.ticker,company:row.company||row.name||legacyNames[row.ticker]||verifiedNames.get(row.ticker)||row.ticker,aliases:[],readiness:'ready'}));
  const legacy=new Set(ready.map(row=>row.ticker));
  return [...ready,...(catalog?.companies||[]).filter(row=>!legacy.has(row.ticker)&&isUSRobinhoodCandidate(row))];
 }

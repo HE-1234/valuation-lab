@@ -1,5 +1,11 @@
 # Change log
 
+## 2026-10-18 · Fabrinet display and compact result card
+
+- Shows the verified Fabrinet company name in the ready selector and name-based search without changing source identity or saved cases.
+- Keeps the original compact two-value card and places the same five FN risk conditions immediately below it, always visible in the result column. Full allocation arithmetic remains in Value & limitations.
+- No numerical, source-data, stylesheet, quiz or security-identity changes. Full suite: 1,562 passed, zero failed, one existing skip; 246 focused tests, 380 independent checks and eight matched bilingual mobile/desktop static captures passed.
+
 ## 2026-10-18 · Fabrinet conditional research and simulation clarity
 
 - Added FN with three audited fiscal-origin scenarios, ten-year references, explicit capital claims and a coupled ordinary-share/customer-warrant allocation. Base/downside/upside reproduce approximately $184.96/$82.09/$344.67 at the June 26, 2026 origin using later research information; current-price comparisons remain unavailable.
