@@ -1,3 +1,4 @@
+import {incrementalCaseVersion,incrementalIdentityValid} from './incremental-research-identity.js';
 // Explicit, editable horizon sensitivities. Frozen research cases are never changed.
 import {marginPathIssues,marginAtYear} from './margin-path.js';
 import {RESEARCH_PROFILE_ID,RESEARCH_VERSION} from './annual-research-identity.js';
@@ -74,7 +75,7 @@ export function calculateDerivedReinvestment(d,revenueRows,{baselineAnnual=d.der
 
 function requireAnnualIdentity(d,c){
  if(!object(d)||![1,2].includes(d.schemaVersion)||!validRows(d.annual)||!validTerminal(d.terminal)||!finite(d.anchor?.revenue)||d.anchor.revenue<=0)throw Error('Complete valid annual and terminal inputs before deriving a growth horizon.');
- if(!c||d.profileId!==RESEARCH_PROFILE_ID||d.version!==RESEARCH_VERSION||d.sourceScenario!==c.scenario||d.caseId!==`${RESEARCH_VERSION}:${c.ticker}:${c.scenario}`||(d.schemaVersion===2&&d.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||d.forecastHorizonYears!==d.annual.length||(d.schemaVersion===1&&d.forecastHorizonYears!==c.forecastHorizonYears)||d.ticker!==c.ticker||d.currency!==c.currency||d.discountOrigin!==c.valuationTiming?.discountOrigin||d.anchor.revenue!==c.anchor?.revenue)throw Error('The derived forecast must retain its original dated research identity.');
+ if((d.incrementalResearch&&!incrementalIdentityValid(d))||!c||d.profileId!==RESEARCH_PROFILE_ID||d.version!==(incrementalCaseVersion(c)||RESEARCH_VERSION)||d.sourceScenario!==c.scenario||d.caseId!==`${incrementalCaseVersion(c)||RESEARCH_VERSION}:${c.ticker}:${c.scenario}`||(d.schemaVersion===2&&d.derivedForecast?.sourceForecastHorizonYears!==c.forecastHorizonYears)||d.forecastHorizonYears!==d.annual.length||(d.schemaVersion===1&&d.forecastHorizonYears!==c.forecastHorizonYears)||d.ticker!==c.ticker||d.currency!==c.currency||d.discountOrigin!==c.valuationTiming?.discountOrigin||d.anchor.revenue!==c.anchor?.revenue)throw Error('The derived forecast must retain its original dated research identity.');
 
 }
 

@@ -1,3 +1,4 @@
+import {incrementalResearchDraft} from './incremental-research.js';
 import selectedGOOG,{selectedGrowthPercentages} from './goog-selected-scenario-data.js';
 import {annualPathDefaults} from './annual-path-sampling.js';
 import review from './terminal-growth-review-data.js';
@@ -26,6 +27,7 @@ export function terminalReviewedResearchDraft(preset,bundle){
  return draft;
 }
 export function currentResearchDraft(preset,bundle){
+ if(preset?.incrementalResearch)return incrementalResearchDraft(preset);
  const reviewed=terminalReviewedResearchDraft(preset,bundle);
  if(preset.ticker!=='GOOG')return reviewed;
  const draft=structuredClone(selectedGOOG.draft);
@@ -51,6 +53,7 @@ export function loadCurrentResearchPreset(previous,preset,bundle){
  return {draft,undo:structuredClone(previous)};
 }
 export function currentResearchPresetStatus(draft,bundle){
+ if(draft?.incrementalResearch){const p=studioPresetFor(bundle,draft.ticker);if(!p)return 'Research preset unavailable';const baseline=incrementalResearchDraft(p);return ['annual','terminal','timing','bridgeInputs','researchSimulationConfig','derivedForecast','marginPath','selectedIncrementalScenario'].some(k=>JSON.stringify(draft[k])!==JSON.stringify(baseline[k]))?'Your changes · based on the complete research preset':'Complete research preset · annual model';}
  if(!draft?.terminalGrowthReview){const status=researchPresetStatus(draft,bundle);return status==='Complete research preset · annual model'?'Saved preset version retained · newer research available':status;}
  const preset=studioPresetFor(bundle,draft?.ticker);if(!preset)return 'Research preset unavailable';
  const baseline=currentResearchDraft(preset,bundle);

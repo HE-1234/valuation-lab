@@ -1,3 +1,4 @@
+import {incrementalMessageKeys} from './incremental-messages.js';
 import {annualMetricMessageKeys} from './annual-metric-messages.js';
 // Only explicitly authored, complete messages are eligible. User content is never scanned.
 import {registerCatalog,t,localizedText,bindText,localizeMarkedNodes} from './i18n.js';
@@ -7,7 +8,7 @@ import en from './locales/annual.en.js';
 import zh from './locales/annual.zh-Hans.js';
 registerCatalog('annual', {en, 'zh-Hans':zh});
 const keys=new Map(Object.entries(en).map(([key,value])=>[value,'annual.'+key]));
-for(const [text,key]of Object.entries(annualMetricMessageKeys))keys.set(text,key);
+for(const [text,key]of Object.entries({...annualMetricMessageKeys,...incrementalMessageKeys}))keys.set(text,key);
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const escapeRegex=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const patterns=Object.entries(en).filter(([key,message])=>/[A-Za-z]{2}/.test(message.replace(/\{\w+\}/g,''))&&/\{\w+\}/.test(message)).map(([key,message])=>{

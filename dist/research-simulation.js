@@ -29,7 +29,7 @@ const levels=Object.freeze({p5:.05,p10:.1,p25:.25,p50:.5,p75:.75,p90:.9,p95:.95}
 const capitalPolicies=Object.freeze(['fixed-schedule','revenue-scaled',DERIVED_CAPITAL_POLICY]);
 
 export function simulationResearchDefaults(draft){
- return {trials:4000,seed:'annual-research',binCount:36,dependence:'independent',capitalPolicy:'fixed-schedule',method:'annual-path',annualPath:annualPathDefaults(draft?.annual?.length??30),annualMetrics:annualMetricDefaults(draft?.annual?.length??30,'investmentFactor'),...(draft?{annualTerminal:annualTerminalDefaults(draft.terminal)}:{}),
+ return {trials:4000,seed:'annual-research',binCount:36,dependence:'independent',capitalPolicy:'fixed-schedule',method:'annual-path',annualPath:{...annualPathDefaults(draft?.annual?.length??30),...(draft?.incrementalResearch?{innovationSD:0,persistence:0}:{})},annualMetrics:annualMetricDefaults(draft?.annual?.length??30,'investmentFactor'),...(draft?{annualTerminal:annualTerminalDefaults(draft.terminal)}:{}),
   drivers:Object.fromEntries(RESEARCH_SIMULATION_DRIVER_KEYS.map(k=>[k,{type:'fixed',value:fixedStresses[k]}]))};
 }
 

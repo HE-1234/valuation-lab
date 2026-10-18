@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "release": "KLAC incremental fiscal-origin v3",
+  "sourceBase": "d9c0a3bcef331232dfc2df7af2c545858959f4a7",
+  "preparedAsOf": "2026-10-18",
+  "company": "KLAC",
+  "scope": "Separate incremental package. Original fourteen and selected GOOG source files preserved byte-identically. No other newly researched company added.",
+  "testResults": {
+    "fullSuite": {
+      "command": "npm test",
+      "total": 1356,
+      "passed": 1355,
+      "failed": 0,
+      "skipped": 1,
+      "skip": "Pre-existing SEC research-cache check; raw research cache is not bundled."
+    },
+    "focused": {
+      "command": "node --test tests/incremental-klac.test.mjs tests/research-workspace.test.mjs",
+      "total": 47,
+      "passed": 47,
+      "failed": 0
+    },
+    "diffCheck": "git diff --check passed",
+    "browser": "Local Chromium failed before page load due sandbox process socket and runtime mount restrictions. No real-browser visual validation claimed; parent owns native post-deployment smoke."
+  },
+  "benchmarks": {
+    "baseEV": 104866.68020203672,
+    "basePerShare": 75.41167193329436,
+    "downsideEV": 61199.28893709977,
+    "downsidePerShare": 42.25505298134887,
+    "dilutedSharesMillions": 1317.003743,
+    "discountOrigin": "2026-06-30",
+    "informationAsOf": "2026-10-18"
+  },
+  "gates": {
+    "currentPriceComparison": false,
+    "asKnownBacktest": false,
+    "sourceIdentityValidated": true,
+    "USListingAndRobinhoodPublicPageRequired": true,
+    "accountSpecificTradeabilityAsserted": false,
+    "fixedSimulationDefault": true,
+    "manualSimulationRunOnly": true,
+    "nullClaimsBlockPerShare": true,
+    "changedValuationDateBlocksPerShare": true,
+    "separateVersionedDraftStorage": true,
+    "ChineseScopeAndControls": true
+  },
+  "changedFiles": [
+    {
+      "path": "dist/annual-growth-horizon.js",
+      "sha256": "0026c9d0e2394d8aa6f837deb986c4aad8e91a1018908b170c4a52c6bb2129e0"
+    },
+    {
+      "path": "dist/annual-localization.js",
+      "sha256": "e2c479934df9aa463c87c1e7cb0f2a5cd7bff1a29d9f55609522fef4a26492f1"
+    },
+    {
+      "path": "dist/current-research-defaults.js",
+      "sha256": "fcf648d043ab3328318cfc8e42cc2492180f6ea891f91c9a80652acd6b583565"
+    },
+    {
+      "path": "dist/data/incremental-research-2026-10-18/KLAC-v3-audit.json",
+      "sha256": "07a67003f35a213d3f36450ba4b4caf7a279f8b3e4d7d209c1dae9e8476145e1"
+    },
+    {
+      "path": "dist/data/incremental-research-2026-10-18/KLAC-v3-source.json",
+      "sha256": "4276b579351328b2dcfd425bcea9ae7d532ddd35223f7e9f2ad89b0bd1f3a351"
+    },
+    {
+      "path": "dist/data/incremental-research-2026-10-18/KLAC-v3.html",
+      "sha256": "646db2f9aea0bfb23c9d83d26ad151a5bb495b3693e4b9c9a19555b805305be1"
+    },
+    {
+      "path": "dist/data/incremental-research-2026-10-18/cases.json",
+      "sha256": "8aaf0732e3143b3d7c2ff2a4b9b398f7fcc5ee4c67b8631a448e1e34fb3c39f4"
+    },
+    {
+      "path": "dist/incremental-messages.js",
+      "sha256": "a0dd39745f069f57c6d9d91f06e06faeaa8b4aeeeec8fd8a232eee4e608b22e6"
+    },
+    {
+      "path": "dist/incremental-research-claims.js",
+      "sha256": "b6e061163433fd15f649e054254b2525a616e2d845c28cb26ee12a404f7a5db7"
+    },
+    {
+      "path": "dist/incremental-research-identity.js",
+      "sha256": "1df02b4e3a1432f3a58f8f79e6fbb85ecbfa90abc588b5d5029b20df860dd123"
+    },
+    {
+      "path": "dist/incremental-research-registry.js",
+      "sha256": "491d8038d57f7e5101bb959e49b8582b69ef619c491230e2065f8a05b1febf2f"
+    },
+    {
+      "path": "dist/incremental-research-view.js",
+      "sha256": "7fe9ad99d7f90b368e4405fa30c452dea16fb88875d1b5ae134b2794968e7d1f"
+    },
+    {
+      "path": "dist/incremental-research.js",
+      "sha256": "1f443de8c996ae2ab8a375dd2ccb23c6a69f3ffbe0e802d4f0b699fe6daeb044"
+    },
+    {
+      "path": "dist/research-claims.js",
+      "sha256": "051d4bb5a7ad61ff4d26c9abc3f730ad57798cddb015e4aeba6ce36ddde7b74e"
+    },
+    {
+      "path": "dist/research-model.js",
+      "sha256": "288b8523948217e0b3d3317e64d2fed13c31a4796d8eebb646245785948a273f"
+    },
+    {
+      "path": "dist/research-simulation-view.js",
+      "sha256": "950144a4af203a32776c942fa8eded3237adf33bf2f1b18f144321f02c4054db"
+    },
+    {
+      "path": "dist/research-simulation.js",
+      "sha256": "1812bd74de15555fe47c87570519cf52d0bc43ebda4a65a3af50564de8f872cb"
+    },
+    {
+      "path": "dist/research-view.js",
+      "sha256": "16e378ea8db04d57fd00c1a000ea54de653fbdf90b35d3f50ec2efef61942fa7"
+    },
+    {
+      "path": "scripts/build-incremental-research.py",
+      "sha256": "13e56b7d111d58ea515345c089dae0bb2d82478b7ab7275e2e45a6353e215678"
+    },
+    {
+      "path": "tests/incremental-klac.test.mjs",
+      "sha256": "15f7b7a60cbca9bc2abb7fb3cbe6e0a77fc0744c2c52a231582c5a2700171631"
+    },
+    {
+      "path": "tests/incremental_klac_browser_qa.py",
+      "sha256": "029726bcc80a7db78efc9cf0589a9b97df5adfc0fc088156b97a25b67cde82e1"
+    },
+    {
+      "path": "tests/research-workspace-harness.mjs",
+      "sha256": "993b076c156aec14efffd16e006cc2eb539e72095e30c4afde3d330b9f503380"
+    }
+  ]
+}

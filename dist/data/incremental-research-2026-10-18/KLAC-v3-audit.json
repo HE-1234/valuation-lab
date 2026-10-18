@@ -1,0 +1,192 @@
+{
+  "auditedVersion": "KLAC-2026-10-18-v3",
+  "auditedSha256": "c1c67c548fd5ca25203d368c5373a1dc9b0a718f65e1519a5f73cf043bb6c1be",
+  "date": "2026-10-18",
+  "units": "USD millions, shares millions, per-share USD",
+  "checks": [
+    "Bridge sums; actual shares plus existing RSUs; no EPS-average count",
+    "WACC independently rebuilt from risk-free, ERP, beta, target leverage and cost of debt",
+    "20 rows contiguous and arithmetically reconciled",
+    "Future grants at3%; non-SBC residual dollars unchanged from v2",
+    "Legacy expense explicitly included/reversed, sum558.1, no economic uplift",
+    "Same-period reinvestment and terminal g/ROIC equivalent under timing-adjusted sales/capital",
+    "Both DCF values independently match author validation using cumulative discount factors",
+    "Ten-year canonical cost-line EBIT reconciles; FY2020/2022/2023 errors corrected",
+    "Compensation sensitivity independently reproduces values without offsetting cost/margin changes"
+  ],
+  "allNumericalChecksPassed": true,
+  "valuationTiming": {
+    "mode": "origin",
+    "discountOrigin": "2026-06-30",
+    "cashFlowTiming": "year-end",
+    "researchAsOf": "2026-10-18",
+    "warning": "Retrospective information-set scenario discounted to FY2026 financial-anchor date. Not an as-known-on-June30 backtest or current-Oct18 value. No price comparison until origin compatibility is resolved."
+  },
+  "results": [
+    {
+      "scenario": "base",
+      "rowResults": [
+        {
+          "year": 1,
+          "NOPAT": 6054.463805962498,
+          "FCFF": 3999.613739295833,
+          "cumulativeDiscountFactor": 1.109423951,
+          "PVFCFF": 3605.1265485035788
+        },
+        {
+          "year": 2,
+          "NOPAT": 7210.288267346136,
+          "FCFF": 5393.853073012802,
+          "cumulativeDiscountFactor": 1.2308215030524503,
+          "PVFCFF": 4382.3194993230045
+        },
+        {
+          "year": 3,
+          "NOPAT": 8177.75509607727,
+          "FCFF": 6628.222942574146,
+          "cumulativeDiscountFactor": 1.365502854892208,
+          "PVFCFF": 4854.052790023185
+        },
+        {
+          "year": 4,
+          "NOPAT": 9044.2363529484,
+          "FCFF": 7677.632894379333,
+          "cumulativeDiscountFactor": 1.5149215723762928,
+          "PVFCFF": 5068.006842318751
+        },
+        {
+          "year": 5,
+          "NOPAT": 9728.850437886147,
+          "FCFF": 8494.683977922074,
+          "cumulativeDiscountFactor": 1.6806902762808391,
+          "PVFCFF": 5054.282813321062
+        },
+        {
+          "year": 6,
+          "NOPAT": 10027.682658615739,
+          "FCFF": 8779.982433843234,
+          "cumulativeDiscountFactor": 1.8575116343224296,
+          "PVFCFF": 4726.74424838579
+        },
+        {
+          "year": 7,
+          "NOPAT": 10232.09219644544,
+          "FCFF": 8909.832356120794,
+          "cumulativeDiscountFactor": 2.045103982976236,
+          "PVFCFF": 4356.664712546465
+        },
+        {
+          "year": 8,
+          "NOPAT": 10334.797928865843,
+          "FCFF": 8950.575358156955,
+          "cumulativeDiscountFactor": 2.2430185945301657,
+          "PVFCFF": 3990.4151396621787
+        },
+        {
+          "year": 9,
+          "NOPAT": 10370.469326558385,
+          "FCFF": 8791.694979397584,
+          "cumulativeDiscountFactor": 2.450628964270032,
+          "PVFCFF": 3587.5259403115574
+        },
+        {
+          "year": 10,
+          "NOPAT": 10337.557489876186,
+          "FCFF": 8528.484929147864,
+          "cumulativeDiscountFactor": 2.6671226732944713,
+          "PVFCFF": 3197.6350448902854
+        }
+      ],
+      "PVExplicit": 42822.773579285866,
+      "PVTerminal": 62043.9066227509,
+      "EV": 104866.68020203678,
+      "equity": 99317.45420203677,
+      "perShare": 75.4116719332944,
+      "terminalReinvestment": 1872.390100353817,
+      "terminalValueFraction": 0.5916455684800619
+    },
+    {
+      "scenario": "cycle-and-export-downside",
+      "rowResults": [
+        {
+          "year": 1,
+          "NOPAT": 5085.435474655001,
+          "FCFF": 3660.873347382273,
+          "cumulativeDiscountFactor": 1.109423951,
+          "PVFCFF": 3299.796569275863
+        },
+        {
+          "year": 2,
+          "NOPAT": 3910.403580967799,
+          "FCFF": 3910.403580967799,
+          "cumulativeDiscountFactor": 1.2308215030524503,
+          "PVFCFF": 3177.0679755512533
+        },
+        {
+          "year": 3,
+          "NOPAT": 4393.410838167314,
+          "FCFF": 3552.8752455506465,
+          "cumulativeDiscountFactor": 1.365502854892208,
+          "PVFCFF": 2601.8804961276396
+        },
+        {
+          "year": 4,
+          "NOPAT": 4898.794480020072,
+          "FCFF": 4117.912235750995,
+          "cumulativeDiscountFactor": 1.5149215723762928,
+          "PVFCFF": 2718.2346009448356
+        },
+        {
+          "year": 5,
+          "NOPAT": 5275.479679700845,
+          "FCFF": 4528.399233748734,
+          "cumulativeDiscountFactor": 1.6806902762808391,
+          "PVFCFF": 2694.368675571519
+        },
+        {
+          "year": 6,
+          "NOPAT": 5484.450040716751,
+          "FCFF": 4761.613174214521,
+          "cumulativeDiscountFactor": 1.8575116343224296,
+          "PVFCFF": 2563.436527788656
+        },
+        {
+          "year": 7,
+          "NOPAT": 5666.718260760567,
+          "FCFF": 4901.200385716806,
+          "cumulativeDiscountFactor": 2.045103982976236,
+          "PVFCFF": 2396.5531466933517
+        },
+        {
+          "year": 8,
+          "NOPAT": 5893.386991190989,
+          "FCFF": 5086.291509945384,
+          "cumulativeDiscountFactor": 2.2430185945301657,
+          "PVFCFF": 2267.610051182293
+        },
+        {
+          "year": 9,
+          "NOPAT": 6099.655535882673,
+          "FCFF": 5218.3072703624675,
+          "cumulativeDiscountFactor": 2.450628964270032,
+          "PVFCFF": 2129.3746815388854
+        },
+        {
+          "year": 10,
+          "NOPAT": 6282.645201959153,
+          "FCFF": 5340.248421665282,
+          "cumulativeDiscountFactor": 2.6671226732944713,
+          "PVFCFF": 2002.2507682666596
+        }
+      ],
+      "PVExplicit": 25850.573492940955,
+      "PVTerminal": 35348.71544415882,
+      "EV": 61199.28893709977,
+      "equity": 55650.06293709978,
+      "perShare": 42.255052981348875,
+      "terminalReinvestment": 970.6686837026895,
+      "terminalValueFraction": 0.5776001005581943
+    }
+  ],
+  "judgment": "PASS for an explicitly retrospective June-30-origin research scenario. Current-date market comparison and as-known backtesting remain blocked. Integration must preserve origin labels, canonical history, source/assumption separation and limitations. No material arithmetic or source-fidelity blocker remains in reviewed v3."
+}

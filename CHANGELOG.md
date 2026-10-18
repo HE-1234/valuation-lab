@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · KLA incremental research case
+
+- Added KLAC as the first independently reviewed incremental company, with ten annual forecasts, corrected historical references, dated capital assumptions, bilingual evidence and explicit uncertainty controls. Original fourteen research records remain byte-identical.
+- Base and downside conditional allocations reproduce $75.4116719333 and $42.2550529813 per split-adjusted share at the June 30, 2026 origin using October 18 research information. Current-price comparison and as-known backtesting are disabled for this retrospective information set.
+- Added versioned identity, storage/export, bounded claim controls and deterministic manual-Monte-Carlo defaults. Unknown claims are not silently treated as known zeros.
+- Regression suite: 1,355 passed, zero failed, one pre-existing skip. Independent methodology/adapter review passed. Static English/Simplified Chinese Result/Claims views at 390/1440 passed eight overflow checks; native browser smoke follows publication.
+
 ## 2026-10-18 · U.S.-listed company scope
 
 - Limited the active directory to 45 additional U.S.-exchange-listed equities with individually verified public Robinhood support, alongside the original fourteen researched companies. U.S.-listed foreign issuers and ADRs remain eligible; nationality is not a filter.
