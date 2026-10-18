@@ -85,6 +85,10 @@ for(const pair of [["All-in residual non-operating claim allowance", "全包剩�
 pairs.push(...[["SNPS annual labels must retain their exact fiscal years ending October 31. Export the saved draft before restoring the reviewed case.", "SNPS 年度标签须保留十月三十一日结束的准确财年。恢复已复核情景前，请先导出已保存草稿。"], ["SNPS investment magnitude loses precision in the funding-floor reconciliation. Reduce the entered magnitude; the saved value is retained.", "SNPS 投资数值过大，导致投资下限核对丢失精度。请减小输入量级；保存值仍予保留。"], ["July legal common plus explicitly assumed October-2025 unissued award quantities and ESPP; not diluted EPS weighted-average shares", "七月法定普通股加明确假设的 2025 年十月未发行奖励及员工购股单位；并非摊薄每股收益加权平均股数"]]);
 pairs.push(["SNPS capital responses and draws change entered investment before the separate FY2027 floor top-up. Entered releases retain their sign, but funded FY2027 investment cannot fall below the selected analyst floor. Later years have no such floor; falling revenue does not automatically create a capital release.", "SNPS 资本响应及抽样先改变输入投资，再另加 2027 财年下限补足额。输入释放额保留符号，但 2027 财年实际出资投资不得低于选定分析下限。后续年度无此下限；收入下降不自动产生资本释放。"]);
 pairs.push(['Mixed actual / forecast reference','实际与预测混合基准']);
+pairs.push(['Rolling reported-period reference','滚动已报告期间参考']);
+pairs.push(['Rolling anchor spans approximately 367 days; forecast years end June 30.','滚动基期约为 367 天；预测年度于六月三十日结束。']);
+pairs.push(['ONTO terminal g/ROIC investment is below the physical, working-capital and operating-cash funding floor. Revise the terminal assumptions.','ONTO 终值 g/ROIC 投资低于实物资本、营运资本和经营现金资金下限。请修改终值假设。']);
+pairs.push(['Occupancy cost-headroom stress','场地成本余量压力情景'],['Load 20bp occupancy stress','载入 20 基点场地成本压力情景'],['Analyst cost stress; not measured incremental lease expense','分析成本压力情景；并非测得的增量租赁费用'],['NYSE common share; not ADR','纽约证券交易所普通股；并非 ADR']);
 const en={},zh={},keys={};pairs.forEach(([a,b],i)=>{const key='copy'+i;en[key]=a;zh[key]=b;keys[a]='incremental.'+key;});
 registerCatalog('incremental',{en,'zh-Hans':zh});
 export const incrementalMessageKeys=Object.freeze(keys);

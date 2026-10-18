@@ -1,7 +1,7 @@
 import {jointEffectiveConfig} from './joint-simulation-config.js';
 // Application policy only. Frozen company research and saved configurations are
 // never rewritten. Call this solely when constructing fresh/reset defaults.
-export const REFERENCE_DEFAULT_TICKERS=Object.freeze(['KLAC','AMAT','LRCX','ASML','FN','CDNS','SNPS','NVMI']);
+export const REFERENCE_DEFAULT_TICKERS=Object.freeze(['KLAC','AMAT','LRCX','ASML','FN','CDNS','SNPS','NVMI','ONTO']);
 export const hasResearchReferencePolicy=draft=>!!draft?.incrementalResearch&&REFERENCE_DEFAULT_TICKERS.includes(draft.ticker);
 export function applyResearchReferenceDefaults(draft,config){
  if(!hasResearchReferencePolicy(draft))return config;

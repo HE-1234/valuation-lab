@@ -1,3 +1,4 @@
+import {ontoAnnualFunding} from './onto-funding.js';
 import {nvmiAnnualFunding} from './nvmi-funding.js';
 import {snpsAnnualFunding} from './snps-opening-stub.js';
 import {operatingCashChange} from './fn-operating-cash.js';
@@ -12,7 +13,7 @@ export function annualCapitalDiagnostics(d,index=0){
  const validRevenue=finite(row?.revenue)&&row.revenue>0&&finite(previous)&&previous>0;
  const change=validRevenue?row.revenue-previous:null;
  const cashChange=row?operatingCashChange(d,index):0;
- const funding=d?.ticker==='NVMI'&&finite(row?.reinvestment)&&finite(row?.revenue)?nvmiAnnualFunding(d,index,row):d?.ticker==='SNPS'&&finite(row?.reinvestment)&&finite(row?.revenue)?snpsAnnualFunding(d,index,row):null;
+ const funding=d?.ticker==='ONTO'&&finite(row?.reinvestment)&&finite(row?.revenue)?ontoAnnualFunding(d,index,row):d?.ticker==='NVMI'&&finite(row?.reinvestment)&&finite(row?.revenue)?nvmiAnnualFunding(d,index,row):d?.ticker==='SNPS'&&finite(row?.reinvestment)&&finite(row?.revenue)?snpsAnnualFunding(d,index,row):null;
  const deltaRevenue=finite(change)?change:null,reinvestment=funding?funding.reinvestment:finite(row?.reinvestment)?operatingInvestment(d,row)+cashChange:null;
  let effectiveMarginalSalesCapital=null,marginalAfterTaxReturnProxy=null,ratioReason='',proxyReason='';
  if(deltaRevenue===null)ratioReason='Positive current and prior revenue are required.';
