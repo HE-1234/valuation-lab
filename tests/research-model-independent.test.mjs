@@ -16,10 +16,10 @@ const expectedSourceSHA='02c8e133893cff642369ba58d29b7e5ad091c204e08a6b37acbff28
 const expectedNumericSHA='dae4599e41f8bfade208eab2f6038412c4f8d155af52db16e91ac6e28f4a3447';
 const protectedHashes={
   // Optional margin-path dirty-state and explicit reset support; source ledger remains frozen.
-  "dist/base-cases.js": "274054688889cf25ab524f6081c0e518b4131d4e6b853c3d55b14fd6e07e0b03",
+  "dist/base-cases.js": "5cec621295445ad1df175954743294045cc55138c0e795e76fde1d9df77c06aa",
   "dist/current-claims-gates.js": "dff896af03e56a6de7bafb6b26af9793d862d2d87097468fc999729f7205a82a",
   // Effective margin-path metadata and finite-result gate; claims arithmetic is unchanged.
-  "dist/current-claims.js": "bccd6df2b102608dcf7d5da20294a9c4861134608c23e7f760c626bebd0feabc",
+  "dist/current-claims.js": "c7acf3395f040458e7ca939fd45a10ad8e435c3fa22efbef17dc49e0f2db2583",
   "dist/data/companies.json": "6cdf199740c0549e32258211dd31abea59259cf46ecd7526b43bf932abf1e4b9",
   "dist/data/company-base-cases.json": "883e8ed981bc307b7d477aca82e5978d05215234a57c5df9d3c551bac3d642c6",
   "dist/data/company-history.json": "f611b66c07983fdb2ffb4e8d6805e64775342e2da5182d5aecd86182c6876853",

@@ -1,5 +1,15 @@
 # Change log
 
+## 2026-10-18 · User Annual Report redesign and capital-efficiency phases
+
+- Integrated the user's GitHub Annual Report UI (commit `7e211252e3adf87fed61fe3caddbe210a3b71127`) with the latest growth-horizon, margin-phase and claims functionality. The user-supplied skin CSS, palettes, font, loader and motion layer are preserved; theme chooser labels/swatches now match those editions.
+- Corrected decorative timing strips for independent 10–30-year forecasts, retained exact fractional values during number scrubbing, and bound simulation rain to native representative outcomes/playback rather than a second sampling clock.
+- Added optional independent early/later incremental sales-to-capital assumptions in Guided, with a separately timed terminal-consistent fade. Existing cases remain unchanged until selected. Monte Carlo uses the existing shared efficiency draw for both ratios.
+- Added live marginal-return proxy and investment diagnostics. Year-by-year keeps its direct investment schedule; no second investment deduction is introduced. Actual whole-company ROIC is withheld without a reliable opening invested-capital balance. Small/large ratios remain readable without false rounded zeros.
+- Preserved invalid-input gates, precise stored inputs, full Undo, original financial data, research provenance and public access. See `UI-INTEGRATION.md` for method and design provenance.
+
+Verification: final suite 1,140 tests, 1,138 passed, one unchanged missing-AAOI-raw-cache failure and one existing SEC-cache skip. Independent all-14-company default and seeded simulation captures match V32; all 72 existing data-file hashes are unchanged. Separate arithmetic checks cover 576 optional-capital paths, 160 direct-investment rows, invalid-state persistence and terminal continuity. Twenty-one labeled static desktop/phone captures cover all six user editions. Native-browser interaction is checked separately after publication; static captures are not browser screenshots.
+
 ## 2026-10-18 · Optional interim margin and final fade
 
 - Added opt-in interim margin, arrival year, plateau/fade start, terminal margin and independent terminal-margin year in Guided and Year-by-year. Actual all-year margin charts show the generated path, including equal start/end levels with an interim peak.

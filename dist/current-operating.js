@@ -1,5 +1,6 @@
 import {defaults} from './engine.js';
 import {marginPathIssues,marginAtYear} from './margin-path.js';
+import {capitalPathIssues,resolvedCapitalPath,applyCapitalEfficiency} from './capital-efficiency.js';
 // Current-only explicit operating paths. Scalars remain the four sampled
 // economic drivers; the same deterministic adapter constructs every annual path.
 export const FLEXIBLE_PROFILE_ID='flexible-growth-v1';
@@ -77,7 +78,7 @@ function legacyOperatingAssumptions(snapshot,draft,assumptions){
   if(p.schemaVersion===2){
    // Authored a.years remains revenue-growth maturity. Extend only the engine's
    // explicit forecast until every operating transition is terminal-consistent.
-   const forecastYears=Math.max(n,draft.marginPath?.enabled===true?draft.marginPath.terminalYear:p.marginMaturityYears,p.capitalMaturityYears);
+   const forecastYears=Math.max(n,draft.marginPath?.enabled===true?draft.marginPath.terminalYear:p.marginMaturityYears,(draft.capitalPath?.enabled===true?draft.capitalPath.terminalYear:p.capitalMaturityYears));
    const yearlyOverrides=Array.from({length:forecastYears},(_,i)=>{
     const year=i+1,growthFade=progress(year,e,n),capitalFade=progress(year,p.capitalHoldYears,p.capitalMaturityYears);
     const growth=p.mode==='immediate'?a.growth+(a.terminalGrowth-a.growth)*Math.min(i,n-1)/(n-1):year<=e?early[i]:early[e-1]+(a.terminalGrowth-early[e-1])*growthFade;
@@ -107,7 +108,14 @@ export function resolvedMarginPath(snapshot,draft,assumptions=draft.assumptions)
  return {...p,startMargin:(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue,terminalMargin:assumptions.targetMargin,interimMargin:p?.interimMargin+(assumptions.targetMargin-draft.assumptions.targetMargin)};
 }
 export function operatingIssues(snapshot,draft){
- const errors=legacyOperatingIssues(snapshot,draft),p=draft?.marginPath;
+ const errors=[...legacyOperatingIssues(snapshot,draft),...capitalPathIssues(draft?.capitalPath)],p=draft?.marginPath;
+ if(draft?.capitalPath?.enabled===true){
+  for(const key of Object.keys(defaults))if(!finite(draft.assumptions?.[key]))errors.push(`${key} must be finite for the capital-efficiency path.`);
+  if(!boundedYear(draft.assumptions?.years))errors.push('Growth maturity must be a whole year from 1 to 30.');
+  if(!finite(draft.normalizationDelta))errors.push('The capital-efficiency path requires finite starting EBIT normalization.');
+  if(draft.assumptions?.yearlyOverrides!=null)errors.push('Do not combine the capital-efficiency path with a second annual-override path.');
+  try{resolvedCapitalPath(draft);}catch(error){errors.push(error.message);}
+ }
  if(p===undefined||p?.enabled===false)return errors;
  if(!p||typeof p!=='object'||Array.isArray(p))return [...errors,'Choose a valid optional margin path.'];
  if(Object.keys(p).some(k=>!['enabled','version','interimMargin','interimYear','declineStartYear','terminalYear'].includes(k)))errors.push('The optional margin path contains unsupported fields. Starting and terminal margins come from normalized EBIT and the terminal-margin assumption.');
@@ -117,14 +125,14 @@ export function operatingIssues(snapshot,draft){
  if(draft.assumptions?.yearlyOverrides!=null)errors.push('Do not combine a margin path with a second annual-override path.');
  return [...errors,...marginPathIssues(resolvedMarginPath(snapshot,draft))];
 }
-export function operatingProfileDefinition(snapshot,draft,assumptions=draft.assumptions){
+function marginOperatingProfileDefinition(snapshot,draft,assumptions=draft.assumptions){
  const base=legacyOperatingProfileDefinition(snapshot,draft);
  if(draft?.marginPath?.enabled!==true)return base;
  const p=draft.operatingProfile,marginPath=resolvedMarginPath(snapshot,draft,assumptions);
- const forecastYears=Math.max(draft.assumptions.years,p?.schemaVersion===2?p.capitalMaturityYears:0,marginPath.terminalYear);
+ const forecastYears=Math.max(draft.assumptions.years,draft.capitalPath?.enabled===true?draft.capitalPath.terminalYear:p?.schemaVersion===2?p.capitalMaturityYears:0,marginPath.terminalYear);
  return {...(base||{id:'margin-path-v1',label:'Independent interim margin path',classification:'User-selected analyst path, not issuer guidance or a fitted forecast'}),marginPath,marginMaturityYears:marginPath.terminalYear,forecastYears,note:'Margin moves from normalized starting EBIT to the interim target, holds through the selected decline-start year, then reaches the terminal target in its independent terminal year and holds. Growth and capital efficiency keep their existing calendars; extending margin timing does not delay either. The explicit forecast continues until all active transitions have finished. Terminal ROIC and snapshot capital claims remain separate judgments.',marginSampling:'One terminal-margin draw shifts interim and terminal margins by the same percentage-point difference. Starting normalized EBIT is unchanged. Infeasible draws are rejected, never clipped.'};
 }
-export function operatingAssumptions(snapshot,draft,assumptions){
+function marginOperatingAssumptions(snapshot,draft,assumptions){
  const errors=operatingIssues(snapshot,draft);if(errors.length)throw Error(errors.join(' '));
  const base=legacyOperatingAssumptions(snapshot,draft,assumptions);
  if(draft.marginPath?.enabled!==true)return base;
@@ -139,4 +147,18 @@ export function operatingAssumptions(snapshot,draft,assumptions){
   return {...row,margin:marginAtYear(path,i+1)};
  });
  return {...base,years,yearlyOverrides};
+}
+
+export function operatingProfileDefinition(snapshot,draft,assumptions=draft.assumptions){
+ const base=marginOperatingProfileDefinition(snapshot,draft,assumptions);
+ if(draft.capitalPath?.enabled!==true)return base;
+ const capitalPath=resolvedCapitalPath(draft,assumptions),p=draft.operatingProfile;
+ const marginYear=draft.marginPath?.enabled===true?draft.marginPath.terminalYear:p?.id===FLEXIBLE_PROFILE_ID&&p.schemaVersion===2?p.marginMaturityYears:assumptions.years;
+ const forecastYears=Math.max(assumptions.years,marginYear,capitalPath.terminalYear);
+ const capitalSampling='One sales / capital draw scales both early and later ratios proportionally; dates stay fixed, and terminal capital intensity follows the sampled mature margin. No extra capital-efficiency draw is added.';
+ const note='Early and later incremental sales / capital are independent analyst assumptions. Later capital intensity fades to (1 + stable growth) × mature margin × (1 − tax) / terminal ROIC on its own calendar. Growth and margin keep their existing timelines; the forecast continues until all active transitions end. The displayed marginal-return proxy is not ROIC on accumulated invested capital.';
+ return {...(base||{id:'capital-efficiency-v1',label:'Early/later capital efficiency',classification:'User-selected analyst path, not issuer guidance or a fitted forecast'}),capitalPath,capitalMaturityYears:capitalPath.terminalYear,forecastYears,capitalSampling,note};
+}
+export function operatingAssumptions(snapshot,draft,assumptions){
+ return applyCapitalEfficiency(snapshot,draft,marginOperatingAssumptions(snapshot,draft,assumptions),assumptions);
 }

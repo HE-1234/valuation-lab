@@ -174,3 +174,8 @@ A longer growth runway can raise or lower value. Inspect absolute revenue scale 
 Profitability can follow a starting → interim → hold → final path, with its own calendar. Both Guided and Year-by-year show actual yearly margin values. The terminal target is the sustainable long-run assumption; an interim peak is optional, not required. Changing revenue maturity does not stretch margin timing. See [method and source notes](MARGIN-PATHS.md).
 
 Disabled/default paths keep their existing values. Guided returns to its simple transition using edited inputs; Year-by-year manual mode retains explicit rows. Full Undo restores the prior case. Active-phase Monte Carlo holds the starting margin fixed and shifts the future targets together.
+
+
+## Annual Report design and capital diagnostics
+
+The user-approved Annual Report UI is the current presentation baseline. See [integration provenance and modeling notes](UI-INTEGRATION.md). Guided optionally supports independently authored early/later incremental sales-to-capital assumptions; Year-by-year retains explicit investment schedules. Return diagnostics are labeled marginal proxies unless a reliable invested-capital stock is supplied.

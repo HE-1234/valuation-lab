@@ -27,12 +27,12 @@ function checkSemantics(h){
 }
 
 test('workspace tables: every company/baseline has a name and native row/column headers, with unchanged source and forecast values',async()=>{
- const h=await startStudio();let baselines=0,supported=0,totalTables=0;
+ const h=await startStudio();let baselines=0,supported=0,totalTables=0,capitalDiagnosticTables=0;
  for(const company of h.library.companies){
   h.change('#current-company',company.ticker);
   for(const raw of company.snapshots){
    baselines++;h.change('#current-snapshot',raw.id);
-   h.step(0);checkSemantics(h);totalTables+=tables(h).length;
+   h.step(0);checkSemantics(h);totalTables+=tables(h).length;if(named(h,'Annual capital efficiency and marginal after-tax return proxy'))capitalDiagnosticTables++;
    const source=named(h,'Field-level evidence ledger');assert.ok(source);
    assert.deepEqual(cells(source).map(r=>r.slice(0,2)),Object.entries(raw.facts||{}).map(([key,value])=>[key,num(value)]));
    h.step(6);checkSemantics(h);
@@ -44,7 +44,7 @@ test('workspace tables: every company/baseline has a name and native row/column 
    else assert.equal(named(h,'Annual cash-flow forecast'),undefined,'Unsupported models do not expose a stale forecast');
   }
  }
- assert.equal(baselines,35);assert.equal(supported,19);assert.equal(totalTables,102);
+ assert.equal(baselines,35);assert.equal(supported,19);assert.equal(capitalDiagnosticTables,supported,'Each supported baseline has one live capital diagnostic table');assert.equal(totalTables-capitalDiagnosticTables,102,'Existing source, bridge and forecast tables remain unchanged');assert.equal(totalTables,121);
 });
 
 test('workspace tables: source-specific claims and staged paths keep table identity across the supported alternatives',async()=>{
@@ -87,7 +87,7 @@ test('workspace tables: captions are escaped and every helper call supplies an e
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const render=new Function('company','esc',definition+';return table;')({ticker:'A<B'},esc),out=render('Value & <risk>',['Name','Value'],[['Example','1']]);
  assert.match(out,/<caption><span class="sr-only">A&lt;B · Value &amp; &lt;risk&gt;<\/span><\/caption>/);assert.doesNotMatch(out,/<risk>|A<B/);
- assert.doesNotMatch(source,/\btable\(\[/);assert.equal((source.match(/\btable\('/g)||[]).length,8);assert.equal((source.match(/\btable\(isFlexible\(\)\?'Flexible annual operating path':'Staged annual operating path'/g)||[]).length,1);
+ assert.doesNotMatch(source,/\btable\(\[/);assert.equal((source.match(/\btable\('/g)||[]).length,8);assert.equal((source.match(/\btable\(draft.capitalPath\?\.enabled\?'Independent capital annual operating path':isFlexible\(\)\?'Flexible annual operating path':'Staged annual operating path'/g)||[]).length,1);
 });
 
 test('workspace tables: row-heading visuals are scoped and preserve existing body-cell treatment',()=>{

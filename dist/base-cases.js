@@ -59,7 +59,7 @@ function userProvenance(company,raw){
 // authored state permits automatic upgrading after optional research arrives.
 export function isUntouchedGenericDraft(draft,company,raw){
  const p=draft?.assumptionProvenance;
- if(Object.prototype.hasOwnProperty.call(draft||{},'claims')||Object.prototype.hasOwnProperty.call(draft||{},'operatingProfile')||Object.prototype.hasOwnProperty.call(draft||{},'marginPath'))return false;
+ if(Object.prototype.hasOwnProperty.call(draft||{},'claims')||Object.prototype.hasOwnProperty.call(draft||{},'operatingProfile')||Object.prototype.hasOwnProperty.call(draft||{},'marginPath')||Object.prototype.hasOwnProperty.call(draft||{},'capitalPath'))return false;
  if(!object(p)||p.schemaVersion!==BASE_CASE_PROVENANCE_VERSION||p.kind!=='generic-default'||p.version!==genericVersion||p.ticker!==company.ticker||p.snapshotId!==raw?.id||p.userEdited!==false||!Array.isArray(p.editedKeys)||p.editedKeys.length)return false;
  if(!equalAssumptions(p.initialAssumptions,defaults)||!equalAssumptions(draft.assumptions,defaults)||Object.keys(draft.assumptions).some(k=>!keys.includes(k)))return false;
  if(!text(p.initialCutoff)||draft.cutoff!==p.initialCutoff||!equalNormalization(normalizationOf(draft),normalizationOf())||!equalNormalization(p.initialNormalization||{},normalizationOf()))return false;
@@ -80,7 +80,7 @@ export function restoreDraftProvenance(value,draft,company,raw){
  if(p.kind==='researched-base-case'&&(!text(p.version)||!validDate(p.asOf)||p.sourcePath!==BASE_CASE_PATH))return userProvenance(company,raw);
  if(p.kind==='generic-default'&&(p.version!==genericVersion||!equalAssumptions(p.initialAssumptions,defaults)))return userProvenance(company,raw);
  const editedKeys=Array.isArray(p.editedKeys)?p.editedKeys.filter(k=>typeof k==='string').slice(0,80):[];
- const changed=draft.marginPath!==undefined||draft.operatingProfile?.id==='flexible-growth-v1'||!equalAssumptions(value.assumptions,p.initialAssumptions)||!equalNormalization(normalizationOf(value),p.initialNormalization);
+ const changed=draft.capitalPath!==undefined||draft.marginPath!==undefined||draft.operatingProfile?.id==='flexible-growth-v1'||!equalAssumptions(value.assumptions,p.initialAssumptions)||!equalNormalization(normalizationOf(value),p.initialNormalization);
  return {schemaVersion:BASE_CASE_PROVENANCE_VERSION,kind:p.kind,version:p.version,ticker:company.ticker,snapshotId:raw?.id,sourcePath:p.kind==='researched-base-case'?BASE_CASE_PATH:null,asOf:p.kind==='researched-base-case'?p.asOf:null,initialCutoff:typeof p.initialCutoff==='string'?p.initialCutoff:draft.cutoff,initialAssumptions:cleanAssumptions(p.initialAssumptions),initialNormalization:normalizationOf(p.initialNormalization),userEdited:p.userEdited!==false||changed||editedKeys.length>0,editedKeys,selection:typeof p.selection==='string'?p.selection:'preserved',...(p.kind==='researched-base-case'?{displayLabel:typeof p.displayLabel==='string'?p.displayLabel:'Researched base case',classification:typeof p.classification==='string'?p.classification:'Dated educational research assumptions',caseSummary:typeof p.caseSummary==='string'?p.caseSummary:'',rationale:object(p.rationale)?Object.fromEntries(Object.entries(p.rationale).filter(([k,v])=>[...keys,'normalizationDelta'].includes(k)&&typeof v==='string')):{},sources:Array.isArray(p.sources)?p.sources.filter(s=>object(s)&&text(s.title)&&http(s.url)).map(s=>({id:typeof s.id==='string'?s.id:'',title:s.title,url:s.url,...(validDate(s.publishedAt)?{publishedAt:s.publishedAt}:{})})):[]}: {})};
 }
 
@@ -101,6 +101,6 @@ export function loadResearchedBaseCase(draft,company,raw,library,{selection='exp
  // metadata and custom uncertainty. Only the explicitly selected assumptions
  // and their starting-EBIT normalization are replaced. Caller can retain a full
  // copy for Undo without a storage side effect from this pure operation.
- const {marginPath:removedMarginPath,...retainedDraft}=clone(draft);
+ const {marginPath:removedMarginPath,capitalPath:removedCapitalPath,...retainedDraft}=clone(draft);
  return {...retainedDraft,operatingProfile:c.operatingProfile?clone(c.operatingProfile):undefined,assumptions:{...c.assumptions},...c.normalization,assumptionProvenance:{schemaVersion:BASE_CASE_PROVENANCE_VERSION,kind:'researched-base-case',version:c.version,ticker:company.ticker,snapshotId:raw.id,sourcePath:BASE_CASE_PATH,asOf:c.asOf,initialCutoff:draft.cutoff,initialAssumptions:{...c.assumptions},initialNormalization:{...c.normalization},displayLabel:text(c.displayLabel)?c.displayLabel:'Researched base case',classification:c.classification,caseSummary:c.summary,rationale:clone(c.rationale),sources:c.sources.map(s=>({id:s.id,title:s.title,url:s.url,...(validDate(s.publishedAt)?{publishedAt:s.publishedAt}:{})})),userEdited:false,editedKeys:[],selection}};
 }

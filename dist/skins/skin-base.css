@@ -1,0 +1,304 @@
+/* Shared refinement layer for the Certificate, Calculator and Annual Report
+   visual versions. Presentation only, loaded after every application stylesheet
+   by skin-loader.js. Each version file supplies the --sk-* tokens, palette and
+   its one signature element. Routes, inputs, tables, chart data geometry and
+   accessibility contracts are unchanged. */
+
+:root[data-skin] {
+  --sk-display: var(--font-editorial);
+  --sk-ui: var(--font-ui);
+  --sk-num: var(--sk-ui);
+  --sk-body: 15px;
+  --sk-small: 12.5px;
+  --sk-label: 12px;
+  --sk-h1: clamp(38px, 4.2vw, 56px);
+  --sk-h2: 32px;
+  --sk-h3: 15px;
+  --sk-display-weight: 400;
+  --sk-display-tracking: -.02em;
+  --sk-eyebrow-font: var(--sk-ui);
+  --sk-eyebrow-size: 13px;
+  --sk-eyebrow-tracking: .04em;
+  --sk-eyebrow-weight: 500;
+  --sk-eyebrow-caps: all-small-caps;
+  --sk-eyebrow-color: var(--muted);
+  --sk-r-sm: 6px;
+  --sk-r-md: 8px;
+  --sk-r-lg: 10px;
+  --sk-r-btn: 6px;
+  --sk-r-tab: 6px;
+  --sk-ease: cubic-bezier(.16, 1, .3, 1);
+  --sk-fast: 160ms;
+  --sk-mid: 300ms;
+  --sk-panel-shadow: none;
+  --sk-btn-shadow: none;
+  --sk-highlight: inset 0 0 0 0 transparent;
+  --sk-grain-opacity: 0;
+  --sk-grain-blend: multiply;
+  --sk-header-bg: color-mix(in srgb, var(--paper) 88%, transparent);
+  --sk-header-rule: var(--line);
+  --sk-ind-bg: var(--surface);
+  --sk-ind-shadow: 0 0 0 1px var(--line);
+  --sk-focus-ring: 0 0 0 3px color-mix(in srgb, var(--accent) 24%, transparent);
+  --sk-gutter: clamp(18px, 3vw, 40px);
+  --sk-grain: none;
+  --approved-gutter: var(--sk-gutter);
+
+  /* ---------- canvas, texture and type ---------- */
+  background: var(--paper);
+  scroll-padding-top: 84px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  & body {
+    background: transparent;
+    font-family: var(--sk-ui);
+    font-size: var(--sk-body);
+    line-height: 1.55;
+  }
+  & body::before {
+    content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background-image: var(--sk-grain); background-size: 240px 240px;
+    opacity: var(--sk-grain-opacity); mix-blend-mode: var(--sk-grain-blend);
+  }
+  & ::selection { background: color-mix(in srgb, var(--accent) 26%, transparent); color: var(--ink); }
+  & :is(button, input, select, textarea) { font-family: var(--sk-ui); }
+  & :is(input, output, td, th, .value, .valuation-number, .research-big-value, .research-equity-value, .approved-history-stats strong, .annual-path-stats b, .live-value-meta b) {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  /* Headings: one display treatment and one rhythm across every route. */
+  & body :is(h1, h2):not(.sr-only, .annual-summary-values h2),
+  & body :is(.approved-company-name h2, .editor-intro h2, .annual-editor-heading h2, .contextual-evidence-title, .learn-card h2, .learn-exercise h3, .approved-history-heading h2, .mc-heading h3, .mc-setup-heading h4) {
+    font-family: var(--sk-display) !important;
+    font-weight: var(--sk-display-weight) !important;
+    letter-spacing: var(--sk-display-tracking) !important;
+    font-optical-sizing: auto;
+    text-wrap: balance;
+  }
+  & body :is(#history, #data, #learn, #workbench) h1:not(.sr-only),
+  & body .page-title h1 {
+    font-size: var(--sk-h1) !important; line-height: 1.02 !important; margin-bottom: 14px;
+  }
+  /* The legacy markup sets a phrase in italics inside page titles; render it as
+     part of the sentence, at the same color, with its missing word space. */
+  & body :is(h1, h2) em { font-family: inherit !important; font-style: normal !important; font-weight: inherit !important; color: inherit !important; padding-left: .24em; }
+  & body :is(.editor-intro h2, .annual-editor-heading h2, .historical-editor > .panel-head h2, .annual-workspace .workspace-view h2, .historical-result-panel h2, .approved-history-heading h2, :is(#history, #data, #learn) .panel h2, .historical-research-heading h2, .learn-card h2, .mc-heading h3, .mc-setup-heading h4) {
+    font-size: var(--sk-h2) !important; line-height: 1.1 !important;
+  }
+  & body .approved-company-name h2 { font-size: calc(var(--sk-h2) * 1.3) !important; line-height: 1 !important; }
+  & body .contextual-evidence-title { font-size: calc(var(--sk-h2) * .8) !important; }
+  & body :is(.annual-assumption-group h3, .growth-path-controls > h3) { font-size: var(--sk-h3); font-weight: 600; }
+
+  /* Section labels arrive uppercase from the application. Small caps keep the
+     words without the shouting, tracked-out treatment. */
+  & body :is(.eyebrow, .learn-topic, .learn-example-label, .annual-summary-values .research-value h2) {
+    font-family: var(--sk-eyebrow-font) !important;
+    font-size: var(--sk-eyebrow-size) !important;
+    letter-spacing: var(--sk-eyebrow-tracking) !important;
+    font-weight: var(--sk-eyebrow-weight) !important;
+    font-variant-caps: var(--sk-eyebrow-caps);
+    text-transform: none;
+    color: var(--sk-eyebrow-color);
+  }
+  & body :is(label, legend) { font-weight: 500; }
+  & body :is(.workspace-toolbar label, .workspace-toolbar .toolbar-model > span, .workspace-toolbar .toolbar-period > span, .annual-proxy-grid label, .annual-editor-panel .research-field-grid label, .mc-setup label) {
+    font-size: var(--sk-label) !important; color: var(--muted);
+  }
+  & body :is(.micro, .annual-input-origin, .annual-summary-caveat, .workspace-statusbar p, .approved-scale-note, .approved-growth-key, .annual-path-legend, .approved-history-basis, .draft-footer, .learn-session-note, .historical-field-evidence) {
+    font-size: var(--sk-small) !important; line-height: 1.55;
+  }
+  & body :is(p, li) { text-wrap: pretty; }
+
+  /* ---------- global header ---------- */
+  & body > aside {
+    position: sticky; top: 0; z-index: 40; min-height: 64px;
+    padding-block: 12px; padding-left: var(--sk-gutter);
+    background: var(--sk-header-bg);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--sk-mid) var(--sk-ease);
+  }
+  &[data-sk-scrolled] body > aside { border-bottom-color: var(--sk-header-rule); }
+  & body > aside .brand { font-family: var(--sk-ui) !important; font-size: 16px !important; font-weight: 600 !important; letter-spacing: -.015em; gap: 12px; }
+  & body > aside .brand-mark {
+    width: 32px; height: 32px; flex-basis: 32px; border-radius: var(--sk-r-sm);
+    display: grid; place-items: center; padding: 0;
+    font-family: var(--sk-display) !important; font-size: 21px !important;
+  }
+  & .appearance-disclosure { position: fixed; top: 14px; right: var(--sk-gutter); z-index: 45; }
+  & .appearance-disclosure > summary {
+    min-height: 36px; padding: 7px 13px; border-radius: var(--sk-r-btn);
+    border: 1px solid var(--line); background: var(--surface);
+    font-size: 12.5px !important; transition: border-color var(--sk-fast);
+  }
+  & .appearance-disclosure > summary:hover { border-color: var(--control); }
+  & .appearance-disclosure .appearance { border-radius: var(--sk-r-md); border: 1px solid var(--line); background: var(--surface); box-shadow: 0 18px 40px -20px rgb(0 0 0 / .35); }
+  & .appearance-disclosure[open] .appearance { animation: sk-open var(--sk-mid) var(--sk-ease); }
+  & .appearance-disclosure .theme-option { border-radius: var(--sk-r-sm); }
+
+  /* ---------- navigation with a sliding indicator (geometry from skin-motion.js) ---------- */
+  & .workspace-modebar { padding: 6px 0 2px; }
+  & body .mode-navigation > span { font-family: var(--sk-eyebrow-font); font-size: 13px; font-variant-caps: var(--sk-eyebrow-caps); letter-spacing: var(--sk-eyebrow-tracking); }
+  & body [data-sk-ind] { position: relative; isolation: isolate; }
+  & body [data-sk-ind]::before {
+    content: ''; position: absolute; left: 0; top: 0; z-index: -1; pointer-events: none;
+    width: var(--sk-ind-w, 0); height: var(--sk-ind-h, 0);
+    transform: translate(var(--sk-ind-x, 0), var(--sk-ind-y, 0));
+    background: var(--sk-ind-bg); border-radius: var(--sk-r-tab); box-shadow: var(--sk-ind-shadow);
+    opacity: var(--sk-ind-o, 0);
+  }
+  & body [data-sk-ind="live"]::before {
+    transition: transform 460ms var(--sk-ease), width 460ms var(--sk-ease), height 460ms var(--sk-ease), opacity 160ms;
+  }
+  & body [data-sk-ind] > :is(button, a) { position: relative; border-radius: var(--sk-r-tab) !important; }
+  & body [data-sk-ind] > :is(.active, [aria-current="page"], [aria-selected="true"], [aria-pressed="true"]) { background: transparent !important; color: var(--sk-ind-text, var(--ink)) !important; }
+  & body :is(body > aside nav, .mode-navigation, .screen-workspace [role="tablist"], .guided-screen .workspace-editor .assumption-tabs) > button {
+    font-size: 13.5px !important; padding-inline: 13px !important;
+  }
+  & body > aside nav > button { font-size: 14px !important; }
+
+  /* ---------- buttons, links ---------- */
+  & body :is(.primary, .quiet, .learn-footer button) {
+    border-radius: var(--sk-r-btn); padding: 9px 16px; min-height: 38px;
+    font-size: 13px !important; font-weight: 600;
+    transition: background-color var(--sk-fast), color var(--sk-fast), border-color var(--sk-fast), box-shadow var(--sk-fast), transform 90ms;
+  }
+  & body .primary { box-shadow: var(--sk-btn-shadow); }
+  & body .primary:not(:disabled):hover { background: var(--sk-primary-hover, var(--ink)); border-color: var(--sk-primary-hover, var(--ink)); color: var(--sk-primary-hover-text, var(--paper)); transform: none; }
+  & body :is(.quiet, .learn-footer button:not(.primary)) { background: var(--sk-quiet-bg, var(--surface)); border: 1px solid var(--line); color: var(--ink); box-shadow: var(--sk-quiet-shadow, none); }
+  & body :is(.quiet, .learn-footer button:not(.primary)):not(:disabled):hover { border-color: var(--control); }
+  & body :is(.primary, .quiet):not(:disabled):active { transform: translateY(1px); }
+  & body :is(.primary, .quiet):disabled { box-shadow: none; }
+  & body .text-button { font-size: 12.5px !important; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 4px; text-decoration-thickness: 1px; transition: text-decoration-color var(--sk-fast), color var(--sk-fast); }
+  & body .text-button:hover { text-decoration-color: currentColor; }
+  & body main a:not(.brand) { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+  /* ---------- inputs ---------- */
+  & body :is(input:not([type="range"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]), select, textarea) {
+    border-radius: var(--sk-r-sm); border-color: var(--control);
+    background-color: var(--sk-field-bg, var(--surface)); color: var(--ink);
+    transition: border-color var(--sk-fast), box-shadow var(--sk-fast), background-color var(--sk-fast);
+  }
+  & body :is(input:not([type="range"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]), select, textarea):hover { border-color: color-mix(in srgb, var(--ink) 45%, var(--control)); }
+  & body :is(input, select, textarea):focus { background-color: var(--sk-field-bg, var(--surface)); border-color: var(--accent); box-shadow: var(--sk-focus-ring); }
+  & body :is(input, select, textarea):focus-visible { outline: none; }
+  & body .guided-screen .workspace-editor .driver-number { border-radius: var(--sk-r-sm); background: var(--sk-field-bg, var(--surface)); transition: border-color var(--sk-fast), box-shadow var(--sk-fast); }
+  & body .guided-screen .workspace-editor .driver-number:focus-within { box-shadow: var(--sk-focus-ring); border-color: var(--accent) !important; }
+  & body .guided-screen .workspace-editor .driver-number input { background: transparent; }
+  & body .guided-screen .workspace-editor .driver-number input:focus { box-shadow: none; }
+  & body select {
+    -webkit-appearance: none; appearance: none; padding-right: 34px !important;
+    background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%) !important;
+    background-position: calc(100% - 17px) 52%, calc(100% - 12px) 52% !important;
+    background-size: 5px 5px, 5px 5px !important; background-repeat: no-repeat !important;
+    cursor: pointer;
+  }
+  & body select[multiple] { background-image: none !important; padding-right: 10px !important; }
+  & body input[type="range"] { -webkit-appearance: none; appearance: none; height: 22px; background: transparent; cursor: pointer; }
+  & body input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px; border-radius: 4px;
+    background: linear-gradient(var(--accent), var(--accent)) 0 / var(--sk-fill, 0%) 100% no-repeat, color-mix(in srgb, var(--line) 70%, var(--control));
+  }
+  & body input[type="range"]::-moz-range-track { height: 4px; border-radius: 4px; background: color-mix(in srgb, var(--line) 70%, var(--control)); }
+  & body input[type="range"]::-moz-range-progress { height: 4px; border-radius: 4px; background: var(--accent); }
+  & body input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7px; border-radius: var(--sk-thumb-radius, 50%);
+    background: var(--sk-thumb-bg, var(--surface)); border: 1.5px solid var(--accent);
+    box-shadow: 0 1px 3px rgb(0 0 0 / .22);
+    transition: transform var(--sk-fast) var(--sk-ease), box-shadow var(--sk-fast);
+  }
+  & body input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: var(--sk-thumb-radius, 50%); background: var(--sk-thumb-bg, var(--surface)); border: 1.5px solid var(--accent); }
+  & body input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.15); box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 18%, transparent); }
+  & body input[type="range"]:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 6px; }
+  & body input[type="checkbox"], & body input[type="radio"] { accent-color: var(--accent); }
+
+  /* ---------- surfaces ---------- */
+  & body :is(.panel, .learn-card, .contextual-evidence-panel, .learn-exercise) {
+    border-radius: var(--sk-r-lg); border-color: var(--line); box-shadow: var(--sk-panel-shadow);
+  }
+  & body :is(#history, #data, #learn) .panel { padding: 26px 30px; margin-bottom: 22px; }
+  & body .learn-card { padding: 30px 34px; }
+  & body :is(.workspace-stage, .workspace-summary, .page, main) { background-color: transparent; }
+  & :is(.annual-workspace, .historical-workspace) .workspace-main > :is(.workspace-stage, .workspace-editor) { background: transparent; }
+  & body .guided-screen .workspace-editor { border-radius: var(--sk-r-lg); border: 1px solid var(--line); box-shadow: var(--sk-panel-shadow); }
+  & body .guided-screen .workspace-editor .assumption-editor { border-radius: 0; }
+  & body :is(.notice, .research-warning, .error) { border-radius: var(--sk-r-sm); font-size: 12.5px !important; }
+  & body .research-resource-grid > a { border-top: 1px solid var(--line); padding: 18px 0 6px; text-decoration: none; transition: border-color var(--sk-mid) var(--sk-ease); }
+  & body .research-resource-grid > a:hover { border-top-color: var(--accent); }
+
+  /* Disclosures open with an eased height where the engine supports it. */
+  & body details > summary { cursor: pointer; transition: color var(--sk-fast); }
+  & body details > summary:hover { color: var(--accent); }
+  @supports (interpolate-size: allow-keywords) {
+    interpolate-size: allow-keywords;
+    & body details::details-content {
+      height: 0; overflow: clip;
+      transition: height 340ms var(--sk-ease), content-visibility 340ms allow-discrete;
+    }
+    & body details[open]::details-content { height: auto; }
+  }
+
+  /* ---------- financial figures ---------- */
+  & body :is(.guided-screen .workspace-summary .valuation-number, .annual-summary-values .research-big-value, .annual-summary-values .research-equity-value, .historical-summary .hero-result .value, .approved-history-stats strong, .annual-path-stats b) {
+    font-family: var(--sk-num) !important; font-weight: var(--sk-num-weight, 500) !important; letter-spacing: var(--sk-num-tracking, -.02em) !important;
+  }
+  & body .annual-summary-values .research-big-value { font-size: 40px !important; line-height: 1.04; }
+  & body .annual-summary-values .research-equity-value { font-size: 34px !important; line-height: 1.06; }
+  & body .guided-screen .workspace-summary .valuation-number { font-size: 40px !important; }
+
+  /* ---------- tables and charts ---------- */
+  & body table th { font-weight: 600; }
+  & body table tbody tr { transition: background-color var(--sk-fast); }
+  & body table tbody tr:hover { background: color-mix(in srgb, var(--soft) 55%, transparent); }
+  /* The legend swatch names the same variable as the plotted series. */
+  & body .annual-path-legend .annual-series-nopat { color: var(--chart-two); }
+  & body .annual-path-legend .annual-series-reinvestment { color: var(--sk-series-three, var(--warning)); }
+  & body svg .annual-series-reinvestment { stroke: var(--sk-series-three, var(--warning)); }
+  /* The simulation chart writes theme colours into SVG attributes; re-tint them from tokens. */
+  & body .mc-chart svg :is(.mc-bin, #mc-particles *) { fill: var(--chart-one); }
+  & body .mc-chart svg text { fill: var(--muted) !important; }
+  & body .mc-chart svg line:is([stroke-opacity], [stroke-dasharray]) { stroke: var(--ink); }
+  & body .mc-chart svg line[stroke-width="2"], & body .mc-chart svg circle:not(#mc-inspect-dot) { stroke: var(--sk-series-three, var(--warning)); fill: var(--sk-series-three, var(--warning)); }
+  & body .mc-chart svg #mc-inspect-dot { fill: var(--ink); }
+  & body .approved-growth-bar { border-radius: var(--sk-bar-radius, 3px 3px 0 0); }
+  & body .approved-growth-column { transition: opacity var(--sk-fast); }
+  & body .approved-growth-bars:hover .approved-growth-column:not(:hover) { opacity: .6; }
+  & body .approved-history-row { border-radius: 4px; transition: background-color var(--sk-fast); }
+  & body .approved-history-row:hover { background: color-mix(in srgb, var(--soft) 50%, transparent); }
+
+  /* ---------- learn ---------- */
+  & body .learn-answer { border-radius: var(--sk-r-md); transition: border-color var(--sk-fast), background-color var(--sk-fast); }
+  & body .learn-answer:not(:disabled):hover { border-color: var(--accent); }
+
+  /* ---------- page-load moment (attributes set by skin-loader.js / skin-motion.js) ---------- */
+  &[data-sk-intro] :is(main, body > aside) { opacity: 0; }
+  &[data-sk-enter] :is(main, body > aside) { animation: sk-fade 520ms var(--sk-ease) both; }
+  &[data-sk-enter] main { animation-delay: 80ms; }
+  & .sk-route-enter { animation: sk-route 260ms var(--sk-ease) both; }
+
+  @media (max-width: 760px) {
+    --sk-h2: 27px;
+    & body > aside { min-height: 56px; padding-block: 8px; }
+    & .appearance-disclosure { top: 10px; }
+    & .appearance-disclosure > summary { padding: 6px; font-size: 0 !important; width: 36px; justify-content: center; }
+    & body :is(#history, #data, #learn) .panel { padding: 20px; }
+    & body .learn-card { padding: 22px 20px; }
+    & body .annual-summary-values .research-big-value { font-size: 32px !important; }
+    & body .annual-summary-values .research-equity-value { font-size: 28px !important; }
+    & body .guided-screen .workspace-summary .valuation-number { font-size: 34px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &[data-sk-intro] :is(main, body > aside) { opacity: 1 !important; }
+    & body [data-sk-ind]::before { transition: none !important; }
+  }
+  @media print {
+    & body::before { display: none; }
+    & :is(main, body > aside) { opacity: 1 !important; animation: none !important; }
+  }
+}
+
+@keyframes sk-open { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@keyframes sk-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sk-route { from { opacity: .35; } to { opacity: 1; } }

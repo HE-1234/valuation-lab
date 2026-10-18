@@ -22,9 +22,12 @@ test('v8 QA: deterministic engine remains byte-identical; UI and motion have exp
 // Strip only those known presentation lines/wrappers, then pin every remaining
 // app byte to pre-feedback v24. This is not a broad refresh of protected hashes.
 test('feedback preservation: historical app logic outside authorized presentation stays exact',()=>{
- // Approved 2026-10-17 redesign changes only these theme presentation literals.
+ // Approved 2026-10-17 redesigns change only these theme presentation literals
+ // (the Annual Report editions, then the earlier palette names).
  // Reverse exactly those substitutions before comparing the SAME protected hash.
  const restoreApprovedThemePresentation=source=>source
+  .replace("{forest:'Glacier',slate:'Cobalt Ledger',midnight:'Night Edition',sand:'Graphite',plum:'Aubergine',ocean:'Pine'}","{forest:'Paper & Forest',slate:'Ivory & Teal',midnight:'Midnight',sand:'Sand & Terracotta',plum:'Plum & Rose',ocean:'Ocean & Teal'}")
+  .replace("{forest:'#edf2f4',slate:'#f3f4f1',midnight:'#10141b',sand:'#f1f1ef',plum:'#f4f1f3',ocean:'#eff2ee'}","{forest:'#183b30',slate:'#f8f7f2',midnight:'#142024',sand:'#633b2c',plum:'#402642',ocean:'#123f49'}")
   .replace("slate:'Ivory & Teal'","slate:'Slate & Blue'")
   .replace("slate:'#f8f7f2',midnight:'#142024'","slate:'#172b4a',midnight:'#111a29'");
  const normalize=source=>restoreApprovedThemePresentation(source).split('\n').filter(line=>line.trim()&&!line.startsWith('import {mountWorkspaceNavigation}')&&!line.startsWith('import {formatTimestamp}')&&!line.startsWith('import {mountLearning}')&&!line.startsWith('function quizzes()')&&!line.startsWith("document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=")&&!line.startsWith('const workspaceNavigation=')&&!line.startsWith('if(location.hash){document.querySelector')).join('\n').replace(/formatTimestamp\(([^)]+)\)/g,'$1');
