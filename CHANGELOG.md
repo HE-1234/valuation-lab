@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · Keep keyboard position in Monte Carlo controls
+
+- Cancelling a simulation from its focused Cancel button now returns focus to Run. Changing the annual chart from operating value to conditional per-share value keeps focus on the replacement selector.
+- Both recoveries preserve scroll position and leave focus elsewhere alone. Manual Run, cancellation, stale-result gates, sample draws, exports, assumptions and visual styles are unchanged.
+- Full suite: 1,728 passed, zero failed, one existing raw-cache skip. Independent audit verified eight exported results byte-for-byte against V55 and all 354 shipped files outside the two exact focus substitutions.
+- Added focused regression coverage for repeated actions, both supported languages, passive cancellation and exact V55 source preservation.
+
 ## 2026-10-18 · Keep a useful keyboard position after closing evidence
 
 - Fixed a verified Annual/Historical navigation edge: when the original evidence button becomes hidden after changing input groups, Close or Escape now recovers focus to the current usable workspace control instead of losing it to the page body.
