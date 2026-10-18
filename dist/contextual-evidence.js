@@ -49,13 +49,27 @@ function hiddenByAncestor(node) {
  return false;
 }
 
+function canReceiveFocus(node) {
+ if (!node?.focus || node.isConnected === false || hiddenByAncestor(node) || node.disabled ||
+  node.getAttribute?.('aria-disabled') === 'true' || node.matches?.(':disabled')) return false;
+ for (let ancestor = node; ancestor; ancestor = ancestor.parentElement) {
+  if (ancestor.inert || ancestor.getAttribute?.('inert') != null) return false;
+ }
+ // Native geometry covers CSS-hidden controls and closed disclosure contents;
+ // synthetic DOMs omit these browser-only checks rather than inventing layout.
+ if (node.getClientRects && !node.getClientRects().length) return false;
+ const visibility = node.ownerDocument?.defaultView?.getComputedStyle?.(node)?.visibility;
+ return visibility !== 'hidden' && visibility !== 'collapse';
+}
+
 function focusWithoutScrolling(node) {
- if (!node?.focus || node.isConnected === false || hiddenByAncestor(node)) return;
+ if (!canReceiveFocus(node)) return false;
  node.focus({preventScroll: true});
+ return node.ownerDocument?.activeElement === node;
 }
 
 /**
- * createContextualEvidencePanel({host, id?, title?, onOpen?, onClose?})
+ * createContextualEvidencePanel({host, id?, title?, onOpen?, onClose?, getFocusFallback?})
  *
  * open({invoker, title?, nodes?: Node[], html?: string, key?: string}) opens in
  * one action. `html` is for application-owned markup only; prefer existing nodes.
@@ -68,7 +82,7 @@ function focusWithoutScrolling(node) {
  * Call close({restoreFocus:false}) before replacing an editor's markup.
  * Callbacks receive {element, invoker, key}; onClose also receives reason.
  */
-export function createContextualEvidencePanel({host, id, title = 'Evidence', onOpen, onClose} = {}) {
+export function createContextualEvidencePanel({host, id, title = 'Evidence', onOpen, onClose, getFocusFallback} = {}) {
  if (!host?.ownerDocument || !host.appendChild) throw new TypeError('An evidence panel needs a DOM host.');
  const document = host.ownerDocument;
  const panelId = id || `contextual-evidence-${++nextPanelId}`;
@@ -178,13 +192,21 @@ export function createContextualEvidencePanel({host, id, title = 'Evidence', onO
   if (!session) return false;
   cancelMotion();
   const current = session;
+  const focusLeavingPanel = element.contains(document.activeElement);
   session = null;
   restoreContent(current);
   element.hidden = true;
   element.setAttribute('data-state', 'closed');
   // Layout mode must return before restoring focus (especially on mobile).
   onClose?.({element, invoker: current.invoker, key: current.key, reason});
-  if (restoreFocus) focusWithoutScrolling(current.invoker);
+  if (restoreFocus && !focusWithoutScrolling(current.invoker) &&
+   (focusLeavingPanel || document.activeElement === document.body ||
+    document.activeElement === document.documentElement || !canReceiveFocus(document.activeElement))) {
+   // Resolve after onClose restores the active workspace/mobile layout. A
+   // visible input outside this nonmodal panel keeps its focus on Escape.
+   const candidates = getFocusFallback?.({invoker: current.invoker, key: current.key, reason});
+   for (const candidate of [candidates].flat()) if (focusWithoutScrolling(candidate)) break;
+  }
   if (restorePosition) restoreScroll(current.context);
   return true;
  }

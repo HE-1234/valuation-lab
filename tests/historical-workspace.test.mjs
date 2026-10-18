@@ -222,3 +222,23 @@ test('historical: locale switch keeps workspace, evidence, inputs, notes and foc
  assert.equal(h.get('#historical-evidence-action').textContent,'Evidence');
  h.workspace.destroy();
 });
+
+// The shared evidence panel is nonmodal: changing groups is permitted while it is open.
+test('historical: Close and Escape recover to the selected assumption group when the old evidence trigger is hidden',()=>{
+ for(const dismiss of ['close','escape']){
+  const h=fixture();try{
+   const trigger=h.get('.historical-field-evidence'),inputs=h.get('#assumptions').querySelectorAll('input'),before={...h.assumptions};
+   trigger.focus();trigger.click();h.get('#historical-tab-operating').dispatch('keydown',{key:'ArrowRight'});
+   assert.equal(h.workspace.getState().group,'risk');const close=h.get('.contextual-evidence-close');close.focus();
+   if(dismiss==='close')close.click();else h.document.dispatch('keydown',{key:'Escape'});
+   assert.equal(h.document.activeElement,h.get('#historical-tab-risk'));assert.equal(h.workspace.evidence.isOpen,false);
+   assert.deepEqual(h.get('#assumptions').querySelectorAll('input'),inputs);assert.deepEqual(h.assumptions,before);
+  }finally{h.workspace.destroy();}
+ }
+});
+test('historical: Escape retains a visible current input when the old evidence trigger is hidden',()=>{
+ const h=fixture();try{
+  h.get('.historical-field-evidence').click();h.workspace.setGroup('risk');const input=h.get('#a-wacc');input.focus();h.document.dispatch('keydown',{key:'Escape'});
+  assert.equal(h.document.activeElement,input);assert.equal(h.workspace.evidence.isOpen,false);
+ }finally{h.workspace.destroy();}
+});

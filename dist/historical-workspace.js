@@ -130,6 +130,7 @@ export function mountHistoricalWorkspace(page) {
  move(find('.page-title'), about);
  const filing = find('#evidence-details'), research = find('#case-analysis');
  const evidence = createContextualEvidencePanel({host: evidenceHost, id: 'historical-contextual-evidence',
+  getFocusFallback: () => [groupTabs.buttons.get(group), viewTabs.buttons.get(view), find('#company')],
   title: t(historicalLabels['Historical evidence']), onOpen() {
    cancelMotion(shell);
    if (mobile !== 'evidence') previousMobile = mobile;

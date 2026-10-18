@@ -1,5 +1,12 @@
 # Change log
 
+## 2026-10-18 · Keep a useful keyboard position after closing evidence
+
+- Fixed a verified Annual/Historical navigation edge: when the original evidence button becomes hidden after changing input groups, Close or Escape now recovers focus to the current usable workspace control instead of losing it to the page body.
+- Kept normal return to the original button, newer outside-input focus, source-node state, whole-page scrolling and passive refresh behavior. No controls, styles, financial assumptions or calculations changed.
+- Full suite: 1,710 passed, zero failed, one existing raw-cache skip. Independent focus and preserved-source audits passed; native phone/screen-reader coverage remains unverified.
+- Added regression coverage for hidden, removed, disabled, inert and CSS-hidden destinations, callback timing, and all reviewed annual companies. Original V54 bytes are protected outside exact reviewed substitutions.
+
 ## 2026-10-18 · Find full-case Undo from the toolbar
 
 - The existing Case actions disclosure now shows “Undo available” when a research load, named scenario or operating-path reload can be reversed. The cue follows the saved, company-specific case history and has matching Simplified Chinese wording.
