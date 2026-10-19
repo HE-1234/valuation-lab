@@ -1,0 +1,12 @@
+export const ARM_MESSAGES={
+editing:['Focus a number to edit its exact value. Terminal revenue, margin, tax and investment need consistent coupled edits; rounded re-entry can invalidate strict convergence.','聚焦数字可编辑其精确值。终值收入、利润率、税率及投资须一致联动编辑；重新输入四舍五入值可能不符合严格收敛。'],
+scope:['March 31, 2026 capital anchor with October 19 information. Conditional analyst scenario only; not a current target or historical backtest.','资本基准为 2026 年三月三十一日，使用十月十九日信息。仅为条件性分析情景，并非当前目标价或历史回测。'],
+unit:['ADS (one ordinary share)','美国存托股（一股普通股）'],
+horizon:['ARM retains ten reviewed fiscal years. Longer horizons require new silicon, investment and funding assumptions.','ARM 保留已复核的十个财年。更长期限须另建芯片、投资及资金假设。'],
+terminal:['Positive 2.5% net-investment floors are analyst constraints, not engineering validation. Terminal growth, ROIC, component convergence and investment must agree; incompatible cases remain uncomputed.','正 2.5% 净投资底线为分析约束，并非工程验证。终值增长、ROIC、分部收敛及投资须一致；不相容情景不计算。'],
+funding:['Every edit and trial recomputes treasury, cash floors, funding and claims. Funding-dependent headline values are withheld. The $265m DreamBig amount is a nominal conservative reserve; all quoted and unquoted equity investments are excluded.','每次编辑及试验重新计算现金、现金底线、融资与请求权。依赖融资的主要估值不予显示。DreamBig 的 2.65 亿美元为保守名义预留；全部上市及非上市股权投资均不计值。'],
+simulation:['No probability calibration is supplied. Fixed inputs reproduce the selected conditional case. Incompatible terminal paths and funding-dependent trials are excluded without replacement; independent uncertainty can reject every trial.','未提供概率校准。固定输入复现选定条件情景。不相容终值路径及依赖融资的试验被排除且不补抽；独立不确定性可能使全部试验无效。'],
+claims:['Economic replacement SBC remains in EBIT. Exactly 1,064,055,252 March 31 ordinary shares support the 1:1 ADS allocation; this is not a current share ledger or grant-by-grant award allocation.','经济替代性股权薪酬保留在营业利润内。三月三十一日准确普通股数 1,064,055,252 支持 1:1 存托股分配；并非当前股数台账或逐笔奖励分配。'],
+mapping:['Edited aggregate revenue uses the selected source component proportions; aggregate margin changes apply equally to IP and silicon margins. This is an analyst mapping, not newly measured segment economics. Final-year investment and segment growth must converge explicitly.','编辑后的总收入采用选定来源的分部比例；总利润率变化等量应用于知识产权及芯片利润率。这是分析映射，并非新测得的分部经济。末年投资及分部增长须明确收敛。'],
+normalization:['ARM capital normalization is unavailable when it breaks reviewed component convergence or analyst net-investment floors.','若破坏已复核分部收敛或分析净投资底线，ARM 资本正常化不可用。']
+};

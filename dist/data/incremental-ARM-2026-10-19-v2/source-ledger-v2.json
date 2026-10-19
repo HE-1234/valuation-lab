@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "inherited_originals_ledger": "../source-ledger-v1.json",
+  "inherited_originals_manifest": "../integrity-manifest-v1.json",
+  "correction": "Q4FY2025 original PDF was already frozen despite incomplete v1 ledger note; now explicitly registered. Both legacy primary PDFs successfully frozen and local text tables checked.",
+  "sources": [
+    {
+      "file": "softbank-fy2018.pdf",
+      "url": "https://group.softbank/system/files/pdf/ir/financials/financial_reports/financial-report_q4fy2017_01_en.pdf",
+      "report_period": "2018-03-31",
+      "retrieved_or_verified": "2026-10-19",
+      "bytes": 1907076,
+      "sha256": "5e8d45041a035f9a65ca15e8803aa71384be4d3ad2edf05b91b4b029283db63f"
+    },
+    {
+      "file": "softbank-fy2020.pdf",
+      "url": "https://group.softbank/system/files/pdf/ir/financials/financial_reports/financial-report_q4fy2019_01_en.pdf",
+      "report_period": "2020-03-31",
+      "retrieved_or_verified": "2026-10-19",
+      "bytes": 2663504,
+      "sha256": "d03b4efabe07a13c3970d443e88c42357f382d65f8609d77af10ab03add943a2"
+    },
+    {
+      "file": "../letter-06.pdf",
+      "url": "https://investors.arm.com/static-files/a9baed37-2c28-4ac3-83b0-c11387d02bb2",
+      "report_period": "2025-03-31",
+      "retrieved_or_verified": "2026-10-19",
+      "bytes": 2416714,
+      "sha256": "90c8c02cbe5c6fe64d3978719dcb94c9bbdb54929977cae73499eac94aadd45a"
+    }
+  ]
+}

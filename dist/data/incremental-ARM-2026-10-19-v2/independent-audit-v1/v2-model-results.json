@@ -1,0 +1,38 @@
+{
+  "status": "PASS model hardening recheck",
+  "independent_check_groups": [
+    "bear independent rows and floors",
+    "base independent rows and floors",
+    "bull independent rows and floors",
+    "grid 0.08/0.02",
+    "grid 0.08/0.03",
+    "grid 0.08/0.04",
+    "grid 0.09/0.02",
+    "grid 0.09/0.03",
+    "grid 0.09/0.04",
+    "grid 0.1/0.02",
+    "grid 0.1/0.03",
+    "grid 0.1/0.04",
+    "grid 0.11/0.02",
+    "grid 0.11/0.03",
+    "grid 0.11/0.04",
+    "grid 0.12/0.02",
+    "grid 0.12/0.03",
+    "grid 0.12/0.04",
+    "sbc_margin_cost_5pp",
+    "sbc_margin_cost_10pp",
+    "sbc_margin_relief_5pp",
+    "funding stress",
+    "zero to positive convergence rejected",
+    "allzero silicon accepted"
+  ],
+  "shipped_tests": "119 checks passed",
+  "baseline_values": {
+    "bear": 8.475119054202718,
+    "base": 25.463301826575428,
+    "bull": 62.42269730253597
+  },
+  "invalid_grid_cells": 5,
+  "invalid_SBC_cells": 2,
+  "constraint_warning": "2.5% net productive investment floor is an explicit analyst assumption, not source-validated engineering or maintenance-capex proof."
+}
