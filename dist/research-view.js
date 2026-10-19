@@ -1,3 +1,4 @@
+import {getLocale} from './i18n.js';
 import {ARM_MESSAGES} from './arm-messages.js';
 import {SNDK_MESSAGES,sndkFundingHTML} from './sndk-research-view.js';
 import {amdH1Revenue,fullFiscalRevenue,priorFiscalRevenue} from './amd-periods.js';
@@ -74,6 +75,80 @@ const input=(key,value,label,{scale=1,step='any',min,max,group='annual',index}={
  const digits=annual&&scale!==100?1:2,shown=formatted&&finite(raw)?num(raw,digits):plain(raw);
  return `<input type="${formatted?'text':'number'}" inputmode="decimal" data-research-input="${group}" data-field="${esc(key)}" data-scale="${scale}" ${index===undefined?'':`data-index="${index}"`} ${formatted?`data-raw="${plain(raw)}" data-display-digits="${digits}" ${annual?'aria-describedby="annual-edit-help"':''} title="${esc(t('annual.input.edit'))}"`:''} value="${shown}" step="${step}" ${min===undefined?'':`min="${min}"`} ${max===undefined?'':`max="${max}"`} aria-label="${esc(annualLabel(label))}" data-annual-label="${esc(label)}"${annualAttribute("aria-label",label)}>`;
 };
+
+// Presentation-only field feedback. Financial validators remain authoritative.
+// Do not project aggregate funding, date-bridge or convergence failures onto cells.
+const annualFieldMessages={
+ finite:['Enter a finite number; blank is not zero.','请输入有限数值；空白不等于零。'],
+ growth:['Use stable growth from 0% to 5%.','稳定增长率须为 0% 至 5%。'],
+ margin:['Use a terminal margin above 0% and at most 100%.','终值利润率须大于 0% 且不超过 100%。'],
+ tax:['Use terminal tax from 0% to 60%.','终值税率须为 0% 至 60%。'],
+ wacc:['Use terminal WACC at most 100%.','终值 WACC 不得超过 100%。'],
+ growthWacc:['Check both stable growth and terminal WACC: WACC must exceed growth.','请同时检查稳定增长率和终值 WACC：WACC 须高于增长率。'],
+ growthRoic:['Check both stable growth and terminal ROIC: ROIC must exceed growth.','请同时检查稳定增长率和终值 ROIC：ROIC 须高于增长率。'],
+ date:['Enter a valid scenario date.','请输入有效的情景日期。'],
+ dateFloor:['Use a scenario date on or after the research information date.','情景日期须不早于研究信息日期。'],
+ reason:['Explain the timing assumption, including an explicit zero.','请说明时点假设，包括明确填入零的依据。'],
+ rate:['Use a stub discount rate above 0% and at most 100%.','短期折现率须大于 0% 且不超过 100%。']
+};
+const annualFieldMessage=key=>annualFieldMessages[key][getLocale()==='zh-Hans'?1:0];
+export function annualFieldIssue(d,group,key,definition){
+ const issue=(code,kind='local')=>({message:annualFieldMessage(code),kind});
+ const value=group==='terminal'?d.terminal?.[key]:group==='timing'?d.timing?.[key]:d.bridgeInputs?.[key];
+ if(group==='terminal'){
+  if(!finite(value))return issue('finite');
+  if(key==='growth'&&(value<0||value>.05))return issue('growth');
+  if(key==='margin'&&(value<=0||value>1))return issue('margin');
+  if(key==='taxRate'&&(value<0||value>.6))return issue('tax');
+  if(key==='wacc'&&value>1)return issue('wacc');
+  const terminal=d.terminal,relations=[];
+  if(['growth','wacc'].includes(key)&&finite(terminal.growth)&&finite(terminal.wacc)&&terminal.wacc<=terminal.growth)relations.push(annualFieldMessage('growthWacc'));
+  if(['growth','roic'].includes(key)&&finite(terminal.growth)&&finite(terminal.roic)&&terminal.roic<=terminal.growth)relations.push(annualFieldMessage('growthRoic'));
+  return relations.length?{message:relations.join(' '),kind:'relationship'}:null;
+ }
+ if(group==='bridge'){
+  if(!definition)return null;
+  const actual=Object.hasOwn(d.bridgeInputs||{},key)?value:definition.default;
+  // Unknown allowances are explicitly supported; missing-company funding evidence
+  // is a model-level limitation, not a malformed number in every claim control.
+  if(actual==null&&(d.incrementalResearch||definition.default===null||definition.allowUnknown))return null;
+  if(!finite(actual))return issue('finite');
+  if(finite(definition.min)&&actual<definition.min||finite(definition.max)&&actual>definition.max){
+   const scale=definition.scale??(definition.max===1?100:1),unit=scale===100?'%':'';
+   const low=finite(definition.min)?num(definition.min*scale,2)+unit:null,high=finite(definition.max)?num(definition.max*scale,2)+unit:null;
+   return {message:getLocale()==='zh-Hans'?low&&high?`数值须为 ${low} 至 ${high}。`:low?`数值须不小于 ${low}。`:`数值须不大于 ${high}。`:low&&high?`Use a value from ${low} to ${high}.`:low?`Use a value at least ${low}.`:`Use a value at most ${high}.`,kind:'local'};
+  }
+ }
+ if(group==='timing'){
+  const timing=d.timing||{},validDate=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&Number.isFinite(Date.parse(x))&&new Date(x).toISOString().slice(0,10)===x;
+  const editableScenario=timing.mode==='as-of-scenario'&&!['AMD','MRVL','SNPS','CRDO','SNDK','ARM'].includes(d.ticker)&&!d.openingStub;
+  if(key==='asOf'){
+   if(!validDate(value))return issue('date');
+   if(editableScenario&&value<d.informationAsOf)return issue('dateFloor');
+  }
+  if(key==='stubFCFF'&&(!finite(value)&&(value!==null||editableScenario)))return issue('finite');
+  if(key==='reason'&&editableScenario&&!String(value||'').trim())return issue('reason');
+  if(key==='stubDiscountRate'&&editableScenario&&validDate(timing.asOf)&&timing.asOf<d.discountOrigin&&(!finite(value)||value<=0||value>1))return issue('rate');
+ }
+ return null;
+}
+function syncAnnualFieldIssues(root,d){
+ const definitions=researchBridgeDefinition(d?.ticker)?.optionDefinitions||[];
+ const controls=[...root.querySelectorAll('[data-research-input]'),...root.querySelectorAll('[data-research-text]')];
+ for(const el of controls){
+  const group=el.dataset.researchInput||'timing',key=el.dataset.field||el.dataset.researchText;
+  if(!['terminal','bridge','timing'].includes(group)||!['asOf','reason'].includes(key)&&!el.dataset.researchInput)continue;
+  const id=`annual-field-error-${group}-${key}`,issue=annualFieldIssue(d,group,key,definitions.find(field=>field.key===key));
+  let message=root.querySelector('#'+id);
+  if(!message){message=root.ownerDocument.createElement('small');message.id=id;message.className='annual-field-error';el.parentNode.insertBefore(message,el.nextSibling);}
+  message.textContent=issue?.message||'';message.hidden=!issue;
+  el.setAttribute('aria-invalid',String(!!issue));
+  const descriptions=(el.getAttribute('aria-describedby')||'').split(/\s+/).filter(part=>part&&part!==id);
+  if(issue)descriptions.push(id);
+  if(descriptions.length)el.setAttribute('aria-describedby',descriptions.join(' '));else el.removeAttribute('aria-describedby');
+  if(issue)el.setAttribute('data-annual-error-kind',issue.kind);else el.removeAttribute('data-annual-error-kind');
+ }
+}
 
 function startingComparison(c,d,startingDraft,current,kind='operating'){
  if(!startingDraft)return '';
@@ -392,6 +467,7 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
  }
  function analysisHTML(){return researchResultsHTML(c,d,{identityError,region:'analysis'}).replace('<div id="research-simulation-root"></div>','');}
  function updateResults(){
+  syncAnnualFieldIssues(root,d);
   cancelMotion(root.querySelector('#research-results'));cancelMotion(root.querySelector('#annual-path-result'));
   // Dynamic result sources are regenerated below. Restore them before replacing
   // their parents, then reopen quietly; static source evidence stays mounted.
@@ -497,10 +573,12 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
   const mode=root.querySelector('#research-timing-mode');if(mode)mode.onchange=()=>{rememberEdit('timing-mode');d.timing.mode=mode.value;save();updateResults();};
   const saveState=root.querySelector('#research-save-state');if(saveState)annualSetText(saveState,identityError?'Saved draft retained for recovery':storageOkay?'Annual draft saved on this device':'Storage unavailable · export before leaving');
   bindTabKeys('[data-annual-view]','annualView',selectView);bindTabKeys('[data-annual-editor]','annualEditor',selectEditor);
+  syncAnnualFieldIssues(root,d);
   selectView(ui.view);selectMobile(ui.mobile);selectEditor(ui.editor);syncYearEditor();bindActions();bindEvidence();mountSimulationPanel();bindPrecisionInputs(root);localizeAnnualPresentation(root);
  }
  const refreshLocalizedPresentation=()=>{
   refreshCompanyPicker(root,entries);localizeAnnualPresentation(root);
+  syncAnnualFieldIssues(root,d);
   if(pendingCompany)return;
   if(!identityError&&d?.annual?.length){const values=annualCapitalDiagnosticText(c,d,currentUI().year);root.querySelectorAll('[data-annual-capital-diagnostic]').forEach(node=>{node.textContent=values[node.dataset.annualCapitalDiagnostic]??'';});}
   root.querySelectorAll('[data-raw]').forEach(node=>{node.setAttribute('title',t('annual.input.edit'));});
