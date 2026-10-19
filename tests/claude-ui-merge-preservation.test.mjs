@@ -1,3 +1,5 @@
+import {simulationUiFixture} from './claude-simulation-ui-preservation.mjs';
+import {umcFixture} from './umc-integration-preservation.mjs';
 import {cevaDeliveryFixture} from './ceva-delivery-preservation.mjs';
 import {cevaRmbsFixture} from './ceva-rmbs-integration-preservation.mjs';
 import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
@@ -28,6 +30,6 @@ test('Claude UI merge reverses only four reviewed files and preserves every V75 
 });
 test('Merged production contains no unapproved SVCO package or production additions',()=>{
  const f=mergeFixture();const paths=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(fileURLToPath(new URL('..',import.meta.url)),join(e.parentPath,e.name))).sort();
- assert.deepEqual(paths,[...Object.keys(f.baselineProduction),...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions)].sort());
+ assert.deepEqual(paths,[...Object.keys(f.baselineProduction),...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions)].sort());
  assert.equal(paths.some(p=>/svco/i.test(p)),false);
 });

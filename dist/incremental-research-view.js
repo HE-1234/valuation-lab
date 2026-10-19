@@ -1,3 +1,4 @@
+import {umcAllocationHTML} from './umc-research-view.js';
 import {CEVA_MESSAGES,cevaAllocationHTML,cevaHistoryHTML} from './ceva-research-view.js';
 import {rmbsAllocationHTML} from './rmbs-research-view.js';
 import {keysAllocationHTML} from './keys-research-view.js';
@@ -36,6 +37,7 @@ export function incrementalQuoteTranslationHTML(bridge){
 
 export function incrementalAllocationHTML(b,{compact=false}={}){
  if(b?.ticker==='CEVA')return cevaAllocationHTML(b,{compact});
+ if(b?.ticker==='UMC')return umcAllocationHTML(b);
  if(b?.ticker==='RMBS')return rmbsAllocationHTML(b);
  if(b?.ticker==='KEYS')return keysAllocationHTML(b,{compact});
  if(b?.claimAllocationModel==='sndk-conditional-v3')return sndkAllocationHTML(b);

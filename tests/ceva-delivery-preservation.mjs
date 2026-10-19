@@ -1,3 +1,4 @@
+import {reverseUmcIntegration} from './umc-integration-preservation.mjs';
 // Exact one-path CEVA fetch-delivery repair. Apply before the combined
 // CEVA/RMBS integration reversal. Frozen source cases remain unchanged.
 import fs from 'node:fs';
@@ -35,6 +36,7 @@ export function cevaDeliveryFixture(){
  return cachedFixture;
 }
 export function reverseCevaDelivery(path,bytes){
+ bytes=reverseUmcIntegration(path,bytes);
  const fixture=cevaDeliveryFixture();
  if(own(fixture.files,path)){
   const f=fixture.files[path];assert.equal(cevaDeliverySHA(bytes),f.afterSHA256,path+REVIEWED_ERROR);

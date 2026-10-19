@@ -19,7 +19,8 @@ const out={order:[],companies:{},locales:{},localeKeys:incrementalMessageKeys,tr
 const storage=new Map();const options={storage,catalogBundle:read('dist/data/atlas-company-catalog-v1.json'),incrementalBundle:incrementalPackages};
 const w=await startResearchWorkspace(options);
 const baselineUI=await allocationBaselineWorkspace({...options,storage:new Map()});
-out.order=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company')).filter(t=>t!=='CEVA'&&t!=='RMBS');
+out.currentOrder=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
+out.order=out.currentOrder.filter(t=>t!=='CEVA'&&t!=='RMBS'&&t!=='UMC');
 if(!out.order.length)throw Error('Empty company order');
 function calculate(d){const operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);return {operating,timing,bridge:calculateResearchBridge(d,timing.enterprise,{...d.bridgeInputs,calculationDate:timing.date})};}
 for(const ticker of out.order.filter(x=>x!=='KEYS')){

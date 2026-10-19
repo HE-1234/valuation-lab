@@ -284,7 +284,7 @@ function summarise(r) {
   const sorted = r.samples;
   const rank = v => { let lo = 0, hi = sorted.length; while (lo < hi) { const m = (lo + hi) >> 1; if (sorted[m] < v) lo = m + 1; else hi = m; } return lo / Math.max(1, sorted.length - 1); };
   // Guided scenarios carry value per share; Year-by-year ones carry operating value.
-  const val = s => finite(s.perShare) ? s.perShare : finite(s.enterprise) ? s.enterprise : s.value;
+  const val = s => r.basis === 'enterprise' ? s.enterprise : finite(s.perShare) ? s.perShare : finite(s.enterprise) ? s.enterprise : s.value;
   const paths = sc.slice(0, 160).map(s => ({growth: s.growthPath, metrics: s.metricPaths, terminal: s.terminal, rank: rank(val(s))}));
   return {p10: q.p10, p50: q.p50, p90: q.p90, p01: sorted[Math.floor(.01 * (sorted.length - 1))], p99: sorted[Math.ceil(.99 * (sorted.length - 1))], base: r.basis === 'enterprise' ? r.baseline?.enterprise ?? null : r.baseline?.perShare ?? r.baseline?.value ?? null, samples: sorted, paths, accepted: r.accepted};
 }
@@ -665,7 +665,7 @@ function onClick(e) {
   if (t.dataset.view) {
     setView(root, t.dataset.view);
     paint(root);
-    if (t.dataset.view === 'range') root.querySelector('.mc-heading')?.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+    if (t.dataset.view === 'range') root.querySelector('.mc-heading')?.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
   } else if (t.dataset.tab) {
     root.querySelector(`[id$="mc-tab-${t.dataset.tab}"]`)?.click();
   }
@@ -677,7 +677,7 @@ const visible = el => el.checkVisibility ? el.checkVisibility() : !!el.offsetPar
 function paint(root) {
   const st = root.mcState; if (!st) return;
   // Hidden views (another studio mode, another tab) are explained when shown.
-  if (!visible(root)) return;
+  if (!visible(root)) { seen.delete(root); return; }
   seen.set(root, st);
   const h = host(root); if (!h) return;
   const state = views.get(root) || {};
@@ -711,6 +711,16 @@ function repaintSoon() {
 const timers = new WeakMap();
 function onState(root) {
   const st = root.mcState; if (!st) return;
+  if (st.reason === 'destroy') {
+    root.querySelector('.rx-mcg')?.setAttribute('hidden', '');
+    root.querySelector('.rx-mcg-back')?.remove();
+    setView(root, 'range');
+    views.delete(root); seen.delete(root);
+    clearTimeout(timers.get(root));
+    queue = queue.filter(q => q.st.mountId !== st.mountId);
+    if (busy?.key.startsWith(st.mountId)) busy.controller.abort();
+    return;
+  }
   // Rearrange before the next frame so a re-rendered view never flashes unwrapped.
   if (visible(root)) arrange(root);
   if (root.getAttribute('data-rx-mcv') === null) root.setAttribute('data-rx-mcv', st.activeTab === 'sampling' ? 'range' : 'guide');

@@ -1,0 +1,41 @@
+{
+  "ticker": "UMC",
+  "version": "v1",
+  "research_cutoff": "2026-10-19",
+  "balance_date": "2026-06-30",
+  "status": "READY_FOR_DATED_CONDITIONAL_OPERATING_ASSETS_ONLY",
+  "current_target": null,
+  "selected_policy": null,
+  "total_company_intrinsic_value": null,
+  "portfolio_value_excluded": true,
+  "eligible_us_security": "NYSE ADS; one ADS represents five ordinary shares",
+  "robinhood_source": "https://robinhood.com/us/en/stocks/UMC/",
+  "history_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "history_field_observations": 2624,
+  "completed_guidance_quarters": 10,
+  "independent_checks": 4311,
+  "independent_failed_checks": 0,
+  "unit_tests": 15,
+  "policy_requirement": "Explicit selection required; staged principal is an analyst allocation using sourced debt, not an actual contractual annual schedule. All-bank-upfront and stress outputs remain withheld.",
+  "award_requirement": "67 million authorized new ordinary shares assumed fully issued without proceeds; this is a scenario, not a verified actual grant or issuance.",
+  "limitations": [
+    "Entire nonoperating equity portfolio and circular ownership benefit excluded; no total-company fair-value label.",
+    "Annual funding test does not prove daily liquidity.",
+    "Current capital unresolved after post-June cancellations and convertible financing.",
+    "Three issuer HTTP403 captures explicitly marked as failed fetches; not verified original content.",
+    "No calibrated probabilities or Monte Carlo distribution."
+  ],
+  "integration_contract": "ADMISSION-v1.md",
+  "independent_review": "independent-review-v1.json"
+}

@@ -1,3 +1,5 @@
+import {simulationUiFixture,reverseClaudeSimulationUi} from './claude-simulation-ui-preservation.mjs';
+import {umcFixture,reverseUmcIntegration} from './umc-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -20,16 +22,16 @@ test('CEVA delivery fixture permits exactly one reviewed path change and one add
 });
 test('CEVA delivery reversal verifies original V80 Git bytes and rejects every mutation',()=>{
  const fixture=cevaDeliveryFixture(),item=fixture.files[modified],bytes=read(modified),original=git('show',CEVA_DELIVERY_BASE_COMMIT+':'+modified);
- assert.equal(git('rev-parse',CEVA_DELIVERY_BASE_COMMIT).toString().trim(),CEVA_DELIVERY_BASE_COMMIT);assert.equal(cevaDeliverySHA(bytes),item.afterSHA256);assert.equal(cevaDeliverySHA(original),item.beforeSHA256);assert.deepEqual(Buffer.from(item.beforeText),original);assert.deepEqual(reverseCevaDelivery(modified,bytes),original);
- const oldPath='./data/incremental-CEVA-2026-10-19-v3/cases.json',newPath='./data/incremental-CEVA-2026-10-19-v3/reviewed-package.json';assert.equal(original.toString().split(oldPath).length,2,'Exactly one original CEVA fetch path');assert.equal(original.toString().replace(oldPath,newPath),bytes.toString(),'The entire production edit is one exact path replacement');
+ assert.equal(git('rev-parse',CEVA_DELIVERY_BASE_COMMIT).toString().trim(),CEVA_DELIVERY_BASE_COMMIT);assert.equal(cevaDeliverySHA(reverseUmcIntegration(modified,bytes)),item.afterSHA256);assert.equal(cevaDeliverySHA(original),item.beforeSHA256);assert.deepEqual(Buffer.from(item.beforeText),original);assert.deepEqual(reverseCevaDelivery(modified,bytes),original);
+ const oldPath='./data/incremental-CEVA-2026-10-19-v3/cases.json',newPath='./data/incremental-CEVA-2026-10-19-v3/reviewed-package.json';assert.equal(original.toString().split(oldPath).length,2,'Exactly one original CEVA fetch path');assert.equal(original.toString().replace(oldPath,newPath),reverseUmcIntegration(modified,bytes).toString(),'The entire production edit is one exact path replacement');
  for(const p of [modified,added]){const b=read(p);for(const changed of [Buffer.concat([b,Buffer.from('\n/* unrelated */')]),altered(b),b.subarray(0,Math.max(0,b.length-1))])if(!changed.equals(b))assert.throws(()=>reverseCevaDelivery(p,changed),/exact reviewed CEVA delivery fix bytes.*exact reviewed CEVA\/RMBS integration bytes.*exact reviewed company allocation repair bytes/);}
  const addedBytes=read(added);assert.equal(cevaDeliverySHA(addedBytes),fixture.additions[added]);assert.strictEqual(reverseCevaDelivery(added,addedBytes),addedBytes);
  const frozenSource='dist/data/incremental-CEVA-2026-10-19-v3/cases.json';assert.deepEqual(read(frozenSource),git('show',CEVA_DELIVERY_BASE_COMMIT+':'+frozenSource),'Frozen source array remains byte-identical');assert.ok(Array.isArray(JSON.parse(read(frozenSource))),'Source cases stay an array');
 });
 test('CEVA delivery repair preserves the entire V80 production tree outside its two exact paths',()=>{
  const fixture=cevaDeliveryFixture(),baseline=baseEntries(),current=filesUnder('dist');assert.equal(git('rev-parse','--show-object-format').toString().trim(),'sha1');
- assert.deepEqual(current.filter(p=>!baseline.has(p)).sort(),[added],'Only the exact envelope addition is permitted');assert.deepEqual([...baseline.keys()].filter(p=>!current.includes(p)),[],'No V80 production file may disappear');assert.ok(baseline.has(modified));assert.ok(!baseline.has(added));
+ assert.deepEqual(current.filter(p=>!baseline.has(p)).sort(),[added,...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions)].sort(),'Only the exact envelope and individually pinned UMC additions are permitted');assert.deepEqual([...baseline.keys()].filter(p=>!current.includes(p)),[],'No V80 production file may disappear');assert.ok(baseline.has(modified));assert.ok(!baseline.has(added));
  for(const [p,entry]of baseline){const bytes=read(p),restored=reverseCevaDelivery(p,bytes);assert.equal(blobSHA(restored),entry.oid,p+' must reverse byte-for-byte to V80; no undeclared mutations');}
- assert.equal(cevaDeliverySHA(read(added)),fixture.additions[added]);
+ assert.equal(cevaDeliverySHA(read(added)),fixture.additions[added]);for(const [p,sha]of Object.entries(umcFixture().additions))assert.equal(cevaDeliverySHA(read(p)),sha,p+' exact reviewed UMC addition bytes');for(const [p,sha]of Object.entries(simulationUiFixture().additions))assert.equal(cevaDeliverySHA(reverseClaudeSimulationUi(p,read(p))),sha,p+' exact reviewed simulation UI addition bytes');
  const unchanged=[...baseline.keys()].find(p=>p!==modified),mutation=altered(read(unchanged));assert.throws(()=>assert.equal(blobSHA(reverseCevaDelivery(unchanged,mutation)),baseline.get(unchanged).oid),'Unlisted mutations must fail pinned whole-tree verification');
 });

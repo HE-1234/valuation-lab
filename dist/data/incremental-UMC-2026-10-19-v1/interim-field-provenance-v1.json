@@ -1,0 +1,886 @@
+{
+  "balance.cash": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[11]",
+    "row_label": "Cash and cash equivalents",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      124706.465,
+      110660.052,
+      111993.768
+    ]
+  },
+  "balance.fvtpl_current": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[12]",
+    "row_label": "Financial assets at fair value through profit or loss, current",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      549.52,
+      568.521,
+      564.689
+    ]
+  },
+  "balance.amortized_cost_current": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[14]",
+    "row_label": "Financial assets measured at amortized cost, current",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      22135.867,
+      12506.177,
+      4689.449
+    ]
+  },
+  "balance.ar": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[16]",
+    "row_label": "Accounts receivable, net",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      37380.871,
+      30772.159,
+      31740.103
+    ]
+  },
+  "balance.ar_related": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[17]",
+    "row_label": "Accounts receivable-related parties, net",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      1267.483,
+      502.149,
+      639.655
+    ]
+  },
+  "balance.inventory": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[20]",
+    "row_label": "Inventories, net",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      37916.61,
+      37228.383,
+      34018.188
+    ]
+  },
+  "balance.equity_method_investments": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[29]",
+    "row_label": "Investments accounted for under the equity method",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      96474.468,
+      48642.917,
+      41692.046
+    ]
+  },
+  "balance.ppne": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[30]",
+    "row_label": "Property, plant and equipment",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      259212.411,
+      271395.296,
+      258627.335
+    ]
+  },
+  "balance.rou_assets": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[31]",
+    "row_label": "Right-of-use assets",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      7463.358,
+      7476.034,
+      7290.883
+    ]
+  },
+  "balance.intangibles": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[32]",
+    "row_label": "Intangible assets",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      4567.572,
+      4742.876,
+      3761.954
+    ]
+  },
+  "balance.assets": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[11]/table/tr[39]",
+    "row_label": "Total assets",
+    "statement_table": 0,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      665972.883,
+      578996.009,
+      548143.566
+    ]
+  },
+  "balance.short_loans": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[11]",
+    "row_label": "Short-term loans",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      2806.983,
+      8408.772,
+      6524.0
+    ]
+  },
+  "balance.ap": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[14]",
+    "row_label": "Accounts payable",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      9056.03,
+      9169.828,
+      8538.152
+    ]
+  },
+  "balance.equipment_payables": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[16]",
+    "row_label": "Payables on equipment",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      7159.251,
+      11680.298,
+      8351.107
+    ]
+  },
+  "balance.dividend_payable": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[17]",
+    "row_label": "Dividends payable",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      32704.164,
+      0,
+      35787.598
+    ]
+  },
+  "balance.current_tax_liabilities": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[18]",
+    "row_label": "Current tax liabilities",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      5216.199,
+      3582.275,
+      3130.838
+    ]
+  },
+  "balance.lease_current": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[19]",
+    "row_label": "Lease liabilities, current",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      640.69,
+      624.825,
+      609.84
+    ]
+  },
+  "balance.current_long_term_liabilities": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[20]",
+    "row_label": "Current portion of long-term liabilities",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      9159.945,
+      19188.041,
+      14778.336
+    ]
+  },
+  "balance.bonds_noncurrent": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[26]",
+    "row_label": "Bonds payable",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      34075.713,
+      34071.144,
+      24282.645
+    ]
+  },
+  "balance.loans_noncurrent": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[27]",
+    "row_label": "Long-term loans",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      11489.924,
+      11300.91,
+      17317.505
+    ]
+  },
+  "balance.lease_noncurrent": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[29]",
+    "row_label": "Lease liabilities, noncurrent",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      5276.626,
+      5376.021,
+      5381.79
+    ]
+  },
+  "balance.guarantee_deposits": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[31]",
+    "row_label": "Guarantee deposits",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      40045.045,
+      39805.928,
+      39138.645
+    ]
+  },
+  "balance.pension": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[30]",
+    "row_label": "Net defined benefit liabilities, noncurrent",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      833.593,
+      866.219,
+      1038.286
+    ]
+  },
+  "balance.parent_equity": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[56]",
+    "row_label": "Total equity attributable to the parent company",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      443920.249,
+      379768.265,
+      336871.499
+    ]
+  },
+  "balance.nci": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[58]",
+    "row_label": "Non-controlling interests",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      4.051,
+      87.175,
+      174.007
+    ]
+  },
+  "balance.equity_total": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[59]",
+    "row_label": "Total equity",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      443924.3,
+      379855.44,
+      337045.506
+    ]
+  },
+  "balance.common_capital_par_twd10": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[39]",
+    "row_label": "Common stock",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      125769.849,
+      125881.563,
+      125565.077
+    ]
+  },
+  "balance.treasury_cost": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[14]/table/tr[55]",
+    "row_label": "Treasury stock",
+    "statement_table": 1,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -3095.666,
+      0,
+      0
+    ]
+  },
+  "income.revenue": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[10]",
+    "row_label": "Operating revenues",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      68732.662,
+      58757.657,
+      129770.564,
+      116616.614
+    ]
+  },
+  "income.cogs": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[11]",
+    "row_label": "Operating costs",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -46409.872,
+      -41879.559,
+      -89629.284,
+      -84291.871
+    ]
+  },
+  "income.gross_profit": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[12]",
+    "row_label": "Gross profit",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      22322.79,
+      16878.098,
+      40141.28,
+      32324.743
+    ]
+  },
+  "income.rd": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[16]",
+    "row_label": "Research and development expenses",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -4747.201,
+      -4193.679,
+      -9322.501,
+      -8157.382
+    ]
+  },
+  "income.sga": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[15]",
+    "row_label": "General and administrative expenses",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -2425.623,
+      -1682.371,
+      -4259.758,
+      -3224.802
+    ]
+  },
+  "income.selling": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[14]",
+    "row_label": "Sales and marketing expenses",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -732.69,
+      -591.217,
+      -1421.94,
+      -1210.453
+    ]
+  },
+  "income.ebit": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[20]",
+    "row_label": "Operating income",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      14949.99,
+      10819.712,
+      26226.401,
+      20605.613
+    ]
+  },
+  "income.equity_method_profit": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[26]",
+    "row_label": "Share of profit or loss of associates and joint ventures",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      23605.97,
+      446.242,
+      26421.106,
+      238.354
+    ]
+  },
+  "income.other_gains": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[24]",
+    "row_label": "Other gains and losses",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      6054.359,
+      -521.745,
+      8168.621,
+      -1086.467
+    ]
+  },
+  "income.interest_income": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[22]",
+    "row_label": "Interest income",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      544.041,
+      632.9,
+      986.276,
+      1238.214
+    ]
+  },
+  "income.finance_cost": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[25]",
+    "row_label": "Finance costs",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -362.161,
+      -360.355,
+      -726.522,
+      -759.328
+    ]
+  },
+  "income.pretax": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[30]",
+    "row_label": "Income from continuing operations before income tax",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      45186.121,
+      10153.978,
+      61829.951,
+      19500.549
+    ]
+  },
+  "income.tax_expense": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[31]",
+    "row_label": "Income tax expense",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -2962.306,
+      -1305.996,
+      -3489.152,
+      -2909.328
+    ]
+  },
+  "income.net_income": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[32]",
+    "row_label": "Net income",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      42223.815,
+      8847.982,
+      58340.799,
+      16591.221
+    ]
+  },
+  "income.net_income_parent": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[17]/table/tr[46]",
+    "row_label": "Shareholders of the parent",
+    "statement_table": 2,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      42259.962,
+      8902.53,
+      58431.436,
+      16679.271
+    ]
+  },
+  "cashflow.cfo": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[49]",
+    "row_label": "Net cash provided by operating activities",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      55678.697,
+      45923.736
+    ]
+  },
+  "cashflow.depreciation": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[13]",
+    "row_label": "Depreciation",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      30813.547,
+      27227.474
+    ]
+  },
+  "cashflow.amortization": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[14]",
+    "row_label": "Amortization",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      1411.485,
+      1406.668
+    ]
+  },
+  "cashflow.sbc": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[20]",
+    "row_label": "Share-based payment",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      475.002,
+      427.219
+    ]
+  },
+  "cashflow.cash_interest_received": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[45]",
+    "row_label": "Interest received",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      981.413,
+      1233.563
+    ]
+  },
+  "cashflow.cash_dividend_received": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[46]",
+    "row_label": "Dividend received",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      1050.194,
+      290.309
+    ]
+  },
+  "cashflow.cash_interest_paid": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[47]",
+    "row_label": "Interest paid",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -389.234,
+      -458.858
+    ]
+  },
+  "cashflow.cash_tax_paid": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[48]",
+    "row_label": "Income tax paid",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -2636.804,
+      -2719.297
+    ]
+  },
+  "cashflow.deferred_grant_amortization": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[23]/table/tr[26]",
+    "row_label": "Amortization of deferred government grants",
+    "statement_table": 4,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -968.256,
+      -726.309
+    ]
+  },
+  "cashflow.cash_ppe": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[26]/table/tr[19]",
+    "row_label": "Acquisition of property, plant and equipment",
+    "statement_table": 5,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -21348.637,
+      -21695.646
+    ]
+  },
+  "cashflow.cash_intangibles": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[26]/table/tr[23]",
+    "row_label": "Acquisition of intangible assets",
+    "statement_table": 5,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -1339.043,
+      -1373.894
+    ]
+  },
+  "cashflow.capital_grants_received": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[26]/table/tr[24]",
+    "row_label": "Government grants related to assets acquisition",
+    "statement_table": 5,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      3781.133,
+      3722.471
+    ]
+  },
+  "cashflow.lease_principal": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[26]/table/tr[38]",
+    "row_label": "Cash payments for the principal portion of the lease liability",
+    "statement_table": 5,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -420.478,
+      -410.117
+    ]
+  },
+  "cashflow.treasury_purchase": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[26]/table/tr[39]",
+    "row_label": "Treasury stock acquired",
+    "statement_table": 5,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -3095.666,
+      0
+    ]
+  },
+  "cashflow.deposits_received": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[26]/table/tr[36]",
+    "row_label": "Increase in guarantee deposits",
+    "statement_table": 5,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      93.659,
+      2.292
+    ]
+  },
+  "cashflow.deposits_repaid": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "source_file": "sources/Q2-2026-financials.htm",
+    "source_sha256": "951be2ce1e22a5591775c5e36425f89e768d8ac0be044872d2fb13785c6b55ad",
+    "row_xpath": "/html/body/document/type/sequence/filename/description/text/div[26]/table/tr[37]",
+    "row_label": "Decrease in guarantee deposits",
+    "statement_table": 5,
+    "raw_unit": "NTD thousands",
+    "output_unit": "NTD millions",
+    "values": [
+      -603.807,
+      -640.278
+    ]
+  }
+}

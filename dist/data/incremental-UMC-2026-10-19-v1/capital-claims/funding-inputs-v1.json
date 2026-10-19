@@ -1,0 +1,300 @@
+{
+  "company": "United Microelectronics Corporation",
+  "balance_sheet_date": "2026-06-30",
+  "research_cutoff": "2026-10-19",
+  "units": "TWD thousands unless expressly stated",
+  "source": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+  "source_sections": [
+    "Balance sheets pp.4-5",
+    "Notes 6(11),6(13),6(14),6(28)",
+    "Note12(5) liquidity maturity table p.65"
+  ],
+  "cash_and_cash_equivalents": 124706465,
+  "time_deposits_original_maturity_over_3_months": 22135867,
+  "cash_plus_time_deposits": 146842332,
+  "cash_access_caveat": "Deposits are financial assets measured at amortized cost, not cash equivalents. Country/currency availability and pre-maturity withdrawal terms are not fully quantified. Separate pledged refundable deposits are not included in this cash pool.",
+  "financial_debt_carrying": 57532565,
+  "financial_debt_face_or_contractual_redemption_proxy": 57557436,
+  "financial_debt_components": {
+    "short_term_bank": 2806983,
+    "long_term_bank_including_current": 15085262,
+    "domestic_bonds_face": 39100000,
+    "novatek_exchangeable_redemption_TWD_equivalent": 565191,
+    "bond_unamortized_discount_total": 24871
+  },
+  "novatek_exchangeable": {
+    "maturity": "2026-07-07",
+    "residual_face_usd_millions_inferred": 20.9,
+    "derivation": "400 original less187.1 repurchased/cancelled less192 exchanged inQ2",
+    "fixed_ntd_per_usd": 27.902,
+    "redemption_percent_of_usd_face": 96.92,
+    "computed_redemption_TWD_thousand": 565190.72456,
+    "umc_ordinary_dilution": 0,
+    "note": "Exchange into Novatek holdings, not UMC shares; exchange period ended June27. Actual cash redemption after June30 not separately confirmed in the reviewed SEC set. USD settlement linked to fixed TWD amount and prevailing payment-date FX."
+  },
+  "domestic_bond_principal_schedule": [
+    {
+      "maturity_month": "2026-12",
+      "principal": 5000000,
+      "coupon_pct": 0.63
+    },
+    {
+      "maturity_month": "2028-04",
+      "principal": 2000000,
+      "coupon_pct": 0.63
+    },
+    {
+      "maturity_month": "2028-08",
+      "principal": 5000000,
+      "coupon_pct": 1.8
+    },
+    {
+      "maturity_month": "2028-09",
+      "principal": 10000000,
+      "coupon_pct": 1.62
+    },
+    {
+      "maturity_month": "2028-10",
+      "principal": 5000000,
+      "coupon_pct": 1.7
+    },
+    {
+      "maturity_month": "2028-12",
+      "principal": 2300000,
+      "coupon_pct": 1.55
+    },
+    {
+      "maturity_month": "2030-06",
+      "principal": 2000000,
+      "coupon_pct": 1.94
+    },
+    {
+      "maturity_month": "2030-06",
+      "principal": 3200000,
+      "coupon_pct": 1.99
+    },
+    {
+      "maturity_month": "2030-12",
+      "principal": 2500000,
+      "coupon_pct": 1.6
+    },
+    {
+      "maturity_month": "2031-04",
+      "principal": 2100000,
+      "coupon_pct": 0.68
+    }
+  ],
+  "long_term_bank_currency_schedule": [
+    {
+      "currency": "TWD",
+      "secured": true,
+      "balance_TWD_thousand": 475036,
+      "last_repayment_date": "2031-10-15"
+    },
+    {
+      "currency": "TWD",
+      "secured": false,
+      "balance_TWD_thousand": 8066046,
+      "last_repayment_date": "2031-03-15"
+    },
+    {
+      "currency": "CNY",
+      "secured": false,
+      "balance_TWD_thousand": 1744180,
+      "last_repayment_date": "2027-05-20"
+    },
+    {
+      "currency": "TWD",
+      "secured": false,
+      "revolving": true,
+      "balance_TWD_thousand": 4800000,
+      "last_repayment_date": "2031-03-25"
+    }
+  ],
+  "bank_current_portion_of_long_term": 3595338,
+  "contractual_undiscounted_maturity_buckets": {
+    "labels": [
+      "less_than_1_year",
+      "years_2_to_3",
+      "years_4_to_5",
+      "greater_than_5_years"
+    ],
+    "short_term_bank": [
+      2842109,
+      0,
+      0,
+      0
+    ],
+    "long_term_bank_including_interest": [
+      3891182,
+      9440611,
+      2560287,
+      1304
+    ],
+    "bonds_including_interest": [
+      6451322,
+      25085578,
+      9984261,
+      0
+    ],
+    "leases_including_interest": [
+      817570,
+      1533671,
+      1381672,
+      3799388
+    ],
+    "customer_guarantee_deposits": [
+      629206,
+      19081785,
+      18178491,
+      2784770
+    ],
+    "payables": [
+      75107403,
+      0,
+      0,
+      0
+    ],
+    "interpretation": "Buckets are measured from June30 2026. They include interest where relevant and are not exact annual principal. For conservative funding allocate each bucket to its earliest year, label assumption; do not call it contractual annual maturities."
+  },
+  "lease_liability_carrying": 5917316,
+  "H1_lease_principal_paid": 420478,
+  "lease_treatment": "If total future lease cash is deducted as an operating cash cost and right-of-use depreciation added back, do not deduct lease liability again in equity bridge.",
+  "customer_guarantee_deposits_total": 40674252,
+  "customer_guarantee_deposits_noncurrent": 40045045,
+  "customer_guarantee_deposits_current_derived": 629207,
+  "deposit_terms": "Note6(28)D says mainly capacity-reservation deposits. No disclosed unilateral refund trigger/offset/individual-customer contract schedule sufficient to establish permanent free funding.1 thousand rounding difference between current derived balance and maturity table.",
+  "deposit_treatment": "For fullface conservative claim deduct once from equity and reserve same amount from spendable liquidity. Future refunds consume this reserve, not another FCFF deduction or new upfront valuation claim. Exclude deposits from operating NWC if already treated debtlike.",
+  "contract_liabilities_current": 4446566,
+  "contract_liabilities_noncurrent": 1767326,
+  "refund_liabilities": 4922969,
+  "other_current_tax_liability": 5216199,
+  "current_tax_asset": 56156,
+  "deferred_tax_liability": 13498249,
+  "deferred_tax_asset": 9971653,
+  "tax_treatment": "Current tax payable may be reserved as a prior-period cash claim only if excluded from future tax/NWC runoff. No June interim allocation of DTL between nonoperating investment disposal, operating timing and other items established; do not blanket deduct DTL while future FCFF uses cash taxes. Do not net DTA automatically as cash. No portfolio disposal tax benefit/value is assumed in operating-only floor.",
+  "dividend_payable": 32704164,
+  "dividend_exact_TWD": 32704164009,
+  "dividend_payment_ordinary": "2026-07-30",
+  "dividend_payment_ADS": "2026-08-06",
+  "dividend_treatment": "Deduct payable once for a June30 ex-declared-distribution study, or reduce rolled-forward cash when paid, never both.",
+  "NCI_book_value": 4051,
+  "NCI_fair_value": null,
+  "NCI_treatment": "Book is not fair value. A separately chosen conservative reserve must be labelled an analyst assumption, not sourced valuation.",
+  "unrecognized_construction_commitments": 12000000,
+  "construction_total_contracts": 18200000,
+  "unrecognized_IP_royalty_development_commitments": 1400000,
+  "IP_royalty_development_total_contracts": 4400000,
+  "equipment_payables": 7159251,
+  "capex_commitment_treatment": "Cash capex forecast must include unpaid prior additions and unrecognized commitments. Do not deduct commitment face again if fully in forecast cash capex. July29 NT$148.68bn capital budget is phased authorization, not all an immediate liability nor incremental on top of annual capex.",
+  "post_June_capex_2026_USD": 2000000000,
+  "post_June_phased_expansion_board_budget_TWD": 148680000000,
+  "post_June_domestic_convertible_proceeds_confirmed_TWD": 16912798780,
+  "post_June_overseas_convertible_priced_USD": 1800000000,
+  "cutoff_warning": "A June30 dated study is not a current October capitalization. Confirmed domestic proceeds plus October priced converts cannot be silently omitted from any current bridge; debt and dilution must be modelled consistently.",
+  "H1_lease_interest_expense": 93065,
+  "H1_lease_interest_cash_paid": null,
+  "source_map": {
+    "h1": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "q2": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+    "dividend": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526278424/umc-ex99.htm",
+    "dividend_issuer": "https://www.umc.com/en/IR_Stock/dividend_information",
+    "domestic_auth": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526254481/umc-ex99.htm",
+    "domestic_cash1": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526333718/umc-ex99_1.htm",
+    "domestic_cash2": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526379275/umc-ex99_1.htm",
+    "oct_convert": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526413417/umc-ex99_1.htm",
+    "new_rsa_terms": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+    "new_rsa_shareholder_approval": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526240337/umc-ex99.htm"
+  },
+  "new_RSa_authorization_warning": "February 25 board notice specifies a maximum of 67 million new ordinary shares, approved at the May 27 AGM. Actual issuance date remains unverified; authorization is not June outstanding shares.",
+  "legacy_obligations": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "units": "TWD thousands",
+    "net_defined_benefit_liability": 833593,
+    "decommissioning_provision": 926028,
+    "onerous_contract_provision": 105949,
+    "carbon_fee_provision": 41971,
+    "total": 1907541,
+    "locators": [
+      "Balance sheet, Note6(15)",
+      "Note6(18)"
+    ],
+    "settlement_mapping": [
+      {
+        "claim": "Defined-benefit net liability",
+        "treatment": "Opening pension funding deficit is a past-service exposure. Ongoing pension expense does not automatically settle it. Deduct a separate reserve if future cash contributions above normal service cost are not explicitly forecast; avoid duplicate opening-balance runoff."
+      },
+      {
+        "claim": "Decommissioning",
+        "treatment": "Present value of dismantling, removal and site restoration obligations. Ordinary maintenance/growth capex does not automatically include this. Deduct separate present-value reserve unless explicit retirement cash spending is in forecast. Do not add the accounting liability and its modeled future settlement PV."
+      },
+      {
+        "claim": "Onerous contracts",
+        "treatment": "Provision reflects unavoidable future contract costs above benefits. May overlap forecast operating costs or capex commitments. Reserve only if those losses are not captured; otherwise show explicit inclusion and no separate deduction."
+      },
+      {
+        "claim": "Carbon fees",
+        "treatment": "Opening accrued fee is a prior-period cash claim. Reserve or include in opening working-capital liability runoff, not both. Recurring future carbon costs belong in operating margins."
+      }
+    ],
+    "H1_decommissioning_used": 0,
+    "H1_decommissioning_new": 4499,
+    "H1_decommissioning_discount_unwind_and_adjustment": 10586,
+    "H1_decommissioning_FX": 12670,
+    "H1_carbon_fees_paid": 49378,
+    "H1_carbon_fees_new": 35290,
+    "H1_carbon_fees_unused_reversed": 13304,
+    "H1_onerous_new": 43280,
+    "H1_onerous_reversed": 98504,
+    "H1_onerous_used": 0,
+    "conservative_scenario": "Reserve NT$1,907.541m only where forecast does not already include the settlement cash. This is a model choice, not a reported single aggregate debt category."
+  },
+  "new_RSA_maximum_shares": 67000000,
+  "new_RSA_source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+  "new_RSA_issuer_estimated_expense_TWD_thousand": {
+    "2026": 232669,
+    "2027": 1392398,
+    "2028": 1285757,
+    "2029": 683122,
+    "2030": 273825
+  },
+  "new_rsa_2026": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+    "locator": "Exhibit 99.6, items 1–4 and 9",
+    "board_resolution_date": "2026-02-25",
+    "shareholder_approval_date": "2026-05-27",
+    "maximum_new_ordinary_shares": 67000000,
+    "issue_price_TWD": 0,
+    "vesting": [
+      {
+        "years_after_grant": 2,
+        "percent": 33
+      },
+      {
+        "years_after_grant": 3,
+        "percent": 33
+      },
+      {
+        "years_after_grant": 4,
+        "percent": 34
+      }
+    ],
+    "conditions": "Continued employment, individual performance and corporate ROE, TSR and ESG criteria. Unvested awards failing the conditions are recalled and cancelled without consideration.",
+    "maximum_fraction_of_June_outstanding_pct": 0.5340162845811103,
+    "issuer_estimated_total_compensation_TWD_thousand": 3867771,
+    "issuer_estimated_compensation_TWD_thousand_by_year": {
+      "2026": 232669,
+      "2027": 1392398,
+      "2028": 1285757,
+      "2029": 683122,
+      "2030": 273825
+    },
+    "expense_caveat": "These are issuer estimates under all-vesting assumptions, not actual grant-date expense or a contractual cash liability. Actual grant-date fair value is used for accounting.",
+    "claim_treatment": "Potential new issuance is distinct from already-issued unvested shares. Do not label the full 67 million as outstanding on June 30. Model an explicit maximum dilution or ongoing compensation replacement assumption consistently with SBC treatment.",
+    "source_inconsistency": "Introductory performance text says EPS, whereas the detailed table specifies ROE. Preserve the detailed table and flag the inconsistency rather than silently rewriting the source.",
+    "source_sha256": "fdfcd7724936190ad5dd83107be1fe354d28a6f54ab4c3ec93333894362b4dc9",
+    "shareholder_approval_source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526240337/umc-ex99.htm",
+    "actual_grant_or_issuance_date": null,
+    "authorization_is_outstanding_share_count": false
+  }
+}

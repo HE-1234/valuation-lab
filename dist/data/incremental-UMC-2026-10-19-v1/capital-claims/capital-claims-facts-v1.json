@@ -1,0 +1,1245 @@
+{
+  "company": "UMC",
+  "research_cutoff_utc": "2026-10-19",
+  "historical_balance_date": "2026-06-30",
+  "version": "1.0",
+  "purpose": "Dated claims and funding research; not an investment recommendation or current fair-value target",
+  "facts": [
+    {
+      "id": "ordinary_shares_issued",
+      "value": 12576984870,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526220535/umc-ex99.htm",
+      "locator": "Exhibit99.1 capitalregistration completedMay12; verified June30 FAQ and July29 cancellation",
+      "status": "reported"
+    },
+    {
+      "id": "treasury_shares",
+      "value": 30551000,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526286731/umc-ex99_1.htm",
+      "locator": "Exhibit99.1 items6,9",
+      "status": "reported",
+      "note": "Confirmed unchanged June30 inNote6(19); for employee transfer, not cancelled."
+    },
+    {
+      "id": "ordinary_shares_outstanding",
+      "value": 12546433870,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526350180/umc-ex99.htm",
+      "locator": "Exhibit99.1 before reduction",
+      "status": "derived_and_subsequently_confirmed",
+      "note": "12,576,984,870 issued less30,551,000 treasury. Includes already issued unvested restricted shares."
+    },
+    {
+      "id": "ads_receipts_outstanding",
+      "value": 147069766,
+      "unit": "ADS",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.umc.com/en/Html/faqs",
+      "locator": "How many shares have been issued? June30 dated paragraph",
+      "status": "reported",
+      "note": "Actual ADR float, not denominator for entire company value. Web retrieval archived; original HTML download403."
+    },
+    {
+      "id": "ordinary_under_ads_receipts",
+      "value": 735348830,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.umc.com/en/Html/faqs",
+      "locator": "SameJune30 paragraph",
+      "status": "reported"
+    },
+    {
+      "id": "ads_ratio_ordinary_per_ads",
+      "value": 5,
+      "unit": "ordinary_per_ADS",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(19)a(ii)",
+      "status": "reported"
+    },
+    {
+      "id": "economic_ads_equivalent_denominator",
+      "value": 2509286774.0,
+      "unit": "ADS_equivalent",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Equity denominator dividedby5; not numberofissuedreceipts",
+      "status": "derived"
+    },
+    {
+      "id": "ordinary_issued_2025",
+      "value": 12588156344,
+      "unit": "shares",
+      "as_of_or_period_end": "2025-12-31",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526193757/d91630d20f.htm",
+      "locator": "Item10B DescriptionofCommonShares",
+      "status": "reported"
+    },
+    {
+      "id": "warrants_options_outstanding_2025",
+      "value": 0,
+      "unit": "instruments",
+      "as_of_or_period_end": "2025-12-31",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526193757/d91630d20f.htm",
+      "locator": "Item10B",
+      "status": "reported",
+      "note": "As-of2025 only; not a claim that2026convertibles do not exist."
+    },
+    {
+      "id": "july_restricted_cancellation",
+      "value": 6890971,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-07-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+      "locator": "Exhibit99.3",
+      "status": "reported"
+    },
+    {
+      "id": "aug10_issued_after_cancellation",
+      "value": 12570093899,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-08-10",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526350180/umc-ex99.htm",
+      "locator": "Exhibit99.1",
+      "status": "derived_from_exact_paid_in_capital_div10"
+    },
+    {
+      "id": "aug10_outstanding_after_cancellation",
+      "value": 12539542899,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-08-10",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526350180/umc-ex99.htm",
+      "locator": "Exhibit99.1",
+      "status": "reported"
+    },
+    {
+      "id": "treasury_stock_cash_cost",
+      "value": 3095665789,
+      "unit": "TWD",
+      "as_of_or_period_end": "2026-06-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526286731/umc-ex99_1.htm",
+      "locator": "Exhibit99.1 item7",
+      "status": "reported"
+    },
+    {
+      "id": "new_rsa_approval",
+      "value": true,
+      "unit": "boolean",
+      "as_of_or_period_end": "2026-05-27",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526240337/umc-ex99.htm",
+      "locator": "Exhibit99.3 proposal2",
+      "status": "reported",
+      "note": "Terms resolved by the February25 board notice: maximum67m new shares; actual issue date still unverified in the reviewed sources."
+    },
+    {
+      "id": "rsa_2024_plan_tranche1_issued",
+      "value": 32956000,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(20), rounded thousandshare table",
+      "status": "reported",
+      "note": "Original issuance, not remaining unvested count. Already issued share capital; not incremental denominator on top of issued less treasury."
+    },
+    {
+      "id": "rsa_2024_plan_tranche2_issued",
+      "value": 32878000,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(20), rounded thousandshare table",
+      "status": "reported",
+      "note": "Original issuance, not remaining unvested count. Already issued share capital; not incremental denominator on top of issued less treasury."
+    },
+    {
+      "id": "rsa_2022_plan_tranche1_issued",
+      "value": 23060000,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(20), rounded thousandshare table",
+      "status": "reported",
+      "note": "Original issuance, not remaining unvested count. Already issued share capital; not incremental denominator on top of issued less treasury."
+    },
+    {
+      "id": "rsa_2022_plan_tranche2_issued",
+      "value": 26728000,
+      "unit": "shares",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(20), rounded thousandshare table",
+      "status": "reported",
+      "note": "Original issuance, not remaining unvested count. Already issued share capital; not incremental denominator on top of issued less treasury."
+    },
+    {
+      "id": "rsa_unearned_compensation_contra_equity",
+      "value": 1624195,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balance sheet;Note6(20)",
+      "status": "reported",
+      "note": "Not an extra cash liability or fair value of future dilution."
+    },
+    {
+      "id": "H1_rsa_compensation_expense",
+      "value": 472000,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(20) roundedmillion",
+      "status": "reported"
+    },
+    {
+      "id": "H1_all_share_based_payment_cashflow_addback",
+      "value": 475002,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement",
+      "status": "reported",
+      "note": "Not free cash: retain the cost or model future dilution/cash replacement consistently."
+    },
+    {
+      "id": "Q2_EPS_basic_weighted_shares",
+      "value": 12475080000,
+      "unit": "weighted_shares",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(27)",
+      "status": "reported"
+    },
+    {
+      "id": "Q2_EPS_diluted_weighted_shares",
+      "value": 12541653000,
+      "unit": "weighted_shares",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(27)",
+      "status": "reported",
+      "note": "Not a point-in-time valuation denominator."
+    },
+    {
+      "id": "Q2_EPS_increment_rsa",
+      "value": 54728000,
+      "unit": "weighted_shares",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(27)",
+      "status": "reported",
+      "note": "Do not add to already-issued restricted shares."
+    },
+    {
+      "id": "Q2_EPS_increment_employee_compensation",
+      "value": 11845000,
+      "unit": "weighted_shares",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(27)",
+      "status": "reported",
+      "note": "Potentialstocksettlement sensitivity;2025 employeescompensation payablein2026approvedcash3,438,287thousand."
+    },
+    {
+      "id": "2025_employee_cash_compensation",
+      "value": 3438287,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-05-27",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(22)",
+      "status": "reported"
+    },
+    {
+      "id": "cash_and_equivalents",
+      "value": 124706465,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Note6(1)",
+      "status": "reported"
+    },
+    {
+      "id": "time_deposits_over_3_months",
+      "value": 22135867,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(4)",
+      "status": "reported"
+    },
+    {
+      "id": "pledged_refundable_deposits",
+      "value": 1575650,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note8",
+      "status": "derived_sum",
+      "note": "Separate from cashandtime-deposit pool; customsduty/landlease/energy/LC collateral."
+    },
+    {
+      "id": "financial_debt_book",
+      "value": 57532565,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(11)(13)(14)",
+      "status": "derived_sum"
+    },
+    {
+      "id": "financial_debt_before_bond_discount",
+      "value": 57557436,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Notes6(11)(13)(14)",
+      "status": "derived_sum",
+      "note": "Exchangeable565,191 is contractualredemption TWD equivalent, not USDnominaltranslatedatJuneFX."
+    },
+    {
+      "id": "lease_liability",
+      "value": 5917316,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "current_tax_liability",
+      "value": 5216199,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "current_tax_asset",
+      "value": 56156,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "deferred_tax_liability",
+      "value": 13498249,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "deferred_tax_asset",
+      "value": 9971653,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "dividend_payable",
+      "value": 32704164,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "NCI_book",
+      "value": 4051,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "net_defined_benefit_liability",
+      "value": 833593,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "decommissioning_provision",
+      "value": 926028,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "onerous_contract_provision",
+      "value": 105949,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "carbon_fee_provision",
+      "value": 41971,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "contract_liabilities_current",
+      "value": 4446566,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "contract_liabilities_noncurrent",
+      "value": 1767326,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "refund_liabilities",
+      "value": 4922969,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "equipment_payables",
+      "value": 7159251,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Balancesheet;Notes6(9)(16)(17)(18)(19)(21)",
+      "status": "reported"
+    },
+    {
+      "id": "customer_capacity_deposits",
+      "value": 40674252,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(28)D andNote12(5)",
+      "status": "reported",
+      "note": "Full current and noncurrent guarantee deposits; mainly capacity-reservation funding; individual terms are not fully disclosed."
+    },
+    {
+      "id": "dividend_exact",
+      "value": 32704164009,
+      "unit": "TWD",
+      "as_of_or_period_end": "2026-06-23",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526278424/umc-ex99.htm",
+      "locator": "Exhibit99.1/99.2",
+      "status": "reported"
+    },
+    {
+      "id": "dividend_per_ordinary",
+      "value": 2.60808262,
+      "unit": "TWD/share",
+      "as_of_or_period_end": "2026-06-23",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526278424/umc-ex99.htm",
+      "locator": "Exhibit99.1/99.2",
+      "status": "reported"
+    },
+    {
+      "id": "ordinary_ex_date",
+      "value": "2026-07-08",
+      "unit": "date",
+      "as_of_or_period_end": "2026",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526278424/umc-ex99.htm",
+      "locator": "2026dividendschedule",
+      "status": "reported"
+    },
+    {
+      "id": "ordinary_record_date",
+      "value": "2026-07-14",
+      "unit": "date",
+      "as_of_or_period_end": "2026",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526278424/umc-ex99.htm",
+      "locator": "2026dividendschedule",
+      "status": "reported"
+    },
+    {
+      "id": "ordinary_dividend_pay_date",
+      "value": "2026-07-30",
+      "unit": "date",
+      "as_of_or_period_end": "2026",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526278424/umc-ex99.htm",
+      "locator": "2026dividendschedule",
+      "status": "reported"
+    },
+    {
+      "id": "ads_ex_record_date",
+      "value": "2026-07-08",
+      "unit": "date",
+      "as_of_or_period_end": "2026",
+      "source_url": "https://www.umc.com/en/IR_Stock/dividend_information",
+      "locator": "2026dividendschedule",
+      "status": "reported"
+    },
+    {
+      "id": "ads_dividend_pay_date",
+      "value": "2026-08-06",
+      "unit": "date",
+      "as_of_or_period_end": "2026",
+      "source_url": "https://www.umc.com/en/IR_Stock/dividend_information",
+      "locator": "2026dividendschedule",
+      "status": "reported"
+    },
+    {
+      "id": "FVTPL_direct_assets_total",
+      "value": 27672121,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Notes6(2),12(7)",
+      "status": "reported",
+      "note": "Includes securities, funds, investments in convertible bonds and derivatives; excludes equity-method associates."
+    },
+    {
+      "id": "FVTPL_direct_current",
+      "value": 549520,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Notes6(2),12(7)",
+      "status": "reported"
+    },
+    {
+      "id": "FVTPL_direct_noncurrent",
+      "value": 27122601,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Notes6(2),12(7)",
+      "status": "reported"
+    },
+    {
+      "id": "FVOCI_direct_assets_total",
+      "value": 23249916,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Notes6(3),12(7)",
+      "status": "reported",
+      "note": "Entirely noncurrent at June30. Includes unlisted holdings. Do not equate with cash."
+    },
+    {
+      "id": "FVTPL_level1",
+      "value": 12968130,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note12(7) hierarchy",
+      "status": "reported_or_sum"
+    },
+    {
+      "id": "FVTPL_level2",
+      "value": 25320,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note12(7) hierarchy",
+      "status": "reported_or_sum"
+    },
+    {
+      "id": "FVTPL_level3",
+      "value": 14678671,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note12(7) hierarchy",
+      "status": "reported_or_sum"
+    },
+    {
+      "id": "FVOCI_level1",
+      "value": 16288130,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note12(7) hierarchy",
+      "status": "reported_or_sum"
+    },
+    {
+      "id": "FVOCI_level3",
+      "value": 6961786,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note12(7) hierarchy",
+      "status": "reported_or_sum"
+    },
+    {
+      "id": "equity_method_carrying_total",
+      "value": 96474468,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7)",
+      "status": "reported",
+      "note": "Separate from FVTPL/FVOCIassets. Not fair value."
+    },
+    {
+      "id": "listed_equity_method_carrying",
+      "value": 30031000,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7) quotedportfolio paragraph",
+      "status": "reported",
+      "note": "Rounded to millions."
+    },
+    {
+      "id": "listed_equity_method_fair_value",
+      "value": 232714000,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7) quotedportfolio paragraph",
+      "status": "reported",
+      "note": "QuotedJune30 FV, beforetax/transaction/blockdiscount/circularownershipadjustments; notcashnorcurrentOctoberquote."
+    },
+    {
+      "id": "unlisted_equity_method_carrying",
+      "value": 66442994,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7) detail minus exactlistedcarrying30,031,474",
+      "status": "derived",
+      "note": "Book carrying value only, not estimated fair value."
+    },
+    {
+      "id": "Q2_revenue",
+      "value": 68732662,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "IncomeStatement",
+      "status": "reported"
+    },
+    {
+      "id": "Q2_operating_income",
+      "value": 14949990,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "IncomeStatement",
+      "status": "reported"
+    },
+    {
+      "id": "Q2_parent_net_income",
+      "value": 42259962,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "IncomeStatement",
+      "status": "reported"
+    },
+    {
+      "id": "Q2_equity_method_profit",
+      "value": 23605970,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "IncomeStatement;Note6(7)",
+      "status": "reported",
+      "note": "Nonoperating. This is not demonstrated repeatable core cash profit. Do not label the entire amount as one asset disposal without investee-level evidence."
+    },
+    {
+      "id": "Q2_FVTPL_valuation_gain",
+      "value": 6067021,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-04-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(24)",
+      "status": "reported",
+      "note": "Market-sensitive valuation gain; exclude from core FCFF."
+    },
+    {
+      "id": "H1_equity_method_profit",
+      "value": 26421106,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_Hsun_Chieh_investment_profit",
+      "value": 21209726,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Attachment7",
+      "status": "reported"
+    },
+    {
+      "id": "H1_Yann_Yuan_investment_profit",
+      "value": 2584048,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Attachment7",
+      "status": "reported"
+    },
+    {
+      "id": "H1_Unimicron_investment_profit",
+      "value": 2261743,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Attachment7",
+      "status": "reported"
+    },
+    {
+      "id": "H1_FVTPL_valuation_gain",
+      "value": 8193073,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_Novatek_disposed_fair_value",
+      "value": 6018202,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(3)",
+      "status": "reported",
+      "note": "Shares transferred for bond exchange. Do not assume these are cash sale proceeds."
+    },
+    {
+      "id": "H1_Novatek_FVOCI_reclassified_to_retained_earnings",
+      "value": 4142004,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(3)",
+      "status": "reported",
+      "note": "No income-statement gain; do not explain Q2 EPS using this reclassification."
+    },
+    {
+      "id": "H1_operating_cashflow",
+      "value": 55678697,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_cash_PP_and_E",
+      "value": 21348637,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_cash_intangibles",
+      "value": 1339043,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_asset_grants_cash",
+      "value": 3781133,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_lease_principal_cash",
+      "value": 420478,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_lease_interest_expense",
+      "value": 93065,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_deferred_grant_amortization",
+      "value": 968256,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "H1_government_grants_in_operating_income",
+      "value": 1044448,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Cashflowstatement;Notes6(16)(23)(24)",
+      "status": "reported"
+    },
+    {
+      "id": "new_2026_phased_capital_budget",
+      "value": 148680000000,
+      "unit": "TWD",
+      "as_of_or_period_end": "2026-07-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+      "locator": "Exhibit99.2",
+      "status": "reported",
+      "note": "Capital-budget execution authorization. It is phased, rather than an immediate cash claim. Working capital is the cited funding source."
+    },
+    {
+      "id": "2026_capex_guidance",
+      "value": 2000000000,
+      "unit": "USD",
+      "as_of_or_period_end": "2026-07-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+      "locator": "Exhibit99.6",
+      "status": "reported"
+    },
+    {
+      "id": "new_TGVest_fund_commitment_max",
+      "value": 1700000000,
+      "unit": "TWD",
+      "as_of_or_period_end": "2026-07-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+      "locator": "Exhibit99.4",
+      "status": "reported",
+      "note": "Capital contributions are made through capital calls; this is a post-June noncore commitment."
+    },
+    {
+      "id": "centera_sale_proceeds",
+      "value": 326642500,
+      "unit": "TWD",
+      "as_of_or_period_end": "2026-07-29/2026-07-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526324785/umc-ex99.htm",
+      "locator": "Exhibit99.2",
+      "status": "reported"
+    },
+    {
+      "id": "centera_sale_gain",
+      "value": 248883331,
+      "unit": "TWD",
+      "as_of_or_period_end": "2026-07-29/2026-07-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526324785/umc-ex99.htm",
+      "locator": "Exhibit99.2",
+      "status": "reported",
+      "note": "Avoid double-counting earlier FVTPL marks or using the gain as cash proceeds."
+    },
+    {
+      "id": "taiwan_semiconductor_sale_proceeds",
+      "value": 302534400,
+      "unit": "TWD",
+      "as_of_or_period_end": "2026-01-23/2026-07-15",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526303966/umc-ex99_1.htm",
+      "locator": "Exhibit99.1",
+      "status": "reported",
+      "note": "Taiwan Semiconductor Co., Ltd., not TSMC. The transaction window straddles June30; the full amount cannot be added to subsequent cash."
+    },
+    {
+      "id": "tax_treaty_deferred_tax_asset_increase",
+      "value": 1947000,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-01-01/2026-06-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(26)",
+      "status": "reported",
+      "note": "Noncashbenefit; Taiwan-Singapore renewedagreementeffectiveJan1 2027 andtax-sparingphaseoutafterthreetaxableyears. Do not extrapolatelowH1ETR."
+    },
+    {
+      "id": "spot_FX_cutoff",
+      "value": 32.338,
+      "unit": "TWD_per_USD",
+      "as_of_or_period_end": "2026-10-16",
+      "source_url": "https://www.cbc.gov.tw/en/lp-700-2.html",
+      "locator": "Dailyclosingtable",
+      "status": "reported",
+      "note": "Forcutoffanalysis only. JuneanchoredvaluationusesparentfrozenJune30CBC31.837, notthisrate orEPSweightedaverageFX."
+    },
+    {
+      "id": "new_rsa_maximum_new_ordinary_shares",
+      "value": 67000000,
+      "unit": "ordinary_shares",
+      "as_of_or_period_end": "2026-02-25",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+      "locator": "Exhibit 99.6, item 3",
+      "status": "reported_authorization_or_estimate",
+      "note": "Maximum authorization; actual grant or issuance date is unverified. Distinct from already-issued restricted shares already included in June issued shares."
+    },
+    {
+      "id": "new_rsa_board_resolution_date",
+      "value": "2026-02-25",
+      "unit": "date",
+      "as_of_or_period_end": "2026-02-25",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+      "locator": "Exhibit 99.6, item 1",
+      "status": "reported_authorization_or_estimate",
+      "note": "Board approval date."
+    },
+    {
+      "id": "new_rsa_issue_price",
+      "value": 0,
+      "unit": "TWD_per_ordinary_share",
+      "as_of_or_period_end": "2026-02-25",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+      "locator": "Exhibit 99.6, item 2",
+      "status": "reported_authorization_or_estimate",
+      "note": "Expected issue price; issuance is gratuitous."
+    },
+    {
+      "id": "new_rsa_vesting_schedule",
+      "value": [
+        {
+          "years_after_grant": 2,
+          "percent": 33
+        },
+        {
+          "years_after_grant": 3,
+          "percent": 33
+        },
+        {
+          "years_after_grant": 4,
+          "percent": 34
+        }
+      ],
+      "unit": "years_after_grant_and_percent",
+      "as_of_or_period_end": "2026-02-25",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+      "locator": "Exhibit 99.6, item 4",
+      "status": "reported_authorization_or_estimate",
+      "note": "33% after two years, 33% after three years and 34% after four years, subject to continued employment and individual and corporate performance conditions."
+    },
+    {
+      "id": "new_rsa_estimated_total_compensation",
+      "value": 3867771,
+      "unit": "TWD_thousand",
+      "as_of_or_period_end": "2026-02-25",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+      "locator": "Exhibit 99.6, item 9",
+      "status": "reported_authorization_or_estimate",
+      "note": "Issuer estimate assuming all vesting conditions are fulfilled; actual accounting uses grant-date fair value. This is not a contractual cash liability."
+    },
+    {
+      "id": "new_rsa_estimated_annual_compensation",
+      "value": {
+        "2026": 232669,
+        "2027": 1392398,
+        "2028": 1285757,
+        "2029": 683122,
+        "2030": 273825
+      },
+      "unit": "TWD_thousand_by_year",
+      "as_of_or_period_end": "2026-02-25",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+      "locator": "Exhibit 99.6, item 9",
+      "status": "reported_authorization_or_estimate",
+      "note": "Issuer estimated expense for 2026–2030, not proof of actual grant date or cash payment."
+    },
+    {
+      "id": "new_rsa_shareholder_approval_date",
+      "value": "2026-05-27",
+      "unit": "date",
+      "as_of_or_period_end": "2026-05-27",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526240337/umc-ex99.htm",
+      "locator": "Annual shareholders meeting resolutions; issuance of new restricted shares to employees",
+      "status": "reported",
+      "note": "Approval does not establish the actual grant or issuance date."
+    }
+  ],
+  "associates": [
+    {
+      "name": "SIS",
+      "carrying_TWD_thousand": 9169636,
+      "ownership_pct": 18.08,
+      "listed": true,
+      "shares_held_rounded_thousand_precision": 92648000,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Faraday",
+      "carrying_TWD_thousand": 3048043,
+      "ownership_pct": 13.8,
+      "listed": true,
+      "shares_held_rounded_thousand_precision": 35963000,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Unimicron",
+      "carrying_TWD_thousand": 17813795,
+      "ownership_pct": 12.85,
+      "listed": true,
+      "shares_held_rounded_thousand_precision": 204424000,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Hsun Chieh Investment",
+      "carrying_TWD_thousand": 34229937,
+      "ownership_pct": 36.49,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": 1069271000,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Yann Yuan",
+      "carrying_TWD_thousand": 30303137,
+      "ownership_pct": 26.78,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": 259468000,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Unitech Capital",
+      "carrying_TWD_thousand": 686546,
+      "ownership_pct": 42,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Triknight",
+      "carrying_TWD_thousand": 769186,
+      "ownership_pct": 40,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Hsun Chieh Capital",
+      "carrying_TWD_thousand": 308837,
+      "ownership_pct": 40,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "United LED HK",
+      "carrying_TWD_thousand": 128687,
+      "ownership_pct": 25.14,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "Amoeso",
+      "carrying_TWD_thousand": 16664,
+      "ownership_pct": 19.61,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    },
+    {
+      "name": "MTIC",
+      "carrying_TWD_thousand": 0,
+      "ownership_pct": 45.44,
+      "listed": false,
+      "shares_held_rounded_thousand_precision": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+      "locator": "Note6(7);Attachment7"
+    }
+  ],
+  "circular_ownership": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "locator": "Note6(7)c",
+    "holdings": [
+      {
+        "associate": "Hsun Chieh Investment",
+        "umc_shares_held": 441371000,
+        "umc_ownership_pct_of_associate": 36.49
+      },
+      {
+        "associate": "SIS",
+        "umc_shares_held": 266580000,
+        "umc_ownership_pct_of_associate": 18.08
+      },
+      {
+        "associate": "Yann Yuan",
+        "umc_shares_held": 196563000,
+        "umc_ownership_pct_of_associate": 26.78
+      },
+      {
+        "associate": "Unimicron",
+        "umc_shares_held": 19000,
+        "umc_ownership_pct_of_associate": 12.85
+      }
+    ],
+    "policy": "The excluded-portfolio case gets no own-share denominator benefit. Including the portfolio requires look-through value, taxes and rights analysis. Never add raw book value and quoted stakes without eliminating circular UMC exposure."
+  },
+  "post_balance_convertibles": [
+    {
+      "name": "Domestic1",
+      "authorization": "2026-06-03",
+      "authorized_face_TWD": 12000000000,
+      "cash_proceeds_confirmed_TWD": 12120000000,
+      "cash_receipt_date": "2026-08-05",
+      "initial_conversion_TWD_per_ordinary": 146,
+      "indicative_full_conversion_shares": 82191780.8219178,
+      "initial_authorized_tenor_years": 5,
+      "initial_authorized_coupon_pct": 0,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526254481/umc-ex99.htm",
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526324785/umc-ex99.htm",
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526333718/umc-ex99_1.htm"
+      ],
+      "unresolved": "Final put/call terms and issue/maturity dates were not primary-verified. June authorization is not June outstanding debt."
+    },
+    {
+      "name": "Domestic2",
+      "authorization": "2026-06-03",
+      "authorized_face_TWD": 4000000000,
+      "cash_proceeds_confirmed_TWD": 4792798780,
+      "cash_receipt_date": "2026-09-02",
+      "initial_conversion_TWD_per_ordinary": 130.7,
+      "indicative_full_conversion_shares": 30604437.643458303,
+      "initial_authorized_tenor_years": 5,
+      "initial_authorized_coupon_pct": 0,
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526254481/umc-ex99.htm",
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526350180/umc-ex99.htm",
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526379275/umc-ex99_1.htm"
+      ],
+      "unresolved": "Do not use NT$4.7928bn of proceeds as NT$4.7928bn principal. Final put/call terms were not primary-verified."
+    },
+    {
+      "name": "Overseas7A",
+      "face_USD": 900000000,
+      "priced_date": "2026-10-05",
+      "scheduled_issue_date": "2026-10-13",
+      "maturity_date": "2031-10-13",
+      "holder_put_dates": [
+        "2027-10-13",
+        "2029-10-13"
+      ],
+      "coupon_pct": 0,
+      "redemption_yield_pct": -0.25,
+      "fixed_TWD_per_USD": 31.753,
+      "initial_conversion_TWD_per_ordinary": 202.06,
+      "indicative_full_conversion_shares": 141431752.9446699,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526413417/umc-ex99_1.htm",
+      "issuance_status": "Priced and scheduled; primary confirmation of final cash receipt was not found in the reviewed SEC set."
+    },
+    {
+      "name": "Overseas7B",
+      "face_USD": 900000000,
+      "priced_date": "2026-10-05",
+      "scheduled_issue_date": "2026-10-13",
+      "maturity_date": "2028-04-13",
+      "coupon_pct": 0,
+      "redemption_yield_pct": -1.35,
+      "fixed_TWD_per_USD": 31.753,
+      "initial_conversion_TWD_per_ordinary": 179.19,
+      "indicative_full_conversion_shares": 159482672.0241085,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526413417/umc-ex99_1.htm",
+      "source_label_warning": "The amended filing mistakenly labels the second conversion paragraph Tranche A. Assignment to B is a contextual inference and must be verified against the indenture or a primary exchange filing.",
+      "issuance_status": "Priced and scheduled; primary confirmation of final cash receipt was not found in the reviewed SEC set."
+    }
+  ],
+  "sources": {
+    "h1": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+    "fy25": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526193757/d91630d20f.htm",
+    "q2": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm",
+    "buyback": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526286731/umc-ex99_1.htm",
+    "may_capital": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526220535/umc-ex99.htm",
+    "dividend": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526278424/umc-ex99.htm",
+    "aug_capital": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526350180/umc-ex99.htm",
+    "domestic_auth": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526254481/umc-ex99.htm",
+    "domestic_price1": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526324785/umc-ex99.htm",
+    "domestic_cash1": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526333718/umc-ex99_1.htm",
+    "domestic_cash2": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526379275/umc-ex99_1.htm",
+    "oct_convert": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526413417/umc-ex99_1.htm",
+    "oct_superseded": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526413371/umc-ex99_1.htm",
+    "agm": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526240337/umc-ex99.htm",
+    "centera": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526324785/umc-ex99.htm",
+    "taiwan_semiconductor_sale": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526303966/umc-ex99_1.htm",
+    "faq": "https://www.umc.com/en/Html/faqs",
+    "dividend_issuer": "https://www.umc.com/en/IR_Stock/dividend_information",
+    "fx_oct": "https://www.cbc.gov.tw/en/lp-700-2.html",
+    "new_rsa_terms": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm"
+  },
+  "funding_inputs_file": "funding-inputs-v1.json",
+  "new_rsa_2026": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm",
+    "locator": "Exhibit 99.6, items 1–4 and 9",
+    "board_resolution_date": "2026-02-25",
+    "shareholder_approval_date": "2026-05-27",
+    "maximum_new_ordinary_shares": 67000000,
+    "issue_price_TWD": 0,
+    "vesting": [
+      {
+        "years_after_grant": 2,
+        "percent": 33
+      },
+      {
+        "years_after_grant": 3,
+        "percent": 33
+      },
+      {
+        "years_after_grant": 4,
+        "percent": 34
+      }
+    ],
+    "conditions": "Continued employment, individual performance and corporate ROE, TSR and ESG criteria. Unvested awards failing the conditions are recalled and cancelled without consideration.",
+    "maximum_fraction_of_June_outstanding_pct": 0.5340162845811103,
+    "issuer_estimated_total_compensation_TWD_thousand": 3867771,
+    "issuer_estimated_compensation_TWD_thousand_by_year": {
+      "2026": 232669,
+      "2027": 1392398,
+      "2028": 1285757,
+      "2029": 683122,
+      "2030": 273825
+    },
+    "expense_caveat": "These are issuer estimates under all-vesting assumptions, not actual grant-date expense or a contractual cash liability. Actual grant-date fair value is used for accounting.",
+    "claim_treatment": "Potential new issuance is distinct from already-issued unvested shares. Do not label the full 67 million as outstanding on June 30. Model an explicit maximum dilution or ongoing compensation replacement assumption consistently with SBC treatment.",
+    "source_inconsistency": "Introductory performance text says EPS, whereas the detailed table specifies ROE. Preserve the detailed table and flag the inconsistency rather than silently rewriting the source.",
+    "source_sha256": "fdfcd7724936190ad5dd83107be1fe354d28a6f54ab4c3ec93333894362b4dc9",
+    "shareholder_approval_source_url": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526240337/umc-ex99.htm",
+    "actual_grant_or_issuance_date": null,
+    "authorization_is_outstanding_share_count": false
+  }
+}
