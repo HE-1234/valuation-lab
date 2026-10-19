@@ -1,3 +1,4 @@
+import {simulationUiFixture,SIM_UI_FIXTURE_PATH} from './claude-simulation-ui-preservation.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';import {createHash} from 'node:crypto';
 import {UMC_MC_BASE_COMMIT,UMC_MC_MODIFIED_PATH,umcMcSHA,umcMcFixture,validateUmcMcFixture,reverseUmcSimulationMount} from './umc-simulation-mount-preservation.mjs';
 import {reverseUmcIntegration} from './umc-integration-preservation.mjs';
@@ -11,7 +12,8 @@ test('UMC simulation mount fixture permits only the exact two guards from immuta
 });
 test('UMC simulation mount fix reverses every production byte to immutable848-file V82 with no allowances',()=>{
  const entries=git('ls-tree','-r','-z',UMC_MC_BASE_COMMIT,'--','dist').toString().split('\0').filter(Boolean).map(r=>{const [meta,p]=r.split('\t');return [p,meta.split(' ')[2]]});
- assert.equal(entries.length,848);assert.deepEqual(walk('dist'),entries.map(([p])=>p).sort());
+ assert.equal(entries.length,848);assert.deepEqual(walk('dist'),[...entries.map(([p])=>p),...Object.keys(simulationUiFixture().additions)].sort());
+ for(const [p,sha]of Object.entries(simulationUiFixture().additions))assert.equal(umcMcSHA(reverseUmcSimulationMount(p,read(p))),sha,p+' exact later UI addition');
  for(const [p,expected]of entries){const bytes=reverseUmcSimulationMount(p,read(p));assert.equal(blob(bytes),expected,p);}
 });
 test('UMC simulation guard reversal rejects modified bytes and leaves earlier strict path constraints intact',()=>{
@@ -22,6 +24,6 @@ test('UMC simulation guard reversal rejects modified bytes and leaves earlier st
 
 test('UMC simulation repair retains every published V82 fixture byte unchanged',()=>{
  const entries=git('ls-tree','-r','-z',UMC_MC_BASE_COMMIT,'--','tests/fixtures').toString().split('\0').filter(Boolean).map(r=>{const [meta,p]=r.split('\t');return [p,meta.split(' ')[2]]});
- assert.deepEqual(walk('tests/fixtures'),[...entries.map(([p])=>p),'tests/fixtures/umc-simulation-mount-v82.json'].sort());
+ assert.deepEqual(walk('tests/fixtures'),[...entries.map(([p])=>p),'tests/fixtures/umc-simulation-mount-v82.json',SIM_UI_FIXTURE_PATH].sort());
  for(const [p,expected]of entries)assert.equal(blob(read(p)),expected,p);
 });

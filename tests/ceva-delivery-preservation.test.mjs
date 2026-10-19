@@ -1,3 +1,4 @@
+import {simulationUiFixture,reverseClaudeSimulationUi} from './claude-simulation-ui-preservation.mjs';
 import {umcFixture,reverseUmcIntegration} from './umc-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -29,8 +30,8 @@ test('CEVA delivery reversal verifies original V80 Git bytes and rejects every m
 });
 test('CEVA delivery repair preserves the entire V80 production tree outside its two exact paths',()=>{
  const fixture=cevaDeliveryFixture(),baseline=baseEntries(),current=filesUnder('dist');assert.equal(git('rev-parse','--show-object-format').toString().trim(),'sha1');
- assert.deepEqual(current.filter(p=>!baseline.has(p)).sort(),[added,...Object.keys(umcFixture().additions)].sort(),'Only the exact envelope and individually pinned UMC additions are permitted');assert.deepEqual([...baseline.keys()].filter(p=>!current.includes(p)),[],'No V80 production file may disappear');assert.ok(baseline.has(modified));assert.ok(!baseline.has(added));
+ assert.deepEqual(current.filter(p=>!baseline.has(p)).sort(),[added,...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions)].sort(),'Only the exact envelope and individually pinned UMC additions are permitted');assert.deepEqual([...baseline.keys()].filter(p=>!current.includes(p)),[],'No V80 production file may disappear');assert.ok(baseline.has(modified));assert.ok(!baseline.has(added));
  for(const [p,entry]of baseline){const bytes=read(p),restored=reverseCevaDelivery(p,bytes);assert.equal(blobSHA(restored),entry.oid,p+' must reverse byte-for-byte to V80; no undeclared mutations');}
- assert.equal(cevaDeliverySHA(read(added)),fixture.additions[added]);for(const [p,sha]of Object.entries(umcFixture().additions))assert.equal(cevaDeliverySHA(read(p)),sha,p+' exact reviewed UMC addition bytes');
+ assert.equal(cevaDeliverySHA(read(added)),fixture.additions[added]);for(const [p,sha]of Object.entries(umcFixture().additions))assert.equal(cevaDeliverySHA(read(p)),sha,p+' exact reviewed UMC addition bytes');for(const [p,sha]of Object.entries(simulationUiFixture().additions))assert.equal(cevaDeliverySHA(reverseClaudeSimulationUi(p,read(p))),sha,p+' exact reviewed simulation UI addition bytes');
  const unchanged=[...baseline.keys()].find(p=>p!==modified),mutation=altered(read(unchanged));assert.throws(()=>assert.equal(blobSHA(reverseCevaDelivery(unchanged,mutation)),baseline.get(unchanged).oid),'Unlisted mutations must fail pinned whole-tree verification');
 });

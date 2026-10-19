@@ -95,3 +95,4 @@ import('./report-ux.js');
 import('./report-phases.js');
 import('./report-paths.js');
 import('./report-journey.js');
+import('./report-mc-guide.js');

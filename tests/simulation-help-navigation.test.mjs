@@ -105,6 +105,6 @@ test('help navigation preservation: all 354 V59 shipped assets survive ten exact
  for(const path of paths)assert.deepEqual(reverseSimulationHelpNavigation(path,read(path)),previous(path),path);
 });
 for(const path of Object.keys(approved.files))test('help navigation preservation rejects unreviewed changes: '+path,()=>{
- assert.throws(()=>reverseSimulationHelpNavigation(path,Buffer.concat([read(path),Buffer.from(' ')])),/reviewed documentation bytes/);
+ assert.throws(()=>reverseSimulationHelpNavigation(path,Buffer.concat([read(path),Buffer.from(' ')])),path==='dist/simulation-view.js'?/dist\/simulation-view\.js exact reviewed Claude simulation UI bytes/:/reviewed documentation bytes/);
  assert.equal(sha(previous(path)),approved.files[path].beforeSHA256);
 });

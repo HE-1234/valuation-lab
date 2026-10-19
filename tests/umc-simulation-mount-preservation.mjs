@@ -1,3 +1,4 @@
+import {reverseClaudeSimulationUi} from './claude-simulation-ui-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -20,6 +21,7 @@ export function validateUmcMcFixture(f){
 let cached;
 export function umcMcFixture(){return cached??=Object.freeze(validateUmcMcFixture(JSON.parse(fs.readFileSync(new URL('./fixtures/umc-simulation-mount-v82.json',import.meta.url),'utf8'))));}
 export function reverseUmcSimulationMount(path,bytes,earlierContext=''){
+ bytes=reverseClaudeSimulationUi(path,bytes,earlierContext);
  if(path!==UMC_MC_MODIFIED_PATH)return bytes;
  assert.ok(Buffer.isBuffer(bytes),'Exact production bytes are required');const f=umcMcFixture();assert.equal(umcMcSHA(bytes),f.afterSHA256,path+' exact reviewed UMC simulation mount fix bytes'+earlierContext);return Buffer.from(f.beforeText);
 }
