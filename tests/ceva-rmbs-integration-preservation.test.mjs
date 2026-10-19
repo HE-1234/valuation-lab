@@ -1,3 +1,4 @@
+import {cevaDeliveryFixture,reverseCevaDelivery} from './ceva-delivery-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -23,7 +24,7 @@ test('exact combined CEVA/RMBS delta reverses to pinned V79 and rejects every mo
  for(const required of ['dist/ceva-valuation.js','dist/rmbs-financial-engine.js'])assert.ok(Object.hasOwn(fixture.additions,required),required+' must be pinned individually');
  for(const [p,item]of Object.entries(fixture.files)){
   const bytes=read(p),original=git('show',CEVA_RMBS_BASE_COMMIT+':'+p),before=reverseCevaRmbsIntegration(p,bytes);
-  assert.equal(cevaRmbsSHA(bytes),item.afterSHA256,p+' exact reviewed after hash');assert.deepEqual(Buffer.from(item.beforeText,'utf8'),original,p+' beforeText must equal git show V79');assert.equal(cevaRmbsSHA(original),item.beforeSHA256,p+' before hash must equal git show V79');assert.deepEqual(before,original,p+' exact reversal');
+  assert.equal(cevaRmbsSHA(reverseCevaDelivery(p,bytes)),item.afterSHA256,p+' exact reviewed after hash');assert.deepEqual(Buffer.from(item.beforeText,'utf8'),original,p+' beforeText must equal git show V79');assert.equal(cevaRmbsSHA(original),item.beforeSHA256,p+' before hash must equal git show V79');assert.deepEqual(before,original,p+' exact reversal');
   for(const changed of [Buffer.concat([bytes,Buffer.from('\n/* unrelated */')]),altered(bytes),bytes.subarray(0,Math.max(0,bytes.length-1))])if(!changed.equals(bytes))assert.throws(()=>reverseCevaRmbsIntegration(p,changed),/exact reviewed CEVA\/RMBS integration bytes/);
  }
  for(const [p,sha]of Object.entries(fixture.additions)){
@@ -32,13 +33,13 @@ test('exact combined CEVA/RMBS delta reverses to pinned V79 and rejects every mo
  }
 });
 test('combined CEVA/RMBS manifest exhaustively accounts for the production tree with no undeclared changes',()=>{
- const fixture=cevaRmbsFixture(),baseline=baseEntries(),current=filesUnder('dist'),declaredAdditions=Object.keys(fixture.additions).sort();
+ const fixture=cevaRmbsFixture(),baseline=baseEntries(),current=filesUnder('dist'),declaredAdditions=[...Object.keys(fixture.additions),...Object.keys(cevaDeliveryFixture().additions)].sort();
  assert.equal(git('rev-parse','--show-object-format').toString().trim(),'sha1','Pinned V79 Git blob verification uses this repository object format');
  assert.deepEqual(current.filter(p=>!baseline.has(p)).sort(),declaredAdditions,'Every production addition must have an exact individual hash, with no prefix allowlist');
  assert.deepEqual([...baseline.keys()].filter(p=>!current.includes(p)),[],'No V79 production file may disappear');
  for(const p of Object.keys(fixture.files))assert.ok(baseline.has(p),p+' modifications must exist in pinned V79');
  for(const p of declaredAdditions)assert.ok(!baseline.has(p),p+' additions must not replace a V79 file');
  for(const [p,entry]of baseline){const bytes=read(p),restored=reverseCevaRmbsIntegration(p,bytes);assert.equal(blobSHA(restored),entry.oid,p+' must reverse byte-for-byte to V79; undeclared changes are forbidden');}
- for(const p of declaredAdditions)assert.equal(cevaRmbsSHA(read(p)),fixture.additions[p],p+' added production bytes must match exactly');
+ for(const p of declaredAdditions)assert.equal(cevaRmbsSHA(read(p)),(fixture.additions[p]??cevaDeliveryFixture().additions[p]),p+' added production bytes must match exactly');
  const unchanged=[...baseline.keys()].find(p=>!Object.hasOwn(fixture.files,p));assert.ok(unchanged,'The preservation layer must retain unmodified baseline files');const bytes=read(unchanged),mutated=altered(bytes);assert.throws(()=>assert.equal(blobSHA(reverseCevaRmbsIntegration(unchanged,mutated)),baseline.get(unchanged).oid),'An undeclared mutation cannot pass the pinned whole-tree check');
 });

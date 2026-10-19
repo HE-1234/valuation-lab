@@ -1,3 +1,4 @@
+import {cevaDeliveryFixture} from './ceva-delivery-preservation.mjs';
 import {cevaRmbsFixture} from './ceva-rmbs-integration-preservation.mjs';
 import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
 import {fixture as keysFixture,reverseKeysIntegration} from './keys-integration-preservation.mjs';
@@ -27,7 +28,7 @@ test('SNDK additions retain exact reviewed hashes and exclude raw source filings
  const f=fixture();assert.ok(Object.keys(f.additions).length>=5);
  const root=fileURLToPath(new URL('..',import.meta.url));
  const actual=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(root,join(e.parentPath,e.name))).sort();
- assert.deepEqual(actual,[...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(armFixture().additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
+ assert.deepEqual(actual,[...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(armFixture().additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
  for(const[p,h]of Object.entries(f.additions)){assert.equal(sha(reverseArmIntegration(p,read(p))),h,p);assert.doesNotMatch(p,/\/raw\/|\/transcripts\//);}
 });
 
