@@ -1,3 +1,4 @@
+import {reverseSimulationRangeHeader} from './simulation-range-header-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -74,7 +75,7 @@ test('Simulation UI reverses all reviewed modifications to immutable originals a
  const f=simulationUiFixture();
  for(const [p,item]of Object.entries(f.files)){
   const bytes=read(p),original=git('show',SIM_UI_BASE_COMMIT+':'+p);
-  assert.equal(simulationUiSHA(bytes),SIM_UI_REVIEWED_HASHES[p]);assert.equal(simulationUiSHA(original),item.beforeSHA256);
+  assert.equal(simulationUiSHA(reverseSimulationRangeHeader(p,bytes)),SIM_UI_REVIEWED_HASHES[p]);assert.equal(simulationUiSHA(original),item.beforeSHA256);
   assert.deepEqual(Buffer.from(item.beforeText),original);assert.deepEqual(reverseClaudeSimulationUi(p,bytes),original);
   assert.throws(()=>reverseClaudeSimulationUi(p,original),/exact reviewed Claude simulation UI bytes/,'Double reversal is forbidden');
  }
@@ -138,7 +139,7 @@ test('Final UI bytes differ from the exact upstream source only by the reviewed 
   ],
  };
  for(const [p,sourceHash]of Object.entries(SIM_UI_SOURCE_HASHES)){
-  let restored=read(p).toString('utf8');
+  let restored=reverseSimulationRangeHeader(p,read(p)).toString('utf8');
   for(const [after,before]of corrections[p]??[]){assert.equal(restored.split(after).length-1,1,p+' each exact compatibility correction occurs once');restored=restored.replace(after,before);}
   assert.equal(simulationUiSHA(restored),sourceHash,p+' exact upstream bytes after reversing only explicit compatibility corrections');
  }

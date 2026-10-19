@@ -1,3 +1,4 @@
+import {reverseSimulationRangeHeader} from './simulation-range-header-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -89,6 +90,7 @@ export function simulationUiFixture(){
 export function reverseClaudeSimulationUi(path,bytes,earlierContext=''){
  assert.ok(productionPath(path),String(path)+' must be an exact normalized dist path');
  assert.ok(Buffer.isBuffer(bytes),path+' requires exact production bytes');
+ bytes=reverseSimulationRangeHeader(path,bytes,earlierContext);
  const fixture=simulationUiFixture(),message=path+' exact reviewed Claude simulation UI bytes'+earlierContext;
  if(own(fixture.files,path)){
   const item=fixture.files[path];assert.equal(simulationUiSHA(bytes),item.afterSHA256,message);
