@@ -1,3 +1,5 @@
+import {allocationBaselineView} from './company-allocation-baseline-presentation.mjs';
+import {analystAllocationEditorHTML} from '../dist/analyst-allocation-view.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {startResearchWorkspace,bundledResearch} from './research-workspace-harness.mjs';
@@ -87,7 +89,7 @@ test('current capital integration: MC describes repriced AAOI assumptions and wi
 
 test('current capital integration: researched Claims starts open, keeps first controls compact and omits empty cash adjustments',async()=>{
  const {researchClaimsEditorHTML}=await import('../dist/research-view.js');const h=await startResearchWorkspace();
- for(const ticker of ['AAOI','NBIS']){h.select(ticker);const d=h.getState().draft,html=researchClaimsEditorHTML(company(ticker),d);assert.match(html,/^<details class="research-card" open>/);assert.doesNotMatch(html,/Cash roll-forward assumptions/);assert.ok(html.indexOf('baseline.commonShares')<html.indexOf(d.currentCapitalScenario.rationale),'full rationale is below initial editable controls');}
+ for(const ticker of ['AAOI','NBIS']){h.select(ticker);const d=h.getState().draft,html=researchClaimsEditorHTML(company(ticker),d),prefix=analystAllocationEditorHTML(d),original=(await allocationBaselineView()).researchClaimsEditorHTML(company(ticker),d);assert.equal(html,prefix+original,'exact approved optional prefix plus entire unchanged V78 Claims editor');assert.equal(prefix.length>0,ticker==='NBIS');assert.match(original,/^<details class="research-card" open>/);assert.doesNotMatch(original,/Cash roll-forward assumptions/);assert.ok(original.indexOf('baseline.commonShares')<original.indexOf(d.currentCapitalScenario.rationale),'full rationale is below initial editable controls');}
 });
 
 test('current capital integration: capital edits update live case labels without misclassifying operating rows and Undo restores research label',async()=>{

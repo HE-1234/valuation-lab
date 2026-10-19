@@ -303,5 +303,9 @@ export default {
   "engineError42": "otherAssets must be finite",
   "engineError43": "otherClaims must be finite",
   "eligibleSelected": "Latest period: {period}. Current selection is eligible.",
-  "ineligibleSelected": "Latest period: {period}. Current selection is not eligible; choose an eligible snapshot in the workbench."
+  "ineligibleSelected": "Latest period: {period}. Current selection is not eligible; choose an eligible snapshot in the workbench.",
+  "repairDerivedLabel": "Derived operating subtotal",
+  "repairAmazonAvailability": "Annual-reference availability uses the later of the recorded filing-date boundary and accepted timestamp. This conservative display convention is not an asserted publication time; historical eligibility remains disabled.",
+  "repairCoherentOperating": "EBIT is a source-derived operating subtotal of USD 897.861m, not a separately reported operating-income line. It excludes interest and separately disclosed other income; gain-on-sale and restructuring classifications remain analyst judgments. Original missing source fields are retained.",
+  "repairFabrinetDebt": "Bank debt is USD 0m from the reviewed June 26 balance sheet and borrowings note, not a missing-tag default. Operating leases remain operating costs; tax, severance, awards, warrants and other claims require the separate reviewed Annual model. This simple reference is provisional."
 };

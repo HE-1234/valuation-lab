@@ -1,3 +1,4 @@
+import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
 import {reverseRealityCheckFix} from './reality-check-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -20,11 +21,11 @@ test('Claude UI merge reverses only four reviewed files and preserves every V75 
   let restored=reverseRealityCheckFix(p,read(p)).toString();for(const [after,before] of changes){assert.equal(restored.split(after).length-1,1);restored=restored.replace(after,before);}
   assert.equal(mergeSHA(restored),f.files[p].upstreamSHA256,p+' exact Claude bytes apart from explicit functional/copy corrections');
  }
- const guided=read('dist/guided.js').toString();
+ const guided=reverseCompanyAllocationRepair('dist/guided.js',read('dist/guided.js')).toString();
  assert.equal(mergeSHA(Buffer.from(guided.replace("'data-bridge':'null','data-sensitivity':'null'","'data-bridge':'null'"))),f.files['dist/guided.js'].upstreamSHA256,'Only withholding stale sensitivity differs from Claude guided.js');
 });
 test('Merged production contains no unapproved SVCO package or production additions',()=>{
  const f=mergeFixture();const paths=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(fileURLToPath(new URL('..',import.meta.url)),join(e.parentPath,e.name))).sort();
- assert.deepEqual(paths,Object.keys(f.baselineProduction).sort());
+ assert.deepEqual(paths,[...Object.keys(f.baselineProduction),...Object.keys(allocationRepairFixture().additions)].sort());
  assert.equal(paths.some(p=>/svco/i.test(p)),false);
 });
