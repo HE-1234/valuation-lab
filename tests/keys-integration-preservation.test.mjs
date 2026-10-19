@@ -1,3 +1,4 @@
+import {cevaRmbsFixture} from './ceva-rmbs-integration-preservation.mjs';
 import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -15,7 +16,7 @@ test('KEYS exact insertion reversal preserves all approved prior production and 
 test('KEYS package contains only reviewed additive production and no raw corporate originals',()=>{
  const f=fixture(),root=fileURLToPath(new URL('..',import.meta.url));
  const actual=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(root,join(e.parentPath,e.name))).sort();
- assert.deepEqual(actual,[...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions)].sort());
+ assert.deepEqual(actual,[...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions)].sort());
  for(const[p,h]of Object.entries(f.additions)){assert.equal(sha(read(p)),h,p);assert.match(p,/^dist\/(?:keys-|data\/incremental-KEYS-)/);assert.doesNotMatch(p,/\/raw\/|\/transcripts\/|keys-20\d{6}\.htm/);}
 });
 test('KEYS preserves all 29 earlier defaults, edits, seeded trials, restores, bilingual output and ordering',async()=>{

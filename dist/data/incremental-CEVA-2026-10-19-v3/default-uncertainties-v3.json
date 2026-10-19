@@ -1,0 +1,50 @@
+[
+  {
+    "id": "growth",
+    "classification": "analyst-assumption-not-probability",
+    "en": "FY2026 licensing/royalty assumptions are $70m/$44m bear, $76m/$49m base and $80m/$51m bull. Nine subsequent licensing and royalty growth rates are separately specified in the source inputs. Base begins near management guidance; bear misses and bull exceeds it. These are named analyst scenarios without probabilities, not estimated expected outcomes.",
+    "zh-Hans": "FY2026 授权／版税假设为熊 70／44、基准 76／49、牛 80／51 百万美元；之后九年两条增长路径在输入中单列。基准接近管理层指引，熊低于、牛高于指引。这些是无概率的命名分析情景，不是预期结果估计。"
+  },
+  {
+    "id": "profitability",
+    "classification": "analyst-assumption-not-probability",
+    "en": "FY2026 GAAP operating-margin assumptions are −12%/−6%/−3% for bear/base/bull, moving linearly to 6%/18%/28% by FY2035. H2 GAAP EBIT equals full-year modeled EBIT minus reported H1 EBIT. Future SBC and R&D remain expensed. Bull recovery requires substantially stronger operating leverage than recent results.",
+    "zh-Hans": "熊／基准／牛 FY2026 GAAP 营业利润率假设为负 12%／负 6%／负 3%，线性改善至 FY2035 的 6%／18%／28%。下半年 GAAP 营业利润等于模型全年减已报上半年。未来股权薪酬及研发保留为费用。牛情景需要显著强于近期的经营杠杆。"
+  },
+  {
+    "id": "tax",
+    "classification": "analyst-assumption-not-probability",
+    "en": "Both explicit and terminal cash tax are max(0, 20% of economic EBIT, 3% of revenue). V3 repairs the prior omission of the terminal revenue floor. Of June liquidity, $122.7m was abroad; zero access tax is conditional, not a verified exemption. A dollar offshore-tax haircut is editable separately.",
+    "zh-Hans": "显性期及终值现金税均取零、经济营业利润 20%、收入 3% 中最大值。V3 修复此前终值遗漏收入税底线的问题。六月流动资产有 122.7 百万美元在境外，零取得税只是条件假设，非已证实免税；可另编辑美元计境外税折减。"
+  },
+  {
+    "id": "terminal",
+    "classification": "analyst-assumption-not-probability",
+    "en": "Explicit reinvestment is PPE capex 3.5% minus D&A 3% of revenue plus 18% of incremental full-year revenue (halved in H2 2026). Terminal reinvestment instead uses taxed NOPAT × growth / 25% incremental ROIC; this is a visible regime change, not a proven maintenance-capital requirement. Terminal PV is 79.38% of base EV and 76.39% of bull EV. Bear EV is negative, so its terminal/EV ratio is not meaningful.",
+    "zh-Hans": "显性期再投资为收入 3.5% 物业设备资本开支减 3% 折旧摊销，加全年收入增量的 18%（2026 下半年减半）。终值改用税后营业利润×增长率÷25% 增量 ROIC，属于明确的机制切换，非已证实维护资本需求。终值占基准 EV 79.38%、牛 76.39%；熊 EV 为负，该比例无经济解释意义。"
+  },
+  {
+    "id": "awards",
+    "classification": "analyst-assumption-not-probability",
+    "en": "The aggregate award reserve is not a proven maximum PSU payout; 234,617 maximum 2026 PSU units are disclosed separately without a full grant reconciliation. Add back only $28.506m unrecognized existing-award expense, allocated $9.502m to H2 2026 and $19.004m to 2027 as an analyst timing assumption. Future awards remain cash-replacement compensation in margins.",
+    "zh-Hans": "合计奖励预留不是已证实的 PSU 最高支付；另披露 2026 PSU 上限 234,617 单位，但未完成逐笔授予对账。只加回现有奖励未确认费用 28.506 百万美元，分析假设分配至 2026 下半年 9.502、2027 年 19.004。未来奖励仍按现金替代薪酬计入利润率。"
+  },
+  {
+    "id": "financing",
+    "classification": "analyst-assumption-not-probability",
+    "en": "Options use an endogenous intrinsic-exercise approximation for 30,025 outstanding options at a $20.91 weighted strike. Only 19,279 were exercisable and remaining life averaged 4.4 years. The model omits time value and vesting timing; out-of-money options need not be worthless. It is not exact option-adjusted fair value.",
+    "zh-Hans": "对 30,025 份未行使期权采用内生内在价值行权近似，加权行权价 20.91 美元；其中仅 19,279 可行权，平均剩余期限 4.4 年。模型未计时间价值及归属时点，价外期权不必然无价值。这不是精确的期权调整公允价值。"
+  },
+  {
+    "id": "funding",
+    "classification": "analyst-assumption-not-probability",
+    "en": "Funding capacity equals opening liquid assets plus cumulative modeled FCFF after future-SBC cash replacement. Minimums are $169.060743m/$215.343842m/$220.720000m, above the assumed $30m reserve. This is a stress proxy, not forecast bank cash, and excludes interest income, acquisitions, distributions, financing and intra-period cash troughs.",
+    "zh-Hans": "资金承受能力等于期初流动资产加累计模型 FCFF，未来股权薪酬按现金替代扣除。最低值为 169.060743／215.343842／220.720000 百万美元，均高于假设预留 30。这是压力代理指标而非银行现金预测，未包含利息收入、收购、分配、融资及期间内低谷。"
+  },
+  {
+    "id": "claimLimits",
+    "classification": "analyst-assumption-not-probability",
+    "en": "The default award multiplier is 1×; editable multipliers up to 2× are diagnostic stress choices, not legal maximum obligations. Unknown inputs remain unknown and may suppress allocation. Additional PSU/option valuation, current capital events and tax access evidence are needed before a current-value claim.",
+    "zh-Hans": "默认奖励乘数为 1 倍，最多可编辑至 2 倍仅为压力诊断，不是法定最高义务。未知输入保持未知，可能关闭股权分配输出。提出当前价值主张前，仍需进一步 PSU／期权估值、最新资本事项及资金取得税证据。"
+  }
+]

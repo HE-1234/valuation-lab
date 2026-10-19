@@ -1,3 +1,4 @@
+import {CEVA_MESSAGES} from './ceva-messages.js';
 import {KEYS_MESSAGES} from './keys-messages.js';
 import {amdH1Revenue,fullFiscalRevenue} from './amd-periods.js';
 import {operatingCashChange,operatingCashPolicy} from './fn-operating-cash.js';
@@ -86,6 +87,8 @@ function requireAnnualIdentity(d,c){
 }
 
 export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyYears,marginalSalesCapital}={}){
+ if(d?.ticker==='CEVA')throw Error(CEVA_MESSAGES.horizon[0]);
+ if(d?.ticker==='RMBS')throw Error('RMBS retains ten rolling June years; edit the existing annual schedule.');
  if(d?.ticker==='KEYS')throw Error(KEYS_MESSAGES.horizon[0]);
  if(d?.ticker==='ARM')throw Error('ARM retains its reviewed ten-year component and funding schedule.');
  if(d?.ticker==='SNDK')throw Error('SNDK retains its reviewed ten-year schedule; horizon regeneration is outside the funding model.');
@@ -167,6 +170,8 @@ function currentMarginOverrides(d){
 // Existing rows remain exact. The adapter completes margin metadata and validates
 // the complete returned draft after replacing only the annual margin values.
 export function extendAnnualForMargin(d,c,terminalYear){
+ if(d?.ticker==='CEVA'&&terminalYear>10)throw Error(CEVA_MESSAGES.horizon[0]);
+ if(d?.ticker==='RMBS'&&terminalYear>10)throw Error('RMBS retains ten rolling June years; edit the existing annual schedule.');
  if(d?.ticker==='KEYS'&&terminalYear>10)throw Error(KEYS_MESSAGES.horizon[0]);
  if(d?.ticker==='ARM'&&terminalYear>10)throw Error('ARM margin endpoint cannot exceed its reviewed ten-year schedule.');
  if(d?.ticker==='SNDK'&&terminalYear>10)throw Error('SNDK margin endpoint cannot extend beyond its reviewed ten-year funding schedule.');

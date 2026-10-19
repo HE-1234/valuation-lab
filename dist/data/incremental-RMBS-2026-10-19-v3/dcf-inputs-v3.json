@@ -1,0 +1,126 @@
+{
+  "ticker": "RMBS",
+  "version": 3,
+  "information_cutoff": "2026-10-19",
+  "valuation_anchor": "2026-06-30",
+  "price_target_status": "WITHHELD",
+  "target_blockers": [
+    "August 2026 $100m ASR final shares and posttransaction balance unavailable as of cutoff",
+    "Anchor includes later-known Q2 publication: this is not a point-in-time backtest"
+  ],
+  "currency": "USD",
+  "units": "millions",
+  "initial_segments": {
+    "product": 377.27600000000007,
+    "royalties": 290.69899999999996,
+    "contract": 88.35600000000001
+  },
+  "initial_common_shares": 108.461603,
+  "legacy_nonvested_awards": 2.476181,
+  "cash_and_securities": 824.948,
+  "operating_cash_reserve": 80,
+  "eda_debt_like_claim": 28.182,
+  "other_claim_reserve": 5.048,
+  "source_url": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm",
+  "method": "Enterprise DCF retains new-grant cash-equivalent compensation; explicit selected legacy expense is removed after tax and corresponding legacy claims allocated separately. No D&A addback, no second SBC subtraction. Operating leases stay in margins; EDA claim reserved once.",
+  "assumption_origin": "All long-term forecasts, reserve amounts and discount rates are analyst scenarios; no fit to market price.",
+  "scenarios": {
+    "bear": {
+      "growth_start": {
+        "product": 0.08,
+        "royalties": 0,
+        "contract": 0.04
+      },
+      "growth_end": {
+        "product": 0.035,
+        "royalties": 0.025,
+        "contract": 0.030000000000000002
+      },
+      "margin_start": 0.32,
+      "margin_end": 0.29,
+      "tax_rate": 0.23,
+      "wacc": 0.12,
+      "terminal_growth": 0.025,
+      "incremental_roic": 0.15,
+      "net_reinvestment_floor_pct_revenue": 0.045,
+      "growth_working_capital_pct": 0.1,
+      "years": 10
+    },
+    "base": {
+      "growth_start": {
+        "product": 0.24,
+        "royalties": 0.05,
+        "contract": 0.12
+      },
+      "growth_end": {
+        "product": 0.04,
+        "royalties": 0.03,
+        "contract": 0.034999999999999996
+      },
+      "margin_start": 0.35,
+      "margin_end": 0.36,
+      "tax_rate": 0.21,
+      "wacc": 0.1,
+      "terminal_growth": 0.03,
+      "incremental_roic": 0.2,
+      "net_reinvestment_floor_pct_revenue": 0.035,
+      "growth_working_capital_pct": 0.1,
+      "years": 10
+    },
+    "bull": {
+      "growth_start": {
+        "product": 0.34,
+        "royalties": 0.09,
+        "contract": 0.2
+      },
+      "growth_end": {
+        "product": 0.045000000000000005,
+        "royalties": 0.035,
+        "contract": 0.04
+      },
+      "margin_start": 0.37,
+      "margin_end": 0.41,
+      "tax_rate": 0.2,
+      "wacc": 0.09,
+      "terminal_growth": 0.035,
+      "incremental_roic": 0.25,
+      "net_reinvestment_floor_pct_revenue": 0.03,
+      "growth_working_capital_pct": 0.1,
+      "years": 10
+    }
+  },
+  "valuation_type": "June 30 2026 conditional intrinsic DCF; not current target or point-in-time backtest",
+  "selection_required": true,
+  "selected_award_policy": null,
+  "legacy_expense_policy": "The original margins had no separately specified SBC rate. V3 requires an explicit analyst decomposition into baseline total SBC allowance and legacy amortization runout. Remove selected legacy amortization after normalized tax, allocate legacy award claims separately, and retain residual new-grant cost as cash compensation. No second SBC subtraction.",
+  "conditional_assumption_fields": [
+    "acknowledge_conditional_not_current",
+    "baseline_total_sbc_pct_revenue",
+    "legacy_expense_runout_m",
+    "residual_legacy_share_equivalents_m",
+    "reported_unit_vesting_fraction",
+    "vesting_weights",
+    "withholding_fraction",
+    "residual_claim_cash_fraction",
+    "reported_units_already_in_common_m",
+    "marketable_securities_liquidity_haircut",
+    "assume_no_separate_legacy_tax_benefit",
+    "settlement_price_convention"
+  ],
+  "eda_nominal_cash_reserve": 31.435,
+  "cash_only": 87.72,
+  "marketable_securities": 737.228,
+  "source_facts": {
+    "reported_nonvested_units": 2.476181,
+    "unrecognized_legacy_sbc": 138.3,
+    "weighted_average_recognition_years": 2.4,
+    "performance_max_pct_target": 200,
+    "approx_extra_second_quarter_performance_reserve_m": 0.1,
+    "pre_anchor_h1_withholding_cash_paid": 52.681,
+    "pre_anchor_h1_employee_proceeds": 5.234,
+    "common_share_increase_exact_m": 0.67974,
+    "stock_statement_net_employee_issuance_rounded_m": 0.713,
+    "stock_statement_repurchases_rounded_m": 0.033
+  },
+  "residual_claim_status": "No exact granular June PSU/option/ESPP valuation established. Residual share-equivalent amount is an opt-in analyst assumption; zero means assume none beyond counted units, not verified absence."
+}

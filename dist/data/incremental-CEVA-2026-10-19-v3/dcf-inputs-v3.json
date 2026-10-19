@@ -1,0 +1,164 @@
+{
+  "cutoff": "2026-10-19",
+  "valuation_date": "2026-06-30",
+  "status": "conditional dated scenarios only; current target and upside withheld",
+  "units": "USD millions, shares millions, per-share USD",
+  "capital": {
+    "as_of": "2026-06-30",
+    "source": "ceva20260630_10q.htm",
+    "cash": 44.301,
+    "bank_deposits": 5.148,
+    "marketable_debt_securities": 171.271,
+    "liquid_assets": 220.72,
+    "interest_bearing_debt": 0,
+    "operating_leases": 17.424,
+    "lease_policy": "lease expense stays in EBIT; no separate subtraction in default bridge",
+    "severance_net": 0.217,
+    "other_noncurrent_accruals": 1.072,
+    "common_shares": 28.137917,
+    "rsu_psu_unvested": 1.845728,
+    "option_shares": 0.030025,
+    "option_exercise_price": 20.91,
+    "existing_award_unrecognized_expense": 28.506,
+    "unrecognized_award_service_years": 1.5,
+    "later_share_observation": {
+      "date": "2026-08-04",
+      "shares": 28.154072,
+      "use_in_June_model": false
+    },
+    "claim_policy": "Full RSU/PSU share reserve, no forfeiture credit. Existing option exercise is endogenous. Add back existing unrecognized award expense over 1.5 years; charge all new SBC as cash replacement, no future share-growth assumption. Allocation of old award amortization is analyst approximation, not grant-level vesting schedule.",
+    "minimum_operating_cash": 30,
+    "foreign_liquidity": 122.7,
+    "repatriation_tax_base": 0,
+    "repatriation_tax_warning": "zero is conditional tax-efficient access, not verified tax-free availability",
+    "option_exercisable_shares": 0.019279,
+    "option_remaining_life_years": 4.4,
+    "option_valuation_limitation": "Intrinsic-value exercise approximation using all30,025 outstanding options, only19,279 currently exercisable; not full option fair value, omits time value and vesting timing.",
+    "psu_limitations": "1,845,728 is the disclosed aggregated unvested RSU/PSU rollforward, not proven maximum payout across every grant.2026 PSU maximum234,617 is disclosed separately; grant-level reconciliation remains unavailable. Award multiplier sensitivities are analyst stresses, not inferred maximum obligations.",
+    "disclosed_2026_psu_maximum": 0.234617
+  },
+  "observed_H1_2026": {
+    "revenue": 56.057,
+    "licensing": 36.041,
+    "royalty": 20.016,
+    "ebit": -7.161,
+    "cfo": 0.94,
+    "capex": 2.949,
+    "sbc": 10.543
+  },
+  "cases": {
+    "bear": {
+      "license2026": 70,
+      "royalty2026": 44,
+      "license_growth": [
+        0.03,
+        0.03,
+        0.04,
+        0.04,
+        0.04,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "royalty_growth": [
+        0.02,
+        0.03,
+        0.04,
+        0.04,
+        0.04,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "margin2026": -0.12,
+      "terminal_margin": 0.06,
+      "wacc": 0.13,
+      "g": 0.02
+    },
+    "base": {
+      "license2026": 76,
+      "royalty2026": 49,
+      "license_growth": [
+        0.12,
+        0.12,
+        0.1,
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.05,
+        0.04
+      ],
+      "royalty_growth": [
+        0.13,
+        0.15,
+        0.15,
+        0.13,
+        0.11,
+        0.09,
+        0.07,
+        0.06,
+        0.05
+      ],
+      "margin2026": -0.06,
+      "terminal_margin": 0.18,
+      "wacc": 0.11,
+      "g": 0.025
+    },
+    "bull": {
+      "license2026": 80,
+      "royalty2026": 51,
+      "license_growth": [
+        0.2,
+        0.18,
+        0.16,
+        0.14,
+        0.12,
+        0.1,
+        0.08,
+        0.07,
+        0.06
+      ],
+      "royalty_growth": [
+        0.22,
+        0.25,
+        0.23,
+        0.2,
+        0.16,
+        0.13,
+        0.1,
+        0.08,
+        0.06
+      ],
+      "margin2026": -0.03,
+      "terminal_margin": 0.28,
+      "wacc": 0.1,
+      "g": 0.03
+    }
+  },
+  "common_assumptions": {
+    "cash_tax_rate_on_positive_ebit": 0.2,
+    "minimum_cash_tax_revenue_rate": 0.03,
+    "da_revenue_rate": 0.03,
+    "capex_revenue_rate": 0.035,
+    "incremental_working_capital_revenue_rate": 0.18,
+    "sbc_policy": "GAAP operating margins include total SBC. Add back ONLY amortization of prevaluation outstanding awards (already included in diluted denominator); never add back future new-grant SBC.",
+    "terminal_reinvestment": "terminal growth requires g/25% incremental ROIC, separate from explicit netcapex and WC",
+    "terminal_incremental_roic": 0.25,
+    "discount": "year-end; H2 at0.5 years, 2027 at1.5, ...2035 at9.5",
+    "probabilities": "None; scenarios are conditional analyst choices, not calibrated distributions. No price target fitting.",
+    "terminal_tax_policy": "Same as explicit forecast: max(0, terminal EBIT times cash tax rate, terminal revenue times minimum revenue cash-tax rate). No unstated terminal tax normalization.",
+    "funding_capacity_policy": "Opening liquid assets plus model FCFF after cash-replacement treatment of future SBC. Stress proxy, not forecast bank cash. Includes no interest income, distributions, acquisitions or financing. Future tax/liquidity access conditional."
+  },
+  "rationale": {
+    "growth": "Licensing precedes uncertain royalty ramp. Base FY2026 $125m near management $123.846\u2013126.038m; bear deliberately misses guidance, bull exceeds. Later ramps are analyst judgments, not reported backlog.",
+    "margin": "History 2016/17 GAAP EBIT margins about18\u201320%, recent GAAP losses; base recovers toward old profitability, bull requires stronger licensing/royalty scale, bear limited recovery.",
+    "wacc_g": "Uncalibrated analyst sensitivity parameters; no claim of observed market cost of capital.",
+    "liquidity": "Keep $30m operating reserve; do not assign full liquid assets as surplus. Offshore taxes tested separately."
+  },
+  "version": 3,
+  "revision": "Terminal cash-tax floor repair. June30 capital, forecasts and other assumptions unchanged.",
+  "valuation_date_label": "2026-06-30 capital and discount anchor; retrospective conditional case using information through2026-10-19, not an ex-ante June forecast"
+}

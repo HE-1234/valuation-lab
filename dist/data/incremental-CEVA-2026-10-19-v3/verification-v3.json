@@ -1,0 +1,647 @@
+{
+  "method": "Separate-method author recomputation; external review separately requested",
+  "number_of_checks": 160,
+  "all_passed": true,
+  "checks": [
+    {
+      "test": "v1 frozen hashes unchanged",
+      "passed": true
+    },
+    {
+      "test": "v2 frozen hashes unchanged",
+      "passed": true
+    },
+    {
+      "test": "bear2026.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2026.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2027.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2027.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2028.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2028.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2029.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2029.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2030.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2030.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2031.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2031.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2032.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2032.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2033.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2033.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2034.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2034.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear2035.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bear2035.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bear terminal tax floor maintained",
+      "passed": true
+    },
+    {
+      "test": "bear terminal tax independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "bear EV independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "bear intrinsic approximation independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "bear funding proxy above reserve",
+      "passed": true
+    },
+    {
+      "test": "base2026.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2026.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2027.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2027.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2028.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2028.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2029.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2029.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2030.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2030.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2031.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2031.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2032.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2032.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2033.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2033.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2034.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2034.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base2035.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "base2035.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "base terminal tax floor maintained",
+      "passed": true
+    },
+    {
+      "test": "base terminal tax independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "base EV independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "base intrinsic approximation independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "base funding proxy above reserve",
+      "passed": true
+    },
+    {
+      "test": "bull2026.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2026.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2027.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2027.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2028.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2028.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2029.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2029.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2030.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2030.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2031.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2031.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2032.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2032.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2033.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2033.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2034.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2034.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull2035.0 explicit tax policy",
+      "passed": true
+    },
+    {
+      "test": "bull2035.0 FCF identity",
+      "passed": true
+    },
+    {
+      "test": "bull terminal tax floor maintained",
+      "passed": true
+    },
+    {
+      "test": "bull terminal tax independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "bull EV independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "bull intrinsic approximation independently recomputed",
+      "passed": true
+    },
+    {
+      "test": "bull funding proxy above reserve",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "sensitivity terminal cash tax floor",
+      "passed": true
+    },
+    {
+      "test": "base unchanged",
+      "passed": true
+    },
+    {
+      "test": "bull unchanged",
+      "passed": true
+    },
+    {
+      "test": "bear decreases",
+      "passed": true
+    }
+  ]
+}

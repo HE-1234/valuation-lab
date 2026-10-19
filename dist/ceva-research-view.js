@@ -1,0 +1,19 @@
+import {annualRevenueGrowthChartHTML,annualFCFFGrowthChartHTML} from './annual-revenue-growth-chart.js';
+import {incrementalRecord} from './incremental-registry.js';
+import {annualTextHTML} from './annual-localization.js';
+import {displayNumber} from './number-display.js';
+import {CEVA_MESSAGES} from './ceva-messages.js';
+export {CEVA_MESSAGES} from './ceva-messages.js';
+const n=x=>displayNumber(x,2),p=x=>`<p class="annual-summary-caveat">${annualTextHTML(x)}</p>`;
+export function cevaAllocationHTML(b){return b?.ticker==='CEVA'?`<div class="incremental-ceva-claim-limits">${p(CEVA_MESSAGES.claims[0])}${p(CEVA_MESSAGES.options[0])}${p(CEVA_MESSAGES.reserves[0])}</div>`:'';}
+export function cevaFundingHTML(r){
+ const cols=['Year',CEVA_MESSAGES.economicEBIT[0],'Cash tax','Entered investment',CEVA_MESSAGES.rawCapacity[0],CEVA_MESSAGES.netCapacity[0]];
+ const rows=r.rows.map(x=>[x.period,n(x.economic_ebit),n(x.tax),n(x.reinvestment),n(x.funding_capacity_proxy),n(x.available_funding_capacity_proxy)]);
+ return `${p(CEVA_MESSAGES.equation[0])}${p(CEVA_MESSAGES.terminal[0])}${p(CEVA_MESSAGES.funding[0])}<p>${annualTextHTML(CEVA_MESSAGES.liquidity[0])}: ${n(r.minimumModeledLiquidity)} USDm</p><div class="research-table-scroll" tabindex="0" role="region" aria-label="CEVA"><table class="research-table"><caption>${annualTextHTML(CEVA_MESSAGES.fundingTable[0])}</caption><thead><tr>${cols.map(x=>`<th scope="col">${annualTextHTML(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map((x,i)=>i?`<td>${x}</td>`:`<th scope="row">${annualTextHTML(x)}</th>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+export function cevaSimulationRelationshipsHTML(config){return `<label for="mc-capital-policy">${annualTextHTML('How investment responds to revenue')}<select id="mc-capital-policy"><option value="fixed-schedule" ${config.capitalPolicy==='fixed-schedule'?'selected':''}>${annualTextHTML('Keep reviewed absolute investment')}</option><option value="revenue-scaled" ${config.capitalPolicy==='revenue-scaled'?'selected':''}>${annualTextHTML('Scale investment with scenario revenue')}</option></select></label>${p(CEVA_MESSAGES.terminal[0])}${p(CEVA_MESSAGES.funding[0])}${p(CEVA_MESSAGES.simulation[0])}`;}
+
+export function cevaRevenueGrowthHTML(d,rows){const h1=incrementalRecord('CEVA').sourceInputs.observed_H1_2026.revenue;return p(CEVA_MESSAGES.revenueGrowth[0])+annualRevenueGrowthChartHTML(rows.map((x,i)=>({...x,fullFiscalRevenue:i?x.revenue:x.revenue+h1})),{anchor:d.anchor,terminalGrowth:d.terminal.growth});}
+export function cevaFCFFGrowthHTML(rows){return annualFCFFGrowthChartHTML(rows.map((x,i)=>i?x:{...x,fcff:null}),{baselineHTML:annualTextHTML(CEVA_MESSAGES.cashGrowth[0])});}
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function cevaHistoryHTML(r){const cols=['Fiscal year','Revenue','Canonical EBIT','Operating margin',CEVA_MESSAGES.continuingCFO[0],CEVA_MESSAGES.ppeOnly[0],CEVA_MESSAGES.continuingBound[0],CEVA_MESSAGES.scopeColumn[0]];return p(CEVA_MESSAGES.history[0])+`<div class="research-table-scroll" tabindex="0" role="region" aria-label="CEVA"><table class="research-table"><caption>${annualTextHTML(CEVA_MESSAGES.historyTable[0])}</caption><thead><tr>${cols.map(x=>`<th scope="col">${annualTextHTML(x)}</th>`).join('')}</tr></thead><tbody>${r.history.map(x=>`<tr><th scope="row">${esc(x.fiscalYear)}</th><td>${n(x.revenue)}</td><td>${n(x.canonicalOperatingEBIT)}</td><td>${n(x.operatingMargin*100)}%</td><td>${n(x.cashFromOperationsContinuing)}</td><td>${n(x.ownCapex)}</td><td>${n(x.continuingCfoLessPpeLowerBound)}–${n(x.continuingCfoLessPpeUpperBound)}</td><td>${annualTextHTML(x.basisLabel)}${x.sourceUrl?` <a href="${esc(x.sourceUrl)}" target="_blank" rel="noopener">${annualTextHTML('Original source')} ↗</a>`:''}</td></tr>`).join('')}</tbody></table></div>`;}

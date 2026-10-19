@@ -1,3 +1,6 @@
+import {calculateCevaOperating,calculateCevaSensitivity,cevaDraftIssues,cevaValidationError} from './ceva-valuation.js';
+import {CEVA_MESSAGES} from './ceva-messages.js';
+import {calculateRmbsOperating,rmbsSensitivity} from './rmbs-research-model.js';
 import {keysValidationError} from './keys-validation.js';
 import {calculateKeysOperating,calculateKeysSensitivity} from './keys-research-model.js';
 import {KEYS_MESSAGES} from './keys-messages.js';
@@ -38,10 +41,11 @@ export function researchDraftFor(c){
  if(!object(c)||!Array.isArray(c.annual)||!c.annual.length)throw Error('A complete dated annual research case is required.');
  const lite=c.ticker==='LITE'?researchBridgeDefinition('LITE'):null,incremental=incrementalRecord(c.ticker),id=c.incrementalResearch;
  if(incremental&&JSON.stringify(c)!==JSON.stringify(incremental.annualCase))throw Error('Load the reviewed incremental source case before editing its draft.');
- return {schemaVersion:1,profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),...(c.openingStub?{openingStub:copy(c.openingStub)}:{}),...(c.annualFundingPolicy?{annualFundingPolicy:copy(c.annualFundingPolicy)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
+ return {schemaVersion:1,...(c.ticker==='RMBS'?{rmbsAwardPolicy:null}:{}),profileId:RESEARCH_PROFILE_ID,version:incrementalCaseVersion(c)||RESEARCH_VERSION,...(id?{incrementalResearch:copy(id)}:{}),...(c.fixedCapitalFunding?{fixedCapitalFunding:copy(c.fixedCapitalFunding)}:{}),...(c.operatingCashFunding?{operatingCashFunding:copy(c.operatingCashFunding)}:{}),...(c.openingStub?{openingStub:copy(c.openingStub)}:{}),...(c.annualFundingPolicy?{annualFundingPolicy:copy(c.annualFundingPolicy)}:{}),caseId:researchCaseId(c),sourceScenario:c.scenario,forecastHorizonYears:c.forecastHorizonYears,ticker:c.ticker,currency:c.currency,informationAsOf:id?.informationAsOf||'2026-10-17',discountOrigin:c.valuationTiming.discountOrigin,anchor:copy(c.anchor),annual:c.annual.map(r=>({year:r.year,period:r.period,revenue:r.revenue,margin:r.operatingMargin,taxRate:r.taxRate,reinvestment:r.reinvestment,wacc:r.wacc})),terminal:{growth:c.terminal.growth,margin:c.terminal.operatingMargin,taxRate:c.terminal.taxRate,roic:c.terminal.ROIC,wacc:c.terminal.wacc},timing:{mode:'origin',asOf:id?.informationAsOf||'2026-10-17',stubFCFF:null,stubDiscountRate:c.annual[0].wacc,reason:''},bridgeInputs:incremental?Object.fromEntries(incremental.bridge.options.map(x=>[x.key,x.default])):lite?Object.fromEntries(lite.options.map(x=>[x.key,x.default])):{},...(lite?{bridgeReviewVersion:lite.bridgeVersion}:{}),notes:'',userEdited:false,capitalPolicy:'original-research',updatedAt:null};
 }
 export function researchDraftIssues(d,{includeTiming=true}={}){
  const errors=[];
+ if(d?.ticker==='CEVA')errors.push(...cevaDraftIssues(d));
  if(!object(d)||![1,2].includes(d.schemaVersion)||d.profileId!==RESEARCH_PROFILE_ID)return ['Unsupported annual-research draft.'];
  if(d.schemaVersion===2)errors.push(...annualHorizonIssues(d));
  errors.push(...annualMarginPathIssues(d));
@@ -90,13 +94,15 @@ function preserveLegacyLiteBridge(d){
 export function loadAnnualResearchCase(previous,c){
  const next=researchDraftFor(c);
  if(object(previous)){
-  for(const key of ['notes','nvmiConditional','analystConditionalAllocation','bridgeInputs','bridgeReviewVersion','researchSimulationConfig','currentCapitalScenario','currentCapitalProvenance'])if(Object.prototype.hasOwnProperty.call(previous,key))next[key]=copy(previous[key]);
+  for(const key of ['notes','rmbsAwardPolicy','nvmiConditional','analystConditionalAllocation','bridgeInputs','bridgeReviewVersion','researchSimulationConfig','currentCapitalScenario','currentCapitalProvenance'])if(Object.prototype.hasOwnProperty.call(previous,key))next[key]=copy(previous[key]);
   if(c.ticker==='LITE'&&previous.ticker==='LITE'&&previous.bridgeReviewVersion===undefined){delete next.bridgeReviewVersion;if(previous.bridgeInputs===undefined)next.bridgeInputs={};preserveLegacyLiteBridge(next);}
  }
  return {draft:next,undo:previous==null?null:copy(previous)};
 }
 export function calculateResearchOperating(d){
- const errors=researchDraftIssues(d,{includeTiming:false});if(d?.ticker==='KEYS'&&errors.length)throw keysValidationError(errors);if(d?.ticker==='ARM'&&errors.length)throw armValidationError(errors);if(errors.length)throw Error(errors.join(' '));
+ const errors=researchDraftIssues(d,{includeTiming:false});if(d?.ticker==='CEVA'&&errors.length)throw cevaValidationError(errors);if(d?.ticker==='KEYS'&&errors.length)throw keysValidationError(errors);if(d?.ticker==='ARM'&&errors.length)throw armValidationError(errors);if(errors.length)throw Error(errors.join(' '));
+ if(d.ticker==='CEVA')return calculateCevaOperating(d);
+ if(d.ticker==='RMBS')return calculateRmbsOperating(d);
  if(d.ticker==='KEYS')return calculateKeysOperating(d);
  if(d.ticker==='ARM')return calculateArmOperating(d);
  if(d.ticker==='SNDK')return calculateSndkOperating(d);
@@ -126,8 +132,10 @@ export function calculateResearchOperating(d){
  return {ticker:d.ticker,currency:d.currency,informationAsOf:d.informationAsOf,discountOrigin:d.discountOrigin,rows,terminal,forecastPV:pv,terminalPV,enterprise,terminalShare:enterprise>0?terminalPV/enterprise:null,peakEconomicDeficit:Math.max(0,-trough),negativeFCFFYears:rows.filter(r=>r.fcff<0).length,warnings,classification:'Conditional operating EV at the forecast origin, using research available on the information date. Not a contemporaneously knowable anchor-date valuation.'};
 }
 export function terminalNormalizedDraft(d,{years=3}={}){
+ if(d?.ticker==='CEVA')throw cevaValidationError([CEVA_MESSAGES.normalization[0]]);
+ if(d?.ticker==='RMBS')throw Error('RMBS retains both investment floors; no automatic repair.');
  if(d?.ticker==='KEYS')throw keysValidationError([KEYS_MESSAGES.normalization[0]]);
- const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
+ const errors=researchDraftIssues(d,{includeTiming:false});if(d?.ticker==='CEVA'&&errors.length)throw cevaValidationError(errors);if(errors.length)throw Error(errors.join(' '));
  const next=copy(d),n=next.annual.length,count=Math.min(years,n),t=next.terminal;
  if(!Number.isInteger(count)||count<1)throw Error('Choose a positive number of transition years.');
  const original=calculateResearchOperating(d);
@@ -147,6 +155,7 @@ export function researchTimingResult(d,operating=calculateResearchOperating(d)){
  const t=d.timing;
  if(!object(t))return {status:'incomplete',enterprise:null,message:'A valid explicit timing policy is required.'};
  if(t.mode==='origin')return {status:'origin',enterprise:operating.enterprise,date:d.discountOrigin,label:'Forecast-origin operating EV',warnings:d.incrementalResearch?[incrementalRecord(d.ticker).prose.scope.en]:['The information date is later than reported anchors and earlier than forecast anchors. No October 17 cash-flow or capital roll-forward is implied.']};
+ if(d.ticker==='CEVA')return {status:'incomplete',enterprise:null,message:CEVA_MESSAGES.horizon[0]};
  if(d.ticker==='MRVL')return {status:'incomplete',enterprise:null,message:MRVL_MESSAGES.timing[0]};
  if(d.ticker==='AMD')return {status:'incomplete',enterprise:null,message:'AMD date changes require a newly reviewed partial-period operating and capital bridge.'};
  if(d.ticker==='SNPS')return {status:'incomplete',enterprise:null,message:'SNPS source Q4 timing is fixed. A different valuation date requires a newly reviewed partial-period operating and capital bridge.'};
@@ -166,6 +175,8 @@ export function researchTimingResult(d,operating=calculateResearchOperating(d)){
  return {status:'scenario',enterprise,date:t.asOf,label:'As-of operating scenario',elapsedYears:elapsed,stubFCFF:t.stubFCFF,stubTreatment:'Remaining pre-origin FCFF is paid at the forecast origin; it and the entire annual stream use the same extra stub discount interval.',rate:t.stubDiscountRate,stubPV:t.stubFCFF/discount,reason:t.reason,classification:'Explicit timing assumption, not observed remaining-year FCFF',warnings:['Pre-origin capital expenditure, customer advances and financing must be counted once. Reported June cash plus later raises is not verified October excess cash.']};
 }
 export function researchSensitivity(d){
+ if(d?.ticker==='CEVA')return calculateCevaSensitivity(d);
+ if(d?.ticker==='RMBS')return rmbsSensitivity(d);
  if(d?.ticker==='KEYS')return calculateKeysSensitivity(d);
  if(d.ticker==='ARM'){const base=calculateResearchOperating(d);let normalized=null;try{normalized=calculateResearchOperating(terminalNormalizedDraft(d));}catch{}const rates=[-.01,0,.01].map(shift=>{const next=copy(d);next.annual.forEach(r=>r.wacc+=shift);next.terminal.wacc+=shift;try{return {waccShift:shift,enterprise:calculateResearchOperating(next).enterprise};}catch(e){return {waccShift:shift,enterprise:null,error:e.message};}});return {base:base.enterprise,normalized:normalized?.enterprise??null,normalizationDelta:normalized?normalized.enterprise-base.enterprise:null,normalizedTerminalFCFFGrowth:normalized?.terminal.fcffGrowth??null,normalizationLabel:'ARM constrained capital sensitivity',rates};}
 

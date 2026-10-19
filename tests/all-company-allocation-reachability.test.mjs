@@ -8,8 +8,10 @@ import {incrementalPackages} from '../dist/incremental-registry.js';
 test('all30 researched operating values remain finite; exactly5 need explicit unknown claims and NVMI existing opt-in works',async()=>{
  const w=await startResearchWorkspace({catalogBundle:JSON.parse(fs.readFileSync(new URL('../dist/data/atlas-company-catalog-v1.json',import.meta.url))),incrementalBundle:incrementalPackages});
  const tickers=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
- let defaultCommon=0,unknownGroups=0,conditionalReachable=0;assert.equal(tickers.length,30);
- for(const ticker of tickers){w.choose(ticker);const d=structuredClone(w.getState().draft),operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);assert.ok(Number.isFinite(operating.enterprise),d.ticker);const bridge=calculateResearchBridge(d,timing.enterprise,{...(d.bridgeInputs||{}),calculationDate:timing.date});
+ assert.equal(tickers.length,32);assert.deepEqual(tickers.slice(-2),['CEVA','RMBS']);
+ const priorTickers=tickers.filter(t=>t!=='CEVA'&&t!=='RMBS');
+ let defaultCommon=0,unknownGroups=0,conditionalReachable=0;assert.equal(priorTickers.length,30);
+ for(const ticker of priorTickers){w.choose(ticker);const d=structuredClone(w.getState().draft),operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);assert.ok(Number.isFinite(operating.enterprise),d.ticker);const bridge=calculateResearchBridge(d,timing.enterprise,{...(d.bridgeInputs||{}),calculationDate:timing.date});
   const definition=getAnalystAllocationDefinition(d.ticker);
   if(definition){unknownGroups++;assert.equal(bridge.perShare,null,d.ticker);const state=createAnalystAllocationState(d.ticker),blank=calculateAnalystAllocation(d,timing,state);assert.equal(blank.status,'incomplete',d.ticker);assert.ok(blank.missing.length>0);assert.ok(definition.fields.filter(f=>f.default===null).every(f=>blank.missing.includes(f.key)));assert.ok(definition.fields.every(f=>f.label.length===2&&f.provenance.length===2));
    // Synthetic test values only: never persisted or loaded as research defaults.

@@ -1,0 +1,135 @@
+{
+  "ticker": "RMBS",
+  "review_date": "2026-10-19",
+  "review_scope": "Independent review of the v3 dated conditional June model, including the final code changes; not current-capital validation or investment advice",
+  "status": "PASS_DATED_CONDITIONAL_MODEL_READY",
+  "valuation_anchor": "2026-06-30",
+  "information_cutoff": "2026-10-19",
+  "current_target": null,
+  "active_selection": null,
+  "remaining_dated_admission_blockers": [],
+  "implementation_corrections_verified": [
+    "Updated stale no-SBC-add-back method metadata",
+    "Wired explicit selected_award_policy into active outputs while retaining null selection by default",
+    "Enforced ten-year horizon to prevent silently truncated settlements",
+    "Enforced capital-allocation identity before returning a result",
+    "Added finite-value checks and exact cash/securities source-bridge reconciliation",
+    "Funding reserves nominal EDA payments of 31.435 while valuation deducts the recognized 28.182 claim; no repeated future payment"
+  ],
+  "verification": {
+    "packaged_checks_passed": 78,
+    "frozen_output_reproduced_exactly": true,
+    "independent_decimal_example_rows": 90,
+    "independent_decimal_example_prices": 9,
+    "largest_decimal_price_absolute_error": 1.4210854715202004e-14,
+    "supplemental_randomized_policy_trials": 100,
+    "random_seed": 20261019,
+    "explicit_selection_activation_test_passed": true,
+    "unselected_active_outputs_null": true,
+    "truncated_horizon_rejection_test_passed": true,
+    "prior_general_allocation_algebra_trials": 1000,
+    "original_business_replay_identical": true,
+    "largest_decimal_cash_row_absolute_error": 9.094947017729282e-13,
+    "nominal_eda_funding_reserve_verified": true
+  },
+  "limitations": [
+    "Conditional legacy expense, compensation decomposition, vesting, residual claim-equivalents, cash splits, overlap and securities haircut remain explicit analyst assumptions",
+    "Exact outstanding option/ESPP/performance capitalization is not established; this is not an exact fully diluted cap table",
+    "Settlement growth matched to WACC is a discount-matching planning convention, not an observed equity return",
+    "Annual settlement-before-receipts funding stress is not a daily liquidity forecast; future legacy corporate tax benefits are explicitly excluded",
+    "Post-June ASR settlement and current capital remain unresolved for any current target, without blocking this dated model",
+    "Subsequently published information informs the June anchor; this is not a point-in-time investable backtest"
+  ],
+  "example_results": {
+    "reported_units_no_residual": {
+      "bear": {
+        "conditional_share_value": 21.527776287239156,
+        "minimum_liquidity_after_reserves": 698.5144214852538,
+        "external_funding_required": 0,
+        "allocation_residual": -1.9184653865522705e-13,
+        "current_price_target": null
+      },
+      "base": {
+        "conditional_share_value": 43.394735894886296,
+        "minimum_liquidity_after_reserves": 688.7652429041285,
+        "external_funding_required": 0,
+        "allocation_residual": -2.0605739337042905e-13,
+        "current_price_target": null
+      },
+      "bull": {
+        "conditional_share_value": 83.73570909005264,
+        "minimum_liquidity_after_reserves": 670.7973664435593,
+        "external_funding_required": 0,
+        "allocation_residual": -8.526512829121202e-14,
+        "current_price_target": null
+      }
+    },
+    "illustrative_point_one_residual": {
+      "bear": {
+        "conditional_share_value": 21.508388493722634,
+        "minimum_liquidity_after_reserves": 698.5233829199622,
+        "external_funding_required": 0,
+        "allocation_residual": 6.394884621840902e-14,
+        "current_price_target": null
+      },
+      "base": {
+        "conditional_share_value": 43.355654841274045,
+        "minimum_liquidity_after_reserves": 688.7829843939046,
+        "external_funding_required": 0,
+        "allocation_residual": 6.039613253960852e-13,
+        "current_price_target": null
+      },
+      "bull": {
+        "conditional_share_value": 83.66029718423681,
+        "minimum_liquidity_after_reserves": 670.8312897012105,
+        "external_funding_required": 0,
+        "allocation_residual": 1.2505552149377763e-12,
+        "current_price_target": null
+      }
+    },
+    "large_residual_stress": {
+      "bear": {
+        "conditional_share_value": 21.0577577087095,
+        "minimum_liquidity_after_reserves": 698.7316736856968,
+        "external_funding_required": 0,
+        "allocation_residual": 1.5631940186722204e-13,
+        "current_price_target": null
+      },
+      "base": {
+        "conditional_share_value": 42.44729330681581,
+        "minimum_liquidity_after_reserves": 689.1953501155765,
+        "external_funding_required": 0,
+        "allocation_residual": -6.821210263296962e-13,
+        "current_price_target": null
+      },
+      "bull": {
+        "conditional_share_value": 81.90749708926141,
+        "minimum_liquidity_after_reserves": 671.6197685042529,
+        "external_funding_required": 0,
+        "allocation_residual": -2.1316282072803006e-13,
+        "current_price_target": null
+      }
+    }
+  },
+  "reviewed_file_sha256": {
+    "build_v3.py": "32e77a5d6ef1803b2637457581095b89a2ab335312b7031f9a2061e9f8abc39b",
+    "business_replay.py": "b70fb3d841398541dece8778455e66e925ef24bf4801fca05023f8ad40c43684",
+    "replay_v3.py": "d6189918e4e14af9051ecd776b8eb237c13cc0dd9a9ab3c127b0da64274d0503",
+    "test_v3.py": "dc2a4709986e362b1254d1eb82a6d81c125824f69bad7f5fd838ef765148ee0f",
+    "dcf-inputs-v3.json": "e4501ccaf21a6c3593cbf419564fa95fd14c0be87f18533785557a93626a690d",
+    "analyst-policy-examples-v3.json": "b923a4198cf94cde149613ecb4d6416151f02271af319e7cd4abc3561cbcef2d",
+    "dcf-output-v3.json": "49e8ce23425f6e0c48e601cda02f23efb753ecb2058d10549161f05df591127b",
+    "ADMISSION-v3.md": "f8062571fac075bfc266a157901d2afa7bebdb773ac53dffae2bf0b4ae9670c4",
+    "validation-v3.json": "ce3108873991dc222bc5474452e8a1993f2625f960477a66517de7324eb5efc2"
+  },
+  "sources": [
+    "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm"
+  ],
+  "writes_by_reviewer": [
+    "../design-review-v3.md",
+    "independent-review-v3.md",
+    "independent-review-v3.json"
+  ],
+  "equity_net_resource_bridge": 711.718,
+  "initial_liquidity_after_reserves": 708.465
+}

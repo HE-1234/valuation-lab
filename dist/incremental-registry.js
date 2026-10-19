@@ -1,3 +1,5 @@
+import {cevaRegistry} from './ceva-research-registry.js';
+import {rmbsRegistry} from './rmbs-research-registry.js';
 import {keysRegistry} from './keys-research-registry.js';
 import {armRegistry} from './arm-research-registry.js';
 import {sndkRegistry} from './sndk-research-registry.js';
@@ -16,6 +18,6 @@ import {camtRegistry} from './camt-research-registry.js';
 import {nvmiRegistry} from './nvmi-research-registry.js';
 import {amdRegistry} from './amd-research-registry.js';
 export {incrementalRegistry};
-export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry,cdnsRegistry,snpsRegistry,nvmiRegistry,ontoRegistry,camtRegistry,mrvlRegistry,amdRegistry,crdoRegistry,sndkRegistry,armRegistry,keysRegistry]);
+export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry,cdnsRegistry,snpsRegistry,nvmiRegistry,ontoRegistry,camtRegistry,mrvlRegistry,amdRegistry,crdoRegistry,sndkRegistry,armRegistry,keysRegistry,cevaRegistry,rmbsRegistry]);
 export const incrementalRecords=Object.freeze(incrementalPackages.flatMap(bundle=>bundle.companies));
 export const incrementalRecord=ticker=>incrementalRecords.find(row=>row.identity.ticker===ticker)||null;
