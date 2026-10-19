@@ -1,3 +1,4 @@
+import {reverseCevaDelivery} from './ceva-delivery-preservation.mjs';
 // Exact combined CEVA/RMBS production delta. Apply before the V79 allocation
 // repair reversal. The fixture is generated only after the reviewed bytes freeze.
 import fs from 'node:fs';
@@ -33,6 +34,7 @@ export function cevaRmbsFixture(){
  return cachedFixture;
 }
 export function reverseCevaRmbsIntegration(path,bytes){
+ bytes=reverseCevaDelivery(path,bytes);
  const fixture=cevaRmbsFixture();
  if(own(fixture.files,path)){
   const f=fixture.files[path];assert.equal(cevaRmbsSHA(bytes),f.afterSHA256,path+REVIEWED_ERROR);
