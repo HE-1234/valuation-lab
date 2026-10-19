@@ -322,3 +322,8 @@ body label,body legend{font-size:var(--type-support)}.research-card p,.research-
 
 .research-primary-actions{flex:0 1 auto;min-width:0}.research-primary-actions .research-actions{gap:8px}.research-primary-actions button{padding:10px 15px;min-height:44px;font-size:14px}.research-primary-actions>span{display:block;font-size:13px;color:var(--muted);margin-top:5px}.research-layout>#research-preset-context{margin-top:2px}.research-layout .research-preset-context{padding-bottom:12px;margin-bottom:20px}.research-primary-actions button:disabled{opacity:.45;cursor:default}
 @media(max-width:650px){.research-primary-actions{grid-column:1/-1}.research-primary-actions .research-actions{display:flex}.research-primary-actions button{flex:1 1 120px}.research-primary-actions>span{margin-top:4px}.research-toolbar .research-action-menu{grid-column:1/-1}.research-layout .preset-heading p{font-size:14px}}
+
+/* Local repair text supplements color without changing input nodes or focus. */
+.annual-workspace .annual-field-error{display:block;color:var(--ink);font-size:13px;line-height:1.5;font-weight:400;overflow-wrap:anywhere;margin-top:5px}
+.annual-workspace .annual-field-error[hidden]{display:none}
+.annual-workspace [data-annual-error-kind]{border-color:var(--error);border-style:dashed}

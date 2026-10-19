@@ -1,3 +1,4 @@
+import {reverseAnnualFieldErrors} from './annual-field-errors-preservation.mjs';
 import fs from 'node:fs';
 import {pathToFileURL} from 'node:url';
 export async function captureResearchSnapshot(root){
@@ -42,6 +43,7 @@ export const fixture = () => JSON.parse(fs.readFileSync(new URL('./fixtures/arm-
 // Newest approved additions are stripped first, so every older preservation
 // layer continues to receive precisely the production bytes it originally reviewed.
 export function reverseArmIntegration(path, bytes) {
+ bytes=reverseAnnualFieldErrors(path,bytes);
  const approved = fixture().files[path];
  if (!approved) return bytes;
  assert.equal(sha(bytes), approved.afterSHA256, path + ' exact reviewed ARM integration bytes; exact reviewed SNDK integration bytes; exact reviewed CRDO integration bytes; exact reviewed user UI integration bytes; exact reviewed AMD integration bytes; exact reviewed MRVL integration bytes; exact reviewed CAMT integration bytes; exact reviewed ONTO integration bytes; exact reviewed conditional-tool bytes; exact isolated NVMI integration bytes');
