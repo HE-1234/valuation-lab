@@ -85,6 +85,7 @@ function requireAnnualIdentity(d,c){
 }
 
 export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyYears,marginalSalesCapital}={}){
+ if(d?.ticker==='SNDK')throw Error('SNDK retains its reviewed ten-year schedule; horizon regeneration is outside the funding model.');
  if(d?.ticker==='CRDO')throw Error('CRDO retains its reviewed ten-year schedule; horizon regeneration is outside the funding model.');
  requireAnnualIdentity(d,c); if(!ANNUAL_GROWTH_HORIZONS.includes(growthMaturityYear))throw Error('Choose 10, 15 or 20 years to stable revenue growth.');
  if(d.schemaVersion===2){const issues=annualHorizonIssues(d);if(issues.length)throw Error(issues.join(' '));}
@@ -163,6 +164,7 @@ function currentMarginOverrides(d){
 // Existing rows remain exact. The adapter completes margin metadata and validates
 // the complete returned draft after replacing only the annual margin values.
 export function extendAnnualForMargin(d,c,terminalYear){
+ if(d?.ticker==='SNDK'&&terminalYear>10)throw Error('SNDK margin endpoint cannot extend beyond its reviewed ten-year funding schedule.');
  if(d?.ticker==='CRDO'&&terminalYear>10)throw Error('CRDO margin endpoint cannot extend beyond its reviewed ten-year funding schedule.');
  requireAnnualIdentity(d,c);
  if(!Number.isInteger(terminalYear)||terminalYear<1||terminalYear>30)throw Error('Choose a margin endpoint from year 1 to year 30.');

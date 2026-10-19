@@ -1,3 +1,4 @@
+import {calculateSndkOperating} from './sndk-research-model.js';
 import {calculateCrdoOperating} from './crdo-research-model.js';
 import {ontoAnnualFunding,ontoTerminalFunding} from './onto-funding.js';
 import {camtAnnualFunding,camtTerminalFunding} from './camt-funding.js';
@@ -91,6 +92,7 @@ export function loadAnnualResearchCase(previous,c){
 }
 export function calculateResearchOperating(d){
  const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
+ if(d.ticker==='SNDK')return calculateSndkOperating(d);
  if(d.ticker==='CRDO')return calculateCrdoOperating(d);
  if(d.ticker==='MRVL')return calculateMrvlOperating(d);
  if(d.ticker==='AMD')return calculateAmdOperating(d);
