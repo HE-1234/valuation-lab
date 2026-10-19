@@ -1,0 +1,263 @@
+{
+  "source_hashes": [
+    {
+      "file": "annual-2025.pdf",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "annual-2026.pdf",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "investor-day-2026.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "release-2025-fourth.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "release-2026-first.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "release-2026-fourth.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "release-2026-second.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "release-2026-third.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "robinhood.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "sec-2026-10k.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "transcript-goldman-2026.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "transcript-q4-2026.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "wdc-2019.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "wdc-2020.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "wdc-2022.html",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "file": "wdc-2023.pdf",
+      "size_match": true,
+      "sha256_match": true
+    }
+  ],
+  "baseline_replay": "PASS: 30 annual cash flows and 27 sensitivity cases",
+  "scenarios": [
+    {
+      "scenario": "Structural_reset_illustrative",
+      "operating_value": 268661.28709939483,
+      "conditional_equity": 272256.03709939483,
+      "per_share": 1756.4905619315796,
+      "pv_explicit": 160976.2215901622,
+      "pv_terminal": 107685.0655092326,
+      "peak_external": 0,
+      "distribution_deficit": 0,
+      "fcff": [
+        18812.003740800003,
+        24817.328336736,
+        29036.27415398112,
+        33972.44076015791,
+        34374.97621929411,
+        33101.866824454504,
+        30387.106661326638,
+        26646.378392421244,
+        23017.736644581266,
+        19824.65008290472
+      ],
+      "revenues": [
+        42405.3864,
+        49614.302088000004,
+        58048.73344296,
+        67917.0181282632,
+        76542.47943055262,
+        83155.74965335237,
+        87812.47163394009,
+        91043.97059006909,
+        93611.41056070905,
+        96382.30831330604
+      ],
+      "terminal_reinvestment_ratio": 0.0336,
+      "final_explicit_reinvestment_ratio": 0.07431235431235433,
+      "negative_years": [],
+      "tax_reserve_1286_per_share": 1748.1937877380312,
+      "fcff_margin_2028_2030": [
+        0.5002051282051282,
+        0.5002051282051282,
+        0.5002051282051282
+      ]
+    },
+    {
+      "scenario": "Partial_normalization_illustrative",
+      "operating_value": 63530.43498669139,
+      "conditional_equity": 67125.1849866914,
+      "per_share": 433.0657095915574,
+      "pv_explicit": 41818.77119134332,
+      "pv_terminal": 21711.663795348068,
+      "peak_external": 0,
+      "distribution_deficit": 0,
+      "fcff": [
+        13019.494372,
+        12724.022994140798,
+        8710.695660631356,
+        5778.975870078726,
+        4559.9183521020195,
+        4064.50599646192,
+        3869.97882516661,
+        3707.54271669361,
+        3465.7007487050555,
+        3210.1322127899566
+      ],
+      "revenues": [
+        37954.87599999999,
+        38410.33451199999,
+        37546.10198547998,
+        37666.24951183352,
+        38811.30349699326,
+        40130.88781589103,
+        41607.70448751582,
+        42781.041754063765,
+        44021.69196493161,
+        45324.73404709359
+      ],
+      "terminal_reinvestment_ratio": 0.026000000000000006,
+      "final_explicit_reinvestment_ratio": 0.08517482517482518,
+      "negative_years": [],
+      "tax_reserve_1286_per_share": 424.76893539800903,
+      "fcff_margin_2028_2030": [
+        0.3312656126482214,
+        0.232,
+        0.15342583732057416
+      ]
+    },
+    {
+      "scenario": "Contract_and_cycle_stress_illustrative",
+      "operating_value": 8971.605597089683,
+      "conditional_equity": 12566.355597089683,
+      "per_share": 81.07326191670764,
+      "pv_explicit": 3343.849294881435,
+      "pv_terminal": 5627.756302208248,
+      "peak_external": 0,
+      "distribution_deficit": 3446.215019483555,
+      "fcff": [
+        7359.894900000001,
+        46.62671474999979,
+        -2741.650827300001,
+        -1840.8226983300008,
+        -892.4301913763779,
+        -233.31130247717556,
+        91.76170051404551,
+        309.560032860365,
+        354.2539650048284,
+        400.5349013480418
+      ],
+      "revenues": [
+        32295.560000000005,
+        18650.685900000004,
+        13055.480130000002,
+        14361.028143000003,
+        16019.726893516503,
+        17403.831297116332,
+        18569.887994023127,
+        19453.81466253863,
+        20208.622671445126,
+        20806.797902519902
+      ],
+      "terminal_reinvestment_ratio": 0.022500000000000003,
+      "final_explicit_reinvestment_ratio": 0.11574980574980577,
+      "negative_years": [
+        2029,
+        2030,
+        2031,
+        2032
+      ],
+      "tax_reserve_1286_per_share": 72.77648772315925,
+      "fcff_margin_2028_2030": [
+        0.0024999999999999883,
+        -0.21000000000000005,
+        -0.1281818181818182
+      ]
+    }
+  ],
+  "invalid_input_probes": [
+    {
+      "case": "nan_wacc",
+      "result": "ACCEPTED_WITHOUT_VALIDATION",
+      "operating_value_repr": "nan"
+    },
+    {
+      "case": "wacc_below_g",
+      "result": "ACCEPTED_WITHOUT_VALIDATION",
+      "operating_value_repr": "-847597.4433565463"
+    },
+    {
+      "case": "negative_roic",
+      "result": "ACCEPTED_WITHOUT_VALIDATION",
+      "operating_value_repr": "320056.43200152856"
+    },
+    {
+      "case": "tax_above_one",
+      "result": "ACCEPTED_WITHOUT_VALIDATION",
+      "operating_value_repr": "-112747.13839624458"
+    },
+    {
+      "case": "negative_capex",
+      "result": "ACCEPTED_WITHOUT_VALIDATION",
+      "operating_value_repr": "315567.3701550638"
+    },
+    {
+      "case": "negative_sales_factor",
+      "result": "ACCEPTED_WITHOUT_VALIDATION",
+      "operating_value_repr": "-8850.235326623355"
+    },
+    {
+      "case": "zero_shares",
+      "result": "ZeroDivisionError"
+    },
+    {
+      "case": "negative_shares",
+      "result": "ACCEPTED_WITHOUT_VALIDATION",
+      "per_share": -1756.4905619315796
+    }
+  ],
+  "price_gate": "No market-price input or return calculation exists; stale-price quarantine is prose only."
+}

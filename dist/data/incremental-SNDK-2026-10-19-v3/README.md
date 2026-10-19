@@ -1,0 +1,7 @@
+# SNDK v3 conditional research package
+
+Start with SNDK-v3.html for the source-linked English and Simplified Chinese report. Financial/discount origin July 3, 2026; information October 18 PDT / October 19 UTC. This is not a current valuation or historical backtest. No quote comparison, upside or ranking is eligible. Values use a 155m diluted-share proxy, with 158m sensitivity, not a verified point-in-time ledger.
+
+Original author research, corrected v2/v3 models, numerical evidence and independent reviews are preserved as separate versions. V1 bridge/model conclusions are superseded. V2 corrects tax/legacy reserves and terminal funding. V3 places the generic claim in opening reserves exactly once and withholds common/per-share values on any unsupported funding gap. Operating EV on an unfunded case is only a contingent diagnostic. Independent v3 review passed within conditional research scope; it does not certify this integration or deployment.
+
+Ten history slots contain only four issuer/carve-out years; prior WDC product/segment years are clearly labeled. Raw filings, full transcripts, PDFs and OCR/source text are excluded. Source and packaged hashes record any path sanitation. Original source files are never changed. Included v3 replay is read-only when imported; running its command-line entry rewrites only its local generated outputs. Controls are bounded interface assumptions; these bounds are not claims of measured probability or exposure completeness.

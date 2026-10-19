@@ -1,3 +1,4 @@
+import {sndkRegistry} from './sndk-research-registry.js';
 import {mrvlRegistry} from './mrvl-research-registry.js';
 // Versioned company packages are independent; earlier files stay byte-identical.
 import {incrementalRegistry} from './incremental-research-registry.js';
@@ -13,6 +14,6 @@ import {camtRegistry} from './camt-research-registry.js';
 import {nvmiRegistry} from './nvmi-research-registry.js';
 import {amdRegistry} from './amd-research-registry.js';
 export {incrementalRegistry};
-export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry,cdnsRegistry,snpsRegistry,nvmiRegistry,ontoRegistry,camtRegistry,mrvlRegistry,amdRegistry,crdoRegistry]);
+export const incrementalPackages=Object.freeze([incrementalRegistry,amatRegistry,lrcxRegistry,asmlRegistry,fnRegistry,cdnsRegistry,snpsRegistry,nvmiRegistry,ontoRegistry,camtRegistry,mrvlRegistry,amdRegistry,crdoRegistry,sndkRegistry]);
 export const incrementalRecords=Object.freeze(incrementalPackages.flatMap(bundle=>bundle.companies));
 export const incrementalRecord=ticker=>incrementalRecords.find(row=>row.identity.ticker===ticker)||null;
