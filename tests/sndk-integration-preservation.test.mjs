@@ -1,3 +1,4 @@
+import {fixture as keysFixture,reverseKeysIntegration} from './keys-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -24,15 +25,15 @@ test('SNDK additions retain exact reviewed hashes and exclude raw source filings
  const f=fixture();assert.ok(Object.keys(f.additions).length>=5);
  const root=fileURLToPath(new URL('..',import.meta.url));
  const actual=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(root,join(e.parentPath,e.name))).sort();
- assert.deepEqual(actual,[...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(armFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
+ assert.deepEqual(actual,[...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(armFixture().additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
  for(const[p,h]of Object.entries(f.additions)){assert.equal(sha(reverseArmIntegration(p,read(p))),h,p);assert.doesNotMatch(p,/\/raw\/|\/transcripts\//);}
 });
 
 test('SNDK preserves all 27 original defaults, edits, seeded trials, restored outputs, ordering and locale keys',async()=>{
  const old=JSON.parse(read('tests/fixtures/sndk-v71-output-goldens.json'));
  const actual=await captureResearchSnapshot(fileURLToPath(new URL('..',import.meta.url)));
- assert.equal(old.order.length,27);assert.equal(actual.order.length,29);
- assert.deepEqual(actual.order,[...old.order,'SNDK','ARM']);
+ assert.equal(old.order.length,27);assert.equal(actual.order.length,30);
+ assert.deepEqual(actual.order,[...old.order,'SNDK','ARM','KEYS']);
  assert.deepEqual(actual.companies,old.companies,'all old 27 default/edited/seeded/restored values and bilingual result rendering');
  for(const kind of ['localeKeys','translatedKeys'])for(const[k,v]of Object.entries(old[kind]))assert.equal(actual[kind][k],v,kind+' '+k);
  for(const locale of ['en','zh-Hans'])for(const[k,v]of Object.entries(old.locales[locale]))assert.deepEqual(actual.locales[locale][k],v,locale+' '+k);

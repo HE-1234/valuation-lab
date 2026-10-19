@@ -20,7 +20,7 @@ const w=await startResearchWorkspace(options);
 out.order=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
 if(!out.order.length)throw Error('Empty company order');
 function calculate(d){const operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);return {operating,timing,bridge:calculateResearchBridge(d,timing.enterprise,{...d.bridgeInputs,calculationDate:timing.date})};}
-for(const ticker of out.order.filter(x=>x!=='SNDK'&&x!=='ARM')){
+for(const ticker of out.order.filter(x=>x!=='KEYS'&&x!=='SNDK'&&x!=='ARM')){
  w.choose(ticker);let d=structuredClone(w.getState().draft);const c=w.getState().company;
  const base=calculate(d), config={...d.researchSimulationConfig,trials:9,seed:'V71-preservation-'+ticker};
  if(config.jointAnnual?.annualPath)config.jointAnnual=structuredClone(config.jointAnnual),config.jointAnnual.annualPath.innovationSD=.005;

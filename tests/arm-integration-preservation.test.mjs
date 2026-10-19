@@ -1,3 +1,4 @@
+import {fixture as keysFixture,reverseKeysIntegration} from './keys-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -28,9 +29,9 @@ test('ARM additions retain exact reviewed hashes with no unrelated production fi
  const f=fixture();assert.ok(Object.keys(f.additions).length>=5);
  const root=fileURLToPath(new URL('..',import.meta.url));
  const actual=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(root,join(e.parentPath,e.name))).sort();
- assert.deepEqual(actual,[...Object.keys(f.baselineProduction),...Object.keys(f.additions)].sort(),'No unreviewed production files or raw-source additions');
+ assert.deepEqual(actual,[...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
  for(const[p,h]of Object.entries(f.additions)){
-  assert.equal(sha(read(p)),h,p);
+  assert.equal(sha(reverseKeysIntegration(p,read(p))),h,p);
   assert.match(p,/^dist\/(?:arm-|data\/incremental-ARM-2026-10-19-v2\/)/);
   assert.doesNotMatch(p,/\/raw\/|\/transcripts\//);
  }
@@ -39,8 +40,8 @@ test('ARM additions retain exact reviewed hashes with no unrelated production fi
 test('ARM preserves all 28 V72 defaults, edits, seeded trials, restored outputs, ordering and bilingual locale keys',async()=>{
  const old=JSON.parse(read('tests/fixtures/arm-v72-output-goldens.json'));
  const actual=await captureResearchSnapshot(fileURLToPath(new URL('..',import.meta.url)));
- assert.equal(old.order.length,28);assert.equal(actual.order.length,29);
- assert.deepEqual(actual.order,[...old.order,'ARM']);
+ assert.equal(old.order.length,28);assert.equal(actual.order.length,30);
+ assert.deepEqual(actual.order,[...old.order,'ARM','KEYS']);
  assert.deepEqual(Object.keys(old.companies),old.order);
  assert.deepEqual(actual.companies,old.companies,'all old 28 default/edited/seeded/restored values and bilingual result rendering, including SNDK');
  for(const kind of ['localeKeys','translatedKeys'])for(const[k,v]of Object.entries(old[kind]))assert.equal(actual[kind][k],v,kind+' '+k);

@@ -1,0 +1,83 @@
+{
+  "review_date_utc": "2026-10-19",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "blocking_findings": [],
+  "resolved_findings": [
+    "Tax provision versus cash-tax wording corrected",
+    "Funding detector limitation now explicitly includes revolver expiry and emergency-debt repayment"
+  ],
+  "scope": "Offline independent reproduction, provenance and primary-document spot checks; no model or canonical edits",
+  "replay_files_matched": 8,
+  "historical_provenance_facts_matched": 221,
+  "history_years": 10,
+  "author_tests_replayed": 17,
+  "additional_invalid_input_tests_passed": 14,
+  "guidance_rows_checked": 11,
+  "source_refresh_performed": false,
+  "eligibility_independently_reverified": false,
+  "case_results": {
+    "bear": {
+      "enterprise_value": 6923.449799369822,
+      "conditional_value_per_share": 37.33383840640616,
+      "terminal_share": 0.41878001704672524,
+      "funding_required": false
+    },
+    "base": {
+      "enterprise_value": 22552.52971303712,
+      "conditional_value_per_share": 129.13743512633602,
+      "terminal_share": 0.5503662918567999,
+      "funding_required": false
+    },
+    "bull": {
+      "enterprise_value": 43346.07549604823,
+      "conditional_value_per_share": 251.27656948264826,
+      "terminal_share": 0.6677545057313511,
+      "funding_required": false
+    }
+  },
+  "floating_rate_stress_assertions": {
+    "enterprise_value_unchanged": true,
+    "liquidity_headroom_decreases": true,
+    "minimum_base_headroom_usdm": 2211.1401,
+    "funding_required": false
+  },
+  "limitations": [
+    "Dated conditional values only; no current quote or target",
+    "Funded diagnostics incomplete and headlines suppressed",
+    "No grant-by-grant award valuation",
+    "Annual liquidity does not establish intra-year liquidity",
+    "Primary evidence spot checks are not a full audit",
+    "Offline review does not independently establish eligibility or latest external state"
+  ],
+  "sha256": {
+    "STUDY-v1.md": "50f11a31707d5e94a338f613e3544fc410aa144aec1bc7bdfe5e9f9f4df79fbd",
+    "build_history.py": "52b021e7d732bb96b0a455805308cfb4209af19c4a8aaad83fae06be0e89cbb8",
+    "replay_dcf.py": "42ae827493cd74efe68d7f177b19f22c26e178ebd7c74df459c32763c3fa0e5d",
+    "test_and_sensitivities.py": "c890e7a5d63244120079ad03f631884a730765c95da5f480f2fa910799c16a03",
+    "dcf-inputs-v1.json": "36b0b8bdf955aed9c3658174f47f8e9c79fd0b0469d21b2af82ff8242c006bc5",
+    "dcf-output-v1.json": "2999704d61f88c3390bd4bd32fc45895bb56c9ddd1fd772a428b203287321ba1",
+    "forecast-v1.csv": "a280e25868ea20db7f46b38a0e60d2afd30c0ef6449d6a673ee3aedc4b627c3c",
+    "history-v1.json": "9fb4958b00e032253417567a49b849576cafa45b170e6fbb7f50f78e7d956813",
+    "history-v1.csv": "8dc68120f1f6234e27ba93aacc2ae2a13186f23744a451adfd44e8bb2d5129fc",
+    "history-field-provenance-v1.json": "54c7261ff6c308993142ad89f0bac7bbceec8a8514d91d244cce0b2432399b5a",
+    "latest-quarter-v1.json": "103acb7006b7264695dd1f64b54530913a98f8e49373eccc757bd548edc2931a",
+    "sensitivities-v1.json": "ccfa6cff7a6cd02122177e3d7203ea8ac9819bdb00dc0931e7ca15918ba05b2a",
+    "validation-v1.json": "25cb6e25c6a4e8d3dbdfea7ca1ee8148cd1b73d401f6481d36faf8d8ad642954",
+    "sec-companyfacts.json": "fc20f41fcc4d4de7f2e33ed60fcffa45e3da2e4f2222876522fbe5e9eed35b51",
+    "source-ledger-v1.json": "9b5a7d0ff5c2f107b23dc4dfa220cc0dd0db994412312aa42598f70cbcdde310",
+    "eligibility-v1.json": "ecd02a73e2c2aaab92e5791fce2979f8a1aed68f6996527aa51e73dee7fb0b88",
+    "guidance/guidance_vs_actual.json": "4defbfdddc8e0f80448bc06ea623b89fb9f98a92fc15dcea4d1e13d313b40f44",
+    "guidance/management_guidance_assessment.md": "4122fb3914977a59a8d512436f1e5765d75a536784ba95242b08ef0c783b485d",
+    "keys-20211031.htm": "583080bac3f5d0524c52f94ea422f103170b7688051e7477c648088edb485f71",
+    "keys-10312019x10k.htm": "639a6a42b2ac39838b573d3fed8743aef4ec63e3055fb614d07f75d496bf344c",
+    "keys-20241031.htm": "3b86ad977dfdb9b57e74e82543064fc680f37593c63b6bca4c1975ce2129dfde",
+    "keys-20231031.htm": "8a34aad79826ce1a2e083061749bc104b61314694f94f2d2ee9a9391ba660d7a",
+    "keys-10312018x10k.htm": "926cb6fc4e218097ef388a3b52282c05bf7bc212c2c5d52b24a795410e69de62",
+    "keys-10312016x10k.htm": "63d0cc704bf26e0e1a06952639aad2f96c1aeec0498b0052fbd86b372f52d747",
+    "keys-20260731.htm": "d6d9e4998f6bfaeb7c316386bdda572c9149071d69426630e7468fdad94346ec",
+    "keys-20221031.htm": "76547e88de9ab1f4e4831a713e5b6324e33c8ab8be8dd1c234ead458c96b7870",
+    "keys-20251031.htm": "44f4530dcb9202d71ef45d574b420a6d7ea88d2f8ba6f113797c871daec98c95",
+    "keys-10312020x10k.htm": "842a372094086b1aa7a5fe01d384c517ff7a2be921000b6e36c42febd84627fd",
+    "keys-10312017x10k.htm": "fdb21d5e3bfb774c383e1bda5e40ef2382c4d033395f580b1106cb925b96f2de"
+  }
+}

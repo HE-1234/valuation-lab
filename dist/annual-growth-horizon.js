@@ -1,3 +1,4 @@
+import {KEYS_MESSAGES} from './keys-messages.js';
 import {amdH1Revenue,fullFiscalRevenue} from './amd-periods.js';
 import {operatingCashChange,operatingCashPolicy} from './fn-operating-cash.js';
 import {fixedCapitalSettlement,operatingInvestment,fixedCapitalFundingIssues} from './fixed-capital-funding.js';
@@ -85,6 +86,7 @@ function requireAnnualIdentity(d,c){
 }
 
 export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyYears,marginalSalesCapital}={}){
+ if(d?.ticker==='KEYS')throw Error(KEYS_MESSAGES.horizon[0]);
  if(d?.ticker==='ARM')throw Error('ARM retains its reviewed ten-year component and funding schedule.');
  if(d?.ticker==='SNDK')throw Error('SNDK retains its reviewed ten-year schedule; horizon regeneration is outside the funding model.');
  if(d?.ticker==='CRDO')throw Error('CRDO retains its reviewed ten-year schedule; horizon regeneration is outside the funding model.');
@@ -165,6 +167,7 @@ function currentMarginOverrides(d){
 // Existing rows remain exact. The adapter completes margin metadata and validates
 // the complete returned draft after replacing only the annual margin values.
 export function extendAnnualForMargin(d,c,terminalYear){
+ if(d?.ticker==='KEYS'&&terminalYear>10)throw Error(KEYS_MESSAGES.horizon[0]);
  if(d?.ticker==='ARM'&&terminalYear>10)throw Error('ARM margin endpoint cannot exceed its reviewed ten-year schedule.');
  if(d?.ticker==='SNDK'&&terminalYear>10)throw Error('SNDK margin endpoint cannot extend beyond its reviewed ten-year funding schedule.');
  if(d?.ticker==='CRDO'&&terminalYear>10)throw Error('CRDO margin endpoint cannot extend beyond its reviewed ten-year funding schedule.');

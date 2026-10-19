@@ -1,0 +1,72 @@
+{
+  "balanceDate": "2026-07-31",
+  "shareDate": "2026-08-27",
+  "informationCutoff": "2026-10-19",
+  "units": "USD millions and million common shares unless stated",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1601046/000160104626000036/keys-20260731.htm",
+  "independentAuditPath": "independent-audit-v2/independent-audit-v2.md",
+  "observations": {
+    "unrestrictedCash": {
+      "value": 2605,
+      "locator": "Condensed consolidated balance sheet, cash and cash equivalents"
+    },
+    "restrictedCashExcluded": {
+      "value": 17,
+      "locator": "Cash, cash equivalents and restricted cash reconciliation"
+    },
+    "debtCarryingValue": {
+      "value": 2517,
+      "locator": "Borrowings; current 700 plus long-term 1817"
+    },
+    "debtFacePrincipal": {
+      "value": 2550,
+      "locator": "Borrowings note; face principal schedule"
+    },
+    "retirementPostretirementReserve": {
+      "value": 76,
+      "locator": "Retirement and post-retirement liabilities"
+    },
+    "swapLiabilityReserve": {
+      "value": 20,
+      "locator": "Derivative instruments; fixed-to-floating swaps"
+    },
+    "longTermInvestmentsExcluded": {
+      "value": 188,
+      "locator": "Long-term investments"
+    },
+    "operatingLeaseCurrent": {
+      "value": 53,
+      "locator": "Operating lease liabilities, current"
+    },
+    "operatingLeaseNoncurrent": {
+      "value": 176,
+      "locator": "Operating lease liabilities, long term"
+    },
+    "exactCommonShares": {
+      "value": 170.244745,
+      "unscaledShares": 170244745,
+      "date": "2026-08-27",
+      "locator": "10-Q cover, shares outstanding on August 27, 2026"
+    },
+    "nineMonthTaxProvision": {
+      "value": 66,
+      "periodStart": "2025-11-01",
+      "periodEnd": "2026-07-31",
+      "locator": "Nine-month statement of operations, provision for income taxes",
+      "basis": "Accrual income-tax provision, not cash paid"
+    },
+    "nineMonthCashIncomeTaxPaidNet": {
+      "value": 127,
+      "periodStart": "2025-11-01",
+      "periodEnd": "2026-07-31",
+      "locator": "Supplemental cash-flow disclosures, cash paid for income taxes net",
+      "basis": "Cash income-tax payment, not accrual tax provision"
+    }
+  },
+  "minimumOperatingCash": {
+    "value": 526.56,
+    "basis": "Analyst assumption: 8% of reconstructed TTM revenue 6582; not a reported liability"
+  },
+  "capitalBridge": -567.56,
+  "capitalBridgeConvention": "2605 − 2550 − 76 − 20 − 526.56. Leases remain operating expense; excluded investments and restricted cash receive no bridge value."
+}

@@ -1,3 +1,6 @@
+import {keysValidationError} from './keys-validation.js';
+import {calculateKeysOperating,calculateKeysSensitivity} from './keys-research-model.js';
+import {KEYS_MESSAGES} from './keys-messages.js';
 import {armValidationError} from './arm-validation.js';
 import {calculateArmOperating} from './arm-research-model.js';
 import {calculateSndkOperating} from './sndk-research-model.js';
@@ -93,7 +96,8 @@ export function loadAnnualResearchCase(previous,c){
  return {draft:next,undo:previous==null?null:copy(previous)};
 }
 export function calculateResearchOperating(d){
- const errors=researchDraftIssues(d,{includeTiming:false});if(d?.ticker==='ARM'&&errors.length)throw armValidationError(errors);if(errors.length)throw Error(errors.join(' '));
+ const errors=researchDraftIssues(d,{includeTiming:false});if(d?.ticker==='KEYS'&&errors.length)throw keysValidationError(errors);if(d?.ticker==='ARM'&&errors.length)throw armValidationError(errors);if(errors.length)throw Error(errors.join(' '));
+ if(d.ticker==='KEYS')return calculateKeysOperating(d);
  if(d.ticker==='ARM')return calculateArmOperating(d);
  if(d.ticker==='SNDK')return calculateSndkOperating(d);
  if(d.ticker==='CRDO')return calculateCrdoOperating(d);
@@ -122,6 +126,7 @@ export function calculateResearchOperating(d){
  return {ticker:d.ticker,currency:d.currency,informationAsOf:d.informationAsOf,discountOrigin:d.discountOrigin,rows,terminal,forecastPV:pv,terminalPV,enterprise,terminalShare:enterprise>0?terminalPV/enterprise:null,peakEconomicDeficit:Math.max(0,-trough),negativeFCFFYears:rows.filter(r=>r.fcff<0).length,warnings,classification:'Conditional operating EV at the forecast origin, using research available on the information date. Not a contemporaneously knowable anchor-date valuation.'};
 }
 export function terminalNormalizedDraft(d,{years=3}={}){
+ if(d?.ticker==='KEYS')throw keysValidationError([KEYS_MESSAGES.normalization[0]]);
  const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
  const next=copy(d),n=next.annual.length,count=Math.min(years,n),t=next.terminal;
  if(!Number.isInteger(count)||count<1)throw Error('Choose a positive number of transition years.');
@@ -161,6 +166,7 @@ export function researchTimingResult(d,operating=calculateResearchOperating(d)){
  return {status:'scenario',enterprise,date:t.asOf,label:'As-of operating scenario',elapsedYears:elapsed,stubFCFF:t.stubFCFF,stubTreatment:'Remaining pre-origin FCFF is paid at the forecast origin; it and the entire annual stream use the same extra stub discount interval.',rate:t.stubDiscountRate,stubPV:t.stubFCFF/discount,reason:t.reason,classification:'Explicit timing assumption, not observed remaining-year FCFF',warnings:['Pre-origin capital expenditure, customer advances and financing must be counted once. Reported June cash plus later raises is not verified October excess cash.']};
 }
 export function researchSensitivity(d){
+ if(d?.ticker==='KEYS')return calculateKeysSensitivity(d);
  if(d.ticker==='ARM'){const base=calculateResearchOperating(d);let normalized=null;try{normalized=calculateResearchOperating(terminalNormalizedDraft(d));}catch{}const rates=[-.01,0,.01].map(shift=>{const next=copy(d);next.annual.forEach(r=>r.wacc+=shift);next.terminal.wacc+=shift;try{return {waccShift:shift,enterprise:calculateResearchOperating(next).enterprise};}catch(e){return {waccShift:shift,enterprise:null,error:e.message};}});return {base:base.enterprise,normalized:normalized?.enterprise??null,normalizationDelta:normalized?normalized.enterprise-base.enterprise:null,normalizedTerminalFCFFGrowth:normalized?.terminal.fcffGrowth??null,normalizationLabel:'ARM constrained capital sensitivity',rates};}
 
  const base=calculateResearchOperating(d),normalized=calculateResearchOperating(terminalNormalizedDraft(d));

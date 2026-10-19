@@ -1,0 +1,305 @@
+{
+  "ticker": "KEYS",
+  "units": "USD millions and million common shares; per-share USD",
+  "information_cutoff": "2026-10-19",
+  "valuation_anchor": "2026-07-31",
+  "share_date": "2026-08-27",
+  "status": "Conditional dated enterprise-to-equity illustration, NOT an October price target or backtest",
+  "revenue": {
+    "csg": 4690,
+    "eisg": 1892
+  },
+  "revenue_basis": "TTM ending July 31 2026: FY2025 + 9M2026 - 9M2025, from 10-K and 10-Q segment tables",
+  "capital": {
+    "unrestricted_cash": 2605,
+    "debt_face": 2550,
+    "pension_reserve": 76,
+    "other_claim_reserve": 20,
+    "shares": 170.244745,
+    "minimum_operating_cash": 526.56,
+    "long_term_investments_included": 0,
+    "restricted_cash_included": 0
+  },
+  "capital_note": "Cash July31 excludes $17M restricted cash; debt face exceeds $2517M carrying amount. $76M retirement/postretirement reserve and $20M derivative reserve conservatively deducted. Exact Aug27 shares used, a 27-day mismatch disclosed. $188M investments excluded. Operating leases remain operating costs; not also debt. SBC treated as cash replacement through economic EBIT; no addback or assumed buybacks. No explicit grant-by-grant award claim valuation.",
+  "debt_schedule": [
+    {
+      "principal": 700,
+      "coupon": 0.046,
+      "year": 1,
+      "maturity": "2027-04-06"
+    },
+    {
+      "principal": 500,
+      "coupon": 0.03,
+      "year": 4,
+      "maturity": "2029-10-30"
+    },
+    {
+      "principal": 750,
+      "coupon": 0.0535,
+      "year": 4,
+      "maturity": "2030-07-30"
+    },
+    {
+      "principal": 600,
+      "coupon": 0.0495,
+      "year": 9,
+      "maturity": "2034-10-15"
+    }
+  ],
+  "assumption_status": "All future growth, economic margins, cash taxes, capital intensity, reinvestment, WACC, terminal ROIC, issuance price/fees and funding rates are analyst estimates. Debt last coupon is a simplifying fixed-rate assumption despite $600M fixed-to-floating swaps; stress tests required.",
+  "cases": {
+    "bear": {
+      "csg_growth": [
+        -0.12,
+        -0.04,
+        0.02,
+        0.04,
+        0.04,
+        0.035,
+        0.03,
+        0.025,
+        0.02,
+        0.02
+      ],
+      "eisg_growth": [
+        -0.1,
+        -0.02,
+        0.02,
+        0.03,
+        0.035,
+        0.03,
+        0.025,
+        0.025,
+        0.02,
+        0.02
+      ],
+      "margin": [
+        0.16,
+        0.15,
+        0.17,
+        0.18,
+        0.19,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "capex_ratio": [
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035
+      ],
+      "depreciation_ratio": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "acquisition_reinvestment_ratio": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "marginal_nwc": 0.18,
+      "cash_floor_ratio": 0.08,
+      "tax": 0.22,
+      "wacc": 0.12,
+      "g": 0.02,
+      "terminal_roic": 0.12,
+      "emergency_debt_capacity": 750,
+      "emergency_interest": 0.08,
+      "equity_issue_price": 100,
+      "equity_fee": 0.05
+    },
+    "base": {
+      "csg_growth": [
+        0.18,
+        0.12,
+        0.1,
+        0.08,
+        0.065,
+        0.05,
+        0.04,
+        0.035,
+        0.03,
+        0.03
+      ],
+      "eisg_growth": [
+        0.08,
+        0.07,
+        0.06,
+        0.055,
+        0.05,
+        0.045,
+        0.04,
+        0.035,
+        0.03,
+        0.03
+      ],
+      "margin": [
+        0.25,
+        0.26,
+        0.265,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.27,
+        0.27
+      ],
+      "capex_ratio": [
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035
+      ],
+      "depreciation_ratio": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "acquisition_reinvestment_ratio": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "marginal_nwc": 0.18,
+      "cash_floor_ratio": 0.08,
+      "tax": 0.22,
+      "wacc": 0.1,
+      "g": 0.03,
+      "terminal_roic": 0.18,
+      "emergency_debt_capacity": 750,
+      "emergency_interest": 0.08,
+      "equity_issue_price": 100,
+      "equity_fee": 0.05
+    },
+    "bull": {
+      "csg_growth": [
+        0.25,
+        0.18,
+        0.15,
+        0.12,
+        0.1,
+        0.08,
+        0.06,
+        0.045,
+        0.035,
+        0.035
+      ],
+      "eisg_growth": [
+        0.12,
+        0.1,
+        0.085,
+        0.07,
+        0.06,
+        0.05,
+        0.045,
+        0.04,
+        0.035,
+        0.035
+      ],
+      "margin": [
+        0.27,
+        0.28,
+        0.29,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "capex_ratio": [
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035
+      ],
+      "depreciation_ratio": [
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "acquisition_reinvestment_ratio": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "marginal_nwc": 0.18,
+      "cash_floor_ratio": 0.08,
+      "tax": 0.22,
+      "wacc": 0.085,
+      "g": 0.035,
+      "terminal_roic": 0.22,
+      "emergency_debt_capacity": 750,
+      "emergency_interest": 0.08,
+      "equity_issue_price": 100,
+      "equity_fee": 0.05
+    }
+  }
+}
