@@ -1,0 +1,300 @@
+{
+  "version": "incremental-ARM-2026-10-19-v2",
+  "ticker": "ARM",
+  "asOf": "2026-10-19",
+  "sourceResearchModified": false,
+  "rawFilingsIncluded": false,
+  "fullTranscriptsIncluded": false,
+  "adapterOrDeploymentCertified": false,
+  "sourceReviewStatus": "PASS for dated analyst-constrained research v2",
+  "normalizationPolicy": "Raw model inputs/outputs retained; private execution paths sanitized in research artifacts; test_v2.py baseline reference adapted to same-folder archived v1 output. Display history combines six US-GAAP years and four explicitly noncomparable legacy slots; originals preserved.",
+  "packagedSources": [
+    {
+      "sourceArtifact": "v2/STUDY-v2.md",
+      "packagedArtifact": "STUDY-v2.md",
+      "sourceSHA256": "c0cbff8ef1eb9d13eb6cd6618aa673d618c024b6c684be8a21602aabba068c60",
+      "packagedSHA256": "c0cbff8ef1eb9d13eb6cd6618aa673d618c024b6c684be8a21602aabba068c60"
+    },
+    {
+      "sourceArtifact": "v2/dcf-inputs-v2.json",
+      "packagedArtifact": "dcf-inputs-v2.json",
+      "sourceSHA256": "f51e5afb0ae8821d49183081207ce729bba12d12d7e043decd7c53674337219f",
+      "packagedSHA256": "f51e5afb0ae8821d49183081207ce729bba12d12d7e043decd7c53674337219f"
+    },
+    {
+      "sourceArtifact": "v2/dcf-output-v2.json",
+      "packagedArtifact": "dcf-output-v2.json",
+      "sourceSHA256": "2d74d4cc909603d256d89c11ec7edfb8114fb602b5a4e0cb4352e2d9f9848ca1",
+      "packagedSHA256": "2d74d4cc909603d256d89c11ec7edfb8114fb602b5a4e0cb4352e2d9f9848ca1"
+    },
+    {
+      "sourceArtifact": "v2/forecast-v2.csv",
+      "packagedArtifact": "forecast-v2.csv",
+      "sourceSHA256": "cf797efb253e602f0a5bb6327d335637a1b2b41fd97d323e484ae22e4c7c8192",
+      "packagedSHA256": "eca10e3135406fab4de4314bfea0aadef546e8596149e1803ade89101e3f7e99"
+    },
+    {
+      "sourceArtifact": "v2/guidance-vs-actual-v2.csv",
+      "packagedArtifact": "guidance-vs-actual-v2.csv",
+      "sourceSHA256": "1c54d875aba026d3acf48ca6e28d19002a37c28520141f52fb6dc591eeee23dc",
+      "packagedSHA256": "155968ecb8bb19d9ad93156f981a6e21f76b5b6f1f6f6a32d7e54c29b07202dc"
+    },
+    {
+      "sourceArtifact": "v2/guidance-vs-actual-v2.json",
+      "packagedArtifact": "guidance-vs-actual-v2.json",
+      "sourceSHA256": "236f5b6ebd831086181d8d6c0132b1954eb26d5482d48cdec821aec8e0208db3",
+      "packagedSHA256": "236f5b6ebd831086181d8d6c0132b1954eb26d5482d48cdec821aec8e0208db3"
+    },
+    {
+      "sourceArtifact": "v2/history-field-provenance-v2.json",
+      "packagedArtifact": "history-field-provenance-v2.json",
+      "sourceSHA256": "92bb452ebb5039a4755c75a9cf853a0fcc10d39ab951ef23cf5110d0478c7202",
+      "packagedSHA256": "92bb452ebb5039a4755c75a9cf853a0fcc10d39ab951ef23cf5110d0478c7202"
+    },
+    {
+      "sourceArtifact": "v2/history-v2.csv",
+      "packagedArtifact": "history-v2.csv",
+      "sourceSHA256": "4a1aa70eabb84e8ec968022096fd06444d1e7ea6af7802f8eb9567bdba870862",
+      "packagedSHA256": "fd265fd15465618d7f442179478378a17a654bea811801f4d1324a3b6797baec"
+    },
+    {
+      "sourceArtifact": "v2/history-v2.json",
+      "packagedArtifact": "history-v2.json",
+      "sourceSHA256": "143eaea676bb16b5f42dcbeb6ac0ff9154955ba45a13fd545f9ed1fbfe58783d",
+      "packagedSHA256": "143eaea676bb16b5f42dcbeb6ac0ff9154955ba45a13fd545f9ed1fbfe58783d"
+    },
+    {
+      "sourceArtifact": "v2/integrity-manifest-v2.json",
+      "packagedArtifact": "integrity-manifest-v2.json",
+      "sourceSHA256": "692e3bc4f93c3d18d29206f4ffc95ce204bd19dbcf92912ce000a29a2605634f",
+      "packagedSHA256": "692e3bc4f93c3d18d29206f4ffc95ce204bd19dbcf92912ce000a29a2605634f"
+    },
+    {
+      "sourceArtifact": "v2/replay_dcf.py",
+      "packagedArtifact": "replay_dcf.py",
+      "sourceSHA256": "b074887be5c36cf5bf937ed8225e88aeae783d5f49d9843e12d870dfd2919edb",
+      "packagedSHA256": "b074887be5c36cf5bf937ed8225e88aeae783d5f49d9843e12d870dfd2919edb"
+    },
+    {
+      "sourceArtifact": "v2/sensitivities-v2.json",
+      "packagedArtifact": "sensitivities-v2.json",
+      "sourceSHA256": "6d594fc03d5de435d1121e513cc87755e91c0c9ecfe0ba7cd139d37efc25d949",
+      "packagedSHA256": "6d594fc03d5de435d1121e513cc87755e91c0c9ecfe0ba7cd139d37efc25d949"
+    },
+    {
+      "sourceArtifact": "v2/source-ledger-v2.json",
+      "packagedArtifact": "source-ledger-v2.json",
+      "sourceSHA256": "82f38964be82366a0aefb836bdfe1a0964c4c62b8c3cd40cf367f5e32ed771e2",
+      "packagedSHA256": "82f38964be82366a0aefb836bdfe1a0964c4c62b8c3cd40cf367f5e32ed771e2"
+    },
+    {
+      "sourceArtifact": "v2/test_v2.py",
+      "packagedArtifact": "test_v2.py",
+      "sourceSHA256": "54aec234a7d577abf58502463f676934f58e9dfa444fe46cc9da9673557ca2c3",
+      "packagedSHA256": "a88160a7aee743a9a1d4849f051c66e94601332c8650822859b45cd00f9f5ceb"
+    },
+    {
+      "sourceArtifact": "v2/validation-v2.json",
+      "packagedArtifact": "validation-v2.json",
+      "sourceSHA256": "747979ff76b302bc9ead97aa3ad46eb1e1652f85237d8471b9eb1621caa62126",
+      "packagedSHA256": "747979ff76b302bc9ead97aa3ad46eb1e1652f85237d8471b9eb1621caa62126"
+    },
+    {
+      "sourceArtifact": "v2/v1-preservation-check.json",
+      "packagedArtifact": "v1-preservation-check.json",
+      "sourceSHA256": "3638fce3182d0b355f47d59ed7669503dff4d34f84d79e28947474f5461a8054",
+      "packagedSHA256": "3638fce3182d0b355f47d59ed7669503dff4d34f84d79e28947474f5461a8054"
+    },
+    {
+      "sourceArtifact": "dcf-output-v1.json",
+      "packagedArtifact": "dcf-output-v1.json",
+      "sourceSHA256": "7079d001fee60f1f63093dbde4d2a5eb893db5a1a4d78239ef462cad79ea0652",
+      "packagedSHA256": "7079d001fee60f1f63093dbde4d2a5eb893db5a1a4d78239ef462cad79ea0652"
+    },
+    {
+      "sourceArtifact": "legacy-history-noncomparable-v1.json",
+      "packagedArtifact": "legacy-history-noncomparable-v1.json",
+      "sourceSHA256": "8e6852046445edf3b413854e14d5ab2c530c8fb1b9babcb8cc2a2efa865012cb",
+      "packagedSHA256": "8e6852046445edf3b413854e14d5ab2c530c8fb1b9babcb8cc2a2efa865012cb"
+    },
+    {
+      "sourceArtifact": "source-ledger-v1.json",
+      "packagedArtifact": "source-ledger-v1.json",
+      "sourceSHA256": "e9643d8aee9b64a57c11413aea1b65d3e0fb414c0bc03fd4c85cd474571252c0",
+      "packagedSHA256": "e9643d8aee9b64a57c11413aea1b65d3e0fb414c0bc03fd4c85cd474571252c0"
+    },
+    {
+      "sourceArtifact": "html-sources.json",
+      "packagedArtifact": "html-sources.json",
+      "sourceSHA256": "82a051d5d096fd6f870bd3c2d2423eb8f9e5d0d502c07f15e8be2dfd35ca4314",
+      "packagedSHA256": "82a051d5d096fd6f870bd3c2d2423eb8f9e5d0d502c07f15e8be2dfd35ca4314"
+    },
+    {
+      "sourceArtifact": "audit-additional-sources-v1.json",
+      "packagedArtifact": "audit-additional-sources-v1.json",
+      "sourceSHA256": "599a82ee7fd33580d199406da82a31d6fd6b6b7eed3e14eb00535e24df0206a0",
+      "packagedSHA256": "599a82ee7fd33580d199406da82a31d6fd6b6b7eed3e14eb00535e24df0206a0"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/REVIEW.md",
+      "packagedArtifact": "independent-audit-v1/REVIEW.md",
+      "sourceSHA256": "021a4159d5132d8dcd60849b35533cca940f602db1a658d89a3fd58babac4fa0",
+      "packagedSHA256": "021a4159d5132d8dcd60849b35533cca940f602db1a658d89a3fd58babac4fa0"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/history-guidance-review.md",
+      "packagedArtifact": "independent-audit-v1/history-guidance-review.md",
+      "sourceSHA256": "16631690fb7d95e71a47ebe7757e87920b729f2a2774277fddd70a15d8c83479",
+      "packagedSHA256": "16631690fb7d95e71a47ebe7757e87920b729f2a2774277fddd70a15d8c83479"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/v2-model-results.json",
+      "packagedArtifact": "independent-audit-v1/v2-model-results.json",
+      "sourceSHA256": "deda28aa68d38460469de1965921e0a5a6337a15bc9c31836abc099f49434a9e",
+      "packagedSHA256": "deda28aa68d38460469de1965921e0a5a6337a15bc9c31836abc099f49434a9e"
+    }
+  ],
+  "generatedFiles": [
+    {
+      "path": "ARM-v2.html",
+      "sha256": "0f32ebdf9839e76e792b45d0f6d9d347604ac87aaeeca9dc1b7e40ad68b78638"
+    },
+    {
+      "path": "README.md",
+      "sha256": "72a277b2b89eed33c1a9240ec00e37929a1433f0ad1bc9f6b21d686b8b83262d"
+    },
+    {
+      "path": "STUDY-v2.md",
+      "sha256": "c0cbff8ef1eb9d13eb6cd6618aa673d618c024b6c684be8a21602aabba068c60"
+    },
+    {
+      "path": "audit-additional-sources-v1.json",
+      "sha256": "599a82ee7fd33580d199406da82a31d6fd6b6b7eed3e14eb00535e24df0206a0"
+    },
+    {
+      "path": "cases.json",
+      "sha256": "a2d77ae0885e643f28327a761ec3d48169f110af12b7e4c91334acb8aac76991"
+    },
+    {
+      "path": "conditional-outputs-v2.json",
+      "sha256": "44b233019f557f5d78d84a4ada0a3d9dc1dba2cf9988ef9182218ac31e03e4a6"
+    },
+    {
+      "path": "dcf-inputs-v2.json",
+      "sha256": "f51e5afb0ae8821d49183081207ce729bba12d12d7e043decd7c53674337219f"
+    },
+    {
+      "path": "dcf-output-v1.json",
+      "sha256": "7079d001fee60f1f63093dbde4d2a5eb893db5a1a4d78239ef462cad79ea0652"
+    },
+    {
+      "path": "dcf-output-v2.json",
+      "sha256": "2d74d4cc909603d256d89c11ec7edfb8114fb602b5a4e0cb4352e2d9f9848ca1"
+    },
+    {
+      "path": "forecast-v2.csv",
+      "sha256": "eca10e3135406fab4de4314bfea0aadef546e8596149e1803ade89101e3f7e99"
+    },
+    {
+      "path": "guidance-comparisons-v2.json",
+      "sha256": "7eef2d5f370d1d96f58dc4ad4c90185894405cd46ecb4a7d56b60bf674c5f2a8"
+    },
+    {
+      "path": "guidance-vs-actual-v2.csv",
+      "sha256": "155968ecb8bb19d9ad93156f981a6e21f76b5b6f1f6f6a32d7e54c29b07202dc"
+    },
+    {
+      "path": "guidance-vs-actual-v2.json",
+      "sha256": "236f5b6ebd831086181d8d6c0132b1954eb26d5482d48cdec821aec8e0208db3"
+    },
+    {
+      "path": "history-field-provenance-v2.json",
+      "sha256": "92bb452ebb5039a4755c75a9cf853a0fcc10d39ab951ef23cf5110d0478c7202"
+    },
+    {
+      "path": "history-normalized-v2.json",
+      "sha256": "fcd6ac78b5a7414f16edf213f2e96a1aa1f1547214bb06f6c1c79fc8931b0214"
+    },
+    {
+      "path": "history-v2.csv",
+      "sha256": "fd265fd15465618d7f442179478378a17a654bea811801f4d1324a3b6797baec"
+    },
+    {
+      "path": "history-v2.json",
+      "sha256": "143eaea676bb16b5f42dcbeb6ac0ff9154955ba45a13fd545f9ed1fbfe58783d"
+    },
+    {
+      "path": "html-sources.json",
+      "sha256": "82a051d5d096fd6f870bd3c2d2423eb8f9e5d0d502c07f15e8be2dfd35ca4314"
+    },
+    {
+      "path": "independent-audit-v1/REVIEW.md",
+      "sha256": "021a4159d5132d8dcd60849b35533cca940f602db1a658d89a3fd58babac4fa0"
+    },
+    {
+      "path": "independent-audit-v1/history-guidance-review.md",
+      "sha256": "16631690fb7d95e71a47ebe7757e87920b729f2a2774277fddd70a15d8c83479"
+    },
+    {
+      "path": "independent-audit-v1/v2-model-results.json",
+      "sha256": "deda28aa68d38460469de1965921e0a5a6337a15bc9c31836abc099f49434a9e"
+    },
+    {
+      "path": "integrity-manifest-v2.json",
+      "sha256": "692e3bc4f93c3d18d29206f4ffc95ce204bd19dbcf92912ce000a29a2605634f"
+    },
+    {
+      "path": "legacy-history-noncomparable-v1.json",
+      "sha256": "8e6852046445edf3b413854e14d5ab2c530c8fb1b9babcb8cc2a2efa865012cb"
+    },
+    {
+      "path": "replay_dcf.py",
+      "sha256": "b074887be5c36cf5bf937ed8225e88aeae783d5f49d9843e12d870dfd2919edb"
+    },
+    {
+      "path": "sensitivities-v2.json",
+      "sha256": "6d594fc03d5de435d1121e513cc87755e91c0c9ecfe0ba7cd139d37efc25d949"
+    },
+    {
+      "path": "source-ledger-v1.json",
+      "sha256": "e9643d8aee9b64a57c11413aea1b65d3e0fb414c0bc03fd4c85cd474571252c0"
+    },
+    {
+      "path": "source-ledger-v2.json",
+      "sha256": "82f38964be82366a0aefb836bdfe1a0964c4c62b8c3cd40cf367f5e32ed771e2"
+    },
+    {
+      "path": "source-links-v2.json",
+      "sha256": "3829aa190e73e7b2a3fa300980f21180c10653401a5c64f1d585d6654a0caa83"
+    },
+    {
+      "path": "test_v2.py",
+      "sha256": "a88160a7aee743a9a1d4849f051c66e94601332c8650822859b45cd00f9f5ceb"
+    },
+    {
+      "path": "v1-preservation-check.json",
+      "sha256": "3638fce3182d0b355f47d59ed7669503dff4d34f84d79e28947474f5461a8054"
+    },
+    {
+      "path": "validation-v2.json",
+      "sha256": "747979ff76b302bc9ead97aa3ad46eb1e1652f85237d8471b9eb1621caa62126"
+    }
+  ],
+  "registrySHA256": "100725e7f6e7f9508fc887d0f2446c8afb8fc997caab4db849ab9c6ef33cbca4",
+  "packageChecks": {
+    "sourceManifestFilesVerified": 23,
+    "sourceSuiteChecks": 119,
+    "annualCases": 3,
+    "annualRows": 30,
+    "bridgeControls": 10,
+    "historySlots": 10,
+    "comparableIssuerYears": 6,
+    "noncomparableLegacyYears": 4,
+    "originalFieldProvenanceEntries": 160,
+    "guidancePairsObserved": 9,
+    "bilingualReportSections": 27,
+    "rawModelRoundTrip": "pass",
+    "publicPathScan": "pass",
+    "rawSourceExclusion": "pass"
+  }
+}

@@ -1,3 +1,4 @@
+import {reverseArmIntegration} from './arm-integration-preservation.mjs';
 import fs from 'node:fs';
 import {pathToFileURL} from 'node:url';
 export async function captureResearchSnapshot(root){
@@ -19,7 +20,7 @@ const w=await startResearchWorkspace(options);
 out.order=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
 if(!out.order.length)throw Error('Empty company order');
 function calculate(d){const operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);return {operating,timing,bridge:calculateResearchBridge(d,timing.enterprise,{...d.bridgeInputs,calculationDate:timing.date})};}
-for(const ticker of out.order.filter(x=>x!=='SNDK')){
+for(const ticker of out.order.filter(x=>x!=='SNDK'&&x!=='ARM')){
  w.choose(ticker);let d=structuredClone(w.getState().draft);const c=w.getState().company;
  const base=calculate(d), config={...d.researchSimulationConfig,trials:9,seed:'V71-preservation-'+ticker};
  if(config.jointAnnual?.annualPath)config.jointAnnual=structuredClone(config.jointAnnual),config.jointAnnual.annualPath.innovationSD=.005;
@@ -40,6 +41,7 @@ import {createHash} from 'node:crypto';
 export const sha = value => createHash('sha256').update(value).digest('hex');
 export const fixture = () => JSON.parse(fs.readFileSync(new URL('./fixtures/sndk-integration-v72.json', import.meta.url)));
 export function reverseSndkIntegration(path, bytes) {
+ bytes=reverseArmIntegration(path,bytes);
  const approved = fixture().files[path];
  if (!approved) return bytes;
  assert.equal(sha(bytes), approved.afterSHA256, path + ' exact reviewed SNDK integration bytes; exact reviewed CRDO integration bytes; exact reviewed user UI integration bytes; exact reviewed AMD integration bytes; exact reviewed MRVL integration bytes; exact reviewed CAMT integration bytes; exact reviewed ONTO integration bytes; exact reviewed conditional-tool bytes; exact isolated NVMI integration bytes');
