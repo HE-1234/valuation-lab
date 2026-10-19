@@ -1,11 +1,12 @@
+import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
 import {MCD_BASE_COMMIT,MCD_FIXTURE_PATH,MCD_MODIFIED_PATHS,MCD_ADDED_PATHS,MCD_REVIEWED_HASHES,mcdSHA,mcdBlobSHA,mcdBaseEntries,mcdFixture,validateMcdFixture,reverseMcdIntegration} from './mcd-integration-preservation.mjs';
 const root=fileURLToPath(new URL('..',import.meta.url)),read=p=>fs.readFileSync(path.join(root,p)),git=(...args)=>execFileSync('git',args,{cwd:root,maxBuffer:64*1024*1024});
-const addedFixtures=[MCD_FIXTURE_PATH,'tests/fixtures/mcd-prior33-final-ui.json',UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json'];
+const addedFixtures=[MCD_FIXTURE_PATH,'tests/fixtures/mcd-prior33-final-ui.json',UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json',NFLX_FIXTURE_PATH,'tests/fixtures/nflx-prior35-mcd-uber-v85.json'];
 function walk(relative){assert.ok(!fs.lstatSync(path.join(root,relative)).isSymbolicLink());return fs.readdirSync(path.join(root,relative),{withFileTypes:true}).flatMap(e=>{const p=relative+'/'+e.name;assert.ok(!e.isSymbolicLink(),p+' cannot be a symlink');if(e.isDirectory())return walk(p);assert.ok(e.isFile());return [p];}).sort();}
 const altered=b=>{const c=Buffer.from(b);c[Math.floor(c.length/2)]^=1;return c;};
-function verifyTree(current,readBytes=read){const baseline=mcdBaseEntries();assert.deepEqual(current,[...baseline.keys(),...MCD_ADDED_PATHS,...UBER_ADDED_PATHS].sort(),'Exact production tree membership');for(const[p,v]of baseline)assert.equal(mcdBlobSHA(reverseMcdIntegration(p,readBytes(p))),v.oid,p+' immutable baseline blob');for(const p of MCD_ADDED_PATHS)assert.equal(mcdSHA(reverseMcdIntegration(p,readBytes(p))),MCD_REVIEWED_HASHES[p],p+' exact addition');for(const p of UBER_ADDED_PATHS)assert.equal(mcdSHA(reverseMcdIntegration(p,readBytes(p))),uberFixture().additions[p],p+' exact Uber addition');}
+function verifyTree(current,readBytes=read){const baseline=mcdBaseEntries();assert.deepEqual(current,[...baseline.keys(),...MCD_ADDED_PATHS,...UBER_ADDED_PATHS,...NFLX_ADDED_PATHS].sort(),'Exact production tree membership');for(const[p,v]of baseline)assert.equal(mcdBlobSHA(reverseMcdIntegration(p,readBytes(p))),v.oid,p+' immutable baseline blob');for(const p of MCD_ADDED_PATHS)assert.equal(mcdSHA(reverseMcdIntegration(p,readBytes(p))),MCD_REVIEWED_HASHES[p],p+' exact addition');for(const p of UBER_ADDED_PATHS)assert.equal(mcdSHA(reverseMcdIntegration(p,readBytes(p))),uberFixture().additions[p],p+' exact Uber addition');for(const p of NFLX_ADDED_PATHS)assert.equal(mcdSHA(reverseMcdIntegration(p,readBytes(p))),nflxFixture().additions[p],p+' exact Netflix addition');}
 test('MCD fixture pins immutable baseline and only thirteen modified plus forty-one added paths',()=>{
  const f=mcdFixture(),p=MCD_MODIFIED_PATHS[0],a=MCD_ADDED_PATHS[0];assert.equal(validateMcdFixture(f),f);assert.equal(MCD_MODIFIED_PATHS.length,13);assert.equal(MCD_ADDED_PATHS.length,41);assert.equal(git('rev-parse',MCD_BASE_COMMIT+'^{commit}').toString().trim(),MCD_BASE_COMMIT);
  for(const x of [f,f.files,f.additions,...Object.values(f.files)])assert.ok(Object.isFrozen(x));
@@ -20,7 +21,7 @@ test('MCD exact reversal rejects modified, added, malformed and double-reversed 
  for(const b of ['x',new Uint8Array([1]),null])assert.throws(()=>reverseMcdIntegration('dist/engine.js',b),/exact production bytes/);
 });
 test('MCD preserves every prior production byte, mode, UI file and exact tree membership',()=>{
- const current=walk('dist'),baseline=mcdBaseEntries();verifyTree(current);assert.equal(current.length,baseline.size+41+UBER_ADDED_PATHS.length);
+ const current=walk('dist'),baseline=mcdBaseEntries();verifyTree(current);assert.equal(current.length,baseline.size+41+UBER_ADDED_PATHS.length+NFLX_ADDED_PATHS.length);
  for(const [p,v]of baseline)assert.equal(fs.statSync(path.join(root,p)).mode&0o111,v.mode==='100755'?0o111:0,p+' executable mode');
  const p='dist/engine.js',b=read(p);assert.strictEqual(reverseMcdIntegration(p,b),b);assert.throws(()=>verifyTree(current,x=>x===p?altered(b):read(x)),/immutable baseline blob/);
  for(const missing of [p,MCD_MODIFIED_PATHS[0],MCD_ADDED_PATHS[0]])assert.throws(()=>verifyTree(current.filter(x=>x!==missing)),/Exact production tree/);assert.throws(()=>verifyTree([...current,'dist/unreviewed.js'].sort()),/Exact production tree/);

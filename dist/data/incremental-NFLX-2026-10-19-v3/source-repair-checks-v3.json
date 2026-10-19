@@ -1,0 +1,150 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "Brazil paid H1 rather than future unpaid reserve",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "MD&A Liquidity and Capital Resources, H1 cash flow discussion",
+      "observed": {
+        "paid_usdm": 729,
+        "payment_status": "made in H1; reflected in June cash"
+      }
+    },
+    {
+      "name": "Financing interest-rate net liability",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "Note 8, zero-indexed HTML table 27, interest rate contracts row",
+      "observed": {
+        "asset_current_usdm": 0.236,
+        "asset_noncurrent_usdm": 1.124,
+        "liability_noncurrent_usdm": 14.934,
+        "net_liability_usdm": 13.574
+      }
+    },
+    {
+      "name": "Financing notionals separately inventoried",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "Note 8, zero-indexed HTML table 26",
+      "observed": {
+        "fx_fair_value_hedge_notional_usdm": 2934.991,
+        "interest_fair_value_hedge_notional_usdm": 1400
+      }
+    },
+    {
+      "name": "Carrying debt includes hedge basis adjustment",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "Note 7 opening paragraph",
+      "observed": {
+        "basis_adjustment_rounded_usdm": -14,
+        "face_convention_does_not_subtract_again": true
+      }
+    },
+    {
+      "name": "Prior-year remaining award expense is stale context",
+      "pass": true,
+      "source_file": "sources/nflx-20251231.htm",
+      "source_sha256": "89eb4d43acd037e75ab20adad53fdbac07788b71a29d415af96aa2d0eadeb907",
+      "locator": "Stock-based compensation discussion after compensation table",
+      "observed": {
+        "as_of": "2025-12-31",
+        "unrecognized_compensation_usdm": 47,
+        "weighted_remaining_years": 1.53,
+        "june_remaining_amount": null
+      }
+    },
+    {
+      "name": "Retained issuer release substantiates Q3 date",
+      "pass": true,
+      "source_file": "sources/issuer-q3-announcement.html",
+      "source_sha256": "8d837763ecd213df40d75ed8be915421e28e9c1253b46b48cbb1031efada2882",
+      "locator": "September 14 issuer announcement, release body",
+      "observed": {
+        "announcement_date": "2026-09-14",
+        "scheduled_results_date": "2026-10-20",
+        "scheduled_time": "13:01 Pacific approximately",
+        "results_included": false
+      }
+    },
+    {
+      "name": "Old event shell not reused as date evidence",
+      "pass": true,
+      "source_file": "sources/issuer-events.html",
+      "source_sha256": "53dd8ac2fdde57ef2f670e1859c107fb7cbf538d95df3cbe3ec6a0b7686e15fa",
+      "locator": "Archived dynamic shell; retained only for provenance history",
+      "observed": {
+        "substantiates_q3_date": false
+      }
+    },
+    {
+      "name": "H1 grant cost context, not exact June remaining cost",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "Note 10, zero-indexed HTML table 38",
+      "observed": {
+        "granted_units_m": 1.245383,
+        "weighted_grant_date_value_usd": 82.91,
+        "derived_grant_value_usdm": 103.25470452999998,
+        "rounded_source_context_envelope_usdm": 150.25470452999997,
+        "exact_june_unrecognized_cost": null
+      }
+    },
+    {
+      "name": "RSU existing award vesting horizon",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "Note 10 Restricted Stock Unit Activity",
+      "observed": {
+        "rsu_vesting_years": 3,
+        "supported_maximum_remaining_date_from_june": "2029-06-30"
+      }
+    },
+    {
+      "name": "PSU performance horizon",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "Note 10 Restricted Stock Unit Activity",
+      "observed": {
+        "psu_performance_years_min": 1,
+        "psu_performance_years_max": 3,
+        "exact_grant_schedule_known": false
+      }
+    },
+    {
+      "name": "H1 grants include prior-period settlement context",
+      "pass": true,
+      "source_file": "sources/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "Note 10 table 38 footnote 1",
+      "observed": {
+        "prior_period_psu_units_granted": 264300,
+        "prior_period_psu_units_vested": 528600,
+        "source_context_overstates_remaining_cost_if_all_grants_treated_as_future": true
+      }
+    },
+    {
+      "name": "Historical compensation floor source context",
+      "pass": true,
+      "source_file": "sources/nflx-20251231.htm",
+      "source_sha256": "89eb4d43acd037e75ab20adad53fdbac07788b71a29d415af96aa2d0eadeb907",
+      "locator": "Zero-indexed HTML table 61, FY2025 stock-based compensation",
+      "observed": {
+        "fy2025_sbc_usdm": 368.449,
+        "fy2025_revenue_usdm_from_historical_provenance": 45183.036,
+        "restricted_policy_compensation_floor_ratio": 0.00815458704457133,
+        "future_expense_is_assumed_not_reported": true
+      }
+    }
+  ],
+  "limitation": "Focused source reconciliation, not an exhaustive audit; raw issuer captures excluded from public ZIP."
+}

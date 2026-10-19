@@ -1,0 +1,448 @@
+{
+  "capital_anchor": "2026-06-30",
+  "information_cutoff": "2026-10-19",
+  "common": {
+    "information_cutoff": "2026-10-19",
+    "capital_anchor": "2026-06-30",
+    "discount_anchor": "2026-06-30",
+    "unit": "USD millions; shares millions; percentages as decimal fractions",
+    "actual_h1_2026": {
+      "revenue": 24809.695,
+      "ebit": 8149.607,
+      "content_amortization": 8529.209,
+      "noncontent_da": 199.105,
+      "ppe_purchases": 414.774
+    },
+    "actual_h1_2026_cash_content": 9911.018,
+    "last_full_year_revenue": 45183.036,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+    "terminal_method": "max(component-based net reinvestment, terminal NOPAT * g / incremental ROIC). Never add both. Terminal includes tax and ongoing content maintenance.",
+    "operating_policy": {
+      "future_sbc": "Core GAAP-like EBIT includes compensation cost. Allocation requires an explicit expense schedule for existing June unvested awards already included in that EBIT and removes only that schedule after tax before valuing those existing awards separately. Future-grant cash replacement excludes the removed existing-award expense. No broad SBC addback; no terminal existing-award addback. Allocation additionally enforces the remaining-expense total and recognition horizon, source-context admission limit under the no-positive-additions convention, and explicit retained compensation/other-cash-cost envelopes.",
+      "leases": "Remain operating: expense retained in EBIT, no lease-debt subtraction and no ROU depreciation addback.",
+      "content": "Cash spending includes additions and liability settlement; opening content liabilities and unrecognized content commitments are not deducted again as debt.",
+      "acquisitions": "Future acquisition cash spending explicitly assumed 0; organic forecast, existing acquired assets embedded. H1 2026 acquisition already in June cash.",
+      "nonoperating_items": "Termination fee and interest income excluded by beginning at operating EBIT; fee cash already in June cash and never added again.",
+      "tax_incentives": "Content spending is net of incentives as represented by the filing cash-flow presentation; no extra incentive asset added to equity.",
+      "working_capital": "Noncontent incremental operating investment assumption includes ordinary operating assets/liabilities and incentive timing. Excludes cash, debt, content assets/liabilities and separate claims."
+    }
+  },
+  "base_case": {
+    "case_type": "analyst scenario, no assigned probability",
+    "h1_2027_fraction_of_annual_content_cash": 0.5,
+    "wacc": 0.09,
+    "terminal_growth": 0.025,
+    "terminal_incremental_roic": 0.15,
+    "full_year_2026_assumptions": {
+      "revenue": 51200,
+      "ebit_margin": 0.315,
+      "content_amortization": 18000,
+      "cash_content_to_amortization": 1.1,
+      "noncontent_da": 450,
+      "ppe_capex": 950
+    },
+    "h2_2026_assumptions": {
+      "cash_tax_rate": 0.21,
+      "noncontent_nwc_investment": 500
+    },
+    "annual_assumptions": [
+      {
+        "year": 2027,
+        "revenue_growth": 0.11,
+        "ebit_margin": 0.325,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.35,
+        "cash_content_to_amortization": 1.1,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2028,
+        "revenue_growth": 0.1,
+        "ebit_margin": 0.335,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.345,
+        "cash_content_to_amortization": 1.095,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2029,
+        "revenue_growth": 0.09,
+        "ebit_margin": 0.34,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.34,
+        "cash_content_to_amortization": 1.09,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2030,
+        "revenue_growth": 0.08,
+        "ebit_margin": 0.345,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.335,
+        "cash_content_to_amortization": 1.08,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2031,
+        "revenue_growth": 0.07,
+        "ebit_margin": 0.35,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.33,
+        "cash_content_to_amortization": 1.07,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2032,
+        "revenue_growth": 0.06,
+        "ebit_margin": 0.35,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.325,
+        "cash_content_to_amortization": 1.06,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2033,
+        "revenue_growth": 0.05,
+        "ebit_margin": 0.35,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.32,
+        "cash_content_to_amortization": 1.05,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2034,
+        "revenue_growth": 0.04,
+        "ebit_margin": 0.35,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.32,
+        "cash_content_to_amortization": 1.045,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      },
+      {
+        "year": 2035,
+        "revenue_growth": 0.035,
+        "ebit_margin": 0.35,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.32,
+        "cash_content_to_amortization": 1.04,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      }
+    ],
+    "terminal": {
+      "ebit_margin": 0.35,
+      "cash_tax_rate": 0.21,
+      "content_amortization_pct_revenue": 0.32,
+      "cash_content_to_amortization": 1.04,
+      "noncontent_da_pct_revenue": 0.009,
+      "ppe_capex_pct_revenue": 0.018,
+      "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+    }
+  },
+  "illustrative_policy": {
+    "policy_label": "ILLUSTRATIVE June allocation, analyst choices; not default or current target",
+    "as_of": "2026-06-30",
+    "operating_cash_reserve": 3000,
+    "debt_value": 14372,
+    "option_volatility": 0.35,
+    "option_remaining_years": 4.5,
+    "option_risk_free_rate": 0.04,
+    "rsu_psu_units_multiplier": 2,
+    "income_tax_claim_reserve": 566,
+    "additional_brazil_claim_excluding_paid_729": 0,
+    "financing_interest_rate_derivative_reserve": 13.574,
+    "financing_fx_derivative_net_claim_reserve": 100,
+    "debt_valuation_basis": "face_principal_excluding_financing_derivatives",
+    "existing_unvested_award_expense_in_ebit_by_year": {
+      "2026": 25,
+      "2027": 25,
+      "2028": 10,
+      "2029": 0,
+      "2030": 0,
+      "2031": 0,
+      "2032": 0,
+      "2033": 0,
+      "2034": 0,
+      "2035": 0
+    },
+    "existing_award_remaining_expense_assumption": 60,
+    "existing_award_latest_recognition_date": "2028-12-31",
+    "retained_future_grant_cash_compensation_pct_revenue_by_year": {
+      "2026": 0.011,
+      "2027": 0.011,
+      "2028": 0.011,
+      "2029": 0.011,
+      "2030": 0.011,
+      "2031": 0.011,
+      "2032": 0.011,
+      "2033": 0.011,
+      "2034": 0.011,
+      "2035": 0.011,
+      "2036": 0.011
+    },
+    "retained_other_cash_operating_cost_pct_revenue_by_year": {
+      "2026": 0.2,
+      "2027": 0.2,
+      "2028": 0.2,
+      "2029": 0.2,
+      "2030": 0.2,
+      "2031": 0.2,
+      "2032": 0.2,
+      "2033": 0.2,
+      "2034": 0.2,
+      "2035": 0.2,
+      "2036": 0.2
+    },
+    "other_claim_reserve": 250,
+    "separate_claim_cash_by_year": {
+      "2026": 929.574,
+      "2027": 0,
+      "2028": 0,
+      "2029": 0,
+      "2030": 0,
+      "2031": 0,
+      "2032": 0,
+      "2033": 0,
+      "2034": 0,
+      "2035": 0
+    },
+    "accept_cash_fungibility_assumption": true,
+    "accept_operating_lease_and_content_treatment": true,
+    "accept_operating_hedges_embedded_no_separate_asset": true,
+    "accept_existing_award_and_future_sbc_nonoverlap": true,
+    "accept_existing_award_no_unmodeled_positive_cost_additions": true,
+    "accept_source_context_compensation_floor_convention": true,
+    "accept_financing_hedges_separate_and_assumed_closeout": true,
+    "accept_annual_funding_proxy_not_bank_cash": true,
+    "basis": "$566m stale FY2025 gross tax-benefit amount is an explicit analyst income-tax reserve, plus $250m other claims. Additional Brazil exposure beyond the $729m already paid in H1 is deliberately assumed zero, not verified absent; the paid item is never reserved or settled twice and no recovery is credited. Face principal $14,372m excludes derivative fair values. Separately reserve the reported $13.574m interest-rate derivative net liability and assume $100m financing FX net liability because its exact fair value is not separately disclosed. No gross derivative, notional or debt carrying-basis deduction. Assume financing hedges close out July 1 at those values; total $929.574m separate cash settles in H2. Funding thereafter uses unhedged 4.9% interest and constant June FX assumptions. Existing-award expense embedded in EBIT is assumed $25m H2 2026, $25m 2027 and $10m 2028, zero thereafter; remove only its after-tax cost before separately allocating existing awards. This $60m is an explicitly reconciled remaining-expense assumption, not June reported unrecognized compensation. Its whole schedule must fit the selected December 2028 horizon, never beyond June 2029 under the supported three-year convention. Under the assumed absence of unmodeled positive modifications or other additions, the policy restricts total expense to the $47m plus 1.245383m x $82.91 = approximately $150.2547m source-context envelope. This is an analytical admission limit, not a verified June or legal ceiling. Retain 1.1% of each period revenue for future-grant cash-replacement compensation and 20% for other cash costs, already embedded in EBIT and never subtracted again. Future-grant compensation excludes the removed existing expense and cannot be below the explicit policy reference of FY2025 SBC/revenue. Cost components must fit jointly after content amortization and noncontent D&A. 2x award units is a sensitivity, not a legal maximum. Operating liquidity reserve $3bn is an assumption."
+  },
+  "rows": [
+    {
+      "wacc": 0.07,
+      "g": 0.015,
+      "operating_ev": 341340.52833992057,
+      "terminal_ev_fraction": 0.6672756215084478,
+      "conditional_june_illustrative_allocation": 78.28890483291579
+    },
+    {
+      "wacc": 0.07,
+      "g": 0.02,
+      "operating_ev": 356026.40437399736,
+      "terminal_ev_fraction": 0.681000302925361,
+      "conditional_june_illustrative_allocation": 81.71642041338163
+    },
+    {
+      "wacc": 0.07,
+      "g": 0.025,
+      "operating_ev": 373874.2271816815,
+      "terminal_ev_fraction": 0.6962285525750121,
+      "conditional_june_illustrative_allocation": 85.88107229152712
+    },
+    {
+      "wacc": 0.07,
+      "g": 0.03,
+      "operating_ev": 396069.7268030759,
+      "terminal_ev_fraction": 0.7132517143822361,
+      "conditional_june_illustrative_allocation": 91.05914614055209
+    },
+    {
+      "wacc": 0.07,
+      "g": 0.035,
+      "operating_ev": 424476.19330119906,
+      "terminal_ev_fraction": 0.7324412606921169,
+      "conditional_june_illustrative_allocation": 97.6847734655409
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.015,
+      "operating_ev": 284426.7386364323,
+      "terminal_ev_fraction": 0.620268596094572,
+      "conditional_june_illustrative_allocation": 64.99805352300154
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.02,
+      "operating_ev": 292956.4883307274,
+      "terminal_ev_fraction": 0.6313248926962705,
+      "conditional_june_illustrative_allocation": 66.99090472596609
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.025,
+      "operating_ev": 302961.02150561404,
+      "terminal_ev_fraction": 0.6434994698859197,
+      "conditional_june_illustrative_allocation": 69.3278376856621
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.03,
+      "operating_ev": 314882.7732052699,
+      "terminal_ev_fraction": 0.6569969081787574,
+      "conditional_june_illustrative_allocation": 72.11199592550676
+    },
+    {
+      "wacc": 0.08,
+      "g": 0.035,
+      "operating_ev": 329360.81627128465,
+      "terminal_ev_fraction": 0.672074638406004,
+      "conditional_june_illustrative_allocation": 75.49234247932554
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.015,
+      "operating_ev": 242899.1930671255,
+      "terminal_ev_fraction": 0.576683936369256,
+      "conditional_june_illustrative_allocation": 55.289032567910525
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.02,
+      "operating_ev": 248057.9877796336,
+      "terminal_ev_fraction": 0.5854875257651276,
+      "conditional_june_illustrative_allocation": 56.495822919414124
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.025,
+      "operating_ev": 253951.4663055186,
+      "terminal_ev_fraction": 0.5951071605762758,
+      "conditional_june_illustrative_allocation": 57.87421098850179
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.03,
+      "operating_ev": 260763.29959812484,
+      "terminal_ev_fraction": 0.6056840420920986,
+      "conditional_june_illustrative_allocation": 59.467054960459336
+    },
+    {
+      "wacc": 0.09,
+      "g": 0.035,
+      "operating_ev": 268743.9480483762,
+      "terminal_ev_fraction": 0.6173936901092536,
+      "conditional_june_illustrative_allocation": 61.33278642924482
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.015,
+      "operating_ev": 211314.9407255982,
+      "terminal_ev_fraction": 0.5362719294263045,
+      "conditional_june_illustrative_allocation": 47.89493669524674
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.02,
+      "operating_ev": 214509.30140181354,
+      "terminal_ev_fraction": 0.5431775260760416,
+      "conditional_june_illustrative_allocation": 48.64323361620073
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.025,
+      "operating_ev": 218082.71242795727,
+      "terminal_ev_fraction": 0.5506628257916227,
+      "conditional_june_illustrative_allocation": 49.48018404967493
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.03,
+      "operating_ev": 222116.3988790142,
+      "terminal_ev_fraction": 0.558822895379946,
+      "conditional_june_illustrative_allocation": 50.4247661288902
+    },
+    {
+      "wacc": 0.1,
+      "g": 0.035,
+      "operating_ev": 226716.57816073345,
+      "terminal_ev_fraction": 0.5677745732532915,
+      "conditional_june_illustrative_allocation": 51.50179231847889
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.015,
+      "operating_ev": 186523.69597259074,
+      "terminal_ev_fraction": 0.4988002725432386,
+      "conditional_june_illustrative_allocation": 42.082789250864735
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.02,
+      "operating_ev": 188521.04675082926,
+      "terminal_ev_fraction": 0.5041104046634567,
+      "conditional_june_illustrative_allocation": 42.55137500996278
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.025,
+      "operating_ev": 190715.43663267005,
+      "terminal_ev_fraction": 0.5098161573268475,
+      "conditional_june_illustrative_allocation": 43.066115426604426
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.03,
+      "operating_ev": 193143.81045003852,
+      "terminal_ev_fraction": 0.5159791796182218,
+      "conditional_june_illustrative_allocation": 43.635656635042196
+    },
+    {
+      "wacc": 0.11,
+      "g": 0.035,
+      "operating_ev": 195852.96499004023,
+      "terminal_ev_fraction": 0.5226744430933463,
+      "conditional_june_illustrative_allocation": 44.270948377369876
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.015,
+      "operating_ev": 166576.01936719584,
+      "terminal_ev_fraction": 0.4640530240827115,
+      "conditional_june_illustrative_allocation": 37.39916364287015
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.02,
+      "operating_ev": 167819.92911130865,
+      "terminal_ev_fraction": 0.4680255538603227,
+      "conditional_june_illustrative_allocation": 37.69143526145055
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.025,
+      "operating_ev": 169163.6010404129,
+      "terminal_ev_fraction": 0.4722510440123555,
+      "conditional_june_illustrative_allocation": 38.00711318890502
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.03,
+      "operating_ev": 170623.66218534057,
+      "terminal_ev_fraction": 0.4767670984390663,
+      "conditional_june_illustrative_allocation": 38.35009576492071
+    },
+    {
+      "wacc": 0.12,
+      "g": 0.035,
+      "operating_ev": 172220.65181947226,
+      "terminal_ev_fraction": 0.4816189992488796,
+      "conditional_june_illustrative_allocation": 38.725197885485755
+    }
+  ]
+}

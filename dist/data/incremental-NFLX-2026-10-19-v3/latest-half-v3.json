@@ -1,0 +1,499 @@
+{
+  "period_end": "2026-06-30",
+  "period_start": "2026-01-01",
+  "unit": "USD millions except shares millions",
+  "reported": {
+    "revenue": 24809.695,
+    "ebit": 8149.607,
+    "net_income": 8684.205,
+    "pretax_income": 10615.672,
+    "income_tax_expense": 1931.467,
+    "cfo": 7034.017,
+    "ppe_purchases": 414.774,
+    "noncontent_da": 199.105,
+    "sbc": 271.717,
+    "interest_expense": 437.762,
+    "interest_paid": null,
+    "cash_income_taxes": null,
+    "buybacks_cash": 5984.991,
+    "eps_weighted_basic_shares_split_adjusted_m": 4205.952,
+    "eps_weighted_diluted_shares_split_adjusted_m": 4279.776,
+    "cash": 9099.232,
+    "short_investments": 28.678,
+    "debt_noncurrent_carrying": 11825.548,
+    "debt_current_carrying": 2483.758,
+    "common_shares_actual_split_adjusted_m": 4163.939676,
+    "equity": 30152.052,
+    "operating_lease_current": 431.403,
+    "operating_lease_noncurrent": 1899.018,
+    "content_additions_signed": -9774.44,
+    "content_liabilities_change_signed": -136.578,
+    "content_amortization": 8529.209,
+    "acquisitions_cash_signed": -585.744
+  },
+  "provenance": {
+    "revenue": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:Revenues",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 24809695000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "ebit": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:OperatingIncomeLoss",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 8149607000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "net_income": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:NetIncomeLoss",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 8684205000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "pretax_income": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 10615672000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "income_tax_expense": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:IncomeTaxExpenseBenefit",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 1931467000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "cfo": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 7034017000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "ppe_purchases": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 414774000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "noncontent_da": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:DepreciationDepletionAndAmortization",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 199105000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "sbc": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:ShareBasedCompensation",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 271717000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "interest_expense": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:InterestExpenseNonoperating",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 437762000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "interest_paid": {
+      "status": "missing_not_zero",
+      "tags_checked": [
+        "InterestPaid",
+        "InterestPaidNet"
+      ]
+    },
+    "cash_income_taxes": {
+      "status": "missing_not_zero",
+      "tags_checked": [
+        "IncomeTaxesPaidNet",
+        "IncomeTaxesPaid"
+      ]
+    },
+    "buybacks_cash": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:PaymentsForRepurchaseOfCommonStock",
+      "unit_original": "USD",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 5984991000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "eps_weighted_basic_shares_split_adjusted_m": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:WeightedAverageNumberOfSharesOutstandingBasic",
+      "unit_original": "shares",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 4205952000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "eps_weighted_diluted_shares_split_adjusted_m": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+      "unit_original": "shares",
+      "raw_fact": {
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "val": 4279776000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "cash": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "unit_original": "USD",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 9099232000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "short_investments": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:ShortTermInvestments",
+      "unit_original": "USD",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 28678000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "debt_noncurrent_carrying": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:LongTermDebtNoncurrent",
+      "unit_original": "USD",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 11825548000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "debt_current_carrying": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:ShortTermBorrowings",
+      "unit_original": "USD",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 2483758000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "common_shares_actual_split_adjusted_m": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:CommonStockSharesOutstanding",
+      "unit_original": "shares",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 4163939676,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "equity": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:StockholdersEquity",
+      "unit_original": "USD",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 30152052000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "operating_lease_current": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:OperatingLeaseLiabilityCurrent",
+      "unit_original": "USD",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 431403000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "operating_lease_noncurrent": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_snapshot": "sources/sec-companyfacts.json",
+      "source_sha256": "00f3449073d90dfa3aec4e384de24b70d92d897f90c67d6bca61f23e33d38634",
+      "tag": "us-gaap:OperatingLeaseLiabilityNoncurrent",
+      "unit_original": "USD",
+      "raw_fact": {
+        "end": "2026-06-30",
+        "val": 1899018000,
+        "accn": "0001065280-26-000212",
+        "fy": 2026,
+        "fp": "Q2",
+        "form": "10-Q",
+        "filed": "2026-07-17",
+        "frame": "CY2026Q2I"
+      },
+      "split_multiplier": 1,
+      "transform": "raw value * split_multiplier / 1000000",
+      "status": "reported SEC companyfacts; exact fiscal date/duration selection, not a stock quote"
+    },
+    "content_additions_signed": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "HTML table 11, row 6, label Additions to content assets; H1 2026 third numeric column",
+      "raw_thousands": -9774440.0
+    },
+    "content_liabilities_change_signed": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "HTML table 11, row 7, label Change in content liabilities; H1 2026 third numeric column",
+      "raw_thousands": -136578.0
+    },
+    "content_amortization": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "HTML table 11, row 8, label Amortization of content assets; H1 2026 third numeric column",
+      "raw_thousands": 8529209.0
+    },
+    "acquisitions_cash_signed": {
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "source_sha256": "fdec51ba161a743684b1b8de7345fe5d00856800ed1f77c588979e04a69d3152",
+      "locator": "HTML table 11, row 24, label Acquisitions; H1 2026 third numeric column",
+      "raw_thousands": -585744.0
+    }
+  },
+  "derived": {
+    "content_cash_payments": 9911.018,
+    "cfo_less_ppe": 6619.2429999999995,
+    "operating_margin": 0.3284847717797418
+  }
+}

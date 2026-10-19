@@ -1655,6 +1655,35 @@
         "evidence": "Public Robinhood page says sign up for an account to buy or sell Uber stocks.",
         "scope": "Public product-page support only; individual account eligibility not verified."
       }
+    },
+    {
+      "id": "nflx-xnas-common",
+      "ticker": "NFLX",
+      "nativeTicker": "NFLX",
+      "company": "Netflix, Inc.",
+      "aliases": [
+        "Netflix",
+        "奈飞"
+      ],
+      "currency": "USD",
+      "mic": "XNAS",
+      "exchange": "Nasdaq",
+      "securityType": "Common stock",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-19T19:00:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm"
+      ],
+      "evidence": "June 2026 SEC 10-Q cover identifies common stock, NFLX, Nasdaq Global Select Market.",
+      "robinhood": {
+        "status": "public-buy-sell-support",
+        "url": "https://robinhood.com/us/en/stocks/NFLX/",
+        "checkedAt": "2026-10-19",
+        "evidence": "Public product page offers buy or sell Netflix shares.",
+        "scope": "Public product support only; account, jurisdiction and execution eligibility unverified."
+      },
+      "note": "Public product support only; account, jurisdiction and execution eligibility are not verified. No quote enters this dated valuation model."
     }
   ],
   "coverage": [],

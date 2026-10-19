@@ -1,3 +1,4 @@
+import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import {mcdFixture,MCD_FIXTURE_PATH,MCD_ADDED_PATHS,reverseMcdIntegration} from './mcd-integration-preservation.mjs';
 import {reverseSimulationRangeHeader} from './simulation-range-header-preservation.mjs';
@@ -28,7 +29,7 @@ function filesUnder(relative){
 }
 function verifyWholeTree(current,readBytes=read){
  const baseline=simulationUiBaseEntries(),fixture=simulationUiFixture();
- assert.deepEqual(current,[...baseline.keys(),...SIM_UI_ADDED_PATHS,...MCD_ADDED_PATHS,...UBER_ADDED_PATHS].sort(),'Every production path must be immutable baseline or an exact reviewed UI/MCD/Uber addition');
+ assert.deepEqual(current,[...baseline.keys(),...SIM_UI_ADDED_PATHS,...MCD_ADDED_PATHS,...UBER_ADDED_PATHS,...NFLX_ADDED_PATHS].sort(),'Every production path must be immutable baseline or an exact reviewed UI/MCD/Uber addition');
  for(const [p,entry]of baseline)assert.equal(simulationUiBlobSHA(reverseClaudeSimulationUi(p,readBytes(p))),entry.oid,p+' must reverse byte-for-byte to immutable published baseline');
  for(const [p,sha]of Object.entries(fixture.additions))assert.equal(simulationUiSHA(reverseClaudeSimulationUi(p,readBytes(p))),sha,p+' exact added bytes');
 }
@@ -88,8 +89,8 @@ test('Simulation UI reverses all reviewed modifications to immutable originals a
 });
 
 test('Simulation UI accounts for all 849 production files and preserves all 848 baseline blobs without broad allowances',()=>{
- const current=filesUnder('dist'),baseline=simulationUiBaseEntries();assert.equal(baseline.size,848);assert.equal(current.length,849+MCD_ADDED_PATHS.length+UBER_ADDED_PATHS.length);verifyWholeTree(current);
- assert.deepEqual(current.filter(p=>!baseline.has(p)),[...SIM_UI_ADDED_PATHS,...MCD_ADDED_PATHS,...UBER_ADDED_PATHS].sort());
+ const current=filesUnder('dist'),baseline=simulationUiBaseEntries();assert.equal(baseline.size,848);assert.equal(current.length,849+MCD_ADDED_PATHS.length+UBER_ADDED_PATHS.length+NFLX_ADDED_PATHS.length);verifyWholeTree(current);
+ assert.deepEqual(current.filter(p=>!baseline.has(p)),[...SIM_UI_ADDED_PATHS,...MCD_ADDED_PATHS,...UBER_ADDED_PATHS,...NFLX_ADDED_PATHS].sort());
  for(const [p,entry]of baseline)assert.equal(fs.statSync(path.join(root,p)).mode&0o111,entry.mode==='100755'?0o111:0,p+' executable mode stays unchanged');
  for(const p of SIM_UI_ADDED_PATHS)assert.equal(fs.statSync(path.join(root,p)).mode&0o111,0,p+' new UI script is nonexecutable');
  const unchanged='dist/engine.js',bytes=read(unchanged);assert.strictEqual(reverseClaudeSimulationUi(unchanged,bytes),bytes);
@@ -113,7 +114,7 @@ test('Simulation UI reversal runs exactly once before UMC mount and existing int
 test('Simulation UI adds only its own fixture and retains every published earlier fixture byte',()=>{
  const rows=git('ls-tree','-r','-z','--full-tree',SIM_UI_BASE_COMMIT,'--','tests/fixtures').toString().split('\0').filter(Boolean);
  const entries=rows.map(row=>{const tab=row.indexOf('\t'),[mode,type,oid]=row.slice(0,tab).split(' ');assert.equal(type,'blob');return [row.slice(tab+1),{mode,oid}];});
- assert.ok(entries.length>30);assert.deepEqual(filesUnder('tests/fixtures'),[...entries.map(([p])=>p),SIM_UI_FIXTURE_PATH,MCD_FIXTURE_PATH,'tests/fixtures/mcd-prior33-final-ui.json',UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json'].sort());
+ assert.ok(entries.length>30);assert.deepEqual(filesUnder('tests/fixtures'),[...entries.map(([p])=>p),SIM_UI_FIXTURE_PATH,MCD_FIXTURE_PATH,'tests/fixtures/mcd-prior33-final-ui.json',UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json',NFLX_FIXTURE_PATH,'tests/fixtures/nflx-prior35-mcd-uber-v85.json'].sort());
  for(const [p,{oid}]of entries)assert.equal(simulationUiBlobSHA(read(p)),oid,p+' earlier immutable fixture stays byte-identical');
 });
 

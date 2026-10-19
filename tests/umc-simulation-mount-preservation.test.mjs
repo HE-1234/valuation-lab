@@ -1,3 +1,4 @@
+import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import {mcdFixture,MCD_FIXTURE_PATH} from './mcd-integration-preservation.mjs';
 import {simulationUiFixture,SIM_UI_FIXTURE_PATH} from './claude-simulation-ui-preservation.mjs';
@@ -14,8 +15,8 @@ test('UMC simulation mount fixture permits only the exact two guards from immuta
 });
 test('UMC simulation mount fix reverses every production byte to immutable848-file V82 with no allowances',()=>{
  const entries=git('ls-tree','-r','-z',UMC_MC_BASE_COMMIT,'--','dist').toString().split('\0').filter(Boolean).map(r=>{const [meta,p]=r.split('\t');return [p,meta.split(' ')[2]]});
- assert.equal(entries.length,848);assert.deepEqual(walk('dist'),[...entries.map(([p])=>p),...Object.keys(uberFixture().additions),...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions)].sort());
- for(const [p,sha]of Object.entries({...uberFixture().additions,...mcdFixture().additions,...simulationUiFixture().additions}))assert.equal(umcMcSHA(reverseUmcSimulationMount(p,read(p))),sha,p+' exact later UI addition');
+ assert.equal(entries.length,848);assert.deepEqual(walk('dist'),[...entries.map(([p])=>p),...Object.keys(nflxFixture().additions),...Object.keys(uberFixture().additions),...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions)].sort());
+ for(const [p,sha]of Object.entries({...nflxFixture().additions,...uberFixture().additions,...mcdFixture().additions,...simulationUiFixture().additions}))assert.equal(umcMcSHA(reverseUmcSimulationMount(p,read(p))),sha,p+' exact later UI addition');
  for(const [p,expected]of entries){const bytes=reverseUmcSimulationMount(p,read(p));assert.equal(blob(bytes),expected,p);}
 });
 test('UMC simulation guard reversal rejects modified bytes and leaves earlier strict path constraints intact',()=>{
@@ -26,6 +27,6 @@ test('UMC simulation guard reversal rejects modified bytes and leaves earlier st
 
 test('UMC simulation repair retains every published V82 fixture byte unchanged',()=>{
  const entries=git('ls-tree','-r','-z',UMC_MC_BASE_COMMIT,'--','tests/fixtures').toString().split('\0').filter(Boolean).map(r=>{const [meta,p]=r.split('\t');return [p,meta.split(' ')[2]]});
- assert.deepEqual(walk('tests/fixtures'),[...entries.map(([p])=>p),'tests/fixtures/umc-simulation-mount-v82.json',SIM_UI_FIXTURE_PATH,MCD_FIXTURE_PATH,'tests/fixtures/mcd-prior33-final-ui.json',UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json'].sort());
+ assert.deepEqual(walk('tests/fixtures'),[...entries.map(([p])=>p),'tests/fixtures/umc-simulation-mount-v82.json',SIM_UI_FIXTURE_PATH,MCD_FIXTURE_PATH,'tests/fixtures/mcd-prior33-final-ui.json',UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json',NFLX_FIXTURE_PATH,'tests/fixtures/nflx-prior35-mcd-uber-v85.json'].sort());
  for(const [p,expected]of entries)assert.equal(blob(read(p)),expected,p);
 });

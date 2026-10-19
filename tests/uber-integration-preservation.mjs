@@ -1,3 +1,4 @@
+import {reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -143,6 +144,7 @@ export function validateUberFixture(f){
 let cached;
 export function uberFixture(){if(!cached){const f=validateUberFixture(JSON.parse(fs.readFileSync(new URL('../'+UBER_FIXTURE_PATH,import.meta.url))));Object.values(f.files).forEach(Object.freeze);Object.freeze(f.files);Object.freeze(f.additions);cached=Object.freeze(f);}return cached;}
 export function reverseUberIntegration(path,bytes,earlierContext=''){
+ bytes=reverseNflxIntegration(path,bytes,earlierContext);
  assert.ok(productionPath(path),String(path)+' must be an exact normalized dist path');assert.ok(Buffer.isBuffer(bytes),path+' requires exact production bytes');const f=uberFixture();
  const message=path+' exact reviewed UBER integration bytes; exact reviewed MCD integration bytes; exact reviewed Claude simulation UI bytes'+earlierContext;
  if(own(f.files,path)){assert.equal(uberSHA(bytes),f.files[path].afterSHA256,message);return Buffer.from(f.files[path].beforeText);}

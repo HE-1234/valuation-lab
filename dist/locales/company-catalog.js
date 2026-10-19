@@ -109,3 +109,35 @@ export const catalogProsePairs=[
     "A 类普通股"
   ]
 ];
+
+// Additive October 19 dated-research directory overlays.
+catalogProsePairs.push(...[
+  [
+    "Issuer June 2026 Form 10-Q cover identifies MCD common stock listed on the New York Stock Exchange. Robinhood public page inspected October 19, 2026 offers buying or selling McDonald’s shares.",
+    "发行人 2026 年六月 10-Q 封面确认 MCD 普通股在纽约证券交易所上市。2026 年十月十九日检查的 Robinhood 公开页面提供买卖麦当劳股票的入口。"
+  ],
+  [
+    "Public listing and broker product support only; account, jurisdiction, order and live trading eligibility are not verified. Quote data on the broker page is not used by this dated valuation model.",
+    "仅核实公开上市资料与券商产品支持，未核实账户、司法辖区、订单或实时交易资格。此指定日期估值模型未使用券商页面报价。"
+  ],
+  [
+    "SEC June 2026 10-Q cover lists UBER common stock on New York Stock Exchange. Public Robinhood UBER product page offers buy/sell support. Both read 2026-10-19.",
+    "SEC 2026 年六月 10-Q 封面确认 UBER 普通股在纽约证券交易所上市。Robinhood 的 UBER 公开产品页面提供买卖支持。两者均于 2026 年十月十九日查阅。"
+  ],
+  [
+    "Public listing and broker-page evidence only; no account, jurisdiction, order, fractional-share or live trading verification. No quote input copied into valuation.",
+    "仅使用公开上市与券商页面证据，未核实账户、司法辖区、订单、碎股或实时交易资格。估值未纳入报价。"
+  ],
+  [
+    "June 2026 SEC 10-Q cover identifies common stock, NFLX, Nasdaq Global Select Market.",
+    "2026 年六月 SEC 10-Q 封面确认普通股代码 NFLX，上市市场为纳斯达克全球精选市场。"
+  ],
+  [
+    "Public product support only; account, jurisdiction and execution eligibility are not verified. No quote enters this dated valuation model.",
+    "仅核实公开产品支持，未核实账户、司法辖区或交易执行资格。此指定日期估值模型未纳入报价。"
+  ],
+  [
+    "Common Stock",
+    "普通股"
+  ]
+]);

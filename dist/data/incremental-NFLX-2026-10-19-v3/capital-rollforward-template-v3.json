@@ -1,0 +1,41 @@
+{
+  "capital_anchor": "2026-06-30",
+  "intended_rollforward_date": "2026-10-19",
+  "scope": "Capital ledger only. Does not re-date operating EV or issue current price target. Need elapsed FCFF removal and updated remaining forecast for current valuation.",
+  "known_event": {
+    "date": "2026-07-22",
+    "debt_face_added": 1000,
+    "underwriter_price_fraction": 0.98855,
+    "cash_proceeds_before_other_issuer_expenses": 988.55,
+    "net_debt_increase_before_other_expenses": 11.45,
+    "coupon": 0.0525,
+    "maturity_year": 2036,
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1065280/000119312526312575/d171951d8k.htm",
+      "https://www.sec.gov/Archives/edgar/data/1065280/000119312526312575/d171951dex11.htm"
+    ],
+    "locator": "8-K Item 8.01 and underwriting agreement section 2(a)",
+    "note": "Intent to repay $1bn November 2026 debt is not proof of repayment before Oct 19. Do not offset debt until repayment cash use is entered."
+  },
+  "user_assumptions_required": {
+    "other_issuer_expenses": null,
+    "operating_cash_flow_since_anchor": null,
+    "ppe_cash_spend_since_anchor": null,
+    "acquisition_cash_spend_since_anchor": null,
+    "buyback_cash_since_anchor": null,
+    "buyback_shares_m_since_anchor": null,
+    "other_debt_added": null,
+    "other_debt_net_cash_proceeds": null,
+    "debt_principal_repaid": null,
+    "debt_repayment_cash_total": null,
+    "option_exercise_cash": null,
+    "option_shares_issued_m": null,
+    "other_net_equity_cash": null,
+    "other_shares_issued_m": null,
+    "other_net_cash_change_including_fx_and_investments": null,
+    "current_option_shares_m": null,
+    "current_rsu_psu_units_m": null,
+    "other_debt_face_fx_change": null
+  },
+  "admission": "Incomplete means no projected current cash/debt/shares and no current allocation. Supplied values are assumptions unless sourced; a complete ledger is conditional, not a verification of current balances."
+}

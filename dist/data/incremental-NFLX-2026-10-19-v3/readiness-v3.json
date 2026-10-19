@@ -1,0 +1,67 @@
+{
+  "ticker": "NFLX",
+  "version": 3,
+  "information_cutoff": "2026-10-19",
+  "capital_anchor": "2026-06-30",
+  "next_results_pending": "2026-10-20 Q3 earnings, not included",
+  "status": "author-ready-for-independent-review",
+  "history": {
+    "fiscal_years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "full_year_count": 10,
+    "critical_primary_table_checks": 70,
+    "checks_passed": true,
+    "comparability_gaps": [
+      "2016 regional split not mapped into later four-region presentation",
+      "2025 exact membership and ARM table not retrieved",
+      "Pre-2019 lease balance-sheet numbers not comparable",
+      "CFO less PPE differs from issuer FCF in historical periods with other investing assets/DVD purchases",
+      "Some historical instant/secondary fields sourced from SEC companyfacts rather than separately checked direct tables; field-level provenance retained"
+    ]
+  },
+  "model": {
+    "author_checks": 205,
+    "author_status": "pass",
+    "scope": "H2 2026 stub + nine full years to 2035 and terminal 2036; dated operating EV and opt-in conditional June allocation",
+    "default_equity_policy": "unselected",
+    "current_target": null,
+    "current_upside": null,
+    "current_share_count": "unverified; last verified period June30",
+    "known_july_financing": "paired debt and proceeds recorded; rollforward not automatically complete",
+    "source_repair_checks": 12,
+    "content_commitment_gate": "Input validation plus direct allocation require explicit first-half FY2027 timing fraction and coverage of $11,939.734m disclosed next-12-month content obligations.",
+    "existing_award_expense_gate": "Exact schedule-to-total reconciliation; source-context analytical envelope under a no-positive-additions assumption; latest recognition date no later than 2029-06-30; per-period cost envelope retaining content amortization, noncontent D&A, source-anchored future-compensation floor and explicit positive other cash costs through terminal."
+  },
+  "independent_review": "pending",
+  "admission": {
+    "history": "requires independent review",
+    "dated_operating_scenarios": "requires independent review; editable analyst assumptions retained",
+    "illustrative_june_allocation": "conditional only; not exact award appraisal and requires explicit policy acceptance",
+    "current_october_valuation": false,
+    "publication": false
+  },
+  "key_unresolved": [
+    "Q3 results scheduled October 20 remain pending and absent; actual issuer announcement retained",
+    "Current cash, debt/FX, buybacks, share exercises and awards not fully rolled forward",
+    "Additional Brazil exposure beyond $729m paid and deposit recoverability are unverified; example assumes no incremental exposure and credits no recovery",
+    "June income-tax uncertainty not fully reconciled; $566m is explicitly a stale-source analyst reserve",
+    "Financing FX hedge net fair value is not separately disclosed; $100m reserve and July 1 closeout are explicit assumptions",
+    "Option remaining life/volatility and grant-level strike mix are unverified; weighted-strike Black-Scholes approximation only",
+    "Maximum aggregate PSU payout and exact June remaining expense are not proven. Budget/horizon/source-context admission limits and forward compensation floors are explicit restricted assumptions, not legal or exact grant-level ceilings",
+    "Operating hedge forecasts versus opening fair values are not instrument-level reconciled",
+    "Content coverage is necessary aggregate capacity, not proof of title-level payment timing or new commitment coverage",
+    "Annual funding-capacity proxy is not intrayear liquidity or bank-cash forecast"
+  ],
+  "non_mutation": "No canonical company, application, site, push, or publication changes.",
+  "prior_version_review": "v1 and v2 preserved. Independent v2 review closed original F1-F4 and passed named illustration arithmetic, but unrestricted expense edits withheld for F5. v3 review pending."
+}
