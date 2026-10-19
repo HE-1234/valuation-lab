@@ -1,3 +1,4 @@
+import {svcoFixture} from './svco-research-preservation.mjs';
 import {fixture as keysFixture,reverseKeysIntegration} from './keys-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -25,7 +26,7 @@ test('SNDK additions retain exact reviewed hashes and exclude raw source filings
  const f=fixture();assert.ok(Object.keys(f.additions).length>=5);
  const root=fileURLToPath(new URL('..',import.meta.url));
  const actual=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(root,join(e.parentPath,e.name))).sort();
- assert.deepEqual(actual,[...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(armFixture().additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
+ assert.deepEqual(actual,[...Object.keys(svcoFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(armFixture().additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
  for(const[p,h]of Object.entries(f.additions)){assert.equal(sha(reverseArmIntegration(p,read(p))),h,p);assert.doesNotMatch(p,/\/raw\/|\/transcripts\//);}
 });
 

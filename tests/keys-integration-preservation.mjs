@@ -1,3 +1,4 @@
+import {reverseSVCOResearch} from './svco-research-preservation.mjs';
 import fs from 'node:fs';
 import {pathToFileURL} from 'node:url';
 export async function captureResearchSnapshot(root){
@@ -40,6 +41,7 @@ import {createHash} from 'node:crypto';
 export const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 export const fixture=()=>JSON.parse(fs.readFileSync(new URL('./fixtures/keys-integration.json',import.meta.url)));
 export function reverseKeysIntegration(path,bytes){
+ bytes=reverseSVCOResearch(path,bytes);
  const approved=fixture().files[path];if(!approved)return bytes;
  assert.equal(sha(bytes),approved.afterSHA256,path+' exact reviewed KEYS integration bytes; exact reviewed annual field errors bytes; exact reviewed ARM integration bytes; exact reviewed SNDK integration bytes; exact reviewed CRDO integration bytes; exact reviewed user UI integration bytes; exact reviewed AMD integration bytes; exact reviewed MRVL integration bytes; exact reviewed CAMT integration bytes; exact reviewed ONTO integration bytes; exact reviewed conditional-tool bytes; exact isolated NVMI integration bytes');
  let text=bytes.toString();
