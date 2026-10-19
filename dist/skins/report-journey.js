@@ -25,7 +25,16 @@ const COPY = {
     pvForecast: 'Cash flows · years 1–{n}', pvTerminal: 'Beyond year {n}', operating: 'Operating value',
     claims: 'Cash, debt & claims', equity: 'Equity value', perShare: 'Per share',
     terminalNote: '{pct} of operating value comes from the years after the forecast.',
-    more: 'Read more', less: 'Show less'
+    more: 'Read more', less: 'Show less',
+    vsStart: '{amount} ({pct}) vs. start',
+    check: 'Reality check',
+    checkGrowth: 'Revenue reaches {rN} by year {n}, {x}× today’s {r0}. Is the market big enough for that?',
+    checkMargin: 'Operating profit reaches {eN} in year {n}, from {e0} today.',
+    checkCapital: 'The forecast reinvests {inv} in total to add {dr} of yearly revenue.',
+    checkRisk: '{pct} of operating value comes after year {n}, so stable growth and the cost of capital carry real weight.',
+    tornado: 'What moves the value', tornadoLead: 'Each bar moves one driver both ways and holds the rest. Spend your research where the bars are widest.',
+    sGrowth: 'Revenue growth · year 1', sTargetMargin: 'Mature operating margin', sSalesCapital: 'Sales / capital', sWacc: 'Cost of capital · WACC', sTerminalGrowth: 'Stable growth',
+    pts: '±{n} pts', pt: '±{n} pt', rel: '±{n}%', most: '{name} matters most: it moves value by up to {pct}.', perShareAxis: 'Value per share', moves: '{d} → value changes by up to {pct}', open: 'Open {name}'
   },
   'zh-Hans': {
     e1: '第 1 步，共 6 步 · 投资论述', e2: '第 2 步，共 6 步 · 价值驱动因素 · 成长', e3: '第 3 步，共 6 步 · 价值驱动因素 · 获利能力',
@@ -43,12 +52,22 @@ const COPY = {
     pvForecast: '第 1–{n} 年现金流量', pvTerminal: '第 {n} 年之后', operating: '营业价值',
     claims: '现金、负债与索偿权', equity: '股权价值', perShare: '每股价值',
     terminalNote: '营业价值中有 {pct} 来自预测期之后的年度。',
-    more: '展开全文', less: '收起'
+    more: '展开全文', less: '收起',
+    vsStart: '较起始 {amount}（{pct}）',
+    check: '合理性检查',
+    checkGrowth: '第 {n} 年营收达到 {rN}，是目前 {r0} 的 {x} 倍。市场规模撑得起吗？',
+    checkMargin: '第 {n} 年营业利润达到 {eN}，目前为 {e0}。',
+    checkCapital: '预测期合计再投资 {inv}，换来每年新增 {dr} 的营收。',
+    checkRisk: '营业价值中有 {pct} 来自第 {n} 年之后，稳定成长率与资金成本的影响很大。',
+    tornado: '什么最影响价值', tornadoLead: '每条长条只朝两个方向调整一项驱动因素，其余维持不变。长条越宽，越值得投入研究。',
+    sGrowth: '营收成长率 · 第 1 年', sTargetMargin: '成熟期营业利润率', sSalesCapital: '营收／资本', sWacc: '资金成本 · WACC', sTerminalGrowth: '稳定成长率',
+    pts: '±{n} 个百分点', pt: '±{n} 个百分点', rel: '±{n}%', most: '{name}影响最大：最多可让价值变动 {pct}。', perShareAxis: '每股价值', moves: '{d} → 价值最多变动 {pct}', open: '前往{name}'
   }
 };
 const lang = () => (COPY[getLocale?.()] ? getLocale() : 'en');
 const copy = (key, vars = {}) => Object.entries(vars).reduce((s, [k, v]) => s.replace(`{${k}}`, v), COPY[lang()][key]);
 const JOURNEY = [1, 2, 3, 4, 5, 6];
+const STORY_SENS = {growth: 'growth', margin: 'targetMargin', capital: 'salesCapital', risk: 'wacc'};
 const DRIVERS = [
   {key: 'growth', step: 2, input: '#g-growth', unit: '%'},
   {key: 'margin', step: 3, input: '#g-targetMargin', unit: '%'},
@@ -153,7 +172,7 @@ function storyMap() {
     const grid = el('div', 'rx-story-grid');
     DRIVERS.forEach((d, i) => {
       const cell = el('button', 'rx-story-cell'); cell.type = 'button'; cell.dataset.driver = d.key;
-      cell.append(el('span', 'rx-story-n', String(i + 2)), el('span', 'rx-story-label'), el('b', 'rx-story-value'), el('small', 'rx-story-sub'));
+      cell.append(el('span', 'rx-story-n', String(i + 2)), el('span', 'rx-story-label'), el('b', 'rx-story-value'), el('small', 'rx-story-sub'), el('span', 'rx-story-impact'));
       cell.addEventListener('click', () => goStep(d.step));
       grid.append(cell);
     });
@@ -167,6 +186,10 @@ function storyMap() {
     setText(cell.querySelector('.rx-story-label'), copy(d.key));
     setText(cell.querySelector('.rx-story-value'), readDriver(d));
     setText(cell.querySelector('.rx-story-sub'), copy(d.key + 'Sub'));
+    const sens = sensitivity(), r = sens?.rows.find(x => x.key === STORY_SENS[d.key]);
+    const impact = cell.querySelector('.rx-story-impact');
+    setText(impact, r ? copy('moves', {d: nudge(r), pct: pctText(swing(r, sens.base))}) : '');
+    impact.style.setProperty('--w', r ? Math.min(1, swing(r, sens.base) / Math.max(...sens.rows.map(x => swing(x, sens.base)))).toFixed(3) : '0');
     const label = copy('edit', {name: copy(d.key)});
     if (cell.getAttribute('aria-label') !== label + ' · ' + readDriver(d)) cell.setAttribute('aria-label', label + ' · ' + readDriver(d));
   }
@@ -289,13 +312,130 @@ function finePrint() {
   }
 }
 
+// ---------- what moves the value (one driver at a time) ----------
+const SENS = {growth: {label: 'sGrowth', step: 2, unit: '%'}, targetMargin: {label: 'sTargetMargin', step: 3, unit: '%'}, salesCapital: {label: 'sSalesCapital', step: 4, unit: '×'}, wacc: {label: 'sWacc', step: 5, unit: '%'}, terminalGrowth: {label: 'sTerminalGrowth', step: 5, unit: '%'}};
+let sensRaw = '', sensData = null;
+function sensitivity() {
+  const raw = document.getElementById('guided-results')?.getAttribute('data-sensitivity') || '';
+  if (raw !== sensRaw) {
+    sensRaw = raw;
+    try { sensData = raw ? JSON.parse(raw) : null; } catch { sensData = null; }
+  }
+  return sensData && Number.isFinite(sensData.base) && sensData.base > 0 ? sensData : null;
+}
+const nudge = r => r.relative ? copy('rel', {n: Math.round(r.step * 100)}) : copy(r.step === .01 ? 'pt' : 'pts', {n: Number((r.step * 100).toFixed(1))});
+const swing = (r, base) => Math.max(Math.abs((r.low ?? base) - base), Math.abs((r.high ?? base) - base)) / base;
+const pctText = x => Math.round(x * 100) + '%';
+function tornado() {
+  const pane = document.getElementById('guided-pane-result');
+  if (!pane || pane.hidden) return;
+  const d = sensitivity();
+  let box = pane.querySelector(':scope > .rx-tornado');
+  if (!d || !d.rows.length) { if (box) box.hidden = true; return; }
+  const key = sensRaw + '|' + lang();
+  if (box && box.dataset.key === key && !box.hidden) return;
+  if (!box) {
+    box = el('section', 'rx-tornado');
+    box.append(el('h3'), el('p', 'rx-tornado-lead'), el('div', 'rx-tornado-rows'), el('p', 'rx-tornado-most'));
+    const after = pane.querySelector(':scope > #guided-cashflow-visual');
+    after ? after.after(box) : pane.append(box);
+  }
+  box.hidden = false;
+  box.dataset.key = key;
+  setText(box.querySelector('h3'), copy('tornado'));
+  setText(box.querySelector('.rx-tornado-lead'), copy('tornadoLead'));
+  const base = d.base, rows = d.rows.slice().sort((a, b) => swing(b, base) - swing(a, base));
+  const ends = rows.flatMap(r => [r.low, r.high]).filter(Number.isFinite);
+  const lo = Math.min(base, ...ends), hi = Math.max(base, ...ends), span = hi - lo || 1, at = v => (v - lo) / span;
+  const host = box.querySelector('.rx-tornado-rows');
+  // Rows are keyed by driver so a re-sort moves them rather than rebuilding them.
+  rows.forEach((r, i) => {
+    let row = host.querySelector(`[data-driver="${r.key}"]`);
+    if (!row) {
+      row = el('button', 'rx-tn-row'); row.type = 'button'; row.dataset.driver = r.key;
+      row.append(el('span', 'rx-tn-label'), el('span', 'rx-tn-plot'), el('span', 'rx-tn-lo'), el('span', 'rx-tn-hi'));
+      row.querySelector('.rx-tn-label').append(el('b'), el('small'));
+      row.querySelector('.rx-tn-plot').append(el('i', 'rx-tn-down'), el('i', 'rx-tn-up'), el('i', 'rx-tn-base'));
+      row.addEventListener('click', () => { goStep(SENS[r.key].step); document.getElementById('guided-view-inputs')?.click(); });
+    }
+    if (host.children[i] !== row) host.insertBefore(row, host.children[i] || null);
+    const meta = SENS[r.key] || {label: r.key, unit: ''};
+    const shown = meta.unit === '×' ? Number(r.value.toFixed(2)) + '×' : Number((r.value * 100).toFixed(2)) + '%';
+    setText(row.querySelector('.rx-tn-label b'), copy(meta.label));
+    setText(row.querySelector('.rx-tn-label small'), shown + ' · ' + nudge(r));
+    const vals = [r.low, r.high].filter(Number.isFinite), min = Math.min(base, ...vals), max = Math.max(base, ...vals);
+    const down = row.querySelector('.rx-tn-down'), up = row.querySelector('.rx-tn-up');
+    down.style.setProperty('--a', at(min).toFixed(4)); down.style.setProperty('--w', (at(base) - at(min)).toFixed(4));
+    up.style.setProperty('--a', at(base).toFixed(4)); up.style.setProperty('--w', (at(max) - at(base)).toFixed(4));
+    row.querySelector('.rx-tn-base').style.setProperty('--a', at(base).toFixed(4));
+    setText(row.querySelector('.rx-tn-lo'), numberFormat(2, 2).format(min));
+    setText(row.querySelector('.rx-tn-hi'), numberFormat(2, 2).format(max));
+    const label = copy('open', {name: copy(meta.label)}) + ' · ' + numberFormat(2, 2).format(min) + '–' + numberFormat(2, 2).format(max) + ' ' + d.currency;
+    if (row.getAttribute('aria-label') !== label) row.setAttribute('aria-label', label);
+  });
+  for (const row of [...host.children]) if (!rows.some(r => r.key === row.dataset.driver)) row.remove();
+  const top = rows[0];
+  setText(box.querySelector('.rx-tornado-most'), copy('most', {name: copy(SENS[top.key]?.label || top.key), pct: pctText(swing(top, base))}));
+}
+
+// ---------- reality checks: what each driver implies, in plain numbers ----------
+// Written a moment after edits settle, so dragging never pays for the sentence.
+let checkTimer = 0;
+function scheduleChecks() { clearTimeout(checkTimer); checkTimer = setTimeout(checks, 300); }
+function checks() {
+  const raw = document.getElementById('guided-results')?.getAttribute('data-bridge');
+  let b = null;
+  try { b = raw ? JSON.parse(raw) : null; } catch { b = null; }
+  for (const id of [2, 3, 4, 5]) {
+    const section = document.getElementById('editor-group-' + id);
+    if (!section || section.hidden) continue;
+    let text = '';
+    if (b && Number.isFinite(b.revenueN) && b.revenue0 > 0) {
+      const m = v => money(v, b.currency), n = b.years;
+      if (id === 2) text = copy('checkGrowth', {rN: m(b.revenueN), n, x: (b.revenueN / b.revenue0).toFixed(1), r0: m(b.revenue0)});
+      if (id === 3 && Number.isFinite(b.ebitN)) text = copy('checkMargin', {eN: m(b.ebitN), n, e0: m(b.ebit0)});
+      if (id === 4 && Number.isFinite(b.reinvestment)) text = copy('checkCapital', {inv: m(b.reinvestment), dr: m(b.revenueN - b.revenue0)});
+      if (id === 5 && b.enterprise > 0) text = copy('checkRisk', {pct: Math.round(b.terminalPV / b.enterprise * 100) + '%', n});
+    }
+    let box = section.querySelector(':scope > .rx-check');
+    if (!text) { box?.remove(); continue; }
+    if (!box) {
+      box = el('p', 'rx-check'); box.append(el('b'), el('span'));
+      const next = section.querySelector(':scope > .rx-next');
+      next ? next.before(box) : section.append(box);
+    }
+    setText(box.querySelector('b'), copy('check'));
+    setText(box.querySelector('span'), text);
+  }
+}
+
+// ---------- the result card keeps your cumulative change in view ----------
+// Drawn by CSS from a custom property on the persistent results host: the card
+// is rebuilt on every edit, and writing nothing into it keeps edits cheap.
+function versusStart() {
+  const host = document.getElementById('guided-results');
+  if (!host || !host.closest('.guided-screen')) return;
+  const text = host.querySelector('[data-value-change]')?.textContent.trim() || '';
+  // The sign may follow a translated prefix (较起始案例 +10.92…).
+  const state = /−\s?\d/.test(text) ? 'down' : /\+\s?\d/.test(text) ? 'up' : '';
+  if ((host.getAttribute('data-rx-vs') || '') !== state) state ? host.setAttribute('data-rx-vs', state) : host.removeAttribute('data-rx-vs');
+  // Short form: the amount and the percentage, read from the app's own sentence.
+  const amount = text.match(/[+−]\s?[\d,.]+(?!\d*%)/)?.[0], pct = text.match(/[+−]\s?[\d,.]+%/)?.[0];
+  const short = amount && pct ? copy('vsStart', {amount: amount.replace(/\s/g, ''), pct: pct.replace(/\s/g, '')}) : text;
+  const value = state ? JSON.stringify(short) : '';
+  if (host.style.getPropertyValue('--rx-vs') !== value) value ? host.style.setProperty('--rx-vs', value) : host.style.removeProperty('--rx-vs');
+}
+
 function scan() {
   if (!document.querySelector('.guided-screen')) return;
   finePrint();
   eyebrows();
   storyMap();
   nextCards();
+  versusStart();
+  scheduleChecks();
   bridge();
+  tornado();
 }
 onScan(scan);
 // The four story numbers follow the sliders and fields as they move.
