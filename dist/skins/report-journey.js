@@ -220,9 +220,9 @@ function bridge() {
   let b = null;
   try { b = raw ? JSON.parse(raw) : null; } catch { b = null; }
   let box = pane.querySelector(':scope > .rx-bridge');
-  if (!b || ![b.forecastPV, b.terminalPV, b.enterprise, b.equity].every(Number.isFinite)) { if (box) box.hidden = true; return; }
+  if (!b || ![b.forecastPV, b.terminalPV, b.enterprise, b.equity].every(Number.isFinite)) { if (box && !box.hidden) box.hidden = true; return; }
   const key = raw + '|' + lang();
-  if (box && box.dataset.key === key) return;
+  if (box && box.dataset.key === key && !box.hidden) return;
   if (!box) {
     box = el('section', 'rx-bridge');
     box.append(el('div', 'rx-bridge-head'));
@@ -331,7 +331,7 @@ function tornado() {
   if (!pane || pane.hidden) return;
   const d = sensitivity();
   let box = pane.querySelector(':scope > .rx-tornado');
-  if (!d || !d.rows.length) { if (box) box.hidden = true; return; }
+  if (!d || !d.rows.length) { if (box && !box.hidden) box.hidden = true; return; }
   const key = sensRaw + '|' + lang();
   if (box && box.dataset.key === key && !box.hidden) return;
   if (!box) {
@@ -380,15 +380,25 @@ function tornado() {
 
 // ---------- reality checks: what each driver implies, in plain numbers ----------
 // Written a moment after edits settle, so dragging never pays for the sentence.
-let checkTimer = 0;
-function scheduleChecks() { clearTimeout(checkTimer); checkTimer = setTimeout(checks, 300); }
+let checkTimer = 0, checkKey = '', checkSections = [];
+function scheduleChecks() {
+  const raw = document.getElementById('guided-results')?.getAttribute('data-bridge');
+  const sections = [2, 3, 4, 5].map(id => document.getElementById('editor-group-' + id));
+  const key = [raw, lang(), ...sections.map(section => section?.hidden)].join('|');
+  if (!raw || raw === 'null') { clearTimeout(checkTimer); checkTimer = 0; checkKey = key; checks(); return; }
+  if (key === checkKey && sections.every((section, i) => section === checkSections[i])) return;
+  checkKey = key; checkSections = sections;
+  clearTimeout(checkTimer); checkTimer = setTimeout(() => { checkTimer = 0; checks(); }, 300);
+}
 function checks() {
   const raw = document.getElementById('guided-results')?.getAttribute('data-bridge');
   let b = null;
   try { b = raw ? JSON.parse(raw) : null; } catch { b = null; }
   for (const id of [2, 3, 4, 5]) {
     const section = document.getElementById('editor-group-' + id);
-    if (!section || section.hidden) continue;
+    if (!section) continue;
+    if (!b) { section.querySelector(':scope > .rx-check')?.remove(); continue; }
+    if (section.hidden) continue;
     let text = '';
     if (b && Number.isFinite(b.revenueN) && b.revenue0 > 0) {
       const m = v => money(v, b.currency), n = b.years;
