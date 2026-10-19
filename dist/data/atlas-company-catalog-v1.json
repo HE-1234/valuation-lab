@@ -1593,6 +1593,38 @@
         "evidence": "Trade SpaceX 24 hours a day, five days a week on Robinhood.",
         "scope": "Public Robinhood product page only; account, jurisdiction, order, fractional-share and live trading eligibility are not verified."
       }
+    },
+    {
+      "id": "atlas:MCD",
+      "ticker": "MCD",
+      "company": "McDonald's Corporation",
+      "aliases": [
+        "McDonalds",
+        "McDonald’s"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "MCD",
+      "securityType": "Common Stock",
+      "currency": "USD",
+      "reportingCurrency": "USD",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-19T18:40:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+        "https://robinhood.com/us/en/stocks/MCD/"
+      ],
+      "evidence": "Issuer June 2026 Form 10-Q cover identifies MCD common stock listed on the New York Stock Exchange. Robinhood public page inspected October 19, 2026 offers buying or selling McDonald’s shares.",
+      "note": "Public listing and broker product support only; account, jurisdiction, order and live trading eligibility are not verified. Quote data on the broker page is not used by this dated valuation model.",
+      "mic": "XNYS",
+      "isin": null,
+      "robinhood": {
+        "status": "public-buy-sell-support",
+        "url": "https://robinhood.com/us/en/stocks/MCD/",
+        "checkedAt": "2026-10-19",
+        "evidence": "Public page offers Buy MCD and account signup to buy or sell McDonald’s shares.",
+        "scope": "Public product page only; no account or jurisdiction-specific eligibility verified."
+      }
     }
   ],
   "coverage": [],

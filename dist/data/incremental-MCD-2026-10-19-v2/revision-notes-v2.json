@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "information_cutoff": "2026-10-19",
+  "predecessor": "MCD v1",
+  "predecessor_public_archive_sha256": "748ea7668cbc36b8b762ee377a2750eb085498135862d4fa979e108dd7fe5ca8",
+  "predecessor_manifest_sha256": "b6e79a396cc8f82fa08b07fcff9b220efba48447ab099daf253a1875f0c7d346",
+  "source_research_changes": false,
+  "default_financial_output_changes": false,
+  "fixes": [
+    {
+      "finding": "Alternative policy prose repeated central amounts, contradicting its own inputs.",
+      "resolution": "Generate each alternative basis from its own numeric policy; include a machine-checkable assumption amount map and test both prose and map."
+    },
+    {
+      "finding": "Edited FY restructuring below observed H1 expense created an implicit negative H2 expense.",
+      "resolution": "Reject any FY restructuring below observed H1 expense in every scenario; test below-bound rejection, equality, and the incremental H2 EBIT/FCFF identities."
+    }
+  ],
+  "review_status": "Frozen candidate for targeted independent recheck; not yet independently cleared",
+  "canonical_application_edited": false,
+  "pushed_or_published": false,
+  "supplemental_disclosure": "Added source-linked observed distribution/funding context from the same retained filings; no new future assumption or valuation change."
+}

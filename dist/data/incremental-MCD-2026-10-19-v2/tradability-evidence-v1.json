@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+      "locator": "Form 10-Q cover, Securities registered pursuant to Section 12(b)",
+      "facts": {
+        "security": "Common Stock",
+        "symbol": "MCD",
+        "exchange": "New York Stock Exchange"
+      }
+    },
+    {
+      "url": "https://robinhood.com/us/en/stocks/MCD/",
+      "locator": "Buy MCD and sign-up footer",
+      "finding": "Public page offers buying and selling the stock",
+      "checkedAt": "2026-10-19"
+    }
+  ],
+  "limitation": "Public listing and broker product support only; account, jurisdiction, order and live trading eligibility are not verified. Quote data on the broker page is not used by this dated valuation model."
+}

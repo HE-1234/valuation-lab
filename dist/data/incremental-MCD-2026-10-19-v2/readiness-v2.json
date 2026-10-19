@@ -1,0 +1,59 @@
+{
+  "ticker": "MCD",
+  "version": 2,
+  "information_cutoff": "2026-10-19",
+  "capital_discount_anchor": "2026-06-30",
+  "intentional_nontech_exception": true,
+  "status": "Author-checked v2 corrections; v1 independent review complete; v2 targeted independent recheck pending",
+  "ten_fiscal_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "selected_history_ready_for_independent_review": true,
+  "historical_series_uniform_perimeter": false,
+  "operating_dcf_ready_for_independent_review": true,
+  "current_verified_target": null,
+  "current_upside": null,
+  "default_dated_per_share_allocation": null,
+  "explicit_conditional_allocations_available": true,
+  "conditional_policy_file": "allocation-policy-template-v2.json",
+  "conditional_illustration_file": "allocation-illustrations-v2.json",
+  "conditional_illustration_policies": 3,
+  "conditional_illustration_scenarios": 3,
+  "author_checks": 881,
+  "primary_original_hash_checks": 16,
+  "source_originals_in_public_safe_bundle": false,
+  "independent_review": {
+    "v1": "Source/arithmetic checks passed; R1 policy prose and R2 editable-input guard required correction",
+    "v2": "Corrections authored and checked, targeted independent recheck pending",
+    "current_target_approved": false,
+    "funding_certified": false
+  },
+  "canonical_application_edited": false,
+  "pushed_or_published": false,
+  "admission_gates": [
+    "Targeted independent recheck of v2 policy basis text, restructuring boundary guard, default-output equality and integrity; v1 independent source/arithmetic review is complete.",
+    "For a dated allocation, complete explicit finance-lease, affiliate, operating-cash, award and other-claim policy with non-overlap basis; illustrative alternatives are already executable.",
+    "For a verified current target, reconcile current-date capital/awards/finance leases and other claims, resolve source inconsistencies, establish current market/risk inputs and a current valuation date.",
+    "A funding-certified case also requires financing/maturity/mandatory cash-flow analysis; this package does not certify it."
+  ],
+  "known_source_inconsistencies": [
+    "2025 weighted option exercise price differs between stock-option note and equity-plan table.",
+    "2025/2024 long-term tax balances differ from amounts stated as included in that balance-sheet line in the tax note."
+  ],
+  "scope_limits": [
+    "Selected ten-year core metrics and restaurant data, not every note audited.",
+    "Three material 2026 guidance vintages; not a complete nine-quarter guidance scorecard.",
+    "No complete earnings-call Q&A or private franchisee P&Ls consumed.",
+    "No current share price or claimed current upside.",
+    "WACC/g/ROIC are explicit analyst assumptions, not verified market observations."
+  ]
+}
