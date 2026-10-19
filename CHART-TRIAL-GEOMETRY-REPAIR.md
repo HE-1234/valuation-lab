@@ -28,7 +28,7 @@ The V85 range-header test was also reconciled with the exact130 company addition
 
 The bounded six-group regression passed. It covers actual MCD11 and AAPL10/15/20 revenue and FCFF chart markup in English and Simplified Chinese, every period/status/value/table, signed bar geometry and input/output preservation. Both prefixed and unprefixed trial controls retain standard1000/5000/10000 and restored7/37/4000 options, reset/Undo and idle behavior. The larger post-repair exact-preservation/header/prior35 sweep passed66/66.
 
-Independent source review: `GEOMETRY-SOURCE-REVIEW.md`, SHA-256 `f3bef051c27d3d889ce3964d130ff19c57855c2a411dbaf9710a1845a35ed553`. Final static visual and aggregate outcomes are recorded separately in the release handoff after the source freeze.
+Independent source review: `GEOMETRY-SOURCE-REVIEW-v1.md`, SHA-256 `f3bef051c27d3d889ce3964d130ff19c57855c2a411dbaf9710a1845a35ed553`. Final static visual and aggregate outcomes are recorded separately in the release handoff after the source freeze.
 
 ## Visual-evidence boundary
 
@@ -36,4 +36,4 @@ The component matrix uses actual shipped chart/option markup in bounded source-d
 
 The adapter materializes exactly two direct-child fourth-option predicates that cssselect2 cannot match inside chained `:has()`. It first verifies actual DOM ancestry/button count, then retains selector specificity with `:is(original, marker)` and preserves every declaration. This independently reviewed shim changes no production file. Native controls, SVG fidelity, sticky/scroll behavior, focus paint, native file-picker input and real-device interaction remain unverified.
 
-The isolated320px standard-three-choice document has identical before/after box geometry and retains an existing overflow caveat. It is not represented as fixed or as a new company regression. Its native-mobile effect is not certified by the document renderer; no further normal-control styling was changed.
+Standard-three-choice documents have identical before/after box geometry at320/390/760px in both languages. The constrained static fixture retains an existing overflow caveat at320px in both languages and390px in English; Chinese390px and both760px cases fit. It is not represented as fixed or as a new company regression. Its native-mobile effect is not certified by the document renderer; no further normal-control styling was changed.
