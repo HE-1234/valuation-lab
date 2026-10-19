@@ -1,0 +1,4991 @@
+{
+  "audit_date": "2026-10-18",
+  "scope": "18 consecutive original quarterly five-metric guide-versus-actual observations FY2022Q4-FY2027Q1; issuer release evidence; local canonical files unchanged",
+  "method": "Independent HTML DOM table-cell extraction, independently read missing issuer release, then recomputed comparisons. Canonical build/extraction scripts were not executed. Margins use reported table precision of 0.1 percentage point. Dollar values use table precision of $0.001m. Exact references preserved per metric.",
+  "continuity": {
+    "pass": true,
+    "quarter_count": 18,
+    "first": "FY2022Q4",
+    "last": "FY2027Q1",
+    "expected": [
+      "FY2022Q4",
+      "FY2023Q1",
+      "FY2023Q2",
+      "FY2023Q3",
+      "FY2023Q4",
+      "FY2024Q1",
+      "FY2024Q2",
+      "FY2024Q3",
+      "FY2024Q4",
+      "FY2025Q1",
+      "FY2025Q2",
+      "FY2025Q3",
+      "FY2025Q4",
+      "FY2026Q1",
+      "FY2026Q2",
+      "FY2026Q3",
+      "FY2026Q4",
+      "FY2027Q1"
+    ]
+  },
+  "checks": {
+    "count": 612,
+    "passed": 612,
+    "failed": []
+  },
+  "numeric_extraction_errors": [],
+  "material_source_date_qualification": "FY2023Q4 revenue earliest numeric range is Feb 14, 2023, not March 1. The March 1 five-metric release reiterates the same revenue range.",
+  "rounding_boundary_changes": [
+    {
+      "quarter": "FY2024Q2",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 42.0,
+      "guide_high": 44.0,
+      "guide_midpoint": 43.0,
+      "headline_actual": 44.0,
+      "original_table_actual": 44.035,
+      "headline_vs_mid": 1.0,
+      "table_vs_mid": 1.035,
+      "headline_position": "within",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-08-24",
+      "actual_date": "2023-11-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q2",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 35.0,
+      "guide_high": 37.0,
+      "guide_midpoint": 36.0,
+      "headline_actual": 35.0,
+      "original_table_actual": 34.992,
+      "headline_vs_mid": -1.0,
+      "table_vs_mid": -1.008,
+      "headline_position": "within",
+      "table_position": "below",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-08-24",
+      "actual_date": "2023-11-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q4",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 50.0,
+      "guide_high": 52.0,
+      "guide_midpoint": 51.0,
+      "headline_actual": 52.0,
+      "original_table_actual": 52.021,
+      "headline_vs_mid": 1.0,
+      "table_vs_mid": 1.021,
+      "headline_position": "within",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2025-03-04",
+      "actual_date": "2025-06-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "source_verified": true
+    }
+  ],
+  "comparison_counts": {
+    "revenue": {
+      "headline": {
+        "within": 7,
+        "above": 11
+      },
+      "original_table": {
+        "within": 6,
+        "above": 12
+      }
+    },
+    "gm": {
+      "headline": {
+        "above": 10,
+        "within": 6,
+        "below": 2
+      },
+      "original_table": {
+        "above": 10,
+        "within": 6,
+        "below": 2
+      }
+    },
+    "opex": {
+      "headline": {
+        "above": 11,
+        "within": 6,
+        "below": 1
+      },
+      "original_table": {
+        "above": 11,
+        "within": 5,
+        "below": 2
+      }
+    },
+    "ng_gm": {
+      "headline": {
+        "above": 10,
+        "within": 6,
+        "below": 2
+      },
+      "original_table": {
+        "above": 10,
+        "within": 6,
+        "below": 2
+      }
+    },
+    "ng_opex": {
+      "headline": {
+        "within": 13,
+        "above": 4,
+        "below": 1
+      },
+      "original_table": {
+        "within": 12,
+        "above": 5,
+        "below": 1
+      }
+    }
+  },
+  "rows": [
+    {
+      "quarter": "FY2022Q4",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 37.0,
+      "guide_high": 41.0,
+      "guide_midpoint": 39.0,
+      "headline_actual": 37.5,
+      "original_table_actual": 37.526,
+      "headline_vs_mid": -1.5,
+      "table_vs_mid": -1.474,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-03-09",
+      "actual_date": "2022-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_html_source_identity": null,
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2022Q4",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 58.5,
+      "guide_high": 60.5,
+      "guide_midpoint": 59.5,
+      "headline_actual": 63.3,
+      "original_table_actual": 63.3,
+      "headline_vs_mid": 3.8,
+      "table_vs_mid": 3.8,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2022-03-09",
+      "actual_date": "2022-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_html_source_identity": null,
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2022Q4",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 26.0,
+      "guide_high": 28.0,
+      "guide_midpoint": 27.0,
+      "headline_actual": 30.1,
+      "original_table_actual": 30.102,
+      "headline_vs_mid": 3.1,
+      "table_vs_mid": 3.102,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2022-03-09",
+      "actual_date": "2022-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_html_source_identity": null,
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2022Q4",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 59.0,
+      "guide_high": 61.0,
+      "guide_midpoint": 60.0,
+      "headline_actual": 63.7,
+      "original_table_actual": 63.7,
+      "headline_vs_mid": 3.7,
+      "table_vs_mid": 3.7,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2022-03-09",
+      "actual_date": "2022-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_html_source_identity": null,
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2022Q4",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 21.0,
+      "guide_high": 23.0,
+      "guide_midpoint": 22.0,
+      "headline_actual": 21.6,
+      "original_table_actual": 21.64,
+      "headline_vs_mid": -0.4,
+      "table_vs_mid": -0.36,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-03-09",
+      "actual_date": "2022-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "actual_html_source_identity": null,
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q1",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 43.5,
+      "guide_high": 47.5,
+      "guide_midpoint": 45.5,
+      "headline_actual": 46.5,
+      "original_table_actual": 46.467,
+      "headline_vs_mid": 1.0,
+      "table_vs_mid": 0.967,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-06-01",
+      "actual_date": "2022-08-31",
+      "guide_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "guide_html_source_identity": null,
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q1",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 58.5,
+      "guide_high": 60.5,
+      "guide_midpoint": 59.5,
+      "headline_actual": 59.5,
+      "original_table_actual": 59.5,
+      "headline_vs_mid": 0.0,
+      "table_vs_mid": 0.0,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-06-01",
+      "actual_date": "2022-08-31",
+      "guide_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "guide_html_source_identity": null,
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q1",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 27.5,
+      "guide_high": 29.5,
+      "guide_midpoint": 28.5,
+      "headline_actual": 27.9,
+      "original_table_actual": 27.881,
+      "headline_vs_mid": -0.6,
+      "table_vs_mid": -0.619,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-06-01",
+      "actual_date": "2022-08-31",
+      "guide_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "guide_html_source_identity": null,
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q1",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 59,
+      "guide_high": 61,
+      "guide_midpoint": 60.0,
+      "headline_actual": 60.5,
+      "original_table_actual": 60.5,
+      "headline_vs_mid": 0.5,
+      "table_vs_mid": 0.5,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-06-01",
+      "actual_date": "2022-08-31",
+      "guide_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "guide_html_source_identity": null,
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q1",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 21.5,
+      "guide_high": 23.5,
+      "guide_midpoint": 22.5,
+      "headline_actual": 22.6,
+      "original_table_actual": 22.639,
+      "headline_vs_mid": 0.1,
+      "table_vs_mid": 0.139,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-06-01",
+      "actual_date": "2022-08-31",
+      "guide_url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "guide_html_source_identity": null,
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q2",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 48.5,
+      "guide_high": 52.5,
+      "guide_midpoint": 50.5,
+      "headline_actual": 51.4,
+      "original_table_actual": 51.369,
+      "headline_vs_mid": 0.9,
+      "table_vs_mid": 0.869,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-08-31",
+      "actual_date": "2022-11-30",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q2",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 58.5,
+      "guide_high": 60.5,
+      "guide_midpoint": 59.5,
+      "headline_actual": 54.4,
+      "original_table_actual": 54.4,
+      "headline_vs_mid": -5.1,
+      "table_vs_mid": -5.1,
+      "headline_position": "below",
+      "table_position": "below",
+      "financial_interpretation": "adverse",
+      "guide_date": "2022-08-31",
+      "actual_date": "2022-11-30",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q2",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 30.5,
+      "guide_high": 32.5,
+      "guide_midpoint": 31.5,
+      "headline_actual": 29.7,
+      "original_table_actual": 29.698,
+      "headline_vs_mid": -1.8,
+      "table_vs_mid": -1.802,
+      "headline_position": "below",
+      "table_position": "below",
+      "financial_interpretation": "favorable",
+      "guide_date": "2022-08-31",
+      "actual_date": "2022-11-30",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q2",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 59.0,
+      "guide_high": 61.0,
+      "guide_midpoint": 60.0,
+      "headline_actual": 54.9,
+      "original_table_actual": 54.9,
+      "headline_vs_mid": -5.1,
+      "table_vs_mid": -5.1,
+      "headline_position": "below",
+      "table_position": "below",
+      "financial_interpretation": "adverse",
+      "guide_date": "2022-08-31",
+      "actual_date": "2022-11-30",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q2",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 23.5,
+      "guide_high": 25.5,
+      "guide_midpoint": 24.5,
+      "headline_actual": 25.0,
+      "original_table_actual": 24.956,
+      "headline_vs_mid": 0.5,
+      "table_vs_mid": 0.456,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-08-31",
+      "actual_date": "2022-11-30",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q3",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 54.0,
+      "guide_high": 56.0,
+      "guide_midpoint": 55.0,
+      "headline_actual": 54.3,
+      "original_table_actual": 54.27,
+      "headline_vs_mid": -0.7,
+      "table_vs_mid": -0.73,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-11-30",
+      "actual_date": "2023-03-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q3",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 58.7,
+      "guide_high": 60.7,
+      "guide_midpoint": 59.7,
+      "headline_actual": 58.9,
+      "original_table_actual": 58.9,
+      "headline_vs_mid": -0.8,
+      "table_vs_mid": -0.8,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-11-30",
+      "actual_date": "2023-03-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q3",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 30.2,
+      "guide_high": 32.2,
+      "guide_midpoint": 31.200000000000003,
+      "headline_actual": 34.9,
+      "original_table_actual": 34.873,
+      "headline_vs_mid": 3.7,
+      "table_vs_mid": 3.673,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2022-11-30",
+      "actual_date": "2023-03-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q3",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 59.0,
+      "guide_high": 61.0,
+      "guide_midpoint": 60.0,
+      "headline_actual": 59.3,
+      "original_table_actual": 59.3,
+      "headline_vs_mid": -0.7,
+      "table_vs_mid": -0.7,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-11-30",
+      "actual_date": "2023-03-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q3",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 25.0,
+      "guide_high": 27.0,
+      "guide_midpoint": 26.0,
+      "headline_actual": 25.7,
+      "original_table_actual": 25.651,
+      "headline_vs_mid": -0.3,
+      "table_vs_mid": -0.349,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2022-11-30",
+      "actual_date": "2023-03-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q4",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 30.0,
+      "guide_high": 32.0,
+      "guide_midpoint": 31.0,
+      "headline_actual": 32.1,
+      "original_table_actual": 32.088,
+      "headline_vs_mid": 1.1,
+      "table_vs_mid": 1.088,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-03-01",
+      "actual_date": "2023-05-31",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "source_verified": true,
+      "earliest_numeric_guide_date": "2023-02-14",
+      "earliest_numeric_guide_local_source_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023003504/crdo-20230214.htm",
+      "date_note": "March 1 is reiteration of the February 14 range; all other metric guides first found March 1."
+    },
+    {
+      "quarter": "FY2023Q4",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 55.8,
+      "guide_high": 57.8,
+      "guide_midpoint": 56.8,
+      "headline_actual": 57.9,
+      "original_table_actual": 57.9,
+      "headline_vs_mid": 1.1,
+      "table_vs_mid": 1.1,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-03-01",
+      "actual_date": "2023-05-31",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q4",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 32.8,
+      "guide_high": 34.8,
+      "guide_midpoint": 33.8,
+      "headline_actual": 35.0,
+      "original_table_actual": 34.977,
+      "headline_vs_mid": 1.2,
+      "table_vs_mid": 1.177,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2023-03-01",
+      "actual_date": "2023-05-31",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q4",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 56.0,
+      "guide_high": 58.0,
+      "guide_midpoint": 57.0,
+      "headline_actual": 58.2,
+      "original_table_actual": 58.2,
+      "headline_vs_mid": 1.2,
+      "table_vs_mid": 1.2,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-03-01",
+      "actual_date": "2023-05-31",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2023Q4",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 26.0,
+      "guide_high": 28.0,
+      "guide_midpoint": 27.0,
+      "headline_actual": 27.2,
+      "original_table_actual": 27.15,
+      "headline_vs_mid": 0.2,
+      "table_vs_mid": 0.15,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-03-01",
+      "actual_date": "2023-05-31",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q1",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 33.0,
+      "guide_high": 35.0,
+      "guide_midpoint": 34.0,
+      "headline_actual": 35.1,
+      "original_table_actual": 35.095,
+      "headline_vs_mid": 1.1,
+      "table_vs_mid": 1.095,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-05-31",
+      "actual_date": "2023-08-24",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q1",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 57.8,
+      "guide_high": 59.8,
+      "guide_midpoint": 58.8,
+      "headline_actual": 59.2,
+      "original_table_actual": 59.2,
+      "headline_vs_mid": 0.4,
+      "table_vs_mid": 0.4,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-05-31",
+      "actual_date": "2023-08-24",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q1",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 34.0,
+      "guide_high": 36.0,
+      "guide_midpoint": 35.0,
+      "headline_actual": 35.2,
+      "original_table_actual": 35.181,
+      "headline_vs_mid": 0.2,
+      "table_vs_mid": 0.181,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-05-31",
+      "actual_date": "2023-08-24",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q1",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 58.0,
+      "guide_high": 60.0,
+      "guide_midpoint": 59.0,
+      "headline_actual": 59.8,
+      "original_table_actual": 59.8,
+      "headline_vs_mid": 0.8,
+      "table_vs_mid": 0.8,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-05-31",
+      "actual_date": "2023-08-24",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q1",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 26.0,
+      "guide_high": 28.0,
+      "guide_midpoint": 27.0,
+      "headline_actual": 27.4,
+      "original_table_actual": 27.402,
+      "headline_vs_mid": 0.4,
+      "table_vs_mid": 0.402,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-05-31",
+      "actual_date": "2023-08-24",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q2",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 42.0,
+      "guide_high": 44.0,
+      "guide_midpoint": 43.0,
+      "headline_actual": 44.0,
+      "original_table_actual": 44.035,
+      "headline_vs_mid": 1.0,
+      "table_vs_mid": 1.035,
+      "headline_position": "within",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-08-24",
+      "actual_date": "2023-11-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q2",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 57.8,
+      "guide_high": 59.8,
+      "guide_midpoint": 58.8,
+      "headline_actual": 59.3,
+      "original_table_actual": 59.3,
+      "headline_vs_mid": 0.5,
+      "table_vs_mid": 0.5,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-08-24",
+      "actual_date": "2023-11-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q2",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 35.0,
+      "guide_high": 37.0,
+      "guide_midpoint": 36.0,
+      "headline_actual": 35.0,
+      "original_table_actual": 34.992,
+      "headline_vs_mid": -1.0,
+      "table_vs_mid": -1.008,
+      "headline_position": "within",
+      "table_position": "below",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-08-24",
+      "actual_date": "2023-11-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q2",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 58.0,
+      "guide_high": 60.0,
+      "guide_midpoint": 59.0,
+      "headline_actual": 59.9,
+      "original_table_actual": 59.9,
+      "headline_vs_mid": 0.9,
+      "table_vs_mid": 0.9,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-08-24",
+      "actual_date": "2023-11-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q2",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 27.0,
+      "guide_high": 29.0,
+      "guide_midpoint": 28.0,
+      "headline_actual": 27.1,
+      "original_table_actual": 27.098,
+      "headline_vs_mid": -0.9,
+      "table_vs_mid": -0.902,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-08-24",
+      "actual_date": "2023-11-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q3",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 51.0,
+      "guide_high": 53.0,
+      "guide_midpoint": 52.0,
+      "headline_actual": 53.1,
+      "original_table_actual": 53.058,
+      "headline_vs_mid": 1.1,
+      "table_vs_mid": 1.058,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-11-29",
+      "actual_date": "2024-02-27",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q3",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 58.8,
+      "guide_high": 60.8,
+      "guide_midpoint": 59.8,
+      "headline_actual": 61.4,
+      "original_table_actual": 61.4,
+      "headline_vs_mid": 1.6,
+      "table_vs_mid": 1.6,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-11-29",
+      "actual_date": "2024-02-27",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q3",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 37.0,
+      "guide_high": 39.0,
+      "guide_midpoint": 38.0,
+      "headline_actual": 38.5,
+      "original_table_actual": 38.469,
+      "headline_vs_mid": 0.5,
+      "table_vs_mid": 0.469,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2023-11-29",
+      "actual_date": "2024-02-27",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q3",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 59.0,
+      "guide_high": 61.0,
+      "guide_midpoint": 60.0,
+      "headline_actual": 62.2,
+      "original_table_actual": 62.2,
+      "headline_vs_mid": 2.2,
+      "table_vs_mid": 2.2,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2023-11-29",
+      "actual_date": "2024-02-27",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q3",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 28.0,
+      "guide_high": 30.0,
+      "guide_midpoint": 29.0,
+      "headline_actual": 30.6,
+      "original_table_actual": 30.595,
+      "headline_vs_mid": 1.6,
+      "table_vs_mid": 1.595,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2023-11-29",
+      "actual_date": "2024-02-27",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q4",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 59.0,
+      "guide_high": 62.0,
+      "guide_midpoint": 60.5,
+      "headline_actual": 60.8,
+      "original_table_actual": 60.782,
+      "headline_vs_mid": 0.3,
+      "table_vs_mid": 0.282,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-02-27",
+      "actual_date": "2024-05-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q4",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 63.2,
+      "guide_high": 65.2,
+      "guide_midpoint": 64.2,
+      "headline_actual": 65.8,
+      "original_table_actual": 65.8,
+      "headline_vs_mid": 1.6,
+      "table_vs_mid": 1.6,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2024-02-27",
+      "actual_date": "2024-05-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q4",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 44.0,
+      "guide_high": 46.0,
+      "guide_midpoint": 45.0,
+      "headline_actual": 47.8,
+      "original_table_actual": 47.847,
+      "headline_vs_mid": 2.8,
+      "table_vs_mid": 2.847,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2024-02-27",
+      "actual_date": "2024-05-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q4",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 64.0,
+      "guide_high": 66.0,
+      "guide_midpoint": 65.0,
+      "headline_actual": 66.1,
+      "original_table_actual": 66.1,
+      "headline_vs_mid": 1.1,
+      "table_vs_mid": 1.1,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2024-02-27",
+      "actual_date": "2024-05-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2024Q4",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 33.0,
+      "guide_high": 35.0,
+      "guide_midpoint": 34.0,
+      "headline_actual": 32.7,
+      "original_table_actual": 32.738,
+      "headline_vs_mid": -1.3,
+      "table_vs_mid": -1.262,
+      "headline_position": "below",
+      "table_position": "below",
+      "financial_interpretation": "favorable",
+      "guide_date": "2024-02-27",
+      "actual_date": "2024-05-29",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q1",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 58.0,
+      "guide_high": 61.0,
+      "guide_midpoint": 59.5,
+      "headline_actual": 59.7,
+      "original_table_actual": 59.714,
+      "headline_vs_mid": 0.2,
+      "table_vs_mid": 0.214,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-05-29",
+      "actual_date": "2024-09-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q1",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 62.3,
+      "guide_high": 64.3,
+      "guide_midpoint": 63.3,
+      "headline_actual": 62.4,
+      "original_table_actual": 62.4,
+      "headline_vs_mid": -0.9,
+      "table_vs_mid": -0.9,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-05-29",
+      "actual_date": "2024-09-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q1",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 49.4,
+      "guide_high": 51.4,
+      "guide_midpoint": 50.4,
+      "headline_actual": 51.7,
+      "original_table_actual": 51.734,
+      "headline_vs_mid": 1.3,
+      "table_vs_mid": 1.334,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2024-05-29",
+      "actual_date": "2024-09-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q1",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 63.0,
+      "guide_high": 65.0,
+      "guide_midpoint": 64.0,
+      "headline_actual": 62.9,
+      "original_table_actual": 62.9,
+      "headline_vs_mid": -1.1,
+      "table_vs_mid": -1.1,
+      "headline_position": "below",
+      "table_position": "below",
+      "financial_interpretation": "adverse",
+      "guide_date": "2024-05-29",
+      "actual_date": "2024-09-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q1",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 35.0,
+      "guide_high": 37.0,
+      "guide_midpoint": 36.0,
+      "headline_actual": 35.4,
+      "original_table_actual": 35.375,
+      "headline_vs_mid": -0.6,
+      "table_vs_mid": -0.625,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-05-29",
+      "actual_date": "2024-09-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q2",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 65.0,
+      "guide_high": 68.0,
+      "guide_midpoint": 66.5,
+      "headline_actual": 72.0,
+      "original_table_actual": 72.034,
+      "headline_vs_mid": 5.5,
+      "table_vs_mid": 5.534,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2024-09-04",
+      "actual_date": "2024-12-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q2",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 61.3,
+      "guide_high": 63.3,
+      "guide_midpoint": 62.3,
+      "headline_actual": 63.2,
+      "original_table_actual": 63.2,
+      "headline_vs_mid": 0.9,
+      "table_vs_mid": 0.9,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-09-04",
+      "actual_date": "2024-12-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q2",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 51.3,
+      "guide_high": 53.3,
+      "guide_midpoint": 52.3,
+      "headline_actual": 53.9,
+      "original_table_actual": 53.919,
+      "headline_vs_mid": 1.6,
+      "table_vs_mid": 1.619,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2024-09-04",
+      "actual_date": "2024-12-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q2",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 62.0,
+      "guide_high": 64.0,
+      "guide_midpoint": 63.0,
+      "headline_actual": 63.6,
+      "original_table_actual": 63.6,
+      "headline_vs_mid": 0.6,
+      "table_vs_mid": 0.6,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-09-04",
+      "actual_date": "2024-12-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q2",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 36.0,
+      "guide_high": 38.0,
+      "guide_midpoint": 37.0,
+      "headline_actual": 37.6,
+      "original_table_actual": 37.587,
+      "headline_vs_mid": 0.6,
+      "table_vs_mid": 0.587,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-09-04",
+      "actual_date": "2024-12-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q3",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 115.0,
+      "guide_high": 125.0,
+      "guide_midpoint": 120.0,
+      "headline_actual": 135.0,
+      "original_table_actual": 135.002,
+      "headline_vs_mid": 15.0,
+      "table_vs_mid": 15.002,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2024-12-02",
+      "actual_date": "2025-03-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q3",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 60.6,
+      "guide_high": 62.6,
+      "guide_midpoint": 61.6,
+      "headline_actual": 63.6,
+      "original_table_actual": 63.6,
+      "headline_vs_mid": 2.0,
+      "table_vs_mid": 2.0,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2024-12-02",
+      "actual_date": "2025-03-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q3",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 58.6,
+      "guide_high": 60.6,
+      "guide_midpoint": 59.6,
+      "headline_actual": 59.7,
+      "original_table_actual": 59.732,
+      "headline_vs_mid": 0.1,
+      "table_vs_mid": 0.132,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-12-02",
+      "actual_date": "2025-03-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q3",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 61.0,
+      "guide_high": 63.0,
+      "guide_midpoint": 62.0,
+      "headline_actual": 63.8,
+      "original_table_actual": 63.8,
+      "headline_vs_mid": 1.8,
+      "table_vs_mid": 1.8,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2024-12-02",
+      "actual_date": "2025-03-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q3",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 42.0,
+      "guide_high": 44.0,
+      "guide_midpoint": 43.0,
+      "headline_actual": 43.8,
+      "original_table_actual": 43.768,
+      "headline_vs_mid": 0.8,
+      "table_vs_mid": 0.768,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2024-12-02",
+      "actual_date": "2025-03-04",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q4",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 155.0,
+      "guide_high": 165.0,
+      "guide_midpoint": 160.0,
+      "headline_actual": 170.0,
+      "original_table_actual": 170.025,
+      "headline_vs_mid": 10.0,
+      "table_vs_mid": 10.025,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-03-04",
+      "actual_date": "2025-06-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q4",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 62.7,
+      "guide_high": 64.7,
+      "guide_midpoint": 63.7,
+      "headline_actual": 67.2,
+      "original_table_actual": 67.2,
+      "headline_vs_mid": 3.5,
+      "table_vs_mid": 3.5,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-03-04",
+      "actual_date": "2025-06-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q4",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 73.0,
+      "guide_high": 75.0,
+      "guide_midpoint": 74.0,
+      "headline_actual": 80.4,
+      "original_table_actual": 80.4,
+      "headline_vs_mid": 6.4,
+      "table_vs_mid": 6.4,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2025-03-04",
+      "actual_date": "2025-06-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q4",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 63.0,
+      "guide_high": 65.0,
+      "guide_midpoint": 64.0,
+      "headline_actual": 67.4,
+      "original_table_actual": 67.4,
+      "headline_vs_mid": 3.4,
+      "table_vs_mid": 3.4,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-03-04",
+      "actual_date": "2025-06-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2025Q4",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 50.0,
+      "guide_high": 52.0,
+      "guide_midpoint": 51.0,
+      "headline_actual": 52.0,
+      "original_table_actual": 52.021,
+      "headline_vs_mid": 1.0,
+      "table_vs_mid": 1.021,
+      "headline_position": "within",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2025-03-04",
+      "actual_date": "2025-06-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q1",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 185.0,
+      "guide_high": 195.0,
+      "guide_midpoint": 190.0,
+      "headline_actual": 223.1,
+      "original_table_actual": 223.074,
+      "headline_vs_mid": 33.1,
+      "table_vs_mid": 33.074,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-06-02",
+      "actual_date": "2025-09-03",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q1",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 63.4,
+      "guide_high": 65.4,
+      "guide_midpoint": 64.4,
+      "headline_actual": 67.4,
+      "original_table_actual": 67.4,
+      "headline_vs_mid": 3.0,
+      "table_vs_mid": 3.0,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-06-02",
+      "actual_date": "2025-09-03",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q1",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 88.3,
+      "guide_high": 90.3,
+      "guide_midpoint": 89.3,
+      "headline_actual": 89.6,
+      "original_table_actual": 89.626,
+      "headline_vs_mid": 0.3,
+      "table_vs_mid": 0.326,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2025-06-02",
+      "actual_date": "2025-09-03",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q1",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 64.0,
+      "guide_high": 66.0,
+      "guide_midpoint": 65.0,
+      "headline_actual": 67.6,
+      "original_table_actual": 67.6,
+      "headline_vs_mid": 2.6,
+      "table_vs_mid": 2.6,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-06-02",
+      "actual_date": "2025-09-03",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q1",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 54.0,
+      "guide_high": 56.0,
+      "guide_midpoint": 55.0,
+      "headline_actual": 54.5,
+      "original_table_actual": 54.527,
+      "headline_vs_mid": -0.5,
+      "table_vs_mid": -0.473,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2025-06-02",
+      "actual_date": "2025-09-03",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q2",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 230.0,
+      "guide_high": 240.0,
+      "guide_midpoint": 235.0,
+      "headline_actual": 268.0,
+      "original_table_actual": 268.027,
+      "headline_vs_mid": 33.0,
+      "table_vs_mid": 33.027,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-09-03",
+      "actual_date": "2025-12-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q2",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 63.5,
+      "guide_high": 65.5,
+      "guide_midpoint": 64.5,
+      "headline_actual": 67.5,
+      "original_table_actual": 67.5,
+      "headline_vs_mid": 3.0,
+      "table_vs_mid": 3.0,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-09-03",
+      "actual_date": "2025-12-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q2",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 96.0,
+      "guide_high": 98.0,
+      "guide_midpoint": 97.0,
+      "headline_actual": 102.3,
+      "original_table_actual": 102.25,
+      "headline_vs_mid": 5.3,
+      "table_vs_mid": 5.25,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2025-09-03",
+      "actual_date": "2025-12-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q2",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 64.0,
+      "guide_high": 66.0,
+      "guide_midpoint": 65.0,
+      "headline_actual": 67.7,
+      "original_table_actual": 67.7,
+      "headline_vs_mid": 2.7,
+      "table_vs_mid": 2.7,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-09-03",
+      "actual_date": "2025-12-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q2",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 56.0,
+      "guide_high": 58.0,
+      "guide_midpoint": 57.0,
+      "headline_actual": 57.3,
+      "original_table_actual": 57.28,
+      "headline_vs_mid": 0.3,
+      "table_vs_mid": 0.28,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2025-09-03",
+      "actual_date": "2025-12-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q3",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 335.0,
+      "guide_high": 345.0,
+      "guide_midpoint": 340.0,
+      "headline_actual": 407.0,
+      "original_table_actual": 407.012,
+      "headline_vs_mid": 67.0,
+      "table_vs_mid": 67.012,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-12-01",
+      "actual_date": "2026-03-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q3",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 63.8,
+      "guide_high": 65.8,
+      "guide_midpoint": 64.8,
+      "headline_actual": 68.5,
+      "original_table_actual": 68.5,
+      "headline_vs_mid": 3.7,
+      "table_vs_mid": 3.7,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-12-01",
+      "actual_date": "2026-03-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q3",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 116.0,
+      "guide_high": 120.0,
+      "guide_midpoint": 118.0,
+      "headline_actual": 129.2,
+      "original_table_actual": 129.246,
+      "headline_vs_mid": 11.2,
+      "table_vs_mid": 11.246,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2025-12-01",
+      "actual_date": "2026-03-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q3",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 64.0,
+      "guide_high": 66.0,
+      "guide_midpoint": 65.0,
+      "headline_actual": 68.6,
+      "original_table_actual": 68.6,
+      "headline_vs_mid": 3.6,
+      "table_vs_mid": 3.6,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2025-12-01",
+      "actual_date": "2026-03-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q3",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 68.0,
+      "guide_high": 72.0,
+      "guide_midpoint": 70.0,
+      "headline_actual": 77.4,
+      "original_table_actual": 77.44,
+      "headline_vs_mid": 7.4,
+      "table_vs_mid": 7.44,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2025-12-01",
+      "actual_date": "2026-03-02",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q4",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 425.0,
+      "guide_high": 435.0,
+      "guide_midpoint": 430.0,
+      "headline_actual": 437.0,
+      "original_table_actual": 437.003,
+      "headline_vs_mid": 7.0,
+      "table_vs_mid": 7.003,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2026-03-02",
+      "actual_date": "2026-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q4",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 63.9,
+      "guide_high": 65.9,
+      "guide_midpoint": 64.9,
+      "headline_actual": 68.2,
+      "original_table_actual": 68.2,
+      "headline_vs_mid": 3.3,
+      "table_vs_mid": 3.3,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2026-03-02",
+      "actual_date": "2026-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q4",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 125.5,
+      "guide_high": 129.5,
+      "guide_midpoint": 127.5,
+      "headline_actual": 142.2,
+      "original_table_actual": 142.222,
+      "headline_vs_mid": 14.7,
+      "table_vs_mid": 14.722,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2026-03-02",
+      "actual_date": "2026-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q4",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 64.0,
+      "guide_high": 66.0,
+      "guide_midpoint": 65.0,
+      "headline_actual": 68.3,
+      "original_table_actual": 68.3,
+      "headline_vs_mid": 3.3,
+      "table_vs_mid": 3.3,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2026-03-02",
+      "actual_date": "2026-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2026Q4",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 76.0,
+      "guide_high": 80.0,
+      "guide_midpoint": 78.0,
+      "headline_actual": 81.7,
+      "original_table_actual": 81.699,
+      "headline_vs_mid": 3.7,
+      "table_vs_mid": 3.699,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2026-03-02",
+      "actual_date": "2026-06-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2027Q1",
+      "metric": "revenue",
+      "unit": "USD_millions",
+      "guide_low": 465.0,
+      "guide_high": 475.0,
+      "guide_midpoint": 470.0,
+      "headline_actual": 479.0,
+      "original_table_actual": 479.003,
+      "headline_vs_mid": 9.0,
+      "table_vs_mid": 9.003,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "favorable",
+      "guide_date": "2026-06-01",
+      "actual_date": "2026-09-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2027Q1",
+      "metric": "gm",
+      "unit": "percentage_points",
+      "guide_low": 66.9,
+      "guide_high": 68.9,
+      "guide_midpoint": 67.9,
+      "headline_actual": 64.5,
+      "original_table_actual": 64.5,
+      "headline_vs_mid": -3.4,
+      "table_vs_mid": -3.4,
+      "headline_position": "below",
+      "table_position": "below",
+      "financial_interpretation": "adverse",
+      "guide_date": "2026-06-01",
+      "actual_date": "2026-09-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2027Q1",
+      "metric": "opex",
+      "unit": "USD_millions",
+      "guide_low": 167.6,
+      "guide_high": 171.6,
+      "guide_midpoint": 169.6,
+      "headline_actual": 188.4,
+      "original_table_actual": 188.38,
+      "headline_vs_mid": 18.8,
+      "table_vs_mid": 18.78,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2026-06-01",
+      "actual_date": "2026-09-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2027Q1",
+      "metric": "ng_gm",
+      "unit": "percentage_points",
+      "guide_low": 67.0,
+      "guide_high": 69.0,
+      "guide_midpoint": 68.0,
+      "headline_actual": 68.0,
+      "original_table_actual": 68.0,
+      "headline_vs_mid": 0.0,
+      "table_vs_mid": 0.0,
+      "headline_position": "within",
+      "table_position": "within",
+      "financial_interpretation": "within",
+      "guide_date": "2026-06-01",
+      "actual_date": "2026-09-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "source_verified": true
+    },
+    {
+      "quarter": "FY2027Q1",
+      "metric": "ng_opex",
+      "unit": "USD_millions",
+      "guide_low": 86.0,
+      "guide_high": 90.0,
+      "guide_midpoint": 88.0,
+      "headline_actual": 95.2,
+      "original_table_actual": 95.154,
+      "headline_vs_mid": 7.2,
+      "table_vs_mid": 7.154,
+      "headline_position": "above",
+      "table_position": "above",
+      "financial_interpretation": "adverse",
+      "guide_date": "2026-06-01",
+      "actual_date": "2026-09-01",
+      "guide_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "guide_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "actual_html_source_identity": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "source_verified": true
+    }
+  ],
+  "source_releases": {
+    "FY2022Q3": {
+      "fy": 2022,
+      "q": 3,
+      "date": "2022-03-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "local_html": "exhibit-2022-03-09-credoq32022ex-991.htm",
+      "local_text": "exhibit-2022-03-09-credoq32022ex-991.txt",
+      "headline_actual": {
+        "revenue": 31.8,
+        "gm": 60.1,
+        "ng_gm": 60.7,
+        "opex": 19.6,
+        "ng_opex": 18.2
+      },
+      "table_actual": {
+        "revenue": 31.8,
+        "gm": 60.1,
+        "ng_gm": 60.7,
+        "opex": 19.563,
+        "ng_opex": 18.171
+      },
+      "guide": {
+        "revenue": [
+          37.0,
+          41.0
+        ],
+        "gm": [
+          58.5,
+          60.5
+        ],
+        "ng_gm": [
+          59.0,
+          61.0
+        ],
+        "opex": [
+          26.0,
+          28.0
+        ],
+        "ng_opex": [
+          21.0,
+          23.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 8,
+          "label": "Total revenue",
+          "values": [
+            31800.0,
+            13458.0,
+            68951.0,
+            38947.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 11,
+          "label": "GAAP gross margin",
+          "values": [
+            60.1,
+            60.0,
+            58.4,
+            64.0
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 12,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            60.7,
+            60.3,
+            58.9,
+            64.3
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 18,
+          "label": "Total operating expenses",
+          "values": [
+            19563.0,
+            12865.0,
+            55881.0,
+            48238.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 19,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            18171.0,
+            12064.0,
+            52241.0,
+            35387.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $37 million to $41 million, up 97% year over year at the midpoint"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            58.5,
+            60.5
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 9,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            59.0,
+            61.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 12,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            26.0,
+            28.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            21.0,
+            23.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2023Q1": {
+      "fy": 2023,
+      "q": 1,
+      "date": "2022-08-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "local_html": "exhibit-2022-08-31-credoq12023ex-991.htm",
+      "local_text": "exhibit-2022-08-31-credoq12023ex-991.txt",
+      "headline_actual": {
+        "revenue": 46.5,
+        "gm": 59.5,
+        "ng_gm": 60.5,
+        "opex": 27.9,
+        "ng_opex": 22.6
+      },
+      "table_actual": {
+        "revenue": 46.467,
+        "gm": 59.5,
+        "ng_gm": 60.5,
+        "opex": 27.881,
+        "ng_opex": 22.639
+      },
+      "guide": {
+        "revenue": [
+          48.5,
+          52.5
+        ],
+        "gm": [
+          58.5,
+          60.5
+        ],
+        "ng_gm": [
+          59.0,
+          61.0
+        ],
+        "opex": [
+          30.5,
+          32.5
+        ],
+        "ng_opex": [
+          23.5,
+          25.5
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 8,
+          "label": "Total revenue",
+          "values": [
+            46467.0,
+            37526.0,
+            10724.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "GAAP gross margin",
+          "values": [
+            59.5,
+            63.3,
+            48.3
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 11,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            60.5,
+            63.7,
+            49.1
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 20,
+          "label": "Total operating expenses",
+          "values": [
+            27881.0,
+            30102.0,
+            16810.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 19,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            22639.0,
+            21640.0,
+            15822.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $48.5 million to $52.5 million, up 91% year over year at the midpoint"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            58.5,
+            60.5
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 9,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            59.0,
+            61.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 12,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            30.5,
+            32.5
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            23.5,
+            25.5
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2023Q2": {
+      "fy": 2023,
+      "q": 2,
+      "date": "2022-11-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "local_html": "exhibit-2022-11-30-credoq22023ex-991.htm",
+      "local_text": "exhibit-2022-11-30-credoq22023ex-991.txt",
+      "headline_actual": {
+        "revenue": 51.4,
+        "gm": 54.4,
+        "ng_gm": 54.9,
+        "opex": 29.7,
+        "ng_opex": 25.0
+      },
+      "table_actual": {
+        "revenue": 51.369,
+        "gm": 54.4,
+        "ng_gm": 54.9,
+        "opex": 29.698,
+        "ng_opex": 24.956
+      },
+      "guide": {
+        "revenue": [
+          54.0,
+          56.0
+        ],
+        "gm": [
+          58.7,
+          60.7
+        ],
+        "ng_gm": [
+          59.0,
+          61.0
+        ],
+        "opex": [
+          30.2,
+          32.2
+        ],
+        "ng_opex": [
+          25.0,
+          27.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 8,
+          "label": "Total revenue",
+          "values": [
+            51369.0,
+            46467.0,
+            26427.0,
+            97836.0,
+            37151.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "GAAP gross margin",
+          "values": [
+            54.4,
+            59.5,
+            60.4,
+            56.9,
+            56.9
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 11,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            54.9,
+            60.5,
+            60.5,
+            57.6,
+            57.2
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 19,
+          "label": "Total operating expenses",
+          "values": [
+            29698.0,
+            27881.0,
+            19508.0,
+            57579.0,
+            36318.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            24956.0,
+            22639.0,
+            18248.0,
+            47595.0,
+            34070.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $54.0 million to $56.0 million, up 73% year over year at the midpoint"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            58.7,
+            60.7
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 9,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            59.0,
+            61.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 12,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            30.2,
+            32.2
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            25.0,
+            27.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2023Q3": {
+      "fy": 2023,
+      "q": 3,
+      "date": "2023-03-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "local_html": "exhibit-2023-03-01-credoq32023ex-991.htm",
+      "local_text": "exhibit-2023-03-01-credoq32023ex-991.txt",
+      "headline_actual": {
+        "revenue": 54.3,
+        "gm": 58.9,
+        "ng_gm": 59.3,
+        "opex": 34.9,
+        "ng_opex": 25.7
+      },
+      "table_actual": {
+        "revenue": 54.27,
+        "gm": 58.9,
+        "ng_gm": 59.3,
+        "opex": 34.873,
+        "ng_opex": 25.651
+      },
+      "guide": {
+        "revenue": [
+          30.0,
+          32.0
+        ],
+        "gm": [
+          55.8,
+          57.8
+        ],
+        "ng_gm": [
+          56.0,
+          58.0
+        ],
+        "opex": [
+          32.8,
+          34.8
+        ],
+        "ng_opex": [
+          26.0,
+          28.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 8,
+          "label": "Total revenue",
+          "values": [
+            54270.0,
+            51369.0,
+            31800.0,
+            152106.0,
+            68951.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "GAAP gross margin",
+          "values": [
+            58.9,
+            54.4,
+            60.1,
+            57.6,
+            58.4
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 11,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            59.3,
+            54.9,
+            60.7,
+            58.2,
+            58.9
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 20,
+          "label": "Total operating expenses",
+          "values": [
+            34873.0,
+            29698.0,
+            19563.0,
+            92452.0,
+            55881.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 18,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            25651.0,
+            24956.0,
+            18171.0,
+            73246.0,
+            52241.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $30.0 million and $32.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            55.8,
+            57.8
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 9,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            56.0,
+            58.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 12,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            32.8,
+            34.8
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            26.0,
+            28.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2023Q4": {
+      "fy": 2023,
+      "q": 4,
+      "date": "2023-05-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "local_html": "exhibit-2023-05-31-credoq42023ex-991.htm",
+      "local_text": "exhibit-2023-05-31-credoq42023ex-991.txt",
+      "headline_actual": {
+        "revenue": 32.1,
+        "gm": 57.9,
+        "ng_gm": 58.2,
+        "opex": 35.0,
+        "ng_opex": 27.2
+      },
+      "table_actual": {
+        "revenue": 32.088,
+        "gm": 57.9,
+        "ng_gm": 58.2,
+        "opex": 34.977,
+        "ng_opex": 27.15
+      },
+      "guide": {
+        "revenue": [
+          33.0,
+          35.0
+        ],
+        "gm": [
+          57.8,
+          59.8
+        ],
+        "ng_gm": [
+          58.0,
+          60.0
+        ],
+        "opex": [
+          34.0,
+          36.0
+        ],
+        "ng_opex": [
+          26.0,
+          28.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 8,
+          "label": "Total revenue",
+          "values": [
+            32088.0,
+            54270.0,
+            37526.0,
+            184194.0,
+            106477.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            57.9,
+            58.9,
+            63.3,
+            57.7,
+            60.1
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            58.2,
+            59.1,
+            63.4,
+            58.0,
+            60.3
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 20,
+          "label": "Total operating expenses",
+          "values": [
+            34977.0,
+            34873.0,
+            30102.0,
+            127429.0,
+            85983.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            27150.0,
+            25651.0,
+            21640.0,
+            100396.0,
+            73881.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $33.0 million and $35.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            57.8,
+            59.8
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            58.0,
+            60.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            34.0,
+            36.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total non-GAAP operating expenses",
+          "values": [
+            26.0,
+            28.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2024Q1": {
+      "fy": 2024,
+      "q": 1,
+      "date": "2023-08-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "local_html": "exhibit-2023-08-24-credoq12024ex-991.htm",
+      "local_text": "exhibit-2023-08-24-credoq12024ex-991.txt",
+      "headline_actual": {
+        "revenue": 35.1,
+        "gm": 59.2,
+        "ng_gm": 59.8,
+        "opex": 35.2,
+        "ng_opex": 27.4
+      },
+      "table_actual": {
+        "revenue": 35.095,
+        "gm": 59.2,
+        "ng_gm": 59.8,
+        "opex": 35.181,
+        "ng_opex": 27.402
+      },
+      "guide": {
+        "revenue": [
+          42.0,
+          44.0
+        ],
+        "gm": [
+          57.8,
+          59.8
+        ],
+        "ng_gm": [
+          58.0,
+          60.0
+        ],
+        "opex": [
+          35.0,
+          37.0
+        ],
+        "ng_opex": [
+          27.0,
+          29.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            35095.0,
+            32088.0,
+            46467.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            59.2,
+            57.9,
+            59.5
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            59.8,
+            58.2,
+            60.2
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 17,
+          "label": "Total operating expenses",
+          "values": [
+            35181.0,
+            34977.0,
+            27881.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            27402.0,
+            27150.0,
+            22639.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $42.0 million and $44.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            57.8,
+            59.8
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            58.0,
+            60.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            35.0,
+            37.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            27.0,
+            29.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2024Q2": {
+      "fy": 2024,
+      "q": 2,
+      "date": "2023-11-29",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "local_html": "exhibit-2023-11-29-credoq22024ex-991.htm",
+      "local_text": "exhibit-2023-11-29-credoq22024ex-991.txt",
+      "headline_actual": {
+        "revenue": 44.0,
+        "gm": 59.3,
+        "ng_gm": 59.9,
+        "opex": 35.0,
+        "ng_opex": 27.1
+      },
+      "table_actual": {
+        "revenue": 44.035,
+        "gm": 59.3,
+        "ng_gm": 59.9,
+        "opex": 34.992,
+        "ng_opex": 27.098
+      },
+      "guide": {
+        "revenue": [
+          51.0,
+          53.0
+        ],
+        "gm": [
+          58.8,
+          60.8
+        ],
+        "ng_gm": [
+          59.0,
+          61.0
+        ],
+        "opex": [
+          37.0,
+          39.0
+        ],
+        "ng_opex": [
+          28.0,
+          30.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            44035.0,
+            35095.0,
+            51369.0,
+            79130.0,
+            97836.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            59.3,
+            59.2,
+            54.4,
+            59.3,
+            56.9
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            59.9,
+            59.8,
+            54.7,
+            59.8,
+            57.3
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 17,
+          "label": "Total operating expenses",
+          "values": [
+            34992.0,
+            35181.0,
+            29698.0,
+            70173.0,
+            57579.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            27098.0,
+            27402.0,
+            24956.0,
+            54500.0,
+            47595.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $51.0 million and $53.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            58.8,
+            60.8
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            59.0,
+            61.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            37.0,
+            39.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            28.0,
+            30.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2024Q3": {
+      "fy": 2024,
+      "q": 3,
+      "date": "2024-02-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "local_html": "exhibit-2024-02-27-credoq32024ex-991.htm",
+      "local_text": "exhibit-2024-02-27-credoq32024ex-991.txt",
+      "headline_actual": {
+        "revenue": 53.1,
+        "gm": 61.4,
+        "ng_gm": 62.2,
+        "opex": 38.5,
+        "ng_opex": 30.6
+      },
+      "table_actual": {
+        "revenue": 53.058,
+        "gm": 61.4,
+        "ng_gm": 62.2,
+        "opex": 38.469,
+        "ng_opex": 30.595
+      },
+      "guide": {
+        "revenue": [
+          59.0,
+          62.0
+        ],
+        "gm": [
+          63.2,
+          65.2
+        ],
+        "ng_gm": [
+          64.0,
+          66.0
+        ],
+        "opex": [
+          44.0,
+          46.0
+        ],
+        "ng_opex": [
+          33.0,
+          35.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            53058.0,
+            44035.0,
+            54270.0,
+            132188.0,
+            152106.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            61.4,
+            59.3,
+            58.9,
+            60.1,
+            57.6
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            62.2,
+            59.9,
+            59.1,
+            60.8,
+            58.0
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 18,
+          "label": "Total operating expenses",
+          "values": [
+            38469.0,
+            34992.0,
+            34873.0,
+            108642.0,
+            92452.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            30595.0,
+            27098.0,
+            25651.0,
+            85095.0,
+            73246.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $59.0 million and $62.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            63.2,
+            65.2
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            64.0,
+            66.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            44.0,
+            46.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            33.0,
+            35.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2024Q4": {
+      "fy": 2024,
+      "q": 4,
+      "date": "2024-05-29",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "local_html": "exhibit-2024-05-29-credoq42024ex-991.htm",
+      "local_text": "exhibit-2024-05-29-credoq42024ex-991.txt",
+      "headline_actual": {
+        "revenue": 60.8,
+        "gm": 65.8,
+        "ng_gm": 66.1,
+        "opex": 47.8,
+        "ng_opex": 32.7
+      },
+      "table_actual": {
+        "revenue": 60.782,
+        "gm": 65.8,
+        "ng_gm": 66.1,
+        "opex": 47.847,
+        "ng_opex": 32.738
+      },
+      "guide": {
+        "revenue": [
+          58.0,
+          61.0
+        ],
+        "gm": [
+          62.3,
+          64.3
+        ],
+        "ng_gm": [
+          63.0,
+          65.0
+        ],
+        "opex": [
+          49.4,
+          51.4
+        ],
+        "ng_opex": [
+          35.0,
+          37.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            60782.0,
+            53058.0,
+            32088.0,
+            192970.0,
+            184194.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            65.8,
+            61.4,
+            57.9,
+            61.9,
+            57.7
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            66.1,
+            62.2,
+            58.2,
+            62.5,
+            58.0
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 18,
+          "label": "Total operating expenses",
+          "values": [
+            47847.0,
+            38469.0,
+            34977.0,
+            156489.0,
+            127429.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            32738.0,
+            30595.0,
+            27150.0,
+            117833.0,
+            100396.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $58.0 million and $61.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            62.3,
+            64.3
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            63.0,
+            65.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            49.4,
+            51.4
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total non-GAAP operating expenses",
+          "values": [
+            35.0,
+            37.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2025Q1": {
+      "fy": 2025,
+      "q": 1,
+      "date": "2024-09-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "local_html": "exhibit-2024-09-04-credoq12025ex-991.htm",
+      "local_text": "exhibit-2024-09-04-credoq12025ex-991.txt",
+      "headline_actual": {
+        "revenue": 59.7,
+        "gm": 62.4,
+        "ng_gm": 62.9,
+        "opex": 51.7,
+        "ng_opex": 35.4
+      },
+      "table_actual": {
+        "revenue": 59.714,
+        "gm": 62.4,
+        "ng_gm": 62.9,
+        "opex": 51.734,
+        "ng_opex": 35.375
+      },
+      "guide": {
+        "revenue": [
+          65.0,
+          68.0
+        ],
+        "gm": [
+          61.3,
+          63.3
+        ],
+        "ng_gm": [
+          62.0,
+          64.0
+        ],
+        "opex": [
+          51.3,
+          53.3
+        ],
+        "ng_opex": [
+          36.0,
+          38.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            59714.0,
+            60782.0,
+            35095.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            62.4,
+            65.8,
+            59.2
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            62.9,
+            66.1,
+            59.8
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 18,
+          "label": "Total operating expenses",
+          "values": [
+            51734.0,
+            47847.0,
+            35181.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            35375.0,
+            32738.0,
+            27402.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $65.0 million and $68.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            61.3,
+            63.3
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            62.0,
+            64.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            51.3,
+            53.3
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            36.0,
+            38.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2025Q2": {
+      "fy": 2025,
+      "q": 2,
+      "date": "2024-12-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "local_html": "exhibit-2024-12-02-credoq22025ex-991.htm",
+      "local_text": "exhibit-2024-12-02-credoq22025ex-991.txt",
+      "headline_actual": {
+        "revenue": 72.0,
+        "gm": 63.2,
+        "ng_gm": 63.6,
+        "opex": 53.9,
+        "ng_opex": 37.6
+      },
+      "table_actual": {
+        "revenue": 72.034,
+        "gm": 63.2,
+        "ng_gm": 63.6,
+        "opex": 53.919,
+        "ng_opex": 37.587
+      },
+      "guide": {
+        "revenue": [
+          115.0,
+          125.0
+        ],
+        "gm": [
+          60.6,
+          62.6
+        ],
+        "ng_gm": [
+          61.0,
+          63.0
+        ],
+        "opex": [
+          58.6,
+          60.6
+        ],
+        "ng_opex": [
+          42.0,
+          44.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            72034.0,
+            59714.0,
+            44035.0,
+            131748.0,
+            79130.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            63.2,
+            62.4,
+            59.3,
+            62.8,
+            59.3
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            63.6,
+            62.9,
+            59.9,
+            63.3,
+            59.8
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 17,
+          "label": "Total operating expenses",
+          "values": [
+            53919.0,
+            51734.0,
+            34992.0,
+            105653.0,
+            70173.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            37587.0,
+            35375.0,
+            27098.0,
+            72962.0,
+            54500.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $115.0 million and $125.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            60.6,
+            62.6
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            61.0,
+            63.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            58.6,
+            60.6
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            42.0,
+            44.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2025Q3": {
+      "fy": 2025,
+      "q": 3,
+      "date": "2025-03-04",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "local_html": "exhibit-2025-03-04-credoq32025ex-991.htm",
+      "local_text": "exhibit-2025-03-04-credoq32025ex-991.txt",
+      "headline_actual": {
+        "revenue": 135.0,
+        "gm": 63.6,
+        "ng_gm": 63.8,
+        "opex": 59.7,
+        "ng_opex": 43.8
+      },
+      "table_actual": {
+        "revenue": 135.002,
+        "gm": 63.6,
+        "ng_gm": 63.8,
+        "opex": 59.732,
+        "ng_opex": 43.768
+      },
+      "guide": {
+        "revenue": [
+          155.0,
+          165.0
+        ],
+        "gm": [
+          62.7,
+          64.7
+        ],
+        "ng_gm": [
+          63.0,
+          65.0
+        ],
+        "opex": [
+          73.0,
+          75.0
+        ],
+        "ng_opex": [
+          50.0,
+          52.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            135002.0,
+            72034.0,
+            53058.0,
+            266750.0,
+            132188.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            63.6,
+            63.2,
+            61.4,
+            63.3,
+            60.1
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            63.8,
+            63.6,
+            62.2,
+            63.6,
+            60.8
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 17,
+          "label": "Total operating expenses",
+          "values": [
+            59732.0,
+            53919.0,
+            38469.0,
+            165385.0,
+            108642.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            43768.0,
+            37587.0,
+            30595.0,
+            116730.0,
+            85095.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $155.0 million and $165.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            62.7,
+            64.7
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            63.0,
+            65.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            73.0,
+            75.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            50.0,
+            52.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2025Q4": {
+      "fy": 2025,
+      "q": 4,
+      "date": "2025-06-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "local_html": "exhibit-2025-06-02-credoq42025ex-991.htm",
+      "local_text": "exhibit-2025-06-02-credoq42025ex-991.txt",
+      "headline_actual": {
+        "revenue": 170.0,
+        "gm": 67.2,
+        "ng_gm": 67.4,
+        "opex": 80.4,
+        "ng_opex": 52.0
+      },
+      "table_actual": {
+        "revenue": 170.025,
+        "gm": 67.2,
+        "ng_gm": 67.4,
+        "opex": 80.4,
+        "ng_opex": 52.021
+      },
+      "guide": {
+        "revenue": [
+          185.0,
+          195.0
+        ],
+        "gm": [
+          63.4,
+          65.4
+        ],
+        "ng_gm": [
+          64.0,
+          66.0
+        ],
+        "opex": [
+          88.3,
+          90.3
+        ],
+        "ng_opex": [
+          54.0,
+          56.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 7,
+          "label": "Total revenue",
+          "values": [
+            170025.0,
+            135002.0,
+            60782.0,
+            436775.0,
+            192970.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            67.2,
+            63.6,
+            65.8,
+            64.8,
+            61.9
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            67.4,
+            63.8,
+            66.1,
+            65.0,
+            62.5
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 18,
+          "label": "Total operating expenses",
+          "values": [
+            80400.0,
+            59732.0,
+            47847.0,
+            245785.0,
+            156489.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            52021.0,
+            43768.0,
+            32738.0,
+            168751.0,
+            117833.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $185.0 million and $195.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            63.4,
+            65.4
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            64.0,
+            66.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            88.3,
+            90.3
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total non-GAAP operating expenses",
+          "values": [
+            54.0,
+            56.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2026Q1": {
+      "fy": 2026,
+      "q": 1,
+      "date": "2025-09-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "local_html": "exhibit-2025-09-03-credoq12026ex-991.htm",
+      "local_text": "exhibit-2025-09-03-credoq12026ex-991.txt",
+      "headline_actual": {
+        "revenue": 223.1,
+        "gm": 67.4,
+        "ng_gm": 67.6,
+        "opex": 89.6,
+        "ng_opex": 54.5
+      },
+      "table_actual": {
+        "revenue": 223.074,
+        "gm": 67.4,
+        "ng_gm": 67.6,
+        "opex": 89.626,
+        "ng_opex": 54.527
+      },
+      "guide": {
+        "revenue": [
+          230.0,
+          240.0
+        ],
+        "gm": [
+          63.5,
+          65.5
+        ],
+        "ng_gm": [
+          64.0,
+          66.0
+        ],
+        "opex": [
+          96.0,
+          98.0
+        ],
+        "ng_opex": [
+          56.0,
+          58.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 6,
+          "label": "Total revenue",
+          "values": [
+            223074.0,
+            170025.0,
+            59714.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            67.4,
+            67.2,
+            62.4
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            67.6,
+            67.4,
+            62.9
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 13,
+          "label": "Total operating expenses",
+          "values": [
+            89626.0,
+            80400.0,
+            51734.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            54527.0,
+            52021.0,
+            35375.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $230.0 million and $240.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            63.5,
+            65.5
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            64.0,
+            66.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            96.0,
+            98.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            56.0,
+            58.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2026Q2": {
+      "fy": 2026,
+      "q": 2,
+      "date": "2025-12-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "local_html": "exhibit-2025-12-01-credoq22026ex-991.htm",
+      "local_text": "exhibit-2025-12-01-credoq22026ex-991.txt",
+      "headline_actual": {
+        "revenue": 268.0,
+        "gm": 67.5,
+        "ng_gm": 67.7,
+        "opex": 102.3,
+        "ng_opex": 57.3
+      },
+      "table_actual": {
+        "revenue": 268.027,
+        "gm": 67.5,
+        "ng_gm": 67.7,
+        "opex": 102.25,
+        "ng_opex": 57.28
+      },
+      "guide": {
+        "revenue": [
+          335.0,
+          345.0
+        ],
+        "gm": [
+          63.8,
+          65.8
+        ],
+        "ng_gm": [
+          64.0,
+          66.0
+        ],
+        "opex": [
+          116.0,
+          120.0
+        ],
+        "ng_opex": [
+          68.0,
+          72.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 6,
+          "label": "Total revenue",
+          "values": [
+            268027.0,
+            223074.0,
+            72034.0,
+            491101.0,
+            131748.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            67.5,
+            67.4,
+            63.2,
+            67.5,
+            62.8
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            67.7,
+            67.6,
+            63.6,
+            67.6,
+            63.3
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 12,
+          "label": "Total operating expenses",
+          "values": [
+            102250.0,
+            89626.0,
+            53919.0,
+            191876.0,
+            105653.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            57280.0,
+            54527.0,
+            37587.0,
+            111807.0,
+            72962.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $335.0 million and $345.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            63.8,
+            65.8
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            64.0,
+            66.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            116.0,
+            120.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            68.0,
+            72.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2026Q3": {
+      "fy": 2026,
+      "q": 3,
+      "date": "2026-03-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "local_html": "exhibit-2026-03-02-credoq32026ex-9911.htm",
+      "local_text": "exhibit-2026-03-02-credoq32026ex-9911.txt",
+      "headline_actual": {
+        "revenue": 407.0,
+        "gm": 68.5,
+        "ng_gm": 68.6,
+        "opex": 129.2,
+        "ng_opex": 77.4
+      },
+      "table_actual": {
+        "revenue": 407.012,
+        "gm": 68.5,
+        "ng_gm": 68.6,
+        "opex": 129.246,
+        "ng_opex": 77.44
+      },
+      "guide": {
+        "revenue": [
+          425.0,
+          435.0
+        ],
+        "gm": [
+          63.9,
+          65.9
+        ],
+        "ng_gm": [
+          64.0,
+          66.0
+        ],
+        "opex": [
+          125.5,
+          129.5
+        ],
+        "ng_opex": [
+          76.0,
+          80.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 3,
+          "label": "Revenue",
+          "values": [
+            407012.0,
+            268027.0,
+            135002.0,
+            898113.0,
+            266750.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            68.5,
+            67.5,
+            63.6,
+            68.0,
+            63.3
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            68.6,
+            67.7,
+            63.8,
+            68.1,
+            63.6
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 9,
+          "label": "Total operating expenses",
+          "values": [
+            129246.0,
+            102250.0,
+            59732.0,
+            321122.0,
+            165385.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 16,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            77440.0,
+            57280.0,
+            43768.0,
+            189247.0,
+            116730.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $425.0 million and $435.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            63.9,
+            65.9
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            64.0,
+            66.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            125.5,
+            129.5
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 15,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            76.0,
+            80.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2026Q4": {
+      "fy": 2026,
+      "q": 4,
+      "date": "2026-06-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "local_html": "exhibit-2026-06-01-credoq42026ex-991.htm",
+      "local_text": "exhibit-2026-06-01-credoq42026ex-991.txt",
+      "headline_actual": {
+        "revenue": 437.0,
+        "gm": 68.2,
+        "ng_gm": 68.3,
+        "opex": 142.2,
+        "ng_opex": 81.7
+      },
+      "table_actual": {
+        "revenue": 437.003,
+        "gm": 68.2,
+        "ng_gm": 68.3,
+        "opex": 142.222,
+        "ng_opex": 81.699
+      },
+      "guide": {
+        "revenue": [
+          465.0,
+          475.0
+        ],
+        "gm": [
+          66.9,
+          68.9
+        ],
+        "ng_gm": [
+          67.0,
+          69.0
+        ],
+        "opex": [
+          167.6,
+          171.6
+        ],
+        "ng_opex": [
+          86.0,
+          90.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 3,
+          "label": "Revenue",
+          "values": [
+            437003.0,
+            407012.0,
+            170025.0,
+            1335116.0,
+            436775.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 9,
+          "label": "GAAP gross margin",
+          "values": [
+            68.2,
+            68.5,
+            67.2,
+            68.0,
+            64.8
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            68.3,
+            68.6,
+            67.4,
+            68.1,
+            65.0
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 9,
+          "label": "Total operating expenses",
+          "values": [
+            142222.0,
+            129246.0,
+            80400.0,
+            463344.0,
+            245785.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 19,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            81699.0,
+            77440.0,
+            52021.0,
+            270945.0,
+            168751.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $465.0 million and $475.0 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            66.9,
+            68.9
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 8,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            67.0,
+            69.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 11,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            167.6,
+            171.6
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 17,
+          "label": "Total non-GAAP operating expenses",
+          "values": [
+            86.0,
+            90.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2027Q1": {
+      "fy": 2027,
+      "q": 1,
+      "date": "2026-09-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "local_html": "exhibit-2026-09-01-credoq12027ex-991.htm",
+      "local_text": "exhibit-2026-09-01-credoq12027ex-991.txt",
+      "headline_actual": {
+        "revenue": 479.0,
+        "gm": 64.5,
+        "ng_gm": 68.0,
+        "opex": 188.4,
+        "ng_opex": 95.2
+      },
+      "table_actual": {
+        "revenue": 479.003,
+        "gm": 64.5,
+        "ng_gm": 68.0,
+        "opex": 188.38,
+        "ng_opex": 95.154
+      },
+      "guide": {
+        "revenue": [
+          525.0,
+          535.0
+        ],
+        "gm": [
+          62.9,
+          64.9
+        ],
+        "ng_gm": [
+          67.0,
+          69.0
+        ],
+        "opex": [
+          199.0,
+          204.0
+        ],
+        "ng_opex": [
+          100.0,
+          105.0
+        ]
+      },
+      "actual_table_evidence": {
+        "revenue": {
+          "table_index": 0,
+          "row_index": 3,
+          "label": "Revenue",
+          "values": [
+            479003.0,
+            437003.0,
+            223074.0
+          ]
+        },
+        "gm": {
+          "table_index": 2,
+          "row_index": 10,
+          "label": "GAAP gross margin",
+          "values": [
+            64.5,
+            68.2,
+            67.4
+          ]
+        },
+        "ng_gm": {
+          "table_index": 2,
+          "row_index": 11,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            68.0,
+            68.3,
+            67.6
+          ]
+        },
+        "opex": {
+          "table_index": 0,
+          "row_index": 9,
+          "label": "Total operating expenses",
+          "values": [
+            188380.0,
+            142222.0,
+            89626.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 2,
+          "row_index": 20,
+          "label": "Total Non-GAAP operating expenses (B)",
+          "values": [
+            95154.0,
+            81699.0,
+            54527.0
+          ]
+        }
+      },
+      "guide_evidence": {
+        "revenue": {
+          "bullet": "Revenue is expected to be between $525 million and $535 million"
+        },
+        "gm": {
+          "table_index": 3,
+          "row_index": 4,
+          "label": "GAAP gross margin",
+          "values": [
+            62.9,
+            64.9
+          ]
+        },
+        "ng_gm": {
+          "table_index": 3,
+          "row_index": 9,
+          "label": "Non-GAAP gross margin",
+          "values": [
+            67.0,
+            69.0
+          ]
+        },
+        "opex": {
+          "table_index": 3,
+          "row_index": 12,
+          "label": "Total GAAP operating expenses",
+          "values": [
+            199.0,
+            204.0
+          ]
+        },
+        "ng_opex": {
+          "table_index": 3,
+          "row_index": 17,
+          "label": "Total Non-GAAP operating expenses",
+          "values": [
+            100.0,
+            105.0
+          ]
+        }
+      },
+      "actual_headline_text_lines": {
+        "revenue": 12,
+        "gm": 13,
+        "opex": 14,
+        "ng_gm": 13,
+        "ng_opex": 14
+      }
+    },
+    "FY2022Q4": {
+      "fy": 2022,
+      "q": 4,
+      "date": "2022-06-01",
+      "url": "https://www.globenewswire.com/news-release/2022/06/01/2454723/0/en/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2022-Financial-Results.html",
+      "local_html": null,
+      "local_text": null,
+      "headline_actual": {
+        "revenue": 37.5,
+        "gm": 63.3,
+        "opex": 30.1,
+        "ng_gm": 63.7,
+        "ng_opex": 21.6
+      },
+      "table_actual": {
+        "revenue": 37.526,
+        "gm": 63.3,
+        "opex": 30.102,
+        "ng_gm": 63.7,
+        "ng_opex": 21.64
+      },
+      "guide": {
+        "revenue": [
+          43.5,
+          47.5
+        ],
+        "gm": [
+          58.5,
+          60.5
+        ],
+        "opex": [
+          27.5,
+          29.5
+        ],
+        "ng_gm": [
+          59,
+          61
+        ],
+        "ng_opex": [
+          21.5,
+          23.5
+        ]
+      },
+      "actual_table_evidence": "GlobeNewswire original table plus FY2023Q1 original release prior-quarter comparative cells",
+      "guide_evidence": "GlobeNewswire June 1, 2022, First Quarter of Fiscal 2023 Financial Outlook, web lines 70-74",
+      "verification_note": "Manual transcription independently checked against the primary issuer release through web tool; not copied from build_guidance.py."
+    }
+  },
+  "source_sha256": {
+    "exhibit-2022-03-09-credoq32022ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022005568/credoq32022ex-991.htm",
+      "sha256": "87c53d865152acc8f2815ab13f2cb314aa638e477a94b8990185bff8d666eba9"
+    },
+    "exhibit-2022-08-31-credoq12023ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022024051/credoq12023ex-991.htm",
+      "sha256": "753ea79289e5ed56e283f441a48793857bf72bfbbb181b76a3dd520d7cbf52d0"
+    },
+    "exhibit-2022-11-30-credoq22023ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022031075/credoq22023ex-991.htm",
+      "sha256": "feb886636d2707a8a3f91d6c40d40be1fd89fe2f40ca916185e03589d77d814c"
+    },
+    "exhibit-2023-03-01-credoq32023ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023005837/credoq32023ex-991.htm",
+      "sha256": "a77a4d884ca36bce8fad80882d64cd99ba6617172381fa86e608e2d88d1ef038"
+    },
+    "exhibit-2023-05-31-credoq42023ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023020320/credoq42023ex-991.htm",
+      "sha256": "6d015c2afdc0c1bae99550a460e88d10b6c72cfad68ab120f7ff63877b591453"
+    },
+    "exhibit-2023-08-24-credoq12024ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023030511/credoq12024ex-991.htm",
+      "sha256": "63b48717902f647182e705d54c1c64682c9ddd83f3a0b9fd9c037b679d82b28f"
+    },
+    "exhibit-2023-11-29-credoq22024ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828023040220/credoq22024ex-991.htm",
+      "sha256": "e1ce92ee42616f18d8f8bf4399da9bce363f53caf2f22e10d76bf9d20e7911de"
+    },
+    "exhibit-2024-02-27-credoq32024ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024007214/credoq32024ex-991.htm",
+      "sha256": "85ff71d09af6623bc7f952a3535dff150a834855d3657d78964c33c0b2d48161"
+    },
+    "exhibit-2024-05-29-credoq42024ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024025607/credoq42024ex-991.htm",
+      "sha256": "450ca91b1466e9f2735a3540fd06593c32bb827a83c47ab2df28eb799d157375"
+    },
+    "exhibit-2024-09-04-credoq12025ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024039309/credoq12025ex-991.htm",
+      "sha256": "efa9beeff0b315a05ea5bb8d0eefd367460dcbb9cdaf40bdd27e925fdafbdcfa"
+    },
+    "exhibit-2024-12-02-credoq22025ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828024049564/credoq22025ex-991.htm",
+      "sha256": "dd4dcc8dd625b47f240f91be399a1e75be49582c39fa74f69bd4a6982ac8c9e1"
+    },
+    "exhibit-2025-03-04-credoq32025ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025009813/credoq32025ex-991.htm",
+      "sha256": "4b3036abab60d92a8736677d633eb45677c0b05d4f2a0893cef08802d9e30415"
+    },
+    "exhibit-2025-06-02-credoq42025ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025028827/credoq42025ex-991.htm",
+      "sha256": "bbfc8182fd2825588fa697e235c2bc675c36a6d6a48a2f0b4439736c33daea2e"
+    },
+    "exhibit-2025-09-03-credoq12026ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm",
+      "sha256": "bcdadbdaf4778fe01d1fde82f84fc79c1cc8bf85cf557b6c6d1dc2085bb1637a"
+    },
+    "exhibit-2025-12-01-credoq22026ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828025054428/credoq22026ex-991.htm",
+      "sha256": "4c12a5a0e25d38eeee3c3edfcea5577a23d31dab786ef37ee3aebd58b1e7a97e"
+    },
+    "exhibit-2026-03-02-credoq32026ex-9911.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026013205/credoq32026ex-9911.htm",
+      "sha256": "2d9108684e745dd2a6436842f030444ab91ba7d7db29af5e8af2ed2984c0f628"
+    },
+    "exhibit-2026-06-01-credoq42026ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026039474/credoq42026ex-991.htm",
+      "sha256": "66e1d90abf71e15ee5517dbbd21f4840ceaa80d12e3f1686c2439ec09822e757"
+    },
+    "exhibit-2026-09-01-credoq12027ex-991.htm": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026059795/credoq12027ex-991.htm",
+      "sha256": "168b673471a3c2b9a60b574ccd8d7ffaf3d7854b2f7fad2c7306137a11b33b07"
+    }
+  }
+}

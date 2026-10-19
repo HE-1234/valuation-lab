@@ -1,0 +1,1416 @@
+{
+  "status": "arithmetic_pass_with_review_findings",
+  "independent_implementation": true,
+  "source_hashes": {
+    "crdo-20230729.htm": "493d9929d6d71f3dbfd3b2a6fc24d58de3c6c76739b51c9f30436f5e6882d134",
+    "exhibit-sources.json": "f93944c46dc2a6a3c5cf36d9b3b78e2f267b7d7424c77f04e23ff046ea7e714c",
+    "crdo-20240127.txt": "eb1a55eff191d7f60d1393e83c09d5f2a03b4f28c33e18f6863edd643907c7e7",
+    "crdo-20261016.txt": "6814b7a29aa9f3dd32af49e5ff09d9590b4ea80680e7b9233f34954d146dfc9f",
+    "crdo-20260413.htm": "d1876c50130d3207158523505e390a0f21643b387902de34370c7c03fad6a666",
+    "crdo-20220601.txt": "22e167fc0c38b2b26abb8d6a208eb4d09655834c500d70da3e327181e5d7fc72",
+    "exhibit-2024-12-02-credoq22025ex-991.htm": "dd4dcc8dd625b47f240f91be399a1e75be49582c39fa74f69bd4a6982ac8c9e1",
+    "exhibit-2023-05-31-credoq42023ex-991.htm": "6d015c2afdc0c1bae99550a460e88d10b6c72cfad68ab120f7ff63877b591453",
+    "exhibit-2023-08-24-credoq12024ex-991.htm": "63b48717902f647182e705d54c1c64682c9ddd83f3a0b9fd9c037b679d82b28f",
+    "build_evidence.py": "12ca8bc0372bc7ca03f47518cc17976d7fac051dda41decc138ce9dc6db3beac",
+    "crdo-20260502.htm": "1853a13402ec9356d338f718628655684e8503c620d95ffe87c50733ceca210f",
+    "crdo-20220730.htm": "b5e57daf400b686139d2bbe84a9b73300346e401b2151203a6e860c779441b87",
+    "exhibit-2023-05-31-credoq42023ex-991.txt": "50e883241b6b2c768690c15e4bc3d15117488ddccc51b363437260f11e55820b",
+    "crdo-20220730.txt": "82dfe9ea67652778c1ffdcea8583ffaf36b26bc109744a975ac30df9597eb2fe",
+    "crdo-20260502.txt": "29e43a410f074b1eca4b640d5998c44dc6f8f785af0bd1c30e25b1bc893937bb",
+    "history-v1.csv": "c4bfffa1d34e7821698b3b533f7aefc25fae89ea2ce138e92a9df05938dfe893",
+    "release-sources.json": "2748265587f01bed5761fc7452c2fb1937667b1759224d063c9f995770dea5b9",
+    "crdo-20221029.htm": "905d27d4da2290e58942d26ddd4c3bad4257e6b44be9b95c4ae505a83550230b",
+    "guidance-revisions-v1.json": "667ae01a1995184a994ec5a55f3e4e4dedc42ae5309a12449da0fcbeb08021aa",
+    "exhibit-2026-09-01-credoq12027ex-991.htm": "168b673471a3c2b9a60b574ccd8d7ffaf3d7854b2f7fad2c7306137a11b33b07",
+    "README.md": "a73ed816c94d96c24bc46a99e7460079960d5e3a96b2596c9e3886e40bd066e1",
+    "forecast-v1.csv": "083401d7c92832c0a02e98d03adabd1c27f04a2a00f70b16f526960b227ea966",
+    "crdo-20250201.htm": "0cb9150fcddddf5eca3a846abb1e115a8665e2eb8363d8b64073aecad6f92b50",
+    "crdo-20251101.txt": "a171a72269738e0cfa8dfa6221cba9f7fa718c1c395fad084a0c999d3f4fbbe4",
+    "get_releases.py": "feb2558474da4fb93d068a858c528d9b37c2b0b90c409450646fba365331a9fd",
+    "exhibit-2024-04-02-a8-kapril2024ex991.txt": "15c5296cb819c526916d97b6c0fbd5b28e67efe34cbe422576cbd46a7461c0de",
+    "credotechnologygroups-1.htm": "1ad89798541db2597d78c039673cbaffe9d86fee31efd18bc240e23d2c99544c",
+    "exhibit-2023-03-01-credoq32023ex-991.txt": "dfcc4556d7be81b8df8c4dc69e81b2a54ca866e26f3ccc1add335639ab6ce727",
+    "exhibit-2026-02-09-feb20268-kex991.htm": "2e9199ea69a169463d80a2105267822f95c5dfc2b5e96597f9818a39e6b277e4",
+    "crdo-20251101.htm": "848c832f788e50e6c6d328c54c8a29de86569081764d16c331804487ffb34c60",
+    "crdo-20231028.txt": "0e6ae621a36a91e53117827bbbc33cad6a990807bd955daec5d47d33e91dd73c",
+    "crdo-20230729.txt": "3b81ef07a5ae21484f86339dd3eb1bf7e021b69578d7f3690e0feae82c4941ef",
+    "exhibit-2022-03-09-credoq32022ex-991.txt": "c0cac9a61840e92e1ffd5d8e5b43906855286263559701a3e65bd2509222a0f1",
+    "crdo-20241102.htm": "1422f458b7b3a7422912ca636df6cb2668625499a3085b911b5c582efc15555b",
+    "exhibit-2022-08-31-credoq12023ex-991.htm": "753ea79289e5ed56e283f441a48793857bf72bfbbb181b76a3dd520d7cbf52d0",
+    "history-field-provenance-v1.json": "d7e814cc134773b0b9c78c30850cea2420dcfadd43cefee458d1b0661bd92a40",
+    "exhibit-2024-04-02-a8-kapril2024ex991.htm": "c52d00dcbbeb4239f93fb4ae39aa38fd8b188b4827ee1b6b8bcc3321f21a444a",
+    "crdo-20230128.htm": "70f0a5432b098fab61c61d6d3c32e0b85a5edc55c2179b14a8aca47826785874",
+    "exhibit-2024-02-27-credoq32024ex-991.htm": "85ff71d09af6623bc7f952a3535dff150a834855d3657d78964c33c0b2d48161",
+    "exhibit-2024-01-09-dp205059_ex9901.txt": "158160f999cd1b03133c16ef9e1295c592179eaa45a319afd58ca8193134ae22",
+    "exhibit-2023-12-06-exhibit991-8xk.htm": "2cbff989ea1cc4e450c82f717045c540124967076d870e2142ff5ce1a10ce804",
+    "build_history.py": "b5512d3c466058175f9511825ede330546776c1f6c13853cf426b6f5730af827",
+    "crdo-20250201.txt": "241796b0eabeca41590f1f848f2f996e115f35b158606e61bc52b7bb7a0bc698",
+    "crdo-20230214.txt": "ba6b361bbb0fd7d12af8ab939ee6b17494d4ac6839fb9d0aa1ad838b7330392b",
+    "companyfacts.json": "42718952361414c81add8e89adf6803dd1fb6d1f511cc66b62b3e62484045323",
+    "crdo-20250503.htm": "a4430544bbfa980323beb3d0ea1c566a8ba1d0018a5db39c8d558371bdf6b415",
+    "crdo-20250802.htm": "f72a266da644ff50d7c17a748872617cea2efaaae38a5810ebd2ea71eccf0275",
+    "crdo-20220131.htm": "215abf145aef0b71d0f0868097ccabf2ede3a944617910eb97092f8d6e02798c",
+    "exhibit-2025-03-04-credoq32025ex-991.htm": "4b3036abab60d92a8736677d633eb45677c0b05d4f2a0893cef08802d9e30415",
+    "source-ledger-v1.json": "af46d388bee0ea27ee1090d013f8751ba4beb487fc1f239e1382848d099b62f3",
+    "exhibit-2025-09-03-credoq12026ex-991.htm": "bcdadbdaf4778fe01d1fde82f84fc79c1cc8bf85cf557b6c6d1dc2085bb1637a",
+    "exhibit-2026-04-13-april20268-kex991.txt": "31fa733e41d4484bef1966a247e778f3746753416e5de23575d0de132b8c7068",
+    "exhibit-2025-06-02-credoq42025ex-991.htm": "bbfc8182fd2825588fa697e235c2bc675c36a6d6a48a2f0b4439736c33daea2e",
+    "exhibit-2023-08-24-credoq12024ex-991.txt": "c739e8efc0d8f93959b406bc3fd21f8c3299aa773cb82f475f6689a50a639e5a",
+    "exhibit-2026-04-13-april20268-kex991.htm": "558ad7c5b34aca40d10621ec7d994f62fdc0150d07ce62abdd8490d38420adb9",
+    "crdo-20220430.txt": "7cfd40c8b73e18e8430d4f2512e0992d189f5d69c9814fe10d91225381ba5bc1",
+    "crdo-20240803.txt": "2c83688ae4a1d31783f1b4891ca24dc322379b9b0682de85c1ce0ede6df75714",
+    "crdo-20260801.txt": "30c8169a7e76c26fbd83c9518db0ca3652e7a326523c0f05e01d80aedb239056",
+    "crdo-20260413.txt": "ecb1a0c9ad7b8dc68beacd749ee49fd8e5c211eccd7bdead6a4c91ce23cdad2c",
+    "exhibit-2025-12-01-credoq22026ex-991.htm": "4c12a5a0e25d38eeee3c3edfcea5577a23d31dab786ef37ee3aebd58b1e7a97e",
+    "crdo-20230429.htm": "885be5ec823eff33e5c0bcb6203f1516f6d36ea9e1e07a04788c4bdb091990a4",
+    "crdo-20240803.htm": "14d1399ded7d23f825a17353b591faec637ad0f0434d057a6f976c50f6b3d15e",
+    "extract.py": "c96f529e412fefa68240f81f6e07f87c9160954e92d1ca1cde518bd97355fbd0",
+    "crdo-20260801.htm": "37d660f3a6d23e0436a356f8df02a65ee13bdf621d9f031b15cdb05943bed68e",
+    "guidance-vs-actual-v1.json": "1e4a5d633ef1fd6fea6234e1b2c04dce6bc47c314df61c9abdcda83c4cd05fac",
+    "exhibit-2025-12-01-credoq22026ex-991.txt": "b085dd6ec6096cb62dfd9c64f5581c2aaea0c127f0d9d57eea50c39684f41693",
+    "history-v1.json": "8248fe489f1cbeba23c96a29020e7605fbffd22b957e1be7c2e75fedb0d9a888",
+    "crdo-20260528.txt": "b5e70032d82704acf852857b279b46d7730658dd81f0aceba1a41744fa2799d0",
+    "observations-v1.json": "160949bc46468674aed199805ff6c31d1dd854a40042cb098bd0cf4a25ea19e1",
+    "crdo-20231028.htm": "5d5d53cbb8640a979837d9c895fa98b6f73256eed43032cc4dcaf56fd1646af8",
+    "exhibit-2025-09-03-credoq12026ex-991.txt": "a0c7493e9e364165e1c485447f0fabdaeff9ace66857c8979376f2da1b3649d8",
+    "exhibit-2025-06-02-credoq42025ex-991.txt": "19c8b0dccede9b2dd253e6e982008839adcd9873e5b97f91fcdd83f5851a60d1",
+    "credotechnologygroups-1.txt": "b7cc2b210b224480641b586721d61d2d5e67be00c9ecb2050ff975c3fa467485",
+    "crdo-20230429.txt": "a59fcbbff7d4149789f47a2a9e8674d40d386acc3395da3c8e0a63fb2d46b4f8",
+    "exhibit-2026-03-02-credoq32026ex-9911.txt": "50c767021b0e6410d2deb8a6f7f18266e1823b2d3dd2bd93d0995bd0ee9c6f81",
+    "exhibit-2026-02-09-feb20268-kex991.txt": "337ca51115f23c390b86bb6fa1f2f894c345133e96a965ff83eb0ae0275b6c92",
+    "exhibit-2024-02-27-credoq32024ex-991.txt": "daffe9b8bb149184249153d1d915a8ea0dfbc7ff6a01f83e324c03709a1394bc",
+    "sensitivity-v1.json": "f65a84ce01ec0eee69bdbcc7a4cc4691051de36d924eb7a221998dbae8b936db",
+    "crdo-20250802.txt": "29ddfdb26502fc25f51a3e6e28ae520b548e1e50f92790b781f80237eb483725",
+    "exhibit-2025-03-04-credoq32025ex-991.txt": "856792e80e0ab65264ac2a1cecafdfc884b952f720f4e49885c491e20a5f89ba",
+    "exhibit-2023-11-29-credoq22024ex-991.htm": "e1ce92ee42616f18d8f8bf4399da9bce363f53caf2f22e10d76bf9d20e7911de",
+    "crdo-20260131.txt": "1808af5c02b6120afe5bcb7fe77920ee07882a3b1558d627e4d18a73d6d05ba0",
+    "extend_sensitivities.py": "e6d698a6223b8c2a5e082dcfc151766f32eb704f7441c654d6676327065fe1bf",
+    "exhibit-2024-01-09-dp205059_ex9901.htm": "bc428ab5999528531ad30f1268d5f91a74d38e73c493d01c376b8cd3f02ff62f",
+    "exhibit-2024-09-04-credoq12025ex-991.txt": "46fcedd3e682c2f3d82866f9bf98fd63b33f63c324335902e52e97ea97684ad7",
+    "crdo-20220131.txt": "6685a649c790e51ae88b1193e58a16783a60ebe52e0656085a7c2e346b3ff143",
+    "crdo-20260528.htm": "7192546080ee5384b8dd57b6d7b5b5bd26bff515728f791d0f0bb1650d543e3a",
+    "crdo-20241102.txt": "9b145e638c7ce9a9318ac6186a3442bfe1fb1758623aa404b288893a33d6dd89",
+    "exhibit-2023-11-29-credoq22024ex-991.txt": "b30c98037bfd1d1599edfccc461154b1cda4b6d7bd4cbe5cb1481a5eee21b2a5",
+    "crdo-20250503.txt": "803f63eb2ca6a09831e43daf319d8302996aa8243e1892ba158d946ad81fc93d",
+    "replay_dcf.py": "25f40b1fdc91af38fdb59302a88f2c5c536d035c7506ef2c262ec82fdc2f2e16",
+    "build_guidance.py": "5ac9279c5f246d9e95a18985400801408cb43431f15711138bc924b23499c7c9",
+    "manifest-v1.json": "b3b3d9333510121816288eca2ef185a9a2c38501bc3b877b0f68ddefd26362de",
+    "dcf-output-v1.json": "8cd800b78e66223ed565e46318fed51728fc66cbd4f17c05a0c30b151e4c0372",
+    "exhibit-2022-11-30-credoq22023ex-991.txt": "7adbdc28e58adfc68a989f8b44c9a93be10861f6f5012e2fdeec0261ae3b80d6",
+    "independent_validate.py": "46aac71e5fba4be123a80eb6ebe7dbc650b38f2032b3c7d6beb21b24746db90a",
+    "earnings-release-extraction-v1.json": "b5ecad844301880a6d56d44293fd43c09d23da1254cb3b2a87a84784916c2d71",
+    "exhibit-2022-11-30-credoq22023ex-991.htm": "feb886636d2707a8a3f91d6c40d40be1fd89fe2f40ca916185e03589d77d814c",
+    "exhibit-2026-06-01-credoq42026ex-991.htm": "66e1d90abf71e15ee5517dbbd21f4840ceaa80d12e3f1686c2439ec09822e757",
+    "exhibit-2024-05-29-credoq42024ex-991.txt": "3d063154a7fec80ca815f4a0a856000d528e43698ac011225f3efb17a19a5561",
+    "crdo-20240127.htm": "bbba27fdde99c72964d29dfe7b027c5a7d70401dba4c495d7f84e5aead2710c9",
+    "crdo-20261016.htm": "b0592f3d4ff4160cde57c5da3d5cb85d8ae62a4b18144c68288c7a29a970be6d",
+    "exhibit-2024-09-04-credoq12025ex-991.htm": "efa9beeff0b315a05ea5bb8d0eefd367460dcbb9cdaf40bdd27e925fdafbdcfa",
+    "exhibit-2023-12-06-exhibit991-8xk.txt": "e48e36fbc92ec5d764856c5229e0b25e72fb44ab7a505388269d5fb91353af26",
+    "exhibit-2022-08-31-credoq12023ex-991.txt": "a577d2c7a52e2cf16f6ff76a39ea6750448a6e3921b9881ee670f7096eafb3dc",
+    "exhibit-2026-09-01-credoq12027ex-991.txt": "c48159b1982f6cdd952aa7749f41c915dc2c6ece4c53a67b7f827e0a435f5b7c",
+    "crdo-20220601.htm": "be8a41ec02d86af516a000087f45324bc4ff8443df2927b90c2378e99f3cb3c6",
+    "exhibit-2022-03-09-credoq32022ex-991.htm": "87c53d865152acc8f2815ab13f2cb314aa638e477a94b8990185bff8d666eba9",
+    "crdo-20220430.htm": "ba35be3cd7c6d2612248ae91d0619af596fd81ddae39f800de4cb4f3f8c44706",
+    "STUDY-v1.md": "d41ada052952490afbaf38816a584576c06971569e6c4e94d79d002fcb944db1",
+    "exhibit-2024-05-29-credoq42024ex-991.htm": "450ca91b1466e9f2735a3540fd06593c32bb827a83c47ab2df28eb799d157375",
+    "get_exhibits.py": "735252d6a7296bd1e702603881c0f5e8f5e2d9edf7fd76c62c4e135b8df53b89",
+    "dcf-inputs-v1.json": "f46e9a446d5d3b330105a4d4c1f05e5dbb602961432d44153ae397d7fa0aa7db",
+    "submissions.json": "a3d8f889c72667d738273363cceb99de22b88768a950441a60098cdfe5b1d6e5",
+    "crdo-20221029.txt": "f162e55c7a1dc0bab1d05b3bddc5a4bac88fff23ca3aadeaeaac6efbc7d10667",
+    "exhibit-2026-06-01-credoq42026ex-991.txt": "86a12144150fb76857a2931f863e8d8e2501c866cf358f278b82aa91cfbabd77",
+    "crdo-20260131.htm": "2bddaf4a0643053ad8ffdb9732e322d7ff8d47c91d6332f5fea9e834985c5b29",
+    "exhibit-2026-03-02-credoq32026ex-9911.htm": "2d9108684e745dd2a6436842f030444ab91ba7d7db29af5e8af2ed2984c0f628",
+    "exhibit-2024-12-02-credoq22025ex-991.txt": "3f732d5eb75b578d2d9d3acf5885706a988a862f2f485a7c00d6cd912209fffd",
+    "crdo-20230128.txt": "a042404fcfd6da2977dee25623f8ece9dc7f329e233ce878878bd0a12d7142a8",
+    "guidance-vs-actual-v1.csv": "b5ed3ae48d9eadb858aa235e38c562bf9c41e510a79f2948b504cc0c50294a90",
+    "exhibit-2023-03-01-credoq32023ex-991.htm": "a77a4d884ca36bce8fad80882d64cd99ba6617172381fa86e608e2d88d1ef038",
+    "crdo-20240427.htm": "52bcb3a3738e165c5109393b2037086506269e510ca0ef05a426dde4c0f89c10",
+    "crdo-20240427.txt": "4bfac70549c42b03466b01636e715a352ee9f252deeefc10da4be466ee5a10c8",
+    "crdo-20230214.htm": "40acb24b46fc11f8d56ce71dcefb4b7c0eb8b147411d3babf21c575eff1decc4",
+    "make_model.py": "e014b67c5333121f8a2a6ff62ca0c868f73d1c466f1169dd7693e929413c7837",
+    "independent-audit-v1.json": "218b7eec8239259b8b0a6c0b328488d8fe93b5eb5b6ad8a62075c559dd3d0112"
+  },
+  "results": [
+    {
+      "mode": "report_snapshot",
+      "scenario": "bear",
+      "ev": 7247.111501964284,
+      "value_per_share": 40.13453944617807,
+      "common_equity": 7535.982202729963,
+      "terminal_pv": 4096.862079277013,
+      "equity_identity_residual": 9.094947017729282e-13,
+      "funding": [
+        {
+          "fy": 2027,
+          "cf": 17.372699295959535,
+          "closing_liquidity_after_reserved_claims": 762.1356992959595,
+          "opening_liquidity": 744.763,
+          "deposit_only_prefunding_floor": 642.363
+        },
+        {
+          "fy": 2028,
+          "cf": 563.5537777777777,
+          "closing_liquidity_after_reserved_claims": 1325.6894770737372,
+          "opening_liquidity": 762.1356992959595,
+          "deposit_only_prefunding_floor": 762.1356992959595
+        },
+        {
+          "fy": 2029,
+          "cf": 589.3981555555556,
+          "closing_liquidity_after_reserved_claims": 1915.0876326292928,
+          "opening_liquidity": 1325.6894770737372,
+          "deposit_only_prefunding_floor": 1325.6894770737372
+        },
+        {
+          "fy": 2030,
+          "cf": 615.6782222222222,
+          "closing_liquidity_after_reserved_claims": 2530.765854851515,
+          "opening_liquidity": 1915.0876326292928,
+          "deposit_only_prefunding_floor": 1915.0876326292928
+        },
+        {
+          "fy": 2031,
+          "cf": 641.9821222222223,
+          "closing_liquidity_after_reserved_claims": 3172.7479770737373,
+          "opening_liquidity": 2530.765854851515,
+          "deposit_only_prefunding_floor": 2530.765854851515
+        },
+        {
+          "fy": 2032,
+          "cf": 645.878,
+          "closing_liquidity_after_reserved_claims": 3818.6259770737374,
+          "opening_liquidity": 3172.7479770737373,
+          "deposit_only_prefunding_floor": 3172.7479770737373
+        },
+        {
+          "fy": 2033,
+          "cf": 635.8352923076923,
+          "closing_liquidity_after_reserved_claims": 4454.46126938143,
+          "opening_liquidity": 3818.6259770737374,
+          "deposit_only_prefunding_floor": 3818.6259770737374
+        },
+        {
+          "fy": 2034,
+          "cf": 618.6818,
+          "closing_liquidity_after_reserved_claims": 5073.14306938143,
+          "opening_liquidity": 4454.46126938143,
+          "deposit_only_prefunding_floor": 4454.46126938143
+        },
+        {
+          "fy": 2035,
+          "cf": 604.7222,
+          "closing_liquidity_after_reserved_claims": 5677.86526938143,
+          "opening_liquidity": 5073.14306938143,
+          "deposit_only_prefunding_floor": 5073.14306938143
+        },
+        {
+          "fy": 2036,
+          "cf": 595.6428846153847,
+          "closing_liquidity_after_reserved_claims": 6273.508153996815,
+          "opening_liquidity": 5677.86526938143,
+          "deposit_only_prefunding_floor": 5677.86526938143
+        }
+      ],
+      "ev_error": 0.0,
+      "per_share_error": 0.0
+    },
+    {
+      "mode": "report_snapshot",
+      "scenario": "base",
+      "ev": 18614.58130416622,
+      "value_per_share": 96.40686692639011,
+      "common_equity": 18102.124589034418,
+      "terminal_pv": 11824.265303563796,
+      "equity_identity_residual": 0.0,
+      "funding": [
+        {
+          "fy": 2027,
+          "cf": 153.464099464,
+          "closing_liquidity_after_reserved_claims": 898.227099464,
+          "opening_liquidity": 744.763,
+          "deposit_only_prefunding_floor": 642.363
+        },
+        {
+          "fy": 2028,
+          "cf": 761.0909090909092,
+          "closing_liquidity_after_reserved_claims": 1659.3180085549093,
+          "opening_liquidity": 898.227099464,
+          "deposit_only_prefunding_floor": 898.227099464
+        },
+        {
+          "fy": 2029,
+          "cf": 980.6909090909091,
+          "closing_liquidity_after_reserved_claims": 2640.0089176458187,
+          "opening_liquidity": 1659.3180085549093,
+          "deposit_only_prefunding_floor": 1659.3180085549093
+        },
+        {
+          "fy": 2030,
+          "cf": 1193.6232727272727,
+          "closing_liquidity_after_reserved_claims": 3833.6321903730914,
+          "opening_liquidity": 2640.0089176458187,
+          "deposit_only_prefunding_floor": 2640.0089176458187
+        },
+        {
+          "fy": 2031,
+          "cf": 1388.3490909090908,
+          "closing_liquidity_after_reserved_claims": 5221.981281282182,
+          "opening_liquidity": 3833.6321903730914,
+          "deposit_only_prefunding_floor": 3833.6321903730914
+        },
+        {
+          "fy": 2032,
+          "cf": 1504.9151999999997,
+          "closing_liquidity_after_reserved_claims": 6726.896481282181,
+          "opening_liquidity": 5221.981281282182,
+          "deposit_only_prefunding_floor": 5221.981281282182
+        },
+        {
+          "fy": 2033,
+          "cf": 1558.5633000000003,
+          "closing_liquidity_after_reserved_claims": 8285.459781282181,
+          "opening_liquidity": 6726.896481282181,
+          "deposit_only_prefunding_floor": 6726.896481282181
+        },
+        {
+          "fy": 2034,
+          "cf": 1618.7616666666668,
+          "closing_liquidity_after_reserved_claims": 9904.221447948848,
+          "opening_liquidity": 8285.459781282181,
+          "deposit_only_prefunding_floor": 8285.459781282181
+        },
+        {
+          "fy": 2035,
+          "cf": 1675.6775111111112,
+          "closing_liquidity_after_reserved_claims": 11579.89895905996,
+          "opening_liquidity": 9904.221447948848,
+          "deposit_only_prefunding_floor": 9904.221447948848
+        },
+        {
+          "fy": 2036,
+          "cf": 1643.4097538461538,
+          "closing_liquidity_after_reserved_claims": 13223.308712906113,
+          "opening_liquidity": 11579.89895905996,
+          "deposit_only_prefunding_floor": 11579.89895905996
+        }
+      ],
+      "ev_error": 0.0,
+      "per_share_error": 0.0
+    },
+    {
+      "mode": "report_snapshot",
+      "scenario": "bull",
+      "ev": 35749.922401873715,
+      "value_per_share": 179.0974455789219,
+      "common_equity": 33628.76916146301,
+      "terminal_pv": 24284.461458440022,
+      "equity_identity_residual": 0.0,
+      "funding": [
+        {
+          "fy": 2027,
+          "cf": 289.60616201776224,
+          "closing_liquidity_after_reserved_claims": 1034.3691620177624,
+          "opening_liquidity": 744.763,
+          "deposit_only_prefunding_floor": 642.363
+        },
+        {
+          "fy": 2028,
+          "cf": 1011.4559615384615,
+          "closing_liquidity_after_reserved_claims": 2045.8251235562238,
+          "opening_liquidity": 1034.3691620177624,
+          "deposit_only_prefunding_floor": 1034.3691620177624
+        },
+        {
+          "fy": 2029,
+          "cf": 1445.051430769231,
+          "closing_liquidity_after_reserved_claims": 3490.876554325455,
+          "opening_liquidity": 2045.8251235562238,
+          "deposit_only_prefunding_floor": 2045.8251235562238
+        },
+        {
+          "fy": 2030,
+          "cf": 1900.0671923076925,
+          "closing_liquidity_after_reserved_claims": 5390.943746633147,
+          "opening_liquidity": 3490.876554325455,
+          "deposit_only_prefunding_floor": 3490.876554325455
+        },
+        {
+          "fy": 2031,
+          "cf": 2314.7776923076917,
+          "closing_liquidity_after_reserved_claims": 7705.721438940839,
+          "opening_liquidity": 5390.943746633147,
+          "deposit_only_prefunding_floor": 5390.943746633147
+        },
+        {
+          "fy": 2032,
+          "cf": 2665.1699,
+          "closing_liquidity_after_reserved_claims": 10370.891338940839,
+          "opening_liquidity": 7705.721438940839,
+          "deposit_only_prefunding_floor": 7705.721438940839
+        },
+        {
+          "fy": 2033,
+          "cf": 2858.6459999999997,
+          "closing_liquidity_after_reserved_claims": 13229.537338940838,
+          "opening_liquidity": 10370.891338940839,
+          "deposit_only_prefunding_floor": 10370.891338940839
+        },
+        {
+          "fy": 2034,
+          "cf": 2970.361766666667,
+          "closing_liquidity_after_reserved_claims": 16199.899105607505,
+          "opening_liquidity": 13229.537338940838,
+          "deposit_only_prefunding_floor": 13229.537338940838
+        },
+        {
+          "fy": 2035,
+          "cf": 2987.0584000000003,
+          "closing_liquidity_after_reserved_claims": 19186.957505607505,
+          "opening_liquidity": 16199.899105607505,
+          "deposit_only_prefunding_floor": 16199.899105607505
+        },
+        {
+          "fy": 2036,
+          "cf": 3038.3818666666666,
+          "closing_liquidity_after_reserved_claims": 22225.33937227417,
+          "opening_liquidity": 19186.957505607505,
+          "deposit_only_prefunding_floor": 19186.957505607505
+        }
+      ],
+      "ev_error": 0.0,
+      "per_share_error": 0.0
+    },
+    {
+      "mode": "current",
+      "scenario": "bear",
+      "ev": 6984.180817073737,
+      "value_per_share": 39.00866081520582,
+      "common_equity": 7351.8842865202105,
+      "terminal_pv": 3802.6871516689416,
+      "equity_identity_residual": 9.094947017729282e-13,
+      "funding": [
+        {
+          "fy": 2027,
+          "cf": 38.15192806854252,
+          "closing_liquidity_after_reserved_claims": 822.9149280685425,
+          "opening_liquidity": 784.763,
+          "deposit_only_prefunding_floor": 737.363
+        },
+        {
+          "fy": 2028,
+          "cf": 563.5537777777777,
+          "closing_liquidity_after_reserved_claims": 1386.46870584632,
+          "opening_liquidity": 822.9149280685425,
+          "deposit_only_prefunding_floor": 822.9149280685425
+        },
+        {
+          "fy": 2029,
+          "cf": 589.3981555555556,
+          "closing_liquidity_after_reserved_claims": 1975.8668614018757,
+          "opening_liquidity": 1386.46870584632,
+          "deposit_only_prefunding_floor": 1386.46870584632
+        },
+        {
+          "fy": 2030,
+          "cf": 615.6782222222222,
+          "closing_liquidity_after_reserved_claims": 2591.545083624098,
+          "opening_liquidity": 1975.8668614018757,
+          "deposit_only_prefunding_floor": 1975.8668614018757
+        },
+        {
+          "fy": 2031,
+          "cf": 641.9821222222223,
+          "closing_liquidity_after_reserved_claims": 3233.52720584632,
+          "opening_liquidity": 2591.545083624098,
+          "deposit_only_prefunding_floor": 2591.545083624098
+        },
+        {
+          "fy": 2032,
+          "cf": 645.878,
+          "closing_liquidity_after_reserved_claims": 3879.4052058463203,
+          "opening_liquidity": 3233.52720584632,
+          "deposit_only_prefunding_floor": 3233.52720584632
+        },
+        {
+          "fy": 2033,
+          "cf": 635.8352923076923,
+          "closing_liquidity_after_reserved_claims": 4515.240498154013,
+          "opening_liquidity": 3879.4052058463203,
+          "deposit_only_prefunding_floor": 3879.4052058463203
+        },
+        {
+          "fy": 2034,
+          "cf": 618.6818,
+          "closing_liquidity_after_reserved_claims": 5133.922298154013,
+          "opening_liquidity": 4515.240498154013,
+          "deposit_only_prefunding_floor": 4515.240498154013
+        },
+        {
+          "fy": 2035,
+          "cf": 604.7222,
+          "closing_liquidity_after_reserved_claims": 5738.6444981540135,
+          "opening_liquidity": 5133.922298154013,
+          "deposit_only_prefunding_floor": 5133.922298154013
+        },
+        {
+          "fy": 2036,
+          "cf": 595.6428846153847,
+          "closing_liquidity_after_reserved_claims": 6334.287382769398,
+          "opening_liquidity": 5738.6444981540135,
+          "deposit_only_prefunding_floor": 5738.6444981540135
+        }
+      ],
+      "ev_error": -9.094947017729282e-13,
+      "per_share_error": 7.105427357601002e-15
+    },
+    {
+      "mode": "current",
+      "scenario": "base",
+      "ev": 17706.872110524153,
+      "value_per_share": 92.07048384550703,
+      "common_equity": 17352.339949395016,
+      "terminal_pv": 10920.612184936246,
+      "equity_identity_residual": 0.0,
+      "funding": [
+        {
+          "fy": 2027,
+          "cf": 135.36007104571428,
+          "closing_liquidity_after_reserved_claims": 920.1230710457144,
+          "opening_liquidity": 784.763,
+          "deposit_only_prefunding_floor": 737.363
+        },
+        {
+          "fy": 2028,
+          "cf": 761.0909090909092,
+          "closing_liquidity_after_reserved_claims": 1681.2139801366236,
+          "opening_liquidity": 920.1230710457144,
+          "deposit_only_prefunding_floor": 920.1230710457144
+        },
+        {
+          "fy": 2029,
+          "cf": 980.6909090909091,
+          "closing_liquidity_after_reserved_claims": 2661.9048892275327,
+          "opening_liquidity": 1681.2139801366236,
+          "deposit_only_prefunding_floor": 1681.2139801366236
+        },
+        {
+          "fy": 2030,
+          "cf": 1193.6232727272727,
+          "closing_liquidity_after_reserved_claims": 3855.5281619548055,
+          "opening_liquidity": 2661.9048892275327,
+          "deposit_only_prefunding_floor": 2661.9048892275327
+        },
+        {
+          "fy": 2031,
+          "cf": 1388.3490909090908,
+          "closing_liquidity_after_reserved_claims": 5243.8772528638965,
+          "opening_liquidity": 3855.5281619548055,
+          "deposit_only_prefunding_floor": 3855.5281619548055
+        },
+        {
+          "fy": 2032,
+          "cf": 1504.9151999999997,
+          "closing_liquidity_after_reserved_claims": 6748.792452863896,
+          "opening_liquidity": 5243.8772528638965,
+          "deposit_only_prefunding_floor": 5243.8772528638965
+        },
+        {
+          "fy": 2033,
+          "cf": 1558.5633000000003,
+          "closing_liquidity_after_reserved_claims": 8307.355752863896,
+          "opening_liquidity": 6748.792452863896,
+          "deposit_only_prefunding_floor": 6748.792452863896
+        },
+        {
+          "fy": 2034,
+          "cf": 1618.7616666666668,
+          "closing_liquidity_after_reserved_claims": 9926.117419530563,
+          "opening_liquidity": 8307.355752863896,
+          "deposit_only_prefunding_floor": 8307.355752863896
+        },
+        {
+          "fy": 2035,
+          "cf": 1675.6775111111112,
+          "closing_liquidity_after_reserved_claims": 11601.794930641674,
+          "opening_liquidity": 9926.117419530563,
+          "deposit_only_prefunding_floor": 9926.117419530563
+        },
+        {
+          "fy": 2036,
+          "cf": 1643.4097538461538,
+          "closing_liquidity_after_reserved_claims": 13245.204684487828,
+          "opening_liquidity": 11601.794930641674,
+          "deposit_only_prefunding_floor": 11601.794930641674
+        }
+      ],
+      "ev_error": 0.0,
+      "per_share_error": 0.0
+    },
+    {
+      "mode": "current",
+      "scenario": "bull",
+      "ev": 33721.73664132657,
+      "value_per_share": 169.31222042281033,
+      "common_equity": 31909.935558646215,
+      "terminal_pv": 22297.021265585576,
+      "equity_identity_residual": 0.0,
+      "funding": [
+        {
+          "fy": 2027,
+          "cf": 232.60440144125872,
+          "closing_liquidity_after_reserved_claims": 1017.3674014412587,
+          "opening_liquidity": 784.763,
+          "deposit_only_prefunding_floor": 737.363
+        },
+        {
+          "fy": 2028,
+          "cf": 1011.4559615384615,
+          "closing_liquidity_after_reserved_claims": 2028.82336297972,
+          "opening_liquidity": 1017.3674014412587,
+          "deposit_only_prefunding_floor": 1017.3674014412587
+        },
+        {
+          "fy": 2029,
+          "cf": 1445.051430769231,
+          "closing_liquidity_after_reserved_claims": 3473.874793748951,
+          "opening_liquidity": 2028.82336297972,
+          "deposit_only_prefunding_floor": 2028.82336297972
+        },
+        {
+          "fy": 2030,
+          "cf": 1900.0671923076925,
+          "closing_liquidity_after_reserved_claims": 5373.941986056643,
+          "opening_liquidity": 3473.874793748951,
+          "deposit_only_prefunding_floor": 3473.874793748951
+        },
+        {
+          "fy": 2031,
+          "cf": 2314.7776923076917,
+          "closing_liquidity_after_reserved_claims": 7688.719678364335,
+          "opening_liquidity": 5373.941986056643,
+          "deposit_only_prefunding_floor": 5373.941986056643
+        },
+        {
+          "fy": 2032,
+          "cf": 2665.1699,
+          "closing_liquidity_after_reserved_claims": 10353.889578364335,
+          "opening_liquidity": 7688.719678364335,
+          "deposit_only_prefunding_floor": 7688.719678364335
+        },
+        {
+          "fy": 2033,
+          "cf": 2858.6459999999997,
+          "closing_liquidity_after_reserved_claims": 13212.535578364335,
+          "opening_liquidity": 10353.889578364335,
+          "deposit_only_prefunding_floor": 10353.889578364335
+        },
+        {
+          "fy": 2034,
+          "cf": 2970.361766666667,
+          "closing_liquidity_after_reserved_claims": 16182.897345031002,
+          "opening_liquidity": 13212.535578364335,
+          "deposit_only_prefunding_floor": 13212.535578364335
+        },
+        {
+          "fy": 2035,
+          "cf": 2987.0584000000003,
+          "closing_liquidity_after_reserved_claims": 19169.955745031002,
+          "opening_liquidity": 16182.897345031002,
+          "deposit_only_prefunding_floor": 16182.897345031002
+        },
+        {
+          "fy": 2036,
+          "cf": 3038.3818666666666,
+          "closing_liquidity_after_reserved_claims": 22208.33761169767,
+          "opening_liquidity": 19169.955745031002,
+          "deposit_only_prefunding_floor": 19169.955745031002
+        }
+      ],
+      "ev_error": 0.0,
+      "per_share_error": -2.842170943040401e-14
+    }
+  ],
+  "history_field_checks": [
+    {
+      "fy": 2020,
+      "field": "revenue",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "gross_profit",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "operating_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "net_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "tax",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "pretax_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "cfo",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "capex",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "da",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "sbc",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "rd",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "equity",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "weighted_basic_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2020,
+      "field": "weighted_diluted_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "revenue",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "gross_profit",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "operating_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "net_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "tax",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "pretax_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "cfo",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "capex",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "da",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "sbc",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "rd",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "cash",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "assets",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "liabilities",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "equity",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "receivables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "inventory",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "payables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "ppe",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "weighted_basic_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2021,
+      "field": "weighted_diluted_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "revenue",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "gross_profit",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "operating_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "net_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "tax",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "pretax_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "cfo",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "capex",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "da",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "sbc",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "rd",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "cash",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "short_investments",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "assets",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "liabilities",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "equity",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "receivables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "inventory",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "payables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "ppe",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "weighted_basic_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2022,
+      "field": "weighted_diluted_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "revenue",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "gross_profit",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "operating_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "net_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "tax",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "pretax_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "cfo",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "capex",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "da",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "sbc",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "rd",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "cash",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "short_investments",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "assets",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "liabilities",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "equity",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "receivables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "inventory",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "payables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "ppe",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "weighted_basic_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2023,
+      "field": "weighted_diluted_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "revenue",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "gross_profit",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "operating_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "net_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "tax",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "pretax_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "cfo",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "capex",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "da",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "sbc",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "rd",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "cash",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "short_investments",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "assets",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "liabilities",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "equity",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "receivables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "inventory",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "payables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "ppe",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "weighted_basic_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2024,
+      "field": "weighted_diluted_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "revenue",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "gross_profit",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "operating_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "net_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "tax",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "pretax_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "cfo",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "capex",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "da",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "sbc",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "rd",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "cash",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "short_investments",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "assets",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "liabilities",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "equity",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "receivables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "inventory",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "payables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "ppe",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "weighted_basic_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2025,
+      "field": "weighted_diluted_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "revenue",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "gross_profit",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "operating_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "net_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "tax",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "pretax_income",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "cfo",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "capex",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "da",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "sbc",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "rd",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "cash",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "short_investments",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "assets",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "liabilities",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "equity",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "receivables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "inventory",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "payables",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "ppe",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "weighted_basic_shares",
+      "matches_companyfacts": true
+    },
+    {
+      "fy": 2026,
+      "field": "weighted_diluted_shares",
+      "matches_companyfacts": true
+    }
+  ],
+  "ttm_independent": {
+    "revenue": 1591.0449999999998,
+    "ebit": 504.963,
+    "sbc": 235.16200000000003
+  },
+  "purchase_consideration": 1251.1109999999999,
+  "cash_paid_net_acquired": 735.619,
+  "withholding_share_reconciliation_sensitivity": [
+    {
+      "assumed_settlement_price": 100,
+      "base_per_share": 92.17946913378802,
+      "extra_gross_rsus_settled": 0.25
+    },
+    {
+      "assumed_settlement_price": 169.7,
+      "base_per_share": 92.13467496373985,
+      "extra_gross_rsus_settled": 0.14731879787860933
+    },
+    {
+      "assumed_settlement_price": 222.35,
+      "base_per_share": 92.11946713638157,
+      "extra_gross_rsus_settled": 0.11243534967393749
+    }
+  ],
+  "annual_liquidity_test_only": true,
+  "dynamic_external_funding_rule_present": false
+}

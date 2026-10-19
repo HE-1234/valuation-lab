@@ -15,7 +15,16 @@ test('every retained Traditional catalog has full Simplified coverage and identi
  for(const name of sources){
   const original=await readCatalog(name),simplified=await readCatalog(name.replace('zh-Hant','zh-Hans'));
   const additions=name==='guided.zh-Hant.js'?yearlyKeys:[];
-  assert.deepEqual(Object.keys(simplified),[...Object.keys(original),...additions],name);
+  const prefix=name==='annual.zh-Hant.js'?['crdo.fundingGap','crdo.inputInvalid']:[];
+  assert.deepEqual(Object.keys(simplified),[...prefix,...Object.keys(original),...additions],name);
+  if(prefix.length){
+   const english=await readCatalog('annual.en.js');
+   for(const key of prefix){
+    assert.equal(typeof english[key],'string');assert.match(simplified[key],/\p{Script=Han}/u);
+    assert.deepEqual(simplified[key].match(/\{[^}]+\}/g),english[key].match(/\{[^}]+\}/g),key+' parameter fidelity');
+   }
+   assert.match(simplified['crdo.fundingGap'],/不发布企业价值、普通股权益或每股价值/);
+  }
   for(const [key,value]of Object.entries(original)){
    assert.equal(nonHan(simplified[key]),nonHan(value),`${name}:${key}`);
    assert.doesNotMatch(simplified[key],/蒙地卡罗|机率|变数/);

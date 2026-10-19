@@ -1,0 +1,628 @@
+{
+  "status": "pass",
+  "scope": "arithmetic, continuity, funding and reconciliation; not external assurance or independent source verification",
+  "tests": [
+    {
+      "test": "ten fiscal slots with private-history gaps",
+      "pass": true
+    },
+    {
+      "test": "18 consecutive forecast comparisons",
+      "pass": true
+    },
+    {
+      "test": "TTM revenue bridge",
+      "pass": true
+    },
+    {
+      "test": "TTM EBIT bridge",
+      "pass": true
+    },
+    {
+      "test": "TTM SBC bridge",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2027 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2027 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2028 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2028 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2029 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2029 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2030 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2030 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2031 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2031 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2032 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2032 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2033 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2033 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2034 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2034 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2035 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2035 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2036 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bear FY2036 funded growth",
+      "pass": true
+    },
+    {
+      "test": "independent EV report_snapshotbear",
+      "pass": true
+    },
+    {
+      "test": "equity allocation report_snapshotbear",
+      "pass": true
+    },
+    {
+      "test": "not EPS diluted denominator report_snapshotbear",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2027 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2027 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2028 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2028 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2029 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2029 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2030 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2030 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2031 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2031 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2032 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2032 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2033 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2033 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2034 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2034 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2035 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2035 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2036 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot base FY2036 funded growth",
+      "pass": true
+    },
+    {
+      "test": "independent EV report_snapshotbase",
+      "pass": true
+    },
+    {
+      "test": "equity allocation report_snapshotbase",
+      "pass": true
+    },
+    {
+      "test": "not EPS diluted denominator report_snapshotbase",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2027 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2027 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2028 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2028 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2029 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2029 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2030 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2030 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2031 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2031 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2032 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2032 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2033 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2033 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2034 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2034 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2035 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2035 funded growth",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2036 cash flow",
+      "pass": true
+    },
+    {
+      "test": "report_snapshot bull FY2036 funded growth",
+      "pass": true
+    },
+    {
+      "test": "independent EV report_snapshotbull",
+      "pass": true
+    },
+    {
+      "test": "equity allocation report_snapshotbull",
+      "pass": true
+    },
+    {
+      "test": "not EPS diluted denominator report_snapshotbull",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2027 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2027 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2028 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2028 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2029 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2029 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2030 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2030 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2031 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2031 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2032 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2032 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2033 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2033 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2034 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2034 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2035 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2035 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2036 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bear FY2036 funded growth",
+      "pass": true
+    },
+    {
+      "test": "independent EV currentbear",
+      "pass": true
+    },
+    {
+      "test": "equity allocation currentbear",
+      "pass": true
+    },
+    {
+      "test": "not EPS diluted denominator currentbear",
+      "pass": true
+    },
+    {
+      "test": "current base FY2027 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2027 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2028 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2028 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2029 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2029 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2030 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2030 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2031 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2031 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2032 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2032 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2033 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2033 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2034 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2034 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2035 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2035 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current base FY2036 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current base FY2036 funded growth",
+      "pass": true
+    },
+    {
+      "test": "independent EV currentbase",
+      "pass": true
+    },
+    {
+      "test": "equity allocation currentbase",
+      "pass": true
+    },
+    {
+      "test": "not EPS diluted denominator currentbase",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2027 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2027 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2028 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2028 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2029 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2029 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2030 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2030 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2031 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2031 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2032 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2032 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2033 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2033 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2034 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2034 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2035 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2035 funded growth",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2036 cash flow",
+      "pass": true
+    },
+    {
+      "test": "current bull FY2036 funded growth",
+      "pass": true
+    },
+    {
+      "test": "independent EV currentbull",
+      "pass": true
+    },
+    {
+      "test": "equity allocation currentbull",
+      "pass": true
+    },
+    {
+      "test": "not EPS diluted denominator currentbull",
+      "pass": true
+    }
+  ],
+  "source_hashes": {
+    "crdo-20230729.htm": "493d9929d6d71f3dbfd3b2a6fc24d58de3c6c76739b51c9f30436f5e6882d134",
+    "crdo-20260413.htm": "d1876c50130d3207158523505e390a0f21643b387902de34370c7c03fad6a666",
+    "exhibit-2024-12-02-credoq22025ex-991.htm": "dd4dcc8dd625b47f240f91be399a1e75be49582c39fa74f69bd4a6982ac8c9e1",
+    "exhibit-2023-05-31-credoq42023ex-991.htm": "6d015c2afdc0c1bae99550a460e88d10b6c72cfad68ab120f7ff63877b591453",
+    "exhibit-2023-08-24-credoq12024ex-991.htm": "63b48717902f647182e705d54c1c64682c9ddd83f3a0b9fd9c037b679d82b28f",
+    "crdo-20260502.htm": "1853a13402ec9356d338f718628655684e8503c620d95ffe87c50733ceca210f",
+    "crdo-20220730.htm": "b5e57daf400b686139d2bbe84a9b73300346e401b2151203a6e860c779441b87",
+    "crdo-20221029.htm": "905d27d4da2290e58942d26ddd4c3bad4257e6b44be9b95c4ae505a83550230b",
+    "exhibit-2026-09-01-credoq12027ex-991.htm": "168b673471a3c2b9a60b574ccd8d7ffaf3d7854b2f7fad2c7306137a11b33b07",
+    "crdo-20250201.htm": "0cb9150fcddddf5eca3a846abb1e115a8665e2eb8363d8b64073aecad6f92b50",
+    "credotechnologygroups-1.htm": "1ad89798541db2597d78c039673cbaffe9d86fee31efd18bc240e23d2c99544c",
+    "exhibit-2026-02-09-feb20268-kex991.htm": "2e9199ea69a169463d80a2105267822f95c5dfc2b5e96597f9818a39e6b277e4",
+    "crdo-20251101.htm": "848c832f788e50e6c6d328c54c8a29de86569081764d16c331804487ffb34c60",
+    "crdo-20241102.htm": "1422f458b7b3a7422912ca636df6cb2668625499a3085b911b5c582efc15555b",
+    "exhibit-2022-08-31-credoq12023ex-991.htm": "753ea79289e5ed56e283f441a48793857bf72bfbbb181b76a3dd520d7cbf52d0",
+    "exhibit-2024-04-02-a8-kapril2024ex991.htm": "c52d00dcbbeb4239f93fb4ae39aa38fd8b188b4827ee1b6b8bcc3321f21a444a",
+    "crdo-20230128.htm": "70f0a5432b098fab61c61d6d3c32e0b85a5edc55c2179b14a8aca47826785874",
+    "exhibit-2024-02-27-credoq32024ex-991.htm": "85ff71d09af6623bc7f952a3535dff150a834855d3657d78964c33c0b2d48161",
+    "exhibit-2023-12-06-exhibit991-8xk.htm": "2cbff989ea1cc4e450c82f717045c540124967076d870e2142ff5ce1a10ce804",
+    "crdo-20250503.htm": "a4430544bbfa980323beb3d0ea1c566a8ba1d0018a5db39c8d558371bdf6b415",
+    "crdo-20250802.htm": "f72a266da644ff50d7c17a748872617cea2efaaae38a5810ebd2ea71eccf0275",
+    "crdo-20220131.htm": "215abf145aef0b71d0f0868097ccabf2ede3a944617910eb97092f8d6e02798c",
+    "exhibit-2025-03-04-credoq32025ex-991.htm": "4b3036abab60d92a8736677d633eb45677c0b05d4f2a0893cef08802d9e30415",
+    "exhibit-2025-09-03-credoq12026ex-991.htm": "bcdadbdaf4778fe01d1fde82f84fc79c1cc8bf85cf557b6c6d1dc2085bb1637a",
+    "exhibit-2025-06-02-credoq42025ex-991.htm": "bbfc8182fd2825588fa697e235c2bc675c36a6d6a48a2f0b4439736c33daea2e",
+    "exhibit-2026-04-13-april20268-kex991.htm": "558ad7c5b34aca40d10621ec7d994f62fdc0150d07ce62abdd8490d38420adb9",
+    "exhibit-2025-12-01-credoq22026ex-991.htm": "4c12a5a0e25d38eeee3c3edfcea5577a23d31dab786ef37ee3aebd58b1e7a97e",
+    "crdo-20230429.htm": "885be5ec823eff33e5c0bcb6203f1516f6d36ea9e1e07a04788c4bdb091990a4",
+    "crdo-20240803.htm": "14d1399ded7d23f825a17353b591faec637ad0f0434d057a6f976c50f6b3d15e",
+    "crdo-20260801.htm": "37d660f3a6d23e0436a356f8df02a65ee13bdf621d9f031b15cdb05943bed68e",
+    "crdo-20231028.htm": "5d5d53cbb8640a979837d9c895fa98b6f73256eed43032cc4dcaf56fd1646af8",
+    "exhibit-2023-11-29-credoq22024ex-991.htm": "e1ce92ee42616f18d8f8bf4399da9bce363f53caf2f22e10d76bf9d20e7911de",
+    "exhibit-2024-01-09-dp205059_ex9901.htm": "bc428ab5999528531ad30f1268d5f91a74d38e73c493d01c376b8cd3f02ff62f",
+    "crdo-20260528.htm": "7192546080ee5384b8dd57b6d7b5b5bd26bff515728f791d0f0bb1650d543e3a",
+    "exhibit-2022-11-30-credoq22023ex-991.htm": "feb886636d2707a8a3f91d6c40d40be1fd89fe2f40ca916185e03589d77d814c",
+    "exhibit-2026-06-01-credoq42026ex-991.htm": "66e1d90abf71e15ee5517dbbd21f4840ceaa80d12e3f1686c2439ec09822e757",
+    "crdo-20240127.htm": "bbba27fdde99c72964d29dfe7b027c5a7d70401dba4c495d7f84e5aead2710c9",
+    "crdo-20261016.htm": "b0592f3d4ff4160cde57c5da3d5cb85d8ae62a4b18144c68288c7a29a970be6d",
+    "exhibit-2024-09-04-credoq12025ex-991.htm": "efa9beeff0b315a05ea5bb8d0eefd367460dcbb9cdaf40bdd27e925fdafbdcfa",
+    "crdo-20220601.htm": "be8a41ec02d86af516a000087f45324bc4ff8443df2927b90c2378e99f3cb3c6",
+    "exhibit-2022-03-09-credoq32022ex-991.htm": "87c53d865152acc8f2815ab13f2cb314aa638e477a94b8990185bff8d666eba9",
+    "crdo-20220430.htm": "ba35be3cd7c6d2612248ae91d0619af596fd81ddae39f800de4cb4f3f8c44706",
+    "exhibit-2024-05-29-credoq42024ex-991.htm": "450ca91b1466e9f2735a3540fd06593c32bb827a83c47ab2df28eb799d157375",
+    "crdo-20260131.htm": "2bddaf4a0643053ad8ffdb9732e322d7ff8d47c91d6332f5fea9e834985c5b29",
+    "exhibit-2026-03-02-credoq32026ex-9911.htm": "2d9108684e745dd2a6436842f030444ab91ba7d7db29af5e8af2ed2984c0f628",
+    "exhibit-2023-03-01-credoq32023ex-991.htm": "a77a4d884ca36bce8fad80882d64cd99ba6617172381fa86e608e2d88d1ef038",
+    "crdo-20240427.htm": "52bcb3a3738e165c5109393b2037086506269e510ca0ef05a426dde4c0f89c10",
+    "crdo-20230214.htm": "40acb24b46fc11f8d56ce71dcefb4b7c0eb8b147411d3babf21c575eff1decc4"
+  }
+}

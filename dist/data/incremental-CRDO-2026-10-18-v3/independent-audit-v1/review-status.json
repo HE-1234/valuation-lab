@@ -1,0 +1,53 @@
+{
+  "review_status": "conditional_pass_arithmetic_only__implementation_blocked_pending_corrections",
+  "source_files_modified": false,
+  "site_or_canonical_modified": false,
+  "blocking_corrections": [
+    {
+      "id": "B1",
+      "finding": "October net issuance, gross RSU settlement and cash withholding do not reconcile",
+      "acceptance_test": "Gross RSUs settled = net shares issued + withheld shares; cash withholding agrees with settlement price/shares or separately documented payable."
+    },
+    {
+      "id": "B2",
+      "finding": "2022 original 10-K and 2023 10-K/A share a single retained filename/hash",
+      "acceptance_test": "Accession-specific retained source or explicit not-retained status; unique source identity and correct field links."
+    },
+    {
+      "id": "B3",
+      "finding": "No financing or invalid-scenario gate for liquidity deficits",
+      "acceptance_test": "Independent adverse case must trigger visible rejection or reconcile cash issuance/debt, interest, fees, share dilution and minimum cash."
+    },
+    {
+      "id": "B4",
+      "finding": "Bridge values are hardcoded in replay despite metadata parameters",
+      "acceptance_test": "Independent input perturbations for elapsed days, shares, RSUs, cash and paid deposits change only intended equations and reconcile dates/capital claims."
+    }
+  ],
+  "non_blocking_conditional_judgments": [
+    "Revenue and economic margin trajectory",
+    "Future equity labor cost",
+    "Tax, capital turns and terminal ROIC",
+    "Risk beta and discount-rate fade",
+    "PSU and earnout conditional share factors",
+    "Capacity recovery timing",
+    "October cash/share estimates after logical reconciliation"
+  ],
+  "independent_diagnostics": [
+    "Six EVs and price allocations recomputed from inputs with separate code and Newton solve",
+    "151 exact companyfacts field-provenance matches",
+    "TTM bridges recomputed",
+    "Purchase/net cash bridge recomputed",
+    "Annual liquidity with debt-like cash claims reserved",
+    "Withholding settlement sensitivities",
+    "Adverse capital-intensity cash-gap test"
+  ],
+  "guidance_status": "90 observations and 612 checks independently verified; publication corrections required",
+  "publication_corrections": [
+    "Specify rounded versus exact classification",
+    "Correct first-issued FY2023Q4 revenue guide date",
+    "Add FY2023Q4 non-GAAP definition-change caveat",
+    "Structure FY2023 annual floor miss separately",
+    "Clarify CEO first two full tranches at $5bn revenue"
+  ]
+}
