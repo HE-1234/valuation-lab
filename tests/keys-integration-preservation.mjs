@@ -1,3 +1,4 @@
+import {allocationBaselineWorkspace} from './company-allocation-baseline-presentation.mjs';
 import {reverseClaudeUiMerge} from './claude-ui-merge-preservation.mjs';
 import fs from 'node:fs';
 import {pathToFileURL} from 'node:url';
@@ -17,21 +18,22 @@ const digest=x=>hash('sha256').update(JSON.stringify(clean(x))).digest('hex');
 const out={order:[],companies:{},locales:{},localeKeys:incrementalMessageKeys,translatedKeys:incrementalTranslatedMessageKeys};
 const storage=new Map();const options={storage,catalogBundle:read('dist/data/atlas-company-catalog-v1.json'),incrementalBundle:incrementalPackages};
 const w=await startResearchWorkspace(options);
+const baselineUI=await allocationBaselineWorkspace({...options,storage:new Map()});
 out.order=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
 if(!out.order.length)throw Error('Empty company order');
 function calculate(d){const operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);return {operating,timing,bridge:calculateResearchBridge(d,timing.enterprise,{...d.bridgeInputs,calculationDate:timing.date})};}
 for(const ticker of out.order.filter(x=>x!=='KEYS')){
- w.choose(ticker);let d=structuredClone(w.getState().draft);const c=w.getState().company;
+ w.choose(ticker);baselineUI.choose(ticker);let d=structuredClone(w.getState().draft);const c=w.getState().company;
  const base=calculate(d), config={...d.researchSimulationConfig,trials:9,seed:'V73-KEYS-preservation-'+ticker};
  if(config.jointAnnual?.annualPath)config.jointAnnual=structuredClone(config.jointAnnual),config.jointAnnual.annualPath.innovationSD=.005;
  const seeded=simulateResearch(d,config);
  const edited=structuredClone(d);edited.annual[0].margin+=.0001;edited.notes='Preserve V73 user edits '+ticker;edited.userEdited=true;
  const restored=restoreResearchDraft(JSON.parse(JSON.stringify(edited)),c);
  out.companies[ticker]={defaultDraft:digest(d),default:digest(base),edited:digest(calculate(edited)),seeded:digest(seeded),restored:digest(restored),restoredOutput:digest(calculate(restored.draft)),accepted:seeded.accepted};
- for(const locale of ['en','zh-Hans']){setLocale(locale);out.companies[ticker][locale]=digest(w.get('#research-results').textContent);}
+ for(const locale of ['en','zh-Hans']){setLocale(locale);out.companies[ticker][locale]=digest(baselineUI.get('#research-results').textContent);}
  setLocale('en');
 }
-w.destroy();
+w.destroy();baselineUI.destroy();
 for(const locale of ['en','zh-Hans']){setLocale(locale);out.locales[locale]=Object.fromEntries(Object.entries(incrementalMessageKeys).map(([source,key])=>[source,{key,text:t(key)}]));}setLocale('en');
 return out;
 }

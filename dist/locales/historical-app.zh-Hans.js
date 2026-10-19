@@ -303,5 +303,9 @@ export default {
   "evidenceNumber": "证据 {number} ↗",
   "freeze": "冻结时间：",
   "eligibleSelected": "最新期间：{period}。目前选择符合时点条件。",
-  "ineligibleSelected": "最新期间：{period}。目前选择不符合时点条件；请在工作台选择符合条件的快照。"
+  "ineligibleSelected": "最新期间：{period}。目前选择不符合时点条件；请在工作台选择符合条件的快照。",
+  "repairDerivedLabel": "推导营业利润小计",
+  "repairAmazonAvailability": "年度参考资料的可用时间取记录的申报日期起点与接收时间中较晚者。这是保守的显示约定，并非已核实的公开发布时间；历史回测资格仍禁用。",
+  "repairCoherentOperating": "EBIT 为根据原始资料推导的营业利润小计 897.861 百万美元，并非单独披露的营业利润项目。它不含利息及单独披露的其他收入；出售业务收益与重组项目的分类仍属分析师判断。原始资料中的缺失字段保持不变。",
+  "repairFabrinetDebt": "经核对 6 月 26 日资产负债表及借款附注，银行债务为 0 百万美元，并非将缺失标签默认设为零。经营租赁仍计入经营成本；税款、遣散费、股权奖励、认股权证及其他索偿须使用单独审核的逐年模型。本简化参考仍属暂定。"
 };

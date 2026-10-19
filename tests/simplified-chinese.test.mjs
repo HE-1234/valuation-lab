@@ -14,9 +14,14 @@ test('every retained Traditional catalog has full Simplified coverage and identi
  let count=0;
  for(const name of sources){
   const original=await readCatalog(name),simplified=await readCatalog(name.replace('zh-Hant','zh-Hans'));
-  const additions=name==='guided.zh-Hant.js'?yearlyKeys:[];
+  const additions=name==='guided.zh-Hant.js'?yearlyKeys:name==='historical-app.zh-Hant.js'?['repairDerivedLabel','repairAmazonAvailability','repairCoherentOperating','repairFabrinetDebt']:[];
   const prefix=name==='annual.zh-Hant.js'?['crdo.fundingGap','crdo.inputInvalid']:[];
   assert.deepEqual(Object.keys(simplified),[...prefix,...Object.keys(original),...additions],name);
+  if(name==='historical-app.zh-Hant.js'){
+   const english=await readCatalog('historical-app.en.js');
+   assert.equal(additions.length,4);
+   for(const key of additions){assert.equal(typeof english[key],'string');assert.match(simplified[key],/\p{Script=Han}/u);assert.deepEqual(simplified[key].match(/\{[^}]+\}/g),english[key].match(/\{[^}]+\}/g),key+' parameter fidelity');}
+  }
   if(prefix.length){
    const english=await readCatalog('annual.en.js');
    for(const key of prefix){

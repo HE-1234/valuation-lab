@@ -90,7 +90,7 @@ function preserveLegacyLiteBridge(d){
 export function loadAnnualResearchCase(previous,c){
  const next=researchDraftFor(c);
  if(object(previous)){
-  for(const key of ['notes','nvmiConditional','bridgeInputs','bridgeReviewVersion','researchSimulationConfig','currentCapitalScenario','currentCapitalProvenance'])if(Object.prototype.hasOwnProperty.call(previous,key))next[key]=copy(previous[key]);
+  for(const key of ['notes','nvmiConditional','analystConditionalAllocation','bridgeInputs','bridgeReviewVersion','researchSimulationConfig','currentCapitalScenario','currentCapitalProvenance'])if(Object.prototype.hasOwnProperty.call(previous,key))next[key]=copy(previous[key]);
   if(c.ticker==='LITE'&&previous.ticker==='LITE'&&previous.bridgeReviewVersion===undefined){delete next.bridgeReviewVersion;if(previous.bridgeInputs===undefined)next.bridgeInputs={};preserveLegacyLiteBridge(next);}
  }
  return {draft:next,undo:previous==null?null:copy(previous)};
