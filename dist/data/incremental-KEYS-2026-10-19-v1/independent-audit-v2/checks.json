@@ -1,0 +1,64 @@
+{
+  "manifest_count": 113,
+  "manifest_errors": [],
+  "all_case_fields_independent_match": true,
+  "all_sensitivity_fields_independent_match": true,
+  "invalid_rejections": [
+    "wacc: nan",
+    "wacc: True",
+    "tax: True",
+    "equity_fee: 1",
+    "equity_issue_price: 0",
+    "g: -0.01",
+    "g: 0.1",
+    "wacc: 0.03",
+    "terminal_roic: 0.03",
+    "margin: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]",
+    "margin: [inf, inf, inf, inf, inf, inf, inf, inf, inf, inf]",
+    "csg_growth: [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]",
+    "eisg_growth: [True, True, True, True, True, True, True, True, True, True]",
+    "csg_growth: [0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02]",
+    "capex_ratio: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001]",
+    "margin: [-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1]",
+    "acquisition_reinvestment_ratio: [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]",
+    "emergency_debt_capacity: -1",
+    "capital shares",
+    "capital unrestricted_cash",
+    "capital shares",
+    "capital debt_face",
+    "capital restricted_cash_included"
+  ],
+  "verified_history_facts": 221,
+  "historical_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "cases": {
+    "bear": {
+      "value": 37.33383840640616,
+      "enterprise_value": 6923.449799369822,
+      "terminal_share": 0.41878001704672524,
+      "minimum_cash_headroom": 1918.7445000000002
+    },
+    "base": {
+      "value": 129.13743512633602,
+      "enterprise_value": 22552.52971303712,
+      "terminal_share": 0.5503662918567999,
+      "minimum_cash_headroom": 2220.5001
+    },
+    "bull": {
+      "value": 251.27656948264826,
+      "enterprise_value": 43346.07549604823,
+      "terminal_share": 0.6677545057313511,
+      "minimum_cash_headroom": 2308.6539239999997
+    }
+  }
+}

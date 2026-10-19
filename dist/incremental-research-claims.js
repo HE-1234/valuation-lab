@@ -1,3 +1,4 @@
+import {calculateKeysBridge,calculateKeysOperating} from './keys-research-model.js';
 import {calculateArmBridge,calculateArmOperating} from './arm-research-model.js';
 import {calculateSndkBridge,calculateSndkOperating} from './sndk-research-model.js';
 import {calculateCrdoBridge} from './crdo-research-model.js';
@@ -12,6 +13,7 @@ import {incrementalIdentityValid} from './incremental-research-identity.js';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
 export function incrementalBridgeDefinition(ticker){const r=incrementalRecord(ticker);return r?structuredClone({...r.bridge,optionDefinitions:r.bridge.options,lines:[],bridgeVersion:r.identity.version}):null;}
 export function calculateIncrementalBridge(d,enterprise,options={}){
+ if(incrementalRecord(d?.ticker)?.bridge.type==='keys-v1')return calculateKeysBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='arm-v2')return calculateArmBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='sndk-v3')return calculateSndkBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='crdo-v3')return calculateCrdoBridge(d,enterprise,options);
@@ -50,5 +52,5 @@ export function calculateIncrementalBridge(d,enterprise,options={}){
 }
 export function incrementalBridgeSensitivity(d,enterprise,options={}){
  const b=incrementalRecord(d?.ticker)?.bridge;if(!b)return [];
- return b.options.flatMap(field=>(['cdns-v3','snps-v3'].includes(b.type)?field.listedStressValues:[field.min,field.max]).filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,b.type==='arm-v2'?calculateArmOperating(d,changes).enterprise:b.type==='sndk-v3'?calculateSndkOperating(d,changes).enterprise:enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));
+ return b.options.flatMap(field=>(['cdns-v3','snps-v3'].includes(b.type)?field.listedStressValues:[field.min,field.max]).filter(value=>finite(value)&&value!==field.default).map(value=>{const changes={[field.key]:value},label=`${field.label}: ${value}`;try{const r=calculateIncrementalBridge(d,b.type==='keys-v1'?calculateKeysOperating(d,changes).enterprise:b.type==='arm-v2'?calculateArmOperating(d,changes).enterprise:b.type==='sndk-v3'?calculateSndkOperating(d,changes).enterprise:enterprise,{...options,...changes});return {label,parameterLabel:field.label,parameterValue:value,changes,...r};}catch(error){return {label,parameterLabel:field.label,parameterValue:value,changes,status:'invalid',error:error.message};}}));
 }

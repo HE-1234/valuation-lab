@@ -1,0 +1,24 @@
+{
+  "status": "self-tests passed; independent review required",
+  "tests": [
+    "bear replay, cash floor, FCFF, terminal floors, debt repayments pass",
+    "base replay, cash floor, FCFF, terminal floors, debt repayments pass",
+    "bull replay, cash floor, FCFF, terminal floors, debt repayments pass",
+    "reject wacc nan",
+    "reject g 0.11",
+    "reject tax -1",
+    "reject equity_fee 1",
+    "reject equity_issue_price 0",
+    "reject emergency_debt_capacity -1",
+    "reject wacc True",
+    "reject margin [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]",
+    "reject terminal_roic 0.01",
+    "reject csg_growth [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]",
+    "reject capex_ratio [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001]",
+    "external-equity funding suppresses headline, increases shares, and respects cash floor",
+    "external debt capped at750; headline suppressed",
+    "floating-rate coupon +200bp liquidity stress replay"
+  ],
+  "test_count": 17,
+  "history_slots": 10
+}
