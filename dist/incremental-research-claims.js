@@ -1,3 +1,4 @@
+import {calculateCrdoBridge} from './crdo-research-model.js';
 import {calculateSnpsBridge} from './snps-research-claims.js';
 import {calculateCdnsBridge} from './cdns-research-claims.js';
 import {calculateFnBridge} from './fn-research-claims.js';
@@ -9,6 +10,7 @@ import {incrementalIdentityValid} from './incremental-research-identity.js';
 const finite=x=>typeof x==='number'&&Number.isFinite(x);
 export function incrementalBridgeDefinition(ticker){const r=incrementalRecord(ticker);return r?structuredClone({...r.bridge,optionDefinitions:r.bridge.options,lines:[],bridgeVersion:r.identity.version}):null;}
 export function calculateIncrementalBridge(d,enterprise,options={}){
+ if(incrementalRecord(d?.ticker)?.bridge.type==='crdo-v3')return calculateCrdoBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='snps-v3')return calculateSnpsBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='cdns-v3')return calculateCdnsBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='fn-v1')return calculateFnBridge(d,enterprise,options);

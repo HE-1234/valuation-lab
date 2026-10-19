@@ -1,0 +1,13 @@
+{
+  "stress": "FY2027 base sales/capital 0.5 instead of 2.2; other inputs unchanged",
+  "first_period": {
+    "fy": 2027,
+    "cf": -904.1687647702856,
+    "closing_liquidity_after_reserved_claims": -119.4057647702856,
+    "opening_liquidity": 784.763,
+    "deposit_only_prefunding_floor": 737.363
+  },
+  "naive_value_without_funding_mechanics": 87.19003561859759,
+  "valid_for_publication": false,
+  "reason": "Cash deficit requires financing/changed investment; naive DCF does not model issuance, interest or dilution."
+}

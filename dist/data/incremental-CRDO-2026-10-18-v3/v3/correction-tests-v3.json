@@ -1,0 +1,424 @@
+{
+  "status": "passed",
+  "scope": "author correction tests; independent recheck still required",
+  "tests": [
+    {
+      "test": "B1 gross equals net plus withholding shares",
+      "pass": true
+    },
+    {
+      "test": "B1 cash withholding equals shares times conditional settlement price",
+      "pass": true
+    },
+    {
+      "test": "B1 remaining RSUs roll forward",
+      "pass": true
+    },
+    {
+      "test": "B4 dates derive78elapsed273stub195remaining",
+      "pass": true
+    },
+    {
+      "test": "B4 cash delta derived40",
+      "pass": true
+    },
+    {
+      "test": "B4 operating_cash_after_ordinary_working_capital impacts result",
+      "pass": true
+    },
+    {
+      "test": "B4 operating_cash_after_ordinary_working_capital snapshot unaffected",
+      "pass": true
+    },
+    {
+      "test": "B4 operating_cash_after_ordinary_working_capital leaves operating EV unchanged",
+      "pass": true
+    },
+    {
+      "test": "B4 capital_expenditures impacts result",
+      "pass": true
+    },
+    {
+      "test": "B4 capital_expenditures snapshot unaffected",
+      "pass": true
+    },
+    {
+      "test": "B4 capital_expenditures leaves operating EV unchanged",
+      "pass": true
+    },
+    {
+      "test": "B4 capacity_deposits_paid impacts result",
+      "pass": true
+    },
+    {
+      "test": "B4 capacity_deposits_paid snapshot unaffected",
+      "pass": true
+    },
+    {
+      "test": "B4 paid deposit cash decrease",
+      "pass": true
+    },
+    {
+      "test": "B4 paid deposit removed from future outflow",
+      "pass": true
+    },
+    {
+      "test": "B4 no double-charge deposit nominal sum",
+      "pass": true
+    },
+    {
+      "test": "B4 rsu_withholding_cash impacts result",
+      "pass": true
+    },
+    {
+      "test": "B4 rsu_withholding_cash snapshot unaffected",
+      "pass": true
+    },
+    {
+      "test": "B4 rsu_withholding_cash leaves operating EV unchanged",
+      "pass": true
+    },
+    {
+      "test": "B1 extra withholding extinguishes extra RSUs",
+      "pass": true
+    },
+    {
+      "test": "B4 net_rsu_shares_issued impacts result",
+      "pass": true
+    },
+    {
+      "test": "B4 net_rsu_shares_issued snapshot unaffected",
+      "pass": true
+    },
+    {
+      "test": "B4 net_rsu_shares_issued leaves operating EV unchanged",
+      "pass": true
+    },
+    {
+      "test": "B4 net issued changes both ordinary and gross settlements",
+      "pass": true
+    },
+    {
+      "test": "B4 rsu_settlement_price impacts result",
+      "pass": true
+    },
+    {
+      "test": "B4 rsu_settlement_price snapshot unaffected",
+      "pass": true
+    },
+    {
+      "test": "B4 rsu_settlement_price leaves operating EV unchanged",
+      "pass": true
+    },
+    {
+      "test": "B4 settlement price does not change cash or common",
+      "pass": true
+    },
+    {
+      "test": "B4 date perturbation derives77days",
+      "pass": true
+    },
+    {
+      "test": "B4 date changes remaining option term",
+      "pass": true
+    },
+    {
+      "test": "B4 date changes operating stub and discount factor",
+      "pass": true
+    },
+    {
+      "test": "B4 end date perturbation changes stub274days",
+      "pass": true
+    },
+    {
+      "test": "B3 auditor capital stress rejected",
+      "pass": true
+    },
+    {
+      "test": "B3 no released EV/equity/price under funding gap",
+      "pass": true
+    },
+    {
+      "test": "B3 known stress deficit reproduced",
+      "pass": true
+    },
+    {
+      "test": "B3 minimum cash floor enforced",
+      "pass": true
+    },
+    {
+      "test": "B3 up-front deposit pre-receipt stress rejected",
+      "pass": true
+    },
+    {
+      "test": "B4 invalid date rejected 2027-05-02",
+      "pass": true
+    },
+    {
+      "test": "B4 invalid date rejected 2026-07-01",
+      "pass": true
+    },
+    {
+      "test": "published case funded report_snapshotbear",
+      "pass": true
+    },
+    {
+      "test": "independent EV replay report_snapshotbear",
+      "pass": true
+    },
+    {
+      "test": "equity allocation identity report_snapshotbear",
+      "pass": true
+    },
+    {
+      "test": "published case funded report_snapshotbase",
+      "pass": true
+    },
+    {
+      "test": "independent EV replay report_snapshotbase",
+      "pass": true
+    },
+    {
+      "test": "equity allocation identity report_snapshotbase",
+      "pass": true
+    },
+    {
+      "test": "published case funded report_snapshotbull",
+      "pass": true
+    },
+    {
+      "test": "independent EV replay report_snapshotbull",
+      "pass": true
+    },
+    {
+      "test": "equity allocation identity report_snapshotbull",
+      "pass": true
+    },
+    {
+      "test": "published case funded currentbear",
+      "pass": true
+    },
+    {
+      "test": "independent EV replay currentbear",
+      "pass": true
+    },
+    {
+      "test": "equity allocation identity currentbear",
+      "pass": true
+    },
+    {
+      "test": "published case funded currentbase",
+      "pass": true
+    },
+    {
+      "test": "independent EV replay currentbase",
+      "pass": true
+    },
+    {
+      "test": "equity allocation identity currentbase",
+      "pass": true
+    },
+    {
+      "test": "published case funded currentbull",
+      "pass": true
+    },
+    {
+      "test": "independent EV replay currentbull",
+      "pass": true
+    },
+    {
+      "test": "equity allocation identity currentbull",
+      "pass": true
+    },
+    {
+      "test": "B2 amendment explicitly unretained no hash",
+      "pass": true
+    },
+    {
+      "test": "B2 original accession-specific file verified",
+      "pass": true
+    },
+    {
+      "test": "B2 original identifies10K not10KA",
+      "pass": true
+    },
+    {
+      "test": "C5 both classifications FY2024Q2revenue",
+      "pass": true
+    },
+    {
+      "test": "C5 both classifications FY2024Q2opex",
+      "pass": true
+    },
+    {
+      "test": "C5 both classifications FY2025Q4ng_opex",
+      "pass": true
+    },
+    {
+      "test": "C5 original Q4FY23 revenue date",
+      "pass": true
+    },
+    {
+      "test": "C5 definition warning",
+      "pass": true
+    }
+  ],
+  "perturbations": [
+    {
+      "field": "operating_cash_after_ordinary_working_capital",
+      "new_value": 145,
+      "result": {
+        "enterprise_value": 17706.872110524153,
+        "value_per_common_share": 92.17475544180675,
+        "bridge": {
+          "balance_date": "2026-08-01",
+          "valuation_date": "2026-10-18",
+          "stub_days": 273,
+          "elapsed_days": 78,
+          "remaining_days": 195,
+          "year_fraction_denominator": 365.25,
+          "cash_increase": 50,
+          "cash": 814.258,
+          "net_rsu_shares_issued": 0.7,
+          "withheld_rsu_shares": 0.125,
+          "gross_rsus_settled": 0.825,
+          "ordinary_shares": 188.468,
+          "remaining_rsus": 7.4750000000000005,
+          "capacity_deposits_paid": 55,
+          "settlement_price": 200
+        },
+        "remaining_option_term": 3.626447638603696
+      }
+    },
+    {
+      "field": "capital_expenditures",
+      "new_value": 25,
+      "result": {
+        "enterprise_value": 17706.872110524153,
+        "value_per_common_share": 92.0751330718854,
+        "bridge": {
+          "balance_date": "2026-08-01",
+          "valuation_date": "2026-10-18",
+          "stub_days": 273,
+          "elapsed_days": 78,
+          "remaining_days": 195,
+          "year_fraction_denominator": 365.25,
+          "cash_increase": 30,
+          "cash": 794.258,
+          "net_rsu_shares_issued": 0.7,
+          "withheld_rsu_shares": 0.125,
+          "gross_rsus_settled": 0.825,
+          "ordinary_shares": 188.468,
+          "remaining_rsus": 7.4750000000000005,
+          "capacity_deposits_paid": 55,
+          "settlement_price": 200
+        },
+        "remaining_option_term": 3.626447638603696
+      }
+    },
+    {
+      "field": "capacity_deposits_paid",
+      "new_value": 65,
+      "result": {
+        "enterprise_value": 17716.30300741581,
+        "value_per_common_share": 92.12210948694727,
+        "bridge": {
+          "balance_date": "2026-08-01",
+          "valuation_date": "2026-10-18",
+          "stub_days": 273,
+          "elapsed_days": 78,
+          "remaining_days": 195,
+          "year_fraction_denominator": 365.25,
+          "cash_increase": 30,
+          "cash": 794.258,
+          "net_rsu_shares_issued": 0.7,
+          "withheld_rsu_shares": 0.125,
+          "gross_rsus_settled": 0.825,
+          "ordinary_shares": 188.468,
+          "remaining_rsus": 7.4750000000000005,
+          "capacity_deposits_paid": 65,
+          "settlement_price": 200
+        },
+        "remaining_option_term": 3.626447638603696
+      }
+    },
+    {
+      "field": "rsu_withholding_cash",
+      "new_value": 35,
+      "result": {
+        "enterprise_value": 17706.872110524153,
+        "value_per_common_share": 92.09692349219722,
+        "bridge": {
+          "balance_date": "2026-08-01",
+          "valuation_date": "2026-10-18",
+          "stub_days": 273,
+          "elapsed_days": 78,
+          "remaining_days": 195,
+          "year_fraction_denominator": 365.25,
+          "cash_increase": 30,
+          "cash": 794.258,
+          "net_rsu_shares_issued": 0.7,
+          "withheld_rsu_shares": 0.175,
+          "gross_rsus_settled": 0.875,
+          "ordinary_shares": 188.468,
+          "remaining_rsus": 7.425000000000001,
+          "capacity_deposits_paid": 55,
+          "settlement_price": 200
+        },
+        "remaining_option_term": 3.626447638603696
+      }
+    },
+    {
+      "field": "net_rsu_shares_issued",
+      "new_value": 0.8,
+      "result": {
+        "enterprise_value": 17706.872110524153,
+        "value_per_common_share": 92.1226498877902,
+        "bridge": {
+          "balance_date": "2026-08-01",
+          "valuation_date": "2026-10-18",
+          "stub_days": 273,
+          "elapsed_days": 78,
+          "remaining_days": 195,
+          "year_fraction_denominator": 365.25,
+          "cash_increase": 40,
+          "cash": 804.258,
+          "net_rsu_shares_issued": 0.8,
+          "withheld_rsu_shares": 0.125,
+          "gross_rsus_settled": 0.925,
+          "ordinary_shares": 188.568,
+          "remaining_rsus": 7.375000000000001,
+          "capacity_deposits_paid": 55,
+          "settlement_price": 200
+        },
+        "remaining_option_term": 3.626447638603696
+      }
+    },
+    {
+      "field": "rsu_settlement_price",
+      "new_value": 100,
+      "result": {
+        "enterprise_value": 17706.872110524153,
+        "value_per_common_share": 92.17946913378805,
+        "bridge": {
+          "balance_date": "2026-08-01",
+          "valuation_date": "2026-10-18",
+          "stub_days": 273,
+          "elapsed_days": 78,
+          "remaining_days": 195,
+          "year_fraction_denominator": 365.25,
+          "cash_increase": 40,
+          "cash": 804.258,
+          "net_rsu_shares_issued": 0.7,
+          "withheld_rsu_shares": 0.25,
+          "gross_rsus_settled": 0.95,
+          "ordinary_shares": 188.468,
+          "remaining_rsus": 7.3500000000000005,
+          "capacity_deposits_paid": 55,
+          "settlement_price": 100
+        },
+        "remaining_option_term": 3.626447638603696
+      }
+    }
+  ]
+}

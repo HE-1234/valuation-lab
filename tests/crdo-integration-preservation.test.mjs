@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
+import {reverseCrdoIntegration} from './crdo-integration-preservation.mjs';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url)),sha=x=>createHash('sha256').update(x).digest('hex'),fixture=JSON.parse(read('tests/fixtures/crdo-integration-v71.json'));
+test('CRDO all public additions retain reviewed exact bytes and no raw filings',()=>{for(const[p,h]of Object.entries(fixture.additions)){assert.equal(sha(read(p)),h,p);assert.doesNotMatch(p,/\/raw\/|\/transcripts\//);}assert.equal(Object.keys(fixture.files).length,11);});
+test('CRDO hooks reverse exactly to V70 and reject every extra mutation',()=>{for(const[p,f]of Object.entries(fixture.files)){const bytes=read(p);assert.equal(sha(reverseCrdoIntegration(p,bytes)),f.beforeSHA256,p);assert.throws(()=>reverseCrdoIntegration(p,Buffer.concat([bytes,Buffer.from('\n/* mutation */')])),/exact reviewed CRDO integration bytes/);}});
+test('All V70 production files including user Guided journey, annual paths and six themes are preserved',()=>{for(const[p,h]of Object.entries(fixture.baselineProduction))assert.equal(sha(reverseCrdoIntegration(p,read(p))),h,p);assert.ok(Object.keys(fixture.baselineProduction).length===486);});

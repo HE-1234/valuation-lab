@@ -1,0 +1,104 @@
+{
+  "latest_quarter": {
+    "period_end": "2026-08-01",
+    "published": "2026-09-01",
+    "filed": "2026-09-02",
+    "unit": "USD million unless indicated",
+    "revenue": 479.003,
+    "gross_profit": 309.08,
+    "operating_income": 120.7,
+    "net_income": 129.425,
+    "cfo": 90.231,
+    "capex": 7.282,
+    "sbc": 87.979,
+    "cash": 466.869,
+    "short_investments": 297.389,
+    "inventory": 313.051,
+    "receivables": 288.798,
+    "payables": 101.822,
+    "common_shares_million": 187.768,
+    "cover_common_shares_million": 187.951918,
+    "cover_share_date": "2026-08-25",
+    "weighted_basic_shares_million": 186.007,
+    "weighted_diluted_shares_million": 194.378,
+    "end_customer_percent": [
+      33,
+      28,
+      13,
+      10
+    ],
+    "contracting_customer_percent": [
+      43,
+      28
+    ],
+    "customer_identity_note": "Anonymized percentages must not be mapped to named hyperscalers without evidence. End-customer and contracting-customer bases differ.",
+    "ship_destination_revenue": {
+      "US": 255.442,
+      "Hong_Kong": 91.175,
+      "Malaysia": 74.455,
+      "Mainland_China": 1.095,
+      "rest": 56.836
+    },
+    "source": "crdo-20260801.htm notes 3,4,5,9,10 and statements"
+  },
+  "product_mix": {
+    "FY2025_product_and_engineering_pct": 97,
+    "FY2025_IP_pct": 3,
+    "FY2024_product_and_engineering_pct": 85,
+    "FY2024_IP_pct": 15,
+    "source": "crdo-20250503.htm business and MD&A",
+    "latest_mix_gap": "FY2026 and FY2027Q1 statements aggregate revenue; no audited AEC/optics/retimer exact revenue table located. Do not fill from assumptions."
+  },
+  "guidance": {
+    "FY2027Q2_revenue": [
+      525,
+      535
+    ],
+    "FY2027Q2_GAAP_gm_pct": [
+      62.9,
+      64.9
+    ],
+    "FY2027Q2_nonGAAP_gm_pct": [
+      67,
+      69
+    ],
+    "FY2027Q2_GAAP_opex": [
+      199,
+      204
+    ],
+    "FY2027Q2_nonGAAP_opex": [
+      100,
+      105
+    ],
+    "source": "exhibit-2026-09-01-credoq12027ex-991.htm",
+    "FY2027_revenue_growth_min_pct": 85,
+    "FY2027_optical_revenue_min": 600,
+    "annual_guidance_source": "September1 earnings call CFO prepared remarks; transcript source ledger"
+  },
+  "annual_guidance_counterexample": {
+    "original_FY2023_revenue_min": 200,
+    "actual_FY2023": 184.194,
+    "miss_pct": -0.07903000000000004,
+    "reaffirmed_dates": [
+      "2022-08-31",
+      "2022-11-30"
+    ],
+    "reduction_date": "2023-02-14",
+    "FY2024_revised_outlook": "flat vsFY2023",
+    "FY2024_actual_growth": 0.04764541733172645,
+    "source": "FY23Q1/Q2 releases, crdo-20230214.htm, historical annual statements"
+  },
+  "claim_method_limitations": [
+    "Rounded award counts in financial statements",
+    "Earnout expected shares calibrated to acquisition-date fair value, not observable current fair value",
+    "PSU probabilities are analyst conditional inputs, not management estimates or a full Monte Carlo model",
+    "Cash and share movement after August25 are unreported estimates",
+    "No new warrants found; old Amazon warrant fully exercised by May2 2026"
+  ],
+  "newest_filing_reviewed": {
+    "date": "2026-10-16",
+    "type": "8-K",
+    "subject": "October12 annual meeting votes; not new financial results",
+    "source": "crdo-20261016.htm"
+  }
+}

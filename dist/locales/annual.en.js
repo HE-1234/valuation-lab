@@ -1,4 +1,6 @@
 export default {
+"crdo.fundingGap": "CRDO requires funding beyond this zero-borrowing model. Maximum modeled cash shortfall: {amount} USDm. No enterprise, common-equity or per-share value is released.",
+"crdo.inputInvalid": "{label}: finite input within its stated bounds is required.",
   "samplingCountPolicy": "Application policy dated 2026-10-18: fresh settings and explicit resets use 5,000 attempted scenarios. Saved counts stay unchanged until reset or Use research. This is a numerical sampling choice, not greater forecast confidence; dated research files retain their original counts.",
   "copy.3ef9bbf5efb7": "Complete preset unavailable",
   "copy.e96c7a4f4e69": "Loads all annual, terminal, dated-claims and Monte Carlo inputs together. Full Undo preserves your prior case; notes stay.",

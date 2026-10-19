@@ -1,0 +1,6043 @@
+{
+  "status": "passed",
+  "scope": "author tests; independent recheck pending",
+  "count": 1509,
+  "tests": [
+    {
+      "test": "base_fy2026_revenue rejects nan",
+      "pass": true
+    },
+    {
+      "test": "base_fy2026_revenue rejects inf",
+      "pass": true
+    },
+    {
+      "test": "base_fy2026_revenue rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "base_fy2026_revenue rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "base_fy2026_revenue rejects True",
+      "pass": true
+    },
+    {
+      "test": "base_fy2026_revenue rejects None",
+      "pass": true
+    },
+    {
+      "test": "q1fy2027_actual_revenue rejects nan",
+      "pass": true
+    },
+    {
+      "test": "q1fy2027_actual_revenue rejects inf",
+      "pass": true
+    },
+    {
+      "test": "q1fy2027_actual_revenue rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "q1fy2027_actual_revenue rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "q1fy2027_actual_revenue rejects True",
+      "pass": true
+    },
+    {
+      "test": "q1fy2027_actual_revenue rejects None",
+      "pass": true
+    },
+    {
+      "test": "ttm_revenue rejects nan",
+      "pass": true
+    },
+    {
+      "test": "ttm_revenue rejects inf",
+      "pass": true
+    },
+    {
+      "test": "ttm_revenue rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "ttm_revenue rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "ttm_revenue rejects True",
+      "pass": true
+    },
+    {
+      "test": "ttm_revenue rejects None",
+      "pass": true
+    },
+    {
+      "test": "ttm_gaap_ebit rejects nan",
+      "pass": true
+    },
+    {
+      "test": "ttm_gaap_ebit rejects inf",
+      "pass": true
+    },
+    {
+      "test": "ttm_gaap_ebit rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "ttm_gaap_ebit rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "ttm_gaap_ebit rejects True",
+      "pass": true
+    },
+    {
+      "test": "ttm_gaap_ebit rejects None",
+      "pass": true
+    },
+    {
+      "test": "ttm_sbc rejects nan",
+      "pass": true
+    },
+    {
+      "test": "ttm_sbc rejects inf",
+      "pass": true
+    },
+    {
+      "test": "ttm_sbc rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "ttm_sbc rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "ttm_sbc rejects True",
+      "pass": true
+    },
+    {
+      "test": "ttm_sbc rejects None",
+      "pass": true
+    },
+    {
+      "test": "cash_and_investments rejects nan",
+      "pass": true
+    },
+    {
+      "test": "cash_and_investments rejects inf",
+      "pass": true
+    },
+    {
+      "test": "cash_and_investments rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "cash_and_investments rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "cash_and_investments rejects True",
+      "pass": true
+    },
+    {
+      "test": "cash_and_investments rejects None",
+      "pass": true
+    },
+    {
+      "test": "technology_license_debt rejects nan",
+      "pass": true
+    },
+    {
+      "test": "technology_license_debt rejects inf",
+      "pass": true
+    },
+    {
+      "test": "technology_license_debt rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "technology_license_debt rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "technology_license_debt rejects True",
+      "pass": true
+    },
+    {
+      "test": "technology_license_debt rejects None",
+      "pass": true
+    },
+    {
+      "test": "cash_contingent_consideration rejects nan",
+      "pass": true
+    },
+    {
+      "test": "cash_contingent_consideration rejects inf",
+      "pass": true
+    },
+    {
+      "test": "cash_contingent_consideration rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "cash_contingent_consideration rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "cash_contingent_consideration rejects True",
+      "pass": true
+    },
+    {
+      "test": "cash_contingent_consideration rejects None",
+      "pass": true
+    },
+    {
+      "test": "ordinary_shares rejects nan",
+      "pass": true
+    },
+    {
+      "test": "ordinary_shares rejects inf",
+      "pass": true
+    },
+    {
+      "test": "ordinary_shares rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "ordinary_shares rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "ordinary_shares rejects True",
+      "pass": true
+    },
+    {
+      "test": "ordinary_shares rejects None",
+      "pass": true
+    },
+    {
+      "test": "rsus rejects nan",
+      "pass": true
+    },
+    {
+      "test": "rsus rejects inf",
+      "pass": true
+    },
+    {
+      "test": "rsus rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "rsus rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "rsus rejects True",
+      "pass": true
+    },
+    {
+      "test": "rsus rejects None",
+      "pass": true
+    },
+    {
+      "test": "psus rejects nan",
+      "pass": true
+    },
+    {
+      "test": "psus rejects inf",
+      "pass": true
+    },
+    {
+      "test": "psus rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "psus rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "psus rejects True",
+      "pass": true
+    },
+    {
+      "test": "psus rejects None",
+      "pass": true
+    },
+    {
+      "test": "special_ceo_psus rejects nan",
+      "pass": true
+    },
+    {
+      "test": "special_ceo_psus rejects inf",
+      "pass": true
+    },
+    {
+      "test": "special_ceo_psus rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "special_ceo_psus rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "special_ceo_psus rejects True",
+      "pass": true
+    },
+    {
+      "test": "special_ceo_psus rejects None",
+      "pass": true
+    },
+    {
+      "test": "options rejects nan",
+      "pass": true
+    },
+    {
+      "test": "options rejects inf",
+      "pass": true
+    },
+    {
+      "test": "options rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "options rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "options rejects True",
+      "pass": true
+    },
+    {
+      "test": "options rejects None",
+      "pass": true
+    },
+    {
+      "test": "option_strike rejects nan",
+      "pass": true
+    },
+    {
+      "test": "option_strike rejects inf",
+      "pass": true
+    },
+    {
+      "test": "option_strike rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "option_strike rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "option_strike rejects True",
+      "pass": true
+    },
+    {
+      "test": "option_strike rejects None",
+      "pass": true
+    },
+    {
+      "test": "option_term rejects nan",
+      "pass": true
+    },
+    {
+      "test": "option_term rejects inf",
+      "pass": true
+    },
+    {
+      "test": "option_term rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "option_term rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "option_term rejects True",
+      "pass": true
+    },
+    {
+      "test": "option_term rejects None",
+      "pass": true
+    },
+    {
+      "test": "option_volatility rejects nan",
+      "pass": true
+    },
+    {
+      "test": "option_volatility rejects inf",
+      "pass": true
+    },
+    {
+      "test": "option_volatility rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "option_volatility rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "option_volatility rejects True",
+      "pass": true
+    },
+    {
+      "test": "option_volatility rejects None",
+      "pass": true
+    },
+    {
+      "test": "exchangeable_subsidiary_restricted_shares rejects nan",
+      "pass": true
+    },
+    {
+      "test": "exchangeable_subsidiary_restricted_shares rejects inf",
+      "pass": true
+    },
+    {
+      "test": "exchangeable_subsidiary_restricted_shares rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "exchangeable_subsidiary_restricted_shares rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "exchangeable_subsidiary_restricted_shares rejects True",
+      "pass": true
+    },
+    {
+      "test": "exchangeable_subsidiary_restricted_shares rejects None",
+      "pass": true
+    },
+    {
+      "test": "earnout_max_shares rejects nan",
+      "pass": true
+    },
+    {
+      "test": "earnout_max_shares rejects inf",
+      "pass": true
+    },
+    {
+      "test": "earnout_max_shares rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "earnout_max_shares rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "earnout_max_shares rejects True",
+      "pass": true
+    },
+    {
+      "test": "earnout_max_shares rejects None",
+      "pass": true
+    },
+    {
+      "test": "earnout_accounting_equity_fair_value rejects nan",
+      "pass": true
+    },
+    {
+      "test": "earnout_accounting_equity_fair_value rejects inf",
+      "pass": true
+    },
+    {
+      "test": "earnout_accounting_equity_fair_value rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "earnout_accounting_equity_fair_value rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "earnout_accounting_equity_fair_value rejects True",
+      "pass": true
+    },
+    {
+      "test": "earnout_accounting_equity_fair_value rejects None",
+      "pass": true
+    },
+    {
+      "test": "acquisition_reference_stock_price rejects nan",
+      "pass": true
+    },
+    {
+      "test": "acquisition_reference_stock_price rejects inf",
+      "pass": true
+    },
+    {
+      "test": "acquisition_reference_stock_price rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "acquisition_reference_stock_price rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "acquisition_reference_stock_price rejects True",
+      "pass": true
+    },
+    {
+      "test": "acquisition_reference_stock_price rejects None",
+      "pass": true
+    },
+    {
+      "test": "interest_bearing_debt rejects nan",
+      "pass": true
+    },
+    {
+      "test": "interest_bearing_debt rejects inf",
+      "pass": true
+    },
+    {
+      "test": "interest_bearing_debt rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "interest_bearing_debt rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "interest_bearing_debt rejects True",
+      "pass": true
+    },
+    {
+      "test": "interest_bearing_debt rejects None",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.operating_cash_after_ordinary_working_capital rejects nan",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.operating_cash_after_ordinary_working_capital rejects inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.operating_cash_after_ordinary_working_capital rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.operating_cash_after_ordinary_working_capital rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.operating_cash_after_ordinary_working_capital rejects True",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.operating_cash_after_ordinary_working_capital rejects None",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capital_expenditures rejects nan",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capital_expenditures rejects inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capital_expenditures rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capital_expenditures rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capital_expenditures rejects True",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capital_expenditures rejects None",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects nan",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects True",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects None",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_withholding_cash rejects nan",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_withholding_cash rejects inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_withholding_cash rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_withholding_cash rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_withholding_cash rejects True",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_withholding_cash rejects None",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects nan",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects True",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects None",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_settlement_price rejects nan",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_settlement_price rejects inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_settlement_price rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_settlement_price rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_settlement_price rejects True",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_settlement_price rejects None",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.restricted_share_vesting_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.restricted_share_vesting_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.restricted_share_vesting_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.restricted_share_vesting_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.restricted_share_vesting_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.restricted_share_vesting_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_report rejects nan",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_report rejects inf",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_report rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_report rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_report rejects True",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_report rejects None",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_report rejects nan",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_report rejects inf",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_report rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_report rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_report rejects True",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_report rejects None",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_current rejects nan",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_current rejects inf",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_current rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_current rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_current rejects True",
+      "pass": true
+    },
+    {
+      "test": "macro.rf_current rejects None",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_current rejects nan",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_current rejects inf",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_current rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_current rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_current rejects True",
+      "pass": true
+    },
+    {
+      "test": "macro.erp_current rejects None",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_start rejects nan",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_start rejects inf",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_start rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_start rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_start rejects True",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_start rejects None",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_terminal rejects nan",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_terminal rejects inf",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_terminal rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_terminal rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_terminal rejects True",
+      "pass": true
+    },
+    {
+      "test": "macro.beta_terminal rejects None",
+      "pass": true
+    },
+    {
+      "test": "macro.debt_weight rejects nan",
+      "pass": true
+    },
+    {
+      "test": "macro.debt_weight rejects inf",
+      "pass": true
+    },
+    {
+      "test": "macro.debt_weight rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "macro.debt_weight rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "macro.debt_weight rejects True",
+      "pass": true
+    },
+    {
+      "test": "macro.debt_weight rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.pre_new_grant_operating_margin.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_growth rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_growth rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_growth rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_growth rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_growth rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_growth rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_roic rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_roic rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_roic rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_roic rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_roic rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_roic rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_outflow rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_outflow rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_outflow rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_outflow rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_outflow rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_outflow rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.pre_new_grant_operating_margin.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_growth rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_growth rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_growth rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_growth rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_growth rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_growth rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_roic rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_roic rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_roic rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_roic rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_roic rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_roic rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_outflow rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_outflow rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_outflow rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_outflow rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_outflow rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_outflow rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.pre_new_grant_operating_margin.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_growth rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_growth rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_growth rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_growth rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_growth rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_growth rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_roic rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_roic rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_roic rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_roic rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_roic rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_roic rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_outflow rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_outflow rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_outflow rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_outflow rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_outflow rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_outflow rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.0 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.0 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.0 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.0 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.0 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.0 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.1 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.1 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.1 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.1 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.1 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.1 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.2 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.2 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.2 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.2 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.2 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.2 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.3 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.3 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.3 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.3 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.3 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.3 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.4 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.4 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.4 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.4 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.4 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.4 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.5 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.5 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.5 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.5 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.5 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.5 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.6 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.6 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.6 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.6 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.6 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.6 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.7 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.7 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.7 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.7 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.7 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.7 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.8 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.8 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.8 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.8 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.8 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.8 rejects None",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.9 rejects nan",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.9 rejects inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.9 rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.9 rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.9 rejects True",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.9 rejects None",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects nan",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects inf",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects True",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects None",
+      "pass": true
+    },
+    {
+      "test": "funding.minimum_cash_floor rejects nan",
+      "pass": true
+    },
+    {
+      "test": "funding.minimum_cash_floor rejects inf",
+      "pass": true
+    },
+    {
+      "test": "funding.minimum_cash_floor rejects -inf",
+      "pass": true
+    },
+    {
+      "test": "funding.minimum_cash_floor rejects '0'",
+      "pass": true
+    },
+    {
+      "test": "funding.minimum_cash_floor rejects True",
+      "pass": true
+    },
+    {
+      "test": "funding.minimum_cash_floor rejects None",
+      "pass": true
+    },
+    {
+      "test": "Exact auditor NaN-floor plus unfunded stress",
+      "pass": true
+    },
+    {
+      "test": "Exact auditor negative earnout factor",
+      "pass": true
+    },
+    {
+      "test": "Exact auditor unmodeled borrowing",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.rsu_vesting_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.psu_vesting_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.earnout_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects -1",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.sales_to_capital.0 rejects -1",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.tax_rate.0 rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.new_grant_sbc_margin.0 rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.revenue.0 rejects 478.003",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.terminal_roic rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bear.capacity_deposit_recovery.1 rejects 1000",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.rsu_vesting_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.psu_vesting_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.earnout_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects -1",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.sales_to_capital.0 rejects -1",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.tax_rate.0 rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.new_grant_sbc_margin.0 rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.revenue.0 rejects 478.003",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.terminal_roic rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.base.capacity_deposit_recovery.1 rejects 1000",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.rsu_vesting_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.psu_vesting_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.earnout_probability rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects -1",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.sales_to_capital.0 rejects -1",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.tax_rate.0 rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects -0.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.new_grant_sbc_margin.0 rejects 1.01",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.revenue.0 rejects 478.003",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.terminal_roic rejects 0",
+      "pass": true
+    },
+    {
+      "test": "scenarios.bull.capacity_deposit_recovery.1 rejects 1000",
+      "pass": true
+    },
+    {
+      "test": "ordinary_shares rejects -1",
+      "pass": true
+    },
+    {
+      "test": "rsus rejects -1",
+      "pass": true
+    },
+    {
+      "test": "psus rejects -1",
+      "pass": true
+    },
+    {
+      "test": "options rejects -1",
+      "pass": true
+    },
+    {
+      "test": "exchangeable_subsidiary_restricted_shares rejects -1",
+      "pass": true
+    },
+    {
+      "test": "earnout_max_shares rejects -1",
+      "pass": true
+    },
+    {
+      "test": "cash_and_investments rejects -1",
+      "pass": true
+    },
+    {
+      "test": "technology_license_debt rejects -1",
+      "pass": true
+    },
+    {
+      "test": "cash_contingent_consideration rejects -1",
+      "pass": true
+    },
+    {
+      "test": "option_strike rejects 0",
+      "pass": true
+    },
+    {
+      "test": "option_term rejects 0",
+      "pass": true
+    },
+    {
+      "test": "option_volatility rejects 0",
+      "pass": true
+    },
+    {
+      "test": "Expired option term rejected",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.operating_cash_after_ordinary_working_capital rejects -1",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capital_expenditures rejects -1",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects -1",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_withholding_cash rejects -1",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects -1",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.rsu_settlement_price rejects 0",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.restricted_share_vesting_probability rejects 1.1",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.net_rsu_shares_issued rejects 10",
+      "pass": true
+    },
+    {
+      "test": "october_bridge.capacity_deposits_paid rejects 103",
+      "pass": true
+    },
+    {
+      "test": "funding.minimum_cash_floor rejects -1",
+      "pass": true
+    },
+    {
+      "test": "funding.reserve_existing_debt_like_claims rejects False",
+      "pass": true
+    },
+    {
+      "test": "funding.mode rejects 'borrow'",
+      "pass": true
+    },
+    {
+      "test": "macro.debt_weight rejects 0.1",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects 0",
+      "pass": true
+    },
+    {
+      "test": "dates.day_count_denominator rejects -1",
+      "pass": true
+    },
+    {
+      "test": "dates.current_date rejects 'invalid'",
+      "pass": true
+    },
+    {
+      "test": "dates.current_date rejects '2030-01-01'",
+      "pass": true
+    },
+    {
+      "test": "Override validated {'earnout_probability': -1}",
+      "pass": true
+    },
+    {
+      "test": "Override validated {'volatility': nan}",
+      "pass": true
+    },
+    {
+      "test": "Override validated {'volatility': 0}",
+      "pass": true
+    },
+    {
+      "test": "Override validated {'wacc_shift': inf}",
+      "pass": true
+    },
+    {
+      "test": "Override validated {'wacc_shift': -1}",
+      "pass": true
+    },
+    {
+      "test": "Override validated {'borrowing': 1000}",
+      "pass": true
+    },
+    {
+      "test": "Unknown financing key cannot be silently ignored",
+      "pass": true
+    },
+    {
+      "test": "Finite extreme inputs cannot release non-finite outputs",
+      "pass": true
+    },
+    {
+      "test": "All output fields exactly preserved report_snapshot/bear",
+      "pass": true
+    },
+    {
+      "test": "All output fields exactly preserved report_snapshot/base",
+      "pass": true
+    },
+    {
+      "test": "All output fields exactly preserved report_snapshot/bull",
+      "pass": true
+    },
+    {
+      "test": "All output fields exactly preserved current/bear",
+      "pass": true
+    },
+    {
+      "test": "All output fields exactly preserved current/base",
+      "pass": true
+    },
+    {
+      "test": "All output fields exactly preserved current/bull",
+      "pass": true
+    },
+    {
+      "test": "All 55 valid sensitivities unchanged",
+      "pass": true
+    }
+  ]
+}

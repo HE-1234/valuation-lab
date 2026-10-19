@@ -1,0 +1,3992 @@
+{
+  "status": "pass",
+  "count": 761,
+  "finite_numeric_fields": 235,
+  "checks": [
+    {
+      "test": "Exact prior NaN-floor gap",
+      "pass": true,
+      "detail": "inputs.funding.minimum_cash_floor: finite real number required"
+    },
+    {
+      "test": "Exact prior negative probability",
+      "pass": true,
+      "detail": "scenarios.base.earnout_probability: outside supported domain"
+    },
+    {
+      "test": "Exact prior ignored debt",
+      "pass": true,
+      "detail": "unsupported_borrowing: funded debt and debt weight must be zero; debt issuance, repayment, interest and dilution are not modeled"
+    },
+    {
+      "test": "Nonfinite ('base_fy2026_revenue',) nan",
+      "pass": true,
+      "detail": "inputs.base_fy2026_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('base_fy2026_revenue',) inf",
+      "pass": true,
+      "detail": "inputs.base_fy2026_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('base_fy2026_revenue',) -inf",
+      "pass": true,
+      "detail": "inputs.base_fy2026_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('q1fy2027_actual_revenue',) nan",
+      "pass": true,
+      "detail": "inputs.q1fy2027_actual_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('q1fy2027_actual_revenue',) inf",
+      "pass": true,
+      "detail": "inputs.q1fy2027_actual_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('q1fy2027_actual_revenue',) -inf",
+      "pass": true,
+      "detail": "inputs.q1fy2027_actual_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_revenue',) nan",
+      "pass": true,
+      "detail": "inputs.ttm_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_revenue',) inf",
+      "pass": true,
+      "detail": "inputs.ttm_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_revenue',) -inf",
+      "pass": true,
+      "detail": "inputs.ttm_revenue: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_gaap_ebit',) nan",
+      "pass": true,
+      "detail": "inputs.ttm_gaap_ebit: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_gaap_ebit',) inf",
+      "pass": true,
+      "detail": "inputs.ttm_gaap_ebit: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_gaap_ebit',) -inf",
+      "pass": true,
+      "detail": "inputs.ttm_gaap_ebit: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_sbc',) nan",
+      "pass": true,
+      "detail": "inputs.ttm_sbc: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_sbc',) inf",
+      "pass": true,
+      "detail": "inputs.ttm_sbc: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ttm_sbc',) -inf",
+      "pass": true,
+      "detail": "inputs.ttm_sbc: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('cash_and_investments',) nan",
+      "pass": true,
+      "detail": "inputs.cash_and_investments: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('cash_and_investments',) inf",
+      "pass": true,
+      "detail": "inputs.cash_and_investments: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('cash_and_investments',) -inf",
+      "pass": true,
+      "detail": "inputs.cash_and_investments: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('technology_license_debt',) nan",
+      "pass": true,
+      "detail": "inputs.technology_license_debt: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('technology_license_debt',) inf",
+      "pass": true,
+      "detail": "inputs.technology_license_debt: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('technology_license_debt',) -inf",
+      "pass": true,
+      "detail": "inputs.technology_license_debt: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('cash_contingent_consideration',) nan",
+      "pass": true,
+      "detail": "inputs.cash_contingent_consideration: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('cash_contingent_consideration',) inf",
+      "pass": true,
+      "detail": "inputs.cash_contingent_consideration: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('cash_contingent_consideration',) -inf",
+      "pass": true,
+      "detail": "inputs.cash_contingent_consideration: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ordinary_shares',) nan",
+      "pass": true,
+      "detail": "inputs.ordinary_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ordinary_shares',) inf",
+      "pass": true,
+      "detail": "inputs.ordinary_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('ordinary_shares',) -inf",
+      "pass": true,
+      "detail": "inputs.ordinary_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('rsus',) nan",
+      "pass": true,
+      "detail": "inputs.rsus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('rsus',) inf",
+      "pass": true,
+      "detail": "inputs.rsus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('rsus',) -inf",
+      "pass": true,
+      "detail": "inputs.rsus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('psus',) nan",
+      "pass": true,
+      "detail": "inputs.psus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('psus',) inf",
+      "pass": true,
+      "detail": "inputs.psus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('psus',) -inf",
+      "pass": true,
+      "detail": "inputs.psus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('special_ceo_psus',) nan",
+      "pass": true,
+      "detail": "inputs.special_ceo_psus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('special_ceo_psus',) inf",
+      "pass": true,
+      "detail": "inputs.special_ceo_psus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('special_ceo_psus',) -inf",
+      "pass": true,
+      "detail": "inputs.special_ceo_psus: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('options',) nan",
+      "pass": true,
+      "detail": "inputs.options: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('options',) inf",
+      "pass": true,
+      "detail": "inputs.options: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('options',) -inf",
+      "pass": true,
+      "detail": "inputs.options: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_strike',) nan",
+      "pass": true,
+      "detail": "inputs.option_strike: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_strike',) inf",
+      "pass": true,
+      "detail": "inputs.option_strike: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_strike',) -inf",
+      "pass": true,
+      "detail": "inputs.option_strike: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_term',) nan",
+      "pass": true,
+      "detail": "inputs.option_term: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_term',) inf",
+      "pass": true,
+      "detail": "inputs.option_term: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_term',) -inf",
+      "pass": true,
+      "detail": "inputs.option_term: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_volatility',) nan",
+      "pass": true,
+      "detail": "inputs.option_volatility: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_volatility',) inf",
+      "pass": true,
+      "detail": "inputs.option_volatility: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('option_volatility',) -inf",
+      "pass": true,
+      "detail": "inputs.option_volatility: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('exchangeable_subsidiary_restricted_shares',) nan",
+      "pass": true,
+      "detail": "inputs.exchangeable_subsidiary_restricted_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('exchangeable_subsidiary_restricted_shares',) inf",
+      "pass": true,
+      "detail": "inputs.exchangeable_subsidiary_restricted_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('exchangeable_subsidiary_restricted_shares',) -inf",
+      "pass": true,
+      "detail": "inputs.exchangeable_subsidiary_restricted_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('earnout_max_shares',) nan",
+      "pass": true,
+      "detail": "inputs.earnout_max_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('earnout_max_shares',) inf",
+      "pass": true,
+      "detail": "inputs.earnout_max_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('earnout_max_shares',) -inf",
+      "pass": true,
+      "detail": "inputs.earnout_max_shares: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('earnout_accounting_equity_fair_value',) nan",
+      "pass": true,
+      "detail": "inputs.earnout_accounting_equity_fair_value: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('earnout_accounting_equity_fair_value',) inf",
+      "pass": true,
+      "detail": "inputs.earnout_accounting_equity_fair_value: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('earnout_accounting_equity_fair_value',) -inf",
+      "pass": true,
+      "detail": "inputs.earnout_accounting_equity_fair_value: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('acquisition_reference_stock_price',) nan",
+      "pass": true,
+      "detail": "inputs.acquisition_reference_stock_price: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('acquisition_reference_stock_price',) inf",
+      "pass": true,
+      "detail": "inputs.acquisition_reference_stock_price: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('acquisition_reference_stock_price',) -inf",
+      "pass": true,
+      "detail": "inputs.acquisition_reference_stock_price: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('interest_bearing_debt',) nan",
+      "pass": true,
+      "detail": "inputs.interest_bearing_debt: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('interest_bearing_debt',) inf",
+      "pass": true,
+      "detail": "inputs.interest_bearing_debt: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('interest_bearing_debt',) -inf",
+      "pass": true,
+      "detail": "inputs.interest_bearing_debt: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'operating_cash_after_ordinary_working_capital') nan",
+      "pass": true,
+      "detail": "inputs.october_bridge.operating_cash_after_ordinary_working_capital: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'operating_cash_after_ordinary_working_capital') inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.operating_cash_after_ordinary_working_capital: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'operating_cash_after_ordinary_working_capital') -inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.operating_cash_after_ordinary_working_capital: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'capital_expenditures') nan",
+      "pass": true,
+      "detail": "inputs.october_bridge.capital_expenditures: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'capital_expenditures') inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.capital_expenditures: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'capital_expenditures') -inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.capital_expenditures: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'capacity_deposits_paid') nan",
+      "pass": true,
+      "detail": "inputs.october_bridge.capacity_deposits_paid: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'capacity_deposits_paid') inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.capacity_deposits_paid: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'capacity_deposits_paid') -inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.capacity_deposits_paid: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'rsu_withholding_cash') nan",
+      "pass": true,
+      "detail": "inputs.october_bridge.rsu_withholding_cash: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'rsu_withholding_cash') inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.rsu_withholding_cash: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'rsu_withholding_cash') -inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.rsu_withholding_cash: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'net_rsu_shares_issued') nan",
+      "pass": true,
+      "detail": "inputs.october_bridge.net_rsu_shares_issued: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'net_rsu_shares_issued') inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.net_rsu_shares_issued: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'net_rsu_shares_issued') -inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.net_rsu_shares_issued: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'rsu_settlement_price') nan",
+      "pass": true,
+      "detail": "inputs.october_bridge.rsu_settlement_price: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'rsu_settlement_price') inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.rsu_settlement_price: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'rsu_settlement_price') -inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.rsu_settlement_price: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'restricted_share_vesting_probability') nan",
+      "pass": true,
+      "detail": "inputs.october_bridge.restricted_share_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'restricted_share_vesting_probability') inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.restricted_share_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('october_bridge', 'restricted_share_vesting_probability') -inf",
+      "pass": true,
+      "detail": "inputs.october_bridge.restricted_share_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'rf_report') nan",
+      "pass": true,
+      "detail": "inputs.macro.rf_report: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'rf_report') inf",
+      "pass": true,
+      "detail": "inputs.macro.rf_report: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'rf_report') -inf",
+      "pass": true,
+      "detail": "inputs.macro.rf_report: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'erp_report') nan",
+      "pass": true,
+      "detail": "inputs.macro.erp_report: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'erp_report') inf",
+      "pass": true,
+      "detail": "inputs.macro.erp_report: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'erp_report') -inf",
+      "pass": true,
+      "detail": "inputs.macro.erp_report: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'rf_current') nan",
+      "pass": true,
+      "detail": "inputs.macro.rf_current: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'rf_current') inf",
+      "pass": true,
+      "detail": "inputs.macro.rf_current: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'rf_current') -inf",
+      "pass": true,
+      "detail": "inputs.macro.rf_current: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'erp_current') nan",
+      "pass": true,
+      "detail": "inputs.macro.erp_current: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'erp_current') inf",
+      "pass": true,
+      "detail": "inputs.macro.erp_current: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'erp_current') -inf",
+      "pass": true,
+      "detail": "inputs.macro.erp_current: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'beta_start') nan",
+      "pass": true,
+      "detail": "inputs.macro.beta_start: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'beta_start') inf",
+      "pass": true,
+      "detail": "inputs.macro.beta_start: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'beta_start') -inf",
+      "pass": true,
+      "detail": "inputs.macro.beta_start: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'beta_terminal') nan",
+      "pass": true,
+      "detail": "inputs.macro.beta_terminal: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'beta_terminal') inf",
+      "pass": true,
+      "detail": "inputs.macro.beta_terminal: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'beta_terminal') -inf",
+      "pass": true,
+      "detail": "inputs.macro.beta_terminal: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'debt_weight') nan",
+      "pass": true,
+      "detail": "inputs.macro.debt_weight: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'debt_weight') inf",
+      "pass": true,
+      "detail": "inputs.macro.debt_weight: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('macro', 'debt_weight') -inf",
+      "pass": true,
+      "detail": "inputs.macro.debt_weight: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'revenue', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'pre_new_grant_operating_margin', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'new_grant_sbc_margin', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'sales_to_capital', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'tax_rate', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'rsu_vesting_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'rsu_vesting_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'rsu_vesting_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'psu_vesting_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'psu_vesting_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'psu_vesting_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'earnout_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'earnout_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'earnout_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'terminal_growth') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'terminal_growth') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'terminal_growth') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'terminal_roic') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'terminal_roic') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'terminal_roic') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_outflow') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_outflow') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_outflow') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bear', 'capacity_deposit_recovery', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bear.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'revenue', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'pre_new_grant_operating_margin', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'new_grant_sbc_margin', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'sales_to_capital', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'tax_rate', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'rsu_vesting_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'rsu_vesting_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'rsu_vesting_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'psu_vesting_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'psu_vesting_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'psu_vesting_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'earnout_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'earnout_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'earnout_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'terminal_growth') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'terminal_growth') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'terminal_growth') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'terminal_roic') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'terminal_roic') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'terminal_roic') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_outflow') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_outflow') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_outflow') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'base', 'capacity_deposit_recovery', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.base.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'revenue', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.revenue[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'pre_new_grant_operating_margin', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.pre_new_grant_operating_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'new_grant_sbc_margin', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.new_grant_sbc_margin[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'sales_to_capital', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.sales_to_capital[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'tax_rate', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.tax_rate[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'rsu_vesting_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'rsu_vesting_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'rsu_vesting_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.rsu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'psu_vesting_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'psu_vesting_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'psu_vesting_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.psu_vesting_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'earnout_probability') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'earnout_probability') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'earnout_probability') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.earnout_probability: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'terminal_growth') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'terminal_growth') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'terminal_growth') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.terminal_growth: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'terminal_roic') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'terminal_roic') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'terminal_roic') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.terminal_roic: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_outflow') nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_outflow') inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_outflow') -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_outflow: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 0) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 0) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 0) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[0]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 1) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 1) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 1) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[1]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 2) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 2) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 2) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[2]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 3) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 3) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 3) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[3]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 4) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 4) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 4) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[4]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 5) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 5) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 5) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[5]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 6) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 6) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 6) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[6]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 7) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 7) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 7) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[7]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 8) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 8) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 8) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[8]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 9) nan",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 9) inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('scenarios', 'bull', 'capacity_deposit_recovery', 9) -inf",
+      "pass": true,
+      "detail": "inputs.scenarios.bull.capacity_deposit_recovery[9]: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('dates', 'day_count_denominator') nan",
+      "pass": true,
+      "detail": "inputs.dates.day_count_denominator: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('dates', 'day_count_denominator') inf",
+      "pass": true,
+      "detail": "inputs.dates.day_count_denominator: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('dates', 'day_count_denominator') -inf",
+      "pass": true,
+      "detail": "inputs.dates.day_count_denominator: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('funding', 'minimum_cash_floor') nan",
+      "pass": true,
+      "detail": "inputs.funding.minimum_cash_floor: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('funding', 'minimum_cash_floor') inf",
+      "pass": true,
+      "detail": "inputs.funding.minimum_cash_floor: finite real number required"
+    },
+    {
+      "test": "Nonfinite ('funding', 'minimum_cash_floor') -inf",
+      "pass": true,
+      "detail": "inputs.funding.minimum_cash_floor: finite real number required"
+    },
+    {
+      "test": "Probability boundary rsu_vesting_probability-1e-12",
+      "pass": true,
+      "detail": "scenarios.base.rsu_vesting_probability: outside supported domain"
+    },
+    {
+      "test": "Probability boundary rsu_vesting_probability1.000000000001",
+      "pass": true,
+      "detail": "scenarios.base.rsu_vesting_probability: outside supported domain"
+    },
+    {
+      "test": "Valid probability endpoint rsu_vesting_probability0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Valid probability endpoint rsu_vesting_probability1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Probability boundary psu_vesting_probability-1e-12",
+      "pass": true,
+      "detail": "scenarios.base.psu_vesting_probability: outside supported domain"
+    },
+    {
+      "test": "Probability boundary psu_vesting_probability1.000000000001",
+      "pass": true,
+      "detail": "scenarios.base.psu_vesting_probability: outside supported domain"
+    },
+    {
+      "test": "Valid probability endpoint psu_vesting_probability0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Valid probability endpoint psu_vesting_probability1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Probability boundary earnout_probability-1e-12",
+      "pass": true,
+      "detail": "scenarios.base.earnout_probability: outside supported domain"
+    },
+    {
+      "test": "Probability boundary earnout_probability1.000000000001",
+      "pass": true,
+      "detail": "scenarios.base.earnout_probability: outside supported domain"
+    },
+    {
+      "test": "Valid probability endpoint earnout_probability0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Valid probability endpoint earnout_probability1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Domain ('dates', 'day_count_denominator') 0",
+      "pass": true,
+      "detail": "day_count_denominator: outside supported domain"
+    },
+    {
+      "test": "Domain ('dates', 'day_count_denominator') -365",
+      "pass": true,
+      "detail": "day_count_denominator: outside supported domain"
+    },
+    {
+      "test": "Domain ('option_term',) 0.2135523613963039",
+      "pass": true,
+      "detail": "Option term must remain positive; expired-option settlement is not modeled"
+    },
+    {
+      "test": "Domain ('option_volatility',) 0",
+      "pass": true,
+      "detail": "option_volatility: outside supported domain"
+    },
+    {
+      "test": "Domain ('option_strike',) 0",
+      "pass": true,
+      "detail": "option_strike: outside supported domain"
+    },
+    {
+      "test": "Domain ('ordinary_shares',) 0",
+      "pass": true,
+      "detail": "ordinary_shares: outside supported domain"
+    },
+    {
+      "test": "Domain ('rsus',) -1",
+      "pass": true,
+      "detail": "rsus: outside supported domain"
+    },
+    {
+      "test": "Domain ('macro', 'debt_weight') 0.01",
+      "pass": true,
+      "detail": "unsupported_borrowing: funded debt and debt weight must be zero; debt issuance, repayment, interest and dilution are not modeled"
+    },
+    {
+      "test": "Domain ('scenarios', 'base', 'terminal_roic') 0",
+      "pass": true,
+      "detail": "scenarios.base.terminal_roic: outside supported domain"
+    },
+    {
+      "test": "Domain ('scenarios', 'base', 'terminal_growth') 0.15",
+      "pass": true,
+      "detail": "scenarios.base.Terminal WACC must exceed growth"
+    },
+    {
+      "test": "Domain ('scenarios', 'base', 'tax_rate', 0) 1.0001",
+      "pass": true,
+      "detail": "scenarios.base.tax_rate: outside supported domain"
+    },
+    {
+      "test": "Domain ('scenarios', 'base', 'tax_rate', 0) -0.001",
+      "pass": true,
+      "detail": "scenarios.base.tax_rate: outside supported domain"
+    },
+    {
+      "test": "Domain ('scenarios', 'base', 'revenue', 0) 479.003",
+      "pass": true,
+      "detail": "scenarios.base.FY2027 revenue must exceed actual Q1"
+    },
+    {
+      "test": "Domain ('scenarios', 'base', 'sales_to_capital', 0) 0",
+      "pass": true,
+      "detail": "scenarios.base.sales_to_capital: outside supported domain"
+    },
+    {
+      "test": "Domain ('funding', 'reserve_existing_debt_like_claims') False",
+      "pass": true,
+      "detail": "Unsupported funding policy: mandatory claim reserve and reject-if-funding-required mode"
+    },
+    {
+      "test": "Domain ('funding', 'minimum_cash_floor') -1",
+      "pass": true,
+      "detail": "funding.minimum_cash_floor: outside supported domain"
+    },
+    {
+      "test": "Override {'earnout_probability': -1}",
+      "pass": true,
+      "detail": "scenarios.base.earnout_probability: outside supported domain"
+    },
+    {
+      "test": "Override {'wacc_shift': nan}",
+      "pass": true,
+      "detail": "inputs.scenarios.base.wacc_shift: finite real number required"
+    },
+    {
+      "test": "Override {'volatility': inf}",
+      "pass": true,
+      "detail": "inputs.scenarios.base.volatility: finite real number required"
+    },
+    {
+      "test": "Override {'borrowing': 1000}",
+      "pass": true,
+      "detail": "inputs.scenarios.base: unknown keys ['borrowing']; missing keys []"
+    },
+    {
+      "test": "Unknown top-level key",
+      "pass": true,
+      "detail": "inputs: unknown keys ['additional_debt']; missing keys []"
+    },
+    {
+      "test": "Extreme finite overflow",
+      "pass": true,
+      "detail": "result.liquidity_tests[9].cash: non-finite derived output; no valuation released"
+    },
+    {
+      "test": "capital gap",
+      "pass": true,
+      "detail": 119.4057647702856
+    },
+    {
+      "test": "cash floor gap",
+      "pass": true,
+      "detail": 262.63699999999994
+    },
+    {
+      "test": "later cash gap",
+      "pass": true,
+      "detail": 8047.031838045194
+    },
+    {
+      "test": "deposit gap",
+      "pass": true,
+      "detail": 60.236999999999966
+    },
+    {
+      "test": "Exact full-object regression report_snapshot bear",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Exact full-object regression report_snapshot base",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Exact full-object regression report_snapshot bull",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Exact full-object regression current bear",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Exact full-object regression current base",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Exact full-object regression current bull",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "55 sensitivity objects unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Fresh independent input formula report_snapshotbear",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Fresh independent input formula report_snapshotbase",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Fresh independent input formula report_snapshotbull",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Fresh independent input formula currentbear",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Fresh independent input formula currentbase",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Fresh independent input formula currentbull",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "v1/v2 frozen hashes preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "test": "Review source preservation",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "candidate_hashes": {
+    "crdo-20230729.htm": "493d9929d6d71f3dbfd3b2a6fc24d58de3c6c76739b51c9f30436f5e6882d134",
+    "exhibit-sources.json": "f93944c46dc2a6a3c5cf36d9b3b78e2f267b7d7424c77f04e23ff046ea7e714c",
+    "crdo-20240127.txt": "eb1a55eff191d7f60d1393e83c09d5f2a03b4f28c33e18f6863edd643907c7e7",
+    "crdo-20261016.txt": "6814b7a29aa9f3dd32af49e5ff09d9590b4ea80680e7b9233f34954d146dfc9f",
+    "crdo-20260413.htm": "d1876c50130d3207158523505e390a0f21643b387902de34370c7c03fad6a666",
+    "crdo-20220601.txt": "22e167fc0c38b2b26abb8d6a208eb4d09655834c500d70da3e327181e5d7fc72",
+    "exhibit-2024-12-02-credoq22025ex-991.htm": "dd4dcc8dd625b47f240f91be399a1e75be49582c39fa74f69bd4a6982ac8c9e1",
+    "exhibit-2023-05-31-credoq42023ex-991.htm": "6d015c2afdc0c1bae99550a460e88d10b6c72cfad68ab120f7ff63877b591453",
+    "exhibit-2023-08-24-credoq12024ex-991.htm": "63b48717902f647182e705d54c1c64682c9ddd83f3a0b9fd9c037b679d82b28f",
+    "build_evidence.py": "12ca8bc0372bc7ca03f47518cc17976d7fac051dda41decc138ce9dc6db3beac",
+    "crdo-20260502.htm": "1853a13402ec9356d338f718628655684e8503c620d95ffe87c50733ceca210f",
+    "crdo-20220730.htm": "b5e57daf400b686139d2bbe84a9b73300346e401b2151203a6e860c779441b87",
+    "exhibit-2023-05-31-credoq42023ex-991.txt": "50e883241b6b2c768690c15e4bc3d15117488ddccc51b363437260f11e55820b",
+    "crdo-20220730.txt": "82dfe9ea67652778c1ffdcea8583ffaf36b26bc109744a975ac30df9597eb2fe",
+    "crdo-20260502.txt": "29e43a410f074b1eca4b640d5998c44dc6f8f785af0bd1c30e25b1bc893937bb",
+    "history-v1.csv": "c4bfffa1d34e7821698b3b533f7aefc25fae89ea2ce138e92a9df05938dfe893",
+    "release-sources.json": "2748265587f01bed5761fc7452c2fb1937667b1759224d063c9f995770dea5b9",
+    "crdo-20221029.htm": "905d27d4da2290e58942d26ddd4c3bad4257e6b44be9b95c4ae505a83550230b",
+    "guidance-revisions-v1.json": "667ae01a1995184a994ec5a55f3e4e4dedc42ae5309a12449da0fcbeb08021aa",
+    "exhibit-2026-09-01-credoq12027ex-991.htm": "168b673471a3c2b9a60b574ccd8d7ffaf3d7854b2f7fad2c7306137a11b33b07",
+    "README.md": "a73ed816c94d96c24bc46a99e7460079960d5e3a96b2596c9e3886e40bd066e1",
+    "forecast-v1.csv": "083401d7c92832c0a02e98d03adabd1c27f04a2a00f70b16f526960b227ea966",
+    "crdo-20250201.htm": "0cb9150fcddddf5eca3a846abb1e115a8665e2eb8363d8b64073aecad6f92b50",
+    "crdo-20251101.txt": "a171a72269738e0cfa8dfa6221cba9f7fa718c1c395fad084a0c999d3f4fbbe4",
+    "get_releases.py": "feb2558474da4fb93d068a858c528d9b37c2b0b90c409450646fba365331a9fd",
+    "exhibit-2024-04-02-a8-kapril2024ex991.txt": "15c5296cb819c526916d97b6c0fbd5b28e67efe34cbe422576cbd46a7461c0de",
+    "credotechnologygroups-1.htm": "1ad89798541db2597d78c039673cbaffe9d86fee31efd18bc240e23d2c99544c",
+    "exhibit-2023-03-01-credoq32023ex-991.txt": "dfcc4556d7be81b8df8c4dc69e81b2a54ca866e26f3ccc1add335639ab6ce727",
+    "exhibit-2026-02-09-feb20268-kex991.htm": "2e9199ea69a169463d80a2105267822f95c5dfc2b5e96597f9818a39e6b277e4",
+    "crdo-20251101.htm": "848c832f788e50e6c6d328c54c8a29de86569081764d16c331804487ffb34c60",
+    "crdo-20231028.txt": "0e6ae621a36a91e53117827bbbc33cad6a990807bd955daec5d47d33e91dd73c",
+    "crdo-20230729.txt": "3b81ef07a5ae21484f86339dd3eb1bf7e021b69578d7f3690e0feae82c4941ef",
+    "exhibit-2022-03-09-credoq32022ex-991.txt": "c0cac9a61840e92e1ffd5d8e5b43906855286263559701a3e65bd2509222a0f1",
+    "crdo-20241102.htm": "1422f458b7b3a7422912ca636df6cb2668625499a3085b911b5c582efc15555b",
+    "exhibit-2022-08-31-credoq12023ex-991.htm": "753ea79289e5ed56e283f441a48793857bf72bfbbb181b76a3dd520d7cbf52d0",
+    "history-field-provenance-v1.json": "d7e814cc134773b0b9c78c30850cea2420dcfadd43cefee458d1b0661bd92a40",
+    "exhibit-2024-04-02-a8-kapril2024ex991.htm": "c52d00dcbbeb4239f93fb4ae39aa38fd8b188b4827ee1b6b8bcc3321f21a444a",
+    "crdo-20230128.htm": "70f0a5432b098fab61c61d6d3c32e0b85a5edc55c2179b14a8aca47826785874",
+    "exhibit-2024-02-27-credoq32024ex-991.htm": "85ff71d09af6623bc7f952a3535dff150a834855d3657d78964c33c0b2d48161",
+    "exhibit-2024-01-09-dp205059_ex9901.txt": "158160f999cd1b03133c16ef9e1295c592179eaa45a319afd58ca8193134ae22",
+    "exhibit-2023-12-06-exhibit991-8xk.htm": "2cbff989ea1cc4e450c82f717045c540124967076d870e2142ff5ce1a10ce804",
+    "build_history.py": "b5512d3c466058175f9511825ede330546776c1f6c13853cf426b6f5730af827",
+    "crdo-20250201.txt": "241796b0eabeca41590f1f848f2f996e115f35b158606e61bc52b7bb7a0bc698",
+    "crdo-20230214.txt": "ba6b361bbb0fd7d12af8ab939ee6b17494d4ac6839fb9d0aa1ad838b7330392b",
+    "companyfacts.json": "42718952361414c81add8e89adf6803dd1fb6d1f511cc66b62b3e62484045323",
+    "crdo-20250503.htm": "a4430544bbfa980323beb3d0ea1c566a8ba1d0018a5db39c8d558371bdf6b415",
+    "crdo-20250802.htm": "f72a266da644ff50d7c17a748872617cea2efaaae38a5810ebd2ea71eccf0275",
+    "crdo-20220131.htm": "215abf145aef0b71d0f0868097ccabf2ede3a944617910eb97092f8d6e02798c",
+    "exhibit-2025-03-04-credoq32025ex-991.htm": "4b3036abab60d92a8736677d633eb45677c0b05d4f2a0893cef08802d9e30415",
+    "source-ledger-v1.json": "af46d388bee0ea27ee1090d013f8751ba4beb487fc1f239e1382848d099b62f3",
+    "exhibit-2025-09-03-credoq12026ex-991.htm": "bcdadbdaf4778fe01d1fde82f84fc79c1cc8bf85cf557b6c6d1dc2085bb1637a",
+    "exhibit-2026-04-13-april20268-kex991.txt": "31fa733e41d4484bef1966a247e778f3746753416e5de23575d0de132b8c7068",
+    "exhibit-2025-06-02-credoq42025ex-991.htm": "bbfc8182fd2825588fa697e235c2bc675c36a6d6a48a2f0b4439736c33daea2e",
+    "exhibit-2023-08-24-credoq12024ex-991.txt": "c739e8efc0d8f93959b406bc3fd21f8c3299aa773cb82f475f6689a50a639e5a",
+    "exhibit-2026-04-13-april20268-kex991.htm": "558ad7c5b34aca40d10621ec7d994f62fdc0150d07ce62abdd8490d38420adb9",
+    "crdo-20220430.txt": "7cfd40c8b73e18e8430d4f2512e0992d189f5d69c9814fe10d91225381ba5bc1",
+    "crdo-20240803.txt": "2c83688ae4a1d31783f1b4891ca24dc322379b9b0682de85c1ce0ede6df75714",
+    "crdo-20260801.txt": "30c8169a7e76c26fbd83c9518db0ca3652e7a326523c0f05e01d80aedb239056",
+    "crdo-20260413.txt": "ecb1a0c9ad7b8dc68beacd749ee49fd8e5c211eccd7bdead6a4c91ce23cdad2c",
+    "exhibit-2025-12-01-credoq22026ex-991.htm": "4c12a5a0e25d38eeee3c3edfcea5577a23d31dab786ef37ee3aebd58b1e7a97e",
+    "crdo-20230429.htm": "885be5ec823eff33e5c0bcb6203f1516f6d36ea9e1e07a04788c4bdb091990a4",
+    "crdo-20240803.htm": "14d1399ded7d23f825a17353b591faec637ad0f0434d057a6f976c50f6b3d15e",
+    "extract.py": "c96f529e412fefa68240f81f6e07f87c9160954e92d1ca1cde518bd97355fbd0",
+    "crdo-20260801.htm": "37d660f3a6d23e0436a356f8df02a65ee13bdf621d9f031b15cdb05943bed68e",
+    "guidance-vs-actual-v1.json": "1e4a5d633ef1fd6fea6234e1b2c04dce6bc47c314df61c9abdcda83c4cd05fac",
+    "exhibit-2025-12-01-credoq22026ex-991.txt": "b085dd6ec6096cb62dfd9c64f5581c2aaea0c127f0d9d57eea50c39684f41693",
+    "history-v1.json": "8248fe489f1cbeba23c96a29020e7605fbffd22b957e1be7c2e75fedb0d9a888",
+    "crdo-20260528.txt": "b5e70032d82704acf852857b279b46d7730658dd81f0aceba1a41744fa2799d0",
+    "observations-v1.json": "160949bc46468674aed199805ff6c31d1dd854a40042cb098bd0cf4a25ea19e1",
+    "crdo-20231028.htm": "5d5d53cbb8640a979837d9c895fa98b6f73256eed43032cc4dcaf56fd1646af8",
+    "exhibit-2025-09-03-credoq12026ex-991.txt": "a0c7493e9e364165e1c485447f0fabdaeff9ace66857c8979376f2da1b3649d8",
+    "exhibit-2025-06-02-credoq42025ex-991.txt": "19c8b0dccede9b2dd253e6e982008839adcd9873e5b97f91fcdd83f5851a60d1",
+    "credotechnologygroups-1.txt": "b7cc2b210b224480641b586721d61d2d5e67be00c9ecb2050ff975c3fa467485",
+    "crdo-20230429.txt": "a59fcbbff7d4149789f47a2a9e8674d40d386acc3395da3c8e0a63fb2d46b4f8",
+    "exhibit-2026-03-02-credoq32026ex-9911.txt": "50c767021b0e6410d2deb8a6f7f18266e1823b2d3dd2bd93d0995bd0ee9c6f81",
+    "exhibit-2026-02-09-feb20268-kex991.txt": "337ca51115f23c390b86bb6fa1f2f894c345133e96a965ff83eb0ae0275b6c92",
+    "exhibit-2024-02-27-credoq32024ex-991.txt": "daffe9b8bb149184249153d1d915a8ea0dfbc7ff6a01f83e324c03709a1394bc",
+    "sensitivity-v1.json": "f65a84ce01ec0eee69bdbcc7a4cc4691051de36d924eb7a221998dbae8b936db",
+    "crdo-20250802.txt": "29ddfdb26502fc25f51a3e6e28ae520b548e1e50f92790b781f80237eb483725",
+    "exhibit-2025-03-04-credoq32025ex-991.txt": "856792e80e0ab65264ac2a1cecafdfc884b952f720f4e49885c491e20a5f89ba",
+    "exhibit-2023-11-29-credoq22024ex-991.htm": "e1ce92ee42616f18d8f8bf4399da9bce363f53caf2f22e10d76bf9d20e7911de",
+    "crdo-20260131.txt": "1808af5c02b6120afe5bcb7fe77920ee07882a3b1558d627e4d18a73d6d05ba0",
+    "extend_sensitivities.py": "e6d698a6223b8c2a5e082dcfc151766f32eb704f7441c654d6676327065fe1bf",
+    "exhibit-2024-01-09-dp205059_ex9901.htm": "bc428ab5999528531ad30f1268d5f91a74d38e73c493d01c376b8cd3f02ff62f",
+    "exhibit-2024-09-04-credoq12025ex-991.txt": "46fcedd3e682c2f3d82866f9bf98fd63b33f63c324335902e52e97ea97684ad7",
+    "crdo-20220131.txt": "6685a649c790e51ae88b1193e58a16783a60ebe52e0656085a7c2e346b3ff143",
+    "crdo-20260528.htm": "7192546080ee5384b8dd57b6d7b5b5bd26bff515728f791d0f0bb1650d543e3a",
+    "crdo-20241102.txt": "9b145e638c7ce9a9318ac6186a3442bfe1fb1758623aa404b288893a33d6dd89",
+    "exhibit-2023-11-29-credoq22024ex-991.txt": "b30c98037bfd1d1599edfccc461154b1cda4b6d7bd4cbe5cb1481a5eee21b2a5",
+    "crdo-20250503.txt": "803f63eb2ca6a09831e43daf319d8302996aa8243e1892ba158d946ad81fc93d",
+    "replay_dcf.py": "25f40b1fdc91af38fdb59302a88f2c5c536d035c7506ef2c262ec82fdc2f2e16",
+    "build_guidance.py": "5ac9279c5f246d9e95a18985400801408cb43431f15711138bc924b23499c7c9",
+    "manifest-v1.json": "b3b3d9333510121816288eca2ef185a9a2c38501bc3b877b0f68ddefd26362de",
+    "dcf-output-v1.json": "8cd800b78e66223ed565e46318fed51728fc66cbd4f17c05a0c30b151e4c0372",
+    "exhibit-2022-11-30-credoq22023ex-991.txt": "7adbdc28e58adfc68a989f8b44c9a93be10861f6f5012e2fdeec0261ae3b80d6",
+    "independent_validate.py": "46aac71e5fba4be123a80eb6ebe7dbc650b38f2032b3c7d6beb21b24746db90a",
+    "earnings-release-extraction-v1.json": "b5ecad844301880a6d56d44293fd43c09d23da1254cb3b2a87a84784916c2d71",
+    "exhibit-2022-11-30-credoq22023ex-991.htm": "feb886636d2707a8a3f91d6c40d40be1fd89fe2f40ca916185e03589d77d814c",
+    "exhibit-2026-06-01-credoq42026ex-991.htm": "66e1d90abf71e15ee5517dbbd21f4840ceaa80d12e3f1686c2439ec09822e757",
+    "exhibit-2024-05-29-credoq42024ex-991.txt": "3d063154a7fec80ca815f4a0a856000d528e43698ac011225f3efb17a19a5561",
+    "crdo-20240127.htm": "bbba27fdde99c72964d29dfe7b027c5a7d70401dba4c495d7f84e5aead2710c9",
+    "crdo-20261016.htm": "b0592f3d4ff4160cde57c5da3d5cb85d8ae62a4b18144c68288c7a29a970be6d",
+    "exhibit-2024-09-04-credoq12025ex-991.htm": "efa9beeff0b315a05ea5bb8d0eefd367460dcbb9cdaf40bdd27e925fdafbdcfa",
+    "exhibit-2023-12-06-exhibit991-8xk.txt": "e48e36fbc92ec5d764856c5229e0b25e72fb44ab7a505388269d5fb91353af26",
+    "exhibit-2022-08-31-credoq12023ex-991.txt": "a577d2c7a52e2cf16f6ff76a39ea6750448a6e3921b9881ee670f7096eafb3dc",
+    "exhibit-2026-09-01-credoq12027ex-991.txt": "c48159b1982f6cdd952aa7749f41c915dc2c6ece4c53a67b7f827e0a435f5b7c",
+    "crdo-20220601.htm": "be8a41ec02d86af516a000087f45324bc4ff8443df2927b90c2378e99f3cb3c6",
+    "exhibit-2022-03-09-credoq32022ex-991.htm": "87c53d865152acc8f2815ab13f2cb314aa638e477a94b8990185bff8d666eba9",
+    "crdo-20220430.htm": "ba35be3cd7c6d2612248ae91d0619af596fd81ddae39f800de4cb4f3f8c44706",
+    "STUDY-v1.md": "d41ada052952490afbaf38816a584576c06971569e6c4e94d79d002fcb944db1",
+    "exhibit-2024-05-29-credoq42024ex-991.htm": "450ca91b1466e9f2735a3540fd06593c32bb827a83c47ab2df28eb799d157375",
+    "get_exhibits.py": "735252d6a7296bd1e702603881c0f5e8f5e2d9edf7fd76c62c4e135b8df53b89",
+    "dcf-inputs-v1.json": "f46e9a446d5d3b330105a4d4c1f05e5dbb602961432d44153ae397d7fa0aa7db",
+    "submissions.json": "a3d8f889c72667d738273363cceb99de22b88768a950441a60098cdfe5b1d6e5",
+    "crdo-20221029.txt": "f162e55c7a1dc0bab1d05b3bddc5a4bac88fff23ca3aadeaeaac6efbc7d10667",
+    "exhibit-2026-06-01-credoq42026ex-991.txt": "86a12144150fb76857a2931f863e8d8e2501c866cf358f278b82aa91cfbabd77",
+    "crdo-20260131.htm": "2bddaf4a0643053ad8ffdb9732e322d7ff8d47c91d6332f5fea9e834985c5b29",
+    "exhibit-2026-03-02-credoq32026ex-9911.htm": "2d9108684e745dd2a6436842f030444ab91ba7d7db29af5e8af2ed2984c0f628",
+    "exhibit-2024-12-02-credoq22025ex-991.txt": "3f732d5eb75b578d2d9d3acf5885706a988a862f2f485a7c00d6cd912209fffd",
+    "crdo-20230128.txt": "a042404fcfd6da2977dee25623f8ece9dc7f329e233ce878878bd0a12d7142a8",
+    "guidance-vs-actual-v1.csv": "b5ed3ae48d9eadb858aa235e38c562bf9c41e510a79f2948b504cc0c50294a90",
+    "exhibit-2023-03-01-credoq32023ex-991.htm": "a77a4d884ca36bce8fad80882d64cd99ba6617172381fa86e608e2d88d1ef038",
+    "crdo-20240427.htm": "52bcb3a3738e165c5109393b2037086506269e510ca0ef05a426dde4c0f89c10",
+    "crdo-20240427.txt": "4bfac70549c42b03466b01636e715a352ee9f252deeefc10da4be466ee5a10c8",
+    "crdo-20230214.htm": "40acb24b46fc11f8d56ce71dcefb4b7c0eb8b147411d3babf21c575eff1decc4",
+    "make_model.py": "e014b67c5333121f8a2a6ff62ca0c868f73d1c466f1169dd7693e929413c7837",
+    "independent-audit-v1.json": "218b7eec8239259b8b0a6c0b328488d8fe93b5eb5b6ad8a62075c559dd3d0112",
+    "v3/funding-gap-stress-v3.json": "ff20f6619b8d0cd8db779d98d5abc74feccf5f66294212550e0c12fe2c4cd891",
+    "v3/dcf-output-v3.json": "7656f1e6bb3f19201420451b62f6921d5e442ead02dee9c8ce4c63e93e67f4c8",
+    "v3/validation-tests-v3.json": "608058a9fd3a1b07d6d75fdcc761e843fdeac55e79bb7d62f85d72ab789c72e5",
+    "v3/README.md": "c1040d10f1579668618301da0777bd0fb6e21829081274e15a601bda35b7c819",
+    "v3/input-schema-template.json": "0d2b1007bc5cdbbdf4c4b4cfc7bb16bbed871588717bff68ecc94fb0906282ef",
+    "v3/build_sensitivities.py": "b76da8a6fa7119df357d792fd372aab5d02cf98e8635946d4639cf18d283fb33",
+    "v3/correction-tests-v3.json": "063f014dfae352e07f974ca5d31ce529715c1d8c672b4d052a0f384584812d3d",
+    "v3/validation.py": "1f51ecc0daaeafd507448378e244ad94ac27f5694d22c9172f71da8153d603b2",
+    "v3/forecast-v3.csv": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be",
+    "v3/test_corrections.py": "256481df9177c9105f651c1e51b2612b483dddcfec8a09052e9ad4b7d1accc85",
+    "v3/replay_dcf.py": "0b9d259143a18f2adfa04ce16a9ec9732b50cab4ec68b43e5a1ac1f30f5dfc02",
+    "v3/sensitivity-v3.json": "08a6aa1434a78440ffa2296a90fbaec8f528420863fcfd6b78422c61a377880a",
+    "v3/manifest-v3.json": "47ab78dc74be9d1abebe9f8a6a9eb1a898af075d2deb0ac243f5ac0ab32176a9",
+    "v3/dcf-inputs-v3.json": "f22cf0026271898f904b706aacb8ed3fcf2dfabb5a9e0b01de5bd479ad338e89",
+    "v3/test_validation.py": "17c6d62575fd398d504dec0e14757cc873a62bf64fb43e3738afed7139257dc0",
+    "v2/correct_evidence.py": "f0c8a262871ef3248f6b88d237c32f2f7baa3af86bdb600f558245387f6bd481",
+    "v2/funding-gap-stress-v2.json": "ff20f6619b8d0cd8db779d98d5abc74feccf5f66294212550e0c12fe2c4cd891",
+    "v2/annual-and-revisions-v2.json": "02ee033d41ab071d013149eac776321a69ed76b6ed14201ce06bd0d462ada23e",
+    "v2/sensitivity-v2.json": "08a6aa1434a78440ffa2296a90fbaec8f528420863fcfd6b78422c61a377880a",
+    "v2/manifest-v2.json": "70adf5ec8949c032f38214bbf39a40685d02fca35f151b30c1d04de5edb5c350",
+    "v2/README.md": "e9bbcde3aeffaf399313dd25f9afe581c27a8cf4f3c747e93186b6b9466a74f1",
+    "v2/definition-change-v2.json": "ee4590c71a25094edaf8b5caf672b8fdc08bf960cf87ba1eb88419d9a2ae5d4f",
+    "v2/update_study.py": "b7f2d6d26285db6f5cf9949bc19a3a264abe78818718489db21959d729666a33",
+    "v2/dcf-output-v2.json": "7656f1e6bb3f19201420451b62f6921d5e442ead02dee9c8ce4c63e93e67f4c8",
+    "v2/build_sensitivities.py": "39479d213565c49b6b36dc332beb845ca2c6de54cb58cf2e7412f5af67e37e64",
+    "v2/STUDY-v2.md": "bbb1c9927e3d294fbac8997ec3f56a28b37e4074c98e464ad3a2403a975c8c82",
+    "v2/CORRECTIONS-v2.md": "3cf6053676d96156b4e331fbe16a67654f5e2ee983efc7c28c48043c609c532c",
+    "v2/test_corrections.py": "fc34ba985ba01b60a744fa00f6ddb0c256ffbf66079d8e8df9388097c729dbc2",
+    "v2/forecast-v2.csv": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be",
+    "v2/correction-tests-v2.json": "063f014dfae352e07f974ca5d31ce529715c1d8c672b4d052a0f384584812d3d",
+    "v2/replay_dcf.py": "9e2e7858ebbb3475343b897b3e341869f517b9b636609e7e65c14ad0f67bbfb4",
+    "v2/source-ledger-v2.json": "270e403f30cab0e8fecb06c4d5f444c74e512b7b91fd14035154f907753f308e",
+    "v2/dcf-inputs-v2.json": "0d2b1007bc5cdbbdf4c4b4cfc7bb16bbed871588717bff68ecc94fb0906282ef",
+    "v2/guidance-comparisons-v2.json": "6d1a6cb9aef9c1e7df95c34a20943eced98c71264d43b0716b512fdd26e82bc3",
+    "v2/prepare_inputs.py": "532f890b3074335f8a7119758e2fe07d4a05daaa2b1641964bee7ffc5ba988e1",
+    "v2/guidance-comparisons-v2.csv": "ad27ebf18cc46888252600d447ba9934ff99d66aeb872b99e08c78d05c8dfe79",
+    "independent-audit-v1/funding-gap-stress.json": "f95cdfc2c6ab9d294897ddfe4f8f942f520a295430042478aa70533179b1bb0e",
+    "independent-audit-v1/REVIEW.md": "8df708c66a22ca0dbf92526938d03b20223b96d7eeb9bc9881ae712671a04cff",
+    "independent-audit-v1/recompute.py": "6947f949d7a142b255effe10b1f8c102363691bc066cd72c658f2cc7ec9e4e70",
+    "independent-audit-v1/review-status.json": "2cc542adf0cc2e3a9fe6cd0eb9056a8ae21b1a5b97bdeee8382cc3eab24bccd1",
+    "independent-audit-v1/recomputed-results.json": "f59789a303b795d2186c411d0c4b8a0beb3dd23337136f2cbac4177bb0546a8b",
+    "independent-audit-v2/recheck-results.json": "b4c75170acbce3ad15ed385e3c0b32ae262faaabc75217bc8f26049f5ff87d0f",
+    "independent-audit-v2/REVIEW.md": "5e8677d7838248ff0841e73e5b231a443324e724637b471950524539f8122d80",
+    "independent-audit-v2/recheck.py": "b2548c43bcdb3272d14036f5147a038afc151f2e6e601e676beae8bbb8882147",
+    "v2/sources/0001628280-22-016593-crdo-20220430.htm": "ba35be3cd7c6d2612248ae91d0619af596fd81ddae39f800de4cb4f3f8c44706",
+    "independent-audit-v1/guidance/FINDINGS.md": "1bea36d4ddadaab5670a34228149349c13c891f8f632d4a1ae0097b818c522ae",
+    "independent-audit-v1/guidance/verified-comparisons.csv": "662aae4c49e7f2b2c43b4429c99143d8957c36cdefe1ba9db562e5a4de55be2e",
+    "independent-audit-v1/guidance/verify_guidance.py": "4ccf02a9210cd27600e87e25309e9fc598b11b8b5876ae9b43d04e7681a4aa98",
+    "independent-audit-v1/guidance/verification.json": "3775f76967332484c295a468a5be9bc740ac5645f74832607c55f6de8cd57faf",
+    "independent-audit-v1/guidance/checks.json": "4f9c4e783e4f2dcd4389d93e7631b69d84c3809031b406213105d014e1650fcf",
+    "independent-audit-v1/guidance/annual-and-revisions.json": "02ee033d41ab071d013149eac776321a69ed76b6ed14201ce06bd0d462ada23e"
+  }
+}

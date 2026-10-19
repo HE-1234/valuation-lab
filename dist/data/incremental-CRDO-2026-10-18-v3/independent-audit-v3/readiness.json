@@ -1,0 +1,21 @@
+{
+  "status": "ready_for_adapter_implementation",
+  "independent_tests": 761,
+  "research_or_model_blockers_remaining": [],
+  "adapter_not_yet_reviewed": true,
+  "deployment_not_approved_by_this_review": true,
+  "current_conditional_values": {
+    "bear": 39.031924964673145,
+    "base": 92.12494425696677,
+    "bull": 169.41092137108117
+  },
+  "integration_gates": [
+    "guarded entry point/schema validation",
+    "clear stale/null results on invalid or unsupported status",
+    "bounded FY2027-36 zero-borrowing controls",
+    "observed-versus-estimated disclosures",
+    "source and guidance precision warnings",
+    "six-output regression and adverse UI tests"
+  ],
+  "canonical_or_site_modified": false
+}

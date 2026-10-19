@@ -1,0 +1,648 @@
+{
+  "version": "incremental-CRDO-2026-10-18-v3",
+  "asOf": "2026-10-18",
+  "ticker": "CRDO",
+  "sourceReviewStatus": "ready_for_adapter_implementation",
+  "sourceIndependentChecksPassed": 761,
+  "adapterOrDeploymentCertified": false,
+  "sourceResearchModified": false,
+  "rawFilingsIncluded": false,
+  "fullTranscriptsIncluded": false,
+  "preservationPolicy": "Versioned author analysis, numeric research and independent reviews retained; historical superseded findings are identified at the package entry point.",
+  "normalizationPolicy": "Private/local source pointers become public source identities; source_verified strings become JSON booleans; original and packaged SHA-256 values remain separately recorded.",
+  "packagedSources": [
+    {
+      "sourceArtifact": "README.md",
+      "packagedArtifact": "README-v1.md",
+      "sourceSHA256": "a73ed816c94d96c24bc46a99e7460079960d5e3a96b2596c9e3886e40bd066e1",
+      "packagedSHA256": "a73ed816c94d96c24bc46a99e7460079960d5e3a96b2596c9e3886e40bd066e1",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "STUDY-v1.md",
+      "packagedArtifact": "STUDY-v1.md",
+      "sourceSHA256": "d41ada052952490afbaf38816a584576c06971569e6c4e94d79d002fcb944db1",
+      "packagedSHA256": "d41ada052952490afbaf38816a584576c06971569e6c4e94d79d002fcb944db1",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "history-v1.json",
+      "packagedArtifact": "history-v1.json",
+      "sourceSHA256": "8248fe489f1cbeba23c96a29020e7605fbffd22b957e1be7c2e75fedb0d9a888",
+      "packagedSHA256": "163686c312148d4a51fbeb29c2bed6813e2cc506c4e4ac802fa76663c7dbf9af",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "history-v1.csv",
+      "packagedArtifact": "history-v1.csv",
+      "sourceSHA256": "c4bfffa1d34e7821698b3b533f7aefc25fae89ea2ce138e92a9df05938dfe893",
+      "packagedSHA256": "c4bfffa1d34e7821698b3b533f7aefc25fae89ea2ce138e92a9df05938dfe893",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "history-field-provenance-v1.json",
+      "packagedArtifact": "history-field-provenance-v1.json",
+      "sourceSHA256": "d7e814cc134773b0b9c78c30850cea2420dcfadd43cefee458d1b0661bd92a40",
+      "packagedSHA256": "00c4c156488a6611714947d64268625a7d3c4ff63f5a84041cddf9d58bfafeed",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "observations-v1.json",
+      "packagedArtifact": "observations-v1.json",
+      "sourceSHA256": "160949bc46468674aed199805ff6c31d1dd854a40042cb098bd0cf4a25ea19e1",
+      "packagedSHA256": "cf297d07843e74a2227794c9d4fe8fa08c7dfac6a8a74a0118c625140e885801",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "guidance-vs-actual-v1.json",
+      "packagedArtifact": "guidance-vs-actual-v1.json",
+      "sourceSHA256": "1e4a5d633ef1fd6fea6234e1b2c04dce6bc47c314df61c9abdcda83c4cd05fac",
+      "packagedSHA256": "e1ace82c127df50266628acc53f46999e8df0f4bf1952f86f329da658666f426",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "guidance-vs-actual-v1.csv",
+      "packagedArtifact": "guidance-vs-actual-v1.csv",
+      "sourceSHA256": "b5ed3ae48d9eadb858aa235e38c562bf9c41e510a79f2948b504cc0c50294a90",
+      "packagedSHA256": "b5ed3ae48d9eadb858aa235e38c562bf9c41e510a79f2948b504cc0c50294a90",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "guidance-revisions-v1.json",
+      "packagedArtifact": "guidance-revisions-v1.json",
+      "sourceSHA256": "667ae01a1995184a994ec5a55f3e4e4dedc42ae5309a12449da0fcbeb08021aa",
+      "packagedSHA256": "d98259c2313c7d815c1b3bdea4509dc75c8c2cde6f18f1874b000802c7913af2",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "dcf-inputs-v1.json",
+      "packagedArtifact": "dcf-inputs-v1.json",
+      "sourceSHA256": "f46e9a446d5d3b330105a4d4c1f05e5dbb602961432d44153ae397d7fa0aa7db",
+      "packagedSHA256": "0c9025383e547d3579f36ebed1441c01791970cc82508f5dd1ec59f30fe4a104",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "dcf-output-v1.json",
+      "packagedArtifact": "dcf-output-v1.json",
+      "sourceSHA256": "8cd800b78e66223ed565e46318fed51728fc66cbd4f17c05a0c30b151e4c0372",
+      "packagedSHA256": "0a3678bf9bd312d842e8b3a9257a84f8d473e2cf5c6293b6d585941aeceaeb96",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "forecast-v1.csv",
+      "packagedArtifact": "forecast-v1.csv",
+      "sourceSHA256": "083401d7c92832c0a02e98d03adabd1c27f04a2a00f70b16f526960b227ea966",
+      "packagedSHA256": "083401d7c92832c0a02e98d03adabd1c27f04a2a00f70b16f526960b227ea966",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "sensitivity-v1.json",
+      "packagedArtifact": "sensitivity-v1.json",
+      "sourceSHA256": "f65a84ce01ec0eee69bdbcc7a4cc4691051de36d924eb7a221998dbae8b936db",
+      "packagedSHA256": "ac123ed37b3b63fe4cf7916a93f0e8d4b8ad7cc8640e36f855f32babdc459564",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1.json",
+      "packagedArtifact": "independent-audit-v1.json",
+      "sourceSHA256": "218b7eec8239259b8b0a6c0b328488d8fe93b5eb5b6ad8a62075c559dd3d0112",
+      "packagedSHA256": "07e6b90f589d9acbaa830837eb6f3484aa4fbeb879e65f9a0b6f684cae8e50f8",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "source-ledger-v1.json",
+      "packagedArtifact": "source-ledger-v1.json",
+      "sourceSHA256": "af46d388bee0ea27ee1090d013f8751ba4beb487fc1f239e1382848d099b62f3",
+      "packagedSHA256": "7a6fc88c9097aa96a071a41c101631fe2b4c5cb89252601b8bd213a913136416",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/README.md",
+      "packagedArtifact": "v2/README.md",
+      "sourceSHA256": "e9bbcde3aeffaf399313dd25f9afe581c27a8cf4f3c747e93186b6b9466a74f1",
+      "packagedSHA256": "e9bbcde3aeffaf399313dd25f9afe581c27a8cf4f3c747e93186b6b9466a74f1",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/STUDY-v2.md",
+      "packagedArtifact": "v2/STUDY-v2.md",
+      "sourceSHA256": "bbb1c9927e3d294fbac8997ec3f56a28b37e4074c98e464ad3a2403a975c8c82",
+      "packagedSHA256": "bbb1c9927e3d294fbac8997ec3f56a28b37e4074c98e464ad3a2403a975c8c82",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/CORRECTIONS-v2.md",
+      "packagedArtifact": "v2/CORRECTIONS-v2.md",
+      "sourceSHA256": "3cf6053676d96156b4e331fbe16a67654f5e2ee983efc7c28c48043c609c532c",
+      "packagedSHA256": "3cf6053676d96156b4e331fbe16a67654f5e2ee983efc7c28c48043c609c532c",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/dcf-inputs-v2.json",
+      "packagedArtifact": "v2/dcf-inputs-v2.json",
+      "sourceSHA256": "0d2b1007bc5cdbbdf4c4b4cfc7bb16bbed871588717bff68ecc94fb0906282ef",
+      "packagedSHA256": "6e68e2d8e9077d1701fc19b6c3ab68a75924e7a5f9376ef5e73a3a8dc4393f5f",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/dcf-output-v2.json",
+      "packagedArtifact": "v2/dcf-output-v2.json",
+      "sourceSHA256": "7656f1e6bb3f19201420451b62f6921d5e442ead02dee9c8ce4c63e93e67f4c8",
+      "packagedSHA256": "e6c0bbb88b337edf126b8fd3142b0e25303089088efa11d699cf88f2281389e6",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/forecast-v2.csv",
+      "packagedArtifact": "v2/forecast-v2.csv",
+      "sourceSHA256": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be",
+      "packagedSHA256": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/sensitivity-v2.json",
+      "packagedArtifact": "v2/sensitivity-v2.json",
+      "sourceSHA256": "08a6aa1434a78440ffa2296a90fbaec8f528420863fcfd6b78422c61a377880a",
+      "packagedSHA256": "c9f90fe38429e282a027c4efb848cf6dcc6905868bebdd368a2e42317156fe63",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/funding-gap-stress-v2.json",
+      "packagedArtifact": "v2/funding-gap-stress-v2.json",
+      "sourceSHA256": "ff20f6619b8d0cd8db779d98d5abc74feccf5f66294212550e0c12fe2c4cd891",
+      "packagedSHA256": "0c1ac412f0854a2d3dd07970b418001ab278873fb022966c0d2beaf8403e9c29",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/correction-tests-v2.json",
+      "packagedArtifact": "v2/correction-tests-v2.json",
+      "sourceSHA256": "063f014dfae352e07f974ca5d31ce529715c1d8c672b4d052a0f384584812d3d",
+      "packagedSHA256": "c0357d1ab77d1993bd7368129afed34976dcbbe22688a6435aee6807675cb2e2",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/source-ledger-v2.json",
+      "packagedArtifact": "v2/source-ledger-v2.json",
+      "sourceSHA256": "270e403f30cab0e8fecb06c4d5f444c74e512b7b91fd14035154f907753f308e",
+      "packagedSHA256": "fd4d8323c2fa03fa44f70a458790d6d3bae0cf3a27ea6e1483048876608a3566",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/guidance-comparisons-v2.json",
+      "packagedArtifact": "v2/guidance-comparisons-v2.json",
+      "sourceSHA256": "6d1a6cb9aef9c1e7df95c34a20943eced98c71264d43b0716b512fdd26e82bc3",
+      "packagedSHA256": "dfba0ae30fa82eaedc6d2902d905df46155c18d84799e57c7dfc61b90509be9c",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/guidance-comparisons-v2.csv",
+      "packagedArtifact": "v2/guidance-comparisons-v2.csv",
+      "sourceSHA256": "ad27ebf18cc46888252600d447ba9934ff99d66aeb872b99e08c78d05c8dfe79",
+      "packagedSHA256": "f7d7540d7fa374a3ad67e8b4316c26472d419bb923d3ef3be35a16a95f1195e3",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/annual-and-revisions-v2.json",
+      "packagedArtifact": "v2/annual-and-revisions-v2.json",
+      "sourceSHA256": "02ee033d41ab071d013149eac776321a69ed76b6ed14201ce06bd0d462ada23e",
+      "packagedSHA256": "25c780359e1b2e12a8aadd214e17b11d7f6bb3a9062c47e5154668ec07060723",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v2/definition-change-v2.json",
+      "packagedArtifact": "v2/definition-change-v2.json",
+      "sourceSHA256": "ee4590c71a25094edaf8b5caf672b8fdc08bf960cf87ba1eb88419d9a2ae5d4f",
+      "packagedSHA256": "3d32d0eed3914ecd34b3b0691b35dc037b3c4cd0c4c54091a320b09e27a47907",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/README.md",
+      "packagedArtifact": "v3/README.md",
+      "sourceSHA256": "c1040d10f1579668618301da0777bd0fb6e21829081274e15a601bda35b7c819",
+      "packagedSHA256": "c1040d10f1579668618301da0777bd0fb6e21829081274e15a601bda35b7c819",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/dcf-inputs-v3.json",
+      "packagedArtifact": "v3/dcf-inputs-v3.json",
+      "sourceSHA256": "f22cf0026271898f904b706aacb8ed3fcf2dfabb5a9e0b01de5bd479ad338e89",
+      "packagedSHA256": "f22cf0026271898f904b706aacb8ed3fcf2dfabb5a9e0b01de5bd479ad338e89",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/dcf-output-v3.json",
+      "packagedArtifact": "v3/dcf-output-v3.json",
+      "sourceSHA256": "7656f1e6bb3f19201420451b62f6921d5e442ead02dee9c8ce4c63e93e67f4c8",
+      "packagedSHA256": "e6c0bbb88b337edf126b8fd3142b0e25303089088efa11d699cf88f2281389e6",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/forecast-v3.csv",
+      "packagedArtifact": "v3/forecast-v3.csv",
+      "sourceSHA256": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be",
+      "packagedSHA256": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/sensitivity-v3.json",
+      "packagedArtifact": "v3/sensitivity-v3.json",
+      "sourceSHA256": "08a6aa1434a78440ffa2296a90fbaec8f528420863fcfd6b78422c61a377880a",
+      "packagedSHA256": "c9f90fe38429e282a027c4efb848cf6dcc6905868bebdd368a2e42317156fe63",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/funding-gap-stress-v3.json",
+      "packagedArtifact": "v3/funding-gap-stress-v3.json",
+      "sourceSHA256": "ff20f6619b8d0cd8db779d98d5abc74feccf5f66294212550e0c12fe2c4cd891",
+      "packagedSHA256": "0c1ac412f0854a2d3dd07970b418001ab278873fb022966c0d2beaf8403e9c29",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/correction-tests-v3.json",
+      "packagedArtifact": "v3/correction-tests-v3.json",
+      "sourceSHA256": "063f014dfae352e07f974ca5d31ce529715c1d8c672b4d052a0f384584812d3d",
+      "packagedSHA256": "c0357d1ab77d1993bd7368129afed34976dcbbe22688a6435aee6807675cb2e2",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/validation-tests-v3.json",
+      "packagedArtifact": "v3/validation-tests-v3.json",
+      "sourceSHA256": "608058a9fd3a1b07d6d75fdcc761e843fdeac55e79bb7d62f85d72ab789c72e5",
+      "packagedSHA256": "3795a80335203a10965adc37e6390e9ca8f76dd89605607037e85e7a078bb836",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/input-schema-template.json",
+      "packagedArtifact": "v3/input-schema-template.json",
+      "sourceSHA256": "0d2b1007bc5cdbbdf4c4b4cfc7bb16bbed871588717bff68ecc94fb0906282ef",
+      "packagedSHA256": "6e68e2d8e9077d1701fc19b6c3ab68a75924e7a5f9376ef5e73a3a8dc4393f5f",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/replay_dcf.py",
+      "packagedArtifact": "v3/replay_dcf.py",
+      "sourceSHA256": "0b9d259143a18f2adfa04ce16a9ec9732b50cab4ec68b43e5a1ac1f30f5dfc02",
+      "packagedSHA256": "0b9d259143a18f2adfa04ce16a9ec9732b50cab4ec68b43e5a1ac1f30f5dfc02",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "v3/validation.py",
+      "packagedArtifact": "v3/validation.py",
+      "sourceSHA256": "1f51ecc0daaeafd507448378e244ad94ac27f5694d22c9172f71da8153d603b2",
+      "packagedSHA256": "1f51ecc0daaeafd507448378e244ad94ac27f5694d22c9172f71da8153d603b2",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/REVIEW.md",
+      "packagedArtifact": "independent-audit-v1/REVIEW.md",
+      "sourceSHA256": "8df708c66a22ca0dbf92526938d03b20223b96d7eeb9bc9881ae712671a04cff",
+      "packagedSHA256": "8df708c66a22ca0dbf92526938d03b20223b96d7eeb9bc9881ae712671a04cff",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/funding-gap-stress.json",
+      "packagedArtifact": "independent-audit-v1/funding-gap-stress.json",
+      "sourceSHA256": "f95cdfc2c6ab9d294897ddfe4f8f942f520a295430042478aa70533179b1bb0e",
+      "packagedSHA256": "0f199c0bef1af905134eaa5b246b86f0c1d964573a2d4b95211e60483474299b",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/guidance/FINDINGS.md",
+      "packagedArtifact": "independent-audit-v1/guidance/FINDINGS.md",
+      "sourceSHA256": "1bea36d4ddadaab5670a34228149349c13c891f8f632d4a1ae0097b818c522ae",
+      "packagedSHA256": "1bea36d4ddadaab5670a34228149349c13c891f8f632d4a1ae0097b818c522ae",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/guidance/annual-and-revisions.json",
+      "packagedArtifact": "independent-audit-v1/guidance/annual-and-revisions.json",
+      "sourceSHA256": "02ee033d41ab071d013149eac776321a69ed76b6ed14201ce06bd0d462ada23e",
+      "packagedSHA256": "25c780359e1b2e12a8aadd214e17b11d7f6bb3a9062c47e5154668ec07060723",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/guidance/checks.json",
+      "packagedArtifact": "independent-audit-v1/guidance/checks.json",
+      "sourceSHA256": "4f9c4e783e4f2dcd4389d93e7631b69d84c3809031b406213105d014e1650fcf",
+      "packagedSHA256": "1734d24a55f03bcaa68cb30eacefee7034853d859925606c22b93d51692adf40",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/guidance/verification.json",
+      "packagedArtifact": "independent-audit-v1/guidance/verification.json",
+      "sourceSHA256": "3775f76967332484c295a468a5be9bc740ac5645f74832607c55f6de8cd57faf",
+      "packagedSHA256": "09044bf1be385feb4c864d1b542b0947881787a2be60568a4ef0f96e94d565fc",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/guidance/verified-comparisons.csv",
+      "packagedArtifact": "independent-audit-v1/guidance/verified-comparisons.csv",
+      "sourceSHA256": "662aae4c49e7f2b2c43b4429c99143d8957c36cdefe1ba9db562e5a4de55be2e",
+      "packagedSHA256": "d8615cd5a01fcf46ac33ac326d2aea079bbf1fe7850cd3e5e2310e6ed82cbb1a",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/recomputed-results.json",
+      "packagedArtifact": "independent-audit-v1/recomputed-results.json",
+      "sourceSHA256": "f59789a303b795d2186c411d0c4b8a0beb3dd23337136f2cbac4177bb0546a8b",
+      "packagedSHA256": "04d95873ef99b04328f8e6f91424fe852f6504e0d41842e47701bfebfd4ad3c6",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v1/review-status.json",
+      "packagedArtifact": "independent-audit-v1/review-status.json",
+      "sourceSHA256": "2cc542adf0cc2e3a9fe6cd0eb9056a8ae21b1a5b97bdeee8382cc3eab24bccd1",
+      "packagedSHA256": "c2f29705e43f536c5fd0fd32c0f07e8a515b2c04ad548d4c778c349d99f3eaba",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v2/REVIEW.md",
+      "packagedArtifact": "independent-audit-v2/REVIEW.md",
+      "sourceSHA256": "5e8677d7838248ff0841e73e5b231a443324e724637b471950524539f8122d80",
+      "packagedSHA256": "5e8677d7838248ff0841e73e5b231a443324e724637b471950524539f8122d80",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v2/recheck-results.json",
+      "packagedArtifact": "independent-audit-v2/recheck-results.json",
+      "sourceSHA256": "b4c75170acbce3ad15ed385e3c0b32ae262faaabc75217bc8f26049f5ff87d0f",
+      "packagedSHA256": "ebbd921c2ed24e07923679191ee2580ec41536ebedd36d971233f347338fdcc3",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v3/REVIEW.md",
+      "packagedArtifact": "independent-audit-v3/REVIEW.md",
+      "sourceSHA256": "41c9f5fc10c99fa148fc13c5e02e38b0b3ddde8bd585782732899437992fe128",
+      "packagedSHA256": "41c9f5fc10c99fa148fc13c5e02e38b0b3ddde8bd585782732899437992fe128",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v3/readiness.json",
+      "packagedArtifact": "independent-audit-v3/readiness.json",
+      "sourceSHA256": "7fe08adb4721279194987250a91211c97ade85de2b6a96550d4a287ec18e1742",
+      "packagedSHA256": "64fa83a825574b5f6d50ea008f22f657f483122946a9f3f3ccaa582191f8e2d0",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    },
+    {
+      "sourceArtifact": "independent-audit-v3/recheck-results.json",
+      "packagedArtifact": "independent-audit-v3/recheck-results.json",
+      "sourceSHA256": "a6141a44a1df67a5fed3673218bbe0cd506dc2c972dec83b8ad7680f3f5ba26c",
+      "packagedSHA256": "585f100b42c03c374db84152953f53b85178b4774ed2a6207c56d901637b102d",
+      "packagingTransform": "JSON formatting, local-source pointer sanitization and boolean normalization where applicable; source research unchanged"
+    }
+  ],
+  "generatedFiles": [
+    {
+      "path": "CRDO-v3.html",
+      "sha256": "e3dcae9cc4f1088cb0c955a9241591b379d590592da6eb95bbd0b80f7b7ea77b"
+    },
+    {
+      "path": "README-v1.md",
+      "sha256": "a73ed816c94d96c24bc46a99e7460079960d5e3a96b2596c9e3886e40bd066e1"
+    },
+    {
+      "path": "README.md",
+      "sha256": "121d71932b375b58f604d511b6ede15a82c2094a361ed22083b2cef907a29850"
+    },
+    {
+      "path": "STUDY-v1.md",
+      "sha256": "d41ada052952490afbaf38816a584576c06971569e6c4e94d79d002fcb944db1"
+    },
+    {
+      "path": "cases.json",
+      "sha256": "5abfd2384f6c4f9c82f9450797e9fbe3ffadabc5faeba195f389e9acaf6a5b03"
+    },
+    {
+      "path": "current-outputs-v3.json",
+      "sha256": "da9994c96aab766a601dbd4d8726ade14e96e365a2288b7d7bc50ff21f659647"
+    },
+    {
+      "path": "dcf-inputs-v1.json",
+      "sha256": "0c9025383e547d3579f36ebed1441c01791970cc82508f5dd1ec59f30fe4a104"
+    },
+    {
+      "path": "dcf-output-v1.json",
+      "sha256": "0a3678bf9bd312d842e8b3a9257a84f8d473e2cf5c6293b6d585941aeceaeb96"
+    },
+    {
+      "path": "forecast-v1.csv",
+      "sha256": "083401d7c92832c0a02e98d03adabd1c27f04a2a00f70b16f526960b227ea966"
+    },
+    {
+      "path": "guidance-revisions-v1.json",
+      "sha256": "d98259c2313c7d815c1b3bdea4509dc75c8c2cde6f18f1874b000802c7913af2"
+    },
+    {
+      "path": "guidance-vs-actual-v1.csv",
+      "sha256": "b5ed3ae48d9eadb858aa235e38c562bf9c41e510a79f2948b504cc0c50294a90"
+    },
+    {
+      "path": "guidance-vs-actual-v1.json",
+      "sha256": "e1ace82c127df50266628acc53f46999e8df0f4bf1952f86f329da658666f426"
+    },
+    {
+      "path": "history-field-provenance-v1.json",
+      "sha256": "00c4c156488a6611714947d64268625a7d3c4ff63f5a84041cddf9d58bfafeed"
+    },
+    {
+      "path": "history-v1.csv",
+      "sha256": "c4bfffa1d34e7821698b3b533f7aefc25fae89ea2ce138e92a9df05938dfe893"
+    },
+    {
+      "path": "history-v1.json",
+      "sha256": "163686c312148d4a51fbeb29c2bed6813e2cc506c4e4ac802fa76663c7dbf9af"
+    },
+    {
+      "path": "independent-audit-v1/REVIEW.md",
+      "sha256": "8df708c66a22ca0dbf92526938d03b20223b96d7eeb9bc9881ae712671a04cff"
+    },
+    {
+      "path": "independent-audit-v1/funding-gap-stress.json",
+      "sha256": "0f199c0bef1af905134eaa5b246b86f0c1d964573a2d4b95211e60483474299b"
+    },
+    {
+      "path": "independent-audit-v1/guidance/FINDINGS.md",
+      "sha256": "1bea36d4ddadaab5670a34228149349c13c891f8f632d4a1ae0097b818c522ae"
+    },
+    {
+      "path": "independent-audit-v1/guidance/annual-and-revisions.json",
+      "sha256": "25c780359e1b2e12a8aadd214e17b11d7f6bb3a9062c47e5154668ec07060723"
+    },
+    {
+      "path": "independent-audit-v1/guidance/checks.json",
+      "sha256": "1734d24a55f03bcaa68cb30eacefee7034853d859925606c22b93d51692adf40"
+    },
+    {
+      "path": "independent-audit-v1/guidance/verification.json",
+      "sha256": "09044bf1be385feb4c864d1b542b0947881787a2be60568a4ef0f96e94d565fc"
+    },
+    {
+      "path": "independent-audit-v1/guidance/verified-comparisons.csv",
+      "sha256": "d8615cd5a01fcf46ac33ac326d2aea079bbf1fe7850cd3e5e2310e6ed82cbb1a"
+    },
+    {
+      "path": "independent-audit-v1/recomputed-results.json",
+      "sha256": "04d95873ef99b04328f8e6f91424fe852f6504e0d41842e47701bfebfd4ad3c6"
+    },
+    {
+      "path": "independent-audit-v1/review-status.json",
+      "sha256": "c2f29705e43f536c5fd0fd32c0f07e8a515b2c04ad548d4c778c349d99f3eaba"
+    },
+    {
+      "path": "independent-audit-v1.json",
+      "sha256": "07e6b90f589d9acbaa830837eb6f3484aa4fbeb879e65f9a0b6f684cae8e50f8"
+    },
+    {
+      "path": "independent-audit-v2/REVIEW.md",
+      "sha256": "5e8677d7838248ff0841e73e5b231a443324e724637b471950524539f8122d80"
+    },
+    {
+      "path": "independent-audit-v2/recheck-results.json",
+      "sha256": "ebbd921c2ed24e07923679191ee2580ec41536ebedd36d971233f347338fdcc3"
+    },
+    {
+      "path": "independent-audit-v3/REVIEW.md",
+      "sha256": "41c9f5fc10c99fa148fc13c5e02e38b0b3ddde8bd585782732899437992fe128"
+    },
+    {
+      "path": "independent-audit-v3/readiness.json",
+      "sha256": "64fa83a825574b5f6d50ea008f22f657f483122946a9f3f3ccaa582191f8e2d0"
+    },
+    {
+      "path": "independent-audit-v3/recheck-results.json",
+      "sha256": "585f100b42c03c374db84152953f53b85178b4774ed2a6207c56d901637b102d"
+    },
+    {
+      "path": "observations-v1.json",
+      "sha256": "cf297d07843e74a2227794c9d4fe8fa08c7dfac6a8a74a0118c625140e885801"
+    },
+    {
+      "path": "report-snapshot-outputs-v3.json",
+      "sha256": "017dc8e316904baed67f353529f0d60ffe7953fc93d3ec07f2196a0b20e8c078"
+    },
+    {
+      "path": "sensitivity-v1.json",
+      "sha256": "ac123ed37b3b63fe4cf7916a93f0e8d4b8ad7cc8640e36f855f32babdc459564"
+    },
+    {
+      "path": "source-ledger-v1.json",
+      "sha256": "7a6fc88c9097aa96a071a41c101631fe2b4c5cb89252601b8bd213a913136416"
+    },
+    {
+      "path": "source-provenance-v3.json",
+      "sha256": "fd4d8323c2fa03fa44f70a458790d6d3bae0cf3a27ea6e1483048876608a3566"
+    },
+    {
+      "path": "v2/CORRECTIONS-v2.md",
+      "sha256": "3cf6053676d96156b4e331fbe16a67654f5e2ee983efc7c28c48043c609c532c"
+    },
+    {
+      "path": "v2/README.md",
+      "sha256": "e9bbcde3aeffaf399313dd25f9afe581c27a8cf4f3c747e93186b6b9466a74f1"
+    },
+    {
+      "path": "v2/STUDY-v2.md",
+      "sha256": "bbb1c9927e3d294fbac8997ec3f56a28b37e4074c98e464ad3a2403a975c8c82"
+    },
+    {
+      "path": "v2/annual-and-revisions-v2.json",
+      "sha256": "25c780359e1b2e12a8aadd214e17b11d7f6bb3a9062c47e5154668ec07060723"
+    },
+    {
+      "path": "v2/correction-tests-v2.json",
+      "sha256": "c0357d1ab77d1993bd7368129afed34976dcbbe22688a6435aee6807675cb2e2"
+    },
+    {
+      "path": "v2/dcf-inputs-v2.json",
+      "sha256": "6e68e2d8e9077d1701fc19b6c3ab68a75924e7a5f9376ef5e73a3a8dc4393f5f"
+    },
+    {
+      "path": "v2/dcf-output-v2.json",
+      "sha256": "e6c0bbb88b337edf126b8fd3142b0e25303089088efa11d699cf88f2281389e6"
+    },
+    {
+      "path": "v2/definition-change-v2.json",
+      "sha256": "3d32d0eed3914ecd34b3b0691b35dc037b3c4cd0c4c54091a320b09e27a47907"
+    },
+    {
+      "path": "v2/forecast-v2.csv",
+      "sha256": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be"
+    },
+    {
+      "path": "v2/funding-gap-stress-v2.json",
+      "sha256": "0c1ac412f0854a2d3dd07970b418001ab278873fb022966c0d2beaf8403e9c29"
+    },
+    {
+      "path": "v2/guidance-comparisons-v2.csv",
+      "sha256": "f7d7540d7fa374a3ad67e8b4316c26472d419bb923d3ef3be35a16a95f1195e3"
+    },
+    {
+      "path": "v2/guidance-comparisons-v2.json",
+      "sha256": "dfba0ae30fa82eaedc6d2902d905df46155c18d84799e57c7dfc61b90509be9c"
+    },
+    {
+      "path": "v2/sensitivity-v2.json",
+      "sha256": "c9f90fe38429e282a027c4efb848cf6dcc6905868bebdd368a2e42317156fe63"
+    },
+    {
+      "path": "v2/source-ledger-v2.json",
+      "sha256": "fd4d8323c2fa03fa44f70a458790d6d3bae0cf3a27ea6e1483048876608a3566"
+    },
+    {
+      "path": "v3/README.md",
+      "sha256": "c1040d10f1579668618301da0777bd0fb6e21829081274e15a601bda35b7c819"
+    },
+    {
+      "path": "v3/correction-tests-v3.json",
+      "sha256": "c0357d1ab77d1993bd7368129afed34976dcbbe22688a6435aee6807675cb2e2"
+    },
+    {
+      "path": "v3/dcf-inputs-v3.json",
+      "sha256": "f22cf0026271898f904b706aacb8ed3fcf2dfabb5a9e0b01de5bd479ad338e89"
+    },
+    {
+      "path": "v3/dcf-output-v3.json",
+      "sha256": "e6c0bbb88b337edf126b8fd3142b0e25303089088efa11d699cf88f2281389e6"
+    },
+    {
+      "path": "v3/forecast-v3.csv",
+      "sha256": "ba824d03975479090fc9e035ceff946b5d918b16ed50a44a1e06c9c3eac7a9be"
+    },
+    {
+      "path": "v3/funding-gap-stress-v3.json",
+      "sha256": "0c1ac412f0854a2d3dd07970b418001ab278873fb022966c0d2beaf8403e9c29"
+    },
+    {
+      "path": "v3/input-schema-template.json",
+      "sha256": "6e68e2d8e9077d1701fc19b6c3ab68a75924e7a5f9376ef5e73a3a8dc4393f5f"
+    },
+    {
+      "path": "v3/replay_dcf.py",
+      "sha256": "0b9d259143a18f2adfa04ce16a9ec9732b50cab4ec68b43e5a1ac1f30f5dfc02"
+    },
+    {
+      "path": "v3/sensitivity-v3.json",
+      "sha256": "c9f90fe38429e282a027c4efb848cf6dcc6905868bebdd368a2e42317156fe63"
+    },
+    {
+      "path": "v3/validation-tests-v3.json",
+      "sha256": "3795a80335203a10965adc37e6390e9ca8f76dd89605607037e85e7a078bb836"
+    },
+    {
+      "path": "v3/validation.py",
+      "sha256": "1f51ecc0daaeafd507448378e244ad94ac27f5694d22c9172f71da8153d603b2"
+    }
+  ],
+  "registrySHA256": "18bba4a4eb831ea35d46b93ddba74d20b89920d83dc4da462517e4c3770d6784",
+  "packageChecks": {
+    "annualCases": 3,
+    "fullAnnualRows": 30,
+    "guidanceRows": 90,
+    "historySlots": 10,
+    "observedAnnuals": 7,
+    "nullPrivateYears": 3,
+    "bridgeControls": 11,
+    "frozenOutputs": 6,
+    "localPathScan": "pass",
+    "rawSourceExclusion": "pass"
+  }
+}

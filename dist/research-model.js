@@ -1,3 +1,4 @@
+import {calculateCrdoOperating} from './crdo-research-model.js';
 import {ontoAnnualFunding,ontoTerminalFunding} from './onto-funding.js';
 import {camtAnnualFunding,camtTerminalFunding} from './camt-funding.js';
 import {calculateMrvlOperating,mrvlOpeningStubIssues,MRVL_MESSAGES} from './mrvl-operating.js';
@@ -90,6 +91,7 @@ export function loadAnnualResearchCase(previous,c){
 }
 export function calculateResearchOperating(d){
  const errors=researchDraftIssues(d,{includeTiming:false});if(errors.length)throw Error(errors.join(' '));
+ if(d.ticker==='CRDO')return calculateCrdoOperating(d);
  if(d.ticker==='MRVL')return calculateMrvlOperating(d);
  if(d.ticker==='AMD')return calculateAmdOperating(d);
  if(d.ticker==='SNPS')return calculateSnpsOperating(d);
