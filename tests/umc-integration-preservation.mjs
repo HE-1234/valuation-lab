@@ -1,3 +1,4 @@
+import {reverseUmcSimulationMount} from './umc-simulation-mount-preservation.mjs';
 // Exact UMC production delta from the immutable V81 tree. This is the newest
 // reversal and runs once, at the beginning of the CEVA delivery chain.
 import fs from 'node:fs';
@@ -145,6 +146,7 @@ export function umcFixture(){
  return cachedFixture;
 }
 export function reverseUmcIntegration(path,bytes){
+ bytes=reverseUmcSimulationMount(path,bytes,REVIEWED_ERROR);
  const fixture=umcFixture();assert.ok(productionPath(path),path+' must be an exact normalized dist path');
  assert.ok(Buffer.isBuffer(bytes),path+' requires exact production bytes');
  if(own(fixture.files,path)){

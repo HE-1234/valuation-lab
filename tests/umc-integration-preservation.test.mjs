@@ -1,3 +1,4 @@
+import {reverseUmcSimulationMount} from './umc-simulation-mount-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -55,7 +56,7 @@ test('UMC exact reversal uses immutable V81 originals and rejects every modified
  const fixture=umcFixture();assert.equal(git('rev-parse',UMC_BASE_COMMIT+'^{commit}').toString().trim(),UMC_BASE_COMMIT);
  for(const [p,item]of Object.entries(fixture.files)){
   const bytes=read(p),original=git('show',UMC_BASE_COMMIT+':'+p),before=reverseUmcIntegration(p,bytes);
-  assert.equal(umcSHA(bytes),item.afterSHA256,p+' reviewed after hash');assert.equal(umcSHA(original),item.beforeSHA256,p+' immutable before hash');
+  assert.equal(umcSHA(reverseUmcSimulationMount(p,bytes)),item.afterSHA256,p+' reviewed after hash');assert.equal(umcSHA(original),item.beforeSHA256,p+' immutable before hash');
   assert.deepEqual(Buffer.from(item.beforeText,'utf8'),original,p+' exact immutable beforeText');assert.deepEqual(before,original,p+' exact reversal');
   assert.throws(()=>reverseUmcIntegration(p,before),/exact reviewed UMC integration bytes/,p+' double reversal is forbidden');
  }
