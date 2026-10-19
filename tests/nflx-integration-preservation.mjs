@@ -1,3 +1,4 @@
+import {reverseChartTrialGeometry} from './chart-trial-geometry-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -151,6 +152,7 @@ export function validateNflxFixture(f){
 let cached;
 export function nflxFixture(){if(!cached){const f=validateNflxFixture(JSON.parse(fs.readFileSync(new URL('../'+NFLX_FIXTURE_PATH,import.meta.url))));Object.values(f.files).forEach(Object.freeze);Object.freeze(f.files);Object.freeze(f.additions);cached=Object.freeze(f);}return cached;}
 export function reverseNflxIntegration(path,bytes,earlierContext=''){
+ bytes=reverseChartTrialGeometry(path,bytes,earlierContext);
  assert.ok(productionPath(path),String(path)+' must be an exact normalized dist path');assert.ok(Buffer.isBuffer(bytes),path+' requires exact production bytes');const f=nflxFixture();
  const message=path+' exact reviewed NFLX integration bytes; exact reviewed UBER integration bytes; exact reviewed MCD integration bytes; exact reviewed Claude simulation UI bytes'+earlierContext;
  if(own(f.files,path)){assert.equal(nflxSHA(bytes),f.files[path].afterSHA256,message);return Buffer.from(f.files[path].beforeText);}

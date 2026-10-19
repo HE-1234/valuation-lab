@@ -1607,6 +1607,18 @@
     & body .guided-screen .simulation-lab > .mc-heading #mc-title { font-size: 26px !important; line-height: 1.15 !important; letter-spacing: -.03em !important; }
   }
 }
+/* A restored custom trial count adds a fourth choice. Give only that group
+   its own stable row, and honor the existing measured two-column/list layout. */
+:root[data-skin="report"] {
+  @media (max-width: 760px) {
+    & body .simulation-lab .mc-run-actions:has(> .rx-trials > .rx-remote-choice > button:nth-of-type(4)) { flex-wrap: wrap !important; }
+    & body .simulation-lab .mc-run-actions > .rx-trials:has(> .rx-remote-choice > button:nth-of-type(4)) { flex: 1 1 100% !important; flex-direction: column !important; align-items: stretch !important; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice:has(> button:nth-of-type(4)) { display: inline-flex !important; flex-direction: row !important; width: 100% !important; flex-wrap: wrap; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice.rx-stacked:has(> button:nth-of-type(4)) { flex-direction: column !important; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice.rx-two:has(> button:nth-of-type(4)) { display: grid !important; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice:has(> button:nth-of-type(4)) > button { flex: 0 1 auto !important; min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+  }
+}
 :root[data-skin="report"] {
   @media (max-width: 600px) {
     /* Annual tables on phones: one compact card per year, four figures in one row. */

@@ -1,3 +1,4 @@
+import {reverseChartTrialGeometry} from './chart-trial-geometry-preservation.mjs';
 import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
@@ -26,7 +27,7 @@ test('MCD preserves every prior production byte, mode, UI file and exact tree me
  const p='dist/engine.js',b=read(p);assert.strictEqual(reverseMcdIntegration(p,b),b);assert.throws(()=>verifyTree(current,x=>x===p?altered(b):read(x)),/immutable baseline blob/);
  for(const missing of [p,MCD_MODIFIED_PATHS[0],MCD_ADDED_PATHS[0]])assert.throws(()=>verifyTree(current.filter(x=>x!==missing)),/Exact production tree/);assert.throws(()=>verifyTree([...current,'dist/unreviewed.js'].sort()),/Exact production tree/);
  const copy=mcdBaseEntries();copy.clear();assert.ok(mcdBaseEntries().size>800);
- for(const p of ['dist/index.html','dist/skins/report.css','dist/skins/report-mc-guide.js','dist/skins/skin-motion.js','dist/simulation-view.js'])assert.deepEqual(read(p),git('show',MCD_BASE_COMMIT+':'+p),p+' final UI bytes unchanged');
+ for(const p of ['dist/index.html','dist/skins/report.css','dist/skins/report-mc-guide.js','dist/skins/skin-motion.js','dist/simulation-view.js'])assert.deepEqual(reverseChartTrialGeometry(p,read(p)),git('show',MCD_BASE_COMMIT+':'+p),p+' final UI bytes unchanged after exact later geometry reversal');
 });
 test('MCD catalog append leaves all existing catalog bytes intact and old fixtures unchanged',()=>{
  const p='dist/data/atlas-company-catalog-v1.json',catalog=JSON.parse(reverseUberIntegration(p,read(p)));assert.equal(catalog.companies.filter(c=>c.ticker==='MCD').length,1);assert.equal(catalog.companies.at(-1).ticker,'MCD');catalog.companies.pop();assert.equal(JSON.stringify(catalog,null,2)+'\n',git('show',MCD_BASE_COMMIT+':'+p).toString(),'Removing only MCD reconstructs original bytes');

@@ -1,3 +1,4 @@
+import {reverseChartTrialGeometry} from './chart-trial-geometry-preservation.mjs';
 import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
 import {UBER_BASE_COMMIT,UBER_FIXTURE_PATH,UBER_MODIFIED_PATHS,UBER_ADDED_PATHS,UBER_REVIEWED_HASHES,uberSHA,uberBlobSHA,uberBaseEntries,uberFixture,validateUberFixture,reverseUberIntegration} from './uber-integration-preservation.mjs';
@@ -25,7 +26,7 @@ test('UBER preserves every prior production byte, mode, UI file and exact tree m
  const p='dist/engine.js',b=read(p);assert.strictEqual(reverseUberIntegration(p,b),b);assert.throws(()=>verifyTree(current,x=>x===p?altered(b):read(x)),/immutable baseline blob/);
  for(const missing of [p,UBER_MODIFIED_PATHS[0],UBER_ADDED_PATHS[0]])assert.throws(()=>verifyTree(current.filter(x=>x!==missing)),/Exact production tree/);assert.throws(()=>verifyTree([...current,'dist/unreviewed.js'].sort()),/Exact production tree/);
  const copy=uberBaseEntries();copy.clear();assert.ok(uberBaseEntries().size>800);
- for(const p of ['dist/index.html','dist/skins/report.css','dist/skins/report-mc-guide.js','dist/skins/skin-motion.js','dist/simulation-view.js'])assert.deepEqual(read(p),git('show',UBER_BASE_COMMIT+':'+p),p+' final UI bytes unchanged');
+ for(const p of ['dist/index.html','dist/skins/report.css','dist/skins/report-mc-guide.js','dist/skins/skin-motion.js','dist/simulation-view.js'])assert.deepEqual(reverseChartTrialGeometry(p,read(p)),git('show',UBER_BASE_COMMIT+':'+p),p+' final UI bytes unchanged after exact later geometry reversal');
 });
 test('UBER catalog append leaves all existing catalog bytes intact and old fixtures unchanged',()=>{
  const p='dist/data/atlas-company-catalog-v1.json',catalog=JSON.parse(reverseNflxIntegration(p,read(p)));assert.equal(catalog.companies.filter(c=>c.ticker==='UBER').length,1);assert.equal(catalog.companies.at(-1).ticker,'UBER');catalog.companies.pop();assert.equal(JSON.stringify(catalog,null,2)+'\n',git('show',UBER_BASE_COMMIT+':'+p).toString(),'Removing only UBER reconstructs original bytes');
