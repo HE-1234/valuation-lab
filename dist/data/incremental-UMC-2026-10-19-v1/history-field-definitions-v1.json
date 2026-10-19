@@ -1,0 +1,1208 @@
+{
+  "cash": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Cash and cash equivalents"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_fvtpl_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Financial assets at fair value through profit or loss, current"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_fvoci_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Financial assets at fair value through other comprehensive income, current"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_amortized_cost_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Financial assets measured at amortized cost, current"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_afs_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Available-for-sale financial assets, current"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "contract_assets_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Contract assets, current"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "receivables": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Accounts receivable, net",
+      "Notes receivable and accounts receivable, net"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "receivables_related": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Accounts receivable-related parties, net",
+      "Accounts receivable \u2013 related parties, net",
+      "Notes receivable and accounts receivable-related parties, net"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "notes_receivable": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Notes receivable"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "other_receivables": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Other receivables"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "inventories": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Inventories, net"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "prepayments_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Prepayments"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "other_current_assets": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Other current assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "current_assets": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Total current assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_fvtpl_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Financial assets at fair value through profit or loss, noncurrent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_fvoci_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Financial assets at fair value through other comprehensive income, noncurrent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_afs_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Available-for-sale financial assets, noncurrent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "financial_assets_cost_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Financial assets measured at cost, noncurrent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "equity_method_investments": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Investments accounted for under the equity method"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "ppe_net": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Property, plant and equipment"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "right_of_use_assets": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Right-of-use assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "intangibles": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Intangible assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "prepayment_equipment": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Prepayment for equipment"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "assets": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Total assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "short_debt": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Short-term loans"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "contract_liabilities_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Contract liabilities, current"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "accounts_payable": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Accounts payable",
+      "Notes and accounts payable"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "other_payables": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Other payables"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "equipment_payables": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Payables on equipment"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "leases_current": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Lease liabilities, current"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "current_long_term_liabilities": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Current portion of long-term liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "other_current_liabilities": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Other current liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "current_liabilities": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Total current liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "bonds_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Bonds payable"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "loans_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Long-term loans"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "leases_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Lease liabilities, noncurrent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "other_financial_liabilities_noncurrent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Other financial liabilities, noncurrent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "guarantee_deposits": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Guarantee deposits"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "liabilities": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Total liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "common_stock": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Common stock - NT$10 par value",
+      "Common stock \u2013 NT$10 par value"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "equity_parent": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Total equity attributable to the parent company"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "noncontrolling_interest_equity": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Non-controlling interests"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "equity_total": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Total equity"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "liabilities_and_equity": {
+    "type": "direct_audited_observation",
+    "statement": "bs",
+    "source_row_aliases": [
+      "Total liabilities and equity"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "revenue": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Operating revenues",
+      "Net operating revenues"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cost_of_revenue_signed": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Operating costs"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "gross_profit": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Gross profit"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "selling_expense_signed": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Sales and marketing expenses"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "general_admin_expense_signed": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "General and administrative expenses"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "rd_expense_signed": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Research and development expenses"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "other_operating_income_expense": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Net other operating income and expenses"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "ebit_reported": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Operating income"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "interest_income": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Interest income"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "finance_costs_signed": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Finance costs"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "pretax_income": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Income from continuing operations before income tax"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "income_tax_expense_signed": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Income tax expense",
+      "Income tax benefit (expense)"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "net_income_total": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Net income"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "net_income_parent": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Stockholders of the parent",
+      "Shareholders of the parent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "net_income_nci": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Non-controlling interests"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "eps_basic_twd": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Earnings per share-basic"
+    ],
+    "unit": "TWD per ordinary share",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "eps_diluted_twd": {
+    "type": "direct_audited_observation",
+    "statement": "income",
+    "source_row_aliases": [
+      "Earnings per share-diluted"
+    ],
+    "unit": "TWD per ordinary share",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_pretax_income": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Net income before tax"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "depreciation": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Depreciation"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "amortization": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Amortization"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "sbc_cf_addback": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Share-based payment"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "interest_expense_cf_addback": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Interest expense"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_income_expense_adjustments": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Income and expense adjustments"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_fvtpl": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Financial assets and liabilities at fair value through profit or loss"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_contract_assets": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Contract assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_receivables": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Accounts receivable",
+      "Notes receivable and accounts receivable"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_other_receivables": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Other receivables"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_inventories": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Inventories"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_prepayments": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Prepayments"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_other_current_assets": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Other current assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_contract_fulfillment": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Contract fulfillment costs"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_contract_liabilities": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Contract liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_accounts_payable": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Accounts payable",
+      "Notes and accounts payable"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_other_payables": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Other payables"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_other_current_liabilities": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Other current liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_pension": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Net defined benefit liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cf_change_other_noncurrent_liabilities": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Other noncurrent liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_generated_operations": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Cash generated from operations"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "interest_received": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Interest received"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "dividends_received": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Dividend received"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "interest_paid_signed": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Interest paid"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "tax_paid_signed": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Income tax paid"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cfo": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Net cash provided by operating activities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_ppe_signed": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Acquisition of property, plant and equipment"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "ppe_disposal_proceeds": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Proceeds from disposal of property, plant and equipment"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_intangibles_signed": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Acquisition of intangible assets"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "government_grants_assets": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Government grants related to assets acquisition"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "subsidiary_acquisition_cash_signed": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Acquisition of subsidiary (net of cash acquired)",
+      "Acquisition of subsidiaries (net of cash acquired)"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cfi": {
+    "type": "direct_audited_observation",
+    "statement": "cf",
+    "source_row_aliases": [
+      "Net cash used in investing activities",
+      "Net cash provided by (used in) investing activities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "lease_principal_paid_signed": {
+    "type": "direct_audited_observation",
+    "statement": "financing",
+    "source_row_aliases": [
+      "Cash payments for the principal portion of the lease liability"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_dividends_signed": {
+    "type": "direct_audited_observation",
+    "statement": "financing",
+    "source_row_aliases": [
+      "Cash dividends",
+      "Cash dividends and cash paid from additional paid-in capital"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cfin": {
+    "type": "direct_audited_observation",
+    "statement": "financing",
+    "source_row_aliases": [
+      "Net cash used in financing activities",
+      "Net cash provided by (used in) financing activities",
+      "Net cash provided by financing activities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "fx_effect_on_cash": {
+    "type": "direct_audited_observation",
+    "statement": "financing",
+    "source_row_aliases": [
+      "Effect of exchange rate changes on cash and cash equivalents"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "net_change_cash": {
+    "type": "direct_audited_observation",
+    "statement": "financing",
+    "source_row_aliases": [
+      "Net increase (decrease) in cash and cash equivalents",
+      "Net increase in cash and cash equivalents"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_beginning": {
+    "type": "direct_audited_observation",
+    "statement": "financing",
+    "source_row_aliases": [
+      "Cash and cash equivalents at beginning of year"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_ending": {
+    "type": "direct_audited_observation",
+    "statement": "financing",
+    "source_row_aliases": [
+      "Cash and cash equivalents at end of year"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "weighted_average_basic_shares_m": {
+    "type": "direct_audited_observation",
+    "statement": "eps",
+    "source_row_aliases": [
+      "Weighted-average number of ordinary shares for basic earnings per share (thousand shares)"
+    ],
+    "unit": "million ordinary shares",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "weighted_average_diluted_shares_m": {
+    "type": "direct_audited_observation",
+    "statement": "eps",
+    "source_row_aliases": [
+      "Weighted-average number of common stocks after dilution (thousand shares)",
+      "Weighted-average number of ordinary shares after dilution (thousand shares)"
+    ],
+    "unit": "million ordinary shares",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_note_total": {
+    "type": "direct_audited_observation",
+    "statement": "cash_note",
+    "source_row_aliases": [
+      "Total"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_note_on_hand": {
+    "type": "direct_audited_observation",
+    "statement": "cash_note",
+    "source_row_aliases": [
+      "Cash on hand and petty cash",
+      "Cash on hand"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_note_bank_accounts": {
+    "type": "direct_audited_observation",
+    "statement": "cash_note",
+    "source_row_aliases": [
+      "Checking and savings accounts"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_note_time_deposits": {
+    "type": "direct_audited_observation",
+    "statement": "cash_note",
+    "source_row_aliases": [
+      "Time deposits"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "cash_note_repo": {
+    "type": "direct_audited_observation",
+    "statement": "cash_note",
+    "source_row_aliases": [
+      "Repurchase agreements collateralized by government bonds and corporate notes",
+      "Repurchase agreements collateralized by government and corporate bonds"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "short_debt_note": {
+    "type": "direct_audited_observation",
+    "statement": "liabilities_note",
+    "source_row_aliases": [
+      "Short-term loans"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "bonds_including_current_note": {
+    "type": "direct_audited_observation",
+    "statement": "liabilities_note",
+    "source_row_aliases": [
+      "Bonds payable (current portion included)"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "loans_including_current_note": {
+    "type": "direct_audited_observation",
+    "statement": "liabilities_note",
+    "source_row_aliases": [
+      "Long-term loans (current portion included)"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "leases_total_note": {
+    "type": "direct_audited_observation",
+    "statement": "liabilities_note",
+    "source_row_aliases": [
+      "Lease liabilities"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "other_financial_liabilities_note": {
+    "type": "direct_audited_observation",
+    "statement": "liabilities_note",
+    "source_row_aliases": [
+      "Other financial liabilities",
+      "Other financial liabilities-noncurrent",
+      "Other financial liabilities - noncurrent"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "guarantee_deposits_including_current_note": {
+    "type": "direct_audited_observation",
+    "statement": "liabilities_note",
+    "source_row_aliases": [
+      "Guarantee deposits (current portion included)"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "capacity_deposit_including_current_note": {
+    "type": "direct_audited_observation",
+    "statement": "liabilities_note",
+    "source_row_aliases": [
+      "Capacity deposit (current portion included)"
+    ],
+    "unit": "TWD millions",
+    "source_for_each_value": "history-observations-v1.json: match year, field, filing date; original series selects original_fiscal_year == year"
+  },
+  "issued_shares_m_rounded": {
+    "type": "direct_audited_annotation",
+    "unit": "million ordinary shares",
+    "definition": "Balance-sheet Issued: thousand-share capital annotation / 1000. Rounded issued shares include treasury stock; not current diluted shares."
+  },
+  "sbc_cf_reported_dash": {
+    "type": "status",
+    "definition": "True iff the CFO share-based payment addback is printed as a dash. Does not prove zero company-wide SBC."
+  },
+  "da": {
+    "type": "derived",
+    "formula": "depreciation + amortization",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "cash_ppe": {
+    "type": "derived",
+    "formula": "-cash_ppe_signed",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "cash_intangibles": {
+    "type": "derived",
+    "formula": "-cash_intangibles_signed",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "tax_expense": {
+    "type": "derived",
+    "formula": "-income_tax_expense_signed",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "tax_paid": {
+    "type": "derived",
+    "formula": "-tax_paid_signed",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "interest_paid": {
+    "type": "derived",
+    "formula": "-interest_paid_signed",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "gross_margin": {
+    "type": "derived",
+    "formula": "gross_profit / revenue",
+    "unit": "ratio",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "ebit_margin": {
+    "type": "derived",
+    "formula": "ebit_reported / revenue",
+    "unit": "ratio",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "effective_tax_rate": {
+    "type": "derived",
+    "formula": "tax_expense / pretax_income",
+    "unit": "ratio",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "fcf_cfo_less_cash_ppe": {
+    "type": "derived",
+    "formula": "cfo - cash_ppe",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "fcf_cfo_less_cash_ppe_intangibles": {
+    "type": "derived",
+    "formula": "cfo - cash_ppe - cash_intangibles",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "borrowings_ex_leases": {
+    "type": "derived",
+    "formula": "short_debt + current_long_term_liabilities + bonds_noncurrent + loans_noncurrent",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "leases_total": {
+    "type": "derived",
+    "formula": "leases_current + leases_noncurrent",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "borrowings_from_notes_ex_leases": {
+    "type": "derived",
+    "formula": "short_debt_note + bonds_including_current_note + loans_including_current_note",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "borrowings_plus_leases": {
+    "type": "derived",
+    "formula": "borrowings_ex_leases + leases_total",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "core_nwc": {
+    "type": "derived",
+    "formula": "receivables + receivables_related + inventories - accounts_payable",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "cf_working_capital_core_cash_effect": {
+    "type": "derived",
+    "formula": "cf_change_receivables + cf_change_inventories + cf_change_accounts_payable",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "current_assets_minus_current_liabilities": {
+    "type": "derived",
+    "formula": "current_assets - current_liabilities",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "net_cash_less_borrowings_ex_leases": {
+    "type": "derived",
+    "formula": "cash - borrowings_ex_leases",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "cash_plus_amortized_cost_current": {
+    "type": "derived",
+    "formula": "cash + financial_assets_amortized_cost_current",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "cf_operating_assets_liabilities_total": {
+    "type": "derived",
+    "formula": "cash_generated_operations - cf_pretax_income - cf_income_expense_adjustments",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "fcf_after_cash_ppe_intangibles_lease_principal": {
+    "type": "derived",
+    "formula": "cfo - cash_ppe - cash_intangibles + lease_principal_paid_signed",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "net_cash_ppe_after_disposals_and_capital_grants": {
+    "type": "derived",
+    "formula": "cash_ppe - ppe_disposal_proceeds - government_grants_assets",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "cf_other_current_assets_including_prepayments": {
+    "type": "derived",
+    "formula": "cf_change_other_current_assets + separately presented cf_change_prepayments ONLY from the SAME filing; otherwise cf_change_other_current_assets already represents aggregate",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  },
+  "change_core_nwc": {
+    "type": "derived",
+    "formula": "current year core_nwc - previous year core_nwc",
+    "unit": "TWD millions",
+    "provenance": "Each named input links recursively to its direct field observation in history-observations-v1.json. No source data for missing inputs is imputed."
+  }
+}

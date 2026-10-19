@@ -1,0 +1,527 @@
+{
+  "schema_version": 1,
+  "company": "United Microelectronics Corporation",
+  "ticker": "UMC",
+  "coverage_fiscal_years": [
+    2016,
+    2025
+  ],
+  "reviewed_at_utc": "2026-10-19T07:55:00Z",
+  "source_method": "Read existing local annual 20-F HTML/text files only; no downloads. XPath refers to lxml HTML parse of each named source. Exact short text locators and section/page locators supplied when preferred.",
+  "default_amount_unit": "NT$ thousands; exceptions explicitly named in field names",
+  "comparative_presentation_note": "The two detected audited comparative changes are reconciled presentation changes. No explicit error-correction narrative for them was located. Do not call them error restatements.",
+  "findings": [
+    {
+      "id": "ifrs9_ifrs15_transition",
+      "period": 2018,
+      "classification": "accounting_policy_transition_no_comparative_restatement",
+      "summary": "IFRS 9 and IFRS 15 adopted on January 1, 2018 using modified retrospective method. 2016 and 2017 consolidated financial statements were not restated and remain under IAS 39, IAS 18 and related interpretations.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "IFRS9_opening_assets_change": 726833,
+        "IFRS9_opening_liabilities_change": -627901,
+        "IFRS9_opening_equity_change": 1354734,
+        "IFRS9_opening_retained_earnings_change": 17026484,
+        "IFRS9_opening_other_equity_change": -15671750,
+        "IFRS15_opening_assets_change": 1131723,
+        "IFRS15_opening_liabilities_change": 1091514,
+        "IFRS15_opening_equity_change": 40209,
+        "IFRS15_opening_retained_earnings_change": 39372,
+        "IFRS15_opening_other_equity_change": -760,
+        "IFRS15_opening_NCI_change": 1597
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2019-04-25_d603585d20f.htm",
+          "section": "Note 3(3), F-11 through F-16",
+          "text_locator": "The Company elected to adopt these standards using the modified retrospective method"
+        },
+        {
+          "file": "sources/20-F_2019-04-25_d603585d20f.htm",
+          "section": "Opening transition table, F-12",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[113]/div/table"
+        }
+      ],
+      "metric_implications": [
+        "Financial-asset classification and measurement changes; large retained-earnings/OCI transfers are not operating earnings.",
+        "Revenue recognition moves to transfer of control, including over-time recognition for certain contracts.",
+        "Sales return and discount allowances move from contra-receivables to refund liabilities."
+      ]
+    },
+    {
+      "id": "ifrs15_2018_revenue_counterfactual",
+      "period": 2018,
+      "classification": "disclosed_policy_counterfactual",
+      "summary": "The filing provides 2018 IFRS 15 revenue and the amount that would have been reported under IAS 18.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "reported_IFRS15_revenue": 151252571,
+        "counterfactual_IAS18_revenue": 151352362,
+        "reported_minus_counterfactual": -99791
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2019-04-25_d603585d20f.htm",
+          "section": "Note 3(3), F-16",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[117]/div/table/tr[20]"
+        }
+      ]
+    },
+    {
+      "id": "ifrs16_transition",
+      "period": 2019,
+      "classification": "accounting_policy_transition_no_comparative_restatement",
+      "summary": "IFRS 16 adopted cumulatively January 1, 2019. Comparative information was not restated. ROU asset was measured at the lease liability adjusted for prepaid lease payments, on a lease-by-lease basis.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "opening_other_current_assets_change_rounded": -15000,
+        "opening_ROU_assets_change_rounded": 8578000,
+        "opening_other_noncurrent_assets_change_rounded": -2621000,
+        "opening_other_payables_change_rounded": -40000,
+        "opening_lease_liability": 6006457,
+        "opening_APIC_change_rounded": -10000,
+        "opening_other_equity_change_rounded": -14000,
+        "prior_operating_lease_commitments": 7408369,
+        "discounted_commitments": 5997551,
+        "extension_options": 8906,
+        "weighted_average_incremental_borrowing_rate_percent": 2.64
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2020-04-28_d820941d20f.htm",
+          "section": "Note 3(1)(a), F-11 through F-13",
+          "text_locator": "The Company elected not to restate comparative information"
+        },
+        {
+          "file": "sources/20-F_2020-04-28_d820941d20f.htm",
+          "section": "Lease liability transition reconciliation, F-13",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[118]/div/table[2]"
+        }
+      ],
+      "metric_implications": [
+        "Lease liability and ROU asset time series break at 2019.",
+        "Lease principal cash payments are financing cash flows after adoption; pre-adoption operating lease expense/cash presentation is not directly comparable."
+      ]
+    },
+    {
+      "id": "usjc_acquisition",
+      "period": 2019,
+      "classification": "consolidation_perimeter_change",
+      "summary": "Acquired remaining 84.1% of Mie Fujitsu Semiconductor Limited on October 1, 2019 for JPY54.4 billion. Prior 15.9% interest was measured at FVOCI. Entity became wholly owned and was renamed United Semiconductor Japan Co., Ltd. (USJC).",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "cash_consideration": 15711370,
+        "previous_equity_interest_fair_value": 2303988,
+        "hedge_adjustment": 2572,
+        "total_consideration": 18017930,
+        "cash_acquired": 2910389,
+        "net_acquisition_cash_outflow": 12800981,
+        "identifiable_net_assets": 18189515,
+        "bargain_purchase_gain": 171585,
+        "PPE_acquired": 11497618,
+        "ROU_assets_acquired": 479547,
+        "intangibles_acquired": 1318754,
+        "2019_post_acquisition_revenue_contribution_rounded": 4277000,
+        "2019_post_acquisition_pretax_profit_contribution_rounded": 305000,
+        "2019_full_year_group_revenue_counterfactual_rounded": 160767000,
+        "2019_full_year_group_pretax_profit_counterfactual_rounded": 5606000
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2020-04-28_d820941d20f.htm",
+          "section": "Note 6(26), F-98 through F-99",
+          "text_locator": "The Company exercised the call option of a joint venture agreement"
+        },
+        {
+          "file": "sources/20-F_2020-04-28_d820941d20f.htm",
+          "section": "Acquisition consideration and cash-flow table",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[203]/div/table[2]"
+        },
+        {
+          "file": "sources/20-F_2020-04-28_d820941d20f.htm",
+          "section": "Acquired assets and liabilities",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[204]/div/table"
+        },
+        {
+          "file": "sources/20-F_2021-04-29_umc-20f_20201231.htm",
+          "section": "Note 6(28), F-61 through F-63",
+          "text_locator": "Upon the acquisition, USJC contributed NT$4,277"
+        }
+      ],
+      "verification_note": "Identical acquisition consideration and net-assets values repeated in the FY2020 filing; no PPA revision identified there."
+    },
+    {
+      "id": "uscxm_nci_financial_liability_settlement",
+      "period": [
+        2022,
+        2023
+      ],
+      "classification": "existing_consolidated_subsidiary_nci_and_liability_settlement",
+      "summary": "USCXM was already controlled and consolidated. Agreement required repurchasing outside investors at original cost plus interest. NCI was recognized during the reporting period then derecognized against the repurchase liability at period end, with differences in equity. The April 2022 plan described 60%/20%/20% payments during 2022-2025; the later filing states completion all at once in July 2023. This is not a new consolidation-perimeter expansion.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "liability_at_2022_12_31": 21449487,
+        "2023_cash_outflow": -21209443,
+        "2023_foreign_exchange_change": -330783,
+        "2023_other_noncash_change": 90739,
+        "liability_at_2023_12_31": 0,
+        "contract_purchase_amount_RMB_billions_rounded": 4.9,
+        "approved_purchase_via_GE_RMB_billions": 4.12,
+        "approved_purchase_via_HJ_RMB_billions": 0.74
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "Note 9(6), F-102",
+          "text_locator": "The transaction will be completed in three times from 2022 to 2025"
+        },
+        {
+          "file": "sources/20-F_2024-04-25_d448612d20f.htm",
+          "section": "Note 9(6), F-98",
+          "text_locator": "The transaction was completed all at once in July, 2023."
+        },
+        {
+          "file": "sources/20-F_2024-04-25_d448612d20f.htm",
+          "section": "Financing cash-flow statement",
+          "xpath": "/html/body/div[105]/div[1]/div[1]/div[4]/div/table/tr[16]"
+        },
+        {
+          "file": "sources/20-F_2024-04-25_d448612d20f.htm",
+          "section": "Note 6(28), 2023 financing-liability reconciliation",
+          "xpath": "/html/body/div[143]/div/div/div[2]/div/ix:continuation/ix:continuation/table/tr[11]"
+        },
+        {
+          "file": "sources/20-F_2024-04-25_d448612d20f.htm",
+          "section": "Item 4, page 21",
+          "text_locator": "which was completed in March 2023"
+        }
+      ],
+      "additional_context": "Separate HJ US$500 million capital investment into USCXM completed in March 2023. Filing states UMC/HJ held all USCXM shares after the July 2023 transaction.",
+      "cash_flow_classification": "Financing: Decrease in other financial liabilities"
+    },
+    {
+      "id": "ias37_onerous_contract_transition",
+      "period": 2022,
+      "classification": "accounting_policy_transition_no_comparative_restatement",
+      "summary": "Onerous Contracts - Cost of Fulfilling a Contract amendments to IAS 37 adopted January 1, 2022 for contracts with outstanding obligations. Cumulative opening adjustment; comparative information not restated.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "opening_other_current_liabilities_change": 219932,
+        "opening_retained_earnings_change": -153843,
+        "opening_NCI_change": -66089
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "Note 3(1)(a), F-11",
+          "text_locator": "In accordance with the transitional provisions of IAS 37, the Company did not restate the comparative information"
+        },
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "Statement of changes in equity, Impact of retroactive applications",
+          "xpath": "/html/body/div[106]/div[1]/div/table/tr[8]"
+        }
+      ]
+    },
+    {
+      "id": "2016_segment_reclassification",
+      "period": 2016,
+      "classification": "retrospective_segment_presentation_change",
+      "summary": "Certain former new-business operations were reclassified into wafer fabrication, with retrospective reclassification of segment data. This does not itself imply changed consolidated totals.",
+      "amounts": {},
+      "sources": [
+        {
+          "file": "sources/20-F_2017-04-13_d280541d20f.htm",
+          "section": "Selected financial data footnote (5), page 5",
+          "text_locator": "Since 2016, certain of our previous new business operation was reclassified"
+        }
+      ]
+    },
+    {
+      "id": "uscxm_loan_current_classification",
+      "period": [
+        2020,
+        2021,
+        2022
+      ],
+      "classification": "current_noncurrent_debt_reclassification",
+      "summary": "USCXM failed a loan financial-ratio covenant; loan classified current at December 31, 2020 and 2021. Bank exemptions obtained April 21, 2021 and February 7, 2022. FY2022 note states the 2021 loan was reclassified noncurrent after the exemption.",
+      "amounts": {},
+      "sources": [
+        {
+          "file": "sources/20-F_2022-04-28_d168667d20f.htm",
+          "section": "Note 6(14), Note A",
+          "text_locator": "loan is reclassified to current liabilities as of December 31, 2020 and 2021"
+        },
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "Note 6(14), Note A",
+          "text_locator": "the bank exemption of 2021 have been obtained and the loan was reclassified to non-current liabilities"
+        }
+      ]
+    },
+    {
+      "id": "small_deconsolidations",
+      "period": [
+        2018,
+        2020
+      ],
+      "classification": "consolidation_perimeter_change",
+      "summary": "UNISTARS was deconsolidated after all its shares were disposed of in December 2018. NEXPOWER was deconsolidated November 11, 2020 when a liquidator took control.",
+      "amounts": {},
+      "sources": [
+        {
+          "file": "sources/20-F_2021-04-29_umc-20f_20201231.htm",
+          "section": "Note 6(29), F-63 onward",
+          "text_locator": "As UMC’s subsidiary disposed of all of its shares of UNISTARS in December 2018"
+        },
+        {
+          "file": "sources/20-F_2021-04-29_umc-20f_20201231.htm",
+          "section": "Note 6(29)",
+          "text_locator": "the liquidator took control on the same day"
+        }
+      ]
+    },
+    {
+      "id": "2021_deposit_presentation_reclass",
+      "period": 2021,
+      "classification": "audited_comparative_presentation_reclassification_reconciled",
+      "summary": "Current time deposits with original maturities over three months to one year were moved from Other current assets to Financial assets measured at amortized cost, current in the FY2022 filing comparative. Exact amount is established by the prior-year other-current-assets note and the later amortized-cost note. No separate explicit narrative announcing this reclassification was found; classification here is an inference from an exact audited-table reconciliation, not an issuer-stated error correction.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "current_amortized_cost_assets_original": 20000,
+        "current_amortized_cost_assets_later_comparative": 28854684,
+        "other_current_assets_original": 31822866,
+        "other_current_assets_later_comparative": 2988182,
+        "current_time_deposits_reclassified": 28834684,
+        "original_combined_categories": 31842866,
+        "later_combined_categories": 31842866,
+        "total_current_assets_original": 233273433,
+        "total_current_assets_later_comparative": 233273433,
+        "later_note_total_deposits_over_three_months": 28843470,
+        "later_note_noncurrent_portion": 8786,
+        "later_note_bonds": 20000
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2022-04-28_d168667d20f.htm",
+          "section": "FY2021 balance sheet",
+          "xpath": "/html/body/div[268]/div[1]/div[1]/table/tr[11]"
+        },
+        {
+          "file": "sources/20-F_2022-04-28_d168667d20f.htm",
+          "section": "FY2021 balance sheet",
+          "xpath": "/html/body/div[268]/div[1]/div[1]/table/tr[18]"
+        },
+        {
+          "file": "sources/20-F_2022-04-28_d168667d20f.htm",
+          "section": "Note 6(7), Other Current Assets, F-50",
+          "xpath": "/html/body/div[356]/div[2]/div[1]/ix:continuation/ix:nonnumeric[2]/table[2]",
+          "text_locator": "Time deposits with original maturities of over three months to a year"
+        },
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "FY2021 balance-sheet comparative",
+          "xpath": "/html/body/div[102]/div[1]/div/table/tr[10]"
+        },
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "FY2021 balance-sheet comparative",
+          "xpath": "/html/body/div[102]/div[1]/div/table/tr[17]"
+        },
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "Note 6(4), Financial Assets Measured at Amortized Cost, F-43",
+          "xpath": "/html/body/div[125]/div[1]/div/ix:continuation/ix:nonnumeric[2]/table[2]"
+        }
+      ],
+      "reconciliations": [
+        "20000 + 28834684 = 28854684",
+        "31822866 - 28834684 = 2988182",
+        "20000 + 31822866 = 28854684 + 2988182 = 31842866",
+        "28843470 - 8786 = 28834684"
+      ],
+      "confidence": "high; exact source-table reconciliation",
+      "use_guidance": "Use consistent deposit classification in liquidity trends. Do not treat reclassification as a 2021 investment purchase, operating change, or error restatement."
+    },
+    {
+      "id": "2016_cf_prepayment_aggregation",
+      "period": 2016,
+      "classification": "audited_comparative_cashflow_line_aggregation_reconciled",
+      "summary": "The original FY2016 cash-flow statement separately displayed Prepayments and Other current assets. FY2017 and FY2018 comparative cash-flow statements combined those amounts under Other current assets. Same aggregation reconciles FY2015. No explicit accompanying narrative was found, so this is source-table-reconciled presentation aggregation, not an issuer-stated error correction.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "2016_original_prepayments": -9455729,
+        "2016_original_other_current_assets": 815618,
+        "2016_later_combined_other_current_assets": -8640111,
+        "2015_original_prepayments": -696632,
+        "2015_original_other_current_assets": 2116853,
+        "2015_later_combined_other_current_assets": 1420221
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2017-04-13_d280541d20f.htm",
+          "section": "Original cash-flow statement, Prepayments",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/table[308]/tr[34]"
+        },
+        {
+          "file": "sources/20-F_2017-04-13_d280541d20f.htm",
+          "section": "Original cash-flow statement, Other current assets",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/table[308]/tr[35]"
+        },
+        {
+          "file": "sources/20-F_2018-04-26_d484523d20f.htm",
+          "section": "Comparative cash-flow statement, Other current assets",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/table[305]/tr[34]"
+        },
+        {
+          "file": "sources/20-F_2019-04-25_d603585d20f.htm",
+          "section": "Comparative cash-flow statement, Other current assets",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[109]/div/table/tr[34]"
+        }
+      ],
+      "reconciliations": [
+        "-9455729 + 815618 = -8640111",
+        "-696632 + 2116853 = 1420221"
+      ],
+      "confidence": "high; exact source-table reconciliation",
+      "use_guidance": "Do not retain original prepayments as an additional line if using the later combined other-current-assets figure; doing so double counts the working-capital effect."
+    },
+    {
+      "id": "share_based_payment_dash_semantics",
+      "period": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "classification": "reported_dash_not_explicit_companywide_nil",
+      "summary": "CFO share-based-payment adjustment is a reported dash in FY2016 and FY2017. No blanket narrative stating nil company-wide SBC expense found. Key-management compensation separately reports nonzero share-based amounts in those years. Later notes also disclose cash-settled stock-appreciation-right compensation, so the CFO adjustment must not be equated automatically with total SBC expense.",
+      "amounts": {
+        "unit": "NT$ thousands",
+        "CFO_adjustment": {
+          "2016": null,
+          "2017": null,
+          "2018": 695669,
+          "2019": 366186,
+          "2020": 959219,
+          "2021": 1745745,
+          "2022": 1351738,
+          "2023": 1031896,
+          "2024": 788849,
+          "2025": 491280
+        },
+        "reported_dash_years": [
+          2016,
+          2017
+        ],
+        "2016_key_management_share_based_payment": 10,
+        "2017_key_management_share_based_payment": 68
+      },
+      "sources": [
+        {
+          "file": "sources/20-F_2018-04-26_d484523d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/table[305]/tr[16]"
+        },
+        {
+          "file": "sources/20-F_2018-04-26_d484523d20f.htm",
+          "section": "Note 7, Key management personnel compensation, F-93",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/table[606]/tr[9]"
+        },
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "Note 6(20)(c), F-75 through F-76",
+          "text_locator": "Stock appreciation right plan for employees"
+        },
+        {
+          "file": "sources/20-F_2019-04-25_d603585d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[109]/div/table/tr[16]"
+        },
+        {
+          "file": "sources/20-F_2020-04-28_d820941d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/center[114]/div/table/tr[16]"
+        },
+        {
+          "file": "sources/20-F_2021-04-29_umc-20f_20201231.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/document/type/sequence/filename/description/text/div[305]/table/tr[14]"
+        },
+        {
+          "file": "sources/20-F_2022-04-28_d168667d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/div[271]/div[1]/div[1]/table/tr[15]"
+        },
+        {
+          "file": "sources/20-F_2023-04-27_d389572d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/div[107]/div[1]/div/table/tr[15]"
+        },
+        {
+          "file": "sources/20-F_2024-04-25_d448612d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/div[105]/div[1]/div[1]/div[1]/div/table/tr[15]"
+        },
+        {
+          "file": "sources/20-F_2025-04-24_d846836d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/div[102]/div/div/div[1]/div/table/tr[15]"
+        },
+        {
+          "file": "sources/20-F_2026-04-30_d91630d20f.htm",
+          "section": "Cash-flow statement",
+          "xpath": "/html/body/div[105]/div/div/div[1]/div/table/tr[15]"
+        }
+      ],
+      "use_guidance": "Preserve the source dash token/flag. If normalized to zero for cash-flow arithmetic, label as dash-normalized CFO adjustment, not explicitly nil SBC expense."
+    },
+    {
+      "id": "standards_no_material_impact_years",
+      "period": [
+        2020,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "classification": "issuer_reported_no_material_transition_impact",
+      "summary": "Annual Note 3(1) states newly adopted/revised standards had no material impact in these years. This finding does not rule out operational, ownership, or presentation changes.",
+      "amounts": {},
+      "sources": [
+        {
+          "file": "sources/20-F_2021-04-29_umc-20f_20201231.htm",
+          "section": "Note 3(1)",
+          "text_locator": "no newly adopted or revised standards and interpretations"
+        },
+        {
+          "file": "sources/20-F_2022-04-28_d168667d20f.htm",
+          "section": "Note 3(1)",
+          "text_locator": "no newly adopted or revised standards and interpretations"
+        },
+        {
+          "file": "sources/20-F_2024-04-25_d448612d20f.htm",
+          "section": "Note 3(1)",
+          "text_locator": "no newly adopted or revised standards and interpretations"
+        },
+        {
+          "file": "sources/20-F_2025-04-24_d846836d20f.htm",
+          "section": "Note 3(1)",
+          "text_locator": "no newly adopted or revised standards and interpretations"
+        },
+        {
+          "file": "sources/20-F_2026-04-30_d91630d20f.htm",
+          "section": "Note 3(1)",
+          "text_locator": "no newly adopted or revised standards and interpretations"
+        }
+      ]
+    }
+  ]
+}

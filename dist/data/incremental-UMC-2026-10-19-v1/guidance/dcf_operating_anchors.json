@@ -1,0 +1,432 @@
+[
+  {
+    "id": "q2_2026_operating",
+    "subject": "Q2 2026 operating result",
+    "value": {
+      "revenue": 68733,
+      "gross_profit": 22323,
+      "operating_income": 14950,
+      "depreciation_in_cogs": 14649,
+      "depreciation_and_amortization_cashflow": 16238,
+      "operating_expenses": 7906,
+      "net_other_operating_income": 533
+    },
+    "unit": "NTD million",
+    "classification": "issuer_reported_actual",
+    "source_ids": [
+      "2026Q2-report.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+    ],
+    "locator": "Report pp3\u20135",
+    "model_use": "Anchor cash flows to operating profit rather than reported net income. Depreciation in COGS differs from total D&A."
+  },
+  {
+    "id": "q2_2026_mix",
+    "subject": "Q2 2026 wafer revenue composition",
+    "value": {
+      "regions_pct": {
+        "Asia Pacific": 66,
+        "North America": 22,
+        "Europe": 8,
+        "Japan": 4
+      },
+      "application_pct": {
+        "Communication": 39,
+        "Consumer": 32,
+        "Computer": 13,
+        "Others": 16
+      },
+      "node_pct": {
+        "22_28nm": 37,
+        "40nm": 15,
+        "65_90nm": 7,
+        "90nm_130nm": 8,
+        "130nm_180nm": 10,
+        "180nm_350nm": 4,
+        "500nm_and_above": 1,
+        "14nm_and_below": 0,
+        "40nm_to65nm": 18
+      },
+      "fabless_pct": 85
+    },
+    "unit": "percent of wafer sales",
+    "classification": "issuer_reported_actual",
+    "source_ids": [
+      "2026Q2-report.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+    ],
+    "locator": "Report p7",
+    "model_use": "Mix percentages are wafer revenue, not consolidated revenue. Geography is customer market classification, not fab capacity geography. Do not classify all Others as automotive."
+  },
+  {
+    "id": "22nm_mix",
+    "subject": "22nm revenue contribution",
+    "value": {
+      "q4_2025": "more than 13%",
+      "q1_2026_pct": 14,
+      "q2_2026_pct": 17.5,
+      "fy2025_22nm_revenue_growth_pct": 93
+    },
+    "unit": "percent",
+    "classification": "issuer_reported_actual",
+    "source_ids": [
+      "2025Q4-report.pdf",
+      "2026Q1-report.pdf",
+      "2026Q2-report.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2025/Q4_2025/UMC25Q4_report.pdf",
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q1_2026/UMC26Q1_report.pdf",
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+    ],
+    "locator": "Reports pp1\u20132",
+    "model_use": "Technology-mix uplift is a demonstrated driver; forward ramp rates remain analyst assumptions."
+  },
+  {
+    "id": "latest_guidance",
+    "subject": "Q3 2026 management outlook",
+    "value": {
+      "shipments_qoq": "high-single-digit increase",
+      "asp_usd": "firm",
+      "gross_margin": "mid-30% range",
+      "utilization": "90%+",
+      "capacity_12inch_equiv_k": 1325
+    },
+    "unit": "mixed",
+    "classification": "issuer_projection",
+    "source_ids": [
+      "2026Q2-report.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+    ],
+    "locator": "Report pp9\u201310",
+    "model_use": "Outstanding at cutoff. Qualitative expressions are not hard numerical intervals. Do not treat as Q3 actuals."
+  },
+  {
+    "id": "latest_capex",
+    "subject": "FY2026 cash capital budget",
+    "value": {
+      "initial_usd_bn": 1.5,
+      "latest_usd_bn": 2.0,
+      "h1_actual_usd_mn": 724,
+      "mix_12inch_pct": 90,
+      "mix_8inch_pct": 10
+    },
+    "unit": "mixed",
+    "classification": "issuer_projection_and_reported_actual",
+    "source_ids": [
+      "2025Q4-report.pdf",
+      "2026Q1-report.pdf",
+      "2026Q2-report.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2025/Q4_2025/UMC25Q4_report.pdf",
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q1_2026/UMC26Q1_report.pdf",
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+    ],
+    "locator": "Reports capex page9",
+    "model_use": "Use US$2bn as latest issuer full-year budget. H2 US$1.276bn residual is arithmetic, not separate guidance. Cash capex and PP&E additions differ."
+  },
+  {
+    "id": "capacity",
+    "subject": "Q2 2026 production system",
+    "value": {
+      "capacity_12inch_equiv_k": 1305,
+      "shipments_12inch_equiv_k": 1129,
+      "utilization_pct": 85,
+      "q3_expected_capacity_12inch_equiv_k": 1325,
+      "fab12i_q2_physical_12inch_k": 172,
+      "fab12i_q3_expected_physical_12inch_k": 192
+    },
+    "unit": "thousand wafers / percent",
+    "classification": "issuer_reported_actual_and_projection",
+    "source_ids": [
+      "2026Q2-report.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+    ],
+    "locator": "Report pp8\u20139",
+    "model_use": "Capacity is calculated maximum output, not nameplate. Utilization is output/capacity, not shipments/capacity. Do not use 1129/1305 as an implied utilization discrepancy."
+  },
+  {
+    "id": "p3_initial_plan",
+    "subject": "Singapore Fab12i P3 original plan",
+    "value": {
+      "investment_usd_bn": 5,
+      "monthly_12inch_capacity_wafers": 30000,
+      "original_production_start": "late 2024",
+      "nodes_nm": [
+        22,
+        28
+      ],
+      "customer_support": "multi-year supply agreements"
+    },
+    "unit": "mixed",
+    "classification": "historical_issuer_projection",
+    "source_ids": [
+      "singapore-original-20220224.html"
+    ],
+    "source_urls": [
+      "https://www.umc.com/en/News/press_release/Content/corporate/20220224-1"
+    ],
+    "locator": "2022-02-24 release",
+    "model_use": "Original timeline is useful project-execution evidence; it is superseded, not current guidance. Customer contracts do not imply the entire project is prepaid."
+  },
+  {
+    "id": "p3_revised_plan",
+    "subject": "Singapore new facility inauguration and revised ramp",
+    "value": {
+      "inauguration": "2025-04-01",
+      "volume_production_target": "2026",
+      "first_phase_full_capacity_wafers_per_month": 30000,
+      "first_phase_investment_up_to_usd_bn": 5,
+      "singapore_total_annual_capacity_after_ramp": "more than 1 million wafers"
+    },
+    "unit": "mixed",
+    "classification": "issuer_projection",
+    "source_ids": [
+      "singapore-inauguration-20250401.html"
+    ],
+    "source_urls": [
+      "https://www.umc.com/en/News/press_release/Content/corporate/20250401"
+    ],
+    "locator": "2025-04-01 release",
+    "model_use": "Compared with original late-2024 target, volume-production schedule slipped into 2026. Do not assume 30k monthly capacity was fully available immediately at inauguration."
+  },
+  {
+    "id": "2026_expansion",
+    "subject": "Singapore P4 and Taiwan P7/P8 staged expansion",
+    "value": {
+      "board_authorized_budget_ntd_mn": 148680,
+      "board_date": "2026-07-29",
+      "source_of_funds": "working capital",
+      "Singapore": "P4 cleanroom installation in existing shell and silicon-photonics tools",
+      "Taiwan": "new Tainan building shell for future P7/P8; advanced packaging footprint",
+      "phasing": "aligned with secured long-term customer commitments"
+    },
+    "unit": "mixed",
+    "classification": "issuer_board_approval_and_projection",
+    "source_ids": [
+      "sec-20260729-ex99.html"
+    ],
+    "source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm"
+    ],
+    "locator": "Exhibit99.2",
+    "model_use": "NT$148.68bn authorization is not annual FY2026 capex and is not incremental to every past announced project budget. Exact multi-year cash schedule and split are not provided."
+  },
+  {
+    "id": "intel_12nm",
+    "subject": "Intel/UMC 12nm collaboration",
+    "value": {
+      "manufacturing_site": "Intel Ocotillo Arizona Fabs12,22,32",
+      "process": "12nm FinFET",
+      "production_expected": "2027",
+      "capital_logic": "reuse existing equipment to reduce upfront investment",
+      "applications": [
+        "mobile",
+        "wireless connectivity",
+        "networking"
+      ]
+    },
+    "unit": "mixed",
+    "classification": "issuer_projection",
+    "source_ids": [
+      "intel-12nm-20240125.html",
+      "umc-logic-technology.html"
+    ],
+    "source_urls": [
+      "https://www.intc.com/news-events/press-releases/detail/1671/intel-and-umc-announce-new-foundry-collaboration",
+      "https://www.umc.com/en/Product/technologies/Index/"
+    ],
+    "locator": "Intel2024-01-25 release; current UMC logic page",
+    "model_use": "Primary sources do not quantify UMC revenue/profit sharing or steady-state margin. Any 2027/2028 revenue, utilization or margin ramp in DCF must be labeled analyst assumption. No unsupported 3nm/6nm extension included."
+  },
+  {
+    "id": "photonics",
+    "subject": "Silicon photonics commercialization",
+    "value": {
+      "first_mass_production_delivery": "2026-07-14 announcement",
+      "customer": "SILITH",
+      "production_location": "UMC Singapore 12-inch fab",
+      "general_customer_platform_target": "2027"
+    },
+    "unit": "mixed",
+    "classification": "issuer_reported_milestone_and_projection",
+    "source_ids": [
+      "silith-20260714.html",
+      "2026Q2-report.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/en/News/press_release/Content/technology_related/20260714",
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+    ],
+    "locator": "2026-07-14 release; Q2 report pp1\u20132",
+    "model_use": "Actual first delivery is established. Material revenue and margin contribution is unquantified; valuation ramp must be analyst scenario."
+  },
+  {
+    "id": "funding_balance",
+    "subject": "Customer-related liabilities and public support",
+    "value": {
+      "guarantee_deposits_ntd_mn": 40045.045,
+      "contract_liabilities_ntd_mn": 6213.892,
+      "h1_2026_asset_grants_received_ntd_mn": 3781.133,
+      "construction_contracts_total_ntd_bn": 18.2,
+      "construction_contracts_not_recognized_ntd_bn": 12
+    },
+    "unit": "mixed",
+    "classification": "issuer_reported_actual",
+    "source_ids": [
+      "Q2-2026-full-financial-notes.htm"
+    ],
+    "source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+    ],
+    "locator": "Balance sheet; cash flow investing section; notes6(21),9(4)",
+    "model_use": "Do not assume deposits are free equity or all earmarked for Singapore; assess debt-like treatment and future refunds separately. Grant receipts are not automatically repeatable. Construction commitments at June30 predate July29 new authorization."
+  },
+  {
+    "id": "fx",
+    "subject": "Issuer currency translation bases",
+    "value": {
+      "q2_2026_income_statement_weighted_average_ntd_per_usd": 31.59,
+      "q1_2026_income_statement_weighted_average_ntd_per_usd": 31.63,
+      "june30_2026_condensed_balance_sheet_ntd_per_usd": 31.84
+    },
+    "unit": "NTD per USD",
+    "classification": "issuer_reported_translation_basis",
+    "source_ids": [
+      "2026Q1-report.pdf",
+      "2026Q2-report.pdf",
+      "2026Q2-financials.pdf"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q1_2026/UMC26Q1_report.pdf",
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf",
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_financial_statements-E.pdf"
+    ],
+    "locator": "Report p1 footnotes; condensed financial table1",
+    "model_use": "Average FX is an income statement convenience translation, not a current valuation spot. Earlier2024/2025 reports used period-end conversions; do not splice their translated USD series into growth/ASP calculations. Forward FX rate and sensitivity must be analyst assumptions unless specifically sourced."
+  },
+  {
+    "id": "tax_actual",
+    "subject": "Reported tax and effective rates",
+    "value": {
+      "q2_pretax_ntd_mn": 45186.121,
+      "q2_tax_ntd_mn": 2962.306,
+      "q2_effective_pct": 6.555787340099409,
+      "h1_pretax_ntd_mn": 61829.951,
+      "h1_tax_ntd_mn": 3489.152,
+      "h1_effective_pct": 5.643142107617067,
+      "h1_tax_rate_change_deferred_benefit_ntd_mn": 1946.754
+    },
+    "unit": "mixed",
+    "classification": "issuer_actual_and_analyst_arithmetic",
+    "source_ids": [
+      "Q2-2026-full-financial-notes.htm"
+    ],
+    "source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+    ],
+    "locator": "Income statement; note6(26)",
+    "model_use": "Headline ETR is distorted by non-operating investment earnings and treaty-related deferred benefit; do not extrapolate as normalized operating cash tax."
+  },
+  {
+    "id": "tax_outlook",
+    "subject": "Singapore incentive and treaty transition",
+    "value": {
+      "singapore_incentive_granted_year": 2025,
+      "singapore_incentive_expiry": "July 2035",
+      "renewed_treaty_entry_into_force": "2026-02-13",
+      "renewed_treaty_effective": "2027-01-01",
+      "tax_sparing_transition": "ceases after three taxable years from effective date",
+      "issuer_direction": "phase-out expected to increase future effective income tax rate",
+      "exact_forward_etr": null
+    },
+    "unit": "mixed",
+    "classification": "issuer_disclosed_tax_outlook",
+    "source_ids": [
+      "Q2-2026-full-financial-notes.htm"
+    ],
+    "source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+    ],
+    "locator": "Note6(26)c\u2013e, printed pp52\u201353",
+    "model_use": "Use tax scenario/normalization with an explicit upward transition; any chosen numerical normalized tax rate is analyst assumption, not issuer guidance."
+  },
+  {
+    "id": "non_operating_gain",
+    "subject": "Q2 net-income distortion",
+    "value": {
+      "operating_income_ntd_mn": 14949.99,
+      "non_operating_income_ntd_mn": 30236.131,
+      "net_investment_gain_report_ntd_mn": 30045,
+      "pretax_income_ntd_mn": 45186.121,
+      "income_tax_ntd_mn": 2962.306,
+      "consolidated_net_income_ntd_mn": 42223.815,
+      "attributable_net_income_ntd_mn": 42259.962,
+      "share_associates_jvs_profit_report_ntd_mn": 23606
+    },
+    "unit": "NTD million",
+    "classification": "issuer_reported_actual",
+    "source_ids": [
+      "2026Q2-report.pdf",
+      "Q2-2026-full-financial-notes.htm"
+    ],
+    "source_urls": [
+      "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf",
+      "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+    ],
+    "locator": "Report pp3\u20135; full income statement",
+    "model_use": "Net investment gain explains most of extraordinary net income; use operating cash generation in DCF. Capital-structure companion analysis provides investee-level bridge. Do not annualize quarterly NT$42.26bn net income."
+  },
+  {
+    "id": "monthly_revenue_cutoff",
+    "subject": "Q3 2026 revenue from monthly issuer figures",
+    "value": {
+      "july_ntd_bn": 23.844045,
+      "august_ntd_bn": 25.044641,
+      "september_ntd_bn": 25.350431,
+      "q3_sum_ntd_bn": 74.239117,
+      "q3_qoq_pct": 8.011409480983001,
+      "q3_yoy_pct": 25.558656411685753,
+      "ytd_ntd_bn": 204.009681
+    },
+    "unit": "mixed",
+    "classification": "issuer_monthly_actual_and_analyst_sum",
+    "source_ids": [
+      "monthly-sales-asof-20261019.html"
+    ],
+    "source_urls": [
+      "https://www.umc.com/en/IR_Financial/monthly_sales_revenue"
+    ],
+    "locator": "2026 table Jan\u2013Sept",
+    "model_use": "Available at cutoff for revenue run-rate. Q3 gross margin, utilization and shipments are still unreported; do not score those guidance metrics from sales."
+  },
+  {
+    "id": "press_speculation_disclaimed",
+    "subject": "October 7 clarification of third-party FY2026 estimates",
+    "value": {
+      "news_estimated_revenue_growth_pct": 21,
+      "news_estimated_profit_growth_pct": 133,
+      "issuer_response": "Does not comment on speculative reports or market rumors",
+      "issuer_guidance": false
+    },
+    "unit": "percent, press estimates only",
+    "classification": "explicitly_not_issuer_guidance",
+    "source_ids": [
+      "sec-oct13-2026-ex99.html"
+    ],
+    "source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1033767/000119312526419602/umc-ex99.htm"
+    ],
+    "locator": "Exhibit99.1",
+    "model_use": "Do not use the press growth figures as management forecasts."
+  }
+]

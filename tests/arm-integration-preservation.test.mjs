@@ -1,3 +1,4 @@
+import {umcFixture} from './umc-integration-preservation.mjs';
 import {cevaDeliveryFixture} from './ceva-delivery-preservation.mjs';
 import {cevaRmbsFixture} from './ceva-rmbs-integration-preservation.mjs';
 import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
@@ -32,7 +33,7 @@ test('ARM additions retain exact reviewed hashes with no unrelated production fi
  const f=fixture();assert.ok(Object.keys(f.additions).length>=5);
  const root=fileURLToPath(new URL('..',import.meta.url));
  const actual=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(root,join(e.parentPath,e.name))).sort();
- assert.deepEqual(actual,[...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
+ assert.deepEqual(actual,[...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions),...Object.keys(keysFixture().additions)].sort(),'No unreviewed production files or raw-source additions');
  for(const[p,h]of Object.entries(f.additions)){
   assert.equal(sha(reverseKeysIntegration(p,read(p))),h,p);
   assert.match(p,/^dist\/(?:arm-|data\/incremental-ARM-2026-10-19-v2\/)/);
@@ -43,6 +44,7 @@ test('ARM additions retain exact reviewed hashes with no unrelated production fi
 test('ARM preserves all 28 V72 defaults, edits, seeded trials, restored outputs, ordering and bilingual locale keys',async()=>{
  const old=JSON.parse(read('tests/fixtures/arm-v72-output-goldens.json'));
  const actual=await captureResearchSnapshot(fileURLToPath(new URL('..',import.meta.url)));
+ assert.deepEqual(actual.currentOrder,[...actual.order,'CEVA','RMBS','UMC'],'The complete current company order admits only the three explicitly reviewed later companies');
  assert.equal(old.order.length,28);assert.equal(actual.order.length,30);
  assert.deepEqual(actual.order,[...old.order,'ARM','KEYS']);
  assert.deepEqual(Object.keys(old.companies),old.order);

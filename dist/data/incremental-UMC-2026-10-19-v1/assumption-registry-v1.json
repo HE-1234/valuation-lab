@@ -1,0 +1,282 @@
+{
+  "current_target": null,
+  "selected_policy": null,
+  "distribution_status": "No calibrated probability distribution; deterministic cases and uncalibrated stress only.",
+  "assumptions": [
+    {
+      "field": "first-year revenue and growth",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": {
+        "bear": {
+          "first": 270000,
+          "growth": [
+            0.02,
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.025,
+            0.025,
+            0.02,
+            0.02
+          ]
+        },
+        "base": {
+          "first": 300000,
+          "growth": [
+            0.1,
+            0.08,
+            0.07,
+            0.06,
+            0.05,
+            0.04,
+            0.04,
+            0.03,
+            0.025
+          ]
+        },
+        "bull": {
+          "first": 320000,
+          "growth": [
+            0.14,
+            0.12,
+            0.1,
+            0.08,
+            0.07,
+            0.06,
+            0.05,
+            0.04,
+            0.03
+          ]
+        }
+      },
+      "rationale": "Next12months TWD270/300/320bn bracket Q2annualized274.931bn and issuer monthlyQ3sum annualized296.956bn. Subsequentratesfade; notissuerannualrevenueguidance. InitialNWCanchor is2xH1revenue, notLTM.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+        "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf",
+        "https://www.umc.com/en/IR_Financial/monthly_sales_revenue"
+      ]
+    },
+    {
+      "field": "pre-lease operating margin",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": {
+        "bear": [
+          0.18,
+          0.17,
+          0.17,
+          0.18,
+          0.18,
+          0.18,
+          0.18,
+          0.18,
+          0.18,
+          0.18
+        ],
+        "base": [
+          0.23,
+          0.25,
+          0.26,
+          0.26,
+          0.26,
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "bull": [
+          0.26,
+          0.29,
+          0.31,
+          0.32,
+          0.32,
+          0.31,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      },
+      "rationale": "Q2reported operatingmargin21.8%; Q3grossmarginguide mid30%. Normalize beforecashlease and excludeinvestmentgains/deferredgrantamortization. Longrun18/25/30% represent cycledownturn/productivity/recovery assumptions, notguaranteedpeakretention.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+        "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf"
+      ]
+    },
+    {
+      "field": "cash capex and nonlease depreciation",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": {
+        "bear": {
+          "cash_capex": [
+            75000,
+            90000,
+            95000,
+            90000,
+            80000,
+            75000,
+            75000,
+            75000,
+            75000,
+            75000
+          ],
+          "da_nonlease": [
+            65000,
+            70000,
+            74000,
+            76000,
+            77000,
+            78000,
+            78000,
+            78000,
+            78000,
+            78000
+          ]
+        },
+        "base": {
+          "cash_capex": [
+            85000,
+            100000,
+            105000,
+            100000,
+            95000,
+            90000,
+            90000,
+            90000,
+            95000,
+            95000
+          ],
+          "da_nonlease": [
+            68000,
+            75000,
+            82000,
+            88000,
+            93000,
+            97000,
+            100000,
+            102000,
+            104000,
+            105000
+          ]
+        },
+        "bull": {
+          "cash_capex": [
+            95000,
+            115000,
+            125000,
+            125000,
+            120000,
+            120000,
+            125000,
+            130000,
+            135000,
+            140000
+          ],
+          "da_nonlease": [
+            70000,
+            80000,
+            90000,
+            100000,
+            110000,
+            120000,
+            125000,
+            130000,
+            135000,
+            140000
+          ]
+        }
+      },
+      "rationale": "2026capexguideUS$2bn; JulyphasedboardbudgetNT$148.68bn is not an additionalinstantbill. Forecast cashbudgetsincludepriorpayables andconstruction/IPcommitments. H1totalDA32.225bn includesROU; futureDA isexplicitnonleaseestimate andleasecashrent handledseparately.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+        "https://www.umc.com/upload/media/08_Investors/Financials/Quarterly_Results/Quarterly_2020-2029_English_pdf/2026/Q2_2026/UMC26Q2_report.pdf",
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322027/umc-ex99.htm"
+      ]
+    },
+    {
+      "field": "tax rates",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": {
+        "bear": 0.25,
+        "base": 0.22,
+        "bull": 0.2
+      },
+      "rationale": "20\u201325% normalizedpositiveoperatingcashprofit tax, noH1headline5.64% extrapolation. Singaporeincentive andtax-sparingtransition make exactETRuncertain; noNOLrefund/DTAmonetization orblanketDTLdoublecharge.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+      ]
+    },
+    {
+      "field": "working capital ratio",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": 0.25,
+      "rationale": "JuneAR+relatedAR+inventory\u2212AP=67.509bn,~26%ofH1annualizedrevenue.25%incrementalratio is approximate; capacitydeposits/contracts/refunds separatelyreserved ratherthanfreeNWCfinancing. No customeradvance inflows assumed.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+      ]
+    },
+    {
+      "field": "wacc, terminal growth and incremental ROIC",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": {
+        "bear": {
+          "wacc": 0.12,
+          "growth": 0.02,
+          "incremental_roic": 0.12
+        },
+        "base": {
+          "wacc": 0.105,
+          "growth": 0.025,
+          "incremental_roic": 0.12
+        },
+        "bull": {
+          "wacc": 0.095,
+          "growth": 0.03,
+          "incremental_roic": 0.12
+        }
+      },
+      "rationale": "NominalTWDdiscount rates9.5\u201312%, perpetualgrowth2\u20133% andnonleaseincrementalROIC12% are transparentanalystjudgments. TerminalFCFFcannotexceedgrownfinalyearFCFF. No marketquote calibration; these aredeterministicscenarios, notprobabilitydistributions.",
+      "source_anchors": []
+    },
+    {
+      "field": "operating cash and minority reserves",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": "See full named policies",
+      "rationale": "Operatingcash15bn approximates a meaningful fraction of quarterlycashcosts;25bn stress. NCI100m/1000m areexplicitanalystreserves, not4.051mbookFV. They are not certifiedupperbounds.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+      ]
+    },
+    {
+      "field": "portfolio exclusion",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": 0,
+      "rationale": "Excludesdirectsecurities50.922bn andequity-methodbook96.474bn plus unrecognizedquotedvalue differences. Zero is no appraisal. Cross-holding benefit alsozero. Nonzeroaddback requiresreviewedlookthrough/tax/circularclaimmodel.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+      ]
+    },
+    {
+      "field": "bank principal timing",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": "Allupfront vs currentupfront/remainingyear2",
+      "rationale": "Allupfrontfailsafterlegacyclaimreserve. Staged usesexactcurrent6.402321bn andremaining11.489924bn conservativelyallocatedyear2, notexactannualmaturities. Allprincipalonce; debt andcash claims remainidentical.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm"
+      ]
+    },
+    {
+      "field": "67m award allocation",
+      "classification": "analyst assumption, not issuer guidance or calibrated probability",
+      "values": {
+        "authorized_max_million": 67,
+        "illustrated_fraction": 1
+      },
+      "rationale": "MaximumFeb2026authorizednewsharesfornocash, actualissuancedateunverified. Existingissuedsharesalreadycounted. RecurringSBCcostretained soexpenseoverlapmayconservativelydepressvalue. Supplementalawardcashreserve isseparatestress.",
+      "source_anchors": [
+        "https://www.sec.gov/Archives/edgar/data/1033767/000119312526068351/umc-ex99.htm"
+      ]
+    }
+  ]
+}
