@@ -1666,7 +1666,7 @@
     content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 3px; border-radius: 3px; transform-origin: 0 50%;
     transform: scaleX(var(--w, 0)); background: color-mix(in srgb, var(--accent) 55%, transparent); transition: transform 420ms cubic-bezier(.2, .8, .2, 1);
   }
-  @media (prefers-reduced-motion: reduce) { & body :is(.rx-tn-plot > i, .rx-story-impact::before) { transition: none !important; } }
+  @media (prefers-reduced-motion: reduce) { & body .rx-tn-plot > i, & body .rx-story-impact::before { transition: none !important; } }
 }
 :root[data-skin="report"] {
   /* Reality check: what the driver implies, in one plain sentence before moving on. */

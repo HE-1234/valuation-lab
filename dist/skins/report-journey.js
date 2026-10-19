@@ -31,10 +31,10 @@ const COPY = {
     checkGrowth: 'Revenue reaches {rN} by year {n}, {x}× today’s {r0}. Is the market big enough for that?',
     checkMargin: 'Operating profit reaches {eN} in year {n}, from {e0} today.',
     checkCapital: 'The forecast reinvests {inv} in total to add {dr} of yearly revenue.',
-    checkRisk: '{pct} of the value comes after year {n}, so stable growth and the cost of capital carry real weight.',
+    checkRisk: '{pct} of operating value comes after year {n}, so stable growth and the cost of capital carry real weight.',
     tornado: 'What moves the value', tornadoLead: 'Each bar moves one driver both ways and holds the rest. Spend your research where the bars are widest.',
     sGrowth: 'Revenue growth · year 1', sTargetMargin: 'Mature operating margin', sSalesCapital: 'Sales / capital', sWacc: 'Cost of capital · WACC', sTerminalGrowth: 'Stable growth',
-    pts: '±{n} pts', pt: '±{n} pt', rel: '±{n}%', most: '{name} matters most: it moves value by up to {pct}.', perShareAxis: 'Value per share', moves: '{d} → value ±{pct}', open: 'Open {name}'
+    pts: '±{n} pts', pt: '±{n} pt', rel: '±{n}%', most: '{name} matters most: it moves value by up to {pct}.', perShareAxis: 'Value per share', moves: '{d} → value changes by up to {pct}', open: 'Open {name}'
   },
   'zh-Hans': {
     e1: '第 1 步，共 6 步 · 投资论述', e2: '第 2 步，共 6 步 · 价值驱动因素 · 成长', e3: '第 3 步，共 6 步 · 价值驱动因素 · 获利能力',
@@ -58,10 +58,10 @@ const COPY = {
     checkGrowth: '第 {n} 年营收达到 {rN}，是目前 {r0} 的 {x} 倍。市场规模撑得起吗？',
     checkMargin: '第 {n} 年营业利润达到 {eN}，目前为 {e0}。',
     checkCapital: '预测期合计再投资 {inv}，换来每年新增 {dr} 的营收。',
-    checkRisk: '价值中有 {pct} 来自第 {n} 年之后，稳定成长率与资金成本的影响很大。',
+    checkRisk: '营业价值中有 {pct} 来自第 {n} 年之后，稳定成长率与资金成本的影响很大。',
     tornado: '什么最影响价值', tornadoLead: '每条长条只朝两个方向调整一项驱动因素，其余维持不变。长条越宽，越值得投入研究。',
     sGrowth: '营收成长率 · 第 1 年', sTargetMargin: '成熟期营业利润率', sSalesCapital: '营收／资本', sWacc: '资金成本 · WACC', sTerminalGrowth: '稳定成长率',
-    pts: '±{n} 个百分点', pt: '±{n} 个百分点', rel: '±{n}%', most: '{name}影响最大：最多可让价值变动 {pct}。', perShareAxis: '每股价值', moves: '{d} → 价值 ±{pct}', open: '前往{name}'
+    pts: '±{n} 个百分点', pt: '±{n} 个百分点', rel: '±{n}%', most: '{name}影响最大：最多可让价值变动 {pct}。', perShareAxis: '每股价值', moves: '{d} → 价值最多变动 {pct}', open: '前往{name}'
   }
 };
 const lang = () => (COPY[getLocale?.()] ? getLocale() : 'en');

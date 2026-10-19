@@ -562,7 +562,15 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
   const marginMode=root.querySelector('#annual-margin-mode');if(marginMode)marginMode.onchange=()=>changeMarginPath({enabled:marginMode.value==='phased'},'annual-margin-mode');
   root.querySelectorAll('[data-margin-prefix="annual"]').forEach(el=>{el.onfocus=()=>{activeEdit=null;};el.onblur=()=>{activeEdit=null;};const edit=()=>{const parsed=parseDisplayedNumber(el.value),value=parsed===null?null:parsed/Number(el.dataset.scale);changeMarginPath({enabled:true,[el.dataset.marginControl]:value},el.id);};el.oninput=edit;el.onchange=()=>{const value=readPrecisionInput(el,Number(el.dataset.scale)),current=el.dataset.marginControl==='terminalMargin'?d.terminal.margin:d.marginPath?.[el.dataset.marginControl];if(!Object.is(current,value)){el.value=String(value*Number(el.dataset.scale));edit();}};});
   const horizon=root.querySelector('#annual-growth-horizon');if(horizon)horizon.onchange=()=>changeGrowthHorizon(horizon.value);
-  const marginal=root.querySelector('#annual-marginal-sales-capital');if(marginal)marginal.onchange=()=>{const value=readPrecisionInput(marginal);if(Object.is(value,d.derivedForecast.marginalSalesCapital))return;if(!finite(value)||value<=0){marginal.setAttribute('aria-invalid','true');annualSetText(root.querySelector('#research-action-status'),'Enter a positive marginal sales / capital assumption; the previous case is retained.');return;}changeGrowthHorizon(d.derivedForecast.growthMaturityYear,{marginalSalesCapital:value});};
+  const marginal=root.querySelector('#annual-marginal-sales-capital');if(marginal)marginal.onchange=()=>{
+   const value=readPrecisionInput(marginal),status=root.querySelector('#research-action-status'),error='Enter a positive marginal sales / capital assumption; the previous case is retained.';
+   if(!finite(value)||value<=0){marginal.setAttribute('aria-invalid','true');annualSetText(status,error);return;}
+   // Repair presentation even when the retained model value needs no change.
+   marginal.removeAttribute('aria-invalid');
+   if(status?.textContent===annualLabel(error))annualSetText(status,'');
+   if(Object.is(value,d.derivedForecast.marginalSalesCapital))return;
+   changeGrowthHorizon(d.derivedForecast.growthMaturityYear,{marginalSalesCapital:value});
+  };
   const year=root.querySelector('#annual-edit-year');if(year)year.onchange=()=>{activeEdit=null;currentUI().year=Number(year.value);syncYearEditor();};
   root.querySelectorAll('[data-research-text]').forEach(el=>{el.onfocus=()=>{activeEdit=null;};el.onblur=()=>{activeEdit=null;};el.oninput=()=>{if(identityError)return;const key=el.dataset.researchText;rememberEdit('text:'+key);if(key==='notes')d.notes=el.value;else d.timing[key]=el.value;save();if(key!=='notes')updateResults();};});
   bindNvmiConditional(root,d,{save,rerender:render,remember:rememberEdit,endEdit:()=>{activeEdit=null;}});
