@@ -1,0 +1,190 @@
+{
+  "information_cutoff": "2026-10-19",
+  "snapshot_date": "2026-06-30",
+  "events": [
+    {
+      "event_date": "2026-07-01",
+      "event": "Getir food control plus minority grocery investment completed",
+      "status": "closed confirmed in SEC Q",
+      "cash_outflow_usdm_approx": 465,
+      "debt_change_usdm": null,
+      "operating_value_added": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+      "locator": "Note15; target assets/liabilities and purchase-price allocation not yet quantified",
+      "food_business_ownership_percent": 100,
+      "grocery_business_ownership_percent": null,
+      "minority_grocery_investment_value": null,
+      "model_rule": "465m USD consideration covers controlled food business AND minority grocery investment. Model operating EV and minority investment separately; no default allocation of all consideration to operating EV."
+    },
+    {
+      "event_date": "2026-07-30",
+      "event": "Careem Technologies controlling interest acquired",
+      "status": "closed/reconsolidation confirmed in SEC Q",
+      "cash_outflow_usdm": null,
+      "operating_value_added": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+      "locator": "Note3; cash consideration and new consolidated debt/NCI not disclosed",
+      "june_equity_method_asset_book_usdm": 147,
+      "model_rule": "Remove the value included in the selected June investment allocation when adding consolidated operating EV; illustration147x80%=117.6, not automatically book147. Additional consideration/acquired cash/debt/NCI require separate assumptions."
+    },
+    {
+      "event_date": "2026-08-06",
+      "event": "Acquisition term commitment and replacement revolver",
+      "status": "commitment, not assumed draw",
+      "term_commitment_eurm": 4000,
+      "bridge_reduction_eurm": 4000,
+      "bridge_initial_commitment_eurm": 14200,
+      "replacement_revolver_commitment_usdm": 7700,
+      "revolver_drawn_at_close_usdm": 0,
+      "letters_of_credit_usdm_approx": 324,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000414/e26328_uber-8k.htm"
+    },
+    {
+      "event_date": "2026-08-20",
+      "event": "Blacklane partner notice says officially acquired",
+      "status": "acquiree confirms acquisition by this date; exact closing/cash not supplied",
+      "cash_price_prior_agreement_usdm_approx": 550,
+      "actual_cash_outflow_usdm": null,
+      "operating_value_added": null,
+      "source_url": "https://partner-help.blacklane.com/en/articles/14324796-uber-to-acquire-global-chauffeur-service-blacklane",
+      "prior_agreement_source": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm"
+    },
+    {
+      "event_date": "2026-08-27",
+      "event": "Delivery Hero offer document published",
+      "status": "pending offer, not consolidated",
+      "offer_eur_per_share": 41.5,
+      "acceptance_deadline": "2026-11-05",
+      "expected_settlement": "H2 2027",
+      "holding_voting_percent_before_launch": 24.77,
+      "additional_derivative_economic_percent": 11.74,
+      "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Publishes-Offer-Document-for-its-Takeover-Offer-for-Delivery-Hero/default.aspx",
+      "model_rule": "Keep June equity-method stake and TRS separate. Do not subtract full14.8bn headline equity value on top of existing stake or add target earnings before closing."
+    },
+    {
+      "event_date": "2026-09-15",
+      "event": "New euro senior notes completed",
+      "status": "issued",
+      "gross_proceeds_eurm": 4489.3075,
+      "usd_conversion": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000486/e26383_uber-8k.htm",
+      "tranches_eurm_coupon_maturity": [
+        [
+          750,
+          0.0375,
+          2029
+        ],
+        [
+          1000,
+          0.04125,
+          2032
+        ],
+        [
+          1000,
+          0.04375,
+          2034
+        ],
+        [
+          1000,
+          0.0475,
+          2038
+        ],
+        [
+          750,
+          0.0525,
+          2046
+        ]
+      ],
+      "model_rule": "Pair issued debt with proceeds AFTER known public issue discount10.6925 and underwriting24.875. Other expenses use a disclosed estimate only with explicit acknowledgement; actual net cash still unverified. Retained EUR cash and debt must revalue at current FX together; converted/spent cash needs an explicit currency/disposition reconciliation. Commitments are not drawn debt.",
+      "principal_eurm": 4500,
+      "original_issue_discount_eurm": 10.6925,
+      "underwriting_discounts_eurm": 24.875,
+      "issuer_proceeds_before_other_expenses_eurm": 4464.4325,
+      "issuer_estimated_net_proceeds_eurm_approx": 4453,
+      "implied_estimated_other_expenses_eurm_approx": 11.4325,
+      "actual_net_proceeds_eurm": null,
+      "annual_coupon_eurm": 200,
+      "pricing_source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000479/e26381_uber-fwp.htm",
+      "underwriting_source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000486/e26383_ex1-1.htm",
+      "prospectus_source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000481/e26382_uber-euro424b2.htm",
+      "tranche_pricing": [
+        {
+          "maturity_year": 2029,
+          "principal_eurm": 750,
+          "public_price_percent": 99.939,
+          "issuer_sale_price_percent": 99.589,
+          "gross_public_proceeds_eurm": 749.5425,
+          "underwriting_discount_eurm": 2.625,
+          "issuer_proceeds_before_other_expenses_eurm": 746.9175
+        },
+        {
+          "maturity_year": 2032,
+          "principal_eurm": 1000,
+          "public_price_percent": 99.745,
+          "issuer_sale_price_percent": 99.245,
+          "gross_public_proceeds_eurm": 997.45,
+          "underwriting_discount_eurm": 5.0,
+          "issuer_proceeds_before_other_expenses_eurm": 992.45
+        },
+        {
+          "maturity_year": 2034,
+          "principal_eurm": 1000,
+          "public_price_percent": 99.722,
+          "issuer_sale_price_percent": 99.197,
+          "gross_public_proceeds_eurm": 997.22,
+          "underwriting_discount_eurm": 5.25,
+          "issuer_proceeds_before_other_expenses_eurm": 991.97
+        },
+        {
+          "maturity_year": 2038,
+          "principal_eurm": 1000,
+          "public_price_percent": 99.856,
+          "issuer_sale_price_percent": 99.256,
+          "gross_public_proceeds_eurm": 998.56,
+          "underwriting_discount_eurm": 6.0,
+          "issuer_proceeds_before_other_expenses_eurm": 992.56
+        },
+        {
+          "maturity_year": 2046,
+          "principal_eurm": 750,
+          "public_price_percent": 99.538,
+          "issuer_sale_price_percent": 98.738,
+          "gross_public_proceeds_eurm": 746.535,
+          "underwriting_discount_eurm": 6.0,
+          "issuer_proceeds_before_other_expenses_eurm": 740.535
+        }
+      ]
+    },
+    {
+      "event_date": "2026-10-06",
+      "event": "ezCater agreement",
+      "status": "pending, not closed",
+      "cash_consideration_usdm": 2300,
+      "trailing_bookings_usdm_lower_bound": 2500,
+      "operating_value_added": null,
+      "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-to-Acquire-ezCater-as-it-Brings-Catering-to-Uber-Eats/default.aspx",
+      "model_rule": "No current cash reduction, debt increase or earnings consolidation solely from announcement. A closing scenario must pair all effects."
+    }
+  ],
+  "remaining_rollforward_unknowns": [
+    "July-October operating cash/FCFF, taxes, insurance collateral and working capital",
+    "Post-June buybacks, award issues and exact October shares",
+    "Actual euro-note expense/proceeds settlement versus issuer estimate; cash currency/disposition; current FX/debt marks and remaining drawn debt",
+    "Careem/Blacklane consideration and acquired cash/debt/NCI; Getir food operating EV versus minority grocery asset; no purchase-price-as-EV default",
+    "Current investment marks, TRS settlements and tax realization",
+    "Restructuring cash and other non-routine claims",
+    "Any subsequent debt repayments; do not assume new bonds merely raise net debt without retaining their cash"
+  ],
+  "current_verified_target": null,
+  "current_verified_equity_ready": false,
+  "existing_debt_funding_watch": {
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+    "locator": "Note5 debt table and 2026 Term Loan",
+    "june_borrowed_principal_usdm": 2000,
+    "maturity": "December2026",
+    "remaining_commitment_at_june_usdm": 1000,
+    "undrawn_commitment_expiry": "2026-08-02",
+    "subsequent_draws_or_repayment": null,
+    "rule": "June borrowed amount already inside debt claim. Do not deduct it again. Undrawn June capacity cannot be treated as October available liquidity after expiry without evidence of timely draw or extension."
+  }
+}

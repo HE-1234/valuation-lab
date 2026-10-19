@@ -1,0 +1,38 @@
+{
+  "source_urls": [
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uberq226earningspressrelea.htm"
+  ],
+  "2025_ebitda_to_gaap_ebit": {
+    "adjusted_ebitda": 8730,
+    "less_operating_da": 719,
+    "less_sbc": 1826,
+    "less_legal_nonincome_tax_regulatory": 564,
+    "less_impairment": 2,
+    "less_acquisition_financing_divestiture": 43,
+    "less_lease_loss": 2,
+    "less_restructuring": 9,
+    "gaap_ebit": 5565
+  },
+  "2026Q2": {
+    "gaap_ebit": 1890,
+    "non_gaap_operating_income": 2143,
+    "adjusted_ebitda": 2819,
+    "company_fcf": 2792,
+    "gaap_net_income_parent": 2394,
+    "pre_tax_equity_revaluation_benefit_approx": 1618,
+    "gaap_diluted_eps": 1.17
+  },
+  "2026H1_segment_operating_income": {
+    "mobility": 4244,
+    "delivery": 2016,
+    "freight": -54,
+    "corporate_ga_and_platform_rd": -2180,
+    "other_reconciling_items": -213,
+    "gaap_ebit": 3813
+  },
+  "interpretation": "2026 segment performance moved from Segment Adjusted EBITDA to Segment Operating Income; 2025 comparatives in the 2026 Q are recast to that measure, whereas 2025 annual report uses old measure. SBC is included in forecast GAAP EBIT; neither SBC nor insurance reserve growth is automatically treated as owner cash. CFO less capex remains a levered reported cash-flow metric, not FCFF.",
+  "cashflow_vs_operating_da": "2025 D&A is 719 in operations and 747 in cash flow; H1 2026 is 372 and 386. Cash-flow custom tag includes amounts from other income/expense. Forecast uses operating D&A only.",
+  "sbc_scope": "H1 2026 cash-flow SBC 1023, equity-compensation note expense 1029, adjusted EBITDA addback 1022; retain the distinctions instead of silently substituting."
+}

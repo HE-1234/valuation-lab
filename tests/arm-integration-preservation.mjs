@@ -20,7 +20,7 @@ const storage=new Map();const options={storage,catalogBundle:read('dist/data/atl
 const w=await startResearchWorkspace(options);
 const baselineUI=await allocationBaselineWorkspace({...options,storage:new Map()});
 out.currentOrder=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
-out.order=out.currentOrder.filter(t=>t!=='CEVA'&&t!=='RMBS'&&t!=='UMC'&&t!=='MCD');
+out.order=out.currentOrder.filter(t=>t!=='CEVA'&&t!=='RMBS'&&t!=='UMC'&&t!=='MCD'&&t!=='UBER');
 if(!out.order.length)throw Error('Empty company order');
 function calculate(d){const operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);return {operating,timing,bridge:calculateResearchBridge(d,timing.enterprise,{...d.bridgeInputs,calculationDate:timing.date})};}
 for(const ticker of out.order.filter(x=>x!=='KEYS'&&x!=='ARM')){

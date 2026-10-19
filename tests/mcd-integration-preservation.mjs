@@ -1,3 +1,4 @@
+import {reverseUberIntegration} from './uber-integration-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -141,6 +142,7 @@ export function validateMcdFixture(f){
 let cached;
 export function mcdFixture(){if(!cached){const f=validateMcdFixture(JSON.parse(fs.readFileSync(new URL('../'+MCD_FIXTURE_PATH,import.meta.url))));Object.values(f.files).forEach(Object.freeze);Object.freeze(f.files);Object.freeze(f.additions);cached=Object.freeze(f);}return cached;}
 export function reverseMcdIntegration(path,bytes,earlierContext=''){
+ bytes=reverseUberIntegration(path,bytes,earlierContext);
  assert.ok(productionPath(path),String(path)+' must be an exact normalized dist path');assert.ok(Buffer.isBuffer(bytes),path+' requires exact production bytes');const f=mcdFixture();
  const message=path+' exact reviewed MCD integration bytes; exact reviewed Claude simulation UI bytes'+earlierContext;
  if(own(f.files,path)){assert.equal(mcdSHA(bytes),f.files[path].afterSHA256,message);return Buffer.from(f.files[path].beforeText);}

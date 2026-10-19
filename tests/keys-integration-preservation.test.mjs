@@ -1,3 +1,4 @@
+import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import {mcdFixture,MCD_FIXTURE_PATH} from './mcd-integration-preservation.mjs';
 import {simulationUiFixture} from './claude-simulation-ui-preservation.mjs';
 import {umcFixture} from './umc-integration-preservation.mjs';
@@ -20,13 +21,13 @@ test('KEYS exact insertion reversal preserves all approved prior production and 
 test('KEYS package contains only reviewed additive production and no raw corporate originals',()=>{
  const f=fixture(),root=fileURLToPath(new URL('..',import.meta.url));
  const actual=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(root,join(e.parentPath,e.name))).sort();
- assert.deepEqual(actual,[...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions)].sort());
+ assert.deepEqual(actual,[...Object.keys(uberFixture().additions),...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions),...Object.keys(f.baselineProduction),...Object.keys(f.additions)].sort());
  for(const[p,h]of Object.entries(f.additions)){assert.equal(sha(read(p)),h,p);assert.match(p,/^dist\/(?:keys-|data\/incremental-KEYS-)/);assert.doesNotMatch(p,/\/raw\/|\/transcripts\/|keys-20\d{6}\.htm/);}
 });
 test('KEYS preserves all 29 earlier defaults, edits, seeded trials, restores, bilingual output and ordering',async()=>{
  const old=JSON.parse(read('tests/fixtures/keys-v74-output-goldens.json'));
  const actual=await captureResearchSnapshot(fileURLToPath(new URL('..',import.meta.url)));
- assert.deepEqual(actual.currentOrder,[...actual.order,'CEVA','RMBS','UMC','MCD'],'The complete current company order admits only the four explicitly reviewed later companies');
+ assert.deepEqual(actual.currentOrder,[...actual.order,'CEVA','RMBS','UMC','MCD','UBER'],'The complete current company order admits only the five explicitly reviewed later companies');
  assert.equal(old.order.length,29);assert.deepEqual(actual.order,[...old.order,'KEYS']);assert.deepEqual(actual.companies,old.companies);
  for(const kind of ['localeKeys','translatedKeys'])for(const[k,v]of Object.entries(old[kind]))assert.equal(actual[kind][k],v,kind+' '+k);
  for(const locale of ['en','zh-Hans'])for(const[k,v]of Object.entries(old.locales[locale]))assert.deepEqual(actual.locales[locale][k],v,locale+' '+k);

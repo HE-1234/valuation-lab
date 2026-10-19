@@ -122,13 +122,13 @@ for(const bad of [{},[],42,{...record.policyExamples[2],required_operating_cash:
  }finally{h.cleanup();}
 });
 
-test('all 34 actual annual adapters mount and bind existing company policy controls without changing defaults',async()=>{
+test('all 35 actual annual adapters mount and bind existing company policy controls without changing defaults',async()=>{
  const h=await startStrictSimulationWorkspace();
  try{
-  const tickers=h.root.querySelectorAll('[data-research-company]').map(node=>node.dataset.researchCompany);assert.equal(tickers.length,34);
+  const tickers=h.root.querySelectorAll('[data-research-company]').map(node=>node.dataset.researchCompany);assert.equal(tickers.length,35);
   for(const ticker of tickers){
    h.choose(ticker);const before=h.getState().draft.researchSimulationConfig,control=h.mc('#mc-capital-policy');assert.ok(h.mc('#mc-run'),ticker);assert.equal(typeof h.mc('#mc-run').onclick,'function',ticker);
-   if(['UMC','MCD'].includes(ticker))assert.equal(control,null);else{assert.ok(control,`${ticker} rendered its selector`);assert.equal(typeof control.onchange,'function',ticker);assert.equal(control.value,before.capitalPolicy,ticker);}
+   if(['UMC','MCD','UBER'].includes(ticker))assert.ok(control===null);else{assert.ok(control,`${ticker} rendered its selector`);assert.equal(typeof control.onchange,'function',ticker);assert.equal(control.value,before.capitalPolicy,ticker);}
    edit(h,'#mc-seed',`strict-all33-${ticker}`);const after=h.getState().draft.researchSimulationConfig;assert.equal(after.capitalPolicy,before.capitalPolicy,ticker);assert.equal(after.method,before.method,ticker);assert.equal(after.trials,before.trials,ticker);assert.equal(after.seed,`strict-all33-${ticker}`);assert.equal(h.mc('#mc-run').disabled,false,ticker);assert.equal(h.runs.length,0,ticker);
    if(['AAPL','KEYS','CEVA','RMBS'].includes(ticker)){
     const next=control.value==='fixed-schedule'?'revenue-scaled':'fixed-schedule';edit(h,'#mc-capital-policy',next,'change');assert.equal(h.getState().draft.researchSimulationConfig.capitalPolicy,next,ticker);edit(h,'#mc-capital-policy',before.capitalPolicy,'change');assert.equal(h.getState().draft.researchSimulationConfig.capitalPolicy,before.capitalPolicy,ticker);

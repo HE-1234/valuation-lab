@@ -8,8 +8,8 @@ import {incrementalPackages} from '../dist/incremental-registry.js';
 test('all30 researched operating values remain finite; exactly5 need explicit unknown claims and NVMI existing opt-in works',async()=>{
  const w=await startResearchWorkspace({catalogBundle:JSON.parse(fs.readFileSync(new URL('../dist/data/atlas-company-catalog-v1.json',import.meta.url))),incrementalBundle:incrementalPackages});
  const tickers=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
- assert.equal(tickers.length,34);assert.deepEqual(tickers.slice(-4),['CEVA','RMBS','UMC','MCD']);
- const priorTickers=tickers.filter(t=>t!=='CEVA'&&t!=='RMBS'&&t!=='UMC'&&t!=='MCD');
+ assert.equal(tickers.length,35);assert.deepEqual(tickers.slice(-5),['CEVA','RMBS','UMC','MCD','UBER']);
+ const priorTickers=tickers.filter(t=>t!=='CEVA'&&t!=='RMBS'&&t!=='UMC'&&t!=='MCD'&&t!=='UBER');
  let defaultCommon=0,unknownGroups=0,conditionalReachable=0;assert.equal(priorTickers.length,30);
  for(const ticker of priorTickers){w.choose(ticker);const d=structuredClone(w.getState().draft),operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);assert.ok(Number.isFinite(operating.enterprise),d.ticker);const bridge=calculateResearchBridge(d,timing.enterprise,{...(d.bridgeInputs||{}),calculationDate:timing.date});
   const definition=getAnalystAllocationDefinition(d.ticker);
