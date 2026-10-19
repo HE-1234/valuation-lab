@@ -1,0 +1,39 @@
+{
+  "anchor": "2026-06-30",
+  "source": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm",
+  "balance_source_fact": {
+    "common_shares_m": 108.461603,
+    "prior_common_shares_m": 107.781863,
+    "cash_m": 87.72,
+    "securities_m": 737.228,
+    "eda_claim_m": 28.182,
+    "eda_nominal_funding_reserve_m": 31.435
+  },
+  "historical_h1_already_in_anchor": {
+    "settlement_tax_cash_m": 52.681,
+    "employee_plan_cash_proceeds_m": 5.234,
+    "share_repurchases_cash_m": 2.956,
+    "net_employee_shares_rounded_m": 0.713,
+    "repurchased_shares_rounded_m": 0.033,
+    "actual_common_change_m": 0.67974,
+    "gross_units_vested_m": 0.994254,
+    "espp_shares_issued_m": 0.05764
+  },
+  "treatment": "Do not deduct already-paid cash or allocate already-settled units again. Rounded movement rows are corroboration, not exact gross-to-net share arithmetic.",
+  "legacy_grants": {
+    "reported_nonvested_units_m": 2.476181,
+    "unrecognized_sbc_m": 138.3,
+    "recognition_years_weighted_average": 2.4,
+    "performance_payout_percent_of_target": [
+      0,
+      200
+    ],
+    "additional_Q2_reserved_shares_m_approx": 0.1
+  },
+  "not_reported_exactly": [
+    "Full June PSU/options/ESPP net economic claim valuation",
+    "Complete vesting and withholding schedule",
+    "Whether any generic nonvested stock classification overlaps common; explicit analyst overlap required"
+  ],
+  "subsequent_event": "August100m ASR excluded from June capital on both sides; current bridge remains blocked."
+}

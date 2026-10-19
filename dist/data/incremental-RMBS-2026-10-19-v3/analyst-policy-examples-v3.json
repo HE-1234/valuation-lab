@@ -1,0 +1,122 @@
+[
+  {
+    "policy_id": "reported_units_no_residual",
+    "status": "EXAMPLE_REQUIRES_EXPLICIT_OPT_IN_NOT_DEFAULT",
+    "selection": {
+      "acknowledge_conditional_not_current": true,
+      "baseline_total_sbc_pct_revenue": 0.08,
+      "legacy_expense_runout_m": [
+        57.625,
+        57.625,
+        23.05,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reported_unit_vesting_fraction": 1,
+      "vesting_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "withholding_fraction": 0.5,
+      "residual_claim_cash_fraction": 0,
+      "reported_units_already_in_common_m": 0,
+      "marketable_securities_liquidity_haircut": 0,
+      "assume_no_separate_legacy_tax_benefit": true,
+      "settlement_price_convention": "intrinsic_price_grows_at_scenario_wacc_no_dividend",
+      "residual_legacy_share_equivalents_m": 0
+    }
+  },
+  {
+    "policy_id": "illustrative_point_one_residual",
+    "status": "EXAMPLE_REQUIRES_EXPLICIT_OPT_IN_NOT_DEFAULT",
+    "selection": {
+      "acknowledge_conditional_not_current": true,
+      "baseline_total_sbc_pct_revenue": 0.08,
+      "legacy_expense_runout_m": [
+        57.625,
+        57.625,
+        23.05,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reported_unit_vesting_fraction": 1,
+      "vesting_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "withholding_fraction": 0.5,
+      "residual_claim_cash_fraction": 0,
+      "reported_units_already_in_common_m": 0,
+      "marketable_securities_liquidity_haircut": 0,
+      "assume_no_separate_legacy_tax_benefit": true,
+      "settlement_price_convention": "intrinsic_price_grows_at_scenario_wacc_no_dividend",
+      "residual_legacy_share_equivalents_m": 0.1
+    }
+  },
+  {
+    "policy_id": "large_residual_stress",
+    "status": "EXAMPLE_REQUIRES_EXPLICIT_OPT_IN_NOT_DEFAULT",
+    "selection": {
+      "acknowledge_conditional_not_current": true,
+      "baseline_total_sbc_pct_revenue": 0.08,
+      "legacy_expense_runout_m": [
+        57.625,
+        57.625,
+        23.05,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "reported_unit_vesting_fraction": 1,
+      "vesting_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "withholding_fraction": 0.5,
+      "residual_claim_cash_fraction": 0,
+      "reported_units_already_in_common_m": 0,
+      "marketable_securities_liquidity_haircut": 0,
+      "assume_no_separate_legacy_tax_benefit": true,
+      "settlement_price_convention": "intrinsic_price_grows_at_scenario_wacc_no_dividend",
+      "residual_legacy_share_equivalents_m": 2.476181
+    }
+  }
+]

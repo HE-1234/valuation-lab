@@ -1,0 +1,59 @@
+{
+  "quarters": 9,
+  "comparisonCount": 27,
+  "periodStart": "2024Q2",
+  "periodEnd": "2026Q2",
+  "revenueOutcomes": {
+    "above": 2,
+    "within": 6,
+    "below": 1
+  },
+  "metrics": [
+    "revenue",
+    "gaap_opex",
+    "gaap_gross_margin"
+  ],
+  "limitations": [
+    "Approximate gross-margin guidance is not a precise beat/miss interval; higher operating expense is not inherently favorable. Q4 actuals may be derived as full-year less nine months. FY2025 growth was 2.486%, below the original 7–11% outlook and consistent with revised low-single-digit commentary. No EPS scorecard or full Q&A/interview coverage is claimed.",
+    "FY2026 management revenue-growth guidance progressed from 8–12% in February to 12% in May and 13–15% in August, implying $123.84574–126.03770m on the exact FY2025 base. Q3 revenue guidance is $30.5–34.5m. FY2026 and Q3 remain unscored because actuals were unavailable at the cutoff."
+  ],
+  "annualGrowth": {
+    "FY2024": 0.09772221024646122,
+    "FY2025": 0.024864642459720088,
+    "FY2026": null
+  },
+  "fiscal2026GuidanceRevisions": [
+    {
+      "issued": "2026-02-17",
+      "fy2026_growth": [
+        0.08,
+        0.12
+      ],
+      "source": "Ceva_Q4_2025_Prepared_Remarks.pdf"
+    },
+    {
+      "issued": "2026-05-11",
+      "fy2026_growth": [
+        0.12,
+        0.12
+      ],
+      "source": "Ceva_Q1_2026_Prepared_Remarks.pdf"
+    },
+    {
+      "issued": "2026-08-10",
+      "fy2026_growth": [
+        0.13,
+        0.15
+      ],
+      "source": "Ceva_Q2_2026_Prepared_Remarks.pdf",
+      "q3_revenue": [
+        30.5,
+        34.5
+      ],
+      "q3_actual": "not reported by cutoff"
+    }
+  ],
+  "sourceComparisonsPath": "guidance-vs-actual-v2.json",
+  "EPSScorecardEstablished": false,
+  "fullQandAOrInterviewCoverage": false
+}

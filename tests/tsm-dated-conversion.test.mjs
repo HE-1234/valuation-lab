@@ -1,8 +1,11 @@
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {reverseCevaRmbsIntegration} from './ceva-rmbs-integration-preservation.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 import {TSM_DATED_CONVERSION as f,calculateTsmDatedConversion as calc,withTsmDatedConversion as overlay,twdOrdinaryToDatedUSDADS as forward,datedUSDADSToTwdOrdinary as inverse} from '../dist/tsm-dated-conversion.js';
 import {tsmDatedConversionHTML} from '../dist/tsm-dated-conversion-view.js';
 import {setLocale} from '../dist/i18n.js';
-const data=JSON.parse(fs.readFileSync('/workspace/shared/all-company-valuation-audit/matrix-full.json'));const base=data.annual.find(r=>r.ticker==='TSM');
+const auditBytes=fs.readFileSync(new URL('./fixtures/tsm-dated-v79-audit.json',import.meta.url));assert.equal(createHash('sha256').update(auditBytes).digest('hex'),'f4a0cb41ee36f9372fde7b2a9a2cc91acfde74eb46d22f033432e9d29d078c3d');const data=JSON.parse(auditBytes);const base=data.annual.find(r=>r.ticker==='TSM');
 const near=(a,b)=>assert.ok(Math.abs(a-b)<=Math.max(1e-10,Math.abs(b)*1e-12),`${a} != ${b}`);
 test('dated primary-source conversion preserves ordinary result and uses multiply five / spot not inverse',()=>{
  const before=JSON.stringify(base),r=calc(base.draft,base.bridge);near(r.perADS,base.bridge.rawPerShare*5/31.880);near(r.perADS,298.5383273960684);assert.equal(r.nativePerShare,base.bridge.rawPerShare);assert.equal(JSON.stringify(base),before);
@@ -36,5 +39,5 @@ test('bilingual display retains full precision exports and clear date/claim rest
 test('merged Annual view retains TSM overlay and core source gates unchanged',()=>{
  const source=fs.readFileSync(new URL('../dist/research-view.js',import.meta.url),'utf8');
  assert.match(source,/withTsmDatedConversion\(d,calculateResearchBridge/);assert.match(source,/tsmDatedConversionHTML\(bridge\)/);
- for(const file of ['research-claims.js','incremental-research-claims.js','engine.js'])assert.equal(fs.readFileSync(new URL('../dist/'+file,import.meta.url),'utf8'),fs.readFileSync('/workspace/shared/valuation-lab/dist/'+file,'utf8'));
+ for(const file of ['research-claims.js','incremental-research-claims.js','engine.js'])assert.equal(reverseCevaRmbsIntegration('dist/'+file,fs.readFileSync(new URL('../dist/'+file,import.meta.url))).toString(),execFileSync('git',['show','e427d6b:dist/'+file],{cwd:new URL('..',import.meta.url),encoding:'utf8'}));
 });

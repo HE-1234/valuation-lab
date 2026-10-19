@@ -1,0 +1,82 @@
+{
+  "sourceTables": [
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774919003949/ceva20181231_10k.htm",
+      "sourceSHA256": "e603137eb9687cec220e49805f2dfb4ed878b09a55d794c2c1089c9ddd7e9649",
+      "tableIndexes": [
+        191,
+        192
+      ],
+      "facts": [
+        {
+          "fiscal_year": 2016,
+          "shares": 21.2735,
+          "da_total": 2.635
+        },
+        {
+          "fiscal_year": 2017,
+          "shares": 22.064007,
+          "da_total": 3.25
+        },
+        {
+          "fiscal_year": 2018,
+          "shares": 21.78786,
+          "da_total": 4.157
+        }
+      ]
+    },
+    {
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+      "sourceSHA256": "2c75eb8349c293cfaa35e5a8e0d7d610bc5d034f9868233b08ceec3e79e5f8f9",
+      "tableIndexes": [
+        235,
+        241
+      ],
+      "facts": [
+        {
+          "fiscal_year": 2021,
+          "cfo_total": 25.804,
+          "da_total": 6.985,
+          "cfo_continuing": 28.895999999999997,
+          "da_continuing": 5.728000000000001,
+          "cfo_discontinued": -3.092,
+          "da_discontinued": 1.257,
+          "ppe_capex_total": 2.193,
+          "ppe_capex_continuing": null,
+          "cfo_total_less_ppe_capex": 23.610999999999997,
+          "continuing_cfo_less_ppe_capex_lower_bound": 26.702999999999996,
+          "continuing_cfo_less_ppe_capex_upper_bound": 28.895999999999997
+        },
+        {
+          "fiscal_year": 2022,
+          "cfo_total": 6.924,
+          "da_total": 7.561,
+          "cfo_continuing": 10.040000000000001,
+          "da_continuing": 5.356,
+          "cfo_discontinued": -3.116,
+          "da_discontinued": 2.205,
+          "ppe_capex_total": 3.499,
+          "ppe_capex_continuing": null,
+          "cfo_total_less_ppe_capex": 3.4250000000000003,
+          "continuing_cfo_less_ppe_capex_lower_bound": 6.541,
+          "continuing_cfo_less_ppe_capex_upper_bound": 10.040000000000001
+        },
+        {
+          "fiscal_year": 2023,
+          "cfo_total": -6.331,
+          "da_total": 4.883,
+          "cfo_continuing": -4.096,
+          "da_continuing": 3.802,
+          "cfo_discontinued": -2.235,
+          "da_discontinued": 1.081,
+          "ppe_capex_total": 2.884,
+          "ppe_capex_continuing": null,
+          "cfo_total_less_ppe_capex": -9.215,
+          "continuing_cfo_less_ppe_capex_lower_bound": -6.98,
+          "continuing_cfo_less_ppe_capex_upper_bound": -4.096
+        }
+      ]
+    }
+  ],
+  "limitation": "All facts are derived or discrete reported numbers. Original corporate document text is intentionally not included."
+}

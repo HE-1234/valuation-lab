@@ -1,0 +1,92 @@
+{
+  "baseline_total_sbc_pct_revenue": {
+    "kind": "new analyst decomposition, not original model input",
+    "example": 0.08,
+    "basis": "FY2025 SBC/revenue54.267/707.630=7.6689%; H1 2026 27.339/387.574=7.0539%. Eight percent deliberately rounded analyst allowance, not guidance.",
+    "source": [
+      "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm",
+      "https://www.sec.gov/Archives/edgar/data/917273/000119312526057101/rmbs-20251231.htm"
+    ]
+  },
+  "legacy_expense_runout_m": {
+    "kind": "analyst timing assumption based on disclosed total",
+    "example": [
+      57.625,
+      57.625,
+      23.05,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "basis": "138.3/2.4 straight-line assumption; weighted-average period does not establish actual schedule.",
+    "source": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm"
+  },
+  "reported_unit_vesting_fraction": {
+    "kind": "analyst vesting outcome",
+    "example": 1,
+    "basis": "Reported2.476181m units; full vesting example is not issuer guidance.",
+    "source": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm"
+  },
+  "reported_units_already_in_common_m": {
+    "kind": "analyst overlap assumption",
+    "example": 0,
+    "basis": "Exact common108.461603m; reported nonvested2.476181m. Explicit overlap prevents allocating any already-issued restricted shares twice.",
+    "source": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm"
+  },
+  "residual_legacy_share_equivalents_m": {
+    "kind": "analyst net economic claim equivalent, not observed instrument count",
+    "examples": [
+      0,
+      0.1,
+      2.476181
+    ],
+    "basis": "Unresolved granular PSU/options/ESPP.0.1m Q2 reserve is not fullcompany cap; largecase is stress not upper bound. Exercise/purchase proceeds and overlaps belong in net equivalent.",
+    "source": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm"
+  },
+  "vesting_weights": {
+    "kind": "analyst timing, not actual vesting schedule",
+    "example": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "basis": "Equal firstthree-year settlement chosen solely for conditional planning; issuer has differing service and performance vesting."
+  },
+  "withholding_fraction": {
+    "kind": "analyst gross-reported-award cash conversion assumption",
+    "example": 0.5,
+    "basis": "Not inferred from H1 amounts; settlement tax rates and stock prices vary."
+  },
+  "residual_claim_cash_fraction": {
+    "kind": "analyst residual claim settlement policy",
+    "example": 0,
+    "basis": "Equity-only net residual equivalent in illustrations. Does not impose RSU withholding on options/ESPP."
+  },
+  "marketable_securities_liquidity_haircut": {
+    "kind": "analyst liquidation/availability assumption",
+    "example": 0,
+    "basis": "Cash87.720m plus securities737.228m; zero assumes availability at reported values. Cash-only stress suppresses unfunded valuation.",
+    "source": "https://www.sec.gov/Archives/edgar/data/917273/000119312526321000/rmbs-20260630.htm"
+  },
+  "settlement_price_convention": {
+    "kind": "explicit discount-matching convention",
+    "example": "intrinsic_price_grows_at_scenario_wacc_no_dividend",
+    "basis": "Algebraic claim/cash consistency; not forecast investment return."
+  },
+  "assume_no_separate_legacy_tax_benefit": {
+    "kind": "tax normalization convention",
+    "example": true,
+    "basis": "Legacy expense removed after corporate tax, removing old shield; gross employee cash withholding remains untaxed in cashflow."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "balanceDate": "2026-06-30",
+  "shareDate": "2026-06-30",
+  "informationCutoff": "2026-10-19",
+  "units": "USD millions, shares millions, per-share USD",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926026774/ceva20260630_10q.htm",
+  "sourceSHA256": "f71f319b23e34db4ef37072db8eb88dcdba92fb96d95a18b9f6d0e39656a2e91",
+  "observations": {
+    "as_of": "2026-06-30",
+    "source": "ceva20260630_10q.htm",
+    "cash": 44.301,
+    "bank_deposits": 5.148,
+    "marketable_debt_securities": 171.271,
+    "liquid_assets": 220.72,
+    "interest_bearing_debt": 0,
+    "operating_leases": 17.424,
+    "lease_policy": "lease expense stays in EBIT; no separate subtraction in default bridge",
+    "severance_net": 0.217,
+    "other_noncurrent_accruals": 1.072,
+    "common_shares": 28.137917,
+    "rsu_psu_unvested": 1.845728,
+    "option_shares": 0.030025,
+    "option_exercise_price": 20.91,
+    "existing_award_unrecognized_expense": 28.506,
+    "unrecognized_award_service_years": 1.5,
+    "later_share_observation": {
+      "date": "2026-08-04",
+      "shares": 28.154072,
+      "use_in_June_model": false
+    },
+    "claim_policy": "Full RSU/PSU share reserve, no forfeiture credit. Existing option exercise is endogenous. Add back existing unrecognized award expense over 1.5 years; charge all new SBC as cash replacement, no future share-growth assumption. Allocation of old award amortization is analyst approximation, not grant-level vesting schedule.",
+    "minimum_operating_cash": 30,
+    "foreign_liquidity": 122.7,
+    "repatriation_tax_base": 0,
+    "repatriation_tax_warning": "zero is conditional tax-efficient access, not verified tax-free availability",
+    "option_exercisable_shares": 0.019279,
+    "option_remaining_life_years": 4.4,
+    "option_valuation_limitation": "Intrinsic-value exercise approximation using all30,025 outstanding options, only19,279 currently exercisable; not full option fair value, omits time value and vesting timing.",
+    "psu_limitations": "1,845,728 is the disclosed aggregated unvested RSU/PSU rollforward, not proven maximum payout across every grant.2026 PSU maximum234,617 is disclosed separately; grant-level reconciliation remains unavailable. Award multiplier sensitivities are analyst stresses, not inferred maximum obligations.",
+    "disclosed_2026_psu_maximum": 0.234617
+  },
+  "capitalBridge": {
+    "liquidAssets": 220.72,
+    "minimumOperatingCash": 30,
+    "netSeverance": 0.217,
+    "otherNoncurrentAccruals": 1.072,
+    "netAssetAdditionBeforeOptions": 189.431
+  },
+  "capitalBridgeConvention": "June liquid assets total $220.720m: cash $44.301m, deposits $5.148m and marketable debt securities $171.271m. They are not all bank cash or risk-free immediately distributable funds. Default reserve is $30m; subtract net severance $0.217m and other noncurrent accruals $1.072m. No interest-bearing borrowing is listed in this bridge."
+}
