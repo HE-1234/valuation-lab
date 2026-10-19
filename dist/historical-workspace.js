@@ -208,6 +208,7 @@ export function mountHistoricalWorkspace(page) {
   if(changed)enterPanel(group==='case'?caseEditor:form);
   return true;
  }
+ const fieldEvidenceLabels=[];
  function refresh() {
   if (destroyed) return;
   prepareFlowTables(page);
@@ -225,7 +226,7 @@ export function mountHistoricalWorkspace(page) {
     const title = label?.textContent.replace(hint?.textContent || '', '').trim() || t(historicalLabels['Assumption']);
     openEvidence(event.target, {title, explanation: hint?.textContent || '', key: input?.id});
    }, 'historical-field-evidence text-button');
-   bindAttribute(action, 'aria-label', 'historical.assumptionEvidence',()=>({label:label?.textContent.replace(hint?.textContent || '', '').trim() || ''}));
+   fieldEvidenceLabels.push(bindAttribute(action, 'aria-label', 'historical.assumptionEvidence',()=>({label:label?.textContent.replace(hint?.textContent || '', '').trim() || ''})));
   }
  }
  function openEvidence(invoker = evidenceAction, context = {}) {
@@ -257,6 +258,8 @@ export function mountHistoricalWorkspace(page) {
  setView(view); setResultView(result); refresh(); updateMobile(mobile);
  localeDisposers.push(onLocaleChange(()=>{
   if(destroyed)return;
+  // Field labels relocalize in the same pass, so read them once that pass has finished.
+  setTimeout(()=>{if(!destroyed)for(const label of fieldEvidenceLabels)label.refresh?.();},0);
   const context=localizedEvidenceContext();
   explanation.textContent=context.explanation||t(historicalLabels['Original filing facts, dated research assumptions, accounting judgments, and source checks. Editing your inputs does not revise the original research case.']);
   const heading=evidence.element.querySelector('.contextual-evidence-title');

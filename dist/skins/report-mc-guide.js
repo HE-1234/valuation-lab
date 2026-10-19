@@ -42,7 +42,7 @@ const COPY = {
     base: 'Base case',
     spread: 'On its own, this tab spreads value from {lo} to {hi} (8 in 10 scenarios), about ±{pct} around the base case.',
     noSpread: 'With these settings this tab adds no spread: every scenario gets the same value.',
-    knobs: 'Reading the settings',
+    knobs: 'What each setting does',
     sources: 'Where the range comes from',
     sourcesLead: 'Middle 80% of value when each tab varies alone. Start your research with the longest bars. Tabs do not simply add up.',
     together: 'All tabs together · last run',
@@ -79,6 +79,8 @@ const COPY = {
     noSpreadHint: 'Nothing in this tab varies yet. Raise the surprise size above zero, or give a range some width, to see what it does.',
     valueLeadRel: 'Both runs vary every tab; the second switches the links off. {n} scenarios each, same seed as your run.',
     fixedSet: 'Fixed in every scenario: {list}. Give one a range to see how far it reaches.',
+    termFixedT: '{name} · fixed at {v}',
+    termFixedB: 'The same in every scenario, so it adds no spread. The second bar shows what a modest range of {lo} to {hi} would add.',
     echoCap: 'What is left of a 1-point surprise, year by year',
     short: {growth: 'Growth', margin: 'Margin', salesCapital: 'Sales / capital', investmentFactor: 'Investment', reinvestment: 'Reinvestment', wacc: 'WACC', taxRate: 'Tax rate'},
     endFixed: 'The path ends at your base case of {v}.',
@@ -108,9 +110,61 @@ const COPY = {
     relSame: 'The links change nothing yet: give linked inputs a surprise size above zero.',
     relWider: 'Your links widen the middle 80% by {pct}.',
     relNarrower: 'Your links narrow the middle 80% by {pct}.',
-    tabs: {growth: 'Growth', targetMargin: 'Margin', salesCapital: 'Sales / capital', wacc: 'WACC', taxTerminal: 'Tax & terminal', growthPremium: 'Growth', marginShift: 'Margin', investmentMultiplier: 'Investment', waccShift: 'WACC'},
+    tabs: {relationships: 'Relationships', sampling: 'Sampling', growth: 'Growth', targetMargin: 'Margin', salesCapital: 'Sales / capital', wacc: 'WACC', taxTerminal: 'Tax & terminal', growthPremium: 'Growth', marginShift: 'Margin', investmentMultiplier: 'Investment', waccShift: 'WACC'},
     metric: {growth: 'growth', margin: 'the margin', salesCapital: 'sales / capital', investmentFactor: 'the investment factor', reinvestment: 'reinvestment', wacc: 'the cost of capital', taxRate: 'the tax rate'},
-    unitPts: ' pts', yearsWord: '{n} years', yearWord: '1 year', underYear: 'under a year'
+    unitPts: ' pts', yearsWord: '{n} years', yearWord: '1 year', underYear: 'under a year',
+    // what-if ladders
+    wiCap: 'If only this setting changed · middle 80% of value',
+    wiLead: 'Each bar is the middle 80% of value if only that setting took the value on its left; the tick is the base case. All bars share one scale. Same scenarios and seed throughout, and nothing is changed for you.',
+    wiYours: 'yours',
+    wiNoPins: 'no pinned years',
+    wiPin3: 'pin Y1–Y3',
+    wiFixed: 'fixed at {v}',
+    wiAt: '{v}',
+    wiRange: '{lo} – {hi}',
+    edit: 'Edit this setting',
+    fieldIs: 'On the left: {f}',
+    nSettings: '{n} settings',
+    leads: '{tab} leads',
+    precChip: 'median ±{v} at your count',
+    pairT: '{a} vs {b}',
+    pairChip: 'end vs journey',
+    pairRange: 'Range',
+    endRangeT: 'End-point range',
+    pairAH: 'Sets where the path ends',
+    pairAB: 'Drawn once per scenario for the terminal year. It lifts or lowers the later years together, like moving one end of a rope.',
+    pairANormal: 'It is the SD of the bell before the cut at your bounds, so actual end points are a little tighter: 8 in 10 land in {p10} – {p90}.',
+    pairBH: 'Sets how bumpy the way there is',
+    pairBB: 'A fresh surprise every year that fades with persistence. Pinned years and the end point pull it back to zero, so it never moves the end point.',
+    pairZeroA: 'Fixed: the end point is the same in every scenario.',
+    pairZeroB: 'Zero: every path runs smoothly to its end point.',
+    pairStatA: 'terminal ±{v}',
+    pairStatB: 'largest ±{v} in Y{y}',
+    pairValue: 'value alone {v}',
+    pairChart: 'How far paths stray from your base case, year by year ({unit}, half the middle 80%)',
+    pairBoth: 'both together',
+    pairSum: 'The two are independent, so they combine like the sides of a right triangle, not by simple addition. In Y{y}: √({a}² + {b}²) ≈ {c}, close to the {m} the simulation measures.',
+    pairTip: 'Rule of thumb: unsure where it settles, widen the range; unsure how bumpy the way is, raise the yearly SD.',
+    loadHere: 'Linked to other inputs · {v}',
+    loadHereB: 'A loading ties this input’s yearly surprises to a shared shock. Its effect on the range is shown on the {tab} tab, where every input varies together.',
+    toRel: 'Open {tab} →',
+    // sampling
+    q_sampling: 'How many scenarios are enough?',
+    l_sampling: 'Each scenario is one random draw of every input. More scenarios give a steadier range, but precision grows only with the square root of the count.',
+    precT: 'How much luck moves the result',
+    precLead: 'How far luck alone can push each number from where unlimited scenarios would put it, about 95% of the time. Estimated from the spread of {src}.',
+    precSrcRun: 'your last run',
+    precSrcPreview: 'a {n}-scenario preview',
+    precMed: 'median ±{v}',
+    precEdge: 'P10 / P90 ±{v}',
+    precRead: 'Ten times the scenarios cuts this wobble only about 3× (√10). Damodaran: more inputs, more varied distributions and wider ranges need more runs; err toward too many.',
+    precCur: 'selected',
+    precKeyMed: 'where the median could land', precKeyEdge: 'where P10 / P90 could land',
+    precVs: 'At {n} scenarios, luck moves the median by about ±{noise}, against ±{range} of spread that your inputs create: the signal is about {x}× the noise.',
+    seedT: 'Seed · {v}',
+    seedB: 'The seed fixes the random draws. Keep it, and two runs differ only because your settings differ; change it to see how much the result moves on luck alone.',
+    trialsT: 'Scenarios · {v}',
+    trialsB: 'Scenarios that break a valuation rule (for example a cost of capital at or below stable growth) are rejected, so the accepted count can be a little lower.'
   },
   'zh-Hans': {
     eyebrow: '这一页如何影响价值',
@@ -137,7 +191,7 @@ const COPY = {
     base: '基准案例',
     spread: '单独来看，这一页让价值分布在 {lo} 到 {hi} 之间（10 个情景中有 8 个），约为基准案例的 ±{pct}。',
     noSpread: '以这些设置，这一页不增加任何分散：每个情景得到的价值都一样。',
-    knobs: '如何理解这些设置',
+    knobs: '每项设置的作用',
     sources: '区间来自哪里',
     sourcesLead: '每一页单独变动时，价值中间 80% 的范围。先研究最长的条。各页的影响不能简单相加。',
     together: '所有页一起 · 最近一次模拟',
@@ -173,6 +227,8 @@ const COPY = {
     noSpreadHint: '这一页目前没有任何变动。把意外幅度调到大于零，或给范围一些宽度，就能看到它的作用。',
     valueLeadRel: '两次模拟都让所有页变动；第二次关闭联动。各 {n} 个情景，与你的模拟使用同一个种子。',
     fixedSet: '每个情景都固定：{list}。给其中一项设定范围，就能看到它的影响有多大。',
+    termFixedT: '{name} · 固定为 {v}',
+    termFixedB: '每个情景都相同，因此不增加分散。第二条横条显示：若改为 {lo} 至 {hi} 的适度范围，会增加多少分散。',
     echoCap: '1 个百分点的意外，逐年还剩多少',
     short: {growth: '成长', margin: '利润率', salesCapital: '营收／资本', investmentFactor: '投资', reinvestment: '再投资', wacc: 'WACC', taxRate: '税率'},
     endFixed: '路径终点为你的基准案例 {v}。',
@@ -202,9 +258,59 @@ const COPY = {
     relSame: '联动目前没有任何作用：请为联动的输入设置大于零的意外幅度。',
     relWider: '你的联动让中间 80% 的范围变宽 {pct}。',
     relNarrower: '你的联动让中间 80% 的范围变窄 {pct}。',
-    tabs: {growth: '成长', targetMargin: '利润率', salesCapital: '营收／资本', wacc: 'WACC', taxTerminal: '税率与终值', growthPremium: '成长', marginShift: '利润率', investmentMultiplier: '投资', waccShift: 'WACC'},
+    tabs: {relationships: '变量关系', sampling: '抽样', growth: '成长', targetMargin: '利润率', salesCapital: '营收／资本', wacc: 'WACC', taxTerminal: '税率与终值', growthPremium: '成长', marginShift: '利润率', investmentMultiplier: '投资', waccShift: 'WACC'},
     metric: {growth: '成长率', margin: '利润率', salesCapital: '营收／资本', investmentFactor: '投资系数', reinvestment: '再投资', wacc: '资金成本', taxRate: '税率'},
-    unitPts: ' 个百分点', yearsWord: '{n} 年', yearWord: '1 年', underYear: '不到 1 年'
+    unitPts: ' 个百分点', yearsWord: '{n} 年', yearWord: '1 年', underYear: '不到 1 年',
+    wiCap: '若只改变这一项设置 · 价值的中间 80%',
+    wiLead: '每条横条表示：若只把该设置改为左侧的数值，价值中间 80% 的范围；竖线是基准案例。所有横条使用同一刻度。全程使用相同的情景和种子，也不会改动你的设置。',
+    wiYours: '你的设置',
+    wiNoPins: '不固定年份',
+    wiPin3: '固定第 1–3 年',
+    wiFixed: '固定为 {v}',
+    wiAt: '{v}',
+    wiRange: '{lo} – {hi}',
+    edit: '编辑此设置',
+    fieldIs: '左侧字段：{f}',
+    nSettings: '{n} 项设置',
+    leads: '{tab}居首',
+    precChip: '当前情景数下中位数 ±{v}',
+    pairT: '{a} vs {b}',
+    pairChip: '终点 vs 途中',
+    pairRange: '范围',
+    endRangeT: '终点范围',
+    pairAH: '决定路径的终点',
+    pairAB: '每个情景只抽一次，作为终期年的值。它把后段年份整体抬高或压低，就像移动绳子的一端。',
+    pairANormal: '它是在你的上下界截断之前钟形曲线的标准差，所以实际终点会更集中一些：10 次中有 8 次落在 {p10} – {p90}。',
+    pairBH: '决定途中有多颠簸',
+    pairBB: '每年一次新的意外，随持续性逐渐消退。固定年份和终点会把它拉回零，所以它不会移动终点。',
+    pairZeroA: '固定：每个情景的终点都相同。',
+    pairZeroB: '为零：每条路径都平滑地走向终点。',
+    pairStatA: '终期 ±{v}',
+    pairStatB: '第 {y} 年最大 ±{v}',
+    pairValue: '单独对价值 {v}',
+    pairChart: '路径逐年偏离基准案例的幅度（{unit}，中间 80% 的一半）',
+    pairBoth: '两者合计',
+    pairSum: '两者互相独立，所以像直角三角形的两条边那样合成，而不是直接相加。第 {y} 年：√({a}² + {b}²) ≈ {c}，与模拟测得的 {m} 相近。',
+    pairTip: '经验法则：不确定最终落在哪里，就放宽范围；不确定途中有多颠簸，就提高逐年标准差。',
+    loadHere: '与其他输入联动 · {v}',
+    loadHereB: '载荷把这个输入的逐年意外与一个共同冲击联系起来。它对区间的影响显示在“{tab}”页，那里所有输入会一起变动。',
+    toRel: '打开{tab} →',
+    q_sampling: '需要多少个情景才够？',
+    l_sampling: '每个情景都是对所有输入的一次随机抽取。情景越多，区间越稳定，但精确度只随情景数的平方根提高。',
+    precT: '运气会让结果变动多少',
+    precLead: '单凭运气，每个数字可能偏离“无限多情景”结果的幅度（约 95% 的情况下）。根据{src}的分散程度估算。',
+    precSrcRun: '你最近一次模拟',
+    precSrcPreview: '{n} 个情景的预览',
+    precMed: '中位数 ±{v}',
+    precEdge: 'P10 / P90 ±{v}',
+    precRead: '情景数增加 10 倍，波动只缩小约 3 倍（√10）。Damodaran：输入越多、分布越多样、范围越宽，就需要越多次模拟；宁可多，不要少。',
+    precCur: '已选',
+    precKeyMed: '中位数可能落在的位置', precKeyEdge: 'P10 / P90 可能落在的位置',
+    precVs: '在 {n} 个情景下，运气让中位数变动约 ±{noise}；而你的输入造成的分散约为 ±{range}：信号约为噪声的 {x} 倍。',
+    seedT: '种子 · {v}',
+    seedB: '种子决定随机抽样。保持不变时，两次模拟的差别只来自你的设置；改变种子，就能看到单凭运气结果会变动多少。',
+    trialsT: '情景数 · {v}',
+    trialsB: '违反估值规则的情景（例如资金成本不高于稳定成长率）会被剔除，因此被接受的情景数可能略少。'
   }
 };
 const lang = () => (getLocale() === 'zh-Hans' ? 'zh-Hans' : 'en');
@@ -221,7 +327,7 @@ const remember = (key, value) => { cache.set(key, value); if (cache.size > 40) c
 /* ---------- which settings belong to which tab ---------- */
 const PATH_OF = {growth: 'growth', growthPremium: 'growth', targetMargin: 'margin', marginShift: 'margin', wacc: 'wacc', waccShift: 'wacc', taxTerminal: 'taxRate'};
 const CAPITAL = ['salesCapital', 'reinvestment', 'investmentFactor'];
-const QUESTION = {growth: 'growth', growthPremium: 'growth', targetMargin: 'margin', marginShift: 'margin', salesCapital: 'capital', investmentMultiplier: 'capital', wacc: 'wacc', waccShift: 'wacc', taxTerminal: 'taxTerminal', relationships: 'relationships'};
+const QUESTION = {growth: 'growth', growthPremium: 'growth', targetMargin: 'margin', marginShift: 'margin', salesCapital: 'capital', investmentMultiplier: 'capital', wacc: 'wacc', waccShift: 'wacc', taxTerminal: 'taxTerminal', relationships: 'relationships', sampling: 'sampling'};
 function pathMetric(tab, config) {
   if (tab === 'salesCapital' || tab === 'investmentMultiplier') return CAPITAL.find(k => config.annualMetrics?.[k]) || null;
   const m = PATH_OF[tab];
@@ -286,7 +392,16 @@ function summarise(r) {
   // Guided scenarios carry value per share; Year-by-year ones carry operating value.
   const val = s => r.basis === 'enterprise' ? s.enterprise : finite(s.perShare) ? s.perShare : finite(s.enterprise) ? s.enterprise : s.value;
   const paths = sc.slice(0, 160).map(s => ({growth: s.growthPath, metrics: s.metricPaths, terminal: s.terminal, rank: rank(val(s))}));
-  return {p10: q.p10, p50: q.p50, p90: q.p90, p01: sorted[Math.floor(.01 * (sorted.length - 1))], p99: sorted[Math.ceil(.99 * (sorted.length - 1))], base: r.basis === 'enterprise' ? r.baseline?.enterprise ?? null : r.baseline?.perShare ?? r.baseline?.value ?? null, samples: sorted, paths, accepted: r.accepted};
+  // Per-year middle 80% of every path, and of the terminal draws, across all scenarios.
+  const qs = (xs, p) => { if (!xs.length) return NaN; const h = (xs.length - 1) * p, i = Math.floor(h); return xs[i] + (xs[Math.min(xs.length - 1, i + 1)] - xs[i]) * (h - i); };
+  const bands = {}, first = sc[0] || {};
+  for (const k of [first.growthPath ? 'growth' : null, ...Object.keys(first.metricPaths || {})].filter(Boolean)) {
+    const get = x => k === 'growth' ? x.growthPath : x.metricPaths?.[k], n = get(first)?.length || 0, lo = [], hi = [];
+    for (let i = 0; i < n; i++) { const xs = sc.map(x => get(x)?.[i]).filter(finite).sort((a, b) => a - b); lo.push(qs(xs, .1)); hi.push(qs(xs, .9)); }
+    const ends = sc.map(x => x.terminal?.[k]).filter(finite).sort((a, b) => a - b);
+    bands[k] = {lo, hi, endLo: qs(ends, .1), endHi: qs(ends, .9)};
+  }
+  return {bands, p10: q.p10, p50: q.p50, p90: q.p90, p01: sorted[Math.floor(.01 * (sorted.length - 1))], p99: sorted[Math.ceil(.99 * (sorted.length - 1))], base: r.basis === 'enterprise' ? r.baseline?.enterprise ?? null : r.baseline?.perShare ?? r.baseline?.value ?? null, samples: sorted, paths, accepted: r.accepted};
 }
 function request(st, key, view, priority = false) {
   const j = job(st, view);
@@ -413,6 +528,8 @@ function fanChart(st, metric, sum, end = null) {
   const x0 = right + 24;
   const lines = shown.map(p => `<path d="${line(p.v)}${end && finite(p.end) ? `M${X(n - 1).toFixed(1)} ${Y(p.v[n - 1]).toFixed(1)}L${x0} ${Y(p.end).toFixed(1)}` : ''}" class="rx-mcg-path" style="--r:${p.rank.toFixed(3)}"/>`).join('');
   const pins = (spec.fixedYears || []).filter(y => y <= n).map(y => `<circle cx="${X(y - 1)}" cy="${Y(baseline[y - 1])}" r="4.5" class="rx-mcg-pin"/>`).join('');
+  // One quiet marker per year, lit while its year field is focused or hovered.
+  const marks = baseline.map((v, i) => `<g class="rx-mcg-yr" data-yr="${i + 1}"><line x1="${X(i)}" x2="${X(i)}" y1="${top}" y2="${bottom}"/><circle cx="${X(i)}" cy="${Y(v)}" r="7"/></g>`).join('');
   const ty = metric === 'growth' ? ctx.terminalYear : null;
   const stable = ty && ty <= n ? `<line x1="${X(ty - 1)}" x2="${X(ty - 1)}" y1="${top}" y2="${bottom}" class="rx-mcg-grid"/><text x="${X(ty - 1) - 4}" y="${top + 10}" text-anchor="end" class="rx-mcg-note">${esc(copy('stable', {n: ty}))}</text>` : '';
   const yt = ticks(lo, hi, 3);
@@ -425,7 +542,7 @@ function fanChart(st, metric, sum, end = null) {
     strip = `<line x1="${right}" x2="${x0}" y1="${Y(baseline.at(-1))}" y2="${Y(baseline.at(-1))}" class="rx-mcg-grid"/><path d="${shape}" class="rx-mcg-dens"/><line x1="${x0}" x2="${x0}" y1="${Y(end.low)}" y2="${Y(end.high)}" class="rx-mcg-axis"/><text x="${x0 + 8}" y="${Math.max(top + 4, Y(end.high) - 8)}" text-anchor="middle" class="rx-mcg-tick">${esc(copy('terminal'))}</text>`;
   }
   const caption = varied ? copy('paths', {n: shown.length}) : copy('pathsFlat');
-  return `<figure class="rx-mcg-fig"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(caption)}">${yTicks}${stable}${band}${lines}<path d="${line(baseline)}" class="rx-mcg-baseline"/>${pins}${strip}${xTicks}</svg>
+  return `<figure class="rx-mcg-fig"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(caption)}">${yTicks}${stable}${marks}${band}${lines}<path d="${line(baseline)}" class="rx-mcg-baseline"/>${pins}${strip}${xTicks}</svg>
     <figcaption><span>${esc(caption)}</span>${varied ? `<span class="rx-mcg-key"><i class="is-lo"></i>${esc(copy('lo'))}<i class="is-hi"></i>${esc(copy('hi'))}</span>` : ''}<span class="rx-mcg-key"><i class="is-base"></i>${esc(copy('baseline'))}${(spec.fixedYears || []).length ? `<i class="is-pin"></i>${esc(copy('fixed'))}` : ''}</span></figcaption></figure>`;
 }
 
@@ -469,37 +586,141 @@ function corrGrid(keys, loadings, live) {
 }
 
 /* ---------- the guide for one tab ---------- */
-// Sections a reader can fold. Open on desktop, folded on phones, and a choice
-// the reader makes survives every repaint.
+// Sections fold, closed by default, with a short answer in the header so a
+// closed section still says something. A reader's choice survives repaints
+// and tab changes.
 const folds = new Map();
-function fold(key, title, body, cls = 'rx-mcg-block') {
-  const k = key + (phone.matches ? ':p' : ':d'), open = folds.has(k) ? folds.get(k) : !phone.matches;
-  return `<details class="${cls} rx-mcg-fold" data-fold="${k}"${open ? ' open' : ''}><summary><h4>${esc(title)}</h4></summary>${body}</details>`;
+const device = () => (phone.matches ? ':p' : ':d');
+// Small line icons, one per kind of section.
+const ICON = {
+  value: '<path d="M2.5 13.5h11M4 13V9.5M6.5 13V6M9 13V3.5M11.5 13V8"/>',
+  pair: '<path d="M2.5 11c1.6 0 2-4 3.6-4s1.7 3 3.3 3 1.5-5.5 3.6-6.5"/><circle cx="13" cy="3.5" r="1.4"/>',
+  knobs: '<path d="M2.5 5h11M2.5 11h11"/><circle cx="6" cy="5" r="1.6"/><circle cx="10.5" cy="11" r="1.6"/>',
+  sources: '<path d="M2.5 3.5h9M2.5 8h6M2.5 12.5h3.5"/>',
+  prec: '<circle cx="8" cy="8" r="5.5"/><circle cx="8" cy="8" r="2.4"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2"/>'
+};
+const icon = k => ICON[k] ? `<span class="rx-mcg-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${ICON[k]}</svg></span>` : '';
+function fold(key, title, body, {chip = '', cls = 'rx-mcg-block', open = false, ic = ''} = {}) {
+  const k = key + device(), isOpen = folds.has(k) ? folds.get(k) : open;
+  return `<details class="${cls} rx-mcg-fold" data-fold="${k}"${isOpen ? ' open' : ''}><summary>${icon(ic)}<h4>${esc(title)}</h4>${chip ? `<span class="rx-mcg-chip">${esc(chip)}</span>` : ''}</summary><div class="rx-mcg-body">${body}</div></details>`;
 }
-function knob(title, body, extra = '') { return `<li><b>${esc(title)}</b><p>${esc(body)}</p>${extra}</li>`; }
+// The label a setting carries on the left, so both sides use the same words.
+let curRoot = null;
+const calm = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+function fieldLabel(f) {
+  const el = f && curRoot?.querySelector(`.mc-setup [id$="mc-${f}"]`); if (!el) return '';
+  const l = curRoot.querySelector(`label[for="${el.id}"]`) || el.closest('label'); if (!l) return '';
+  // Read the label's own words, skipping any control nested inside it.
+  const skip = /^(SELECT|INPUT|TEXTAREA|BUTTON)$/;
+  const words = n => n.nodeType === 3 ? n.nodeValue : n.nodeType !== 1 || skip.test(n.tagName) || n.getAttribute?.('role') === 'radiogroup' ? '' : [...(n.childNodes || [])].map(words).join('');
+  return words(l).replace(/\s+/g, ' ').trim().slice(0, 64);
+}
+const bare = label => label.split(/\s*[·・]\s*/)[0];
+// A row explains one setting and folds on its own. `k` names it for the focus
+// link with the field on the left; `f` is that field's id after "mc-".
+function knob(title, body, extra = '', k = '', f = '') {
+  const cut = title.indexOf(' · '), name = cut > 0 ? title.slice(0, cut) : title, val = cut > 0 ? title.slice(cut + 3) : '';
+  const attrs = `${k ? ` data-k="${esc(k)}"` : ''}${f ? ` data-f="${esc(f)}"` : ''}`;
+  if (!body && !extra) return `<li class="is-plain"${attrs}><b>${esc(title)}</b></li>`;
+  const field = fieldLabel(f), key = 'kd:' + (k || name) + device(), open = folds.get(key) ?? false;
+  const head = `<summary><span class="rx-mcg-kn"><b>${esc(name)}</b>${val ? `<em>${esc(val)}</em>` : ''}</span>${field ? `<small>${esc(copy('fieldIs', {f: field}))}</small>` : ''}</summary>`;
+  const edit = f ? `<button type="button" class="rx-mcg-link" data-edit="${esc(f)}">${esc(copy('edit'))}</button>` : '';
+  return `<li${attrs}><details class="rx-mcg-kd" data-fold="${key}"${open ? ' open' : ''}>${head}<div class="rx-mcg-kb">${body ? `<p>${esc(body)}</p>` : ''}${extra}${edit}</div></details></li>`;
+}
 
-function pathKnobs(st, metric, endpoint) {
+/* ---------- what-if ladders ---------- */
+// Each rung reruns the tab on its own with one setting changed: same scenarios,
+// same seed, so the rungs differ only by that setting. Nothing is applied.
+let ladderScale = 0;
+function ladder(st, rungs) {
+  const seenKeys = new Set(), rows = [];
+  for (const r of rungs) {
+    const j = job(st, r.view);
+    if (!j.key || seenKeys.has(j.key)) continue;
+    seenKeys.add(j.key);
+    rows.push({...r, sum: request(st, 'wi', r.view, r.yours)});
+  }
+  if (rows.length < 2) return '';
+  const ok = rows.filter(r => r.sum && !r.sum.error);
+  const base = ok.find(r => finite(r.sum.base))?.sum.base ?? ok[0]?.sum.p50;
+  const live = rows.filter(r => !(r.sum && r.sum.error));
+  if (live.length < 2) return '';
+  // Bars sit on one scale shared by every ladder in the guide (relative to the
+  // base case), so a long bar here is long compared with the other settings too.
+  const rel = v => (v - base) / Math.abs(base || 1);
+  const items = live.map(r => {
+    const s = r.sum, ready = s && !s.error && finite(base);
+    if (ready) ladderScale = Math.max(ladderScale, Math.abs(rel(s.p10)), Math.abs(rel(s.p90)));
+    const pct = ready && base ? '±' + fmtPct((s.p90 - s.p10) / 2 / Math.abs(base)) : ready ? range(fmtVal(s.p10), fmtVal(s.p90)) : '…';
+    return `<li class="${r.yours ? 'is-yours' : ''}${ready ? '' : ' is-wait'}"><span>${esc(r.label)}${r.yours ? `<small>${esc(copy('wiYours'))}</small>` : ''}</span><i style="--l:${ready ? rel(s.p10).toFixed(5) : 0};--h:${ready ? rel(s.p90).toFixed(5) : 0}"${ready ? ` title="${esc(range(fmtVal(s.p10), fmtVal(s.p90)))}"` : ''}></i><em>${esc(pct)}</em></li>`;
+  }).join('');
+  return `<figure class="rx-mcg-wi" aria-label="${esc(copy('wiCap'))}"><ul>${items}</ul></figure>`;
+}
+function tweak(st, tab, edit) { const v = isolate(st, tab); edit(v); return v; }
+function editPath(metric, patch) {
+  return v => { if (metric === 'growth') v.annualPath = {...v.annualPath, ...patch}; else v.annualMetrics[metric] = {...v.annualMetrics[metric], ...patch}; };
+}
+const uniq = (xs, eq = (a, b) => Math.abs(a - b) < 1e-9) => xs.filter((x, i) => xs.findIndex(y => eq(x, y)) === i).sort((a, b) => a - b);
+// A range with its width scaled around its centre. Bounds stay positive for
+// ratios, so the rung remains a valid input.
+function widen(spec, f, key) {
+  if (spec.type === 'fixed') return spec;
+  const c = center(spec);
+  if (!isRate(key) && spec.low > 0) f = Math.min(f, .9 * c / Math.max(c - spec.low, 1e-9));
+  const s = {...spec, low: c - (c - spec.low) * f, high: c + (spec.high - c) * f};
+  if (spec.type === 'normal') s.sd = spec.sd * f;
+  return s;
+}
+const specRange = (key, s) => { try { const m = distributionSummary(s); return m.type === 'fixed' ? copy('wiFixed', {v: fmtIn(key, m.low)}) : copy('wiRange', {lo: fmtIn(key, m.low), hi: fmtIn(key, m.high)}); } catch { return ''; } };
+function distLadder(st, tab, key, spec, place) {
+  if (!spec || spec.type === 'fixed') return '';
+  const set = s => v => place(v, s);
+  const wide = widen(spec, 2, key);
+  return ladder(st, [
+    {label: copy('wiFixed', {v: fmtIn(key, center(spec))}), view: tweak(st, tab, set({type: 'fixed', value: center(spec)}))},
+    {label: specRange(key, spec), view: isolate(st, tab), yours: true},
+    {label: specRange(key, wide), view: tweak(st, tab, set(wide))}
+  ]);
+}
+
+const pathField = (metric, part) => metric === 'growth' ? `annual-${part === 'sd' ? 'innovation-sd' : part}` : `metric-${metric}-${part}`;
+function pathKnobs(st, metric, endpoint, tab) {
   const spec = pathSpec(metric, st.config); if (!spec) return '';
   const sd = spec.innovationSD, rho = spec.persistence, rows = [], mName = COPY[lang()].metric[metric] || metric;
-  rows.push(knob(copy('sdT', {v: fmtStep(metric, sd)}), sd > 0 ? copy('sdB', {metric: mName, v: fmtStep(metric, sd), v2: fmtStep(metric, 2 * sd)}) : copy('sdZero')));
+  const fixed = spec.fixedYears || [];
+  // Rungs: no surprises, yours, twice as large (or a typical size when yours is zero).
+  const typical = isRate(metric) ? .02 : .2;
+  const sdRungs = uniq([0, sd, sd > 0 ? 2 * sd : typical]).map(v => ({label: fmtStep(metric, v), view: v === sd ? isolate(st, tab) : tweak(st, tab, editPath(metric, {innovationSD: v})), yours: v === sd}));
+  rows.push(knob(copy('sdT', {v: fmtStep(metric, sd)}), sd > 0 ? copy('sdB', {metric: mName, v: fmtStep(metric, sd), v2: fmtStep(metric, 2 * sd)}) : copy('sdZero'), ladder(st, sdRungs), 'sd', pathField(metric, 'sd')));
   let rb;
   if (!(sd > 0)) rb = copy('rhoIdle');
   else if (Math.abs(rho) < 1e-9) rb = copy('rhoZero');
   else if (rho >= 1) rb = copy('rhoOne');
   else if (rho < 0) rb = copy('rhoNeg');
   else rb = copy('rhoB', {p1: fmtPct(rho), p2: fmtPct(rho * rho), half: yearsText(Math.log(.5) / Math.log(rho)), stat: fmtStep(metric, sd / Math.sqrt(1 - rho * rho))});
-  rows.push(knob(copy('rhoT', {v: num(rho, 2)}), rb, sd > 0 ? `<figure class="rx-mcg-echo-fig">${echoBars(rho)}<figcaption>${esc(copy('echoCap'))}</figcaption></figure>` : ''));
-  const fixed = spec.fixedYears || [];
-  rows.push(knob(copy('fixT', {v: fixed.length ? yearsList(fixed) : '—'}), fixed.length ? copy('fixB') : copy('fixNone')));
-  if (endpoint) rows.push(knob(copy('endT'), endpoint));
+  const rhoRungs = sd > 0 ? uniq([0, rho, rho >= .85 ? .5 : .9]).map(v => ({label: num(v, 2), view: v === rho ? isolate(st, tab) : tweak(st, tab, editPath(metric, {persistence: v})), yours: v === rho})) : [];
+  rows.push(knob(copy('rhoT', {v: num(rho, 2)}), rb, sd > 0 ? `<figure class="rx-mcg-echo-fig">${echoBars(rho)}<figcaption>${esc(copy('echoCap'))}</figcaption></figure>${ladder(st, rhoRungs)}` : '', 'rho', pathField(metric, 'persistence')));
+  // Pinning removes surprise from those years: compare with no pins, or with pinning the first three.
+  const ty = metric === 'growth' ? st.annualContext?.terminalYear : null;
+  const pin3 = [1, 2, 3].filter(y => !ty || y < ty);
+  const fixRungs = sd > 0 ? (fixed.length ? [{label: copy('wiNoPins'), view: tweak(st, tab, editPath(metric, {fixedYears: []}))}, {label: yearsList(fixed), view: isolate(st, tab), yours: true}]
+    : [{label: copy('wiNoPins'), view: isolate(st, tab), yours: true}, {label: copy('wiPin3'), view: tweak(st, tab, editPath(metric, {fixedYears: pin3}))}]) : [];
+  rows.push(knob(copy('fixT', {v: fixed.length ? yearsList(fixed) : '—'}), fixed.length ? copy('fixB') : copy('fixNone'), ladder(st, fixRungs), 'fix', pathField(metric, 'fixed-1')));
+  if (endpoint) rows.push(knob(copy('endT'), endpoint, '', 'end'));
+  // The loading field sits on this tab; what it does is shown with every input varying.
+  const load = st.config.method === 'joint-annual-path' ? st.config.jointAnnual?.loadings?.[metric] : undefined;
+  if (finite(load) && st.tabs.some(([k]) => k === 'relationships')) {
+    const rel = COPY[lang()].tabs.relationships || st.tabs.find(([k]) => k === 'relationships')[1];
+    rows.push(knob(copy('loadHere', {v: num(load, 2)}), copy('loadHereB', {tab: rel}), `<button type="button" class="rx-mcg-link" data-tab="relationships">${esc(copy('toRel', {tab: rel}))}</button>`, 'load', `joint-${metric}-loading`));
+  }
   return rows.join('');
 }
 
-function distKnob(key, spec, note) {
+function distKnob(key, spec, note, extra = '', k = 'dist', f = '', prefix = '') {
   let s; try { s = distributionSummary(spec); } catch { return ''; }
   const range = s.type === 'fixed' ? fmtIn(key, s.low) : `${fmtIn(key, s.low)} – ${fmtIn(key, s.high)}`;
   const body = copy('d_' + s.type, {mode: fmtIn(key, spec.mode), mean: fmtIn(key, s.mean), mean0: fmtIn(key, spec.mean), sd: fmtStep(key, spec.sd)}) + (s.type === 'fixed' ? '' : ' ' + copy('d_mid', {p10: fmtIn(key, distributionQuantile(.1, spec)), p90: fmtIn(key, distributionQuantile(.9, spec))})) + (note ? ' ' + note : '');
-  return knob(copy('distT', {family: copy('fam_' + s.type), range}), body, `<div class="rx-mcg-dens-wrap">${densityChart(key, spec, true)}</div>`);
+  return knob((prefix ? prefix + ' · ' : '') + copy('distT', {family: copy('fam_' + s.type), range}), body, `<div class="rx-mcg-dens-wrap">${densityChart(key, spec, true)}</div>${extra}`, k, f);
 }
 
 function valueBlock(st, sum, what) {
@@ -526,7 +747,9 @@ function sourcesBlock(st) {
   const flat = s => !(s.p90 - s.p10 > Math.abs(base || 1) * 1e-4);
   const items = rows.map(r => line(COPY[lang()].tabs[r.k] || st.tabs.find(([k]) => k === r.k)?.[1] || r.k, r.sum && !r.sum.error && !flat(r.sum) ? r.sum : null, !r.sum ? copy('pending') : r.sum.error ? '—' : flat(r.sum) ? copy('zero') : range(fmtVal(r.sum.p10), fmtVal(r.sum.p90)), r.k)).join('');
   const total = st.latest ? line(copy('together'), st.latest, range(fmtVal(st.latest.p10), fmtVal(st.latest.p90)), null) : '';
-  return fold('sources', copy('sources'), `<p class="rx-mcg-sub">${esc(copy('sourcesLead'))}</p><ul>${items}${total}</ul>`, 'rx-mcg-sources');
+  const top = ok.filter(r => !flat(r.sum)).sort((a, b) => (b.sum.p90 - b.sum.p10) - (a.sum.p90 - a.sum.p10))[0];
+  const chip = top ? copy('leads', {tab: COPY[lang()].tabs[top.k] || top.k}) : rows.some(r => !r.sum) ? '…' : '';
+  return fold('sources', copy('sources'), `<p class="rx-mcg-sub">${esc(copy('sourcesLead'))}</p><ul>${items}${total}</ul><p class="rx-mcg-cite">${esc(copy('cite'))}</p>`, {chip, cls: 'rx-mcg-sources', ic: 'sources'});
 }
 
 function endRange(tab, driver, metric, st) {
@@ -540,10 +763,101 @@ function endRange(tab, driver, metric, st) {
   return {low: sm.low + shift, high: sm.high + shift, density: sm.density.map(p => ({x: p.x + shift, y: p.y}))};
 }
 
+/* ---------- end point vs. the way there ---------- */
+// With annual paths a tab has two spreads. The range (for a bounded normal,
+// its SD before truncation) is drawn once per scenario and fixes the terminal
+// end point; the yearly innovation SD adds AR(1) surprises that are exactly
+// zero at pinned years and at that end point (joint-annual-path.js conditions
+// on both). The two are independent, so their variances add. The chart is
+// measured, not drawn from a formula: the tab is rerun with each part alone.
+const stepNum = (k, v) => isRate(k) ? num(v * 100, 1) : num(v, 2);
+function pairChart(metric, rows, n) {
+  const H = 150, top = 12, bottom = 118, left = 40, right = W - 12;
+  const cols = n + 1, X = i => left + i / (cols - 1) * (right - left);
+  const max = Math.max(...rows.flatMap(r => r.v).filter(finite), isRate(metric) ? .002 : .02) * 1.12;
+  const Y = v => bottom - v / max * (bottom - top);
+  const line = v => v.map((y, i) => `${i ? 'L' : 'M'}${X(i).toFixed(1)} ${Y(y).toFixed(1)}`).join('');
+  const yt = ticks(0, max, 2).filter(v => v <= max);
+  const grid = yt.map(v => `<line x1="${left}" x2="${right}" y1="${Y(v)}" y2="${Y(v)}" class="${v ? 'rx-mcg-grid' : 'rx-mcg-axis'}"/><text x="${left - 6}" y="${Y(v) + 4}" text-anchor="end" class="rx-mcg-tick">±${esc(stepNum(metric, v))}</text>`).join('');
+  const xs = [0, Math.floor((n - 1) / 2)].filter((v, i, a) => a.indexOf(v) === i).map(i => `<text x="${X(i)}" y="${bottom + 18}" text-anchor="${i ? 'middle' : 'start'}" class="rx-mcg-tick">${esc(copy('yr', {n: i + 1}))}</text>`).join('') + `<text x="${X(n)}" y="${bottom + 18}" text-anchor="end" class="rx-mcg-tick">${esc(copy('terminal'))}</text>`;
+  const [both, a, b] = rows;
+  const area = `${line(both.v)}L${X(n)} ${bottom}L${X(0)} ${bottom}Z`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(copy('pairChart', {unit: isRate(metric) ? copy('unitPts').trim() : '×'}))}">${grid}<line x1="${X(n - 1)}" x2="${X(n - 1)}" y1="${top}" y2="${bottom}" class="rx-mcg-grid"/>
+    <path d="${area}" class="rx-mcg-pa-both"/><path d="${line(both.v)}" class="rx-mcg-pa-bl"/><path d="${line(a.v)}" class="rx-mcg-pa-a"/><path d="${line(b.v)}" class="rx-mcg-pa-b"/>
+    <circle cx="${X(n)}" cy="${Y(a.v[n])}" r="3.5" class="rx-mcg-pa-dot"/>${xs}</svg>`;
+}
+function pairBlock(st, tab, metric, spec, place, fieldA) {
+  const path = pathSpec(metric, st.config); if (!path || !spec) return '';
+  const sd = path.innovationSD;
+  const both = request(st, 'pair', isolate(st, tab));
+  const endOnly = sd > 0 ? request(st, 'pair', tweak(st, tab, editPath(metric, {innovationSD: 0}))) : both;
+  const fixedSpec = spec.type === 'fixed' ? spec : {type: 'fixed', value: center(spec)};
+  const bumpsOnly = spec.type !== 'fixed' ? request(st, 'pair', tweak(st, tab, v => place(v, fixedSpec))) : both;
+  const labelA = spec.type === 'normal' ? bare(fieldLabel(fieldA) || copy('pairRange')) : copy('pairRange');
+  const labelB = bare(fieldLabel(pathField(metric, 'sd')) || copy('sdT', {v: ''}));
+  const title = copy('pairT', {a: labelA, b: labelB});
+  const all = [both, endOnly, bumpsOnly];
+  if (all.some(x => !x)) return fold('pair', title, `<div class="rx-mcg-skel"></div>`, {chip: copy('pairChip'), ic: 'pair'});
+  if (all.some(x => x.error || !x.bands?.[metric])) return '';
+  const half = sm => { const b = sm.bands[metric]; return [...b.lo.map((l, i) => Math.max(0, (b.hi[i] - l) / 2)), Math.max(0, (b.endHi - b.endLo) / 2)]; };
+  const n = both.bands[metric].lo.length;
+  const vBoth = half(both), vA = spec.type === 'fixed' ? vBoth.map(() => 0) : half(endOnly), vB = sd > 0 ? half(bumpsOnly) : vBoth.map(() => 0);
+  // Where the yearly surprises are largest: the clearest year to see both parts.
+  let peak = -1; vB.slice(0, n).forEach((v, i) => { if (v > (vB[peak] ?? 0) + 1e-12) peak = i; });
+  // The worked example uses the year where both parts are largest together.
+  let y = -1; vB.slice(0, n).forEach((v, i) => { if (Math.min(v, vA[i]) > (y < 0 ? 1e-12 : Math.min(vB[y], vA[y]))) y = i; });
+  const spreadOf = sm => sm.base ? '±' + fmtPct((sm.p90 - sm.p10) / 2 / Math.abs(sm.base)) : '—';
+  let sNote = '';
+  try { if (spec.type === 'normal') sNote = ' ' + copy('pairANormal', {p10: fmtIn(metric, distributionQuantile(.1, spec) + (/Shift$/.test(tab) ? st.annualContext?.terminals?.[metric] || 0 : 0)), p90: fmtIn(metric, distributionQuantile(.9, spec) + (/Shift$/.test(tab) ? st.annualContext?.terminals?.[metric] || 0 : 0))}); } catch {}
+  const card = (cls, name, head, body, stat, value) => `<div class="rx-mcg-pc ${cls}"><span class="rx-mcg-pc-k"><i></i>${esc(name)}</span><b>${esc(head)}</b><p>${esc(body)}</p><div class="rx-mcg-pc-s"><strong>${esc(stat)}</strong><span>${esc(copy('pairValue', {v: value}))}</span></div></div>`;
+  const cardA = card('is-a', labelA, copy('pairAH'), spec.type === 'fixed' ? copy('pairZeroA') : copy('pairAB') + sNote, copy('pairStatA', {v: fmtStep(metric, vA[n])}), spec.type === 'fixed' ? '±0%' : spreadOf(endOnly));
+  const cardB = card('is-b', labelB, copy('pairBH'), sd > 0 ? copy('pairBB') : copy('pairZeroB'), peak >= 0 ? copy('pairStatB', {v: fmtStep(metric, vB[peak]), y: peak + 1}) : '±' + fmtStep(metric, 0), sd > 0 ? spreadOf(bumpsOnly) : '±0%');
+  const a = y >= 0 ? vA[y] : 0, b = y >= 0 ? vB[y] : 0;
+  const sum = a > 0 && b > 0 ? `<p class="rx-mcg-read">${esc(copy('pairSum', {y: y + 1, a: stepNum(metric, a), b: stepNum(metric, b), c: fmtStep(metric, Math.hypot(a, b)), m: fmtStep(metric, vBoth[y])}))}</p>` : '';
+  const legend = `<figcaption><span class="rx-mcg-key"><i class="is-pa"></i>${esc(labelA)}<i class="is-pb"></i>${esc(labelB)}<i class="is-pboth"></i>${esc(copy('pairBoth'))}</span></figcaption>`;
+  return fold('pair', title, `<div class="rx-mcg-pair">${cardA}${cardB}</div><figure class="rx-mcg-fig"><p class="rx-mcg-sub">${esc(copy('pairChart', {unit: isRate(metric) ? copy('unitPts').trim() : '×'}))}</p>${pairChart(metric, [{v: vBoth}, {v: vA}, {v: vB}], n)}${legend}</figure>${sum}<p class="rx-mcg-sub rx-mcg-after">${esc(copy('pairTip'))}</p>`, {chip: copy('pairChip'), ic: 'pair'});
+}
+
+// Monte Carlo error of the reported numbers, from the normal approximation:
+// SE(median) = √(π/2)·σ/√n and SE(P10) = √(0.1·0.9)/φ(1.2816)·σ/√n = 1.709·σ/√n,
+// with σ estimated as (P90 − P10) / 2.563. Shown at 95% (×1.96), as "about".
+function samplingGuide(st) {
+  const c = st.config, n = c.trials;
+  let sum, src;
+  if (st.latest) { sum = {p10: st.latest.p10, p50: st.latest.p50, p90: st.latest.p90}; src = copy('precSrcRun'); }
+  else { sum = request(st, 'samp', full(st), true); src = copy('precSrcPreview', {n: num(TRIALS, 0)}); }
+  let value, chip = !sum ? '…' : '';
+  if (!sum || sum.error) value = valueBlock(st, sum);
+  else {
+    const sigma = Math.max(0, sum.p90 - sum.p10) / 2.5631;
+    const counts = uniq([1000, 5000, 10000, n].filter(k => finite(k) && k > 0));
+    const med = k => 1.96 * 1.2533 * sigma / Math.sqrt(k), edge = k => 1.96 * 1.7094 * sigma / Math.sqrt(k);
+    const widest = 2 * edge(counts[0]) || 1;
+    const rows = counts.map(k => {
+      const w = 2 * med(k) / widest, we = 2 * edge(k) / widest;
+      const rel = finite(sum.p50) && sum.p50 ? ` (${fmtPct(med(k) / Math.abs(sum.p50))})` : '';
+      return `<li class="${k === n ? 'is-yours' : ''}"><span>${esc(num(k, 0))}${k === n ? `<small>${esc(copy('precCur'))}</small>` : ''}</span><i class="is-err" style="--a:${(.5 - w / 2).toFixed(4)};--w:${w.toFixed(4)};--ea:${(.5 - we / 2).toFixed(4)};--ew:${we.toFixed(4)};--b:.5"></i><em>${esc(copy('precMed', {v: fmtVal(med(k)) + rel}))} · ${esc(copy('precEdge', {v: fmtVal(edge(k))}))}</em></li>`;
+    }).join('');
+    // Luck against what the inputs themselves do: the noise should be a small fraction of the range.
+    if (finite(sum.p50) && sum.p50 && finite(n)) chip = copy('precChip', {v: fmtPct(med(n) / Math.abs(sum.p50))});
+    const half = (sum.p90 - sum.p10) / 2, verdict = half > 0 && finite(n) ? copy('precVs', {n: num(n, 0), noise: fmtVal(med(n)), range: fmtVal(half), x: num(Math.max(1, half / med(n)), 0)}) : '';
+    value = `<figure class="rx-mcg-wi rx-mcg-prec" aria-label="${esc(copy('precT'))}"><ul>${rows}</ul><figcaption><span class="rx-mcg-key"><i class="is-hi"></i>${esc(copy('precKeyMed'))}<i class="is-soft"></i>${esc(copy('precKeyEdge'))}</span></figcaption></figure><p class="rx-mcg-read">${esc(verdict)}</p><p class="rx-mcg-sub rx-mcg-after">${esc(copy('precRead'))}</p>`;
+  }
+  const knobs = knob(copy('trialsT', {v: num(n, 0)}), copy('trialsB'), '', 'trials', 'trials') + knob(copy('seedT', {v: String(c.seed ?? '—')}), copy('seedB'), '', 'seed', 'seed');
+  return [
+    ['head', `<header class="rx-mcg-head"><span class="rx-mcg-eyebrow">${esc(copy('eyebrow'))}</span></header><h3>${esc(copy('q_sampling'))}</h3><p class="rx-mcg-lead">${esc(copy('l_sampling'))}</p>`],
+    // Folded: on Sampling the latest range below should stay in view.
+    ['value', fold('prec', copy('precT'), `<p class="rx-mcg-sub">${esc(copy('precLead', {src}))}</p>${value}`, {chip, ic: 'prec'})],
+    ['knobs', fold('sknobs', copy('knobs'), `<ul class="rx-mcg-knobs">${knobs}</ul>`, {chip: copy('nSettings', {n: 2}), ic: 'knobs'})]
+  ];
+}
+
 function guideFor(st, root) {
   const tab = st.activeTab, c = st.config, q = QUESTION[tab];
   if (!q) return [];
-  let inputs = '', knobs = '', value = '', lead = copy('valueLead', {n: num(TRIALS, 0)});
+  if (tab === 'sampling') return samplingGuide(st);
+  ladderScale = 0;
+  let inputs = '', knobs = '', value = '', pair = '', chip = '', lead = copy('valueLead', {n: num(TRIALS, 0)});
   const metric = pathMetric(tab, c), what = COPY[lang()].metric[metric || PATH_OF[tab]] || (COPY[lang()].tabs[tab] || tab).toLowerCase();
   if (tab === 'relationships') {
     lead = copy('valueLeadRel', {n: num(TRIALS, 0)});
@@ -565,6 +879,7 @@ function guideFor(st, root) {
       const lo = Math.min(withSum.p10, withoutSum.p10), hi = Math.max(withSum.p90, withoutSum.p90), span = Math.max(hi - lo, 1e-9);
       const bar = (label, s) => `<li><span>${esc(label)}</span><i style="--a:${((s.p10 - lo) / span).toFixed(3)};--w:${((s.p90 - s.p10) / span).toFixed(3)}"></i><em>${esc(range(fmtVal(s.p10), fmtVal(s.p90)))}</em></li>`;
       const change = Math.abs(a - b) / Math.max(b, 1e-9);
+      chip = change < .01 ? copy('zero') : (a > b ? '+' : '−') + fmtPct(change);
       value = `<div class="rx-mcg-value"><ul class="rx-mcg-compare">${bar(copy('withLinks'), withSum)}${bar(copy('noLinks'), withoutSum)}</ul><p class="rx-mcg-read">${esc(change < .01 ? copy('relSame') : a > b ? copy('relWider', {pct: fmtPct(change)}) : copy('relNarrower', {pct: fmtPct(change)}))}</p></div>`;
     }
   } else {
@@ -577,13 +892,24 @@ function guideFor(st, root) {
       if (bridge && finite(bridge.terminalPV) && bridge.enterprise > 0) knobs += `<li class="is-key"><b>${esc(copy('tvShare', {pct: fmtPct(bridge.terminalPV / bridge.enterprise)}))}</b></li>`;
       const varying = Object.entries(t).filter(([, s]) => s.type !== 'fixed'), fixed = Object.entries(t).filter(([, s]) => s.type === 'fixed');
       for (const [k, s] of varying) {
-        knobs += distKnob(unitKey(k), s).replace('<b>', `<b>${esc(names[k] || k)} · `);
+        const lad = distLadder(st, tab, unitKey(k), s, (v, x) => { v.annualTerminal[k] = x; });
+        knobs += distKnob(unitKey(k), s, '', lad, 'term-' + k, `terminal-${k}-type`, names[k] || k);
       }
-      if (fixed.length) knobs += knob(copy('fixedSet', {list: fixed.map(([k, s]) => `${names[k] || k} ${fmtIn(unitKey(k), s.value)}`).join(lang() === 'zh-Hans' ? '、' : ', ')}), '').replace('<p></p>', '');
+      // A fixed terminal input still deserves a question: how far would a modest range reach?
+      const typical = {growth: .005, taxRate: .05, roic: .05};
+      for (const [k, s] of fixed) {
+        const d = typical[k] ?? Math.abs(s.value) * .2, tri = {type: 'triangular', low: s.value - d, mode: s.value, high: s.value + d};
+        const lad = ladder(st, [
+          {label: fmtIn(unitKey(k), s.value), view: isolate(st, tab), yours: true},
+          {label: specRange(unitKey(k), tri), view: tweak(st, tab, v => { v.annualTerminal[k] = tri; })}
+        ]);
+        knobs += knob(copy('termFixedT', {name: names[k] || k, v: fmtIn(unitKey(k), s.value)}), copy('termFixedB', {lo: fmtIn(unitKey(k), tri.low), hi: fmtIn(unitKey(k), tri.high)}), lad, 'term-' + k, `terminal-${k}-type`);
+      }
       if (metric) {
         const flat = !(pathSpec(metric, c)?.innovationSD > 0);
         if (!flat) inputs += fanChart(st, metric, sum);
-        knobs += `<li class="is-group"><b>${esc(copy('taxPath'))}</b></li>` + pathKnobs(st, metric, '');
+        knobs += `<li class="is-group"><b>${esc(copy('taxPath'))}</b></li>` + pathKnobs(st, metric, '', tab);
+        if (t.taxRate) pair = pairBlock(st, tab, metric, t.taxRate, (v, x) => { v.annualTerminal.taxRate = x; }, 'terminal-taxRate-sd');
       }
     } else {
       const end = metric ? endRange(tab, driver, metric, st) : null;
@@ -593,11 +919,15 @@ function guideFor(st, root) {
         let endpoint = '';
         if (metric === 'growth') endpoint = st.annualContext?.terminalYear <= (st.annualContext?.baseline?.length || 0) ? copy('endGrowth', {n: st.annualContext.terminalYear, g: fmtIn('growth', st.annualContext.terminalGrowth)}) : '';
         else if (driver && !inactive) endpoint = end ? copy('endDist', {lo: fmtIn(metric, end.low), hi: fmtIn(metric, end.high)}) : copy('endFixed', {v: fmtIn(metric, (driver.value ?? 0) + (/Shift$/.test(tab) ? st.annualContext?.terminals?.[metric] || 0 : 0))});
-        knobs += pathKnobs(st, metric, endpoint);
+        // The range row below already says where the path ends.
+        knobs += pathKnobs(st, metric, metric !== 'growth' && driver && !inactive && end ? '' : endpoint, tab);
       }
-      if (driver) knobs += inactive ? knob(copy('inactiveT'), copy('inactiveB')) : distKnob(/Multiplier$/.test(tab) ? 'investmentFactor' : tab, driver, metric ? copy('terminalOnly') : '');
+      const dKey = /Multiplier$/.test(tab) ? 'investmentFactor' : tab;
+      if (metric && metric !== 'growth' && driver && !inactive) pair = pairBlock(st, tab, metric, driver, (v, x) => { v.drivers[tab] = x; }, `${tab}-sd`);
+      if (driver) knobs += inactive ? knob(copy('inactiveT'), copy('inactiveB'), '', 'dist') : distKnob(dKey, driver, metric ? copy('terminalOnly') : '', distLadder(st, tab, dKey, driver, (v, x) => { v.drivers[tab] = x; }), 'dist', `${tab}-type`, metric ? copy('endRangeT') : '');
     }
     value = valueBlock(st, sum, what);
+    chip = !sum ? '…' : sum.error ? '—' : !(sum.p90 - sum.p10 > Math.abs(sum.base || sum.p50 || 1) * 1e-4) ? copy('zero') : '±' + fmtPct((sum.p90 - sum.p10) / 2 / Math.abs(finite(sum.base) ? sum.base : sum.p50));
   }
   if (money && tab !== 'relationships') lead += ' ' + copy('evNote');
   // Sections are painted separately, so a result that lands rewrites one of them.
@@ -605,10 +935,10 @@ function guideFor(st, root) {
     ['head', `<header class="rx-mcg-head"><span class="rx-mcg-eyebrow">${esc(copy('eyebrow'))}</span><button type="button" class="rx-mcg-switch" data-view="range">${esc(copy('toRange'))}</button></header>
     <h3>${esc(copy('q_' + q))}</h3><p class="rx-mcg-lead">${esc(copy('l_' + q))}</p>`],
     ['inputs', inputs ? `<section class="rx-mcg-block"><h4>${esc(copy('inputs'))}</h4>${inputs}</section>` : ''],
-    ['value', `<section class="rx-mcg-block"><h4>${esc(copy(tab === 'relationships' ? 'valueRel' : 'value'))}</h4><p class="rx-mcg-sub">${esc(lead)}</p>${value}</section>`],
-    ['knobs', knobs ? fold('knobs', copy('knobs'), `<ul class="rx-mcg-knobs">${knobs}</ul>`) : ''],
-    ['sources', sourcesBlock(st)],
-    ['cite', `<p class="rx-mcg-cite">${esc(copy('cite'))}</p>`]
+    ['value', fold(tab === 'relationships' ? 'valueRel' : 'value', copy(tab === 'relationships' ? 'valueRel' : 'value'), `<p class="rx-mcg-sub">${esc(lead)}</p>${value}`, {chip, ic: 'value'})],
+    ['pair', pair],
+    ['knobs', knobs ? fold('knobs', copy('knobs'), (knobs.includes('rx-mcg-wi') ? `<p class="rx-mcg-sub">${esc(copy('wiLead'))}</p>` : '') + `<ul class="rx-mcg-knobs" style="--s:${Math.max(ladderScale * 1.04, .005).toFixed(5)}">${knobs}</ul>`, {chip: copy('nSettings', {n: (knobs.match(/<li data-k/g) || []).length || (knobs.match(/<li/g) || []).length}), ic: 'knobs'}) : ''],
+    ['sources', sourcesBlock(st)]
   ];
 }
 
@@ -666,6 +996,8 @@ function onClick(e) {
     setView(root, t.dataset.view);
     paint(root);
     if (t.dataset.view === 'range') root.querySelector('.mc-heading')?.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  } else if (t.dataset.edit) {
+    editField(root, t.dataset.edit);
   } else if (t.dataset.tab) {
     root.querySelector(`[id$="mc-tab-${t.dataset.tab}"]`)?.click();
   }
@@ -684,13 +1016,18 @@ function paint(root) {
   if (!state.view) setView(root, st.activeTab === 'sampling' ? 'range' : 'guide');
   backLink(root, st);
   const inline = phone.matches;
-  const show = !!QUESTION[st.activeTab] && st.valid && (inline || (views.get(root).view === 'guide'));
+  const sampling = st.activeTab === 'sampling';
+  // Sampling keeps the range in view: its short guide sits above it.
+  const show = !!QUESTION[st.activeTab] && st.valid && (inline || sampling || views.get(root).view === 'guide');
   h.hidden = !show;
+  h.classList.toggle('is-sampling', sampling);
   if (!show) return;
   wanted = new Set();
   W = inline ? 340 : 560;
   money = st.adapterId ? (String(st.unit || '').match(/[A-Z]{3}/)?.[0] || 'USD') : null;
+  curRoot = root;
   const parts = guideFor(st, root);
+  curRoot = null;
   // Work for settings that are no longer on screen is dropped, not finished.
   queue = queue.filter(q => wanted.has(q.key));
   if (busy && !wanted.has(busy.key)) busy.controller.abort();
@@ -700,6 +1037,85 @@ function paint(root) {
   }
   parts.forEach(([, html], i) => { const c = h.children[i]; if (painted.get(c) !== html) { painted.set(c, html); c.innerHTML = html; } });
   painted.set(h, true);
+  relink(root);
+}
+
+/* ---------- linking a field on the left to its row on the right ---------- */
+// Focus or hover a setting and the row that explains it lights up (and, on
+// desktop, scrolls into view in the right column). Hover a row and its field
+// is outlined; its title focuses the field.
+function fieldRow(id) {
+  const s = String(id || '').replace(/^.*?mc-/, '');
+  let m;
+  if ((m = s.match(/^(?:annual|metric-\w+)-(innovation-sd|sd|persistence|fixed-(\d+))$/))) return {k: m[2] ? 'fix' : m[1] === 'persistence' ? 'rho' : 'sd', year: m[2] ? +m[2] : null};
+  if (/^joint-\w+-(loading|add)$/.test(s)) return {k: 'load'};
+  if ((m = s.match(/^terminal-(\w+)-/))) return {k: 'term-' + m[1]};
+  if (/^(trials|seed)$/.test(s)) return {k: s};
+  if (/^\w+-(type|low|mode|high|mean|sd|value)$/.test(s)) return {k: 'dist'};
+  return null;
+}
+const links = new WeakMap(); // root → {focus, hover}
+function rowFor(el) {
+  if (!el?.closest || el.closest('.mc-setup-tabs')) return null;
+  const setup = el.closest('.mc-setup'); if (!setup) return null;
+  for (let n = el; n && n !== setup; n = n.parentElement) {
+    // Choice buttons sit beside a hidden select that carries the id.
+    for (const id of [n.id, n.tagName === 'LABEL' ? n.querySelector(':scope > select[id]')?.id : '']) if (id && /mc-/.test(id)) { const r = fieldRow(id); if (r) return r; }
+  }
+  return null;
+}
+function relink(root, scroll = false) {
+  const h = root.querySelector('.rx-mcg'); if (!h) return;
+  const st = links.get(root) || {}, row = st.hover || st.focus;
+  for (const n of h.querySelectorAll('.is-linked, .rx-mcg-yr.is-on')) n.classList.remove('is-linked', 'is-on');
+  if (!row || h.hidden) return;
+  const li = h.querySelector(`[data-k~="${row.k}"]`);
+  if (row.year) h.querySelector(`.rx-mcg-yr[data-yr="${row.year}"]`)?.classList.add('is-on');
+  if (!li) return;
+  li.classList.add('is-linked');
+  if (!scroll || phone.matches) return;
+  // Unfold the explanation the reader is working on, then bring it into view
+  // inside the sticky column without moving the page.
+  for (const d of [li.closest('details'), li.querySelector(':scope > details')]) if (d && !d.open) d.open = true;
+  const col = h.closest('.rx-mc-right'); if (!col) return;
+  const a = col.getBoundingClientRect(), b = li.getBoundingClientRect();
+  if (b.top < a.top + 8 || b.bottom > a.bottom - 8) col.scrollTo({top: col.scrollTop + b.top - a.top - Math.max(16, (a.height - b.height) / 3), behavior: calm() ? 'auto' : 'smooth'});
+}
+const same = (a, b) => (a?.k || null) === (b?.k || null) && (a?.year || null) === (b?.year || null);
+document.addEventListener('focusin', e => {
+  const root = e.target.closest?.('[data-rx-mcv]'); if (!root) return;
+  const st = links.get(root) || {}, row = rowFor(e.target);
+  if (same(st.focus, row)) return;
+  st.focus = row; links.set(root, st); relink(root, !!row);
+});
+document.addEventListener('focusout', e => {
+  const root = e.target.closest?.('[data-rx-mcv]'); if (!root) return;
+  if (e.relatedTarget && root.contains(e.relatedTarget)) return;
+  const st = links.get(root); if (st?.focus) { st.focus = null; relink(root); }
+});
+const fine = matchMedia('(hover: hover) and (pointer: fine)');
+let hoverTimer = 0;
+document.addEventListener('pointerover', e => {
+  if (!fine.matches) return;
+  const root = e.target.closest?.('[data-rx-mcv]'); if (!root) return;
+  // Right to left: a row outlines its field.
+  const li = e.target.closest('.rx-mcg li[data-f]');
+  for (const n of root.querySelectorAll('.rx-mcg-target')) if (!li || !n.id.endsWith('mc-' + li.dataset.f)) n.classList.remove('rx-mcg-target');
+  if (li) root.querySelector(`.mc-setup [id$="mc-${li.dataset.f}"]`)?.classList.add('rx-mcg-target');
+  // Left to right, after a short rest so a pointer passing by does not flicker.
+  if (e.target.closest('.rx-mcg')) return;
+  const row = rowFor(e.target), st = links.get(root) || {};
+  if (same(st.hover, row)) return;
+  clearTimeout(hoverTimer);
+  hoverTimer = setTimeout(() => { st.hover = row; links.set(root, st); relink(root, false); }, row ? 90 : 160);
+});
+function editField(root, f) {
+  const el = root.querySelector(`.mc-setup [id$="mc-${f}"]`); if (!el) return;
+  const shown = x => x && (x.checkVisibility ? x.checkVisibility() : !!x.offsetParent);
+  let target = el.matches('input, select, textarea, button') ? el : el.querySelector('[aria-checked="true"], input, select, button') || el;
+  if (!shown(target) || target.getAttribute('aria-hidden') === 'true' || target.tabIndex < 0) target = el.parentElement?.querySelector('[role="radiogroup"] [aria-checked="true"]') || el.parentElement?.querySelector('[role="radiogroup"] button') || target;
+  target.scrollIntoView({block: 'center', behavior: calm() ? 'auto' : 'smooth'});
+  target.focus({preventScroll: true});
 }
 let repaintQueued = false;
 function repaintSoon() {

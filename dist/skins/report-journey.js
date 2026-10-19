@@ -136,6 +136,8 @@ function nextCards() {
       }
       section.append(card);
     }
+    const name = copy('next', {n: Math.min(id + 1, 6)});
+    if (card.getAttribute('aria-label') !== name) card.setAttribute('aria-label', name);
     if (id < 6) {
       setText(card.querySelector('.rx-next-kicker'), copy('next', {n: id + 1}) + ' · ' + tabName(id + 1));
       setText(card.querySelector('.rx-next-title'), stepTitle(id + 1));
@@ -277,7 +279,7 @@ function bridge() {
 // ---------- long fine print folds to two lines, with a toggle ----------
 const overflow = new Map();
 let resizeTimer = 0;
-addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { overflow.clear(); for (const p of document.querySelectorAll('.rx-clamp, p.micro')) p.__rxText = undefined; finePrint(); }, 200); });
+addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { fitName(); overflow.clear(); for (const p of document.querySelectorAll('.rx-clamp, p.micro')) p.__rxText = undefined; finePrint(); }, 200); });
 function unclamp(p) {
   p.classList.remove('rx-clamp', 'is-open');
   if (p.nextElementSibling?.classList.contains('rx-more')) p.nextElementSibling.remove();
@@ -436,7 +438,31 @@ function versusStart() {
   if (host.style.getPropertyValue('--rx-vs') !== value) value ? host.style.setProperty('--rx-vs', value) : host.style.removeProperty('--rx-vs');
 }
 
+// ---------- a long company name steps down until its longest word fits, in three lines at most ----------
+function fitName() {
+  for (const h of document.querySelectorAll('.approved-company-name h2')) {
+    const key = h.textContent + '|' + innerWidth;
+    if (h.__rxFit === key || !h.checkVisibility?.()) continue;
+    h.__rxFit = key;
+    h.style.removeProperty('font-size');
+    // Measure with words unbroken, so a word that does not fit shows as overflow.
+    h.style.overflowWrap = 'normal';
+    let size = parseFloat(getComputedStyle(h).fontSize);
+    const lines = () => h.getBoundingClientRect().height / (parseFloat(getComputedStyle(h).lineHeight) || size);
+    // A name that wraps beside the ticker takes the full width, with the ticker beneath.
+    h.parentElement.classList.remove('rx-name-long');
+    h.parentElement.classList.toggle('rx-name-long', lines() > 1.5 || h.scrollWidth > h.clientWidth + 1);
+    while (size > 24 && (h.scrollWidth > h.clientWidth + 1 || lines() > 3.2)) {
+      size = Math.max(24, size * .9);
+      h.style.setProperty('font-size', size.toFixed(1) + 'px', 'important');
+    }
+    h.style.removeProperty('overflow-wrap');
+  }
+}
+// A web font that arrives after the first fit changes the widths without a DOM change.
+document.fonts?.addEventListener?.('loadingdone', () => { for (const h of document.querySelectorAll('.approved-company-name h2')) h.__rxFit = undefined; fitName(); });
 function scan() {
+  fitName();
   if (!document.querySelector('.guided-screen')) return;
   finePrint();
   eyebrows();
