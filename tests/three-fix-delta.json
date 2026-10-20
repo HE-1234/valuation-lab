@@ -72,6 +72,42 @@
       "before_sha256": "ce3153b212155b83424f19e39fffd49c20b5d0ec713311d884a6377e1fa762ba",
       "after_sha256": "0828032fabd05a37a008be8b9ca3ba205ffd1bbc98225f504b2366cd5bb5d410",
       "bytes": 10972
+    },
+    {
+      "path": "tests/arm-integration-preservation.mjs",
+      "before_sha256": "88d89ffa1d20388746fc4cabd3e2d0d0d4f6854bbba9fc14cc4fb27001ccb0d7",
+      "after_sha256": "8c97c8ec1a365c6af5ac9c252a84ed63674eb6c50e6abebd06230554c9fba986",
+      "bytes": 5223
+    },
+    {
+      "path": "tests/keys-integration-preservation.mjs",
+      "before_sha256": "e6b2930af83dccd1c7cb54dbc78d04c80cac8f08bb24091914567e86d41f1aae",
+      "after_sha256": "c3e99d63ad4c742c7f5251675d9e3708d7063df51757a00c45cd0e2943588f57",
+      "bytes": 5001
+    },
+    {
+      "path": "tests/sndk-integration-preservation.mjs",
+      "before_sha256": "a51a35cc40c4a642a30bf435a22020cef3090810e9eebbc222c6850b45060d2e",
+      "after_sha256": "6820ccef8fec314bf90bcd719d482ff8a9760087bf17ff2b06397a41e5f883e1",
+      "bytes": 5023
+    },
+    {
+      "path": "tests/ceva-v79-snapshot.mjs",
+      "before_sha256": "2a70a9c8bde78ef7f82f3c1d4f906f85625e096d280e2f29d7a9974b7e746a97",
+      "after_sha256": "7186408cd6a27ca82967a93ddab574bedcb597300033b94eefb732d0ff4bd5c2",
+      "bytes": 2777
+    },
+    {
+      "path": "tests/umc-v81-snapshot.mjs",
+      "before_sha256": "ab08897e02a266c737804964b9986149137951bd28d7e51d2fc23ebdf9e500ba",
+      "after_sha256": "7748ebd3d48d1479df775010c545990fc886a112ad0a017190399b4f102c9817",
+      "bytes": 2802
+    },
+    {
+      "path": "tests/tsm-historical-snapshot.mjs",
+      "before_sha256": null,
+      "after_sha256": "6411805ec89ab0f94797b91a0585b009954a710280e155bf1bfea4b6d9666cac",
+      "bytes": 1637
     }
   ]
 }
