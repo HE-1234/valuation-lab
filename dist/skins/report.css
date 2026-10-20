@@ -1879,6 +1879,7 @@
   & body .rx-mcg-link:hover { text-decoration: underline; text-underline-offset: 3px; }
   & body .rx-mcg-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   & body .mc-setup .rx-mcg-target { outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent) !important; outline-offset: 3px; border-radius: 6px; transition: outline-color 160ms ease; }
+  & body .mc-setup details.rx-mcg-edit-reveal[open]::details-content { transition: none !important; height: auto !important; content-visibility: visible !important; }
   /* Year markers on the path chart. */
   & body .rx-mcg-yr { opacity: 0; transition: opacity 160ms ease; pointer-events: none; }
   & body .rx-mcg-yr line { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 3; }
@@ -2019,6 +2020,12 @@
     & body .rx-mcg [data-part] > details.rx-mcg-fold { padding: 0 12px !important; border-radius: 12px; }
     & body .rx-mcg [data-part] > details.rx-mcg-fold > summary { min-height: 54px; gap: 10px; }
     & body .rx-mcg-ic { width: 28px; height: 28px; border-radius: 8px; }
+    /* Keep precision's long title and answer chip on separate phone rows. */
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; row-gap: 8px; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary > .rx-mcg-ic { grid-column: 1; grid-row: 1; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary > h4 { grid-column: 2; grid-row: 1; overflow-wrap: anywhere; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary > .rx-mcg-chip { grid-column: 2; grid-row: 2; justify-self: start; max-width: 100%; box-sizing: border-box; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary::after { grid-column: 3; grid-row: 1 / span 2; }
     & body .mc-setup > .rx-mcg { padding-bottom: 14px; }
   }
 }

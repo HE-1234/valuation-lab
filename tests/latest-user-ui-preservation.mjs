@@ -1,3 +1,4 @@
+import {reverseNativeGuideFix} from './native-guide-layout-preservation.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
@@ -198,6 +199,7 @@ export function latestUiCompatibilityBaseBytes(path,bytes,earlierContext=''){
  return out;
 }
 export function reverseLatestUserUi(path,bytes,earlierContext=''){
+ bytes=reverseNativeGuideFix(path,bytes,earlierContext);
  validateInput(path,bytes);
  if(own(LATEST_UI_COMPATIBILITY_FILES,path))return latestUiCompatibilityBaseBytes(path,bytes,earlierContext);
  if(!own(LATEST_UI_FILES,path))return bytes;

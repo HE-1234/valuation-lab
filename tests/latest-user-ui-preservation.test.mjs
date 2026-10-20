@@ -1,3 +1,4 @@
+import {reverseNativeGuideFix} from './native-guide-layout-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -56,8 +57,8 @@ test('latest user UI pins immutable V86 and seven exact upstream Git blobs, sour
   for(const k of ['beforeSHA256','sourceSHA256','afterSHA256'])assert.match(item[k],/^[0-9a-f]{64}$/);
   for(const k of ['baseBlob','sourceBlob'])assert.match(item[k],/^[0-9a-f]{40}$/);
   assert.notEqual(item.beforeSHA256,item.afterSHA256);
-  const current=read(p),before=git('show',LATEST_UI_BASE_COMMIT+':'+p),upstream=latestUiUpstreamBytes(p,current);
-  assert.equal(latestUiSHA(current),item.afterSHA256);assert.equal(latestUiSHA(before),item.beforeSHA256);
+  const current=read(p),stable=reverseNativeGuideFix(p,current),before=git('show',LATEST_UI_BASE_COMMIT+':'+p),upstream=latestUiUpstreamBytes(p,stable);
+  assert.equal(latestUiSHA(stable),item.afterSHA256);assert.equal(latestUiSHA(before),item.beforeSHA256);
   assert.equal(latestUiBlobSHA(before),item.baseBlob);assert.equal(latestUiBlobSHA(upstream),upstreamBlobs[p]);
   assert.equal(latestUiSHA(upstream),item.sourceSHA256);assert.deepEqual(reverseLatestUserUi(p,current),before);
  }
@@ -67,15 +68,16 @@ test('latest user UI retains every upstream byte except exact reviewed compatibi
  assert.ok(Object.hasOwn(LATEST_UI_COMPATIBILITY,'dist/skins/report.css'));
  assert.strictEqual(LATEST_UI_COMPATIBILITY['dist/skins/report.css'],GEOMETRY_FILES['dist/skins/report.css'].repairs,'The retained V86 mobile-trial overlay is the original immutable repair');
  for(const p of paths){
-  let expected=latestUiUpstreamBytes(p,read(p)).toString('utf8');
+  const current=reverseNativeGuideFix(p,read(p));
+  let expected=latestUiUpstreamBytes(p,current).toString('utf8');
   const repairs=LATEST_UI_COMPATIBILITY[p]??[];
-  if(!repairs.length)assert.deepEqual(Buffer.from(expected),read(p),p+' exact unmodified upstream bytes');
+  if(!repairs.length)assert.deepEqual(Buffer.from(expected),current,p+' exact unmodified upstream bytes');
   for(const repair of [...repairs].reverse()){
    assert.ok(Object.isFrozen(repair));assert.notEqual(repair.before,repair.after);
    assert.equal(expected.split(repair.before).length-1,1,p+' one exact upstream repair target');
    expected=expected.replace(repair.before,repair.after);
   }
-  assert.deepEqual(Buffer.from(expected),read(p),p+' exact upstream plus reviewed compatibility only');
+  assert.deepEqual(Buffer.from(expected),current,p+' exact upstream plus reviewed compatibility only');
  }
 });
 
@@ -93,9 +95,9 @@ test('latest user UI and reviewed company copy retain all 979 production paths, 
 
 test('latest user UI rejects mutations, omissions, restored-source substitutions and double reversal at every changed path',()=>{
  for(const p of LATEST_UI_MODIFIED_PATHS){
-  const good=read(p),before=git('show',LATEST_UI_BASE_COMMIT+':'+p);
+  const good=read(p),stable=reverseNativeGuideFix(p,good),before=git('show',LATEST_UI_BASE_COMMIT+':'+p);
   const bad=[altered(good),Buffer.concat([good,Buffer.from('\n')]),good.subarray(0,good.length-1),Buffer.alloc(0),before];
-  for(const repair of LATEST_UI_COMPATIBILITY[p]??[])bad.push(Buffer.from(good.toString().replace(repair.after,repair.before)),Buffer.from(good.toString().replace(repair.after,repair.after+repair.after)));
+  for(const repair of LATEST_UI_COMPATIBILITY[p]??[])bad.push(Buffer.from(stable.toString().replace(repair.after,repair.before)),Buffer.from(stable.toString().replace(repair.after,repair.after+repair.after)));
   for(const bytes of bad){assert.throws(()=>reverseLatestUserUi(p,bytes),/exact reviewed latest user UI bytes/);assert.throws(()=>reverseNflxIntegration(p,bytes),/exact reviewed latest user UI bytes/);}
   assert.throws(()=>reverseLatestUserUi(p,reverseLatestUserUi(p,good)),/exact reviewed latest user UI bytes/);
   for(const other of LATEST_UI_MODIFIED_PATHS.filter(x=>x!==p))assert.throws(()=>reverseLatestUserUi(other,good),/exact reviewed latest user UI bytes/,'Valid source bytes cannot be moved to another UI path');

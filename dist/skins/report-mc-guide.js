@@ -626,6 +626,11 @@ function fieldLabel(f) {
   return words(l).replace(/\s+/g, ' ').trim().slice(0, 64);
 }
 const bare = label => label.split(/\s*[·・]\s*/)[0];
+function fieldAvailable(f) {
+  const el = f && curRoot?.querySelector(`.mc-setup [id$="mc-${f}"]`);
+  // A closed disclosure can be opened; a hidden mode-specific panel cannot.
+  return !!el && !el.closest('[hidden]');
+}
 // A row explains one setting and folds on its own. `k` names it for the focus
 // link with the field on the left; `f` is that field's id after "mc-".
 function knob(title, body, extra = '', k = '', f = '') {
@@ -634,7 +639,7 @@ function knob(title, body, extra = '', k = '', f = '') {
   if (!body && !extra) return `<li class="is-plain"${attrs}><b>${esc(title)}</b></li>`;
   const field = fieldLabel(f), key = 'kd:' + (k || name) + device(), open = folds.get(key) ?? false;
   const head = `<summary><span class="rx-mcg-kn"><b>${esc(name)}</b>${val ? `<em>${esc(val)}</em>` : ''}</span>${field ? `<small>${esc(copy('fieldIs', {f: field}))}</small>` : ''}</summary>`;
-  const edit = f ? `<button type="button" class="rx-mcg-link" data-edit="${esc(f)}">${esc(copy('edit'))}</button>` : '';
+  const edit = fieldAvailable(f) ? `<button type="button" class="rx-mcg-link" data-edit="${esc(f)}">${esc(copy('edit'))}</button>` : '';
   return `<li${attrs}><details class="rx-mcg-kd" data-fold="${key}"${open ? ' open' : ''}>${head}<div class="rx-mcg-kb">${body ? `<p>${esc(body)}</p>` : ''}${extra}${edit}</div></details></li>`;
 }
 
@@ -1151,15 +1156,24 @@ document.addEventListener('pointerout', e => {
   for (const n of root.querySelectorAll('.rx-mcg-target')) n.classList.remove('rx-mcg-target');
 });
 function editField(root, f) {
-  const el = root.querySelector(`.mc-setup [id$="mc-${f}"]`); if (!el) return;
+  const el = root.querySelector(`.mc-setup [id$="mc-${f}"]`); if (!el || el.closest('[hidden]')) return;
   const disclosures = [];
   for (let n = el.parentElement; n && n !== root; n = n.parentElement) if (n.tagName === 'DETAILS') disclosures.unshift(n);
-  for (const d of disclosures) d.open = true;
-  const shown = x => x && (x.checkVisibility ? x.checkVisibility() : !!x.offsetParent);
-  let target = el.matches('input, select, textarea, button') ? el : el.querySelector('[aria-checked="true"], input, select, button') || el;
-  if (!shown(target) || target.getAttribute('aria-hidden') === 'true' || target.tabIndex < 0) target = el.parentElement?.querySelector('[role="radiogroup"] [aria-checked="true"]') || el.parentElement?.querySelector('[role="radiogroup"] button') || target;
-  target.scrollIntoView({block: 'center', behavior: calm() ? 'auto' : 'smooth'});
-  target.focus({preventScroll: true});
+  const opened = disclosures.filter(d => !d.open);
+  // Edit is direct navigation: reveal its target before focusing it. Manual
+  // disclosure toggles keep their normal animation after this scoped cleanup.
+  for (const d of opened) d.classList.add('rx-mcg-edit-reveal');
+  try {
+    for (const d of disclosures) d.open = true;
+    for (const d of opened) void d.offsetHeight;
+    const shown = x => x && (x.checkVisibility ? x.checkVisibility() : !!x.offsetParent);
+    let target = el.matches('input, select, textarea, button') ? el : el.querySelector('[aria-checked="true"], input, select, button') || el;
+    if (!shown(target) || target.getAttribute('aria-hidden') === 'true' || target.tabIndex < 0) target = el.parentElement?.querySelector('[role="radiogroup"] [aria-checked="true"]') || el.parentElement?.querySelector('[role="radiogroup"] button') || target;
+    target.scrollIntoView({block: 'center', behavior: calm() ? 'auto' : 'smooth'});
+    target.focus({preventScroll: true});
+  } finally {
+    for (const d of opened) d.classList.remove('rx-mcg-edit-reveal');
+  }
 }
 let repaintQueued = false;
 function repaintSoon() {
