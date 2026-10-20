@@ -1,3 +1,4 @@
+import {applyTsmReceiptCorrection,tsmReceiptCorrectionHTML} from './tsm-receipt-correction.js';
 import {mcdPolicyEditorHTML,bindMcdPolicy,mcdComponentsHTML,mcdHistoryHTML,mcdRevenueGrowthHTML,mcdFCFFGrowthHTML,MCD_MESSAGES} from './mcd-research-view.js';
 import {uberPolicyEditorHTML,bindUberPolicy,uberCalculationHTML,uberHistoryHTML,UBER_MESSAGES} from './uber-research-view.js';
 import {nflxPolicyEditorHTML,bindNflxPolicy,nflxContentTimingHTML,nflxAllocationHTML,nflxCalculationHTML,nflxHistoryHTML,nflxRevenueGrowthHTML,nflxFCFFGrowthHTML,NFLX_MESSAGES} from './nflx-research-view.js';
@@ -148,7 +149,7 @@ export function annualFieldIssue(d,group,key,definition){
  return null;
 }
 function syncAnnualFieldIssues(root,d){
- const definitions=researchBridgeDefinition(d?.ticker)?.optionDefinitions||[];
+ const definitions=researchBridgeDefinition(d?.ticker,d)?.optionDefinitions||[];
  const controls=[...root.querySelectorAll('[data-research-input]'),...root.querySelectorAll('[data-research-text]')];
  for(const el of controls){
   const group=el.dataset.researchInput||'timing',key=el.dataset.field||el.dataset.researchText;
@@ -251,7 +252,7 @@ function capitalScenarioEditorHTML(c,d){
  const events=Array.isArray(scenario.events)?scenario.events.map((event,index)=>!event||typeof event!=='object'?'<p class="research-warning" data-i18n="annual.copy.038a4d8da552">Malformed retained event; export or reload the capital scenario.</p>':`<section><h4>${esc(event.label||event.id)} · ${esc(event.date)}</h4><p class="micro">Completed ${esc(event.kind)}. ${esc(event.rationale)}</p><div class="research-field-grid">${numberControl(`events.${index}.sharesAdded`,event.sharesAdded,'Completed event shares · millions')}${event.kind==='equity-issuance'?numberControl(`events.${index}.issuePrice`,event.issuePrice,'Completed issue price')+numberControl(`events.${index}.fees`,event.fees,'Completed issue fees · millions'):event.kind==='debt-funding'?numberControl(`events.${index}.cashReceived`,event.cashReceived,'Completed debt cash received · millions'):''}${amounts(event.claimsAdded,`events.${index}.claimsAdded`,'New existing claim')}</div></section>`).join(''):'';
  return `<details class="research-card" open><summary data-i18n="annual.copy.1a6e622337f3">Current capital scenario · editable assumptions</summary><p class="micro">${localizedText("annual.capital.asOf",{date:scenario.asOf,currency:scenario.currency})}</p><div class="research-field-grid">${numberControl('baseline.commonShares',scenario.baseline?.commonShares,'Reference common shares · millions')}${numberControl('baseline.cash',scenario.baseline?.cash,'Reference cash · millions')}${numberControl('operatingCashReserve',scenario.operatingCashReserve,'Operating cash reserve · millions')}</div><h4 data-i18n="annual.copy.4d6bdc555e36">Existing claims and nonoperating assets</h4><div class="research-field-grid">${amounts(scenario.baseline?.claims,'baseline.claims','Existing claim')}${amounts(scenario.nonoperatingAssets,'nonoperatingAssets','Nonoperating asset')}</div>${scenario.cashAdjustments?.length?`<h4 data-i18n="annual.copy.8a843712e795">Cash roll-forward assumptions</h4><div class="research-field-grid">${amounts(scenario.cashAdjustments,'cashAdjustments','Cash adjustment')}</div>`:''}${events}${optionControls}<h4 data-i18n="annual.copy.656598323965">Existing employee awards</h4>${awardControls}<p class="micro" data-i18n="annual.copy.a9c5c6d26fc5">Future cash use is already deducted through negative FCFF. Future fundraising shares and a second funding-deficit deduction are not added automatically. These controls describe existing capital and completed financing; changes are analyst assumptions.</p><details><summary data-i18n="annual.copy.1ebe4d51f4db">Capital scenario sources and limitations</summary><p>${annualTextHTML(scenario.rationale)}</p><p class="micro">${localizedText("annual.capital.references",{cashDate:scenario.baseline?.cashDate??"",shareDate:scenario.baseline?.shareDate??""})}</p><p class="micro" data-i18n="annual.copy.ab2bada493ed">Reference-case rationale below describes the researched starting assumptions. Edited controls and the current result above take precedence.</p>${d.currentCapitalProvenance?.reportPath?`<p>${link(d.currentCapitalProvenance.reportPath,'Read the dated capital scenario review')}</p>`:''}${rationaleHTML(d.currentCapitalProvenance||{})}${(d.currentCapitalProvenance?.sourceUrls||[]).map(url=>link(url,'Original source')).join(' · ')}${list(scenario.unresolved||[])}${(Array.isArray(scenario.sources)?scenario.sources:[]).filter(source=>source&&(typeof source==='string'||typeof source.url==='string')).map(source=>link(typeof source==='string'?source:source.url,typeof source==='string'?'Capital source':source.label||source.date||'Capital source')).join(' · ')}</details>${load}</details>`;
 }
-export function researchClaimsEditorHTML(c,d){return analystAllocationEditorHTML(d)+reviewedResearchClaimsEditorHTML(c,d);}
+export function researchClaimsEditorHTML(c,d){return tsmReceiptCorrectionHTML(d)+analystAllocationEditorHTML(d)+reviewedResearchClaimsEditorHTML(c,d);}
 function reviewedResearchClaimsEditorHTML(c,d){
  if(c.ticker==='MCD')return mcdPolicyEditorHTML(d);
  if(c.ticker==='UBER')return uberPolicyEditorHTML(d);
@@ -260,7 +261,7 @@ function reviewedResearchClaimsEditorHTML(c,d){
  if(c.ticker==='RMBS')return rmbsPolicyEditorHTML(d);
  if(c.ticker==='NVMI')return nvmiConditionalEditorHTML(d);
  if(Object.prototype.hasOwnProperty.call(d||{},'currentCapitalScenario'))return capitalScenarioEditorHTML(c,d);
- const definition=researchBridgeDefinition(c.ticker);if(!definition)return '';
+ const definition=researchBridgeDefinition(c.ticker,d);if(!definition)return '';
  const controls=definition.optionDefinitions.map(field=>{
   const value=Object.prototype.hasOwnProperty.call(d.bridgeInputs||{},field.key)?d.bridgeInputs[field.key]:c.incrementalResearch?null:field.default;
   if(field.type==='select')return `<label>${annualTextHTML(field.label)}<select data-research-claim-select="${esc(field.key)}">${field.values.map(v=>`<option value="${esc(v)}" ${v===value?'selected':''}>${annualTextHTML(v)}</option>`).join('')}</select></label>`;
@@ -396,7 +397,7 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
   try{if(raw!==null)saved=JSON.parse(raw);}catch{retainedRaw=raw;d={unreadableSavedJSON:raw};identityError='Saved annual draft is not valid JSON. It has been retained for export.';render();return;}
   if(raw!==null&&(saved===null||typeof saved!=='object'||Array.isArray(saved))){retainedRaw=raw;d=saved;identityError='Saved annual draft is an unsupported JSON value. It has been retained for export.';render();return;}
   const preset=studioPresetFor(presets,c.ticker);
-  const restored=raw===null&&preset?{draft:studioResearchDraft(preset,presets),error:null}:restoreResearchDraft(saved,c);d=restored.draft;identityError=restored.error;if(d?.marginPath?.inputText&&identityError){const identityProbe=structuredClone(d);delete identityProbe.marginPath;if(Object.hasOwn(d.marginPath.inputText,'terminalMargin'))identityProbe.terminal.margin=d.marginPath.generatedMargins?.at(-1);if(!restoreResearchDraft(identityProbe,c).error)identityError=null;}if(identityError)retainedRaw=raw;
+  const restored=raw===null&&preset?{draft:studioResearchDraft(preset,presets),error:null}:restoreResearchDraft(saved,c);d=raw===null?applyTsmReceiptCorrection(restored.draft):restored.draft;identityError=restored.error;if(d?.marginPath?.inputText&&identityError){const identityProbe=structuredClone(d);delete identityProbe.marginPath;if(Object.hasOwn(d.marginPath.inputText,'terminalMargin'))identityProbe.terminal.margin=d.marginPath.generatedMargins?.at(-1);if(!restoreResearchDraft(identityProbe,c).error)identityError=null;}if(identityError)retainedRaw=raw;
   if(!identityError&&!startingDrafts.has(c.ticker))startingDrafts.set(c.ticker,structuredClone(d));render();if(!identityError){if(raw===null)save();else write(RESEARCH_STORAGE_PREFIX+'selection',c.ticker);}
  }
  function renderPending(){
@@ -409,11 +410,11 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
  function useResearch(ticker=c?.ticker||pendingCompany?.ticker,{originPage='renewed',terminalOnly=false}={}){
   const preset=studioPresetFor(presets,ticker);if(!preset)throw Error(presetError||'No complete research preset is available for this company.');
   const previousAnnualTicker=c?.ticker||'AAPL';if(ticker!==c?.ticker)choose(ticker);
-  if(!terminalOnly&&undo.has(c.ticker)&&researchPresetStatus(d,presets)==='Complete research preset · annual model'){navigate('renewed');return true;}
+  if(!terminalOnly&&undo.has(c.ticker)&&!(c.ticker==='TSM'&&!d.tsmReceiptReview)&&researchPresetStatus(d,presets)==='Complete research preset · annual model'){navigate('renewed');return true;}
   const loaded=terminalOnly?{draft:terminalReviewedResearchDraft(preset,presets),undo:structuredClone(d)}:loadStudioResearchPreset(d,preset,presets);if(terminalOnly&&typeof d?.notes==='string')loaded.draft.notes=d.notes;const navigation={page:originPage,previousAnnualTicker};
   undo.set(c.ticker,loaded.undo);undoRaw.set(c.ticker,retainedRaw);undoErrors.set(c.ticker,identityError);undoNavigation.set(c.ticker,navigation);
   write(undoKey(),JSON.stringify({schemaVersion:1,ticker:c.ticker,draft:loaded.undo,raw:retainedRaw,error:identityError,navigation}));
-  d=loaded.draft;identityError=null;retainedRaw=null;editUndo.delete(c.ticker);activeEdit=null;save();render();navigate('renewed');
+  d=applyTsmReceiptCorrection(loaded.draft);identityError=null;retainedRaw=null;editUndo.delete(c.ticker);activeEdit=null;save();render();navigate('renewed');
   annualSetText(root.querySelector('#research-action-status'),'Complete research preset loaded: annual path, horizon, terminal inputs, claims and Monte Carlo. Undo restores the prior draft.');return true;
  }
  function changeGrowthHorizon(value,{marginalSalesCapital}={}){
@@ -521,7 +522,7 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
   const scenario=root.querySelector('#annual-scenario-state');if(scenario)annualSetText(scenario,annualScenarioLabel(d));
   prepareFlowTables(root);localizeAnnualPresentation(root);
   updateFeedback(summary?.querySelector('.annual-summary-values'),summary);updateFeedback(path?.querySelector('svg'),path);
-  bindActions();bindEvidence();mountSimulationPanel();
+  bindActions();bindEvidence();mountSimulationPanel();present({resultsOnly:true});
   if(refreshEvidence){
    const invoker=root.querySelector(`[data-annual-evidence="${refreshEvidence.key}"]`)||refreshEvidence.invoker;
    openAnnualEvidence(refreshEvidence.key,invoker,{focus:false,reveal:false,restorePosition:false,animate:false});
@@ -538,7 +539,7 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
   if(action==='incremental-downside'||action==='incremental-alternative'){const restoreScenario=button.dataset.incrementalScenario;try{const loaded=incrementalAlternative(d,button.dataset.incrementalScenario||'cycle-and-export-downside');undo.set(c.ticker,loaded.undo);undoRaw.set(c.ticker,retainedRaw);undoErrors.set(c.ticker,identityError);undoNavigation.delete(c.ticker);write(undoKey(),JSON.stringify({schemaVersion:1,ticker:c.ticker,draft:loaded.undo,raw:retainedRaw,error:identityError,navigation:null}));d=loaded.draft;identityError=null;retainedRaw=null;editUndo.delete(c.ticker);activeEdit=null;save();render();annualSetText(root.querySelector('#research-action-status'),'Named research scenario loaded. Undo restores the previous complete case.');root.querySelector(restoreScenario?`[data-incremental-scenario="${restoreScenario}"]`:`[data-research-action="${action}"]`)?.focus({preventScroll:true});}catch(error){annualSetText(root.querySelector('#research-action-status'),error.message);}return;}
   if(action==='use-research'){try{useResearch();}catch(error){annualSetText(root.querySelector('#research-action-status'),error.message);}return;}
   if(action==='undo'){if(!undo.has(c.ticker))return;editUndo.delete(c.ticker);const navigation=undoNavigation.get(c.ticker);d=structuredClone(undo.get(c.ticker));retainedRaw=undoRaw.get(c.ticker)??null;identityError=undoErrors.get(c.ticker)||restoreResearchDraft(d,c).error;undo.delete(c.ticker);undoRaw.delete(c.ticker);undoErrors.delete(c.ticker);undoNavigation.delete(c.ticker);write(undoKey(),'null');if(retainedRaw!==null)write(key(),retainedRaw);else save({stamp:false});render();if(navigation?.page==='renewed'&&navigation.previousAnnualTicker!==c.ticker)choose(navigation.previousAnnualTicker);if(navigation?.page)navigate(navigation.page);return;}
-  if(action==='load'){editUndo.delete(c.ticker);write(undoKey(),'null');undoNavigation.delete(c.ticker);const loaded=loadAnnualResearchCase(d,c);undo.set(c.ticker,loaded.undo);undoRaw.set(c.ticker,retainedRaw);undoErrors.set(c.ticker,identityError);d=loaded.draft;identityError=null;retainedRaw=null;save();render();return;}
+  if(action==='load'){editUndo.delete(c.ticker);write(undoKey(),'null');undoNavigation.delete(c.ticker);const loaded=loadAnnualResearchCase(d,c);if(d?.tsmReceiptReview)loaded.draft.tsmReceiptReview=structuredClone(d.tsmReceiptReview);undo.set(c.ticker,loaded.undo);undoRaw.set(c.ticker,retainedRaw);undoErrors.set(c.ticker,identityError);d=loaded.draft;identityError=null;retainedRaw=null;save();render();return;}
   if(action==='load-current-capital'&&!identityError){
    const capital=getCurrentCapitalPreset(c.ticker);if(!capital)return;
    if(undo.has(c.ticker)&&JSON.stringify([d.currentCapitalScenario,d.timing,d.currentCapitalProvenance])===JSON.stringify([capital.scenario,capital.timing,capital.provenance]))return;

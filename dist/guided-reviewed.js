@@ -1,3 +1,5 @@
+import {calculateResearchOperating,researchTimingResult} from './research-model.js';
+import {calculateResearchBridge} from './research-claims.js';
 import {getLocale,onLocaleChange} from './i18n.js';
 import {annualTextHTML} from './annual-localization.js';
 import {incrementalRecord} from './incremental-registry.js';
@@ -83,8 +85,13 @@ export function mountReviewedGuided({document=globalThis.document,window=globalT
   if(!active||destroyed)return;
   if(intent?.editor==='claims'){step='equity';stepsByCompany.set(selected,step);}
   restoreHidden();
+  const state=api.getState(),ticker=state.company?.ticker||state.catalogCompany?.ticker;
+  if(ticker&&ticker!==selected&&allowed.has(ticker)){
+   selected=ticker;step=stepsByCompany.get(ticker)||'story';keep();renderDirectory();
+   if(legacySet.has(ticker)){leave();legacy.chooseCompany(ticker);return;}
+  }
   root.setAttribute('data-guided-review','');root.setAttribute('data-guided-step',step);
-  const state=api.getState(),shell=root.querySelector('.annual-workspace');
+  const shell=root.querySelector('.annual-workspace');
   if(!shell)return;
   root.querySelectorAll('.guided-reviewed-nav,.guided-reviewed-context,.guided-reviewed-footer').forEach(node=>node.remove());
   hide(root.querySelector('.catalog-picker'));
@@ -97,8 +104,10 @@ export function mountReviewedGuided({document=globalThis.document,window=globalT
   if(!editor)return;
   if(!panelSemantics.has(editor))panelSemantics.set(editor,{role:editor.getAttribute('role'),'aria-labelledby':editor.getAttribute('aria-labelledby')});
   editor.setAttribute('role','tabpanel');editor.setAttribute('aria-labelledby',`guided-reviewed-${step}`);
+  let needsAllocation=['UBER','MCD','NFLX'].includes(state.company.ticker),allocationSuppressed=false;
+  if(needsAllocation)try{const timing=researchTimingResult(state.draft,calculateResearchOperating(state.draft));const bridge=calculateResearchBridge(state.draft,timing.enterprise,{...state.draft.bridgeInputs,calculationDate:timing.date});allocationSuppressed=bridge.uberAllocation?.status==='suppressed_nonpositive_economics'||bridge.mcdAllocation?.allocation_status==='nonpositive value: allocation suppressed'||bridge.nflxAllocation?.status==='withheld_funding_or_value_gate';needsAllocation=!Number.isFinite(bridge.perShare)&&!allocationSuppressed;}catch{/* Incomplete inputs still require an allocation. */}
   const nav=document.createElement('nav');nav.className='guided-reviewed-nav';nav.setAttribute('aria-label',text('Guided review steps','引导式审阅步骤'));
-  nav.innerHTML=`${['UBER','MCD','NFLX'].includes(state.company.ticker)?`<div class="guided-allocation-prompt"><p>${text('Business value is available. To calculate value per share, choose how cash, investments, debts and other claims affect common shareholders. Review the June 30, 2026 assumptions below or enter your own. Blank amounts remain unknown; the dated illustrations are not current target prices.','经营价值已可计算。计算每股价值需要明确现金、投资、债务及其他请求权如何影响普通股股东。请审阅下方 2026 年 6 月 30 日假设或输入自己的假设。空白金额仍为未知；注明日期的示例不是当前目标价。')}</p><button type="button" data-review-allocation>${text('Choose assumptions for value per share','选择每股价值假设')}</button></div>`:''}<div class="guided-reviewed-intro"><b>${esc(state.company.ticker)} · ${text('Shape the business','构建业务假设')}</b><p>${text('These steps edit the same company-specific case as Year-by-year. Changes are shared between both views.','这些步骤与逐年模型编辑同一个公司专属案例。两个视图共享修改。')}</p></div><div role="tablist" aria-label="${text('Guided assumptions','引导式假设')}">${REVIEW_STEPS.map((s,i)=>`<button type="button" id="guided-reviewed-${s.id}" role="tab" data-review-step="${s.id}" aria-controls="research-editor" aria-selected="${s.id===step}" tabindex="${s.id===step?'0':'-1'}"><span>${i+1}</span> ${label(s)}</button>`).join('')}</div>`;
+  nav.innerHTML=`${allocationSuppressed?`<p class="guided-allocation-status" role="status">${text('Selected allocation assumptions are complete. A positive per-share value is withheld because this scenario has nonpositive economics or fails a funding/value constraint. Review the scenario and claims below.','已选分配假设完整。由于此情景的经济价值非正，或未满足融资／价值约束，暂不显示正的每股价值。请审阅下方情景及请求权。')}</p>`:''}${needsAllocation?`<div class="guided-allocation-prompt"><p>${text('Business value is available. To calculate value per share, choose how cash, investments, debts and other claims affect common shareholders. Review the June 30, 2026 assumptions below or enter your own. Blank amounts remain unknown; the dated illustrations are not current target prices.','经营价值已可计算。计算每股价值需要明确现金、投资、债务及其他请求权如何影响普通股股东。请审阅下方 2026 年 6 月 30 日假设或输入自己的假设。空白金额仍为未知；注明日期的示例不是当前目标价。')}</p><button type="button" data-review-allocation>${text('Choose assumptions for value per share','选择每股价值假设')}</button></div>`:''}<div class="guided-reviewed-intro"><b>${esc(state.company.ticker)} · ${text('Shape the business','构建业务假设')}</b><p>${text('These steps edit the same company-specific case as Year-by-year. Changes are shared between both views.','这些步骤与逐年模型编辑同一个公司专属案例。两个视图共享修改。')}</p></div><div role="tablist" aria-label="${text('Guided assumptions','引导式假设')}">${REVIEW_STEPS.map((s,i)=>`<button type="button" id="guided-reviewed-${s.id}" role="tab" data-review-step="${s.id}" aria-controls="research-editor" aria-selected="${s.id===step}" tabindex="${s.id===step?'0':'-1'}"><span>${i+1}</span> ${label(s)}</button>`).join('')}</div>`;
   shell.querySelector('.workspace-main').before(nav);
   const allocation=nav.querySelector('[data-review-allocation]');
   if(allocation)allocation.onclick=()=>{
@@ -150,10 +159,10 @@ export function mountReviewedGuided({document=globalThis.document,window=globalT
   if(legacySet.has(selected)){leave();legacy.hidden=false;return;}
   active=true;legacy.hidden=true;host.hidden=false;host.appendChild(root);
   root.setAttribute('data-guided-review','');step=stepsByCompany.get(selected)||'story';
-  api.setPresentation(present);
+  api.setPresentation(null);
   const state=api.getState();
   if((state.company?.ticker||state.catalogCompany?.ticker)!==selected)api.choose(selected);
-  else present();
+  api.setPresentation(present);
  }
  function leave(){
   if(!active)return;

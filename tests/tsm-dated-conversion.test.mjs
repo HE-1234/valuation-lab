@@ -1,7 +1,7 @@
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {reverseCevaRmbsIntegration} from './ceva-rmbs-integration-preservation.mjs';
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV88Fs as fs} from './three-fix-preservation.mjs';
 import {TSM_DATED_CONVERSION as f,calculateTsmDatedConversion as calc,withTsmDatedConversion as overlay,twdOrdinaryToDatedUSDADS as forward,datedUSDADSToTwdOrdinary as inverse} from '../dist/tsm-dated-conversion.js';
 import {tsmDatedConversionHTML} from '../dist/tsm-dated-conversion-view.js';
 import {setLocale} from '../dist/i18n.js';

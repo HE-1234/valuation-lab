@@ -1,7 +1,7 @@
 // Exact compatibility projection for immutable historical preservation gates.
 // This does not affect runtime tests or production. The new independent tree gate
 // verifies every V87 file plus the two additions before prior gates see V87 bytes.
-import fs from 'node:fs';
+import {preservedV88Fs as fs} from './three-fix-preservation.mjs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';

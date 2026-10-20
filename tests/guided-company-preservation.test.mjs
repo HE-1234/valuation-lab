@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV88Fs as fs} from './three-fix-preservation.mjs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {root,delta,sha,reverseGuidedCompany,preservedV87Fs} from './guided-company-preservation.mjs';

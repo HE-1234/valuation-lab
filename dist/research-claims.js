@@ -1,3 +1,4 @@
+import {correctedTsmDefinition} from './tsm-receipt-correction.js';
 import {incrementalRecord} from './incremental-registry.js';
 import {incrementalBridgeDefinition,calculateIncrementalBridge,incrementalBridgeSensitivity} from './incremental-research-claims.js';
 import {calculateCurrentCapitalScenario} from './current-capital-presets.js';
@@ -104,7 +105,7 @@ const definitions = [
 ].map(d=>({currency:'USD',...d,sourceUrl:sources[d.ticker],informationAsOf:'2026-10-17',moneyUnit:'millions',shareUnit:'millions',classification:'Source-dated conditional capital allocation; retrospective October 17 research, not information knowable at the capital date',claimCompleteness:'partial',shareBasis:d.ticker==='TSM'?'TWD ordinary share, issuer-rounded common count':'Dated common-share allocation; additional contingent claims remain as listed'}));
 
 const sharedOptions=[numberOption('assetValueFactor','Value factor on separately listed investment assets',1,0,1),numberOption('operatingCashReserve','Cash retained outside the equity allocation',0),numberOption('additionalClaimAllowance','Explicit additional unvalued-claim sensitivity',0),numberOption('additionalDilutionShares','Explicit additional dilution sensitivity, millions',0)];
-export function researchBridgeDefinition(ticker){if(incrementalRecord(ticker))return incrementalBridgeDefinition(ticker);const d=definitions.find(x=>x.ticker===ticker);return d?clone({...d,optionDefinitions:[...sharedOptions,...(d.options||[])]}):null;}
+export function researchBridgeDefinition(ticker,draft){if(incrementalRecord(ticker))return incrementalBridgeDefinition(ticker);const d=definitions.find(x=>x.ticker===ticker);return d?correctedTsmDefinition(clone({...d,optionDefinitions:[...sharedOptions,...(d.options||[])]}),draft):null;}
 export function researchBridgeDefinitions(){return definitions.map(d=>researchBridgeDefinition(d.ticker));}
 export function researchBridgeOptionDefinitions(ticker){return researchBridgeDefinition(ticker)?.optionDefinitions||[];}
 function readOptions(d,options){
@@ -138,7 +139,7 @@ export function calculateResearchBridge(operatingCase,operatingEV,options={}){
   const result=calculateCurrentCapitalScenario(scenario,{enterprise:operatingEV,currency:operatingCase.currency,date:options.calculationDate||originOf(operatingCase),status:operatingCase.timing?.mode==='as-of-scenario'?'scenario':'origin'});
   return {...result,ticker:operatingCase.ticker,discountOrigin:originOf(operatingCase),informationAsOf:operatingCase.informationAsOf,referenceDate:scenario.asOf,sources:scenario.sources||[],unresolved:scenario.unresolved||[],provenance:operatingCase.currentCapitalProvenance||null};
  }
- const d=researchBridgeDefinition(operatingCase?.ticker);if(!d)throw Error('No source-dated research bridge for this company.');
+ const d=researchBridgeDefinition(operatingCase?.ticker,operatingCase);if(!d)throw Error('No source-dated research bridge for this company.');
  if(!finite(operatingEV))throw Error('Operating EV must be finite; negative values are supported.');
  if(operatingCase.currency!==d.currency)throw Error('Operating EV currency must match the dated capital-reference currency.');
  const origin=originOf(operatingCase),calculationDate=options.calculationDate||origin;
@@ -215,7 +216,7 @@ export function calculateResearchBridge(operatingCase,operatingEV,options={}){
 export function researchBridgeSensitivity(operatingCase,operatingEV,options={}){
  if(operatingCase?.incrementalResearch||incrementalRecord(operatingCase?.ticker))return incrementalBridgeSensitivity(operatingCase,operatingEV,options);
  if(Object.prototype.hasOwnProperty.call(operatingCase||{},'currentCapitalScenario'))return []; // Legacy option variants do not describe this separate scenario.
- const d=researchBridgeDefinition(operatingCase?.ticker);if(!d)return [];
+ const d=researchBridgeDefinition(operatingCase?.ticker,operatingCase);if(!d)return [];
  const variants=[['Source-date reference',{}],['No credit for separately listed investment assets',{assetValueFactor:0}]];
  if(d.ticker==='GOOG')variants.push(['Minimum preferred conversion',{conversionCase:'minimum'}],['Preferred liquidation proxy',{preferredMethod:'liquidation-proxy'}],['Noncurrent investment value: 25% haircut',{noncurrentInvestmentValue:145587*.75}],['Current equity: 25% haircut',{currentEquityHaircut:.25}]);
  if(d.ticker==='META')variants.push(['Full conditional legal settlement',{settlementAmount:18000}]);
