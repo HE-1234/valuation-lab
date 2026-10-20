@@ -1,7 +1,7 @@
 import {reverseNativeGuideFix} from './native-guide-layout-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {
  LATEST_UI_BASE_COMMIT,LATEST_UI_SOURCE_COMMIT,LATEST_UI_SOURCE_BASE,

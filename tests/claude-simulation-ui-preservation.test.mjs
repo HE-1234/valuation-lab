@@ -5,7 +5,7 @@ import {mcdFixture,MCD_FIXTURE_PATH,MCD_ADDED_PATHS,reverseMcdIntegration} from 
 import {reverseSimulationRangeHeader} from './simulation-range-header-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';

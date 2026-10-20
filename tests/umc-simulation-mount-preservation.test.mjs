@@ -2,7 +2,7 @@ import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} f
 import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import {mcdFixture,MCD_FIXTURE_PATH} from './mcd-integration-preservation.mjs';
 import {simulationUiFixture,SIM_UI_FIXTURE_PATH} from './claude-simulation-ui-preservation.mjs';
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';import {createHash} from 'node:crypto';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';import {createHash} from 'node:crypto';
 import {UMC_MC_BASE_COMMIT,UMC_MC_MODIFIED_PATH,umcMcSHA,umcMcFixture,validateUmcMcFixture,reverseUmcSimulationMount} from './umc-simulation-mount-preservation.mjs';
 import {reverseUmcIntegration} from './umc-integration-preservation.mjs';
 const root=fileURLToPath(new URL('..',import.meta.url)),read=p=>fs.readFileSync(path.join(root,p)),git=(...a)=>execFileSync('git',a,{cwd:root,maxBuffer:64*1024*1024});

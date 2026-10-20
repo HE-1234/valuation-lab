@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import {createHash} from 'node:crypto';
 import {reverseOntoIntegration} from './onto-integration-preservation.mjs';
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url)),sha=x=>createHash('sha256').update(x).digest('hex');
 const fixture=JSON.parse(read('tests/fixtures/onto-integration-v66.json'));

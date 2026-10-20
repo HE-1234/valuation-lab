@@ -3,7 +3,7 @@ import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
 // bounds are separate evidence; this harness does not implement CSS layout.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {guideFixture} from './simulation-guide-dom-harness.mjs';

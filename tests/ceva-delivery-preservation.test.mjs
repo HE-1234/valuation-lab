@@ -5,7 +5,7 @@ import {simulationUiFixture,reverseClaudeSimulationUi} from './claude-simulation
 import {umcFixture,reverseUmcIntegration} from './umc-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';

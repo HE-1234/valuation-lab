@@ -372,6 +372,8 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
  const bundles=incrementalBundle===undefined?(catalog?(await Promise.allSettled(INCREMENTAL_RESEARCH_PATHS.map(path=>fetchIncrementalResearch(fetcher,{path})))).filter(r=>r.status==='fulfilled').map(r=>r.value):[]):Array.isArray(incrementalBundle)?incrementalBundle:[incrementalBundle];
  for(const bundle of bundles)try{if(bundle){const additions=incrementalPresets(bundle,catalog).filter(p=>!library.companies.some(c=>c.ticker===p.ticker));library={...library,companies:[...library.companies,...additions.map(p=>p.annualCase)]};presets={...(presets||{}),presets:[...(presets?.presets||[]),...additions]};}}catch{/* Each unverified addition stays pending without blocking other packages. */}
  const entries=directoryEntries(library,catalog);
+ let presentation=null;
+ const present=intent=>presentation?.(intent);
  const workspaceStates=new Map(),editUndo=new Map();let activeEdit=null,editingProxy=null,evidence=null,activeEvidence=null,passiveEvidenceOpen=false,viewAnimation=null;
  const session=new Map(),startingDrafts=new Map(),undo=new Map(),undoRaw=new Map(),undoErrors=new Map(),undoNavigation=new Map();let c,d,identityError=null,retainedRaw=null,storageOkay=true,releaseSimulation=()=>{},simulationGeneration=0;
  const key=()=>researchStorageKey(c);
@@ -399,7 +401,7 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
  }
  function renderPending(){
   root.innerHTML=`<section class="screen-workspace annual-workspace catalog-pending-workspace"><div class="research-toolbar workspace-toolbar">${companyPickerHTML(entries,pendingCompany.id)}</div>${pendingCompanyHTML(pendingCompany)}${coverageHTML(catalog,catalogError)}</section>`;
-  bindCompanyPicker(root,entries,pendingCompany.id,choose);localizeAnnualPresentation(root);
+  bindCompanyPicker(root,entries,pendingCompany.id,choose);localizeAnnualPresentation(root);present();
  }
  function clearSimulation(){simulationGeneration++;releaseSimulation();releaseSimulation=()=>{};}
  async function mountSimulationPanel(){const target=root.querySelector('#research-simulation-root');if(!target||identityError||(typeof document==='undefined'&&!simulationMount))return;const generation=simulationGeneration,activeDraft=d;try{const mount=simulationMount||(await import('./research-simulation-view.js')).mountAnnualResearchSimulation;if(generation!==simulationGeneration||activeDraft!==d)return;releaseSimulation=mount(target,{draft:d,companyCase:c,onConfigChange:config=>{if(generation!==simulationGeneration||activeDraft!==d)return;d.researchSimulationConfig=structuredClone(config);save();updatePresetContext();}})||(()=>{});}catch(error){if(generation===simulationGeneration&&activeDraft===d)target.innerHTML=`<p class="research-warning">${localizedText("annual.simulation.loadError",{reason:annualLabel(error.message)})}</p>`;}}
@@ -528,7 +530,7 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
  }
  function bindActions(){root.querySelectorAll('[data-research-action]').forEach(button=>button.onclick=()=>{
   const action=button.dataset.researchAction;
-  if(action==='open-analyst-allocation'){if(identityError)return;rememberEdit('open-analyst-allocation');if(c.ticker==='NVMI'){d.nvmiConditional={...d.nvmiConditional,mode:['conditional','market'].includes(d.nvmiConditional?.mode)?d.nvmiConditional.mode:'conditional',inputs:d.nvmiConditional?.inputs||{}};}else enableAnalystAllocation(d);currentUI().editor='claims';currentUI().mobile='inputs';currentUI().view='result';save();render();root.querySelector('#analyst-allocation-tool input, #nvmi-conditional-tool input')?.focus({preventScroll:true});return;}
+  if(action==='open-analyst-allocation'){if(identityError)return;rememberEdit('open-analyst-allocation');if(c.ticker==='NVMI'){d.nvmiConditional={...d.nvmiConditional,mode:['conditional','market'].includes(d.nvmiConditional?.mode)?d.nvmiConditional.mode:'conditional',inputs:d.nvmiConditional?.inputs||{}};}else enableAnalystAllocation(d);currentUI().editor='claims';currentUI().mobile='inputs';currentUI().view='result';save();render();present({editor:'claims'});root.querySelector('#analyst-allocation-tool input, #nvmi-conditional-tool input')?.focus({preventScroll:true});return;}
   if(action==='undo-edit'){if(!editUndo.has(c.ticker))return;d=structuredClone(editUndo.get(c.ticker));editUndo.delete(c.ticker);activeEdit=null;save({stamp:false});render();return;}
   if(action==='legacy'){if(typeof document!=='undefined'){const picker=document.querySelector('#current-company');if(picker){picker.value=c.ticker;picker.onchange?.({target:picker});}document.querySelector('[data-tab="current"]')?.click();}return;}
   if(action==='export'){let output;try{output=exportResearchCase(d,c);}catch{output={originalResearchCase:c,retainedDraft:d,...(retainedRaw===null?{}:{rawSavedDraft:retainedRaw}),error:identityError||'Invalid edited inputs; no valuation exported.'};}if(output.operating){if(finite(output.timing.enterprise)){try{output.equityBridge=withTsmDatedConversion(d,calculateResearchBridge(d,output.timing.enterprise,{...(d.bridgeInputs||{}),calculationDate:output.timing.date}));}catch(e){output.equityBridge={status:'incomplete',equity:null,perShare:null,error:e.message};}}else output.equityBridge={status:'incomplete',equity:null,perShare:null,error:output.timing.message};}if(c.ticker==='MCD'){output.current_target=null;output.current_upside=null;output.funding_certified=false;}if(c.ticker==='UMC'){output.current_target=null;output.current_price_target=null;output.operating_assets_only=true;output.nonoperating_investment_portfolio_excluded=true;}if(c.ticker==='NVMI'){try{output.nvmiConditionalAllocation=nvmiConditionalResult(d);}catch(e){output.nvmiConditionalAllocation={status:'invalid',reason:e.message};}}if(d?.analystConditionalAllocation){output.analystConditionalAllocation=analystAllocationResult(d);output.analystConditionalAllocationDraft=structuredClone(d.analystConditionalAllocation);}exportFile(`${c.ticker}-annual-research-${d?.version||RESEARCH_VERSION}.json`,output);return;}
@@ -626,22 +628,22 @@ export async function mountResearchWorkspace(root,{fetcher=globalThis.fetch,stor
   const saveState=root.querySelector('#research-save-state');if(saveState)annualSetText(saveState,identityError?'Saved draft retained for recovery':storageOkay?'Annual draft saved on this device':'Storage unavailable · export before leaving');
   bindTabKeys('[data-annual-view]','annualView',selectView);bindTabKeys('[data-annual-editor]','annualEditor',selectEditor);
   syncAnnualFieldIssues(root,d);
-  selectView(ui.view);selectMobile(ui.mobile);selectEditor(ui.editor);syncYearEditor();bindActions();bindEvidence();mountSimulationPanel();bindPrecisionInputs(root);localizeAnnualPresentation(root);
+  selectView(ui.view);selectMobile(ui.mobile);selectEditor(ui.editor);syncYearEditor();bindActions();bindEvidence();mountSimulationPanel();bindPrecisionInputs(root);localizeAnnualPresentation(root);present();
  }
  const refreshLocalizedPresentation=()=>{
   refreshCompanyPicker(root,entries);localizeAnnualPresentation(root);refreshAnalystAllocationLocale(root);
   syncAnnualFieldIssues(root,d);
-  if(pendingCompany)return;
+  if(pendingCompany){present();return;}
   if(!identityError&&d?.annual?.length){const values=annualCapitalDiagnosticText(c,d,currentUI().year);root.querySelectorAll('[data-annual-capital-diagnostic]').forEach(node=>{node.textContent=values[node.dataset.annualCapitalDiagnostic]??'';});}
-  root.querySelectorAll('[data-raw]').forEach(node=>{node.setAttribute('title',t('annual.input.edit'));});
+  root.querySelectorAll('[data-raw]').forEach(node=>{node.setAttribute('title',t('annual.input.edit'));});present();
  };
  const releaseLocale=onLocaleChange(refreshLocalizedPresentation);
  choose(read(RESEARCH_STORAGE_PREFIX+'selection')||'AAPL');
- return {choose,useResearch,openCompany(ticker){if(!library.companies.some(row=>row.ticker===ticker))throw Error('No reviewed annual case for this company.');choose(ticker);navigate('renewed');},getState:()=>({company:structuredClone(c),draft:structuredClone(d),identityError,readiness:pendingCompany?'research-pending':'ready',catalogCompany:structuredClone(pendingCompany)}),destroy(){releaseLocale();releaseAnnualPresentation(root);cancelMotion(root);evidence?.destroy();viewAnimation?.cancel?.();clearSimulation();root.innerHTML='';}};
+ return {choose,useResearch,selectView,selectMobile,selectEditor,getDirectory:()=>structuredClone(entries),setPresentation(callback){presentation=callback;present();},openCompany(ticker){if(!library.companies.some(row=>row.ticker===ticker))throw Error('No reviewed annual case for this company.');choose(ticker);navigate('renewed');},getState:()=>({company:structuredClone(c),draft:structuredClone(d),identityError,readiness:pendingCompany?'research-pending':'ready',catalogCompany:structuredClone(pendingCompany)}),destroy(){releaseLocale();releaseAnnualPresentation(root);cancelMotion(root);evidence?.destroy();viewAnimation?.cancel?.();clearSimulation();root.innerHTML='';}};
 }
 
 if(typeof document!=='undefined'){
  const root=document.querySelector('#renewed-research-app');
- if(root)mountResearchWorkspace(root,{catalogBundle:undefined}).then(workspace=>{root.useResearch=workspace.useResearch;root.openCompany=workspace.openCompany;}).catch(e=>{root.innerHTML=`<div class="error">${annualTextHTML(e.message)}</div>`;localizeAnnualPresentation(root);});
+ if(root)mountResearchWorkspace(root,{catalogBundle:undefined,navigate:page=>{if(page==='renewed'&&root.hasAttribute('data-guided-review'))return;document.querySelector(`[data-tab="${page}"]`)?.click();}}).then(workspace=>{root.useResearch=workspace.useResearch;root.openCompany=workspace.openCompany;root.workspace=workspace;window.dispatchEvent(new CustomEvent('valuation:annual-ready'));}).catch(e=>{root.innerHTML=`<div class="error">${annualTextHTML(e.message)}</div>`;localizeAnnualPresentation(root);});
  const open=document.querySelector('#open-renewed-research');if(open)open.onclick=e=>{e.preventDefault();document.querySelector('[data-tab="renewed"]')?.click();};
 }

@@ -9,7 +9,7 @@ import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-
 import {fixture as keysFixture,reverseKeysIntegration} from './keys-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {relative,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {fixture as armFixture,reverseArmIntegration} from './arm-integration-preservation.mjs';

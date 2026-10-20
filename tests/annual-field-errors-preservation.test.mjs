@@ -9,7 +9,7 @@ import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-
 import {fixture as keysFixture} from './keys-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {fieldErrorFixture,fieldErrorSHA,reverseAnnualFieldErrors} from './annual-field-errors-preservation.mjs';
 const read=path=>fs.readFileSync(new URL('../'+path,import.meta.url));
 test('annual field feedback: exact insertion reversal preserves every V73 production byte and rejects unrelated edits',()=>{

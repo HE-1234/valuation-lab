@@ -1,7 +1,7 @@
 import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
 import {reverseCompanyPeriodCopy} from './company-period-copy-preservation.mjs';
 import {reverseChartTrialGeometry} from './chart-trial-geometry-preservation.mjs';
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
 import {NFLX_BASE_COMMIT,NFLX_FIXTURE_PATH,NFLX_MODIFIED_PATHS,NFLX_ADDED_PATHS,NFLX_REVIEWED_HASHES,nflxSHA,nflxBlobSHA,nflxBaseEntries,nflxFixture,validateNflxFixture,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 const root=fileURLToPath(new URL('..',import.meta.url)),read=p=>fs.readFileSync(path.join(root,p)),git=(...args)=>execFileSync('git',args,{cwd:root,maxBuffer:64*1024*1024});
 const addedFixtures=[NFLX_FIXTURE_PATH,'tests/fixtures/nflx-prior35-mcd-uber-v85.json'];

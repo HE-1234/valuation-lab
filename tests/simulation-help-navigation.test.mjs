@@ -1,7 +1,7 @@
 import {reverseJointIntegration} from './joint-integration-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {reverseSimulationHelpNavigation} from './simulation-help-navigation-preservation.mjs';

@@ -2,7 +2,7 @@ import {reverseMethodologyDocumentation} from './simulation-methodology-preserva
 // Real shipped quiz handlers with synthetic viewport geometry. Not native-browser or AT proof.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {mountQuizView} from '../dist/learn-quiz-view.js';
 import {createQuizDeck} from '../dist/learn-deck.js';

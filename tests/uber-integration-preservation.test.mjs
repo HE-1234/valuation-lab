@@ -1,7 +1,7 @@
 import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
 import {reverseChartTrialGeometry} from './chart-trial-geometry-preservation.mjs';
 import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
 import {UBER_BASE_COMMIT,UBER_FIXTURE_PATH,UBER_MODIFIED_PATHS,UBER_ADDED_PATHS,UBER_REVIEWED_HASHES,uberSHA,uberBlobSHA,uberBaseEntries,uberFixture,validateUberFixture,reverseUberIntegration} from './uber-integration-preservation.mjs';
 const root=fileURLToPath(new URL('..',import.meta.url)),read=p=>fs.readFileSync(path.join(root,p)),git=(...args)=>execFileSync('git',args,{cwd:root,maxBuffer:64*1024*1024});
 const addedFixtures=[UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json',NFLX_FIXTURE_PATH,'tests/fixtures/nflx-prior35-mcd-uber-v85.json'];

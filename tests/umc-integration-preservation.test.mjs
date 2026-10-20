@@ -5,7 +5,7 @@ import {simulationUiFixture} from './claude-simulation-ui-preservation.mjs';
 import {reverseUmcSimulationMount} from './umc-simulation-mount-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';

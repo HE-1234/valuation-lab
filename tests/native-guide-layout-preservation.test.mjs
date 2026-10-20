@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {
  NATIVE_GUIDE_BASE_COMMIT,NATIVE_GUIDE_FILES,NATIVE_GUIDE_PATHS,NATIVE_PRECISION_RULES,NATIVE_EDIT_REVEAL_RULE,

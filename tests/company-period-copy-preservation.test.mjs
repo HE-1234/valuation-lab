@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {COMPANY_COPY_BASE,COMPANY_COPY_FILES,companyCopySHA,reverseCompanyPeriodCopy} from './company-period-copy-preservation.mjs';

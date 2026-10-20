@@ -8,7 +8,7 @@ import {cevaRmbsFixture} from './ceva-rmbs-integration-preservation.mjs';
 import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {relative,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {realityFixture,realitySHA,reverseRealityCheckFix} from './reality-check-preservation.mjs';

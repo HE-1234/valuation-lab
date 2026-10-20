@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {createHash} from 'node:crypto';
 import {displayNumber,precisionInputAttributes,readPrecisionInput,bindPrecisionInput,setPrecisionInput} from '../dist/number-display.js';
 import {reverseDecimalDisplay} from './decimal-display-preservation.mjs';
