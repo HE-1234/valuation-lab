@@ -1,3 +1,4 @@
+import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
 import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import {mcdFixture,MCD_FIXTURE_PATH} from './mcd-integration-preservation.mjs';
@@ -45,6 +46,6 @@ test('combined CEVA/RMBS manifest exhaustively accounts for the production tree 
  for(const p of Object.keys(fixture.files))assert.ok(baseline.has(p),p+' modifications must exist in pinned V79');
  for(const p of declaredAdditions)assert.ok(!baseline.has(p),p+' additions must not replace a V79 file');
  for(const [p,entry]of baseline){const bytes=read(p),restored=reverseCevaRmbsIntegration(p,bytes);assert.equal(blobSHA(restored),entry.oid,p+' must reverse byte-for-byte to V79; undeclared changes are forbidden');}
- for(const p of declaredAdditions)assert.equal(cevaRmbsSHA(read(p)),(fixture.additions[p]??cevaDeliveryFixture().additions[p]??umcFixture().additions[p]??nflxFixture().additions[p]??uberFixture().additions[p]??mcdFixture().additions[p]??simulationUiFixture().additions[p]),p+' added production bytes must match exactly');
+ for(const p of declaredAdditions)assert.equal(cevaRmbsSHA(reverseLatestUserUi(p,read(p))),(fixture.additions[p]??cevaDeliveryFixture().additions[p]??umcFixture().additions[p]??nflxFixture().additions[p]??uberFixture().additions[p]??mcdFixture().additions[p]??simulationUiFixture().additions[p]),p+' added production bytes must match exactly');
  const unchanged=[...baseline.keys()].find(p=>!Object.hasOwn(fixture.files,p));assert.ok(unchanged,'The preservation layer must retain unmodified baseline files');const bytes=read(unchanged),mutated=altered(bytes);assert.throws(()=>assert.equal(blobSHA(reverseCevaRmbsIntegration(unchanged,mutated)),baseline.get(unchanged).oid),'An undeclared mutation cannot pass the pinned whole-tree check');
 });

@@ -1,3 +1,4 @@
+import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
 // Source and parsed-DOM regression. Static-render bounds and native browser
 // bounds are separate evidence; this harness does not implement CSS layout.
 import test from 'node:test';
@@ -19,7 +20,7 @@ const blob=bytes=>createHash('sha1').update(Buffer.from(`blob ${bytes.length}\0`
 function files(p){return fs.readdirSync(new URL(p,root),{withFileTypes:true}).flatMap(e=>{assert.ok(!e.isSymbolicLink());const n=p+'/'+e.name;return e.isDirectory()?files(n):[n];}).sort();}
 
 test('range header: only the three desktop right-column sections stop shrinking; scroll, colors and phone rules remain exact',()=>{
- const bytes=read(RANGE_HEADER_PATH),stable=reverseChartTrialGeometry(RANGE_HEADER_PATH,bytes),css=stable.toString(),before=git('show',RANGE_HEADER_BASE+':'+RANGE_HEADER_PATH);
+ const bytes=read(RANGE_HEADER_PATH),stable=reverseChartTrialGeometry(RANGE_HEADER_PATH,reverseLatestUserUi(RANGE_HEADER_PATH,bytes)),css=stable.toString(),before=git('show',RANGE_HEADER_BASE+':'+RANGE_HEADER_PATH);
  assert.equal(git('rev-parse',RANGE_HEADER_BASE+'^{commit}').toString().trim(),RANGE_HEADER_BASE);
  assert.equal(blob(before),'aef31178ad787540aa19df6f43a515fb04ea639f');
  assert.equal(rangeHeaderSHA(before),RANGE_HEADER_BEFORE);assert.equal(rangeHeaderSHA(stable),RANGE_HEADER_AFTER);

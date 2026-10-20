@@ -1,3 +1,4 @@
+import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
 import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
 import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
 import {mcdFixture,MCD_FIXTURE_PATH,MCD_ADDED_PATHS,reverseMcdIntegration} from './mcd-integration-preservation.mjs';
@@ -82,7 +83,7 @@ test('Simulation UI reverses all reviewed modifications to immutable originals a
   assert.deepEqual(Buffer.from(item.beforeText),original);assert.deepEqual(reverseClaudeSimulationUi(p,bytes),original);
   assert.throws(()=>reverseClaudeSimulationUi(p,original),/exact reviewed Claude simulation UI bytes/,'Double reversal is forbidden');
  }
- for(const p of SIM_UI_ADDED_PATHS){const bytes=read(p);assert.equal(simulationUiSHA(bytes),f.additions[p]);assert.strictEqual(reverseClaudeSimulationUi(p,bytes),bytes);}
+ for(const p of SIM_UI_ADDED_PATHS){const bytes=read(p),prior=reverseLatestUserUi(p,bytes);assert.equal(simulationUiSHA(prior),f.additions[p]);assert.deepEqual(reverseClaudeSimulationUi(p,bytes),prior);}
  for(const p of [...SIM_UI_MODIFIED_PATHS,...SIM_UI_ADDED_PATHS]){
   const bytes=read(p);for(const changed of [altered(bytes),Buffer.concat([bytes,Buffer.from('\n/* unrelated */')]),bytes.subarray(0,bytes.length-1)])assert.throws(()=>reverseClaudeSimulationUi(p,changed),/exact reviewed Claude simulation UI bytes/,p+' every byte mutation must fail');
  }

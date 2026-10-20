@@ -3,6 +3,13 @@
 // original field), so models, drafts, undo and validation behave exactly as if
 // the person had typed. Inserted nodes are decorative (.rx-el).
 const root = document.documentElement;
+// The few words this layer writes itself, in both languages.
+const COPY = {
+  en: {full: 'Full history ↗', you: 'You {v}', same: 'same as you', above: 'you are {v} above', below: 'you are {v} below', pts: ' pts', fallback: 'Reported history'},
+  'zh-Hans': {full: '完整历史资料 ↗', you: '你 {v}', same: '与你的假设相同', above: '你的假设高出 {v}', below: '你的假设低了 {v}', pts: ' 个百分点', fallback: '申报历史资料'}
+};
+// This file also runs as a plain script in tests, so it reads the page language rather than importing i18n.
+const say = (k, v = '') => (COPY[document.documentElement.lang] || COPY.en)[k].replace('{v}', v);
 const on = () => root.dataset.skin === 'report';
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Fixed to the field's precision, without trailing zeros: 12, 2.25, 9.5.
@@ -169,7 +176,8 @@ function drawHistory(card) {
   let strip = card.querySelector(':scope > .rx-history');
   if (points.length < 2 || !input) { strip?.remove(); return; }
   const unit = card.querySelector('.driver-number > span')?.textContent?.trim() || '';
-  const measure = (card.querySelector('.assumption-history table caption')?.textContent || 'Reported history').split('.')[0].replace(/^Annual /, '');
+  // The caption is already in the page's language; keep its first clause.
+  const measure = (card.querySelector('.assumption-history table caption')?.textContent || say('fallback')).split(/[.。]/)[0].replace(/^Annual /, '');
   const user = Number(input.value);
   const vals = points.map(p => p.value);
   const latest = points.at(-1);
@@ -206,16 +214,16 @@ function drawHistory(card) {
   const dec = decimals(input.step || 1);
   const above = user - latest.value;
   strip.innerHTML = `
-    <span class="rx-history-head"><span>${measure}</span><span class="rx-history-open">${historyButton ? 'Full history ↗' : ''}</span></span>
+    <span class="rx-history-head"><span>${measure}</span><span class="rx-history-open">${historyButton ? say('full') : ''}</span></span>
     <span class="rx-history-plot">
       <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
         <line x1="0" x2="${W}" y1="${y(0).toFixed(1)}" y2="${y(0).toFixed(1)}" class="rx-zero"/>
         ${bars}
         <line x1="0" x2="${W}" y1="${uy}" y2="${uy}" class="rx-you"/>
       </svg>
-      <span class="rx-you-label${uy < 20 ? ' is-below' : ''}" style="top:${(uy / H * 100).toFixed(1)}%">You ${display(user)}${unit}</span>
+      <span class="rx-you-label${uy < 20 ? ' is-below' : ''}" style="top:${(uy / H * 100).toFixed(1)}%">${say('you', display(user) + unit)}</span>
     </span>
-    <span class="rx-history-foot"><span>${short(points[0].label)}</span><span>${short(latest.label)} <b>${display(latest.value)}${unit}</b> · ${Math.abs(above) < 1e-9 ? 'same as you' : `you are ${fmt(Math.abs(above), 1)}${unit === '%' ? ' pts' : unit} ${above > 0 ? 'above' : 'below'}`}</span></span>`;
+    <span class="rx-history-foot"><span>${short(points[0].label)}</span><span>${short(latest.label)} <b>${display(latest.value)}${unit}</b> · ${Math.abs(above) < 1e-9 ? say('same') : say(above > 0 ? 'above' : 'below', fmt(Math.abs(above), 1) + (unit === '%' ? say('pts') : unit))}</span></span>`;
 }
 
 /* ---------- result feedback: a change chip on the key-figures panel ---------- */
@@ -381,5 +389,8 @@ function scan() {
     figureFeedback();
   });
 }
+// A language switch redraws every strip: hidden ones are drawn when they show.
+// The history strips are drawn once, so a language switch redraws them.
+if (typeof MutationObserver === 'function' && document.documentElement) new MutationObserver(() => setTimeout(() => { for (const s of document.querySelectorAll('.guided-screen .rx-history')) s.remove(); scan(); }, 0)).observe(document.documentElement, {attributes: true, attributeFilter: ['lang']});
 new MutationObserver(scan).observe(document.body, {subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ['class', 'hidden']});
 scan();

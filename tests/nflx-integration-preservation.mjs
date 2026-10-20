@@ -1,3 +1,4 @@
+import {reverseCompanyPeriodCopy} from './company-period-copy-preservation.mjs';
 import {reverseChartTrialGeometry} from './chart-trial-geometry-preservation.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -152,6 +153,7 @@ export function validateNflxFixture(f){
 let cached;
 export function nflxFixture(){if(!cached){const f=validateNflxFixture(JSON.parse(fs.readFileSync(new URL('../'+NFLX_FIXTURE_PATH,import.meta.url))));Object.values(f.files).forEach(Object.freeze);Object.freeze(f.files);Object.freeze(f.additions);cached=Object.freeze(f);}return cached;}
 export function reverseNflxIntegration(path,bytes,earlierContext=''){
+ bytes=reverseCompanyPeriodCopy(path,bytes,earlierContext);
  bytes=reverseChartTrialGeometry(path,bytes,earlierContext);
  assert.ok(productionPath(path),String(path)+' must be an exact normalized dist path');assert.ok(Buffer.isBuffer(bytes),path+' requires exact production bytes');const f=nflxFixture();
  const message=path+' exact reviewed NFLX integration bytes; exact reviewed UBER integration bytes; exact reviewed MCD integration bytes; exact reviewed Claude simulation UI bytes'+earlierContext;

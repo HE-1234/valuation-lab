@@ -8,7 +8,7 @@ import zh from './locales/guided.zh-Hans.js';
 import researchProsePairs from './locales/research-prose-pairs.js';
 const english={...en,...Object.fromEntries(researchProsePairs.map(([english],index)=>['prose'+index,english]))};
 const chinese={...zh,...Object.fromEntries(researchProsePairs.map(([,chinese],index)=>['prose'+index,chinese]))};
-registerCatalog('guided',{en:{...english,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗'},'zh-Hans':{...chinese,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗'}});
+registerCatalog('guided',{en:{...english,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗',comparisonAbove:'{label} is {amount} above {period}. {context}',comparisonBelow:'{label} is {amount} below {period}. {context}'},'zh-Hans':{...chinese,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗',comparisonAbove:'{label}比 {period} 高 {amount}。{context}',comparisonBelow:'{label}比 {period} 低 {amount}。{context}'}});
 const escapeRegExp=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const exact=new Map(),patterns=[];
 for(const [key,message] of Object.entries(english)){
@@ -34,6 +34,10 @@ export function matchGuidedMessage(value,depth=0){
  return memo&&{key:memo.key,params:{...memo.params}};
 }
 function findGuidedMessage(text,depth){
+ // Evidence comparisons ("Your first year is 1.6 percentage points above FY2025. Fiscal-year comparison.")
+ // read in a different order in Chinese, so the whole sentence is one message.
+ const comparison=text.match(/^(Your [^.]+?) is (-?[\d,]+(?:\.\d+)?(?: percentage points|×)?) (above|below) ([^.]+?(?:\.\d+)*)\. (.+)$/s);
+ if(comparison)return {key:'guided.comparison'+(comparison[3]==='above'?'Above':'Below'),params:{label:comparison[1],amount:comparison[2],period:comparison[4],context:comparison[5]}};
  const yearDescription=text.match(/^((?:Year \d+: -?[\d,]+(?:\.\d+)?%)(?:; Year \d+: -?[\d,]+(?:\.\d+)?%)*)\. (.+)$/s);
  if(yearDescription)return {key:'guided.marginSequenceDescription',params:{years:yearDescription[1],source:yearDescription[2]}};
  const found=exact.get(text);if(found)return {...found,params:{}};

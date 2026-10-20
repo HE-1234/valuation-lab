@@ -1,3 +1,5 @@
+import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
+import {reverseCompanyPeriodCopy} from './company-period-copy-preservation.mjs';
 import {reverseChartTrialGeometry} from './chart-trial-geometry-preservation.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {execFileSync} from 'node:child_process';import {fileURLToPath} from 'node:url';
 import {NFLX_BASE_COMMIT,NFLX_FIXTURE_PATH,NFLX_MODIFIED_PATHS,NFLX_ADDED_PATHS,NFLX_REVIEWED_HASHES,nflxSHA,nflxBlobSHA,nflxBaseEntries,nflxFixture,validateNflxFixture,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
@@ -13,7 +15,7 @@ test('NFLX fixture pins immutable baseline and only fourteen modified plus forty
  for(const mutate of mutations){const bad=structuredClone(f);mutate(bad);assert.throws(()=>validateNflxFixture(bad));}
 });
 test('NFLX exact reversal rejects modified, added, malformed and double-reversed bytes',()=>{
- const f=nflxFixture();for(const p of NFLX_MODIFIED_PATHS){const bytes=read(p);assert.equal(nflxSHA(bytes),f.files[p].afterSHA256);assert.deepEqual(reverseNflxIntegration(p,bytes),git('show',NFLX_BASE_COMMIT+':'+p));assert.throws(()=>reverseNflxIntegration(p,Buffer.from(f.files[p].beforeText)),/exact reviewed NFLX/);}
+ const f=nflxFixture();for(const p of NFLX_MODIFIED_PATHS){const bytes=read(p);assert.equal(nflxSHA(reverseCompanyPeriodCopy(p,bytes)),f.files[p].afterSHA256);assert.deepEqual(reverseNflxIntegration(p,bytes),git('show',NFLX_BASE_COMMIT+':'+p));assert.throws(()=>reverseNflxIntegration(p,Buffer.from(f.files[p].beforeText)),/exact reviewed NFLX/);}
  for(const p of NFLX_ADDED_PATHS)assert.strictEqual(reverseNflxIntegration(p,read(p)).toString(),read(p).toString());
  for(const p of [...NFLX_MODIFIED_PATHS,...NFLX_ADDED_PATHS]){const b=read(p);for(const bad of [altered(b),Buffer.concat([b,Buffer.from('\nmutation')]),b.subarray(0,b.length-1)])assert.throws(()=>reverseNflxIntegration(p,bad),/exact reviewed NFLX/);}
  for(const p of ['dist/../x','dist//x','dist/./x','dist/','/dist/x','dist\\x','dist/x\0x','dist/x\nx','dist/x\rx','dist',null,42])assert.throws(()=>reverseNflxIntegration(p,Buffer.from('x')),/exact normalized dist path/);
@@ -25,7 +27,7 @@ test('NFLX preserves every prior production byte, mode, UI file and exact tree m
  const p='dist/engine.js',b=read(p);assert.strictEqual(reverseNflxIntegration(p,b),b);assert.throws(()=>verifyTree(current,x=>x===p?altered(b):read(x)),/immutable baseline blob/);
  for(const missing of [p,NFLX_MODIFIED_PATHS[0],NFLX_ADDED_PATHS[0]])assert.throws(()=>verifyTree(current.filter(x=>x!==missing)),/Exact production tree/);assert.throws(()=>verifyTree([...current,'dist/unreviewed.js'].sort()),/Exact production tree/);
  const copy=nflxBaseEntries();copy.clear();assert.ok(nflxBaseEntries().size>800);
- for(const p of ['dist/index.html','dist/skins/report.css','dist/skins/report-mc-guide.js','dist/skins/skin-motion.js','dist/simulation-view.js'])assert.deepEqual(reverseChartTrialGeometry(p,read(p)),git('show',NFLX_BASE_COMMIT+':'+p),p+' final UI bytes unchanged after exact later geometry reversal');
+ for(const p of ['dist/index.html','dist/skins/report.css','dist/skins/report-mc-guide.js','dist/skins/skin-motion.js','dist/simulation-view.js'])assert.deepEqual(reverseChartTrialGeometry(p,reverseLatestUserUi(p,read(p))),git('show',NFLX_BASE_COMMIT+':'+p),p+' final UI bytes unchanged after exact later geometry reversal');
 });
 test('NFLX catalog append leaves all existing catalog bytes intact and old fixtures unchanged',()=>{
  const p='dist/data/atlas-company-catalog-v1.json',catalog=JSON.parse(read(p));assert.equal(catalog.companies.filter(c=>c.ticker==='NFLX').length,1);assert.equal(catalog.companies.at(-1).ticker,'NFLX');catalog.companies.pop();assert.equal(JSON.stringify(catalog,null,2)+'\n',git('show',NFLX_BASE_COMMIT+':'+p).toString(),'Removing only NFLX reconstructs original bytes');
