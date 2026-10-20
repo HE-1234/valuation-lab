@@ -1,3 +1,6 @@
+import {MCD_MESSAGES} from './mcd-messages.js';
+import {UBER_MESSAGES} from './uber-messages.js';
+import {NFLX_MESSAGES} from './nflx-messages.js';
 import {UMC_MESSAGES} from './umc-messages.js';
 import {CEVA_MESSAGES} from './ceva-messages.js';
 import {KEYS_MESSAGES} from './keys-messages.js';
@@ -89,6 +92,9 @@ function requireAnnualIdentity(d,c){
 
 export function deriveAnnualGrowthHorizon(d,c,{growthMaturityYear,explicitEarlyYears,marginalSalesCapital}={}){
  if(d?.ticker==='CEVA')throw Error(CEVA_MESSAGES.horizon[0]);
+ if(d?.ticker==='MCD')throw Error(MCD_MESSAGES.terminal[0]);
+ if(d?.ticker==='UBER')throw Error(UBER_MESSAGES.horizon[0]);
+ if(d?.ticker==='NFLX')throw Error(NFLX_MESSAGES.horizon[0]);
  if(d?.ticker==='UMC')throw Error(UMC_MESSAGES.horizon[0]);
  if(d?.ticker==='RMBS')throw Error('RMBS retains ten rolling June years; edit the existing annual schedule.');
  if(d?.ticker==='KEYS')throw Error(KEYS_MESSAGES.horizon[0]);
@@ -173,6 +179,9 @@ function currentMarginOverrides(d){
 // the complete returned draft after replacing only the annual margin values.
 export function extendAnnualForMargin(d,c,terminalYear){
  if(d?.ticker==='CEVA'&&terminalYear>10)throw Error(CEVA_MESSAGES.horizon[0]);
+ if(d?.ticker==='MCD'&&terminalYear>11)throw Error(MCD_MESSAGES.terminal[0]);
+ if(d?.ticker==='UBER'&&terminalYear>10)throw Error(UBER_MESSAGES.horizon[0]);
+ if(d?.ticker==='NFLX'&&terminalYear>10)throw Error(NFLX_MESSAGES.horizon[0]);
  if(d?.ticker==='UMC'&&terminalYear>10)throw Error(UMC_MESSAGES.horizon[0]);
  if(d?.ticker==='RMBS'&&terminalYear>10)throw Error('RMBS retains ten rolling June years; edit the existing annual schedule.');
  if(d?.ticker==='KEYS'&&terminalYear>10)throw Error(KEYS_MESSAGES.horizon[0]);

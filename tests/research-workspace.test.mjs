@@ -1,3 +1,4 @@
+import {applyTsmReceiptCorrection} from '../dist/tsm-receipt-correction.js';
 import {displayNumber} from '../dist/number-display.js';
 import {currentResearchDraft} from '../dist/current-research-defaults.js';
 // Independent minimal-DOM runtime QA of the actual shipped annual workspace.
@@ -24,7 +25,7 @@ test('renewed workspace: fresh default and all fourteen companies use complete r
  for(const c of h.library.companies){
   h.get(`[data-research-company="${c.ticker}"]`).click();
   const {draft:d,identityError}=h.getState();
-  const bundle=JSON.parse(read('data/studio-research-presets-2026-10-17-v1.json')),expected=currentResearchDraft(bundle.presets.find(p=>p.ticker===c.ticker),bundle);
+  const bundle=JSON.parse(read('data/studio-research-presets-2026-10-17-v1.json')),expected=applyTsmReceiptCorrection(currentResearchDraft(bundle.presets.find(p=>p.ticker===c.ticker),bundle));
   assert.equal(identityError,null,c.ticker);assert.equal(d.userEdited,expected.userEdited,c.ticker);
   assert.equal(d.forecastHorizonYears,expected.forecastHorizonYears,c.ticker);assert.equal(d.annual.length,expected.annual.length,c.ticker);
   assert.deepEqual(d.annual,expected.annual,c.ticker);
@@ -130,7 +131,7 @@ test('renewed workspace: original saved capital cases render their equity contro
  const storage=new Map(['AAOI','NBIS'].map(ticker=>[key(ticker),JSON.stringify(researchDraftFor(company(ticker)))]));
  const h=await startResearchWorkspace({storage});
  for(const c of h.library.companies){
-  h.select(c.ticker);const definition=researchBridgeDefinition(c.ticker);
+  h.select(c.ticker);const definition=researchBridgeDefinition(c.ticker,h.getState().draft);
   for(const option of definition.optionDefinitions){
    const selector=option.type==='select'?`[data-research-claim-select="${option.key}"]`:h.field('bridge',option.key),control=h.get(selector);
    const expected=option.default===null?'':option.type==='select'?option.default:displayNumber(option.default*(option.max===1?100:1),2);

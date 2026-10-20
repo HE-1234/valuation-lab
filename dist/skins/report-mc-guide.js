@@ -126,7 +126,7 @@ const COPY = {
     fieldIs: 'On the left: {f}',
     nSettings: '{n} settings',
     leads: '{tab} leads',
-    precChip: 'median ±{v} at your count',
+    precChip: 'rough median ±{v} at your count',
     pairT: '{a} vs {b}',
     pairChip: 'end vs journey',
     pairRange: 'Range',
@@ -151,8 +151,13 @@ const COPY = {
     // sampling
     q_sampling: 'How many scenarios are enough?',
     l_sampling: 'Each scenario is one random draw of every input. More scenarios give a steadier range, but precision grows only with the square root of the count.',
-    precT: 'How much luck moves the result',
-    precLead: 'How far luck alone can push each number from where unlimited scenarios would put it, about 95% of the time. Estimated from the spread of {src}.',
+    precT: 'Approximate sampling precision',
+    precLead: 'Rough normal-reference estimates of sampling variation, based on accepted scenarios from {src}. They assume approximately bell-shaped accepted values and are not validated 95% intervals. Skewed, heavy-tailed or repeated values can make them unreliable.',
+    precAccepted: '{accepted} accepted of {attempts} attempted. Comparisons project this acceptance rate.',
+    precRowAccepted: '≈{n} accepted (projected)',
+    precRowActual: '{n} accepted',
+    precWithheld: 'Estimate withheld',
+    precUnavailable: 'Precision estimate withheld: it needs at least 100 accepted scenarios, valid counts and a measurable central spread. This cutoff is a display safeguard, not proof the approximation is reliable. Run more scenarios and inspect the distribution.',
     precSrcRun: 'your last run',
     precSrcPreview: 'a {n}-scenario preview',
     precMed: 'median ±{v}',
@@ -273,7 +278,7 @@ const COPY = {
     fieldIs: '左侧字段：{f}',
     nSettings: '{n} 项设置',
     leads: '{tab}居首',
-    precChip: '当前情景数下中位数 ±{v}',
+    precChip: '当前情景数下中位数约 ±{v}',
     pairT: '{a} vs {b}',
     pairChip: '终点 vs 途中',
     pairRange: '范围',
@@ -297,8 +302,13 @@ const COPY = {
     toRel: '打开{tab} →',
     q_sampling: '需要多少个情景才够？',
     l_sampling: '每个情景都是对所有输入的一次随机抽取。情景越多，区间越稳定，但精确度只随情景数的平方根提高。',
-    precT: '运气会让结果变动多少',
-    precLead: '单凭运气，每个数字可能偏离“无限多情景”结果的幅度（约 95% 的情况下）。根据{src}的分散程度估算。',
+    precT: '抽样精度的近似估计',
+    precLead: '根据{src}中被接受的情景估算抽样波动，仅以正态分布作粗略参照。这些数字假设被接受的估值近似钟形分布，未经验证为 95% 置信区间。偏态、厚尾或大量重复结果都可能使估算不可靠。',
+    precAccepted: '尝试 {attempts} 个情景，接受 {accepted} 个。比较结果按此接受率推算。',
+    precRowAccepted: '预计接受 {n} 个',
+    precRowActual: '已接受 {n} 个',
+    precWithheld: '暂不提供精度估计',
+    precUnavailable: '暂不提供精度估计：需要至少 100 个被接受的情景、有效计数和可衡量的中间区间。此门槛仅为显示保护，并不证明近似方法可靠。请增加情景数并检查分布。',
     precSrcRun: '你最近一次模拟',
     precSrcPreview: '{n} 个情景的预览',
     precMed: '中位数 ±{v}',
@@ -616,6 +626,11 @@ function fieldLabel(f) {
   return words(l).replace(/\s+/g, ' ').trim().slice(0, 64);
 }
 const bare = label => label.split(/\s*[·・]\s*/)[0];
+function fieldAvailable(f) {
+  const el = f && curRoot?.querySelector(`.mc-setup [id$="mc-${f}"]`);
+  // A closed disclosure can be opened; a hidden mode-specific panel cannot.
+  return !!el && !el.closest('[hidden]');
+}
 // A row explains one setting and folds on its own. `k` names it for the focus
 // link with the field on the left; `f` is that field's id after "mc-".
 function knob(title, body, extra = '', k = '', f = '') {
@@ -624,7 +639,7 @@ function knob(title, body, extra = '', k = '', f = '') {
   if (!body && !extra) return `<li class="is-plain"${attrs}><b>${esc(title)}</b></li>`;
   const field = fieldLabel(f), key = 'kd:' + (k || name) + device(), open = folds.get(key) ?? false;
   const head = `<summary><span class="rx-mcg-kn"><b>${esc(name)}</b>${val ? `<em>${esc(val)}</em>` : ''}</span>${field ? `<small>${esc(copy('fieldIs', {f: field}))}</small>` : ''}</summary>`;
-  const edit = f ? `<button type="button" class="rx-mcg-link" data-edit="${esc(f)}">${esc(copy('edit'))}</button>` : '';
+  const edit = fieldAvailable(f) ? `<button type="button" class="rx-mcg-link" data-edit="${esc(f)}">${esc(copy('edit'))}</button>` : '';
   return `<li${attrs}><details class="rx-mcg-kd" data-fold="${key}"${open ? ' open' : ''}>${head}<div class="rx-mcg-kb">${body ? `<p>${esc(body)}</p>` : ''}${extra}${edit}</div></details></li>`;
 }
 
@@ -820,34 +835,52 @@ function pairBlock(st, tab, metric, spec, place, fieldA) {
 
 // Monte Carlo error of the reported numbers, from the normal approximation:
 // SE(median) = √(π/2)·σ/√n and SE(P10) = √(0.1·0.9)/φ(1.2816)·σ/√n = 1.709·σ/√n,
-// with σ estimated as (P90 − P10) / 2.563. Shown at 95% (×1.96), as "about".
+// with σ estimated as (P90 − P10) / 2.563. This is an illustrative normal-output
+// approximation, not a validated confidence interval. Exclusions reduce n.
+function samplingPrecision(sum, attempts, count) {
+  if (!sum || !Number.isInteger(sum.accepted) || sum.accepted < 100 || !Number.isInteger(attempts) || sum.accepted > attempts || !Number.isInteger(count) || count <= 0) return null;
+  if (![sum.p10, sum.p50, sum.p90].every(finite) || !(sum.p10 <= sum.p50 && sum.p50 <= sum.p90 && sum.p90 > sum.p10)) return null;
+  const accepted = count === attempts ? sum.accepted : Math.floor(count * (sum.accepted / attempts)), width = sum.p90 - sum.p10;
+  if (!(width > Number.EPSILON * Math.max(Math.abs(sum.p10), Math.abs(sum.p90)))) return null;
+  const sigma = width / 2.5631;
+  if (!(accepted >= 100) || !finite(sigma)) return null;
+  const median = (sigma / Math.sqrt(accepted)) * (1.96 * 1.2533), edge = (sigma / Math.sqrt(accepted)) * (1.96 * 1.7094);
+  return finite(median) && finite(edge) && median > 0 && edge > 0 ? {accepted, median, edge} : null;
+}
+const precisionValue = v => v > 0 && v < .01 ? '<' + fmtVal(.01) : fmtVal(v);
+const precisionPercent = v => (v > 0 && v * 100 < .01 ? '<0.01' : num(v * 100, 2)) + '%';
 function samplingGuide(st) {
   const c = st.config, n = c.trials;
   let sum, src;
-  if (st.latest) { sum = {p10: st.latest.p10, p50: st.latest.p50, p90: st.latest.p90}; src = copy('precSrcRun'); }
+  if (st.latest) { sum = {p10: st.latest.p10, p50: st.latest.p50, p90: st.latest.p90, accepted: st.latest.accepted}; src = copy('precSrcRun'); }
   else { sum = request(st, 'samp', full(st), true); src = copy('precSrcPreview', {n: num(TRIALS, 0)}); }
-  let value, chip = !sum ? '…' : '';
-  if (!sum || sum.error) value = valueBlock(st, sum);
+  const attempts = st.latest ? n : TRIALS, precision = samplingPrecision(sum, attempts, n);
+  let value, chip = !sum ? '…' : '', acceptedNote = '';
+  if (!sum) value = valueBlock(st, sum);
+  else if (sum.error || !precision) { value = `<p class="rx-mcg-read">${esc(copy('precUnavailable'))}</p>`; chip = copy('precWithheld'); }
   else {
-    const sigma = Math.max(0, sum.p90 - sum.p10) / 2.5631;
+    acceptedNote = `<p class="rx-mcg-sub">${esc(copy('precAccepted', {accepted: num(sum.accepted, 0), attempts: num(attempts, 0)}))}</p>`;
     const counts = uniq([1000, 5000, 10000, n].filter(k => finite(k) && k > 0));
-    const med = k => 1.96 * 1.2533 * sigma / Math.sqrt(k), edge = k => 1.96 * 1.7094 * sigma / Math.sqrt(k);
-    const widest = 2 * edge(counts[0]) || 1;
+    const estimates = counts.map(k => samplingPrecision(sum, attempts, k));
+    const med = k => samplingPrecision(sum, attempts, k)?.median, edge = k => samplingPrecision(sum, attempts, k)?.edge;
+    const widest = 2 * Math.max(...estimates.filter(Boolean).map(x => x.edge)) || 1;
     const rows = counts.map(k => {
+      const estimate = samplingPrecision(sum, attempts, k);
+      if (!estimate) return `<li><span>${esc(num(k, 0))}</span><i></i><em>${esc(copy('precWithheld'))}</em></li>`;
       const w = 2 * med(k) / widest, we = 2 * edge(k) / widest;
-      const rel = finite(sum.p50) && sum.p50 ? ` (${fmtPct(med(k) / Math.abs(sum.p50))})` : '';
-      return `<li class="${k === n ? 'is-yours' : ''}"><span>${esc(num(k, 0))}${k === n ? `<small>${esc(copy('precCur'))}</small>` : ''}</span><i class="is-err" style="--a:${(.5 - w / 2).toFixed(4)};--w:${w.toFixed(4)};--ea:${(.5 - we / 2).toFixed(4)};--ew:${we.toFixed(4)};--b:.5"></i><em>${esc(copy('precMed', {v: fmtVal(med(k)) + rel}))} · ${esc(copy('precEdge', {v: fmtVal(edge(k))}))}</em></li>`;
+      const rel = finite(sum.p50) && sum.p50 ? ` (${precisionPercent(med(k) / Math.abs(sum.p50))})` : '';
+      return `<li class="${k === n ? 'is-yours' : ''}"><span>${esc(num(k, 0))}${k === n ? `<small>${esc(copy('precCur'))}</small>` : ''}<small>${esc(copy(st.latest && k === n ? 'precRowActual' : 'precRowAccepted', {n: num(estimate.accepted, 0)}))}</small></span><i class="is-err" style="--a:${(.5 - w / 2).toFixed(4)};--w:${w.toFixed(4)};--ea:${(.5 - we / 2).toFixed(4)};--ew:${we.toFixed(4)};--b:.5"></i><em>${esc(copy('precMed', {v: precisionValue(med(k)) + rel}))} · ${esc(copy('precEdge', {v: precisionValue(edge(k))}))}</em></li>`;
     }).join('');
     // Luck against what the inputs themselves do: the noise should be a small fraction of the range.
-    if (finite(sum.p50) && sum.p50 && finite(n)) chip = copy('precChip', {v: fmtPct(med(n) / Math.abs(sum.p50))});
-    const half = (sum.p90 - sum.p10) / 2, verdict = half > 0 && finite(n) ? copy('precVs', {n: num(n, 0), noise: fmtVal(med(n)), range: fmtVal(half), x: num(Math.max(1, half / med(n)), 0)}) : '';
+    if (finite(sum.p50) && sum.p50 && finite(n)) chip = copy('precChip', {v: precisionPercent(med(n) / Math.abs(sum.p50))});
+    const half = (sum.p90 - sum.p10) / 2, verdict = half > 0 && finite(n) ? copy('precVs', {n: num(n, 0), noise: precisionValue(med(n)), range: precisionValue(half), x: num(Math.max(1, half / med(n)), 0)}) : '';
     value = `<figure class="rx-mcg-wi rx-mcg-prec" aria-label="${esc(copy('precT'))}"><ul>${rows}</ul><figcaption><span class="rx-mcg-key"><i class="is-hi"></i>${esc(copy('precKeyMed'))}<i class="is-soft"></i>${esc(copy('precKeyEdge'))}</span></figcaption></figure><p class="rx-mcg-read">${esc(verdict)}</p><p class="rx-mcg-sub rx-mcg-after">${esc(copy('precRead'))}</p>`;
   }
   const knobs = knob(copy('trialsT', {v: num(n, 0)}), copy('trialsB'), '', 'trials', 'trials') + knob(copy('seedT', {v: String(c.seed ?? '—')}), copy('seedB'), '', 'seed', 'seed');
   return [
     ['head', `<header class="rx-mcg-head"><span class="rx-mcg-eyebrow">${esc(copy('eyebrow'))}</span></header><h3>${esc(copy('q_sampling'))}</h3><p class="rx-mcg-lead">${esc(copy('l_sampling'))}</p>`],
     // Folded: on Sampling the latest range below should stay in view.
-    ['value', fold('prec', copy('precT'), `<p class="rx-mcg-sub">${esc(copy('precLead', {src}))}</p>${value}`, {chip, ic: 'prec'})],
+    ['value', fold('prec', copy('precT'), `<p class="rx-mcg-sub">${esc(copy('precLead', {src}))}</p>${acceptedNote}${value}`, {chip, ic: 'prec'})],
     ['knobs', fold('sknobs', copy('knobs'), `<ul class="rx-mcg-knobs">${knobs}</ul>`, {chip: copy('nSettings', {n: 2}), ic: 'knobs'})]
   ];
 }
@@ -1085,8 +1118,9 @@ const same = (a, b) => (a?.k || null) === (b?.k || null) && (a?.year || null) ==
 document.addEventListener('focusin', e => {
   const root = e.target.closest?.('[data-rx-mcv]'); if (!root) return;
   const st = links.get(root) || {}, row = rowFor(e.target);
-  if (same(st.focus, row)) return;
-  st.focus = row; links.set(root, st); relink(root, !!row);
+  clearTimeout(hoverTimer);
+  if (same(st.focus, row) && !st.hover) return;
+  st.hover = null; st.focus = row; links.set(root, st); relink(root, !!row);
 });
 document.addEventListener('focusout', e => {
   const root = e.target.closest?.('[data-rx-mcv]'); if (!root) return;
@@ -1103,19 +1137,43 @@ document.addEventListener('pointerover', e => {
   for (const n of root.querySelectorAll('.rx-mcg-target')) if (!li || !n.id.endsWith('mc-' + li.dataset.f)) n.classList.remove('rx-mcg-target');
   if (li) root.querySelector(`.mc-setup [id$="mc-${li.dataset.f}"]`)?.classList.add('rx-mcg-target');
   // Left to right, after a short rest so a pointer passing by does not flicker.
-  if (e.target.closest('.rx-mcg')) return;
+  if (e.target.closest('.rx-mcg')) {
+    clearTimeout(hoverTimer); const st = links.get(root);
+    if (st?.hover) { st.hover = null; relink(root); }
+    return;
+  }
   const row = rowFor(e.target), st = links.get(root) || {};
   if (same(st.hover, row)) return;
   clearTimeout(hoverTimer);
-  hoverTimer = setTimeout(() => { st.hover = row; links.set(root, st); relink(root, false); }, row ? 90 : 160);
+  const mountId = root.mcState?.mountId;
+  hoverTimer = setTimeout(() => { if (!root.mcState || root.mcState.mountId !== mountId) return; st.hover = row; links.set(root, st); relink(root, false); }, row ? 90 : 160);
+});
+document.addEventListener('pointerout', e => {
+  const root = e.target.closest?.('[data-rx-mcv]');
+  if (!root || e.relatedTarget && root.contains(e.relatedTarget)) return;
+  clearTimeout(hoverTimer); const st = links.get(root);
+  if (st?.hover) { st.hover = null; relink(root); }
+  for (const n of root.querySelectorAll('.rx-mcg-target')) n.classList.remove('rx-mcg-target');
 });
 function editField(root, f) {
-  const el = root.querySelector(`.mc-setup [id$="mc-${f}"]`); if (!el) return;
-  const shown = x => x && (x.checkVisibility ? x.checkVisibility() : !!x.offsetParent);
-  let target = el.matches('input, select, textarea, button') ? el : el.querySelector('[aria-checked="true"], input, select, button') || el;
-  if (!shown(target) || target.getAttribute('aria-hidden') === 'true' || target.tabIndex < 0) target = el.parentElement?.querySelector('[role="radiogroup"] [aria-checked="true"]') || el.parentElement?.querySelector('[role="radiogroup"] button') || target;
-  target.scrollIntoView({block: 'center', behavior: calm() ? 'auto' : 'smooth'});
-  target.focus({preventScroll: true});
+  const el = root.querySelector(`.mc-setup [id$="mc-${f}"]`); if (!el || el.closest('[hidden]')) return;
+  const disclosures = [];
+  for (let n = el.parentElement; n && n !== root; n = n.parentElement) if (n.tagName === 'DETAILS') disclosures.unshift(n);
+  const opened = disclosures.filter(d => !d.open);
+  // Edit is direct navigation: reveal its target before focusing it. Manual
+  // disclosure toggles keep their normal animation after this scoped cleanup.
+  for (const d of opened) d.classList.add('rx-mcg-edit-reveal');
+  try {
+    for (const d of disclosures) d.open = true;
+    for (const d of opened) void d.offsetHeight;
+    const shown = x => x && (x.checkVisibility ? x.checkVisibility() : !!x.offsetParent);
+    let target = el.matches('input, select, textarea, button') ? el : el.querySelector('[aria-checked="true"], input, select, button') || el;
+    if (!shown(target) || target.getAttribute('aria-hidden') === 'true' || target.tabIndex < 0) target = el.parentElement?.querySelector('[role="radiogroup"] [aria-checked="true"]') || el.parentElement?.querySelector('[role="radiogroup"] button') || target;
+    target.scrollIntoView({block: 'center', behavior: calm() ? 'auto' : 'smooth'});
+    target.focus({preventScroll: true});
+  } finally {
+    for (const d of opened) d.classList.remove('rx-mcg-edit-reveal');
+  }
 }
 let repaintQueued = false;
 function repaintSoon() {
@@ -1131,7 +1189,8 @@ function onState(root) {
     root.querySelector('.rx-mcg')?.setAttribute('hidden', '');
     root.querySelector('.rx-mcg-back')?.remove();
     setView(root, 'range');
-    views.delete(root); seen.delete(root);
+    views.delete(root); seen.delete(root); links.delete(root);
+    clearTimeout(hoverTimer);
     clearTimeout(timers.get(root));
     queue = queue.filter(q => q.st.mountId !== st.mountId);
     if (busy?.key.startsWith(st.mountId)) busy.controller.abort();

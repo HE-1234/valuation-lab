@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+// Separate exact CSS-only geometry layer; all company and older fixtures stay frozen.
+export const GEOMETRY_BASE="86fe7169f84689aba13f2076b4789289f4477ec8";
+export const GEOMETRY_FILES=Object.freeze(Object.fromEntries(Object.entries({
+  "dist/research.css": {
+    "beforeSHA256": "806112aa3e84c2484d5e6f7af8b25b592f2eb987b1dede3bc913cc2a0818b87b",
+    "afterSHA256": "51e6bf1b392558d31c6165b65752819eb3b6b6b2e968a55be76215ba5f299672",
+    "repairs": [
+      {
+        "before": ".annual-workspace #research-editor{flex-wrap:nowrap}\n\n/* Annual revenue growth reuses the approved signed bar chart and theme tokens. */\n.annual-revenue-growth{border-top:1px solid var(--line);padding-top:16px;margin:18px 0 22px}\n.annual-revenue-growth .approved-plot-heading{flex-wrap:wrap;gap:8px}\n.annual-revenue-growth h3{margin:0;font-size:16px}\n.annual-revenue-growth .annual-revenue-growth-bars{grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:22px 12px;padding-top:20px}\n.annual-revenue-growth .approved-growth-column{height:156px;border-radius:3px}\n.annual-revenue-growth .approved-growth-column:focus-visible{outline:2px solid var(--accent);outline-offset:4px}\n.annual-revenue-growth .approved-growth-track{height:108px}\n.annual-revenue-growth .approved-growth-bar{animation:annual-revenue-grow 460ms ease-out both}\n.annual-revenue-growth .approved-growth-value{font-size:11px;color:var(--ink)}\n.annual-growth-values{margin-top:10px;font-size:12px}\n.annual-growth-values summary{cursor:pointer;color:var(--accent)}\n",
+        "after": ".annual-workspace #research-editor{flex-wrap:nowrap}\n\n/* Annual revenue growth reuses the approved signed bar chart and theme tokens. */\n.annual-revenue-growth{border-top:1px solid var(--line);padding-top:16px;margin:18px 0 22px}\n.annual-revenue-growth .approved-plot-heading{flex-wrap:wrap;gap:8px}\n.annual-revenue-growth h3{margin:0;font-size:16px}\n/* Keep the common plot aligned while wrapped annotations grow below it. */\n.annual-revenue-growth .annual-revenue-growth-bars{grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:22px 12px;padding-top:20px;align-items:start}\n.annual-revenue-growth .approved-growth-column{height:auto;min-height:156px;border-radius:3px}\n.annual-revenue-growth .approved-growth-year{overflow-wrap:anywhere}\n.annual-revenue-growth .approved-growth-column:focus-visible{outline:2px solid var(--accent);outline-offset:4px}\n.annual-revenue-growth .approved-growth-track{height:108px}\n.annual-revenue-growth .approved-growth-bar{animation:annual-revenue-grow 460ms ease-out both}\n.annual-revenue-growth .approved-growth-value{font-size:11px;color:var(--ink)}\n.annual-growth-values{margin-top:10px;font-size:12px}\n.annual-growth-values summary{cursor:pointer;color:var(--accent)}\n"
+      }
+    ]
+  },
+  "dist/skins/report.css": {
+    "beforeSHA256": "51c2fbfc2281b20b07aa72a20944cc249563edef8fe57eb237622fcb0d60b82d",
+    "afterSHA256": "23dfd58a7d90dede8b302fcf252e3078cd41ae056405aa4839b327e8e78b3fba",
+    "repairs": [
+      {
+        "before": "  @media (max-width: 600px) {\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-choice { display: inline-flex !important; flex-direction: row !important; width: auto !important; flex-wrap: nowrap; }\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-choice > button { flex: none !important; width: auto !important; }\n    & body .guided-screen .simulation-lab > .mc-heading #mc-title { font-size: 26px !important; line-height: 1.15 !important; letter-spacing: -.03em !important; }\n  }\n}\n:root[data-skin=\"report\"] {\n  @media (max-width: 600px) {\n    /* Annual tables on phones: one compact card per year, four figures in one row. */\n    & body #forecast-detail .flow-table tbody tr:has(> td:nth-of-type(4)) {\n      display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 8px; padding: 12px 0 14px !important;\n    }\n",
+        "after": "  @media (max-width: 600px) {\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-choice { display: inline-flex !important; flex-direction: row !important; width: auto !important; flex-wrap: nowrap; }\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-choice > button { flex: none !important; width: auto !important; }\n    & body .guided-screen .simulation-lab > .mc-heading #mc-title { font-size: 26px !important; line-height: 1.15 !important; letter-spacing: -.03em !important; }\n  }\n}\n/* A restored custom trial count adds a fourth choice. Give only that group\n   its own stable row, and honor the existing measured two-column/list layout. */\n:root[data-skin=\"report\"] {\n  @media (max-width: 760px) {\n    & body .simulation-lab .mc-run-actions:has(> .rx-trials > .rx-remote-choice > button:nth-of-type(4)) { flex-wrap: wrap !important; }\n    & body .simulation-lab .mc-run-actions > .rx-trials:has(> .rx-remote-choice > button:nth-of-type(4)) { flex: 1 1 100% !important; flex-direction: column !important; align-items: stretch !important; }\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice:has(> button:nth-of-type(4)) { display: inline-flex !important; flex-direction: row !important; width: 100% !important; flex-wrap: wrap; }\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice.rx-stacked:has(> button:nth-of-type(4)) { flex-direction: column !important; }\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice.rx-two:has(> button:nth-of-type(4)) { display: grid !important; }\n    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice:has(> button:nth-of-type(4)) > button { flex: 0 1 auto !important; min-width: 0; max-width: 100%; overflow-wrap: anywhere; }\n  }\n}\n:root[data-skin=\"report\"] {\n  @media (max-width: 600px) {\n    /* Annual tables on phones: one compact card per year, four figures in one row. */\n    & body #forecast-detail .flow-table tbody tr:has(> td:nth-of-type(4)) {\n      display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 8px; padding: 12px 0 14px !important;\n    }\n"
+      }
+    ]
+  }
+}).map(([path,item])=>[path,Object.freeze({...item,repairs:Object.freeze(item.repairs.map(Object.freeze))})])));
+export const geometrySHA=bytes=>createHash('sha256').update(bytes).digest('hex');
+export function reverseChartTrialGeometry(path,bytes,earlierContext=''){
+ if(!Object.prototype.hasOwnProperty.call(GEOMETRY_FILES,path))return bytes;
+ assert.ok(Buffer.isBuffer(bytes),path+' requires exact production bytes');
+ const f=GEOMETRY_FILES[path];
+ assert.equal(geometrySHA(bytes),f.afterSHA256,path+' exact reviewed chart/trial geometry bytes; exact reviewed range header fix bytes; exact reviewed Claude simulation UI bytes'+earlierContext);
+ let restored=bytes.toString('utf8');
+ for(const repair of f.repairs){assert.equal(restored.split(repair.after).length-1,1,'Exactly one reviewed geometry replacement is allowed');restored=restored.replace(repair.after,repair.before);}
+ const out=Buffer.from(restored);assert.equal(geometrySHA(out),f.beforeSHA256,'Geometry reversal must restore exact frozen company CSS');return out;
+}

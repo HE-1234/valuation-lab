@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {reverseNvmiConditional} from './nvmi-conditional-preservation.mjs';
 const fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/nvmi-conditional-v65.json',import.meta.url)));

@@ -1,0 +1,178 @@
+{
+  "status": "PASS_FOR_LIMITED_DATED_SCOPE",
+  "reviewed_version": "MCD v2",
+  "review_date": "2026-10-19",
+  "closed_findings": [
+    "R1",
+    "R2"
+  ],
+  "test_groups": [
+    {
+      "name": "Frozen v2 archive and manifest integrity",
+      "passed": true,
+      "detail": {
+        "archive_sha256": "18cf7498dd23a41a1357742c25addbf20bd07ed8947a365e4ccd18d41925a929",
+        "manifest_files": 29
+      }
+    },
+    {
+      "name": "Predecessor package and primary originals preserved",
+      "passed": true,
+      "detail": {
+        "v1_payload_files": 26,
+        "original_sources": 16
+      }
+    },
+    {
+      "name": "R1 policy prose and amount maps match distinct inputs",
+      "passed": true,
+      "detail": {
+        "policies": {
+          "lower_claims_higher_assets": [
+            2000,
+            6000,
+            0,
+            500,
+            500,
+            500
+          ],
+          "higher_claims_lower_assets": [
+            3000,
+            3000,
+            0,
+            1500,
+            1500,
+            2000
+          ]
+        },
+        "basis_map_equals_numeric_inputs": true
+      }
+    },
+    {
+      "name": "R2 rejects below H1 and preserves equality/incremental identities",
+      "passed": true,
+      "detail": [
+        {
+          "scenario": "bear",
+          "annual_expense": 0,
+          "rejected": true
+        },
+        {
+          "scenario": "bear",
+          "annual_expense": 97.99,
+          "rejected": true
+        },
+        {
+          "scenario": "bear",
+          "annual_expense": 97.99999999999999,
+          "rejected": true
+        },
+        {
+          "scenario": "bear",
+          "equality_at_98_accepted": true,
+          "one_more_expense_h2_ebit_impact": -1,
+          "one_more_expense_h2_fcff_impact": -0.77
+        },
+        {
+          "scenario": "base",
+          "annual_expense": 0,
+          "rejected": true
+        },
+        {
+          "scenario": "base",
+          "annual_expense": 97.99,
+          "rejected": true
+        },
+        {
+          "scenario": "base",
+          "annual_expense": 97.99999999999999,
+          "rejected": true
+        },
+        {
+          "scenario": "base",
+          "equality_at_98_accepted": true,
+          "one_more_expense_h2_ebit_impact": -1,
+          "one_more_expense_h2_fcff_impact": -0.78
+        },
+        {
+          "scenario": "bull",
+          "annual_expense": 0,
+          "rejected": true
+        },
+        {
+          "scenario": "bull",
+          "annual_expense": 97.99,
+          "rejected": true
+        },
+        {
+          "scenario": "bull",
+          "annual_expense": 97.99999999999999,
+          "rejected": true
+        },
+        {
+          "scenario": "bull",
+          "equality_at_98_accepted": true,
+          "one_more_expense_h2_ebit_impact": -1,
+          "one_more_expense_h2_fcff_impact": -0.78
+        }
+      ]
+    },
+    {
+      "name": "All default scenarios and rows unchanged",
+      "passed": true,
+      "detail": {
+        "scenarios": 3,
+        "rows": 33,
+        "ev_USDm": {
+          "bear": 98917.3045820689,
+          "base": 187793.29019496965,
+          "bull": 292139.6283463944
+        }
+      }
+    },
+    {
+      "name": "Nine allocations and historical/source evidence unchanged",
+      "passed": true,
+      "detail": {
+        "allocations": 9
+      }
+    },
+    {
+      "name": "Fresh public ZIP runs portably with optimization and exact regeneration",
+      "passed": true,
+      "detail": {
+        "public_files": 30,
+        "commands_completed": 5,
+        "source_originals_available": false,
+        "author_checks_reported": 881
+      }
+    },
+    {
+      "name": "Funding disclosure calculations and source boundaries",
+      "passed": true,
+      "detail": {
+        "residuals_USDm": [
+          15,
+          -185
+        ],
+        "source_spot_check": "Retained 2025 annual Debt Financing text explicitly states 798 plus 725 classified long term under June 2028 line; already included in total debt."
+      }
+    },
+    {
+      "name": "Readiness does not promote current target or funding certification",
+      "passed": true,
+      "detail": {
+        "frozen_author_status": "Targeted independent recheck pending at freeze; separate review disposition now resolves it for limited scope."
+      }
+    },
+    {
+      "name": "Frozen packages remain unchanged after recheck",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "current_target_approved": false,
+  "funding_certified": false,
+  "integration_or_publication_authorized": false,
+  "archive_sha256": "18cf7498dd23a41a1357742c25addbf20bd07ed8947a365e4ccd18d41925a929"
+}

@@ -2,7 +2,7 @@ import {reverseMethodologyDocumentation} from './simulation-methodology-preserva
 // Shipped handlers and source preservation, not native-browser/AT certification.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {minimalDocument,startResearchWorkspace} from './research-workspace-harness.mjs';
 import {createContextualEvidencePanel} from '../dist/contextual-evidence.js';

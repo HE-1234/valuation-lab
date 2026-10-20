@@ -1593,6 +1593,97 @@
         "evidence": "Trade SpaceX 24 hours a day, five days a week on Robinhood.",
         "scope": "Public Robinhood product page only; account, jurisdiction, order, fractional-share and live trading eligibility are not verified."
       }
+    },
+    {
+      "id": "atlas:MCD",
+      "ticker": "MCD",
+      "company": "McDonald's Corporation",
+      "aliases": [
+        "McDonalds",
+        "McDonald’s"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "MCD",
+      "securityType": "Common Stock",
+      "currency": "USD",
+      "reportingCurrency": "USD",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-19T18:40:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+        "https://robinhood.com/us/en/stocks/MCD/"
+      ],
+      "evidence": "Issuer June 2026 Form 10-Q cover identifies MCD common stock listed on the New York Stock Exchange. Robinhood public page inspected October 19, 2026 offers buying or selling McDonald’s shares.",
+      "note": "Public listing and broker product support only; account, jurisdiction, order and live trading eligibility are not verified. Quote data on the broker page is not used by this dated valuation model.",
+      "mic": "XNYS",
+      "isin": null,
+      "robinhood": {
+        "status": "public-buy-sell-support",
+        "url": "https://robinhood.com/us/en/stocks/MCD/",
+        "checkedAt": "2026-10-19",
+        "evidence": "Public page offers Buy MCD and account signup to buy or sell McDonald’s shares.",
+        "scope": "Public product page only; no account or jurisdiction-specific eligibility verified."
+      }
+    },
+    {
+      "id": "atlas:UBER",
+      "ticker": "UBER",
+      "company": "Uber Technologies, Inc.",
+      "aliases": [
+        "Uber"
+      ],
+      "exchange": "New York Stock Exchange",
+      "nativeTicker": "UBER",
+      "securityType": "Common Stock",
+      "currency": "USD",
+      "reportingCurrency": "USD",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-19T18:43:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+        "https://robinhood.com/us/en/stocks/UBER/"
+      ],
+      "evidence": "SEC June 2026 10-Q cover lists UBER common stock on New York Stock Exchange. Public Robinhood UBER product page offers buy/sell support. Both read 2026-10-19.",
+      "note": "Public listing and broker-page evidence only; no account, jurisdiction, order, fractional-share or live trading verification. No quote input copied into valuation.",
+      "mic": "XNYS",
+      "robinhood": {
+        "status": "public-buy-sell-support",
+        "url": "https://robinhood.com/us/en/stocks/UBER/",
+        "checkedAt": "2026-10-19",
+        "evidence": "Public Robinhood page says sign up for an account to buy or sell Uber stocks.",
+        "scope": "Public product-page support only; individual account eligibility not verified."
+      }
+    },
+    {
+      "id": "nflx-xnas-common",
+      "ticker": "NFLX",
+      "nativeTicker": "NFLX",
+      "company": "Netflix, Inc.",
+      "aliases": [
+        "Netflix",
+        "奈飞"
+      ],
+      "currency": "USD",
+      "mic": "XNAS",
+      "exchange": "Nasdaq",
+      "securityType": "Common stock",
+      "verified": true,
+      "readiness": "research-pending",
+      "checkedAt": "2026-10-19T19:00:00Z",
+      "sourceURLs": [
+        "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm"
+      ],
+      "evidence": "June 2026 SEC 10-Q cover identifies common stock, NFLX, Nasdaq Global Select Market.",
+      "robinhood": {
+        "status": "public-buy-sell-support",
+        "url": "https://robinhood.com/us/en/stocks/NFLX/",
+        "checkedAt": "2026-10-19",
+        "evidence": "Public product page offers buy or sell Netflix shares.",
+        "scope": "Public product support only; account, jurisdiction and execution eligibility unverified."
+      },
+      "note": "Public product support only; account, jurisdiction and execution eligibility are not verified. No quote enters this dated valuation model."
     }
   ],
   "coverage": [],

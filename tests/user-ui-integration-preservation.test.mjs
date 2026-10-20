@@ -1,5 +1,5 @@
 import {reverseClaudeUiMerge} from './claude-ui-merge-preservation.mjs';
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
 import {reverseUserUiIntegration} from './user-ui-integration-preservation.mjs';
 const root=new URL('..',import.meta.url),read=p=>fs.readFileSync(new URL('../'+p,import.meta.url)),sha=x=>createHash('sha256').update(x).digest('hex'),fixture=JSON.parse(read('tests/fixtures/user-ui-integration-v70.json'));
 test('User UI additions retain reviewed bytes',()=>{for(const[p,h]of Object.entries(fixture.additions))assert.equal(sha(reverseClaudeUiMerge(p,read(p))),h,p);});

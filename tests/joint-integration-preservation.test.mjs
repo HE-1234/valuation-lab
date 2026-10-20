@@ -1,7 +1,7 @@
 import {reverseDecimalDisplay} from './decimal-display-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {createHash} from 'node:crypto';
 import {reverseJointIntegration} from './joint-integration-preservation.mjs';
 const read=path=>fs.readFileSync(new URL('../'+path,import.meta.url));

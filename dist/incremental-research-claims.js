@@ -1,3 +1,6 @@
+import {calculateMcdBridge} from './mcd-research-model.js';
+import {calculateUberBridge} from './uber-research-model.js';
+import {calculateNflxBridge} from './nflx-research-model.js';
 import {calculateUmcBridge} from './umc-research-model.js';
 import {calculateCevaBridge,calculateCevaOperating} from './ceva-valuation.js';
 import {calculateRmbsBridge} from './rmbs-research-model.js';
@@ -17,6 +20,9 @@ const finite=x=>typeof x==='number'&&Number.isFinite(x);
 export function incrementalBridgeDefinition(ticker){const r=incrementalRecord(ticker);return r?structuredClone({...r.bridge,optionDefinitions:r.bridge.options,lines:[],bridgeVersion:r.identity.version}):null;}
 export function calculateIncrementalBridge(d,enterprise,options={}){
  if(incrementalRecord(d?.ticker)?.bridge.type==='ceva-v3')return calculateCevaBridge(d,enterprise,options);
+ if(d?.ticker==='MCD')return calculateMcdBridge(d,enterprise,options);
+ if(d?.ticker==='UBER')return calculateUberBridge(d,enterprise,options);
+ if(d?.ticker==='NFLX')return calculateNflxBridge(d,enterprise,options);
  if(d?.ticker==='UMC')return calculateUmcBridge(d,enterprise,options);
  if(d?.ticker==='RMBS')return calculateRmbsBridge(d,enterprise,options);
  if(incrementalRecord(d?.ticker)?.bridge.type==='keys-v1')return calculateKeysBridge(d,enterprise,options);

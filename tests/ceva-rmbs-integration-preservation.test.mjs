@@ -1,9 +1,13 @@
+import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
+import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
+import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
+import {mcdFixture,MCD_FIXTURE_PATH} from './mcd-integration-preservation.mjs';
 import {simulationUiFixture} from './claude-simulation-ui-preservation.mjs';
 import {umcFixture} from './umc-integration-preservation.mjs';
 import {cevaDeliveryFixture,reverseCevaDelivery} from './ceva-delivery-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -35,13 +39,13 @@ test('exact combined CEVA/RMBS delta reverses to pinned V79 and rejects every mo
  }
 });
 test('combined CEVA/RMBS manifest exhaustively accounts for the production tree with no undeclared changes',()=>{
- const fixture=cevaRmbsFixture(),baseline=baseEntries(),current=filesUnder('dist'),declaredAdditions=[...Object.keys(fixture.additions),...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions)].sort();
+ const fixture=cevaRmbsFixture(),baseline=baseEntries(),current=filesUnder('dist'),declaredAdditions=[...Object.keys(fixture.additions),...Object.keys(nflxFixture().additions),...Object.keys(uberFixture().additions),...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions)].sort();
  assert.equal(git('rev-parse','--show-object-format').toString().trim(),'sha1','Pinned V79 Git blob verification uses this repository object format');
  assert.deepEqual(current.filter(p=>!baseline.has(p)).sort(),declaredAdditions,'Every production addition must have an exact individual hash, with no prefix allowlist');
  assert.deepEqual([...baseline.keys()].filter(p=>!current.includes(p)),[],'No V79 production file may disappear');
  for(const p of Object.keys(fixture.files))assert.ok(baseline.has(p),p+' modifications must exist in pinned V79');
  for(const p of declaredAdditions)assert.ok(!baseline.has(p),p+' additions must not replace a V79 file');
  for(const [p,entry]of baseline){const bytes=read(p),restored=reverseCevaRmbsIntegration(p,bytes);assert.equal(blobSHA(restored),entry.oid,p+' must reverse byte-for-byte to V79; undeclared changes are forbidden');}
- for(const p of declaredAdditions)assert.equal(cevaRmbsSHA(read(p)),(fixture.additions[p]??cevaDeliveryFixture().additions[p]??umcFixture().additions[p]??simulationUiFixture().additions[p]),p+' added production bytes must match exactly');
+ for(const p of declaredAdditions)assert.equal(cevaRmbsSHA(reverseLatestUserUi(p,read(p))),(fixture.additions[p]??cevaDeliveryFixture().additions[p]??umcFixture().additions[p]??nflxFixture().additions[p]??uberFixture().additions[p]??mcdFixture().additions[p]??simulationUiFixture().additions[p]),p+' added production bytes must match exactly');
  const unchanged=[...baseline.keys()].find(p=>!Object.hasOwn(fixture.files,p));assert.ok(unchanged,'The preservation layer must retain unmodified baseline files');const bytes=read(unchanged),mutated=altered(bytes);assert.throws(()=>assert.equal(blobSHA(reverseCevaRmbsIntegration(unchanged,mutated)),baseline.get(unchanged).oid),'An undeclared mutation cannot pass the pinned whole-tree check');
 });

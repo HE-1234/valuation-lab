@@ -84,7 +84,7 @@ export function mountSimulation(root,snapshot,draft,options={}){
  }
  function saveSettings(next,{persist=true,reset=false}={}){
   currentSettings=structuredClone(next);previousView=completedViews.get(visualKey)||previousView;pending();
-  try{config=validate(next);if(isJoint(config)&&annualContext)prepareJointSimulation(annualContext,config);}catch(e){withhold(t('simulationManual.invalid'),e.message);simMessage(find('#mc-output'),'simulationManual.invalid');publish('settings',false);return false;}
+  try{config=validate(next);if(isJoint(config)&&annualContext)prepareJointSimulation(annualContext,config);}catch(e){withhold(t('simulationManual.invalid'),e.message);simMessage(find('#mc-output').firstElementChild,'simulationManual.invalid');publish('settings',false);return false;}
   if(find('#mc-dependence-note'))bindPresentation(find('#mc-dependence-note'),relationshipNote(config.method));updateAnnualScope();find('#mc-trial-count').textContent=fmt(config.trials,0);bindPresentation(find('#mc-error'),'');
   if(persist){configs.set(key,structuredClone(config));customConfigs.set(visualKey,structuredClone(config));options.onConfigChange?.(structuredClone(config));}
   bindPresentation(find('#mc-settings-status'),reset?'Starting ranges follow the current base assumptions.':persist?(options.onConfigChange?'Custom shapes saved with this draft.':'Custom shapes retained for this session.'):(savedConfig?'Custom shapes saved with this draft.':adapter?.defaultNote||'Starting ranges follow the current base assumptions.'));publish('settings',true);return true;

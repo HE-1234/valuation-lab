@@ -1,0 +1,89 @@
+{
+  "corrections": [
+    {
+      "period": "2021-12-31",
+      "field": "basic_weighted_average_shares",
+      "raw_value": 746.3,
+      "normalized_value": 746.3,
+      "source_id": "mcd-20231231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2021-12-31",
+      "field": "diluted_weighted_average_shares",
+      "raw_value": 751.8,
+      "normalized_value": 751.8,
+      "source_id": "mcd-20231231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2022-12-31",
+      "field": "basic_weighted_average_shares",
+      "raw_value": 736.5,
+      "normalized_value": 736.5,
+      "source_id": "mcd-20241231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2022-12-31",
+      "field": "diluted_weighted_average_shares",
+      "raw_value": 741.3,
+      "normalized_value": 741.3,
+      "source_id": "mcd-20241231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2023-12-31",
+      "field": "basic_weighted_average_shares",
+      "raw_value": 727.9,
+      "normalized_value": 727.9,
+      "source_id": "mcd-20251231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2023-12-31",
+      "field": "diluted_weighted_average_shares",
+      "raw_value": 732.3,
+      "normalized_value": 732.3,
+      "source_id": "mcd-20251231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2024-12-31",
+      "field": "basic_weighted_average_shares",
+      "raw_value": 718.3,
+      "normalized_value": 718.3,
+      "source_id": "mcd-20251231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2024-12-31",
+      "field": "diluted_weighted_average_shares",
+      "raw_value": 721.9,
+      "normalized_value": 721.9,
+      "source_id": "mcd-20251231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2025-12-31",
+      "field": "basic_weighted_average_shares",
+      "raw_value": 713.4,
+      "normalized_value": 713.4,
+      "source_id": "mcd-20251231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    },
+    {
+      "period": "2025-12-31",
+      "field": "diluted_weighted_average_shares",
+      "raw_value": 716.4,
+      "normalized_value": 716.4,
+      "source_id": "mcd-20251231.htm",
+      "reason": "Filing table explicitly in millions except per-share data; inline scale 0 / companyfacts unit label is inconsistent. Display amount interpreted as million shares. EPS identity independently checked."
+    }
+  ],
+  "warnings": [
+    "Never choose the SG&A-only D&A tag for FCFF.",
+    "Do not add current debt to the balance-sheet long-term debt line without checking classification: current maturities refinanced under long-term facilities may already be included.",
+    "Companyfacts operating-lease tags in interim data can represent combined finance and operating lease liabilities; use filing presentation and annual lease note instead."
+  ]
+}

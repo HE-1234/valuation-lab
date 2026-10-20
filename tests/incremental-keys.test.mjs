@@ -56,7 +56,7 @@ test('KEYS bridge sensitivities recompute operating funding and retain invalid e
 });
 test('KEYS workspace adds one ready company, clears stale values, restores Undo and exports dated gates',async()=>{
  const storage=new Map(),w=await start(storage);try{
-  assert.equal(w.root.querySelectorAll('[data-research-company]').length,33);w.choose('KEYS');assert.equal(w.getState().readiness,'ready');assert.ok(w.get('#research-results').querySelector('.research-big-value'));assert.match(w.get('.incremental-keys-claim-limits').textContent,/170,244,745/);
+  assert.equal(w.root.querySelectorAll('[data-research-company]').length,36);w.choose('KEYS');assert.equal(w.getState().readiness,'ready');assert.ok(w.get('#research-results').querySelector('.research-big-value'));assert.match(w.get('.incremental-keys-claim-limits').textContent,/170,244,745/);
   assert.equal(w.get('#research-timing-mode'),null);assert.equal(w.get('#annual-growth-horizon'),null);assert.equal(w.get('[data-research-action="normalize"]'),null);
   w.input('#research-notes','KEYS retained notes');const key=r.bridge.options[0].key,selector=w.field('bridge',key),value=w.getState().draft.bridgeInputs[key];w.input(selector,'');assert.equal(w.get('#research-results').querySelector('.research-big-value'),null);w.input(selector,String(value*(r.bridge.options[0].scale||1)));assert.ok(w.get('#research-results').querySelector('.research-big-value'));
   const before=structuredClone(w.getState().draft);w.get(`[data-incremental-scenario="${r.alternatives[0].name}"]`).click();w.action('undo');assert.deepEqual(w.getState().draft,before);

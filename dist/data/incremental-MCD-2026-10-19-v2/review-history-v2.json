@@ -1,0 +1,33 @@
+{
+  "review_date": "2026-10-19",
+  "reviewed_predecessor": "MCD v1",
+  "review_type": "Independent review, separate from package author",
+  "v1_status": "Revisions requested; supplied scenario and allocation arithmetic passed",
+  "v1_coverage": {
+    "independent_test_groups": 9,
+    "inline_observations_matched": 476,
+    "manual_table_observations": 41,
+    "original_source_hashes": 16
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "finding": "Alternative policy basis prose repeated central amounts",
+      "v2_author_response": "Basis generated from each alternative numeric policy; amount-map and text checks added",
+      "independent_v2_disposition": "pending targeted recheck"
+    },
+    {
+      "id": "R2",
+      "finding": "Edited FY restructuring below actual H1 implied a reversal",
+      "v2_author_response": "Input rejected below observed H1; equality and incremental H2 identities tested in all scenarios",
+      "independent_v2_disposition": "pending targeted recheck"
+    }
+  ],
+  "limitations_reaffirmed": [
+    "June finance lease split and grant-level existing-award non-overlap remain unresolved.",
+    "Claim ranges are analyst sensitivities, not confidence intervals or verified fair values.",
+    "Dated operating and conditional-allocation scope only; no current target or funding certification."
+  ],
+  "current_target_approved": false,
+  "funding_certified": false
+}

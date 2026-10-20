@@ -1,7 +1,7 @@
 import {reverseReferencePolicyHooks,reverseLearnQuestionVisibility} from './reference-policy-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV88Fs as fs} from './three-fix-preservation.mjs';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fnRegistry} from '../dist/fn-research-registry.js';

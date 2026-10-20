@@ -1,0 +1,38 @@
+{
+  "ticker": "UBER",
+  "as_of": "2026-10-19",
+  "valuation_anchor": "2026-06-30",
+  "research_package_ready": true,
+  "annual_operating_model_replay_ready": true,
+  "conditional_june_allocation_available": true,
+  "conditional_june_policy_default_selected": false,
+  "conditional_october_engine_available": true,
+  "verified_current_equity_ready": false,
+  "current_target_price": null,
+  "canonical_admission": false,
+  "published": false,
+  "independent_review": "v1 June arithmetic independently reproduced; v1 October changes requested; v2 review pending",
+  "historical_slots": 10,
+  "full_annual_cfo_years": 9,
+  "partial_history": "2016 selected data unaudited; missingcashflow fieldsnull;2017revenue from2020recastselectedcolumn",
+  "author_validation_checks": 696,
+  "blocking_current_admission": [
+    "Independent review of model and source selection",
+    "Complete post-June cash/debt/FX/currentshares rollforward",
+    "Closed-deal consideration and new assets/debt/NCI, especially Careem/Blacklane",
+    "Existing earned awards/options and current financelease claims",
+    "Valuation of minority/put and mixed tax/legal/other obligations",
+    "Investment/AV cash commitments and acquisition scenarios",
+    "Cashfunding/fungibility assessment if using as investment recommendation"
+  ],
+  "large_us_tradable_classification": {
+    "listing": "NYSE:UBER",
+    "direct_common_stock": true,
+    "economic_business": "mobility,delivery,freight platform",
+    "ai_infrastructure_vendor": false,
+    "ai_and_av_risk_material": true
+  },
+  "known_note_proceeds_corrected": true,
+  "actual_october_cash_and_claims_verified": false,
+  "changes_from_prior_version": "See CHANGELOG-v2.md; prior v1 remains immutable"
+}

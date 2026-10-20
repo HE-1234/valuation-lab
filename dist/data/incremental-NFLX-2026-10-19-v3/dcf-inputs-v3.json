@@ -1,0 +1,429 @@
+{
+  "common": {
+    "information_cutoff": "2026-10-19",
+    "capital_anchor": "2026-06-30",
+    "discount_anchor": "2026-06-30",
+    "unit": "USD millions; shares millions; percentages as decimal fractions",
+    "actual_h1_2026": {
+      "revenue": 24809.695,
+      "ebit": 8149.607,
+      "content_amortization": 8529.209,
+      "noncontent_da": 199.105,
+      "ppe_purchases": 414.774
+    },
+    "actual_h1_2026_cash_content": 9911.018,
+    "last_full_year_revenue": 45183.036,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+    "terminal_method": "max(component-based net reinvestment, terminal NOPAT * g / incremental ROIC). Never add both. Terminal includes tax and ongoing content maintenance.",
+    "operating_policy": {
+      "future_sbc": "Core GAAP-like EBIT includes compensation cost. Allocation requires an explicit expense schedule for existing June unvested awards already included in that EBIT and removes only that schedule after tax before valuing those existing awards separately. Future-grant cash replacement excludes the removed existing-award expense. No broad SBC addback; no terminal existing-award addback. Allocation additionally enforces the remaining-expense total and recognition horizon, source-context admission limit under the no-positive-additions convention, and explicit retained compensation/other-cash-cost envelopes.",
+      "leases": "Remain operating: expense retained in EBIT, no lease-debt subtraction and no ROU depreciation addback.",
+      "content": "Cash spending includes additions and liability settlement; opening content liabilities and unrecognized content commitments are not deducted again as debt.",
+      "acquisitions": "Future acquisition cash spending explicitly assumed 0; organic forecast, existing acquired assets embedded. H1 2026 acquisition already in June cash.",
+      "nonoperating_items": "Termination fee and interest income excluded by beginning at operating EBIT; fee cash already in June cash and never added again.",
+      "tax_incentives": "Content spending is net of incentives as represented by the filing cash-flow presentation; no extra incentive asset added to equity.",
+      "working_capital": "Noncontent incremental operating investment assumption includes ordinary operating assets/liabilities and incentive timing. Excludes cash, debt, content assets/liabilities and separate claims."
+    }
+  },
+  "cases": {
+    "bear": {
+      "case_type": "analyst scenario, no assigned probability",
+      "h1_2027_fraction_of_annual_content_cash": 0.5,
+      "wacc": 0.105,
+      "terminal_growth": 0.02,
+      "terminal_incremental_roic": 0.12,
+      "full_year_2026_assumptions": {
+        "revenue": 50000,
+        "ebit_margin": 0.295,
+        "content_amortization": 18100,
+        "cash_content_to_amortization": 1.15,
+        "noncontent_da": 440,
+        "ppe_capex": 1100
+      },
+      "h2_2026_assumptions": {
+        "cash_tax_rate": 0.25,
+        "noncontent_nwc_investment": 700
+      },
+      "annual_assumptions": [
+        {
+          "year": 2027,
+          "revenue_growth": 0.08,
+          "ebit_margin": 0.29,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.36,
+          "cash_content_to_amortization": 1.14,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2028,
+          "revenue_growth": 0.065,
+          "ebit_margin": 0.285,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.36,
+          "cash_content_to_amortization": 1.13,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2029,
+          "revenue_growth": 0.05,
+          "ebit_margin": 0.28,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.355,
+          "cash_content_to_amortization": 1.12,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2030,
+          "revenue_growth": 0.04,
+          "ebit_margin": 0.275,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.35,
+          "cash_content_to_amortization": 1.11,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2031,
+          "revenue_growth": 0.035,
+          "ebit_margin": 0.27,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.345,
+          "cash_content_to_amortization": 1.1,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2032,
+          "revenue_growth": 0.03,
+          "ebit_margin": 0.27,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.34,
+          "cash_content_to_amortization": 1.09,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2033,
+          "revenue_growth": 0.025,
+          "ebit_margin": 0.27,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.34,
+          "cash_content_to_amortization": 1.08,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2034,
+          "revenue_growth": 0.025,
+          "ebit_margin": 0.27,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.34,
+          "cash_content_to_amortization": 1.07,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        },
+        {
+          "year": 2035,
+          "revenue_growth": 0.02,
+          "ebit_margin": 0.27,
+          "cash_tax_rate": 0.25,
+          "content_amortization_pct_revenue": 0.34,
+          "cash_content_to_amortization": 1.06,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.022,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+        }
+      ],
+      "terminal": {
+        "ebit_margin": 0.27,
+        "cash_tax_rate": 0.25,
+        "content_amortization_pct_revenue": 0.34,
+        "cash_content_to_amortization": 1.06,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.022,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.2
+      }
+    },
+    "base": {
+      "case_type": "analyst scenario, no assigned probability",
+      "h1_2027_fraction_of_annual_content_cash": 0.5,
+      "wacc": 0.09,
+      "terminal_growth": 0.025,
+      "terminal_incremental_roic": 0.15,
+      "full_year_2026_assumptions": {
+        "revenue": 51200,
+        "ebit_margin": 0.315,
+        "content_amortization": 18000,
+        "cash_content_to_amortization": 1.1,
+        "noncontent_da": 450,
+        "ppe_capex": 950
+      },
+      "h2_2026_assumptions": {
+        "cash_tax_rate": 0.21,
+        "noncontent_nwc_investment": 500
+      },
+      "annual_assumptions": [
+        {
+          "year": 2027,
+          "revenue_growth": 0.11,
+          "ebit_margin": 0.325,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.35,
+          "cash_content_to_amortization": 1.1,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2028,
+          "revenue_growth": 0.1,
+          "ebit_margin": 0.335,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.345,
+          "cash_content_to_amortization": 1.095,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2029,
+          "revenue_growth": 0.09,
+          "ebit_margin": 0.34,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.34,
+          "cash_content_to_amortization": 1.09,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2030,
+          "revenue_growth": 0.08,
+          "ebit_margin": 0.345,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.335,
+          "cash_content_to_amortization": 1.08,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2031,
+          "revenue_growth": 0.07,
+          "ebit_margin": 0.35,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.33,
+          "cash_content_to_amortization": 1.07,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2032,
+          "revenue_growth": 0.06,
+          "ebit_margin": 0.35,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.325,
+          "cash_content_to_amortization": 1.06,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2033,
+          "revenue_growth": 0.05,
+          "ebit_margin": 0.35,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.32,
+          "cash_content_to_amortization": 1.05,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2034,
+          "revenue_growth": 0.04,
+          "ebit_margin": 0.35,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.32,
+          "cash_content_to_amortization": 1.045,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        },
+        {
+          "year": 2035,
+          "revenue_growth": 0.035,
+          "ebit_margin": 0.35,
+          "cash_tax_rate": 0.21,
+          "content_amortization_pct_revenue": 0.32,
+          "cash_content_to_amortization": 1.04,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.018,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+        }
+      ],
+      "terminal": {
+        "ebit_margin": 0.35,
+        "cash_tax_rate": 0.21,
+        "content_amortization_pct_revenue": 0.32,
+        "cash_content_to_amortization": 1.04,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.018,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.15
+      }
+    },
+    "bull": {
+      "case_type": "analyst scenario, no assigned probability",
+      "h1_2027_fraction_of_annual_content_cash": 0.5,
+      "wacc": 0.08,
+      "terminal_growth": 0.03,
+      "terminal_incremental_roic": 0.2,
+      "full_year_2026_assumptions": {
+        "revenue": 51400,
+        "ebit_margin": 0.32,
+        "content_amortization": 17800,
+        "cash_content_to_amortization": 1.08,
+        "noncontent_da": 460,
+        "ppe_capex": 900
+      },
+      "h2_2026_assumptions": {
+        "cash_tax_rate": 0.18,
+        "noncontent_nwc_investment": 300
+      },
+      "annual_assumptions": [
+        {
+          "year": 2027,
+          "revenue_growth": 0.14,
+          "ebit_margin": 0.34,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.34,
+          "cash_content_to_amortization": 1.08,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2028,
+          "revenue_growth": 0.13,
+          "ebit_margin": 0.35,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.33,
+          "cash_content_to_amortization": 1.075,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2029,
+          "revenue_growth": 0.12,
+          "ebit_margin": 0.36,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.32,
+          "cash_content_to_amortization": 1.07,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2030,
+          "revenue_growth": 0.11,
+          "ebit_margin": 0.37,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.31,
+          "cash_content_to_amortization": 1.065,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2031,
+          "revenue_growth": 0.1,
+          "ebit_margin": 0.375,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.3,
+          "cash_content_to_amortization": 1.06,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2032,
+          "revenue_growth": 0.085,
+          "ebit_margin": 0.38,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.295,
+          "cash_content_to_amortization": 1.055,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2033,
+          "revenue_growth": 0.07,
+          "ebit_margin": 0.38,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.29,
+          "cash_content_to_amortization": 1.05,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2034,
+          "revenue_growth": 0.055,
+          "ebit_margin": 0.38,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.29,
+          "cash_content_to_amortization": 1.045,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        },
+        {
+          "year": 2035,
+          "revenue_growth": 0.045,
+          "ebit_margin": 0.38,
+          "cash_tax_rate": 0.18,
+          "content_amortization_pct_revenue": 0.29,
+          "cash_content_to_amortization": 1.04,
+          "noncontent_da_pct_revenue": 0.009,
+          "ppe_capex_pct_revenue": 0.016,
+          "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+        }
+      ],
+      "terminal": {
+        "ebit_margin": 0.38,
+        "cash_tax_rate": 0.18,
+        "content_amortization_pct_revenue": 0.29,
+        "cash_content_to_amortization": 1.04,
+        "noncontent_da_pct_revenue": 0.009,
+        "ppe_capex_pct_revenue": 0.016,
+        "incremental_noncontent_nwc_pct_delta_revenue": 0.1
+      }
+    }
+  },
+  "assumption_basis": {
+    "2026_base": "Revenue midpoint and 31.5% margin match July 16 guidance; amortization, capex, D&A, taxes and working capital are separate analyst estimates. Full year cash content / amortization 1.1x matches management indication.",
+    "long_term": "Revenue decelerates to mature growth; margin ranges reflect uncertain scale and reinvestment. These paths are not issuer guidance or measured probabilities.",
+    "discount_rate": "8%/9%/10.5% subjective nominal-USD required-return scenarios, not observed current WACC, CAPM regression or a verified market discount rate.",
+    "tax": "18%/21%/25% analyst cash-tax assumptions acknowledge uncertain SBC benefits, domestic deductions, foreign taxes and tax incentive timing; no perpetual extrapolation of 2025 13.7% book tax rate.",
+    "content": "Explicitly model amortization and cash spend; do not add back content amortization without matching reinvestment. Terminal ROIC floor protects against free perpetual growth.",
+    "source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+      "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+      "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm"
+    ]
+  }
+}

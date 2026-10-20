@@ -1,7 +1,11 @@
+import {reverseLatestUserUi} from './latest-user-ui-preservation.mjs';
+import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
+import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
+import {mcdFixture,MCD_FIXTURE_PATH,MCD_ADDED_PATHS,reverseMcdIntegration} from './mcd-integration-preservation.mjs';
 import {reverseSimulationRangeHeader} from './simulation-range-header-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
@@ -26,7 +30,7 @@ function filesUnder(relative){
 }
 function verifyWholeTree(current,readBytes=read){
  const baseline=simulationUiBaseEntries(),fixture=simulationUiFixture();
- assert.deepEqual(current,[...baseline.keys(),...SIM_UI_ADDED_PATHS].sort(),'Every production path must be immutable baseline or the one exact reviewed UI addition');
+ assert.deepEqual(current,[...baseline.keys(),...SIM_UI_ADDED_PATHS,...MCD_ADDED_PATHS,...UBER_ADDED_PATHS,...NFLX_ADDED_PATHS].sort(),'Every production path must be immutable baseline or an exact reviewed UI/MCD/Uber addition');
  for(const [p,entry]of baseline)assert.equal(simulationUiBlobSHA(reverseClaudeSimulationUi(p,readBytes(p))),entry.oid,p+' must reverse byte-for-byte to immutable published baseline');
  for(const [p,sha]of Object.entries(fixture.additions))assert.equal(simulationUiSHA(reverseClaudeSimulationUi(p,readBytes(p))),sha,p+' exact added bytes');
 }
@@ -79,15 +83,15 @@ test('Simulation UI reverses all reviewed modifications to immutable originals a
   assert.deepEqual(Buffer.from(item.beforeText),original);assert.deepEqual(reverseClaudeSimulationUi(p,bytes),original);
   assert.throws(()=>reverseClaudeSimulationUi(p,original),/exact reviewed Claude simulation UI bytes/,'Double reversal is forbidden');
  }
- for(const p of SIM_UI_ADDED_PATHS){const bytes=read(p);assert.equal(simulationUiSHA(bytes),f.additions[p]);assert.strictEqual(reverseClaudeSimulationUi(p,bytes),bytes);}
+ for(const p of SIM_UI_ADDED_PATHS){const bytes=read(p),prior=reverseLatestUserUi(p,bytes);assert.equal(simulationUiSHA(prior),f.additions[p]);assert.deepEqual(reverseClaudeSimulationUi(p,bytes),prior);}
  for(const p of [...SIM_UI_MODIFIED_PATHS,...SIM_UI_ADDED_PATHS]){
   const bytes=read(p);for(const changed of [altered(bytes),Buffer.concat([bytes,Buffer.from('\n/* unrelated */')]),bytes.subarray(0,bytes.length-1)])assert.throws(()=>reverseClaudeSimulationUi(p,changed),/exact reviewed Claude simulation UI bytes/,p+' every byte mutation must fail');
  }
 });
 
 test('Simulation UI accounts for all 849 production files and preserves all 848 baseline blobs without broad allowances',()=>{
- const current=filesUnder('dist'),baseline=simulationUiBaseEntries();assert.equal(baseline.size,848);assert.equal(current.length,849);verifyWholeTree(current);
- assert.deepEqual(current.filter(p=>!baseline.has(p)),SIM_UI_ADDED_PATHS);
+ const current=filesUnder('dist'),baseline=simulationUiBaseEntries();assert.equal(baseline.size,848);assert.equal(current.length,849+MCD_ADDED_PATHS.length+UBER_ADDED_PATHS.length+NFLX_ADDED_PATHS.length);verifyWholeTree(current);
+ assert.deepEqual(current.filter(p=>!baseline.has(p)),[...SIM_UI_ADDED_PATHS,...MCD_ADDED_PATHS,...UBER_ADDED_PATHS,...NFLX_ADDED_PATHS].sort());
  for(const [p,entry]of baseline)assert.equal(fs.statSync(path.join(root,p)).mode&0o111,entry.mode==='100755'?0o111:0,p+' executable mode stays unchanged');
  for(const p of SIM_UI_ADDED_PATHS)assert.equal(fs.statSync(path.join(root,p)).mode&0o111,0,p+' new UI script is nonexecutable');
  const unchanged='dist/engine.js',bytes=read(unchanged);assert.strictEqual(reverseClaudeSimulationUi(unchanged,bytes),bytes);
@@ -103,7 +107,7 @@ test('Simulation UI reversal runs exactly once before UMC mount and existing int
  assert.equal(helper.split(call).length-1,1);assert.ok(helper.indexOf(call)<helper.indexOf('if(path!==UMC_MC_MODIFIED_PATH)'));
  for(const p of SIM_UI_MODIFIED_PATHS)assert.deepEqual(reverseUmcSimulationMount(p,read(p)),git('show',SIM_UI_BASE_COMMIT+':'+p),p+' UI reversal reaches UMC repair first');
  const p=UMC_MC_MODIFIED_PATH,bytes=read(p);
- assert.strictEqual(reverseClaudeSimulationUi(p,bytes),bytes,'The new UI layer cannot absorb the earlier mount repair');
+ assert.deepEqual(reverseClaudeSimulationUi(p,bytes),reverseMcdIntegration(p,bytes),'The UI layer cannot absorb the earlier mount repair after the newer MCD reversal');
  assert.deepEqual(reverseUmcSimulationMount(p,bytes),git('show',UMC_MC_BASE_COMMIT+':'+p));
  assert.deepEqual(reverseUmcIntegration(p,bytes),git('show',UMC_BASE_COMMIT+':'+p));
 });
@@ -111,7 +115,7 @@ test('Simulation UI reversal runs exactly once before UMC mount and existing int
 test('Simulation UI adds only its own fixture and retains every published earlier fixture byte',()=>{
  const rows=git('ls-tree','-r','-z','--full-tree',SIM_UI_BASE_COMMIT,'--','tests/fixtures').toString().split('\0').filter(Boolean);
  const entries=rows.map(row=>{const tab=row.indexOf('\t'),[mode,type,oid]=row.slice(0,tab).split(' ');assert.equal(type,'blob');return [row.slice(tab+1),{mode,oid}];});
- assert.ok(entries.length>30);assert.deepEqual(filesUnder('tests/fixtures'),[...entries.map(([p])=>p),SIM_UI_FIXTURE_PATH].sort());
+ assert.ok(entries.length>30);assert.deepEqual(filesUnder('tests/fixtures'),[...entries.map(([p])=>p),SIM_UI_FIXTURE_PATH,MCD_FIXTURE_PATH,'tests/fixtures/mcd-prior33-final-ui.json',UBER_FIXTURE_PATH,'tests/fixtures/uber-prior34-mcd-v85.json',NFLX_FIXTURE_PATH,'tests/fixtures/nflx-prior35-mcd-uber-v85.json'].sort());
  for(const [p,{oid}]of entries)assert.equal(simulationUiBlobSHA(read(p)),oid,p+' earlier immutable fixture stays byte-identical');
 });
 

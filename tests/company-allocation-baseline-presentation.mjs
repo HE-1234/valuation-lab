@@ -2,7 +2,7 @@
 // Current numerical/model captures still run the shipping engine. The new UI has
 // separate runtime tests, and all source edits are hash-pinned by reversal tests.
 import {allocationRepairFixture,allocationRepairSHA} from './company-allocation-repair-preservation.mjs';
-import {startResearchWorkspace} from './research-workspace-harness.mjs';
+import {startResearchWorkspace} from './research-workspace-v87-golden-harness.mjs';
 import assert from 'node:assert/strict';
 let baseline;
 export async function allocationBaselineView(){

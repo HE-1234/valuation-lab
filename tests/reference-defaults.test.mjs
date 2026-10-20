@@ -1,7 +1,7 @@
 import {assertFreshJointDefaults,preJointAnnualDefaults} from './joint-default-contract.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {reverseReferencePolicyHooks} from './reference-policy-preservation.mjs';
 import {incrementalRecord,incrementalPackages} from '../dist/incremental-registry.js';

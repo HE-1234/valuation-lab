@@ -1,3 +1,4 @@
+import {applyTsmReceiptCorrection} from '../dist/tsm-receipt-correction.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -69,7 +70,7 @@ test('saved old presets and edits remain exact; explicit research applies review
 });
 test('fresh UI cases select current wrapper and export separate dated review provenance',async()=>{
  const h=await startResearchWorkspace();
- for(const p of bundle().presets){h.select(p.ticker);assert.deepEqual(withoutTime(h.getState().draft),withoutTime(draft(p.ticker)));}
+ for(const p of bundle().presets){h.select(p.ticker);assert.deepEqual(withoutTime(h.getState().draft),withoutTime(applyTsmReceiptCorrection(draft(p.ticker))));}
  h.select('GOOG');h.action('export');assert.equal(h.downloads[0].value.draft.terminalGrowthReview.asOf,'2026-10-18');assert.equal(h.downloads[0].value.draft.informationAsOf,'2026-10-17');
  assert.match(h.get('#research-preset-context').textContent,/Terminal-growth review/);assert.match(h.get('#research-preset-context').textContent,/final explicit growth remains 2.5%/);
  assert.doesNotMatch(h.get('#research-preset-context').textContent,/four-factor model deliberately does not represent/);

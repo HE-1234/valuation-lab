@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import {createHash} from 'node:crypto';
 import {reverseCrdoIntegration} from './crdo-integration-preservation.mjs';
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url)),sha=x=>createHash('sha256').update(x).digest('hex'),fixture=JSON.parse(read('tests/fixtures/crdo-integration-v71.json'));
 test('CRDO all public additions retain reviewed exact bytes and no raw filings',()=>{for(const[p,h]of Object.entries(fixture.additions)){assert.equal(sha(read(p)),h,p);assert.doesNotMatch(p,/\/raw\/|\/transcripts\//);}assert.equal(Object.keys(fixture.files).length,11);});

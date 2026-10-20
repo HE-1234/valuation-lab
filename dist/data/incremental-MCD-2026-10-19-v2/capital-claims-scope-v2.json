@@ -1,0 +1,145 @@
+{
+  "ticker": "MCD",
+  "capital_anchor": "2026-06-30",
+  "information_cutoff": "2026-10-19",
+  "current_target": null,
+  "current_upside": null,
+  "default_dated_allocation": null,
+  "known_june": {
+    "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+    "cash": 822,
+    "debt_balance_sheet": 39863,
+    "debt_fair_value_approximate": 38300,
+    "common_shares_exact": 707641531,
+    "shares_locator": "Cover, count explicitly as of June 30, 2026; inline fact f-24, context c-2.",
+    "h1_basic_weighted_shares_m": 709.9,
+    "h1_diluted_weighted_shares_m": 712.3,
+    "q2_diluted_weighted_shares_m": 711.1,
+    "total_lease_current": 690,
+    "total_lease_noncurrent": 14039,
+    "finance_lease_split": null,
+    "net_ppe": 28479,
+    "lease_rou_assets_total": 14459,
+    "affiliate_carrying_amount": 2896,
+    "long_term_income_taxes": 176,
+    "current_income_taxes": 327,
+    "accrued_interest": 428,
+    "other_long_term_liabilities": 677,
+    "restructuring_accrual": 44
+  },
+  "lease_reference_december_only": {
+    "date": "2025-12-31",
+    "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+    "operating_liabilities": 12488,
+    "finance_liabilities": 2352,
+    "operating_rou": 12438,
+    "finance_rou": 2168,
+    "new_finance_rou_assets_2025": 468,
+    "note_total_lease_liability": 14840,
+    "balance_sheet_total_lease_liability": 14841,
+    "rounding_difference": 1,
+    "current_use": "Not rolled forward to June without explicit assumption. Companyfacts interim OperatingLeaseLiability tags correspond to total lease balance presentation."
+  },
+  "awards_reference_december_only": {
+    "date": "2025-12-31",
+    "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+    "options_exact_plan_table": 8782269,
+    "rsu_exact_plan_table": 1164094,
+    "total_issued_upon_exercise_or_vesting": 9946363,
+    "ungranted_plan_capacity": 17830010,
+    "option_note_weighted_exercise_price": 228.19,
+    "plan_table_weighted_exercise_price": 236.04,
+    "exercise_price_discrepancy": "Different reported weighted-exercise-price figures not reconciled; neither is forced into a current options valuation.",
+    "option_exercisable_m_rounded": 6.3,
+    "option_total_m_rounded": 8.8,
+    "option_remaining_life_years": 5.3,
+    "unrecognized_compensation_cost": 198,
+    "unrecognized_service_period_years": 1.5,
+    "june_award_count": null,
+    "june_existing_award_value": null,
+    "current_use": "Dates and unknowns preserved. Available plan capacity is not an existing award; RSUs and options differ economically."
+  },
+  "other_claims": {
+    "minimum_operating_cash": null,
+    "incremental_existing_award_claim": null,
+    "other_noncommon_claims": null,
+    "affiliate_equity_value": null,
+    "other_nonoperating_asset_value": null,
+    "tax_source_reconciliation_needed": "2025 10-K balance-sheet long-term income taxes =139, while tax-note footnote says 353 of unrecognized tax benefits included in that line (2024 also differs). Preserve both; do not manufacture reconciliation or double reserve.",
+    "benefit_reference": "2025 supplemental benefit obligation 421, in other liabilities; June roll-forward not separately verified. Do not add it atop a blanket other-liability reserve without removing overlap.",
+    "deferred_taxes": "No asset add-on in core. Normalized cash tax is forecast; deferred tax/uncertain tax settlement scope requires explicit capital review.",
+    "affiliate_scope": "June Grand Foods holding stake 48%, carrying 2134; Japan 35%, carrying 658 and quoted stake fair value 2161. Total all affiliates carrying 2896. Equity earnings excluded from model; royalties retained. Valuing ownership separately therefore requires values net of royalty obligations, not systemwide sales multiples."
+  },
+  "capital_events": [
+    {
+      "date": "2026-03-31",
+      "fact": "Exact common shares 710505859",
+      "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000051/mcd-20260331.htm"
+    },
+    {
+      "date": "2026-06-30",
+      "fact": "Exact common shares 707641531; H1 cash buybacks 1251 and cash dividends 2640. Q2 publicly announced-program purchases 2973917 shares, remaining authority 11731806872 dollars. Authorization does not imply future issuance-free accretion.",
+      "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm"
+    },
+    {
+      "date": "2026-09-23",
+      "fact": "NEXT support and capital plan included in forecast information; no post-June balance-sheet/share roll-forward asserted.",
+      "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000076/exhibit991-investorupdate2.htm"
+    }
+  ],
+  "bridge_rules": [
+    "No market price/upside/current target.",
+    "June cash/debt/exact common shares are matched in date.",
+    "Default equity allocation blocked; use explicit policy, not zeros.",
+    "Operating lease liabilities are not subtracted because operating rent remains in EBIT.",
+    "Finance leased asset additions are deducted as economic capex, finance debt separately deducted only under explicit policy.",
+    "No real estate/ROU/franchisee systemwide asset add-on: operating cash flows already capture their use.",
+    "No second deduction for future rent relief/capital support; each is charged once in core.",
+    "No buyback cash inflow or free share shrinkage in FCFF.",
+    "No affiliate carrying-value addition while leaving equity-method earnings in EBIT.",
+    "Full SBC cash replacement stays in operating forecast. Existing-award reserve must be incremental to compensation already charged."
+  ],
+  "not_a_funding_model": "The DCF values operating cash flows; it does not certify debt refinancing, annual dividends/buybacks, daily liquidity, or cash fungibility. Optional allocations are arithmetic illustrations only; no funding-certified admission.",
+  "observed_distribution_funding_context": {
+    "units": "USD millions",
+    "funding_certified": false,
+    "interpretation": "CFO less cash capex compared with discretionary distributions is a limited observed cash-flow check, not FCFF or a solvency, refinancing or dividend-safety test. Other investing, financing and FX flows are not included in this residual. No projected distributions are assumed in the operating DCF.",
+    "periods": [
+      {
+        "period": "FY2025",
+        "cfo": 10551,
+        "cash_capex": 3365,
+        "cfo_less_capex": 7186,
+        "cash_dividends": 5115,
+        "cash_buybacks": 2056,
+        "total_distributions": 7171,
+        "residual_before_other_flows": 15,
+        "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+        "locator": "Consolidated Statement of Cash Flows, year ended December 31, 2025"
+      },
+      {
+        "period": "H1 2026",
+        "cfo": 5222,
+        "cash_capex": 1516,
+        "cfo_less_capex": 3706,
+        "cash_dividends": 2640,
+        "cash_buybacks": 1251,
+        "total_distributions": 3891,
+        "residual_before_other_flows": -185,
+        "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+        "locator": "Condensed Consolidated Statement of Cash Flows, six months ended June 30, 2026"
+      }
+    ],
+    "debt_classification_reference": {
+      "date": "2025-12-31",
+      "source": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+      "locator": "Debt Financing, Line of Credit Agreements and Debt Obligations footnote (3)",
+      "reported_2026_maturities": 0,
+      "short_term_borrowings_classified_long_term": 798,
+      "current_other_debt_maturities_classified_long_term": 725,
+      "short_term_obligations_classified_long_term_rounded": 1500,
+      "supporting_credit_line_expiration": "June 2028",
+      "interpretation": "The zero maturity bucket includes reclassification under the long-term credit line; it does not establish no near-term financing dependence. These obligations are already inside reported debt and are not added again."
+    }
+  }
+}

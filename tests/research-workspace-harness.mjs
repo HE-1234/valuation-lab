@@ -12,7 +12,10 @@ const dataKey=name=>name.slice(5).replace(/-([a-z])/g,(_,letter)=>letter.toUpper
 export function minimalDocument(){
  let focused=null;
  function matches(element,selector){
-  if(element.nodeType!==1)return false;if(selector==='*')return true;
+  if(element.nodeType!==1)return false;selector=selector.trim();if(selector==='*')return true;
+  if(selector.includes(','))return selector.split(',').some(part=>matches(element,part));
+  const relation=selector.match(/^(.*?)\s*(>)?\s+([^ >]+)$/);
+  if(relation){if(!matches(element,relation[3]))return false;let parent=element.parentElement;if(relation[2])return !!parent&&matches(parent,relation[1]);while(parent){if(matches(parent,relation[1]))return true;parent=parent.parentElement;}return false;}
   const chunks=selector.match(/(?:\[[^\]]+\]|[#.][\w-]+|^[\w-]+)/g)||[];
   if(!chunks.length)return false;
   return chunks.every(chunk=>{
@@ -40,7 +43,13 @@ export function minimalDocument(){
   get childNodes(){return this.children;}
   get parentElement(){return this.parent;}
   get isConnected(){return this===document.root||!!this.parent?.isConnected;}
-  get classList(){return {contains:name=>(this.attrs.class||'').split(/\s+/).includes(name)};}
+  get classList(){return {contains:name=>(this.attrs.class||'').split(/\s+/).includes(name),add:(...names)=>{this.className=[...new Set([...this.className.split(/\s+/).filter(Boolean),...names])].join(' ');},remove:(...names)=>{this.className=this.className.split(/\s+/).filter(n=>!names.includes(n)).join(' ');}};}
+  closest(selector){let node=this;while(node){if(matches(node,selector))return node;node=node.parentElement;}return null;}
+  before(node){this.parentNode?.insertBefore(node,this);}
+  after(node){this.parentNode?.insertBefore(node,this.nextSibling);}
+  prepend(...nodes){for(const node of nodes.reverse())this.insertBefore(node,this.children[0]||null);}
+  append(...nodes){for(const node of nodes)this.appendChild(node);}
+  insertAdjacentHTML(position,html){if(position!=='beforeend')throw Error('Unsupported fixture insertion '+position);const fragment=document.createElement('div');fragment.innerHTML=html;for(const child of [...fragment.children])this.appendChild(child);}
   contains(element){return element===this||this.descendants().includes(element);}
   set innerHTML(html){
    if(focused&&focused!==this&&this.contains(focused))focused=null;
@@ -72,6 +81,7 @@ export function minimalDocument(){
   querySelectorAll(selector){return this.descendants().filter(element=>matches(element,selector));}
   setAttribute(name,value){this.attrs[name]=String(value);if(name.startsWith('data-'))this.dataset[dataKey(name)]=String(value);}
   getAttribute(name){return this.attrs[name]??null;}
+  hasAttribute(name){return Object.hasOwn(this.attrs,name);}
   removeAttribute(name){delete this.attrs[name];if(name.startsWith('data-'))delete this.dataset[dataKey(name)];}
   appendChild(node){return this.insertBefore(node,null);}
   insertBefore(node,reference){if(node===reference)return node;if(reference&&reference.parent!==this)throw Error('Reference is not a child');node.remove();const index=reference?this.children.indexOf(reference):this.children.length;this.children.splice(index,0,node);node.parent=this;return node;}

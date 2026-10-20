@@ -13,8 +13,10 @@
 .annual-revenue-growth{border-top:1px solid var(--line);padding-top:16px;margin:18px 0 22px}
 .annual-revenue-growth .approved-plot-heading{flex-wrap:wrap;gap:8px}
 .annual-revenue-growth h3{margin:0;font-size:16px}
-.annual-revenue-growth .annual-revenue-growth-bars{grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:22px 12px;padding-top:20px}
-.annual-revenue-growth .approved-growth-column{height:156px;border-radius:3px}
+/* Keep the common plot aligned while wrapped annotations grow below it. */
+.annual-revenue-growth .annual-revenue-growth-bars{grid-template-columns:repeat(auto-fit,minmax(64px,1fr));gap:22px 12px;padding-top:20px;align-items:start}
+.annual-revenue-growth .approved-growth-column{height:auto;min-height:156px;border-radius:3px}
+.annual-revenue-growth .approved-growth-year{overflow-wrap:anywhere}
 .annual-revenue-growth .approved-growth-column:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .annual-revenue-growth .approved-growth-track{height:108px}
 .annual-revenue-growth .approved-growth-bar{animation:annual-revenue-grow 460ms ease-out both}

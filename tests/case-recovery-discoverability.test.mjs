@@ -2,7 +2,7 @@ import {reverseMethodologyDocumentation} from './simulation-methodology-preserva
 // Synthetic-DOM recovery and presentation checks; not browser geometry or AT certification.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {startResearchWorkspace} from './research-workspace-harness.mjs';
 import {incrementalPackages} from '../dist/incremental-registry.js';

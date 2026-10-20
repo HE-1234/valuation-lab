@@ -1,0 +1,3533 @@
+{
+  "status": "PASS",
+  "author_checks": 881,
+  "external_review": "V1 independent source/arithmetic review complete; V2 corrections awaiting targeted independent recheck",
+  "cutoff": "2026-10-19",
+  "scope": "MCD focused history/model/claim guards only. No integration or current-target approval.",
+  "checks": [
+    {
+      "name": "exactly ten consecutive fiscal years",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2016 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2016 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2016 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2016 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2016 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2016 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2016 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2016 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2016 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2016 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2016 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2016 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2017 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2017 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2017 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2017 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2017 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2017 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2017 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2017 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2017 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2017 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2017 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2017 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2018 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2018 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2018 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2018 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2018 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2018 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2018 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2018 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2018 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2018 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2018 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2018 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2019 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2019 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2019 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2019 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2019 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2019 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2019 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2019 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2019 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2019 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2019 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2019 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2020 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2020 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2020 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2020 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2020 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2020 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2020 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2020 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2020 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2020 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2020 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2020 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2021 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2021 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2021 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2021 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2021 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2021 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2021 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2021 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2021 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2021 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2021 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2021 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2022 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2022 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2022 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2022 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2022 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2022 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2022 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2022 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2022 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2022 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2022 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2022 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2023 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2023 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2023 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2023 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2023 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2023 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2023 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2023 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2023 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2023 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2023 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2023 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2024 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2024 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2024 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2024 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2024 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2024 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2024 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2024 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2024 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2024 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2024 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2024 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite net_income",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite cfo",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite sbc",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2025 present finite company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2025 revenue reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2025 rent royalty fees reconcile",
+      "pass": true
+    },
+    {
+      "name": "2025 net income reconciliation",
+      "pass": true
+    },
+    {
+      "name": "2025 diluted EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2025 basic EPS and million-share normalization",
+      "pass": true
+    },
+    {
+      "name": "2025 restaurants reconcile",
+      "pass": true
+    },
+    {
+      "name": "2025 ownership cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2025 franchise sales cohorts reconcile",
+      "pass": true
+    },
+    {
+      "name": "2025 system sales excludes fee double count",
+      "pass": true
+    },
+    {
+      "name": "2025 CFO-capex distinct from FCFF",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance franchise_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance company_restaurant_sales",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance rent_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance royalty_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance initial_franchise_fee_revenue",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance ebit_gaap",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance net_income",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance pretax_income",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance income_tax_expense",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance cfo",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance cash_capex",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance consolidated_da_cash_flow",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance sbc",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance basic_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance diluted_weighted_average_shares",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance total_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance franchised_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2025 primary provenance company_restaurants",
+      "pass": true
+    },
+    {
+      "name": "2016 and2017 missing other revenue remain null",
+      "pass": true
+    },
+    {
+      "name": "2025 total DA is2199 not457",
+      "pass": true
+    },
+    {
+      "name": "June exact cover shares matched to date",
+      "pass": true
+    },
+    {
+      "name": "June total versus primary affiliate income separated",
+      "pass": true
+    },
+    {
+      "name": "June finance lease split stays missing",
+      "pass": true
+    },
+    {
+      "name": "output replay equality",
+      "pass": true
+    },
+    {
+      "name": "bear correct periods",
+      "pass": true
+    },
+    {
+      "name": "bear default per share withheld",
+      "pass": true
+    },
+    {
+      "name": "bear EV decomposition",
+      "pass": true
+    },
+    {
+      "name": "bear terminal fraction",
+      "pass": true
+    },
+    {
+      "name": "bear terminal reinvestment",
+      "pass": true
+    },
+    {
+      "name": "bear terminal PV timing",
+      "pass": true
+    },
+    {
+      "name": "bear 2026-H2 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2026-H2 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2026-H2 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2026-H2 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2026-H2 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2026-H2 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2026-H2 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2027 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2027 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2027 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2027 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2027 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2027 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2027 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2028 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2028 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2028 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2028 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2028 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2028 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2028 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2029 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2029 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2029 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2029 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2029 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2029 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2029 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2030 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2030 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2030 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2030 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2030 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2030 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2030 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2031 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2031 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2031 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2031 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2031 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2031 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2031 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2032 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2032 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2032 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2032 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2032 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2032 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2032 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2033 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2033 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2033 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2033 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2033 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2033 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2033 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2034 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2034 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2034 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2034 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2034 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2034 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2034 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2035 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2035 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2035 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2035 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2035 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2035 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2035 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear 2036 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bear 2036 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bear 2036 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bear 2036 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bear 2036 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bear 2036 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bear 2036 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bear H2 capex subtracts observed H1",
+      "pass": true
+    },
+    {
+      "name": "bear H2 DA subtracts observed H1",
+      "pass": true
+    },
+    {
+      "name": "base correct periods",
+      "pass": true
+    },
+    {
+      "name": "base default per share withheld",
+      "pass": true
+    },
+    {
+      "name": "base EV decomposition",
+      "pass": true
+    },
+    {
+      "name": "base terminal fraction",
+      "pass": true
+    },
+    {
+      "name": "base terminal reinvestment",
+      "pass": true
+    },
+    {
+      "name": "base terminal PV timing",
+      "pass": true
+    },
+    {
+      "name": "base 2026-H2 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2026-H2 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2026-H2 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2026-H2 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2026-H2 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2026-H2 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2026-H2 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2027 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2027 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2027 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2027 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2027 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2027 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2027 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2028 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2028 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2028 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2028 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2028 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2028 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2028 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2029 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2029 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2029 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2029 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2029 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2029 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2029 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2030 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2030 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2030 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2030 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2030 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2030 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2030 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2031 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2031 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2031 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2031 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2031 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2031 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2031 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2032 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2032 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2032 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2032 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2032 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2032 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2032 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2033 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2033 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2033 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2033 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2033 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2033 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2033 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2034 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2034 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2034 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2034 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2034 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2034 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2034 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2035 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2035 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2035 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2035 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2035 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2035 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2035 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base 2036 revenue components",
+      "pass": true
+    },
+    {
+      "name": "base 2036 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "base 2036 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "base 2036 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "base 2036 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "base 2036 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "base 2036 no units double count",
+      "pass": true
+    },
+    {
+      "name": "base H2 capex subtracts observed H1",
+      "pass": true
+    },
+    {
+      "name": "base H2 DA subtracts observed H1",
+      "pass": true
+    },
+    {
+      "name": "bull correct periods",
+      "pass": true
+    },
+    {
+      "name": "bull default per share withheld",
+      "pass": true
+    },
+    {
+      "name": "bull EV decomposition",
+      "pass": true
+    },
+    {
+      "name": "bull terminal fraction",
+      "pass": true
+    },
+    {
+      "name": "bull terminal reinvestment",
+      "pass": true
+    },
+    {
+      "name": "bull terminal PV timing",
+      "pass": true
+    },
+    {
+      "name": "bull 2026-H2 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2026-H2 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2026-H2 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2026-H2 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2026-H2 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2026-H2 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2026-H2 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2027 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2027 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2027 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2027 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2027 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2027 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2027 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2028 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2028 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2028 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2028 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2028 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2028 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2028 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2029 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2029 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2029 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2029 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2029 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2029 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2029 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2030 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2030 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2030 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2030 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2030 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2030 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2030 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2031 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2031 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2031 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2031 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2031 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2031 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2031 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2032 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2032 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2032 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2032 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2032 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2032 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2032 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2033 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2033 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2033 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2033 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2033 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2033 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2033 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2034 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2034 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2034 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2034 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2034 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2034 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2034 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2035 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2035 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2035 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2035 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2035 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2035 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2035 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull 2036 revenue components",
+      "pass": true
+    },
+    {
+      "name": "bull 2036 system sales not corporate revenue",
+      "pass": true
+    },
+    {
+      "name": "bull 2036 rent relief once",
+      "pass": true
+    },
+    {
+      "name": "bull 2036 FCFF identity",
+      "pass": true
+    },
+    {
+      "name": "bull 2036 discount exponent",
+      "pass": true
+    },
+    {
+      "name": "bull 2036 positive cashflows",
+      "pass": true
+    },
+    {
+      "name": "bull 2036 no units double count",
+      "pass": true
+    },
+    {
+      "name": "bull H2 capex subtracts observed H1",
+      "pass": true
+    },
+    {
+      "name": "bull H2 DA subtracts observed H1",
+      "pass": true
+    },
+    {
+      "name": "0 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "0 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "0 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "1 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "1 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "1 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "2 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "2 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "2 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "3 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "3 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "3 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "4 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "4 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "4 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "5 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "5 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "5 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "6 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "6 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "6 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "7 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "7 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "7 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "8 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "8 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "8 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "9 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "9 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "9 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "10 NEXT FCFF single charge",
+      "pass": true
+    },
+    {
+      "name": "10 NEXT does not create NWC credit",
+      "pass": true
+    },
+    {
+      "name": "10 margin derived after rent relief",
+      "pass": true
+    },
+    {
+      "name": "NEXT not also charged to terminal after finite expiry",
+      "pass": true
+    },
+    {
+      "name": "NEXT operating EV difference equals one PV of support",
+      "pass": true
+    },
+    {
+      "name": "base2030 support sum5000",
+      "pass": true
+    },
+    {
+      "name": "base2036 support sum8500",
+      "pass": true
+    },
+    {
+      "name": "base2030 margin not forced to management target",
+      "pass": true
+    },
+    {
+      "name": "wacc direction",
+      "pass": true
+    },
+    {
+      "name": "terminal_roic direction",
+      "pass": true
+    },
+    {
+      "name": "royalty_rate_shift direction",
+      "pass": true
+    },
+    {
+      "name": "rent_rate_shift direction",
+      "pass": true
+    },
+    {
+      "name": "nan WACC",
+      "pass": true
+    },
+    {
+      "name": "inf growth",
+      "pass": true
+    },
+    {
+      "name": "bool WACC",
+      "pass": true
+    },
+    {
+      "name": "g equals WACC",
+      "pass": true
+    },
+    {
+      "name": "g equals ROIC",
+      "pass": true
+    },
+    {
+      "name": "negative capex",
+      "pass": true
+    },
+    {
+      "name": "capex belowH1",
+      "pass": true
+    },
+    {
+      "name": "DA belowH1",
+      "pass": true
+    },
+    {
+      "name": "short annual path",
+      "pass": true
+    },
+    {
+      "name": "negative NWC ratio",
+      "pass": true
+    },
+    {
+      "name": "future date mismatch",
+      "pass": true
+    },
+    {
+      "name": "zero exact shares",
+      "pass": true
+    },
+    {
+      "name": "noninteger exact shares",
+      "pass": true
+    },
+    {
+      "name": "bear restructuring below observed H1 rejected 0",
+      "pass": true
+    },
+    {
+      "name": "bear restructuring below observed H1 rejected 97.99",
+      "pass": true
+    },
+    {
+      "name": "bear restructuring equal to H1 allowed",
+      "pass": true
+    },
+    {
+      "name": "bear incremental H2 restructuring EBIT identity",
+      "pass": true
+    },
+    {
+      "name": "bear incremental H2 restructuring FCFF tax identity",
+      "pass": true
+    },
+    {
+      "name": "base restructuring below observed H1 rejected 0",
+      "pass": true
+    },
+    {
+      "name": "base restructuring below observed H1 rejected 97.99",
+      "pass": true
+    },
+    {
+      "name": "base restructuring equal to H1 allowed",
+      "pass": true
+    },
+    {
+      "name": "base incremental H2 restructuring EBIT identity",
+      "pass": true
+    },
+    {
+      "name": "base incremental H2 restructuring FCFF tax identity",
+      "pass": true
+    },
+    {
+      "name": "bull restructuring below observed H1 rejected 0",
+      "pass": true
+    },
+    {
+      "name": "bull restructuring below observed H1 rejected 97.99",
+      "pass": true
+    },
+    {
+      "name": "bull restructuring equal to H1 allowed",
+      "pass": true
+    },
+    {
+      "name": "bull incremental H2 restructuring EBIT identity",
+      "pass": true
+    },
+    {
+      "name": "bull incremental H2 restructuring FCFF tax identity",
+      "pass": true
+    },
+    {
+      "name": "central structured basis matches finance_lease_claim",
+      "pass": true
+    },
+    {
+      "name": "central structured basis matches affiliate_equity_value",
+      "pass": true
+    },
+    {
+      "name": "central structured basis matches other_nonoperating_assets",
+      "pass": true
+    },
+    {
+      "name": "central structured basis matches minimum_operating_cash",
+      "pass": true
+    },
+    {
+      "name": "central structured basis matches existing_award_incremental_claim",
+      "pass": true
+    },
+    {
+      "name": "central structured basis matches other_noncommon_claims",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets structured basis matches finance_lease_claim",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets structured basis matches affiliate_equity_value",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets structured basis matches other_nonoperating_assets",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets structured basis matches minimum_operating_cash",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets structured basis matches existing_award_incremental_claim",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets structured basis matches other_noncommon_claims",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets prose basis matches finance_lease_claim",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets prose basis matches affiliate_equity_value",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets prose basis matches other_nonoperating_assets",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets prose basis matches minimum_operating_cash",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets prose basis matches existing_award_incremental_claim",
+      "pass": true
+    },
+    {
+      "name": "lower_claims_higher_assets prose basis matches other_noncommon_claims",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets structured basis matches finance_lease_claim",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets structured basis matches affiliate_equity_value",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets structured basis matches other_nonoperating_assets",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets structured basis matches minimum_operating_cash",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets structured basis matches existing_award_incremental_claim",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets structured basis matches other_noncommon_claims",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets prose basis matches finance_lease_claim",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets prose basis matches affiliate_equity_value",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets prose basis matches other_nonoperating_assets",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets prose basis matches minimum_operating_cash",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets prose basis matches existing_award_incremental_claim",
+      "pass": true
+    },
+    {
+      "name": "higher_claims_lower_assets prose basis matches other_noncommon_claims",
+      "pass": true
+    },
+    {
+      "name": "null capital template rejected",
+      "pass": true
+    },
+    {
+      "name": "missing policy finance_lease_claim",
+      "pass": true
+    },
+    {
+      "name": "negative policy finance_lease_claim",
+      "pass": true
+    },
+    {
+      "name": "missing policy affiliate_equity_value",
+      "pass": true
+    },
+    {
+      "name": "negative policy affiliate_equity_value",
+      "pass": true
+    },
+    {
+      "name": "missing policy other_nonoperating_assets",
+      "pass": true
+    },
+    {
+      "name": "negative policy other_nonoperating_assets",
+      "pass": true
+    },
+    {
+      "name": "missing policy minimum_operating_cash",
+      "pass": true
+    },
+    {
+      "name": "negative policy minimum_operating_cash",
+      "pass": true
+    },
+    {
+      "name": "missing policy existing_award_incremental_claim",
+      "pass": true
+    },
+    {
+      "name": "negative policy existing_award_incremental_claim",
+      "pass": true
+    },
+    {
+      "name": "missing policy other_noncommon_claims",
+      "pass": true
+    },
+    {
+      "name": "negative policy other_noncommon_claims",
+      "pass": true
+    },
+    {
+      "name": "unacknowledged dated_june_only",
+      "pass": true
+    },
+    {
+      "name": "unacknowledged nonoverlap_confirmed",
+      "pass": true
+    },
+    {
+      "name": "unacknowledged incremental_award_claim_excludes_future_sbc_cash_replacement",
+      "pass": true
+    },
+    {
+      "name": "unacknowledged lease_policy_confirmed",
+      "pass": true
+    },
+    {
+      "name": "unacknowledged affiliate_value_excludes_royalty_rights",
+      "pass": true
+    },
+    {
+      "name": "unacknowledged capital_scope_reviewed",
+      "pass": true
+    },
+    {
+      "name": "unacknowledged assumption_not_current_target",
+      "pass": true
+    },
+    {
+      "name": "bear conditional bridge identity",
+      "pass": true
+    },
+    {
+      "name": "bear exact common denominator",
+      "pass": true
+    },
+    {
+      "name": "bear conditional still no current target",
+      "pass": true
+    },
+    {
+      "name": "base conditional bridge identity",
+      "pass": true
+    },
+    {
+      "name": "base exact common denominator",
+      "pass": true
+    },
+    {
+      "name": "base conditional still no current target",
+      "pass": true
+    },
+    {
+      "name": "bull conditional bridge identity",
+      "pass": true
+    },
+    {
+      "name": "bull exact common denominator",
+      "pass": true
+    },
+    {
+      "name": "bull conditional still no current target",
+      "pass": true
+    },
+    {
+      "name": "negative equity allocation suppressed",
+      "pass": true
+    },
+    {
+      "name": "cash reserve shortfall not clipped",
+      "pass": true
+    },
+    {
+      "name": "forecast CSV33rows",
+      "pass": true
+    },
+    {
+      "name": "bear base bull operating order",
+      "pass": true
+    },
+    {
+      "name": "FY2025 CFO less capex identity",
+      "pass": true
+    },
+    {
+      "name": "FY2025 distributions identity",
+      "pass": true
+    },
+    {
+      "name": "FY2025 residual before other flows identity",
+      "pass": true
+    },
+    {
+      "name": "H1 2026 CFO less capex identity",
+      "pass": true
+    },
+    {
+      "name": "H1 2026 distributions identity",
+      "pass": true
+    },
+    {
+      "name": "H1 2026 residual before other flows identity",
+      "pass": true
+    }
+  ]
+}

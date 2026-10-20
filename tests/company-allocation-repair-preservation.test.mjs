@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {execFileSync} from 'node:child_process';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import {execFileSync} from 'node:child_process';
 import {allocationRepairFixture,allocationRepairSHA,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
 const fixture=allocationRepairFixture(),read=p=>fs.readFileSync(new URL('../'+p,import.meta.url));
 test('exact approved twelve-file allocation delta reverses to V78 and rejects any added mutation',()=>{

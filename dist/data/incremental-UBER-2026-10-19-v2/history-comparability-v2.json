@@ -1,0 +1,47 @@
+{
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+  "locator": "Note1 Change in Accounting Policy; Item6 Selected Financial Data",
+  "retrieved": "2026-10-19",
+  "change": "Excess cumulative payments to drivers moved from cost of revenue to reduction of revenue in Q4 2020; operating income, net income and cash flows unchanged.",
+  "recast_revenue_usdm": [
+    {
+      "year": 2016,
+      "old_method": 3845,
+      "reduction": 507,
+      "selected_recast": 3338,
+      "status": "unaudited selected table; retrospectively recast to ASC606, but China disposal and other perimeter changes remain"
+    },
+    {
+      "year": 2017,
+      "old_method": 7932,
+      "reduction": 530,
+      "selected_recast": 7402,
+      "status": "unaudited selected column, supersedes older tagged7932"
+    },
+    {
+      "year": 2018,
+      "old_method": 11270,
+      "reduction": 837,
+      "selected_recast": 10433
+    },
+    {
+      "year": 2019,
+      "old_method": 14147,
+      "reduction": 1147,
+      "selected_recast": 13000
+    },
+    {
+      "year": 2020,
+      "old_method": 12422,
+      "reduction": 1283,
+      "selected_recast": 11139
+    }
+  ],
+  "remaining_gaps": [
+    "2016 CFO/capex/complete capital claims not retrieved; never inferred zero",
+    "No constant-perimeter ten-year organic series",
+    "2017 old-tag revenue trap corrected; latest 10-K companyfacts alone missed selected-data recast"
+  ],
+  "asc606": "2016 was retrospectively recast to ASC606 on adoption January1,2017; selected2016/2017columns are unaudited in2020annualreport.",
+  "old_method_2016_2017_note": "Old-method values reconstructed as selected recast plus explicitly disclosed reduction where appropriate."
+}

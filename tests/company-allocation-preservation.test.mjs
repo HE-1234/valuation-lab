@@ -1,5 +1,5 @@
 import {reverseCevaRmbsIntegration} from './ceva-rmbs-integration-preservation.mjs';
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import crypto from 'node:crypto';
+import test from 'node:test';import assert from 'node:assert/strict';import {preservedV87Fs as fs} from './guided-company-preservation.mjs';import crypto from 'node:crypto';
 const manifest=JSON.parse(fs.readFileSync(new URL('./fixtures/company-allocation-base-v78-dist-sha256.json',import.meta.url)));
 const changed=new Set(['dist/app.js','dist/guided.js','dist/research-model.js','dist/research-view.js','dist/locales/historical-app.en.js','dist/locales/historical-app.zh-Hans.js']);
 test('V78 all existing source data, engines, six themes and design assets preserved except six reviewed integration files',()=>{let checked=0;for(const [path,hash]of Object.entries(manifest)){if(changed.has(path))continue;assert.equal(crypto.createHash('sha256').update(reverseCevaRmbsIntegration(path,fs.readFileSync(new URL('../'+path,import.meta.url)))).digest('hex'),hash,path);checked++;}assert.equal(checked,Object.keys(manifest).length-changed.size);assert.ok(checked>600);});

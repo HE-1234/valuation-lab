@@ -1,0 +1,86 @@
+{
+  "as_of": "2026-06-30",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+  "reported": {
+    "cash": 9099.232,
+    "short_term_investments": 28.678,
+    "restricted_cash_excluded": 3.554,
+    "debt_current_carrying": 2483.758,
+    "debt_noncurrent_carrying": 11825.548,
+    "debt_total_carrying": 14309.306,
+    "debt_face_rounded": 14372,
+    "debt_fair_value_rounded": 14605,
+    "actual_common_shares_m": 4163.939676,
+    "h1_eps_weighted_basic_shares_m": 4205.952,
+    "h1_eps_weighted_diluted_shares_m": 4279.776,
+    "option_shares_m": 123.891603,
+    "option_weighted_strike_usd": 39.21,
+    "rsu_psu_rollforward_units_m": 2.012512,
+    "operating_lease_liabilities": 2330.421,
+    "current_content_liabilities": 3866.522,
+    "noncurrent_content_liabilities": 1625.6,
+    "total_content_obligations": 25106.705,
+    "content_obligations_next_12m": 11939.734,
+    "derivative_assets": 632.715,
+    "derivative_liabilities": 433.863,
+    "repurchase_authorization_remaining_approx": 27100,
+    "brazil_prior_period_non_income_tax_paid_h1": 729,
+    "interest_rate_derivative_assets_current": 0.236,
+    "interest_rate_derivative_assets_noncurrent": 1.124,
+    "interest_rate_derivative_liabilities_noncurrent": 14.934,
+    "interest_rate_financing_derivative_net_liability": 13.574,
+    "interest_rate_hedge_notional": 1400,
+    "financing_fx_hedge_notional": 2934.991,
+    "designated_fx_derivative_assets": 611.406,
+    "designated_fx_derivative_liabilities": 406.568,
+    "financing_fx_net_fair_value_separately_disclosed": null,
+    "fy2025_unrecognized_rsu_psu_compensation_cost": 47,
+    "h1_2026_rsu_psu_granted_units_m": 1.245383,
+    "h1_2026_rsu_psu_weighted_grant_date_fair_value": 82.91,
+    "fy2025_stock_compensation_cost": 368.449,
+    "fy2025_revenue_for_compensation_reference": 45183.036
+  },
+  "claims_scope": [
+    {
+      "claim": "Senior notes",
+      "treatment": "Rounded face value selected only in illustrative policy; fair value and carrying value shown separately. Liability model excludes operating leases and content obligations already represented in operating cash flow."
+    },
+    {
+      "claim": "Options",
+      "treatment": "All 123.891603m June options vested and exercisable. Existing claim modeled separately; weighted-strike Black-Scholes approximation is analyst optionality proxy, not exact grant-level appraisal. June remaining life and volatility are assumed, not silently borrowed as exact facts."
+    },
+    {
+      "claim": "RSU/PSU",
+      "treatment": "2.012512m aggregate unvested awards is not proven maximum payout. Allocation removes an explicitly assumed remaining-expense schedule for these same awards from modeled EBIT after tax, then values the units separately; future-grant compensation remains charged. FY2025 unrecognized compensation cost was $47m over 1.53 years; that is not a verified June remaining balance. Policy must select explicit multiplier or replace units; example uses 2x; multiplier is editable. Weighted EPS shares are never equity denominator."
+    },
+    {
+      "claim": "Income-tax uncertainty",
+      "treatment": "FY2025 gross unrecognized benefits $566m, of which $409m classified noncurrent, are stale at June. June precise reserve is unverified. Policy requires chosen income-tax reserve and cash settlement. No 2025 number silently treated as current."
+    },
+    {
+      "claim": "Brazil non-income-tax cash",
+      "treatment": "FY2025 $619m expense and anticipated approximately $700m deposits are superseded for cash status by the June filing: $729m of prior-period non-income-tax assessment payments were made in H1 and are already reflected in June cash. Do not deduct or settle that paid item again. No recovery asset is recognized here. The separate policy input covers only additional exposure beyond those paid amounts; its value is unknown unless explicitly assumed."
+    },
+    {
+      "claim": "Derivatives",
+      "treatment": "Operating cash-flow FX hedges stay in revenue/cost forecasts. Financing interest-rate derivatives have a sourced $13.574m net liability, separately reserved because the selected $14,372m face principal excludes derivatives. Do not also subtract the approximately $14m debt carrying-basis adjustment. Financing FX fair-value hedges have $2,934.991m notional, but their net fair value is not separately disclosed from operating designated FX contracts. Require a separately labeled nonnegative analyst reserve for financing FX; illustration assumes $100m, not a reported claim. Neither gross derivatives nor hedge notional is deducted. Hypothetical July 1 closeout and constant June FX underpin the funding illustration, not actual events."
+    },
+    {
+      "claim": "Other litigation, indemnification, pension, acquisition or claims",
+      "treatment": "No complete fair-value appraisal. Additional-claim input must be deliberately chosen; null never zero."
+    }
+  ],
+  "source_locators": {
+    "balance_sheet": "Consolidated balance sheets, HTML table 12",
+    "options": "Note 10, HTML table 37",
+    "awards": "Note 10, HTML table 38",
+    "debt": "Note 7, HTML table 25; principal figures rounded USD millions",
+    "leases": "Note 5, HTML table 23",
+    "derivatives": "Note 8, HTML table 27",
+    "brazil_cash_paid": "MD&A Liquidity and Capital Resources, H1 operating-cash-flow paragraph; $729m already paid",
+    "financing_hedges": "Note 8, HTML tables 26 and 27; Note 7 debt carrying-basis reconciliation",
+    "existing_award_expense_context": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm (Stock-based compensation note; $47m and 1.53 years at December 2025, not June 2026)",
+    "prior_tax_exposures": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm (Notes 9 and 11; Liquidity and Capital Resources)"
+  },
+  "current_share_count": "unknown as of 2026-10-19; June actual count is last verified issuer-period count, not exact current shares"
+}

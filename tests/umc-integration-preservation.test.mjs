@@ -1,8 +1,11 @@
+import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
+import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
+import {mcdFixture,MCD_FIXTURE_PATH} from './mcd-integration-preservation.mjs';
 import {simulationUiFixture} from './claude-simulation-ui-preservation.mjs';
 import {reverseUmcSimulationMount} from './umc-simulation-mount-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
@@ -22,10 +25,10 @@ function filesUnder(relative){
 }
 function verifyWholeTree(current,readBytes=read){
  const fixture=umcFixture(),baseline=umcBaseEntries();
- assert.deepEqual(current,[...baseline.keys(),...Object.keys(fixture.additions),...Object.keys(simulationUiFixture().additions)].sort(),'Every production path must be in immutable V81 or individually pinned as an addition; no missing or unlisted paths');
+ assert.deepEqual(current,[...baseline.keys(),...Object.keys(fixture.additions),...Object.keys(nflxFixture().additions),...Object.keys(uberFixture().additions),...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions)].sort(),'Every production path must be in immutable V81 or individually pinned as an addition; no missing or unlisted paths');
  for(const [p,entry]of baseline)assert.equal(umcBlobSHA(reverseUmcIntegration(p,readBytes(p))),entry.oid,p+' must reverse byte-for-byte to immutable V81; no undeclared mutations');
  for(const [p,sha]of Object.entries(fixture.additions))assert.equal(umcSHA(reverseUmcIntegration(p,readBytes(p))),sha,p+' exact individually reviewed addition');
- for(const [p,sha]of Object.entries(simulationUiFixture().additions))assert.equal(umcSHA(reverseUmcIntegration(p,readBytes(p))),sha,p+' exact individually reviewed simulation UI addition');
+ for(const [p,sha]of Object.entries({...nflxFixture().additions,...uberFixture().additions,...mcdFixture().additions,...simulationUiFixture().additions}))assert.equal(umcSHA(reverseUmcIntegration(p,readBytes(p))),sha,p+' exact individually reviewed simulation UI addition');
 }
 
 test('UMC manifest strictly pins V81 source, exact ten modified paths and all 74 added paths',()=>{
@@ -73,8 +76,8 @@ test('UMC exact reversal uses immutable V81 originals and rejects every modified
 });
 
 test('UMC accounts for the entire production tree, including the one later UI addition, with immutable Git blob IDs and no broad allowances',()=>{
- const current=filesUnder('dist'),baseline=umcBaseEntries(),fixture=umcFixture();assert.equal(baseline.size,774);assert.equal(current.length,848+Object.keys(simulationUiFixture().additions).length);verifyWholeTree(current);
- assert.deepEqual(current.filter(p=>!baseline.has(p)),[...UMC_ADDED_PATHS,...Object.keys(simulationUiFixture().additions)].sort());
+ const current=filesUnder('dist'),baseline=umcBaseEntries(),fixture=umcFixture();assert.equal(baseline.size,774);assert.equal(current.length,848+Object.keys(nflxFixture().additions).length+Object.keys(uberFixture().additions).length+Object.keys(mcdFixture().additions).length+Object.keys(simulationUiFixture().additions).length);verifyWholeTree(current);
+ assert.deepEqual(current.filter(p=>!baseline.has(p)),[...UMC_ADDED_PATHS,...Object.keys(nflxFixture().additions),...Object.keys(uberFixture().additions),...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions)].sort());
  for(const p of UMC_MODIFIED_PATHS)assert.ok(baseline.has(p));for(const p of UMC_ADDED_PATHS)assert.ok(!baseline.has(p));
  const unchanged=[...baseline.keys()].find(p=>!Object.hasOwn(fixture.files,p));assert.ok(unchanged);const bytes=read(unchanged);
  assert.strictEqual(reverseUmcIntegration(unchanged,bytes),bytes,'Unlisted paths are not normalized or hidden');

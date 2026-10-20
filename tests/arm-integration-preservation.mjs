@@ -1,3 +1,4 @@
+import {historicalTsmSnapshotStorage} from './tsm-historical-snapshot.mjs';
 import {allocationBaselineWorkspace} from './company-allocation-baseline-presentation.mjs';
 import {reverseAnnualFieldErrors} from './annual-field-errors-preservation.mjs';
 import fs from 'node:fs';
@@ -16,11 +17,11 @@ const hash=(await import('node:crypto')).createHash;
 const clean=x=>{if(Array.isArray(x))return x.map(clean);if(x&&typeof x==='object')return Object.fromEntries(Object.entries(x).filter(([k])=>!['updatedAt','exportedAt','elapsedMs','durationMs'].includes(k)).map(([k,v])=>[k,clean(v)]));return x;};
 const digest=x=>hash('sha256').update(JSON.stringify(clean(x))).digest('hex');
 const out={order:[],companies:{},locales:{},localeKeys:incrementalMessageKeys,translatedKeys:incrementalTranslatedMessageKeys};
-const storage=new Map();const options={storage,catalogBundle:read('dist/data/atlas-company-catalog-v1.json'),incrementalBundle:incrementalPackages};
+const storage=await historicalTsmSnapshotStorage(root);const options={storage,catalogBundle:read('dist/data/atlas-company-catalog-v1.json'),incrementalBundle:incrementalPackages};
 const w=await startResearchWorkspace(options);
 const baselineUI=await allocationBaselineWorkspace({...options,storage:new Map()});
 out.currentOrder=w.root.querySelectorAll('[data-research-company]').map(x=>x.getAttribute('data-research-company'));
-out.order=out.currentOrder.filter(t=>t!=='CEVA'&&t!=='RMBS'&&t!=='UMC');
+out.order=out.currentOrder.filter(t=>t!=='CEVA'&&t!=='RMBS'&&t!=='UMC'&&t!=='MCD'&&t!=='UBER'&&t!=='NFLX');
 if(!out.order.length)throw Error('Empty company order');
 function calculate(d){const operating=calculateResearchOperating(d),timing=researchTimingResult(d,operating);return {operating,timing,bridge:calculateResearchBridge(d,timing.enterprise,{...d.bridgeInputs,calculationDate:timing.date})};}
 for(const ticker of out.order.filter(x=>x!=='KEYS'&&x!=='ARM')){

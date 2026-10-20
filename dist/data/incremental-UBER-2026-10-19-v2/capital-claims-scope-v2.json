@@ -1,0 +1,132 @@
+{
+  "date": "2026-06-30",
+  "unit": "USD million unless explicit shares",
+  "source_urls": [
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+    "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-and-Rivian-Partner-to-Deploy-up-to-50000-Fully-Autonomous-Robotaxis-2026-TViR4R05gi/"
+  ],
+  "claims": [
+    {
+      "id": "unrestricted_liquidity",
+      "reported_or_reference_amount": 5391,
+      "basis": "June cash 4870 + short-term investments 521",
+      "treatment": "Candidate asset; choose operating cash reserve; geography/fungibility not certified"
+    },
+    {
+      "id": "restricted_pool",
+      "reported_or_reference_amount": 11793,
+      "basis": "661+1646+9486",
+      "treatment": "Excluded equity bridge; modeled as collateral required by ongoing insurance system, no free cash add"
+    },
+    {
+      "id": "insurance_reserves",
+      "reported_or_reference_amount": 13286,
+      "basis": "3758+9528",
+      "treatment": "Operating claim; future reserve/collateral changes in FCFF. Opening collateral catch-up charged once in model, not also deducted as debt"
+    },
+    {
+      "id": "debt_carrying",
+      "reported_or_reference_amount": 12723,
+      "basis": "1997+10726",
+      "treatment": "Reference only; choose total debt value once; fair-value approx12900 includes convertible option and exchangeable note economics"
+    },
+    {
+      "id": "operating_leases",
+      "reported_or_reference_amount": 2008,
+      "basis": "178+1830",
+      "treatment": "Rent stays in EBIT; no second bridge subtraction"
+    },
+    {
+      "id": "finance_leases_june",
+      "reported_or_reference_amount": null,
+      "basis": "June balance not separately disclosed in retrieved Q; Dec2025 balance222, H1 principal82",
+      "treatment": "Require explicit June estimate; 140 is only no-new-lease/FX assumption, not reported fact"
+    },
+    {
+      "id": "nci",
+      "reported_or_reference_amount": 903,
+      "basis": "June balance sheet",
+      "treatment": "Choose non-controlling value, not automatic liquidation claim; consolidated FCFF includes subsidiary earnings"
+    },
+    {
+      "id": "redeemable_nci",
+      "reported_or_reference_amount": 180,
+      "basis": "June balance sheet",
+      "treatment": "Choose claim value; Trendyol put/call from 2031 and subsidiary rights require future review"
+    },
+    {
+      "id": "legal_regulatory_nonincome_tax",
+      "reported_or_reference_amount": 1841,
+      "basis": "June Note6",
+      "treatment": "Choose legacy settlement value; keep separate from future ordinary costs in EBIT; do not hide within incremental NWC"
+    },
+    {
+      "id": "income_other_taxes",
+      "reported_or_reference_amount": 1042,
+      "basis": "June Note6",
+      "treatment": "Choose unpaid-tax reserve; does not imply entire mixed line is immediately payable"
+    },
+    {
+      "id": "other_current_mixed",
+      "reported_or_reference_amount": 2343,
+      "basis": "June Note6",
+      "treatment": "Includes multiple items, requires chosen incremental financial claim excluding finance leases already reserved and operating items assumed renewed"
+    },
+    {
+      "id": "other_noncurrent_mixed",
+      "reported_or_reference_amount": 421,
+      "basis": "June Note6 excluding DTL26",
+      "treatment": "Requires chosen incremental financial claim excluding already reserved finance lease/derivatives and operating items"
+    },
+    {
+      "id": "dta",
+      "reported_or_reference_amount": 10162,
+      "basis": "June balance sheet",
+      "treatment": "Not added: model uses normalized tax, conservatively omits tax-asset value; separately adding would require tax schedule and avoidance of double count"
+    },
+    {
+      "id": "driver_merchant_payable",
+      "reported_or_reference_amount": 1773,
+      "basis": "June Note6",
+      "treatment": "Ordinary operating liability assumed maintained; included in incremental operating NWC convention, not debt"
+    },
+    {
+      "id": "existing_equity_awards",
+      "reported_or_reference_amount": null,
+      "basis": "June Note8: 71.804m unvested RSU-type shares, 6.099m options, 0.010m SAR; options WA strike$51.44 and aggregate intrinsic$132m",
+      "treatment": "Choose earned existing-award incremental units/value net of future-service cost already charged in forecast; gross awards are not automatic incremental dilution"
+    },
+    {
+      "id": "convertible_notes",
+      "reported_or_reference_amount": 1725,
+      "basis": "2028 Convertible Notes principal; conversion13.7848 shares/$1000, strike~72.54",
+      "treatment": "Included in total-debt fair-value choice; do not add conversion shares when reserving full note fair value"
+    },
+    {
+      "id": "aurora_exchangeable_note",
+      "reported_or_reference_amount": 1324,
+      "basis": "June fair-value carrying balance, principal1150",
+      "treatment": "Already part of debt total; Aurora shares partly pledged, about61%; do not add a second note reserve or subtract the pledged equity twice"
+    },
+    {
+      "id": "contingent_other_shares",
+      "reported_or_reference_amount": 2321000,
+      "basis": "H1 diluted EPS schedule",
+      "treatment": "EPS weighted-average inclusion is not exact dated claim; choose separate existing rights assumption"
+    },
+    {
+      "id": "investment_commitments",
+      "reported_or_reference_amount": null,
+      "basis": "Rivian up to1250 through2031; initial300 conditional; Lucid/Nuro minimum20000vehicles conditional with unknown Uber cash",
+      "treatment": "Require expected economic cost/value allowance or explicit no incremental cost assumption. No fabricated vehicle capex."
+    },
+    {
+      "id": "uk_vat_receivable",
+      "reported_or_reference_amount": 1800,
+      "basis": "Note11 paid contested assessments approx1.8bn",
+      "treatment": "Not an unrestricted cash asset; no recovery included. Additional assessments/appeal outcomes unresolved"
+    }
+  ],
+  "inventory_not_assertion_of_zero": "Unmeasured claims remain unknown. Illustration choices are explicitly analyst assumptions, not certification that reserves equal ultimate economic obligations."
+}

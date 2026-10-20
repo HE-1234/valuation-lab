@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+import json,pathlib,copy,importlib.util
+P=pathlib.Path(__file__).resolve().parent
+spec=importlib.util.spec_from_file_location('mcd_v2_examples_engine',P/'replay_dcf_v2.py');engine=importlib.util.module_from_spec(spec);spec.loader.exec_module(engine)
+d=json.loads((P/'dcf-inputs-v2.json').read_text());central=json.loads((P/'allocation-policy-illustration-v2.json').read_text());policies={'central':central}
+for name,params in {'lower_claims_higher_assets':{'finance_lease_claim':2000,'affiliate_equity_value':6000,'minimum_operating_cash':500,'existing_award_incremental_claim':500,'other_noncommon_claims':500},'higher_claims_lower_assets':{'finance_lease_claim':3000,'affiliate_equity_value':3000,'minimum_operating_cash':1500,'existing_award_incremental_claim':1500,'other_noncommon_claims':2000}}.items():
+ p=copy.deepcopy(central);p.update(params)
+ p['basis_amounts_USDm']={k:p[k] for k in ['finance_lease_claim','affiliate_equity_value','other_nonoperating_assets','minimum_operating_cash','existing_award_incremental_claim','other_noncommon_claims']}
+ p['basis']=(f"Analyst sensitivity policy {name}, USD millions; not verified June fair values. "
+             f"Finance lease claim assumed {p['finance_lease_claim']:g}, informed by December liability 2352 with June split unknown. "
+             f"Affiliate equity assumed {p['affiliate_equity_value']:g}, including Japan's June quoted stake 2161 and assumed China/other ownership values; royalty rights remain in operating EV. "
+             f"Other nonoperating assets assumed {p['other_nonoperating_assets']:g}. "
+             f"Minimum operating cash assumed {p['minimum_operating_cash']:g}; any reserve above cash 822 reduces equity without clipping. "
+             f"Existing-award incremental claim assumed {p['existing_award_incremental_claim']:g}, excluding future SBC cash replacement already charged in SGA and already-issued shares. "
+             f"Other noncommon claims assumed {p['other_noncommon_claims']:g}, only for amounts not already captured in forecast taxes, compensation, operating liabilities, debt or leases. "
+             "These chosen sensitivity amounts are neither confidence bounds, grant-level valuations, nor completeness or funding certifications.")
+ policies[name]=p
+ranges={'finance_lease_claim':{'illustrative_range':[2000,3000],'basis':'December 2025 disclosed finance liability 2352; June total leases 14729 but finance split unknown. This is an analyst sensitivity around the last disclosed amount, not a verified confidence interval.'},'affiliate_equity_value':{'illustrative_range':[3000,6000],'basis':'June quoted Japan stake value2161; China carrying2134 and remaining affiliate book amounts about104. China/other fair value, taxes and realizability are unresolved. The range is not an appraisal; royalty rights remain in operating EV.'},'minimum_operating_cash':{'illustrative_range':[500,1500],'basis':'June cash822; low-cash franchisor nonetheless has global rent, payroll and operating obligations. Bounds are analyst liquidity reserves, not a verified minimum. A reserve exceeding cash is deducted as a funding need.'},'existing_award_incremental_claim':{'illustrative_range':[500,1500],'basis':'December outstanding-option intrinsic value682, plus1.164094m RSUs; remaining service cost198 and six-month exercises/grants make a June fair-value reserve uncertain. Grant-date RSU cost is not current value. Bounds are explicit incremental-claim assumptions excluding future SBC cash replacement and already-issued shares, not mechanical sums of stale awards.'},'other_noncommon_claims':{'illustrative_range':[500,2000],'basis':'June accrued interest428 and other long-term liabilities677; December benefit liability421 and tax-note inconsistency require line-by-line review. Range reserves only claims not already handled in operating cash flows, leases, taxes or other bridge items. It is a non-overlap assumption, not a sum of every liability.'}}
+out={'valuation_anchor':'2026-06-30','information_cutoff':'2026-10-19','units':'USD millions, per-share USD','status':'Explicit analyst illustrations; templates remain null; no current target/upside; no funding certification','ranges':ranges,'policies':policies,'results':[]}
+for pn,p in policies.items():
+ for sn,r in engine.run(d,p)['results'].items():
+  out['results'].append({'allocation_policy':pn,'operating_scenario':sn,'core_operating_ev':r['core_operating_ev'],'conditional_june_equity_value':r['conditional_june_equity_value'],'exact_june_common_shares':d['capital_known_june']['common_shares_exact'],'conditional_june_allocation_per_share':r['dated_per_share_allocation'],'current_target':None,'current_upside':None})
+(P/'allocation-illustrations-v2.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n')
+print(json.dumps(out['results'],indent=2))

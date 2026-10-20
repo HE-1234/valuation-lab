@@ -1607,6 +1607,18 @@
     & body .guided-screen .simulation-lab > .mc-heading #mc-title { font-size: 26px !important; line-height: 1.15 !important; letter-spacing: -.03em !important; }
   }
 }
+/* A restored custom trial count adds a fourth choice. Give only that group
+   its own stable row, and honor the existing measured two-column/list layout. */
+:root[data-skin="report"] {
+  @media (max-width: 760px) {
+    & body .simulation-lab .mc-run-actions:has(> .rx-trials > .rx-remote-choice > button:nth-of-type(4)) { flex-wrap: wrap !important; }
+    & body .simulation-lab .mc-run-actions > .rx-trials:has(> .rx-remote-choice > button:nth-of-type(4)) { flex: 1 1 100% !important; flex-direction: column !important; align-items: stretch !important; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice:has(> button:nth-of-type(4)) { display: inline-flex !important; flex-direction: row !important; width: 100% !important; flex-wrap: wrap; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice.rx-stacked:has(> button:nth-of-type(4)) { flex-direction: column !important; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice.rx-two:has(> button:nth-of-type(4)) { display: grid !important; }
+    & body .simulation-lab .mc-run-actions .rx-trials .rx-remote-choice:has(> button:nth-of-type(4)) > button { flex: 0 1 auto !important; min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+  }
+}
 :root[data-skin="report"] {
   @media (max-width: 600px) {
     /* Annual tables on phones: one compact card per year, four figures in one row. */
@@ -1867,6 +1879,7 @@
   & body .rx-mcg-link:hover { text-decoration: underline; text-underline-offset: 3px; }
   & body .rx-mcg-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   & body .mc-setup .rx-mcg-target { outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent) !important; outline-offset: 3px; border-radius: 6px; transition: outline-color 160ms ease; }
+  & body .mc-setup details.rx-mcg-edit-reveal[open]::details-content { transition: none !important; height: auto !important; content-visibility: visible !important; }
   /* Year markers on the path chart. */
   & body .rx-mcg-yr { opacity: 0; transition: opacity 160ms ease; pointer-events: none; }
   & body .rx-mcg-yr line { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 3; }
@@ -2007,6 +2020,12 @@
     & body .rx-mcg [data-part] > details.rx-mcg-fold { padding: 0 12px !important; border-radius: 12px; }
     & body .rx-mcg [data-part] > details.rx-mcg-fold > summary { min-height: 54px; gap: 10px; }
     & body .rx-mcg-ic { width: 28px; height: 28px; border-radius: 8px; }
+    /* Keep precision's long title and answer chip on separate phone rows. */
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; row-gap: 8px; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary > .rx-mcg-ic { grid-column: 1; grid-row: 1; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary > h4 { grid-column: 2; grid-row: 1; overflow-wrap: anywhere; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary > .rx-mcg-chip { grid-column: 2; grid-row: 2; justify-self: start; max-width: 100%; box-sizing: border-box; }
+    & body .rx-mcg.is-sampling [data-part="value"] > .rx-mcg-fold > summary::after { grid-column: 3; grid-row: 1 / span 2; }
     & body .mc-setup > .rx-mcg { padding-bottom: 14px; }
   }
 }

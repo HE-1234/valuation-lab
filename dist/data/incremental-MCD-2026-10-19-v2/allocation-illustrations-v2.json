@@ -1,0 +1,209 @@
+{
+  "valuation_anchor": "2026-06-30",
+  "information_cutoff": "2026-10-19",
+  "units": "USD millions, per-share USD",
+  "status": "Explicit analyst illustrations; templates remain null; no current target/upside; no funding certification",
+  "ranges": {
+    "finance_lease_claim": {
+      "illustrative_range": [
+        2000,
+        3000
+      ],
+      "basis": "December 2025 disclosed finance liability 2352; June total leases 14729 but finance split unknown. This is an analyst sensitivity around the last disclosed amount, not a verified confidence interval."
+    },
+    "affiliate_equity_value": {
+      "illustrative_range": [
+        3000,
+        6000
+      ],
+      "basis": "June quoted Japan stake value2161; China carrying2134 and remaining affiliate book amounts about104. China/other fair value, taxes and realizability are unresolved. The range is not an appraisal; royalty rights remain in operating EV."
+    },
+    "minimum_operating_cash": {
+      "illustrative_range": [
+        500,
+        1500
+      ],
+      "basis": "June cash822; low-cash franchisor nonetheless has global rent, payroll and operating obligations. Bounds are analyst liquidity reserves, not a verified minimum. A reserve exceeding cash is deducted as a funding need."
+    },
+    "existing_award_incremental_claim": {
+      "illustrative_range": [
+        500,
+        1500
+      ],
+      "basis": "December outstanding-option intrinsic value682, plus1.164094m RSUs; remaining service cost198 and six-month exercises/grants make a June fair-value reserve uncertain. Grant-date RSU cost is not current value. Bounds are explicit incremental-claim assumptions excluding future SBC cash replacement and already-issued shares, not mechanical sums of stale awards."
+    },
+    "other_noncommon_claims": {
+      "illustrative_range": [
+        500,
+        2000
+      ],
+      "basis": "June accrued interest428 and other long-term liabilities677; December benefit liability421 and tax-note inconsistency require line-by-line review. Range reserves only claims not already handled in operating cash flows, leases, taxes or other bridge items. It is a non-overlap assumption, not a sum of every liability."
+    }
+  },
+  "policies": {
+    "central": {
+      "finance_lease_claim": 2500,
+      "affiliate_equity_value": 4400,
+      "other_nonoperating_assets": 0,
+      "minimum_operating_cash": 800,
+      "existing_award_incremental_claim": 1000,
+      "other_noncommon_claims": 1000,
+      "dated_june_only": true,
+      "nonoverlap_confirmed": true,
+      "incremental_award_claim_excludes_future_sbc_cash_replacement": true,
+      "lease_policy_confirmed": true,
+      "affiliate_value_excludes_royalty_rights": true,
+      "capital_scope_reviewed": true,
+      "assumption_not_current_target": true,
+      "basis": "Analyst illustration only. June finance lease claim assumed $2.5bn (not disclosed June split); affiliate equity $4.4bn (Japan June quoted stake $2.161bn plus assumed China/other equity); $0.8bn operating cash; $1bn incremental existing-award reserve after excluding cash replacement charged in SGA; $1bn other claim reserve. No fairness or completeness certification, no assumption of exact grant-level allocation.",
+      "basis_amounts_USDm": {
+        "finance_lease_claim": 2500,
+        "affiliate_equity_value": 4400,
+        "other_nonoperating_assets": 0,
+        "minimum_operating_cash": 800,
+        "existing_award_incremental_claim": 1000,
+        "other_noncommon_claims": 1000
+      }
+    },
+    "lower_claims_higher_assets": {
+      "finance_lease_claim": 2000,
+      "affiliate_equity_value": 6000,
+      "other_nonoperating_assets": 0,
+      "minimum_operating_cash": 500,
+      "existing_award_incremental_claim": 500,
+      "other_noncommon_claims": 500,
+      "dated_june_only": true,
+      "nonoverlap_confirmed": true,
+      "incremental_award_claim_excludes_future_sbc_cash_replacement": true,
+      "lease_policy_confirmed": true,
+      "affiliate_value_excludes_royalty_rights": true,
+      "capital_scope_reviewed": true,
+      "assumption_not_current_target": true,
+      "basis": "Analyst sensitivity policy lower_claims_higher_assets, USD millions; not verified June fair values. Finance lease claim assumed 2000, informed by December liability 2352 with June split unknown. Affiliate equity assumed 6000, including Japan's June quoted stake 2161 and assumed China/other ownership values; royalty rights remain in operating EV. Other nonoperating assets assumed 0. Minimum operating cash assumed 500; any reserve above cash 822 reduces equity without clipping. Existing-award incremental claim assumed 500, excluding future SBC cash replacement already charged in SGA and already-issued shares. Other noncommon claims assumed 500, only for amounts not already captured in forecast taxes, compensation, operating liabilities, debt or leases. These chosen sensitivity amounts are neither confidence bounds, grant-level valuations, nor completeness or funding certifications.",
+      "basis_amounts_USDm": {
+        "finance_lease_claim": 2000,
+        "affiliate_equity_value": 6000,
+        "other_nonoperating_assets": 0,
+        "minimum_operating_cash": 500,
+        "existing_award_incremental_claim": 500,
+        "other_noncommon_claims": 500
+      }
+    },
+    "higher_claims_lower_assets": {
+      "finance_lease_claim": 3000,
+      "affiliate_equity_value": 3000,
+      "other_nonoperating_assets": 0,
+      "minimum_operating_cash": 1500,
+      "existing_award_incremental_claim": 1500,
+      "other_noncommon_claims": 2000,
+      "dated_june_only": true,
+      "nonoverlap_confirmed": true,
+      "incremental_award_claim_excludes_future_sbc_cash_replacement": true,
+      "lease_policy_confirmed": true,
+      "affiliate_value_excludes_royalty_rights": true,
+      "capital_scope_reviewed": true,
+      "assumption_not_current_target": true,
+      "basis": "Analyst sensitivity policy higher_claims_lower_assets, USD millions; not verified June fair values. Finance lease claim assumed 3000, informed by December liability 2352 with June split unknown. Affiliate equity assumed 3000, including Japan's June quoted stake 2161 and assumed China/other ownership values; royalty rights remain in operating EV. Other nonoperating assets assumed 0. Minimum operating cash assumed 1500; any reserve above cash 822 reduces equity without clipping. Existing-award incremental claim assumed 1500, excluding future SBC cash replacement already charged in SGA and already-issued shares. Other noncommon claims assumed 2000, only for amounts not already captured in forecast taxes, compensation, operating liabilities, debt or leases. These chosen sensitivity amounts are neither confidence bounds, grant-level valuations, nor completeness or funding certifications.",
+      "basis_amounts_USDm": {
+        "finance_lease_claim": 3000,
+        "affiliate_equity_value": 3000,
+        "other_nonoperating_assets": 0,
+        "minimum_operating_cash": 1500,
+        "existing_award_incremental_claim": 1500,
+        "other_noncommon_claims": 2000
+      }
+    }
+  },
+  "results": [
+    {
+      "allocation_policy": "central",
+      "operating_scenario": "bear",
+      "core_operating_ev": 98917.3045820689,
+      "conditional_june_equity_value": 58976.3045820689,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 83.34206232741434,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "central",
+      "operating_scenario": "base",
+      "core_operating_ev": 187793.29019496965,
+      "conditional_june_equity_value": 147852.29019496965,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 208.9367055464268,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "central",
+      "operating_scenario": "bull",
+      "core_operating_ev": 292139.6283463944,
+      "conditional_june_equity_value": 252198.6283463944,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 356.3931981069585,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "lower_claims_higher_assets",
+      "operating_scenario": "bear",
+      "core_operating_ev": 98917.3045820689,
+      "conditional_june_equity_value": 62376.3045820689,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 88.14675488862581,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "lower_claims_higher_assets",
+      "operating_scenario": "base",
+      "core_operating_ev": 187793.29019496965,
+      "conditional_june_equity_value": 151252.29019496965,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 213.74139810763828,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "lower_claims_higher_assets",
+      "operating_scenario": "bull",
+      "core_operating_ev": 292139.6283463944,
+      "conditional_june_equity_value": 255598.6283463944,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 361.19789066817,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "higher_claims_lower_assets",
+      "operating_scenario": "bear",
+      "core_operating_ev": 98917.3045820689,
+      "conditional_june_equity_value": 54876.3045820689,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 77.54816835654167,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "higher_claims_lower_assets",
+      "operating_scenario": "base",
+      "core_operating_ev": 187793.29019496965,
+      "conditional_june_equity_value": 143752.29019496965,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 203.14281157555413,
+      "current_target": null,
+      "current_upside": null
+    },
+    {
+      "allocation_policy": "higher_claims_lower_assets",
+      "operating_scenario": "bull",
+      "core_operating_ev": 292139.6283463944,
+      "conditional_june_equity_value": 248098.6283463944,
+      "exact_june_common_shares": 707641531,
+      "conditional_june_allocation_per_share": 350.59930413608583,
+      "current_target": null,
+      "current_upside": null
+    }
+  ]
+}

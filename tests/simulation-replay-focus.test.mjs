@@ -2,7 +2,7 @@ import {reverseMethodologyDocumentation} from './simulation-methodology-preserva
 // Shipped-handler synthetic DOM/WAAPI checks; not native-browser or AT certification.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {execFileSync} from 'node:child_process';
 import {fixture} from './v7-simulation-harness.mjs';
 import {simulationDefaults} from '../dist/simulation.js';

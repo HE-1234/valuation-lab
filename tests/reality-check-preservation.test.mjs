@@ -1,3 +1,6 @@
+import {nflxFixture,NFLX_FIXTURE_PATH,NFLX_ADDED_PATHS,reverseNflxIntegration} from './nflx-integration-preservation.mjs';
+import {uberFixture,UBER_FIXTURE_PATH,UBER_ADDED_PATHS,reverseUberIntegration} from './uber-integration-preservation.mjs';
+import {mcdFixture,MCD_FIXTURE_PATH} from './mcd-integration-preservation.mjs';
 import {simulationUiFixture,reverseClaudeSimulationUi} from './claude-simulation-ui-preservation.mjs';
 import {umcFixture} from './umc-integration-preservation.mjs';
 import {cevaDeliveryFixture} from './ceva-delivery-preservation.mjs';
@@ -5,7 +8,7 @@ import {cevaRmbsFixture} from './ceva-rmbs-integration-preservation.mjs';
 import {allocationRepairFixture,reverseCompanyAllocationRepair} from './company-allocation-repair-preservation.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
+import {preservedV87Fs as fs} from './guided-company-preservation.mjs';
 import {relative,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {realityFixture,realitySHA,reverseRealityCheckFix} from './reality-check-preservation.mjs';
@@ -17,6 +20,6 @@ test('Reality-check fix reverses only two reviewed JS files and preserves all 68
  for(const [p,h]of Object.entries(f.baselineProduction))assert.equal(realitySHA(reverseRealityCheckFix(p,read(p))),h,p);
  for(const p of Object.keys(f.files))assert.throws(()=>reverseRealityCheckFix(p,Buffer.concat([read(p),Buffer.from('\n/* unrelated */')])),/exact reviewed reality-check fix/);
  const paths=fs.readdirSync(new URL('../dist/',import.meta.url),{recursive:true,withFileTypes:true}).filter(e=>e.isFile()).map(e=>relative(fileURLToPath(root),join(e.parentPath,e.name))).sort();
- assert.deepEqual(paths,[...Object.keys(f.baselineProduction),...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions)].sort());
+ assert.deepEqual(paths,[...Object.keys(f.baselineProduction),...Object.keys(nflxFixture().additions),...Object.keys(uberFixture().additions),...Object.keys(mcdFixture().additions),...Object.keys(simulationUiFixture().additions),...Object.keys(umcFixture().additions),...Object.keys(cevaDeliveryFixture().additions),...Object.keys(cevaRmbsFixture().additions),...Object.keys(allocationRepairFixture().additions)].sort());
  for(const p of paths.filter(p=>p.endsWith('.css')))assert.equal(realitySHA(reverseClaudeSimulationUi(p,read(p))),f.baselineProduction[p],p+' exact unchanged CSS');
 });

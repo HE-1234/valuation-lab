@@ -1,0 +1,50 @@
+{
+  "status": "conditional_capital_ledger_only",
+  "missing_fields": [],
+  "current_target": null,
+  "current_upside": null,
+  "known_event": {
+    "date": "2026-07-22",
+    "debt_face_added": 1000,
+    "underwriter_price_fraction": 0.98855,
+    "cash_proceeds_before_other_issuer_expenses": 988.55,
+    "net_debt_increase_before_other_expenses": 11.45,
+    "coupon": 0.0525,
+    "maturity_year": 2036,
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1065280/000119312526312575/d171951d8k.htm",
+      "https://www.sec.gov/Archives/edgar/data/1065280/000119312526312575/d171951dex11.htm"
+    ],
+    "locator": "8-K Item 8.01 and underwriting agreement section 2(a)",
+    "note": "Intent to repay $1bn November 2026 debt is not proof of repayment before Oct 19. Do not offset debt until repayment cash use is entered."
+  },
+  "projected_capital": {
+    "cash_and_short_investments": 10116.46,
+    "debt_face": 15372,
+    "net_debt_face": 5255.540000000001,
+    "common_shares_m": 4163.939676,
+    "option_shares_m": 123.891603,
+    "rsu_psu_units_m": 2.012512
+  },
+  "assumptions": {
+    "other_issuer_expenses": 0,
+    "operating_cash_flow_since_anchor": 0,
+    "ppe_cash_spend_since_anchor": 0,
+    "acquisition_cash_spend_since_anchor": 0,
+    "buyback_cash_since_anchor": 0,
+    "buyback_shares_m_since_anchor": 0,
+    "other_debt_added": 0,
+    "other_debt_net_cash_proceeds": 0,
+    "debt_principal_repaid": 0,
+    "debt_repayment_cash_total": 0,
+    "option_exercise_cash": 0,
+    "option_shares_issued_m": 0,
+    "other_net_equity_cash": 0,
+    "other_shares_issued_m": 0,
+    "other_net_cash_change_including_fx_and_investments": 0,
+    "current_option_shares_m": 123.891603,
+    "current_rsu_psu_units_m": 2.012512,
+    "other_debt_face_fx_change": 0
+  },
+  "illustration_label": "Known financing event only. All other movements explicitly assumed zero for arithmetic demonstration; never current verified capital."
+}

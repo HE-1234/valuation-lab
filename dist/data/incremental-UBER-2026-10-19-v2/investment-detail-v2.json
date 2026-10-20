@@ -1,0 +1,47 @@
+{
+  "date": "2026-06-30",
+  "units": "USD million",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+  "locators": [
+    "Note2 Fair Value Measurement and Investments",
+    "Note3 Equity Method Investments",
+    "Note5 Debt and Credit Arrangements",
+    "Note12 Variable Interest Entities"
+  ],
+  "nonmarketable": {
+    "didi": 1900,
+    "other": 2263,
+    "total": 4163
+  },
+  "marketable": {
+    "grab": 2020,
+    "aurora": 1763,
+    "other": 813,
+    "total": 4596
+  },
+  "balance_sheet_investments_total": 8759,
+  "equity_method": {
+    "delivery_hero": 3502,
+    "careem_technologies": 147,
+    "other": 124,
+    "total": 3773
+  },
+  "delivery_hero_total_return_swaps_in_other_noncurrent_assets": 1504,
+  "loans_and_notes_receivable_in_other_noncurrent_assets": 864,
+  "aurora_shares_pledged_percent_approx": 61,
+  "illustrative_asset_valuation": {
+    "marketable_multiplier": 0.9,
+    "nonmarketable_multiplier": 0.6,
+    "equity_method_multiplier": 0.8,
+    "trs_multiplier": 0.9,
+    "loans_multiplier": 0.9,
+    "total": 11783.800000000001
+  },
+  "not_added": [
+    "UKVAT appeal receivable",
+    "deferred tax asset",
+    "restricted cash or investments",
+    "goodwill and operating intangible book value"
+  ],
+  "non_overlap": "Equity investments8759 exclude equity-method3773 and TRS1504/loans864 in other noncurrent assets. Do not separately add named components after adding their category total. Aurora debt is already in total debt claim."
+}

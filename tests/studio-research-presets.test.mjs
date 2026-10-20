@@ -1,3 +1,4 @@
+import {applyTsmReceiptCorrection} from '../dist/tsm-receipt-correction.js';
 import {assertFreshJointDefaults} from './joint-default-contract.mjs';
 import {currentResearchDraft} from '../dist/current-research-defaults.js';
 import test from 'node:test';
@@ -39,7 +40,7 @@ test('complete presets: fresh defaults, company switches and reload retain full 
  const h=await startResearchWorkspace();
  for(const preset of readBundle().presets){
   h.select(preset.ticker);const d=h.getState().draft;
-  assert.deepEqual(withoutTime(d),withoutTime(currentResearchDraft(preset,readBundle())),preset.ticker);
+  assert.deepEqual(withoutTime(d),withoutTime(applyTsmReceiptCorrection(currentResearchDraft(preset,readBundle()))),preset.ticker);
   assert.match(h.get('#research-preset-state').textContent,/Complete research preset/);
   assert.ok(h.get('[data-research-action="use-research"]'));
  }

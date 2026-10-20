@@ -68,7 +68,7 @@ test('every production authored identity note and coverage reason has an exact S
  const overlay=new Map(catalogProsePairs);
  const authored=[...artifact.companies.flatMap(row=>[row.evidence,row.note,row.exchange,row.securityType]),...artifact.coverage.map(row=>row.reason)];
  for(const original of authored){assert.ok(overlay.has(original),original);assert.match(overlay.get(original),/[\u3400-\u9fff]/);assert.notEqual(overlay.get(original),original);}
- assert.equal(artifact.companies.length,45);assert.equal(artifact.coverage.length,0);
+ assert.equal(artifact.companies.length,48);assert.equal(artifact.coverage.length,0);
  const h=await startResearchWorkspace({catalogBundle:artifact});
  // The shared minimal DOM does not implement comma-separated selectors or
  // hasAttribute; enable the standard DOM operations used by locale binding.

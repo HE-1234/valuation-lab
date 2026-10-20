@@ -1,0 +1,53 @@
+{
+  "scope": "All monetary model inputs USDm. These paragraphs explain analyst choices; dated issuer facts remain in sources/history.",
+  "items": [
+    {
+      "group": "Unit economics and reported revenue",
+      "basis": "FY2025 corporate rents 10442, royalties 6018, franchisee sales 129675 and conventional franchisee sales 93761 calibrate blended rent and royalty yields. These are observations, not contract rates. Separate comp/unit-sales/FX factors feed three franchise cohorts; only company-operated sales are gross corporate restaurant revenue.",
+      "editable": "All cohort growth arrays, rent_rate_shift, royalty_rate_shift, company revenue growth, restaurant-count illustration",
+      "uncertainty": "Blend can change with market/cohort mix and rent relief. No contractual royalty-by-cohort split is claimed."
+    },
+    {
+      "group": "Near-term demand and unit expansion",
+      "basis": "Q2 global comparable sales 1.3%, H1 2.5%, U.S. guest counts negative; H1 revenues 13616. Base 2026 comp 2%, units weighted about 2.47%, FX1.5%; thereafter stable FX. Net count grows more quickly than first-year sales contribution because opening dates and maturation differ.",
+      "editable": "comp_growth, unit_sales_contribution arrays, fx_growth",
+      "uncertainty": "Illustrative restaurant counts are not a second revenue multiplier."
+    },
+    {
+      "group": "Margins and support",
+      "basis": "Franchise occupancy expense grows 3% base; company restaurant margin improves from 14.5%2026 to 16.5%2030; SGA declines from 2.2% to 2.0% of systemwide sales. No management target plug. Other technology fees largely recover costs; only the 2025 residual other profit 83 grows 2.5%, rather than assigning franchise margins to all other revenue.",
+      "editable": "occupancy growth, company margin, SGA rate, other profit growth",
+      "uncertainty": "Corporate benefit differs from 250 bp restaurant efficiency; downside has weaker demand, higher costs and 20% support overrun."
+    },
+    {
+      "group": "NEXT partnering",
+      "basis": "Base assumes no 2026 spend from newly announced program, 1750 capital+3250 rent relief during 2027\u201330 and 3500 remaining during 2031\u201336. Later split 35%capital/65%rent is analyst assumption. September baseline 3000 annual capex supersedes earlier expectation of sequential 2027 capex increases.",
+      "editable": "annual next_capital_support and next_rent_relief",
+      "uncertainty": "Annual timing andpost 2030 split were not disclosed; total commitments treated as plan not enforceable debt.2037 finite program ends, but terminal reinvestment persists."
+    },
+    {
+      "group": "D&A, property and leases",
+      "basis": "Cash-flow D&A2199 in 2025; base 2300 in 2026 grows 3.5%; new finance ROU additions 468 in 2025 support 500 annual economic finance-asset capex assumption, H2 standalone 250. Cash capex 3800 in 2026 then 3000 baseline pluspartnering.",
+      "editable": "da, cash_capex_baseline, new_finance_lease_assets",
+      "uncertainty": "Maintenance versus expansion split and June finance lease liability are not fully verified. Asset depreciation schedules not modeled by vintage."
+    },
+    {
+      "group": "Tax and working capital",
+      "basis": "Base cash tax 22%2026 rises 23%; avoids extrapolating one-off discrete benefits. Operating NWC investment 3% of incremental gross-before-relief corporate revenue; H2 half-year charge estimated separately.",
+      "editable": "cash_tax_rate, incremental_nwc_ratio",
+      "uncertainty": "No claim that normalized tax equals period cash taxes; no cash-tax refunds or offshore tax-asset benefit added. Seasonal working-capital changes not forecast in detail."
+    },
+    {
+      "group": "SBC and ownership",
+      "basis": "SBC remains in SGA as cash-replacement expense; no SBC addback or free future share shrinkage. June exact common shares 707641531 differ from H1 diluted EPS weighted shares 712.3 m. Existing awards are separately datedDecember 2025 and incomplete atJune.",
+      "editable": "Only optional explicit capital allocation policy",
+      "uncertainty": "Unknown existing-award reserve defaultsnull; no forced price allocation or option value from EPS dilution."
+    },
+    {
+      "group": "WACC and terminal reinvestment",
+      "basis": "Bear/base/bull WACC9.5/8/7%, g 2/2.5/3%, incremental ROIC13/18/22% are analyst scenario choices, not current observed market estimates. No beta, risk-free rate, ERP or market price is falsely described as verified.",
+      "editable": "wacc, terminal_g, terminal_roic",
+      "uncertainty": "g/ROIC reinvestment includes cash and economically financed assets; terminal D&A/capex/NWC are not deducted again. Substantial terminal dependence is exported. Economic ROIC is an assumption, not book ROE from negative equity."
+    }
+  ]
+}

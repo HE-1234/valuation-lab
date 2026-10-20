@@ -33,8 +33,8 @@ function trialDraft(d,path,capitalPolicy='fixed-schedule') {
  return result;
 }
 
-test('zero-uncertainty joint paths reproduce all 33 research operating values and reviewed rows exactly',()=>{
- const cases=[...original,...incrementalRecords.map(r=>r.annualCase)];assert.equal(cases.length,33);
+test('zero-uncertainty joint paths reproduce all 36 research operating values and reviewed rows exactly',()=>{
+ const cases=[...original,...incrementalRecords.map(r=>r.annualCase)];assert.equal(cases.length,36);
  for(const company of cases) {
   const d=researchDraftFor(company),before=structuredClone(d),context=researchAnnualPathContext(d),sampler=prepareJointAnnualPaths(context,config(context));
   const path=sampler.sample(()=>{throw Error('No randomness at zero uncertainty');}),replay=trialDraft(d,path),value=calculateResearchOperating(replay),base=calculateResearchOperating(d);

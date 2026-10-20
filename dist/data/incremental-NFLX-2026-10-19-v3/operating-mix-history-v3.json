@@ -1,0 +1,502 @@
+{
+  "annual": [
+    {
+      "year": 2016,
+      "regions": null,
+      "global_paid_memberships_m": 89.09,
+      "global_monthly_revenue_per_paying_membership": 8.61,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+          "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+          "locator": "HTML table 62, row 6, Paid memberships at end of period"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+          "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+          "locator": "HTML table 62, row 8, Average monthly revenue per paying membership"
+        }
+      },
+      "old_basis": {
+        "Domestic streaming": {
+          "revenue_usd_m": 5077.307,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+            "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+            "locator": "HTML table 66, row 12, Revenues"
+          }
+        },
+        "International streaming": {
+          "revenue_usd_m": 3211.095,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+            "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+            "locator": "HTML table 67, row 12, Revenues"
+          }
+        },
+        "DVD": {
+          "revenue_usd_m": 542.267,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+            "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+            "locator": "HTML table 68, row 11, Revenues"
+          }
+        }
+      },
+      "regional_gap": "Four-region 2016 comparison not retrieved; old domestic/international segmentation retained, not mapped to UCAN/EMEA/LATAM/APAC."
+    },
+    {
+      "year": 2017,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 6660.859,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 113, row 5, Revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 2362.813,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 114, row 5, Revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 1642.616,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 115, row 5, Revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 575.928,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 116, row 5, Revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 110.644,
+      "global_monthly_revenue_per_paying_membership": 9.43,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+          "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+          "locator": "HTML table 62, row 6, Paid memberships at end of period"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+          "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+          "locator": "HTML table 62, row 8, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 8281.532,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 113, row 5, Revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 3963.707,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 114, row 5, Revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 2237.697,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 115, row 5, Revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 945.816,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528020000040/form10kq419.htm",
+            "source_sha256": "7b86390350416eb98b1496e26ae5aab821c193373b5a48cd8858925734ff5fcf",
+            "locator": "HTML table 116, row 5, Revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 139.259,
+      "global_monthly_revenue_per_paying_membership": 10.31,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+          "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+          "locator": "HTML table 62, row 6, Paid memberships at end of period"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528019000043/form10k_q418.htm",
+          "source_sha256": "91a969c74ce2130e024432e67844ef2aeeae2e427671c6f28fda26ca1eadcc33",
+          "locator": "HTML table 62, row 8, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 10051.208,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 32, row 4, Revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 5543.067,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 33, row 4, Revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 2795.434,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 34, row 4, Revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 1469.521,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 35, row 4, Revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 167.09,
+      "global_monthly_revenue_per_paying_membership": 10.82,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+          "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+          "locator": "HTML table 8, row 11, Paid memberships at end of period"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+          "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+          "locator": "HTML table 8, row 13, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 11455.396,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 32, row 4, Revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 7772.252,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 33, row 4, Revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 3156.727,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 34, row 4, Revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 2372.3,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 35, row 4, Revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 203.663,
+      "global_monthly_revenue_per_paying_membership": 10.91,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+          "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+          "locator": "HTML table 8, row 11, Paid memberships at end of period"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+          "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+          "locator": "HTML table 8, row 13, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 12972.1,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 32, row 4, Revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 9699.819,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 33, row 4, Revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 3576.976,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 34, row 4, Revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 3266.601,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+            "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+            "locator": "HTML table 35, row 4, Revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 221.844,
+      "global_monthly_revenue_per_paying_membership": 11.67,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+          "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+          "locator": "HTML table 8, row 11, Paid memberships at end of period"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528022000036/nflx-20211231.htm",
+          "source_sha256": "84361e8e0c4302b5dec106b9804c4bb201e68651995223670271d57c2d98de66",
+          "locator": "HTML table 8, row 13, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 14084.643,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 37, row 4, Streaming revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 9745.015,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 38, row 4, Streaming revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 4069.973,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 39, row 4, Streaming revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 3570.221,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 40, row 4, Streaming revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 230.747,
+      "global_monthly_revenue_per_paying_membership": 11.76,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+          "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+          "locator": "HTML table 10, row 14, Paid memberships at end of period (2)"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+          "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+          "locator": "HTML table 10, row 16, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 14873.783,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 37, row 4, Streaming revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 10556.487,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 38, row 4, Streaming revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 4446.461,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 39, row 4, Streaming revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 3763.727,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 40, row 4, Streaming revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 260.276,
+      "global_monthly_revenue_per_paying_membership": 11.64,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+          "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+          "locator": "HTML table 10, row 14, Paid memberships at end of period (2)"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+          "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+          "locator": "HTML table 10, row 16, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 17359.369,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 37, row 4, Streaming revenues"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 12387.035,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 38, row 4, Streaming revenues"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 4839.816,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 39, row 4, Streaming revenues"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 4414.746,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+            "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+            "locator": "HTML table 40, row 4, Streaming revenues"
+          }
+        }
+      },
+      "global_paid_memberships_m": 301.626,
+      "global_monthly_revenue_per_paying_membership": 11.7,
+      "provenance": {
+        "global_paid_memberships_m": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+          "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+          "locator": "HTML table 10, row 14, Paid memberships at end of period (2)"
+        },
+        "global_monthly_revenue_per_paying_membership": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/nflx-20241231.htm",
+          "source_sha256": "d4a6b60eccd7ffd92b0fc3a45e8494ff4754ddd1e704cf4a59b9a398a9bf3d13",
+          "locator": "HTML table 10, row 16, Average monthly revenue per paying membership"
+        }
+      }
+    },
+    {
+      "year": 2025,
+      "regions": {
+        "UCAN": {
+          "revenue_usd_m": 19957.152,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+            "source_sha256": "89eb4d43acd037e75ab20adad53fdbac07788b71a29d415af96aa2d0eadeb907",
+            "locator": "HTML table 35, row 4, United States and Canada (UCAN)"
+          }
+        },
+        "EMEA": {
+          "revenue_usd_m": 14514.646,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+            "source_sha256": "89eb4d43acd037e75ab20adad53fdbac07788b71a29d415af96aa2d0eadeb907",
+            "locator": "HTML table 35, row 5, Europe, Middle East, and Africa (EMEA)"
+          }
+        },
+        "LATAM": {
+          "revenue_usd_m": 5357.521,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+            "source_sha256": "89eb4d43acd037e75ab20adad53fdbac07788b71a29d415af96aa2d0eadeb907",
+            "locator": "HTML table 35, row 6, Latin America (LATAM)"
+          }
+        },
+        "APAC": {
+          "revenue_usd_m": 5353.717,
+          "provenance": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+            "source_sha256": "89eb4d43acd037e75ab20adad53fdbac07788b71a29d415af96aa2d0eadeb907",
+            "locator": "HTML table 35, row 7, Asia-Pacific (APAC)"
+          }
+        }
+      },
+      "global_paid_memberships_m": null,
+      "global_monthly_revenue_per_paying_membership": null,
+      "membership_gap": "No comparable exact FY2025 membership/ARM table retrieved in this package. Periodic milestone disclosures are not substituted for an exact year-end count; null is not zero."
+    }
+  ],
+  "notes": [
+    "Regions are geographic revenue disclosures, not separately valued businesses or segment EBITDA.",
+    "Membership and average monthly revenue per membership are reported issuer KPIs; changing ads, paid-sharing and plan mix reduce like-for-like explanatory power.",
+    "Global paid memberships are not individual viewer counts. Historical ARM should not be extrapolated into a current segment model without updated advertising and membership disclosures."
+  ]
+}

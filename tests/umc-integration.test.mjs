@@ -17,7 +17,7 @@ const applyPolicy=(d,p)=>{d.umcPolicy=structuredClone(p);if(p)d.annual.forEach((
 const calc=d=>{const op=calculateResearchOperating(d),timing=researchTimingResult(d,op);return {op,bridge:calculateResearchBridge(d,timing.enterprise,{calculationDate:timing.date})};};
 
 test('UMC shipped envelope, source hashes, exclusions and frozen raw-free transformation manifest are exact',async()=>{
- assert.ok(INCREMENTAL_RESEARCH_PATHS.includes(file));assert.deepEqual(await fetchIncrementalResearch(fetcher,{path:file}),incrementalPackages.at(-1));
+ assert.ok(INCREMENTAL_RESEARCH_PATHS.includes(file));assert.deepEqual(await fetchIncrementalResearch(fetcher,{path:file}),incrementalPackages.find(p=>p.version===r.identity.packageVersion));
  for(const k of ['source','history','audit','fullReport'])assert.equal(createHash('sha256').update(fs.readFileSync(new URL(r.identity[k+'Path'].replace(/^\.\//,''),root))).digest('hex'),r.identity[k+'SHA256']);
  const p='data/incremental-UMC-2026-10-19-v1/',manifest=read(p+'packaging-manifest.json'),original=read(p+'integrity-manifest-v1.json');assert.equal(manifest.sourceBundleSHA256,'b1759e15c3aeb3b8044f95034cb723aae24fb90ad5fe92d1d89ce3c5da3d4523');
  for(const [name,hash]of Object.entries(manifest.files)){assert.doesNotMatch(name,/(^|\/)(sources|private-sources|__pycache__)(\/|$)|\.pdf$|\.pyc$/);assert.equal(createHash('sha256').update(fs.readFileSync(new URL(p+name,root))).digest('hex'),hash,name);}
