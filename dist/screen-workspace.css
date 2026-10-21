@@ -113,3 +113,25 @@ body>aside nav{max-width:none}.workspace-evidence-host{scroll-margin-top:64px}
 .annual-growth-horizon p,.annual-growth-horizon details{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
 .annual-growth-horizon details{margin-top:8px}.annual-growth-horizon summary{min-height:44px;padding:10px 0}
 .annual-derived-label{color:var(--ink)}
+
+/* My valuations window */
+.myval-dialog{width:min(560px,calc(100vw - 32px));max-height:min(720px,calc(100vh - 48px));padding:20px 22px;border:1px solid var(--line,#dfe2e7);border-radius:12px;background:var(--surface,#fff);color:var(--ink,#14181e);box-shadow:0 24px 64px rgba(10,14,20,.22);overflow:auto}
+.myval-dialog::backdrop{background:rgba(12,16,22,.38)}
+.myval-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 6px}
+.myval-head h2{margin:0;font-size:20px}
+.myval-close{font-size:22px;line-height:1;padding:4px 10px}
+.myval-save{display:grid;gap:8px;margin:16px 0 4px;padding:14px;border-radius:10px;background:var(--soft,#eaedf3)}
+.myval-save input[type=text]{width:100%;box-sizing:border-box;min-height:42px;padding:8px 12px;border:1px solid var(--line,#dfe2e7);border-radius:8px;background:var(--surface,#fff);color:inherit;font:inherit}
+.myval-check{display:flex;align-items:center;gap:8px;font-size:14px}
+.myval-save .primary{justify-self:start}
+.myval-status{min-height:1.2em;margin:6px 0}
+.myval-list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.myval-list li{display:grid;gap:8px;padding:12px 0;border-top:1px solid var(--line,#dfe2e7)}
+.myval-row-main{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px}
+.myval-row-main .micro{flex-basis:100%;color:var(--muted,#59606a)}
+.myval-row-main input{flex:1;min-width:0;min-height:36px;padding:6px 10px;border:1px solid var(--line,#dfe2e7);border-radius:8px;font:inherit;color:inherit;background:var(--surface,#fff)}
+.myval-badge{padding:2px 8px;border-radius:999px;background:var(--accent,#2343c4);color:var(--on-accent,#fff);font-size:12px;font-weight:600}
+.myval-row-actions{display:flex;flex-wrap:wrap;gap:6px}
+.myval-row-actions button{min-height:34px}
+.myval-danger{color:#b42318;border-color:#b42318}
+.myval-count{opacity:.7}
