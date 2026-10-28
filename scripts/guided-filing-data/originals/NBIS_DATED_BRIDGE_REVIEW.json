@@ -1,0 +1,178 @@
+{
+  "cutoff": "2026-10-21",
+  "scope": "Evidence for period-end Nebius bridge; no gate change or claim-model assumption inferred",
+  "conclusion": "Subsequent financing does not invalidate a clearly labelled period-end reference. Parent share and award counts are available at both dates. A complete common-equity allocation still requires a consistent convertible/parent-option scenario and a separately valued Avride subsidiary-award claim. Subsidiary awards cannot be added to parent-company shares.",
+  "annual": {
+    "periodEnd": "2025-12-31",
+    "actualOrdinaryShares": {
+      "value": 253.016971,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "locator": "Consolidated Balance Sheets: Class A 219,465,088 + Class B 33,551,883; excludes treasury",
+      "originalDocumentVerified": true
+    },
+    "parentUnvestedRSUs": {
+      "value": 5.737256,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "locator": "Note 14 Share-Based Compensation, unvested RSU rollforward closing balance",
+      "originalDocumentVerified": true
+    },
+    "parentOptions": {
+      "value": 7.316882,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "locator": "Note 14, outstanding share-option activity and exercise-price table",
+      "originalDocumentVerified": true
+    },
+    "parentOptionExerciseTranches": [
+      {
+        "value": 1.316882,
+        "unit": "million shares",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+        "locator": "Note 14, exercise-price table: 1,316,882 options at USD40",
+        "originalDocumentVerified": true
+      },
+      {
+        "value": 6,
+        "unit": "million shares",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+        "locator": "Note 14, exercise-price table: 6,000,000 options at USD100",
+        "originalDocumentVerified": true
+      }
+    ],
+    "convertibleFairValue": {
+      "value": 4922.5,
+      "unit": "USD millions",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "locator": "Note 12 Debt: total fair value of convertible debt",
+      "originalDocumentVerified": true
+    },
+    "avrideSAFEClaim": {
+      "value": 102.7,
+      "unit": "USD millions",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "locator": "Note 4 Other accrued liabilities: Avride SAFE and Tranche Right liability",
+      "originalDocumentVerified": true
+    },
+    "avrideOptions": {
+      "value": 6.605272,
+      "unit": "million subsidiary shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "locator": "Note 14 Avride employee stock incentive plan: closing options",
+      "originalDocumentVerified": true
+    },
+    "avrideRSUs": {
+      "value": 0.015794,
+      "unit": "million subsidiary shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "locator": "Note 14 Avride employee stock incentive plan: closing RSUs",
+      "originalDocumentVerified": true
+    },
+    "prefundedWarrantTreatment": "March 2026 NVIDIA warrants are a subsequent event and must not be added to the December 2025 denominator."
+  },
+  "interim": {
+    "periodEnd": "2026-06-30",
+    "actualOrdinaryShares": {
+      "value": 271.855218,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Consolidated Statements of Changes in Shareholders Equity: balance as of June 30 2026",
+      "originalDocumentVerified": true
+    },
+    "includedParticipatingShares": {
+      "value": 2.743655,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "EPS policy: unvested issued Eigen acquisition shares carry nonforfeitable dividend rights; already included in total actual shares",
+      "originalDocumentVerified": true
+    },
+    "prefundedWarrantShares": {
+      "value": 21.065936,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 14 Share Capital: NVIDIA prefunded warrants, nominal USD0.0001 exercise price",
+      "originalDocumentVerified": true
+    },
+    "parentUnvestedRSUs": {
+      "value": 6.234091,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 13 Share-Based Compensation: closing RSU activity",
+      "originalDocumentVerified": true
+    },
+    "parentOptions": {
+      "value": 6.7406,
+      "unit": "million shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 13: closing parent option activity",
+      "originalDocumentVerified": true
+    },
+    "parentOptionWeightedStrike": {
+      "value": 88.65,
+      "unit": "USD/share",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 13: closing parent option weighted-average exercise price",
+      "originalDocumentVerified": true
+    },
+    "convertibleFairValue": {
+      "value": 20823.7,
+      "unit": "USD millions",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 12: total fair value of convertible debt",
+      "originalDocumentVerified": true
+    },
+    "avrideSAFEClaim": {
+      "value": 178.1,
+      "unit": "USD millions",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 4: Avride SAFE, Tranche Right and Milestone SAFE liability",
+      "originalDocumentVerified": true
+    },
+    "tavilyHoldbackEarnoutLiability": {
+      "value": 19,
+      "unit": "USD millions",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 4 Other accrued liabilities: Tavily Holdback and Earnout liability; Note 3 business combination terms",
+      "originalDocumentVerified": true
+    },
+    "noncontrollingInterest": {
+      "value": 1,
+      "unit": "USD millions",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Consolidated Balance Sheets / Statements of Changes in Shareholders Equity: NCI",
+      "originalDocumentVerified": true
+    },
+    "avrideOptions": {
+      "value": 5.94557,
+      "unit": "million subsidiary shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 13 Avride options, outstanding at end of period",
+      "originalDocumentVerified": true
+    },
+    "avrideOptionWeightedStrike": {
+      "value": 2.1,
+      "unit": "USD/subsidiary share",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 13 Avride option weighted-average exercise price",
+      "originalDocumentVerified": true
+    },
+    "avrideRSUs": {
+      "value": 0,
+      "unit": "million subsidiary shares",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "locator": "Note 13 Avride RSU activity: 15,794 at beginning, all exercised; end \u2014",
+      "originalDocumentVerified": true
+    }
+  },
+  "missingForCompleteClaimValuation": [
+    "The date-matched economic value of outstanding Avride subsidiary options/RSUs or enough subsidiary equity/capitalization information to allocate the parent enterprise value to those instruments. The filings disclose counts, strikes and grant accounting but not a current aggregate claim value; unamortized compensation expense is not that value.",
+    "A specified mutually exclusive treatment of convertible claims: filing fair value as a debt claim, or a contractual conversion model. Counting both convertible debt and converted shares would double count.",
+    "A specified parent-option treatment. Counts and exercise-price data exist, enabling a transparent full-exercise scenario, but that scenario is not an option time-value appraisal."
+  ],
+  "otherLimitations": [
+    "The current generic loss-to-margin operating case may yield a nonpositive operating value; that is a model-suitability problem, separate from missing filing dates.",
+    "Parent continuing-operation perimeter is explicitly recast in the annual and interim statements. Do not use old Yandex consolidated history as though it were the current group.",
+    "June Tavily holdback/earnout liability19.0m is additional to the previously captured SAFE178.1m and NCI1.0m; employment-conditioned future consideration must not be counted both as a current acquisition claim and as the same future operating expense."
+  ]
+}

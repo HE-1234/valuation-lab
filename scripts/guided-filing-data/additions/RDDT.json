@@ -1,0 +1,145 @@
+{
+  "ticker": "RDDT",
+  "cutoff": "2026-10-21",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000022/rddt-20251231.htm",
+      "title": "Reddit, Inc. 10-K 2025-12-31",
+      "publishedAt": "2026-02-06"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000100/rddt-20260630.htm",
+      "title": "Reddit, Inc. 10-Q 2026-06-30",
+      "publishedAt": "2026-07-31"
+    }
+  ],
+  "freshness": {
+    "checkedAt": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001713445.json",
+    "annual": {
+      "accessionNumber": "0001713445-26-000022",
+      "filingDate": "2026-02-06",
+      "reportDate": "2025-12-31",
+      "acceptanceDateTime": "2026-02-06T04:07:09.000Z",
+      "act": "34",
+      "form": "10-K",
+      "fileNumber": "001-41983",
+      "filmNumber": "26604422",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 11750531,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": null,
+      "primaryDocument": "rddt-20251231.htm",
+      "primaryDocDescription": "10-K"
+    },
+    "latestPeriodic": {
+      "accessionNumber": "0001713445-26-000100",
+      "filingDate": "2026-07-31",
+      "reportDate": "2026-06-30",
+      "acceptanceDateTime": "2026-07-31T01:42:59.000Z",
+      "act": "34",
+      "form": "10-Q",
+      "fileNumber": "001-41983",
+      "filmNumber": "261224668",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 8441000,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": 1,
+      "primaryDocument": "rddt-20260630.htm",
+      "primaryDocDescription": "10-Q"
+    }
+  },
+  "claimsPolicy": {
+    "annual": {
+      "optionTranches": [
+        {
+          "shares": 10.852131,
+          "strike": 38.38,
+          "years": 7.14,
+          "volatility": 0.65,
+          "rate": 0.04
+        }
+      ],
+      "note": "The denominator includes actual Class A and B shares plus unissued RSUs and PRSUs. Already-issued restricted shares are not counted twice. Options use DCF common value, with assumed 65% volatility and a 4% risk-free rate.",
+      "noteZh": "分母包含实际A类及B类股数及尚未发行的RSU和绩效RSU，已发行限制股不重复计算。期权使用DCF普通股价值，并假设波动率65%、无风险利率4%。"
+    },
+    "ttm": {
+      "optionTranches": [
+        {
+          "shares": 9.992568,
+          "strike": 40.68,
+          "years": 6.91,
+          "volatility": 0.65,
+          "rate": 0.04
+        }
+      ],
+      "note": "The denominator includes actual Class A and B shares plus unissued RSUs and PRSUs. Already-issued restricted shares are not counted twice. Options use DCF common value, with assumed 65% volatility and a 4% risk-free rate.",
+      "noteZh": "分母包含实际A类及B类股数及尚未发行的RSU和绩效RSU，已发行限制股不重复计算。期权使用DCF普通股价值，并假设波动率65%、无风险利率4%。"
+    }
+  },
+  "modelProxies": {},
+  "limitations": [
+    "IPO-period compensation distorts historical GAAP margins. Existing options and unissued awards are allocated separately; future employee compensation remains in operating margins."
+  ],
+  "limitationsZh": [
+    "上市期间股权薪酬扭曲历史GAAP利润率。现有期权和未发行奖励单独分配；未来员工薪酬仍计入营业利润率。"
+  ],
+  "sector": "Internet advertising",
+  "sectorZh": "互联网广告",
+  "businessSummary": "Community platform monetized through advertising and data licensing.",
+  "businessSummaryZh": "通过广告和数据授权盈利的社区平台。",
+  "assumptions": {
+    "growth": 0.25,
+    "targetMargin": 0.35,
+    "tax": 0.25,
+    "salesCapital": 5,
+    "wacc": 0.115,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.25,
+    "years": 10
+  },
+  "rationale": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain.",
+  "rationaleZh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。",
+  "rationaleByField": {
+    "growth": {
+      "en": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "targetMargin": {
+      "en": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "tax": {
+      "en": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "salesCapital": {
+      "en": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "wacc": {
+      "en": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalGrowth": {
+      "en": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    }
+  },
+  "localizationPairs": {
+    "Internet advertising": "互联网广告",
+    "Community platform monetized through advertising and data licensing.": "通过广告和数据授权盈利的社区平台。",
+    "IPO-period compensation distorts historical GAAP margins. Existing options and unissued awards are allocated separately; future employee compensation remains in operating margins.": "上市期间股权薪酬扭曲历史GAAP利润率。现有期权和未发行奖励单独分配；未来员工薪酬仍计入营业利润率。",
+    "The denominator includes actual Class A and B shares plus unissued RSUs and PRSUs. Already-issued restricted shares are not counted twice. Options use DCF common value, with assumed 65% volatility and a 4% risk-free rate.": "分母包含实际A类及B类股数及尚未发行的RSU和绩效RSU，已发行限制股不重复计算。期权使用DCF普通股价值，并假设波动率65%、无风险利率4%。",
+    "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain.": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。",
+    "Initial 25% growth is below recent reported expansion;35% mature GAAP margin assumes advertising monetization scales without removing recurring employee pay. Data licensing and advertising demand remain uncertain. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.": "初期25%增长低于近期申报增速；成熟期35%GAAP利润率假设广告变现扩大且不剔除持续员工薪酬。数据授权及广告需求仍有不确定性。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "ticker": "ARM",
+  "name": "Arm Holdings plc",
+  "cik": "0001973239",
+  "currency": "USD",
+  "filerType": "foreign",
+  "shareBasis": "ordinary share (one ADS represents one ordinary share)",
+  "adrRatio": 1,
+  "listedUnit": "ADS (1 ordinary share)",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2026-03-31",
+      "label": "FY2026",
+      "form": "20-F",
+      "accession": "0001973239-26-000097",
+      "filedAt": "2026-05-26",
+      "acceptedAt": "2026-05-26T20:35:23.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+      "revenue": 4920,
+      "operatingIncome": 900,
+      "ttmComponents": null,
+      "cashAndEquivalents": 2751,
+      "shortTermInvestments": 850,
+      "longTermInvestments": 387,
+      "debtCurrent": 25,
+      "debtNoncurrent": 34,
+      "operatingLeaseLiabilities": 432,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesOutstanding": 1064.055252,
+      "sharesDate": "2026-03-31",
+      "unvestedRSUs": 19,
+      "options": {
+        "count": null,
+        "weightedExercisePrice": null,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "convertibles": [],
+      "otherClaims": [
+        {
+          "name": "Electronic design automation (EDA) liabilities (current 78 + non-current 97)",
+          "value": 175,
+          "basis": "carrying value of deferred-payment obligations for EDA licences; not interest-bearing borrowings and not included in debt above; the reviewed ARM package deducts them in its equity bridge",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm - Note 'Other current liabilities' (EDA liabilities 78) and 'Other non-current liabilities' (EDA liabilities 97), as of March 31, 2026"
+        }
+      ],
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Consolidated Income Statements, Total revenue, fiscal year ended March 31, 2026 (p.127)",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Consolidated Income Statements, Operating income (loss), FY ended March 31, 2026",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Consolidated Balance Sheets, Cash and cash equivalents, March 31, 2026",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Consolidated Balance Sheets, Short-term investments (bank term deposits 3-12 months), March 31, 2026"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Consolidated Balance Sheets, non-current 'Equity investments' 387 (incl. 148 fair-value-option investments), March 31, 2026",
+          "tag": "us-gaap:LongTermInvestments"
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Lease note: finance lease liabilities in Other current liabilities 25 (also 'Other current liabilities consist of' table), March 31, 2026",
+          "tag": "us-gaap:FinanceLeaseLiabilityCurrent"
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Lease note: finance lease liabilities in Other non-current liabilities 34 (total finance lease liabilities 59), March 31, 2026",
+          "tag": "us-gaap:FinanceLeaseLiabilityNoncurrent"
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Lease note: total operating lease liabilities 432 = current 39 + non-current 393, March 31, 2026",
+          "tag": "us-gaap:OperatingLeaseLiability"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Consolidated Balance Sheets: no non-controlling interest line (equity is ordinary shares, APIC, AOCI, retained earnings only)"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Consolidated Balance Sheets: no preferred shares outstanding; only ordinary shares in shareholders' equity"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Cover page: number of ordinary shares outstanding as of March 31, 2026 was 1,064,055,252 (also balance sheet: 1,064 million issued and outstanding)",
+          "tag": "dei:EntityCommonStockSharesOutstanding"
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Share-based compensation note: 2022 RSU Plan outstanding and expected to vest at March 31, 2026 = 1 million; Omnibus Incentive Plan (RSUs and PSUs) outstanding and expected to vest = 18 million (disclosed in rounded millions; excludes PSUs with no grant date; excludes 31,806 NED Plan RSUs reported at FY2024)"
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Share-based compensation note: awards are RSUs/PSUs only; no stock option plan outstanding (ESPP rights only, 0.7m shares purchased to date)"
+        },
+        "convertibles": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "Balance sheet and notes: no borrowings or convertible debt; Ampere convertible loan was a receivable and was settled in Dec 2025"
+        }
+      },
+      "note": "20-F for fiscal year ended March 31, 2026 (ADS = 1 ordinary share). No bank debt, notes or convertibles; 'debt' is finance leases only (25 current + 34 non-current = 59). Operating-lease liabilities 432 recorded only. Long-term investments 387 = balance-sheet Equity investments (includes 96.1 publicly listed equity incl. Raspberry Pi, equity-method, private); available-for-sale preferred shares (13.2) and loans in other non-current assets are not included. EDA liabilities 175 are listed as otherClaims, not debt. Unvested awards are disclosed only in rounded millions (1 + 18 = 19). Subsequent: DreamBig acquisition for about 265 cash closed July 1, 2026 (after this base).",
+      "accountingBasis": "US GAAP",
+      "accountingBasisZh": "\u7f8e\u56fd\u516c\u8ba4\u4f1a\u8ba1\u539f\u5219"
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "6-K",
+      "accession": "0001973239-26-000114",
+      "filedAt": "2026-07-29",
+      "acceptedAt": "2026-07-29T20:05:46.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "revenue": 5156,
+      "operatingIncome": 877,
+      "ttmComponents": {
+        "annualRevenue": 4920,
+        "ytdRevenue": 1289,
+        "priorYtdRevenue": 1053,
+        "annualOperatingIncome": 900,
+        "ytdOperatingIncome": 91,
+        "priorYtdOperatingIncome": 114,
+        "ytdStart": "2026-04-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-04-01",
+        "priorYtdEnd": "2025-06-30"
+      },
+      "cashAndEquivalents": 3058,
+      "shortTermInvestments": 830,
+      "longTermInvestments": 589,
+      "debtCurrent": 21,
+      "debtNoncurrent": 34,
+      "operatingLeaseLiabilities": 464,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesOutstanding": 1068,
+      "sharesDate": "2026-06-30",
+      "unvestedRSUs": 24,
+      "options": {
+        "count": null,
+        "weightedExercisePrice": null,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "convertibles": [],
+      "otherClaims": [
+        {
+          "name": "Electronic design automation (EDA) liabilities (current 56 + non-current 92)",
+          "value": 148,
+          "basis": "carrying value of deferred-payment obligations for EDA licences; not interest-bearing borrowings and not included in debt above; the reviewed ARM package deducts them in its equity bridge",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm - Note 'Other current liabilities consist of' (EDA 56) and 'Other non-current liabilities consist of' (EDA 92), June 30, 2026"
+        }
+      ],
+      "carriedFrom": {
+        "debtNoncurrent": {
+          "date": "2026-03-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "why": "6-K does not split the non-current finance lease liability (Other non-current liabilities table shows EDA 92 and 'Other' 49, where 49 includes the undisclosed non-current finance lease portion). 34 is the March 31, 2026 non-current finance lease liability from the 20-F lease note. Q1 FY2027 had no new finance-lease additions (non-cash additions: nil), so the liability can only have fallen; 34 is an upper bound and cannot exceed the 49 shown for all other non-current liabilities."
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Income Statements: Total revenue 1,289 (Q1 FY27) and 1,053 (Q1 FY26); TTM = 4,920 (20-F) + 1,289 - 1,053",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Income Statements: Operating income 91 (Q1 FY27) and 114 (Q1 FY26); TTM = 900 + 91 - 114",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Balance Sheets, Cash and cash equivalents, June 30, 2026",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Balance Sheets, Short-term investments, June 30, 2026"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Balance Sheets, non-current 'Equity investments' 589 (incl. 289.6 publicly listed, 141 fair-value-option), June 30, 2026",
+          "tag": "us-gaap:LongTermInvestments"
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "'Other current liabilities consist of' table: Finance lease liabilities 21, June 30, 2026",
+          "tag": "us-gaap:FinanceLeaseLiabilityCurrent"
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm",
+          "locator": "20-F lease note: non-current finance lease liabilities 34 at March 31, 2026 (carried; see carriedFrom)",
+          "tag": "us-gaap:FinanceLeaseLiabilityNoncurrent"
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Balance Sheets: Operating lease liabilities current 41 + non-current 423, June 30, 2026",
+          "tag": "us-gaap:OperatingLeaseLiabilityCurrent + OperatingLeaseLiabilityNoncurrent"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Balance Sheets: no non-controlling interest line"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Condensed Consolidated Balance Sheets: no preferred shares"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Balance sheet equity caption: '1,068 shares issued and outstanding as of June 30, 2026' (reported rounded to nearest million; no exact count filed)",
+          "tag": "us-gaap:CommonStockSharesOutstanding"
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Share-based compensation note: Omnibus Incentive Plan outstanding and expected to vest at June 30, 2026 = 24 million; 2022 RSU Plan = 0 (rounded); excludes PSUs without a grant date; excludes the 425,000-PSU CEO VCP Award granted in the quarter (conditional on AGM approval)"
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Share-based compensation note: RSUs/PSUs only; no stock options"
+        },
+        "convertibles": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+          "locator": "Balance sheet and notes: no borrowings or convertible debt"
+        }
+      },
+      "note": "Q1 FY2027 quarterly 6-K filed 2026-07-29 (quarter ended June 30, 2026) is the latest financial report filed by 2026-10-21; later 6-Ks (Aug 10 AGM notice, Sep 10 AGM results, Sep 18 UK annual report) carry no new financials. TTM = FY2026 (20-F) + Q1 FY2027 - Q1 FY2026. Debt = finance leases only: current 21 from 6-K plus non-current 34 carried from the March 31 20-F (not disclosed in the 6-K; upper bound). Shares are filed rounded to 1,068 million (20-F cover gave 1,068,078,760 at May 21, 2026, consistent). Unvested awards 24 million rounded, excludes PSUs without a grant date and the 425,000 CEO VCP PSUs. EDA liabilities 148 listed as otherClaims. Subsequent event: DreamBig acquisition for about 265 cash closed July 1, 2026 (after this balance sheet; Note 16); not deducted from cash here.",
+      "accountingBasis": "US GAAP",
+      "accountingBasisZh": "\u7f8e\u56fd\u516c\u8ba4\u4f1a\u8ba1\u539f\u5219"
+    }
+  },
+  "notes": [
+    "Arm files 20-F (annual) and 6-K (quarterly report on Q1-Q3 as 6-K, with GAAP statements), not 10-K/10-Q. Fiscal year ends March 31.",
+    "Annual base = FY2026 (year ended 2026-03-31; 20-F filed 2026-05-26). TTM base = twelve months to 2026-06-30 using the Q1 FY2027 6-K (filed 2026-07-29).",
+    "Currency USD; all statements US GAAP in USD millions.",
+    "carriedFrom used once (TTM non-current finance lease, from the 20-F). 6-K does not disclose option/RSU detail beyond rounded millions and does not give an exact share count.",
+    "Reviewed package incremental-ARM-2026-10-20-v3 uses a conservative finance-lease bound of 70 (21 + 49 all other non-current liabilities); this file uses 21 + 34 = 55 which follows the filed 20-F split."
+  ],
+  "reviewedThrough": "2026-10-21"
+}

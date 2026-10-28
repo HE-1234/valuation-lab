@@ -1,0 +1,237 @@
+{
+ "ticker": "KLAC",
+ "name": "KLA Corporation",
+ "cik": "0000319201",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "ordinary-common",
+ "adrRatio": 1,
+ "listedUnit": "common share (post 10-for-1 split of 2026-06-11)",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2026-06-30",
+   "label": "FY2026",
+   "form": "10-K",
+   "accession": "0000319201-26-000027",
+   "filedAt": "2026-08-06",
+   "acceptedAt": "2026-08-06T20:35:27.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+   "revenue": 13579.476,
+   "operatingIncome": 5660.78,
+   "ttmComponents": null,
+   "cashAndEquivalents": 1649.842,
+   "shortTermInvestments": 3252.566,
+   "longTermInvestments": null,
+   "debtCurrent": 0,
+   "debtNoncurrent": 5887.415,
+   "operatingLeaseLiabilities": 264.298,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 1306.983,
+   "sharesDate": "2026-06-30",
+   "unvestedRSUs": 10.021,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Statements of Operations (p.50), Total revenues, year ended June 30 2026: $13,579,476 thousand",
+     "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "KLA reports no operating-income line. Derived from Consolidated Statements of Operations (p.50): revenues 13,579.476 - costs of revenues 5,255.060 - R&D 1,532.118 - SG&A 1,131.518 - impairment 0 = 5,660.780. Cross-check: income before taxes 5,605.925 + interest expense 284.440 - other income net 229.585 = 5,660.780"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets (p.49), Cash and cash equivalents, June 30 2026: $1,649,842 thousand",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets (p.49), Marketable securities (current) $3,252,566 thousand; includes ~$46.8m publicly held equity securities (Note 5)"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets (p.49) and Note 7 Debt (p.72): Long-term debt $5,887,415 thousand carrying (principal 5,950,000 less discount 21,873, issuance costs 40,128, swap fair value 584); all reported as long-term, no current portion, no revolver borrowings",
+     "tag": "us-gaap:LongTermDebt"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Note 8 Leases (p.74): total lease liabilities $264,298 thousand (current 52,937 in other current liabilities + non-current 211,361); finance leases not material",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets equity caption (p.49): 1,306,983 thousand shares outstanding June 30 2026, post 10-for-1 split of June 11 2026 (Note 1). Cover page: 1,306,546,783 shares at Aug 3 2026",
+     "tag": "us-gaap:CommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Note 9 Restricted Stock Units (p.76): outstanding RSUs June 30 2026 10,021 thousand (includes performance-based RSUs at maximum), post-split"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets, complete current liability schedule: no outstanding borrowing/current debt balance reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "As of June 30, (In thousands, except par value) 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,649,842 $ 2,078,908 Marketable securities 3,252,566 2,415,715 Accounts receivable, net 2,889,208 2,263,915 Inventories 3,648,538 3,212,149 Other current assets 941,636 728,102 Total current assets 12,381,790 10,698,789 Land, property and equipment, net 1,380,550 1,252,775 Goodwill, net 1,788,758 1,792,193 Deferred income taxes 1,037,224 1,105,770 Purchased intangible assets, net 255,835 444,785 Other non-current assets 1,107,378 773,614 Total assets $ 17,951,535 $ 16,067,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 623,668 $ 458,509 Deferred system revenue 932,901 816,834 Deferred service revenue 604,127 548,011 Other current liabilities 2,144,231 2,262,441 Total current liabilities 4,304,927 4,085,795 Long-term debt 5,887,415 5,884,257 Deferred tax liabilities 473,648 446,945 Deferred service revenue 238,111 348,844 Other non-current liabilities 697,614 609,632 Total liabilities 11,601,715 11,375,473 Commitments and contingencies (Notes 8, 14 and 15) Stockholders\u2019 equity: Preferred stock, $ 0.001 par value, 1,000 shares authorized, none outstanding \u2014 \u2014 Common stock, $ 0.001 par value, 5,000,000 shares authorized, 2,816,579 and 2,811,758 shares issued, 1,306,983 and 1,320,227 shares outstanding, as of June 30, 2026 and June 30, 2025, respectively 1,307 1,320 Capital in excess of par value 2,699,102 2,510,602 Retained earnings 3,683,864 2,179,330 Accumulated other comprehensive income (loss) ( 34,453 ) 1,201 Total stockholders\u2019 equity 6,349,820 4,692,453 Total liabilities and stockholders\u2019 equity $ 17,951,535 $ 16,067,926"
+     }
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets, complete equity section: all equity is common-parent stockholders equity; no noncontrolling-interest or mezzanine NCI class reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "As of June 30, (In thousands, except par value) 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,649,842 $ 2,078,908 Marketable securities 3,252,566 2,415,715 Accounts receivable, net 2,889,208 2,263,915 Inventories 3,648,538 3,212,149 Other current assets 941,636 728,102 Total current assets 12,381,790 10,698,789 Land, property and equipment, net 1,380,550 1,252,775 Goodwill, net 1,788,758 1,792,193 Deferred income taxes 1,037,224 1,105,770 Purchased intangible assets, net 255,835 444,785 Other non-current assets 1,107,378 773,614 Total assets $ 17,951,535 $ 16,067,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 623,668 $ 458,509 Deferred system revenue 932,901 816,834 Deferred service revenue 604,127 548,011 Other current liabilities 2,144,231 2,262,441 Total current liabilities 4,304,927 4,085,795 Long-term debt 5,887,415 5,884,257 Deferred tax liabilities 473,648 446,945 Deferred service revenue 238,111 348,844 Other non-current liabilities 697,614 609,632 Total liabilities 11,601,715 11,375,473 Commitments and contingencies (Notes 8, 14 and 15) Stockholders\u2019 equity: Preferred stock, $ 0.001 par value, 1,000 shares authorized, none outstanding \u2014 \u2014 Common stock, $ 0.001 par value, 5,000,000 shares authorized, 2,816,579 and 2,811,758 shares issued, 1,306,983 and 1,320,227 shares outstanding, as of June 30, 2026 and June 30, 2025, respectively 1,307 1,320 Capital in excess of par value 2,699,102 2,510,602 Retained earnings 3,683,864 2,179,330 Accumulated other comprehensive income (loss) ( 34,453 ) 1,201 Total stockholders\u2019 equity 6,349,820 4,692,453 Total liabilities and stockholders\u2019 equity $ 17,951,535 $ 16,067,926"
+     }
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets, preferred stock authorized; no shares issued or outstanding.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "As of June 30, (In thousands, except par value) 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,649,842 $ 2,078,908 Marketable securities 3,252,566 2,415,715 Accounts receivable, net 2,889,208 2,263,915 Inventories 3,648,538 3,212,149 Other current assets 941,636 728,102 Total current assets 12,381,790 10,698,789 Land, property and equipment, net 1,380,550 1,252,775 Goodwill, net 1,788,758 1,792,193 Deferred income taxes 1,037,224 1,105,770 Purchased intangible assets, net 255,835 444,785 Other non-current assets 1,107,378 773,614 Total assets $ 17,951,535 $ 16,067,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 623,668 $ 458,509 Deferred system revenue 932,901 816,834 Deferred service revenue 604,127 548,011 Other current liabilities 2,144,231 2,262,441 Total current liabilities 4,304,927 4,085,795 Long-term debt 5,887,415 5,884,257 Deferred tax liabilities 473,648 446,945 Deferred service revenue 238,111 348,844 Other non-current liabilities 697,614 609,632 Total liabilities 11,601,715 11,375,473 Commitments and contingencies (Notes 8, 14 and 15) Stockholders\u2019 equity: Preferred stock, $ 0.001 par value, 1,000 shares authorized, none outstanding \u2014 \u2014 Common stock, $ 0.001 par value, 5,000,000 shares authorized, 2,816,579 and 2,811,758 shares issued, 1,306,983 and 1,320,227 shares outstanding, as of June 30, 2026 and June 30, 2025, respectively 1,307 1,320 Capital in excess of par value 2,699,102 2,510,602 Retained earnings 3,683,864 2,179,330 Accumulated other comprehensive income (loss) ( 34,453 ) 1,201 Total stockholders\u2019 equity 6,349,820 4,692,453 Total liabilities and stockholders\u2019 equity $ 17,951,535 $ 16,067,926"
+     }
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Note 1, equity securities accounting policy: non-marketable equity securities are included in Other non-current assets. The separate carrying balance is not quantified in the filing.",
+     "note": "Unknown noncurrent strategic equity investment carrying amount; previous zero was unsupported."
+    }
+   },
+   "note": "Fiscal year ends June 30; 10-K filed 2026-08-06. All share data is post 10-for-1 stock split effective 2026-06-11 (earlier 10-Qs and EDGAR dei values before Aug 2026 are pre-split, e.g. 131.08m). Operating income is derived (KLA reports no operating income line; same derivation as reviewed research package: 5,660.78). No stock options outstanding disclosed (RSUs only), no convertibles, no preferred, no NCI. Long-term investments set to 0: privately held equity investments, if any, are not separately disclosed (inside Other non-current assets 175.2 per Note 4); marketable equity securities (~46.8) are inside current marketable securities. Operating lease liabilities excluded from debt. Non-marketable equity securities are included in Other non-current assets under Note 1, but their carrying balance is not separately quantified; longTermInvestments is unknown, not zero."
+  },
+  "ttm": {
+   "periodEnd": "2026-06-30",
+   "label": "TTM through 2026-06-30 (= FY2026; no later quarter filed by 2026-10-20)",
+   "form": "10-K",
+   "accession": "0000319201-26-000027",
+   "filedAt": "2026-08-06",
+   "acceptedAt": "2026-08-06T20:35:27.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+   "revenue": 13579.476,
+   "operatingIncome": 5660.78,
+   "ttmComponents": {
+    "annualRevenue": 13579.476,
+    "ytdRevenue": 0,
+    "priorYtdRevenue": 0,
+    "annualOperatingIncome": 5660.78,
+    "ytdOperatingIncome": 0,
+    "priorYtdOperatingIncome": 0,
+    "ytdStart": "2026-06-30",
+    "ytdEnd": "2026-06-30",
+    "priorYtdStart": "2025-06-30",
+    "priorYtdEnd": "2025-06-30"
+   },
+   "cashAndEquivalents": 1649.842,
+   "shortTermInvestments": 3252.566,
+   "longTermInvestments": null,
+   "debtCurrent": 0,
+   "debtNoncurrent": 5887.415,
+   "operatingLeaseLiabilities": 264.298,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 1306.983,
+   "sharesDate": "2026-06-30",
+   "unvestedRSUs": 10.021,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Statements of Operations (p.50), Total revenues, year ended June 30 2026: $13,579,476 thousand",
+     "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "KLA reports no operating-income line. Derived from Consolidated Statements of Operations (p.50): revenues 13,579.476 - costs of revenues 5,255.060 - R&D 1,532.118 - SG&A 1,131.518 - impairment 0 = 5,660.780. Cross-check: income before taxes 5,605.925 + interest expense 284.440 - other income net 229.585 = 5,660.780"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets (p.49), Cash and cash equivalents, June 30 2026: $1,649,842 thousand",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets (p.49), Marketable securities (current) $3,252,566 thousand; includes ~$46.8m publicly held equity securities (Note 5)"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets (p.49) and Note 7 Debt (p.72): Long-term debt $5,887,415 thousand carrying (principal 5,950,000 less discount 21,873, issuance costs 40,128, swap fair value 584); all reported as long-term, no current portion, no revolver borrowings",
+     "tag": "us-gaap:LongTermDebt"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Note 8 Leases (p.74): total lease liabilities $264,298 thousand (current 52,937 in other current liabilities + non-current 211,361); finance leases not material",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets equity caption (p.49): 1,306,983 thousand shares outstanding June 30 2026, post 10-for-1 split of June 11 2026 (Note 1). Cover page: 1,306,546,783 shares at Aug 3 2026",
+     "tag": "us-gaap:CommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Note 9 Restricted Stock Units (p.76): outstanding RSUs June 30 2026 10,021 thousand (includes performance-based RSUs at maximum), post-split"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets, complete current liability schedule: no outstanding borrowing/current debt balance reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "As of June 30, (In thousands, except par value) 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,649,842 $ 2,078,908 Marketable securities 3,252,566 2,415,715 Accounts receivable, net 2,889,208 2,263,915 Inventories 3,648,538 3,212,149 Other current assets 941,636 728,102 Total current assets 12,381,790 10,698,789 Land, property and equipment, net 1,380,550 1,252,775 Goodwill, net 1,788,758 1,792,193 Deferred income taxes 1,037,224 1,105,770 Purchased intangible assets, net 255,835 444,785 Other non-current assets 1,107,378 773,614 Total assets $ 17,951,535 $ 16,067,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 623,668 $ 458,509 Deferred system revenue 932,901 816,834 Deferred service revenue 604,127 548,011 Other current liabilities 2,144,231 2,262,441 Total current liabilities 4,304,927 4,085,795 Long-term debt 5,887,415 5,884,257 Deferred tax liabilities 473,648 446,945 Deferred service revenue 238,111 348,844 Other non-current liabilities 697,614 609,632 Total liabilities 11,601,715 11,375,473 Commitments and contingencies (Notes 8, 14 and 15) Stockholders\u2019 equity: Preferred stock, $ 0.001 par value, 1,000 shares authorized, none outstanding \u2014 \u2014 Common stock, $ 0.001 par value, 5,000,000 shares authorized, 2,816,579 and 2,811,758 shares issued, 1,306,983 and 1,320,227 shares outstanding, as of June 30, 2026 and June 30, 2025, respectively 1,307 1,320 Capital in excess of par value 2,699,102 2,510,602 Retained earnings 3,683,864 2,179,330 Accumulated other comprehensive income (loss) ( 34,453 ) 1,201 Total stockholders\u2019 equity 6,349,820 4,692,453 Total liabilities and stockholders\u2019 equity $ 17,951,535 $ 16,067,926"
+     }
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets, complete equity section: all equity is common-parent stockholders equity; no noncontrolling-interest or mezzanine NCI class reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "As of June 30, (In thousands, except par value) 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,649,842 $ 2,078,908 Marketable securities 3,252,566 2,415,715 Accounts receivable, net 2,889,208 2,263,915 Inventories 3,648,538 3,212,149 Other current assets 941,636 728,102 Total current assets 12,381,790 10,698,789 Land, property and equipment, net 1,380,550 1,252,775 Goodwill, net 1,788,758 1,792,193 Deferred income taxes 1,037,224 1,105,770 Purchased intangible assets, net 255,835 444,785 Other non-current assets 1,107,378 773,614 Total assets $ 17,951,535 $ 16,067,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 623,668 $ 458,509 Deferred system revenue 932,901 816,834 Deferred service revenue 604,127 548,011 Other current liabilities 2,144,231 2,262,441 Total current liabilities 4,304,927 4,085,795 Long-term debt 5,887,415 5,884,257 Deferred tax liabilities 473,648 446,945 Deferred service revenue 238,111 348,844 Other non-current liabilities 697,614 609,632 Total liabilities 11,601,715 11,375,473 Commitments and contingencies (Notes 8, 14 and 15) Stockholders\u2019 equity: Preferred stock, $ 0.001 par value, 1,000 shares authorized, none outstanding \u2014 \u2014 Common stock, $ 0.001 par value, 5,000,000 shares authorized, 2,816,579 and 2,811,758 shares issued, 1,306,983 and 1,320,227 shares outstanding, as of June 30, 2026 and June 30, 2025, respectively 1,307 1,320 Capital in excess of par value 2,699,102 2,510,602 Retained earnings 3,683,864 2,179,330 Accumulated other comprehensive income (loss) ( 34,453 ) 1,201 Total stockholders\u2019 equity 6,349,820 4,692,453 Total liabilities and stockholders\u2019 equity $ 17,951,535 $ 16,067,926"
+     }
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Consolidated Balance Sheets, preferred stock authorized; no shares issued or outstanding.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "As of June 30, (In thousands, except par value) 2026 2025 ASSETS Current assets: Cash and cash equivalents $ 1,649,842 $ 2,078,908 Marketable securities 3,252,566 2,415,715 Accounts receivable, net 2,889,208 2,263,915 Inventories 3,648,538 3,212,149 Other current assets 941,636 728,102 Total current assets 12,381,790 10,698,789 Land, property and equipment, net 1,380,550 1,252,775 Goodwill, net 1,788,758 1,792,193 Deferred income taxes 1,037,224 1,105,770 Purchased intangible assets, net 255,835 444,785 Other non-current assets 1,107,378 773,614 Total assets $ 17,951,535 $ 16,067,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 623,668 $ 458,509 Deferred system revenue 932,901 816,834 Deferred service revenue 604,127 548,011 Other current liabilities 2,144,231 2,262,441 Total current liabilities 4,304,927 4,085,795 Long-term debt 5,887,415 5,884,257 Deferred tax liabilities 473,648 446,945 Deferred service revenue 238,111 348,844 Other non-current liabilities 697,614 609,632 Total liabilities 11,601,715 11,375,473 Commitments and contingencies (Notes 8, 14 and 15) Stockholders\u2019 equity: Preferred stock, $ 0.001 par value, 1,000 shares authorized, none outstanding \u2014 \u2014 Common stock, $ 0.001 par value, 5,000,000 shares authorized, 2,816,579 and 2,811,758 shares issued, 1,306,983 and 1,320,227 shares outstanding, as of June 30, 2026 and June 30, 2025, respectively 1,307 1,320 Capital in excess of par value 2,699,102 2,510,602 Retained earnings 3,683,864 2,179,330 Accumulated other comprehensive income (loss) ( 34,453 ) 1,201 Total stockholders\u2019 equity 6,349,820 4,692,453 Total liabilities and stockholders\u2019 equity $ 17,951,535 $ 16,067,926"
+     }
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/319201/000031920126000027/klac-20260630.htm",
+     "locator": "Note 1, equity securities accounting policy: non-marketable equity securities are included in Other non-current assets. The separate carrying balance is not quantified in the filing.",
+     "note": "Unknown noncurrent strategic equity investment carrying amount; previous zero was unsupported."
+    }
+   },
+   "note": "Latest filing on or before 2026-10-21 is the FY2026 10-K (fiscal year ended 2026-06-30); the first-quarter FY2027 10-Q (quarter ending 2026-09-30) was not yet filed (KLA filed Q1 10-Q on 2025-10-31 last year). TTM therefore equals the annual snapshot with zero YTD components. Fiscal year ends June 30; 10-K filed 2026-08-06. All share data is post 10-for-1 stock split effective 2026-06-11 (earlier 10-Qs and EDGAR dei values before Aug 2026 are pre-split, e.g. 131.08m). Operating income is derived (KLA reports no operating income line; same derivation as reviewed research package: 5,660.78). No stock options outstanding disclosed (RSUs only), no convertibles, no preferred, no NCI. Long-term investments set to 0: privately held equity investments, if any, are not separately disclosed (inside Other non-current assets 175.2 per Note 4); marketable equity securities (~46.8) are inside current marketable securities. Operating lease liabilities excluded from debt. Non-marketable equity securities are included in Other non-current assets under Note 1, but their carrying balance is not separately quantified; longTermInvestments is unknown, not zero."
+  }
+ },
+ "notes": [
+  "TTM equals FY2026 annual (no later 10-Q filed by cutoff). Shares are post-split (1,306.983m at 2026-06-30).",
+  "Operating income derived (KLA has no operating income line); matches reviewed package ebit 5,660.78.",
+  "Reviewed package (dist/data/incremental-research-2026-10-18) also uses cash+investments 4,902.408, debt principal 5,950 / book 5,887.415, RSUs 10.020743 (this file uses the filed 10.021), shares 1,306.983 - consistent."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0000319201.json",
+  "latestPeriodicAccession": "0000319201-26-000027",
+  "latestAnnualAccession": "0000319201-26-000027"
+ }
+}

@@ -9,7 +9,7 @@ const near=(a,b,label)=>assert.ok(Number.isFinite(a)&&Number.isFinite(b)&&Math.a
 const day=(a,b)=>(Date.parse(a)-Date.parse(b))/864e5;
 
 test('v7 QA: history is additive, dated, unit-explicit and never claims point-in-time eligibility',()=>{
- const data=load();assert.deepEqual(Object.keys(data.companies).sort(),[...REQUIRED_TICKERS].sort());
+ const data=load();assert.deepEqual(Object.keys(data.companies).sort(),[...REQUIRED_TICKERS,...['AMAT','AMD','ARM','ASML','CAMT','CDNS','CEVA','CRDO','FN','KEYS','KLAC','LRCX','MCD','MRVL','NFLX','NVMI','ONTO','RMBS','SNDK','SNPS','UBER','UMC','MA','SPGI','DUOL','RDDT','HOOD','RKLB','NKE','CMG','CRWD','PANW','BAM','APP','COST','QCOM','ORCL','DELL','ALAB','ADBE','SNOW','BE']].sort());
  assert.match(data.classification,/latest-reported/i);assert.match(data.classification,/not.*backtest/i);
  assert.match(data.methodology.rangeWarning,/not.*recommend|descriptive/i);
  assert.match(data.methodology.capitalProxy,/not.*adjusted|proxy/i);
@@ -27,6 +27,7 @@ test('v7 QA: raw facts convert to millions with exact periods and dated provenan
   if(f.rawValue!==undefined){near(f.value,f.rawValue/1e6,label);assert.equal(f.periodEnd,row.periodEnd,label);if(f.periodStart)assert.equal(f.periodStart,row.periodStart,label);assert.ok(f.tag,label);assert.match(f.sourceUrl,/^https:\/\//,label);}
   else if(f.reportedTableValue!==undefined){const raw=String(f.reportedTableValue),parsed=Number(raw.replace(/[^0-9.+-]/g,''))*(raw.includes('(')?-1:1);near(f.value,parsed*f.multiplierToMillions,label+' original table unit conversion');assert.match(f.rawUnit,/millions|thousands|currency/i,label);assert.equal(f.originalDocumentVerified,true,label);assert.ok(f.tableEvidence,label);assert.match(f.sourceUrl,/^https:\/\//,label);}
   else if(f.tableEvidence?.excerpt){assert.equal(f.value,0,label+' explicit nil narrative only');assert.match(f.tableEvidence.excerpt,/\bnil\b|\bzero\b/i,label);assert.equal(f.originalDocumentVerified,true,label);assert.match(f.sourceUrl,/^https:\/\//,label);}
+  else if(Array.isArray(f.tableEvidence?.debtRows)&&f.tableEvidence.debtRows.length===0){assert.equal(f.value,0,label+' reviewed empty debt schedule');assert.equal(f.originalDocumentVerified,true,label);assert.ok(f.tableEvidence.liabilitiesExcerpt?.length>100,label+' complete liability evidence');assert.match(f.formula,/Sum|sum/);assert.match(f.sourceUrl,/^https:\/\//,label);}
   else{assert.ok(f.formula,label+' derived formula');assert.ok(f.components?.length,label+' derived components');assert.ok(f.sourceUrls?.length,label+' derived sources');}
   assert.ok(f.filedAt&&f.filedAt<=data.asOf,label+' source cannot be future');facts++;
  }

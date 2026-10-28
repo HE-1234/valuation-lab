@@ -114,6 +114,11 @@ body>aside nav{max-width:none}.workspace-evidence-host{scroll-margin-top:64px}
 .annual-growth-horizon details{margin-top:8px}.annual-growth-horizon summary{min-height:44px;padding:10px 0}
 .annual-derived-label{color:var(--ink)}
 
+/* Year-by-year re-based bridge */
+.annual-base-bridge{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:12px 0 0}
+.annual-base-bridge dt{margin:0}
+.annual-base-bridge dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+
 /* My valuations window */
 .myval-dialog{width:min(560px,calc(100vw - 32px));max-height:min(720px,calc(100vh - 48px));padding:20px 22px;border:1px solid var(--line,#dfe2e7);border-radius:12px;background:var(--surface,#fff);color:var(--ink,#14181e);box-shadow:0 24px 64px rgba(10,14,20,.22);overflow:auto}
 .myval-dialog::backdrop{background:rgba(12,16,22,.38)}

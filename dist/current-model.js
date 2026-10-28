@@ -2,15 +2,29 @@ import {defaults,validateSnapshot,valueCompany,validDate} from './engine.js';
 import {genericProvenance,researchCaseFor,loadResearchedBaseCase,restoreDraftProvenance,isUntouchedGenericDraft} from './base-cases.js';
 import {currentClaimsEvidence} from './current-claims-gates.js';
 import {operatingIssues} from './current-operating.js';
+import {financialDefinition,financialSnapshot,financialIssues} from './financial-model.js';
+export {financialDefinition} from './financial-model.js';
 export {operatingProfileDefinition,operatingIssues,operatingAssumptions,independentGrowthProfile,resolvedMarginPath,FLEXIBLE_PROFILE_ID} from './current-operating.js';
-import {claimsDefaults,restoreClaims,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis} from './current-claims.js';
+import {claimsDefinition,claimsDefaults,restoreClaims,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis} from './current-claims.js';
 export {claimsDefinition,claimsDefaults,claimsIssues,valueCurrentWithClaims,currentEconomicShareBasis,claimsSensitivity} from './current-claims.js';
 export {researchCaseFor,loadResearchedBaseCase,markDraftEdited,fetchBaseCases} from './base-cases.js';
 export {currentClaimsEvidence} from './current-claims-gates.js';
 export const REQUIRED_TICKERS=['AAPL','MSFT','AMZN','GOOG','META','NVDA','TSLA','COHR','LITE','AAOI','NBIS','MU','AVGO','TSM'];
+// A native-currency ordinary-share result needs no FX conversion. Require the
+// filed denominator to match the selected base exactly; an EPS average fails.
+export function nativeShareBasisVerified(snapshot){
+ const e=snapshot?.raw?.nativeShareBasisEvidence;
+ return snapshot?.ticker==='TSM'&&snapshot.currency==='TWD'&&e?.currency==='TWD'
+  &&e.originalDocumentVerified===true&&e.periodEnd===snapshot.periodEnd
+  &&e.denominatorType==='period-end common shares outstanding'&&e.shareUnits==='millions'
+  &&e.fxConversionApplied===false&&e.adrRatio===5&&typeof e.locator==='string'&&e.locator.length>0
+  &&/^https:\/\//.test(e.sourceUrl||'')&&validDate(e.filingDate)&&e.filingDate<=String(snapshot.filedAt).slice(0,10)
+  &&typeof e.ordinaryShares==='number'&&Number.isFinite(e.ordinaryShares)&&e.ordinaryShares>0
+  &&Math.abs(e.ordinaryShares-snapshot.shares)<1e-8;
+}
 export function currentSnapshot(company,raw){
- const f=raw?.facts||{};const number=(...v)=>v.find(x=>typeof x==='number'&&Number.isFinite(x))??null;
- return {ticker:company.ticker,name:company.name,modelType:raw?.modelType||company.modelType,sector:raw?.sector||company.sector,currency:raw?.currency||company.currency||'',units:'millions',periodEnd:raw?.periodEnd||raw?.fiscalPeriodEnd,filedAt:raw?.filedAt||raw?.filingDate,availableFrom:raw?.availableFrom||raw?.acceptedAt||raw?.filedAt||raw?.filingDate,acceptedAt:raw?.acceptedAt,sourceUrl:raw?.sourceUrl||raw?.sourceURL||'',revenue:number(raw?.revenue,f.revenue),ebit:number(raw?.ebit,raw?.EBIT,f.operatingIncome,f.EBIT),cash:number(raw?.cash,f.cash),debt:number(raw?.debt,f.debt,f.totalDebt),shares:number(raw?.shares,f.shares,f.sharesOutstanding),shareBasis:raw?.shareBasis||'',coverShareDate:raw?.coverShareDate||raw?.sharesAsOf||raw?.sharesDate,snapshotMode:raw?.snapshotMode,backtestEligible:false,researchImported:company.researchImported===true||raw?.researchImported===true,raw};
+ const f=raw?.facts||{};const number=(...values)=>{for(const value of values){if(value===null)return null;if(typeof value==='number'&&Number.isFinite(value))return value;}return null;};
+ return financialSnapshot({ticker:company.ticker,name:company.name,modelType:raw?.modelType||company.modelType,sector:raw?.sector||company.sector,currency:raw?.currency||company.currency||'',units:'millions',periodEnd:raw?.periodEnd||raw?.fiscalPeriodEnd,filedAt:raw?.filedAt||raw?.filingDate,availableFrom:raw?.availableFrom||raw?.acceptedAt||raw?.filedAt||raw?.filingDate,acceptedAt:raw?.acceptedAt,sourceUrl:raw?.sourceUrl||raw?.sourceURL||'',revenue:number(raw?.revenue,f.revenue),ebit:number(raw?.ebit,raw?.EBIT,f.operatingIncome,f.EBIT),cash:number(raw?.cash,f.cash),debt:number(raw?.debt,f.debt,f.totalDebt),shares:number(raw?.shares,f.shares,f.sharesOutstanding),shareBasis:raw?.shareBasis||'',coverShareDate:raw?.coverShareDate||raw?.sharesAsOf||raw?.sharesDate,snapshotMode:raw?.snapshotMode,backtestEligible:false,researchImported:company.researchImported===true||raw?.researchImported===true,raw});
 }
 export function draftFor(company,raw,{baseCases}={}){
  const cutoff=new Date().toISOString().slice(0,10);
@@ -26,19 +40,22 @@ export function currentIssues(snapshot,draft,{includeReview=true}={}){
  else if(Date.parse(snapshot.availableFrom)>Date.parse(draft.cutoff+'T23:59:59.999Z'))errors.push('This filing was not available by the valuation date.');
  if(!snapshot.shareBasis)errors.push('The economic share basis is unverified.');
  const r=snapshot.raw||{};
- if(snapshot.ticker==='JPM'||/bank|insurance|financial/i.test(snapshot.sector||'')||snapshot.modelType&&snapshot.modelType!=='operating-fcff')errors.push('Financial institutions or specialist models require an equity/regulatory-capital workflow; this operating-company FCFF model is unsuitable.');
- const explicit=[...(r.hardBlockers||[]),...(r.fatalBlockers||[])];errors.push(...explicit,...claimsIssues(snapshot,draft),...operatingIssues(snapshot,draft));
+ if(!financialDefinition(snapshot)&&(snapshot.ticker==='JPM'||/bank|insurance|financial/i.test(snapshot.sector||'')||snapshot.modelType&&snapshot.modelType!=='operating-fcff'))errors.push('Financial institutions or specialist models require an equity/regulatory-capital workflow; this operating-company FCFF model is unsuitable.');
+ const native=nativeShareBasisVerified(snapshot);
+ const fxComparisonOnly='Reporting currency differs from USD quote currency; verified FX and ADR conversion must be applied before per-share comparison.';
+ const explicit=[...(r.hardBlockers||[]),...(r.fatalBlockers||[])].filter(x=>!(native&&x===fxComparisonOnly));errors.push(...explicit,...claimsIssues(snapshot,draft),...financialIssues(snapshot,draft),...operatingIssues(snapshot,draft));
  const provenance=draft.assumptionProvenance;if(provenance?.kind==='researched-base-case'&&validDate(provenance.asOf)&&validDate(draft.cutoff)&&provenance.asOf.slice(0,10)>draft.cutoff.slice(0,10))errors.push(`This researched base case includes information through ${provenance.asOf.slice(0,10)}, after the valuation date. Choose that date or later.`);
  // Never infer an ADR conversion or a reporting currency from the US ticker.
- if(snapshot.ticker==='TSM'&&!r.adrConversionVerified)errors.push('TSM: reporting currency and depositary-share conversion require a verified model-specific mapping. Per-ADR valuation is withheld.');
- if(snapshot.ticker==='NBIS'&&!r.currentBusinessPerimeterVerified)errors.push('NBIS: business-perimeter comparability, funding and loss-to-profit mechanics require a specialist model. This simplified result is withheld.');
+ if(snapshot.ticker==='TSM'&&!r.adrConversionVerified&&!native)errors.push('TSM: reporting currency and depositary-share conversion require a verified model-specific mapping. Per-ADR valuation is withheld.');
+ if(r.guidedClaimsResolutionId&&!claimsDefinition(snapshot))errors.push('The dated ownership model no longer matches its source inputs.');
+ if(snapshot.ticker==='NBIS'&&!(claimsDefinition(snapshot)?.perimeterVerified===true))errors.push('NBIS: business-perimeter comparability, funding and loss-to-profit mechanics require a specialist model. This simplified result is withheld.');
  if(draft.normalizationDelta!==0&&(!draft.adjustmentReason?.trim()||!/^https?:\/\//.test(draft.adjustmentSource||'')))errors.push('Explain and source the EBIT adjustment, or return it to zero.');
  // Review acknowledgements are legacy draft metadata, never financial evidence.
  // Source, date, currency/security and model compatibility above remain hard constraints.
  return [...new Set(errors)];
 }
 export function calculateCurrent(snapshot,draft){const errors=currentIssues(snapshot,draft);if(errors.length)throw new Error(errors.join(' '));return valueCurrentWithClaims(snapshot,draft);}
-export function quoteComparison(snapshot,draft,value){const q=draft.quote||{};if(!(typeof q.price==='number'&&Number.isFinite(q.price)&&q.price>0))return {status:'missing',message:'No verified current market price. Add a dated, sourced quote to compare.'};if(!validDate(q.date)||q.date>draft.cutoff||q.currency!==snapshot.currency||!/^https?:\/\//.test(q.sourceUrl||'')||!q.shareBasis||q.shareBasis!==currentEconomicShareBasis(snapshot,draft))return {status:'blocked',message:'Quote comparison withheld: verify date, matching currency, source and economic share basis.'};return {status:'ready',price:q.price,date:q.date,gap:value.perShare/q.price-1,message:'Value-to-price gap, not an expected return.'};}
+export function quoteComparison(snapshot,draft,value){const q=draft.quote||{};if(!(typeof q.price==='number'&&Number.isFinite(q.price)&&q.price>0))return {status:'missing',message:'No verified current market price. Add a dated, sourced quote to compare.'};if(snapshot.raw?.quoteScope&&q.date>snapshot.raw.quoteScope.through)return {status:'blocked',message:snapshot.raw.quoteScope.note};if(!validDate(q.date)||q.date>draft.cutoff||q.currency!==snapshot.currency||!/^https?:\/\//.test(q.sourceUrl||'')||!q.shareBasis||q.shareBasis!==currentEconomicShareBasis(snapshot,draft))return {status:'blocked',message:'Quote comparison withheld: verify date, matching currency, source and economic share basis.'};return {status:'ready',price:q.price,date:q.date,gap:value.perShare/q.price-1,message:'Value-to-price gap, not an expected return.'};}
 export function safeDraft(value,company,raw,{baseCases}={}){
  if(!value||typeof value!=='object'||Array.isArray(value)||value.schemaVersion!==5||value.ticker!==company.ticker||value.snapshotId!==raw?.id)return draftFor(company,raw,{baseCases});
  // Restore saved numbers over the original generic baseline first. Filling a
@@ -62,4 +79,4 @@ export function safeDraft(value,company,raw,{baseCases}={}){
  return c&&validDate(d.cutoff)&&c.asOf.slice(0,10)<=d.cutoff.slice(0,10)?loadResearchedBaseCase(d,company,raw,baseCases,{selection:'untouched-upgrade'}):d;
 }
 export function freezeCurrent(snapshot,draft){const result=calculateCurrent(snapshot,draft);return JSON.parse(JSON.stringify({schemaVersion:5,id:globalThis.crypto?.randomUUID?.()||String(Date.now()),createdAt:new Date().toISOString(),mode:'current-research',classification:'Conditional educational valuation; sourced dated financials and user assumptions. Not investment advice or a live quote.',snapshot,draft,result,quoteComparison:quoteComparison(snapshot,draft,result)}));}
-export function waccWorksheet({riskFree,beta,equityPremium,countryPremium,costOfDebt,debtWeight,tax}){const xs=[riskFree,beta,equityPremium,countryPremium,costOfDebt,debtWeight,tax];if(!xs.every(x=>typeof x==='number'&&Number.isFinite(x)))throw Error('Complete all seven worksheet inputs.');if(beta<0||riskFree<0||equityPremium<0||countryPremium<0||costOfDebt<0||debtWeight<0||debtWeight>1||tax<0||tax>.6)throw Error('Use nonnegative rates/beta, debt weight 0–100%, and tax 0–60%.');const costOfEquity=riskFree+beta*equityPremium+countryPremium;return {costOfEquity,afterTaxCostOfDebt:costOfDebt*(1-tax),wacc:costOfEquity*(1-debtWeight)+costOfDebt*(1-tax)*debtWeight};}
+export function waccWorksheet({riskFree,beta,equityPremium,countryPremium,costOfDebt,debtWeight,tax}){const xs=[riskFree,beta,equityPremium,countryPremium,costOfDebt,debtWeight,tax];if(!xs.every(x=>typeof x==='number'&&Number.isFinite(x)))throw Error('Complete all seven worksheet inputs.');if(beta<0||riskFree<0||equityPremium<0||countryPremium<0||costOfDebt<0||debtWeight<0||debtWeight>1||tax<0||tax>1)throw Error('Use nonnegative rates/beta, debt weight 0–100%, and tax 0–100%.');const costOfEquity=riskFree+beta*equityPremium+countryPremium;return {costOfEquity,afterTaxCostOfDebt:costOfDebt*(1-tax),wacc:costOfEquity*(1-debtWeight)+costOfDebt*(1-tax)*debtWeight};}

@@ -64,7 +64,17 @@ export function assumptionEvidence(dataset,ticker,inputKey,{snapshot=null,market
  const company=Array.isArray(dataset?.companies)?dataset.companies.find(c=>c.ticker===ticker):dataset?.companies?.[ticker];
  const key=ALIASES[inputKey]||inputKey,result=baseAnswer(dataset,company,ticker,inputKey);
  if(!company)return result;
- const spec=SPECS[key];
+ let spec=SPECS[key];
+ if(company.modelHistory){
+  const ownerSpecs={
+   growth:{title:'Owner-business revenue history',metric:'ownerRevenueGrowth',unit:'percent',formula:'Change in owner-business revenue / prior-year owner-business revenue',summary:'Uses the separately identified revenue basis of the shareholder model.',caution:'Fee revenue can differ from consolidated GAAP revenue. Reported source facts remain in the evidence ledger.'},
+   targetMargin:{title:'Historical pretax owner margin',metric:'ownerMargin',unit:'percent',formula:'Pretax owner earnings / owner-business revenue',summary:'Owner earnings retain financing costs and compensation. They are not industrial EBIT.',caution:'Acquisitions, ownership changes and unusual income can make years incomparable.'},
+   salesCapital:{title:'Historical revenue / common-equity proxy',metric:'ownerSalesEquity',unit:'multiple',kind:'proxy',formula:'Owner-business revenue / ending common book equity',summary:'An equity-capital accounting cross-check; the forecast uses incremental required equity.',caution:'Book equity is not automatically distributable or identical to a legal regulatory minimum. Do not copy this average ratio mechanically.'},
+   terminalROIC:{title:'Historical common-equity return',metric:'ownerROE',unit:'percent',kind:'proxy',formula:'Net income attributable to common / prior-year common book equity',summary:'Historical total-equity returns provide context for the model’s marginal return on new equity.',caution:'The terminal assumption is a marginal return on new equity, not a promise about returns on all existing book equity.'}
+  };
+  spec=ownerSpecs[key]||spec;
+ }
+
  if(spec){
   Object.assign(result,{title:spec.title,unit:spec.unit==='money'?company.currency+' millions':spec.unit,kind:spec.kind||'historical',formula:spec.formula,summary:spec.summary});
   result.series=evidenceRows(company,spec,cutoff);result.range=historyRange(result.series);
@@ -92,6 +102,7 @@ export function assumptionEvidence(dataset,ticker,inputKey,{snapshot=null,market
  }else if(key==='years'){
   Object.assign(result,{title:'Forecast horizon',unit:'years',kind:'context',status:'contextual',summary:'The ten-year forecast horizon is a modeling choice. It has no historical company counterpart.',formula:'Explicit forecast followed by a mature-business terminal period'});
  }
+ if(company.modelHistory){result.comparisonLabel=({targetMargin:'Your pretax owner margin',salesCapital:'Your incremental revenue / required equity',terminalROIC:'Your mature marginal ROE',wacc:'Your required equity return'})[key];result.ttm=null;if(key==='wacc'){result.title='Cost of equity evidence';result.summary='The shareholder model discounts equity cash flows at the required equity return; debt weights are not applied.';result.formula='Risk-free rate + levered beta × equity risk premium + relevant risk adjustments';}}
  if(result.coverage){result.coverage.observationYears=result.series.filter(x=>finite(x.value)).length;result.coverage.rangeYears=result.range?.count||0;}
  if(ticker==='NBIS')result.summary+=' This series is FY2025-recast continuing operations; old Yandex group totals are excluded.';
  if(ticker==='NBIS'&&key==='tax')result.summary+=' FY2025’s tax ratio is excluded from the range because investment gains obscure operating losses.';

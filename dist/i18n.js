@@ -87,7 +87,7 @@ export function bindText(node,key,params={}) {
  const dispose=bind(()=>{const value=t(key,typeof params==='function'?params():params); if(node.nodeType===3)node.data=value;else node.textContent=value;},node);
  textBindings.set(node,dispose);return dispose;
 }
-const attributes = new Set(['aria-label','aria-description','title','placeholder','alt']);
+const attributes = new Set(['aria-label','aria-description','title','placeholder','alt','data-column-label']);
 export function bindAttribute(node,attribute,key,params={}) {
  if(!attributes.has(attribute))throw new TypeError('Only presentation attributes may be localized');
  const existing=attributeBindings.get(node)||new Map();existing.get(attribute)?.();

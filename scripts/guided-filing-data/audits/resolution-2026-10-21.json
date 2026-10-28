@@ -1,0 +1,723 @@
+{
+  "cutoff": "2026-10-21",
+  "classification": "Explicit proxy and ownership resolution; original unknown facts retained",
+  "rows": [
+    {
+      "ticker": "AAPL",
+      "id": "AAPL-CURRENT-2025-09-27",
+      "periodEnd": "2025-09-27",
+      "currency": "USD",
+      "perShare": 139.69905839908697,
+      "rawPerShare": 139.69905839908697,
+      "enterprise": 2052452.2565626786,
+      "equity": 2084985.2565626786,
+      "modelLabel": "Conditional Guided case"
+    },
+    {
+      "ticker": "AAPL",
+      "id": "AAPL-TTM-2026-06-27",
+      "periodEnd": "2026-06-27",
+      "currency": "USD",
+      "perShare": 149.78038534066434,
+      "rawPerShare": 149.78038534066434,
+      "enterprise": 2148755.7914019204,
+      "equity": 2209698.7914019204,
+      "modelLabel": "Conditional Guided case",
+      "debtProxy": 85574,
+      "reportedDebt": null,
+      "debtStress": {
+        "lowDebt": 84344,
+        "baseDebt": 85574,
+        "highDebt": 86804,
+        "lowDebtPerShareChange": 0.0833732971597158,
+        "highDebtPerShareChange": -0.0833732971597158,
+        "rangeBasis": "Zero to twice the last reported liability; a stress scenario, not a factual bound"
+      },
+      "largestTestedDebtEffectPercent": 0.05566369519619638
+    },
+    {
+      "ticker": "META",
+      "id": "META-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "currency": "USD",
+      "perShare": 388.47317033342364,
+      "rawPerShare": 388.47317033342364,
+      "enterprise": 978537.9727219297,
+      "equity": 1027725.9727219297,
+      "modelLabel": "Conditional Guided case"
+    },
+    {
+      "ticker": "META",
+      "id": "META-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "currency": "USD",
+      "perShare": 393.8792509185413,
+      "rawPerShare": 393.8792509185413,
+      "enterprise": 1025724.4619469763,
+      "equity": 1061293.4619469764,
+      "modelLabel": "Conditional Guided case",
+      "debtProxy": 84848,
+      "reportedDebt": null,
+      "debtStress": {
+        "lowDebt": 83664,
+        "baseDebt": 84848,
+        "highDebt": 86032,
+        "lowDebtPerShareChange": 0.4394194912234864,
+        "highDebtPerShareChange": -0.4394194912234864,
+        "rangeBasis": "Zero to twice the last reported liability; a stress scenario, not a factual bound",
+        "severeStress": {
+          "leaseAssumption": 9467,
+          "debt": 93131,
+          "perShareChange": -3.0740807819291702,
+          "anchor": "June gross finance-lease right-of-use assets, Note 6, 9,467. Assets are not liability evidence; this is a deliberately broad additional stress, not a claim that debt equals assets.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+        }
+      },
+      "largestTestedDebtEffectPercent": 0.11156198002274646
+    },
+    {
+      "ticker": "TSLA",
+      "id": "TSLA-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "currency": "USD",
+      "perShare": 25.600738252037505,
+      "rawPerShare": 25.600738252037505,
+      "enterprise": 53984.138632402086,
+      "equity": 84185.81240754144,
+      "modelLabel": "Conditional Guided case",
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "TSLA-2025-12-31-resolved-awards-v1",
+        "referenceDate": "2025-12-31",
+        "method": "option-proxy",
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 44059,
+        "mappedDebt": 8376,
+        "commonShares": 3231.256096,
+        "basicShares": 3231.256096,
+        "allocationShares": 3288.413466,
+        "equityBeforeWarrants": 89947.13863240209,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 6489.3262248606425,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 57.15737,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 728,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 5761.3262248606425,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Musk’s old options and 96 million interim shares are reconciled once; June exercise is already inside common shares. The 423.7 million performance award has a $334.09 per-share offset and is modeled as a full-vesting vanilla-call proxy instead of free common stock. This conservative proxy includes time value but ignores milestone and service restrictions. Employee awards use a small, explicitly estimated dilution buffer; June is not a reported award inventory."
+        ],
+        "sources": [
+          {
+            "id": "annual",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+            "filedAt": "2026-01-29",
+            "locator": "Note 11, Equity Incentive Plans, pp. 78–83; consolidated balance sheet",
+            "supports": "344.106 million total options, $47.58 weighted average exercise price, 17.012 million RSUs; 96 million interim award with no-double-dip condition; 423.743904 million performance award with $334.09 offset; 60% volatility, 3.95% stock-option risk-free rate and 4.06% performance-award risk-free rate.",
+            "title": "annual"
+          },
+          {
+            "id": "annual-amendment",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926053166/tm2611837d1_10ka.htm",
+            "filedAt": "2026-04-30",
+            "locator": "Outstanding Equity Awards at Fiscal 2025 Year-End; 2018 CEO Performance Award; Security Ownership footnote 2",
+            "supports": "303.960630 million CEO 2018 options at $23.34, expiry 2028-01-20; excludes 96 million interim shares to avoid double counting.",
+            "title": "annual-amendment"
+          },
+          {
+            "id": "june",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+            "filedAt": "2026-07-23",
+            "locator": "Note 9, Equity Incentive Plans pp. 20–22; balance sheet p. 4",
+            "supports": "96 million shares forfeited April 21; CEO 2018 options exercised in Q2; June 3,949 million issued common; 423.743904 million conditional performance shares remain; 19.1 million other performance awards versus 13 million annually.",
+            "title": "june"
+          },
+          {
+            "id": "exercise",
+            "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/xslF345X06/tm2618092-2_4seq1.xml",
+            "filedAt": "2026-06-17",
+            "locator": "Form 4, Table I and Table II, June 16 transactions; footnotes 1–3",
+            "supports": "303,960,630 options exercised; 17,531,857 shares withheld at $404.66 to cover exercise price; zero CEO 2018 options remain.",
+            "title": "exercise"
+          },
+          {
+            "id": "latest-proxy",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926116718/tm2626016d2_ars.pdf",
+            "filedAt": "2026-10-19",
+            "locator": "2026 Proxy Statement p. 46 (PDF p. 58), 2018 CEO Performance Award",
+            "supports": "Corroborates 286,428,773 restricted shares after net settlement; service vesting January 19, 2028.",
+            "title": "latest-proxy"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "TSLA-2025-12-31-resolved-awards-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 25.600738252037505,
+          "rawPerShare": 25.600738252037505,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 27.013216648192333,
+          "rawPerShare": 27.013216648192333,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 22.39653780899916,
+          "rawPerShare": 22.39653780899916,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 25.209553187704902,
+          "rawPerShare": 25.209553187704902,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "id": "TSLA-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "currency": "USD",
+      "perShare": 25.788533448744115,
+      "rawPerShare": 25.788533448744115,
+      "enterprise": 57968.717927510086,
+      "equity": 92663.34461695049,
+      "modelLabel": "Conditional Guided case",
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "TSLA-2026-06-30-resolved-awards-v1",
+        "referenceDate": "2026-06-30",
+        "method": "option-proxy",
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 43524,
+        "mappedDebt": 9342,
+        "commonShares": 3525.256096,
+        "basicShares": 3525.256096,
+        "allocationShares": 3593.199466,
+        "equityBeforeWarrants": 95170.7179275101,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 3168.373310559611,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 67.94337,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 661,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 2507.373310559611,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Musk’s old options and 96 million interim shares are reconciled once; June exercise is already inside common shares. The 423.7 million performance award has a $334.09 per-share offset and is modeled as a full-vesting vanilla-call proxy instead of free common stock. This conservative proxy includes time value but ignores milestone and service restrictions. Employee awards use a small, explicitly estimated dilution buffer; June is not a reported award inventory."
+        ],
+        "sources": [
+          {
+            "id": "annual",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+            "filedAt": "2026-01-29",
+            "locator": "Note 11, Equity Incentive Plans, pp. 78–83; consolidated balance sheet",
+            "supports": "344.106 million total options, $47.58 weighted average exercise price, 17.012 million RSUs; 96 million interim award with no-double-dip condition; 423.743904 million performance award with $334.09 offset; 60% volatility, 3.95% stock-option risk-free rate and 4.06% performance-award risk-free rate.",
+            "title": "annual"
+          },
+          {
+            "id": "annual-amendment",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926053166/tm2611837d1_10ka.htm",
+            "filedAt": "2026-04-30",
+            "locator": "Outstanding Equity Awards at Fiscal 2025 Year-End; 2018 CEO Performance Award; Security Ownership footnote 2",
+            "supports": "303.960630 million CEO 2018 options at $23.34, expiry 2028-01-20; excludes 96 million interim shares to avoid double counting.",
+            "title": "annual-amendment"
+          },
+          {
+            "id": "june",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+            "filedAt": "2026-07-23",
+            "locator": "Note 9, Equity Incentive Plans pp. 20–22; balance sheet p. 4",
+            "supports": "96 million shares forfeited April 21; CEO 2018 options exercised in Q2; June 3,949 million issued common; 423.743904 million conditional performance shares remain; 19.1 million other performance awards versus 13 million annually.",
+            "title": "june"
+          },
+          {
+            "id": "exercise",
+            "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/xslF345X06/tm2618092-2_4seq1.xml",
+            "filedAt": "2026-06-17",
+            "locator": "Form 4, Table I and Table II, June 16 transactions; footnotes 1–3",
+            "supports": "303,960,630 options exercised; 17,531,857 shares withheld at $404.66 to cover exercise price; zero CEO 2018 options remain.",
+            "title": "exercise"
+          },
+          {
+            "id": "latest-proxy",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926116718/tm2626016d2_ars.pdf",
+            "filedAt": "2026-10-19",
+            "locator": "2026 Proxy Statement p. 46 (PDF p. 58), 2018 CEO Performance Award",
+            "supports": "Corroborates 286,428,773 restricted shares after net settlement; service vesting January 19, 2028.",
+            "title": "latest-proxy"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "TSLA-2026-06-30-resolved-awards-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 25.788533448744115,
+          "rawPerShare": 25.788533448744115,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 26.48634422554211,
+          "rawPerShare": 26.48634422554211,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 23.692322535159388,
+          "rawPerShare": 23.692322535159388,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 25.33021229528817,
+          "rawPerShare": 25.33021229528817,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "NBIS",
+      "id": "NBIS-ANNUAL-REFERENCE-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "currency": "USD",
+      "perShare": 0,
+      "rawPerShare": -82.07262238386754,
+      "enterprise": -20612.737962800544,
+      "equity": -21236.637962800545,
+      "modelLabel": "Conditional funding stress; not validated fair value",
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "NBIS-2025-12-31-resolved-claims-v1",
+        "referenceDate": "2025-12-31",
+        "method": "option-proxy",
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 3678.1,
+        "mappedDebt": 4127.7,
+        "commonShares": 253.016971,
+        "basicShares": 253.016971,
+        "allocationShares": 258.754227,
+        "equityBeforeWarrants": -21236.637962800545,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 1022.0000000000002,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Convertible claim adjustment above carrying debt",
+            "amount": 819.3000000000002,
+            "kind": "claim"
+          },
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 5.737256,
+            "kind": "shares"
+          },
+          {
+            "label": "Subsidiary employee-award reserve proxy",
+            "amount": 100,
+            "kind": "claim"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 102.7,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 0,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Nebius uses dated continuing operations and a separate ownership-claims model. The displayed default is a slow-transition funding stress, not management guidance or an economically validated fair-value estimate.",
+          "Convertible fair value replaces its carrying amount once; converted shares are not also counted. Parent RSUs and prefunded warrants are included once. Eigen participating shares are already in the reported common-share count.",
+          "Avride employee awards use a $100m analyst reserve, not a reported fair value. Test $0m, $500m and $1,000m; these are scenarios, not a proven upper bound. Avride awards are never added to Nebius shares.",
+          "The Avride reserve changes value by at most $0.39 per annual-base share or $0.34 per June-base share for each $100m, before option allocation. A zero equity floor does not prove the uncertainty immaterial.",
+          "Parent options use a Black-Scholes scenario with 60% volatility and a 4.2% risk-free rate anchored to the annual grant assumptions. Contractual life is used conservatively; June life is carried forward and the weighted strike aggregates different awards.",
+          "Negative FCFF already includes the modeled reinvestment outflow. Do not deduct the same funding need twice. The calculation assumes funding is available on fair terms; distress, financing fees and issuance below fair value can reduce existing-shareholder value further.",
+          "The dated cash and ownership bridge excludes later financing. Customer prepayments are not free revenue: the model must also fund delivery of the prepaid services.",
+          "A staged-margin illustration reaches -15%, 5%, 12%, 18%, 22% and then 25% EBIT margin. These are analyst assumptions; revenue growth, reinvestment and discount rate stay unchanged so the effect of the faster profit transition is visible.",
+          "The 2026 revenue guidance midpoint implies about 504% growth from the 2025 annual base, above the engine’s 200% per-year limit. It is disclosed as a reference rather than silently capped or substituted into the default."
+        ],
+        "sources": [
+          {
+            "title": "Nebius period-end statements; balance sheet and Notes3,4,12,13/14,15",
+            "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+          },
+          {
+            "title": "Annual Note14; option parameters and Avride20% authorized pool",
+            "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "NBIS-2025-12-31-resolved-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 100,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 0,
+          "rawPerShare": -82.07262238386754,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 0,
+          "rawPerShare": -82.07262238386754,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 0,
+          "rawPerShare": -82.07262238386754,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 0,
+          "rawPerShare": -80.29233199467728,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Convertible contractual principal · excludes option",
+          "perShare": 0,
+          "rawPerShare": -81.74142006499684,
+          "changes": {
+            "convertibleCase": "principal-only"
+          }
+        },
+        {
+          "label": "Subsidiary award reserve omitted",
+          "perShare": 0,
+          "rawPerShare": -81.68615526733228,
+          "changes": {
+            "subsidiaryReserve": 0
+          }
+        },
+        {
+          "label": "Subsidiary award reserve stressed",
+          "perShare": 0,
+          "rawPerShare": -85.55082643268489,
+          "changes": {
+            "subsidiaryReserve": 1000
+          }
+        }
+      ],
+      "peakCumulativeOperatingCashDeficit": 61672.12583182973,
+      "deficitBeyondDatedCash": 57994.025831829735,
+      "positiveEquityReserveStresses": [
+        {
+          "hypotheticalEquity": 10000,
+          "reserve100Percent": 1,
+          "reserve1000Percent": 10
+        },
+        {
+          "hypotheticalEquity": 30000,
+          "reserve100Percent": 0.33333333333333337,
+          "reserve1000Percent": 3.3333333333333335
+        },
+        {
+          "hypotheticalEquity": 60000,
+          "reserve100Percent": 0.16666666666666669,
+          "reserve1000Percent": 1.6666666666666667
+        }
+      ],
+      "limitations": "Zero equity does not prove claims immaterial. Full capex, replacement, net customer advance and financing scenarios remain consequential."
+    },
+    {
+      "ticker": "NBIS",
+      "id": "NBIS-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "currency": "USD",
+      "perShare": 0,
+      "rawPerShare": -107.22427366984462,
+      "enterprise": -20546.503859649412,
+      "equity": -32076.703859649413,
+      "modelLabel": "Conditional funding stress; not validated fair value",
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "NBIS-2026-06-30-resolved-claims-v1",
+        "referenceDate": "2026-06-30",
+        "method": "option-proxy",
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 8042.1,
+        "mappedDebt": 8545.7,
+        "commonShares": 271.855218,
+        "basicShares": 271.855218,
+        "allocationShares": 299.155245,
+        "equityBeforeWarrants": -32076.703859649413,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 12647.1,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Convertible claim adjustment above carrying debt",
+            "amount": 12324.7,
+            "kind": "claim"
+          },
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 6.234091,
+            "kind": "shares"
+          },
+          {
+            "label": "Prefunded warrants counted once",
+            "amount": 21.065936,
+            "kind": "shares"
+          },
+          {
+            "label": "Subsidiary employee-award reserve proxy",
+            "amount": 100,
+            "kind": "claim"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 222.4,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 0,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Nebius uses dated continuing operations and a separate ownership-claims model. The displayed default is a slow-transition funding stress, not management guidance or an economically validated fair-value estimate.",
+          "Convertible fair value replaces its carrying amount once; converted shares are not also counted. Parent RSUs and prefunded warrants are included once. Eigen participating shares are already in the reported common-share count.",
+          "Avride employee awards use a $100m analyst reserve, not a reported fair value. Test $0m, $500m and $1,000m; these are scenarios, not a proven upper bound. Avride awards are never added to Nebius shares.",
+          "The Avride reserve changes value by at most $0.39 per annual-base share or $0.34 per June-base share for each $100m, before option allocation. A zero equity floor does not prove the uncertainty immaterial.",
+          "Parent options use a Black-Scholes scenario with 60% volatility and a 4.2% risk-free rate anchored to the annual grant assumptions. Contractual life is used conservatively; June life is carried forward and the weighted strike aggregates different awards.",
+          "Negative FCFF already includes the modeled reinvestment outflow. Do not deduct the same funding need twice. The calculation assumes funding is available on fair terms; distress, financing fees and issuance below fair value can reduce existing-shareholder value further.",
+          "The dated cash and ownership bridge excludes later financing. Customer prepayments are not free revenue: the model must also fund delivery of the prepaid services.",
+          "A staged-margin illustration reaches -15%, 5%, 12%, 18%, 22% and then 25% EBIT margin. These are analyst assumptions; revenue growth, reinvestment and discount rate stay unchanged so the effect of the faster profit transition is visible.",
+          "The 2026 revenue guidance midpoint implies about 504% growth from the 2025 annual base, above the engine’s 200% per-year limit. It is disclosed as a reference rather than silently capped or substituted into the default."
+        ],
+        "sources": [
+          {
+            "title": "Nebius period-end statements; balance sheet and Notes3,4,12,13/14,15",
+            "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm"
+          },
+          {
+            "title": "Annual Note14; option parameters and Avride20% authorized pool",
+            "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "NBIS-2026-06-30-resolved-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 100,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 0,
+          "rawPerShare": -107.22427366984462,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 0,
+          "rawPerShare": -107.22427366984462,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 0,
+          "rawPerShare": -107.22427366984462,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 0,
+          "rawPerShare": -105.03544190439385,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Convertible contractual principal · excludes option",
+          "perShare": 0,
+          "rawPerShare": -71.18312052208682,
+          "changes": {
+            "convertibleCase": "principal-only"
+          }
+        },
+        {
+          "label": "Subsidiary award reserve omitted",
+          "perShare": 0,
+          "rawPerShare": -106.88999906937755,
+          "changes": {
+            "subsidiaryReserve": 0
+          }
+        },
+        {
+          "label": "Subsidiary award reserve stressed",
+          "perShare": 0,
+          "rawPerShare": -110.23274507404813,
+          "changes": {
+            "subsidiaryReserve": 1000
+          }
+        }
+      ],
+      "peakCumulativeOperatingCashDeficit": 69210.03375090439,
+      "deficitBeyondDatedCash": 61167.93375090439,
+      "positiveEquityReserveStresses": [
+        {
+          "hypotheticalEquity": 10000,
+          "reserve100Percent": 1,
+          "reserve1000Percent": 10
+        },
+        {
+          "hypotheticalEquity": 30000,
+          "reserve100Percent": 0.33333333333333337,
+          "reserve1000Percent": 3.3333333333333335
+        },
+        {
+          "hypotheticalEquity": 60000,
+          "reserve100Percent": 0.16666666666666669,
+          "reserve1000Percent": 1.6666666666666667
+        }
+      ],
+      "limitations": "Zero equity does not prove claims immaterial. Full capex, replacement, net customer advance and financing scenarios remain consequential."
+    },
+    {
+      "ticker": "ASML",
+      "id": "ASML-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "currency": "EUR",
+      "perShare": 670.7337029563379,
+      "rawPerShare": 670.7337029563379,
+      "enterprise": 247977.12265986335,
+      "equity": 259034.92265986334,
+      "modelLabel": "Conditional Guided case"
+    },
+    {
+      "ticker": "ASML",
+      "id": "ASML-TTM-2026-09-27",
+      "periodEnd": "2026-09-27",
+      "currency": "EUR",
+      "perShare": 680.9886796749751,
+      "rawPerShare": 680.9886796749751,
+      "enterprise": 248730.14251494157,
+      "equity": 262098.0425149416,
+      "modelLabel": "Conditional Guided case",
+      "debtProxy": 2735.8,
+      "reportedDebt": null,
+      "debtStress": {
+        "lowDebt": 1963,
+        "baseDebt": 2735.8,
+        "highDebt": 3731.3,
+        "lowDebtPerShareChange": 2.0079053113218865,
+        "highDebtPerShareChange": -2.5865291633293706,
+        "rangeBasis": "Current borrowings zero through last reported June amount1,735.3; finance leases zero through twice16.5. Chosen stresses, not guaranteed bounds.",
+        "olderAnnualRollForwardDebt": 2713.7,
+        "olderAnnualRollForwardPerShareChange": 0.05742068760379618
+      },
+      "largestTestedDebtEffectPercent": 0.3798197004631383
+    }
+  ]
+}

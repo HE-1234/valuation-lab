@@ -1,0 +1,126 @@
+{
+ "ticker": "ONTO",
+ "draftPatch": {
+  "analystConditionalAllocation": {
+   "enabled": true,
+   "ticker": "ONTO",
+   "version": "2026-10-19-explicit-claims-v1",
+   "inputs": {
+    "liquidAssets": 1882.15,
+    "operatingReserve": 33.60411,
+    "wholeConvert": 1982.25,
+    "unpaidFinancing": 4.669,
+    "cappedCall": 88.95,
+    "privateRecovery": 8,
+    "residualClaims": 15,
+    "esppClaim": 3,
+    "netRigakuPV": 0,
+    "netFX": 0,
+    "legacyUnits": 0.484
+   }
+  }
+ },
+ "fields": [
+  {
+   "path": "analystConditionalAllocation.inputs.liquidAssets",
+   "value": 1882.15,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm",
+   "locator": "10-Q Jun 30 2026 balance sheet: cash 1,253.205 + short-term investments 628.945",
+   "note_en": "June 30 cash and short-term investments.",
+   "note_zh": "2026年6月30日现金及短期投资。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.operatingReserve",
+   "value": 33.60411,
+   "basis": "derived",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm",
+   "locator": "3% of TTM revenue 1,120.137 (model default)",
+   "note_en": "Operating cash reserve at 3% of TTM revenue; a judgment.",
+   "note_zh": "按TTM收入的3%设定的运营现金储备；属判断值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.wholeConvert",
+   "value": 1982.25,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm",
+   "locator": "10-Q Note 7: 0% convertible notes due 2031, fair value at Jun 30 (principal 1,500, carrying 1,471.731)",
+   "note_en": "Fair value of the whole 2031 convertible, deducted once with no extra conversion shares.",
+   "note_zh": "2031年可转债整体公允价值，仅扣除一次，不增加转换股。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.unpaidFinancing",
+   "value": 4.669,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm",
+   "locator": "10-Q Notes 3/7 and cash-flow supplement: unpaid financing and excise costs",
+   "note_en": "Unpaid financing and excise costs at June 30.",
+   "note_zh": "6月30日未付融资及消费税成本。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.cappedCall",
+   "value": 88.95,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm",
+   "locator": "10-Q Note 7: capped-call premium paid 88.9, equity-classified; cost used as asset proxy",
+   "note_en": "Capped-call premium paid, used as a cost proxy for the asset; no fair value is disclosed.",
+   "note_zh": "已付封顶看涨期权费，作为资产成本代理值；未披露公允价值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.privateRecovery",
+   "value": 8,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm",
+   "locator": "10-Q balance sheet: long-term investments 8.0, carried at cost as the recovery proxy",
+   "note_en": "Carrying value of the private investment as the recovery proxy; not a fair value.",
+   "note_zh": "非上市投资账面价值作为回收代理值；并非公允价值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.residualClaims",
+   "value": 15,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/analyst-conditional-allocation.js ONTO illustration; dist/data/incremental-ONTO-2026-10-18-v2/claims-addendum-v3.md",
+   "locator": "residualClaims 15; addendum says this allowance is unmeasured",
+   "note_en": "Allowance for remaining tax, capital and deferred-compensation claims; a judgment.",
+   "note_zh": "剩余税务、资本及递延薪酬债权的准备金；判断值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.esppClaim",
+   "value": 3,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/analyst-conditional-allocation.js ONTO illustration; dist/data/incremental-ONTO-2026-10-18-v2/claims-addendum-v3.md",
+   "locator": "esppClaim 3; current ESPP rights not quantified in the 10-Q",
+   "note_en": "Existing ESPP claim; a judgment.",
+   "note_zh": "现有员工购股计划债权；判断值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.netRigakuPV",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "dist/analyst-conditional-allocation.js ONTO illustration; dist/data/incremental-ONTO-2026-10-18-v2/claims-addendum-v3.md",
+   "locator": "addendum: at-cost convention; paired purchase and asset legs net to zero",
+   "note_en": "Purchase and asset are valued at cost, so net present value is zero by convention, not a measured fair value.",
+   "note_zh": "购买与资产均按成本计价，净现值按约定为零，并非实测公允价值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.netFX",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526338401/onto-20260630.htm",
+   "locator": "10-Q Note 5: FX forward asset 1.284 is not designated as hedge; net economics not specified",
+   "note_en": "Net FX exposure is not specified; gross asset is only 1.284.",
+   "note_zh": "净外汇敞口未披露；账面总资产仅1.284。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.legacyUnits",
+   "value": 0.484,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/704532/000119312526066937/onto-20260103.htm",
+   "locator": "FY2025 10-K: 484K nonvested RSUs/PRSUs at target at Jan 3 2026 (carried; 10-Q has no count)",
+   "note_en": "Nonvested RSU/PRSU units, millions; stale, and PRSU payout can reach 200% of target.",
+   "note_zh": "未归属RSU/PRSU（百万股，按目标）；数据偏旧，PRSU最高可按目标200%兑现。"
+  }
+ ],
+ "summary_en": "June 30 cash, the 2031 convertible fair value, unpaid financing costs and the capped-call premium are from the 10-Q; the Rigaku and FX nets are set to zero by convention, and award units are carried from the 10-K.",
+ "summary_zh": "6月30日现金、2031年可转债公允价值、未付融资成本及封顶看涨期权费来自10-Q；理学与外汇净额按约定设为零，奖励股数沿用10-K。"
+}

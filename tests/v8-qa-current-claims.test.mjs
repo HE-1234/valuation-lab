@@ -28,5 +28,5 @@ test('v8 QA: current bridge gates do not retroactively withhold Alphabet before 
  const before=JSON.stringify(universe),c=universe.companies.find(c=>c.ticker==='GOOG'),raw=c.snapshots.find(r=>r.id==='GOOG-CURRENT-2025-12-31'),s=currentSnapshot(c,raw),d={...draftFor(c,raw),cutoff:universe.asOf};
  assert.deepEqual(currentClaimsEvidence(s),[]);assert.deepEqual(currentIssues(s,d),[]);assert.ok(Number.isFinite(calculateCurrent(s,d).perShare));
  for(const c of universe.companies)for(const r of c.snapshots)currentClaimsEvidence(currentSnapshot(c,r));assert.equal(JSON.stringify(universe),before);
- const current=c.snapshots.find(r=>r.id===c.currentSnapshotId);assert.equal(current.facts.preferredEquity,null,'raw source remains a preserved prior capture, with an explicit source-reviewed bridge overlay');
+ const current=c.snapshots.find(r=>r.id===c.currentSnapshotId);assert.equal(current.facts.preferredEquity,18023,'source-reviewed preferred carrying amount remains separate from the conversion overlay');assert.equal(current.debt,100164,'captured bank debt must not double-count the overlay finance leases');assert.equal(current.shares,12230,'captured common shares stay separate from overlay dilution');
 });

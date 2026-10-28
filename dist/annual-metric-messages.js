@@ -17,6 +17,7 @@ export const annualMetricMessagePairs = {
   "Annual capital innovation SD must be finite and nonnegative.": "年度资本创新标准差必须为有限非负数。",
   "Unsupported terminal uncertainty input.": "不支持的终值不确定性输入。",
   "Terminal uncertainty is outside supported bounds.": "终值不确定性超出支持范围。",
+  "Terminal uncertainty cannot be computed: tax 0–100% and ROIC above zero.": "终值不确定性无法计算：税率须为 0–100%，ROIC 须大于零。",
   "Direct annual investment requires the fixed-schedule policy; use annual investmentFactor with a revenue-response policy.": "直接年度投资要求使用固定计划政策；若采用营收响应政策，请使用年度 investmentFactor。",
   "Sampled terminal growth is the conditioned maturity endpoint and is held across the stable plateau. User-fixed years at or after maturity require terminal growth fixed at baseline.": "抽样终值增长率是作为条件的成熟端点，并在稳定平台期保持不变。成熟年及之后若有用户固定年份，终值增长率必须固定为基准值。",
   "Gaussian AR(1) deviations around the deterministic annual baseline, conditioned exactly on all fixed-year and terminal anchors. Innovation SD and persistence are illustrative analyst assumptions, not fitted reliability estimates. Invalid paths are excluded without replacement.": "围绕确定性年度基准产生高斯 AR(1) 偏差，并精确满足所有固定年份和终值锚点条件。创新标准差与持续性是分析者的示例假设，并非拟合的可靠性估计。无效路径直接排除，不补抽。",

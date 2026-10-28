@@ -1,0 +1,478 @@
+{
+  "ticker": "ALAB",
+  "currency": "USD",
+  "accountingBasis": "US GAAP annual filings; latest reported comparisons",
+  "accountingBasisZh": "美国GAAP年度申报；采用最新重列比较数据",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001736297.json",
+  "collectedAt": "2026-10-21",
+  "mappedDebt": "Borrowings and finance lease liabilities; operating leases excluded.",
+  "years": {
+    "2022": {
+      "fiscalYear": 2022,
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "revenue": {
+        "value": 79.872,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001736297-25-000003",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/alab-20241231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 79872000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": -60.194,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001736297-25-000003",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/alab-20241231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -60194000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 76.088,
+        "periodEnd": "2022-12-31",
+        "filed": "2024-02-21",
+        "accession": "0001193125-24-040419",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524040419/d285484ds1.htm",
+        "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2022 column, USD thousands",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2022 column, USD thousands",
+          "excerpt": " As of December 31, 2023 Actual Pro Forma(1) Pro Forma, As Adjusted(2) (in thousands) Consolidated Balance Sheet Data: Cash and cash equivalents $ 45,098 $ $ Working capital(3) 150,728 Total assets 196,292 Total liabilities 38,866 Total stockholders’ deficit $ (97,701 ) "
+        },
+        "reportedTableValue": 76088.0
+      },
+      "bookEquity": {
+        "value": -85.292,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": -85292000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": -57.581,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001736297-25-000003",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/alab-20241231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -57581000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 0.764,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001736297-25-000003",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/alab-20241231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 764000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2022-12-31",
+        "filed": "2024-02-21",
+        "accession": "0001193125-24-040419",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524040419/d285484ds1.htm",
+        "locator": "Consolidated Balance Sheets 2022: no borrowing debt; note states no finance leases; operating lease liabilities excluded",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " As of December 31, 2023 Actual Pro Forma(1) Pro Forma, As Adjusted(2) (in thousands) Consolidated Balance Sheet Data: Cash and cash equivalents $ 45,098 $ $ Working capital(3) 150,728 Total assets 196,292 Total liabilities 38,866 Total stockholders’ deficit $ (97,701 ) ",
+          "locator": "Consolidated Balance Sheets 2022: no borrowing debt; note states no finance leases; operating lease liabilities excluded"
+        },
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1736297/000119312524040419/d285484ds1.htm"
+        ]
+      },
+      "metricRangeExclusions": {
+        "bookSalesCapitalProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns.",
+        "incrementalBookSalesCapitalProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns.",
+        "bookROICProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns."
+      }
+    },
+    "2023": {
+      "fiscalYear": 2023,
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "revenue": {
+        "value": 115.794,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 115794000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": -29.497,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -29497000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 45.098,
+        "periodEnd": "2023-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001736297-25-000003",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/alab-20241231.htm",
+        "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2023 column, USD thousands",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2023 column, USD thousands",
+          "excerpt": " As of December 31, 2024 2023 Assets Current assets Cash and cash equivalents $ 79,551 $ 45,098 Marketable securities 834,750 104,215 Accounts receivable, net 38,811 8,335 Inventory 43,215 24,095 Prepaid expenses and other current assets 16,652 4,064 Total current assets 1,012,979 185,807 Property and equipment, net 35,651 4,712 Other assets 5,878 5,773 Total assets $ 1,054,508 $ 196,292 Liabilities, Redeemable Convertible Preferred Stock and Stockholders’ Equity (Deficit) Current liabilities Accounts payable $ 26,918 $ 6,337 Accrued expenses and other current liabilities 59,624 28,742 Total current liabilities 86,542 35,079 Other liabilities 3,167 3,787 Total liabilities 89,709 38,866 Commitments and contingencies (Note 6) Redeemable convertible preferred stock, $ 0.0001 par value; 0 and 91,131 shares authorized as of December 31, 2024 and 2023, respectively; 0 and 90,891 shares issued and outstanding as of December 31, 2024 and 2023, respectively; liquidation preference of $ 0 and $ 265,699 as of December 31, 2024 and 2023, respectively — 255,127 Stockholders’ equity (deficit) Common stock, $ 0.0001 par value; 1,000,000 and 162,641 shares authorized as of December 31, 2024 and 2023, respectively; 162,018 and 42,046 shares issued and outstanding as of December 31, 2024 and 2023, respectively 16 4 Additional paid-in capital 1,173,153 27,411 Accumulated other comprehensive income 426 259 Accumulated deficit ( 208,796 ) ( 125,375 ) Total stockholders’ equity (deficit) 964,799 ( 97,701 ) Total liabilities, redeemable convertible preferred stock and stockholders’ equity (deficit) $ 1,054,508 $ 196,292 "
+        },
+        "reportedTableValue": 45098.0
+      },
+      "bookEquity": {
+        "value": -97.701,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": -97701000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": -22.948,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -22948000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 3.309,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 3309000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2023-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001736297-25-000003",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/alab-20241231.htm",
+        "locator": "Consolidated Balance Sheets 2023: no borrowing debt; note states no finance leases; operating lease liabilities excluded",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " As of December 31, 2024 2023 Assets Current assets Cash and cash equivalents $ 79,551 $ 45,098 Marketable securities 834,750 104,215 Accounts receivable, net 38,811 8,335 Inventory 43,215 24,095 Prepaid expenses and other current assets 16,652 4,064 Total current assets 1,012,979 185,807 Property and equipment, net 35,651 4,712 Other assets 5,878 5,773 Total assets $ 1,054,508 $ 196,292 Liabilities, Redeemable Convertible Preferred Stock and Stockholders’ Equity (Deficit) Current liabilities Accounts payable $ 26,918 $ 6,337 Accrued expenses and other current liabilities 59,624 28,742 Total current liabilities 86,542 35,079 Other liabilities 3,167 3,787 Total liabilities 89,709 38,866 Commitments and contingencies (Note 6) Redeemable convertible preferred stock, $ 0.0001 par value; 0 and 91,131 shares authorized as of December 31, 2024 and 2023, respectively; 0 and 90,891 shares issued and outstanding as of December 31, 2024 and 2023, respectively; liquidation preference of $ 0 and $ 265,699 as of December 31, 2024 and 2023, respectively — 255,127 Stockholders’ equity (deficit) Common stock, $ 0.0001 par value; 1,000,000 and 162,641 shares authorized as of December 31, 2024 and 2023, respectively; 162,018 and 42,046 shares issued and outstanding as of December 31, 2024 and 2023, respectively 16 4 Additional paid-in capital 1,173,153 27,411 Accumulated other comprehensive income 426 259 Accumulated deficit ( 208,796 ) ( 125,375 ) Total stockholders’ equity (deficit) 964,799 ( 97,701 ) Total liabilities, redeemable convertible preferred stock and stockholders’ equity (deficit) $ 1,054,508 $ 196,292 ",
+          "locator": "Consolidated Balance Sheets 2023: no borrowing debt; note states no finance leases; operating lease liabilities excluded"
+        },
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1736297/000173629725000003/alab-20241231.htm"
+        ]
+      },
+      "metricRangeExclusions": {
+        "bookSalesCapitalProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns.",
+        "incrementalBookSalesCapitalProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns.",
+        "bookROICProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns."
+      }
+    },
+    "2024": {
+      "fiscalYear": 2024,
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "revenue": {
+        "value": 396.29,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 396290000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": -116.066,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -116066000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 79.551,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2024 column, USD thousands",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2024 column, USD thousands",
+          "excerpt": " As of December 31, 2025 2024 Assets Current assets Cash and cash equivalents $ 167,611 $ 79,551 Marketable securities 1,021,205 834,750 Accounts receivable, net 83,202 38,811 Inventory 58,979 43,215 Prepaid expenses and other current assets 31,033 16,652 Total current assets 1,362,030 1,012,979 Property and equipment, net 92,038 35,651 Other assets 77,755 5,878 Total assets $ 1,531,823 $ 1,054,508 Liabilities and Stockholders’ Equity Current liabilities Accounts payable $ 42,362 $ 26,918 Accrued expenses and other current liabilities 90,680 59,624 Total current liabilities 133,042 86,542 Other liabilities 35,147 3,167 Total liabilities 168,189 89,709 Commitments and contingencies (Note 8) Stockholders’ equity Common stock, $ 0.0001 par value; 1,000,000 shares authorized as of December 31, 2025 and 2024, respectively; 170,186 and 162,018 shares issued and outstanding as of December 31, 2025 and 2024, respectively 17 16 Additional paid-in capital 1,348,969 1,173,153 Accumulated other comprehensive income 4,310 426 Retained earnings (accumulated deficit) 10,338 ( 208,796 ) Total stockholders’ equity 1,363,634 964,799 Total liabilities and stockholders’ equity $ 1,531,823 $ 1,054,508 "
+        },
+        "reportedTableValue": 79551.0
+      },
+      "bookEquity": {
+        "value": 964.799,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 964799000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": -81.778,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -81778000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 1.643,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 1643000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "Consolidated Balance Sheets 2024: no borrowing debt; note states no finance leases; operating lease liabilities excluded",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " As of December 31, 2025 2024 Assets Current assets Cash and cash equivalents $ 167,611 $ 79,551 Marketable securities 1,021,205 834,750 Accounts receivable, net 83,202 38,811 Inventory 58,979 43,215 Prepaid expenses and other current assets 31,033 16,652 Total current assets 1,362,030 1,012,979 Property and equipment, net 92,038 35,651 Other assets 77,755 5,878 Total assets $ 1,531,823 $ 1,054,508 Liabilities and Stockholders’ Equity Current liabilities Accounts payable $ 42,362 $ 26,918 Accrued expenses and other current liabilities 90,680 59,624 Total current liabilities 133,042 86,542 Other liabilities 35,147 3,167 Total liabilities 168,189 89,709 Commitments and contingencies (Note 8) Stockholders’ equity Common stock, $ 0.0001 par value; 1,000,000 shares authorized as of December 31, 2025 and 2024, respectively; 170,186 and 162,018 shares issued and outstanding as of December 31, 2025 and 2024, respectively 17 16 Additional paid-in capital 1,348,969 1,173,153 Accumulated other comprehensive income 4,310 426 Retained earnings (accumulated deficit) 10,338 ( 208,796 ) Total stockholders’ equity 1,363,634 964,799 Total liabilities and stockholders’ equity $ 1,531,823 $ 1,054,508 ",
+          "locator": "Consolidated Balance Sheets 2024: no borrowing debt; note states no finance leases; operating lease liabilities excluded"
+        },
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm"
+        ]
+      },
+      "metricRangeExclusions": {
+        "bookSalesCapitalProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns.",
+        "incrementalBookSalesCapitalProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns.",
+        "bookROICProxy": "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns."
+      }
+    },
+    "2025": {
+      "fiscalYear": 2025,
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "revenue": {
+        "value": 852.525,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 852525000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": 173.423,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 173423000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 167.611,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2025 column, USD thousands",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "locator": "Consolidated Balance Sheets, cash and cash equivalents, 2025 column, USD thousands",
+          "excerpt": " As of December 31, 2025 2024 Assets Current assets Cash and cash equivalents $ 167,611 $ 79,551 Marketable securities 1,021,205 834,750 Accounts receivable, net 83,202 38,811 Inventory 58,979 43,215 Prepaid expenses and other current assets 31,033 16,652 Total current assets 1,362,030 1,012,979 Property and equipment, net 92,038 35,651 Other assets 77,755 5,878 Total assets $ 1,531,823 $ 1,054,508 Liabilities and Stockholders’ Equity Current liabilities Accounts payable $ 42,362 $ 26,918 Accrued expenses and other current liabilities 90,680 59,624 Total current liabilities 133,042 86,542 Other liabilities 35,147 3,167 Total liabilities 168,189 89,709 Commitments and contingencies (Note 8) Stockholders’ equity Common stock, $ 0.0001 par value; 1,000,000 shares authorized as of December 31, 2025 and 2024, respectively; 170,186 and 162,018 shares issued and outstanding as of December 31, 2025 and 2024, respectively 17 16 Additional paid-in capital 1,348,969 1,173,153 Accumulated other comprehensive income 4,310 426 Retained earnings (accumulated deficit) 10,338 ( 208,796 ) Total stockholders’ equity 1,363,634 964,799 Total liabilities and stockholders’ equity $ 1,531,823 $ 1,054,508 "
+        },
+        "reportedTableValue": 167611.0
+      },
+      "bookEquity": {
+        "value": 1363.634,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 1363634000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": 218.153,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 218153000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": -0.981,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -981000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-20",
+        "accession": "0001736297-26-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "locator": "Consolidated Balance Sheets 2025: no borrowing debt; note states no finance leases; operating lease liabilities excluded",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "sourceType": "Original filing table",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " As of December 31, 2025 2024 Assets Current assets Cash and cash equivalents $ 167,611 $ 79,551 Marketable securities 1,021,205 834,750 Accounts receivable, net 83,202 38,811 Inventory 58,979 43,215 Prepaid expenses and other current assets 31,033 16,652 Total current assets 1,362,030 1,012,979 Property and equipment, net 92,038 35,651 Other assets 77,755 5,878 Total assets $ 1,531,823 $ 1,054,508 Liabilities and Stockholders’ Equity Current liabilities Accounts payable $ 42,362 $ 26,918 Accrued expenses and other current liabilities 90,680 59,624 Total current liabilities 133,042 86,542 Other liabilities 35,147 3,167 Total liabilities 168,189 89,709 Commitments and contingencies (Note 8) Stockholders’ equity Common stock, $ 0.0001 par value; 1,000,000 shares authorized as of December 31, 2025 and 2024, respectively; 170,186 and 162,018 shares issued and outstanding as of December 31, 2025 and 2024, respectively 17 16 Additional paid-in capital 1,348,969 1,173,153 Accumulated other comprehensive income 4,310 426 Retained earnings (accumulated deficit) 10,338 ( 208,796 ) Total stockholders’ equity 1,363,634 964,799 Total liabilities and stockholders’ equity $ 1,531,823 $ 1,054,508 ",
+          "locator": "Consolidated Balance Sheets 2025: no borrowing debt; note states no finance leases; operating lease liabilities excluded"
+        },
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm"
+        ]
+      }
+    }
+  }
+}

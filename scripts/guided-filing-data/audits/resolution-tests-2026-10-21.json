@@ -1,0 +1,54 @@
+[
+  {
+    "file": "tests/assumption-history.test.mjs",
+    "exitCode": 0,
+    "output": "\u2714 all requested tickers have explicit evidence records and no backtest eligibility (0.873334ms)\n\u2714 annual observations are real full fiscal years, never quarter or YTD (0.168917ms)\n\u2714 growth and beginning capital never bridge missing fiscal years (0.379125ms)\n\u2714 every numeric metric is exactly its documented numerator divided by positive denominator (0.8785ms)\n\u2714 negative and extraordinary tax rates remain visible but are not normalization anchors (0.065625ms)\n\u2714 LITE prior revenue is FY2021, not an older available annual record (0.036209ms)\n\u2714 reported money raw units convert exactly to millions (1.220625ms)\n\u2714 full assumption contract including aliases is pure and non-mutating (35.097584ms)\n\u2714 capital productivity and returns are explicitly proxies (0.381125ms)\n\u2714 WACC and terminal growth never fabricate historical counterparts (0.165958ms)\n\u2714 dated market references and financial histories are not leaked before availability (0.23925ms)\n\u2714 TTM is explicit and separate from the annual range (0.086625ms)\n\u2714 other asset/claim assumptions show contextual balances without invented adjustment series (0.155209ms)\n\u2714 range ignores nulls and excluded observations, does not coerce missing to zero (0.223375ms)\n\u2714 foreign issuer tables preserve their actual reported million-unit scales (0.229458ms)\n\u2714 foreign coverage is real and specialist caveats remain explicit (0.112416ms)\n\u2714 adapter checks prior denominator filing date even without builder availableFrom (11.690625ms)\n\u2714 ten-year coverage distinguishes reported rows from actual metric availability (0.583583ms)\n\u2714 COHR exact predecessor observations stay visible but cannot enter post-acquisition ranges (0.155542ms)\n\u2714 cutoff coverage hides future ratios and their numerical components while retaining older dated evidence (0.099042ms)\n\u2139 tests 20\n\u2139 suites 0\n\u2139 pass 20\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 126.239208\n"
+  },
+  {
+    "file": "tests/v7-qa-history.test.mjs",
+    "exitCode": 0,
+    "output": "\u2714 v7 QA: history is additive, dated, unit-explicit and never claims point-in-time eligibility (18.268916ms)\n\u2714 v7 QA: raw facts convert to millions with exact periods and dated provenance; missing values remain explicit (18.550416ms)\n\u2714 v7 QA: every available ratio recomputes from numerator and positive denominator (16.243958ms)\n\u2714 v7 QA: prior-year ratios cannot bridge a missing multiyear period or call it YoY (14.263541ms)\n\u2714 v7 QA: growth, EBIT margins and tax rates use the stated economic denominators (14.277875ms)\n\u2714 v7 QA: book-capital proxies reconcile and marginal model assumptions remain distinct (17.31925ms)\n\u2139 tests 6\n\u2139 suites 0\n\u2139 pass 6\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 153.026083\n"
+  },
+  {
+    "file": "tests/current-data-qa.test.mjs",
+    "exitCode": 0,
+    "output": "\u2714 current data QA: complete requested universe with unique source IDs and current selections (7.353958ms)\n\u2714 current data QA: current facts stay separate from historical sources and cannot enter any future backtest (7.016542ms)\n\u2714 current data QA: dated current observations and original source URLs are explicit (4.837792ms)\n\u2714 current data QA: every nonnull source fact carries evidence, while missing facts remain null (4.933417ms)\n\u2714 current data QA: all retained TTM component arithmetic recomputes independently (5.095542ms)\n\u2714 current data QA: quarterly and specialist securities remain blocked; viable annual/TTM data calculate without acknowledgement (19.862625ms)\n\u2714 current data QA: foreign currency and security distinctions are retained (5.021041ms)\n\u2139 tests 7\n\u2139 suites 0\n\u2139 pass 7\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 107.595542\n"
+  },
+  {
+    "file": "tests/guided-bases.test.mjs",
+    "exitCode": 0,
+    "output": "\u2714 Guided offers the newest annual and later TTM, never YTD or duplicate accounting bases (6.372ms)\n\u2714 Native TWD share evidence never accepts a weighted average or unmatched denominator (1.623125ms)\n\u2714 An explicitly unknown refreshed balance cannot fall back to an older numeric alias (0.057917ms)\n\u2714 Unavailable history shows its source reason ahead of generic range exclusion (0.321792ms)\n\u2714 Case bridge evidence belongs to its own selected period, never the other base (1.528042ms)\n\u2139 tests 5\n\u2139 suites 0\n\u2139 pass 5\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 65.765458\n"
+  },
+  {
+    "file": "tests/special-claims-model.test.mjs",
+    "exitCode": 0,
+    "output": "\u2714 special claims: exact original-filing facts distinguish book, principal, market value and conversion units (1.616709ms)\n\u2714 special claims: changed source/capital/currency or imported copies cannot inherit reviewed terms (0.976959ms)\n\u2714 special claims: missing, wrong-company, malformed and unsupported inputs fail despite review flags (1.886083ms)\n\u2714 special claims: legacy-draft migration preserves all operating work and invalid existing claims stay invalid (1.929583ms)\n\u2714 special claims: AAOI default fair-value bridge subtracts the whole note once with no note shares or coupon deduction (1.15725ms)\n\u2714 special claims: AAOI alternative note treatments remain mutually exclusive with warrant exercise proceeds correctly allocated (1.256333ms)\n\u2714 special claims: AAOI preserved legacy linear stress remains negative before the disclosed common-equity floor (0.973291ms)\n\u2714 special claims: AAOI known transactions keep cash and shares together and cannot appear before their source date (0.360083ms)\n\u2714 special claims: Alphabet exact dividend dates/amounts and dated PV are independent of WACC and the quote (5.609042ms)\n\u2714 special claims: Alphabet min/max dilution, liquidation and investment/NCI adjustments do not double count (0.925875ms)\n\u2714 special claims: all active approximations are disclosed, including fixed future-conversion endpoints and stale claim observations (0.271292ms)\n\u2714 special claims: every simulated draw matches the independent operating-plus-claims oracle in every treatment (34.5045ms)\n\u2714 special claims: fixed Monte Carlo reproduces the displayed value and quote changes cannot change claim values (1.325625ms)\n\u2714 special claims: evidence, inputs and immutable exports cannot be mutated by calculations or sensitivities (4.510666ms)\n\u2714 special operating path: fresh researched AAOI uses the disclosed staged ramp and exact terminal cash-flow transition (0.743875ms)\n\u2714 special operating path: absence of optional research and restored legacy drafts retain their original linear economics (0.5655ms)\n\u2714 special operating path: staged selection fails closed for wrong baseline/date, malformed profiles, duplicate overrides and zero mature margin (0.722ms)\n\u2714 special operating path: every staged Monte Carlo draw rebuilds its growth, margin, capital intensity and claims consistently (34.10675ms)\n\u2714 special operating path: invalid zero-margin draws are excluded without replacement and a zero-margin baseline is withheld (0.728667ms)\n\u2139 tests 19\n\u2139 suites 0\n\u2139 pass 19\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 156.514\n"
+  },
+  {
+    "file": "tests/v8-qa-current-claims.test.mjs",
+    "exitCode": 0,
+    "output": "\u2714 v8 QA: verified debt / preferred omissions retain dated evidence and require a genuine explicit claims model (11.491292ms)\n\u2714 v8 QA: current bridge gates do not retroactively withhold Alphabet before preferred issuance or mutate source bytes (8.097208ms)\n\u2139 tests 2\n\u2139 suites 0\n\u2139 pass 2\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 75.188208\n"
+  },
+  {
+    "file": "tests/guided-resolution.test.mjs",
+    "exitCode": 0,
+    "output": "\u2714 debt proxies preserve reported unknowns and have linear per-share materiality (3.130833ms)\n\u2714 option allocation matches a published textbook Black-Scholes case and conserves ownership value (0.220542ms)\n\u2714 Tesla annual and June match independent source reconciliation and option-pricing oracle (0.864791ms)\n\u2714 dated ownership gate fails closed even if its marker is lost or direct caller bypasses currentIssues (2.385458ms)\n\u2714 Nebius convertible fair value replaces carrying debt and prefunded warrants enter only once (1.043458ms)\n\u2714 positive-equity Nebius stresses expose reserve and option effects hidden by a zero floor (1.904625ms)\n\u2714 all offered Guided bases calculate while source records retain original missing values (12.03075ms)\n\u2139 tests 7\n\u2139 suites 0\n\u2139 pass 7\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 77.595333\n"
+  },
+  {
+    "file": "tests/test_guided_history_builder.py",
+    "exitCode": 0,
+    "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "file": "tests/guided-localization.test.mjs",
+    "exitCode": 0,
+    "tests": 8,
+    "note": "Catalog parity, matching, live locale state, inputs and dynamic messages all pass; run after mobile column-label localization change."
+  },
+  {
+    "file": "tests/i18n-foundation.test.mjs",
+    "exitCode": 0,
+    "tests": 16,
+    "note": "Presentation attribute allowlist, identity, catalog and locale binding checks passed after adding mobile column labels."
+  }
+]

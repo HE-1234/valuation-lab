@@ -44,7 +44,9 @@ export function directoryEntries(library,catalog){
  const verifiedNames=new Map((catalog?.companies||[]).filter(isUSRobinhoodCandidate).map(row=>[row.ticker,row.company]));
  const ready=library.companies.map(row=>({id:row.ticker,ticker:row.ticker,company:row.company||row.name||legacyNames[row.ticker]||verifiedNames.get(row.ticker)||row.ticker,aliases:[],readiness:'ready'}));
  const legacy=new Set(ready.map(row=>row.ticker));
- return [...ready,...(catalog?.companies||[]).filter(row=>!legacy.has(row.ticker)&&isUSRobinhoodCandidate(row))];
+ // Ready companies first, then research pending; each group A–Z by ticker.
+ const byTicker=(a,b)=>a.ticker.localeCompare(b.ticker,'en');
+ return [...ready.sort(byTicker),...(catalog?.companies||[]).filter(row=>!legacy.has(row.ticker)&&isUSRobinhoodCandidate(row)).sort(byTicker)];
 }
 export function searchCompanies(entries,query){
  const needle=normalizeCompanyQuery(query);return entries.filter(row=>[row.id,row.ticker,row.nativeTicker,row.company,...(row.aliases||[])].some(value=>normalizeCompanyQuery(value).includes(needle)));

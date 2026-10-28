@@ -85,7 +85,7 @@ export function prepareAnnualMetrics(context,metrics){
 export function sampleAnnualMetrics(samplers,random,endpoints={}){return Object.fromEntries(Object.entries(samplers||{}).map(([k,s])=>[k,s.sample(random,endpoints[k]??s.terminalGrowth)]));}
 export function annualMetricsAudit(samplers,scenarios){return Object.fromEntries(Object.entries(samplers||{}).map(([key,s])=>[key,{...annualPathAudit(s,[]),units:key==='reinvestment'?'currency millions':key==='salesCapital'?'sales / capital ratio':key==='investmentFactor'?'net-investment factor':'fraction',preview:scenarios.slice(0,12).map(row=>({trial:row.trial,values:[...row.metricPaths[key]],terminalGrowth:row.terminal?.[key]??s.terminalGrowth}))}]));}
 export function annualMetricConstraint(paths){
- for(const [key,values]of Object.entries(paths||{}))if(values.some(v=>!finite(v)||(key==='margin'&&(v<-.5||v>1))||(key==='taxRate'&&(v<0||v>.6))||(key==='wacc'&&(v<=0||v>1))||(['salesCapital','investmentFactor'].includes(key)&&v<=0)))return `annual-${key}-bounds`;
+ for(const [key,values]of Object.entries(paths||{}))if(values.some(v=>!finite(v)||(key==='margin'&&v>1)||(key==='taxRate'&&(v<0||v>1))||(key==='wacc'&&v<=-1)||(['salesCapital','investmentFactor'].includes(key)&&v<=0)))return `annual-${key}-bounds`;
  return null;
 }
 

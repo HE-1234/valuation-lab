@@ -1,0 +1,126 @@
+{
+  "cutoff": "2026-10-21",
+  "sequential": true,
+  "nodeHeapMB": 2048,
+  "passed": true,
+  "tests": 115,
+  "records": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/assumption-history.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 20
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/v7-qa-history.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 6
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/current-data-qa.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 7
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/guided-bases.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 5
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/special-claims-model.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 19
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/v8-qa-current-claims.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 2
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/guided-resolution.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 7
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/guided-additions.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 9
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/guided-next-four.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 6
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/meta-snow-refresh.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 5
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/guided-localization.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 8
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/i18n-foundation.test.mjs"
+      ],
+      "exitCode": 0,
+      "tests": 16
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "tests/test_guided_history_builder.py"
+      ],
+      "exitCode": 0,
+      "tests": 5
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "ticker": "ORCL",
+  "name": "Oracle Corporation",
+  "cik": "0001341439",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2026-05-31",
+      "label": "FY2026",
+      "form": "10-K",
+      "accession": "0001193125-26-277521",
+      "filedAt": "2026-06-22",
+      "acceptedAt": "2026-06-23T00:12:40.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+      "sharesDate": "2026-05-31",
+      "ttmComponents": null,
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Statements of Operations, Total revenues; USD millions.",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Statements of Operations, Operating income (GAAP, including stock compensation and depreciation).",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Balance Sheets, Cash and cash equivalents; excludes restricted cash.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Balance Sheets, Marketable securities; current securities only, separate from cash.",
+          "tag": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Note 1, Non-marketable debt investments and equity securities: $2.3bn at May 31 / $2.4bn August 31, converted to millions. Excludes separately matched deferred-compensation plan assets."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Balance Sheets current notes payable and other borrowings, plus separately classified current finance lease liability in Note 9 (annual) / Note 6 (quarter). Annual 7,199+620; quarter 7,625+749. Finance leases sit in other current liabilities, not notes payable."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Balance Sheets noncurrent notes payable and other borrowings, plus separately classified noncurrent finance lease liability in Note 9 (annual) / Note 6 (quarter). Annual 122,342+7,081; quarter117,712+8,436. Finance leases sit in other noncurrent liabilities, not notes payable."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Note 9 (annual) / Note 6 (quarter), total operating lease liability; current+noncurrent; retained as operating context, not added again to financial debt.",
+          "tag": "us-gaap:OperatingLeaseLiability"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Balance Sheets, Noncontrolling interests."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Balance Sheets, 6.50% Series D Mandatory Convertible Preferred Stock, carrying amount4,954. Note10 annual:50,000 preferred shares, $100,000 liquidation each, mandatory conversion Jan15 2029. Source carrying is retained; model substitutes conversion shares plus remaining dividends, never both principal and shares.",
+          "tag": "us-gaap:PreferredStockValue"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Balance Sheets, actual common shares outstanding at period end (rounded to millions); not weighted-average EPS shares. August3,024 includes141m shares issued under completed ATM program.",
+          "tag": "us-gaap:CommonStockSharesOutstanding"
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 restricted stock-based awards activity:81m outstanding May31 2026. Quarter Note7 reports2m new RSUs, .4m new options,4m combined cancellations but no full outstanding rollforward. Annual81m carried conservatively at August31, with separate carry flag.",
+          "tag": "us-gaap:ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber"
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 option activity:21m total outstanding. Includes20m vested/expected-to-vest and1m not expected to vest."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 option activity:21m total outstanding at weighted exercise price217.63."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 discloses7.58years only for20m vested/expected options, not all21m; source full-count remaining life unknown. Explicit model tranches use1.64/9.35years disclosed for5m vested/15m expected and5years proxy for remaining1m."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 intrinsic884m is for20m vested/expected options, not total21m. Full total not separately disclosed; preserved as null. Market intrinsic is not deducted from DCF equity."
+        }
+      },
+      "options": {
+        "count": 21,
+        "weightedExercisePrice": 217.63,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "unvestedRSUs": 81,
+      "convertibles": [],
+      "otherClaims": [
+        {
+          "name": "Net unfunded defined-benefit pension obligation",
+          "value": 256,
+          "basis": "Annual Note11 aggregate net pension liability (funded status); quarterly carry because no update disclosed.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+        },
+        {
+          "name": "Short-term capital expenditure financing balance",
+          "value": null,
+          "basis": "Separate cash-flow line exists outside the reconciled notes-payable schedule, but a standalone balance/opening is not disclosed. Model uses explicitly assumed zero FY2024 opening plus FY2025 net proceeds1,422+FY2026 net proceeds3,345, less830quarter repayments when applicable. This is a proxy, not a reported balance.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+        }
+      ],
+      "note": "Primary balance sheet, operations, cash flow and debt/lease/equity notes cross-checked in original filing. Restricted cash excluded. Finance leases added once; operating leases remain operating costs. Reported preferred carrying remains a source fact; model replaces it with maximum mandatory conversion shares and discounted scheduled dividends. Employee stock compensation remains in operating expenses. Investments and pension carrying values are economic-value proxies. Uncommenced leases and purchase commitments are future operating/reinvestment obligations, not automatically current debt.",
+      "revenue": 67357,
+      "operatingIncome": 20606,
+      "cashAndEquivalents": 31289,
+      "shortTermInvestments": 605,
+      "longTermInvestments": 2300,
+      "debtCurrent": 7819,
+      "debtNoncurrent": 129423,
+      "operatingLeaseLiabilities": 30190,
+      "noncontrollingInterest": 548,
+      "preferredEquity": 4954,
+      "sharesOutstanding": 2880
+    },
+    "ttm": {
+      "periodEnd": "2026-08-31",
+      "label": "TTM through 2026-08-31",
+      "form": "10-Q",
+      "accession": "0001193125-26-389274",
+      "filedAt": "2026-09-11",
+      "acceptedAt": "2026-09-12T00:10:12.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+      "sharesDate": "2026-08-31",
+      "ttmComponents": {
+        "annualRevenue": 67357,
+        "ytdRevenue": 19345,
+        "priorYtdRevenue": 14926,
+        "annualOperatingIncome": 20606,
+        "ytdOperatingIncome": 6728,
+        "priorYtdOperatingIncome": 4277,
+        "ytdStart": "2026-06-01",
+        "ytdEnd": "2026-08-31",
+        "priorYtdStart": "2025-06-01",
+        "priorYtdEnd": "2025-08-31"
+      },
+      "carriedFrom": {
+        "unvestedRSUs": {
+          "date": "2026-05-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "why": "Quarterly report does not disclose a complete updated outstanding award/option or funded pension balance. Annual awards are a conservative count proxy: quarter2.4m grants were exceeded by4m cancellations before vesting/exercises. Unfunded pension carried explicitly."
+        },
+        "options": {
+          "date": "2026-05-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "why": "Quarterly report does not disclose a complete updated outstanding award/option or funded pension balance. Annual awards are a conservative count proxy: quarter2.4m grants were exceeded by4m cancellations before vesting/exercises. Unfunded pension carried explicitly."
+        },
+        "otherClaims.Net unfunded defined-benefit pension obligation": {
+          "date": "2026-05-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "why": "Quarterly report does not disclose a complete updated outstanding award/option or funded pension balance. Annual awards are a conservative count proxy: quarter2.4m grants were exceeded by4m cancellations before vesting/exercises. Unfunded pension carried explicitly."
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Statements of Operations, Total revenues; USD millions.",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Statements of Operations, Operating income (GAAP, including stock compensation and depreciation).",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Balance Sheets, Cash and cash equivalents; excludes restricted cash.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Balance Sheets, Marketable securities; current securities only, separate from cash.",
+          "tag": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Note 1, Non-marketable debt investments and equity securities: $2.3bn at May 31 / $2.4bn August 31, converted to millions. Excludes separately matched deferred-compensation plan assets."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Balance Sheets current notes payable and other borrowings, plus separately classified current finance lease liability in Note 9 (annual) / Note 6 (quarter). Annual 7,199+620; quarter 7,625+749. Finance leases sit in other current liabilities, not notes payable."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Balance Sheets noncurrent notes payable and other borrowings, plus separately classified noncurrent finance lease liability in Note 9 (annual) / Note 6 (quarter). Annual 122,342+7,081; quarter117,712+8,436. Finance leases sit in other noncurrent liabilities, not notes payable."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Note 9 (annual) / Note 6 (quarter), total operating lease liability; current+noncurrent; retained as operating context, not added again to financial debt.",
+          "tag": "us-gaap:OperatingLeaseLiability"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Balance Sheets, Noncontrolling interests."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Balance Sheets, 6.50% Series D Mandatory Convertible Preferred Stock, carrying amount4,954. Note10 annual:50,000 preferred shares, $100,000 liquidation each, mandatory conversion Jan15 2029. Source carrying is retained; model substitutes conversion shares plus remaining dividends, never both principal and shares.",
+          "tag": "us-gaap:PreferredStockValue"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Balance Sheets, actual common shares outstanding at period end (rounded to millions); not weighted-average EPS shares. August3,024 includes141m shares issued under completed ATM program.",
+          "tag": "us-gaap:CommonStockSharesOutstanding"
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 restricted stock-based awards activity:81m outstanding May31 2026. Quarter Note7 reports2m new RSUs, .4m new options,4m combined cancellations but no full outstanding rollforward. Annual81m carried conservatively at August31, with separate carry flag.",
+          "tag": "us-gaap:ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber"
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 option activity:21m total outstanding. Includes20m vested/expected-to-vest and1m not expected to vest."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 option activity:21m total outstanding at weighted exercise price217.63."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 discloses7.58years only for20m vested/expected options, not all21m; source full-count remaining life unknown. Explicit model tranches use1.64/9.35years disclosed for5m vested/15m expected and5years proxy for remaining1m."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Annual Note11 intrinsic884m is for20m vested/expected options, not total21m. Full total not separately disclosed; preserved as null. Market intrinsic is not deducted from DCF equity."
+        },
+        "ttmComponents.annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Statements of Operations, Total revenues, year endedMay31 2026"
+        },
+        "ttmComponents.annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Consolidated Statements of Operations, Operating income, year endedMay31 2026"
+        },
+        "ttmComponents.ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Statements of Operations, Total revenues, three months endedAugust31 2026"
+        },
+        "ttmComponents.priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Statements of Operations, Total revenues, three months endedAugust31 2025"
+        },
+        "ttmComponents.ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Statements of Operations, Operating income, three months endedAugust31 2026"
+        },
+        "ttmComponents.priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "locator": "Consolidated Statements of Operations, Operating income, three months endedAugust31 2025"
+        }
+      },
+      "options": {
+        "count": 21,
+        "weightedExercisePrice": 217.63,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "unvestedRSUs": 81,
+      "convertibles": [],
+      "otherClaims": [
+        {
+          "name": "Net unfunded defined-benefit pension obligation",
+          "value": 256,
+          "basis": "Annual Note11 aggregate net pension liability (funded status); quarterly carry because no update disclosed.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+        },
+        {
+          "name": "Short-term capital expenditure financing balance",
+          "value": null,
+          "basis": "Separate cash-flow line exists outside the reconciled notes-payable schedule, but a standalone balance/opening is not disclosed. Model uses explicitly assumed zero FY2024 opening plus FY2025 net proceeds1,422+FY2026 net proceeds3,345, less830quarter repayments when applicable. This is a proxy, not a reported balance.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+        }
+      ],
+      "note": "Primary balance sheet, operations, cash flow and debt/lease/equity notes cross-checked in original filing. Restricted cash excluded. Finance leases added once; operating leases remain operating costs. Reported preferred carrying remains a source fact; model replaces it with maximum mandatory conversion shares and discounted scheduled dividends. Employee stock compensation remains in operating expenses. Investments and pension carrying values are economic-value proxies. Uncommenced leases and purchase commitments are future operating/reinvestment obligations, not automatically current debt.",
+      "revenue": 71776,
+      "operatingIncome": 23057,
+      "cashAndEquivalents": 36369,
+      "shortTermInvestments": 708,
+      "longTermInvestments": 2400,
+      "debtCurrent": 8374,
+      "debtNoncurrent": 126148,
+      "operatingLeaseLiabilities": 34621,
+      "noncontrollingInterest": 424,
+      "preferredEquity": 4954,
+      "sharesOutstanding": 3024
+    }
+  },
+  "notes": [
+    "Latest annual and quarterly SEC submissions checked through2026-10-21. Historical and modeled amounts are USD millions; common shares in millions.",
+    "AI infrastructure capital spending, financing and customer prepayments are material; see explicit model policies and limitations."
+  ]
+}

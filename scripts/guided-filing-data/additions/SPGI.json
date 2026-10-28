@@ -1,0 +1,143 @@
+{
+  "ticker": "SPGI",
+  "sector": "Ratings and market-data services",
+  "businessSummary": {
+    "en": "Credit ratings, indices, financial information and commodity data. These filed bases include Mobility through June 30, 2026, before its July 1 separation.",
+    "zh": "信用评级、指数、金融信息与大宗商品数据。申报基期包含2026年6月30日前的出行业务，该业务于7月1日分拆。"
+  },
+  "assumptions": {
+    "growth": 0.07,
+    "targetMargin": 0.45,
+    "tax": 0.24,
+    "salesCapital": 1.4,
+    "wacc": 0.085,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.18,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "Recurring subscriptions, ratings and indices support growth and strong margins. Historical merger accounting and the Mobility separation limit direct comparisons; this is the filed pre-separation group.",
+      "zh": "经常性订阅、评级及指数业务支持增长与较高利润率。历史并购会计与出行业务分拆限制直接比较；本情景为分拆前申报集团。"
+    },
+    "targetMargin": {
+      "en": "Recurring subscriptions, ratings and indices support growth and strong margins. Historical merger accounting and the Mobility separation limit direct comparisons; this is the filed pre-separation group.",
+      "zh": "经常性订阅、评级及指数业务支持增长与较高利润率。历史并购会计与出行业务分拆限制直接比较；本情景为分拆前申报集团。"
+    },
+    "tax": {
+      "en": "Normalized forward operating tax assumption; historical effective tax remains reported in history. ",
+      "zh": "前瞻正常化营业税率假设；历史有效税率仍按申报保留。"
+    },
+    "salesCapital": {
+      "en": "Analyst reinvestment assumption informed by the historical book-capital proxy. Incremental sales require new operating capital; accounting acquisitions and buybacks can distort historical ratios.",
+      "zh": "依据历史账面资本代理指标设定的分析师再投资假设。新增销售需要新增经营资本；并购会计与回购可能扭曲历史比率。"
+    },
+    "wacc": {
+      "en": "Analyst required-return assumption reflecting business cyclicality and financing risk; not a quoted market measurement.",
+      "zh": "反映业务周期及融资风险的分析师必要回报假设，并非市场报价测量值。"
+    },
+    "terminalGrowth": {
+      "en": "Long-run nominal growth assumption below the discount rate; competitive growth fades as the business matures.",
+      "zh": "低于折现率的长期名义增长假设；随着业务成熟，竞争性增长逐渐放缓。"
+    },
+    "terminalROIC": {
+      "en": "Analyst mature return on new capital; preserves reinvestment needed to fund terminal growth rather than assuming growth is free.",
+      "zh": "分析师对成熟期新增资本回报率的假设；保留支持永续增长所需的再投资，不假设增长无需投入。"
+    },
+    "years": {
+      "en": "These are analyst starting assumptions, not company guidance or reported facts. Growth fades toward the terminal rate; stock-based compensation remains an expense.",
+      "zh": "这些是分析师起始假设，并非公司指引或申报事实。增长逐步收敛至永续增长率；股权薪酬仍计入费用。"
+    }
+  },
+  "sources": [
+    {
+      "title": "10-K 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+      "filedAt": "2026-02-11"
+    },
+    {
+      "title": "10-Q 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+      "filedAt": "2026-07-28"
+    },
+    {
+      "title": "Filed Mobility separation pro forma",
+      "url": "https://www.sec.gov/Archives/edgar/data/64040/000110465926080571/tm2619099d2_ex99-2.htm",
+      "filedAt": "2026-07-06"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0000064040.json",
+    "latestPeriodicAccession": "0000064040-26-000045",
+    "latestAnnualAccession": "0000064040-26-000013"
+  },
+  "limitations": [
+    {
+      "en": "Dated group includes Mobility, separated on July 1, 2026; this is not the current standalone SPGI perimeter.",
+      "zh": "基期集团包含于2026年7月1日分拆的出行业务；并非当前独立标普全球的业务范围。"
+    },
+    {
+      "en": "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+      "zh": "中期未披露完整奖励余额，沿用最近年度未归属股数，作为明确的稀释代理；应展示奖励股数上下25%的敏感度。"
+    },
+    {
+      "en": "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+      "zh": "中期未披露完整期权变动表，沿用最近年度期权数量及行权价；年度市场内在价值并非当前期末估值。"
+    },
+    {
+      "en": "The June filing has no separate current-investment line. No additional value is assigned; the prior annual $56m balance is only about $0.19 per share.",
+      "zh": "6月申报未单列流动投资，不另行加值；上年度5600万美元余额仅相当于每股约0.19美元。"
+    },
+    {
+      "en": "Redeemable minority interests of $4.917bn annual and $5.024bn June are deducted separately from ordinary minority equity.",
+      "zh": "年度49.17亿美元与6月50.24亿美元的可赎回少数股东权益，在普通少数股东权益之外单独扣除。"
+    },
+    {
+      "en": "S&P Global earns fees from ratings, subscriptions, indices and data services; it is not a lending or deposit-taking institution. Operating free-cash-flow valuation is appropriate for this service business, with ordinary debt and minority claims separately deducted.",
+      "zh": "标普全球通过评级、订阅、指数与数据服务收取费用，并非贷款或吸收存款机构。该服务业务适用经营自由现金流估值，并单独扣除普通债务与少数股东请求权。"
+    },
+    {
+      "en": "The annual filing reports fewer than 0.1m options and $5m intrinsic value, not an exact option count. The $5m disclosed claim is retained as a small proxy (about $0.017 per share); no invented option count is used.",
+      "zh": "年报披露期权少于10万份、内在价值500万美元，并未提供精确数量。保留已披露的500万美元请求权作为小额代理（约每股0.017美元），不编造期权数量。"
+    }
+  ],
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": true,
+    "reason": {
+      "en": "Equity-method earnings are already included in operating income; do not add affiliate carrying value again.",
+      "zh": "权益法收益已计入营业利润；不再添加联营投资账面价值。"
+    }
+  },
+  "separationReview": {
+    "status": "filed proforma reviewed; keep dated pre-separation bases",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000110465926080571/tm2619099d2_ex99-2.htm",
+    "filedAt": "2026-07-06",
+    "annual2025": {
+      "groupRevenue": 15336,
+      "standaloneProformaRevenue": 13589,
+      "groupOperatingIncome": 6478,
+      "standaloneProformaOperatingIncome": 6140
+    },
+    "march2026Bridge": {
+      "groupCash": 1810,
+      "removedMobilityCash": 121,
+      "distributionToParent": 1974,
+      "standaloneCash": 3663,
+      "debtCurrent": 2697,
+      "debtNoncurrent": 10621
+    },
+    "reason": {
+      "en": "The filed proforma balance sheet is dated March 31, not December 31 or June 30. Its cash and debt cannot be silently combined with either selectable base. The filed June group still includes Mobility financing.",
+      "zh": "申报备考资产负债表日期为3月31日，并非12月31日或6月30日。不能将其现金与债务无提示地混用于任一可选基期。6月申报集团仍包含出行业务融资。"
+    }
+  },
+  "sectorZh": "评级与市场数据服务",
+  "quoteScope": {
+    "through": "2026-06-30",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000110465926080571/tm2619099d2_ex99-2.htm",
+    "note": "These dated financials include Mobility. A post-separation standalone SPGI quote is not comparable with this group valuation.",
+    "noteZh": "这些历史时点财务数据包含出行业务。分拆后的独立标普全球报价不可与此集团估值直接比较。"
+  }
+}

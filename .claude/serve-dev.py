@@ -20,6 +20,7 @@ def write_json(path, value):
     with os.fdopen(fd, 'w', encoding='utf-8') as f:
         json.dump(value, f, ensure_ascii=False, indent=1)
         f.write('\n')
+    os.chmod(tmp, 0o644)  # mkstemp creates 0600; saved versions are ordinary repo files
     os.replace(tmp, path)
 
 

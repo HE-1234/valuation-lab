@@ -1,0 +1,180 @@
+{
+  "ticker": "ALAB",
+  "sector": "Semiconductors",
+  "businessSummary": {
+    "en": "Connectivity semiconductors that link processors, accelerators and memory inside AI and cloud infrastructure; growth depends on customer platform adoption and concentration.",
+    "zh": "连接AI及云基础设施内处理器、加速器及内存的互连半导体；增长取决于客户平台采用及客户集中风险。"
+  },
+  "assumptions": {
+    "growth": 0.3,
+    "targetMargin": 0.3,
+    "tax": 0.21,
+    "salesCapital": 2.5,
+    "wacc": 0.12,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.2,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "30% initial growth fading toward 3% is an analyst scenario below the latest reported growth: FY 2025 revenue 852.525 m and first-half 2026 revenue 700.761 m versus 351.367 m. AI demand and Scorpio product ramps support expansion, but customer concentration and platform cycles prevent treating current growth as permanent.",
+      "zh": "30%的初期增长逐步收敛至3%，是低于近期申报增长的分析情景：2025年收入8.52525亿美元，2026年上半年收入7.00761亿美元，上年同期为3.51367亿美元。AI需求及Scorpio产品放量支持增长，但客户集中与平台周期意味着不能将当前增速视为永久。"
+    },
+    "targetMargin": {
+      "en": "30% mature GAAP operating margin allows operating leverage from the FY 2025 20.3% and first-half 2026 21.6% margins while retaining stock compensation and customer-warrant revenue reductions. The reported non-GAAP margins near 39% are not copied into GAAP economics.",
+      "zh": "30%的成熟期GAAP营业利润率考虑从2025年20.3%及2026年上半年21.6%的水平提升，同时保留股权薪酬及客户认股权证收入抵减。不会直接将约39%的非GAAP利润率套入GAAP经济模型。"
+    },
+    "tax": {
+      "en": "21% normalized operating tax is an analyst assumption. Reported FY 2025 and first-half 2026 tax benefits reflect equity-compensation deductions and valuation allowances and are not recurring negative tax rates.",
+      "zh": "21%的正常化营业税率为分析假设。2025年及2026年上半年的税收利益反映股权薪酬扣除与估值准备，不代表可持续负税率。"
+    },
+    "salesCapital": {
+      "en": "2.5 x incremental sales to capital is an analyst reinvestment assumption for a fabless design business with rising inventory, receivables and development needs. IPO proceeds and excluded pre-IPO preferred stock distort historical book-capital ratios.",
+      "zh": "新增销售与资本比2.5倍为分析师再投资假设，适用于库存、应收账款及研发需求增加的无晶圆厂设计业务。上市融资与上市前未计入普通权益的优先股会扭曲历史账面资本比率。"
+    },
+    "wacc": {
+      "en": "12% required return reflects customer concentration, semiconductor platform competition and execution risk; it is an analyst discount-rate scenario, not a measured market quote.",
+      "zh": "12%的必要回报反映客户集中、半导体平台竞争及执行风险；为分析师折现率情景，并非市场报价测量值。"
+    },
+    "terminalGrowth": {
+      "en": "Analyst long-run assumption: growth fades as the business matures and terminal reinvestment is retained. These are editable valuation scenarios, not company guidance.",
+      "zh": "分析师长期假设：业务成熟后增长逐渐放缓，保留永续期再投资。这些是可编辑的估值情景，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "Analyst long-run assumption: growth fades as the business matures and terminal reinvestment is retained. These are editable valuation scenarios, not company guidance.",
+      "zh": "分析师长期假设：业务成熟后增长逐渐放缓，保留永续期再投资。这些是可编辑的估值情景，并非公司指引。"
+    },
+    "years": {
+      "en": "Analyst long-run assumption: growth fades as the business matures and terminal reinvestment is retained. These are editable valuation scenarios, not company guidance.",
+      "zh": "分析师长期假设：业务成熟后增长逐渐放缓，保留永续期再投资。这些是可编辑的估值情景，并非公司指引。"
+    }
+  },
+  "sources": [
+    {
+      "title": "10-K 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+      "filedAt": "2026-02-20"
+    },
+    {
+      "title": "10-Q 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000035/alab-20260630.htm",
+      "filedAt": "2026-08-05"
+    },
+    {
+      "title": "IPO S-1, SVB warrant terms and FY2022 comparative statements",
+      "url": "https://www.sec.gov/Archives/edgar/data/1736297/000119312524040419/d285484ds1.htm",
+      "filedAt": "2024-02-21"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001736297.json",
+    "latestPeriodicAccession": "0001736297-26-000035",
+    "latestAnnualAccession": "0001736297-26-000010"
+  },
+  "limitations": [
+    {
+      "en": "The business has four available annual periods. Pre-IPO preferred stock and the 2024 IPO prevent comparable pre/post-IPO capital calibration; the 2024 IPO-triggered stock compensation remains in GAAP operating history.",
+      "zh": "该公司仅有四个可用年度期间。上市前优先股及2024年上市导致前后资本口径不可直接比较；2024年上市触发的股权薪酬仍保留于GAAP营业历史。"
+    },
+    {
+      "en": "Unquantified noncurrent investments are omitted, not zero-filled. Other assets less operating-lease ROU assets provide conservative ceilings of $54.945m at year-end and $32.667m at June, below $0.31 per allocation share. The annual ceiling still includes goodwill and other operating assets; these are ceilings, not investment estimates.",
+      "zh": "未量化非流动投资予以省略，不填零。其他资产扣除经营租赁使用权资产后，保守上限为年底5494.5万美元及6月3266.7万美元，每分配股低于0.31美元。年度上限仍包括商誉及其他经营资产；这些是上限，并非投资估计值。"
+    },
+    {
+      "en": "February 2026 acquisition holdback 5 m is deducted once; issued acquisition shares are already in common stock. Existing customer-warrant revenue reductions and ongoing stock compensation remain in the operating margin.",
+      "zh": "2026年2月并购的500万美元保留款仅扣除一次；已发行并购股份已计入普通股。现有客户认股权证的收入抵减与持续股权薪酬仍保留在营业利润率中。"
+    }
+  ],
+  "localizationPairs": {
+    "US GAAP annual filings; latest reported comparisons": "美国GAAP年度申报；采用最新重列比较数据",
+    "Only four real annual income-statement periods (FY2022–FY2025) are available in the IPO and annual filings; no earlier annual results are invented.": "上市及年度申报仅提供四个真实年度利润表期间（2022至2025年），不会虚构更早的年度业绩。",
+    "Pre-IPO preferred equity and the March2024 IPO change the capital basis; do not use this observation to calibrate mature capital returns.": "上市前优先股及2024年3月上市改变了资本基础；不应用这些观察值校准成熟期资本回报率。"
+  },
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  },
+  "historicalShortfallReason": "Only four real annual income-statement periods (FY2022–FY2025) are available in the IPO and annual filings; no earlier annual results are invented.",
+  "claimsPolicy": {
+    "annual": {
+      "fixedClaims": 0,
+      "optionTranches": [
+        {
+          "name": "Employee options",
+          "shares": 2.721,
+          "strike": 0.86,
+          "years": 5.5,
+          "volatility": 0.55,
+          "rate": 0.04
+        },
+        {
+          "name": "2022 and2023 Amazon warrants, maximum contractual shares",
+          "shares": 2.316175,
+          "strike": 20.34,
+          "years": 3.786447638603696,
+          "volatility": 0.55,
+          "rate": 0.04
+        },
+        {
+          "name": "SVB warrant",
+          "shares": 0.126185,
+          "strike": 0.3,
+          "years": 5.327857631759069,
+          "volatility": 0.55,
+          "rate": 0.04
+        }
+      ],
+      "note": {
+        "en": "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "zh": "员工期权与全部合同客户认股权证按模型股价采用明确的全部归属期权代理分配。原Amazon认股权证231.6175万股、行权价20.34美元，2029年10月到期；6月基期另含326.2299万股、行权价142.82美元，期限至2033年1月。年度SVB认股权证12.6185万股、行权价0.30美元，在2026年6月无现金行权后不再列入；已发行股份已计入6月普通股。授予日价值不会再次扣除。"
+      },
+      "cautions": [
+        {
+          "en": "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms.",
+          "zh": "全额合同认股权证归属是保守稀释假设，并非管理层概率：年底仅116.5513万份原权证已归属，6月客户权证合计166.3042万份已归属。55%/54.8%波动率及4%/4.3%利率为模型代理；SVB剩余期限依据上市文件所载2031年4月30日到期日计算。"
+        }
+      ]
+    },
+    "ttm": {
+      "fixedClaims": 5,
+      "optionTranches": [
+        {
+          "name": "Employee options",
+          "shares": 1.693,
+          "strike": 0.89,
+          "years": 5,
+          "volatility": 0.55,
+          "rate": 0.04
+        },
+        {
+          "name": "2022 and2023 Amazon warrants, maximum contractual shares",
+          "shares": 2.316175,
+          "strike": 20.34,
+          "years": 3.2908966461327855,
+          "volatility": 0.55,
+          "rate": 0.04
+        },
+        {
+          "name": "2026 Amazon warrant, maximum contractual shares",
+          "shares": 3.262299,
+          "strike": 142.82,
+          "years": 6.510609171800137,
+          "volatility": 0.548,
+          "rate": 0.043
+        }
+      ],
+      "note": {
+        "en": "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "zh": "员工期权与全部合同客户认股权证按模型股价采用明确的全部归属期权代理分配。原Amazon认股权证231.6175万股、行权价20.34美元，2029年10月到期；6月基期另含326.2299万股、行权价142.82美元，期限至2033年1月。年度SVB认股权证12.6185万股、行权价0.30美元，在2026年6月无现金行权后不再列入；已发行股份已计入6月普通股。授予日价值不会再次扣除。"
+      },
+      "cautions": [
+        {
+          "en": "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms.",
+          "zh": "全额合同认股权证归属是保守稀释假设，并非管理层概率：年底仅116.5513万份原权证已归属，6月客户权证合计166.3042万份已归属。55%/54.8%波动率及4%/4.3%利率为模型代理；SVB剩余期限依据上市文件所载2031年4月30日到期日计算。"
+        }
+      ]
+    }
+  }
+}

@@ -12,7 +12,8 @@ export const SIMULATION_DRIVER_KEYS = Object.freeze(['growth', 'targetMargin', '
 const finite = value => typeof value === 'number' && Number.isFinite(value);
 const own = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
 const clone = value => JSON.parse(JSON.stringify(value));
-const limits = Object.freeze({growth:[-.5,1,false],targetMargin:[0,1,false],salesCapital:[0,Infinity,true],wacc:[0,1,true]});
+// Arithmetic limits only: revenue and discount factors stay positive, EBIT cannot exceed revenue.
+const limits = Object.freeze({growth:[-1,Infinity,true],targetMargin:[-Infinity,1,false],salesCapital:[0,Infinity,true],wacc:[-1,Infinity,true]});
 const operatingLoadings = Object.freeze({growth:.7,targetMargin:.7,salesCapital:.4,wacc:0});
 const quantileLevels = Object.freeze({p5:.05,p10:.1,p25:.25,p50:.5,p75:.75,p90:.9,p95:.95});
 
@@ -24,14 +25,15 @@ function assertObject(value, name) {
 // The mode is the corresponding deterministic assumption; bounds are editable.
 export function simulationDefaults(assumptions = defaults) {
  const a = {...defaults,...assumptions};
- const bounds = (mode, width, low, high) => ({type:'triangular',low:Math.max(low,mode-width),mode,high:Math.min(high,mode+width)});
+ // Starting ranges stay inside the arithmetic limits and always contain the current assumption.
+ const bounds = (mode, width, low, high) => ({type:'triangular',low:Math.min(mode,Math.max(low,mode-width)),mode,high:Math.max(mode,Math.min(high,mode+width))});
  return jointDefaults({
   trials:DEFAULT_SIMULATION_TRIALS, seed:'valuation-lab', binCount:36, dependence:'independent', method:'annual-path', annualPath:annualPathDefaults(a.years),annualMetrics:annualMetricDefaults(a.years),annualTerminal:annualTerminalDefaults({growth:a.terminalGrowth,taxRate:a.tax,roic:a.terminalROIC}),
   drivers:{
-   growth:bounds(a.growth,.05,-.5,1),
-   targetMargin:bounds(a.targetMargin,.05,0,1),
+   growth:bounds(a.growth,.05,-.99,Infinity),
+   targetMargin:bounds(a.targetMargin,.05,-Infinity,1),
    salesCapital:bounds(a.salesCapital,a.salesCapital*.25,Number.MIN_VALUE,Infinity),
-   wacc:bounds(a.wacc,.015,Number.MIN_VALUE,1)
+   wacc:bounds(a.wacc,.015,-.99,Infinity)
   }
  },{horizon:a.years});
 }
@@ -197,7 +199,7 @@ export function validateAnnualTerminal(spec){
  if(Object.keys(spec).some(k=>!['growth','taxRate','roic'].includes(k)))throw Error('Unsupported terminal uncertainty input.');
  return Object.fromEntries(Object.entries(spec).map(([key,value])=>{
   const d=validateDriverDistribution(value),low=d.type==='fixed'?d.value:d.low,high=d.type==='fixed'?d.value:d.high;
-  if(low<0||(key==='taxRate'&&high>.6)||(key==='growth'&&high>.05)||(key==='roic'&&low<=0))throw Error('Terminal uncertainty is outside supported bounds.');
+  if((key==='taxRate'&&(low<0||high>1))||(key==='roic'&&low<=0))throw Error('Terminal uncertainty cannot be computed: tax 0–100% and ROIC above zero.');
   return [key,d];
  }));
 }
@@ -386,10 +388,10 @@ function* currentSimulationSteps(snapshot, draft, config, chunkSize = 64) {
   const metricIssue=annualMetricConstraint(metricPaths);if(metricIssue){exclude(metricIssue);continue;}
   if(metricPaths)a[ANNUAL_METRIC_PATHS]=metricPaths;
   if(growthPath){
-   if(growthPath.some(g=>!finite(g)||g<-.5||g>2)){exclude('annual-growth-bounds');continue;}
+   if(growthPath.some(g=>!finite(g)||g<=-1)){exclude('annual-growth-bounds');continue;}
    a[ANNUAL_GROWTH_PATH]=growthPath;
   }
-  if (!(a.wacc > a.terminalGrowth && a.terminalGrowth >= 0 && a.terminalROIC > a.terminalGrowth)) {exclude('terminal-constraints');continue;}
+  if (!(a.wacc > a.terminalGrowth && a.terminalROIC > a.terminalGrowth && a.terminalROIC > 0)) {exclude('terminal-constraints');continue;}
   try {
    const value = valueCurrentWithClaims(snapshot,draft,a);
    if (!finiteValuation(value)) {exclude('nonfinite-valuation');continue;}

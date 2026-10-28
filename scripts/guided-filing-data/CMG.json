@@ -1,0 +1,261 @@
+{
+  "ticker": "CMG",
+  "name": "CHIPOTLE MEXICAN GRILL INC",
+  "cik": "0001058090",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "10-K",
+      "accession": "0001058090-26-000009",
+      "filedAt": "2026-02-04",
+      "acceptedAt": "2026-02-04T21:51:26.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+      "ttmComponents": null,
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated income statement; total revenue. Full fiscal year.",
+          "tag": "us-gaap:Revenues"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated income statement; reported operating income.",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated balance sheet; cash and cash equivalents; restricted and client funds excluded.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated balance sheet; current investments / marketable securities."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Balance sheet long-term investments plus separate equity investments in other assets: 197.123 + 105.282; investment income is outside operating profit."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated balance sheet and debt note; no borrowings outstanding; operating leases excluded."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated balance sheet and debt note; no borrowings outstanding; operating leases excluded."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Lease note; current plus noncurrent operating lease liability. Kept separate from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated balance sheet; noncontrolling interests. No claim added where no separate noncontrolling equity line is reported."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated balance sheet / equity note: no outstanding preferred equity claim identified."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated statements: actual shares outstanding at period end; all share classes included; stock-split adjusted."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Share-based compensation note; outstanding restricted units plus performance units. RSU 3.643 + PSU 2.088"
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedExercisePrice."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedRemainingYears."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: aggregateIntrinsicValue."
+        }
+      },
+      "convertibles": [],
+      "otherClaims": [],
+      "note": "Amounts in USD millions; shares in millions. Primary financial statements and debt/share notes checked in the filed document. Restricted cash is not an excess asset. Operating leases remain operating expenses and are not deducted again as financial debt. Stock compensation remains in operating expenses; outstanding awards are also reflected as current ownership claims. ",
+      "revenue": 11925.601,
+      "operatingIncome": 1935.798,
+      "cashAndEquivalents": 350.545,
+      "shortTermInvestments": 698.591,
+      "longTermInvestments": 302.405,
+      "debtCurrent": 0,
+      "debtNoncurrent": 0,
+      "operatingLeaseLiabilities": 5075.814,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesDate": "2025-12-31",
+      "sharesOutstanding": 1304.36,
+      "unvestedRSUs": 5.731,
+      "options": {
+        "count": 10.598,
+        "weightedExercisePrice": 38.8,
+        "weightedRemainingYears": 4.0,
+        "aggregateIntrinsicValue": 53.211
+      }
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "10-Q",
+      "accession": "0001058090-26-000066",
+      "filedAt": "2026-07-31",
+      "acceptedAt": "2026-07-31T16:23:51.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+      "ttmComponents": {
+        "annualRevenue": 11925.601,
+        "ytdRevenue": 6436.804,
+        "priorYtdRevenue": 5938.646,
+        "annualOperatingIncome": 1935.798,
+        "ytdOperatingIncome": 922.658,
+        "priorYtdOperatingIncome": 1038.307,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-06-30"
+      },
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated income statement; total revenue. TTM = annual + current YTD - comparable prior YTD.",
+          "tag": "us-gaap:Revenues"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated income statement; reported operating income. TTM = annual + current YTD - comparable prior YTD.",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "ttmComponents.annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated income statement; annualRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated income statement; ytdRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated income statement; priorYtdRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+          "locator": "Consolidated income statement; annualOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated income statement; ytdOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated income statement; priorYtdOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated balance sheet; cash and cash equivalents; restricted and client funds excluded.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated balance sheet; current investments / marketable securities."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Balance sheet long-term investments plus separate equity investments in other assets: 97.079 + 106.596; investment income is outside operating profit."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated balance sheet and debt note; no borrowings outstanding; operating leases excluded."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated balance sheet and debt note; no borrowings outstanding; operating leases excluded."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Lease note; current plus noncurrent operating lease liability. Kept separate from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated balance sheet; noncontrolling interests. No claim added where no separate noncontrolling equity line is reported."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated balance sheet / equity note: no outstanding preferred equity claim identified."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Consolidated statements: actual shares outstanding at period end; all share classes included; stock-split adjusted."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Share-based compensation note; outstanding restricted units plus performance units. RSU 4.175 + PSU 1.864"
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Share-based compensation note; option activity at period end."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedExercisePrice."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedRemainingYears."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: aggregateIntrinsicValue."
+        }
+      },
+      "convertibles": [],
+      "otherClaims": [],
+      "note": "Amounts in USD millions; shares in millions. Primary financial statements and debt/share notes checked in the filed document. Restricted cash is not an excess asset. Operating leases remain operating expenses and are not deducted again as financial debt. Stock compensation remains in operating expenses; outstanding awards are also reflected as current ownership claims. ",
+      "revenue": 12423.759,
+      "operatingIncome": 1820.149,
+      "cashAndEquivalents": 228.199,
+      "shortTermInvestments": 449.658,
+      "longTermInvestments": 203.675,
+      "debtCurrent": 0,
+      "debtNoncurrent": 0,
+      "operatingLeaseLiabilities": 5419.196,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesDate": "2026-06-30",
+      "sharesOutstanding": 1267.838,
+      "unvestedRSUs": 6.039,
+      "options": {
+        "count": 12.824,
+        "weightedExercisePrice": 39.28,
+        "weightedRemainingYears": 4.1,
+        "aggregateIntrinsicValue": 27.667
+      }
+    }
+  },
+  "notes": [
+    "Latest periodic reports checked against SEC submissions as of 2026-10-21; numbers cross-checked against filed primary statements. Sources preserve reported amounts and explicitly distinguish analyst proxies."
+  ],
+  "latestFilingCheck": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001058090.json",
+    "latestPeriodicAccession": "0001058090-26-000066",
+    "latestAnnualAccession": "0001058090-26-000009"
+  }
+}

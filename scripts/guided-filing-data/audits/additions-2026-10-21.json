@@ -1,0 +1,1757 @@
+{
+  "cutoff": "2026-10-21",
+  "requested": [
+    "MCD",
+    "MA",
+    "SPGI",
+    "DUOL",
+    "RDDT",
+    "HOOD",
+    "RKLB",
+    "NKE",
+    "CMG",
+    "CRWD",
+    "PANW",
+    "BAM",
+    "APP",
+    "COST",
+    "QCOM",
+    "MRVL"
+  ],
+  "skippedAlreadyPresent": [
+    "MCD",
+    "MRVL"
+  ],
+  "added": [
+    "MA",
+    "SPGI",
+    "DUOL",
+    "RDDT",
+    "HOOD",
+    "RKLB",
+    "NKE",
+    "CMG",
+    "CRWD",
+    "PANW",
+    "BAM",
+    "APP",
+    "COST",
+    "QCOM"
+  ],
+  "companies": 50,
+  "selectableBases": 90,
+  "newBases": 26,
+  "newAnnualRows": 117,
+  "records": [
+    {
+      "ticker": "MA",
+      "id": "MA-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-11",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+      "currency": "USD",
+      "perShare": 391.2752409074049,
+      "rawPerShare": 391.2752409074049,
+      "enterpriseOrEquityCashflowPV": 356710.47406220646,
+      "commonEquity": 349922.26493298303,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 391.2752409074049,
+          "rawPerShare": 391.2752409074049,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 391.56863459518576,
+          "rawPerShare": 391.56863459518576,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 390.9158146385587,
+          "rawPerShare": 390.9158146385587,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 390.1862934503903,
+          "rawPerShare": 390.1862934503903,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "operatingLeaseLiabilities: Current interim filing omits full operating lease liability split; annual operating lease liability retained as context only, not added to debt.",
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+        "Finance leases are not separately quantified; no unverified extra liability is added. A $100m omitted liability would lower value by about $0.11 per share.",
+        "Negative June noncontrolling book equity of $5m is not treated as a common-shareholder asset; the claim is floored at zero.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "MA",
+      "id": "MA-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-07-30",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+      "currency": "USD",
+      "perShare": 422.00695331936487,
+      "rawPerShare": 422.00695331936487,
+      "enterpriseOrEquityCashflowPV": 382532.3486669413,
+      "commonEquity": 370737.30324017804,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 422.00695331936487,
+          "rawPerShare": 422.00695331936487,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 422.29484386708305,
+          "rawPerShare": 422.29484386708305,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 421.6303051933519,
+          "rawPerShare": 421.6303051933519,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 420.81148749590864,
+          "rawPerShare": 420.81148749590864,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "operatingLeaseLiabilities: Current interim filing omits full operating lease liability split; annual operating lease liability retained as context only, not added to debt.",
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+        "Finance leases are not separately quantified; no unverified extra liability is added. A $100m omitted liability would lower value by about $0.11 per share.",
+        "Negative June noncontrolling book equity of $5m is not treated as a common-shareholder asset; the claim is floored at zero.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "SPGI",
+      "id": "SPGI-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-11",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+      "currency": "USD",
+      "perShare": 274.3020343412486,
+      "rawPerShare": 274.3020343412486,
+      "enterpriseOrEquityCashflowPV": 98525.3196920722,
+      "commonEquity": 82208.3196920722,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [],
+      "financialModel": null,
+      "limits": [
+        "Dated group includes Mobility, separated on July 1, 2026; this is not the current standalone SPGI perimeter.",
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+        "The June filing has no separate current-investment line. No additional value is assigned; the prior annual $56m balance is only about $0.19 per share.",
+        "Redeemable minority interests of $4.917bn annual and $5.024bn June are deducted separately from ordinary minority equity.",
+        "S&P Global earns fees from ratings, subscriptions, indices and data services; it is not a lending or deposit-taking institution. Operating free-cash-flow valuation is appropriate for this service business, with ordinary debt and minority claims separately deducted.",
+        "The annual filing reports fewer than 0.1m options and $5m intrinsic value, not an exact option count. The $5m disclosed claim is retained as a small proxy (about $0.017 per share); no invented option count is used."
+      ],
+      "quoteScope": {
+        "through": "2026-06-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000110465926080571/tm2619099d2_ex99-2.htm",
+        "note": "These dated financials include Mobility. A post-separation standalone SPGI quote is not comparable with this group valuation.",
+        "noteZh": "这些历史时点财务数据包含出行业务。分拆后的独立标普全球报价不可与此集团估值直接比较。"
+      }
+    },
+    {
+      "ticker": "SPGI",
+      "id": "SPGI-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-07-28",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+      "currency": "USD",
+      "perShare": 299.3230535159679,
+      "rawPerShare": 299.3230535159679,
+      "enterpriseOrEquityCashflowPV": 104689.82692467171,
+      "commonEquity": 88509.82692467171,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [],
+      "financialModel": null,
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "Dated group includes Mobility, separated on July 1, 2026; this is not the current standalone SPGI perimeter.",
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+        "The June filing has no separate current-investment line. No additional value is assigned; the prior annual $56m balance is only about $0.19 per share.",
+        "Redeemable minority interests of $4.917bn annual and $5.024bn June are deducted separately from ordinary minority equity.",
+        "S&P Global earns fees from ratings, subscriptions, indices and data services; it is not a lending or deposit-taking institution. Operating free-cash-flow valuation is appropriate for this service business, with ordinary debt and minority claims separately deducted.",
+        "The annual filing reports fewer than 0.1m options and $5m intrinsic value, not an exact option count. The $5m disclosed claim is retained as a small proxy (about $0.017 per share); no invented option count is used."
+      ],
+      "quoteScope": {
+        "through": "2026-06-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000110465926080571/tm2619099d2_ex99-2.htm",
+        "note": "These dated financials include Mobility. A post-separation standalone SPGI quote is not comparable with this group valuation.",
+        "noteZh": "这些历史时点财务数据包含出行业务。分拆后的独立标普全球报价不可与此集团估值直接比较。"
+      }
+    },
+    {
+      "ticker": "DUOL",
+      "id": "DUOL-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-27",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+      "currency": "USD",
+      "perShare": 96.65244740792562,
+      "rawPerShare": 96.65244740792562,
+      "enterpriseOrEquityCashflowPV": 3506.9688351880486,
+      "commonEquity": 4712.193420926005,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 7,
+      "openingPeriod": null,
+      "historyShortfall": "7 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 96.65244740792562,
+          "rawPerShare": 96.65244740792562,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 96.71501935355751,
+          "rawPerShare": 96.71501935355751,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 96.39678784165538,
+          "rawPerShare": 96.39678784165538,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 92.6797902132034,
+          "rawPerShare": 92.6797902132034,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "The remaining founder awards are treated as fully earned: 0.72m shares at year-end and 0.36m in June. These are added to ordinary RSUs. Options use their reported count, strike and term, with assumed 60% volatility and a 4% risk-free rate.",
+        "Founder performance awards are conservatively treated as fully earned: 0.72m additional shares at year-end and 0.36m in June.",
+        "The remaining founder awards are treated as fully earned: 0.72m shares at year-end and 0.36m in June. These are added to ordinary RSUs. Options use their reported count, strike and term, with assumed 60% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "DUOL",
+      "id": "DUOL-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-08-06",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm",
+      "currency": "USD",
+      "perShare": 105.37272757006417,
+      "rawPerShare": 105.37272757006417,
+      "enterpriseOrEquityCashflowPV": 3897.8713662329865,
+      "commonEquity": 5258.204478473772,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 7,
+      "openingPeriod": null,
+      "historyShortfall": "7 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 105.37272757006417,
+          "rawPerShare": 105.37272757006417,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 105.42461179399226,
+          "rawPerShare": 105.42461179399226,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 105.15919754304741,
+          "rawPerShare": 105.15919754304741,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 99.13888658001619,
+          "rawPerShare": 99.13888658001619,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "The remaining founder awards are treated as fully earned: 0.72m shares at year-end and 0.36m in June. These are added to ordinary RSUs. Options use their reported count, strike and term, with assumed 60% volatility and a 4% risk-free rate.",
+        "Founder performance awards are conservatively treated as fully earned: 0.72m additional shares at year-end and 0.36m in June.",
+        "The remaining founder awards are treated as fully earned: 0.72m shares at year-end and 0.36m in June. These are added to ordinary RSUs. Options use their reported count, strike and term, with assumed 60% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "RDDT",
+      "id": "RDDT-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-06",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000022/rddt-20251231.htm",
+      "currency": "USD",
+      "perShare": 76.63657739958589,
+      "rawPerShare": 76.63657739958589,
+      "enterpriseOrEquityCashflowPV": 13136.788348344799,
+      "commonEquity": 14964.222258591932,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 4,
+      "openingPeriod": null,
+      "historyShortfall": "4 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 76.63657739958589,
+          "rawPerShare": 76.63657739958589,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 77.77289705756961,
+          "rawPerShare": 77.77289705756961,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 75.75215011114149,
+          "rawPerShare": 75.75215011114149,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 75.03911503703392,
+          "rawPerShare": 75.03911503703392,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "The denominator includes actual Class A and B shares plus unissued RSUs and PRSUs. Already-issued restricted shares are not counted twice. Options use DCF common value, with assumed 65% volatility and a 4% risk-free rate.",
+        "IPO-period compensation distorts historical GAAP margins. Existing options and unissued awards are allocated separately; future employee compensation remains in operating margins.",
+        "The denominator includes actual Class A and B shares plus unissued RSUs and PRSUs. Already-issued restricted shares are not counted twice. Options use DCF common value, with assumed 65% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "RDDT",
+      "id": "RDDT-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-07-31",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1713445/000171344526000100/rddt-20260630.htm",
+      "currency": "USD",
+      "perShare": 99.3563122241418,
+      "rawPerShare": 99.3563122241418,
+      "enterpriseOrEquityCashflowPV": 17584.016356813598,
+      "commonEquity": 19572.404718393187,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 4,
+      "openingPeriod": null,
+      "historyShortfall": "4 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 99.3563122241418,
+          "rawPerShare": 99.3563122241418,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 100.3788113321864,
+          "rawPerShare": 100.3788113321864,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 98.41490865881445,
+          "rawPerShare": 98.41490865881445,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 97.15728079927453,
+          "rawPerShare": 97.15728079927453,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "The denominator includes actual Class A and B shares plus unissued RSUs and PRSUs. Already-issued restricted shares are not counted twice. Options use DCF common value, with assumed 65% volatility and a 4% risk-free rate.",
+        "IPO-period compensation distorts historical GAAP margins. Existing options and unissued awards are allocated separately; future employee compensation remains in operating margins.",
+        "The denominator includes actual Class A and B shares plus unissued RSUs and PRSUs. Already-issued restricted shares are not counted twice. Options use DCF common value, with assumed 65% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "HOOD",
+      "id": "HOOD-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-20",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+      "currency": "USD",
+      "perShare": 24.514542169876172,
+      "rawPerShare": 24.514542169876172,
+      "enterpriseOrEquityCashflowPV": 22571.7352364338,
+      "commonEquity": 22571.7352364338,
+      "method": "shareholder cash flow / cost of equity",
+      "historyYears": 7,
+      "openingPeriod": null,
+      "historyShortfall": "Seven real annual observations (2019–2025) are available in filed statements. Earlier full-year comparable data are not disclosed in the reviewed public filings. Pre-2022 capital ratios are affected by preferred shares and the IPO; 2024 return on equity is affected by a large tax benefit.",
+      "claimsSensitivities": [],
+      "financialModel": {
+        "reportedRevenue": 4473,
+        "reportedOperatingIncome": 2094,
+        "reportedPretaxIncome": 2108,
+        "reportedNetIncomeAttributableCommon": 1883,
+        "modelRevenue": 4473,
+        "modelPretaxIncome": 2094,
+        "surplusCash": 0,
+        "modeledDebt": 0,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 901.328432,
+        "unvestedAwards": 7.646387,
+        "dilutionProxyShares": 11.773979,
+        "modelShareCount": 920.7487980000001,
+        "startingRequiredEquity": 9140,
+        "reportedBookCommonEquity": 9140,
+        "legalMinimumSubsidiaryNetCapital": 383.5,
+        "reportedSubsidiaryNetCapital": 3935,
+        "modelRevenueLabel": "Net brokerage revenue",
+        "modelRevenueLabelZh": "券商净收入",
+        "modelProfitLabel": "Core pretax earnings attributable to common",
+        "modelProfitLabelZh": "普通股股东应占核心税前收益",
+        "reportedTotalDebt": 602,
+        "optionWarrantTreatment": "Conservative full-share dilution adds 3.033979m employee options and 8.74m warrants once, with no separate intrinsic-value deduction. The annual option count is carried to June. Ignored exercise proceeds reduce value by at most approximately $0.28 per modeled share.",
+        "note": "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+        "noteZh": "净利息属于主营收入。模型从净收入减全部经营费用起算，保留股权薪酬并剔除其他收益（包括2026年RVI处置收益106及投资收益23百万美元）；六月另将8百万美元少数股东收益按21%标准税率还原后扣除。排除客户资产，已发行限制性股票不重复计算。",
+        "excludedCashDebtNote": "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+        "excludedCashDebtNoteZh": "原有公司现金全部保留为经营资本，不视为可立即分配现金。信托融资成本已计入主营净利息，不再重复扣除。六月新增公司可转债独立处理。",
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+            "locator": "Statements of operations; balance sheet; Notes11–13 and Liquidity/Net Capital tables"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+            "locator": "Annual option/RSU/warrant note; latest formatting-only10-K/A"
+          }
+        ],
+        "proxies": [
+          {
+            "field": "optionWarrantDilution",
+            "kind": "conservative-full-share",
+            "value": 11.773979,
+            "maxExerciseProceedsPerShare": 0.2726606345023977,
+            "note": "Maximum dilution assumes exercise regardless of modeledprice; overstates claims when outofthemoney. No separate optionvaluededuction."
+          },
+          {
+            "field": "availableSurplusOperatingCash",
+            "kind": "retained-capital-policy",
+            "value": 0,
+            "note": "Not a claim that cash is absent. No released corporate/regulatory cash on top of earningstream; analyst can investigate excesscapital separately."
+          }
+        ],
+        "periodEnd": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+          "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+          "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+          "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change."
+        ],
+        "cautionsZh": [
+          "客户现金、客户证券及监管抵押品不属于股东剩余资产。原有公司现金保留为经营资本；模型不假定法定最低资本足以支撑经营。",
+          "员工期权及认股权证采用保守的全额股份稀释估算。模型仅计入一次303.3979万份期权及874万份认股权证，不再另扣期权价值。忽略行权所得款项最多使每股模型价值降低约0.28美元；价外奖励会使此估算更保守。",
+          "预测收益保留股权薪酬费用。尚未发行的限制性股票单位计入新增股份，已发行限制性股票不重复计入。未来授予及回购可能改变股数。",
+          "每美元新增所需普通股资本支持的收入是模型假设，而非监管公式。随着保证金贷款、信用卡及交易活动变化，所需经营资本可能与收入以不同速度增长。"
+        ],
+        "id": "HOOD-2025-12-31-equity-v1",
+        "ticker": "HOOD",
+        "currency": "USD",
+        "snapshotIds": [
+          "HOOD-CURRENT-2025-12-31"
+        ],
+        "evidenceAsOf": "2026-10-21",
+        "reportedTuple": {
+          "revenue": 4473,
+          "EBIT": 2094,
+          "cash": 4289,
+          "debt": 602,
+          "shares": 908.974819
+        },
+        "financingClaim": 0,
+        "allocationShares": 920.7487980000001,
+        "shareBasis": "HOOD common share; dated shareholder earnings and explicit dilution proxy"
+      },
+      "limits": [
+        "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+        "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+        "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+        "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+        "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+        "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "HOOD",
+      "id": "HOOD-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-07-30",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+      "currency": "USD",
+      "perShare": 26.35869605448673,
+      "rawPerShare": 26.35869605448673,
+      "enterpriseOrEquityCashflowPV": 24695.042751286863,
+      "commonEquity": 24244.042751286863,
+      "method": "shareholder cash flow / cost of equity",
+      "historyYears": 7,
+      "openingPeriod": null,
+      "historyShortfall": "Seven real annual observations (2019–2025) are available in filed statements. Earlier full-year comparable data are not disclosed in the reviewed public filings. Pre-2022 capital ratios are affected by preferred shares and the IPO; 2024 return on equity is affected by a large tax benefit.",
+      "claimsSensitivities": [],
+      "financialModel": {
+        "reportedRevenue": 4932,
+        "reportedOperatingIncome": 2270,
+        "reportedPretaxIncome": 2415,
+        "reportedNetIncomeAttributableCommon": 2072,
+        "modelRevenue": 4932,
+        "modelPretaxIncome": 2259.8734177215188,
+        "surplusCash": 1757,
+        "modeledDebt": 2208,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 899,
+        "unvestedAwards": 9,
+        "dilutionProxyShares": 11.773979,
+        "modelShareCount": 919.773979,
+        "startingRequiredEquity": 9480,
+        "reportedBookCommonEquity": 9480,
+        "legalMinimumSubsidiaryNetCapital": 513.5,
+        "reportedSubsidiaryNetCapital": 4591,
+        "modelRevenueLabel": "Net brokerage revenue",
+        "modelRevenueLabelZh": "券商净收入",
+        "modelProfitLabel": "Core pretax earnings attributable to common",
+        "modelProfitLabelZh": "普通股股东应占核心税前收益",
+        "reportedTotalDebt": 3129,
+        "optionWarrantTreatment": "Conservative full-share dilution adds 3.033979m employee options and 8.74m warrants once, with no separate intrinsic-value deduction. The annual option count is carried to June. Ignored exercise proceeds reduce value by at most approximately $0.28 per modeled share.",
+        "note": "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+        "noteZh": "净利息属于主营收入。模型从净收入减全部经营费用起算，保留股权薪酬并剔除其他收益（包括2026年RVI处置收益106及投资收益23百万美元）；六月另将8百万美元少数股东收益按21%标准税率还原后扣除。排除客户资产，已发行限制性股票不重复计算。",
+        "excludedCashDebtNote": "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+        "excludedCashDebtNoteZh": "原有公司现金全部保留为经营资本，不视为可立即分配现金。信托融资成本已计入主营净利息，不再重复扣除。六月新增公司可转债独立处理。",
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+            "locator": "Statements of operations; balance sheet; Notes11–13 and Liquidity/Net Capital tables"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+            "locator": "Annual option/RSU/warrant note; latest formatting-only10-K/A"
+          }
+        ],
+        "proxies": [
+          {
+            "field": "optionWarrantDilution",
+            "kind": "conservative-full-share",
+            "value": 11.773979,
+            "maxExerciseProceedsPerShare": 0.27294961285265934,
+            "note": "Maximum dilution assumes exercise regardless of modeledprice; overstates claims when outofthemoney. No separate optionvaluededuction."
+          },
+          {
+            "field": "availableSurplusOperatingCash",
+            "kind": "retained-capital-policy",
+            "value": 0,
+            "note": "Not a claim that cash is absent. No released corporate/regulatory cash on top of earningstream; analyst can investigate excesscapital separately."
+          },
+          {
+            "field": "commonShares",
+            "kind": "reported-rounding",
+            "value": 899,
+            "maximumApproximateShareError": 1,
+            "note": "June statement reports rounded millions for790A+109B; ≤0.12%sharecount uncertainty."
+          }
+        ],
+        "corporateConvertibleBridge": {
+          "principal": 2200,
+          "issuanceCost": 30,
+          "cappedCallCost": 123,
+          "concurrentRepurchase": 290,
+          "assumedRetainedProceeds": 1757,
+          "debtFairValue": 2208,
+          "netAdjustment": -451,
+          "formula": "2200 -30 -123 -290 -2208 = -451",
+          "convertibleSharesAdded": 0,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Note11 Financing Activities, issuance and useofproceeds; Note8 fairvalue.",
+          "note": "1757 is fungible-cash allocation assumption, not identified restricted bankbalance. All preexistingcash retained. Fairvalue claim substitutes for conversiondilution; no12.61304mshares added. Cappedcall asset omitted;123m historicalpremium (~$0.13/share) is sensitivity reference, not currentvalue upperbound. Valuation materially above$174strike requires optionoverlay refresh."
+        },
+        "periodEnd": "2026-06-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+          "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+          "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+          "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change.",
+          "The June statement rounds common shares to 899 million. The annual employee-option count is carried forward because June lacks a complete option rollforward. Share-count rounding is approximately 0.12% or less; the carried option count is a labeled conservative proxy.",
+          "The June corporate financing bridge adds $1,757 million of assumed retained proceeds: $2,200 million issued, less $30 million issuance costs, $123 million capped-call premium and $290 million concurrent buyback. Cash is fungible; this is an allocation assumption, not an identified bank balance.",
+          "The corporate convertible is deducted once at its disclosed $2,208 million fair value. No conversion shares are added on top. The operating Credit Card Funding Trust is treated separately: its financing cost is already in net interest, so its debt is not deducted a second time.",
+          "No separate asset value is credited for the capped calls. Their $123 million historical premium, about $0.13 per modeled share, is a sensitivity reference, not a bound on current value. Scenarios materially above the $174.42 conversion strike need an updated option and capped-call treatment."
+        ],
+        "cautionsZh": [
+          "客户现金、客户证券及监管抵押品不属于股东剩余资产。原有公司现金保留为经营资本；模型不假定法定最低资本足以支撑经营。",
+          "员工期权及认股权证采用保守的全额股份稀释估算。模型仅计入一次303.3979万份期权及874万份认股权证，不再另扣期权价值。忽略行权所得款项最多使每股模型价值降低约0.28美元；价外奖励会使此估算更保守。",
+          "预测收益保留股权薪酬费用。尚未发行的限制性股票单位计入新增股份，已发行限制性股票不重复计入。未来授予及回购可能改变股数。",
+          "每美元新增所需普通股资本支持的收入是模型假设，而非监管公式。随着保证金贷款、信用卡及交易活动变化，所需经营资本可能与收入以不同速度增长。",
+          "六月报表将普通股股数取整为8.99亿股。由于六月未提供完整期权变动表，沿用年度员工期权数量。股数取整误差约不超过0.12%；沿用的期权数量为明确标注的保守估算。",
+          "六月公司融资桥接加回假设保留的17.57亿美元款项：发行22亿美元，减去3000万美元发行费用、1.23亿美元封顶看涨期权费及2.90亿美元同期回购款。现金可混同使用，因此这是分配假设，并非已识别的银行账户余额。",
+          "公司可转债按披露的22.08亿美元公允价值扣除一次，不再另外计入转股股份。经营性信用卡融资信托另行处理：融资成本已包含在净利息中，其债务不重复扣除。",
+          "封顶看涨期权未单独计入资产价值。其1.23亿美元历史权利金、约每股模型股份0.13美元，仅为敏感性参考，并非当前价值上限。若情景价值显著高于174.42美元转股价，需更新期权及封顶看涨期权处理。"
+        ],
+        "id": "HOOD-2026-06-30-equity-v1",
+        "ticker": "HOOD",
+        "currency": "USD",
+        "snapshotIds": [
+          "HOOD-TTM-2026-06-30"
+        ],
+        "evidenceAsOf": "2026-10-21",
+        "reportedTuple": {
+          "revenue": 4932,
+          "EBIT": 2270,
+          "cash": 5846,
+          "debt": 3129,
+          "shares": 908
+        },
+        "financingClaim": 2208,
+        "allocationShares": 919.773979,
+        "shareBasis": "HOOD common share; dated shareholder earnings and explicit dilution proxy"
+      },
+      "limits": [
+        "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+        "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+        "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+        "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+        "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+        "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change.",
+        "The June statement rounds common shares to 899 million. The annual employee-option count is carried forward because June lacks a complete option rollforward. Share-count rounding is approximately 0.12% or less; the carried option count is a labeled conservative proxy.",
+        "The June corporate financing bridge adds $1,757 million of assumed retained proceeds: $2,200 million issued, less $30 million issuance costs, $123 million capped-call premium and $290 million concurrent buyback. Cash is fungible; this is an allocation assumption, not an identified bank balance.",
+        "The corporate convertible is deducted once at its disclosed $2,208 million fair value. No conversion shares are added on top. The operating Credit Card Funding Trust is treated separately: its financing cost is already in net interest, so its debt is not deducted a second time.",
+        "No separate asset value is credited for the capped calls. Their $123 million historical premium, about $0.13 per modeled share, is a sensitivity reference, not a bound on current value. Scenarios materially above the $174.42 conversion strike need an updated option and capped-call treatment."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "RKLB",
+      "id": "RKLB-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-26",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+      "currency": "USD",
+      "perShare": 0.538202165474615,
+      "rawPerShare": 0.538202165474615,
+      "enterpriseOrEquityCashflowPV": -592.1960959347695,
+      "commonEquity": 326.65390406523056,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 7,
+      "openingPeriod": null,
+      "historyShortfall": "7 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 0.538202165474615,
+          "rawPerShare": 0.538202165474615,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 0.538202165474615,
+          "rawPerShare": 0.538202165474615,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 0.538202165474615,
+          "rawPerShare": 0.538202165474615,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 0.5231946884757317,
+          "rawPerShare": 0.5231946884757317,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Capped-call asset omitted",
+          "perShare": 0.538202165474615,
+          "rawPerShare": 0.538202165474615,
+          "changes": {
+            "cappedCallTreatment": "omit"
+          }
+        },
+        {
+          "label": "Capped-call maximum nominal payoff stress",
+          "perShare": 0.8707956432316952,
+          "rawPerShare": 0.8707956432316952,
+          "changes": {
+            "cappedCallTreatment": "maximum-payoff"
+          }
+        },
+        {
+          "label": "Convertible holder-choice proxy",
+          "perShare": 0.538202165474615,
+          "rawPerShare": 0.538202165474615,
+          "changes": {
+            "convertibleCase": "holder-choice"
+          }
+        },
+        {
+          "label": "Convertible principal retained",
+          "perShare": 0.538202165474615,
+          "rawPerShare": 0.538202165474615,
+          "changes": {
+            "convertibleCase": "principal-only"
+          }
+        },
+        {
+          "label": "Convertible full-share conversion",
+          "perShare": 0.7567942519771911,
+          "rawPerShare": 0.7567942519771911,
+          "changes": {
+            "convertibleCase": "if-converted"
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Common-like preferred shares participate alongside ordinary shares. The combined disclosed employee options and RSUs are conservatively treated as free shares. Convertible holders receive either the principal debt claim or conversion shares; the debt carrying amount is reversed before either allocation. The capped-call hedge uses its intrinsic payoff at the model common-share value, capped at about $202m. Its option time value remains an uncertainty.",
+        "This is the standalone dated business, before the pending $8bn Iridium acquisition. That transaction can materially change debt, shares, cash flows and value; this case is not a post-acquisition valuation.",
+        "Employee awards use conservative full dilution. The capped-call asset follows the model share value. June also includes delayed collared-forward proceeds and the associated future shares; these proceeds are not current cash.",
+        "The October 14, 2026 filing delayed the first Neutron launch into 2027. Growth and the loss-to-profit transition remain scenarios, not a confirmed launch schedule.",
+        "Common-like preferred shares participate alongside ordinary shares. The combined disclosed employee options and RSUs are conservatively treated as free shares. Convertible holders receive either the principal debt claim or conversion shares; the debt carrying amount is reversed before either allocation. The capped-call hedge uses its intrinsic payoff at the model common-share value, capped at about $202m. Its option time value remains an uncertainty."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "RKLB",
+      "id": "RKLB-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-08-10",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+      "currency": "USD",
+      "perShare": 3.6389877748160866,
+      "rawPerShare": 3.6389877748160866,
+      "enterpriseOrEquityCashflowPV": -375.7613636886224,
+      "commonEquity": 2400.561662022138,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 7,
+      "openingPeriod": null,
+      "historyShortfall": "7 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 3.6389877748160866,
+          "rawPerShare": 3.6389877748160866,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 3.6389877748160866,
+          "rawPerShare": 3.6389877748160866,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 3.6389877748160866,
+          "rawPerShare": 3.6389877748160866,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 3.5681550103441855,
+          "rawPerShare": 3.5681550103441855,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Maximum contracted forward proceeds",
+          "perShare": 3.871238891768452,
+          "rawPerShare": 3.871238891768452,
+          "changes": {
+            "forwardProceeds": "maximum"
+          }
+        },
+        {
+          "label": "Capped-call asset omitted",
+          "perShare": 3.6389877748160866,
+          "rawPerShare": 3.6389877748160866,
+          "changes": {
+            "cappedCallTreatment": "omit"
+          }
+        },
+        {
+          "label": "Capped-call maximum nominal payoff stress",
+          "perShare": 3.9449894973781503,
+          "rawPerShare": 3.9449894973781503,
+          "changes": {
+            "cappedCallTreatment": "maximum-payoff"
+          }
+        },
+        {
+          "label": "Convertible holder-choice proxy",
+          "perShare": 3.6389877748160866,
+          "rawPerShare": 3.6389877748160866,
+          "changes": {
+            "convertibleCase": "holder-choice"
+          }
+        },
+        {
+          "label": "Convertible principal retained",
+          "perShare": 3.6389877748160866,
+          "rawPerShare": 3.6389877748160866,
+          "changes": {
+            "convertibleCase": "principal-only"
+          }
+        },
+        {
+          "label": "Convertible full-share conversion",
+          "perShare": 3.644840906136442,
+          "rawPerShare": 3.644840906136442,
+          "changes": {
+            "convertibleCase": "if-converted"
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Carry the annual $0.317m current finance-lease balance. A 100% error changes value by less than $0.001 per share.",
+        "Common-like preferred shares participate alongside ordinary shares. The combined disclosed employee options and RSUs are conservatively treated as free shares. Convertible holders receive either the principal debt claim or conversion shares; the debt carrying amount is reversed before either allocation. The capped-call hedge uses its intrinsic payoff at the model common-share value, capped at about $202m. Its option time value remains an uncertainty.",
+        "This is the standalone dated business, before the pending $8bn Iridium acquisition. That transaction can materially change debt, shares, cash flows and value; this case is not a post-acquisition valuation.",
+        "Employee awards use conservative full dilution. The capped-call asset follows the model share value. June also includes delayed collared-forward proceeds and the associated future shares; these proceeds are not current cash.",
+        "The October 14, 2026 filing delayed the first Neutron launch into 2027. Growth and the loss-to-profit transition remain scenarios, not a confirmed launch schedule.",
+        "Common-like preferred shares participate alongside ordinary shares. The combined disclosed employee options and RSUs are conservatively treated as free shares. Convertible holders receive either the principal debt claim or conversion shares; the debt carrying amount is reversed before either allocation. The capped-call hedge uses its intrinsic payoff at the model common-share value, capped at about $202m. Its option time value remains an uncertainty."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "NKE",
+      "id": "NKE-CURRENT-2026-05-31",
+      "periodEnd": "2026-05-31",
+      "filedAt": "2026-07-15",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm",
+      "currency": "USD",
+      "perShare": 40.90228307469805,
+      "rawPerShare": 40.90228307469805,
+      "enterpriseOrEquityCashflowPV": 60893.914070219325,
+      "commonEquity": 61189.76242948713,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2016",
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 40.90228307469805,
+          "rawPerShare": 40.90228307469805,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 41.42979131327451,
+          "rawPerShare": 41.42979131327451,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 39.40676829908304,
+          "rawPerShare": 39.40676829908304,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 40.57164701175363,
+          "rawPerShare": 40.57164701175363,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+        "Finance leases are described as immaterial in the annual filing. Operating leases are not treated as financial debt; a $100m omitted debt stress changes value by about $0.07 per share.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "NKE",
+      "id": "NKE-TTM-2026-08-31",
+      "periodEnd": "2026-08-31",
+      "filedAt": "2026-10-02",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm",
+      "currency": "USD",
+      "perShare": 40.02833758316262,
+      "rawPerShare": 40.02833758316262,
+      "enterpriseOrEquityCashflowPV": 60236.02956749505,
+      "commonEquity": 59954.79744225349,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2016",
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 40.02833758316262,
+          "rawPerShare": 40.02833758316262,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 40.53322987021533,
+          "rawPerShare": 40.53322987021533,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 38.55626137067408,
+          "rawPerShare": 38.55626137067408,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 39.70502209920518,
+          "rawPerShare": 39.70502209920518,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+        "Finance leases are described as immaterial in the annual filing. Operating leases are not treated as financial debt; a $100m omitted debt stress changes value by about $0.07 per share.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "CMG",
+      "id": "CMG-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-04",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+      "currency": "USD",
+      "perShare": 22.160688529753124,
+      "rawPerShare": 22.160688529753124,
+      "enterpriseOrEquityCashflowPV": 27743.26571121217,
+      "commonEquity": 29032.518596632795,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 22.160688529753124,
+          "rawPerShare": 22.160688529753124,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 22.20823340608566,
+          "rawPerShare": 22.20823340608566,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 22.030021232259955,
+          "rawPerShare": 22.030021232259955,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 22.06458585632999,
+          "rawPerShare": 22.06458585632999,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "CMG",
+      "id": "CMG-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-07-31",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+      "currency": "USD",
+      "perShare": 22.818717900489116,
+      "rawPerShare": 22.818717900489116,
+      "enterpriseOrEquityCashflowPV": 28267.4481148737,
+      "commonEquity": 29068.23990292137,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 22.818717900489116,
+          "rawPerShare": 22.818717900489116,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 22.882099382337305,
+          "rawPerShare": 22.882099382337305,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 22.65404325859209,
+          "rawPerShare": 22.65404325859209,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 22.711644474065526,
+          "rawPerShare": 22.711644474065526,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again.",
+        "Existing employee options are allocated once using an all-vesting option-value proxy at the modeled share price. Weighted strikes and disclosed remaining life simplify individual awards; missing life uses five years, volatility 50% and rate 4% are analyst assumptions. Intrinsic-only and free-share scenarios test this uncertainty. Reported market-price intrinsic value is not deducted again."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "CRWD",
+      "id": "CRWD-CURRENT-2026-01-31",
+      "periodEnd": "2026-01-31",
+      "filedAt": "2026-03-05",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000010/crwd-20260131.htm",
+      "currency": "USD",
+      "perShare": 15.15469294795817,
+      "rawPerShare": 15.15469294795817,
+      "enterpriseOrEquityCashflowPV": 11409.087392167754,
+      "commonEquity": 15834.577937682418,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": null,
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 15.15469294795817,
+          "rawPerShare": 15.15469294795817,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 15.156055255206748,
+          "rawPerShare": 15.156055255206748,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 15.14503104369264,
+          "rawPerShare": 15.14503104369264,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 14.713932582847015,
+          "rawPerShare": 14.713932582847015,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Both bases use the July 2026 four-for-one split basis. Outstanding performance awards are included at the disclosed target count. Existing acquisition founder holdbacks are reserved at full payout. Options use assumed 50% volatility and a 4% risk-free rate.",
+        "Both annual and TTM shares and awards use the four-for-one July 2026 split basis. Profitability must improve after recurring employee compensation; no blanket stock-compensation addback.",
+        "Both bases use the July 2026 four-for-one split basis. Outstanding performance awards are included at the disclosed target count. Existing acquisition founder holdbacks are reserved at full payout. Options use assumed 50% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "CRWD",
+      "id": "CRWD-TTM-2026-07-31",
+      "periodEnd": "2026-07-31",
+      "filedAt": "2026-08-27",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000031/crwd-20260731.htm",
+      "currency": "USD",
+      "perShare": 16.832333050749092,
+      "rawPerShare": 16.832333050749092,
+      "enterpriseOrEquityCashflowPV": 13605.422729200087,
+      "commonEquity": 17814.129372933185,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": null,
+      "historyShortfall": null,
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 16.832333050749092,
+          "rawPerShare": 16.832333050749092,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 16.83375458001939,
+          "rawPerShare": 16.83375458001939,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 16.82297636429572,
+          "rawPerShare": 16.82297636429572,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 16.302855477105243,
+          "rawPerShare": 16.302855477105243,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Both bases use the July 2026 four-for-one split basis. Outstanding performance awards are included at the disclosed target count. Existing acquisition founder holdbacks are reserved at full payout. Options use assumed 50% volatility and a 4% risk-free rate.",
+        "Both annual and TTM shares and awards use the four-for-one July 2026 split basis. Profitability must improve after recurring employee compensation; no blanket stock-compensation addback.",
+        "Both bases use the July 2026 four-for-one split basis. Outstanding performance awards are included at the disclosed target count. Existing acquisition founder holdbacks are reserved at full payout. Options use assumed 50% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "PANW",
+      "id": "PANW-CURRENT-2026-07-31",
+      "periodEnd": "2026-07-31",
+      "filedAt": "2026-09-10",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+      "currency": "USD",
+      "perShare": 49.56507387601554,
+      "rawPerShare": 49.56507387601554,
+      "enterpriseOrEquityCashflowPV": 35960.662055853056,
+      "commonEquity": 41634.662055853056,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2016",
+      "historyShortfall": null,
+      "claimsSensitivities": [],
+      "financialModel": null,
+      "limits": [
+        "The $1,774m debt balance already reflects convertible fair value. Its $153m capped-call hedge is included in other assets. Additional claims are the $206m acquisition earnout and $405m vested deferred compensation. Conversion shares are not added again. Using debt principal instead would increase equity by $677m before dilution.",
+        "FY2026 includes only part-year CyberArk and Chronosphere revenue despite their full acquisition balance sheets. The growth assumption includes a first-year acquisition annualization effect.",
+        "Convertible debt and its capped-call hedge use paired reported fair values. Using principal instead would raise common equity by $677m before dilution; do not add conversion shares again."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "BAM",
+      "id": "BAM-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-03-02",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+      "currency": "USD",
+      "perShare": 30.47244403875285,
+      "rawPerShare": 30.47244403875285,
+      "enterpriseOrEquityCashflowPV": 49512.05131153154,
+      "commonEquity": 49512.05131153154,
+      "method": "shareholder cash flow / cost of equity",
+      "historyYears": 4,
+      "openingPeriod": null,
+      "historyShortfall": "Four real full annual observations (2022–2025) are retained for the full asset-management business. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit owner-earnings comparability. The 2023–2025 owner-earnings series is directly reconciled. Earlier listed-shell or Brookfield Corporation figures are not spliced into this business.",
+      "claimsSensitivities": [],
+      "financialModel": {
+        "reportedRevenue": 4817,
+        "reportedOperatingIncome": 2888,
+        "reportedPretaxIncome": 2925,
+        "reportedNetIncomeAttributableCommon": 2485,
+        "modelRevenue": 5487,
+        "modelPretaxIncome": 3028,
+        "feeRelatedEarnings": 2995,
+        "netInvestmentAndInterestIncome": 33,
+        "cashTaxes": 377,
+        "distributableEarnings": 2695,
+        "sbcAddbackReversed": 44,
+        "modelAfterTaxEarnings": 2651,
+        "surplusCash": 0,
+        "modeledDebt": 0,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 1608.513922,
+        "unvestedAwards": 0,
+        "dilutionProxyShares": 16.3,
+        "modelShareCount": 1624.813922,
+        "startingRequiredEquity": 8118,
+        "reportedBookCommonEquity": 8118,
+        "reportedTotalDebt": 2940,
+        "modelRevenueLabel": "Attributable fee-business revenue",
+        "modelRevenueLabelZh": "应占费用业务收入",
+        "modelProfitLabel": "Common pretax fee-business earnings",
+        "modelProfitLabelZh": "普通股股东税前费用业务收益",
+        "note": "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+        "noteZh": "费用收入采用发行人已调节的非公认会计准则指标，包括权益法投资的应占费用收益。普通股税前收益=归属于BAM的费用相关收益+扣除利息后的投资及其他收益。减实际现金税后等于可分配收益减股权薪酬加回，保留薪酬成本。包含2025年重组后全部普通股；BN持有73%不再作为少数股东权益重复扣减。合并基金及优先少数股东收益已从应占收益中扣除。",
+        "excludedCashDebtNote": "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+        "excludedCashDebtNoteZh": "股权收益已包含融资成本及持股比例，不再加回全部投资或现金，亦不重复扣减合并基金债务及少数股东权益。发行人费用收益调节已剔除附带权益等投资收益；纳入收益的投资不再单独加值。",
+        "proxies": [
+          {
+            "field": "dilutionProxyShares",
+            "kind": "reportedEPSincremental-dilution-proxy",
+            "value": 16.3,
+            "note": "Annual weightedaverage incremental16.3m;Junequarter14.9m, not pointintimeoutstandingawardcount. Uses totaloptions+escrowcombined; no duplicate annualoptiondeduction. 0–2xproxy sensitivity about±1%equitypershare. BNoptionseparateissuerexcluded; restrictedsharesalreadyissued; escrowplans includecancellation."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "MD&A Fee Revenues/FRE/DE reconciliation; EPS and stockcompensationnotes; balance sheet totalissuedlesstreasury"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "2025reorganization and restated2023–2025 comparative statements"
+          }
+        ],
+        "ttmModelComponents": null,
+        "periodEnd": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+          "The annual 16.3 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+          "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+          "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+          "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+        ],
+        "cautionsZh": [
+          "分母包含重组后全部BAM已发行普通股，扣除库存股。Brookfield Corporation持有BAM股份，不构成再次扣除的少数股东权益。Brookfield Corporation期权属于另一发行人，不计入BAM股份。",
+          "年度摊薄每股收益所用的1630万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。",
+          "股东收益保留股权薪酬成本，并已反映应占持股比例及融资成本。合并基金资产、基金借款及少数股东权益不再重复加回或扣除。",
+          "预测假定每美元新增所需普通股资本支持3美元费用收入。永续期25%的回报率适用于新增边际股权资本，而非全部现有账面权益。永续期资本效率降低会提高所需利润留存，但不假定现有资本存量在未融资情况下突然增加。",
+          "费用收入与股东收益是经过调节的非公认会计准则业务指标。由于重组及合并披露的薪酬加回限制可比性，2022年前身年度仅供参考；2023–2025年股东收益可直接调节。"
+        ],
+        "id": "BAM-2025-12-31-equity-v1",
+        "ticker": "BAM",
+        "currency": "USD",
+        "snapshotIds": [
+          "BAM-CURRENT-2025-12-31"
+        ],
+        "evidenceAsOf": "2026-10-21",
+        "reportedTuple": {
+          "revenue": 4817,
+          "EBIT": 2888,
+          "cash": null,
+          "debt": null,
+          "shares": 1608.513922
+        },
+        "financingClaim": 0,
+        "allocationShares": 1624.813922,
+        "shareBasis": "BAM common share; dated shareholder earnings and explicit dilution proxy"
+      },
+      "limits": [
+        "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+        "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+        "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+        "The annual 16.3 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+        "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+        "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+        "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "BAM",
+      "id": "BAM-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-08-10",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+      "currency": "USD",
+      "perShare": 32.49205964595415,
+      "rawPerShare": 32.49205964595415,
+      "enterpriseOrEquityCashflowPV": 52381.65214630666,
+      "commonEquity": 52381.65214630666,
+      "method": "shareholder cash flow / cost of equity",
+      "historyYears": 4,
+      "openingPeriod": null,
+      "historyShortfall": "Four real full annual observations (2022–2025) are retained for the full asset-management business. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit owner-earnings comparability. The 2023–2025 owner-earnings series is directly reconciled. Earlier listed-shell or Brookfield Corporation figures are not spliced into this business.",
+      "claimsSensitivities": [],
+      "financialModel": {
+        "reportedRevenue": 5737,
+        "reportedOperatingIncome": 3532,
+        "reportedPretaxIncome": 3714,
+        "reportedNetIncomeAttributableCommon": 2805,
+        "modelRevenue": 5822,
+        "modelPretaxIncome": 3171,
+        "feeRelatedEarnings": 3201,
+        "netInvestmentAndInterestIncome": -30,
+        "cashTaxes": 390,
+        "distributableEarnings": 2837,
+        "sbcAddbackReversed": 56,
+        "modelAfterTaxEarnings": 2781,
+        "surplusCash": 0,
+        "modeledDebt": 0,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 1597.237018,
+        "unvestedAwards": 0,
+        "dilutionProxyShares": 14.9,
+        "modelShareCount": 1612.1370180000001,
+        "startingRequiredEquity": 7513,
+        "reportedBookCommonEquity": 7513,
+        "reportedTotalDebt": 4055,
+        "modelRevenueLabel": "Attributable fee-business revenue",
+        "modelRevenueLabelZh": "应占费用业务收入",
+        "modelProfitLabel": "Common pretax fee-business earnings",
+        "modelProfitLabelZh": "普通股股东税前费用业务收益",
+        "note": "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+        "noteZh": "费用收入采用发行人已调节的非公认会计准则指标，包括权益法投资的应占费用收益。普通股税前收益=归属于BAM的费用相关收益+扣除利息后的投资及其他收益。减实际现金税后等于可分配收益减股权薪酬加回，保留薪酬成本。包含2025年重组后全部普通股；BN持有73%不再作为少数股东权益重复扣减。合并基金及优先少数股东收益已从应占收益中扣除。",
+        "excludedCashDebtNote": "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+        "excludedCashDebtNoteZh": "股权收益已包含融资成本及持股比例，不再加回全部投资或现金，亦不重复扣减合并基金债务及少数股东权益。发行人费用收益调节已剔除附带权益等投资收益；纳入收益的投资不再单独加值。",
+        "proxies": [
+          {
+            "field": "dilutionProxyShares",
+            "kind": "reportedEPSincremental-dilution-proxy",
+            "value": 14.9,
+            "note": "Annual weightedaverage incremental16.3m;Junequarter14.9m, not pointintimeoutstandingawardcount. Uses totaloptions+escrowcombined; no duplicate annualoptiondeduction. 0–2xproxy sensitivity about±1%equitypershare. BNoptionseparateissuerexcluded; restrictedsharesalreadyissued; escrowplans includecancellation."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+            "locator": "MD&A Fee Revenues/FRE/DE reconciliation; EPS and stockcompensationnotes; balance sheet totalissuedlesstreasury"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "2025reorganization and restated2023–2025 comparative statements"
+          }
+        ],
+        "ttmModelComponents": {
+          "annualFeeRevenue": 5487,
+          "ytdFeeRevenue": 2920,
+          "priorYtdFeeRevenue": 2585,
+          "annualFRE": 2995,
+          "ytdFRE": 1580,
+          "priorYtdFRE": 1374,
+          "annualInvestmentNetInterest": 33,
+          "ytdInvestmentNetInterest": -16,
+          "priorYtdInvestmentNetInterest": 47,
+          "annualDE": 2695,
+          "ytdDE": 1409,
+          "priorYtdDE": 1267,
+          "annualSBCAddback": 44,
+          "ytdSBCAddback": 37,
+          "priorYtdSBCAddback": 25
+        },
+        "periodEnd": "2026-06-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+          "The June-quarter 14.9 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+          "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+          "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+          "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+        ],
+        "cautionsZh": [
+          "分母包含重组后全部BAM已发行普通股，扣除库存股。Brookfield Corporation持有BAM股份，不构成再次扣除的少数股东权益。Brookfield Corporation期权属于另一发行人，不计入BAM股份。",
+          "六月季度摊薄每股收益所用的1490万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。",
+          "股东收益保留股权薪酬成本，并已反映应占持股比例及融资成本。合并基金资产、基金借款及少数股东权益不再重复加回或扣除。",
+          "预测假定每美元新增所需普通股资本支持3美元费用收入。永续期25%的回报率适用于新增边际股权资本，而非全部现有账面权益。永续期资本效率降低会提高所需利润留存，但不假定现有资本存量在未融资情况下突然增加。",
+          "费用收入与股东收益是经过调节的非公认会计准则业务指标。由于重组及合并披露的薪酬加回限制可比性，2022年前身年度仅供参考；2023–2025年股东收益可直接调节。"
+        ],
+        "id": "BAM-2026-06-30-equity-v1",
+        "ticker": "BAM",
+        "currency": "USD",
+        "snapshotIds": [
+          "BAM-TTM-2026-06-30"
+        ],
+        "evidenceAsOf": "2026-10-21",
+        "reportedTuple": {
+          "revenue": 5737,
+          "EBIT": 3532,
+          "cash": null,
+          "debt": null,
+          "shares": 1597.237018
+        },
+        "financingClaim": 0,
+        "allocationShares": 1612.1370180000001,
+        "shareBasis": "BAM common share; dated shareholder earnings and explicit dilution proxy"
+      },
+      "limits": [
+        "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+        "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+        "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+        "The June-quarter 14.9 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+        "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+        "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+        "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "APP",
+      "id": "APP-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-19",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm",
+      "currency": "USD",
+      "perShare": 207.09575460457438,
+      "rawPerShare": 207.09575460457438,
+      "enterpriseOrEquityCashflowPV": 71422.943420039,
+      "commonEquity": 70327.99688380118,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 8,
+      "openingPeriod": null,
+      "historyShortfall": "8 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 207.09575460457438,
+          "rawPerShare": 207.09575460457438,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 207.09926043600834,
+          "rawPerShare": 207.09926043600834,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 207.0767803280099,
+          "rawPerShare": 207.0767803280099,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 206.32173889666944,
+          "rawPerShare": 206.32173889666944,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "All 2025 performance awards are treated as earned despite their market-capitalization conditions. June carries the annual award stock as a proxy, totaling about 0.76% of actual common shares. Options use assumed 70% volatility and a 4% risk-free rate.",
+        "The June finance-lease total is a rollforward proxy; a $60m error changes value by less than $0.18 per share. Employee awards carry the annual disclosed stock and conservatively assume all performance awards vest.",
+        "Historical years before 2023 include the disposed Apps business. Recent revenue and operating income are recast continuing operations; compare older growth and capital ratios with caution.",
+        "All 2025 performance awards are treated as earned despite their market-capitalization conditions. June carries the annual award stock as a proxy, totaling about 0.76% of actual common shares. Options use assumed 70% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "APP",
+      "id": "APP-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-08-05",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000059/app-20260630.htm",
+      "currency": "USD",
+      "perShare": 264.13309381680114,
+      "rawPerShare": 264.13309381680114,
+      "enterpriseOrEquityCashflowPV": 89490.66562749127,
+      "commonEquity": 88899.19297639548,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 8,
+      "openingPeriod": null,
+      "historyShortfall": "8 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+      "claimsSensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 264.13309381680114,
+          "rawPerShare": 264.13309381680114,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 264.13611806623123,
+          "rawPerShare": 264.13611806623123,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 264.1134368638049,
+          "rawPerShare": 264.1134368638049,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 263.1371058558082,
+          "rawPerShare": 263.1371058558082,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "financialModel": null,
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "The June finance-lease proxy is $122.653m annual liability minus $8.528m first-half principal payments. It is assigned to the model current-debt field to obtain the correct total, not as a reported maturity classification. A $60.319m stress for unclassified new leases changes value by less than $0.18 per share.",
+        "All 2025 performance awards are treated as earned despite their market-capitalization conditions. June carries the annual award stock as a proxy, totaling about 0.76% of actual common shares. Options use assumed 70% volatility and a 4% risk-free rate.",
+        "The June finance-lease total is a rollforward proxy; a $60m error changes value by less than $0.18 per share. Employee awards carry the annual disclosed stock and conservatively assume all performance awards vest.",
+        "Historical years before 2023 include the disposed Apps business. Recent revenue and operating income are recast continuing operations; compare older growth and capital ratios with caution.",
+        "All 2025 performance awards are treated as earned despite their market-capitalization conditions. June carries the annual award stock as a proxy, totaling about 0.76% of actual common shares. Options use assumed 70% volatility and a 4% risk-free rate."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "COST",
+      "id": "COST-CURRENT-2026-08-30",
+      "periodEnd": "2026-08-30",
+      "filedAt": "2026-10-07",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+      "currency": "USD",
+      "perShare": 461.58367887653856,
+      "rawPerShare": 461.58367887653856,
+      "enterpriseOrEquityCashflowPV": 191801.51835864084,
+      "commonEquity": 205527.51835864084,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2016",
+      "historyShortfall": null,
+      "claimsSensitivities": [],
+      "financialModel": null,
+      "limits": [],
+      "quoteScope": null
+    },
+    {
+      "ticker": "QCOM",
+      "id": "QCOM-CURRENT-2025-09-28",
+      "periodEnd": "2025-09-28",
+      "filedAt": "2025-11-05",
+      "mode": "annual-reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+      "currency": "USD",
+      "perShare": 117.70899030441146,
+      "rawPerShare": 117.70899030441146,
+      "enterpriseOrEquityCashflowPV": 132992.30731546142,
+      "commonEquity": 129715.30731546142,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [],
+      "financialModel": null,
+      "limits": [
+        "longTermInvestments: June filing does not disclose a new separate private/equity-method investment carrying subtotal. Carry FY2025 1,379 as an explicit proxy; +/-50% changes value by about $0.65 per share. Do not substitute 1,293 deferred-compensation assets from the fair-value table.",
+        "operatingLeaseLiabilities: Current interim filing omits full operating lease liability split; annual operating lease liability retained as context only, not added to debt.",
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "Private investment carrying values are approximate economic values. The June $1.293bn deferred-compensation investments have matching plan liabilities and are excluded from excess assets."
+      ],
+      "quoteScope": null
+    },
+    {
+      "ticker": "QCOM",
+      "id": "QCOM-TTM-2026-06-28",
+      "periodEnd": "2026-06-28",
+      "filedAt": "2026-07-29",
+      "mode": "ttm",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000086/qcom-20260628.htm",
+      "currency": "USD",
+      "perShare": 110.9491227417258,
+      "rawPerShare": 110.9491227417258,
+      "enterpriseOrEquityCashflowPV": 125966.7981747725,
+      "commonEquity": 120379.7981747725,
+      "method": "operating FCFF with dated claims",
+      "historyYears": 10,
+      "openingPeriod": "FY2015",
+      "historyShortfall": null,
+      "claimsSensitivities": [],
+      "financialModel": null,
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "longTermInvestments: June filing does not disclose a new separate private/equity-method investment carrying subtotal. Carry FY2025 1,379 as an explicit proxy; +/-50% changes value by about $0.65 per share. Do not substitute 1,293 deferred-compensation assets from the fair-value table.",
+        "operatingLeaseLiabilities: Current interim filing omits full operating lease liability split; annual operating lease liability retained as context only, not added to debt.",
+        "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+        "Private investment carrying values are approximate economic values. The June $1.293bn deferred-compensation investments have matching plan liabilities and are excluded from excess assets."
+      ],
+      "quoteScope": null
+    }
+  ]
+}

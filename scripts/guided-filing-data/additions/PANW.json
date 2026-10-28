@@ -1,0 +1,131 @@
+{
+  "ticker": "PANW",
+  "cutoff": "2026-10-21",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+      "title": "Palo Alto Networks Inc 10-K 2026-07-31",
+      "publishedAt": "2026-09-10"
+    }
+  ],
+  "freshness": {
+    "checkedAt": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001327567.json",
+    "annual": {
+      "accessionNumber": "0001327567-26-000023",
+      "filingDate": "2026-09-10",
+      "reportDate": "2026-07-31",
+      "acceptanceDateTime": "2026-09-11T00:19:53.000Z",
+      "act": "34",
+      "form": "10-K",
+      "fileNumber": "001-35594",
+      "filmNumber": "261371345",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 17479666,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": 1,
+      "primaryDocument": "panw-20260731.htm",
+      "primaryDocDescription": "10-K"
+    },
+    "latestPeriodic": {
+      "accessionNumber": "0001327567-26-000023",
+      "filingDate": "2026-09-10",
+      "reportDate": "2026-07-31",
+      "acceptanceDateTime": "2026-09-11T00:19:53.000Z",
+      "act": "34",
+      "form": "10-K",
+      "fileNumber": "001-35594",
+      "filmNumber": "261371345",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 17479666,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": 1,
+      "primaryDocument": "panw-20260731.htm",
+      "primaryDocDescription": "10-K"
+    }
+  },
+  "claimsPolicy": {
+    "annual": {
+      "fixedClaims": 611,
+      "optionTranches": [],
+      "convertibleTreatment": "reported fair-value debt paired with capped-call asset; no conversion shares",
+      "note": "The $1,774m debt balance already reflects convertible fair value. Its $153m capped-call hedge is included in other assets. Additional claims are the $206m acquisition earnout and $405m vested deferred compensation. Conversion shares are not added again. Using debt principal instead would increase equity by $677m before dilution.",
+      "noteZh": "17.74亿美元债务已反映可转债公允价值；1.53亿美元封顶看涨对冲计入其他资产。额外请求权为2.06亿美元收购业绩支付及4.05亿美元已归属递延薪酬。不会再次加入转换股数。改用债务本金会在稀释前增加6.77亿美元权益。"
+    },
+    "ttm": {
+      "fixedClaims": 611,
+      "optionTranches": [],
+      "convertibleTreatment": "reported fair-value debt paired with capped-call asset; no conversion shares",
+      "note": "The $1,774m debt balance already reflects convertible fair value. Its $153m capped-call hedge is included in other assets. Additional claims are the $206m acquisition earnout and $405m vested deferred compensation. Conversion shares are not added again. Using debt principal instead would increase equity by $677m before dilution.",
+      "noteZh": "17.74亿美元债务已反映可转债公允价值；1.53亿美元封顶看涨对冲计入其他资产。额外请求权为2.06亿美元收购业绩支付及4.05亿美元已归属递延薪酬。不会再次加入转换股数。改用债务本金会在稀释前增加6.77亿美元权益。"
+    }
+  },
+  "modelProxies": {},
+  "limitations": [
+    "FY2026 includes only part-year CyberArk and Chronosphere revenue despite their full acquisition balance sheets. The growth assumption includes a first-year acquisition annualization effect.",
+    "Convertible debt and its capped-call hedge use paired reported fair values. Using principal instead would raise common equity by $677m before dilution; do not add conversion shares again."
+  ],
+  "limitationsZh": [
+    "2026财年只包含CyberArk和Chronosphere的部分年度营收，但资产负债表已包含全部收购。增长假设计入首年收购全年化影响。",
+    "可转债及封顶看涨对冲采用配套的申报公允价值。改用本金会在稀释前增加6.77亿美元普通股权益；不可重复增加转换股数。"
+  ],
+  "sector": "Cybersecurity platforms",
+  "sectorZh": "网络安全平台",
+  "businessSummary": "Network, cloud, security operations and identity security.",
+  "businessSummaryZh": "网络、云端、安全运营及身份安全。",
+  "assumptions": {
+    "growth": 0.18,
+    "targetMargin": 0.23,
+    "tax": 0.25,
+    "salesCapital": 2.5,
+    "wacc": 0.1,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.2,
+    "years": 10
+  },
+  "rationale": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return.",
+  "rationaleZh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。",
+  "rationaleByField": {
+    "growth": {
+      "en": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "targetMargin": {
+      "en": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "tax": {
+      "en": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "salesCapital": {
+      "en": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "wacc": {
+      "en": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalGrowth": {
+      "en": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    }
+  },
+  "localizationPairs": {
+    "Cybersecurity platforms": "网络安全平台",
+    "Network, cloud, security operations and identity security.": "网络、云端、安全运营及身份安全。",
+    "FY2026 includes only part-year CyberArk and Chronosphere revenue despite their full acquisition balance sheets. The growth assumption includes a first-year acquisition annualization effect.": "2026财年只包含CyberArk和Chronosphere的部分年度营收，但资产负债表已包含全部收购。增长假设计入首年收购全年化影响。",
+    "Convertible debt and its capped-call hedge use paired reported fair values. Using principal instead would raise common equity by $677m before dilution; do not add conversion shares again.": "可转债及封顶看涨对冲采用配套的申报公允价值。改用本金会在稀释前增加6.77亿美元普通股权益；不可重复增加转换股数。",
+    "The $1,774m debt balance already reflects convertible fair value. Its $153m capped-call hedge is included in other assets. Additional claims are the $206m acquisition earnout and $405m vested deferred compensation. Conversion shares are not added again. Using debt principal instead would increase equity by $677m before dilution.": "17.74亿美元债务已反映可转债公允价值；1.53亿美元封顶看涨对冲计入其他资产。额外请求权为2.06亿美元收购业绩支付及4.05亿美元已归属递延薪酬。不会再次加入转换股数。改用债务本金会在稀释前增加6.77亿美元权益。",
+    "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return.": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。",
+    "18% initial growth includes acquired-business annualization and then fades.23% mature GAAP margin requires integration and operating leverage; full acquisition goodwill means historical book ROIC is not a clean organic return. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.": "初期18%增长包含收购业务全年化效应，随后放缓。成熟期23%GAAP利润率需要整合及经营杠杆；全部收购商誉令历史账面ROIC无法直接代表有机回报。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+  }
+}

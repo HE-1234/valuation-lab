@@ -1,0 +1,147 @@
+{
+  "ticker": "CRWD",
+  "cutoff": "2026-10-21",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000010/crwd-20260131.htm",
+      "title": "CrowdStrike Holdings, Inc. 10-K 2026-01-31",
+      "publishedAt": "2026-03-05"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1535527/000153552726000031/crwd-20260731.htm",
+      "title": "CrowdStrike Holdings, Inc. 10-Q 2026-07-31",
+      "publishedAt": "2026-08-27"
+    }
+  ],
+  "freshness": {
+    "checkedAt": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001535527.json",
+    "annual": {
+      "accessionNumber": "0001535527-26-000010",
+      "filingDate": "2026-03-05",
+      "reportDate": "2026-01-31",
+      "acceptanceDateTime": "2026-03-05T06:48:18.000Z",
+      "act": "34",
+      "form": "10-K",
+      "fileNumber": "001-38933",
+      "filmNumber": "26723845",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 13406684,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": null,
+      "primaryDocument": "crwd-20260131.htm",
+      "primaryDocDescription": "10-K"
+    },
+    "latestPeriodic": {
+      "accessionNumber": "0001535527-26-000031",
+      "filingDate": "2026-08-27",
+      "reportDate": "2026-07-31",
+      "acceptanceDateTime": "2026-08-27T05:03:35.000Z",
+      "act": "34",
+      "form": "10-Q",
+      "fileNumber": "001-38933",
+      "filmNumber": "261324728",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 11398868,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": 1,
+      "primaryDocument": "crwd-20260731.htm",
+      "primaryDocDescription": "10-Q"
+    }
+  },
+  "claimsPolicy": {
+    "annual": {
+      "fixedClaims": 89.61500000000001,
+      "optionTranches": [
+        {
+          "shares": 3.729,
+          "strike": 3.1,
+          "years": 2.9,
+          "volatility": 0.5,
+          "rate": 0.04
+        }
+      ],
+      "note": "Both bases use the July 2026 four-for-one split basis. Outstanding performance awards are included at the disclosed target count. Existing acquisition founder holdbacks are reserved at full payout. Options use assumed 50% volatility and a 4% risk-free rate.",
+      "noteZh": "两个基期均采用2026年七月一拆四后的口径。未结算绩效奖励按披露目标股数计入，现有收购创始人延期款按全额支付预留。期权假设波动率50%、无风险利率4%。"
+    },
+    "ttm": {
+      "fixedClaims": 80.101,
+      "optionTranches": [
+        {
+          "shares": 3.447,
+          "strike": 3.32,
+          "years": 3.1,
+          "volatility": 0.5,
+          "rate": 0.04
+        }
+      ],
+      "note": "Both bases use the July 2026 four-for-one split basis. Outstanding performance awards are included at the disclosed target count. Existing acquisition founder holdbacks are reserved at full payout. Options use assumed 50% volatility and a 4% risk-free rate.",
+      "noteZh": "两个基期均采用2026年七月一拆四后的口径。未结算绩效奖励按披露目标股数计入，现有收购创始人延期款按全额支付预留。期权假设波动率50%、无风险利率4%。"
+    }
+  },
+  "modelProxies": {},
+  "limitations": [
+    "Both annual and TTM shares and awards use the four-for-one July 2026 split basis. Profitability must improve after recurring employee compensation; no blanket stock-compensation addback."
+  ],
+  "limitationsZh": [
+    "年度和近十二个月的股数及奖励均采用2026年七月一拆四后的口径。盈利改善须包含持续员工薪酬，不会将全部股权薪酬加回。"
+  ],
+  "sector": "Cybersecurity software",
+  "sectorZh": "网络安全软件",
+  "businessSummary": "Cloud endpoint, identity and security operations subscriptions.",
+  "businessSummaryZh": "云端终端、身份及安全运营订阅。",
+  "assumptions": {
+    "growth": 0.18,
+    "targetMargin": 0.22,
+    "tax": 0.25,
+    "salesCapital": 3.5,
+    "wacc": 0.105,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.2,
+    "years": 10
+  },
+  "rationale": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date.",
+  "rationaleZh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。",
+  "rationaleByField": {
+    "growth": {
+      "en": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "targetMargin": {
+      "en": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "tax": {
+      "en": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "salesCapital": {
+      "en": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "wacc": {
+      "en": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalGrowth": {
+      "en": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    }
+  },
+  "localizationPairs": {
+    "Cybersecurity software": "网络安全软件",
+    "Cloud endpoint, identity and security operations subscriptions.": "云端终端、身份及安全运营订阅。",
+    "Both annual and TTM shares and awards use the four-for-one July 2026 split basis. Profitability must improve after recurring employee compensation; no blanket stock-compensation addback.": "年度和近十二个月的股数及奖励均采用2026年七月一拆四后的口径。盈利改善须包含持续员工薪酬，不会将全部股权薪酬加回。",
+    "Both bases use the July 2026 four-for-one split basis. Outstanding performance awards are included at the disclosed target count. Existing acquisition founder holdbacks are reserved at full payout. Options use assumed 50% volatility and a 4% risk-free rate.": "两个基期均采用2026年七月一拆四后的口径。未结算绩效奖励按披露目标股数计入，现有收购创始人延期款按全额支付预留。期权假设波动率50%、无风险利率4%。",
+    "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date.": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。",
+    "18% initial growth moderates reported subscription momentum.22% mature GAAP margin requires recurring SBC intensity and acquisition overhead to decline; reported losses are retained at the starting date. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.": "初期18%增长较申报订阅势头放缓。成熟期22%GAAP利润率需要持续股权薪酬占比及收购管理成本下降；起点保留申报亏损。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+  }
+}

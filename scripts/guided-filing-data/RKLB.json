@@ -1,0 +1,316 @@
+{
+  "ticker": "RKLB",
+  "name": "Rocket Lab Corp",
+  "cik": "0001819994",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "10-K",
+      "accession": "0001819994-26-000013",
+      "filedAt": "2026-02-26",
+      "acceptedAt": "2026-02-27T02:31:49.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+      "sharesDate": "2025-12-31",
+      "ttmComponents": null,
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Consolidated Statements of Operations; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Consolidated Statements of Operations; us-gaap:OperatingIncomeLoss",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Consolidated Balance Sheets; us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Balance Sheets, Marketable securities current",
+          "originalDocumentVerified": true
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Balance Sheets, Marketable securities noncurrent",
+          "originalDocumentVerified": true
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Annual lease note: current finance lease. June liability not separately disclosed; explicit model proxy follows.",
+          "originalDocumentVerified": true
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Convertible carrying amount + other long-term borrowings1.716 + noncurrent finance leases (annual14.653; June14.468).",
+          "originalDocumentVerified": true
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Annual lease note total current+noncurrent. June current liability omitted.",
+          "originalDocumentVerified": true
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Balance Sheets, actual common outstanding excluding treasury. Common-like preferred is separately added by claims policy.",
+          "originalDocumentVerified": true
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Net Loss Per Share note: total outstanding options and restricted stock units; conservative all-free award proxy, not a pure RSU reported count.",
+          "originalDocumentVerified": true
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Quarterly note does not separately split remaining options versus RSUs; combined EPS exclusion table amount is used conservatively as zero-strike awards."
+        }
+      },
+      "convertibles": [
+        {
+          "name": "4.25% notes due 2029",
+          "principal": 155.654,
+          "carrying": 152.395,
+          "fairValue": 2185.44,
+          "conversionPrice": 5.1255,
+          "conversionShares": 30.368547,
+          "maturity": "2029-02-01",
+          "evidence": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+            "locator": "Loan Agreements / Convertible Senior Notes; carrying amount and fair value tables"
+          }
+        }
+      ],
+      "otherClaims": [
+        {
+          "name": "Acquisition earnout obligation",
+          "value": 7.634,
+          "basis": "Fair Value Measurements: booked cash earnout liability; deduct once in common equity bridge.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm"
+        }
+      ],
+      "options": {
+        "count": null,
+        "weightedExercisePrice": null,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "note": "All money and shares in millions. Actual outstanding shares, not the EPS weighted-average denominator. Preferred shares have common economic rights; not a fixed par-value claim. Capped calls cover69.261530m shares at5.1255 strike and8.04 cap. Standalone dated business excludes pending Iridium acquisition and related undrawn bridge financing. Source filing checked for balance sheet, operating statements and claims notes. Latest periodic filing confirmed against SEC submissions through2026-10-21.",
+      "revenue": 601.799,
+      "operatingIncome": -228.838,
+      "cashAndEquivalents": 828.66,
+      "shortTermInvestments": 187.917,
+      "longTermInvestments": 82.247,
+      "debtCurrent": 0.317,
+      "debtNoncurrent": 168.764,
+      "operatingLeaseLiabilities": 96.007,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "unvestedRSUs": 17.409519,
+      "sharesOutstanding": 543.574552
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "10-Q",
+      "accession": "0001819994-26-000062",
+      "filedAt": "2026-08-10",
+      "acceptedAt": "2026-08-11T00:18:42.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+      "sharesDate": "2026-06-30",
+      "ttmComponents": {
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-06-30",
+        "annualRevenue": 601.799,
+        "ytdRevenue": 434.414,
+        "priorYtdRevenue": 267.067,
+        "annualOperatingIncome": -228.838,
+        "ytdOperatingIncome": -113.483,
+        "priorYtdOperatingIncome": -118.827
+      },
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "TTM = annual 601.799 + YTD 434.414 - prior comparable YTD 267.067; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm"
+          ]
+        },
+        "annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 2025-01-01 to 2025-12-31"
+        },
+        "ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 2026-01-01 to 2026-06-30"
+        },
+        "priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 2025-01-01 to 2025-06-30"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "TTM = annual -228.838 + YTD -113.483 - prior comparable YTD -118.827; us-gaap:OperatingIncomeLoss",
+          "sourceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+            "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm"
+          ]
+        },
+        "annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "us-gaap:OperatingIncomeLoss 2025-01-01 to 2025-12-31"
+        },
+        "ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "us-gaap:OperatingIncomeLoss 2026-01-01 to 2026-06-30"
+        },
+        "priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "us-gaap:OperatingIncomeLoss 2025-01-01 to 2025-06-30"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Consolidated Balance Sheets; us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Balance Sheets, Marketable securities current",
+          "originalDocumentVerified": true
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Balance Sheets, Marketable securities noncurrent",
+          "originalDocumentVerified": true
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Annual lease note: current finance lease. June liability not separately disclosed; explicit model proxy follows.",
+          "originalDocumentVerified": true
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Convertible carrying amount + other long-term borrowings1.716 + noncurrent finance leases (annual14.653; June14.468).",
+          "originalDocumentVerified": true
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Annual lease note total current+noncurrent. June current liability omitted.",
+          "originalDocumentVerified": true
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Balance Sheets, actual common outstanding excluding treasury. Common-like preferred is separately added by claims policy.",
+          "originalDocumentVerified": true
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Net Loss Per Share note: total outstanding options and restricted stock units; conservative all-free award proxy, not a pure RSU reported count.",
+          "originalDocumentVerified": true
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Quarterly note does not separately split remaining options versus RSUs; combined EPS exclusion table amount is used conservatively as zero-strike awards."
+        }
+      },
+      "convertibles": [
+        {
+          "name": "4.25% notes due 2029",
+          "principal": 13.366,
+          "carrying": 13.129,
+          "fairValue": 280.789,
+          "conversionPrice": 5.1255,
+          "conversionShares": 2.607745,
+          "maturity": "2029-02-01",
+          "evidence": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+            "locator": "Loan Agreements / Convertible Senior Notes; carrying amount and fair value tables"
+          }
+        }
+      ],
+      "otherClaims": [
+        {
+          "name": "Acquisition earnout obligation",
+          "value": 13.674,
+          "basis": "Fair Value Measurements: booked cash earnout liability; deduct once in common equity bridge.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm"
+        }
+      ],
+      "options": {
+        "count": null,
+        "weightedExercisePrice": null,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "note": "All money and shares in millions. Actual outstanding shares, not the EPS weighted-average denominator. Preferred shares have common economic rights; not a fixed par-value claim. Capped calls cover69.261530m shares at5.1255 strike and8.04 cap. Standalone dated business excludes pending Iridium acquisition and related undrawn bridge financing. Source filing checked for balance sheet, operating statements and claims notes. Latest periodic filing confirmed against SEC submissions through2026-10-21. June has 7.4512m future collared-forward shares outside actual common outstanding, with $474m minimum/$642m maximum expected proceeds in April2028 and no cash received yet. Model recognizes a discounted conservative proceeds proxy and corresponding future shares together.",
+      "revenue": 769.146,
+      "operatingIncome": -223.494,
+      "cashAndEquivalents": 2129.485,
+      "shortTermInvestments": 172.7,
+      "longTermInvestments": 85.405,
+      "debtCurrent": null,
+      "debtNoncurrent": 29.313,
+      "operatingLeaseLiabilities": null,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "unvestedRSUs": 13.09552,
+      "sharesOutstanding": 598.180438,
+      "forwardEquityContracts": [
+        {
+          "name": "Collared forward transactions",
+          "shares": 7.4512,
+          "minimumExpectedProceeds": 474,
+          "maximumExpectedProceeds": 642,
+          "settlementMonth": "2028-04",
+          "proceedsReceived": 0,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Note12 Collared Forward Transactions; Net Loss Per Share anti-dilutive share table; March17 8-K agreement terms"
+        }
+      ]
+    }
+  },
+  "notes": [
+    "This is the standalone dated business, before the pending $8bn Iridium acquisition. That transaction can materially change debt, shares, cash flows and value; this case is not a post-acquisition valuation.",
+    "Employee awards use conservative full dilution. The capped-call asset follows the model share value. June also includes delayed collared-forward proceeds and the associated future shares; these proceeds are not current cash."
+  ],
+  "latestFilingCheck": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001819994.json",
+    "latestPeriodicAccession": "0001819994-26-000062",
+    "latestAnnualAccession": "0001819994-26-000013"
+  }
+}

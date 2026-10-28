@@ -1,0 +1,564 @@
+{
+  "ticker": "HOOD",
+  "sector": "Brokerage and financial services",
+  "modelType": "equity-cash-flow",
+  "summary": "Brokerage equity cash flows retain customer and regulatory capital.",
+  "summaryZh": "券商股权现金流保留客户及监管资本。",
+  "sourceFreshness": {
+    "cutoff": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001783879.json",
+    "checkedAt": "2026-10-21",
+    "latestAnnualFiledAt": "2026-02-20",
+    "latestInterimFiledAt": "2026-07-30",
+    "note": "Annual and interim SEC submissions checked; no later10-Q/10-K filed by cutoff."
+  },
+  "snapshots": {
+    "annual": {
+      "financialModel": {
+        "reportedRevenue": 4473,
+        "reportedOperatingIncome": 2094,
+        "reportedPretaxIncome": 2108,
+        "reportedNetIncomeAttributableCommon": 1883,
+        "modelRevenue": 4473,
+        "modelPretaxIncome": 2094,
+        "surplusCash": 0,
+        "modeledDebt": 0,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 901.328432,
+        "unvestedAwards": 7.646387,
+        "dilutionProxyShares": 11.773979,
+        "modelShareCount": 920.7487980000001,
+        "startingRequiredEquity": 9140,
+        "reportedBookCommonEquity": 9140,
+        "legalMinimumSubsidiaryNetCapital": 383.5,
+        "reportedSubsidiaryNetCapital": 3935,
+        "modelRevenueLabel": "Net brokerage revenue",
+        "modelRevenueLabelZh": "券商净收入",
+        "modelProfitLabel": "Core pretax earnings attributable to common",
+        "modelProfitLabelZh": "普通股股东应占核心税前收益",
+        "reportedTotalDebt": 602,
+        "optionWarrantTreatment": "Conservative full-share dilution adds 3.033979m employee options and 8.74m warrants once, with no separate intrinsic-value deduction. The annual option count is carried to June. Ignored exercise proceeds reduce value by at most approximately $0.28 per modeled share.",
+        "note": "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+        "noteZh": "净利息属于主营收入。模型从净收入减全部经营费用起算，保留股权薪酬并剔除其他收益（包括2026年RVI处置收益106及投资收益23百万美元）；六月另将8百万美元少数股东收益按21%标准税率还原后扣除。排除客户资产，已发行限制性股票不重复计算。",
+        "excludedCashDebtNote": "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+        "excludedCashDebtNoteZh": "原有公司现金全部保留为经营资本，不视为可立即分配现金。信托融资成本已计入主营净利息，不再重复扣除。六月新增公司可转债独立处理。",
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+            "locator": "Statements of operations; balance sheet; Notes11–13 and Liquidity/Net Capital tables"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+            "locator": "Annual option/RSU/warrant note; latest formatting-only10-K/A"
+          }
+        ],
+        "proxies": [
+          {
+            "field": "optionWarrantDilution",
+            "kind": "conservative-full-share",
+            "value": 11.773979,
+            "maxExerciseProceedsPerShare": 0.2726606345023977,
+            "note": "Maximum dilution assumes exercise regardless of modeledprice; overstates claims when outofthemoney. No separate optionvaluededuction."
+          },
+          {
+            "field": "availableSurplusOperatingCash",
+            "kind": "retained-capital-policy",
+            "value": 0,
+            "note": "Not a claim that cash is absent. No released corporate/regulatory cash on top of earningstream; analyst can investigate excesscapital separately."
+          }
+        ],
+        "periodEnd": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+          "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+          "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+          "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change."
+        ],
+        "cautionsZh": [
+          "客户现金、客户证券及监管抵押品不属于股东剩余资产。原有公司现金保留为经营资本；模型不假定法定最低资本足以支撑经营。",
+          "员工期权及认股权证采用保守的全额股份稀释估算。模型仅计入一次303.3979万份期权及874万份认股权证，不再另扣期权价值。忽略行权所得款项最多使每股模型价值降低约0.28美元；价外奖励会使此估算更保守。",
+          "预测收益保留股权薪酬费用。尚未发行的限制性股票单位计入新增股份，已发行限制性股票不重复计入。未来授予及回购可能改变股数。",
+          "每美元新增所需普通股资本支持的收入是模型假设，而非监管公式。随着保证金贷款、信用卡及交易活动变化，所需经营资本可能与收入以不同速度增长。"
+        ]
+      }
+    },
+    "ttm": {
+      "financialModel": {
+        "reportedRevenue": 4932,
+        "reportedOperatingIncome": 2270,
+        "reportedPretaxIncome": 2415,
+        "reportedNetIncomeAttributableCommon": 2072,
+        "modelRevenue": 4932,
+        "modelPretaxIncome": 2259.8734177215188,
+        "surplusCash": 1757,
+        "modeledDebt": 2208,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 899,
+        "unvestedAwards": 9,
+        "dilutionProxyShares": 11.773979,
+        "modelShareCount": 919.773979,
+        "startingRequiredEquity": 9480,
+        "reportedBookCommonEquity": 9480,
+        "legalMinimumSubsidiaryNetCapital": 513.5,
+        "reportedSubsidiaryNetCapital": 4591,
+        "modelRevenueLabel": "Net brokerage revenue",
+        "modelRevenueLabelZh": "券商净收入",
+        "modelProfitLabel": "Core pretax earnings attributable to common",
+        "modelProfitLabelZh": "普通股股东应占核心税前收益",
+        "reportedTotalDebt": 3129,
+        "optionWarrantTreatment": "Conservative full-share dilution adds 3.033979m employee options and 8.74m warrants once, with no separate intrinsic-value deduction. The annual option count is carried to June. Ignored exercise proceeds reduce value by at most approximately $0.28 per modeled share.",
+        "note": "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+        "noteZh": "净利息属于主营收入。模型从净收入减全部经营费用起算，保留股权薪酬并剔除其他收益（包括2026年RVI处置收益106及投资收益23百万美元）；六月另将8百万美元少数股东收益按21%标准税率还原后扣除。排除客户资产，已发行限制性股票不重复计算。",
+        "excludedCashDebtNote": "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+        "excludedCashDebtNoteZh": "原有公司现金全部保留为经营资本，不视为可立即分配现金。信托融资成本已计入主营净利息，不再重复扣除。六月新增公司可转债独立处理。",
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+            "locator": "Statements of operations; balance sheet; Notes11–13 and Liquidity/Net Capital tables"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+            "locator": "Annual option/RSU/warrant note; latest formatting-only10-K/A"
+          }
+        ],
+        "proxies": [
+          {
+            "field": "optionWarrantDilution",
+            "kind": "conservative-full-share",
+            "value": 11.773979,
+            "maxExerciseProceedsPerShare": 0.27294961285265934,
+            "note": "Maximum dilution assumes exercise regardless of modeledprice; overstates claims when outofthemoney. No separate optionvaluededuction."
+          },
+          {
+            "field": "availableSurplusOperatingCash",
+            "kind": "retained-capital-policy",
+            "value": 0,
+            "note": "Not a claim that cash is absent. No released corporate/regulatory cash on top of earningstream; analyst can investigate excesscapital separately."
+          },
+          {
+            "field": "commonShares",
+            "kind": "reported-rounding",
+            "value": 899,
+            "maximumApproximateShareError": 1,
+            "note": "June statement reports rounded millions for790A+109B; ≤0.12%sharecount uncertainty."
+          }
+        ],
+        "corporateConvertibleBridge": {
+          "principal": 2200,
+          "issuanceCost": 30,
+          "cappedCallCost": 123,
+          "concurrentRepurchase": 290,
+          "assumedRetainedProceeds": 1757,
+          "debtFairValue": 2208,
+          "netAdjustment": -451,
+          "formula": "2200 -30 -123 -290 -2208 = -451",
+          "convertibleSharesAdded": 0,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Note11 Financing Activities, issuance and useofproceeds; Note8 fairvalue.",
+          "note": "1757 is fungible-cash allocation assumption, not identified restricted bankbalance. All preexistingcash retained. Fairvalue claim substitutes for conversiondilution; no12.61304mshares added. Cappedcall asset omitted;123m historicalpremium (~$0.13/share) is sensitivity reference, not currentvalue upperbound. Valuation materially above$174strike requires optionoverlay refresh."
+        },
+        "periodEnd": "2026-06-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+          "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+          "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+          "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change.",
+          "The June statement rounds common shares to 899 million. The annual employee-option count is carried forward because June lacks a complete option rollforward. Share-count rounding is approximately 0.12% or less; the carried option count is a labeled conservative proxy.",
+          "The June corporate financing bridge adds $1,757 million of assumed retained proceeds: $2,200 million issued, less $30 million issuance costs, $123 million capped-call premium and $290 million concurrent buyback. Cash is fungible; this is an allocation assumption, not an identified bank balance.",
+          "The corporate convertible is deducted once at its disclosed $2,208 million fair value. No conversion shares are added on top. The operating Credit Card Funding Trust is treated separately: its financing cost is already in net interest, so its debt is not deducted a second time.",
+          "No separate asset value is credited for the capped calls. Their $123 million historical premium, about $0.13 per modeled share, is a sensitivity reference, not a bound on current value. Scenarios materially above the $174.42 conversion strike need an updated option and capped-call treatment."
+        ],
+        "cautionsZh": [
+          "客户现金、客户证券及监管抵押品不属于股东剩余资产。原有公司现金保留为经营资本；模型不假定法定最低资本足以支撑经营。",
+          "员工期权及认股权证采用保守的全额股份稀释估算。模型仅计入一次303.3979万份期权及874万份认股权证，不再另扣期权价值。忽略行权所得款项最多使每股模型价值降低约0.28美元；价外奖励会使此估算更保守。",
+          "预测收益保留股权薪酬费用。尚未发行的限制性股票单位计入新增股份，已发行限制性股票不重复计入。未来授予及回购可能改变股数。",
+          "每美元新增所需普通股资本支持的收入是模型假设，而非监管公式。随着保证金贷款、信用卡及交易活动变化，所需经营资本可能与收入以不同速度增长。",
+          "六月报表将普通股股数取整为8.99亿股。由于六月未提供完整期权变动表，沿用年度员工期权数量。股数取整误差约不超过0.12%；沿用的期权数量为明确标注的保守估算。",
+          "六月公司融资桥接加回假设保留的17.57亿美元款项：发行22亿美元，减去3000万美元发行费用、1.23亿美元封顶看涨期权费及2.90亿美元同期回购款。现金可混同使用，因此这是分配假设，并非已识别的银行账户余额。",
+          "公司可转债按披露的22.08亿美元公允价值扣除一次，不再另外计入转股股份。经营性信用卡融资信托另行处理：融资成本已包含在净利息中，其债务不重复扣除。",
+          "封顶看涨期权未单独计入资产价值。其1.23亿美元历史权利金、约每股模型股份0.13美元，仅为敏感性参考，并非当前价值上限。若情景价值显著高于174.42美元转股价，需更新期权及封顶看涨期权处理。"
+        ]
+      }
+    }
+  },
+  "financialModels": {
+    "annual": {
+      "reportedRevenue": 4473,
+      "reportedOperatingIncome": 2094,
+      "reportedPretaxIncome": 2108,
+      "reportedNetIncomeAttributableCommon": 1883,
+      "modelRevenue": 4473,
+      "modelPretaxIncome": 2094,
+      "surplusCash": 0,
+      "modeledDebt": 0,
+      "otherAssets": 0,
+      "otherClaims": 0,
+      "commonShares": 901.328432,
+      "unvestedAwards": 7.646387,
+      "dilutionProxyShares": 11.773979,
+      "modelShareCount": 920.7487980000001,
+      "startingRequiredEquity": 9140,
+      "reportedBookCommonEquity": 9140,
+      "legalMinimumSubsidiaryNetCapital": 383.5,
+      "reportedSubsidiaryNetCapital": 3935,
+      "modelRevenueLabel": "Net brokerage revenue",
+      "modelRevenueLabelZh": "券商净收入",
+      "modelProfitLabel": "Core pretax earnings attributable to common",
+      "modelProfitLabelZh": "普通股股东应占核心税前收益",
+      "reportedTotalDebt": 602,
+      "optionWarrantTreatment": "Conservative full-share dilution adds 3.033979m employee options and 8.74m warrants once, with no separate intrinsic-value deduction. The annual option count is carried to June. Ignored exercise proceeds reduce value by at most approximately $0.28 per modeled share.",
+      "note": "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+      "noteZh": "净利息属于主营收入。模型从净收入减全部经营费用起算，保留股权薪酬并剔除其他收益（包括2026年RVI处置收益106及投资收益23百万美元）；六月另将8百万美元少数股东收益按21%标准税率还原后扣除。排除客户资产，已发行限制性股票不重复计算。",
+      "excludedCashDebtNote": "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+      "excludedCashDebtNoteZh": "原有公司现金全部保留为经营资本，不视为可立即分配现金。信托融资成本已计入主营净利息，不再重复扣除。六月新增公司可转债独立处理。",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Statements of operations; balance sheet; Notes11–13 and Liquidity/Net Capital tables"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Annual option/RSU/warrant note; latest formatting-only10-K/A"
+        }
+      ],
+      "proxies": [
+        {
+          "field": "optionWarrantDilution",
+          "kind": "conservative-full-share",
+          "value": 11.773979,
+          "maxExerciseProceedsPerShare": 0.2726606345023977,
+          "note": "Maximum dilution assumes exercise regardless of modeledprice; overstates claims when outofthemoney. No separate optionvaluededuction."
+        },
+        {
+          "field": "availableSurplusOperatingCash",
+          "kind": "retained-capital-policy",
+          "value": 0,
+          "note": "Not a claim that cash is absent. No released corporate/regulatory cash on top of earningstream; analyst can investigate excesscapital separately."
+        }
+      ],
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+      "version": "equity-method-2026-10-21",
+      "cautions": [
+        "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+        "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+        "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+        "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change."
+      ],
+      "cautionsZh": [
+        "客户现金、客户证券及监管抵押品不属于股东剩余资产。原有公司现金保留为经营资本；模型不假定法定最低资本足以支撑经营。",
+        "员工期权及认股权证采用保守的全额股份稀释估算。模型仅计入一次303.3979万份期权及874万份认股权证，不再另扣期权价值。忽略行权所得款项最多使每股模型价值降低约0.28美元；价外奖励会使此估算更保守。",
+        "预测收益保留股权薪酬费用。尚未发行的限制性股票单位计入新增股份，已发行限制性股票不重复计入。未来授予及回购可能改变股数。",
+        "每美元新增所需普通股资本支持的收入是模型假设，而非监管公式。随着保证金贷款、信用卡及交易活动变化，所需经营资本可能与收入以不同速度增长。"
+      ]
+    },
+    "ttm": {
+      "reportedRevenue": 4932,
+      "reportedOperatingIncome": 2270,
+      "reportedPretaxIncome": 2415,
+      "reportedNetIncomeAttributableCommon": 2072,
+      "modelRevenue": 4932,
+      "modelPretaxIncome": 2259.8734177215188,
+      "surplusCash": 1757,
+      "modeledDebt": 2208,
+      "otherAssets": 0,
+      "otherClaims": 0,
+      "commonShares": 899,
+      "unvestedAwards": 9,
+      "dilutionProxyShares": 11.773979,
+      "modelShareCount": 919.773979,
+      "startingRequiredEquity": 9480,
+      "reportedBookCommonEquity": 9480,
+      "legalMinimumSubsidiaryNetCapital": 513.5,
+      "reportedSubsidiaryNetCapital": 4591,
+      "modelRevenueLabel": "Net brokerage revenue",
+      "modelRevenueLabelZh": "券商净收入",
+      "modelProfitLabel": "Core pretax earnings attributable to common",
+      "modelProfitLabelZh": "普通股股东应占核心税前收益",
+      "reportedTotalDebt": 3129,
+      "optionWarrantTreatment": "Conservative full-share dilution adds 3.033979m employee options and 8.74m warrants once, with no separate intrinsic-value deduction. The annual option count is carried to June. Ignored exercise proceeds reduce value by at most approximately $0.28 per modeled share.",
+      "note": "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+      "noteZh": "净利息属于主营收入。模型从净收入减全部经营费用起算，保留股权薪酬并剔除其他收益（包括2026年RVI处置收益106及投资收益23百万美元）；六月另将8百万美元少数股东收益按21%标准税率还原后扣除。排除客户资产，已发行限制性股票不重复计算。",
+      "excludedCashDebtNote": "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+      "excludedCashDebtNoteZh": "原有公司现金全部保留为经营资本，不视为可立即分配现金。信托融资成本已计入主营净利息，不再重复扣除。六月新增公司可转债独立处理。",
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Statements of operations; balance sheet; Notes11–13 and Liquidity/Net Capital tables"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Annual option/RSU/warrant note; latest formatting-only10-K/A"
+        }
+      ],
+      "proxies": [
+        {
+          "field": "optionWarrantDilution",
+          "kind": "conservative-full-share",
+          "value": 11.773979,
+          "maxExerciseProceedsPerShare": 0.27294961285265934,
+          "note": "Maximum dilution assumes exercise regardless of modeledprice; overstates claims when outofthemoney. No separate optionvaluededuction."
+        },
+        {
+          "field": "availableSurplusOperatingCash",
+          "kind": "retained-capital-policy",
+          "value": 0,
+          "note": "Not a claim that cash is absent. No released corporate/regulatory cash on top of earningstream; analyst can investigate excesscapital separately."
+        },
+        {
+          "field": "commonShares",
+          "kind": "reported-rounding",
+          "value": 899,
+          "maximumApproximateShareError": 1,
+          "note": "June statement reports rounded millions for790A+109B; ≤0.12%sharecount uncertainty."
+        }
+      ],
+      "corporateConvertibleBridge": {
+        "principal": 2200,
+        "issuanceCost": 30,
+        "cappedCallCost": 123,
+        "concurrentRepurchase": 290,
+        "assumedRetainedProceeds": 1757,
+        "debtFairValue": 2208,
+        "netAdjustment": -451,
+        "formula": "2200 -30 -123 -290 -2208 = -451",
+        "convertibleSharesAdded": 0,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+        "locator": "Note11 Financing Activities, issuance and useofproceeds; Note8 fairvalue.",
+        "note": "1757 is fungible-cash allocation assumption, not identified restricted bankbalance. All preexistingcash retained. Fairvalue claim substitutes for conversiondilution; no12.61304mshares added. Cappedcall asset omitted;123m historicalpremium (~$0.13/share) is sensitivity reference, not currentvalue upperbound. Valuation materially above$174strike requires optionoverlay refresh."
+      },
+      "periodEnd": "2026-06-30",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+      "version": "equity-method-2026-10-21",
+      "cautions": [
+        "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+        "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+        "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+        "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change.",
+        "The June statement rounds common shares to 899 million. The annual employee-option count is carried forward because June lacks a complete option rollforward. Share-count rounding is approximately 0.12% or less; the carried option count is a labeled conservative proxy.",
+        "The June corporate financing bridge adds $1,757 million of assumed retained proceeds: $2,200 million issued, less $30 million issuance costs, $123 million capped-call premium and $290 million concurrent buyback. Cash is fungible; this is an allocation assumption, not an identified bank balance.",
+        "The corporate convertible is deducted once at its disclosed $2,208 million fair value. No conversion shares are added on top. The operating Credit Card Funding Trust is treated separately: its financing cost is already in net interest, so its debt is not deducted a second time.",
+        "No separate asset value is credited for the capped calls. Their $123 million historical premium, about $0.13 per modeled share, is a sensitivity reference, not a bound on current value. Scenarios materially above the $174.42 conversion strike need an updated option and capped-call treatment."
+      ],
+      "cautionsZh": [
+        "客户现金、客户证券及监管抵押品不属于股东剩余资产。原有公司现金保留为经营资本；模型不假定法定最低资本足以支撑经营。",
+        "员工期权及认股权证采用保守的全额股份稀释估算。模型仅计入一次303.3979万份期权及874万份认股权证，不再另扣期权价值。忽略行权所得款项最多使每股模型价值降低约0.28美元；价外奖励会使此估算更保守。",
+        "预测收益保留股权薪酬费用。尚未发行的限制性股票单位计入新增股份，已发行限制性股票不重复计入。未来授予及回购可能改变股数。",
+        "每美元新增所需普通股资本支持的收入是模型假设，而非监管公式。随着保证金贷款、信用卡及交易活动变化，所需经营资本可能与收入以不同速度增长。",
+        "六月报表将普通股股数取整为8.99亿股。由于六月未提供完整期权变动表，沿用年度员工期权数量。股数取整误差约不超过0.12%；沿用的期权数量为明确标注的保守估算。",
+        "六月公司融资桥接加回假设保留的17.57亿美元款项：发行22亿美元，减去3000万美元发行费用、1.23亿美元封顶看涨期权费及2.90亿美元同期回购款。现金可混同使用，因此这是分配假设，并非已识别的银行账户余额。",
+        "公司可转债按披露的22.08亿美元公允价值扣除一次，不再另外计入转股股份。经营性信用卡融资信托另行处理：融资成本已包含在净利息中，其债务不重复扣除。",
+        "封顶看涨期权未单独计入资产价值。其1.23亿美元历史权利金、约每股模型股份0.13美元，仅为敏感性参考，并非当前价值上限。若情景价值显著高于174.42美元转股价，需更新期权及封顶看涨期权处理。"
+      ]
+    }
+  },
+  "assumptions": {
+    "growth": 0.18,
+    "targetMargin": 0.43,
+    "salesCapital": 0.55,
+    "terminalROIC": 0.18,
+    "wacc": 0.115,
+    "terminalGrowth": 0.03,
+    "taxRate": 0.21
+  },
+  "rationale": {
+    "growth": "Analyst scenario, not management guidance: fade elevated growth toward3% terminal growth.",
+    "growthZh": "分析假设而非管理层指引：较高增长率逐步降至3%的永续增长率。",
+    "targetMargin": "Pretax earnings attributable to common owners; recurring SBC stays an expense.",
+    "targetMarginZh": "普通股股东应占税前收益率；持续性股权薪酬保留为费用。",
+    "salesCapital": "HOOD uses0.55 revenue per dollar of incremental required common equity, near dated revenue/book-common-equity0.49–0.52; buffers exceed legal minimum capital.",
+    "salesCapitalZh": "HOOD每增加一美元所需普通股资本支持0.55美元收入，接近当期收入/普通股账面权益0.49–0.52；资本缓冲高于法定最低要求。",
+    "wacc": "This control is cost of equity, not WACC; no enterprise-value bridge.",
+    "waccZh": "该参数表示股权成本，并非加权平均资本成本；不使用企业价值桥接。",
+    "terminalROIC": "Terminal return on required common equity governs sustainable earnings retention.",
+    "terminalROICZh": "永续期所需普通股资本回报率决定可持续的利润留存。"
+  },
+  "localizationPairs": [
+    [
+      "Net brokerage revenue",
+      "券商净收入"
+    ],
+    [
+      "Core pretax earnings attributable to common",
+      "普通股股东应占核心税前收益"
+    ],
+    [
+      "Net interest is core revenue. The model deducts all operating expenses, retains stock compensation, and excludes other income, including the 2026 RVI deconsolidation gain and investment gains. The June base also removes minority earnings. Customer assets are excluded and issued restricted shares are not counted twice.",
+      "净利息属于主营收入。模型从净收入减全部经营费用起算，保留股权薪酬并剔除其他收益（包括2026年RVI处置收益106及投资收益23百万美元）；六月另将8百万美元少数股东收益按21%标准税率还原后扣除。排除客户资产，已发行限制性股票不重复计算。"
+    ],
+    [
+      "Preexisting corporate cash is retained as operating capital. Trust funding costs are already in net interest and its debt is not deducted again. The June corporate convertible and assumed retained proceeds are treated separately.",
+      "原有公司现金全部保留为经营资本，不视为可立即分配现金。信托融资成本已计入主营净利息，不再重复扣除。六月新增公司可转债独立处理。"
+    ],
+    [
+      "Seven real annual observations (2019–2025) are available in filed statements. Earlier full-year comparable data are not disclosed in the reviewed public filings. Pre-2022 capital ratios are affected by preferred shares and the IPO; 2024 return on equity is affected by a large tax benefit.",
+      "已提交报表提供2019–2025年七个真实年度。所审阅公开文件未披露更早可比全年数据。2022年前资本比率受优先股和上市影响；2024年权益回报率受大额税收收益影响。"
+    ],
+    [
+      "Customer cash, customer securities and regulatory collateral are not shareholder surplus assets. Existing corporate cash is retained as operating capital; the model does not assume that the legal minimum is a sufficient operating buffer.",
+      "客户现金、客户证券及监管抵押品不属于股东剩余资产。原有公司现金保留为经营资本；模型不假定法定最低资本足以支撑经营。"
+    ],
+    [
+      "Employee options and warrants use a conservative full-share dilution proxy. The model adds 3.033979 million options and 8.74 million warrants once, without deducting a separate option value. Ignored exercise proceeds can reduce value by at most approximately $0.28 per modeled share; out-of-the-money awards make this proxy more conservative.",
+      "员工期权及认股权证采用保守的全额股份稀释估算。模型仅计入一次303.3979万份期权及874万份认股权证，不再另扣期权价值。忽略行权所得款项最多使每股模型价值降低约0.28美元；价外奖励会使此估算更保守。"
+    ],
+    [
+      "Stock compensation remains an expense in projected earnings. Unissued RSUs are additional shares; already-issued restricted stock is not added again. Future grants and repurchases may change the share count.",
+      "预测收益保留股权薪酬费用。尚未发行的限制性股票单位计入新增股份，已发行限制性股票不重复计入。未来授予及回购可能改变股数。"
+    ],
+    [
+      "Revenue per dollar of new required common equity is a modeling assumption, not a regulatory formula. Required operating capital may grow differently from revenue as margin lending, credit cards and trading activity change.",
+      "每美元新增所需普通股资本支持的收入是模型假设，而非监管公式。随着保证金贷款、信用卡及交易活动变化，所需经营资本可能与收入以不同速度增长。"
+    ],
+    [
+      "The June statement rounds common shares to 899 million. The annual employee-option count is carried forward because June lacks a complete option rollforward. Share-count rounding is approximately 0.12% or less; the carried option count is a labeled conservative proxy.",
+      "六月报表将普通股股数取整为8.99亿股。由于六月未提供完整期权变动表，沿用年度员工期权数量。股数取整误差约不超过0.12%；沿用的期权数量为明确标注的保守估算。"
+    ],
+    [
+      "The June corporate financing bridge adds $1,757 million of assumed retained proceeds: $2,200 million issued, less $30 million issuance costs, $123 million capped-call premium and $290 million concurrent buyback. Cash is fungible; this is an allocation assumption, not an identified bank balance.",
+      "六月公司融资桥接加回假设保留的17.57亿美元款项：发行22亿美元，减去3000万美元发行费用、1.23亿美元封顶看涨期权费及2.90亿美元同期回购款。现金可混同使用，因此这是分配假设，并非已识别的银行账户余额。"
+    ],
+    [
+      "The corporate convertible is deducted once at its disclosed $2,208 million fair value. No conversion shares are added on top. The operating Credit Card Funding Trust is treated separately: its financing cost is already in net interest, so its debt is not deducted a second time.",
+      "公司可转债按披露的22.08亿美元公允价值扣除一次，不再另外计入转股股份。经营性信用卡融资信托另行处理：融资成本已包含在净利息中，其债务不重复扣除。"
+    ],
+    [
+      "No separate asset value is credited for the capped calls. Their $123 million historical premium, about $0.13 per modeled share, is a sensitivity reference, not a bound on current value. Scenarios materially above the $174.42 conversion strike need an updated option and capped-call treatment.",
+      "封顶看涨期权未单独计入资产价值。其1.23亿美元历史权利金、约每股模型股份0.13美元，仅为敏感性参考，并非当前价值上限。若情景价值显著高于174.42美元转股价，需更新期权及封顶看涨期权处理。"
+    ]
+  ],
+  "capitalAllocationEvidence": {
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+    "locator": "Cash flow, buyback and dividend disclosures",
+    "note": "Repurchases are financing distributions, not operating costs or a second equity-value deduction. SBC retained economically; existing outstanding claims considered separately.",
+    "buybacksYTD": 664,
+    "dividendsYTD": 0
+  },
+  "financialHistory": {
+    "kind": "equity-return",
+    "years": [
+      {
+        "fiscalYear": 2019,
+        "revenue": 277.533,
+        "pretaxIncome": -106.93,
+        "bookCommonEquity": -97.0,
+        "netIncomeAttributableCommon": -106.569,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387922000044/hood-20211231.htm",
+        "capitalComparable": false,
+        "filedAt": "2022-02-24",
+        "accession": "0001783879-22-000044",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "locator": "Consolidated statements of operations: net revenues less all operating expenses; balance sheet common equity; net income attributable to Robinhood.",
+        "roeComparable": false,
+        "roeExclusionReason": "Pre-IPO preferred capital, IPO conversion and unusual IPO compensation distort common return on equity.",
+        "roeExclusionReasonZh": "上市前优先股资本、上市转换及异常上市薪酬使普通股权益回报率失真。"
+      },
+      {
+        "fiscalYear": 2020,
+        "revenue": 958.0,
+        "pretaxIncome": 13.0,
+        "bookCommonEquity": -55.0,
+        "netIncomeAttributableCommon": 7.0,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387923000045/hood-20221231.htm",
+        "capitalComparable": false,
+        "filedAt": "2023-02-27",
+        "accession": "0001783879-23-000045",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "locator": "Consolidated statements of operations: net revenues less all operating expenses; balance sheet common equity; net income attributable to Robinhood.",
+        "roeComparable": false,
+        "roeExclusionReason": "Pre-IPO preferred capital, IPO conversion and unusual IPO compensation distort common return on equity.",
+        "roeExclusionReasonZh": "上市前优先股资本、上市转换及异常上市薪酬使普通股权益回报率失真。"
+      },
+      {
+        "fiscalYear": 2021,
+        "revenue": 1815.0,
+        "pretaxIncome": -1641.0,
+        "bookCommonEquity": 7293.0,
+        "netIncomeAttributableCommon": -3687.0,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387924000054/hood-20231231.htm",
+        "capitalComparable": false,
+        "filedAt": "2024-02-27",
+        "accession": "0001783879-24-000054",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "locator": "Consolidated statements of operations: net revenues less all operating expenses; balance sheet common equity; net income attributable to Robinhood.",
+        "roeComparable": false,
+        "roeExclusionReason": "Pre-IPO preferred capital, IPO conversion and unusual IPO compensation distort common return on equity.",
+        "roeExclusionReasonZh": "上市前优先股资本、上市转换及异常上市薪酬使普通股权益回报率失真。"
+      },
+      {
+        "fiscalYear": 2022,
+        "revenue": 1358.0,
+        "pretaxIncome": -1011.0,
+        "bookCommonEquity": 6956.0,
+        "netIncomeAttributableCommon": -1028.0,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387925000049/hood-20241231.htm",
+        "capitalComparable": true,
+        "filedAt": "2025-02-18",
+        "accession": "0001783879-25-000049",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "locator": "Consolidated statements of operations: net revenues less all operating expenses; balance sheet common equity; net income attributable to Robinhood.",
+        "roeComparable": true
+      },
+      {
+        "fiscalYear": 2023,
+        "revenue": 1865.0,
+        "pretaxIncome": -536.0,
+        "bookCommonEquity": 6696.0,
+        "netIncomeAttributableCommon": -541.0,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+        "capitalComparable": true,
+        "filedAt": "2026-02-20",
+        "accession": "0001783879-26-000029",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "locator": "Consolidated statements of operations: net revenues less all operating expenses; balance sheet common equity; net income attributable to Robinhood.",
+        "roeComparable": true
+      },
+      {
+        "fiscalYear": 2024,
+        "revenue": 2951.0,
+        "pretaxIncome": 1054.0,
+        "bookCommonEquity": 7972.0,
+        "netIncomeAttributableCommon": 1411.0,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+        "capitalComparable": true,
+        "filedAt": "2026-02-20",
+        "accession": "0001783879-26-000029",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "locator": "Consolidated statements of operations: net revenues less all operating expenses; balance sheet common equity; net income attributable to Robinhood.",
+        "roeComparable": false,
+        "roeExclusionReason": "The 2024 net profit includes a $347m income-tax benefit, including a deferred-tax valuation-allowance release; this is not a sustainable tax rate.",
+        "roeExclusionReasonZh": "2024年净利润包含3.47亿美元所得税收益，其中包括递延税估值备抵转回，不能视为可持续税率。"
+      },
+      {
+        "fiscalYear": 2025,
+        "revenue": 4473.0,
+        "pretaxIncome": 2094.0,
+        "bookCommonEquity": 9140,
+        "netIncomeAttributableCommon": 1883.0,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+        "capitalComparable": true,
+        "filedAt": "2026-02-20",
+        "accession": "0001783879-26-000029",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "locator": "Consolidated statements of operations: net revenues less all operating expenses; balance sheet common equity; net income attributable to Robinhood.",
+        "roeComparable": true
+      }
+    ],
+    "note": "Use common return on equity, not industrial return on invested capital. The pre-IPO preferred shares and IPO conversion affect historical common equity. The 2024 tax benefit is not a sustainable earnings assumption."
+  },
+  "historicalShortfallReason": "Seven real annual observations (2019–2025) are available in filed statements. Earlier full-year comparable data are not disclosed in the reviewed public filings. Pre-2022 capital ratios are affected by preferred shares and the IPO; 2024 return on equity is affected by a large tax benefit.",
+  "historicalShortfallReasonZh": "已提交报表提供2019–2025年七个真实年度。所审阅公开文件未披露更早可比全年数据。2022年前资本比率受优先股和上市影响；2024年权益回报率受大额税收收益影响。"
+}

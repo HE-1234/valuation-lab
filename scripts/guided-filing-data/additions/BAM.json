@@ -1,0 +1,483 @@
+{
+  "ticker": "BAM",
+  "sector": "Alternative asset management",
+  "modelType": "equity-cash-flow",
+  "summary": "Fee-business owner earnings use full-manager economics and total issuer shares.",
+  "summaryZh": "资管业务采用归属于股东的费用收益及发行人的全部股数。",
+  "sourceFreshness": {
+    "cutoff": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001937926.json",
+    "checkedAt": "2026-10-21",
+    "latestAnnualFiledAt": "2026-03-02",
+    "latestInterimFiledAt": "2026-08-10",
+    "note": "Annual and interim SEC submissions checked; no later10-Q/10-K filed by cutoff."
+  },
+  "snapshots": {
+    "annual": {
+      "financialModel": {
+        "reportedRevenue": 4817,
+        "reportedOperatingIncome": 2888,
+        "reportedPretaxIncome": 2925,
+        "reportedNetIncomeAttributableCommon": 2485,
+        "modelRevenue": 5487,
+        "modelPretaxIncome": 3028,
+        "feeRelatedEarnings": 2995,
+        "netInvestmentAndInterestIncome": 33,
+        "cashTaxes": 377,
+        "distributableEarnings": 2695,
+        "sbcAddbackReversed": 44,
+        "modelAfterTaxEarnings": 2651,
+        "surplusCash": 0,
+        "modeledDebt": 0,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 1608.513922,
+        "unvestedAwards": 0,
+        "dilutionProxyShares": 16.3,
+        "modelShareCount": 1624.813922,
+        "startingRequiredEquity": 8118,
+        "reportedBookCommonEquity": 8118,
+        "reportedTotalDebt": 2940,
+        "modelRevenueLabel": "Attributable fee-business revenue",
+        "modelRevenueLabelZh": "应占费用业务收入",
+        "modelProfitLabel": "Common pretax fee-business earnings",
+        "modelProfitLabelZh": "普通股股东税前费用业务收益",
+        "note": "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+        "noteZh": "费用收入采用发行人已调节的非公认会计准则指标，包括权益法投资的应占费用收益。普通股税前收益=归属于BAM的费用相关收益+扣除利息后的投资及其他收益。减实际现金税后等于可分配收益减股权薪酬加回，保留薪酬成本。包含2025年重组后全部普通股；BN持有73%不再作为少数股东权益重复扣减。合并基金及优先少数股东收益已从应占收益中扣除。",
+        "excludedCashDebtNote": "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+        "excludedCashDebtNoteZh": "股权收益已包含融资成本及持股比例，不再加回全部投资或现金，亦不重复扣减合并基金债务及少数股东权益。发行人费用收益调节已剔除附带权益等投资收益；纳入收益的投资不再单独加值。",
+        "proxies": [
+          {
+            "field": "dilutionProxyShares",
+            "kind": "reportedEPSincremental-dilution-proxy",
+            "value": 16.3,
+            "note": "Annual weightedaverage incremental16.3m;Junequarter14.9m, not pointintimeoutstandingawardcount. Uses totaloptions+escrowcombined; no duplicate annualoptiondeduction. 0–2xproxy sensitivity about±1%equitypershare. BNoptionseparateissuerexcluded; restrictedsharesalreadyissued; escrowplans includecancellation."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "MD&A Fee Revenues/FRE/DE reconciliation; EPS and stockcompensationnotes; balance sheet totalissuedlesstreasury"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "2025reorganization and restated2023–2025 comparative statements"
+          }
+        ],
+        "ttmModelComponents": null,
+        "periodEnd": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+          "The annual 16.3 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+          "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+          "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+          "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+        ],
+        "cautionsZh": [
+          "分母包含重组后全部BAM已发行普通股，扣除库存股。Brookfield Corporation持有BAM股份，不构成再次扣除的少数股东权益。Brookfield Corporation期权属于另一发行人，不计入BAM股份。",
+          "年度摊薄每股收益所用的1630万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。",
+          "股东收益保留股权薪酬成本，并已反映应占持股比例及融资成本。合并基金资产、基金借款及少数股东权益不再重复加回或扣除。",
+          "预测假定每美元新增所需普通股资本支持3美元费用收入。永续期25%的回报率适用于新增边际股权资本，而非全部现有账面权益。永续期资本效率降低会提高所需利润留存，但不假定现有资本存量在未融资情况下突然增加。",
+          "费用收入与股东收益是经过调节的非公认会计准则业务指标。由于重组及合并披露的薪酬加回限制可比性，2022年前身年度仅供参考；2023–2025年股东收益可直接调节。"
+        ]
+      }
+    },
+    "ttm": {
+      "financialModel": {
+        "reportedRevenue": 5737,
+        "reportedOperatingIncome": 3532,
+        "reportedPretaxIncome": 3714,
+        "reportedNetIncomeAttributableCommon": 2805,
+        "modelRevenue": 5822,
+        "modelPretaxIncome": 3171,
+        "feeRelatedEarnings": 3201,
+        "netInvestmentAndInterestIncome": -30,
+        "cashTaxes": 390,
+        "distributableEarnings": 2837,
+        "sbcAddbackReversed": 56,
+        "modelAfterTaxEarnings": 2781,
+        "surplusCash": 0,
+        "modeledDebt": 0,
+        "otherAssets": 0,
+        "otherClaims": 0,
+        "commonShares": 1597.237018,
+        "unvestedAwards": 0,
+        "dilutionProxyShares": 14.9,
+        "modelShareCount": 1612.1370180000001,
+        "startingRequiredEquity": 7513,
+        "reportedBookCommonEquity": 7513,
+        "reportedTotalDebt": 4055,
+        "modelRevenueLabel": "Attributable fee-business revenue",
+        "modelRevenueLabelZh": "应占费用业务收入",
+        "modelProfitLabel": "Common pretax fee-business earnings",
+        "modelProfitLabelZh": "普通股股东税前费用业务收益",
+        "note": "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+        "noteZh": "费用收入采用发行人已调节的非公认会计准则指标，包括权益法投资的应占费用收益。普通股税前收益=归属于BAM的费用相关收益+扣除利息后的投资及其他收益。减实际现金税后等于可分配收益减股权薪酬加回，保留薪酬成本。包含2025年重组后全部普通股；BN持有73%不再作为少数股东权益重复扣减。合并基金及优先少数股东收益已从应占收益中扣除。",
+        "excludedCashDebtNote": "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+        "excludedCashDebtNoteZh": "股权收益已包含融资成本及持股比例，不再加回全部投资或现金，亦不重复扣减合并基金债务及少数股东权益。发行人费用收益调节已剔除附带权益等投资收益；纳入收益的投资不再单独加值。",
+        "proxies": [
+          {
+            "field": "dilutionProxyShares",
+            "kind": "reportedEPSincremental-dilution-proxy",
+            "value": 14.9,
+            "note": "Annual weightedaverage incremental16.3m;Junequarter14.9m, not pointintimeoutstandingawardcount. Uses totaloptions+escrowcombined; no duplicate annualoptiondeduction. 0–2xproxy sensitivity about±1%equitypershare. BNoptionseparateissuerexcluded; restrictedsharesalreadyissued; escrowplans includecancellation."
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+            "locator": "MD&A Fee Revenues/FRE/DE reconciliation; EPS and stockcompensationnotes; balance sheet totalissuedlesstreasury"
+          },
+          {
+            "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "2025reorganization and restated2023–2025 comparative statements"
+          }
+        ],
+        "ttmModelComponents": {
+          "annualFeeRevenue": 5487,
+          "ytdFeeRevenue": 2920,
+          "priorYtdFeeRevenue": 2585,
+          "annualFRE": 2995,
+          "ytdFRE": 1580,
+          "priorYtdFRE": 1374,
+          "annualInvestmentNetInterest": 33,
+          "ytdInvestmentNetInterest": -16,
+          "priorYtdInvestmentNetInterest": 47,
+          "annualDE": 2695,
+          "ytdDE": 1409,
+          "priorYtdDE": 1267,
+          "annualSBCAddback": 44,
+          "ytdSBCAddback": 37,
+          "priorYtdSBCAddback": 25
+        },
+        "periodEnd": "2026-06-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+        "version": "equity-method-2026-10-21",
+        "cautions": [
+          "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+          "The June-quarter 14.9 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+          "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+          "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+          "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+        ],
+        "cautionsZh": [
+          "分母包含重组后全部BAM已发行普通股，扣除库存股。Brookfield Corporation持有BAM股份，不构成再次扣除的少数股东权益。Brookfield Corporation期权属于另一发行人，不计入BAM股份。",
+          "六月季度摊薄每股收益所用的1490万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。",
+          "股东收益保留股权薪酬成本，并已反映应占持股比例及融资成本。合并基金资产、基金借款及少数股东权益不再重复加回或扣除。",
+          "预测假定每美元新增所需普通股资本支持3美元费用收入。永续期25%的回报率适用于新增边际股权资本，而非全部现有账面权益。永续期资本效率降低会提高所需利润留存，但不假定现有资本存量在未融资情况下突然增加。",
+          "费用收入与股东收益是经过调节的非公认会计准则业务指标。由于重组及合并披露的薪酬加回限制可比性，2022年前身年度仅供参考；2023–2025年股东收益可直接调节。"
+        ]
+      }
+    }
+  },
+  "financialModels": {
+    "annual": {
+      "reportedRevenue": 4817,
+      "reportedOperatingIncome": 2888,
+      "reportedPretaxIncome": 2925,
+      "reportedNetIncomeAttributableCommon": 2485,
+      "modelRevenue": 5487,
+      "modelPretaxIncome": 3028,
+      "feeRelatedEarnings": 2995,
+      "netInvestmentAndInterestIncome": 33,
+      "cashTaxes": 377,
+      "distributableEarnings": 2695,
+      "sbcAddbackReversed": 44,
+      "modelAfterTaxEarnings": 2651,
+      "surplusCash": 0,
+      "modeledDebt": 0,
+      "otherAssets": 0,
+      "otherClaims": 0,
+      "commonShares": 1608.513922,
+      "unvestedAwards": 0,
+      "dilutionProxyShares": 16.3,
+      "modelShareCount": 1624.813922,
+      "startingRequiredEquity": 8118,
+      "reportedBookCommonEquity": 8118,
+      "reportedTotalDebt": 2940,
+      "modelRevenueLabel": "Attributable fee-business revenue",
+      "modelRevenueLabelZh": "应占费用业务收入",
+      "modelProfitLabel": "Common pretax fee-business earnings",
+      "modelProfitLabelZh": "普通股股东税前费用业务收益",
+      "note": "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+      "noteZh": "费用收入采用发行人已调节的非公认会计准则指标，包括权益法投资的应占费用收益。普通股税前收益=归属于BAM的费用相关收益+扣除利息后的投资及其他收益。减实际现金税后等于可分配收益减股权薪酬加回，保留薪酬成本。包含2025年重组后全部普通股；BN持有73%不再作为少数股东权益重复扣减。合并基金及优先少数股东收益已从应占收益中扣除。",
+      "excludedCashDebtNote": "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+      "excludedCashDebtNoteZh": "股权收益已包含融资成本及持股比例，不再加回全部投资或现金，亦不重复扣减合并基金债务及少数股东权益。发行人费用收益调节已剔除附带权益等投资收益；纳入收益的投资不再单独加值。",
+      "proxies": [
+        {
+          "field": "dilutionProxyShares",
+          "kind": "reportedEPSincremental-dilution-proxy",
+          "value": 16.3,
+          "note": "Annual weightedaverage incremental16.3m;Junequarter14.9m, not pointintimeoutstandingawardcount. Uses totaloptions+escrowcombined; no duplicate annualoptiondeduction. 0–2xproxy sensitivity about±1%equitypershare. BNoptionseparateissuerexcluded; restrictedsharesalreadyissued; escrowplans includecancellation."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "MD&A Fee Revenues/FRE/DE reconciliation; EPS and stockcompensationnotes; balance sheet totalissuedlesstreasury"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "2025reorganization and restated2023–2025 comparative statements"
+        }
+      ],
+      "ttmModelComponents": null,
+      "periodEnd": "2025-12-31",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+      "version": "equity-method-2026-10-21",
+      "cautions": [
+        "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+        "The annual 16.3 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+        "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+        "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+        "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+      ],
+      "cautionsZh": [
+        "分母包含重组后全部BAM已发行普通股，扣除库存股。Brookfield Corporation持有BAM股份，不构成再次扣除的少数股东权益。Brookfield Corporation期权属于另一发行人，不计入BAM股份。",
+        "年度摊薄每股收益所用的1630万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。",
+        "股东收益保留股权薪酬成本，并已反映应占持股比例及融资成本。合并基金资产、基金借款及少数股东权益不再重复加回或扣除。",
+        "预测假定每美元新增所需普通股资本支持3美元费用收入。永续期25%的回报率适用于新增边际股权资本，而非全部现有账面权益。永续期资本效率降低会提高所需利润留存，但不假定现有资本存量在未融资情况下突然增加。",
+        "费用收入与股东收益是经过调节的非公认会计准则业务指标。由于重组及合并披露的薪酬加回限制可比性，2022年前身年度仅供参考；2023–2025年股东收益可直接调节。"
+      ]
+    },
+    "ttm": {
+      "reportedRevenue": 5737,
+      "reportedOperatingIncome": 3532,
+      "reportedPretaxIncome": 3714,
+      "reportedNetIncomeAttributableCommon": 2805,
+      "modelRevenue": 5822,
+      "modelPretaxIncome": 3171,
+      "feeRelatedEarnings": 3201,
+      "netInvestmentAndInterestIncome": -30,
+      "cashTaxes": 390,
+      "distributableEarnings": 2837,
+      "sbcAddbackReversed": 56,
+      "modelAfterTaxEarnings": 2781,
+      "surplusCash": 0,
+      "modeledDebt": 0,
+      "otherAssets": 0,
+      "otherClaims": 0,
+      "commonShares": 1597.237018,
+      "unvestedAwards": 0,
+      "dilutionProxyShares": 14.9,
+      "modelShareCount": 1612.1370180000001,
+      "startingRequiredEquity": 7513,
+      "reportedBookCommonEquity": 7513,
+      "reportedTotalDebt": 4055,
+      "modelRevenueLabel": "Attributable fee-business revenue",
+      "modelRevenueLabelZh": "应占费用业务收入",
+      "modelProfitLabel": "Common pretax fee-business earnings",
+      "modelProfitLabelZh": "普通股股东税前费用业务收益",
+      "note": "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+      "noteZh": "费用收入采用发行人已调节的非公认会计准则指标，包括权益法投资的应占费用收益。普通股税前收益=归属于BAM的费用相关收益+扣除利息后的投资及其他收益。减实际现金税后等于可分配收益减股权薪酬加回，保留薪酬成本。包含2025年重组后全部普通股；BN持有73%不再作为少数股东权益重复扣减。合并基金及优先少数股东收益已从应占收益中扣除。",
+      "excludedCashDebtNote": "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+      "excludedCashDebtNoteZh": "股权收益已包含融资成本及持股比例，不再加回全部投资或现金，亦不重复扣减合并基金债务及少数股东权益。发行人费用收益调节已剔除附带权益等投资收益；纳入收益的投资不再单独加值。",
+      "proxies": [
+        {
+          "field": "dilutionProxyShares",
+          "kind": "reportedEPSincremental-dilution-proxy",
+          "value": 14.9,
+          "note": "Annual weightedaverage incremental16.3m;Junequarter14.9m, not pointintimeoutstandingawardcount. Uses totaloptions+escrowcombined; no duplicate annualoptiondeduction. 0–2xproxy sensitivity about±1%equitypershare. BNoptionseparateissuerexcluded; restrictedsharesalreadyissued; escrowplans includecancellation."
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "MD&A Fee Revenues/FRE/DE reconciliation; EPS and stockcompensationnotes; balance sheet totalissuedlesstreasury"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "2025reorganization and restated2023–2025 comparative statements"
+        }
+      ],
+      "ttmModelComponents": {
+        "annualFeeRevenue": 5487,
+        "ytdFeeRevenue": 2920,
+        "priorYtdFeeRevenue": 2585,
+        "annualFRE": 2995,
+        "ytdFRE": 1580,
+        "priorYtdFRE": 1374,
+        "annualInvestmentNetInterest": 33,
+        "ytdInvestmentNetInterest": -16,
+        "priorYtdInvestmentNetInterest": 47,
+        "annualDE": 2695,
+        "ytdDE": 1409,
+        "priorYtdDE": 1267,
+        "annualSBCAddback": 44,
+        "ytdSBCAddback": 37,
+        "priorYtdSBCAddback": 25
+      },
+      "periodEnd": "2026-06-30",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+      "version": "equity-method-2026-10-21",
+      "cautions": [
+        "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+        "The June-quarter 14.9 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+        "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+        "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+        "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled."
+      ],
+      "cautionsZh": [
+        "分母包含重组后全部BAM已发行普通股，扣除库存股。Brookfield Corporation持有BAM股份，不构成再次扣除的少数股东权益。Brookfield Corporation期权属于另一发行人，不计入BAM股份。",
+        "六月季度摊薄每股收益所用的1490万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。",
+        "股东收益保留股权薪酬成本，并已反映应占持股比例及融资成本。合并基金资产、基金借款及少数股东权益不再重复加回或扣除。",
+        "预测假定每美元新增所需普通股资本支持3美元费用收入。永续期25%的回报率适用于新增边际股权资本，而非全部现有账面权益。永续期资本效率降低会提高所需利润留存，但不假定现有资本存量在未融资情况下突然增加。",
+        "费用收入与股东收益是经过调节的非公认会计准则业务指标。由于重组及合并披露的薪酬加回限制可比性，2022年前身年度仅供参考；2023–2025年股东收益可直接调节。"
+      ]
+    }
+  },
+  "assumptions": {
+    "growth": 0.12,
+    "targetMargin": 0.54,
+    "salesCapital": 3.0,
+    "terminalROIC": 0.25,
+    "wacc": 0.095,
+    "terminalGrowth": 0.03,
+    "taxRate": 0.2
+  },
+  "rationale": {
+    "growth": "Analyst scenario, not management guidance: fade elevated growth toward3% terminal growth.",
+    "growthZh": "分析假设而非管理层指引：较高增长率逐步降至3%的永续增长率。",
+    "targetMargin": "Pretax earnings attributable to common owners; recurring SBC stays an expense.",
+    "targetMarginZh": "普通股股东应占税前收益率；持续性股权薪酬保留为费用。",
+    "salesCapital": "BAM uses3.0 fee revenue per dollar of incremental common equity, an explicit asset-light fee-business scenario; historical investment balances are not a marginal reinvestment forecast.",
+    "salesCapitalZh": "BAM假设每增加一美元普通股资本支持3美元费用收入；这是轻资产业务的显式假设，历史投资余额并非边际再投资预测。",
+    "wacc": "This control is cost of equity, not WACC; no enterprise-value bridge.",
+    "waccZh": "该参数表示股权成本，并非加权平均资本成本；不使用企业价值桥接。",
+    "terminalROIC": "Terminal return on required common equity governs sustainable earnings retention.",
+    "terminalROICZh": "永续期所需普通股资本回报率决定可持续的利润留存。"
+  },
+  "localizationPairs": [
+    [
+      "Attributable fee-business revenue",
+      "应占费用业务收入"
+    ],
+    [
+      "Common pretax fee-business earnings",
+      "普通股股东税前费用业务收益"
+    ],
+    [
+      "The model uses the issuer-reconciled fee revenue, including its share of equity-method fee businesses. Common pretax earnings equal fee-related earnings attributable to BAM plus investment and other income net of interest. Subtracting cash taxes gives distributable earnings less the stock-compensation addback. All post-reorganization common shares are included; BN ownership and minority interests are not deducted again.",
+      "费用收入采用发行人已调节的非公认会计准则指标，包括权益法投资的应占费用收益。普通股税前收益=归属于BAM的费用相关收益+扣除利息后的投资及其他收益。减实际现金税后等于可分配收益减股权薪酬加回，保留薪酬成本。包含2025年重组后全部普通股；BN持有73%不再作为少数股东权益重复扣减。合并基金及优先少数股东收益已从应占收益中扣除。"
+    ],
+    [
+      "Owner earnings already include financing costs and proportionate ownership. The model does not add all investments or cash, or subtract consolidated-fund debt and minority interests a second time. Investments whose earnings are included receive no separate asset-value addback.",
+      "股权收益已包含融资成本及持股比例，不再加回全部投资或现金，亦不重复扣减合并基金债务及少数股东权益。发行人费用收益调节已剔除附带权益等投资收益；纳入收益的投资不再单独加值。"
+    ],
+    [
+      "Four real full annual observations (2022–2025) are retained for the full asset-management business. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit owner-earnings comparability. The 2023–2025 owner-earnings series is directly reconciled. Earlier listed-shell or Brookfield Corporation figures are not spliced into this business.",
+      "保留完整资管业务2022–2025年四个真实全年。2022年前身年度仅供参考，因重组及合并披露薪酬加回限制股东收益可比性；2023–2025年股东收益可直接调节。不拼接更早上市壳公司或Brookfield Corporation数据。"
+    ],
+    [
+      "The denominator includes all outstanding BAM common shares after the reorganization, excluding treasury shares. Brookfield Corporation’s ownership of BAM is not another minority-interest deduction. Options on Brookfield Corporation are a different issuer’s shares and are not added to BAM.",
+      "分母包含重组后全部BAM已发行普通股，扣除库存股。Brookfield Corporation持有BAM股份，不构成再次扣除的少数股东权益。Brookfield Corporation期权属于另一发行人，不计入BAM股份。"
+    ],
+    [
+      "The annual 16.3 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+      "年度摊薄每股收益所用的1630万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。"
+    ],
+    [
+      "Owner earnings retain stock-compensation costs and already reflect attributable ownership and financing costs. Consolidated fund assets, fund borrowings and minority interests are not added or deducted a second time.",
+      "股东收益保留股权薪酬成本，并已反映应占持股比例及融资成本。合并基金资产、基金借款及少数股东权益不再重复加回或扣除。"
+    ],
+    [
+      "The forecast assumes that each dollar of new required common equity supports $3 of fee revenue. The terminal 25% return applies to new incremental equity, not the entire existing book-equity balance. This lower terminal capital efficiency raises required retention; it does not assume an unfunded jump in the existing capital stock.",
+      "预测假定每美元新增所需普通股资本支持3美元费用收入。永续期25%的回报率适用于新增边际股权资本，而非全部现有账面权益。永续期资本效率降低会提高所需利润留存，但不假定现有资本存量在未融资情况下突然增加。"
+    ],
+    [
+      "Fee revenue and owner earnings are reconciled non-GAAP business measures. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit comparability; the 2023–2025 owner-earnings series is directly reconciled.",
+      "费用收入与股东收益是经过调节的非公认会计准则业务指标。由于重组及合并披露的薪酬加回限制可比性，2022年前身年度仅供参考；2023–2025年股东收益可直接调节。"
+    ],
+    [
+      "The June-quarter 14.9 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
+      "六月季度摊薄每股收益所用的1490万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。"
+    ]
+  ],
+  "capitalAllocationEvidence": {
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+    "locator": "Cash flow, buyback and dividend disclosures",
+    "note": "Repurchases are financing distributions, not operating costs or a second equity-value deduction. SBC retained economically; existing outstanding claims considered separately.",
+    "buybacksYTD": 576,
+    "dividendsYTD": 1611
+  },
+  "financialHistory": {
+    "kind": "fee-business-equity",
+    "years": [
+      {
+        "fiscalYear": 2022,
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filedAt": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "revenue": 4048,
+        "pretaxIncome": null,
+        "feeRelatedEarnings": 2108,
+        "cashTaxes": 98,
+        "netIncomeAttributableCommon": null,
+        "bookCommonEquity": 9508,
+        "capitalComparable": false,
+        "roeComparable": false,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "MD&A asset-management-business fee table, 2022 column: fee revenue4048, FRE2108, combined compensation/other-income addback86, cash taxes98, DE2096. The combined addback is not split into current-model owner pretax profit.",
+        "note": "2022 is a genuine predecessor year, but the capital reorganization and bundled compensation/other-income addback prevent an exact comparable owner-earnings reconstruction. Fee-revenue history remains available.",
+        "noteZh": "2022年为真实前身业务年度，但资本重组及合并披露的薪酬/其他收益加回，妨碍精确重建可比股东收益。费用收入历史仍可使用。"
+      },
+      {
+        "fiscalYear": 2023,
+        "revenue": 4381,
+        "pretaxIncome": 2401,
+        "feeRelatedEarnings": 2241,
+        "cashTaxes": 196,
+        "netIncomeAttributableCommon": 2205,
+        "bookCommonEquity": 9126,
+        "capitalComparable": true,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "locator": "MD&A Fee Revenues / Fee-Related Earnings / Distributable Earnings reconciliation, 2023 column. Pretax owner earnings = FRE + investment and other income net of interest; after-tax owner earnings = DE minus stock-compensation addback. Common equity from the consolidated equity statement.",
+        "filedAt": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "roeComparable": true
+      },
+      {
+        "fiscalYear": 2024,
+        "revenue": 4706,
+        "pretaxIncome": 2626,
+        "feeRelatedEarnings": 2456,
+        "cashTaxes": 301,
+        "netIncomeAttributableCommon": 2325,
+        "bookCommonEquity": 8752,
+        "capitalComparable": true,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "locator": "MD&A Fee Revenues / Fee-Related Earnings / Distributable Earnings reconciliation, 2024 column. Pretax owner earnings = FRE + investment and other income net of interest; after-tax owner earnings = DE minus stock-compensation addback. Common equity from the consolidated equity statement.",
+        "filedAt": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "roeComparable": true
+      },
+      {
+        "fiscalYear": 2025,
+        "revenue": 5487,
+        "pretaxIncome": 3028,
+        "feeRelatedEarnings": 2995,
+        "cashTaxes": 377,
+        "netIncomeAttributableCommon": 2651,
+        "bookCommonEquity": 8118,
+        "capitalComparable": true,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "locator": "MD&A Fee Revenues / Fee-Related Earnings / Distributable Earnings reconciliation, 2025 column. Pretax owner earnings = FRE + investment and other income net of interest; after-tax owner earnings = DE minus stock-compensation addback. Common equity from the consolidated equity statement.",
+        "filedAt": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "roeComparable": true
+      }
+    ],
+    "note": "Fee revenue and attributable fee earnings are reconciled non-GAAP owner-business metrics, not GAAP revenue or industrial EBIT. Three owner-earnings years are directly comparable, with a fourth real predecessor fee-revenue observation retained as context."
+  },
+  "historicalShortfallReason": "Four real full annual observations (2022–2025) are retained for the full asset-management business. The 2022 predecessor year is contextual because the reorganization and bundled compensation addback limit owner-earnings comparability. The 2023–2025 owner-earnings series is directly reconciled. Earlier listed-shell or Brookfield Corporation figures are not spliced into this business.",
+  "historicalShortfallReasonZh": "保留完整资管业务2022–2025年四个真实全年。2022年前身年度仅供参考，因重组及合并披露薪酬加回限制股东收益可比性；2023–2025年股东收益可直接调节。不拼接更早上市壳公司或Brookfield Corporation数据。"
+}

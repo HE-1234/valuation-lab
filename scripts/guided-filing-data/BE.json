@@ -1,0 +1,458 @@
+{
+  "ticker": "BE",
+  "name": "Bloom Energy Corporation",
+  "cik": "0001664703",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "10-K",
+      "accession": "0001628280-26-006516",
+      "filedAt": "2026-02-09",
+      "acceptedAt": "2026-02-10T03:16:15.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+      "carriedFrom": {},
+      "revenue": 2023.994,
+      "operatingIncome": 72.802,
+      "cashAndEquivalents": 2454.108,
+      "longTermInvestments": 10.037,
+      "debtCurrent": 56.831,
+      "debtNoncurrent": 2810.034,
+      "operatingLeaseLiabilities": 128.935,
+      "noncontrollingInterest": 24.322,
+      "sharesOutstanding": 280.045459,
+      "unvestedRSUs": 12.292948,
+      "shortTermInvestments": 0,
+      "preferredEquity": 0,
+      "sharesDate": "2025-12-31",
+      "options": {
+        "count": 5.741283,
+        "weightedExercisePrice": 15.92,
+        "weightedRemainingYears": 4.5,
+        "aggregateIntrinsicValue": 406.957
+      },
+      "ttmComponents": null,
+      "convertibles": [
+        {
+          "name": "0% notes due November 2030",
+          "principal": 2500,
+          "carrying": 2442.091,
+          "fairValue": 2140.536,
+          "conversionPrice": 194.97,
+          "maturity": "2030-11-15"
+        },
+        {
+          "name": "3% Green notes due June 2029",
+          "principal": 75.125,
+          "carrying": 73.473,
+          "fairValue": 313.74,
+          "conversionPrice": 20.84,
+          "maturity": "2029-06-01"
+        },
+        {
+          "name": "3% Green notes due June 2028",
+          "principal": 99.655,
+          "carrying": 98.162,
+          "fairValue": 456.764,
+          "conversionPrice": 18.85,
+          "maturity": "2028-06-01"
+        }
+      ],
+      "otherClaims": [
+        {
+          "name": "Embedded EPP derivative liability",
+          "value": 5.607,
+          "basis": "Note 5 fair-value liability; cash-flow exposure to existing electricity escalation protection contracts. Separate once from debt.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
+        },
+        {
+          "name": "Remaining unfunded Fund JV capital commitments",
+          "value": 21.7,
+          "basis": "Note 7 maximum exposure to loss: remaining unfunded capital commitments; modeled conservatively without credit for future investment value.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
+        },
+        {
+          "name": "Purchased 2028 capped-call asset",
+          "value": null,
+          "basis": "Note 8:33.549508 m shares, strike 18.85, cap 26.46, expiryJune 1,2028; separate asset allocated at model-price intrinsic payoff.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
+        },
+        {
+          "name": "Promised Oracle customer warrant",
+          "value": 55.9,
+          "basis": "Note 3 reported fair value of promised 3.531073 m-share warrant, strike 113.28,0.5 year term; model uses option value at model share price instead of this market-dependent mark.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
+        }
+      ],
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Consolidated statements of operations, Total revenue INCLUDING electricity lease revenue; USD thousands /1000. TTM=2023.994+3052.256−1246.311."
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Consolidated statements of operations, Income (loss) from operations; includes stock compensation and customer share consideration, excludes debt inducement and equity-method losses below EBIT. TTM=72.802+479.876−(−14.727)."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Consolidated balance sheets, Cash and cash equivalents, excludes restricted cash 27.472 m annual/21.444 m September."
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 4 Cash, Cash Equivalents and Restricted Cash and full balance sheet: no separate short-term investment account; money market funds already in cash and restricted cash."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Balance sheets Investments in unconsolidated affiliates 10.037 m/28.236 m; equity-method earnings/losses below EBIT. Customer consideration 306.500 m, contract assets and prepaid assets are operating assets, not additional surplus investments."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Balance sheets current recourse/nonrecourse debt + financing obligations + Note 9 current finance leases. Annual 4.153+51.308+1.370=56.831 m; September 2.950+42.783+1.387=47.120 m. Raw book financing obligations retained; model separately substitutes economic contractual principal."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Balance sheets recourse/nonrecourse debt + financing obligations + Note 9 noncurrent finance leases. Annual 2613.726+192.460+3.848=2810.034 m; September 2473.499+142.212+3.232=2618.943 m."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Balance sheets current plus noncurrent operating lease liabilities; annual 22.000+106.935=128.935; September 24.022+96.509=120.531 m. Excluded from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Consolidated balance sheets Noncontrolling interest,24.322/30.233 m; consolidated Korean JV minority ownership retained as book-value allocation proxy."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 6 Stockholders equity:20 m preferred shares authorized, none issued or outstanding."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Consolidated balance sheets legal common issued and outstanding 280,045,459/295,537,217. ClassB zero at annual and eliminated 2026. September includes settled Oraclewarrant 2,154,231 shares and converted notes 7,796,169 shares; neither added again."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 10 Stock Awards, Unvested Balance, includes RSUs and PSUs including executive awards. Actual unvested 12,292,948/9,319,315 shares; assume reported awards fully vest, unused plan capacity excluded."
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "convertibles.0.principal": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, principal. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.0.carrying": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, carrying. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.0.fairValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, fairValue. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.0.conversionPrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, conversionPrice. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.principal": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, principal. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.carrying": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, carrying. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.fairValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, fairValue. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.conversionPrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, conversionPrice. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.2.principal": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2028, principal. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.2.carrying": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2028, carrying. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.2.fairValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2028, fairValue. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.2.conversionPrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2028, conversionPrice. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "otherClaims.0": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 5 fair-value liability; cash-flow exposure to existing electricity escalation protection contracts. Separate once from debt."
+        },
+        "otherClaims.1": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 7 maximum exposure to loss: remaining unfunded capital commitments; modeled conservatively without credit for future investment value."
+        },
+        "otherClaims.2": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8:33.549508 m shares, strike 18.85, cap 26.46, expiryJune 1,2028; separate asset allocated at model-price intrinsic payoff."
+        },
+        "otherClaims.3": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 3 reported fair value of promised 3.531073 m-share warrant, strike 113.28,0.5 year term; model uses option value at model share price instead of this market-dependent mark."
+        }
+      },
+      "note": "Reported GAAP flows and legal shares are preserved. Model substitutes contractual financing principal for noncash sale-leaseback residuals, allocates each convertible series independently, values existing employee options and the annual Oracle warrant once, and adds capped-call payoff only as a separate asset. Restricted cash and operating customer-consideration assets are excluded from surplus cash."
+    },
+    "ttm": {
+      "periodEnd": "2026-09-30",
+      "label": "TTM through 2026-09-30",
+      "form": "10-Q",
+      "accession": "0001628280-26-066931",
+      "filedAt": "2026-10-22",
+      "acceptedAt": "2026-10-23T01:25:55.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+      "carriedFrom": {
+        "otherClaims.2": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "why": "September Note8 refers back to the annual capped-call agreement without a fresh coverage rollforward or a disclosed termination. Continuing original33.549508m coverage is an explicit model assumption, tested by omitting the hedge."
+        }
+      },
+      "revenue": 3829.939,
+      "operatingIncome": 567.405,
+      "cashAndEquivalents": 2486.702,
+      "longTermInvestments": 28.236,
+      "debtCurrent": 47.12,
+      "debtNoncurrent": 2618.943,
+      "operatingLeaseLiabilities": 120.531,
+      "noncontrollingInterest": 30.233,
+      "sharesOutstanding": 295.537217,
+      "unvestedRSUs": 9.319315,
+      "shortTermInvestments": 0,
+      "preferredEquity": 0,
+      "sharesDate": "2026-09-30",
+      "options": {
+        "count": 4.979585,
+        "weightedExercisePrice": 15.44,
+        "weightedRemainingYears": 4.2,
+        "aggregateIntrinsicValue": 1286.171
+      },
+      "ttmComponents": {
+        "annualRevenue": 2023.994,
+        "ytdRevenue": 3052.256,
+        "priorYtdRevenue": 1246.311,
+        "annualOperatingIncome": 72.802,
+        "ytdOperatingIncome": 479.876,
+        "priorYtdOperatingIncome": -14.727,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-09-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-09-30"
+      },
+      "convertibles": [
+        {
+          "name": "0% notes due November 2030",
+          "principal": 2500,
+          "carrying": 2450.891,
+          "fairValue": 4155.551,
+          "conversionPrice": 194.97,
+          "maturity": "2030-11-15"
+        },
+        {
+          "name": "3% Green notes due June 2029",
+          "principal": 22.771,
+          "carrying": 22.608,
+          "fairValue": 304.704,
+          "conversionPrice": 20.84,
+          "maturity": "2029-06-01"
+        }
+      ],
+      "otherClaims": [
+        {
+          "name": "Embedded EPP derivative liability",
+          "value": 4.889,
+          "basis": "Note 5 fair-value liability; cash-flow exposure to existing electricity escalation protection contracts. Separate once from debt.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm"
+        },
+        {
+          "name": "Remaining unfunded Fund JV capital commitments",
+          "value": 14.5,
+          "basis": "Note 7 maximum exposure to loss: remaining unfunded capital commitments; modeled conservatively without credit for future investment value.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm"
+        },
+        {
+          "name": "Purchased 2028 capped-call asset",
+          "value": null,
+          "basis": "Note 8:33.549508 m shares, strike 18.85, cap 26.46, expiryJune 1,2028; separate asset allocated at model-price intrinsic payoff.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm"
+        }
+      ],
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated statements of operations, Total revenue INCLUDING electricity lease revenue; USD thousands /1000. TTM=2023.994+3052.256−1246.311."
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated statements of operations, Income (loss) from operations; includes stock compensation and customer share consideration, excludes debt inducement and equity-method losses below EBIT. TTM=72.802+479.876−(−14.727)."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated balance sheets, Cash and cash equivalents, excludes restricted cash 27.472 m annual/21.444 m September."
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 4 Cash, Cash Equivalents and Restricted Cash and full balance sheet: no separate short-term investment account; money market funds already in cash and restricted cash."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Balance sheets Investments in unconsolidated affiliates 10.037 m/28.236 m; equity-method earnings/losses below EBIT. Customer consideration 306.500 m, contract assets and prepaid assets are operating assets, not additional surplus investments."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Balance sheets current recourse/nonrecourse debt + financing obligations + Note 9 current finance leases. Annual 4.153+51.308+1.370=56.831 m; September 2.950+42.783+1.387=47.120 m. Raw book financing obligations retained; model separately substitutes economic contractual principal."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Balance sheets recourse/nonrecourse debt + financing obligations + Note 9 noncurrent finance leases. Annual 2613.726+192.460+3.848=2810.034 m; September 2473.499+142.212+3.232=2618.943 m."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Balance sheets current plus noncurrent operating lease liabilities; annual 22.000+106.935=128.935; September 24.022+96.509=120.531 m. Excluded from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated balance sheets Noncontrolling interest,24.322/30.233 m; consolidated Korean JV minority ownership retained as book-value allocation proxy."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 6 Stockholders equity:20 m preferred shares authorized, none issued or outstanding."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated balance sheets legal common issued and outstanding 280,045,459/295,537,217. ClassB zero at annual and eliminated 2026. September includes settled Oraclewarrant 2,154,231 shares and converted notes 7,796,169 shares; neither added again."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 10 Stock Awards, Unvested Balance, includes RSUs and PSUs including executive awards. Actual unvested 12,292,948/9,319,315 shares; assume reported awards fully vest, unused plan capacity excluded."
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 10 Stock Option and Stock Award Activity, outstanding options rollforward at period end; count and intrinsic in millions, strike and life unchanged. Rollforward total controls instead of inconsistent plan narrative."
+        },
+        "convertibles.0.principal": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, principal. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.0.carrying": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, carrying. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.0.fairValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, fairValue. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.0.conversionPrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 0% notes due November 2030, conversionPrice. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.principal": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, principal. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.carrying": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, carrying. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.fairValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, fairValue. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "convertibles.1.conversionPrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8 Outstanding Loans and Security Agreements principal/netcarrying table and conversion terms; Note 5 fairvalues; 3% Green notes due June 2029, conversionPrice. Standard conversion rate 5.1290/47.9795/53.0427 shares per$1000; make-whole incremental shares are contingent."
+        },
+        "otherClaims.0": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 5 fair-value liability; cash-flow exposure to existing electricity escalation protection contracts. Separate once from debt."
+        },
+        "otherClaims.1": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 7 maximum exposure to loss: remaining unfunded capital commitments; modeled conservatively without credit for future investment value."
+        },
+        "otherClaims.2": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Note 8:33.549508 m shares, strike 18.85, cap 26.46, expiryJune 1,2028; separate asset allocated at model-price intrinsic payoff."
+        },
+        "ttmComponents.annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Consolidated statements of operations, matching annual 2025 or nine-month 2026/2025 column; USD thousands /1000."
+        },
+        "ttmComponents.ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated statements of operations, matching annual 2025 or nine-month 2026/2025 column; USD thousands /1000."
+        },
+        "ttmComponents.priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated statements of operations, matching annual 2025 or nine-month 2026/2025 column; USD thousands /1000."
+        },
+        "ttmComponents.annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Consolidated statements of operations, matching annual 2025 or nine-month 2026/2025 column; USD thousands /1000."
+        },
+        "ttmComponents.ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated statements of operations, matching annual 2025 or nine-month 2026/2025 column; USD thousands /1000."
+        },
+        "ttmComponents.priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "locator": "Consolidated statements of operations, matching annual 2025 or nine-month 2026/2025 column; USD thousands /1000."
+        }
+      },
+      "note": "Reported GAAP flows and legal shares are preserved. Model substitutes contractual financing principal for noncash sale-leaseback residuals, allocates each convertible series independently, values existing employee options and the annual Oracle warrant once, and adds capped-call payoff only as a separate asset. Restricted cash and operating customer-consideration assets are excluded from surplus cash."
+    }
+  },
+  "latestFilingCheck": {
+    "cutoff": "2026-10-23",
+    "checkedAt": "2026-10-23",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001664703.json",
+    "latestPeriodicAccession": "0001628280-26-066931",
+    "latestAnnualAccession": "0001628280-26-006516"
+  },
+  "notes": [
+    "Reported GAAP flows and legal shares are preserved. Model substitutes contractual financing principal for noncash sale-leaseback residuals, allocates each convertible series independently, values existing employee options and the annual Oracle warrant once, and adds capped-call payoff only as a separate asset. Restricted cash and operating customer-consideration assets are excluded from surplus cash."
+  ],
+  "localizationPairs": {
+    "Reported GAAP flows and legal shares are preserved. Model substitutes contractual financing principal for noncash sale-leaseback residuals, allocates each convertible series independently, values existing employee options and the annual Oracle warrant once, and adds capped-call payoff only as a separate asset. Restricted cash and operating customer-consideration assets are excluded from surplus cash.": "保留申报GAAP流量与法定股数。模型以合同融资本金替代非现金售后回租残值，分别分配各系列可转债，并仅计算一次员工期权与年度Oracle认股权证；封顶看涨收益作为独立资产加入。受限现金及经营性客户对价资产不计入闲置现金。"
+  }
+}

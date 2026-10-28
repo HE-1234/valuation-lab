@@ -1,0 +1,315 @@
+{
+ "ticker": "UBER",
+ "name": "Uber Technologies, Inc.",
+ "cik": "0001543151",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "ordinary-common",
+ "adrRatio": 1,
+ "listedUnit": "common share",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2025-12-31",
+   "label": "FY2025",
+   "form": "10-K",
+   "accession": "0001543151-26-000015",
+   "filedAt": "2026-02-13",
+   "acceptedAt": "2026-02-14T02:08:17.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+   "revenue": 52017,
+   "operatingIncome": 5565,
+   "ttmComponents": null,
+   "cashAndEquivalents": 7105,
+   "shortTermInvestments": 528,
+   "longTermInvestments": 9465,
+   "debtCurrent": 138,
+   "debtNoncurrent": 10605,
+   "operatingLeaseLiabilities": 1559,
+   "noncontrollingInterest": 1042,
+   "preferredEquity": 0,
+   "sharesOutstanding": 2067.905,
+   "sharesDate": "2025-12-31",
+   "unvestedRSUs": 57.654,
+   "options": {
+    "count": 5.868,
+    "weightedExercisePrice": 48.72,
+    "weightedRemainingYears": 4.79,
+    "aggregateIntrinsicValue": 194
+   },
+   "convertibles": [
+    {
+     "name": "0.875% Convertible Senior Notes due 2028 (convert into Uber common stock)",
+     "principal": 1725,
+     "carrying": 1725,
+     "fairValue": 2200,
+     "conversionPrice": 72.54,
+     "maturity": "2028-12-01"
+    },
+    {
+     "name": "0.00% Exchangeable Senior Notes due 2028 (exchangeable into Aurora Innovation Class A shares, not Uber shares)",
+     "principal": 1150,
+     "carrying": 1125,
+     "fairValue": 1125,
+     "conversionPrice": 8.5,
+     "maturity": "2028-05-15"
+    }
+   ],
+   "otherClaims": [],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Statements of Operations, Revenue, year ended Dec 31 2025 ($52,017m)",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Statements of Operations, Income from operations, year ended Dec 31 2025 ($5,565m)",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets, Cash and cash equivalents, Dec 31 2025 ($7,105m); excludes restricted cash 631 current + 1,911 non-current",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets, Short-term investments, Dec 31 2025 ($528m)",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets: Investments $9,178m (non-marketable equity incl. Didi $3,011m + other $1,455m; marketable equity Grab $2,674m, Aurora $1,252m, other $667m; note receivable $119m, per the Dec 31 2025 column of the Investments table in the Jun 30 2026 10-Q Note 2) + Equity method investments $287m (Note 4). Excludes Restricted investments $8,874m (insurance collateral)."
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 6 Leases, finance lease table: Other current liabilities (finance leases) $138m at Dec 31 2025. No short-term debt line at Dec 31 2025 (current portion of long-term debt = 0, Note 8)."
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets, Long-term debt, net of current portion $10,521m (Note 8; incl. 2028 Convertible Notes 1,725 and 2028 Exchangeable Notes at fair value 1,125) + Note 6 finance lease liabilities in Other long-term liabilities $84m = $10,605m"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets / Note 6 Leases: operating lease liabilities current $169m + non-current $1,390m = $1,559m"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets: Redeemable non-controlling interests $165m + Non-redeemable non-controlling interests $877m = $1,042m"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets: no Uber-level preferred stock (0). Freight Holding preferred stock sits inside non-controlling interests (Note 16)."
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Consolidated Balance Sheets: 2,067,905 thousand shares issued and outstanding at Dec 31 2025. (10-K cover: 2,058,115,983 as of Feb 10 2026.)"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 10 Stockholders' Equity, RSU Activity: Unvested and outstanding as of Dec 31 2025 = 57,654 thousand"
+    },
+    "options.count": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 10 Stock Option and SAR Activity: options outstanding Dec 31 2025 = 5,868 thousand (plus 16 thousand SARs)"
+    },
+    "options.weightedExercisePrice": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 10 Stock Option and SAR Activity: $48.72"
+    },
+    "options.weightedRemainingYears": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 10 Stock Option and SAR Activity: 4.79 years"
+    },
+    "options.aggregateIntrinsicValue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 10 Stock Option and SAR Activity: aggregate intrinsic value $194m"
+    },
+    "convertibles[0]": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 8 Long-Term Debt: 2028 Convertible Notes $1,725m, 0.875%, matures Dec 1 2028; fair value $2.2bn; initial conversion rate 13.7848 shares per $1,000 (~$72.54). Carrying value is NOT separately disclosed per note (only total unamortized discount of $79m across all notes), so carrying is set equal to principal."
+    },
+    "convertibles[1]": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "Note 8 Long-Term Debt: 2028 Exchangeable Senior Notes, $1.15bn principal issued May 2025, matures May 15 2028; elected fair value option, balance $1,125m (Note 2 Level 2); exchange rate 117.6471 Aurora shares per $1,000 (~$8.50 per Aurora share)."
+    }
+   },
+   "note": "Finance lease liabilities at Dec 31 2025 ($222m: current 138 + non-current 84) are included in debt because they are disclosed (Note 6). Debt excluding finance leases = $10,521m (carrying; principal $10,600m; fair value $11.1bn). Noncontrolling interest = redeemable 165 + non-redeemable 877. Long-term investments = Investments 9,178 + equity-method 287; restricted investments ($8,874m) and restricted cash ($2,542m) are insurance collateral and excluded. 2.321m weighted-average \"other contingently issuable shares\" appear in diluted EPS (nature not described in the filing). Equity awards: 16 thousand SARs not modeled."
+  },
+  "ttm": {
+   "periodEnd": "2026-06-30",
+   "label": "TTM through 2026-06-30",
+   "form": "10-Q",
+   "accession": "0001543151-26-000032",
+   "filedAt": "2026-08-05",
+   "acceptedAt": "2026-08-06T00:07:13.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+   "revenue": 55227,
+   "operatingIncome": 6700,
+   "ttmComponents": {
+    "annualRevenue": 52017,
+    "ytdRevenue": 27394,
+    "priorYtdRevenue": 24184,
+    "annualOperatingIncome": 5565,
+    "ytdOperatingIncome": 3813,
+    "priorYtdOperatingIncome": 2678,
+    "ytdStart": "2026-01-01",
+    "ytdEnd": "2026-06-30",
+    "priorYtdStart": "2025-01-01",
+    "priorYtdEnd": "2025-06-30"
+   },
+   "cashAndEquivalents": 4870,
+   "shortTermInvestments": 521,
+   "longTermInvestments": 12532,
+   "debtCurrent": 1997,
+   "debtNoncurrent": 10726,
+   "operatingLeaseLiabilities": 2008,
+   "noncontrollingInterest": 1083,
+   "preferredEquity": 0,
+   "sharesOutstanding": 2039.994,
+   "sharesDate": "2026-06-30",
+   "unvestedRSUs": 71.804,
+   "options": {
+    "count": 6.099,
+    "weightedExercisePrice": 51.44,
+    "weightedRemainingYears": 4.56,
+    "aggregateIntrinsicValue": 132
+   },
+   "convertibles": [
+    {
+     "name": "0.875% Convertible Senior Notes due 2028 (convert into Uber common stock)",
+     "principal": 1725,
+     "carrying": 1725,
+     "fairValue": 2100,
+     "conversionPrice": 72.54,
+     "maturity": "2028-12-01"
+    },
+    {
+     "name": "0.00% Exchangeable Senior Notes due 2028 (exchangeable into Aurora Innovation Class A shares, not Uber shares)",
+     "principal": 1150,
+     "carrying": 1324,
+     "fairValue": 1324,
+     "conversionPrice": 8.5,
+     "maturity": "2028-05-15"
+    }
+   ],
+   "otherClaims": [],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "TTM = FY2025 10-K revenue 52,017 + six months ended Jun 30 2026 27,394 - six months ended Jun 30 2025 24,184 (Condensed Consolidated Statements of Operations)",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "TTM = FY2025 income from operations 5,565 + six months 2026 3,813 - six months 2025 2,678 (Condensed Consolidated Statements of Operations)",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "ttmComponents.annualRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "10-K Consolidated Statements of Operations, FY2025 Revenue"
+    },
+    "ttmComponents.ytdRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "10-Q Statements of Operations, Six Months Ended June 30 2026, Revenue $27,394m"
+    },
+    "ttmComponents.priorYtdRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "10-Q Statements of Operations, Six Months Ended June 30 2025, Revenue $24,184m"
+    },
+    "ttmComponents.annualOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "locator": "10-K Consolidated Statements of Operations, FY2025 Income from operations"
+    },
+    "ttmComponents.ytdOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "10-Q Statements of Operations, Six Months Ended June 30 2026, Income from operations $3,813m"
+    },
+    "ttmComponents.priorYtdOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "10-Q Statements of Operations, Six Months Ended June 30 2025, Income from operations $2,678m"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Cash and cash equivalents, Jun 30 2026 ($4,870m); excludes restricted cash 661 current + 1,646 non-current",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Short-term investments, Jun 30 2026 ($521m)",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Balance Sheet: Investments $8,759m (Note 2 Investments table: non-marketable Didi 1,900 + other 2,263; marketable Grab 2,020, Aurora 1,763, other 813) + Equity method investments $3,773m (Note 3: Delivery Hero 3,502, Careem Technologies 147, other 124) = $12,532m. Excludes restricted investments $9,486m (insurance collateral) and Delivery Hero total return swaps $1,504m (in other non-current assets, Note 2)."
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Short-term debt, Jun 30 2026 ($1,997m; 2026 Term Loan $2.0bn net of discount, due Dec 2026, Note 5)"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Long-term debt, net of current portion, Jun 30 2026 ($10,726m); Note 5 total debt $12,723m = 1,997 + 10,726. Excludes finance leases (not disclosed at Jun 30 2026)."
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets: Operating lease liabilities current $178m + non-current $1,830m = $2,008m"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets: Redeemable non-controlling interests $180m + Non-redeemable non-controlling interests $903m = $1,083m (Note 13)"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets: no Uber-level preferred stock (0). Freight Holding preferred is within non-controlling interests (Note 13)."
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheets: 2,039,994 thousand shares issued and outstanding at Jun 30 2026 (reported to the thousand). 10-Q cover: 2,042,560,121 as of Jul 31 2026."
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Note 7 Stockholders' Equity, RSU Activity: Unvested and outstanding as of Jun 30 2026 = 71,804 thousand"
+    },
+    "options.count": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Note 7 Stock Option and SAR Activity: options outstanding Jun 30 2026 = 6,099 thousand (plus 10 thousand SARs)"
+    },
+    "options.weightedExercisePrice": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Note 7 Stock Option and SAR Activity: $51.44"
+    },
+    "options.weightedRemainingYears": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Note 7 Stock Option and SAR Activity: 4.56 years"
+    },
+    "options.aggregateIntrinsicValue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Note 7 Stock Option and SAR Activity: aggregate intrinsic value $132m"
+    },
+    "convertibles[0]": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Note 5 Debt: 2028 Convertible Notes $1,725m, 0.875%, due Dec 2028 (matures Dec 1 2028 per 10-K Note 8); fair value $2.1bn at Jun 30 2026; conversion rate 13.7848 per $1,000 (~$72.54). Carrying value is not separately disclosed (only total unamortized discount $76m), so carrying is set equal to principal."
+    },
+    "convertibles[1]": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+     "locator": "Note 5 Debt and Note 2 Fair Value: 2028 Exchangeable Senior Notes, principal $1.15bn, fair value (= carrying) $1,324m at Jun 30 2026; exchange rate 117.6471 Aurora shares per $1,000 (~$8.50); about 61% of Uber's Aurora stake pledged as collateral (Note 2)."
+    }
+   },
+   "note": "Latest filed periodic report on or before 2026-10-21 is the Q2 2026 10-Q (Q3 10-Q not yet filed). Finance lease liabilities at Jun 30 2026 are NOT disclosed in the 10-Q (Dec 31 2025: $222m; H1 2026 principal payments $82m), so debt excludes them and is not strictly comparable with the annual base that includes them; excluded rather than estimated. NCI = redeemable 180 (Trendyol GO put/call from Q1 2031) + non-redeemable 903. Long-term investments exclude Delivery Hero total return swaps ($1,504m, in other non-current assets) - they are a DH-equity exposure financed with cash and could arguably be added. Post-period events not in this balance sheet: Getir delivery businesses acquired Jul 1 2026 (~$465m cash), Careem control Jul 30 2026, Delivery Hero takeover offer (EUR 41.50/share, EUR 14.2bn bridge) agreed Jul 16 2026, further debt financing in Aug-Sep 2026 (8-Ks). Redemption value of redeemable NCI is the carrying amount. Other contingently issuable shares of 2.321m (diluted-EPS weighted) are not described in the filing."
+  }
+ },
+ "notes": [
+  "Share counts and RSU/option counts are filed in thousands and converted to millions.",
+  "Insurance-related restricted cash and restricted investments are excluded from cash and investments (they collateralize insurance reserves).",
+  "Both convertible/exchangeable notes are included in debt at carrying value; the exchangeable note is exchangeable into Aurora shares, not Uber shares."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0001543151.json",
+  "latestPeriodicAccession": "0001543151-26-000032",
+  "latestAnnualAccession": "0001543151-26-000015"
+ }
+}

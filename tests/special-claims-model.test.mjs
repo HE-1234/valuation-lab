@@ -32,6 +32,7 @@ function oracle(snapshot,draft,a=draft.assumptions){
  if(snapshot.ticker==='AAOI'){
   const f=facts.AAOI[snapshot.periodEnd];shares=f.periodEndCommonShares;
   if(c.capitalBasis==='known-transactions'){cash+=587.99998589-26.783472+c.interimCashChange;shares=84.906289+5.694845;}
+  shares+=f.unvestedEmployeeAwards;
   claim=f.bankAcceptancePayable*c.vendorFinancingFraction+c.warrantTimeValueReserve;
   if(c.method==='if-converted')shares+=f.notePrincipal*facts.AAOI.noteTerms.sharesPerThousandPrincipal/1000;
   else claim+=c.method==='fair-value'?c.noteFairValue:f.notePrincipal;
@@ -40,7 +41,7 @@ function oracle(snapshot,draft,a=draft.assumptions){
   const rawPerShare=equityBeforeWarrants/shares>strike?(equityBeforeWarrants+warrants*strike)/(shares+warrants):equityBeforeWarrants/shares;
   return {...op,shares,cash,equityBeforeWarrants,warrantClaim:equityBeforeWarrants-rawPerShare*shares,equity:rawPerShare*shares,rawPerShare,perShare:Math.max(0,rawPerShare)};
  }
- const g=facts.GOOG;shares=g.periodEndCommonShares;asset=c.noncurrentInvestmentValue;
+ const g=facts.GOOG;shares=g.periodEndCommonShares+g.unvestedEmployeeAwards;asset=c.noncurrentInvestmentValue;
  claim=g.financeLeaseLiability+c.noncontrollingClaim+g.currentMarketableEquityAlreadyInCash*c.currentEquityHaircut;
  if(c.method==='if-converted'){
   shares+=c.conversionCase==='maximum'?g.totalMaximumCommonShares:g.totalMinimumCommonShares;
@@ -89,7 +90,7 @@ test('special claims: legacy-draft migration preserves all operating work and in
 
 test('special claims: AAOI default fair-value bridge subtracts the whole note once with no note shares or coupon deduction',()=>{
  for(const id of variants.filter(x=>x.startsWith('AAOI'))){const {snapshot,draft}=pairing('AAOI',id),{result,expected}=matchesOracle(snapshot,draft),f=facts.AAOI[snapshot.periodEnd];
-  near(result.claimsBridge.allocationShares,f.periodEndCommonShares);near(result.claimsBridge.additionalClaims,f.bankAcceptancePayable+f.noteFairValue+expected.warrantClaim);assert.equal(result.claimsBridge.dividends.length,0);assert.ok(!result.claimsBridge.rows.some(r=>/conversion.*shares/i.test(r.label)));assert.match(result.claimsBridge.warnings.join(' '),/not.*live|observed claim proxy/);
+  near(result.claimsBridge.allocationShares,f.periodEndCommonShares+f.unvestedEmployeeAwards);near(result.claimsBridge.additionalClaims,f.bankAcceptancePayable+f.noteFairValue+expected.warrantClaim);assert.equal(result.claimsBridge.dividends.length,0);assert.ok(!result.claimsBridge.rows.some(r=>/conversion.*shares/i.test(r.label)));assert.match(result.claimsBridge.warnings.join(' '),/not.*live|observed claim proxy/);
  }
 });
 
@@ -98,7 +99,7 @@ test('special claims: AAOI alternative note treatments remain mutually exclusive
  for(const method of ['fair-value','principal-only','if-converted'])for(const warrantCoverage of ['all','initially-vested'])for(const vendorFinancingFraction of [0,.5,1]){
   const d={...draft,claims:{...draft.claims,method,warrantCoverage,vendorFinancingFraction,warrantTimeValueReserve:3}}, {result,expected}=matchesOracle(snapshot,d,a);
   assert.ok(expected.warrantClaim>0,'synthetic strong operating case exercises warrants');near(result.claimsBridge.warrantClaim,expected.warrantClaim);near(result.claimsBridge.equityBeforeWarrants,expected.equityBeforeWarrants);
-  const additional=method==='if-converted'?facts.AAOI['2026-06-30'].notePrincipal*facts.AAOI.noteTerms.sharesPerThousandPrincipal/1000:0;near(result.claimsBridge.allocationShares,facts.AAOI['2026-06-30'].periodEndCommonShares+additional);
+  const additional=method==='if-converted'?facts.AAOI['2026-06-30'].notePrincipal*facts.AAOI.noteTerms.sharesPerThousandPrincipal/1000:0;near(result.claimsBridge.allocationShares,facts.AAOI['2026-06-30'].periodEndCommonShares+facts.AAOI['2026-06-30'].unvestedEmployeeAwards+additional);
   if(method==='if-converted')assert.ok(!result.claimsBridge.rows.some(r=>/Convertible .*claim/.test(r.label)));else assert.ok(!result.claimsBridge.rows.some(r=>/conversion.*shares/i.test(r.label)));
   // The equivalent claim subtraction must equal explicit exercise cash + dilution.
   near(result.rawPerShare,(expected.equityBeforeWarrants+result.claimsBridge.exerciseCash)/(expected.shares+result.claimsBridge.exerciseShares));
@@ -112,7 +113,7 @@ test('special claims: AAOI preserved legacy linear stress remains negative befor
 
 test('special claims: AAOI known transactions keep cash and shares together and cannot appear before their source date',()=>{
  const {snapshot,draft}=pairing('AAOI'),d={...draft,claims:{...draft.claims,capitalBasis:'known-transactions',interimCashChange:-100}},{result}=matchesOracle(snapshot,d);
- near(result.claimsBridge.cash,499.737+587.99998589-26.783472-100);near(result.claimsBridge.allocationShares,84.906289+5.694845);assert.match(result.claimsBridge.warnings.join(' '),/not observed current|not actual current/);
+ near(result.claimsBridge.cash,499.737+587.99998589-26.783472-100);near(result.claimsBridge.allocationShares,84.906289+5.694845+facts.AAOI['2026-06-30'].unvestedEmployeeAwards);assert.match(result.claimsBridge.warnings.join(' '),/not observed current|not actual current/);
  assert.throws(()=>calculateCurrent(snapshot,{...d,cutoff:'2026-10-04'}),/October 5/);assert.throws(()=>calculateCurrent(snapshot,{...d,claims:{...d.claims,interimCashChange:-2000}}),/cash cannot be negative/);
  const old=pairing('AAOI','AAOI-CURRENT-2025-12-31');assert.throws(()=>calculateCurrent(old.snapshot,{...old.draft,claims:{...old.draft.claims,capitalBasis:'known-transactions'}}),/capital basis/);
 });
@@ -128,7 +129,7 @@ test('special claims: Alphabet min/max dilution, liquidation and investment/NCI 
  for(const method of ['if-converted','liquidation-proxy'])for(const conversionCase of ['minimum','maximum'])for(const currentEquityHaircut of [0,.25,1]){
   const d={...draft,claims:{...draft.claims,method,conversionCase,currentEquityHaircut}},{result}=matchesOracle(snapshot,d),b=result.claimsBridge;
   near(b.additionalAssets,145587);near(b.commonShares,12230);assert.ok(!b.rows.some(r=>/capped.call.*premium/i.test(r.label)));assert.ok(!b.rows.some(r=>/redeemable.*interest/i.test(r.label)),'RNCI is already in total NCI');
-  if(method==='if-converted'){assert.ok(!b.rows.some(r=>/liquidation|principal proxy/i.test(r.label)));assert.equal(b.dividends.length,12);}else{near(b.allocationShares,12230);assert.equal(b.dividends.length,0);}
+  if(method==='if-converted'){assert.ok(!b.rows.some(r=>/liquidation|principal proxy/i.test(r.label)));assert.equal(b.dividends.length,12);}else{near(b.allocationShares,12230+facts.GOOG.unvestedEmployeeAwards);assert.equal(b.dividends.length,0);}
  }
 });
 
@@ -153,7 +154,7 @@ test('special claims: fixed Monte Carlo reproduces the displayed value and quote
  for(const ticker of ['AAOI','GOOG']){const {snapshot,draft}=pairing(ticker),base=calculateCurrent(snapshot,draft),config={trials:5,seed:'fixed-claims'},sim=simulateCurrent(snapshot,draft,config);assert.equal(sim.accepted,5);for(const v of sim.draws)near(v,base.perShare);
   const priced={...draft,quote:{price:100,date:'2026-10-16',currency:'USD',sourceUrl:'https://example.com/synthetic-test-quote',shareBasis:currentEconomicShareBasis(snapshot,draft)}};
   assert.deepEqual(calculateCurrent(snapshot,priced),base);assert.deepEqual(simulateCurrent(snapshot,priced,config).draws,sim.draws);assert.equal(quoteComparison(snapshot,priced,base).status,'ready');
-  for(const patch of [{shareBasis:snapshot.shareBasis},{currency:'EUR'},{date:'2026-10-18'},{sourceUrl:''}])assert.equal(quoteComparison(snapshot,{...priced,quote:{...priced.quote,...patch}},base).status,'blocked');
+  for(const patch of [{shareBasis:snapshot.shareBasis},{currency:'EUR'},{date:'2099-01-01'},{sourceUrl:''}])assert.equal(quoteComparison(snapshot,{...priced,quote:{...priced.quote,...patch}},base).status,'blocked');
   assert.equal(draft.quote.price,null);assert.equal(sim.quote.status,'missing');
  }
 });

@@ -1,0 +1,815 @@
+{
+  "ticker": "DUOL",
+  "currency": "USD",
+  "accountingBasis": "US GAAP annual filings; latest reported comparisons",
+  "accountingBasisZh": "美国GAAP年度申报；采用最新重列比较数据",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001562088.json",
+  "collectedAt": "2026-10-21",
+  "mappedDebt": "Documented borrowing and finance lease totals; no operating lease debt and no duplicate debt aliases.",
+  "years": {
+    "2020": {
+      "fiscalYear": 2020,
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "revenue": {
+        "value": 161.696,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001562088-23-000052",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208823000052/duol-20221231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 161696000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": -16.011,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001562088-23-000052",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208823000052/duol-20221231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -16011000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 120.49,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2022-03-04",
+        "accession": "0001562088-22-000039",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208822000039/duol-20211231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 120490000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "bookEquity": {
+        "value": -80.691,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2024-02-29",
+        "accession": "0001562088-24-000050",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000050/duol-20231231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": -80691000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": -15.708,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001562088-23-000052",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208823000052/duol-20221231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -15708000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 0.068,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001562088-23-000052",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208823000052/duol-20221231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 68000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2020-12-31",
+        "filed": "2022-03-04",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001562088/000156208822000039/duol-20211231.htm",
+        "accession": "0001562088-22-000039",
+        "locator": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "sourceType": "Filing balance sheet/no borrowings disclosed",
+        "note": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "originalDocumentVerified": true,
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " December 31, 2021 2020 ASSETS Current assets Cash and cash equivalents $ 553,922 $ 120,490 Accounts receivable 33,163 20,450 Deferred cost of revenues 24,219 13,585 Prepaid expenses and other current assets 7,967 3,855 Total current assets 619,271 158,380 Property and equipment, net 8,211 6,428 Capitalized software, net 4,566 2,296 Operating lease right-of-use assets 28,369 8,073 Other assets 894 562 Total assets $ 661,311 $ 175,739 LIABILITIES, CONVERTIBLE PREFERRED STOCK AND STOCKHOLDERS’ EQUITY (DEFICIT) Current liabilities Accounts payable $ 7,818 $ 2,196 Deferred revenues 98,267 54,792 Income tax payable 113 68 Accrued expenses and other current liabilities 12,933 8,634 Total current liabilities 119,131 65,690 Long-term obligation under operating leases 29,124 8,131 Total liabilities 148,255 73,821 Commitments and contingencies (Note 10) Convertible preferred stock, $ 0.0001 par value, no shares issued and outstanding at December 31, 2021 and 19,074 shares issued and outstanding at December 31, 2020. — 182,609 Stockholders’ equity (deficit) Common stock, $ 0.0001 par value; 2,000,000 shares of Class A common stock authorized and 16,645 issued and outstanding at December 31, 2021; 30,000 shares of Class B common stock authorized and 21,627 issued and outstanding at December 31, 2021; 42,800 authorized shares of common stock; 12,794 issued and outstanding at December 31, 2020. 4 1 Additional paid-in capital 683,966 30,087 Accumulated deficit ( 170,914 ) ( 110,779 ) Total stockholders’ equity (deficit) 513,056 ( 80,691 ) Total liabilities, convertible preferred stock and stockholders' equity (deficit) $ 661,311 $ 175,739 ",
+          "locator": "Consolidated Balance Sheets, 2020 column; operating leases and redeemable preferred equity excluded"
+        },
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001562088/000156208822000039/duol-20211231.htm"
+        ]
+      }
+    },
+    "2021": {
+      "fiscalYear": 2021,
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "revenue": {
+        "value": 250.772,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-29",
+        "accession": "0001562088-24-000050",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000050/duol-20231231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 250772000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": -60.007,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-29",
+        "accession": "0001562088-24-000050",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000050/duol-20231231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -60007000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 553.922,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001562088-23-000052",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208823000052/duol-20221231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 553922000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "bookEquity": {
+        "value": 513.056,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2025-02-28",
+        "accession": "0001562088-25-000042",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000042/duol-20241231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 513056000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": -59.958,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-29",
+        "accession": "0001562088-24-000050",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000050/duol-20231231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -59958000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 0.177,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-29",
+        "accession": "0001562088-24-000050",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000050/duol-20231231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 177000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-04",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001562088/000156208822000039/duol-20211231.htm",
+        "accession": "0001562088-22-000039",
+        "locator": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "sourceType": "Filing balance sheet/no borrowings disclosed",
+        "note": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "originalDocumentVerified": true,
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " December 31, 2021 2020 ASSETS Current assets Cash and cash equivalents $ 553,922 $ 120,490 Accounts receivable 33,163 20,450 Deferred cost of revenues 24,219 13,585 Prepaid expenses and other current assets 7,967 3,855 Total current assets 619,271 158,380 Property and equipment, net 8,211 6,428 Capitalized software, net 4,566 2,296 Operating lease right-of-use assets 28,369 8,073 Other assets 894 562 Total assets $ 661,311 $ 175,739 LIABILITIES, CONVERTIBLE PREFERRED STOCK AND STOCKHOLDERS’ EQUITY (DEFICIT) Current liabilities Accounts payable $ 7,818 $ 2,196 Deferred revenues 98,267 54,792 Income tax payable 113 68 Accrued expenses and other current liabilities 12,933 8,634 Total current liabilities 119,131 65,690 Long-term obligation under operating leases 29,124 8,131 Total liabilities 148,255 73,821 Commitments and contingencies (Note 10) Convertible preferred stock, $ 0.0001 par value, no shares issued and outstanding at December 31, 2021 and 19,074 shares issued and outstanding at December 31, 2020. — 182,609 Stockholders’ equity (deficit) Common stock, $ 0.0001 par value; 2,000,000 shares of Class A common stock authorized and 16,645 issued and outstanding at December 31, 2021; 30,000 shares of Class B common stock authorized and 21,627 issued and outstanding at December 31, 2021; 42,800 authorized shares of common stock; 12,794 issued and outstanding at December 31, 2020. 4 1 Additional paid-in capital 683,966 30,087 Accumulated deficit ( 170,914 ) ( 110,779 ) Total stockholders’ equity (deficit) 513,056 ( 80,691 ) Total liabilities, convertible preferred stock and stockholders' equity (deficit) $ 661,311 $ 175,739 ",
+          "locator": "Consolidated Balance Sheets, 2021 column; operating leases and redeemable preferred equity excluded"
+        },
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001562088/000156208822000039/duol-20211231.htm"
+        ]
+      }
+    },
+    "2022": {
+      "fiscalYear": 2022,
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "revenue": {
+        "value": 369.495,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-28",
+        "accession": "0001562088-25-000042",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000042/duol-20241231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 369495000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": -65.195,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-28",
+        "accession": "0001562088-25-000042",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000042/duol-20241231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -65195000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 608.18,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2024-02-29",
+        "accession": "0001562088-24-000050",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208824000050/duol-20231231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 608180000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "bookEquity": {
+        "value": 542.078,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 542078000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": -58.636,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-28",
+        "accession": "0001562088-25-000042",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000042/duol-20241231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -58636000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 0.938,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-02-28",
+        "accession": "0001562088-25-000042",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000042/duol-20241231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 938000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2022-12-31",
+        "filed": "2023-03-01",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001562088/000156208823000052/duol-20221231.htm",
+        "accession": "0001562088-23-000052",
+        "locator": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "sourceType": "Filing balance sheet/no borrowings disclosed",
+        "note": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "originalDocumentVerified": true,
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " December 31, 2022 2021 ASSETS Current assets Cash and cash equivalents $ 608,180 $ 553,922 Accounts receivable 46,728 33,163 Deferred cost of revenues 35,041 24,219 Prepaid expenses and other current assets 7,234 7,967 Total current assets 697,183 619,271 Property and equipment, net 12,969 8,211 Goodwill 4,050 — Intangible assets, net 8,497 4,566 Operating lease right-of-use assets 22,508 28,369 Deferred tax assets 633 — Other assets 1,507 894 Total assets $ 747,347 $ 661,311 LIABILITIES, CONVERTIBLE PREFERRED STOCK AND STOCKHOLDERS’ EQUITY Current liabilities Accounts payable $ 1,177 $ 7,818 Deferred revenues 157,550 98,267 Income tax payable 1,069 113 Accrued expenses and other current liabilities 21,970 12,933 Total current liabilities 181,766 119,131 Long-term obligation under operating leases 23,503 29,124 Total liabilities 205,269 148,255 Commitments and contingencies (Note 10) Stockholders’ equity Class A common stock, $ 0.0001 par value; 2,000,000 shares authorized as of December 31, 2022 and 2021; 31,899 and 16,645 issued and outstanding at December 31, 2022 and 2021, respectively Class B common stock, $ 0.0001 par value; 30,000 shares authorized as of December 31, 2022 and 2021; 8,462 and 21,627 issued and outstanding at December 31, 2022 and 2021, respectively 4 4 Additional paid-in capital 772,562 683,966 Accumulated deficit ( 230,488 ) ( 170,914 ) Total stockholders’ equity 542,078 513,056 Total liabilities, convertible preferred stock and stockholders' equity $ 747,347 $ 661,311 ",
+          "locator": "Consolidated Balance Sheets, 2022 column; operating leases and redeemable preferred equity excluded"
+        },
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001562088/000156208823000052/duol-20221231.htm"
+        ]
+      }
+    },
+    "2023": {
+      "fiscalYear": 2023,
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "revenue": {
+        "value": 531.109,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 531109000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": -13.259,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -13259000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 747.61,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2025-02-28",
+        "accession": "0001562088-25-000042",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000042/duol-20241231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 747610000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "bookEquity": {
+        "value": 655.501,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 655501000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": 17.777,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 17777000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 1.71,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 1710000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-29",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001562088/000156208824000050/duol-20231231.htm",
+        "accession": "0001562088-24-000050",
+        "locator": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "sourceType": "Filing balance sheet/no borrowings disclosed",
+        "note": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "originalDocumentVerified": true,
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " December 31, 2023 December 31, 2022 ASSETS Current assets Cash and cash equivalents $ 747,610 $ 608,180 Accounts receivable 88,975 46,728 Deferred cost of revenues 53,931 35,041 Prepaid expenses and other current assets 7,282 7,234 Total current assets 897,798 697,183 Property and equipment, net 11,792 12,969 Goodwill 4,050 4,050 Intangible assets, net 15,995 8,497 Operating lease right-of-use assets 19,103 22,508 Deferred tax assets, net 766 633 Restricted cash 2,735 — Other assets 1,718 1,507 Total assets $ 953,957 $ 747,347 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities Accounts payable $ 2,447 $ 1,177 Deferred revenues 249,192 157,550 Income tax payable 792 1,069 Accrued expenses and other current liabilities 24,931 21,970 Total current liabilities 277,362 181,766 Long-term obligation under operating leases 21,094 23,503 Total liabilities 298,456 205,269 Commitments and contingencies (Note 10) Stockholders’ equity Class A common stock, $ 0.0001 par value; 2,000,000 shares authorized as of December 31, 2023 and December 31, 2022; 36,311 and 31,899 issued and outstanding at December 31, 2023 and December 31, 2022, respectively Class B common stock, $ 0.0001 par value; 30,000 shares authorized as of December 31, 2023 and December 31, 2022; 6,215 and 8,462 issued and outstanding at December 31, 2023 and December 31, 2022, respectively 4 4 Additional paid-in capital 869,918 772,562 Accumulated deficit ( 214,421 ) ( 230,488 ) Total stockholders’ equity 655,501 542,078 Total liabilities and stockholders' equity $ 953,957 $ 747,347 ",
+          "locator": "Consolidated Balance Sheets, 2023 column; operating leases and redeemable preferred equity excluded"
+        },
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001562088/000156208824000050/duol-20231231.htm"
+        ]
+      }
+    },
+    "2024": {
+      "fiscalYear": 2024,
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "revenue": {
+        "value": 748.024,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 748024000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": 62.595,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 62595000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 785.791,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 785791000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "bookEquity": {
+        "value": 824.55,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-08-06",
+        "accession": "0001628280-26-053603",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 824550000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": 102.306,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 102306000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": 13.732,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 13732000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-28",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001562088/000156208825000042/duol-20241231.htm",
+        "accession": "0001562088-25-000042",
+        "locator": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "sourceType": "Filing balance sheet/no borrowings disclosed",
+        "note": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "originalDocumentVerified": true,
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " December 31, 2024 December 31, 2023 ASSETS Current assets Cash and cash equivalents $ 785,791 $ 747,610 Short-term investments 91,854 — Accounts receivable 128,923 88,975 Deferred cost of revenues 80,162 53,931 Prepaid expenses and other current assets 14,858 7,282 Total current assets 1,101,588 897,798 Operating lease right-of-use assets 47,495 19,103 Intangible assets, net 19,899 15,995 Long-term investments 98,292 — Property and equipment, net 18,943 11,792 Goodwill 10,538 4,050 Restricted cash 2,735 2,735 Deferred tax assets, net 675 766 Other assets 1,563 1,718 Total assets $ 1,301,728 $ 953,957 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities Deferred revenues $ 372,884 $ 249,192 Accounts payable 6,381 2,447 Income tax payable 6,591 792 Accrued expenses and other current liabilities 36,375 24,931 Total current liabilities 422,231 277,362 Long-term obligation under operating leases 54,656 21,094 Deferred tax liabilities, net 291 — Total liabilities 477,178 298,456 Commitments and contingencies (Note 11) Stockholders’ equity Class A common stock, $ 0.0001 par value; 2,000,000 shares authorized as of December 31, 2024 and December 31, 2023; 38,730 and 36,311 issued and outstanding at December 31, 2024 and December 31, 2023, respectively Class B common stock, $ 0.0001 par value; 30,000 shares authorized as of December 31, 2024 and December 31, 2023; 6,206 and 6,215 issued and outstanding at December 31, 2024 and December 31, 2023, respectively 4 4 Additional paid-in capital 950,393 869,918 Accumulated deficit ( 125,847 ) ( 214,421 ) Total stockholders’ equity 824,550 655,501 Total liabilities and stockholders' equity $ 1,301,728 $ 953,957 ",
+          "locator": "Consolidated Balance Sheets, 2024 column; operating leases and redeemable preferred equity excluded"
+        },
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001562088/000156208825000042/duol-20241231.htm"
+        ]
+      }
+    },
+    "2025": {
+      "fiscalYear": 2025,
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "revenue": {
+        "value": 1037.589,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 1037589000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "operatingIncome": {
+        "value": 135.57,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 135570000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "cashAndEquivalents": {
+        "value": 1036.389,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-08-06",
+        "accession": "0001628280-26-053603",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 1036389000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "bookEquity": {
+        "value": 1347.006,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-08-06",
+        "accession": "0001628280-26-053603",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 1347006000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "pretaxIncome": {
+        "value": 182.41,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 182410000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "incomeTaxExpense": {
+        "value": -231.655,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001628280-26-012494",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -231655000,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06,
+        "sourceType": "SEC standardized Company Facts / annual filing"
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001562088/000162828026012494/duol-20251231.htm",
+        "accession": "0001628280-26-012494",
+        "locator": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "sourceType": "Filing balance sheet/no borrowings disclosed",
+        "note": "Annual consolidated balance sheet has no bank borrowing, debt security or finance-lease debt; credit facility undrawn where disclosed. Operating leases excluded.",
+        "originalDocumentVerified": true,
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " December 31, 2025 December 31, 2024 ASSETS Current assets Cash and cash equivalents $ 1,036,389 $ 785,791 Short-term investments 104,078 91,854 Accounts receivable 162,827 128,923 Deferred cost of revenues 102,663 80,162 Income tax receivable 14,067 27 Prepaid expenses and other current assets 16,582 14,831 Total current assets 1,436,606 1,101,588 Operating lease right-of-use assets 80,380 47,495 Long-term investments 135,098 98,292 Intangible assets, net 28,309 19,899 Property and equipment, net 36,297 18,943 Goodwill 35,335 10,538 Restricted cash 2,735 2,735 Deferred tax assets, net 227,339 675 Other assets 10,083 1,563 Total assets $ 1,992,182 $ 1,301,728 LIABILITIES AND STOCKHOLDERS’ EQUITY Current liabilities Deferred revenues $ 496,205 $ 372,884 Accounts payable 7,998 6,381 Income tax payable 1,257 6,591 Accrued expenses and other current liabilities 45,688 36,375 Total current liabilities 551,148 422,231 Long-term obligation under operating leases 93,779 54,656 Deferred tax liabilities, net 249 291 Total liabilities 645,176 477,178 Commitments and contingencies (Note 11) Stockholders’ equity Class A common stock, $ 0.0001 par value; 2,000,000 shares authorized as of December 31, 2025 and December 31, 2024; 40,368 and 38,730 issued and outstanding at December 31, 2025 and December 31, 2024, respectively Class B common stock, $ 0.0001 par value; 30,000 shares authorized as of December 31, 2025 and December 31, 2024; 6,260 and 6,206 issued and outstanding at December 31, 2025 and December 31, 2024, respectively 5 4 Additional paid-in capital 1,058,783 950,393 Retained earnings (Accumulated deficit) 288,218 ( 125,847 ) Total stockholders’ equity 1,347,006 824,550 Total liabilities and stockholders' equity $ 1,992,182 $ 1,301,728 ",
+          "locator": "Consolidated Balance Sheets, 2025 column; operating leases and redeemable preferred equity excluded"
+        },
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001562088/000162828026012494/duol-20251231.htm"
+        ]
+      }
+    },
+    "2019": {
+      "fiscalYear": 2019,
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "revenue": {
+        "value": 70.76,
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-06-28",
+        "accession": "0001628280-21-013065",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828021013065/duolingos-1.htm",
+        "sourceType": "Original IPO filing verified",
+        "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+        "originalDocumentVerified": true,
+        "reportedTableValue": "70,760",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "rawRow": " 2019 2020 Over time $ 54,848 $ 117,501 Point in time 15,912 44,195 Total revenues $ 70,760 $ 161,696 ",
+        "tableEvidence": {
+          "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+          "excerpt": " 2019 2020 Over time $ 54,848 $ 117,501 Point in time 15,912 44,195 Total revenues $ 70,760 $ 161,696 "
+        }
+      },
+      "operatingIncome": {
+        "value": -14.125,
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-06-28",
+        "accession": "0001628280-21-013065",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828021013065/duolingos-1.htm",
+        "sourceType": "Original IPO filing verified",
+        "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+        "originalDocumentVerified": true,
+        "reportedTableValue": "(14,125)",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "rawRow": "983 General and administrative 16,371 43,713 Impairment of capitalized software 1,228 — Total operating expenses 64,148 131,720 Loss from operations (14,125) (16,011) Other income 591 388 Other expense (20) (85) Other income, net 571 303 Loss before provision for income taxes (13,554) (15,708) Provision for income taxes — 68 Net loss and comprehensive loss $ (13,554) $ (15,776) Basic and diluted n",
+        "tableEvidence": {
+          "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+          "excerpt": "983 General and administrative 16,371 43,713 Impairment of capitalized software 1,228 — Total operating expenses 64,148 131,720 Loss from operations (14,125) (16,011) Other income 591 388 Other expense (20) (85) Other income, net 571 303 Loss before provision for income taxes (13,554) (15,708) Provision for income taxes — 68 Net loss and comprehensive loss $ (13,554) $ (15,776) Basic and diluted n"
+        }
+      },
+      "pretaxIncome": {
+        "value": -13.554,
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-06-28",
+        "accession": "0001628280-21-013065",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828021013065/duolingos-1.htm",
+        "sourceType": "Original IPO filing verified",
+        "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+        "originalDocumentVerified": true,
+        "reportedTableValue": "(13,554)",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "rawRow": "Loss from operations (14,125) (16,011) Other income 591 388 Other expense (20) (85) Other income, net 571 303 Loss before provision for income taxes (13,554) (15,708) Provision for income taxes — 68 Net loss and comprehensive loss $ (13,554) $ (15,776) Basic and diluted net loss per share attributable to common stockholders $ (1.10) $ (1.24) ",
+        "tableEvidence": {
+          "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+          "excerpt": "Loss from operations (14,125) (16,011) Other income 591 388 Other expense (20) (85) Other income, net 571 303 Loss before provision for income taxes (13,554) (15,708) Provision for income taxes — 68 Net loss and comprehensive loss $ (13,554) $ (15,776) Basic and diluted net loss per share attributable to common stockholders $ (1.10) $ (1.24) "
+        }
+      },
+      "incomeTaxExpense": {
+        "value": 0,
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-06-28",
+        "accession": "0001628280-21-013065",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828021013065/duolingos-1.htm",
+        "sourceType": "Original IPO filing verified",
+        "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+        "originalDocumentVerified": true,
+        "reportedTableValue": "—",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "rawRow": "Year ended December 31: 2019 2020; Provision for income taxes — 68",
+        "tableEvidence": {
+          "locator": "S-1 Consolidated Statements of Operations, 2019 tax provision column",
+          "excerpt": "Year ended December 31: 2019 2020; Provision for income taxes — 68"
+        }
+      },
+      "cashAndEquivalents": {
+        "value": 59.843,
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2021-06-28",
+        "accession": "0001628280-21-013065",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828021013065/duolingos-1.htm",
+        "sourceType": "Original IPO filing verified",
+        "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+        "originalDocumentVerified": true,
+        "reportedTableValue": "59,843",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "rawRow": " As of December 31, As of March 31, (In thousands) 2019 2020 2021 Cash and cash equivalents $ 59,843 $ 120,490 $ 117,459 Working capital 46,816 92,690 74,916 Total assets 95,059 175,739 176,874 Total deferred revenues 26,307 54,792 65,262 Total stockholders’ deficit (83,976) (80,691) (97,785) ",
+        "tableEvidence": {
+          "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+          "excerpt": " As of December 31, As of March 31, (In thousands) 2019 2020 2021 Cash and cash equivalents $ 59,843 $ 120,490 $ 117,459 Working capital 46,816 92,690 74,916 Total assets 95,059 175,739 176,874 Total deferred revenues 26,307 54,792 65,262 Total stockholders’ deficit (83,976) (80,691) (97,785) "
+        }
+      },
+      "bookEquity": {
+        "value": -83.976,
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2021-06-28",
+        "accession": "0001628280-21-013065",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1562088/000162828021013065/duolingos-1.htm",
+        "sourceType": "Original IPO filing verified",
+        "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+        "originalDocumentVerified": true,
+        "reportedTableValue": "(83,976)",
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001,
+        "rawRow": "59 Working capital 46,816 92,690 74,916 Total assets 95,059 175,739 176,874 Total deferred revenues 26,307 54,792 65,262 Total stockholders’ deficit (83,976) (80,691) (97,785) ",
+        "tableEvidence": {
+          "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+          "excerpt": "59 Working capital 46,816 92,690 74,916 Total assets 95,059 175,739 176,874 Total deferred revenues 26,307 54,792 65,262 Total stockholders’ deficit (83,976) (80,691) (97,785) "
+        }
+      },
+      "mappedDebt": {
+        "value": 0,
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2021-06-28",
+        "accession": "0001628280-21-013065",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001562088/000162828021013065/duolingos-1.htm",
+        "sourceType": "Original IPO filing verified",
+        "locator": "S-1 Consolidated Statements of Operations2019; Balance Sheets2019; no debt or finance leases.",
+        "originalDocumentVerified": true,
+        "formula": "Sum of reviewed borrowing and finance-lease liability rows (empty debt schedule)",
+        "tableEvidence": {
+          "debtRows": [],
+          "liabilitiesExcerpt": " December 31, 2019 2020 ASSETS Current assets Cash and cash equivalents $ 59,843 $ 120,490 Accounts receivable 10,005 20,450 Deferred cost of revenues 6,932 13,585 Prepaid expenses and other current assets 2,143 3,855 Total current assets 78,923 158,380 Property and equipment, net 4,676 6,428 Capitalized software, net 1,791 2,296 Operating lease right-of-use assets 9,145 8,073 Other assets 524 562 Total assets $ 95,059 $ 175,739 LIABILITIES, CONVERTIBLE PREFERRED STOCK AND STOCKHOLDERS’ DEFICIT Current liabilities Accounts payable $ 3,811 $ 2,196 Deferred revenues 26,307 54,792 Income tax payable — 68 Accrued expenses and other current liabilities 1,989 8,634 Total current liabilities 32,107 65,690 Long term obligation under operating leases 9,242 8,131 Total liabilities 41,349 73,821 Commitments and contingencies (Note 10) Convertible preferred stock, $.0001 par value ; 18,247 shares issued and outstanding at December 31, 2019 and 19,074 shares issued and outstanding at December 31, 2020 137,686 182,609 Stockholders’ deficit Common stock, $.0001 par value; 42,800 authorized shares; 12,406 issued and outstanding at December 31, 2019 and 12,794 issued and outstanding at December 31, 2020. 1 1 Additional paid-in capital 11,026 30,087 Accumulated deficit (95,003) (110,779) Total stockholders’ deficit (83,976) (80,691) Total liabilities, convertible preferred stock and stockholders' deficit $ 95,059 $ 175,739 ",
+          "locator": "Consolidated Balance Sheets, 2019 column; operating leases and redeemable preferred equity excluded"
+        },
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001562088/000162828021013065/duolingos-1.htm"
+        ]
+      }
+    }
+  },
+  "cautions": [
+    "Pre-IPO common book equity excludes redeemable preferred capital. Negative or incomplete book capital is not a useful economic invested-capital measure."
+  ],
+  "cautionsZh": [
+    "上市前普通股账面权益不包含可赎回优先股资本。负数或不完整的账面资本不是有用的经济投入资本指标。"
+  ],
+  "shortfallReason": "7 complete annual periods are available after reviewing annual and initial IPO or operating-predecessor filings. Earlier quarterly summaries or the SPAC shell are not substituted for comparable annual company financial statements.",
+  "shortfallReasonZh": "已查阅年度和首次上市或经营前身申报，共有7个完整年度。不会用更早的季度摘要或SPAC空壳数据代替可比公司年度财务报表。",
+  "localizationPairs": {
+    "Pre-IPO common book equity excludes redeemable preferred capital. Negative or incomplete book capital is not a useful economic invested-capital measure.": "上市前普通股账面权益不包含可赎回优先股资本。负数或不完整的账面资本不是有用的经济投入资本指标。"
+  }
+}

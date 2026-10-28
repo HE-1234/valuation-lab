@@ -1,0 +1,196 @@
+{
+ "schemaVersion": 1,
+ "id": "guided-AAOI-ttm-through-2026-06-30-20261021233957",
+ "model": "guided",
+ "ticker": "AAOI",
+ "name": "TTM through 2026-06-30",
+ "baseId": "AAOI-TTM-2026-06-30",
+ "baseLabel": "TTM through 2026-06-30",
+ "perShare": 0,
+ "currency": "USD",
+ "savedAt": "2026-10-21T23:39:57+00:00",
+ "default": true,
+ "file": "guided-AAOI-ttm-through-2026-06-30-20261021233957.json",
+ "draft": {
+  "schemaVersion": 5,
+  "ticker": "AAOI",
+  "snapshotId": "AAOI-TTM-2026-06-30",
+  "step": 3,
+  "cutoff": "2026-10-21",
+  "assumptions": {
+   "growth": 1.3,
+   "targetMargin": 0.1,
+   "tax": 0,
+   "salesCapital": 0.6,
+   "wacc": 0.11,
+   "terminalGrowth": 0.035,
+   "terminalROIC": 0.1,
+   "years": 10,
+   "otherClaims": 100,
+   "otherAssets": 100
+  },
+  "notes": {},
+  "reviewed": [],
+  "bridgeReviewed": false,
+  "modelReviewed": false,
+  "normalizationDelta": 0,
+  "adjustmentReason": "",
+  "adjustmentSource": "",
+  "quote": {
+   "price": null,
+   "date": "",
+   "currency": "",
+   "sourceUrl": "",
+   "basisConfirmed": false,
+   "shareBasis": ""
+  },
+  "waccWorksheet": {
+   "riskFree": null,
+   "beta": null,
+   "equityPremium": null,
+   "countryPremium": null,
+   "costOfDebt": null,
+   "debtWeight": null,
+   "tax": null
+  },
+  "updatedAt": "2026-10-21T23:39:22.385Z",
+  "assumptionProvenance": {
+   "schemaVersion": 1,
+   "kind": "researched-base-case",
+   "version": "2026-10-21.1",
+   "ticker": "AAOI",
+   "snapshotId": "AAOI-TTM-2026-06-30",
+   "sourcePath": "./data/company-base-cases.json",
+   "asOf": "2026-10-17",
+   "initialCutoff": "2026-10-21",
+   "initialAssumptions": {
+    "growth": 0.6,
+    "targetMargin": 0.12,
+    "tax": 0.25,
+    "salesCapital": 0.8,
+    "wacc": 0.135,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.1,
+    "years": 10,
+    "otherClaims": 0,
+    "otherAssets": 0
+   },
+   "initialNormalization": {
+    "normalizationDelta": 0,
+    "adjustmentReason": "",
+    "adjustmentSource": ""
+   },
+   "displayLabel": "Staged capacity research case",
+   "classification": "conditional staged capacity research assumptions; not a validated fair-value estimate",
+   "caseSummary": "Provisional research assumptions only. A high-risk capacity-led turnaround in datacenter optics, with substantial funding needs before durable GAAP profitability.",
+   "rationale": {
+    "growth": "60% is year 1 growth. The staged profile then uses 40%, 30%, 20%, 15%, 10%, 8%, 5%, 3%, and 2.5% at these defaults. Quarter 3 guidance and capacity expansion support a front-loaded structure; the annual path is analyst judgment, not management guidance. Each simulated initial-growth input changes the whole same weighted path.",
+    "targetMargin": "12% mature GAAP EBIT margin is reached in year 6. At the reported starting loss, the staged path is −5%,0%,5%,8%,10%,12% before maturity. This is a conditional utilization and operating-leverage judgment; no non-GAAP net margin is substituted.",
+    "tax": "25% applies only to positive modeled EBIT. This is a normalized mature rate; no tax refund or verified NOL benefit is assumed during losses.",
+    "salesCapital": "0.8x is initial incremental sales/capital, requiring $1.25 investment per $1 extra revenue in years 1–2. It rises to 1.6x by years 6–7 as capacity is used. Years 8–10 fade capital intensity toward (1 + terminal growth) × margin × (1 − tax) / terminal ROIC, ending at 1.084x at defaults to align year 10 and terminal economics. The whole path is an explicit assumption, not a reported ratio.",
+    "terminalROIC": "10% assumes capital utilization improves in maturity but grants no excess return versus the high constant model discount rate.",
+    "wacc": "13.5% nominal USD is a rounded model estimate. Assumed beta 1.8 plus a 1-point extra equity allowance, 10% target debt and a 3.5-point debt spread reflect concentrated customers, execution and funding risk. These are judgments, not quoted borrowing terms.",
+    "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+    "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+    "otherClaims": "0 means no additional user-entered claim beyond the separate explicit current claims model. Do not enter the same modeled claims again. The separate source-dated current claims model deducts the disclosed convertible fair-value proxy and vendor financing once, and uses an explicit intrinsic customer-warrant scenario. Counterfactual note conversion and the incomplete known-ATM pro forma are separate sensitivities. Current employee awards and warrant time value remain incomplete.",
+    "otherAssets": "0 is an additional-asset assumption beyond source cash and any explicitly selected financing proceeds. It is not proof that every other nonoperating asset is absent."
+   },
+   "sources": [
+    {
+     "id": "AAOI-filing",
+     "title": "APPLIED OPTOELECTRONICS, INC. derived for period ended 2026-06-30",
+     "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926026278/aaoi20260630_10q.htm",
+     "publishedAt": "2026-08-06"
+    },
+    {
+     "id": "AAOI-annual-filing",
+     "title": "APPLIED OPTOELECTRONICS, INC. annual financial context ended 2025-12-31",
+     "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774926005875/aaoi20251231_10k.htm",
+     "publishedAt": "2026-02-26"
+    },
+    {
+     "id": "AAOI-release",
+     "title": "Applied Optoelectronics Q2 2026 results and Q3 outlook",
+     "url": "https://investors.ao-inc.com/news-releases/news-release-details/applied-optoelectronics-reports-second-quarter-2026-results?hss_channel=lcp-744608",
+     "publishedAt": "2026-08-06"
+    },
+    {
+     "id": "treasury",
+     "title": "US Treasury 10-year nominal USD yield, October 16, 2026",
+     "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+     "publishedAt": "2026-10-16"
+    },
+    {
+     "id": "erp-reference",
+     "title": "Damodaran January 2026 implied US equity-risk premium",
+     "url": "https://aswathdamodaran.blogspot.com/2026/01/data-update-2-for-2026-equities-get.html",
+     "publishedAt": "2026-01-23"
+    }
+   ],
+   "userEdited": true,
+   "editedKeys": [
+    "operatingProfile",
+    "growth",
+    "growthYear:2",
+    "growthYear:3",
+    "terminalGrowth",
+    "targetMargin",
+    "marginPath",
+    "salesCapital",
+    "operatingProfile:capitalHoldYears",
+    "wacc",
+    "otherAssets",
+    "otherClaims",
+    "capitalPath",
+    "tax"
+   ],
+   "selection": "fresh"
+  },
+  "claims": {
+   "schemaVersion": 1,
+   "modelId": "AAOI-2026-06-30-claims-v1",
+   "method": "fair-value",
+   "capitalBasis": "reported",
+   "noteFairValue": 445.1,
+   "vendorFinancingFraction": 1,
+   "warrantCoverage": "all",
+   "warrantTimeValueReserve": 0,
+   "interimCashChange": 0
+  },
+  "operatingProfile": {
+   "id": "flexible-growth-v1",
+   "mode": "annual",
+   "explicitYears": 5,
+   "subsequentGrowth": [
+    1.6,
+    0.6,
+    0.19999999999999998,
+    0.15
+   ],
+   "schemaVersion": 2,
+   "marginMaturityYears": 10,
+   "capitalMaturityYears": 10,
+   "capitalHoldYears": 2
+  },
+  "marginPath": {
+   "enabled": true,
+   "version": "yearly-margin-path-v1",
+   "nearTermMargins": [
+    -0.05,
+    0.1,
+    0.2,
+    0.15,
+    0.15
+   ],
+   "terminalYear": 10
+  },
+  "capitalPath": {
+   "enabled": false,
+   "version": 1,
+   "earlyEndYear": 5,
+   "laterSalesCapital": 0.6,
+   "fadeStartYear": 10,
+   "terminalYear": 15
+  }
+ }
+}

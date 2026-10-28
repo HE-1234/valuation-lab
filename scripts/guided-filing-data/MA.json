@@ -1,0 +1,277 @@
+{
+  "ticker": "MA",
+  "name": "Mastercard Inc",
+  "cik": "0001141391",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "10-K",
+      "accession": "0001141391-26-000013",
+      "filedAt": "2026-02-11",
+      "acceptedAt": "2026-02-11T21:04:08.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+      "ttmComponents": null,
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated income statement; total revenue. Full fiscal year.",
+          "tag": "us-gaap:Revenues"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated income statement; reported operating income.",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated balance sheet; cash and cash equivalents; restricted and client funds excluded.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated balance sheet; current investments / marketable securities."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Other assets footnote: total equity investments; earnings are below operating income."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings. Finance-lease liability is not separately quantified in the lease note; no additional unquantified lease debt is assumed. This is an omission, not a reported zero."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings. Finance-lease liability is not separately quantified in the lease note; no additional unquantified lease debt is assumed. This is an omission, not a reported zero."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Lease note; current plus noncurrent operating lease liability. Kept separate from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated balance sheet; noncontrolling interests. No claim added where no separate noncontrolling equity line is reported."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated balance sheet / equity note: no outstanding preferred equity claim identified."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Cover page, exact Class A plus Class B shares at 2026-02-06. Near-period share-count proxy; not weighted-average EPS shares."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; outstanding restricted units plus performance units. RSU/PSU total, one-for-one dilution proxy."
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedExercisePrice."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedRemainingYears."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: aggregateIntrinsicValue."
+        }
+      },
+      "convertibles": [],
+      "otherClaims": [],
+      "note": "Amounts in USD millions; shares in millions. Primary financial statements and debt/share notes checked in the filed document. Restricted cash is not an excess asset. Operating leases remain operating expenses and are not deducted again as financial debt. Stock compensation remains in operating expenses; outstanding awards are also reflected as current ownership claims. ",
+      "revenue": 32791.0,
+      "operatingIncome": 18897.0,
+      "cashAndEquivalents": 10566.0,
+      "shortTermInvestments": 332,
+      "longTermInvestments": 1705,
+      "debtCurrent": 749,
+      "debtNoncurrent": 18251,
+      "operatingLeaseLiabilities": 833,
+      "noncontrollingInterest": 9,
+      "preferredEquity": 0,
+      "sharesDate": "2026-02-06",
+      "sharesOutstanding": 891.812311,
+      "unvestedRSUs": 2.5,
+      "options": {
+        "count": 1.8,
+        "weightedExercisePrice": 325,
+        "weightedRemainingYears": 5.2,
+        "aggregateIntrinsicValue": 432
+      }
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "10-Q",
+      "accession": "0001141391-26-000083",
+      "filedAt": "2026-07-30",
+      "acceptedAt": "2026-07-30T18:28:40.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+      "ttmComponents": {
+        "annualRevenue": 32791.0,
+        "ytdRevenue": 17675.0,
+        "priorYtdRevenue": 15383.0,
+        "annualOperatingIncome": 18897.0,
+        "ytdOperatingIncome": 10494.0,
+        "priorYtdOperatingIncome": 8926.0,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-06-30"
+      },
+      "carriedFrom": {
+        "operatingLeaseLiabilities": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "why": "Current interim filing omits full operating lease liability split; annual operating lease liability retained as context only, not added to debt."
+        },
+        "unvestedRSUs": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "why": "Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown."
+        },
+        "options": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "why": "Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation."
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated income statement; total revenue. TTM = annual + current YTD - comparable prior YTD.",
+          "tag": "us-gaap:Revenues"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated income statement; reported operating income. TTM = annual + current YTD - comparable prior YTD.",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "ttmComponents.annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated income statement; annualRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated income statement; ytdRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated income statement; priorYtdRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Consolidated income statement; annualOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated income statement; ytdOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated income statement; priorYtdOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated balance sheet; cash and cash equivalents; restricted and client funds excluded.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated balance sheet; current investments / marketable securities."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Other assets footnote: total equity investments; earnings are below operating income."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings. Finance-lease liability is not separately quantified in the lease note; no additional unquantified lease debt is assumed. This is an omission, not a reported zero."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings. Finance-lease liability is not separately quantified in the lease note; no additional unquantified lease debt is assumed. This is an omission, not a reported zero."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Lease note; current plus noncurrent operating lease liability. Kept separate from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated balance sheet; noncontrolling interests. Book amount is negative 5; valuation claim floored at zero, not added as an asset. Maximum effect of retaining signed amount is $0.006/share."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Consolidated balance sheet / equity note: no outstanding preferred equity claim identified."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+          "locator": "Cover page, exact Class A plus Class B shares at 2026-07-27. Near-period share-count proxy; not weighted-average EPS shares."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; outstanding restricted units plus performance units. RSU/PSU total, one-for-one dilution proxy."
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedExercisePrice."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: weightedRemainingYears."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/ma-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Column: aggregateIntrinsicValue."
+        }
+      },
+      "convertibles": [],
+      "otherClaims": [],
+      "note": "Amounts in USD millions; shares in millions. Primary financial statements and debt/share notes checked in the filed document. Restricted cash is not an excess asset. Operating leases remain operating expenses and are not deducted again as financial debt. Stock compensation remains in operating expenses; outstanding awards are also reflected as current ownership claims. ",
+      "revenue": 35083.0,
+      "operatingIncome": 20465.0,
+      "cashAndEquivalents": 11291.0,
+      "shortTermInvestments": 318,
+      "longTermInvestments": 1667,
+      "debtCurrent": 2459,
+      "debtNoncurrent": 22184,
+      "operatingLeaseLiabilities": 833,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesDate": "2026-07-27",
+      "sharesOutstanding": 876.00994,
+      "unvestedRSUs": 2.5,
+      "options": {
+        "count": 1.8,
+        "weightedExercisePrice": 325,
+        "weightedRemainingYears": 5.2,
+        "aggregateIntrinsicValue": 432
+      }
+    }
+  },
+  "notes": [
+    "Latest periodic reports checked against SEC submissions as of 2026-10-21; numbers cross-checked against filed primary statements. Sources preserve reported amounts and explicitly distinguish analyst proxies."
+  ],
+  "latestFilingCheck": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001141391.json",
+    "latestPeriodicAccession": "0001141391-26-000083",
+    "latestAnnualAccession": "0001141391-26-000013"
+  }
+}

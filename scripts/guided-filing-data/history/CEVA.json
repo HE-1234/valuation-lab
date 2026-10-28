@@ -1,0 +1,1352 @@
+{
+  "ticker": "CEVA",
+  "currency": "USD",
+  "accountingBasis": "US GAAP",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001173489.json",
+  "collectedAt": "2026-10-21",
+  "mappedDebt": "Exact balance-sheet borrowing rows plus separately disclosed finance/capital leases; components and filing locators preserved. Missing inputs remain null.",
+  "years": {
+    "2015": {
+      "revenue": {
+        "value": 59.499,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2016-03-11",
+        "accession": "0001193125-16-501526",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 59499000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 6.312,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2016-03-11",
+        "accession": "0001193125-16-501526",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 6312000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 186.095,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2015-12-31",
+        "filed": "2016-03-11",
+        "accession": "0001193125-16-501526",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 186095000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 18.909,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2015-12-31",
+        "filed": "2016-03-11",
+        "accession": "0001193125-16-501526",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 18909000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 7.381,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2016-03-11",
+        "accession": "0001193125-16-501526",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 7381000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 1.114,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2016-03-11",
+        "accession": "0001193125-16-501526",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 1114000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2015-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2015-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2015,
+      "periodEnd": "2015-12-31",
+      "periodStart": "2015-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2015-12-31",
+        "filed": "2016-03-11",
+        "accession": "0001193125-16-501526",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+        "note": "Zero separately reported borrowings verified from the complete filed balance sheet, not inferred from absent XBRL tags.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Trade payables $ 864 $ 693 Deferred revenues 1,681 2,763 Accrued expenses and other payables (Note 7) 3,793 3,633 Contingent consideration (Note 2) 3,603 \u2014 Accrued payroll and related benefits 10,054 11,894 Total current liabilities 19,995 18,983 Long-term liabilities: Accrued severance pay 7,096 7,571 Deferred tax liabilities (Note 13) 865 \u2014 Total long-term liabilities 7,961 7,571 ",
+          "balanceSheetHeader": "December 31, 2014 2015 ASSETS Current assets: Cash and cash equivalents $ 16,166 $ 18,909 Short-term bank deposits 37,444 30,767 Marketable securities (Note 3) ",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000119312516501526/d127989d10k.htm"
+        ]
+      }
+    },
+    "2016": {
+      "revenue": {
+        "value": 72.653,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2017-03-10",
+        "accession": "0001193125-17-078780",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312517078780/d332181d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 72653000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 14.386,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2017-03-10",
+        "accession": "0001193125-17-078780",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312517078780/d332181d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 14386000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 211.551,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2016-12-31",
+        "filed": "2017-03-10",
+        "accession": "0001193125-17-078780",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312517078780/d332181d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 211551000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 18.401,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2016-12-31",
+        "filed": "2017-03-10",
+        "accession": "0001193125-17-078780",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312517078780/d332181d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 18401000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 16.425,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2017-03-10",
+        "accession": "0001193125-17-078780",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312517078780/d332181d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 16425000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 3.325,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2017-03-10",
+        "accession": "0001193125-17-078780",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312517078780/d332181d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 3325000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2016-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2016-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2016,
+      "periodEnd": "2016-12-31",
+      "periodStart": "2016-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2016-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+        "note": "Zero separately reported borrowings verified from the complete filed balance sheet, not inferred from absent XBRL tags.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Trade payables $ 571 $ 392 Deferred revenues 6,258 4,399 Accrued expenses and other payables (Note 6) 4,015 3,927 Accrued payroll and related benefits 11,751 14,077 Total current liabilities 22,595 22,795 Long-term liabilities: Accrued severance pay 8,349 9,347 Total long-term liabilities 8,349 9,347 ",
+          "balanceSheetHeader": "December 31, 2016 2017 ASSETS Current assets: Cash and cash equivalents $ 18,401 $ 21,739 Short-term bank deposits 46,247 34,432 Marketable securities (Note 2) ",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm"
+        ]
+      }
+    },
+    "2017": {
+      "revenue": {
+        "value": 87.507,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 87507000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 15.873,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 15873000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 244.67,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2017-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 244670000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 21.739,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2017-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 21739000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 18.899,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 18899000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 1.871,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 1871000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2017-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2017-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2017,
+      "periodEnd": "2017-12-31",
+      "periodStart": "2017-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2017-12-31",
+        "filed": "2018-03-01",
+        "accession": "0001193125-18-067193",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+        "note": "Zero separately reported borrowings verified from the complete filed balance sheet, not inferred from absent XBRL tags.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Trade payables $ 571 $ 392 Deferred revenues 6,258 4,399 Accrued expenses and other payables (Note 6) 4,015 3,927 Accrued payroll and related benefits 11,751 14,077 Total current liabilities 22,595 22,795 Long-term liabilities: Accrued severance pay 8,349 9,347 Total long-term liabilities 8,349 9,347 ",
+          "balanceSheetHeader": "December 31, 2016 2017 ASSETS Current assets: Cash and cash equivalents $ 18,401 $ 21,739 Short-term bank deposits 46,247 34,432 Marketable securities (Note 2) ",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000119312518067193/d528001d10k.htm"
+        ]
+      }
+    },
+    "2018": {
+      "revenue": {
+        "value": 77.877,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2019-03-04",
+        "accession": "0001437749-19-003949",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774919003949/ceva20181231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 77877000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -1.245,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2019-03-04",
+        "accession": "0001437749-19-003949",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774919003949/ceva20181231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -1245000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 245.879,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2019-03-04",
+        "accession": "0001437749-19-003949",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774919003949/ceva20181231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 245879000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 22.26,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2019-03-04",
+        "accession": "0001437749-19-003949",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774919003949/ceva20181231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 22260000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 1.303,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2019-03-04",
+        "accession": "0001437749-19-003949",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774919003949/ceva20181231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 1303000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 0.729,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2019-03-04",
+        "accession": "0001437749-19-003949",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774919003949/ceva20181231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 729000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2018-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2018-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2018,
+      "periodEnd": "2018-12-31",
+      "periodStart": "2018-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+        "note": "Zero separately reported borrowings verified from the complete filed balance sheet, not inferred from absent XBRL tags.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Trade payables $ 632 $ 701 Deferred revenues 3,593 3,642 Accrued expenses and other payables (Note 8) 4,344 3,748 Accrued payroll and related benefits 13,183 15,894 Operating lease liabilities \u2014 2,393 Total current liabilities 21,752 26,378 Long-term liabilities: Accrued severance pay 9,632 10,551 Operating lease liabilities \u2014 8,273 Other accrued liabilities \u2014 662 Total long-term liabilities 9,632 19,486 ",
+          "balanceSheetHeader": "December 31, 2018 2019 ASSETS Current assets: Cash and cash equivalents $ 22,260 $ 22,803 Short-term bank deposits 46,139 56,915 Marketable securities (Note 3) ",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm"
+        ]
+      }
+    },
+    "2019": {
+      "revenue": {
+        "value": 87.152,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 87152000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -1.924,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -1924000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 251.157,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 251157000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 22.803,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 22803000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 1.367,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 1367000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 1.339,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 1339000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2019-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2019-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2019,
+      "periodEnd": "2019-12-31",
+      "periodStart": "2019-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2020-02-28",
+        "accession": "0001437749-20-003932",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+        "note": "Zero separately reported borrowings verified from the complete filed balance sheet, not inferred from absent XBRL tags.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated Balance Sheets: complete current and long-term liability schedules contain no borrowings or finance/capital leases. Trade payables, deferred revenue, payroll, severance and operating leases are not interest-bearing debt.",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Trade payables $ 632 $ 701 Deferred revenues 3,593 3,642 Accrued expenses and other payables (Note 8) 4,344 3,748 Accrued payroll and related benefits 13,183 15,894 Operating lease liabilities \u2014 2,393 Total current liabilities 21,752 26,378 Long-term liabilities: Accrued severance pay 9,632 10,551 Operating lease liabilities \u2014 8,273 Other accrued liabilities \u2014 662 Total long-term liabilities 9,632 19,486 ",
+          "balanceSheetHeader": "December 31, 2018 2019 ASSETS Current assets: Cash and cash equivalents $ 22,260 $ 22,803 Short-term bank deposits 46,139 56,915 Marketable securities (Note 3) ",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774920003932/ceva20191231_10k.htm"
+        ]
+      }
+    },
+    "2020": {
+      "revenue": {
+        "value": 100.326,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001437749-21-004597",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774921004597/ceva20201231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 100326000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -0.763,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001437749-21-004597",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774921004597/ceva20201231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -763000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 260.889,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001437749-21-004597",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774921004597/ceva20201231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 260889000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 21.143,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001437749-21-004597",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774921004597/ceva20201231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 21143000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 2.521,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001437749-21-004597",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774921004597/ceva20201231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 2521000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 4.9,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001437749-21-004597",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774921004597/ceva20201231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 4900000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2020-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2020-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2020,
+      "periodEnd": "2020-12-31",
+      "periodStart": "2020-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS \u2019 EQUITY Current liabilities: Trade payables $ 894 $ 1,464 Deferred revenues 2,434 8,661 Accrued expenses and other payables 3,843 4,030 Accrued payroll and related benefits 18,040 18,011 Operating lease liabilities 2,969 3,274 Total current liabilities 28,180 35,440 Long-term liabilities: Accrued severance pay 11,226 10,551 Operating lease liabilities 5,772 5,130 Other accrued liabilities 885 806 Total long-term liabilities 17,883 16,487 ",
+          "balanceSheetHeader": "December 31, 2020 2021 ASSETS Current assets: Cash and cash equivalents $ 21,143 $ 33,153 Short-term bank deposits 20,233 31,410 Marketable securities 88,754 90",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm"
+        ]
+      }
+    },
+    "2021": {
+      "revenue": {
+        "value": 122.706,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 122706000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 3.508,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 3508000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 276.732,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 276732000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 33.153,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 33153000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 5.688,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 5688000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 5.292,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 5292000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2021-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2021-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2021,
+      "periodEnd": "2021-12-31",
+      "periodStart": "2021-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-03-01",
+        "accession": "0001437749-22-004905",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS \u2019 EQUITY Current liabilities: Trade payables $ 894 $ 1,464 Deferred revenues 2,434 8,661 Accrued expenses and other payables 3,843 4,030 Accrued payroll and related benefits 18,040 18,011 Operating lease liabilities 2,969 3,274 Total current liabilities 28,180 35,440 Long-term liabilities: Accrued severance pay 11,226 10,551 Operating lease liabilities 5,772 5,130 Other accrued liabilities 885 806 Total long-term liabilities 17,883 16,487 ",
+          "balanceSheetHeader": "December 31, 2020 2021 ASSETS Current assets: Cash and cash equivalents $ 21,143 $ 33,153 Short-term bank deposits 20,233 31,410 Marketable securities 88,754 90",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774922004905/ceva20211231_10k.htm"
+        ]
+      }
+    },
+    "2022": {
+      "revenue": {
+        "value": 134.648,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001437749-23-005106",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774923005106/ceva20221231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 134648000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -5.409,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001437749-23-005106",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774923005106/ceva20221231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -5409000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 258.871,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001437749-23-005106",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774923005106/ceva20221231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 258871000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 21.285,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001437749-23-005106",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774923005106/ceva20221231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 21285000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -5.108,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001437749-23-005106",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774923005106/ceva20221231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -5108000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 18.075,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-03-01",
+        "accession": "0001437749-23-005106",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774923005106/ceva20221231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 18075000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2022-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2022-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2022,
+      "periodEnd": "2022-12-31",
+      "periodStart": "2022-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS \u2019 EQUITY Current liabilities: Trade payables $ 1,859 $ 1,154 Deferred revenues 3,098 3,018 Accrued expenses and other payables 6,545 5,800 Accrued payroll and related benefits 17,504 14,402 Operating lease liabilities 2,680 2,513 Current liabilities of discontinued operation 1,592 \u2014 Total current liabilities 33,278 26,887 Long-term liabilities: Accrued severance pay 9,064 7,524 Operating lease liabilities 5,207 3,943 Other accrued liabilities 526 1,390 Long-term liabilities of discontinued operation 1,496 \u2014 Total long-term liabilities 16,293 12,857 ",
+          "balanceSheetHeader": "December 31, 2022 2023 ASSETS Current assets: Cash and cash equivalents $ 20,116 $ 23,287 Short-term bank deposits 6,114 10,556 Marketable securities 112,080 13",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm"
+        ]
+      }
+    },
+    "2023": {
+      "revenue": {
+        "value": 97.419,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 97419000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -13.467,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -13467000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 264.341,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 264341000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 23.287,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 23287000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -8.205,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -8205000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 10.232,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 10232000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2023-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2023-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2023,
+      "periodEnd": "2023-12-31",
+      "periodStart": "2023-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-03-07",
+        "accession": "0001437749-24-006970",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS \u2019 EQUITY Current liabilities: Trade payables $ 1,859 $ 1,154 Deferred revenues 3,098 3,018 Accrued expenses and other payables 6,545 5,800 Accrued payroll and related benefits 17,504 14,402 Operating lease liabilities 2,680 2,513 Current liabilities of discontinued operation 1,592 \u2014 Total current liabilities 33,278 26,887 Long-term liabilities: Accrued severance pay 9,064 7,524 Operating lease liabilities 5,207 3,943 Other accrued liabilities 526 1,390 Long-term liabilities of discontinued operation 1,496 \u2014 Total long-term liabilities 16,293 12,857 ",
+          "balanceSheetHeader": "December 31, 2022 2023 ASSETS Current assets: Cash and cash equivalents $ 20,116 $ 23,287 Short-term bank deposits 6,114 10,556 Marketable securities 112,080 13",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774924006970/ceva20231231_10k.htm"
+        ]
+      }
+    },
+    "2024": {
+      "revenue": {
+        "value": 106.939,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-27",
+        "accession": "0001437749-25-005523",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774925005523/ceva20241231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 106939000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -7.545,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-27",
+        "accession": "0001437749-25-005523",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774925005523/ceva20241231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -7545000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 266.556,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-27",
+        "accession": "0001437749-25-005523",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774925005523/ceva20241231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 266556000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 18.498,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-27",
+        "accession": "0001437749-25-005523",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774925005523/ceva20241231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 18498000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -2.755,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-27",
+        "accession": "0001437749-25-005523",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774925005523/ceva20241231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -2755000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 6.031,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-27",
+        "accession": "0001437749-25-005523",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774925005523/ceva20241231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 6031000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2024-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2024-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2024,
+      "periodEnd": "2024-12-31",
+      "periodStart": "2024-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS \u2019 EQUITY Current liabilities: Trade payables $ 1,125 $ 2,418 Deferred revenues 3,599 3,496 Accrued expenses and other payables 6,243 5,181 Accrued payroll and related benefits 16,964 15,845 Operating lease liabilities 2,598 1,743 Total current liabilities 30,529 28,683 Long-term liabilities: Accrued severance pay 7,365 7,690 Operating lease liabilities 2,963 14,388 Other accrued liabilities 1,535 1,037 Total long-term liabilities 11,863 23,115 ",
+          "balanceSheetHeader": "December 31, 2024 2025 ASSETS Current assets: Cash and cash equivalents $ 18,498 $ 40,586 Short-term bank deposits 2,029 2,095 Marketable securities 143,117 179",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm"
+        ]
+      }
+    },
+    "2025": {
+      "revenue": {
+        "value": 109.598,
+        "tag": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "rawValue": 109598000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -11.346,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -11346000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 336.458,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 336458000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 40.586,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 40586000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -4.69,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -4690000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 5.948,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 5948000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2025-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2025-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2025,
+      "periodEnd": "2025-12-31",
+      "periodStart": "2025-01-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-27",
+        "accession": "0001437749-26-006091",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "LIABILITIES AND STOCKHOLDERS \u2019 EQUITY Current liabilities: Trade payables $ 1,125 $ 2,418 Deferred revenues 3,599 3,496 Accrued expenses and other payables 6,243 5,181 Accrued payroll and related benefits 16,964 15,845 Operating lease liabilities 2,598 1,743 Total current liabilities 30,529 28,683 Long-term liabilities: Accrued severance pay 7,365 7,690 Operating lease liabilities 2,963 14,388 Other accrued liabilities 1,535 1,037 Total long-term liabilities 11,863 23,115 ",
+          "balanceSheetHeader": "December 31, 2024 2025 ASSETS Current assets: Cash and cash equivalents $ 18,498 $ 40,586 Short-term bank deposits 2,029 2,095 Marketable securities 143,117 179",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1173489/000143774926006091/ceva20251231_10k.htm"
+        ]
+      }
+    }
+  }
+}

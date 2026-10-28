@@ -1,0 +1,291 @@
+{
+ "ticker": "MRVL",
+ "name": "Marvell Technology, Inc.",
+ "cik": "0001835632",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "ordinary-common",
+ "adrRatio": 1,
+ "listedUnit": "common share (Nasdaq: MRVL)",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2026-01-31",
+   "label": "FY2026",
+   "form": "10-K",
+   "accession": "0001835632-26-000011",
+   "filedAt": "2026-03-11",
+   "acceptedAt": "2026-03-12T00:04:20.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+   "revenue": 8194.6,
+   "operatingIncome": 1322.9,
+   "ttmComponents": null,
+   "cashAndEquivalents": 2638.8,
+   "shortTermInvestments": 0,
+   "longTermInvestments": 151.3,
+   "debtCurrent": 499.8,
+   "debtNoncurrent": 3970.8,
+   "operatingLeaseLiabilities": 319.7,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 847.3,
+   "sharesDate": "2026-01-31",
+   "unvestedRSUs": 17.0,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "FY2025 customer warrant (up to 4.2M shares, strike $87.77, 7-yr term, vests on customer qualifying product revenue through 2030-01-05)",
+     "value": 227.6,
+     "basis": "grant-date Black-Scholes fair value as disclosed (total $227.6M, $54.44/share); current fair or intrinsic value is NOT disclosed. 0.7M shares vested and 3.5M unvested at 2026-01-31; exercisable for cash or net exercise.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm Note 3 Revenue, Customer Warrants; Note 11 Warrant Shares activity table and valuation assumptions; Item 5 recent sales (term, strike, net exercise)"
+    },
+    {
+     "name": "FY2026 customer warrant (up to 1.0M shares, strike $87.00, 6-yr term, vests on customer photonic-fabric revenue through 2030-12-31)",
+     "value": 55.4,
+     "basis": "grant-date Black-Scholes fair value as disclosed (total $55.4M, $53.02/share); current fair or intrinsic value is NOT disclosed. None vested at 2026-01-31.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm Note 3 Revenue, Customer Warrants; Note 11 Warrant Shares; Item 5 recent sales"
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Statements of Operations, Net revenue, year ended January 31, 2026",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Statements of Operations, Operating income, year ended January 31, 2026",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Balance Sheets, Cash and cash equivalents, January 31, 2026 (includes $72.7M time deposits per Note 15)",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Note 6 Fair Value: marketable equity investments $21.7M (Level 1) + non-marketable equity investments $129.6M carrying value, both in Other non-current assets; NQDC securities $3.9M and severance fund $0.7M excluded (matched to obligations)"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Balance Sheets, Short-term debt $499.8M (2026 Senior Notes due 2026-04-15; Note 7 Debt, current portion)",
+     "tag": "us-gaap:LongTermDebtCurrent"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Balance Sheets, Long-term debt $3,970.8M; Note 7: face $4,499.9M less $29.3M discount/issuance cost = $4,470.6M carrying",
+     "tag": "us-gaap:LongTermDebtNoncurrent"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Note 9 Leases, present value of lease liabilities $319.7M (current $56.5M + non-current $263.2M per Note 15 and 10-Q comparative)"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Balance Sheets, common stock 847.3M shares issued and outstanding at January 31, 2026 (balance-sheet date; cover shows 874.3M at March 4, 2026 only because ~24.5M Celestial + ~2.1M XConn acquisition shares were issued after year end)"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Note 11 Restricted Stock and Stock Unit Awards: unvested time-based 12.2M + performance-based (target) 4.8M at January 31, 2026"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Balance Sheets, complete equity section: all equity is common-parent stockholders equity; no noncontrolling-interest or mezzanine NCI class reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "January 31, 2026 February 1, 2025 ASSETS Current assets: Cash and cash equivalents $ 2,638.8 $ 948.3 Accounts receivable, net 2,186.6 1,028.4 Inventories 1,388.0 1,029.7 Prepaid expenses and other current assets 247.2 113.9 Total current assets 6,460.6 3,120.3 Property and equipment, net 935.0 790.5 Goodwill 11,062.2 11,586.9 Acquired intangible assets, net 1,754.7 2,710.6 Deferred tax assets 345.9 401.2 Other non-current assets 1,726.9 1,595.0 Total assets $ 22,285.3 $ 20,204.5 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 1,073.8 $ 622.2 Accrued liabilities 1,337.1 972.6 Accrued employee compensation 309.8 302.5 Short-term debt 499.8 129.5 Total current liabilities 3,220.5 2,026.8 Long-term debt 3,970.8 3,934.3 Other non-current liabilities 785.6 816.4 Total liabilities 7,976.9 6,777.5 Commitments and contingencies (Note 8) Stockholders\u2019 equity: Preferred stock, $ 0.002 par value; 8.0 shares authorized; no shares issued and outstanding \u2014 \u2014 Common stock, $ 0.002 par value; 1.3 billion shares authorized; 847.3 and 866.0 shares issued and outstanding as of January 31, 2026 and February 1, 2025, respectively 1.7 1.7 Additional paid-in capital 12,950.9 14,534.1 Accumulated other comprehensive income \u2014 0.4 Retained earnings (Accumulated deficit) 1,355.8 ( 1,109.2 ) Total stockholders\u2019 equity 14,308.4 13,427.0 Total liabilities and stockholders\u2019 equity $ 22,285.3 $ 20,204.5"
+     }
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Balance Sheets, preferred stock authorized; no shares issued or outstanding.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "January 31, 2026 February 1, 2025 ASSETS Current assets: Cash and cash equivalents $ 2,638.8 $ 948.3 Accounts receivable, net 2,186.6 1,028.4 Inventories 1,388.0 1,029.7 Prepaid expenses and other current assets 247.2 113.9 Total current assets 6,460.6 3,120.3 Property and equipment, net 935.0 790.5 Goodwill 11,062.2 11,586.9 Acquired intangible assets, net 1,754.7 2,710.6 Deferred tax assets 345.9 401.2 Other non-current assets 1,726.9 1,595.0 Total assets $ 22,285.3 $ 20,204.5 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 1,073.8 $ 622.2 Accrued liabilities 1,337.1 972.6 Accrued employee compensation 309.8 302.5 Short-term debt 499.8 129.5 Total current liabilities 3,220.5 2,026.8 Long-term debt 3,970.8 3,934.3 Other non-current liabilities 785.6 816.4 Total liabilities 7,976.9 6,777.5 Commitments and contingencies (Note 8) Stockholders\u2019 equity: Preferred stock, $ 0.002 par value; 8.0 shares authorized; no shares issued and outstanding \u2014 \u2014 Common stock, $ 0.002 par value; 1.3 billion shares authorized; 847.3 and 866.0 shares issued and outstanding as of January 31, 2026 and February 1, 2025, respectively 1.7 1.7 Additional paid-in capital 12,950.9 14,534.1 Accumulated other comprehensive income \u2014 0.4 Retained earnings (Accumulated deficit) 1,355.8 ( 1,109.2 ) Total stockholders\u2019 equity 14,308.4 13,427.0 Total liabilities and stockholders\u2019 equity $ 22,285.3 $ 20,204.5"
+     }
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Consolidated Balance Sheets, complete current assets: cash and cash equivalents, receivables, inventories, prepaid/other assets; no separate short-term investments balance. Note 6 cash-equivalents fair-value table includes money market funds and time deposits in cash, not an additional investment asset.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "January 31, 2026 February 1, 2025 ASSETS Current assets: Cash and cash equivalents $ 2,638.8 $ 948.3 Accounts receivable, net 2,186.6 1,028.4 Inventories 1,388.0 1,029.7 Prepaid expenses and other current assets 247.2 113.9 Total current assets 6,460.6 3,120.3 Property and equipment, net 935.0 790.5 Goodwill 11,062.2 11,586.9 Acquired intangible assets, net 1,754.7 2,710.6 Deferred tax assets 345.9 401.2 Other non-current assets 1,726.9 1,595.0 Total assets $ 22,285.3 $ 20,204.5 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 1,073.8 $ 622.2 Accrued liabilities 1,337.1 972.6 Accrued employee compensation 309.8 302.5 Short-term debt 499.8 129.5 Total current liabilities 3,220.5 2,026.8 Long-term debt 3,970.8 3,934.3 Other non-current liabilities 785.6 816.4 Total liabilities 7,976.9 6,777.5 Commitments and contingencies (Note 8) Stockholders\u2019 equity: Preferred stock, $ 0.002 par value; 8.0 shares authorized; no shares issued and outstanding \u2014 \u2014 Common stock, $ 0.002 par value; 1.3 billion shares authorized; 847.3 and 866.0 shares issued and outstanding as of January 31, 2026 and February 1, 2025, respectively 1.7 1.7 Additional paid-in capital 12,950.9 14,534.1 Accumulated other comprehensive income \u2014 0.4 Retained earnings (Accumulated deficit) 1,355.8 ( 1,109.2 ) Total stockholders\u2019 equity 14,308.4 13,427.0 Total liabilities and stockholders\u2019 equity $ 22,285.3 $ 20,204.5"
+     }
+    }
+   },
+   "note": "Fiscal 2026 ended Jan 31, 2026. Filer is Marvell Technology, Inc. (Delaware, CIK 1835632; the former Bermuda parent Marvell Technology Group Ltd is CIK 1058057). Balance sheet and share count EXCLUDE the Celestial AI (closed 2026-02-02, cash ~$1.3B + ~24.5M shares + earnout) and XConn (closed 2026-02-10, ~$280M cash + ~2.1M shares) acquisitions and the NVIDIA Series A preferred (2026-03-31) because all occurred after the balance-sheet date (10-K Note 16 Subsequent Events); the Celestial earnout is therefore not a Jan-31 claim. No stock options table is disclosed in the 10-K (options null). Technology license obligations (about $244.5M at Jan 31: current $84.1M + non-current $160.4M, Note 15 of 10-Q comparative) are not included in debt. Customer warrant fair values shown are grant-date values; the FY2025 and FY2026 warrants total up to 5.2M shares."
+  },
+  "ttm": {
+   "periodEnd": "2026-08-01",
+   "label": "TTM through 2026-08-01",
+   "form": "10-Q",
+   "accession": "0001835632-26-000025",
+   "filedAt": "2026-08-28",
+   "acceptedAt": "2026-08-29T00:04:02.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "revenue": 9450.3,
+   "operatingIncome": 1561.3,
+   "ttmComponents": {
+    "annualRevenue": 8194.6,
+    "ytdRevenue": 5157.1,
+    "priorYtdRevenue": 3901.4,
+    "annualOperatingIncome": 1322.9,
+    "ytdOperatingIncome": 799.1,
+    "priorYtdOperatingIncome": 560.7,
+    "ytdStart": "2026-02-01",
+    "ytdEnd": "2026-08-01",
+    "priorYtdStart": "2025-02-02",
+    "priorYtdEnd": "2025-08-02"
+   },
+   "cashAndEquivalents": 3932.8,
+   "shortTermInvestments": 0,
+   "longTermInvestments": 181.7,
+   "debtCurrent": 0,
+   "debtNoncurrent": 4962.9,
+   "operatingLeaseLiabilities": 323.2,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 2000.0,
+   "sharesOutstanding": 876.8,
+   "sharesDate": "2026-08-01",
+   "unvestedRSUs": 17.0,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "Celestial AI contingent consideration (earnout) liability",
+     "value": 749.5,
+     "basis": "fair value (Level 3, Monte Carlo) in Other non-current liabilities at 2026-08-01; initial measurement $315.8M on 2026-02-02; maximum settlement about $233.0M undiscounted cash plus about 22.4M shares (exact cap 22,378,470 shares per Aug-18 warrant exhibit) if revenue milestones are met through fiscal 2029. Deduct the fair value OR model earned cash/shares, never both.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm Note 6 Fair Value (contingent consideration roll-forward and maximum settlement); Note 14 other non-current liabilities table; shares cap: https://www.sec.gov/Archives/edgar/data/1835632/000119312526356217/d412696dex41.htm capitalization representation"
+    },
+    {
+     "name": "Cash-settled forward stock purchase contract on MRVL shares (asset, hedges the Celestial earnout)",
+     "value": -131.0,
+     "basis": "fair value asset (Level 3) in Prepaid expenses and other current assets at 2026-08-01 (notional $300.0M, 12-month term from April 2026); entered as a NEGATIVE claim (asset). Offsets part of the earnout liability; cash-settled, does not reduce share count.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm Note 6 Fair Value, forward stock purchase contract; fair value table at August 1, 2026"
+    },
+    {
+     "name": "Series A Convertible Preferred (NVIDIA): 2.0M shares, convertible at about $91.84 into about 21.778M common shares",
+     "value": 0,
+     "basis": "memo entry, value 0 to avoid double count: the $2,000M stated value is carried in preferredEquity. Participates as-converted in dividends and liquidation, no redemption right; GAAP treats it as a second class of common. Valuer must either deduct preferredEquity OR add 21.778M as-converted shares to the share count, not both.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm Note 10 Stockholders Equity (Preferred and Common Stock); Note 12 EPS; 10-Q states approx. 21.8M shares maximum on conversion (Note 10); the exact 21,778,000 figure comes only from the reviewed research package (capital-claims-v2.json), not re-verified in a filing; Q2 weighted as-converted preferred shares 21.8M (Note 12)"
+    },
+    {
+     "name": "FY2025 customer warrant (up to 4.2M shares, strike $87.77, through 2031-12-02)",
+     "value": 227.6,
+     "basis": "grant-date Black-Scholes fair value as disclosed; current fair or intrinsic value NOT disclosed. 1.2M shares vested at 2026-08-01 (0.7M at Jan 31).",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm Note 3 Revenue, Customer Warrant paragraph"
+    },
+    {
+     "name": "FY2026 customer warrant (up to 1.0M shares, strike $87.00, through 2031-12-02)",
+     "value": 55.4,
+     "basis": "grant-date Black-Scholes fair value as disclosed; current value NOT disclosed. None vested at 2026-08-01.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm Note 3 Revenue, Customer Warrant paragraph"
+    },
+    {
+     "name": "Google warrant issued 2026-08-18 (post period end, before 10-Q filing): up to 58,970,907 shares at $206.58, expires 2033-08-18",
+     "value": null,
+     "basis": "no fair value or intrinsic value disclosed in any filing; value is null because no fair value is disclosed. Terms: 1,360,867 time-based shares vest quarterly over 12 months; 57,610,040 vest in 240 equal tranches (240,042 shares each, last 240,002) per $500M Google custom-product revenue from fiscal Q3 2027 through fiscal 2033; cash or cashless exercise. Not on the 2026-08-01 balance sheet (subsequent event).",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm Note 15 Subsequent Event and Part II Item 2; terms: https://www.sec.gov/Archives/edgar/data/1835632/000119312526356217/d412696d8k.htm Item 1.01 and Exhibit 4.1 https://www.sec.gov/Archives/edgar/data/1835632/000119312526356217/d412696dex41.htm"
+    }
+   ],
+   "carriedFrom": {
+    "unvestedRSUs": {
+     "date": "2026-01-31",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "why": "The Q2 FY2027 10-Q has no equity-compensation award table; 12.2M time-based + 4.8M performance (target) unvested at 2026-01-31 carried. The Aug-18-2026 Google warrant exhibit states 30,581,074 shares subject to outstanding options, RSUs and PRSUs (target) in total, after Celestial/XConn assumed awards and new grants, so the carried 17.0M is stale and understates."
+    }
+   },
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "TTM = FY2026 net revenue 8,194.6 + six months ended Aug 1, 2026 5,157.1 - six months ended Aug 2, 2025 3,901.4; Statements of Operations",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "TTM = FY2026 operating income 1,322.9 + six months 2026 799.1 - six months 2025 560.7; Statements of Operations",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Unaudited Condensed Consolidated Balance Sheets, Cash and cash equivalents, August 1, 2026 (includes $194.0M time deposits, Note 6)",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Note 6 Fair Value: marketable equity investments $25.5M + non-marketable equity investments $156.2M (Other non-current assets); NQDC securities $9.1M and severance fund $0.8M excluded (matched to obligations)"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Balance Sheets Long-term debt $4,962.9M; Note 7: face $4,999.9M less $37.0M discount/issuance cost; short-term debt nil (2026 Senior Notes repaid April 2026, $1.0B 5.300% 2036 notes issued April 15, 2026)",
+     "tag": "us-gaap:LongTermDebtNoncurrent"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Note 14 Supplemental: lease liabilities current $59.3M (Accrued liabilities) + non-current $263.9M (Other non-current liabilities)"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Note 10: 2.0M Series A Convertible Preferred shares sold to NVIDIA for $2.0 billion, stated value $1,000/share; balance-sheet equity statement shows $1,999.6M net of issuance cost"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Statement of Stockholders Equity, common shares 876.8M at August 1, 2026 (cover: 876.9M at Aug 21, 2026; exact 876,926,613 at Aug 18, 2026 per https://www.sec.gov/Archives/edgar/data/1835632/000119312526356217/d412696dex41.htm)"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000011/mrvl-20260131.htm",
+     "locator": "Note 11 (carried): 12.2M time-based + 4.8M performance-based at January 31, 2026"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets August 1, 2026: Short-term debt is a dash; January 31 comparative $499.8M; Note 7 Debt: 2026 notes repaid at maturity.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "August 1, 2026 January 31, 2026 ASSETS Current assets: Cash and cash equivalents $ 3,932.8 $ 2,638.8 Accounts receivable, net 2,218.4 2,186.6 Inventories 1,360.6 1,388.0 Prepaid expenses and other current assets 407.5 247.2 Total current assets 7,919.3 6,460.6 Property and equipment, net 1,071.0 935.0 Goodwill 13,873.9 11,062.2 Acquired intangible assets, net 2,346.6 1,754.7 Deferred tax assets 322.3 345.9 Other non-current assets 2,021.5 1,726.9 Total assets $ 27,554.6 $ 22,285.3 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 797.9 $ 1,073.8 Accrued liabilities 1,425.8 1,337.1 Accrued employee compensation 275.8 309.8 Short-term debt \u2014 499.8 Total current liabilities 2,499.5 3,220.5 Long-term debt 4,962.9 3,970.8 Other non-current liabilities 1,560.6 785.6 Total liabilities 9,023.0 7,976.9 Commitments and contingencies (Note 9) Stockholders\u2019 equity: Preferred stock, $ 0.002 par value; 8.0 shares authorized; 2.0 shares issued and outstanding as of August 1, 2026 of Series A Convertible Preferred Stock ( none issued and outstanding as of January 31, 2026) \u2014 \u2014 Common stock, $ 0.002 par value 1.8 1.7 Additional paid-in capital 16,939.2 12,950.9 Retained earnings 1,590.6 1,355.8 Total stockholders\u2019 equity 18,531.6 14,308.4 Total liabilities and stockholders\u2019 equity $ 27,554.6 $ 22,285.3"
+     }
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Consolidated Balance Sheets, complete equity section: all equity is common-parent stockholders equity; no noncontrolling-interest or mezzanine NCI class reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "August 1, 2026 January 31, 2026 ASSETS Current assets: Cash and cash equivalents $ 3,932.8 $ 2,638.8 Accounts receivable, net 2,218.4 2,186.6 Inventories 1,360.6 1,388.0 Prepaid expenses and other current assets 407.5 247.2 Total current assets 7,919.3 6,460.6 Property and equipment, net 1,071.0 935.0 Goodwill 13,873.9 11,062.2 Acquired intangible assets, net 2,346.6 1,754.7 Deferred tax assets 322.3 345.9 Other non-current assets 2,021.5 1,726.9 Total assets $ 27,554.6 $ 22,285.3 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 797.9 $ 1,073.8 Accrued liabilities 1,425.8 1,337.1 Accrued employee compensation 275.8 309.8 Short-term debt \u2014 499.8 Total current liabilities 2,499.5 3,220.5 Long-term debt 4,962.9 3,970.8 Other non-current liabilities 1,560.6 785.6 Total liabilities 9,023.0 7,976.9 Commitments and contingencies (Note 9) Stockholders\u2019 equity: Preferred stock, $ 0.002 par value; 8.0 shares authorized; 2.0 shares issued and outstanding as of August 1, 2026 of Series A Convertible Preferred Stock ( none issued and outstanding as of January 31, 2026) \u2014 \u2014 Common stock, $ 0.002 par value 1.8 1.7 Additional paid-in capital 16,939.2 12,950.9 Retained earnings 1,590.6 1,355.8 Total stockholders\u2019 equity 18,531.6 14,308.4 Total liabilities and stockholders\u2019 equity $ 27,554.6 $ 22,285.3"
+     }
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+     "locator": "Consolidated Balance Sheets, complete current assets: cash and cash equivalents, receivables, inventories, prepaid/other assets; no separate short-term investments balance. Note 6 cash-equivalents fair-value table includes money market funds and time deposits in cash, not an additional investment asset.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "August 1, 2026 January 31, 2026 ASSETS Current assets: Cash and cash equivalents $ 3,932.8 $ 2,638.8 Accounts receivable, net 2,218.4 2,186.6 Inventories 1,360.6 1,388.0 Prepaid expenses and other current assets 407.5 247.2 Total current assets 7,919.3 6,460.6 Property and equipment, net 1,071.0 935.0 Goodwill 13,873.9 11,062.2 Acquired intangible assets, net 2,346.6 1,754.7 Deferred tax assets 322.3 345.9 Other non-current assets 2,021.5 1,726.9 Total assets $ 27,554.6 $ 22,285.3 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 797.9 $ 1,073.8 Accrued liabilities 1,425.8 1,337.1 Accrued employee compensation 275.8 309.8 Short-term debt \u2014 499.8 Total current liabilities 2,499.5 3,220.5 Long-term debt 4,962.9 3,970.8 Other non-current liabilities 1,560.6 785.6 Total liabilities 9,023.0 7,976.9 Commitments and contingencies (Note 9) Stockholders\u2019 equity: Preferred stock, $ 0.002 par value; 8.0 shares authorized; 2.0 shares issued and outstanding as of August 1, 2026 of Series A Convertible Preferred Stock ( none issued and outstanding as of January 31, 2026) \u2014 \u2014 Common stock, $ 0.002 par value 1.8 1.7 Additional paid-in capital 16,939.2 12,950.9 Retained earnings 1,590.6 1,355.8 Total stockholders\u2019 equity 18,531.6 14,308.4 Total liabilities and stockholders\u2019 equity $ 27,554.6 $ 22,285.3"
+     }
+    }
+   },
+   "note": "Latest filed 10-Q is Q2 FY2027 (period ended 2026-08-01, filed 2026-08-28). Common shares exclude the 2.0M Series A preferred (as-converted about 21.8M common equivalents per 10-Q; research package says 21.778M), which is carried as preferredEquity $2,000M; do not count both. Options: the 10-Q gives no option or RSU table; Celestial and XConn assumed options (3.1M and 0.5M shares registered, strikes unknown) exist so options is left null rather than estimated. Aug-18-2026 exact capital (Google warrant exhibit): 876,926,613 common; 30,581,074 shares under options, RSUs and PRSUs at target; legacy customer warrants up to 5,225,854 shares; 22,378,470 earnout shares. Technology license obligations of $220.0M (current $96.2M + non-current $123.8M) are not in debt; restructuring $238.4M and tax payables $249.4M likewise excluded. Unconditional purchase commitments $8,518.9M foundry + $666.3M technology services (Note 9). H1 FY2027 includes $433.7M earnout fair-value expense and $131.0M forward gain in Other expense, below operating income."
+  }
+ },
+ "notes": [
+  "Fiscal year ends on the Saturday nearest January 31. FY2026 = year ended 2026-01-31. TTM runs to the Q2 FY2027 quarter end 2026-08-01.",
+  "Reviewed package (dist/data/incremental-MRVL-2026-10-18-v3) figures for the Aug-1 balance sheet and Aug-18 capital were re-checked against the 10-Q and the Aug-19 8-K exhibit and agree.",
+  "Annual and TTM balance sheets are not comparable for capital: Celestial, XConn, NVIDIA preferred and Google warrant all fall between the two dates.",
+  "No convertible notes or capped calls exist at either date; debt is senior unsecured notes only."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0001835632.json",
+  "latestPeriodicAccession": "0001835632-26-000025",
+  "latestAnnualAccession": "0001835632-26-000011"
+ }
+}

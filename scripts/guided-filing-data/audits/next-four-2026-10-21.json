@@ -1,0 +1,1398 @@
+{
+  "cutoff": "2026-10-21",
+  "added": [
+    "ORCL",
+    "DELL",
+    "ALAB",
+    "ADBE"
+  ],
+  "companies": 54,
+  "selectableBases": 98,
+  "newBases": 8,
+  "newAnnualRows": 34,
+  "records": [
+    {
+      "ticker": "ORCL",
+      "id": "ORCL-CURRENT-2026-05-31",
+      "periodEnd": "2026-05-31",
+      "filedAt": "2026-06-22",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+      "mode": "annual-reference",
+      "valuePerShare": 0,
+      "rawValuePerShare": -13.475524579557579,
+      "enterprise": 73709.64611362532,
+      "equity": -40321.980557410716,
+      "shares": 2992.238285,
+      "assumptions": {
+        "growth": 0.18,
+        "targetMargin": 0.32,
+        "tax": 0.2,
+        "salesCapital": 0.22,
+        "wacc": 0.1,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.15,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 2300
+      },
+      "claims": {
+        "id": "ORCL-2026-05-31-guided-claims-v1",
+        "type": "resolved-awards",
+        "ticker": "ORCL",
+        "snapshotIds": [
+          "ORCL-CURRENT-2026-05-31"
+        ],
+        "periodEnd": "2026-05-31",
+        "filedAt": "2026-06-22",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "cash": 31894,
+        "mappedDebt": 137242,
+        "capturedShares": 2992.238285,
+        "commonShares": 2880,
+        "employeeAwardShares": 81,
+        "optionTranches": [
+          {
+            "shares": 5,
+            "strike": 49.37,
+            "years": 1.64,
+            "volatility": 0.51,
+            "rate": 0.038
+          },
+          {
+            "shares": 15,
+            "strike": 275.9,
+            "years": 9.35,
+            "volatility": 0.51,
+            "rate": 0.038
+          },
+          {
+            "shares": 1,
+            "strike": 184.88,
+            "years": 5,
+            "volatility": 0.51,
+            "rate": 0.038
+          }
+        ],
+        "fixedClaims": 5571,
+        "evidenceAsOf": "2026-10-21",
+        "description": "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "evidencePath": "./data/guided-additions-evidence.json",
+        "cautions": [
+          "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+          "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August."
+        ],
+        "sources": [
+          {
+            "title": "ORCL · 10-K · 2026-05-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+          }
+        ],
+        "commonEquivalentShares": 31.238285,
+        "mandatoryConversion": {
+          "minimumShares": 24.99063,
+          "maximumShares": 31.238285,
+          "dividendPresentValue": 820.6266710360389,
+          "undiscountedDividends": 893.75,
+          "conversionDate": "2029-01-15",
+          "valuationDate": "2026-05-31",
+          "preferredCarryingExcluded": 4954,
+          "preferredLiquidationAmount": 5000,
+          "quarterlyDividend": 81.25,
+          "discountRate": 0.065,
+          "paymentDates": [
+            "2026-07-15",
+            "2026-10-15",
+            "2027-01-15",
+            "2027-04-15",
+            "2027-07-15",
+            "2027-10-15",
+            "2028-01-15",
+            "2028-04-15",
+            "2028-07-15",
+            "2028-10-15",
+            "2029-01-15"
+          ],
+          "formula": "Sum(5000 * .065 /4 / (1+.065)^((paymentDate-valuationDate)/365.25)); dividend rate is a disclosed coupon but discount rate is an analyst proxy, not market yield.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Note10 Stockholders equity, Mandatory Convertible Preferred Stock; quarterly dividenddatesJan15/Apr15/Jul15/Oct15 throughJan15 2029."
+        },
+        "operatingCashReserve": {
+          "amount": 4592,
+          "note": {
+            "en": "Conservative reserve for cash collected before delivery of future cloud services. Uses cumulative increases in deferred revenue from customer prepayments with a significant financing component: 4,592 in FY2026, plus 11,363 in Q1 FY2027. This is not legally restricted cash or a reported closing financing balance; earned amounts, noncash changes and FX may make the actual balance lower. No future repeat funding is assumed in the reinvestment default.",
+            "zh": "为提前收取、尚需履行未来云服务的现金保留审慎储备。采用含重大融资成分客户预付款所形成的递延收入累计增量：2026财年45.92亿美元，加2027财年第一季度113.63亿美元。这并非法律限制现金或披露的期末融资余额；已赚取收入、非现金变化及汇率可能使实际余额较低。再投资默认值不假设未来重复获得此类融资。"
+          },
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "sourceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+          ],
+          "locator": "Cash flow statement: Increase in deferred revenues from customer prepayments with significant financing component; Note 1 revenue recognition; net proceeds zero in FY2024 and FY2025.",
+          "components": [
+            4592
+          ],
+          "formula": "Cumulative disclosed cash-flow increases in customer prepayments with significant financing components: 4592 + 11363 for TTM, 4592 for annual."
+        }
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "ORCL-2026-05-31-guided-claims-v1",
+        "referenceDate": "2026-05-31",
+        "method": "option-proxy",
+        "conversionChoice": null,
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 31894,
+        "mappedDebt": 137242,
+        "commonShares": 2880,
+        "basicShares": 2880,
+        "allocationShares": 2992.238285,
+        "equityBeforeWarrants": -40321.980557410716,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 10983.62667103604,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Common-equivalent preferred shares",
+            "amount": 31.238285,
+            "kind": "shares"
+          },
+          {
+            "label": "Remaining preferred dividends",
+            "amount": 820.6266710360389,
+            "kind": "claim"
+          },
+          {
+            "label": "Customer-prepayment cash reserve proxy",
+            "amount": 4592,
+            "kind": "claim"
+          },
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 81,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 5571,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 0,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+          "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August."
+        ],
+        "sources": [
+          {
+            "title": "ORCL · 10-K · 2026-05-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "ORCL-2026-05-31-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value",
+          "mandatoryConversionCase": "maximum",
+          "preferredDividendTreatment": "discounted",
+          "operatingCashReserveFraction": 1
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 0,
+          "rawPerShare": -13.475524579557579,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 0,
+          "rawPerShare": -13.475524579557579,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 0,
+          "rawPerShare": -13.475524579557579,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 0,
+          "rawPerShare": -13.120356060321146,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Half customer-prepayment reserve",
+          "perShare": 0,
+          "rawPerShare": -12.708206010207746,
+          "changes": {
+            "operatingCashReserveFraction": 0.5
+          }
+        },
+        {
+          "label": "Customer-prepayment reserve omitted",
+          "perShare": 0,
+          "rawPerShare": -11.940887440857912,
+          "changes": {
+            "operatingCashReserveFraction": 0
+          }
+        },
+        {
+          "label": "Minimum mandatory-conversion shares",
+          "perShare": 0,
+          "rawPerShare": -13.503719721120062,
+          "changes": {
+            "mandatoryConversionCase": "minimum"
+          }
+        },
+        {
+          "label": "Preferred dividends without discounting",
+          "perShare": 0,
+          "rawPerShare": -13.499962248619742,
+          "changes": {
+            "preferredDividendTreatment": "undiscounted"
+          }
+        }
+      ],
+      "historyYears": 10,
+      "historyShortfall": null,
+      "reportedNulls": [
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "Some dilution or convertible values are undisclosed. The displayed case includes quantified claims only and is not a complete period-end claims valuation.",
+        "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "The default keeps recent AI buildout intensity in the explicit forecast: sales-to-new-capital of 0.22 means about $4.55 of net reinvestment per $1 of incremental revenue. With current debt and other claims, this scenario produces negative modeled common equity, displayed at a zero floor. It is a conservative conditional scenario, not an assertion that Oracle is worthless. Post-buildout capital efficiency, customer funding and terminal assumptions materially change the result; historical book capital is contextual and is not substituted for future investment.",
+        "August 2026 restricted cash of $2,565m is excluded from excess cash. The 141m ATM shares and $19.9bn net proceeds are already in the August balance sheet and are not added again.",
+        "Short-term capex financing has no standalone reported closing balance. A conservative claim proxy assumes zero opening at FY2024 and accumulates net financing of $1,422m + $3,345m = $4,767m for May 2026 and subtracts $830m to reach $3,937m for August. The notes-payable schedule reconciles separately and excludes these cash flows. An omitted $1bn opening balance would reduce value by about $0.33/share; the full proxy is about $1.3–1.6/share.",
+        "The 31.238285m maximum mandatory preferred-conversion shares are an explicit conservative current-value proxy for a future market-price collar; the minimum 24.99063m sensitivity is available. Preferred carrying amount of $4,954m is not also subtracted. Remaining cumulative dividends are discounted separately at a 6.5% analyst rate; nominal payments provide a sensitivity.",
+        "Annual 81m restricted awards and 21m options are carried into August because no complete interim rollforward is disclosed; 2.4m new awards were exceeded by 4m forfeitures/cancellations before vesting or exercises. Carrying annual counts is conservative, not an exact current count.",
+        "Uncommenced data-center leases are $288bn at August and purchase obligations total $34.15bn. They are future operating and investment commitments, not added mechanically to current debt. Growth, margin and reinvestment must fund the capacity; contracted revenue can fail to translate into cash if customers default or construction slips.",
+        "Net pension liability of $256m is included once and carried from May to August. Matched deferred-compensation investments and liabilities are excluded. Nonmarketable investment carrying amounts of $2.3bn/$2.4bn is a valuation proxy; a 50% haircut changes value by roughly $0.4/share.",
+        "FY2017/2018 were retrospectively restated for Topic 606 and pension presentation; FY2016 opening context was not. The transition is excluded from comparable historical growth/capital ranges. History is latest-reported context, not a point-in-time backtest.",
+        "Gross uncertain income-tax exposures and related interest/penalties total $13.2bn at May 2026. They are not all assumed immediately payable or deducted as debt; the timing and ultimate settlement remain a material tax sensitivity beyond the normalized 20% operating tax scenario.",
+        "Customer prepayment funding reserve is 4,592m for May and 15,955m for August, shown separately from debt and restricted cash. Full, half and omitted reserve scenarios expose a material cash-conversion uncertainty. The reserve is a conservative gross cash-flow accumulation, not a separately reported closing balance.",
+        "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August."
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "id": "ORCL-TTM-2026-08-31",
+      "periodEnd": "2026-08-31",
+      "filedAt": "2026-09-11",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+      "mode": "ttm",
+      "valuePerShare": 0,
+      "rawValuePerShare": -10.591150346364945,
+      "enterprise": 83152.46514625428,
+      "equity": -33216.37119846075,
+      "shares": 3136.238285,
+      "assumptions": {
+        "growth": 0.18,
+        "targetMargin": 0.32,
+        "tax": 0.2,
+        "salesCapital": 0.22,
+        "wacc": 0.1,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.15,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 2400
+      },
+      "claims": {
+        "id": "ORCL-2026-08-31-guided-claims-v1",
+        "type": "resolved-awards",
+        "ticker": "ORCL",
+        "snapshotIds": [
+          "ORCL-TTM-2026-08-31"
+        ],
+        "periodEnd": "2026-08-31",
+        "filedAt": "2026-09-11",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+        "cash": 37077,
+        "mappedDebt": 134522,
+        "capturedShares": 3136.238285,
+        "commonShares": 3024,
+        "employeeAwardShares": 81,
+        "optionTranches": [
+          {
+            "shares": 5,
+            "strike": 49.37,
+            "years": 1.64,
+            "volatility": 0.51,
+            "rate": 0.038
+          },
+          {
+            "shares": 15,
+            "strike": 275.9,
+            "years": 9.35,
+            "volatility": 0.51,
+            "rate": 0.038
+          },
+          {
+            "shares": 1,
+            "strike": 184.88,
+            "years": 5,
+            "volatility": 0.51,
+            "rate": 0.038
+          }
+        ],
+        "fixedClaims": 4617,
+        "evidenceAsOf": "2026-10-21",
+        "description": "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "evidencePath": "./data/guided-additions-evidence.json",
+        "cautions": [
+          "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+          "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August."
+        ],
+        "sources": [
+          {
+            "title": "ORCL · 10-Q · 2026-08-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+          }
+        ],
+        "commonEquivalentShares": 31.238285,
+        "mandatoryConversion": {
+          "minimumShares": 24.99063,
+          "maximumShares": 31.238285,
+          "dividendPresentValue": 751.8363447150316,
+          "undiscountedDividends": 812.5,
+          "conversionDate": "2029-01-15",
+          "valuationDate": "2026-08-31",
+          "preferredCarryingExcluded": 4954,
+          "preferredLiquidationAmount": 5000,
+          "quarterlyDividend": 81.25,
+          "discountRate": 0.065,
+          "paymentDates": [
+            "2026-10-15",
+            "2027-01-15",
+            "2027-04-15",
+            "2027-07-15",
+            "2027-10-15",
+            "2028-01-15",
+            "2028-04-15",
+            "2028-07-15",
+            "2028-10-15",
+            "2029-01-15"
+          ],
+          "formula": "Sum(5000 * .065 /4 / (1+.065)^((paymentDate-valuationDate)/365.25)); dividend rate is a disclosed coupon but discount rate is an analyst proxy, not market yield.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "locator": "Note10 Stockholders equity, Mandatory Convertible Preferred Stock; quarterly dividenddatesJan15/Apr15/Jul15/Oct15 throughJan15 2029."
+        },
+        "operatingCashReserve": {
+          "amount": 15955,
+          "note": {
+            "en": "Conservative reserve for cash collected before delivery of future cloud services. Uses cumulative increases in deferred revenue from customer prepayments with a significant financing component: 4,592 in FY2026, plus 11,363 in Q1 FY2027. This is not legally restricted cash or a reported closing financing balance; earned amounts, noncash changes and FX may make the actual balance lower. No future repeat funding is assumed in the reinvestment default.",
+            "zh": "为提前收取、尚需履行未来云服务的现金保留审慎储备。采用含重大融资成分客户预付款所形成的递延收入累计增量：2026财年45.92亿美元，加2027财年第一季度113.63亿美元。这并非法律限制现金或披露的期末融资余额；已赚取收入、非现金变化及汇率可能使实际余额较低。再投资默认值不假设未来重复获得此类融资。"
+          },
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+          "sourceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+            "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+          ],
+          "locator": "Cash flow statement: Increase in deferred revenues from customer prepayments with significant financing component; Note 1 revenue recognition; net proceeds zero in FY2024 and FY2025.",
+          "components": [
+            4592,
+            11363
+          ],
+          "formula": "Cumulative disclosed cash-flow increases in customer prepayments with significant financing components: 4592 + 11363 for TTM, 4592 for annual."
+        }
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "ORCL-2026-08-31-guided-claims-v1",
+        "referenceDate": "2026-08-31",
+        "method": "option-proxy",
+        "conversionChoice": null,
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 37077,
+        "mappedDebt": 134522,
+        "commonShares": 3024,
+        "basicShares": 3024,
+        "allocationShares": 3136.238285,
+        "equityBeforeWarrants": -33216.37119846075,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 21323.836344715033,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Common-equivalent preferred shares",
+            "amount": 31.238285,
+            "kind": "shares"
+          },
+          {
+            "label": "Remaining preferred dividends",
+            "amount": 751.8363447150316,
+            "kind": "claim"
+          },
+          {
+            "label": "Customer-prepayment cash reserve proxy",
+            "amount": 15955,
+            "kind": "claim"
+          },
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 81,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 4617,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 0,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+          "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August."
+        ],
+        "sources": [
+          {
+            "title": "ORCL · 10-Q · 2026-08-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "ORCL-2026-08-31-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value",
+          "mandatoryConversionCase": "maximum",
+          "preferredDividendTreatment": "discounted",
+          "operatingCashReserveFraction": 1
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 0,
+          "rawPerShare": -10.591150346364945,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 0,
+          "rawPerShare": -10.591150346364945,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 0,
+          "rawPerShare": -10.591150346364945,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 0,
+          "rawPerShare": -10.324498298223114,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Half customer-prepayment reserve",
+          "perShare": 0,
+          "rawPerShare": -8.047497959314258,
+          "changes": {
+            "operatingCashReserveFraction": 0.5
+          }
+        },
+        {
+          "label": "Customer-prepayment reserve omitted",
+          "perShare": 0,
+          "rawPerShare": -5.503845572263573,
+          "changes": {
+            "operatingCashReserveFraction": 0
+          }
+        },
+        {
+          "label": "Minimum mandatory-conversion shares",
+          "perShare": 0,
+          "rawPerShare": -10.61229093789995,
+          "changes": {
+            "mandatoryConversionCase": "minimum"
+          }
+        },
+        {
+          "label": "Preferred dividends without discounting",
+          "perShare": 0,
+          "rawPerShare": -10.610493154459315,
+          "changes": {
+            "preferredDividendTreatment": "undiscounted"
+          }
+        }
+      ],
+      "historyYears": 10,
+      "historyShortfall": null,
+      "reportedNulls": [
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "Some dilution or convertible values are undisclosed. The displayed case includes quantified claims only and is not a complete period-end claims valuation.",
+        "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "The default keeps recent AI buildout intensity in the explicit forecast: sales-to-new-capital of 0.22 means about $4.55 of net reinvestment per $1 of incremental revenue. With current debt and other claims, this scenario produces negative modeled common equity, displayed at a zero floor. It is a conservative conditional scenario, not an assertion that Oracle is worthless. Post-buildout capital efficiency, customer funding and terminal assumptions materially change the result; historical book capital is contextual and is not substituted for future investment.",
+        "August 2026 restricted cash of $2,565m is excluded from excess cash. The 141m ATM shares and $19.9bn net proceeds are already in the August balance sheet and are not added again.",
+        "Short-term capex financing has no standalone reported closing balance. A conservative claim proxy assumes zero opening at FY2024 and accumulates net financing of $1,422m + $3,345m = $4,767m for May 2026 and subtracts $830m to reach $3,937m for August. The notes-payable schedule reconciles separately and excludes these cash flows. An omitted $1bn opening balance would reduce value by about $0.33/share; the full proxy is about $1.3–1.6/share.",
+        "The 31.238285m maximum mandatory preferred-conversion shares are an explicit conservative current-value proxy for a future market-price collar; the minimum 24.99063m sensitivity is available. Preferred carrying amount of $4,954m is not also subtracted. Remaining cumulative dividends are discounted separately at a 6.5% analyst rate; nominal payments provide a sensitivity.",
+        "Annual 81m restricted awards and 21m options are carried into August because no complete interim rollforward is disclosed; 2.4m new awards were exceeded by 4m forfeitures/cancellations before vesting or exercises. Carrying annual counts is conservative, not an exact current count.",
+        "Uncommenced data-center leases are $288bn at August and purchase obligations total $34.15bn. They are future operating and investment commitments, not added mechanically to current debt. Growth, margin and reinvestment must fund the capacity; contracted revenue can fail to translate into cash if customers default or construction slips.",
+        "Net pension liability of $256m is included once and carried from May to August. Matched deferred-compensation investments and liabilities are excluded. Nonmarketable investment carrying amounts of $2.3bn/$2.4bn is a valuation proxy; a 50% haircut changes value by roughly $0.4/share.",
+        "FY2017/2018 were retrospectively restated for Topic 606 and pension presentation; FY2016 opening context was not. The transition is excluded from comparable historical growth/capital ranges. History is latest-reported context, not a point-in-time backtest.",
+        "Gross uncertain income-tax exposures and related interest/penalties total $13.2bn at May 2026. They are not all assumed immediately payable or deducted as debt; the timing and ultimate settlement remain a material tax sensitivity beyond the normalized 20% operating tax scenario.",
+        "Customer prepayment funding reserve is 4,592m for May and 15,955m for August, shown separately from debt and restricted cash. Full, half and omitted reserve scenarios expose a material cash-conversion uncertainty. The reserve is a conservative gross cash-flow accumulation, not a separately reported closing balance.",
+        "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August."
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "id": "DELL-CURRENT-2026-01-30",
+      "periodEnd": "2026-01-30",
+      "filedAt": "2026-03-16",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+      "mode": "annual-reference",
+      "valuePerShare": 151.30861889398776,
+      "rawValuePerShare": 151.30861889398776,
+      "enterprise": 120269.90391153579,
+      "equity": 101528.0832778658,
+      "shares": 671,
+      "assumptions": {
+        "growth": 0.12,
+        "targetMargin": 0.09,
+        "tax": 0.2,
+        "salesCapital": 5,
+        "wacc": 0.105,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.18,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 1730
+      },
+      "claims": {
+        "id": "DELL-2026-01-30-guided-claims-v1",
+        "type": "resolved-awards",
+        "ticker": "DELL",
+        "snapshotIds": [
+          "DELL-CURRENT-2026-01-30"
+        ],
+        "periodEnd": "2026-01-30",
+        "filedAt": "2026-03-16",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+        "cash": 11528,
+        "mappedDebt": 31503,
+        "capturedShares": 671,
+        "commonShares": 652,
+        "employeeAwardShares": 19,
+        "optionTranches": [
+          {
+            "shares": 2.5,
+            "strike": 141.77,
+            "years": 9.664613,
+            "volatility": 0.5,
+            "rate": 0.04
+          }
+        ],
+        "fixedClaims": 248,
+        "evidenceAsOf": "2026-10-21",
+        "description": "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "evidencePath": "./data/guided-additions-evidence.json",
+        "cautions": [
+          "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+          "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively."
+        ],
+        "sources": [
+          {
+            "title": "DELL · 10-K · 2026-01-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm"
+          }
+        ]
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "DELL-2026-01-30-guided-claims-v1",
+        "referenceDate": "2026-01-30",
+        "method": "option-proxy",
+        "conversionChoice": null,
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 11528,
+        "mappedDebt": 31503,
+        "commonShares": 652,
+        "basicShares": 652,
+        "allocationShares": 671,
+        "equityBeforeWarrants": 101776.9039115358,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 496.82063367001285,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 19,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 248,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 248.82063367001285,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+          "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively."
+        ],
+        "sources": [
+          {
+            "title": "DELL · 10-K · 2026-01-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "DELL-2026-01-30-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 151.30861889398776,
+          "rawPerShare": 151.30861889398776,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 151.64265614184976,
+          "rawPerShare": 151.64265614184976,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 151.1164126377666,
+          "rawPerShare": 151.1164126377666,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 147.15501935785866,
+          "rawPerShare": 147.15501935785866,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "historyYears": 10,
+      "historyShortfall": null,
+      "reportedNulls": [
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "Whole-enterprise FCFF includes DFS financing income in revenue and subtracts all consolidated corporate and DFS debt once. DFS borrowing interest is below EBIT. Financing receivables and customer leased equipment are operating capital, never added again as surplus investments.",
+        "FY2026 book equity is negative after repurchases. Large payables and supplier-finance balances support working capital; use the explicit reinvestment assumption rather than treating a high book sales/capital ratio as free growth. Supplier finance of $1.98bn annual and about $3.1bn July remains trade payables, as filed, without a second debt deduction.",
+        "July carries 19 million annual RSU/PSU units because the interim filing omits a complete award roll-forward; PSUs are at target, with possible 0%-200% vesting. A +/-25% total-award scenario tests roughly 0.7% of allocation shares. Fractional rounding and small deferred units are below about 0.1% of shares.",
+        "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "The $248m international pension deficit is included once as a separate claim and carried to July; a 50% change moves value by about $0.19 per share. Annual finance leases are disclosed as immaterial; $100m omitted debt would move value about $0.15 per share.",
+        "Strategic investments of $1.73bn annual and $2.679bn July are added once at carrying value; private securities may realize different prices. The $0.6bn July YTD investment gains sit below EBIT and are not projected as operating earnings.",
+        "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively."
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "id": "DELL-TTM-2026-07-31",
+      "periodEnd": "2026-07-31",
+      "filedAt": "2026-09-08",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731.htm",
+      "mode": "ttm",
+      "valuePerShare": 229.56685597224956,
+      "rawValuePerShare": 229.56685597224956,
+      "enterprise": 172166.91728913313,
+      "equity": 151284.55808571246,
+      "shares": 659,
+      "assumptions": {
+        "growth": 0.12,
+        "targetMargin": 0.09,
+        "tax": 0.2,
+        "salesCapital": 5,
+        "wacc": 0.105,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.18,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 2679
+      },
+      "claims": {
+        "id": "DELL-2026-07-31-guided-claims-v1",
+        "type": "resolved-awards",
+        "ticker": "DELL",
+        "snapshotIds": [
+          "DELL-TTM-2026-07-31"
+        ],
+        "periodEnd": "2026-07-31",
+        "filedAt": "2026-09-08",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731.htm",
+        "cash": 11569,
+        "mappedDebt": 34466,
+        "capturedShares": 659,
+        "commonShares": 640,
+        "employeeAwardShares": 19,
+        "optionTranches": [
+          {
+            "shares": 2.5,
+            "strike": 141.77,
+            "years": 9.166324,
+            "volatility": 0.5,
+            "rate": 0.04
+          }
+        ],
+        "fixedClaims": 248,
+        "evidenceAsOf": "2026-10-21",
+        "description": "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "evidencePath": "./data/guided-additions-evidence.json",
+        "cautions": [
+          "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+          "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively."
+        ],
+        "sources": [
+          {
+            "title": "DELL · 10-Q · 2026-07-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731.htm"
+          }
+        ]
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "DELL-2026-07-31-guided-claims-v1",
+        "referenceDate": "2026-07-31",
+        "method": "option-proxy",
+        "conversionChoice": null,
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 11569,
+        "mappedDebt": 34466,
+        "commonShares": 640,
+        "basicShares": 640,
+        "allocationShares": 659,
+        "equityBeforeWarrants": 151700.91728913313,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 664.3592034206579,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 19,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 248,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 416.3592034206579,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+          "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively."
+        ],
+        "sources": [
+          {
+            "title": "DELL · 10-Q · 2026-07-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "DELL-2026-07-31-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 229.56685597224956,
+          "rawPerShare": 229.56685597224956,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 229.86446302212113,
+          "rawPerShare": 229.86446302212113,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 229.328673150617,
+          "rawPerShare": 229.328673150617,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 223.15495351670378,
+          "rawPerShare": 223.15495351670378,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "historyYears": 10,
+      "historyShortfall": null,
+      "reportedNulls": [
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "Whole-enterprise FCFF includes DFS financing income in revenue and subtracts all consolidated corporate and DFS debt once. DFS borrowing interest is below EBIT. Financing receivables and customer leased equipment are operating capital, never added again as surplus investments.",
+        "FY2026 book equity is negative after repurchases. Large payables and supplier-finance balances support working capital; use the explicit reinvestment assumption rather than treating a high book sales/capital ratio as free growth. Supplier finance of $1.98bn annual and about $3.1bn July remains trade payables, as filed, without a second debt deduction.",
+        "July carries 19 million annual RSU/PSU units because the interim filing omits a complete award roll-forward; PSUs are at target, with possible 0%-200% vesting. A +/-25% total-award scenario tests roughly 0.7% of allocation shares. Fractional rounding and small deferred units are below about 0.1% of shares.",
+        "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "The $248m international pension deficit is included once as a separate claim and carried to July; a 50% change moves value by about $0.19 per share. Annual finance leases are disclosed as immaterial; $100m omitted debt would move value about $0.15 per share.",
+        "Strategic investments of $1.73bn annual and $2.679bn July are added once at carrying value; private securities may realize different prices. The $0.6bn July YTD investment gains sit below EBIT and are not projected as operating earnings.",
+        "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively."
+      ]
+    },
+    {
+      "ticker": "ALAB",
+      "id": "ALAB-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-20",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+      "mode": "annual-reference",
+      "valuePerShare": 32.54807335456761,
+      "rawValuePerShare": 32.54807335456761,
+      "enterprise": 4795.829656739033,
+      "equity": 5849.442099062829,
+      "shares": 179.717,
+      "assumptions": {
+        "growth": 0.3,
+        "targetMargin": 0.3,
+        "tax": 0.21,
+        "salesCapital": 2.5,
+        "wacc": 0.12,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.2,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "claims": {
+        "id": "ALAB-2025-12-31-guided-claims-v1",
+        "type": "resolved-awards",
+        "ticker": "ALAB",
+        "snapshotIds": [
+          "ALAB-CURRENT-2025-12-31"
+        ],
+        "periodEnd": "2025-12-31",
+        "filedAt": "2026-02-20",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm",
+        "cash": 1188.816,
+        "mappedDebt": 0,
+        "capturedShares": 179.717,
+        "commonShares": 170.186,
+        "employeeAwardShares": 9.531,
+        "optionTranches": [
+          {
+            "name": "Employee options",
+            "shares": 2.721,
+            "strike": 0.86,
+            "years": 5.5,
+            "volatility": 0.55,
+            "rate": 0.04
+          },
+          {
+            "name": "2022 and2023 Amazon warrants, maximum contractual shares",
+            "shares": 2.316175,
+            "strike": 20.34,
+            "years": 3.786447638603696,
+            "volatility": 0.55,
+            "rate": 0.04
+          },
+          {
+            "name": "SVB warrant",
+            "shares": 0.126185,
+            "strike": 0.3,
+            "years": 5.327857631759069,
+            "volatility": 0.55,
+            "rate": 0.04
+          }
+        ],
+        "fixedClaims": 0,
+        "evidenceAsOf": "2026-10-21",
+        "description": "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "evidencePath": "./data/guided-additions-evidence.json",
+        "cautions": [
+          "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+          "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms."
+        ],
+        "sources": [
+          {
+            "title": "ALAB · 10-K · 2025-12-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm"
+          }
+        ]
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "ALAB-2025-12-31-guided-claims-v1",
+        "referenceDate": "2025-12-31",
+        "method": "option-proxy",
+        "conversionChoice": null,
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 1188.816,
+        "mappedDebt": 0,
+        "commonShares": 170.186,
+        "basicShares": 170.186,
+        "allocationShares": 179.717,
+        "equityBeforeWarrants": 5984.645656739033,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 135.2035576762048,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 9.531,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 0,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 135.2035576762048,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+          "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms."
+        ],
+        "sources": [
+          {
+            "title": "ALAB · 10-K · 2025-12-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000010/alab-20251231.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "ALAB-2025-12-31-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 32.54807335456761,
+          "rawPerShare": 32.54807335456761,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 32.638050746650606,
+          "rawPerShare": 32.638050746650606,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 32.37036998813196,
+          "rawPerShare": 32.37036998813196,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 30.949788876620044,
+          "rawPerShare": 30.949788876620044,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "historyYears": 4,
+      "historyShortfall": "Only four real annual income-statement periods (FY2022–FY2025) are available in the IPO and annual filings; no earlier annual results are invented.",
+      "reportedNulls": [
+        "longTermInvestments",
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "Noncurrent investments exist but their separate carrying amount is unavailable. No value is added for this unquantified asset; this is an omission, not a reported zero.",
+        "Some dilution or convertible values are undisclosed. The displayed case includes quantified claims only and is not a complete period-end claims valuation.",
+        "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "The business has four available annual periods. Pre-IPO preferred stock and the 2024 IPO prevent comparable pre/post-IPO capital calibration; the 2024 IPO-triggered stock compensation remains in GAAP operating history.",
+        "Unquantified noncurrent investments are omitted, not zero-filled. Other assets less operating-lease ROU assets provide conservative ceilings of $54.945m at year-end and $32.667m at June, below $0.31 per allocation share. The annual ceiling still includes goodwill and other operating assets; these are ceilings, not investment estimates.",
+        "February 2026 acquisition holdback 5 m is deducted once; issued acquisition shares are already in common stock. Existing customer-warrant revenue reductions and ongoing stock compensation remain in the operating margin.",
+        "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms."
+      ]
+    },
+    {
+      "ticker": "ALAB",
+      "id": "ALAB-TTM-2026-06-30",
+      "periodEnd": "2026-06-30",
+      "filedAt": "2026-08-05",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000035/alab-20260630.htm",
+      "mode": "ttm",
+      "valuePerShare": 43.58956300293354,
+      "rawValuePerShare": 43.58956300293354,
+      "enterprise": 6911.61528226314,
+      "equity": 7978.633612056956,
+      "shares": 183.04000000000002,
+      "assumptions": {
+        "growth": 0.3,
+        "targetMargin": 0.3,
+        "tax": 0.21,
+        "salesCapital": 2.5,
+        "wacc": 0.12,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.2,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 0
+      },
+      "claims": {
+        "id": "ALAB-2026-06-30-guided-claims-v1",
+        "type": "resolved-awards",
+        "ticker": "ALAB",
+        "snapshotIds": [
+          "ALAB-TTM-2026-06-30"
+        ],
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-08-05",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000035/alab-20260630.htm",
+        "cash": 1252.958,
+        "mappedDebt": 0,
+        "capturedShares": 183.04000000000002,
+        "commonShares": 173.485,
+        "employeeAwardShares": 9.555,
+        "optionTranches": [
+          {
+            "name": "Employee options",
+            "shares": 1.693,
+            "strike": 0.89,
+            "years": 5,
+            "volatility": 0.55,
+            "rate": 0.04
+          },
+          {
+            "name": "2022 and2023 Amazon warrants, maximum contractual shares",
+            "shares": 2.316175,
+            "strike": 20.34,
+            "years": 3.2908966461327855,
+            "volatility": 0.55,
+            "rate": 0.04
+          },
+          {
+            "name": "2026 Amazon warrant, maximum contractual shares",
+            "shares": 3.262299,
+            "strike": 142.82,
+            "years": 6.510609171800137,
+            "volatility": 0.548,
+            "rate": 0.043
+          }
+        ],
+        "fixedClaims": 5,
+        "evidenceAsOf": "2026-10-21",
+        "description": "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "evidencePath": "./data/guided-additions-evidence.json",
+        "cautions": [
+          "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+          "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms."
+        ],
+        "sources": [
+          {
+            "title": "ALAB · 10-Q · 2026-06-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000035/alab-20260630.htm"
+          }
+        ]
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "ALAB-2026-06-30-guided-claims-v1",
+        "referenceDate": "2026-06-30",
+        "method": "option-proxy",
+        "conversionChoice": null,
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 1252.958,
+        "mappedDebt": 0,
+        "commonShares": 173.485,
+        "basicShares": 173.485,
+        "allocationShares": 183.04000000000002,
+        "equityBeforeWarrants": 8159.57328226314,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 185.9396702061837,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 9.555,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 5,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 180.9396702061837,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+          "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms."
+        ],
+        "sources": [
+          {
+            "title": "ALAB · 10-Q · 2026-06-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000035/alab-20260630.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "ALAB-2026-06-30-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "fair-value"
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 43.58956300293354,
+          "rawPerShare": 43.58956300293354,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 43.882530098104624,
+          "rawPerShare": 43.882530098104624,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 42.874836239580276,
+          "rawPerShare": 42.874836239580276,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 41.48689270922349,
+          "rawPerShare": 41.48689270922349,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        }
+      ],
+      "historyYears": 4,
+      "historyShortfall": "Only four real annual income-statement periods (FY2022–FY2025) are available in the IPO and annual filings; no earlier annual results are invented.",
+      "reportedNulls": [
+        "longTermInvestments",
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "Noncurrent investments exist but their separate carrying amount is unavailable. No value is added for this unquantified asset; this is an omission, not a reported zero.",
+        "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "The business has four available annual periods. Pre-IPO preferred stock and the 2024 IPO prevent comparable pre/post-IPO capital calibration; the 2024 IPO-triggered stock compensation remains in GAAP operating history.",
+        "Unquantified noncurrent investments are omitted, not zero-filled. Other assets less operating-lease ROU assets provide conservative ceilings of $54.945m at year-end and $32.667m at June, below $0.31 per allocation share. The annual ceiling still includes goodwill and other operating assets; these are ceilings, not investment estimates.",
+        "February 2026 acquisition holdback 5 m is deducted once; issued acquisition shares are already in common stock. Existing customer-warrant revenue reductions and ongoing stock compensation remain in the operating margin.",
+        "Employee options and all contractual customer warrants are allocated at the model share price with an explicit full-vesting option proxy. Old Amazon warrants 2.316175 m at 20.34 mature October 2029; the June base also includes 3.262299 m at 142.82 through January 2033. Annual SVB 0.126185 m at 0.30 disappears after June 2026 cashless exercise; its issued shares are already in June common shares. Reported grant-date values are not deducted again.",
+        "Full contractual warrant vesting is a conservative dilution assumption, not management probability: only 1.165513 m old warrants were vested at year-end and 1.663042 m aggregate customer warrants atJune. Volatility 55%/54.8% and rates 4%/4.3% are modeling proxies; SVB remaining life follows its April 30, 2031 expiry in the IPO warrant terms."
+      ]
+    },
+    {
+      "ticker": "ADBE",
+      "id": "ADBE-CURRENT-2025-11-28",
+      "periodEnd": "2025-11-28",
+      "filedAt": "2026-01-15",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/adbe-20251128.htm",
+      "mode": "annual-reference",
+      "valuePerShare": 269.4901599048227,
+      "rawValuePerShare": 269.4901599048227,
+      "enterprise": 113217.10239988276,
+      "equity": 113590.10239988276,
+      "shares": 421.5,
+      "assumptions": {
+        "growth": 0.1,
+        "targetMargin": 0.37,
+        "tax": 0.22,
+        "salesCapital": 2.5,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.2,
+        "years": 10,
+        "otherClaims": 12,
+        "otherAssets": 0
+      },
+      "claims": null,
+      "claimsBridge": null,
+      "sensitivities": [],
+      "historyYears": 10,
+      "historyShortfall": null,
+      "reportedNulls": [
+        "longTermInvestments",
+        "optionsOutstanding",
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "Noncurrent investments exist but their separate carrying amount is unavailable. No value is added for this unquantified asset; this is an omission, not a reported zero.",
+        "Semrush acquiredApril 28,2026 for 1.874 bn is already included in the August balance sheet, current awards and results from closing; no second purchase-price deduction. Topaz Labs 340 m was agreed but unclosed atAugust 28 and is excluded from the dated base; its gross cash commitment is about$0.84 per allocation share before acquired value.",
+        "Private investment carrying values are not separately quantified and receive no extra asset value. The entire other-assets balance less matched plan assets is only 1.268 bn annual or 1.355 bn interim, a conservative ceiling below$3.4 per allocation share that also contains non-investment operating assets.",
+        "Unvested awards use full RSU vesting plus target performance shares:8.5 m annual and 13.4 m interim. Maximum 200% performance payout would add only 0.6 m shares (about 0.15% of the interim denominator). The annual 12 m net deferred-compensation funding gap is carried as a small interim proxy (~$0.03/share).",
+        "The FY 2024 Figma termination fee 1 bn remains in reported historical operating income; it is not projected as recurring. FY 2026 goodwill impairment 70 m and acquisition costs remain in current GAAP earnings."
+      ]
+    },
+    {
+      "ticker": "ADBE",
+      "id": "ADBE-TTM-2026-08-28",
+      "periodEnd": "2026-08-28",
+      "filedAt": "2026-09-22",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/adbe-20260828.htm",
+      "mode": "ttm",
+      "valuePerShare": 302.08475767448476,
+      "rawValuePerShare": 302.08475767448476,
+      "enterprise": 122899.07600356164,
+      "equity": 122163.07600356164,
+      "shares": 404.4,
+      "assumptions": {
+        "growth": 0.1,
+        "targetMargin": 0.37,
+        "tax": 0.22,
+        "salesCapital": 2.5,
+        "wacc": 0.1,
+        "terminalGrowth": 0.025,
+        "terminalROIC": 0.2,
+        "years": 10,
+        "otherClaims": 12,
+        "otherAssets": 0
+      },
+      "claims": null,
+      "claimsBridge": null,
+      "sensitivities": [],
+      "historyYears": 10,
+      "historyShortfall": null,
+      "reportedNulls": [
+        "longTermInvestments",
+        "optionsOutstanding",
+        "dilutedShares"
+      ],
+      "proxies": {},
+      "limits": [
+        "Some share, award, lease or claim inputs come from earlier disclosures. See the source dates; they are not verified period-end amounts.",
+        "Noncurrent investments exist but their separate carrying amount is unavailable. No value is added for this unquantified asset; this is an omission, not a reported zero.",
+        "Semrush acquiredApril 28,2026 for 1.874 bn is already included in the August balance sheet, current awards and results from closing; no second purchase-price deduction. Topaz Labs 340 m was agreed but unclosed atAugust 28 and is excluded from the dated base; its gross cash commitment is about$0.84 per allocation share before acquired value.",
+        "Private investment carrying values are not separately quantified and receive no extra asset value. The entire other-assets balance less matched plan assets is only 1.268 bn annual or 1.355 bn interim, a conservative ceiling below$3.4 per allocation share that also contains non-investment operating assets.",
+        "Unvested awards use full RSU vesting plus target performance shares:8.5 m annual and 13.4 m interim. Maximum 200% performance payout would add only 0.6 m shares (about 0.15% of the interim denominator). The annual 12 m net deferred-compensation funding gap is carried as a small interim proxy (~$0.03/share).",
+        "The FY 2024 Figma termination fee 1 bn remains in reported historical operating income; it is not projected as recurring. FY 2026 goodwill impairment 70 m and acquisition costs remain in current GAAP earnings."
+      ]
+    }
+  ]
+}
