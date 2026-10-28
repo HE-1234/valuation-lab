@@ -7,7 +7,7 @@ export const workspacePages={
 const sectionLabels={studio:'Studio',research:'Research',learn:'Learn'};
 export function mountWorkspaceNavigation({document=globalThis.document,window=globalThis.window,history=globalThis.history,location=globalThis.location,enter=()=>{}}={}){
  const releaseDocumentFlow=mountDocumentFlow(document);
- const last={studio:'renewed',research:'history',learn:'learn'};let current='renewed',active=true;
+ const last={studio:'current',research:'history',learn:'learn'};let current='current',active=true;
  function show(page,{record=true,animate=true,reason='programmatic'}={}){
   if(!active||!Object.hasOwn(workspacePages,page))return false;
   const info=workspacePages[page],changed=page!==current;current=page;last[info.section]=page;
@@ -25,8 +25,8 @@ export function mountWorkspaceNavigation({document=globalThis.document,window=gl
  document.querySelectorAll('[data-tab]').forEach(el=>el.onclick=()=>show(el.dataset.tab,{reason:'explicit'}));
  document.querySelectorAll('[data-primary]').forEach(el=>el.onclick=()=>show(last[el.dataset.primary],{reason:'explicit'}));
  document.querySelectorAll('[data-page-link]').forEach(el=>el.onclick=e=>{e.preventDefault();show(el.dataset.pageLink,{reason:'explicit'});});
- const onLocation=()=>show(location.hash?location.hash.slice(1):'renewed',{record:false,animate:false,reason:'history'});
+ const onLocation=()=>show(location.hash?location.hash.slice(1):'current',{record:false,animate:false,reason:'history'});
  window.addEventListener('popstate',onLocation);window.addEventListener('hashchange',onLocation);
- show(Object.hasOwn(workspacePages,location.hash.slice(1))?location.hash.slice(1):'renewed',{record:false,animate:false,reason:'initial'});
+ show(Object.hasOwn(workspacePages,location.hash.slice(1))?location.hash.slice(1):'current',{record:false,animate:false,reason:'initial'});
  return {show,getPage:()=>current,destroy(){active=false;releaseDocumentFlow();window.removeEventListener('popstate',onLocation);window.removeEventListener('hashchange',onLocation);}};
 }

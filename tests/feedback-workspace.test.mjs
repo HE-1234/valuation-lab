@@ -23,7 +23,7 @@ function navigationFixture(hash=''){
 test('feedback navigation: three primary destinations keep six distinct route IDs and model modes',()=>{
  const h=navigationFixture();assert.deepEqual(h.document.querySelectorAll('[data-primary]').map(x=>x.textContent),['Studio','Research','Learn']);
  assert.deepEqual(Object.keys(workspacePages).sort(),['current','data','history','learn','renewed','workbench']);
- assert.equal(h.nav.getPage(),'renewed');assert.equal(h.get('#breadcrumb').textContent,'Studio / Year-by-year');
+ assert.equal(h.nav.getPage(),'current');assert.equal(h.get('#breadcrumb').textContent,'Studio / Guided valuation');
  for(const page of Object.keys(workspacePages)){
   h.nav.show(page);assert.equal(h.nav.getPage(),page);const visible=h.document.querySelectorAll('.page').filter(x=>!x.classList.contains('hidden'));assert.deepEqual(visible.map(x=>x.id),[page]);
   assert.equal(h.get(`[data-tab="${page}"]`).getAttribute('aria-current'),'page');
@@ -31,10 +31,11 @@ test('feedback navigation: three primary destinations keep six distinct route ID
  }
  h.nav.show('current');h.get('[data-primary="research"]').click();h.nav.show('data');h.get('[data-primary="studio"]').click();assert.equal(h.nav.getPage(),'current');h.get('[data-primary="research"]').click();assert.equal(h.nav.getPage(),'data');
 });
-test('feedback navigation: Back to empty initial hash returns to annual mode; Forward and deep links work',()=>{
- const h=navigationFixture();h.get('[data-tab="current"]').click();assert.equal(h.location.hash,'#current');h.history.back();assert.equal(h.location.hash,'');assert.equal(h.nav.getPage(),'renewed');h.history.forward();assert.equal(h.nav.getPage(),'current');
+test('feedback navigation: Back to empty initial hash returns to Guided; Forward and deep links work',()=>{
+ const h=navigationFixture();h.get('[data-tab="renewed"]').click();assert.equal(h.location.hash,'#renewed');h.history.back();assert.equal(h.location.hash,'');assert.equal(h.nav.getPage(),'current');h.history.forward();assert.equal(h.nav.getPage(),'renewed');
+ for(const page of Object.keys(workspacePages))assert.equal(navigationFixture('#'+page).nav.getPage(),page);
  const deep=navigationFixture('#workbench');assert.equal(deep.nav.getPage(),'workbench');assert.deepEqual(deep.enters,[]);deep.location.hash='#forecast-details';deep.listeners.get('hashchange')();assert.equal(deep.nav.getPage(),'workbench');
- deep.get('[data-page-link="renewed"]').click();assert.equal(deep.nav.getPage(),'renewed');deep.nav.destroy();assert.equal(deep.listeners.size,0);
+ deep.get('[data-page-link="current"]').click();assert.equal(deep.nav.getPage(),'current');deep.nav.destroy();assert.equal(deep.listeners.size,0);
 });
 test('feedback display: compact money keeps currency, negative sign and raw values separate',()=>{
  assert.equal(formatMoneyMillions(2142560,'USD'),'$2.14T');assert.equal(formatMoneyMillions(-2142560,'USD'),'−$2.14T');assert.equal(formatMoneyMillions(5000,'TWD'),'NT$5B');assert.equal(formatMoneyMillions(0,'USD'),'$0M');assert.equal(formatMoneyMillions(null),'Not computed');
