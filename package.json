@@ -1,1 +1,10 @@
-{"name":"valuation-lab","private":true,"type":"module","scripts":{"test":"node --test tests/*.test.mjs","start":"python3 -m http.server 8080 -d dist"}}
+{
+  "name": "valuation-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --max-old-space-size=2048 --test --test-concurrency=1 --test-timeout=120000 tests/*.test.mjs",
+    "test:files": "node --max-old-space-size=2048 --test --test-concurrency=1 --test-timeout=120000",
+    "start": "python3 -m http.server 8080 -d dist"
+  }
+}
