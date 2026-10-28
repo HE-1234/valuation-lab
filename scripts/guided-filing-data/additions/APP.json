@@ -1,0 +1,159 @@
+{
+  "ticker": "APP",
+  "cutoff": "2026-10-21",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm",
+      "title": "AppLovin Corp 10-K 2025-12-31",
+      "publishedAt": "2026-02-19"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000059/app-20260630.htm",
+      "title": "AppLovin Corp 10-Q 2026-06-30",
+      "publishedAt": "2026-08-05"
+    }
+  ],
+  "freshness": {
+    "checkedAt": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001751008.json",
+    "annual": {
+      "accessionNumber": "0001751008-26-000010",
+      "filingDate": "2026-02-19",
+      "reportDate": "2025-12-31",
+      "acceptanceDateTime": "2026-02-20T02:02:51.000Z",
+      "act": "34",
+      "form": "10-K",
+      "fileNumber": "001-40325",
+      "filmNumber": "26654232",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 11725481,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": null,
+      "primaryDocument": "app-20251231.htm",
+      "primaryDocDescription": "10-K"
+    },
+    "latestPeriodic": {
+      "accessionNumber": "0001751008-26-000059",
+      "filingDate": "2026-08-05",
+      "reportDate": "2026-06-30",
+      "acceptanceDateTime": "2026-08-06T01:01:18.000Z",
+      "act": "34",
+      "form": "10-Q",
+      "fileNumber": "001-40325",
+      "filmNumber": "261244597",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 5920974,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": 1,
+      "primaryDocument": "app-20260630.htm",
+      "primaryDocDescription": "10-Q"
+    }
+  },
+  "claimsPolicy": {
+    "annual": {
+      "optionTranches": [
+        {
+          "shares": 1.256114,
+          "strike": 6.1,
+          "years": 4,
+          "volatility": 0.7,
+          "rate": 0.04
+        }
+      ],
+      "note": "All 2025 performance awards are treated as earned despite their market-capitalization conditions. June carries the annual award stock as a proxy, totaling about 0.76% of actual common shares. Options use assumed 70% volatility and a 4% risk-free rate.",
+      "noteZh": "尽管存在市值条件，2025年绩效奖励均按已达标处理。六月沿用年度奖励数量作为代理，约占实际普通股股数0.76%。期权假设波动率70%、无风险利率4%。"
+    },
+    "ttm": {
+      "optionTranches": [
+        {
+          "shares": 1.256114,
+          "strike": 6.1,
+          "years": 3.5,
+          "volatility": 0.7,
+          "rate": 0.04
+        }
+      ],
+      "note": "All 2025 performance awards are treated as earned despite their market-capitalization conditions. June carries the annual award stock as a proxy, totaling about 0.76% of actual common shares. Options use assumed 70% volatility and a 4% risk-free rate.",
+      "noteZh": "尽管存在市值条件，2025年绩效奖励均按已达标处理。六月沿用年度奖励数量作为代理，约占实际普通股股数0.76%。期权假设波动率70%、无风险利率4%。"
+    }
+  },
+  "modelProxies": {
+    "ttm": {
+      "debtCurrent": {
+        "value": 114.125,
+        "sourceDate": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1751008/000175100826000010/app-20251231.htm",
+        "note": "The June finance-lease proxy is $122.653m annual liability minus $8.528m first-half principal payments. It is assigned to the model current-debt field to obtain the correct total, not as a reported maturity classification. A $60.319m stress for unclassified new leases changes value by less than $0.18 per share.",
+        "noteZh": "六月融资租赁代理值为年度1.22653亿美元负债减上半年852.8万美元本金偿还。列入模型流动债务仅为计算总额，并非申报到期分类。对未分类新租赁施加6031.9万美元压力，影响低于每股0.18美元。"
+      }
+    }
+  },
+  "limitations": [
+    "The June finance-lease total is a rollforward proxy; a $60m error changes value by less than $0.18 per share. Employee awards carry the annual disclosed stock and conservatively assume all performance awards vest.",
+    "Historical years before 2023 include the disposed Apps business. Recent revenue and operating income are recast continuing operations; compare older growth and capital ratios with caution."
+  ],
+  "limitationsZh": [
+    "六月融资租赁总额采用滚动估计；6000万美元误差对每股价值影响低于0.18美元。员工奖励沿用年度披露，保守假设全部绩效奖励归属。",
+    "2023年前的历史数据包含已出售的Apps业务。近期营收和营业利润已重列为持续经营口径；比较旧年度增长和资本比率须谨慎。"
+  ],
+  "sector": "Advertising technology",
+  "sectorZh": "广告技术",
+  "businessSummary": "AI advertising recommendation and performance marketing platform.",
+  "businessSummaryZh": "AI广告推荐及效果营销平台。",
+  "assumptions": {
+    "growth": 0.22,
+    "targetMargin": 0.65,
+    "tax": 0.23,
+    "salesCapital": 6,
+    "wacc": 0.11,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.3,
+    "years": 10
+  },
+  "rationale": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption.",
+  "rationaleZh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。",
+  "rationaleByField": {
+    "growth": {
+      "en": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "targetMargin": {
+      "en": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "tax": {
+      "en": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "salesCapital": {
+      "en": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "wacc": {
+      "en": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalGrowth": {
+      "en": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    }
+  },
+  "localizationPairs": {
+    "Advertising technology": "广告技术",
+    "AI advertising recommendation and performance marketing platform.": "AI广告推荐及效果营销平台。",
+    "The June finance-lease total is a rollforward proxy; a $60m error changes value by less than $0.18 per share. Employee awards carry the annual disclosed stock and conservatively assume all performance awards vest.": "六月融资租赁总额采用滚动估计；6000万美元误差对每股价值影响低于0.18美元。员工奖励沿用年度披露，保守假设全部绩效奖励归属。",
+    "Historical years before 2023 include the disposed Apps business. Recent revenue and operating income are recast continuing operations; compare older growth and capital ratios with caution.": "2023年前的历史数据包含已出售的Apps业务。近期营收和营业利润已重列为持续经营口径；比较旧年度增长和资本比率须谨慎。",
+    "All 2025 performance awards are treated as earned despite their market-capitalization conditions. June carries the annual award stock as a proxy, totaling about 0.76% of actual common shares. Options use assumed 70% volatility and a 4% risk-free rate.": "尽管存在市值条件，2025年绩效奖励均按已达标处理。六月沿用年度奖励数量作为代理，约占实际普通股股数0.76%。期权假设波动率70%、无风险利率4%。",
+    "The June finance-lease proxy is $122.653m annual liability minus $8.528m first-half principal payments. It is assigned to the model current-debt field to obtain the correct total, not as a reported maturity classification. A $60.319m stress for unclassified new leases changes value by less than $0.18 per share.": "六月融资租赁代理值为年度1.22653亿美元负债减上半年852.8万美元本金偿还。列入模型流动债务仅为计算总额，并非申报到期分类。对未分类新租赁施加6031.9万美元压力，影响低于每股0.18美元。",
+    "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption.": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。",
+    "22% initial growth is below recent expansion; mature 65% margin is below recent continuing-operations margin near 76%, allowing more competition and employee compensation. Sales/capital 6 reflects software economics, not a perpetual zero-investment assumption. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.": "初期22%增长低于近期增速；成熟期65%利润率低于近期持续经营约76%，为竞争及员工薪酬留余地。营收资本比6反映软件经济模式，并非永久无需投资。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+  }
+}

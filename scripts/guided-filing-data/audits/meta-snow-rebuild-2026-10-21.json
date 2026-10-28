@@ -1,0 +1,50 @@
+{
+  "cutoff": "2026-10-21",
+  "idempotent": true,
+  "before": {
+    "data/current-universe.json": "8cedcbca83bfc3b042aa16e341b9108bd6e4ebdf677dd1496825ccffa08bacf5",
+    "data/company-base-cases.json": "a17d71f4fb593bb5a8e93fb4aa5efc68d378b7df3f57956d66f1446110f25b91",
+    "data/company-history.json": "a803655da1d25c13be1d9b533c41586023a982a03d9acffaaa9d8de96599f2ea",
+    "data/guided-additions-evidence.json": "1f1671597068cc903447260359eab5d93ae7c570810c22144d1eed6757623424",
+    "added-claims-data.js": "9e220b8ec75920c149b5270cc19f5e0f33f8b39c68be9e67e4fc9b674d699b11",
+    "financial-model-data.js": "d432c721985dea1998769726789f5f6a5ca6bd506980ac9fac3fcd82b2eedece",
+    "resolved-claims-data.js": "b8c2542b3ef2235a0264178056a4e759c00779845fd98f54421905886d63a9aa",
+    "locales/guided-case-pairs.js": "c77c34174b9333f76525c15e0c8ca20d5cbe15a06eeb037864388cc5dace6625"
+  },
+  "after": {
+    "data/current-universe.json": "8cedcbca83bfc3b042aa16e341b9108bd6e4ebdf677dd1496825ccffa08bacf5",
+    "data/company-base-cases.json": "a17d71f4fb593bb5a8e93fb4aa5efc68d378b7df3f57956d66f1446110f25b91",
+    "data/company-history.json": "a803655da1d25c13be1d9b533c41586023a982a03d9acffaaa9d8de96599f2ea",
+    "data/guided-additions-evidence.json": "1f1671597068cc903447260359eab5d93ae7c570810c22144d1eed6757623424",
+    "added-claims-data.js": "9e220b8ec75920c149b5270cc19f5e0f33f8b39c68be9e67e4fc9b674d699b11",
+    "financial-model-data.js": "d432c721985dea1998769726789f5f6a5ca6bd506980ac9fac3fcd82b2eedece",
+    "resolved-claims-data.js": "b8c2542b3ef2235a0264178056a4e759c00779845fd98f54421905886d63a9aa",
+    "locales/guided-case-pairs.js": "c77c34174b9333f76525c15e0c8ca20d5cbe15a06eeb037864388cc5dace6625"
+  },
+  "preservation": {
+    "current-universe.json": {
+      "changedExistingCompanies": [
+        "META"
+      ],
+      "othersUnchanged": true
+    },
+    "company-base-cases.json": {
+      "changedExistingCompanies": [
+        "META"
+      ],
+      "othersUnchanged": true
+    },
+    "company-history.json": {
+      "changedExistingCompanies": [],
+      "othersUnchanged": true
+    }
+  },
+  "oldMetaSnapshotsUnchanged": true,
+  "sourceSchemaValidators": 41,
+  "sourceSchemaFailures": [],
+  "metaLatestFull10Q": "2026-06-30",
+  "metaProvisionalRelease": "2026-09-30",
+  "metaPrimaryReleaseAccession": "0001628280-26-066700",
+  "metaSourceNote": "September10-Q still absent in final submissions check; explicit release-based snapshot and carried source gaps independently tested.",
+  "oldMetaAnnualCaseUnchanged": true
+}

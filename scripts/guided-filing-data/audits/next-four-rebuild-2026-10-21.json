@@ -1,0 +1,58 @@
+{
+  "cutoff": "2026-10-21",
+  "idempotent": true,
+  "before": {
+    "dist/data/current-universe.json": "a659895c3feab95fdea5ec2855be41b19a60d56a19f278f439d64ad378ebf1cb",
+    "dist/data/company-base-cases.json": "40da8ecd845ef8e79804af99dcd8b93338d0f56eb35cf592f997ad3949f5559a",
+    "dist/data/company-history.json": "9f55a40defbcc969a29797d38ea57d6171a84af157b9e2e344b8cd14c12bd457",
+    "dist/data/guided-additions-evidence.json": "5d8172885c6d2c91b044b00823c3f734d25ef42263f421006fb7d11952bd28d5",
+    "dist/locales/guided-case-pairs.js": "75b3898e5092913a08d40acaccecab2c9237abc7b96b5cbc3557375bba6c1b85",
+    "dist/added-claims-data.js": "48b562cfaf00225b9f5b2c5b52f448f8256e145ceb251f49707c50a56b48f19f",
+    "dist/financial-model-data.js": "d432c721985dea1998769726789f5f6a5ca6bd506980ac9fac3fcd82b2eedece",
+    "dist/resolved-claims-data.js": "b8c2542b3ef2235a0264178056a4e759c00779845fd98f54421905886d63a9aa"
+  },
+  "after": {
+    "dist/data/current-universe.json": "a659895c3feab95fdea5ec2855be41b19a60d56a19f278f439d64ad378ebf1cb",
+    "dist/data/company-base-cases.json": "40da8ecd845ef8e79804af99dcd8b93338d0f56eb35cf592f997ad3949f5559a",
+    "dist/data/company-history.json": "9f55a40defbcc969a29797d38ea57d6171a84af157b9e2e344b8cd14c12bd457",
+    "dist/data/guided-additions-evidence.json": "5d8172885c6d2c91b044b00823c3f734d25ef42263f421006fb7d11952bd28d5",
+    "dist/locales/guided-case-pairs.js": "75b3898e5092913a08d40acaccecab2c9237abc7b96b5cbc3557375bba6c1b85",
+    "dist/added-claims-data.js": "48b562cfaf00225b9f5b2c5b52f448f8256e145ceb251f49707c50a56b48f19f",
+    "dist/financial-model-data.js": "d432c721985dea1998769726789f5f6a5ca6bd506980ac9fac3fcd82b2eedece",
+    "dist/resolved-claims-data.js": "b8c2542b3ef2235a0264178056a4e759c00779845fd98f54421905886d63a9aa"
+  },
+  "existingCompanies": {
+    "current-universe.json": {
+      "compared": 50,
+      "unchanged": true,
+      "changedExistingCompanies": []
+    },
+    "company-base-cases.json": {
+      "compared": 50,
+      "unchanged": true,
+      "changedExistingCompanies": []
+    },
+    "company-history.json": {
+      "compared": 50,
+      "unchanged": true,
+      "changedExistingCompanies": []
+    }
+  },
+  "initialPipelineReordering": [
+    "dist/data/company-base-cases.json",
+    "dist/data/company-history.json",
+    "dist/locales/guided-case-pairs.js"
+  ],
+  "commands": [
+    [
+      ".venv/bin/python",
+      "-I",
+      "scripts/build-guided-reviewed-cases.py"
+    ],
+    [
+      "python3",
+      "-I",
+      "scripts/patch-original-guided-data.py"
+    ]
+  ]
+}

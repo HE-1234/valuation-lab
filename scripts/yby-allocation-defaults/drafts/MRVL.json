@@ -1,0 +1,156 @@
+{
+ "ticker": "MRVL",
+ "draftPatch": {
+  "analystConditionalAllocation": {
+   "enabled": true,
+   "ticker": "MRVL",
+   "version": "2026-10-19-explicit-claims-v1",
+   "inputs": {
+    "liquidAssets": 3932.8,
+    "operatingReserve": 1000,
+    "fundedDebt": 4999.9,
+    "licenseClaim": 220,
+    "restructuringClaim": 238.4,
+    "taxClaim": 249.4,
+    "earnoutClaim": 749.5,
+    "netForward": 131,
+    "dateShareAdjustment": 0,
+    "legacyUnits": 30.581074,
+    "employeeOptions": 0,
+    "legacyWarrants": 283.0,
+    "googleWarrant": 0,
+    "residualClaims": 0
+   }
+  }
+ },
+ "fields": [
+  {
+   "path": "analystConditionalAllocation.inputs.liquidAssets",
+   "value": 3932.8,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q Aug 1 2026 balance sheet: cash and cash equivalents",
+   "note_en": "August 1 cash; no short-term investments.",
+   "note_zh": "2026年8月1日现金；无短期投资。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.operatingReserve",
+   "value": 1000,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/data/incremental-MRVL-2026-10-18-v3/dated-conditional-valuation.json",
+   "locator": "bridge_formula: surplus cash 2932.8 = cash 3932.8 less 1000 reserve",
+   "note_en": "Operating cash reserve used by the reviewed package; a judgment.",
+   "note_zh": "经审阅研究包使用的运营现金储备；属判断值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.fundedDebt",
+   "value": 4999.9,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q Note on debt: senior unsecured notes face value 4,999.9 (carrying 4,962.9)",
+   "note_en": "Senior notes at face value.",
+   "note_zh": "优先无担保票据面值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.licenseClaim",
+   "value": 220,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q balance sheet: technology-license liability 96.2 current + 123.8 noncurrent (rounded to 220 in package)",
+   "note_en": "Technology-license financing liability.",
+   "note_zh": "技术许可融资负债。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.restructuringClaim",
+   "value": 238.4,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q restructuring note: 62.7 current + 175.7 noncurrent",
+   "note_en": "Opening restructuring liability.",
+   "note_zh": "期初重组负债。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.taxClaim",
+   "value": 249.4,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q balance sheet: income tax payable 163.7 current + 85.7 noncurrent",
+   "note_en": "Opening income tax payable.",
+   "note_zh": "期初应付所得税。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.earnoutClaim",
+   "value": 749.5,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q Note 6 fair value: Celestial AI contingent consideration (Level 3)",
+   "note_en": "Fair value of the Celestial earnout, deducted once with no extra shares or cash.",
+   "note_zh": "Celestial或有对价公允价值，仅扣除一次，不另加股数或现金。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.netForward",
+   "value": 131,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q Note 6: cash-settled forward stock purchase asset, Aug 1 fair value",
+   "note_en": "Forward asset (hedges the earnout).",
+   "note_zh": "远期合约资产（对冲或有对价）。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.dateShareAdjustment",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-356217/d412696dex41.htm",
+   "locator": "Aug 18 exact common 876,926,613 vs Aug 1 rounded 876.8; 0.127M difference",
+   "note_en": "Shares, awards and warrants are all taken at Aug 18; the 0.127M (0.014%) gap to Aug 1 is immaterial and the Aug 1 count is rounded.",
+   "note_zh": "股数、奖励和认股权证均取八月十八日；与八月一日相差0.127百万股（0.014%），可忽略，且八月一日股数为四舍五入值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.legacyUnits",
+   "value": 30.581074,
+   "basis": "filed",
+   "sourceUrl": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-356217/d412696dex41.htm",
+   "locator": "Aug 19 8-K Ex. 4.1 capitalization representation: 30,581,074 shares subject to outstanding options, RSUs and PRSUs (target) at Aug 18",
+   "note_en": "All outstanding options, RSUs and PRSUs counted as units, a gross ceiling: option strikes are not netted. The 10-Q has no award table (17.0M RSUs is stale Jan 31).",
+   "note_zh": "所有未行权期权、RSU和PRSU均按股计入，为总量上限，未扣除行权价。10-Q无奖励表（17.0百万RSU为1月31日旧数）。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.employeeOptions",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-356217/d412696dex41.htm",
+   "locator": "Options are already inside the 30.581M units above",
+   "note_en": "Options are counted in the units above, so no separate option claim, to avoid double counting.",
+   "note_zh": "期权已计入上述股数，故不再单列期权债权，避免重复。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.legacyWarrants",
+   "value": 283.0,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/mrvl-20260801.htm",
+   "locator": "10-Q Note 3 Customer Warrant: grant-date Black-Scholes value FY2025 227.6 + FY2026 55.4",
+   "note_en": "Grant-date fair value of the two earlier customer warrants (5.2M shares); current value is not disclosed.",
+   "note_zh": "两份早期客户认股权证（520万股）的授予日公允价值；当前价值未披露。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.googleWarrant",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://investor.marvell.com/sec-filings/all-sec-filings/content/0001193125-26-356217/d412696dex41.htm",
+   "locator": "Aug 18 Google warrant: up to 58,970,907 shares at 206.58; no fair value in any filing",
+   "note_en": "No fair value disclosed. Zero is not economic zero: up to 59.0M shares at $206.58, vesting on $500M tranches of Google revenue.",
+   "note_zh": "未披露公允价值。零并非经济价值为零：最多5897万股，行权价206.58美元，按每5亿美元谷歌收入分档归属。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.residualClaims",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "dist/data/incremental-MRVL-2026-10-18-v3/dated-conditional-valuation.json",
+   "locator": "no_double_count / claim_inventory: licences, restructuring and tax are entered above; leases sit in operating cost",
+   "note_en": "Remaining candidates are already entered above or sit in operating cost; no separate residual is supported.",
+   "note_zh": "其余候选项已在上方录入或已在运营成本中，不再单列剩余债权。"
+  }
+ ],
+ "summary_en": "August 1 cash, note face value, licence, restructuring, tax, earnout and forward are from the 10-Q; shares, awards and warrants are at August 18. The Google warrant is set to zero because no value is disclosed.",
+ "summary_zh": "八月一日现金、票据面值、许可、重组、税务、或有对价和远期取自10-Q；股数、奖励和认股权证为八月十八日数据。谷歌认股权证因未披露价值而设为零。"
+}

@@ -1,0 +1,217 @@
+{
+  "ticker": "RKLB",
+  "cutoff": "2026-10-21",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+      "title": "Rocket Lab Corp 10-K 2025-12-31",
+      "publishedAt": "2026-02-26"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+      "title": "Rocket Lab Corp 10-Q 2026-06-30",
+      "publishedAt": "2026-08-10"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000162828026018789/rklb-20260317.htm",
+      "title": "Rocket Lab March 17, 2026 equity distribution and collared-forward agreement",
+      "publishedAt": "2026-03-17"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000067/rklb-20261014.htm",
+      "title": "Rocket Lab October 14, 2026 Neutron launch update",
+      "publishedAt": "2026-10-14"
+    }
+  ],
+  "freshness": {
+    "checkedAt": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001819994.json",
+    "annual": {
+      "accessionNumber": "0001819994-26-000013",
+      "filingDate": "2026-02-26",
+      "reportDate": "2025-12-31",
+      "acceptanceDateTime": "2026-02-27T02:31:49.000Z",
+      "act": "34",
+      "form": "10-K",
+      "fileNumber": "001-39560",
+      "filmNumber": "26689426",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 14446876,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": null,
+      "primaryDocument": "rklb-20251231.htm",
+      "primaryDocDescription": "10-K"
+    },
+    "latestPeriodic": {
+      "accessionNumber": "0001819994-26-000062",
+      "filingDate": "2026-08-10",
+      "reportDate": "2026-06-30",
+      "acceptanceDateTime": "2026-08-11T00:18:42.000Z",
+      "act": "34",
+      "form": "10-Q",
+      "fileNumber": "001-39560",
+      "filmNumber": "261258695",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 10331539,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": 1,
+      "primaryDocument": "rklb-20260630.htm",
+      "primaryDocDescription": "10-Q"
+    }
+  },
+  "claimsPolicy": {
+    "annual": {
+      "fixedClaims": 7.634,
+      "optionTranches": [],
+      "convertibleScenarios": [
+        {
+          "name": "4.25%2029",
+          "carrying": 152.395,
+          "principal": 155.654,
+          "conversionShares": 30.368547,
+          "conversionPrice": 5.1255,
+          "cashOnConversion": 0
+        }
+      ],
+      "note": "Common-like preferred shares participate alongside ordinary shares. The combined disclosed employee options and RSUs are conservatively treated as free shares. Convertible holders receive either the principal debt claim or conversion shares; the debt carrying amount is reversed before either allocation. The capped-call hedge uses its intrinsic payoff at the model common-share value, capped at about $202m. Its option time value remains an uncertainty.",
+      "noteZh": "具有普通股经济权利的优先股与普通股共同参与分配。合并披露的员工期权及RSU保守地按零行权价股数处理。可转债持有人获得本金债权或转换股数；两种分配前均冲回债务账面金额。封顶看涨对冲按模型普通股价值计算内在收益，上限约2.02亿美元。其期权时间价值仍有不确定性。",
+      "commonEquivalentShares": 45.95125,
+      "cappedCalls": [
+        {
+          "shares": 69.26153,
+          "strike": 5.1255,
+          "cap": 8.04,
+          "expiry": "2029-01-30",
+          "maxPayoff": 201.862729185,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+          "locator": "Loan agreements / capped-call transactions; June MD&A explicitly confirms original69.3m-share coverage remains."
+        }
+      ]
+    },
+    "ttm": {
+      "fixedClaims": 13.674,
+      "optionTranches": [],
+      "convertibleScenarios": [
+        {
+          "name": "4.25%2029",
+          "carrying": 13.129,
+          "principal": 13.366,
+          "conversionShares": 2.607745,
+          "conversionPrice": 5.1255,
+          "cashOnConversion": 0
+        }
+      ],
+      "note": "Common-like preferred shares participate alongside ordinary shares. The combined disclosed employee options and RSUs are conservatively treated as free shares. Convertible holders receive either the principal debt claim or conversion shares; the debt carrying amount is reversed before either allocation. The capped-call hedge uses its intrinsic payoff at the model common-share value, capped at about $202m. Its option time value remains an uncertainty.",
+      "noteZh": "具有普通股经济权利的优先股与普通股共同参与分配。合并披露的员工期权及RSU保守地按零行权价股数处理。可转债持有人获得本金债权或转换股数；两种分配前均冲回债务账面金额。封顶看涨对冲按模型普通股价值计算内在收益，上限约2.02亿美元。其期权时间价值仍有不确定性。",
+      "commonEquivalentShares": 40.95125,
+      "cappedCalls": [
+        {
+          "shares": 69.26153,
+          "strike": 5.1255,
+          "cap": 8.04,
+          "expiry": "2029-01-30",
+          "maxPayoff": 201.862729185,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+          "locator": "Loan agreements / capped-call transactions; June MD&A explicitly confirms original69.3m-share coverage remains."
+        }
+      ],
+      "forwardSettlement": {
+        "shares": 7.4512,
+        "proceedsMin": 474,
+        "proceedsMax": 642,
+        "settlementDate": "2028-04-30",
+        "discountRate": 0.04,
+        "feeHaircut": 0.02,
+        "presentValueMin": 432.2740257107605,
+        "presentValueMax": 585.4850727981187,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000062/rklb-20260630.htm",
+        "termsUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000162828026018789/rklb-20260317.htm",
+        "note": "All 7.4512m forward shares are assumed delivered. Discount the $474m contractual floor to June 2026 at 4%, using April 30, 2028 as a conservative end-of-month proxy, and deduct the maximum 2% fee. This gives $432.274m of other assets, not current cash. Maximum disclosed proceeds give a $585.485m stress.",
+        "noteZh": "假设全部745.12万股远期股数交付。以4%将4.74亿美元合同最低款项折现至2026年六月，保守采用2028年4月30日月末，并扣最高2%费用。得到4.32274亿美元其他资产，并非当前现金。最高披露收入对应5.85485亿美元压力情景。"
+      }
+    }
+  },
+  "modelProxies": {
+    "ttm": {
+      "debtCurrent": {
+        "value": 0.317,
+        "sourceDate": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+        "note": "Carry the annual $0.317m current finance-lease balance. A 100% error changes value by less than $0.001 per share.",
+        "noteZh": "沿用年度31.7万美元流动融资租赁余额。即使误差100%，每股价值影响也小于0.001美元。"
+      }
+    }
+  },
+  "limitations": [
+    "This is the standalone dated business, before the pending $8bn Iridium acquisition. That transaction can materially change debt, shares, cash flows and value; this case is not a post-acquisition valuation.",
+    "Employee awards use conservative full dilution. The capped-call asset follows the model share value. June also includes delayed collared-forward proceeds and the associated future shares; these proceeds are not current cash.",
+    "The October 14, 2026 filing delayed the first Neutron launch into 2027. Growth and the loss-to-profit transition remain scenarios, not a confirmed launch schedule."
+  ],
+  "limitationsZh": [
+    "这是待完成的80亿美元Iridium收购之前的独立公司基期。该交易可能显著改变债务、股数、现金流和价值；本案例不是收购后估值。",
+    "员工奖励采用保守全额稀释。封顶看涨期权资产随模型股价变化。六月还计入延迟的有区间远期收益及对应未来股数；该款项并非当前现金。",
+    "2026年10月14日申报将Neutron首次发射推迟至2027年。增长及扭亏路径仍是情景，并非已确认的发射计划。"
+  ],
+  "sector": "Space systems and launch",
+  "sectorZh": "航天系统及发射",
+  "businessSummary": "Electron launches, satellite components and development of Neutron.",
+  "businessSummaryZh": "Electron发射、卫星部件及Neutron研发。",
+  "assumptions": {
+    "growth": 0.25,
+    "targetMargin": 0.18,
+    "tax": 0.25,
+    "salesCapital": 1.2,
+    "wacc": 0.125,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.15,
+    "years": 10
+  },
+  "rationale": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization.",
+  "rationaleZh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。",
+  "rationaleByField": {
+    "growth": {
+      "en": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "targetMargin": {
+      "en": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "tax": {
+      "en": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "salesCapital": {
+      "en": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "wacc": {
+      "en": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalGrowth": {
+      "en": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    }
+  },
+  "localizationPairs": {
+    "Space systems and launch": "航天系统及发射",
+    "Electron launches, satellite components and development of Neutron.": "Electron发射、卫星部件及Neutron研发。",
+    "This is the standalone dated business, before the pending $8bn Iridium acquisition. That transaction can materially change debt, shares, cash flows and value; this case is not a post-acquisition valuation.": "这是待完成的80亿美元Iridium收购之前的独立公司基期。该交易可能显著改变债务、股数、现金流和价值；本案例不是收购后估值。",
+    "Carry the annual $0.317m current finance-lease balance. A 100% error changes value by less than $0.001 per share.": "沿用年度31.7万美元流动融资租赁余额。即使误差100%，每股价值影响也小于0.001美元。",
+    "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization.": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。",
+    "25% initial growth and 18% mature margin require successful Neutron execution and spacecraft scale-up. Sales/capital 1.2 reserves substantial reinvestment. Reported losses remain the starting point; no automatic profit normalization. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.": "初期25%增长及成熟期18%利润率需要Neutron成功及航天器规模扩大。营收资本比1.2保留大量再投资。以申报亏损为起点，不自动调整为盈利。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。",
+    "Common-like preferred shares participate alongside ordinary shares. The combined disclosed employee options and RSUs are conservatively treated as free shares. Convertible holders receive either the principal debt claim or conversion shares; the debt carrying amount is reversed before either allocation. The capped-call hedge uses its intrinsic payoff at the model common-share value, capped at about $202m. Its option time value remains an uncertainty.": "具有普通股经济权利的优先股与普通股共同参与分配。合并披露的员工期权及RSU保守地按零行权价股数处理。可转债持有人获得本金债权或转换股数；两种分配前均冲回债务账面金额。封顶看涨对冲按模型普通股价值计算内在收益，上限约2.02亿美元。其期权时间价值仍有不确定性。",
+    "All 7.4512m forward shares are assumed delivered. Discount the $474m contractual floor to June 2026 at 4%, using April 30, 2028 as a conservative end-of-month proxy, and deduct the maximum 2% fee. This gives $432.274m of other assets, not current cash. Maximum disclosed proceeds give a $585.485m stress.": "假设全部745.12万股远期股数交付。以4%将4.74亿美元合同最低款项折现至2026年六月，保守采用2028年4月30日月末，并扣最高2%费用。得到4.32274亿美元其他资产，并非当前现金。最高披露收入对应5.85485亿美元压力情景。",
+    "Employee awards use conservative full dilution. The capped-call asset follows the model share value. June also includes delayed collared-forward proceeds and the associated future shares; these proceeds are not current cash.": "员工奖励采用保守全额稀释。封顶看涨期权资产随模型股价变化。六月还计入延迟的有区间远期收益及对应未来股数；该款项并非当前现金。",
+    "The October 14, 2026 filing delayed the first Neutron launch into 2027. Growth and the loss-to-profit transition remain scenarios, not a confirmed launch schedule.": "2026年10月14日申报将Neutron首次发射推迟至2027年。增长及扭亏路径仍是情景，并非已确认的发射计划。"
+  }
+}

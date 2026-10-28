@@ -1,0 +1,76 @@
+{
+  "ticker": "CMG",
+  "sector": "Restaurants",
+  "businessSummary": {
+    "en": "Company-operated fast-casual restaurants; new units and comparable-store sales drive growth, with labor and food costs affecting margins.",
+    "zh": "直营快餐餐厅；新店与同店销售推动增长，人工及食材成本影响利润率。"
+  },
+  "assumptions": {
+    "growth": 0.09,
+    "targetMargin": 0.17,
+    "tax": 0.25,
+    "salesCapital": 2.5,
+    "wacc": 0.09,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.2,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "New restaurant openings and comparable sales support 9% starting growth. A 17% company operating margin includes corporate overhead, food, labor and stock compensation; it is not restaurant-level margin.",
+      "zh": "新店开业与同店销售支持9%的起始增长。17%的公司营业利润率包含总部、食材、人工及股权薪酬；并非餐厅层面利润率。"
+    },
+    "targetMargin": {
+      "en": "New restaurant openings and comparable sales support 9% starting growth. A 17% company operating margin includes corporate overhead, food, labor and stock compensation; it is not restaurant-level margin.",
+      "zh": "新店开业与同店销售支持9%的起始增长。17%的公司营业利润率包含总部、食材、人工及股权薪酬；并非餐厅层面利润率。"
+    },
+    "tax": {
+      "en": "Normalized forward operating tax assumption; historical effective tax remains reported in history. ",
+      "zh": "前瞻正常化营业税率假设；历史有效税率仍按申报保留。"
+    },
+    "salesCapital": {
+      "en": "Analyst reinvestment assumption informed by the historical book-capital proxy. Incremental sales require new operating capital; accounting acquisitions and buybacks can distort historical ratios.",
+      "zh": "依据历史账面资本代理指标设定的分析师再投资假设。新增销售需要新增经营资本；并购会计与回购可能扭曲历史比率。"
+    },
+    "wacc": {
+      "en": "Analyst required-return assumption reflecting business cyclicality and financing risk; not a quoted market measurement.",
+      "zh": "反映业务周期及融资风险的分析师必要回报假设，并非市场报价测量值。"
+    },
+    "terminalGrowth": {
+      "en": "Long-run nominal growth assumption below the discount rate; competitive growth fades as the business matures.",
+      "zh": "低于折现率的长期名义增长假设；随着业务成熟，竞争性增长逐渐放缓。"
+    },
+    "terminalROIC": {
+      "en": "Analyst mature return on new capital; preserves reinvestment needed to fund terminal growth rather than assuming growth is free.",
+      "zh": "分析师对成熟期新增资本回报率的假设；保留支持永续增长所需的再投资，不假设增长无需投入。"
+    },
+    "years": {
+      "en": "These are analyst starting assumptions, not company guidance or reported facts. Growth fades toward the terminal rate; stock-based compensation remains an expense.",
+      "zh": "这些是分析师起始假设，并非公司指引或申报事实。增长逐步收敛至永续增长率；股权薪酬仍计入费用。"
+    }
+  },
+  "sources": [
+    {
+      "title": "10-K 2025-12-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm",
+      "filedAt": "2026-02-04"
+    },
+    {
+      "title": "10-Q 2026-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+      "filedAt": "2026-07-31"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001058090.json",
+    "latestPeriodicAccession": "0001058090-26-000066",
+    "latestAnnualAccession": "0001058090-26-000009"
+  },
+  "limitations": [],
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  }
+}

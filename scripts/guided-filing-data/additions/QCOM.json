@@ -1,0 +1,93 @@
+{
+  "ticker": "QCOM",
+  "sector": "Semiconductors",
+  "businessSummary": {
+    "en": "Wireless chip design and technology licensing, with handset cyclicality and growing automotive, connected-device and computing exposure.",
+    "zh": "无线芯片设计与技术授权；手机业务具有周期性，汽车、联网设备与计算业务持续发展。"
+  },
+  "assumptions": {
+    "growth": 0.05,
+    "targetMargin": 0.27,
+    "tax": 0.18,
+    "salesCapital": 2,
+    "wacc": 0.1,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.18,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "Handset demand is cyclical, while automotive and connected devices diversify revenue. A 27% operating margin and 18% normalized tax rate avoid extrapolating unusual tax allowance charges or reversals.",
+      "zh": "手机需求具有周期性，汽车及联网设备推动收入多元化。27%的营业利润率与18%的正常化税率避免外推异常税项准备计提或转回。"
+    },
+    "targetMargin": {
+      "en": "Handset demand is cyclical, while automotive and connected devices diversify revenue. A 27% operating margin and 18% normalized tax rate avoid extrapolating unusual tax allowance charges or reversals.",
+      "zh": "手机需求具有周期性，汽车及联网设备推动收入多元化。27%的营业利润率与18%的正常化税率避免外推异常税项准备计提或转回。"
+    },
+    "tax": {
+      "en": "Normalized forward operating tax assumption; historical effective tax remains reported in history. FY2025 valuation allowance and FY2026 reversal are not recurring tax rates.",
+      "zh": "前瞻正常化营业税率假设；历史有效税率仍按申报保留。2025财年估值准备与2026财年转回并非经常性税率。"
+    },
+    "salesCapital": {
+      "en": "Analyst reinvestment assumption informed by the historical book-capital proxy. Incremental sales require new operating capital; accounting acquisitions and buybacks can distort historical ratios.",
+      "zh": "依据历史账面资本代理指标设定的分析师再投资假设。新增销售需要新增经营资本；并购会计与回购可能扭曲历史比率。"
+    },
+    "wacc": {
+      "en": "Analyst required-return assumption reflecting business cyclicality and financing risk; not a quoted market measurement.",
+      "zh": "反映业务周期及融资风险的分析师必要回报假设，并非市场报价测量值。"
+    },
+    "terminalGrowth": {
+      "en": "Long-run nominal growth assumption below the discount rate; competitive growth fades as the business matures.",
+      "zh": "低于折现率的长期名义增长假设；随着业务成熟，竞争性增长逐渐放缓。"
+    },
+    "terminalROIC": {
+      "en": "Analyst mature return on new capital; preserves reinvestment needed to fund terminal growth rather than assuming growth is free.",
+      "zh": "分析师对成熟期新增资本回报率的假设；保留支持永续增长所需的再投资，不假设增长无需投入。"
+    },
+    "years": {
+      "en": "These are analyst starting assumptions, not company guidance or reported facts. Growth fades toward the terminal rate; stock-based compensation remains an expense.",
+      "zh": "这些是分析师起始假设，并非公司指引或申报事实。增长逐步收敛至永续增长率；股权薪酬仍计入费用。"
+    }
+  },
+  "sources": [
+    {
+      "title": "10-K 2025-09-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/qcom-20250928.htm",
+      "filedAt": "2025-11-05"
+    },
+    {
+      "title": "10-Q 2026-06-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/804328/000080432826000086/qcom-20260628.htm",
+      "filedAt": "2026-07-29"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0000804328.json",
+    "latestPeriodicAccession": "0000804328-26-000086",
+    "latestAnnualAccession": "0000804328-25-000085"
+  },
+  "limitations": [
+    {
+      "en": "longTermInvestments: June filing does not disclose a new separate private/equity-method investment carrying subtotal. Carry FY2025 1,379 as an explicit proxy; +/-50% changes value by about $0.65 per share. Do not substitute 1,293 deferred-compensation assets from the fair-value table.",
+      "zh": "沿用2025财年13.79亿美元私人及权益法投资余额作为代理；上下50%约影响每股0.65美元。不将递延薪酬计划资产重复计入。"
+    },
+    {
+      "en": "operatingLeaseLiabilities: Current interim filing omits full operating lease liability split; annual operating lease liability retained as context only, not added to debt.",
+      "zh": "中期未完整拆分经营租赁负债，年度数仅作背景资料，不计入金融债务。"
+    },
+    {
+      "en": "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+      "zh": "中期未披露完整奖励余额，沿用最近年度未归属股数，作为明确的稀释代理；应展示奖励股数上下25%的敏感度。"
+    },
+    {
+      "en": "Private investment carrying values are approximate economic values. The June $1.293bn deferred-compensation investments have matching plan liabilities and are excluded from excess assets.",
+      "zh": "私人投资账面值仅为经济价值的近似值。6月12.93亿美元递延薪酬投资对应计划负债，因此不计入多余资产。"
+    }
+  ],
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  }
+}

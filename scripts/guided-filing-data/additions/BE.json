@@ -1,0 +1,409 @@
+{
+  "ticker": "BE",
+  "reviewedThrough": "2026-10-23",
+  "sector": "Fuel-cell power and AI data-center infrastructure",
+  "sectorZh": "燃料电池电力及AI数据中心基础设施",
+  "businessSummary": {
+    "en": "Bloom supplies on-site solid-oxide fuel-cell power systems, installation and long-term service. AI data-center power demand is accelerating sales, while manufacturing expansion, working capital, customer concentration and project timing remain central risks.",
+    "zh": "Bloom提供现场固体氧化物燃料电池发电系统、安装及长期服务。AI数据中心电力需求推动销售加速，但扩产、营运资本、客户集中及项目进度仍是核心风险。"
+  },
+  "freshness": {
+    "cutoff": "2026-10-23",
+    "checkedAt": "2026-10-23",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001664703.json",
+    "latestPeriodicAccession": "0001628280-26-066931",
+    "latestAnnualAccession": "0001628280-26-006516"
+  },
+  "sources": [
+    {
+      "title": "Bloom Energy FY 2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+      "filedAt": "2026-02-09"
+    },
+    {
+      "title": "Bloom Energy Q 32026 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+      "filedAt": "2026-10-22"
+    },
+    {
+      "title": "Bloom Energy Q 32025 Form 10-Q, affiliate-profit elimination comparator",
+      "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828025046844/be-20250930.htm",
+      "filedAt": "2025-10-28"
+    }
+  ],
+  "assumptions": {
+    "growth": 0.3,
+    "targetMargin": 0.18,
+    "tax": 0.23,
+    "salesCapital": 1.5,
+    "wacc": 0.115,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.15,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "30% initial growth fading toward 3% is an analyst scenario below nine-month 2026 growth 145%; it recognizes AI power demand without extrapolating one year of rapid deployment indefinitely.",
+      "zh": "初期30%增长逐步收敛至3%，为低于2026年前九个月145%增长的分析情景；反映AI供电需求，但不无限外推单年快速部署。"
+    },
+    "targetMargin": {
+      "en": "18% mature operating margin is a normalized analyst scenario after affiliate-profit eliminations, stock compensation and customer incentives. It requires improvement from normalized FY 2025 margin 1.6% and TTM 13.8%; Q 32026 reported 18.2% is context, not a directly comparable cash margin. Installation losses, service obligations and competition limit profitability.",
+      "zh": "18%成熟期营业利润率为扣除合资利润抵消、股权薪酬及客户激励后的正常化分析情景，要求从正常化2025年1.6%及TTM13.8%改善。2026第三季度申报18.2%仅作背景，并非直接可比现金利润率。安装亏损、服务义务及竞争限制盈利能力。"
+    },
+    "tax": {
+      "en": "23% normalized tax is an analyst assumption for sustainable profitability. Historical low taxes reflect losses and allowances; no separate NOL asset is added.",
+      "zh": "23%正常化税率为持续盈利的分析假设。历史低税额受亏损与估值准备影响；不另加亏损结转资产。"
+    },
+    "salesCapital": {
+      "en": "1.5 x incremental sales to capital funds gross manufacturing, inventory and receivable growth without assuming recurring customer-advance financing. Nine-month 2026 capex 231 m and working-capital expansion argue against software-like capital efficiency. Existing deposits are separately reserved once.",
+      "zh": "新增销售与资本比1.5倍为制造、库存及应收款增长总额提供资金，不假设重复客户预付融资。2026年前九个月资本开支2.31亿美元及营运资本扩张不支持采用软件式资本效率。现有预付款另行保留一次。"
+    },
+    "wacc": {
+      "en": "11.5% discount rate is an editable analyst required return reflecting concentrated project demand, manufacturing execution, fuel economics, leverage and dilution; it is not live market-derived WACC.",
+      "zh": "11.5%折现率是可编辑分析必要回报，反映项目需求集中、制造执行、燃料经济性、杠杆及稀释风险，并非实时市场推导WACC。"
+    },
+    "terminalGrowth": {
+      "en": "3% terminal growth assumes a mature power-equipment business and requires ongoing reinvestment.",
+      "zh": "3%永续增长假设企业成为成熟电力设备业务，并保留持续再投资。"
+    },
+    "terminalROIC": {
+      "en": "15% marginal terminal capital return assumes an established manufacturing and service franchise with continuing competition; historical loss years are not calibration targets.",
+      "zh": "15%永续期边际资本回报假设成熟制造及服务业务仍面临竞争；历史亏损年度不作为校准目标。"
+    },
+    "years": {
+      "en": "Ten forecast years allow deployment growth and margins to mature while capital intensity remains explicit.",
+      "zh": "十年预测期允许部署增长及利润率逐步成熟，同时明确保留资本投入。"
+    },
+    "normalizationDelta": {
+      "en": "Starting operating income excludes own-share product profit on sales to unconsolidated affiliates that the filing eliminates below EBIT; raw GAAP figures remain visible. TTM uses the rounded 16.9 m current-period elimination.",
+      "zh": "起始营业利润排除公司在营业利润以下抵消的、向未并表合资销售产生的自身份额利润；原始GAAP数字保持可见。TTM采用舍入披露的当期1690万美元抵消额。"
+    }
+  },
+  "claimsPolicy": {
+    "annual": {
+      "fixedClaims": 51.629,
+      "optionTranches": [
+        {
+          "name": "Employee options",
+          "shares": 5.741283,
+          "strike": 15.92,
+          "years": 4.5,
+          "volatility": 0.95,
+          "rate": 0.04
+        },
+        {
+          "name": "Promised Oracle warrant",
+          "shares": 3.531073,
+          "strike": 113.28,
+          "years": 0.5,
+          "volatility": 0.962,
+          "rate": 0.036
+        }
+      ],
+      "convertibleScenarios": [
+        {
+          "name": "0% notes due November 2030",
+          "carrying": 2442.091,
+          "principal": 2500,
+          "conversionShares": 12.822499999999998,
+          "conversionPrice": 194.97,
+          "cashOnConversion": 0
+        },
+        {
+          "name": "3% Green notes due June 2029",
+          "carrying": 73.473,
+          "principal": 75.125,
+          "conversionShares": 3.6044599375,
+          "conversionPrice": 20.84,
+          "cashOnConversion": 0
+        },
+        {
+          "name": "3% Green notes due June 2028",
+          "carrying": 98.162,
+          "principal": 99.655,
+          "conversionShares": 5.2859702685,
+          "conversionPrice": 18.85,
+          "cashOnConversion": 0
+        }
+      ],
+      "cappedCalls": [
+        {
+          "shares": 33.549508,
+          "strike": 18.85,
+          "cap": 26.46,
+          "expiry": "2028-06-01",
+          "maxPayoff": 255.31175588,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Capped Calls: original coverage retained after 2025 inducedconversion; September note refers to annualterms with no disclosed termination. Full 2028 note redemption does not itself extinguish freestanding derivative."
+        }
+      ],
+      "note": {
+        "en": "Each convertible series is allocated separately between principal and conversion at its own strike; carrying debt is reversed once. Capped calls are valued by bounded intrinsic payoff at the modeled share price. Employee options use reported count, weighted strike/life and 95% volatility/4% rate analyst proxies. Annual Oracle warrant uses disclosed terms; September has no remaining warrant claim because settlement shares are already outstanding.",
+        "zh": "每个可转债系列按自身转换价分别在本金与转换之间分配，账面债务仅冲回一次。封顶看涨按模型股价计算有上限的内在收益。员工期权采用披露数量、加权行权价/期限及95%波动率、4%利率分析代理。年度Oracle认股权证采用披露条款；9月结算股份已发行，不再有该权证索偿。"
+      },
+      "cautions": [
+        {
+          "en": "Intrinsic convertible/capped-call allocation omits full time value, discounting and counterparty risk. Make-whole conversion increments apply only to specified events and are excluded from ordinary continuation; all-series principal/conversion and omitted/maximal hedge sensitivities bound useful alternatives.",
+          "zh": "可转债及封顶看涨内在价值分配未完整计入时间价值、折现及对手方风险。补偿性转换增量仅适用于特定事件，持续经营情景不计入；全系列本金/转换及省略/最高对冲敏感性展示替代情景。"
+        },
+        {
+          "en": "Reported RSU/PSU counts are assumed to vest. Conditional performance multipliers beyond disclosed outstanding units and ungranted share-pool capacity are excluded. Existing EPP derivative liability and unfunded JV commitments are deducted once at reported amounts; no new investment value is assumed for the commitments.",
+          "zh": "假设披露RSU/PSU全部归属；不计入超出披露未归属单位的条件性业绩倍数或未授予股份池。现有EPP衍生负债及未缴合资资本承诺按披露金额扣除一次，未假设未来注资创造额外投资价值。"
+        }
+      ],
+      "operatingCashReserve": {
+        "amount": 78.207,
+        "note": {
+          "en": "Reserve the full reported customer-deposit balance as conservative operating funding:78.207 m annual and 661.354 m September. These are deposits from Note 3 contract balances, separate from deferred revenue 65.608 m/93.026 m; they are neither legally restricted cash nor an additional debt claim. Gross deposits may exceed remaining cash fulfillment costs. The 1.5 x sales-to-capital assumption funds gross incremental operating investment without assuming repeat customer-advance funding; full, half and no reserve sensitivities show the uncertainty.",
+          "zh": "按完整披露客户预付款余额保留审慎营运资金：年度7820.7万美元、9月6.61354亿美元。金额来自附注3合同余额，与递延收入6560.8万美元/9302.6万美元分开；并非法律受限现金或额外债务索偿。预付款总额可能高于剩余履约现金成本。销售资本比1.5倍为新增经营投资总额提供资金，不假设持续客户预付融资；完整、半额及不保留储备敏感性展示不确定性。"
+        },
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+        "locator": "Note 3 Revenue Recognition, Contract Balances table, Customer deposits (not deferred revenue).",
+        "components": [
+          78.207
+        ],
+        "formula": "Reserve 100% of reported closing customer deposits; sensitivityproxy, not financial debt."
+      },
+      "fixedClaimsEvidence": {
+        "formula": "NCI + EPP derivative liability + remaining unfunded JV commitment",
+        "components": [
+          24.322,
+          5.607,
+          21.7
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+        "locator": "Balance sheet NCI; Note5 EPP; Note7 FundJV remaining commitments."
+      }
+    },
+    "ttm": {
+      "fixedClaims": 49.622,
+      "optionTranches": [
+        {
+          "name": "Employee options",
+          "shares": 4.979585,
+          "strike": 15.44,
+          "years": 4.2,
+          "volatility": 0.95,
+          "rate": 0.04
+        }
+      ],
+      "convertibleScenarios": [
+        {
+          "name": "0% notes due November 2030",
+          "carrying": 2450.891,
+          "principal": 2500,
+          "conversionShares": 12.822499999999998,
+          "conversionPrice": 194.97,
+          "cashOnConversion": 0
+        },
+        {
+          "name": "3% Green notes due June 2029",
+          "carrying": 22.608,
+          "principal": 22.771,
+          "conversionShares": 1.0925411945,
+          "conversionPrice": 20.84,
+          "cashOnConversion": 0
+        }
+      ],
+      "cappedCalls": [
+        {
+          "shares": 33.549508,
+          "strike": 18.85,
+          "cap": 26.46,
+          "expiry": "2028-06-01",
+          "maxPayoff": 255.31175588,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+          "locator": "Note 8 Capped Calls: original coverage retained after 2025 inducedconversion; September note refers to annualterms with no disclosed termination. Full 2028 note redemption does not itself extinguish freestanding derivative.",
+          "confirmedBySourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+          "sourceDate": "2025-12-31"
+        }
+      ],
+      "note": {
+        "en": "Each convertible series is allocated separately between principal and conversion at its own strike; carrying debt is reversed once. Capped calls are valued by bounded intrinsic payoff at the modeled share price. Employee options use reported count, weighted strike/life and 95% volatility/4% rate analyst proxies. Annual Oracle warrant uses disclosed terms; September has no remaining warrant claim because settlement shares are already outstanding.",
+        "zh": "每个可转债系列按自身转换价分别在本金与转换之间分配，账面债务仅冲回一次。封顶看涨按模型股价计算有上限的内在收益。员工期权采用披露数量、加权行权价/期限及95%波动率、4%利率分析代理。年度Oracle认股权证采用披露条款；9月结算股份已发行，不再有该权证索偿。"
+      },
+      "cautions": [
+        {
+          "en": "Intrinsic convertible/capped-call allocation omits full time value, discounting and counterparty risk. Make-whole conversion increments apply only to specified events and are excluded from ordinary continuation; all-series principal/conversion and omitted/maximal hedge sensitivities bound useful alternatives.",
+          "zh": "可转债及封顶看涨内在价值分配未完整计入时间价值、折现及对手方风险。补偿性转换增量仅适用于特定事件，持续经营情景不计入；全系列本金/转换及省略/最高对冲敏感性展示替代情景。"
+        },
+        {
+          "en": "Reported RSU/PSU counts are assumed to vest. Conditional performance multipliers beyond disclosed outstanding units and ungranted share-pool capacity are excluded. Existing EPP derivative liability and unfunded JV commitments are deducted once at reported amounts; no new investment value is assumed for the commitments.",
+          "zh": "假设披露RSU/PSU全部归属；不计入超出披露未归属单位的条件性业绩倍数或未授予股份池。现有EPP衍生负债及未缴合资资本承诺按披露金额扣除一次，未假设未来注资创造额外投资价值。"
+        }
+      ],
+      "operatingCashReserve": {
+        "amount": 661.354,
+        "note": {
+          "en": "Reserve the full reported customer-deposit balance as conservative operating funding:78.207 m annual and 661.354 m September. These are deposits from Note 3 contract balances, separate from deferred revenue 65.608 m/93.026 m; they are neither legally restricted cash nor an additional debt claim. Gross deposits may exceed remaining cash fulfillment costs. The 1.5 x sales-to-capital assumption funds gross incremental operating investment without assuming repeat customer-advance funding; full, half and no reserve sensitivities show the uncertainty.",
+          "zh": "按完整披露客户预付款余额保留审慎营运资金：年度7820.7万美元、9月6.61354亿美元。金额来自附注3合同余额，与递延收入6560.8万美元/9302.6万美元分开；并非法律受限现金或额外债务索偿。预付款总额可能高于剩余履约现金成本。销售资本比1.5倍为新增经营投资总额提供资金，不假设持续客户预付融资；完整、半额及不保留储备敏感性展示不确定性。"
+        },
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+        "locator": "Note 3 Revenue Recognition, Contract Balances table, Customer deposits (not deferred revenue).",
+        "components": [
+          661.354
+        ],
+        "formula": "Reserve 100% of reported closing customer deposits; sensitivityproxy, not financial debt."
+      },
+      "fixedClaimsEvidence": {
+        "formula": "NCI + EPP derivative liability + remaining unfunded JV commitment",
+        "components": [
+          30.233,
+          4.889,
+          14.5
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+        "locator": "Balance sheet NCI; Note5 EPP; Note7 FundJV remaining commitments."
+      }
+    }
+  },
+  "modelProxies": {
+    "annual": {
+      "debtCurrent": {
+        "value": 15.719,
+        "sourceDate": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+        "note": {
+          "en": "The model uses contractual financing principal PV 43.257 m annual/35.694 m September instead of book financing obligations 243.768 m/184.995 m. The residual 200.511 m/149.301 m is expected to offset the related Energy Server asset at lease end rather than require cash repayment. Recourse/nonrecourse debt and finance leases remain in full; source book balances are preserved.",
+          "zh": "模型采用合同融资本金现值：年度4325.7万美元/9月3569.4万美元，替代账面融资义务2.43768亿美元/1.84995亿美元。剩余2.00511亿美元/1.49301亿美元预期在租期结束时与相关发电设备资产抵消，而非现金偿还。追索/无追索债务及融资租赁仍完整保留；原始账面余额不变。"
+        }
+      },
+      "debtNoncurrent": {
+        "value": 2650.635,
+        "sourceDate": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+        "note": {
+          "en": "The model uses contractual financing principal PV 43.257 m annual/35.694 m September instead of book financing obligations 243.768 m/184.995 m. The residual 200.511 m/149.301 m is expected to offset the related Energy Server asset at lease end rather than require cash repayment. Recourse/nonrecourse debt and finance leases remain in full; source book balances are preserved.",
+          "zh": "模型采用合同融资本金现值：年度4325.7万美元/9月3569.4万美元，替代账面融资义务2.43768亿美元/1.84995亿美元。剩余2.00511亿美元/1.49301亿美元预期在租期结束时与相关发电设备资产抵消，而非现金偿还。追索/无追索债务及融资租赁仍完整保留；原始账面余额不变。"
+        }
+      }
+    },
+    "ttm": {
+      "debtCurrent": {
+        "value": 12.876,
+        "sourceDate": "2026-09-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+        "note": {
+          "en": "The model uses contractual financing principal PV 43.257 m annual/35.694 m September instead of book financing obligations 243.768 m/184.995 m. The residual 200.511 m/149.301 m is expected to offset the related Energy Server asset at lease end rather than require cash repayment. Recourse/nonrecourse debt and finance leases remain in full; source book balances are preserved.",
+          "zh": "模型采用合同融资本金现值：年度4325.7万美元/9月3569.4万美元，替代账面融资义务2.43768亿美元/1.84995亿美元。剩余2.00511亿美元/1.49301亿美元预期在租期结束时与相关发电设备资产抵消，而非现金偿还。追索/无追索债务及融资租赁仍完整保留；原始账面余额不变。"
+        }
+      },
+      "debtNoncurrent": {
+        "value": 2503.886,
+        "sourceDate": "2026-09-30",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+        "note": {
+          "en": "The model uses contractual financing principal PV 43.257 m annual/35.694 m September instead of book financing obligations 243.768 m/184.995 m. The residual 200.511 m/149.301 m is expected to offset the related Energy Server asset at lease end rather than require cash repayment. Recourse/nonrecourse debt and finance leases remain in full; source book balances are preserved.",
+          "zh": "模型采用合同融资本金现值：年度4325.7万美元/9月3569.4万美元，替代账面融资义务2.43768亿美元/1.84995亿美元。剩余2.00511亿美元/1.49301亿美元预期在租期结束时与相关发电设备资产抵消，而非现金偿还。追索/无追索债务及融资租赁仍完整保留；原始账面余额不变。"
+        }
+      }
+    }
+  },
+  "limitations": [
+    {
+      "en": "Use the filed September 30,2026 balance sheet and nine-month results, filed October 22. TTM is FY 2025 plus 2026 nine months minus 2025 nine months; it is not a provisional earnings-release base.",
+      "zh": "使用10月22日正式提交的2026年9月30日资产负债表及前九个月业绩。TTM为2025全年加2026前九个月减2025前九个月，并非业绩新闻稿临时口径。"
+    },
+    {
+      "en": "September cash includes large customer deposits funding future deliveries; not all cash is economically idle. Growth requires substantial inventory, contract assets and manufacturing investment, so the sales-to-capital assumption and cash-reserve sensitivity matter.",
+      "zh": "9月现金包含用于未来交货的大额客户预付款，并非全部属于经济上闲置现金。增长需要大量库存、合同资产及制造投资，因此销售资本比假设及现金储备敏感性重要。"
+    },
+    {
+      "en": "September customer-consideration asset 306.500 m is prepaid share-based selling consideration, not surplus cash or an investment. Oracle cashless exercise plus incentive shares 2.154231 m is already in actual common; the old warrant is not charged again. Future amortization reduces revenue and target margins retain customer-incentive costs.",
+      "zh": "9月客户对价资产3.065亿美元为预付股份销售对价，不是闲置现金或投资。Oracle无现金行权及激励股份215.4231万股已计入实际普通股，不再扣除旧权证。未来摊销冲减收入，目标利润率保留客户激励成本。"
+    },
+    {
+      "en": "Unconsolidated Fund JV investments are added at carrying value and unfunded capital commitments are deducted. Fund JV debt is nonrecourse and not consolidated; deferred intra-entity profit is an accounting elimination, not a second cash debt. Consolidated Korean JV debt and minority interest remain in the bridge.",
+      "zh": "未并表基金合资投资按账面价值加入，并扣除未缴资本承诺。基金合资债务无追索且未并表；递延内部利润为会计抵消，并非第二笔现金债务。已并表韩国合资债务及少数股东权益保留在估值调整中。"
+    },
+    {
+      "en": "Supplier commitments of 5.8 bn over multiple years support planned production and are not added wholesale as debt; inventory and equipment purchases belong in forecast reinvestment. Customer concentration, performance guarantees and demand shortfalls can materially change the outcome.",
+      "zh": "多年供应商承诺58亿美元用于计划生产，不整体计为债务；库存和设备采购计入预测再投资。客户集中、性能保证及需求不及预期可能显著改变结果。"
+    },
+    {
+      "en": "Capped-call coverage 33.549508 m uses the annual disclosed contract carried forward because the September filing refers to the same terms and discloses no termination. It is a separate derivative even though the 2028 notes are now redeemed; omit-hedge sensitivity tests this residual uncertainty.",
+      "zh": "封顶看涨覆盖3354.9508万股沿用年度披露合同，因为9月申报引用相同条款且未披露终止。即使2028年债券已赎回，该衍生工具仍独立存在；省略对冲敏感性测试该剩余不确定性。"
+    },
+    {
+      "en": "Reserve the full reported customer-deposit balance as conservative operating funding:78.207 m annual and 661.354 m September. These are deposits from Note 3 contract balances, separate from deferred revenue 65.608 m/93.026 m; they are neither legally restricted cash nor an additional debt claim. Gross deposits may exceed remaining cash fulfillment costs. The 1.5 x sales-to-capital assumption funds gross incremental operating investment without assuming repeat customer-advance funding; full, half and no reserve sensitivities show the uncertainty.",
+      "zh": "按完整披露客户预付款余额保留审慎营运资金：年度7820.7万美元、9月6.61354亿美元。金额来自附注3合同余额，与递延收入6560.8万美元/9302.6万美元分开；并非法律受限现金或额外债务索偿。预付款总额可能高于剩余履约现金成本。销售资本比1.5倍为新增经营投资总额提供资金，不假设持续客户预付融资；完整、半额及不保留储备敏感性展示不确定性。"
+    },
+    {
+      "en": "Reported debt retains all book financing obligations. A conservative carrying-value stress adds back 200.511 m annual/149.301 m September to model debt, instead of assuming the noncash financing residual offsets Energy Server assets at expiry. This changes only the valuation bridge; original filings remain intact.",
+      "zh": "申报债务保留全部账面融资义务。保守账面价值压力情景向模型债务加回年度2.00511亿美元/9月1.49301亿美元，不假设非现金融资残值于到期时与发电设备抵消。仅改变估值调整，原始申报保持完整。"
+    },
+    {
+      "en": "Starting operating income excludes own-share product profit on sales to unconsolidated affiliates that the filing eliminates below EBIT; raw GAAP figures remain visible. TTM uses the rounded 16.9 m current-period elimination.",
+      "zh": "起始营业利润排除公司在营业利润以下抵消的、向未并表合资销售产生的自身份额利润；原始GAAP数字保持可见。TTM采用舍入披露的当期1690万美元抵消额。"
+    }
+  ],
+  "localizationPairs": {
+    "Fuel-cell power and AI data-center infrastructure": "燃料电池电力及AI数据中心基础设施",
+    "Deduct 40.421 m of FY 2025 own-share profit on sales to Fund JVs, eliminated below EBIT under equity-method accounting. Reported GAAP EBIT 72.802 m is preserved; normalized starting EBIT 32.381 m excludes this unrealized affiliate-sale profit.": "扣除2025年度向基金合资销售产生、在营业利润以下通过权益法抵消的自身份额利润4042.1万美元。申报GAAP营业利润7280.2万美元保留；正常化起始营业利润3238.1万美元排除此尚未实现的合资销售利润。",
+    "Deduct approximately 37.722 m of TTM own-share affiliate-sale profit: FY 2025 elimination 40.421 m plus nine-month 2026 elimination 16.9 m minus nine-month 2025 elimination 19.599 m. Current 16.9 m is disclosed rounded, so the adjustment is an estimate. GAAP EBIT 567.405 m remains unchanged; normalized starting EBIT is approximately 529.683 m. Do not subtract all equity-method losses or the future release a second time.": "扣除TTM自身份额合资销售利润约3772.2万美元：2025年度抵消4042.1万美元，加2026前九个月1690万美元，减2025前九个月1959.9万美元。当期1690万美元采用披露舍入值，因此调整为估计。GAAP营业利润5.67405亿美元不变；正常化起始营业利润约5.29683亿美元。不再扣除全部权益法亏损或重复扣除未来释放。",
+    "Employee options": "员工期权",
+    "Promised Oracle warrant": "已承诺Oracle认股权证",
+    "0% notes due November 2030": "2030年11月到期零息债券",
+    "3% Green notes due June 2029": "2029年6月到期3%绿色债券",
+    "3% Green notes due June 2028": "2028年6月到期3%绿色债券"
+  },
+  "historicalShortfallReason": null,
+  "normalizationByBase": {
+    "annual": {
+      "normalizationDelta": -40.421,
+      "adjustmentReason": "Deduct 40.421 m of FY 2025 own-share profit on sales to Fund JVs, eliminated below EBIT under equity-method accounting. Reported GAAP EBIT 72.802 m is preserved; normalized starting EBIT 32.381 m excludes this unrealized affiliate-sale profit.",
+      "adjustmentSource": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
+    },
+    "ttm": {
+      "normalizationDelta": -37.722,
+      "adjustmentReason": "Deduct approximately 37.722 m of TTM own-share affiliate-sale profit: FY 2025 elimination 40.421 m plus nine-month 2026 elimination 16.9 m minus nine-month 2025 elimination 19.599 m. Current 16.9 m is disclosed rounded, so the adjustment is an estimate. GAAP EBIT 567.405 m remains unchanged; normalized starting EBIT is approximately 529.683 m. Do not subtract all equity-method losses or the future release a second time.",
+      "adjustmentSource": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm"
+    }
+  },
+  "normalizationEvidenceByBase": {
+    "annual": {
+      "formula": "-40.421",
+      "components": [
+        -40.421
+      ],
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
+      ],
+      "locator": "Note 7 Investments in Unconsolidated Affiliates: annualloss wholly intraentityprofit;2026 nine-monthloss decomposes 16.9 melimination and 1.3 mincome.2025 Q 3 Note 7/MD&A identifies 19.599 mequityloss as affiliate-sale profit."
+    },
+    "ttm": {
+      "formula": "-(40.421+16.9-19.599)",
+      "components": [
+        40.421,
+        16.9,
+        19.599
+      ],
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+        "https://www.sec.gov/Archives/edgar/data/1664703/000162828025046844/be-20250930.htm"
+      ],
+      "locator": "Note 7 Investments in Unconsolidated Affiliates: annualloss wholly intraentityprofit;2026 nine-monthloss decomposes 16.9 melimination and 1.3 mincome.2025 Q 3 Note 7/MD&A identifies 19.599 mequityloss as affiliate-sale profit."
+    }
+  },
+  "economicDebtSensitivity": {
+    "annual": {
+      "reportedBookDebt": 2866.865,
+      "modeledEconomicDebt": 2666.354,
+      "additionalBookDebtStress": 200.511,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+      "locator": "Note 9 Managed Services Financing: disclosed repayment principalPV versus total bookfinancingobligations; residual offsets Energy Serverasset atleaseexpiry."
+    },
+    "ttm": {
+      "reportedBookDebt": 2666.063,
+      "modeledEconomicDebt": 2516.762,
+      "additionalBookDebtStress": 149.301,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+      "locator": "Note 9 Managed Services Financing: disclosed repayment principalPV versus total bookfinancingobligations; residual offsets Energy Serverasset atleaseexpiry."
+    }
+  },
+  "debtDefinition": {
+    "en": "Modeled debt includes net carrying borrowings, finance leases and the disclosed present value of contractual managed-service financing principal. Reported book financing obligations also contain noncash residuals of $200.511 m annual/$149.301 m September expected to offset Energy Server assets at expiry; those residuals are excluded from the model and retained in the source facts. To stress full book debt, add that residual to other claims for the selected base.",
+    "zh": "模型债务包含净账面借款、融资租赁及披露的托管服务合同融资本金现值。申报账面融资义务另含年度2.00511亿美元/9月1.49301亿美元非现金残值，预计到期时与发电设备资产抵消；模型排除此残值，原始事实完整保留。若测试完整账面债务，可在所选基期的其他索偿中加入对应残值。"
+  }
+}

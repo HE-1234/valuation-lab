@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "ticker": "TSLA",
+  "asOf": "2026-10-21",
+  "status": "resolved-with-explicit-conservative-proxies",
+  "units": "USD millions;millions of shares;strike USD/share",
+  "recommendedMethod": "self-consistent-full-vesting-vanilla-call-proxy",
+  "formula": "E=max(0,enterprise+cash+otherAssets-debt-NCI);solve E=S*P+sum(Nj*Call(P,Kj,Tj,sigmaj,rj)) for P>=0.Call=P*N(d1)-K*exp(-r*T)*N(d2),d1=(ln(P/K)+(r+sigma^2/2)*T)/(sigma*sqrt(T)),d2=d1-sigma*sqrt(T).",
+  "implementationRules": [
+    "Remove issued96m interim shares annually before counting2018 options;June forfeiture is already reflected in reported common.",
+    "Remove423.743904m conditional issued shares from plain common and model once as call-like claim with334.09 offset.",
+    "June2018 options are zero;286.428773m net replacement restricted shares are already in reported common.Assume continued service,no second deduction,no hypothetical cash exercise proceeds.",
+    "Do not subtract annual138380m market-based aggregate option intrinsic value from DCF equity.It uses a different underlying valuation and double counts if combined with diluted awards.",
+    "Use actual common shares,not weighted-average dilutedEPS shares.",
+    "Ordinary employee options use conservative free-share proxy to avoid pretending aggregate average strike prices are each individual strike.All annualperformanceawards13m are not added separately to annualtotaloption/RSUtable;that would overlap.",
+    "Keep GAAP compensation in business EBIT;claims overlay values existing awards.Future compensation expense/awards are not removed or separately added.",
+    "Use baseline dates for remainingterm;data known through cutoff may clarify history but future cash or financing must not be silently mixed in."
+  ],
+  "sources": [
+    {
+      "id": "annual",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+      "filedAt": "2026-01-29",
+      "locator": "Note 11, Equity Incentive Plans, pp. 78–83; consolidated balance sheet",
+      "supports": "344.106 million total options, $47.58 weighted average exercise price, 17.012 million RSUs; 96 million interim award with no-double-dip condition; 423.743904 million performance award with $334.09 offset; 60% volatility, 3.95% stock-option risk-free rate and 4.06% performance-award risk-free rate."
+    },
+    {
+      "id": "annual-amendment",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926053166/tm2611837d1_10ka.htm",
+      "filedAt": "2026-04-30",
+      "locator": "Outstanding Equity Awards at Fiscal 2025 Year-End; 2018 CEO Performance Award; Security Ownership footnote 2",
+      "supports": "303.960630 million CEO 2018 options at $23.34, expiry 2028-01-20; excludes 96 million interim shares to avoid double counting."
+    },
+    {
+      "id": "june",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+      "filedAt": "2026-07-23",
+      "locator": "Note 9, Equity Incentive Plans pp. 20–22; balance sheet p. 4",
+      "supports": "96 million shares forfeited April 21; CEO 2018 options exercised in Q2; June 3,949 million issued common; 423.743904 million conditional performance shares remain; 19.1 million other performance awards versus 13 million annually."
+    },
+    {
+      "id": "exercise",
+      "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/xslF345X06/tm2618092-2_4seq1.xml",
+      "filedAt": "2026-06-17",
+      "locator": "Form 4, Table I and Table II, June 16 transactions; footnotes 1–3",
+      "supports": "303,960,630 options exercised; 17,531,857 shares withheld at $404.66 to cover exercise price; zero CEO 2018 options remain."
+    },
+    {
+      "id": "latest-proxy",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926116718/tm2626016d2_ars.pdf",
+      "filedAt": "2026-10-19",
+      "locator": "2026 Proxy Statement p. 46 (PDF p. 58), 2018 CEO Performance Award",
+      "supports": "Corroborates 286,428,773 restricted shares after net settlement; service vesting January 19, 2028."
+    }
+  ],
+  "bases": [
+    {
+      "periodEnd": "2025-12-31",
+      "snapshotIds": [
+        "TSLA-CURRENT-2025-12-31"
+      ],
+      "reportedCommonShares": 3751,
+      "removeInterimOverlapShares": 96,
+      "removeConditionalPerformanceShares": 423.743904,
+      "economicCommonBeforeEmployeeProxy": 3231.256096,
+      "employeeZeroStrikeShares": 57.15737,
+      "employeeProxyClassification": "Annual filed17.012mRSUs +40.145370m nonCEO options;all treated as free shares and assumed vested,conservative for existing inventory.",
+      "commonSharesForSolver": 3288.413466,
+      "awards": [
+        {
+          "id": "ceo2018",
+          "shares": 303.96063,
+          "strike": 23.34,
+          "termYears": 2.0533880903490758,
+          "volatility": 0.6,
+          "riskFreeRate": 0.0395,
+          "expiry": "2028-01-20",
+          "classification": "Filed option count/strike/expiry;volatility and risk-free inputs are proxies from annual new-grant assumptions;full vesting/no illiquidity discount."
+        },
+        {
+          "id": "ceo2025",
+          "shares": 423.743904,
+          "strike": 334.09,
+          "termYears": 9.672826830937714,
+          "volatility": 0.6,
+          "riskFreeRate": 0.0406,
+          "expiry": "2035-09-03",
+          "classification": "Filed shares/offset/end date;full vesting vanilla-call proxy ignores milestone barriers,service forfeiture and illiquidity;filed grant assumptions reused,not current market calibration."
+        }
+      ],
+      "cash": 44059,
+      "debt": 8376,
+      "otherAssets": 1008,
+      "otherClaims": 728,
+      "reconciliation": {
+        "annualTotalOptions": 344.106,
+        "ceo2018Options": 303.96063,
+        "ordinaryOptionResidual": 40.14537,
+        "ordinaryWeightedAverageStrikeDerived": 231.1131364787521,
+        "annualRSUs": 17.012,
+        "juneGrantBufferProxy": 0,
+        "ceo2018ExercisedInJune": 303.96063,
+        "ceo2018SharesWithheld": 17.531857,
+        "ceo2018NetIssuedInJune": 286.428773,
+        "juneAdditionalCEO2018SharesToAdd": 0
+      },
+      "existingGuidedPathCheck": {
+        "preAwardEquity": 89947.13863240209,
+        "perShareConservativeVanillaProxy": 25.60074008154111,
+        "perShareIntrinsicOnly": 27.013216648192333,
+        "perShareNoCEOClaims": 27.352746107627723,
+        "perShareAllCEOClaimsFreeShares": 22.39653780899916,
+        "awardClaims": [
+          {
+            "id": "ceo2018",
+            "claimUSDMillions": 3048.13847418389
+          },
+          {
+            "id": "ceo2025",
+            "claimUSDMillions": 2713.1817345124828
+          }
+        ],
+        "perShareAllFreeDenominator": 4016.118,
+        "zeroEquityFloorActive": false,
+        "ordinaryEmployeeProxyShareFraction": 0.017381442629088174,
+        "ceoPerformanceFreeShareDilutionFraction": 0.11415030715683264
+      },
+      "definition": {
+        "id": "TSLA-2025-12-31-resolved-awards-v1",
+        "type": "resolved-awards",
+        "ticker": "TSLA",
+        "snapshotIds": [
+          "TSLA-CURRENT-2025-12-31"
+        ],
+        "periodEnd": "2025-12-31",
+        "filedAt": "2026-01-29",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+        "cash": 44059,
+        "mappedDebt": 8376,
+        "capturedShares": 3288.413466,
+        "commonShares": 3231.256096,
+        "employeeAwardShares": 57.15737,
+        "optionTranches": [
+          {
+            "shares": 303.96063,
+            "strike": 23.34,
+            "years": 2.0533880903490758,
+            "volatility": 0.6,
+            "rate": 0.0395,
+            "label": "ceo2018"
+          },
+          {
+            "shares": 423.743904,
+            "strike": 334.09,
+            "years": 9.672826830937714,
+            "volatility": 0.6,
+            "rate": 0.0406,
+            "label": "ceo2025"
+          }
+        ],
+        "fixedClaims": 728,
+        "otherAssets": 1008,
+        "notes": {
+          "en": "Musk’s old options and 96 million interim shares are reconciled once; June exercise is already inside common shares. The 423.7 million performance award has a $334.09 per-share offset and is modeled as a full-vesting vanilla-call proxy instead of free common stock. This conservative proxy includes time value but ignores milestone and service restrictions. Employee awards use a small, explicitly estimated dilution buffer; June is not a reported award inventory.",
+          "zh-Hans": "马斯克旧期权与9600万股临时奖励只计算一次；6月已行权股份已包含在普通股中。4.237亿股绩效奖励每股需抵扣334.09美元，采用假设全部归属的普通看涨期权代理估值，而非当作免费普通股。该保守代理计入时间价值，但未折减业绩门槛及服务限制。员工奖励使用明确标注的稀释估计，6月数量并非披露的期末余额。"
+        },
+        "sources": [
+          {
+            "id": "annual",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+            "filedAt": "2026-01-29",
+            "locator": "Note 11, Equity Incentive Plans, pp. 78–83; consolidated balance sheet",
+            "supports": "344.106 million total options, $47.58 weighted average exercise price, 17.012 million RSUs; 96 million interim award with no-double-dip condition; 423.743904 million performance award with $334.09 offset; 60% volatility, 3.95% stock-option risk-free rate and 4.06% performance-award risk-free rate."
+          },
+          {
+            "id": "annual-amendment",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926053166/tm2611837d1_10ka.htm",
+            "filedAt": "2026-04-30",
+            "locator": "Outstanding Equity Awards at Fiscal 2025 Year-End; 2018 CEO Performance Award; Security Ownership footnote 2",
+            "supports": "303.960630 million CEO 2018 options at $23.34, expiry 2028-01-20; excludes 96 million interim shares to avoid double counting."
+          },
+          {
+            "id": "june",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+            "filedAt": "2026-07-23",
+            "locator": "Note 9, Equity Incentive Plans pp. 20–22; balance sheet p. 4",
+            "supports": "96 million shares forfeited April 21; CEO 2018 options exercised in Q2; June 3,949 million issued common; 423.743904 million conditional performance shares remain; 19.1 million other performance awards versus 13 million annually."
+          },
+          {
+            "id": "exercise",
+            "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/xslF345X06/tm2618092-2_4seq1.xml",
+            "filedAt": "2026-06-17",
+            "locator": "Form 4, Table I and Table II, June 16 transactions; footnotes 1–3",
+            "supports": "303,960,630 options exercised; 17,531,857 shares withheld at $404.66 to cover exercise price; zero CEO 2018 options remain."
+          },
+          {
+            "id": "latest-proxy",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926116718/tm2626016d2_ars.pdf",
+            "filedAt": "2026-10-19",
+            "locator": "2026 Proxy Statement p. 46 (PDF p. 58), 2018 CEO Performance Award",
+            "supports": "Corroborates 286,428,773 restricted shares after net settlement; service vesting January 19, 2028."
+          }
+        ],
+        "employeeInventorySensitivity": {
+          "low": 57.15737,
+          "base": 57.15737,
+          "high": 57.15737,
+          "classification": "June low carries annual remaining employee inventory; base adds half 2025 gross grant pace; high doubles annual residual inventory. Scenarios are estimates, not verified June counts or guaranteed limits."
+        }
+      }
+    },
+    {
+      "periodEnd": "2026-06-30",
+      "snapshotIds": [
+        "TSLA-CURRENT-2026-06-30",
+        "TSLA-TTM-2026-06-30"
+      ],
+      "reportedCommonShares": 3949,
+      "removeInterimOverlapShares": 0,
+      "removeConditionalPerformanceShares": 423.743904,
+      "economicCommonBeforeEmployeeProxy": 3525.256096,
+      "employeeZeroStrikeShares": 67.94337,
+      "employeeProxyClassification": "June inventory proxy:annual17.012mRSUs +40.145370m nonCEO options +0.5*(13.128m annual option grants+8.444m annualRSU grants).No releases/exercises/cancellations deducted.New-grant pace is judgment,not a filed June count or formal upper bound.",
+      "commonSharesForSolver": 3593.199466,
+      "awards": [
+        {
+          "id": "ceo2025",
+          "shares": 423.743904,
+          "strike": 334.09,
+          "termYears": 9.177275838466803,
+          "volatility": 0.6,
+          "riskFreeRate": 0.0406,
+          "expiry": "2035-09-03",
+          "classification": "Filed shares/offset/end date;full vesting vanilla-call proxy ignores milestone barriers,service forfeiture and illiquidity;filed grant assumptions reused,not current market calibration."
+        }
+      ],
+      "cash": 43524,
+      "debt": 9342,
+      "otherAssets": 3681,
+      "otherClaims": 661,
+      "reconciliation": {
+        "annualTotalOptions": 344.106,
+        "ceo2018Options": 303.96063,
+        "ordinaryOptionResidual": 40.14537,
+        "ordinaryWeightedAverageStrikeDerived": 231.1131364787521,
+        "annualRSUs": 17.012,
+        "juneGrantBufferProxy": 10.786,
+        "ceo2018ExercisedInJune": 303.96063,
+        "ceo2018SharesWithheld": 17.531857,
+        "ceo2018NetIssuedInJune": 286.428773,
+        "juneAdditionalCEO2018SharesToAdd": 0
+      },
+      "existingGuidedPathCheck": {
+        "preAwardEquity": 95170.7179275101,
+        "perShareConservativeVanillaProxy": 25.788535235064884,
+        "perShareIntrinsicOnly": 26.486344225542105,
+        "perShareNoCEOClaims": 26.48634422554211,
+        "perShareAllCEOClaimsFreeShares": 23.692322535159388,
+        "awardClaims": [
+          {
+            "id": "ceo2025",
+            "claimUSDMillions": 2507.36689195279
+          }
+        ],
+        "perShareAllFreeDenominator": 4016.94337,
+        "zeroEquityFloorActive": false,
+        "ordinaryEmployeeProxyShareFraction": 0.018908877907531114,
+        "ceoPerformanceFreeShareDilutionFraction": 0.10548914061489495,
+        "doubleAnnualEmployeeInventoryStressPerShare": 25.473976502365375
+      },
+      "definition": {
+        "id": "TSLA-2026-06-30-resolved-awards-v1",
+        "type": "resolved-awards",
+        "ticker": "TSLA",
+        "snapshotIds": [
+          "TSLA-CURRENT-2026-06-30",
+          "TSLA-TTM-2026-06-30"
+        ],
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-07-23",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+        "cash": 43524,
+        "mappedDebt": 9342,
+        "capturedShares": 3593.199466,
+        "commonShares": 3525.256096,
+        "employeeAwardShares": 67.94337,
+        "optionTranches": [
+          {
+            "shares": 423.743904,
+            "strike": 334.09,
+            "years": 9.177275838466803,
+            "volatility": 0.6,
+            "rate": 0.0406,
+            "label": "ceo2025"
+          }
+        ],
+        "fixedClaims": 661,
+        "otherAssets": 3681,
+        "notes": {
+          "en": "Musk’s old options and 96 million interim shares are reconciled once; June exercise is already inside common shares. The 423.7 million performance award has a $334.09 per-share offset and is modeled as a full-vesting vanilla-call proxy instead of free common stock. This conservative proxy includes time value but ignores milestone and service restrictions. Employee awards use a small, explicitly estimated dilution buffer; June is not a reported award inventory.",
+          "zh-Hans": "马斯克旧期权与9600万股临时奖励只计算一次；6月已行权股份已包含在普通股中。4.237亿股绩效奖励每股需抵扣334.09美元，采用假设全部归属的普通看涨期权代理估值，而非当作免费普通股。该保守代理计入时间价值，但未折减业绩门槛及服务限制。员工奖励使用明确标注的稀释估计，6月数量并非披露的期末余额。"
+        },
+        "sources": [
+          {
+            "id": "annual",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+            "filedAt": "2026-01-29",
+            "locator": "Note 11, Equity Incentive Plans, pp. 78–83; consolidated balance sheet",
+            "supports": "344.106 million total options, $47.58 weighted average exercise price, 17.012 million RSUs; 96 million interim award with no-double-dip condition; 423.743904 million performance award with $334.09 offset; 60% volatility, 3.95% stock-option risk-free rate and 4.06% performance-award risk-free rate."
+          },
+          {
+            "id": "annual-amendment",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926053166/tm2611837d1_10ka.htm",
+            "filedAt": "2026-04-30",
+            "locator": "Outstanding Equity Awards at Fiscal 2025 Year-End; 2018 CEO Performance Award; Security Ownership footnote 2",
+            "supports": "303.960630 million CEO 2018 options at $23.34, expiry 2028-01-20; excludes 96 million interim shares to avoid double counting."
+          },
+          {
+            "id": "june",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+            "filedAt": "2026-07-23",
+            "locator": "Note 9, Equity Incentive Plans pp. 20–22; balance sheet p. 4",
+            "supports": "96 million shares forfeited April 21; CEO 2018 options exercised in Q2; June 3,949 million issued common; 423.743904 million conditional performance shares remain; 19.1 million other performance awards versus 13 million annually."
+          },
+          {
+            "id": "exercise",
+            "url": "https://www.sec.gov/Archives/edgar/data/1494730/000110465926075213/xslF345X06/tm2618092-2_4seq1.xml",
+            "filedAt": "2026-06-17",
+            "locator": "Form 4, Table I and Table II, June 16 transactions; footnotes 1–3",
+            "supports": "303,960,630 options exercised; 17,531,857 shares withheld at $404.66 to cover exercise price; zero CEO 2018 options remain."
+          },
+          {
+            "id": "latest-proxy",
+            "url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926116718/tm2626016d2_ars.pdf",
+            "filedAt": "2026-10-19",
+            "locator": "2026 Proxy Statement p. 46 (PDF p. 58), 2018 CEO Performance Award",
+            "supports": "Corroborates 286,428,773 restricted shares after net settlement; service vesting January 19, 2028."
+          }
+        ],
+        "employeeInventorySensitivity": {
+          "low": 57.15737,
+          "base": 67.94337,
+          "high": 114.31474,
+          "classification": "June low carries annual remaining employee inventory; base adds half 2025 gross grant pace; high doubles annual residual inventory. Scenarios are estimates, not verified June counts or guaranteed limits."
+        }
+      }
+    }
+  ],
+  "notes": {
+    "en": "Musk’s old options and 96 million interim shares are reconciled once; June exercise is already inside common shares. The 423.7 million performance award has a $334.09 per-share offset and is modeled as a full-vesting vanilla-call proxy instead of free common stock. This conservative proxy includes time value but ignores milestone and service restrictions. Employee awards use a small, explicitly estimated dilution buffer; June is not a reported award inventory.",
+    "zh-Hans": "马斯克旧期权与9600万股临时奖励只计算一次；6月已行权股份已包含在普通股中。4.237亿股绩效奖励每股需抵扣334.09美元，采用假设全部归属的普通看涨期权代理估值，而非当作免费普通股。该保守代理计入时间价值，但未折减业绩门槛及服务限制。员工奖励使用明确标注的稀释估计，6月数量并非披露的期末余额。"
+  },
+  "limitations": [
+    "Vanilla-call proxy is deliberately conservative on performance vesting,not an official award fair value or forecast of market trading price.",
+    "Grant-date60% volatility andrisk-free rates reused as transparent proxies;stress20–80% volatility if users change the case.",
+    "EmployeeJune new-grant buffer assumes half annualpace;no formal guarantee awards cannot exceed it.",
+    "At high model values the423.7m award can be material;never label it immaterial solely because intrinsic value is zero.At current path timevalue remains about2–3bUSD.",
+    "Shares are rounded to millions in balance sheet;small rounding persists."
+  ],
+  "localizationPairs": {
+    "Musk’s old options and 96 million interim shares are reconciled once; June exercise is already inside common shares. The 423.7 million performance award has a $334.09 per-share offset and is modeled as a full-vesting vanilla-call proxy instead of free common stock. This conservative proxy includes time value but ignores milestone and service restrictions. Employee awards use a small, explicitly estimated dilution buffer; June is not a reported award inventory.": "马斯克旧期权与9600万股临时奖励只计算一次；6月已行权股份已包含在普通股中。4.237亿股绩效奖励每股需抵扣334.09美元，采用假设全部归属的普通看涨期权代理估值，而非当作免费普通股。该保守代理计入时间价值，但未折减业绩门槛及服务限制。员工奖励使用明确标注的稀释估计，6月数量并非披露的期末余额。"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "ticker": "DELL",
+  "sector": "Computing and AI infrastructure",
+  "businessSummary": {
+    "en": "AI servers, storage, networking and personal computers, with an integrated customer-financing business.",
+    "zh": "AI服务器、存储、网络设备和个人电脑，并经营一体化客户融资业务。"
+  },
+  "assumptions": {
+    "growth": 0.12,
+    "targetMargin": 0.09,
+    "tax": 0.2,
+    "salesCapital": 5,
+    "wacc": 0.105,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.18,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "Initial growth of 12% reflects AI-server demand while deliberately fading the exceptional recent acceleration toward 2.5% long-run growth. It is an analyst scenario, not backlog converted mechanically into sales or management guidance.",
+      "zh": "12%的初期增长反映AI服务器需求，同时将近期异常加速逐步收敛至2.5%的长期增长。这是分析师情景，并非将订单机械转换为收入或公司指引。"
+    },
+    "targetMargin": {
+      "en": "A 9% mature GAAP operating margin balances higher server scale against hardware competition and expensive GPU pass-through. Recent TTM margin is about 9.4%, versus 7.2% in FY2026; stock compensation and depreciation remain expenses.",
+      "zh": "9%的成熟期GAAP营业利润率平衡服务器规模效应、硬件竞争及昂贵GPU的转售成本。近期TTM约为9.4%，2026财年为7.2%；股权薪酬及折旧仍计入费用。"
+    },
+    "tax": {
+      "en": "20% normalized operating tax is an analyst assumption near the FY2026 18.3% effective rate, without repeating FY2025 discrete statute-expiry and stock-compensation tax benefits.",
+      "zh": "20%的正常化营业税率为分析师假设，接近2026财年18.3%的有效税率，不重复2025财年税务时效届满及股权薪酬的一次性税收利益。"
+    },
+    "salesCapital": {
+      "en": "Five dollars of incremental sales per dollar of new operating capital is a conservative analyst reinvestment assumption relative to supplier-funded book ratios. It explicitly funds inventory, customer financing and leased equipment; ongoing supplier credit is not assumed to make growth free.",
+      "zh": "每投入1美元新增经营资本支持5美元新增收入，相比依赖供应商资金的账面比率，这是较保守的分析假设。再投资需支持库存、客户融资及出租设备，不假设供应商信用使增长无需投入。"
+    },
+    "wacc": {
+      "en": "10.5% is an analyst blended required return for a leveraged, cyclical hardware business with customer credit and AI-capacity concentration risk; not a measured market quote.",
+      "zh": "10.5%是分析师对具杠杆、周期性硬件业务的综合必要回报假设，考虑客户信用及AI产能集中风险，并非市场报价。"
+    },
+    "terminalGrowth": {
+      "en": "2.5% nominal long-run growth assumes a mature global computing supplier and stays below the discount rate.",
+      "zh": "2.5%的长期名义增长假设对应成熟的全球计算设备供应商，并低于折现率。"
+    },
+    "terminalROIC": {
+      "en": "18% return on new terminal capital is an analyst assumption, not distorted historical book ROIC. Terminal growth still requires reinvestment.",
+      "zh": "18%的终值新增资本回报率是分析师假设，并非失真的历史账面ROIC；永续增长仍需要再投资。"
+    },
+    "years": {
+      "en": "Ten forecast years allow exceptional AI-server growth to fade. These are editable analyst starting assumptions; the filing data remain reported facts.",
+      "zh": "十年预测期让异常AI服务器增长逐渐放缓。这些是可编辑的分析师起始假设；申报数据仍保留为报告事实。"
+    }
+  },
+  "sources": [
+    {
+      "title": "FY2026 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000008/dell-20260130.htm",
+      "filedAt": "2026-03-16"
+    },
+    {
+      "title": "FY2027 second-quarter 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1571996/000157199626000046/dell-20260731.htm",
+      "filedAt": "2026-09-08"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001571996.json",
+    "latestPeriodicAccession": "0001571996-26-000046",
+    "latestAnnualAccession": "0001571996-26-000008"
+  },
+  "limitations": [
+    {
+      "en": "Whole-enterprise FCFF includes DFS financing income in revenue and subtracts all consolidated corporate and DFS debt once. DFS borrowing interest is below EBIT. Financing receivables and customer leased equipment are operating capital, never added again as surplus investments.",
+      "zh": "全企业FCFF包括收入中的DFS融资收益，并仅扣除一次全部公司及DFS债务。DFS借款利息列于营业利润以下。融资应收款和客户出租设备属于经营资本，不重复计为多余投资。"
+    },
+    {
+      "en": "FY2026 book equity is negative after repurchases. Large payables and supplier-finance balances support working capital; use the explicit reinvestment assumption rather than treating a high book sales/capital ratio as free growth. Supplier finance of $1.98bn annual and about $3.1bn July remains trade payables, as filed, without a second debt deduction.",
+      "zh": "2026财年回购后账面权益为负。大额应付账款及供应商融资支持营运资本，应使用明确的再投资假设，不将高账面销售资本比视为免费增长。年度19.8亿美元及7月约31亿美元供应商融资按申报保留为贸易应付款，不重复扣为债务。"
+    },
+    {
+      "en": "July carries 19 million annual RSU/PSU units because the interim filing omits a complete award roll-forward; PSUs are at target, with possible 0%-200% vesting. A +/-25% total-award scenario tests roughly 0.7% of allocation shares. Fractional rounding and small deferred units are below about 0.1% of shares.",
+      "zh": "7月沿用年度1900万份RSU/PSU，因季报未披露完整奖励变动；PSU按目标计量，可能归属0%-200%。总奖励上下25%情景对应约0.7%的分配股数。小数四舍五入及少量递延股份低于约0.1%的股数。"
+    },
+    {
+      "en": "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+      "zh": "250万份COO期权行权价141.77美元，需满足市值、调整后自由现金流及服务条件。模型保守假设全部归属，并按模型股价及剩余合约期估值；不重复扣除1.32亿美元授予日公允价值。"
+    },
+    {
+      "en": "The $248m international pension deficit is included once as a separate claim and carried to July; a 50% change moves value by about $0.19 per share. Annual finance leases are disclosed as immaterial; $100m omitted debt would move value about $0.15 per share.",
+      "zh": "2.48亿美元国际养老金缺口作为独立索偿计入一次，并沿用至7月；变动50%约影响每股0.19美元。年报披露融资租赁不重大；若遗漏1亿美元债务，约影响每股0.15美元。"
+    },
+    {
+      "en": "Strategic investments of $1.73bn annual and $2.679bn July are added once at carrying value; private securities may realize different prices. The $0.6bn July YTD investment gains sit below EBIT and are not projected as operating earnings.",
+      "zh": "年度17.3亿美元及7月26.79亿美元战略投资按账面值仅加计一次；私人证券实际变现价格可能不同。7月累计6亿美元投资收益列于营业利润以下，不外推为经营盈利。"
+    }
+  ],
+  "claimsPolicy": {
+    "annual": {
+      "optionTranches": [
+        {
+          "shares": 2.5,
+          "strike": 141.77,
+          "years": 9.664613,
+          "volatility": 0.5,
+          "rate": 0.04
+        }
+      ],
+      "note": {
+        "en": "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "zh": "250万份COO期权行权价141.77美元，需满足市值、调整后自由现金流及服务条件。模型保守假设全部归属，并按模型股价及剩余合约期估值；不重复扣除1.32亿美元授予日公允价值。"
+      },
+      "cautions": [
+        {
+          "en": "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively.",
+          "zh": "期权波动率50%及无风险利率4%为分析师代理。合约到期日为2035年9月30日，保守忽略绩效未达标导致的没收。"
+        }
+      ]
+    },
+    "ttm": {
+      "optionTranches": [
+        {
+          "shares": 2.5,
+          "strike": 141.77,
+          "years": 9.166324,
+          "volatility": 0.5,
+          "rate": 0.04
+        }
+      ],
+      "note": {
+        "en": "The 2.5 million COO options at $141.77 require market-capitalization, adjusted free-cash-flow and service conditions. The model conservatively assumes full vesting and values contractual time remaining at the modeled share price; $132m grant-date fair value is not deducted again.",
+        "zh": "250万份COO期权行权价141.77美元，需满足市值、调整后自由现金流及服务条件。模型保守假设全部归属，并按模型股价及剩余合约期估值；不重复扣除1.32亿美元授予日公允价值。"
+      },
+      "cautions": [
+        {
+          "en": "Option volatility 50% and risk-free rate 4% are analyst proxies. Contractual expiry is September 30 2035; performance forfeitures are ignored conservatively.",
+          "zh": "期权波动率50%及无风险利率4%为分析师代理。合约到期日为2035年9月30日，保守忽略绩效未达标导致的没收。"
+        }
+      ]
+    }
+  },
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  },
+  "localizationPairs": {
+    "US GAAP; latest reported annual evidence": "美国公认会计准则；最新申报年度证据",
+    "US GAAP continuing operations excluding VMware": "美国GAAP持续经营业务，不含VMware",
+    "US GAAP pre-EMC continuing operations": "美国GAAP收购EMC前持续经营业务",
+    "US GAAP partial-year EMC including VMware": "美国GAAP，包含部分年度EMC及VMware",
+    "US GAAP consolidated operations including VMware": "美国GAAP合并业务，包含VMware",
+    "EMC acquisition and pre-spin VMware consolidation create a different business scope; retained as historical context, excluded from current-business assumption ranges.": "收购EMC及分拆前合并VMware形成不同业务范围；保留为历史背景，但不纳入当前业务假设区间。",
+    "Continuing-operation earnings exclude VMware, but pre-spin balance sheets or opening capital still include VMware; affected capital ratios are excluded from assumption ranges.": "持续经营盈利不含VMware，但分拆前资产负债表或期初资本仍包含VMware；相关资本比率不纳入假设区间。",
+    "Financing receivables, leased equipment and DFS debt remain consolidated. Buybacks and supplier credit distort book-capital proxies; negative equity is not forced positive.": "融资应收款、出租设备及DFS债务仍纳入合并。回购及供应商信用扭曲账面资本代理指标，负权益不会强制改为正数。",
+    "FY2017 includes a partial year of EMC after the September 2016 merger; years through FY2019 include VMware, while FY2020 onward is recast continuing operations excluding VMware. Growth across incompatible scope is unavailable.": "2017财年仅包含2016年9月合并后的部分年度EMC；截至2019财年包含VMware，2020财年起已重列为不含VMware的持续经营业务。跨不兼容业务范围的增长率不可用。",
+    "VMware was spun off in November 2021. FY2020-FY2021 closing capital and FY2022 opening capital can retain VMware while earnings exclude it; affected capital ratios are excluded from ranges.": "VMware于2021年11月分拆。2020至2021财年期末及2022财年期初资本可能仍含VMware，而盈利已排除；相关资本比率不纳入区间。",
+    "Consolidated book capital includes DFS customer-financing assets and debt. Buybacks, negative equity, large trade payables and supplier finance make historical book ratios poor direct forecasts of required reinvestment.": "合并账面资本包含DFS客户融资资产及债务。回购、负权益、大额应付账款和供应商融资使历史账面比率难以直接预测再投资需求。",
+    "Fiscal 2026 includes the first quarter disposal of Secureworks and VMware resale run-off. Recent AI-server growth and working-capital intensity can differ sharply from historical averages.": "2026财年包含首季出售Secureworks及VMware转售业务收缩。近期AI服务器增长及营运资本需求可能明显偏离历史平均。",
+    "USD millions; common shares in millions. Whole-enterprise FCFF includes customer-finance income in revenue and all consolidated financing debt. DFS borrowing interest is in Interest and other, net below EBIT, so no interest addback or DFS debt exclusion is needed. Financing receivables and leased customer equipment remain operating assets; do not add them as surplus assets. Strategic-investment gains are below EBIT and investments are added once at carrying value. Annual filing reports no material finance leases as lessee. Share counts are rounded millions as filed, all classes included. Stock compensation stays in expenses. Employee awards are separate ownership claims; options use a separately labelled full-vesting value proxy, not the reported $132m grant-date expense value. Supplier finance remains ordinary trade payables as classified in the filing and is not deducted again. Annual international pension shortfall is included once outside borrowing debt.": "金额及普通股数以百万为单位。全企业FCFF将客户融资收益纳入收入，并包含全部合并融资债务。DFS借款利息列于营业利润以下的净利息及其他项目，因此无需额外加回利息或排除DFS债务。融资应收款及客户出租设备保留为经营资产，不作为多余资产再加入。战略投资收益列于营业利润以下，投资按账面值仅加计一次。年报披露作为承租人的融资租赁不重大。股数按申报四舍五入至百万，包含所有类别。股权薪酬仍列为费用，员工奖励另作所有权索偿。期权采用明确标示的全部归属估值代理，不使用1.32亿美元授予日费用价值。供应商融资按申报保留为普通贸易应付款，不重复扣除。年度国际养老金缺口在借款债务之外仅计入一次。",
+    "Latest 10-K and 10-Q verified against SEC submissions as of 2026-10-21. Original financial statements, financing debt, shares, awards, pensions and leases reviewed. Reported continuing operations retain Secureworks until its February 2025 sale; VMware resale run-off and AI server mix affect comparability.": "截至2026年10月21日已核对SEC申报索引中的最新年报及季报。直接查阅原始财务报表、融资债务、股数、奖励、养老金及租赁附注。申报持续经营业务包含Secureworks直至2025年2月出售；VMware转售业务收缩及AI服务器组合变化影响可比性。",
+    "July 10-Q omits a complete award roll-forward; carry FY2026 19 million RSU/PSUs as explicit dilution proxy; roughly 3% of common shares, so +/-25% award sensitivity matters.": "7月季报未披露完整奖励变动表，沿用2026财年1900万份RSU/PSU作为明确稀释代理，约占普通股3%；奖励上下25%的敏感度值得关注。",
+    "July 10-Q omits a full option activity table; retain documented COO award count and strike. Contractual expiry unchanged, remaining term updated in separate model policy.": "7月季报未披露完整期权变动表，保留已披露COO奖励数量及行权价。合约到期日不变，剩余期限在独立模型政策中更新。",
+    "July interim report does not update pension funding; annual $248m deficit retained as explicit proxy (about $0.38 per allocation share). +/-50% changes value about $0.19 per share.": "7月季报未更新养老金资金状况，沿用年度2.48亿美元缺口作为明确代理，约每分配股0.38美元；上下50%约影响每股0.19美元。",
+    "International pension underfunding": "国际养老金资金缺口",
+    "Computing and AI infrastructure": "计算与AI基础设施"
+  }
+}

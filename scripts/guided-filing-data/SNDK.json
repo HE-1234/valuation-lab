@@ -1,0 +1,238 @@
+{
+ "ticker": "SNDK",
+ "name": "Sandisk Corporation",
+ "cik": "0002023554",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "common",
+ "adrRatio": 1,
+ "listedUnit": "common share (Nasdaq: SNDK)",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2026-07-03",
+   "label": "FY2026",
+   "form": "10-K",
+   "accession": "0001628280-26-057406",
+   "filedAt": "2026-08-17",
+   "acceptedAt": "2026-08-18T00:50:29.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+   "revenue": 20248,
+   "operatingIncome": 12389,
+   "ttmComponents": null,
+   "cashAndEquivalents": 4762,
+   "shortTermInvestments": 0,
+   "longTermInvestments": 1777,
+   "debtCurrent": 0,
+   "debtNoncurrent": 0,
+   "operatingLeaseLiabilities": 201,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 146.419001,
+   "sharesDate": "2026-08-07",
+   "unvestedRSUs": 6.6,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "Tax indemnification liability to Western Digital (Tax Matters Agreement, spin-off)",
+     "value": 128,
+     "basis": "recorded liability in Other liabilities at July 3, 2026 ($110M at June 27, 2025; $112M initially recorded Feb 21, 2025)",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm Note 10 Related Parties, Transactions with Western Digital Corporation - Tax Matters Agreement; MD&A Liquidity"
+    },
+    {
+     "name": "Flash Ventures operating-lease guarantees (50% of Flash Ventures lease obligations)",
+     "value": 923,
+     "basis": "contingent, off-balance-sheet guarantee at July 3, 2026 (JPY 149.0 billion; $565M principal amortization + $358M purchase-option price); informational, NOT a recorded debt and not to be deducted by default",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm Note 10, Flash Ventures - Off-Balance Sheet Liabilities, guarantee table \"Total guarantee obligations\""
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Statements of Operations, Revenue, net, year ended July 3, 2026 ($20,248 million)",
+     "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Statements of Operations, Operating income, year ended July 3, 2026 ($12,389 million)",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets, Cash and cash equivalents at July 3, 2026 ($4,762 million)",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets: no short-term investment line (current assets are cash, receivables, inventories, tax receivable, other)"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets, Marketable equity securities $1,777 million (Nanya Technology, Level 1, 3-year Taiwan lock-up; Note 6 Fair Value Measurements). Excludes Flash Ventures notes/investments $679M and equity-method stakes SDSS $167M / Unis (see note)"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 8 Debt: Current portion of long-term debt $0 at July 3, 2026 ($20M at June 27, 2025)"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 8 Debt: Term Loan Facility repaid in full March 4, 2026; Total debt $0; $1.5B revolver undrawn"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 11 Leases, Total operating lease liabilities $201 million (current $24M in Accrued expenses + long-term $177M in Other liabilities)",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets: no preferred stock"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "10-K cover page: 146,419,001 shares of common stock outstanding as of close of business August 7, 2026 (35 days after period end; balance sheet shows only rounded 146 million issued-less-treasury at July 3, 2026)",
+     "tag": "dei:EntityCommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 12 Shareholders' Equity, RSUs and PSUs outstanding at July 3, 2026 = 6.6 million (PSUs: 1.4M target awards, max 3.6M shares if all conditions met)"
+    }
+   },
+   "note": "Fiscal year ended July 3, 2026 (53 weeks), audited 10-K filed 2026-08-17. Statements are filed in whole USD millions (no decimals). No debt: the $2.0B term loan (issued at the Feb 2025 spin-off from Western Digital) was settled in full on March 4, 2026 and the $1.5B revolver is undrawn. No options, no warrants, no convertibles; the only employee claims are RSUs/PSUs (6.6M; PSU max-case adds ~2.2M more shares) and ESPP purchase rights ($71M unamortized). Share count: filed balance sheet is rounded to 146 million; the exact 146,419,001 is the Aug 7, 2026 cover figure (carried only because the period-end exact count is not disclosed); company repurchased ~3M shares ($4.5B) in FY26 and announced a $14.0B program on Aug 5, 2026, so shares may be lower after Aug 7. Spin-off items: Western Digital has almost exited its stake (80.1% distributed Feb 21, 2025; 14.6% disposed June 9, 2025 and 5.8M shares on Feb 18, 2026 via debt-for-equity exchanges; WDC retained 1,691,884 shares (about 1.2%) after Feb 18, 2026 and expects to monetize the rest by end of 2026 (these are already inside the outstanding share count, so no extra dilution); the $128M tax indemnification liability is recorded; Tax Matters Agreement restricts share issuances/business combinations. Items NOT counted in the numeric fields: Flash Ventures notes receivable and equity investments $679M (operating JV supply arrangement; balance sheet shows $678M), 20% SDSS equity-method stake $167M, Unis Venture 48% (not material), Flash Ventures lease guarantees $923M (contingent), unrecognized tax benefits $323M plus $16M interest/penalties, income tax payable current $1,286M, customer refund liabilities (security deposits) $1,500M and contract liabilities $849M current + $393M non-current (customer prepayments under long-term agreements), long-term supplier commitments $5,892M. After year end: two new long-term customer agreements totaling $31.3B."
+  },
+  "ttm": {
+   "periodEnd": "2026-07-03",
+   "label": "TTM through 2026-07-03 (= FY2026, no later 10-Q filed by 2026-10-20)",
+   "form": "10-K",
+   "accession": "0001628280-26-057406",
+   "filedAt": "2026-08-17",
+   "acceptedAt": "2026-08-18T00:50:29.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+   "revenue": 20248,
+   "operatingIncome": 12389,
+   "ttmComponents": {
+    "annualRevenue": 20248,
+    "ytdRevenue": 0,
+    "priorYtdRevenue": 0,
+    "annualOperatingIncome": 12389,
+    "ytdOperatingIncome": 0,
+    "priorYtdOperatingIncome": 0,
+    "ytdStart": "2026-07-03",
+    "ytdEnd": "2026-07-03",
+    "priorYtdStart": "2025-06-27",
+    "priorYtdEnd": "2025-06-27"
+   },
+   "cashAndEquivalents": 4762,
+   "shortTermInvestments": 0,
+   "longTermInvestments": 1777,
+   "debtCurrent": 0,
+   "debtNoncurrent": 0,
+   "operatingLeaseLiabilities": 201,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 146.419001,
+   "sharesDate": "2026-08-07",
+   "unvestedRSUs": 6.6,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "Tax indemnification liability to Western Digital (Tax Matters Agreement, spin-off)",
+     "value": 128,
+     "basis": "recorded liability in Other liabilities at July 3, 2026 ($110M at June 27, 2025; $112M initially recorded Feb 21, 2025)",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm Note 10 Related Parties, Transactions with Western Digital Corporation - Tax Matters Agreement; MD&A Liquidity"
+    },
+    {
+     "name": "Flash Ventures operating-lease guarantees (50% of Flash Ventures lease obligations)",
+     "value": 923,
+     "basis": "contingent, off-balance-sheet guarantee at July 3, 2026 (JPY 149.0 billion; $565M principal amortization + $358M purchase-option price); informational, NOT a recorded debt and not to be deducted by default",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm Note 10, Flash Ventures - Off-Balance Sheet Liabilities, guarantee table \"Total guarantee obligations\""
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Statements of Operations, Revenue, net, year ended July 3, 2026 ($20,248 million)",
+     "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Statements of Operations, Operating income, year ended July 3, 2026 ($12,389 million)",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets, Cash and cash equivalents at July 3, 2026 ($4,762 million)",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets: no short-term investment line (current assets are cash, receivables, inventories, tax receivable, other)"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets, Marketable equity securities $1,777 million (Nanya Technology, Level 1, 3-year Taiwan lock-up; Note 6 Fair Value Measurements). Excludes Flash Ventures notes/investments $679M and equity-method stakes SDSS $167M / Unis (see note)"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 8 Debt: Current portion of long-term debt $0 at July 3, 2026 ($20M at June 27, 2025)"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 8 Debt: Term Loan Facility repaid in full March 4, 2026; Total debt $0; $1.5B revolver undrawn"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 11 Leases, Total operating lease liabilities $201 million (current $24M in Accrued expenses + long-term $177M in Other liabilities)",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Consolidated Balance Sheets: no preferred stock"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "10-K cover page: 146,419,001 shares of common stock outstanding as of close of business August 7, 2026 (35 days after period end; balance sheet shows only rounded 146 million issued-less-treasury at July 3, 2026)",
+     "tag": "dei:EntityCommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026057406/sndk-20260703.htm",
+     "locator": "Note 12 Shareholders' Equity, RSUs and PSUs outstanding at July 3, 2026 = 6.6 million (PSUs: 1.4M target awards, max 3.6M shares if all conditions met)"
+    }
+   },
+   "note": "Fiscal year ended July 3, 2026 (53 weeks), audited 10-K filed 2026-08-17. Statements are filed in whole USD millions (no decimals). No debt: the $2.0B term loan (issued at the Feb 2025 spin-off from Western Digital) was settled in full on March 4, 2026 and the $1.5B revolver is undrawn. No options, no warrants, no convertibles; the only employee claims are RSUs/PSUs (6.6M; PSU max-case adds ~2.2M more shares) and ESPP purchase rights ($71M unamortized). Share count: filed balance sheet is rounded to 146 million; the exact 146,419,001 is the Aug 7, 2026 cover figure (carried only because the period-end exact count is not disclosed); company repurchased ~3M shares ($4.5B) in FY26 and announced a $14.0B program on Aug 5, 2026, so shares may be lower after Aug 7. Spin-off items: Western Digital has almost exited its stake (80.1% distributed Feb 21, 2025; 14.6% disposed June 9, 2025 and 5.8M shares on Feb 18, 2026 via debt-for-equity exchanges; WDC retained 1,691,884 shares (about 1.2%) after Feb 18, 2026 and expects to monetize the rest by end of 2026 (these are already inside the outstanding share count, so no extra dilution); the $128M tax indemnification liability is recorded; Tax Matters Agreement restricts share issuances/business combinations. Items NOT counted in the numeric fields: Flash Ventures notes receivable and equity investments $679M (operating JV supply arrangement; balance sheet shows $678M), 20% SDSS equity-method stake $167M, Unis Venture 48% (not material), Flash Ventures lease guarantees $923M (contingent), unrecognized tax benefits $323M plus $16M interest/penalties, income tax payable current $1,286M, customer refund liabilities (security deposits) $1,500M and contract liabilities $849M current + $393M non-current (customer prepayments under long-term agreements), long-term supplier commitments $5,892M. After year end: two new long-term customer agreements totaling $31.3B. TTM base: the latest quarterly report filed on or before 2026-10-21 does not exist for this period - fiscal Q1 FY2027 ends about Oct 2, 2026 and the 10-Q is not yet filed (last 10-Q: quarter ended April 3, 2026, filed 2026-05-01, which is superseded by the 10-K), so per spec TTM equals the annual FY2026 data with ytd and prior YTD components set to 0."
+  }
+ },
+ "notes": [
+  "Spun off from Western Digital on Feb 21, 2025; fiscal year ends the Friday closest to June 30 (FY2026 ended July 3, 2026).",
+  "Annual and TTM bases are identical because no 10-Q for fiscal Q1 FY2027 (quarter ending about Oct 2, 2026) had been filed by 2026-10-20.",
+  "Values cross-checked against XBRL company facts (revenue 20,248; operating income 12,389; cash 4,762; lease liability 201; cover shares 146,419,001) - all match.",
+  "FY2026 reported figures reflect an extreme pricing cycle (revenue +175% to $20.2B, operating margin 61%); also includes $808M gain on Nanya securities below operating income."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0002023554.json",
+  "latestPeriodicAccession": "0001628280-26-057406",
+  "latestAnnualAccession": "0001628280-26-057406"
+ }
+}

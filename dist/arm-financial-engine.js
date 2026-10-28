@@ -60,9 +60,24 @@ function validateCase(c){
  if(!near(c.royalty_growth[9],c.terminal_growth)||!near(c.license_growth[9],c.terminal_growth))fail('ARM final royalty and license growth must converge to terminal growth.');
  if((c.silicon_revenue[8]===0&&c.silicon_revenue[9]!==0)||!near(c.silicon_revenue[9],c.silicon_revenue[8]*(1+c.terminal_growth)))fail('ARM final silicon revenue must equal prior silicon revenue times one plus terminal growth, including zero-base paths.');
 }
+// v3 moves the capital and discount origin to June 30, 2026. FY2027 stays a
+// full-year research input; only the nine months after reported Q1 are valued.
+const STUB_SCHEMA={period:'string',start:'string',end:'string',duration_years:'number',source_url:'string',
+ elapsed:{royalty:'number',license:'number',silicon:'number',operating_income:'number',net_capex:'number',model_nwc_change:'number'}};
+function validateStub(x){
+ shape(x,STUB_SCHEMA,'opening_stub');
+ if(x.start!=='2026-07-01'||x.end!=='2027-03-31'||x.duration_years!==.75)fail('ARM opening stub must cover July 1, 2026 to March 31, 2027.');
+ for(const k of ['royalty','license','silicon','net_capex'])num(x.elapsed[k],0,1e7,'elapsed '+k);
+ num(x.elapsed.operating_income,-1e7,1e7,'elapsed operating income');num(x.elapsed.model_nwc_change,-1e7,1e7,'elapsed working capital');
+}
 export function validateArmInputs(a,scenario){
- shape(a,INPUT_SCHEMA);
- if(a.ticker!=='ARM'||a.currency!=='USD'||a.valuation_anchor!=='2026-03-31'||a.information_cutoff!=='2026-10-19')fail('ARM requires the reviewed March 31 capital anchor and October 19 information cutoff in USD.');
+ if(!a||typeof a!=='object'||Array.isArray(a))fail('ARM inputs requires an object.');
+ const {opening_stub:stub,...rest}=a;
+ shape(rest,INPUT_SCHEMA);
+ const march=rest.valuation_anchor==='2026-03-31'&&rest.information_cutoff==='2026-10-19'&&!own(a,'opening_stub');
+ const june=rest.valuation_anchor==='2026-06-30'&&rest.information_cutoff==='2026-10-20'&&own(a,'opening_stub');
+ if(a.ticker!=='ARM'||a.currency!=='USD'||!(march||june))fail('ARM requires a reviewed capital anchor (March 31 with October 19 information, or June 30 with its opening stub and October 20 information) in USD.');
+ if(june)validateStub(stub);
  for(const [k,v]of Object.entries(a.capital))if(typeof v==='number')num(v,k==='ordinary_shares'?.001:0,1e7,k);
  if(a.capital.ads_per_ordinary!==1)fail('ARM supports one ADS per ordinary share only.');
  if(a.capital.unquoted_equity_included!==0)fail('ARM excludes all equity investments from the capital bridge.');
@@ -91,26 +106,35 @@ function validateSchedule(annual,t){
  if(!near(last.reinvestment,nopat*t.growth/t.roic))fail('ARM final-year reinvestment must equal NOPAT times growth divided by ROIC. Capital is never clipped or silently repaired.');
 }
 function evaluate(a,c,annual,t,sourceMode){
- const b=a.capital;let cash=b.cash_short_investments-b.finance_lease-b.eda_obligations-b.acquisition_reserve,debt=0,shares=b.ordinary_shares,previousCashFloor=b.minimum_operating_cash;
+ const b=a.capital,stub=a.opening_stub;let cash=b.cash_short_investments-b.finance_lease-b.eda_obligations-b.acquisition_reserve,debt=0,shares=b.ordinary_shares,previousCashFloor=b.minimum_operating_cash;
  const openingCash=cash,openingGap=Math.max(0,previousCashFloor-cash);
  let prior={...a.revenue},pv=0,pvFundingFees=0,discount=1,peakFundingGap=openingGap;
  const rows=annual.map((r,i)=>{
   const ip=r.royalty+r.license,prevIp=prior.royalty+prior.license,revenue=ip+r.silicon;
-  const ebit=ip*r.ipMargin+r.silicon*r.siliconMargin,tax=Math.max(0,ebit)*r.taxRate,nopat=ebit-tax;
+  const ebit=ip*r.ipMargin+r.silicon*r.siliconMargin;
   const cashFloor=revenue*c.cash_floor_ratio,deltaOperatingCash=cashFloor-previousCashFloor;
   const dnwc=(ip-prevIp)*c.ip_marginal_nwc+(r.silicon-prior.silicon)*c.silicon_marginal_nwc+deltaOperatingCash;
   let netCapex=sourceMode?revenue*r.netCapexRatio:r.reinvestment-dnwc;
-  if(sourceMode&&i>=7){const target=nopat*t.growth/t.roic-dnwc;if(target<0)fail('ARM terminal reinvestment is incompatible with working capital.');const blend=(i-6)/3;netCapex=netCapex*(1-blend)+target*blend;}
-  const physicalFloor=Math.max(revenue*c.net_capex_floor_total,ip*c.net_capex_floor_ip+r.silicon*c.net_capex_floor_silicon);
-  if(netCapex+1e-9<physicalFloor)fail(`ARM net-capital physical-floor incompatibility in FY${2027+i}: revise growth, ROIC or explicit floor assumptions. Capital is never clipped.`);
-  const reinvestment=netCapex+dnwc,fcff=nopat-reinvestment;
-  discount*=1+r.wacc;const presentValue=fcff/discount;pv+=presentValue;
-  const interest=debt*c.funding_interest_rate,afterInterest=ebit>interest?interest*(1-r.taxRate):interest;
+  if(sourceMode&&i>=7){const nopatFull=ebit-Math.max(0,ebit)*r.taxRate,target=nopatFull*t.growth/t.roic-dnwc;if(target<0)fail('ARM terminal reinvestment is incompatible with working capital.');const blend=(i-6)/3;netCapex=netCapex*(1-blend)+target*blend;}
+  // Opening stub: full-year FY2027 research less reported Q1 operating and investment amounts.
+  const e=i===0&&stub?stub.elapsed:null,years=e?stub.duration_years:1;
+  const part={royalty:r.royalty-(e?e.royalty:0),license:r.license-(e?e.license:0),silicon:r.silicon-(e?e.silicon:0)};
+  const partIp=part.royalty+part.license,partRevenue=partIp+part.silicon;
+  if(e&&(part.royalty<0||part.license<0||part.silicon<0||partRevenue<=0))fail('ARM full-year FY2027 revenue must exceed reported first-quarter revenue in every component.');
+  const partEbit=ebit-(e?e.operating_income:0),tax=Math.max(0,partEbit)*r.taxRate,nopat=partEbit-tax;
+  const partNetCapex=netCapex-(e?e.net_capex:0),partDnwc=dnwc-(e?e.model_nwc_change:0);
+  const physicalFloor=Math.max(partRevenue*c.net_capex_floor_total,partIp*c.net_capex_floor_ip+part.silicon*c.net_capex_floor_silicon);
+  if(partNetCapex+1e-9<physicalFloor)fail(`ARM net-capital physical-floor incompatibility in FY${2027+i}: revise growth, ROIC or explicit floor assumptions. Capital is never clipped.`);
+  const reinvestment=partNetCapex+partDnwc,fcff=nopat-reinvestment;
+  discount*=(1+r.wacc)**years;const presentValue=fcff/discount;pv+=presentValue;
+  const interest=debt*c.funding_interest_rate*years,afterInterest=partEbit>interest?interest*(1-r.taxRate):interest;
   const cashPre=cash+fcff+deltaOperatingCash-afterInterest;let newDebt=0,newEquity=0,issueFee=0;
   peakFundingGap=Math.max(peakFundingGap,cashFloor-cashPre);
   if(cashPre<cashFloor){let need=cashFloor-cashPre;const headroom=Math.max(0,c.funding_debt_capacity_multiple*Math.max(ebit,0)-debt);newDebt=Math.min(need,headroom);debt+=newDebt;need-=newDebt;if(need>0){newEquity=need/(1-c.equity_issuance_fee);issueFee=newEquity-need;shares+=newEquity/c.emergency_equity_price_per_ads/b.ads_per_ordinary;}cash=cashPre+newDebt+newEquity-issueFee;}else cash=cashPre;
   pvFundingFees+=issueFee/discount;previousCashFloor=cashFloor;prior={royalty:r.royalty,license:r.license,silicon:r.silicon};
-  return {fiscal_year:2027+i,royalty:r.royalty,license:r.license,silicon:r.silicon,revenue,ebit,ebit_margin:ebit/revenue,tax,nopat,net_capex:netCapex,net_capex_floor:physicalFloor,delta_nwc:dnwc,delta_operating_cash:deltaOperatingCash,reinvestment,fcff,discount_factor:discount,pv_fcff:presentValue,cash_floor:cashFloor,cash_end:cash,new_debt:newDebt,debt_end:debt,new_equity_gross:newEquity,issue_fee:issueFee,interest,shares_end:shares};
+  const row={fiscal_year:2027+i,royalty:part.royalty,license:part.license,silicon:part.silicon,revenue:partRevenue,ebit:partEbit,ebit_margin:partEbit/partRevenue,tax,nopat,net_capex:partNetCapex,net_capex_floor:physicalFloor,delta_nwc:partDnwc,delta_operating_cash:deltaOperatingCash,reinvestment,fcff,discount_factor:discount,pv_fcff:presentValue,cash_floor:cashFloor,cash_end:cash,new_debt:newDebt,debt_end:debt,new_equity_gross:newEquity,issue_fee:issueFee,interest,shares_end:shares};
+  if(e)Object.assign(row,{period_basis:'nine_months_after_reported_q1',years_from_origin:years,full_year_royalty:r.royalty,full_year_license:r.license,full_year_silicon:r.silicon,full_year_revenue:revenue,full_year_ebit:ebit,full_year_net_capex:netCapex,full_year_delta_nwc:dnwc,full_year_reinvestment:netCapex+dnwc});
+  return row;
  });
  const last=rows[9],terminalRevenue=last.revenue*(1+t.growth),terminalNopat=terminalRevenue*t.margin*(1-t.taxRate);
  if(terminalNopat<=0)fail('ARM positive terminal NOPAT is required.');

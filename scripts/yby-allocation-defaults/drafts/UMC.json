@@ -1,0 +1,222 @@
+{
+ "ticker": "UMC",
+ "draftPatch": {
+  "umcPolicy": {
+   "policy_id": "explicit_staged_bank_principal",
+   "classification": "Default allocation from the June 30, 2026 filed balance sheet; analyst judgments use the published operating-assets-exclusion illustration. NOT a current total-company fair value.",
+   "bank_principal_timing": "current_upfront_remaining_year2",
+   "authorized_2026_award_issuance_fraction": 0,
+   "authorized_award_policy": "The up-to-67m new restricted shares authorized at the May 27, 2026 AGM were not issued at June 30, 2026 and are not in the filed share count; future award cost stays in SBC-inclusive operating margins. Set the fraction to 1 for the published conservative illustration.",
+   "nonoperating_equity_value_assigned": 0,
+   "circular_crossholding_share_reduction": 0,
+   "required_operating_cash": 15000,
+   "minority_claim_reserved": 4.051,
+   "minority_reserve_basis": "Filed book non-controlling interests at June 30, 2026 (NT$4,051 thousand), Q2 2026 6-K balance sheet. Book value, not an appraisal.",
+   "time_deposit_funding_release_year": 1,
+   "time_deposit_recovery_fraction": 1,
+   "lease_cash_by_year": [
+    1100,
+    1122,
+    1144.44,
+    1167.3288,
+    1190.675376,
+    1214.48888352,
+    1238.77866119,
+    1263.55423441,
+    1288.8253191,
+    1314.60182549
+   ],
+   "financial_cash_interest_by_year": [
+    2000,
+    2000,
+    2000,
+    2000,
+    2000,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "supplemental_operating_cash_by_year": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "supplemental_senior_cash_claim": 0,
+   "unissued_award_claim_reserved": 0,
+   "award_policy": "Zero supplemental cash award reserve beyond the separately modeled67m authorized newsharemaximum. Existingrestrictedsharesalreadyissuedandcounted; recurringSBCexpense remains, so legacy/newawardexpense overlap may conservatively reducevalue. Actualissuancedateunverified.",
+   "funding_policy": "Reserve sourcedcurrent bankprincipal6402.321m upfront; placeALLnoncurrentbankprincipal11489.924m inyear2, a conservativeearliestbucket allocation ratherthanexactannualcontractschedule. Domesticbondsfollowcontractualdates. No newfinancing/subsidies/portfolio sales."
+  }
+ },
+ "fields": [
+  {
+   "path": "umcPolicy.policy_id",
+   "value": "explicit_staged_bank_principal",
+   "basis": "published-illustration",
+   "sourceUrl": "./data/incremental-UMC-2026-10-19-v1/analyst-policy-examples-v1.json",
+   "locator": "policies[2] explicit_staged_bank_principal",
+   "note_en": "Engine accepts only the three admitted policy ids; this default starts from the staged-bank-principal example, the only published example whose cost paths equal the baseline and that passes the funding test.",
+   "note_zh": "引擎只接受三个已审核的政策编号；默认值以“银行本金分期”示例为起点，这是唯一成本路径与基准相同且通过资金测试的已发布示例。"
+  },
+  {
+   "path": "umcPolicy.minority_claim_reserved",
+   "value": 4.051,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+   "locator": "6-K Jun 30 2026, Consolidated Balance Sheets, Non-controlling interests NT$4,051 thousand",
+   "note_en": "Filed book NCI at the origin replaces the 100m analyst reserve.",
+   "note_zh": "采用起点日已申报的非控制性权益账面值，替代分析师的1亿新台币储备。"
+  },
+  {
+   "path": "umcPolicy.authorized_2026_award_issuance_fraction",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+   "locator": "6-K Jun 30 2026, Note 6(19): 12,546.43m shares outstanding; 67m RSA authorized 2026-05-27, not issued at Jun 30",
+   "note_en": "Authorized new restricted shares were not issued at the origin and are not in the filed share count; illustration assumes 1 (all 67m).",
+   "note_zh": "新限制性股票在起点日尚未发行，不计入已申报股数；示例假设全部6,700万股发行（比例为1）。"
+  },
+  {
+   "path": "umcPolicy.required_operating_cash",
+   "value": 15000,
+   "basis": "published-illustration",
+   "sourceUrl": "./data/incremental-UMC-2026-10-19-v1/analyst-policy-examples-v1.json",
+   "locator": "policies[2].required_operating_cash",
+   "note_en": "Operating cash reserve is a judgment with no filed number.",
+   "note_zh": "经营所需现金为判断项，财报无对应数字。"
+  },
+  {
+   "path": "umcPolicy.time_deposit_recovery_fraction",
+   "value": 1,
+   "basis": "derived",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+   "locator": "6-K Jun 30 2026, current financial assets at amortized cost NT$22,135,867 thousand (time deposits >3 months, Note 6(4))",
+   "note_en": "Time deposits carried at amortized cost; full carrying amount counted.",
+   "note_zh": "定期存款按摊余成本计量，全额计入。"
+  },
+  {
+   "path": "umcPolicy.time_deposit_funding_release_year",
+   "value": 1,
+   "basis": "derived",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+   "locator": "6-K Jun 30 2026, time deposits classified as current assets",
+   "note_en": "Classified as current, so they mature within year 1.",
+   "note_zh": "列为流动资产，故在第1年内到期。"
+  },
+  {
+   "path": "umcPolicy.bank_principal_timing",
+   "value": "current_upfront_remaining_year2",
+   "basis": "derived",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+   "locator": "6-K Jun 30 2026, short-term loans 2,806,983 + current portion of long-term loans 3,595,338 = 6,402,321 current; long-term loans noncurrent 11,489,924 (NT$ thousand)",
+   "note_en": "Filed current bank principal (NT$6,402m) is reserved upfront; noncurrent principal (NT$11,490m) is paid in year 2, the earliest bucket after 12 months. Affects only the funding test, not equity. The all-upfront illustration fails the funding test by about NT$0.4-0.5bn at inception.",
+   "note_zh": "已申报的流动银行本金（64.02亿新台币）预先保留；非流动本金（114.90亿新台币）在第2年偿付，即12个月后最早的年度。只影响资金测试，不影响股权价值。全部预先保留的示例在起点即有约4-5亿新台币资金缺口。"
+  },
+  {
+   "path": "umcPolicy.supplemental_senior_cash_claim",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+   "locator": "6-K Jun 30 2026 balance sheet; filed claims (debt, deposits, dividend, tax, contract/refund, pension/provisions) are already deducted by the engine",
+   "note_en": "No further senior claim beyond the filed claims the engine already deducts.",
+   "note_zh": "除引擎已扣除的已申报债权外，无其他优先现金债权。"
+  },
+  {
+   "path": "umcPolicy.unissued_award_claim_reserved",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1033767/000119312526322030/umc-ex99_1.htm",
+   "locator": "6-K Jun 30 2026, no UMC options or warrants outstanding; restricted shares already issued and counted",
+   "note_en": "No unissued-award cash claim at the origin; award cost is in SBC-inclusive margins.",
+   "note_zh": "起点日无未发行奖励的现金债权；奖励成本已含在含股权激励的利润率中。"
+  },
+  {
+   "path": "umcPolicy.lease_cash_by_year",
+   "value": [
+    1100,
+    1122,
+    1144.44,
+    1167.3288,
+    1190.675376,
+    1214.48888352,
+    1238.77866119,
+    1263.55423441,
+    1288.8253191,
+    1314.60182549
+   ],
+   "basis": "published-illustration",
+   "sourceUrl": "./data/incremental-UMC-2026-10-19-v1/analyst-policy-examples-v1.json",
+   "locator": "policies[2].lease_cash_by_year = UMC_OPERATING_COST_BASELINE",
+   "note_en": "Same as the model baseline cost path, so the operating forecast and EV are unchanged.",
+   "note_zh": "与模型基准成本路径相同，经营预测和企业价值不变。"
+  },
+  {
+   "path": "umcPolicy.financial_cash_interest_by_year",
+   "value": [
+    2000,
+    2000,
+    2000,
+    2000,
+    2000,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "basis": "published-illustration",
+   "sourceUrl": "./data/incremental-UMC-2026-10-19-v1/analyst-policy-examples-v1.json",
+   "locator": "policies[2].financial_cash_interest_by_year = UMC_OPERATING_COST_BASELINE",
+   "note_en": "Same as the model baseline; used only in the funding test.",
+   "note_zh": "与模型基准相同；只用于资金测试。"
+  },
+  {
+   "path": "umcPolicy.supplemental_operating_cash_by_year",
+   "value": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "basis": "published-illustration",
+   "sourceUrl": "./data/incremental-UMC-2026-10-19-v1/analyst-policy-examples-v1.json",
+   "locator": "policies[2].supplemental_operating_cash_by_year = UMC_OPERATING_COST_BASELINE",
+   "note_en": "Zero, as in the baseline; reinvestment is unchanged.",
+   "note_zh": "与基准相同为零；再投资不变。"
+  },
+  {
+   "path": "umcPolicy.nonoperating_equity_value_assigned",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "./data/incremental-UMC-2026-10-19-v1/analyst-policy-examples-v1.json",
+   "locator": "Engine rule: investment portfolio must stay excluded",
+   "note_en": "Required by the engine: the NT$146,847m long-term investment portfolio is excluded from this operating-assets study.",
+   "note_zh": "引擎要求：长期投资组合（1,468.47亿新台币）不计入本经营资产研究。"
+  },
+  {
+   "path": "umcPolicy.circular_crossholding_share_reduction",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "./data/incremental-UMC-2026-10-19-v1/analyst-policy-examples-v1.json",
+   "locator": "Engine rule",
+   "note_en": "Required by the engine.",
+   "note_zh": "引擎要求。"
+  }
+ ],
+ "summary_en": "June 30, 2026 filed cash, time deposits, debt, dividend payable, deposits, tax, contract and pension claims, book NCI (NT$4m) and 12,546m outstanding shares; NT$15bn operating cash from the published illustration. The investment portfolio is excluded and unissued 2026 awards are not counted.",
+ "summary_zh": "采用2026年6月30日已申报的现金、定期存款、债务、应付股利、存入保证金、税项、合同与退休金债务、非控制性权益账面值（400万新台币）及12,546百万股流通股；经营所需现金150亿新台币取自已发布示例。不计入投资组合，也不计入未发行的2026年奖励股份。"
+}

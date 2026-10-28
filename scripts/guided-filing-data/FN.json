@@ -1,0 +1,282 @@
+{
+ "ticker": "FN",
+ "name": "Fabrinet",
+ "cik": "0001408710",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "ordinary-common ($0.01 par)",
+ "adrRatio": 1,
+ "listedUnit": "ordinary share (NYSE: FN; no ADS)",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2026-06-26",
+   "label": "FY2026",
+   "form": "10-K",
+   "accession": "0001408710-26-000028",
+   "filedAt": "2026-08-18",
+   "acceptedAt": "2026-08-18T11:12:07.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+   "revenue": 4641.097,
+   "operatingIncome": 462.887,
+   "ttmComponents": null,
+   "cashAndEquivalents": 346.711,
+   "shortTermInvestments": 528.344,
+   "longTermInvestments": 89.103,
+   "debtCurrent": 0,
+   "debtNoncurrent": 0,
+   "operatingLeaseLiabilities": 4.013,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 35.834864,
+   "sharesDate": "2026-06-26",
+   "unvestedRSUs": 0.306261,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "Amazon customer warrant (up to 381,922 ordinary shares, exercise price $208.48, cashless exercise, expires 2032-03-12)",
+     "value": 0,
+     "basis": "Not valued here: 85,942 warrant shares vested and unexercised at 2026-06-26 (38,192 at 2025-06-27); remainder vests with payments from Amazon; vests in full on an acquisition. Intrinsic value not disclosed in the 10-K; treat via treasury-stock method at the valuation share price.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm (Note 15 Share-based compensation, Customer Warrant)",
+     "warrantShares": 0.381922,
+     "vestedWarrantShares": 0.085942,
+     "exercisePrice": 208.48
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Statements of Operations and Comprehensive Income (p.55), Revenues, year ended June 26 2026 $4,641,097 thousand",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Statements of Operations and Comprehensive Income (p.55), Operating income $462,887 thousand",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "ttmComponents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Latest filed periodic report before 2026-10-20 is this 10-K (FY ended 2026-06-26; Q1 FY2027 10-Q covers the quarter ending 2026-09-25 and is not yet filed), so TTM = FY2026 with zero YTD components"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54), Cash and cash equivalents $346,711 thousand; Note 6",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54), Short-term investments $528,344 thousand; Note 6 (CDs/time deposits 44,250, corporate debt 200,637, US agency/Treasury 283,457)",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54), Non-marketable equity securities $89,103 thousand (private companies, measurement alternative; purchases $32,360 thousand and gain $56,743 thousand in FY2026); no noncurrent marketable securities",
+     "tag": "us-gaap:EquitySecuritiesWithoutReadilyDeterminableFairValueAmount"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Item 7 Liquidity: \"no outstanding debt\" as of June 26 2026; balance sheet has no borrowings line; Note 19: no amount outstanding under 2023 Credit Facility Agreement"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Item 7 Liquidity: \"no outstanding debt\" as of June 26 2026; balance sheet has no borrowings line"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets: operating lease liabilities current 1,189 + non-current 2,824 = 4,013 $ thousand; Note 11 Leases",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets: preferred shares, none issued or outstanding"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54): 35,834,864 ordinary shares outstanding as of June 26 2026 (39,722,708 issued less 3,887,844 treasury); cover page also 35,834,864 as of Aug 7 2026",
+     "tag": "dei:EntityCommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Note 15: restricted share units outstanding 211,574 + performance share units outstanding 94,687 = 306,261 at June 26 2026"
+    },
+    "options": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Note 15 Equity Incentive Plans table lists only restricted share units and performance share units outstanding; no share options outstanding table is disclosed"
+    },
+    "convertibles": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "No convertible notes: Item 7 Liquidity states no outstanding debt"
+    }
+   },
+   "note": "The FY2026 10-K (filed 2026-08-18) is both the last annual report and the latest periodic filing on or before 2026-10-21 (Q1 FY2027 ends 2026-09-25 and has not been filed; ARS and proxy filed 2026-10-20 add no financial statements). TTM is therefore identical to the annual base with zero YTD and prior-YTD components. Fabrinet is a Cayman Islands company filing 10-K/10-Q in USD; NYSE listing is the ordinary share (no ADS). No interest-bearing debt at 2026-06-26. Subsequent event: on 2026-08-17 the Thai subsidiary borrowed a Thai baht 2.50 billion term loan (about $75.0 million) under the amended 2019 credit facility (Note 19); it is not on the 2026-06-26 balance sheet, so debt is 0 here (the proceeds are also not in June cash). Operating lease liabilities are excluded from debt. FY2026 other income of $57.0 million includes a $56.7 million gain on non-marketable equity securities (below operating income). Purchase obligations and commitments to third parties $3.15 billion and capex commitments $108.1 million at 2026-06-26 are not debt. Litigation (Casix, RMB 400 million claim accepted for retrial by the PRC Supreme Court on 2026-07-30) is unquantified and not accrued. Unvested RSUs/PSUs are not yet issued shares and are excluded from sharesOutstanding."
+  },
+  "ttm": {
+   "periodEnd": "2026-06-26",
+   "label": "TTM through 2026-06-26",
+   "form": "10-K",
+   "accession": "0001408710-26-000028",
+   "filedAt": "2026-08-18",
+   "acceptedAt": "2026-08-18T11:12:07.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+   "revenue": 4641.097,
+   "operatingIncome": 462.887,
+   "ttmComponents": {
+    "annualRevenue": 4641.097,
+    "ytdRevenue": 0,
+    "priorYtdRevenue": 0,
+    "annualOperatingIncome": 462.887,
+    "ytdOperatingIncome": 0,
+    "priorYtdOperatingIncome": 0,
+    "ytdStart": "2026-06-27",
+    "ytdEnd": "2026-06-26",
+    "priorYtdStart": "2025-06-28",
+    "priorYtdEnd": "2025-06-27"
+   },
+   "cashAndEquivalents": 346.711,
+   "shortTermInvestments": 528.344,
+   "longTermInvestments": 89.103,
+   "debtCurrent": 0,
+   "debtNoncurrent": 0,
+   "operatingLeaseLiabilities": 4.013,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 35.834864,
+   "sharesDate": "2026-06-26",
+   "unvestedRSUs": 0.306261,
+   "options": {
+    "count": null,
+    "weightedExercisePrice": null,
+    "weightedRemainingYears": null,
+    "aggregateIntrinsicValue": null
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "Amazon customer warrant (up to 381,922 ordinary shares, exercise price $208.48, cashless exercise, expires 2032-03-12)",
+     "value": 0,
+     "basis": "Not valued here: 85,942 warrant shares vested and unexercised at 2026-06-26 (38,192 at 2025-06-27); remainder vests with payments from Amazon; vests in full on an acquisition. Intrinsic value not disclosed in the 10-K; treat via treasury-stock method at the valuation share price.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm (Note 15 Share-based compensation, Customer Warrant)",
+     "warrantShares": 0.381922,
+     "vestedWarrantShares": 0.085942,
+     "exercisePrice": 208.48
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Statements of Operations and Comprehensive Income (p.55), Revenues, year ended June 26 2026 $4,641,097 thousand",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Statements of Operations and Comprehensive Income (p.55), Operating income $462,887 thousand",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "ttmComponents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Latest filed periodic report before 2026-10-20 is this 10-K (FY ended 2026-06-26; Q1 FY2027 10-Q covers the quarter ending 2026-09-25 and is not yet filed), so TTM = FY2026 with zero YTD components"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54), Cash and cash equivalents $346,711 thousand; Note 6",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54), Short-term investments $528,344 thousand; Note 6 (CDs/time deposits 44,250, corporate debt 200,637, US agency/Treasury 283,457)",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54), Non-marketable equity securities $89,103 thousand (private companies, measurement alternative; purchases $32,360 thousand and gain $56,743 thousand in FY2026); no noncurrent marketable securities",
+     "tag": "us-gaap:EquitySecuritiesWithoutReadilyDeterminableFairValueAmount"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Item 7 Liquidity: \"no outstanding debt\" as of June 26 2026; balance sheet has no borrowings line; Note 19: no amount outstanding under 2023 Credit Facility Agreement"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Item 7 Liquidity: \"no outstanding debt\" as of June 26 2026; balance sheet has no borrowings line"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets: operating lease liabilities current 1,189 + non-current 2,824 = 4,013 $ thousand; Note 11 Leases",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets: preferred shares, none issued or outstanding"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Consolidated Balance Sheets (p.54): 35,834,864 ordinary shares outstanding as of June 26 2026 (39,722,708 issued less 3,887,844 treasury); cover page also 35,834,864 as of Aug 7 2026",
+     "tag": "dei:EntityCommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Note 15: restricted share units outstanding 211,574 + performance share units outstanding 94,687 = 306,261 at June 26 2026"
+    },
+    "options": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "Note 15 Equity Incentive Plans table lists only restricted share units and performance share units outstanding; no share options outstanding table is disclosed"
+    },
+    "convertibles": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "No convertible notes: Item 7 Liquidity states no outstanding debt"
+    },
+    "ttmComponents.annualRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "FY2026 Revenues (p.55)"
+    },
+    "ttmComponents.annualOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "FY2026 Operating income (p.55)"
+    },
+    "ttmComponents.ytdRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "No interim period after fiscal year end filed by 2026-10-20; zero by construction"
+    },
+    "ttmComponents.ytdOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "No interim period after fiscal year end filed by 2026-10-20; zero by construction"
+    },
+    "ttmComponents.priorYtdRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "No interim period; zero by construction"
+    },
+    "ttmComponents.priorYtdOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1408710/000140871026000028/fn-20260626.htm",
+     "locator": "No interim period; zero by construction"
+    }
+   },
+   "note": "The FY2026 10-K (filed 2026-08-18) is both the last annual report and the latest periodic filing on or before 2026-10-21 (Q1 FY2027 ends 2026-09-25 and has not been filed; ARS and proxy filed 2026-10-20 add no financial statements). TTM is therefore identical to the annual base with zero YTD and prior-YTD components. Fabrinet is a Cayman Islands company filing 10-K/10-Q in USD; NYSE listing is the ordinary share (no ADS). No interest-bearing debt at 2026-06-26. Subsequent event: on 2026-08-17 the Thai subsidiary borrowed a Thai baht 2.50 billion term loan (about $75.0 million) under the amended 2019 credit facility (Note 19); it is not on the 2026-06-26 balance sheet, so debt is 0 here (the proceeds are also not in June cash). Operating lease liabilities are excluded from debt. FY2026 other income of $57.0 million includes a $56.7 million gain on non-marketable equity securities (below operating income). Purchase obligations and commitments to third parties $3.15 billion and capex commitments $108.1 million at 2026-06-26 are not debt. Litigation (Casix, RMB 400 million claim accepted for retrial by the PRC Supreme Court on 2026-07-30) is unquantified and not accrued. Unvested RSUs/PSUs are not yet issued shares and are excluded from sharesOutstanding."
+  }
+ },
+ "notes": [
+  "USD millions; shares in millions. Fiscal year ends the last Friday of June (FY2026 = 52 weeks ended 2026-06-26).",
+  "No 10-Q has been filed after the FY2026 10-K by 2026-10-20, so the TTM base equals the annual base (ytd and prior-ytd set to 0 per schema). The ytdStart/ytdEnd dates are placeholders for an empty interval."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0001408710.json",
+  "latestPeriodicAccession": "0001408710-26-000028",
+  "latestAnnualAccession": "0001408710-26-000028"
+ }
+}

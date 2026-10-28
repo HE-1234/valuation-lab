@@ -1,0 +1,146 @@
+{
+ "ticker": "AMD",
+ "draftPatch": {
+  "analystConditionalAllocation": {
+   "enabled": true,
+   "ticker": "AMD",
+   "version": "2026-10-19-explicit-claims-v1",
+   "inputs": {
+    "liquidAssets": 13111,
+    "operatingReserve": 1493.67,
+    "nonoperatingAssets": 2228.5283745893985,
+    "fundedDebt": 3250,
+    "taxClaim": 873,
+    "guaranteeClaim": 275.7533374197523,
+    "esppClaim": 100,
+    "residualClaims": 500,
+    "partnerFundingPV": 2337.406313502409,
+    "legacyUnits": 35,
+    "employeeOptions": 77,
+    "openaiWarrant": 0,
+    "metaWarrant": 0
+   }
+  }
+ },
+ "fields": [
+  {
+   "path": "analystConditionalAllocation.inputs.liquidAssets",
+   "value": 13111,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+   "locator": "10-Q Jun 27 2026 balance sheet: cash 5,086 + short-term investments 8,025",
+   "note_en": "June 27 cash and short-term investments.",
+   "note_zh": "2026年6月27日现金及短期投资。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.operatingReserve",
+   "value": 1493.67,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/data/incremental-AMD-2026-10-18-v3/conditional-capital-pools.json (base)",
+   "locator": "components.operating_cash_reserve (3% reserve ratio)",
+   "note_en": "Operating cash reserve from the model base scenario; a judgment, not a filed figure.",
+   "note_zh": "运营现金储备取自模型基准情景；属判断值，非申报数据。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.nonoperatingAssets",
+   "value": 2228.5283745893985,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/data/incremental-AMD-2026-10-18-v3/conditional-capital-pools.json (base)",
+   "locator": "Sum of marketable equity after recovery 908.65, private equity 850, equity-method 151, earnout PV 209.71, related-party loan PV 96.17, Level 3 13",
+   "note_en": "Net recoverable investments at the model base-scenario recovery rates applied to filed Note 7/8 carrying values.",
+   "note_zh": "按模型基准情景回收率对已申报附注7/8账面价值折算的净回收价值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.fundedDebt",
+   "value": 3250,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+   "locator": "10-Q Note 9: principal 3,250 (carrying 3,226)",
+   "note_en": "Senior note principal at June 27.",
+   "note_zh": "2026年6月27日优先票据本金。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.taxClaim",
+   "value": 873,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+   "locator": "Opening uncertain tax liability as carried in the reviewed package pools",
+   "note_en": "Uncertain tax liability at the origin.",
+   "note_zh": "起点日不确定税务负债。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.guaranteeClaim",
+   "value": 275.7533374197523,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/data/incremental-AMD-2026-10-18-v3/conditional-capital-pools.json (base)",
+   "locator": "components.guarantee_selected_expected_loss_pv: 10% of $4,100M max guarantee exposure paid in 3.5 years, discounted",
+   "note_en": "Expected-loss PV on the $4.1B filed maximum lease-guarantee exposure; loss fraction and timing are judgments.",
+   "note_zh": "已申报41亿美元租赁担保最大敞口的预期损失现值；损失比例与时间为判断值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.esppClaim",
+   "value": 100,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/data/incremental-AMD-2026-10-18-v3/conditional-capital-pools.json (base)",
+   "locator": "assumptions.espp_claim",
+   "note_en": "ESPP claim from the model base scenario.",
+   "note_zh": "员工购股计划债权取自模型基准情景。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.residualClaims",
+   "value": 500,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/data/incremental-AMD-2026-10-18-v3/conditional-capital-pools.json (base)",
+   "locator": "assumptions.other_unmapped_claim_reserve",
+   "note_en": "Reserve for other unmapped claims; a judgment.",
+   "note_zh": "其他未归类债权准备金；判断值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.partnerFundingPV",
+   "value": 2337.406313502409,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/data/incremental-AMD-2026-10-18-v3/commercial-funding-stresses.json",
+   "locator": "combined_stresses: 20% forward return, FY2030 recovery 3,000, pv_partner_net_funding",
+   "note_en": "Net future partner-funding PV, deducted once.",
+   "note_zh": "未来合作方净资金现值，仅扣除一次。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.legacyUnits",
+   "value": 35,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+   "locator": "10-K Note 14: 33M unvested RSUs + 2M PRSUs (10-Q has no table, carried from Dec 27 2025)",
+   "note_en": "Unvested RSU/PRSU units, millions.",
+   "note_zh": "未归属RSU/PRSU股数（百万）。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.employeeOptions",
+   "value": 77,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+   "locator": "10-K Note 14: 2M options, strike 117.60, intrinsic value 77 (carried; 10-Q has no table)",
+   "note_en": "Aggregate intrinsic value of existing options.",
+   "note_zh": "现有期权内在价值合计。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.openaiWarrant",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+   "locator": "10-Q Note 12 Warrants: no tranche vested or exercisable at Jun 27 2026; fair value not disclosed",
+   "note_en": "Nothing vested at the origin and no fair value disclosed. Zero is an accounting zero, not economic zero: up to 160M shares at $0.01.",
+   "note_zh": "起点日无已归属部分且未披露公允价值。零为会计口径，并非经济价值为零：最多1.6亿股、行权价0.01美元。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.metaWarrant",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+   "locator": "10-Q Note 12 Warrants: Meta warrant issued 2026-02-23, nothing vested; fair value not disclosed",
+   "note_en": "Same as OpenAI: nothing vested, no disclosed value; up to 160M shares at $0.01.",
+   "note_zh": "同OpenAI：无已归属部分、未披露价值；最多1.6亿股，行权价0.01美元。"
+  }
+ ],
+ "summary_en": "Cash and short investments, principal debt, tax, guarantee, ESPP, options and units come from the June 27 10-Q or the model base scenario; both customer warrants are set to zero because nothing had vested or been valued.",
+ "summary_zh": "现金、债务本金、税务、担保、员工购股、期权及股数取自6月27日10-Q或模型基准情景；两份客户认股权证因尚未归属且未估值而设为零。"
+}

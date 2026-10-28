@@ -1,0 +1,286 @@
+{
+  "ticker": "SPGI",
+  "name": "S&P Global Inc.",
+  "cik": "0000064040",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "10-K",
+      "accession": "0000064040-26-000013",
+      "filedAt": "2026-02-11",
+      "acceptedAt": "2026-02-11T03:37:32.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+      "ttmComponents": null,
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated income statement; total revenue. Full fiscal year.",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated income statement; reported operating income.",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated balance sheet; cash and cash equivalents; restricted and client funds excluded.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated balance sheet; current investments / marketable securities."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Balance sheet: equity investments in unconsolidated subsidiaries. Carrying value preserved as context; do not add to equity value because equity-method earnings are inside operating income."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Lease note; current plus noncurrent operating lease liability. Kept separate from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated balance sheet; noncontrolling interests. No claim added where no separate noncontrolling equity line is reported."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated balance sheet / equity note: no outstanding preferred equity claim identified."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated statements: actual shares outstanding at period end; all share classes included; stock-split adjusted."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; outstanding restricted units plus performance units. RSU/PSU total, one-for-one dilution proxy."
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Fewer than 0.1m options; exact count not disclosed. Intrinsic value $5m is deducted; count remains unknown instead of treating threshold as exact."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Fewer than 0.1m options; exact count not disclosed. Intrinsic value $5m is deducted; count remains unknown instead of treating threshold as exact. Column: weightedExercisePrice."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Fewer than 0.1m options; exact count not disclosed. Intrinsic value $5m is deducted; count remains unknown instead of treating threshold as exact. Column: weightedRemainingYears."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note: stock option table, aggregate intrinsic value $5m. Exact option count is not reported; less-than0.1m threshold must not be treated as an exact count."
+        }
+      },
+      "convertibles": [],
+      "otherClaims": [
+        {
+          "name": "Redeemable noncontrolling interests",
+          "value": 4917,
+          "basis": "Balance-sheet redemption carrying value; separate from ordinary noncontrolling interests, deducted once.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm; Consolidated balance sheet, Redeemable noncontrolling interests; Equity note."
+        }
+      ],
+      "note": "Amounts in USD millions; shares in millions. Primary financial statements and debt/share notes checked in the filed document. Restricted cash is not an excess asset. Operating leases remain operating expenses and are not deducted again as financial debt. Stock compensation remains in operating expenses; outstanding awards are also reflected as current ownership claims. Filed dated-group basis includes Mobility until June 30, 2026; Mobility was separated effective July 1, 2026. This result is not standalone post-separation SPGI and must not be compared directly with its current quote. Redeemable NCI is a material separate claim. Affiliates carrying value is context only because related earnings are already in EBIT. ",
+      "revenue": 15336.0,
+      "operatingIncome": 6478.0,
+      "cashAndEquivalents": 1745.0,
+      "shortTermInvestments": 56,
+      "longTermInvestments": 603,
+      "debtCurrent": 718,
+      "debtNoncurrent": 12370,
+      "operatingLeaseLiabilities": 618,
+      "noncontrollingInterest": 108,
+      "preferredEquity": 0,
+      "sharesDate": "2025-12-31",
+      "sharesOutstanding": 298.8,
+      "unvestedRSUs": 0.9,
+      "options": {
+        "count": null,
+        "weightedExercisePrice": 74.46,
+        "weightedRemainingYears": 1.22,
+        "aggregateIntrinsicValue": 5
+      }
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "10-Q",
+      "accession": "0000064040-26-000045",
+      "filedAt": "2026-07-28",
+      "acceptedAt": "2026-07-29T00:52:35.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+      "ttmComponents": {
+        "annualRevenue": 15336.0,
+        "ytdRevenue": 8318.0,
+        "priorYtdRevenue": 7532.0,
+        "annualOperatingIncome": 6478.0,
+        "ytdOperatingIncome": 3814.0,
+        "priorYtdOperatingIncome": 3129.0,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-06-30"
+      },
+      "carriedFrom": {
+        "unvestedRSUs": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "why": "Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown."
+        },
+        "options": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "why": "Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation."
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated income statement; total revenue. TTM = annual + current YTD - comparable prior YTD.",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated income statement; reported operating income. TTM = annual + current YTD - comparable prior YTD.",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "ttmComponents.annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated income statement; annualRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated income statement; ytdRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated income statement; priorYtdRevenue; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Consolidated income statement; annualOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated income statement; ytdOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "ttmComponents.priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated income statement; priorYtdOperatingIncome; matching annual / year-to-date statement column."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated balance sheet; cash and cash equivalents; restricted and client funds excluded.",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated balance sheet; current investments / marketable securities. No separate short-term investment line at June 30; no addition for unquantified amounts."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Balance sheet: equity investments in unconsolidated subsidiaries. Carrying value preserved as context; do not add to equity value because equity-method earnings are inside operating income."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated balance sheet and debt note; current borrowings including commercial paper; noncurrent borrowings."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Lease note; current plus noncurrent operating lease liability. Kept separate from financial debt."
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated balance sheet; noncontrolling interests. No claim added where no separate noncontrolling equity line is reported."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated balance sheet / equity note: no outstanding preferred equity claim identified."
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm",
+          "locator": "Consolidated statements: actual shares outstanding at period end; all share classes included; stock-split adjusted."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; outstanding restricted units plus performance units. RSU/PSU total, one-for-one dilution proxy."
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Fewer than 0.1m options; exact count not disclosed. Intrinsic value $5m is deducted; count remains unknown instead of treating threshold as exact."
+        },
+        "options.weightedExercisePrice": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Fewer than 0.1m options; exact count not disclosed. Intrinsic value $5m is deducted; count remains unknown instead of treating threshold as exact. Column: weightedExercisePrice."
+        },
+        "options.weightedRemainingYears": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note; option activity at period end. Fewer than 0.1m options; exact count not disclosed. Intrinsic value $5m is deducted; count remains unknown instead of treating threshold as exact. Column: weightedRemainingYears."
+        },
+        "options.aggregateIntrinsicValue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000013/spgi-20251231.htm",
+          "locator": "Share-based compensation note: stock option table, aggregate intrinsic value $5m. Exact option count is not reported; less-than0.1m threshold must not be treated as an exact count."
+        }
+      },
+      "convertibles": [],
+      "otherClaims": [
+        {
+          "name": "Redeemable noncontrolling interests",
+          "value": 5024,
+          "basis": "Balance-sheet redemption carrying value; separate from ordinary noncontrolling interests, deducted once.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/64040/000006404026000045/spgi-20260630.htm; Consolidated balance sheet, Redeemable noncontrolling interests; Equity note."
+        }
+      ],
+      "note": "Amounts in USD millions; shares in millions. Primary financial statements and debt/share notes checked in the filed document. Restricted cash is not an excess asset. Operating leases remain operating expenses and are not deducted again as financial debt. Stock compensation remains in operating expenses; outstanding awards are also reflected as current ownership claims. Filed dated-group basis includes Mobility until June 30, 2026; Mobility was separated effective July 1, 2026. This result is not standalone post-separation SPGI and must not be compared directly with its current quote. Redeemable NCI is a material separate claim. Affiliates carrying value is context only because related earnings are already in EBIT. ",
+      "revenue": 16122.0,
+      "operatingIncome": 7163.0,
+      "cashAndEquivalents": 4134.0,
+      "shortTermInvestments": 0,
+      "longTermInvestments": 613,
+      "debtCurrent": 2572,
+      "debtNoncurrent": 12598,
+      "operatingLeaseLiabilities": 578,
+      "noncontrollingInterest": 115,
+      "preferredEquity": 0,
+      "sharesDate": "2026-06-30",
+      "sharesOutstanding": 294.8,
+      "unvestedRSUs": 0.9,
+      "options": {
+        "count": null,
+        "weightedExercisePrice": 74.46,
+        "weightedRemainingYears": 1.22,
+        "aggregateIntrinsicValue": 5
+      }
+    }
+  },
+  "notes": [
+    "Latest periodic reports checked against SEC submissions as of 2026-10-21; numbers cross-checked against filed primary statements. Sources preserve reported amounts and explicitly distinguish analyst proxies."
+  ],
+  "latestFilingCheck": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0000064040.json",
+    "latestPeriodicAccession": "0000064040-26-000045",
+    "latestAnnualAccession": "0000064040-26-000013"
+  }
+}

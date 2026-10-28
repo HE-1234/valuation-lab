@@ -1,0 +1,287 @@
+{
+  "ticker": "NVMI",
+  "name": "Nova Ltd.",
+  "cik": "0001109345",
+  "currency": "USD",
+  "filerType": "foreign",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "ordinary share (Nasdaq: NVMI; also TASE)",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "20-F",
+      "accession": "0001178913-26-000504",
+      "filedAt": "2026-02-17",
+      "acceptedAt": "2026-02-17T17:01:45.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+      "revenue": 880.577,
+      "operatingIncome": 253.468,
+      "ttmComponents": null,
+      "cashAndEquivalents": 214.462,
+      "shortTermInvestments": 834.048,
+      "longTermInvestments": 597.239,
+      "debtCurrent": 0,
+      "debtNoncurrent": 731.68,
+      "operatingLeaseLiabilities": 67.475,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesOutstanding": 31.780111,
+      "sharesDate": "2025-12-31",
+      "unvestedRSUs": 0.396262,
+      "options": {
+        "count": 0.012879,
+        "weightedExercisePrice": 45.44,
+        "weightedRemainingYears": 0.995,
+        "aggregateIntrinsicValue": 3.644
+      },
+      "convertibles": [
+        {
+          "name": "0% Convertible Senior Notes due 2030",
+          "principal": 750.0,
+          "carrying": 731.68,
+          "fairValue": 936.27,
+          "conversionPrice": 320.16,
+          "maturity": "2030-09-15"
+        }
+      ],
+      "otherClaims": [],
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Statements of Operations, Total revenues, year ended Dec 31 2025 ($880,577K), F-7"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Statements of Operations, Operating income, year ended Dec 31 2025 ($253,468K)"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets, Cash and cash equivalents, Dec 31 2025 ($214,462K), F-5/F-6"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets: Short-term interest-bearing bank deposits $512,250K + current Marketable securities $321,798K (Note 4)"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets: non-current Marketable securities $584,731K + Interest-bearing bank deposits and restricted cash $12,508K (of which $318K long-term restricted cash per Note 2 cash table)"
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets: Convertible senior notes, net is classified non-current at Dec 31 2025 (Note 11); no other borrowings reported"
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets, non-current Convertible senior notes, net $731,680K; Note 11 principal $750,000K less unamortized issuance costs $18,320K"
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets: Operating lease current liabilities $8,204K + Operating lease long-term liabilities $59,271K (Note 12)"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets: no noncontrolling interest line"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Consolidated Balance Sheets / Note 14: no preferred shares outstanding"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Cover page: 31,780,111 ordinary shares outstanding as of December 31, 2025"
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Note 14 Shareholders equity, RSU table: Unvested at year end 396,262 (includes performance-based RSUs)"
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Note 14 share option table: Outstanding - year end 12,879 options, weighted average exercise price $45.44; intrinsic value $3,644K; weighted remaining contractual term 0.995 years"
+        },
+        "convertibles[0]": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "Note 11 Convertible Senior Notes, net: 2030 notes principal $750,000K, carrying $731,680K, estimated fair value approx. $936,270K (Level 2) at Dec 31 2025, initial conversion rate 3.1234 shares per $1,000 (conversion price approx. $320.16), maturity Sept 15 2030"
+        }
+      },
+      "note": "Reporting currency USD; amounts converted from USD thousands. 2030 notes: 0% coupon, settlement in cash, shares or a combination at Nova election; capped calls ($51.826M paid, cap price about $415.03, equity-classified, an asset-like offset) are not included as claims. Options expire about one year after year-end (0.995 years remaining); 12,879 options only. Long-term investments include $0.318M restricted cash collateral.",
+      "accountingBasis": "US GAAP",
+      "accountingBasisZh": "\u7f8e\u56fd\u516c\u8ba4\u4f1a\u8ba1\u539f\u5219"
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "6-K",
+      "accession": "0001178913-26-003892",
+      "filedAt": "2026-08-06",
+      "acceptedAt": "2026-08-06T15:30:57.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+      "revenue": 937.498,
+      "operatingIncome": 271.614,
+      "ttmComponents": {
+        "annualRevenue": 880.577,
+        "ytdRevenue": 490.266,
+        "priorYtdRevenue": 433.345,
+        "annualOperatingIncome": 253.468,
+        "ytdOperatingIncome": 147.021,
+        "priorYtdOperatingIncome": 128.875,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-06-30"
+      },
+      "cashAndEquivalents": 124.846,
+      "shortTermInvestments": 896.153,
+      "longTermInvestments": 697.218,
+      "debtCurrent": 733.588,
+      "debtNoncurrent": 0,
+      "operatingLeaseLiabilities": 69.91,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesOutstanding": 31.806161,
+      "sharesDate": "2026-05-12",
+      "unvestedRSUs": 0.396262,
+      "options": {
+        "count": 0.012879,
+        "weightedExercisePrice": 45.44,
+        "weightedRemainingYears": 0.995,
+        "aggregateIntrinsicValue": 3.644
+      },
+      "convertibles": [
+        {
+          "name": "0% Convertible Senior Notes due 2030",
+          "principal": 750.0,
+          "carrying": 733.588,
+          "fairValue": null,
+          "conversionPrice": 320.16,
+          "maturity": "2030-09-15"
+        }
+      ],
+      "otherClaims": [],
+      "carriedFrom": {
+        "sharesOutstanding": {
+          "date": "2026-05-12",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326002707/exhibit_99-1.htm",
+          "why": "Q2 2026 6-K (earnings press release) has no period-end share count; latest filed count is the 2026 AGM proxy (6-K filed 2026-05-14, Exhibit 99.1): 31,806,161 shares as of May 12, 2026. Weighted basic shares for Q2 2026 are 31,800K."
+        },
+        "unvestedRSUs": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "why": "6-K does not report RSU counts; latest disclosure is 20-F Note 14 (396,262 at Dec 31 2025). Awards granted/vested/cancelled in H1 2026 are not reflected."
+        },
+        "options": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "why": "6-K does not report option counts; 20-F Note 14 (12,879 options, WAEP $45.44, 0.995 years remaining as of Dec 31 2025). Intrinsic value is as of Dec 31 2025 price."
+        },
+        "convertibles[0].principal": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "why": "6-K balance sheet shows only carrying value; principal $750M is from 20-F Note 11 (no conversion or repurchase reported; carrying moved 731.680 to 733.588 = amortization of $1.908M per the 6-K cash flow statement)"
+        },
+        "convertibles[0].conversionPrice": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "why": "6-K does not restate terms; 20-F Note 11: 3.1234 shares per $1,000 = approx. $320.16"
+        },
+        "convertibles[0].maturity": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "why": "6-K does not restate terms; 20-F Note 11: Sept 15 2030"
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Statements of Operations, Total revenues, six months ended Jun 30 2026 ($490,266K) and Jun 30 2025 ($433,345K); FY2025 $880,577K from 20-F"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Statements of Operations, Operating income, six months ended Jun 30 2026 ($147,021K) and 2025 ($128,875K); FY2025 $253,468K from 20-F"
+        },
+        "ttmComponents.annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "20-F Consolidated Statements of Operations, FY2025 Total revenues"
+        },
+        "ttmComponents.ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "6-K Statements of Operations, six months ended Jun 30 2026, Total revenues"
+        },
+        "ttmComponents.priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "6-K Statements of Operations, six months ended Jun 30 2025, Total revenues"
+        },
+        "ttmComponents.annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "20-F Consolidated Statements of Operations, FY2025 Operating income"
+        },
+        "ttmComponents.ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "6-K Statements of Operations, six months ended Jun 30 2026, Operating income"
+        },
+        "ttmComponents.priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "6-K Statements of Operations, six months ended Jun 30 2025, Operating income"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets, Cash and cash equivalents, Jun 30 2026 ($124,846K)"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets: Short-term interest-bearing bank deposits $397,082K + current Marketable securities $499,071K"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets: non-current Marketable securities $685,471K + Interest-bearing bank deposits and restricted deposits $11,747K (restricted portion not split out)"
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets, current liabilities: Convertible senior notes, net $733,588K (reclassified from non-current). The 6-K does not state the reason; the likely trigger is the 20-F Note 11 conversion condition (stock at least 130% of conversion price for 20 of 30 trading days), which is an inference, not a filed statement."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets: no non-current convertible notes at Jun 30 2026 (shown as \"-\")"
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets: Operating lease current liabilities $10,067K + Operating lease long-term liabilities $59,843K"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets: no noncontrolling interest line"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "Condensed Consolidated Balance Sheets: no preferred shares"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326002707/exhibit_99-1.htm",
+          "locator": "AGM proxy statement (6-K accession 0001178913-26-002707, Exhibit 99.1): \"As of May 12, 2026, the Company had 31,806,161 issued and outstanding Shares\""
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "20-F Note 14 RSU table, Unvested at year end 396,262 (carried)"
+        },
+        "options.count": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326000504/zk2634307.htm",
+          "locator": "20-F Note 14 share option table (carried)"
+        },
+        "convertibles[0]": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1109345/000117891326003892/zk2635873.htm",
+          "locator": "6-K balance sheet carrying $733,588K; principal, fair value and conversion price carried from 20-F Note 11 (see carriedFrom)"
+        }
+      },
+      "note": "Latest report filed on or before 2026-10-21 is the Q2 2026 results 6-K (filed 2026-08-06; GAAP statements incorporated into S-8). Q3 2026 results are scheduled for 2026-11-05. The 2030 notes are shown as a current liability at Jun 30 2026 (carrying $733.588M vs $731.680M at Dec 31 2025, difference equals amortization); treat full $750M as a possible near-term cash/share settlement claim. Fair value at June 30 2026 is not disclosed in the filings reviewed through2026-10-21; it remains null and was not estimated. A $200M share repurchase program was announced in a 6-K filed 2026-09-02 (after the balance-sheet date; no repurchases recorded in H1 2026). Share count is the May 12 2026 proxy figure, 49 days before the period end. The June 30 convertible fair value is null; the former carried December 31 fair value has been removed from this period. Contractual terms remain sourced to the annual filing.",
+      "accountingBasis": "US GAAP",
+      "accountingBasisZh": "\u7f8e\u56fd\u516c\u8ba4\u4f1a\u8ba1\u539f\u5219"
+    }
+  },
+  "notes": [
+    "Nova files 20-F annually and furnishes quarterly results as a 6-K press release with condensed GAAP statements. Amounts converted from USD thousands to USD millions.",
+    "Capped calls on the 2030 notes are equity-classified and not recorded as assets or claims here."
+  ],
+  "reviewedThrough": "2026-10-21"
+}

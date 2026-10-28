@@ -1,0 +1,147 @@
+{
+  "ticker": "DUOL",
+  "cutoff": "2026-10-21",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+      "title": "Duolingo, Inc. 10-K 2025-12-31",
+      "publishedAt": "2026-02-27"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm",
+      "title": "Duolingo, Inc. 10-Q 2026-06-30",
+      "publishedAt": "2026-08-06"
+    }
+  ],
+  "freshness": {
+    "checkedAt": "2026-10-21",
+    "submissionsUrl": "https://data.sec.gov/submissions/CIK0001562088.json",
+    "annual": {
+      "accessionNumber": "0001628280-26-012494",
+      "filingDate": "2026-02-27",
+      "reportDate": "2025-12-31",
+      "acceptanceDateTime": "2026-02-27T04:35:35.000Z",
+      "act": "34",
+      "form": "10-K",
+      "fileNumber": "001-40653",
+      "filmNumber": "26691420",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 9882575,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": null,
+      "primaryDocument": "duol-20251231.htm",
+      "primaryDocDescription": "10-K"
+    },
+    "latestPeriodic": {
+      "accessionNumber": "0001628280-26-053603",
+      "filingDate": "2026-08-06",
+      "reportDate": "2026-06-30",
+      "acceptanceDateTime": "2026-08-06T01:49:02.000Z",
+      "act": "34",
+      "form": "10-Q",
+      "fileNumber": "001-40653",
+      "filmNumber": "261245094",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 7892279,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "isXBRLNumeric": 1,
+      "primaryDocument": "duol-20260630.htm",
+      "primaryDocDescription": "10-Q"
+    }
+  },
+  "claimsPolicy": {
+    "annual": {
+      "additionalAwardShares": 0.72,
+      "optionTranches": [
+        {
+          "shares": 0.859,
+          "strike": 18.38,
+          "years": 3.77,
+          "volatility": 0.6,
+          "rate": 0.04
+        }
+      ],
+      "note": "The remaining founder awards are treated as fully earned: 0.72m shares at year-end and 0.36m in June. These are added to ordinary RSUs. Options use their reported count, strike and term, with assumed 60% volatility and a 4% risk-free rate.",
+      "noteZh": "剩余创始人奖励按全部达标处理：年末72万股，六月36万股，并加在普通RSU之外。期权使用申报数量、行权价及期限，假设波动率60%、无风险利率4%。"
+    },
+    "ttm": {
+      "additionalAwardShares": 0.36,
+      "optionTranches": [
+        {
+          "shares": 0.636,
+          "strike": 21.09,
+          "years": 3.68,
+          "volatility": 0.6,
+          "rate": 0.04
+        }
+      ],
+      "note": "The remaining founder awards are treated as fully earned: 0.72m shares at year-end and 0.36m in June. These are added to ordinary RSUs. Options use their reported count, strike and term, with assumed 60% volatility and a 4% risk-free rate.",
+      "noteZh": "剩余创始人奖励按全部达标处理：年末72万股，六月36万股，并加在普通RSU之外。期权使用申报数量、行权价及期限，假设波动率60%、无风险利率4%。"
+    }
+  },
+  "modelProxies": {},
+  "limitations": [
+    "Founder performance awards are conservatively treated as fully earned: 0.72m additional shares at year-end and 0.36m in June."
+  ],
+  "limitationsZh": [
+    "创始人绩效奖励保守地按全部达标处理：年末额外计入72万股，六月计入36万股。"
+  ],
+  "sector": "Education software",
+  "sectorZh": "教育软件",
+  "businessSummary": "Subscription language learning and digital English testing.",
+  "businessSummaryZh": "订阅式语言学习及数字英语测试。",
+  "assumptions": {
+    "growth": 0.16,
+    "targetMargin": 0.25,
+    "tax": 0.24,
+    "salesCapital": 4,
+    "wacc": 0.105,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.22,
+    "years": 10
+  },
+  "rationale": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs.",
+  "rationaleZh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。",
+  "rationaleByField": {
+    "growth": {
+      "en": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "targetMargin": {
+      "en": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "tax": {
+      "en": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "salesCapital": {
+      "en": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "wacc": {
+      "en": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalGrowth": {
+      "en": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.",
+      "zh": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+    }
+  },
+  "localizationPairs": {
+    "Education software": "教育软件",
+    "Subscription language learning and digital English testing.": "订阅式语言学习及数字英语测试。",
+    "Founder performance awards are conservatively treated as fully earned: 0.72m additional shares at year-end and 0.36m in June.": "创始人绩效奖励保守地按全部达标处理：年末额外计入72万股，六月计入36万股。",
+    "The remaining founder awards are treated as fully earned: 0.72m shares at year-end and 0.36m in June. These are added to ordinary RSUs. Options use their reported count, strike and term, with assumed 60% volatility and a 4% risk-free rate.": "剩余创始人奖励按全部达标处理：年末72万股，六月36万股，并加在普通RSU之外。期权使用申报数量、行权价及期限，假设波动率60%、无风险利率4%。",
+    "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs.": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。",
+    "Subscription growth moderates from FY 2025 38.7% and first-half 2026 22.2%; initial 16% growth fades toward 3%.25% mature GAAP margin requires operating leverage while retaining compensation costs. Discount rates, normalized taxes, capital efficiency and terminal returns are analyst scenario assumptions, not company guidance.": "订阅增长由2025财年38.7%及2026上半年22.2%放缓；初期16%增长逐步降至3%。成熟期25%GAAP利润率需要经营杠杆，仍包含薪酬成本。 折现率、正常化税率、资本效率及终值回报均为分析情景假设，并非公司指引。"
+  }
+}

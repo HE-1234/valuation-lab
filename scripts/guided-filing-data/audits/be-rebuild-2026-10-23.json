@@ -1,0 +1,67 @@
+{
+  "idempotent": true,
+  "before": {
+    "data/current-universe.json": "068ef8be15ac79e9d46b77bc29e28af79f44c50b9df08bbb0fcafafbc55556ae",
+    "data/company-base-cases.json": "e77ade188564ba5b2cbffcc307105fe70c3f571f570208743f4ede771364376d",
+    "data/company-history.json": "83f310bd80028eef05cac4b4d8758323989d2577635a824562f3e4ece658085d",
+    "data/guided-additions-evidence.json": "675eb69b0eb089fa2c3d81f89b93b5baf76f3f9b3e478f583c4639ed664b1a31",
+    "added-claims-data.js": "ae5e8aef4619bf5687437bae7073afb66d34d5d265ab9943033ec01b2eaa5085",
+    "financial-model-data.js": "d432c721985dea1998769726789f5f6a5ca6bd506980ac9fac3fcd82b2eedece",
+    "locales/guided-case-pairs.js": "5ce2a042353f1cf4bdaa2bb32a2dcb69b8f0b113216657c09a17fad01345a202"
+  },
+  "after": {
+    "data/current-universe.json": "068ef8be15ac79e9d46b77bc29e28af79f44c50b9df08bbb0fcafafbc55556ae",
+    "data/company-base-cases.json": "e77ade188564ba5b2cbffcc307105fe70c3f571f570208743f4ede771364376d",
+    "data/company-history.json": "83f310bd80028eef05cac4b4d8758323989d2577635a824562f3e4ece658085d",
+    "data/guided-additions-evidence.json": "675eb69b0eb089fa2c3d81f89b93b5baf76f3f9b3e478f583c4639ed664b1a31",
+    "added-claims-data.js": "ae5e8aef4619bf5687437bae7073afb66d34d5d265ab9943033ec01b2eaa5085",
+    "financial-model-data.js": "d432c721985dea1998769726789f5f6a5ca6bd506980ac9fac3fcd82b2eedece",
+    "locales/guided-case-pairs.js": "5ce2a042353f1cf4bdaa2bb32a2dcb69b8f0b113216657c09a17fad01345a202"
+  },
+  "preservation": {
+    "current-universe.json": {
+      "existingCompanyCount": 55,
+      "changedExistingCompanies": []
+    },
+    "company-base-cases.json": {
+      "existingCompanyCount": 55,
+      "changedExistingCompanies": []
+    },
+    "company-history.json": {
+      "existingCompanyCount": 55,
+      "changedExistingCompanies": []
+    }
+  },
+  "existingClaimsAndFinancialModelsUnchanged": true,
+  "sourceSchemaValidators": 42,
+  "latestPeriodicFilings": [
+    {
+      "form": "10-Q",
+      "reportDate": "2026-09-30",
+      "filingDate": "2026-10-22",
+      "accessionNumber": "0001628280-26-066931",
+      "primaryDocument": "be-20260930.htm"
+    },
+    {
+      "form": "10-Q",
+      "reportDate": "2026-06-30",
+      "filingDate": "2026-07-28",
+      "accessionNumber": "0001628280-26-050247",
+      "primaryDocument": "be-20260630.htm"
+    },
+    {
+      "form": "10-Q",
+      "reportDate": "2026-03-31",
+      "filingDate": "2026-04-29",
+      "accessionNumber": "0001628280-26-028021",
+      "primaryDocument": "be-20260331.htm"
+    },
+    {
+      "form": "10-K",
+      "reportDate": "2025-12-31",
+      "filingDate": "2026-02-09",
+      "accessionNumber": "0001628280-26-006516",
+      "primaryDocument": "be-20251231.htm"
+    }
+  ]
+}

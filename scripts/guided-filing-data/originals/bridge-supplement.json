@@ -1,0 +1,2714 @@
+{
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21T18:03:50.293489+00:00",
+  "snapshotPatches": {
+    "AAPL-CURRENT-2025-09-27": {
+      "ticker": "AAPL",
+      "periodEnd": "2025-09-27",
+      "form": "10-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 14773.26,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2025-09-27; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 151.574,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 14924.834,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 35934.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-20 at 2025-09-27",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeaseLiabilityTotal": {
+          "value": 1230.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:FinanceLeaseLiability",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-20 at 2025-09-27",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 54697,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities; 35,934 + 18,763",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 99887,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Consolidated balance sheet term debt + commercial paper; finance leases note (12,350 + 78,328) + 7,979 + 1,230",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 77723,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Consolidated balance sheet: noncurrent marketable securities",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 77,723 million of noncurrent marketable securities at this base date; current investments are already included in cash."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-09-27",
+          "filedAt": "2025-10-31",
+          "accession": "0000320193-25-000079",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {},
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": []
+    },
+    "AAPL-CURRENT-2026-06-27": {
+      "ticker": "AAPL",
+      "periodEnd": "2026-06-27",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 14608.963,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-27; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 143.962,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 14752.925,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 39544.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-21 at 2026-06-27",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 62399,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities; 39,544 + 22,855",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet term debt + commercial paper; finance leases note complete finance lease liability is not separately updated in the 10-Q",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 84118,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet: noncurrent marketable securities",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 84,118 million of noncurrent marketable securities at this base date; current investments are already included in cash."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "knownBorrowingsExcludingFinanceLeases": {
+          "value": 84344,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Balance sheet: current term debt 11,007 + noncurrent term debt 71,340 + commercial paper 1,997",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": [
+        "June finance-lease liability is not disclosed. The annual $1,230 million amount is not a June fact; complete debt remains unknown."
+      ]
+    },
+    "AAPL-TTM-2026-06-27": {
+      "ticker": "AAPL",
+      "periodEnd": "2026-06-27",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 14608.963,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-27; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 143.962,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 14752.925,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 39544.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-21 at 2026-06-27",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 62399,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities; 39,544 + 22,855",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet term debt + commercial paper; finance leases note complete finance lease liability is not separately updated in the 10-Q",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 84118,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated balance sheet: noncurrent marketable securities",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 84,118 million of noncurrent marketable securities at this base date; current investments are already included in cash."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "knownBorrowingsExcludingFinanceLeases": {
+          "value": 84344,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-27",
+          "filedAt": "2026-07-31",
+          "accession": "0000320193-26-000020",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "locator": "Balance sheet: current term debt 11,007 + noncurrent term debt 71,340 + commercial paper 1,997",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": [
+        "June finance-lease liability is not disclosed. The annual $1,230 million amount is not a June fact; complete debt remains unknown."
+      ]
+    },
+    "MSFT-CURRENT-2026-06-30": {
+      "ticker": "MSFT",
+      "periodEnd": "2026-06-30",
+      "form": "10-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 7427,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-30; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 78,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 7505,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 20935.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45 at 2026-06-30",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeaseLiabilityTotal": {
+          "value": 66594.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:FinanceLeaseLiability",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context C_ca004a37-7abb-4b0e-8638-a7c6b14ebb45 at 2026-06-30",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 76843,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Consolidated balance sheet: cash 20,935 + short-term investments 55,908",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 106888,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Current debt 9,227 + noncurrent debt 31,067 + finance lease liability 66,594; finance leases note excludes operating leases",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 36348,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Consolidated balance sheet and investments note: equity and other investments / long-term investments 36,348",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add the period-end $36,348 million investment balance once; cash already includes short-term investments."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-29",
+          "accession": "0001193125-26-323660",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {},
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": []
+    },
+    "AMZN-CURRENT-2025-12-31": {
+      "ticker": "AMZN",
+      "periodEnd": "2025-12-31",
+      "form": "10-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 10731,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2025-12-31; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 222.5,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 10953.5,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 86810.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-9 at 2025-12-31",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeaseLiabilityTotal": {
+          "value": 12286.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:FinanceLeaseLiability",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-9 at 2025-12-31",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 123029,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities, excluding restricted cash",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 89295,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Debt and commitments notes: carrying current/noncurrent long-term debt 68396 + short-term credit facilities 455 + finance leases 12286 + financing obligations 8158. Financing obligations current/noncurrent 358 + 7,800. Narrative billion-dollar inputs retain filing rounding.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 65359,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Non-Marketable Investments note: convertible notes + all private equity holdings + equity-method holdings + investment warrants; all classified in Other assets",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 65,359 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "longTermDebtCarrying": {
+          "value": 68396,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Debt, leases and commitments notes; longTermDebtCarrying",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "shortTermBorrowings": {
+          "value": 455,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Debt, leases and commitments notes; shortTermBorrowings",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeases": {
+          "value": 12286,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Debt, leases and commitments notes; financeLeases",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "financingObligations": {
+          "value": 8158,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Debt, leases and commitments notes; financingObligations",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "anthropicConvertibleInvestment": {
+          "value": 45800,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Non-Marketable Investments note; anthropicConvertibleInvestment; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "privateCompanyEquityInvestments": {
+          "value": 16200,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Non-Marketable Investments note; privateCompanyEquityInvestments; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "equityMethodInvestments": {
+          "value": 659,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Non-Marketable Investments note; equityMethodInvestments; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "investmentWarrants": {
+          "value": 2700,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-02-06",
+          "accession": "0001018724-26-000004",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+          "locator": "Non-Marketable Investments note; investmentWarrants; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": []
+    },
+    "AMZN-CURRENT-2026-06-30": {
+      "ticker": "AMZN",
+      "periodEnd": "2026-06-30",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 10783,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-30; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 244.4,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 11027.4,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 78213.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-23 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeaseLiabilityTotal": {
+          "value": 13451.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:FinanceLeaseLiability",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-23 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 122988,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities, excluding restricted cash",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 155315,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt and commitments notes: carrying current/noncurrent long-term debt 132224 + short-term credit facilities 325 + finance leases 13451 + financing obligations 9315. Financing obligations current/noncurrent 415 + 8,900. Narrative billion-dollar inputs retain filing rounding.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 224895,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note: convertible notes + all private equity holdings + equity-method holdings + investment warrants; all classified in Other assets",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 224,895 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "longTermDebtCarrying": {
+          "value": 132224,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; longTermDebtCarrying",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shortTermBorrowings": {
+          "value": 325,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; shortTermBorrowings",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeases": {
+          "value": 13451,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; financeLeases",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "financingObligations": {
+          "value": 9315,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; financingObligations",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "anthropicConvertibleInvestment": {
+          "value": 97900,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; anthropicConvertibleInvestment; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "privateCompanyEquityInvestments": {
+          "value": 122300,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; privateCompanyEquityInvestments; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "equityMethodInvestments": {
+          "value": 395,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; equityMethodInvestments; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "investmentWarrants": {
+          "value": 4300,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; investmentWarrants; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": [
+        "The $21.3 billion OpenAI commitment paid after June is not a June cash deduction or a second June investment asset. Undrawn Anthropic capacity is a future funding commitment."
+      ]
+    },
+    "AMZN-TTM-2026-06-30": {
+      "ticker": "AMZN",
+      "periodEnd": "2026-06-30",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 10783,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-30; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 244.4,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 11027.4,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 78213.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-23 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeaseLiabilityTotal": {
+          "value": 13451.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:FinanceLeaseLiability",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-23 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 122988,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities, excluding restricted cash",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 155315,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt and commitments notes: carrying current/noncurrent long-term debt 132224 + short-term credit facilities 325 + finance leases 13451 + financing obligations 9315. Financing obligations current/noncurrent 415 + 8,900. Narrative billion-dollar inputs retain filing rounding.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 224895,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note: convertible notes + all private equity holdings + equity-method holdings + investment warrants; all classified in Other assets",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 224,895 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "longTermDebtCarrying": {
+          "value": 132224,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; longTermDebtCarrying",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shortTermBorrowings": {
+          "value": 325,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; shortTermBorrowings",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeases": {
+          "value": 13451,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; financeLeases",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "financingObligations": {
+          "value": 9315,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Debt, leases and commitments notes; financingObligations",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "anthropicConvertibleInvestment": {
+          "value": 97900,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; anthropicConvertibleInvestment; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "privateCompanyEquityInvestments": {
+          "value": 122300,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; privateCompanyEquityInvestments; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "equityMethodInvestments": {
+          "value": 395,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; equityMethodInvestments; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "investmentWarrants": {
+          "value": 4300,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-31",
+          "accession": "0001018724-26-000026",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "locator": "Non-Marketable Investments note; investmentWarrants; held as an asset, not an issued dilutive claim",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": [
+        "The $21.3 billion OpenAI commitment paid after June is not a June cash deduction or a second June investment asset. Undrawn Anthropic capacity is a future funding commitment."
+      ]
+    },
+    "META-CURRENT-2025-12-31": {
+      "ticker": "META",
+      "periodEnd": "2025-12-31",
+      "form": "10-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 2530,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2025-12-31; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 115.552,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 2645.552,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 35873.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-5 at 2025-12-31",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeaseLiabilityTotal": {
+          "value": 1184.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:FinanceLeaseLiability",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-5 at 2025-12-31",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 81592,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities, including public equity. Fair-value table reconciles marketable equity within total marketable securities.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 59928,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Consolidated long-term debt 58,744 + finance lease liabilities 1,184",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 27524,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Consolidated balance sheet and Non-Marketable Equity Investments note: total carrying value; excludes publicly traded equity already within cash/current marketable securities.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 27,524 million of nonmarketable equity investments. Publicly traded equity is already included in cash plus current marketable securities and is not added again."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "nonmarketableEquityInvestments": {
+          "value": 27524,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003942",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+          "locator": "Investments note: nonmarketableEquityInvestments",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": []
+    },
+    "META-CURRENT-2026-06-30": {
+      "ticker": "META",
+      "periodEnd": "2026-06-30",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 2548,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-30; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 146.464,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 2694.464,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 15462.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-4 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 90260,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities, including public equity. Fair-value table reconciles marketable equity within total marketable securities.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated long-term debt 83,664; complete June finance lease liability not disclosed",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 30157,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet and Non-Marketable Equity Investments note: total carrying value; excludes publicly traded equity already within cash/current marketable securities.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 30,157 million of nonmarketable equity investments. Publicly traded equity is already included in cash plus current marketable securities and is not added again."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "nonmarketableEquityInvestments": {
+          "value": 30157,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Investments note: nonmarketableEquityInvestments",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "knownBorrowingsExcludingFinanceLeases": {
+          "value": 83664,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet: long-term debt carrying amount",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": [
+        "June finance-lease assets and principal payments are disclosed, but the liability balance is not. Neither assets nor payments establish an exact liability; complete debt remains unknown."
+      ]
+    },
+    "META-TTM-2026-06-30": {
+      "ticker": "META",
+      "periodEnd": "2026-06-30",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 2548,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-30; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 146.464,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 2694.464,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 15462.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-4 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 90260,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet: cash and equivalents + current marketable securities, including public equity. Fair-value table reconciles marketable equity within total marketable securities.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated long-term debt 83,664; complete June finance lease liability not disclosed",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 30157,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet and Non-Marketable Equity Investments note: total carrying value; excludes publicly traded equity already within cash/current marketable securities.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 30,157 million of nonmarketable equity investments. Publicly traded equity is already included in cash plus current marketable securities and is not added again."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "nonmarketableEquityInvestments": {
+          "value": 30157,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Investments note: nonmarketableEquityInvestments",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "knownBorrowingsExcludingFinanceLeases": {
+          "value": 83664,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-30",
+          "accession": "0001628280-26-050705",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+          "locator": "Consolidated balance sheet: long-term debt carrying amount",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": [
+        "June finance-lease assets and principal payments are disclosed, but the liability balance is not. Neither assets nor payments establish an exact liability; complete debt remains unknown."
+      ]
+    },
+    "NVDA-CURRENT-2026-01-25": {
+      "ticker": "NVDA",
+      "periodEnd": "2026-01-25",
+      "form": "10-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 24304,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-01-25; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 189,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 24493,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 10605.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-11 at 2026-01-25",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 62556,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Annual: cash 10,605 + current marketable securities 51,951 (including equity 12,886).",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 8468,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Consolidated balance sheets: current debt + noncurrent debt; all lease liabilities presented are operating leases",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 27091,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Nonmarketable securities plus publicly held equity outside snapshot cash; long-term publicly held equity is separately classified in Other assets",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 27,091 million of investment assets outside cash. The annual and interim cash presentations classify current public equity differently; the components here avoid double counting."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "privateCompanyInvestments": {
+          "value": 22251,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Investment fair-value table / balance sheet; privateCompanyInvestments",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "longTermMarketableEquity": {
+          "value": 4840,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-01-25",
+          "filedAt": "2026-02-25",
+          "accession": "0001045810-26-000021",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+          "locator": "Investment fair-value table / balance sheet; longTermMarketableEquity",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": []
+    },
+    "NVDA-CURRENT-2026-07-26": {
+      "ticker": "NVDA",
+      "periodEnd": "2026-07-26",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 24147,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-07-26; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 168,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 24315,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 22443.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-6 at 2026-07-26",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 56586,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Interim liquidity presentation: cash 22,443 + current marketable debt securities 34,143. Current marketable equity 42,783 is added through otherAssets, not duplicated in cash.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 33366,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Consolidated balance sheets: current debt + noncurrent debt; all lease liabilities presented are operating leases",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 98897,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Nonmarketable securities plus publicly held equity outside snapshot cash; long-term publicly held equity is separately classified in Other assets",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 98,897 million of investment assets outside cash. The annual and interim cash presentations classify current public equity differently; the components here avoid double counting."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "nonmarketableSecurities": {
+          "value": 51157,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Investment fair-value table / balance sheet; nonmarketableSecurities",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "currentMarketableEquityExcludedFromCash": {
+          "value": 42783,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Investment fair-value table / balance sheet; currentMarketableEquityExcludedFromCash",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "longTermMarketableEquity": {
+          "value": 4957,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Investment fair-value table / balance sheet; longTermMarketableEquity",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": []
+    },
+    "NVDA-TTM-2026-07-26": {
+      "ticker": "NVDA",
+      "periodEnd": "2026-07-26",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 24147,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-07-26; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 168,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": 24315,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Derived: period-end common shares outstanding plus period-end unvested RSUs/stock awards.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 22443.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-6 at 2026-07-26",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 56586,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Interim liquidity presentation: cash 22,443 + current marketable debt securities 34,143. Current marketable equity 42,783 is added through otherAssets, not duplicated in cash.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 33366,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Consolidated balance sheets: current debt + noncurrent debt; all lease liabilities presented are operating leases",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 98897,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Nonmarketable securities plus publicly held equity outside snapshot cash; long-term publicly held equity is separately classified in Other assets",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add 98,897 million of investment assets outside cash. The annual and interim cash presentations classify current public equity differently; the components here avoid double counting."
+        },
+        "otherClaims": {
+          "value": 0,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+        }
+      },
+      "bridgeComponents": {
+        "nonmarketableSecurities": {
+          "value": 51157,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Investment fair-value table / balance sheet; nonmarketableSecurities",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "currentMarketableEquityExcludedFromCash": {
+          "value": 42783,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Investment fair-value table / balance sheet; currentMarketableEquityExcludedFromCash",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "longTermMarketableEquity": {
+          "value": 4957,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-07-26",
+          "filedAt": "2026-08-26",
+          "accession": "0001045810-26-000075",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+          "locator": "Investment fair-value table / balance sheet; longTermMarketableEquity",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Period-end common shares plus reported unvested stock awards; all share classes included.",
+      "limitations": []
+    },
+    "TSLA-CURRENT-2025-12-31": {
+      "ticker": "TSLA",
+      "periodEnd": "2025-12-31",
+      "form": "10-K",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 3751,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2025-12-31; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": 17.012,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": null,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "A complete common-equity denominator cannot be established from this filing without resolving the conditional CEO-award overlap and remaining option/award disclosures.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 16513.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-4 at 2025-12-31",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "financeLeaseLiabilityTotal": {
+          "value": 223.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:FinanceLeaseLiability",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-4 at 2025-12-31",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 44059,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Consolidated balance sheet: cash and cash equivalents + short-term investments",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 8376,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Debt note and balance sheet: current debt and finance leases 1,640 + noncurrent 6,736; the previously used LongTermDebt tag covers only noncurrent debt",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsOutstanding": {
+          "value": 344.106,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Equity incentive plans note: year-end stock option activity table",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsWeightedAverageExercisePrice": {
+          "value": 47.58,
+          "unit": "USD per share",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Equity incentive plans note: year-end stock option activity table",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsWeightedAverageRemainingTerm": {
+          "value": 2.68,
+          "unit": "years",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Equity incentive plans note: year-end stock option activity table",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsAggregateIntrinsicValue": {
+          "value": 138380,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Equity incentive plans note: year-end stock option activity table",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 1008,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Consolidated balance sheets / digital assets note: cryptoasset fair value",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add digital assets at the base-date fair value. For June, also add the separately reported $3,007 million SpaceX investment; the annual xAI agreement was a subsequent event and is not an annual asset."
+        },
+        "otherClaims": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Noncontrolling interests plus redeemable interests are known; option/conditional CEO award reconciliation remains unresolved. See bridgeComponents.",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true,
+          "note": "A complete other-claims deduction is unavailable. Known minority interests are recorded separately, but conditional CEO awards and remaining options must be reconciled before showing a per-share value."
+        }
+      },
+      "bridgeComponents": {
+        "noncontrollingInterest": {
+          "value": 670,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Consolidated balance sheets: noncontrolling interests",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "redeemableNoncontrollingInterest": {
+          "value": 58,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Consolidated balance sheets: redeemable noncontrolling interests",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        },
+        "digitalAssets": {
+          "value": 1008,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2025-12-31",
+          "filedAt": "2026-01-29",
+          "accession": "0001628280-26-003952",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm",
+          "locator": "Digital assets note: cryptoasset fair value",
+          "sourceType": "Original 10-K financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Reported shares include issued CEO restricted stock. Do not add those shares again or carry exercised CEO options into the later period.",
+      "limitations": [
+        "Annual shares include 96 million issued CEO interim-award shares and approximately 423.7 million issued CEO performance shares. The no-double-dip provision links the 96 million shares to 2018 options; do not subtract the full annual option value while counting both conditional awards as independent claims."
+      ]
+    },
+    "TSLA-CURRENT-2026-06-30": {
+      "ticker": "TSLA",
+      "periodEnd": "2026-06-30",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 3949,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-30; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": null,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": null,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "A complete common-equity denominator cannot be established from this filing without resolving the conditional CEO-award overlap and remaining option/award disclosures.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 15219.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-3 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 43524,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheet: cash and cash equivalents + short-term investments",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 9342,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Debt note and balance sheet: current debt and finance leases 1,418 + noncurrent 7,924; the previously used LongTermDebt tag covers only noncurrent debt",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsOutstanding": {
+          "value": null,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "June equity incentive plans note does not disclose the full remaining option count after CEO exercises; annual count is obsolete",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsAggregateIntrinsicValue": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "June equity incentive plans note does not disclose a full period-end intrinsic/fair-value claim; annual amount is obsolete",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 3681,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Note 2, Fair Value of Financial Instruments: SpaceX equity investment 3,007 + digital assets 674; both outside cash and short-term investments",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add digital assets at the base-date fair value. For June, also add the separately reported $3,007 million SpaceX investment; the annual xAI agreement was a subsequent event and is not an annual asset."
+        },
+        "otherClaims": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Noncontrolling interests plus redeemable interests are known; option/conditional CEO award reconciliation remains unresolved. See bridgeComponents.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "A complete other-claims deduction is unavailable. Known minority interests are recorded separately, but conditional CEO awards and remaining options must be reconciled before showing a per-share value."
+        }
+      },
+      "bridgeComponents": {
+        "noncontrollingInterest": {
+          "value": 607,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheets: noncontrolling interests",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "redeemableNoncontrollingInterest": {
+          "value": 54,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheets: redeemable noncontrolling interests",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "digitalAssets": {
+          "value": 674,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Digital assets note: cryptoasset fair value",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "spaceXEquityInvestment": {
+          "value": 3007,
+          "unit": "USD millions",
+          "tag": "us-gaap:EquityMethodInvestmentsFairValueDisclosure",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Note 2, Fair Value of Financial Instruments: SpaceX equity investment, Level 2, 3,007; includes 238 marketability discount",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Reported shares include issued CEO restricted stock. Do not add those shares again or carry exercised CEO options into the later period.",
+      "limitations": [
+        "In Q2 the CEO exercised approximately 304 million options and net-settled about 17.5 million shares; the 96 million interim-award shares were forfeited. Remaining option and RSU totals are not fully quantified in this 10-Q. Do not carry annual counts or intrinsic value."
+      ]
+    },
+    "TSLA-TTM-2026-06-30": {
+      "ticker": "TSLA",
+      "periodEnd": "2026-06-30",
+      "form": "10-Q",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+      "facts": {
+        "periodEndShares": {
+          "value": 3949,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheet/shareholders equity statement, common shares outstanding at 2026-06-30; all classes. As-filed rounding retained.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "unvestedNonOptionAwards": {
+          "value": null,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Share-based compensation note, awards activity, end-of-period RSUs/stock awards; no grants or weighted-average EPS shares substituted.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "shares": {
+          "value": null,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "A complete common-equity denominator cannot be established from this filing without resolving the conditional CEO-award overlap and remaining option/award disclosures.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cashAndEquivalents": {
+          "value": 15219.0,
+          "unit": "USD millions",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Inline XBRL us-gaap:CashAndCashEquivalentsAtCarryingValue, context c-3 at 2026-06-30",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "cash": {
+          "value": 43524,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheet: cash and cash equivalents + short-term investments",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "debt": {
+          "value": 9342,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Debt note and balance sheet: current debt and finance leases 1,418 + noncurrent 7,924; the previously used LongTermDebt tag covers only noncurrent debt",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsOutstanding": {
+          "value": null,
+          "unit": "millions of shares",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "June equity incentive plans note does not disclose the full remaining option count after CEO exercises; annual count is obsolete",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "optionsAggregateIntrinsicValue": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "June equity incentive plans note does not disclose a full period-end intrinsic/fair-value claim; annual amount is obsolete",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "caseAssumptions": {
+        "otherAssets": {
+          "value": 3681,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Note 2, Fair Value of Financial Instruments: SpaceX equity investment 3,007 + digital assets 674; both outside cash and short-term investments",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "Add digital assets at the base-date fair value. For June, also add the separately reported $3,007 million SpaceX investment; the annual xAI agreement was a subsequent event and is not an annual asset."
+        },
+        "otherClaims": {
+          "value": null,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Noncontrolling interests plus redeemable interests are known; option/conditional CEO award reconciliation remains unresolved. See bridgeComponents.",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true,
+          "note": "A complete other-claims deduction is unavailable. Known minority interests are recorded separately, but conditional CEO awards and remaining options must be reconciled before showing a per-share value."
+        }
+      },
+      "bridgeComponents": {
+        "noncontrollingInterest": {
+          "value": 607,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheets: noncontrolling interests",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "redeemableNoncontrollingInterest": {
+          "value": 54,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Consolidated balance sheets: redeemable noncontrolling interests",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "digitalAssets": {
+          "value": 674,
+          "unit": "USD millions",
+          "tag": "filing:manuallyVerified",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Digital assets note: cryptoasset fair value",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        },
+        "spaceXEquityInvestment": {
+          "value": 3007,
+          "unit": "USD millions",
+          "tag": "us-gaap:EquityMethodInvestmentsFairValueDisclosure",
+          "periodEnd": "2026-06-30",
+          "filedAt": "2026-07-23",
+          "accession": "0001628280-26-049270",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+          "locator": "Note 2, Fair Value of Financial Instruments: SpaceX equity investment, Level 2, 3,007; includes 238 marketability discount",
+          "sourceType": "Original 10-Q financial statements",
+          "originalDocumentVerified": true
+        }
+      },
+      "shareBasis": "Reported shares include issued CEO restricted stock. Do not add those shares again or carry exercised CEO options into the later period.",
+      "limitations": [
+        "In Q2 the CEO exercised approximately 304 million options and net-settled about 17.5 million shares; the 96 million interim-award shares were forfeited. Remaining option and RSU totals are not fully quantified in this 10-Q. Do not carry annual counts or intrinsic value."
+      ]
+    }
+  },
+  "localizationPairs": {
+    "Period-end common shares plus reported unvested stock awards; all share classes included.": "\u671f\u672b\u666e\u901a\u80a1\u80a1\u6570\u52a0\u62a5\u544a\u7684\u672a\u5f52\u5c5e\u80a1\u7968\u5956\u52b1\uff0c\u5305\u542b\u5168\u90e8\u80a1\u4efd\u7c7b\u522b\u3002",
+    "Add 77,723 million of noncurrent marketable securities at this base date; current investments are already included in cash.": "\u52a0\u56de\u672c\u57fa\u51c6\u65e5\u7684\u975e\u6d41\u52a8\u6709\u4ef7\u8bc1\u523877,723\u767e\u4e07\u7f8e\u5143\uff1b\u6d41\u52a8\u6295\u8d44\u5df2\u5305\u542b\u4e8e\u73b0\u91d1\u3002",
+    "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment.": "\u6240\u5ba1\u9605\u6743\u76ca\u53ca\u5956\u52b1\u9644\u6ce8\u4e2d\u672a\u53d1\u73b0\u5355\u72ec\u91cf\u5316\u7684\u989d\u5916\u6743\u5229\uff1b\u62a5\u544a\u7684\u80a1\u7968\u5956\u52b1\u5df2\u8ba1\u5165\u80a1\u6570\u3002\u8fd9\u662f\u8303\u56f4\u6709\u9650\u7684\u7533\u62a5\u6570\u636e\u6865\u63a5\uff0c\u5e76\u975e\u5bf9\u6240\u6709\u8bc9\u8bbc\u6216\u672a\u6765\u5408\u540c\u627f\u8bfa\u7684\u4f30\u503c\u3002",
+    "June finance-lease liability is not disclosed. The annual $1,230 million amount is not a June fact; complete debt remains unknown.": "\u516d\u6708\u878d\u8d44\u79df\u8d41\u8d1f\u503a\u672a\u62ab\u9732\u3002\u5e74\u5ea6\u91d1\u989d12.30\u4ebf\u7f8e\u5143\u5e76\u975e\u516d\u6708\u6570\u636e\uff0c\u5b8c\u6574\u503a\u52a1\u4ecd\u672a\u77e5\u3002",
+    "Add 84,118 million of noncurrent marketable securities at this base date; current investments are already included in cash.": "\u52a0\u56de\u672c\u57fa\u51c6\u65e5\u7684\u975e\u6d41\u52a8\u6709\u4ef7\u8bc1\u523884,118\u767e\u4e07\u7f8e\u5143\uff1b\u6d41\u52a8\u6295\u8d44\u5df2\u5305\u542b\u4e8e\u73b0\u91d1\u3002",
+    "Add the period-end $36,348 million investment balance once; cash already includes short-term investments.": "\u671f\u672b\u6295\u8d44\u4f59\u989d36,348\u767e\u4e07\u7f8e\u5143\u4ec5\u52a0\u56de\u4e00\u6b21\uff0c\u77ed\u671f\u6295\u8d44\u5df2\u5305\u542b\u4e8e\u73b0\u91d1\u3002",
+    "Add 65,359 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding.": "\u52a0\u56de\u62a5\u544a\u7684\u975e\u4e0a\u5e02\u6295\u8d44\u8d44\u4ea765,359\u767e\u4e07\u7f8e\u5143\u3002Anthropic\u4f18\u5148\u80a1\u5df2\u8ba1\u5165\u79c1\u52df\u80a1\u6743\uff0c\u4e0d\u5f97\u91cd\u590d\u52a0\u56de\u3002\u4ee5\u5341\u4ebf\u7f8e\u5143\u62ab\u9732\u7684\u91d1\u989d\u4fdd\u7559\u539f\u6709\u7cbe\u5ea6\u3002",
+    "Add 224,895 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding.": "\u52a0\u56de\u62a5\u544a\u7684\u975e\u4e0a\u5e02\u6295\u8d44\u8d44\u4ea7224,895\u767e\u4e07\u7f8e\u5143\u3002Anthropic\u4f18\u5148\u80a1\u5df2\u8ba1\u5165\u79c1\u52df\u80a1\u6743\uff0c\u4e0d\u5f97\u91cd\u590d\u52a0\u56de\u3002\u4ee5\u5341\u4ebf\u7f8e\u5143\u62ab\u9732\u7684\u91d1\u989d\u4fdd\u7559\u539f\u6709\u7cbe\u5ea6\u3002",
+    "The $21.3 billion OpenAI commitment paid after June is not a June cash deduction or a second June investment asset. Undrawn Anthropic capacity is a future funding commitment.": "\u516d\u6708\u4e4b\u540e\u652f\u4ed8\u7684213\u4ebf\u7f8e\u5143OpenAI\u6295\u8d44\u627f\u8bfa\u65e2\u4e0d\u4ece\u516d\u6708\u73b0\u91d1\u6263\u9664\uff0c\u4e5f\u4e0d\u4f5c\u4e3a\u7b2c\u4e8c\u7b14\u516d\u6708\u6295\u8d44\u8d44\u4ea7\u52a0\u56de\u3002\u672a\u63d0\u7528\u7684Anthropic\u989d\u5ea6\u5c5e\u4e8e\u672a\u6765\u878d\u8d44\u627f\u8bfa\u3002",
+    "June finance-lease assets and principal payments are disclosed, but the liability balance is not. Neither assets nor payments establish an exact liability; complete debt remains unknown.": "\u516d\u6708\u62ab\u9732\u4e86\u878d\u8d44\u79df\u8d41\u8d44\u4ea7\u53ca\u672c\u91d1\u652f\u4ed8\uff0c\u4f46\u672a\u62ab\u9732\u8d1f\u503a\u4f59\u989d\u3002\u8d44\u4ea7\u53ca\u652f\u4ed8\u91d1\u989d\u5747\u65e0\u6cd5\u786e\u5b9a\u51c6\u786e\u8d1f\u503a\uff0c\u5b8c\u6574\u503a\u52a1\u4ecd\u672a\u77e5\u3002",
+    "Add 27,091 million of investment assets outside cash. The annual and interim cash presentations classify current public equity differently; the components here avoid double counting.": "\u52a0\u56de\u73b0\u91d1\u4e4b\u5916\u7684\u6295\u8d44\u8d44\u4ea727,091\u767e\u4e07\u7f8e\u5143\u3002\u5e74\u5ea6\u53ca\u4e2d\u671f\u73b0\u91d1\u62ab\u9732\u5bf9\u6d41\u52a8\u4e0a\u5e02\u80a1\u6743\u7684\u5206\u7c7b\u4e0d\u540c\uff0c\u6b64\u5904\u5404\u7ec4\u6210\u90e8\u5206\u907f\u514d\u91cd\u590d\u8ba1\u5165\u3002",
+    "Add 98,897 million of investment assets outside cash. The annual and interim cash presentations classify current public equity differently; the components here avoid double counting.": "\u52a0\u56de\u73b0\u91d1\u4e4b\u5916\u7684\u6295\u8d44\u8d44\u4ea798,897\u767e\u4e07\u7f8e\u5143\u3002\u5e74\u5ea6\u53ca\u4e2d\u671f\u73b0\u91d1\u62ab\u9732\u5bf9\u6d41\u52a8\u4e0a\u5e02\u80a1\u6743\u7684\u5206\u7c7b\u4e0d\u540c\uff0c\u6b64\u5904\u5404\u7ec4\u6210\u90e8\u5206\u907f\u514d\u91cd\u590d\u8ba1\u5165\u3002",
+    "Reported shares include issued CEO restricted stock. Do not add those shares again or carry exercised CEO options into the later period.": "\u62a5\u544a\u80a1\u6570\u5df2\u5305\u542b\u53d1\u884c\u7684\u9996\u5e2d\u6267\u884c\u5b98\u9650\u5236\u6027\u80a1\u7968\uff0c\u4e0d\u5f97\u518d\u6b21\u52a0\u56de\uff0c\u4e5f\u4e0d\u5f97\u5c06\u5df2\u884c\u6743\u7684\u9996\u5e2d\u6267\u884c\u5b98\u671f\u6743\u6cbf\u7528\u81f3\u4e4b\u540e\u671f\u95f4\u3002",
+    "Annual shares include 96 million issued CEO interim-award shares and approximately 423.7 million issued CEO performance shares. The no-double-dip provision links the 96 million shares to 2018 options; do not subtract the full annual option value while counting both conditional awards as independent claims.": "\u5e74\u5ea6\u80a1\u6570\u5305\u542b\u5df2\u53d1\u884c\u76849,600\u4e07\u80a1\u9996\u5e2d\u6267\u884c\u5b98\u4e34\u65f6\u5956\u52b1\u53ca\u7ea64.237\u4ebf\u80a1\u7ee9\u6548\u5956\u52b1\u3002\u201c\u4e0d\u5f97\u53cc\u91cd\u83b7\u76ca\u201d\u6761\u6b3e\u5c069,600\u4e07\u80a1\u4e0e2018\u5e74\u671f\u6743\u6302\u94a9\uff0c\u4e0d\u80fd\u5c06\u4e24\u9879\u6709\u6761\u4ef6\u5956\u52b1\u89c6\u4e3a\u72ec\u7acb\u6743\u5229\u540c\u65f6\u8ba1\u5165\u80a1\u6570\u5e76\u6263\u9664\u5b8c\u6574\u671f\u6743\u4ef7\u503c\u3002",
+    "A complete other-claims deduction is unavailable. Known minority interests are recorded separately, but conditional CEO awards and remaining options must be reconciled before showing a per-share value.": "\u5b8c\u6574\u7684\u5176\u4ed6\u6743\u5229\u6263\u51cf\u91d1\u989d\u4e0d\u53ef\u7528\u3002\u5df2\u5355\u72ec\u8bb0\u5f55\u5df2\u77e5\u5c11\u6570\u80a1\u4e1c\u6743\u76ca\uff0c\u4f46\u987b\u5148\u6838\u5bf9\u6709\u6761\u4ef6\u7684\u9996\u5e2d\u6267\u884c\u5b98\u5956\u52b1\u53ca\u5269\u4f59\u671f\u6743\uff0c\u624d\u80fd\u663e\u793a\u6bcf\u80a1\u4ef7\u503c\u3002",
+    "In Q2 the CEO exercised approximately 304 million options and net-settled about 17.5 million shares; the 96 million interim-award shares were forfeited. Remaining option and RSU totals are not fully quantified in this 10-Q. Do not carry annual counts or intrinsic value.": "\u7b2c\u4e8c\u5b63\u5ea6\u9996\u5e2d\u6267\u884c\u5b98\u884c\u6743\u7ea63.04\u4ebf\u4efd\u671f\u6743\uff0c\u5e76\u51c0\u989d\u7ed3\u7b97\u7ea61,750\u4e07\u80a1\uff1b9,600\u4e07\u80a1\u4e34\u65f6\u5956\u52b1\u5df2\u88ab\u6ca1\u6536\u3002\u672c10-Q\u672a\u5b8c\u6574\u91cf\u5316\u5269\u4f59\u671f\u6743\u53ca\u9650\u5236\u6027\u80a1\u7968\u5355\u4f4d\u603b\u989d\uff0c\u4e0d\u5f97\u6cbf\u7528\u5e74\u5ea6\u6570\u91cf\u6216\u5185\u5728\u4ef7\u503c\u3002",
+    "Add digital assets at the base-date fair value. For June, also add the separately reported $3,007 million SpaceX investment; the annual xAI agreement was a subsequent event and is not an annual asset.": "\u6309\u57fa\u51c6\u65e5\u516c\u5141\u4ef7\u503c\u52a0\u56de\u6570\u5b57\u8d44\u4ea7\u3002\u516d\u6708\u53e6\u52a0\u56de\u5355\u72ec\u62a5\u544a\u76843,007\u767e\u4e07\u7f8e\u5143SpaceX\u6295\u8d44\uff1b\u5e74\u5ea6xAI\u534f\u8bae\u5c5e\u4e8e\u671f\u540e\u4e8b\u9879\uff0c\u4e0d\u662f\u5e74\u5ea6\u8d44\u4ea7\u3002",
+    "Add 27,524 million of nonmarketable equity investments. Publicly traded equity is already included in cash plus current marketable securities and is not added again.": "\u52a0\u56de\u975e\u4e0a\u5e02\u80a1\u6743\u6295\u8d4427,524\u767e\u4e07\u7f8e\u5143\u3002\u4e0a\u5e02\u80a1\u6743\u5df2\u5305\u542b\u4e8e\u73b0\u91d1\u53ca\u6d41\u52a8\u6709\u4ef7\u8bc1\u5238\uff0c\u4e0d\u518d\u91cd\u590d\u52a0\u56de\u3002",
+    "Add 30,157 million of nonmarketable equity investments. Publicly traded equity is already included in cash plus current marketable securities and is not added again.": "\u52a0\u56de\u975e\u4e0a\u5e02\u80a1\u6743\u6295\u8d4430,157\u767e\u4e07\u7f8e\u5143\u3002\u4e0a\u5e02\u80a1\u6743\u5df2\u5305\u542b\u4e8e\u73b0\u91d1\u53ca\u6d41\u52a8\u6709\u4ef7\u8bc1\u5238\uff0c\u4e0d\u518d\u91cd\u590d\u52a0\u56de\u3002"
+  },
+  "scope": "Six original companies: period-matched equity bridge and claims, based on original filed annual/interim documents. This supplement does not assert exhaustive litigation or contingent-claim valuation.",
+  "filingChecks": {
+    "AAPL": {
+      "annual": {
+        "periodEnd": "2025-09-27",
+        "filedAt": "2025-10-31",
+        "accession": "0000320193-25-000079",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+      },
+      "interim": {
+        "periodEnd": "2026-06-27",
+        "filedAt": "2026-07-31",
+        "accession": "0000320193-26-000020",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm"
+      },
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "note": "Submissions cache freshly retrieved by original-filings researcher for this same cutoff; financial documents independently read for this supplement."
+    },
+    "MSFT": {
+      "annual": {
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-07-29",
+        "accession": "0001193125-26-323660",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+      },
+      "interim": {
+        "periodEnd": "2026-03-31",
+        "filedAt": "2026-04-29",
+        "accession": "0001193125-26-191507",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm"
+      },
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "note": "Submissions cache freshly retrieved by original-filings researcher for this same cutoff; financial documents independently read for this supplement."
+    },
+    "AMZN": {
+      "annual": {
+        "periodEnd": "2025-12-31",
+        "filedAt": "2026-02-06",
+        "accession": "0001018724-26-000004",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm"
+      },
+      "interim": {
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-07-31",
+        "accession": "0001018724-26-000026",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+      },
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "note": "Submissions cache freshly retrieved by original-filings researcher for this same cutoff; financial documents independently read for this supplement."
+    },
+    "META": {
+      "annual": {
+        "periodEnd": "2025-12-31",
+        "filedAt": "2026-01-29",
+        "accession": "0001628280-26-003942",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+      },
+      "interim": {
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-07-30",
+        "accession": "0001628280-26-050705",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+      },
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
+      "note": "Submissions cache freshly retrieved by original-filings researcher for this same cutoff; financial documents independently read for this supplement."
+    },
+    "NVDA": {
+      "annual": {
+        "periodEnd": "2026-01-25",
+        "filedAt": "2026-02-25",
+        "accession": "0001045810-26-000021",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+      },
+      "interim": {
+        "periodEnd": "2026-07-26",
+        "filedAt": "2026-08-26",
+        "accession": "0001045810-26-000075",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+      },
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001045810.json",
+      "note": "Submissions cache freshly retrieved by original-filings researcher for this same cutoff; financial documents independently read for this supplement."
+    },
+    "TSLA": {
+      "annual": {
+        "periodEnd": "2025-12-31",
+        "filedAt": "2026-01-29",
+        "accession": "0001628280-26-003952",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm"
+      },
+      "interim": {
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-07-23",
+        "accession": "0001628280-26-049270",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm"
+      },
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001318605.json",
+      "note": "Submissions cache freshly retrieved by original-filings researcher for this same cutoff; financial documents independently read for this supplement."
+    }
+  }
+}

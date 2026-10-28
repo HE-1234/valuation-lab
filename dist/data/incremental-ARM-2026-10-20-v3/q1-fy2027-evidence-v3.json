@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "ticker": "ARM",
+  "form": "6-K",
+  "accession": "0001973239-26-000114",
+  "period": "Q1 FY2027 (April 1–June 30, 2026)",
+  "periodEnd": "2026-06-30",
+  "filingDate": "2026-07-29",
+  "acceptedAt": "2026-07-29T20:05:46.000Z",
+  "documentUrl": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+  "xbrlInstanceUrl": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630_htm.xml",
+  "retrieved": "2026-10-20",
+  "operating": [
+    {
+      "id": "revenue",
+      "label": "Total revenue",
+      "value": 1289,
+      "unit": "USD millions",
+      "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context": "2026-04-01..2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "royalty",
+      "label": "Royalty revenue",
+      "value": 715,
+      "unit": "USD millions",
+      "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context": "2026-04-01..2026-06-30; srt:ProductOrServiceAxis=us-gaap:RoyaltyMember",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "license",
+      "label": "License and other revenue",
+      "value": 574,
+      "unit": "USD millions",
+      "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context": "2026-04-01..2026-06-30; srt:ProductOrServiceAxis=arm:LicenseAndOtherRevenueMember",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "silicon",
+      "label": "Production silicon revenue",
+      "value": 0,
+      "unit": "USD millions",
+      "tag": "derived",
+      "context": "Total revenue equals royalty plus license and other; no product revenue line",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "classification": "derived zero, not a separately tagged fact"
+    },
+    {
+      "id": "operatingIncome",
+      "label": "Income (loss) from operations",
+      "value": 91,
+      "unit": "USD millions",
+      "tag": "us-gaap:OperatingIncomeLoss",
+      "context": "2026-04-01..2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "ppeCapex",
+      "label": "Purchases of property and equipment",
+      "value": 197,
+      "unit": "USD millions",
+      "tag": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+      "context": "2026-04-01..2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "intangibleCapex",
+      "label": "Purchases of intangible assets",
+      "value": 11,
+      "unit": "USD millions",
+      "tag": "us-gaap:PaymentsToAcquireIntangibleAssets",
+      "context": "2026-04-01..2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "depreciationAmortization",
+      "label": "Depreciation and amortization",
+      "value": 75,
+      "unit": "USD millions",
+      "tag": "us-gaap:DepreciationDepletionAndAmortization",
+      "context": "2026-04-01..2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "priorYearQ1Revenue",
+      "label": "Q1 FY2026 total revenue (comparative)",
+      "value": 1053,
+      "unit": "USD millions",
+      "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context": "2025-04-01..2025-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    }
+  ],
+  "workingCapital": [
+    {
+      "id": "receivablesJun",
+      "label": "Accounts receivable, net",
+      "value": 1119,
+      "unit": "USD millions",
+      "tag": "us-gaap:AccountsReceivableNetCurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "receivablesMar",
+      "label": "Accounts receivable, net",
+      "value": 1300,
+      "unit": "USD millions",
+      "tag": "us-gaap:AccountsReceivableNetCurrent",
+      "context": "2026-03-31",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractAssetsJun",
+      "label": "Contract assets, current",
+      "value": 881,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerAssetNetCurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractAssetsMar",
+      "label": "Contract assets, current",
+      "value": 977,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerAssetNetCurrent",
+      "context": "2026-03-31",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractAssetsNoncurrentJun",
+      "label": "Contract assets, non-current",
+      "value": 366,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerAssetNetNoncurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractAssetsNoncurrentMar",
+      "label": "Contract assets, non-current",
+      "value": 320,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerAssetNetNoncurrent",
+      "context": "2026-03-31",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractLiabilitiesJun",
+      "label": "Contract liabilities, current",
+      "value": 200,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerLiabilityCurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractLiabilitiesMar",
+      "label": "Contract liabilities, current",
+      "value": 294,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerLiabilityCurrent",
+      "context": "2026-03-31",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractLiabilitiesNoncurrentJun",
+      "label": "Contract liabilities, non-current",
+      "value": 739,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerLiabilityNoncurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "contractLiabilitiesNoncurrentMar",
+      "label": "Contract liabilities, non-current",
+      "value": 752,
+      "unit": "USD millions",
+      "tag": "us-gaap:ContractWithCustomerLiabilityNoncurrent",
+      "context": "2026-03-31",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    }
+  ],
+  "capital": [
+    {
+      "id": "cash",
+      "label": "Cash and cash equivalents",
+      "value": 3058,
+      "unit": "USD millions",
+      "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "shortTermInvestments",
+      "label": "Short-term investments",
+      "value": 830,
+      "unit": "USD millions",
+      "tag": "balance sheet line",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "locator": "Condensed Consolidated Balance Sheets"
+    },
+    {
+      "id": "financeLeaseCurrent",
+      "label": "Finance lease liabilities, current",
+      "value": 21,
+      "unit": "USD millions",
+      "tag": "us-gaap:FinanceLeaseLiabilityCurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "locator": "Other current liabilities note"
+    },
+    {
+      "id": "otherNoncurrentLiabilitiesExEda",
+      "label": "Other non-current liabilities excluding EDA",
+      "value": 49,
+      "unit": "USD millions",
+      "tag": "balance sheet note",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "locator": "Other non-current liabilities note; includes the undisclosed non-current finance lease portion"
+    },
+    {
+      "id": "edaCurrent",
+      "label": "Electronic design automation liabilities, current",
+      "value": 56,
+      "unit": "USD millions",
+      "tag": "arm:ElectronicDesignAutomationLiabilitiesCurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "edaNoncurrent",
+      "label": "Electronic design automation liabilities, non-current",
+      "value": 92,
+      "unit": "USD millions",
+      "tag": "arm:ElectronicDesignAutomationLiabilitiesNoncurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "equityInvestments",
+      "label": "Equity investments",
+      "value": 589,
+      "unit": "USD millions",
+      "tag": "balance sheet line",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "locator": "Condensed Consolidated Balance Sheets"
+    },
+    {
+      "id": "quotedEquityInvestments",
+      "label": "Publicly listed equity securities (fair value)",
+      "value": 290,
+      "unit": "USD millions",
+      "tag": "us-gaap:EquitySecuritiesFvNiCurrentAndNoncurrent",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm"
+    },
+    {
+      "id": "dreamBig",
+      "label": "DreamBig acquisition cash consideration (closed July 1, 2026)",
+      "value": 265,
+      "unit": "USD millions",
+      "tag": "Note 16 – Subsequent Events",
+      "context": "2026-07-01",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "classification": "subsequent event; approximately $265.0m subject to adjustments"
+    },
+    {
+      "id": "ordinaryShares",
+      "label": "Ordinary shares issued and outstanding",
+      "value": 1068,
+      "unit": "million shares",
+      "tag": "us-gaap:CommonStockSharesOutstanding",
+      "context": "2026-06-30",
+      "source": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000114/arm-20260630.htm",
+      "decimals": -6,
+      "classification": "Reported rounded to the nearest million; no exact June 30 count is filed. Precision is about ±0.5 million shares (±0.05%)."
+    }
+  ],
+  "derived": {
+    "netCapex": {
+      "value": 133,
+      "formula": "PPE purchases + intangible purchases − depreciation and amortization"
+    },
+    "modelWorkingCapitalChange": {
+      "value": -124,
+      "formula": "Δ(receivables + current and non-current contract assets − current and non-current contract liabilities), March 31 to June 30",
+      "june": 1427,
+      "march": 1551
+    },
+    "cashAndShortInvestments": {
+      "value": 3888,
+      "formula": "cash and cash equivalents + short-term investments"
+    },
+    "financeLeaseConservativeBound": {
+      "value": 70,
+      "formula": "reported current finance lease + all other non-current liabilities excluding EDA (the non-current lease portion is not separately disclosed)",
+      "classification": "conservative upper bound, not the reported total"
+    },
+    "edaObligations": {
+      "value": 148,
+      "formula": "current + non-current EDA liabilities"
+    },
+    "ttmRevenue": {
+      "value": 5156,
+      "formula": "FY2026 revenue 4,920 − Q1 FY2026 1,053 + Q1 FY2027 1,289"
+    },
+    "minimumOperatingCash": {
+      "value": 257.8,
+      "formula": "5% × trailing-twelve-month revenue (same 5% analyst ratio as v2)"
+    }
+  }
+}

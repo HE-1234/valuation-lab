@@ -1,0 +1,273 @@
+{
+ "ticker": "MCD",
+ "name": "McDonald's Corporation",
+ "cik": "0000063908",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "ordinary-common",
+ "adrRatio": 1,
+ "listedUnit": "common share",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2025-12-31",
+   "label": "FY2025",
+   "form": "10-K",
+   "accession": "0000063908-26-000035",
+   "filedAt": "2026-02-24",
+   "acceptedAt": "2026-02-24T16:12:45.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+   "revenue": 26885,
+   "operatingIncome": 12393,
+   "ttmComponents": null,
+   "cashAndEquivalents": 774,
+   "shortTermInvestments": 0,
+   "longTermInvestments": 2820,
+   "debtCurrent": 23,
+   "debtNoncurrent": 42302,
+   "operatingLeaseLiabilities": 12488,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 710.398642,
+   "sharesDate": "2026-01-31",
+   "unvestedRSUs": 1.164094,
+   "options": {
+    "count": 8.782269,
+    "weightedExercisePrice": 228.19,
+    "weightedRemainingYears": 5.3,
+    "aggregateIntrinsicValue": 682.0
+   },
+   "convertibles": [],
+   "otherClaims": [],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Statement of Income, Total revenues, year ended Dec 31 2025",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Statement of Income, Operating income, year ended Dec 31 2025 (after 229 impairment and other charges, 190 equity-method earnings is inside Other operating income)",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Balance Sheet, Cash and equivalents at Dec 31 2025",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Balance Sheet: no short-term investments or marketable securities line"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Balance Sheet, Other assets: Investments in and advances to affiliates 2,820 (equity-method investees, mainly China/Japan; equity earnings 190 are inside operating income)",
+     "tag": "us-gaap:InvestmentsInAffiliatesSubsidiariesAssociatesAndJointVentures"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Leasing Arrangements footnote, table of operating and finance leases at Dec 31 2025: current finance lease liability 23 (included in balance-sheet Lease liability 694); no current debt line - Debt Financing footnote: 798 commercial paper/short-term borrowings and 725 current maturities are classified in Long-term debt because supported by the credit line expiring June 2028",
+     "tag": "us-gaap:FinanceLeaseLiabilityCurrent"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Balance Sheet Long-term debt 39,973 (Debt Financing footnote Total debt obligations 39,973) + long-term finance lease liability 2,329 (Leasing Arrangements footnote; included in balance-sheet Long-term lease liability 14,147) = 42,302",
+     "tag": "us-gaap:LongTermDebtNoncurrent + us-gaap:FinanceLeaseLiabilityNoncurrent"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Leasing Arrangements footnote: operating current 671 + long-term 11,817 = 12,488 (maturity table present value of operating lease liability 12,488)",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Balance Sheet: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Balance Sheet: preferred stock, 165.0 million authorized, issued none"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Cover page: 710,398,642 shares outstanding as of January 31, 2026 (31 days after year end). Balance sheet implies 1,660.6 issued - 950.0 treasury = 710.6 million at Dec 31 2025 (rounded to 0.1M)",
+     "tag": "dei:EntityCommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Item 12 Equity compensation plan information, footnote (1): 1,164,094 restricted stock units outstanding at Dec 31 2025 (RSU activity table shows nonvested 1.2 million); includes performance-based RSUs"
+    },
+    "options.count": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Item 12 footnote (1): 8,782,269 stock options outstanding; Share-based Compensation note stock option table: outstanding at end of 2025 8.8M, weighted-average exercise price $228.19, remaining life 5.3 years, aggregate intrinsic value $682M; Item 12 table shows a different weighted exercise price of $236.04 that blends options and RSUs (RSUs have no strike)"
+    }
+   },
+   "note": "All values from the FY2025 10-K. Debt = Long-term debt 39,973 (already includes 798 commercial paper/short-term borrowings and 725 current maturities that the filing classifies as long-term under the June 2028 credit line) plus finance lease liabilities 2,352 (current 23, noncurrent 2,329) from the lease footnote; operating lease liabilities 12,488 are recorded separately and not in debt. longTermInvestments is the equity-method carrying amount 2,820 per the schema, but MCD's equity-method earnings (190 in 2025) sit inside reported operating income, so adding it to equity value double counts unless equity earnings are removed from EBIT (the reviewed package deliberately does not add it). Shares are the exact cover-page count at 2026-01-31; no material issuance/buyback gap. Unvested RSUs 1.164M and options 8.782M use the exact Item 12 counts."
+  },
+  "ttm": {
+   "periodEnd": "2026-06-30",
+   "label": "TTM through 2026-06-30",
+   "form": "10-Q",
+   "accession": "0000063908-26-000073",
+   "filedAt": "2026-08-07",
+   "acceptedAt": "2026-08-07T16:52:32.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+   "revenue": 27702,
+   "operatingIncome": 12805,
+   "ttmComponents": {
+    "annualRevenue": 26885,
+    "ytdRevenue": 13616,
+    "priorYtdRevenue": 12799,
+    "annualOperatingIncome": 12393,
+    "ytdOperatingIncome": 6292,
+    "priorYtdOperatingIncome": 5880,
+    "ytdStart": "2026-01-01",
+    "ytdEnd": "2026-06-30",
+    "priorYtdStart": "2025-01-01",
+    "priorYtdEnd": "2025-06-30"
+   },
+   "cashAndEquivalents": 822,
+   "shortTermInvestments": 0,
+   "longTermInvestments": 2896,
+   "debtCurrent": 23,
+   "debtNoncurrent": 42192,
+   "operatingLeaseLiabilities": 12377,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 707.641531,
+   "sharesDate": "2026-06-30",
+   "unvestedRSUs": 1.164094,
+   "options": {
+    "count": 8.782269,
+    "weightedExercisePrice": 228.19,
+    "weightedRemainingYears": 5.3,
+    "aggregateIntrinsicValue": 682.0
+   },
+   "convertibles": [],
+   "otherClaims": [],
+   "carriedFrom": {
+    "debtCurrent": {
+     "date": "2025-12-31",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "why": "The 10-Q reports only total lease liability (690 current + 14,039 noncurrent = 14,729); the finance/operating split is disclosed only in the 10-K lease footnote. Finance lease current 23 carried from Dec 31 2025."
+    },
+    "debtNoncurrent": {
+     "date": "2025-12-31",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "why": "Long-term debt 39,863 is from the Jun 30 2026 balance sheet; the added finance lease noncurrent 2,329 is carried from the Dec 31 2025 lease footnote because the 10-Q has no split."
+    },
+    "operatingLeaseLiabilities": {
+     "date": "2025-12-31",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "why": "Derived as June total lease liability 14,729 minus carried Dec 31 2025 finance lease liability 2,352 = 12,377; the 10-Q does not split operating vs finance. Treat as approximate (finance leases grew in 2025 by new leases of 468 ROU assets)."
+    },
+    "unvestedRSUs": {
+     "date": "2025-12-31",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "why": "10-Q has no RSU table; latest disclosure is the FY2025 10-K Item 12 (1,164,094)."
+    },
+    "options": {
+     "date": "2025-12-31",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "why": "10-Q has no option table; latest disclosure is the FY2025 10-K (8,782,269 options; strike 228.19; 5.3 yrs; intrinsic 682 at the Dec 31 2025 price, stale)."
+    }
+   },
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "TTM = FY2025 total revenues 26,885 (10-K) + six months ended Jun 30 2026 13,616 - six months ended Jun 30 2025 12,799 (Condensed Consolidated Statement of Income)",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "TTM = FY2025 operating income 12,393 + six months 2026 6,292 - six months 2025 5,880 (Condensed Consolidated Statement of Income)",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "ttmComponents.annualRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Statement of Income FY2025 total revenues 26,885"
+    },
+    "ttmComponents.ytdRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Statement of Income, Total revenues, Six Months Ended June 30, 2026: 13,616"
+    },
+    "ttmComponents.priorYtdRevenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Statement of Income, Total revenues, Six Months Ended June 30, 2025: 12,799"
+    },
+    "ttmComponents.annualOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "Consolidated Statement of Income FY2025 operating income 12,393"
+    },
+    "ttmComponents.ytdOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Statement of Income, Operating income, Six Months Ended June 30, 2026: 6,292"
+    },
+    "ttmComponents.priorYtdOperatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Statement of Income, Operating income, Six Months Ended June 30, 2025: 5,880"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheet, Cash and equivalents at June 30 2026",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheet: no short-term investments line"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheet, Other assets: Investments in affiliates 2,896 at June 30 2026 (equity-method; earnings inside operating income)",
+     "tag": "us-gaap:InvestmentsInAffiliatesSubsidiariesAssociatesAndJointVentures"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "FY2025 10-K lease footnote finance lease current 23 (carried; see carriedFrom). June 30 2026 balance sheet has no current debt line."
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheet, Long-term debt at June 30 2026: 39,863 (fair value about 38.3 billion per Fair Value note) + 2,329 finance lease noncurrent carried from 10-K",
+     "tag": "us-gaap:LongTermDebtNoncurrent"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheet: Lease liability 690 + Long-term lease liability 14,039 = 14,729 total, less 2,352 finance leases carried from the 10-K lease footnote"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheet: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Condensed Consolidated Balance Sheet: preferred stock issued none"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000073/mcd-20260630.htm",
+     "locator": "Cover page: 707,641,531 shares of common stock outstanding as of June 30, 2026",
+     "tag": "dei:EntityCommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "carried: FY2025 10-K Item 12 footnote (1)"
+    },
+    "options.count": {
+     "url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/mcd-20251231.htm",
+     "locator": "carried: FY2025 10-K Share-based Compensation note stock option table and Item 12 footnote (1)"
+    }
+   },
+   "note": "TTM = FY2025 + H1 2026 - H1 2025; balance sheet and shares at 2026-06-30 from the Q2 10-Q (filed 2026-08-07); no Q3 10-Q filed by 2026-10-21. Long-term debt 39,863 is as reported (includes short-term/commercial paper supported by the long-term credit line). Finance lease split is NOT disclosed in the 10-Q, so finance leases (2,352 at Dec 31 2025) are carried into debt and deducted from the June total lease liability 14,729 to get operating leases 12,377; if a user prefers strictly reported figures use debt 39,863 and operating+finance leases 14,729. Equity-method investment 2,896 is included per schema but equity earnings (98 in H1 2026) are inside operating income, so adding it double counts unless EBIT is adjusted. Operating income H1 2026 includes net other operating income of 106. Awards carried from 10-K."
+  }
+ },
+ "notes": [
+  "Source: FY2025 10-K and Q2 2026 10-Q text read from sec.gov and cross-checked to XBRL companyfacts (long-term debt, finance lease liabilities, affiliates, exact shares).",
+  "Reviewed package incremental-MCD-2026-10-19-v2 (latest-half-v2.json, capital-claims-scope-v2.json) agrees on all June figures; it also records that no June finance/operating lease split is available.",
+  "No convertible debt, warrants or preferred stock. Options exist (8.78M, strike 228.19)."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0000063908.json",
+  "latestPeriodicAccession": "0000063908-26-000073",
+  "latestAnnualAccession": "0000063908-26-000035"
+ }
+}

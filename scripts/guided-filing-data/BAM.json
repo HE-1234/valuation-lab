@@ -1,0 +1,210 @@
+{
+  "ticker": "BAM",
+  "name": "Brookfield Asset Management Ltd.",
+  "cik": "0001937926",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "Class A limited voting share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "10-K",
+      "accession": "0001628280-26-013098",
+      "filedAt": "2026-03-02",
+      "acceptedAt": "2026-03-02T22:31:17.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+      "revenue": 4817,
+      "operatingIncome": 2888,
+      "cashAndEquivalents": 1583,
+      "shortTermInvestments": null,
+      "longTermInvestments": 9795,
+      "debtCurrent": null,
+      "debtNoncurrent": null,
+      "operatingLeaseLiabilities": null,
+      "noncontrollingInterest": 2192,
+      "preferredEquity": 0,
+      "sharesOutstanding": 1608.513922,
+      "unvestedRSUs": null,
+      "sharesDate": "2025-12-31",
+      "ttmComponents": null,
+      "convertibles": [],
+      "otherClaims": [],
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Derived totalrevenues4817 minus compensation/operating/G&A1783 minus carried-interestcompensation146=2888; GAAP does not label an EBIT subtotal. Valuation uses separately sourced fee-business owner earnings."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Unclassified balance sheet Financial assets 417m; current/noncurrent split is not reported. Preserve unknown in this field; financial-model equity earnings need no surplus-asset addback."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Balance sheet Investments9795; excludes consolidatedfundinvestments505 and financialassets417. Not added separately to fee earnings equity value."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Note corporate borrowing maturities: no corporate principal due before2027; consolidated fund borrowing split not provided. Total2940 kept noncurrent for data mapping only; not an economic maturity assertion."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Corporateborrowings2478+consolidatedfundborrowings462=2940. Unclassified balance sheet; debtcurrent split unavailable for fund borrowing."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Preferred redeemableNCI1398 + consolidatedentityNCI773 + fundNCI21 =2192. This is not subtracted from already-attributable feeearnings."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "ClassA1608492642 outstanding (issued1637942656 less29450014treasury) +21280ClassB =1608513922."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Restricted stock bought in open market, votes and receives dividends, already issued. No disclosed additional equity-settledRSU aggregate; cashsettledDSUs/RSUs not commonshares. Use separate totalincrementalEPSdilutionproxy."
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "Note16:BAM employee options21.666million at$39.65. BN options28.226million are a different issuer and excluded."
+        },
+        "ttmComponents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "locator": "GAAP statements2025 annual and H12026/H12025; derived operating subtotal stated above."
+        }
+      },
+      "options": {
+        "count": 21.666,
+        "weightedExercisePrice": 39.65,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "note": "BAM is the asset manager, not Brookfield Corporation. February2025 reorganization presents full manager ownership with approximately1.6billion total issuer shares. Use attributable fee-business equity model and avoid subtracting consolidated fund/NCI claims twice. GAAP revenue includes volatile unrealized carry; model fee revenue and common pretax earnings are explicitly reconciled in additions/BAM.json. Debt maturity and operating lease splits are unclassified/undisclosed; model does not require a fictitious EV bridge."
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "10-Q",
+      "accession": "0001628280-26-054933",
+      "filedAt": "2026-08-10",
+      "acceptedAt": "2026-08-08T01:32:17.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+      "revenue": 5737,
+      "operatingIncome": 3532,
+      "cashAndEquivalents": 1503,
+      "shortTermInvestments": null,
+      "longTermInvestments": 10360,
+      "debtCurrent": null,
+      "debtNoncurrent": null,
+      "operatingLeaseLiabilities": null,
+      "noncontrollingInterest": 4355,
+      "preferredEquity": 0,
+      "sharesOutstanding": 1597.237018,
+      "unvestedRSUs": null,
+      "sharesDate": "2026-06-30",
+      "ttmComponents": {
+        "annualRevenue": 4817,
+        "ytdRevenue": 3091,
+        "priorYtdRevenue": 2171,
+        "annualOperatingIncome": 2888,
+        "ytdOperatingIncome": 1806,
+        "priorYtdOperatingIncome": 1162,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-06-30"
+      },
+      "convertibles": [],
+      "otherClaims": [],
+      "carriedFrom": {
+        "options": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+          "why": "June discloses7.7million newoptions but no fulloutstandingrollforward. Valuation instead uses June combined incrementalEPSdilution14.9million, not stale annualoptiondeduction."
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "TTM2888+(3091-1023-262)-(2171-847-162)=3532. Derived operating subtotal, not GAAP-labelled EBIT."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Unclassified balance sheet Financial assets 506m; current/noncurrent split is not reported. Preserve unknown in this field; financial-model equity earnings need no surplus-asset addback."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Investments10360 excluding consolidatedfundinvestments3090; included economics not double added."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Unclassified balance sheet corporate3466+fund589=4055 carrying; maturities principal463 remainder2026+1262027. Carrying split not disclosed. Preserve unknown instead of fictitious current/noncurrent split."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Unclassified totalcorporate3466+fund589=4055 retained in financialModel.reportedTotalDebt; no duplicate deduction from equity earnings."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Preferred redeemableNCI1238+redeemablefundNCI1442+entityNCI1079+fundNCI596=4355. Already excluded from attributable feeearnings."
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "ClassA1597215738 outstanding plus21280ClassB;41064881treasury shares excluded."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "Restrictedstock purchased openmarket and already issued; aggregate awards captured by explicit EPSdilutionproxy instead of double counting."
+        },
+        "ttmComponents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026054933/bam-20260630.htm",
+          "locator": "GAAP statements2025 annual and H12026/H12025; derived operating subtotal stated above."
+        }
+      },
+      "options": {
+        "count": 21.666,
+        "weightedExercisePrice": 39.65,
+        "weightedRemainingYears": null,
+        "aggregateIntrinsicValue": null
+      },
+      "note": "BAM is the asset manager, not Brookfield Corporation. February2025 reorganization presents full manager ownership with approximately1.6billion total issuer shares. Use attributable fee-business equity model and avoid subtracting consolidated fund/NCI claims twice. GAAP revenue includes volatile unrealized carry; model fee revenue and common pretax earnings are explicitly reconciled in additions/BAM.json. Debt maturity and operating lease splits are unclassified/undisclosed; model does not require a fictitious EV bridge."
+    }
+  },
+  "notes": [
+    "2025reverseacquisition uses fullmanager comparative2023–2025; do not splice old27%-owned shell or BrookfieldCorporation history."
+  ]
+}

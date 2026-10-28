@@ -1,0 +1,805 @@
+{
+  "schemaVersion": 1,
+  "ticker": "NBIS",
+  "cutoff": "2026-10-21",
+  "scope": "Authorized proxy resolution; reported unknowns remain unknown; this ledger does not certify a fair-value recommendation",
+  "status": "dated-claims-reconciled-with-explicit-proxies; operating-default-remains-stress",
+  "definitions": [
+    {
+      "id": "NBIS-2025-12-31-resolved-claims-v1",
+      "ticker": "NBIS",
+      "periodEnd": "2025-12-31",
+      "snapshotIds": [
+        "NBIS-ANNUAL-REFERENCE-2025-12-31"
+      ],
+      "filedAt": "2026-04-30",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "cash": 3678.1,
+      "mappedDebt": 4127.7,
+      "capturedShares": 258.754227,
+      "commonShares": 253.016971,
+      "employeeAwardShares": 5.737256,
+      "prefundedWarrantShares": 0,
+      "prefundedStrike": 0,
+      "includedEigenParticipatingShares": 0,
+      "convertibleCarrying": 4103.2,
+      "convertibleFairValue": 4922.5,
+      "convertiblePremium": 819.3,
+      "optionTranches": [
+        {
+          "shares": 1.316882,
+          "strike": 40,
+          "life": 3.9,
+          "volatility": 0.6,
+          "riskFree": 0.042,
+          "method": "black-scholes",
+          "classification": "count, strike and contractual remaining life reported;60% annual-grant volatility and4.2% rate midpoint are proxy parameters"
+        },
+        {
+          "shares": 6,
+          "strike": 100,
+          "life": 9.3,
+          "volatility": 0.6,
+          "riskFree": 0.042,
+          "method": "black-scholes",
+          "classification": "count, strike and contractual remaining life reported;60% annual-grant volatility and4.2% rate midpoint are proxy parameters"
+        }
+      ],
+      "knownOtherClaims": {
+        "avrideSAFEAndTrancheRight": 102.7
+      },
+      "knownOtherClaimsTotal": 102.7,
+      "avrideReserve": 100,
+      "avrideReserveClassification": "explicit analyst scenario reserve, not filing fair value, not a statistically derived estimate",
+      "otherClaimsWithReserve": 202.7,
+      "otherAssets": 847.7,
+      "sources": [
+        {
+          "title": "Nebius period-end statements; balance sheet and Notes3,4,12,13/14,15",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+        },
+        {
+          "title": "Annual Note14; option parameters and Avride20% authorized pool",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+        }
+      ],
+      "reportedEvidence": {
+        "periodEnd": "2025-12-31",
+        "actualOrdinaryShares": {
+          "value": 253.016971,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Consolidated Balance Sheets: Class A 219,465,088 + Class B 33,551,883; excludes treasury",
+          "originalDocumentVerified": true
+        },
+        "parentUnvestedRSUs": {
+          "value": 5.737256,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note 14 Share-Based Compensation, unvested RSU rollforward closing balance",
+          "originalDocumentVerified": true
+        },
+        "parentOptions": {
+          "value": 7.316882,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note 14, outstanding share-option activity and exercise-price table",
+          "originalDocumentVerified": true
+        },
+        "parentOptionExerciseTranches": [
+          {
+            "value": 1.316882,
+            "unit": "million shares",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+            "locator": "Note 14, exercise-price table: 1,316,882 options at USD40",
+            "originalDocumentVerified": true
+          },
+          {
+            "value": 6,
+            "unit": "million shares",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+            "locator": "Note 14, exercise-price table: 6,000,000 options at USD100",
+            "originalDocumentVerified": true
+          }
+        ],
+        "convertibleFairValue": {
+          "value": 4922.5,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note 12 Debt: total fair value of convertible debt",
+          "originalDocumentVerified": true
+        },
+        "avrideSAFEClaim": {
+          "value": 102.7,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note 4 Other accrued liabilities: Avride SAFE and Tranche Right liability",
+          "originalDocumentVerified": true
+        },
+        "avrideOptions": {
+          "value": 6.605272,
+          "unit": "million subsidiary shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note 14 Avride employee stock incentive plan: closing options",
+          "originalDocumentVerified": true
+        },
+        "avrideRSUs": {
+          "value": 0.015794,
+          "unit": "million subsidiary shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note 14 Avride employee stock incentive plan: closing RSUs",
+          "originalDocumentVerified": true
+        },
+        "prefundedWarrantTreatment": "March 2026 NVIDIA warrants are a subsequent event and must not be added to the December 2025 denominator."
+      },
+      "additionalEvidence": {
+        "eigenDeferredPurchaseConsideration": {
+          "value": 0,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Not present at December2025; acquisition subsequent"
+        },
+        "avrideAuthorizedPool": {
+          "value": 7.926674,
+          "percentFullyDiluted": 0.2,
+          "unit": "million subsidiary shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note14 Avride ESOP; authorized pool represents20% fully diluted share capital"
+        },
+        "optionVolatility": {
+          "value": 0.6,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note14 annual grant pricing assumptions"
+        },
+        "riskFreeRange": {
+          "value": [
+            0.0401,
+            0.044
+          ],
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note14 annual grant pricing assumptions"
+        },
+        "convertiblePrincipal": {
+          "value": 4836.8,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note12 convertible-debt carrying-amount table, Principal amount outstanding column, total",
+          "classification": "reported contractual principal column includes scheduled accretion; not issuance proceeds, current carrying amount or present value",
+          "sensitivityLabel": "Contractual principal stress; conversion option value excluded"
+        }
+      },
+      "materiality": {
+        "parentOptionsFreeShareMaxPercentDilution": 2.7499723767453452,
+        "avrideClaimScenarios": [
+          {
+            "reserve": 0,
+            "maximumPerShareReductionBeforeParentOptionResponse": 0.0
+          },
+          {
+            "reserve": 100,
+            "maximumPerShareReductionBeforeParentOptionResponse": 0.3864671165352595
+          },
+          {
+            "reserve": 500,
+            "maximumPerShareReductionBeforeParentOptionResponse": 1.9323355826762976
+          },
+          {
+            "reserve": 1000,
+            "maximumPerShareReductionBeforeParentOptionResponse": 3.864671165352595
+          }
+        ],
+        "convertibleFVPremiumPerShareBeforeOptions": 3.166325085773382,
+        "syntheticPositiveEquityScenarios": [
+          {
+            "preAvrideReserveEquity": 10000,
+            "reserve100PercentOfEquity": 1.0,
+            "reserve500PercentOfEquity": 5.0,
+            "reserve1000PercentOfEquity": 10.0
+          },
+          {
+            "preAvrideReserveEquity": 30000,
+            "reserve100PercentOfEquity": 0.3333333333333333,
+            "reserve500PercentOfEquity": 1.6666666666666667,
+            "reserve1000PercentOfEquity": 3.3333333333333335
+          },
+          {
+            "preAvrideReserveEquity": 60000,
+            "reserve100PercentOfEquity": 0.16666666666666666,
+            "reserve500PercentOfEquity": 0.8333333333333334,
+            "reserve1000PercentOfEquity": 1.6666666666666667
+          }
+        ],
+        "note": "Do not infer materiality from default zero floor.100m reserve is0.33–0.39/share;1000m can be10% of10bn positive equity. Avride current fair value is genuinely unobserved."
+      },
+      "convertiblePrincipal": 4836.8
+    },
+    {
+      "id": "NBIS-2026-06-30-resolved-claims-v1",
+      "ticker": "NBIS",
+      "periodEnd": "2026-06-30",
+      "snapshotIds": [
+        "NBIS-TTM-2026-06-30"
+      ],
+      "filedAt": "2026-08-12",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "cash": 8042.1,
+      "mappedDebt": 8545.7,
+      "capturedShares": 299.155245,
+      "commonShares": 271.855218,
+      "employeeAwardShares": 6.234091,
+      "prefundedWarrantShares": 21.065936,
+      "prefundedStrike": 0.0001,
+      "includedEigenParticipatingShares": 2.743655,
+      "convertibleCarrying": 8499,
+      "convertibleFairValue": 20823.7,
+      "convertiblePremium": 12324.7,
+      "optionTranches": [
+        {
+          "shares": 6.7406,
+          "strike": 88.65,
+          "life": 7.8,
+          "volatility": 0.6,
+          "riskFree": 0.042,
+          "method": "black-scholes",
+          "classification": "count and weighted strike reported; volatility and rate carried from annual grants; 7.8-year life is annual8.3 less0.5, proxy"
+        }
+      ],
+      "knownOtherClaims": {
+        "avrideSAFE": 178.1,
+        "tavilyHoldbackEarnout": 19.0,
+        "eigenDeferredPurchaseConsideration": 24.3,
+        "noncontrollingInterest": 1.0
+      },
+      "knownOtherClaimsTotal": 222.4,
+      "avrideReserve": 100,
+      "avrideReserveClassification": "explicit analyst scenario reserve, not filing fair value, not a statistically derived estimate",
+      "otherClaimsWithReserve": 322.4,
+      "otherAssets": 1620.5,
+      "sources": [
+        {
+          "title": "Nebius period-end statements; balance sheet and Notes3,4,12,13/14,15",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm"
+        },
+        {
+          "title": "Annual Note14; option parameters and Avride20% authorized pool",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+        }
+      ],
+      "reportedEvidence": {
+        "periodEnd": "2026-06-30",
+        "actualOrdinaryShares": {
+          "value": 271.855218,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Consolidated Statements of Changes in Shareholders Equity: balance as of June 30 2026",
+          "originalDocumentVerified": true
+        },
+        "includedParticipatingShares": {
+          "value": 2.743655,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "EPS policy: unvested issued Eigen acquisition shares carry nonforfeitable dividend rights; already included in total actual shares",
+          "originalDocumentVerified": true
+        },
+        "prefundedWarrantShares": {
+          "value": 21.065936,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 14 Share Capital: NVIDIA prefunded warrants, nominal USD0.0001 exercise price",
+          "originalDocumentVerified": true
+        },
+        "parentUnvestedRSUs": {
+          "value": 6.234091,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 13 Share-Based Compensation: closing RSU activity",
+          "originalDocumentVerified": true
+        },
+        "parentOptions": {
+          "value": 6.7406,
+          "unit": "million shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 13: closing parent option activity",
+          "originalDocumentVerified": true
+        },
+        "parentOptionWeightedStrike": {
+          "value": 88.65,
+          "unit": "USD/share",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 13: closing parent option weighted-average exercise price",
+          "originalDocumentVerified": true
+        },
+        "convertibleFairValue": {
+          "value": 20823.7,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 12: total fair value of convertible debt",
+          "originalDocumentVerified": true
+        },
+        "avrideSAFEClaim": {
+          "value": 178.1,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 4: Avride SAFE, Tranche Right and Milestone SAFE liability",
+          "originalDocumentVerified": true
+        },
+        "tavilyHoldbackEarnoutLiability": {
+          "value": 19,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 4 Other accrued liabilities: Tavily Holdback and Earnout liability; Note 3 business combination terms",
+          "originalDocumentVerified": true
+        },
+        "noncontrollingInterest": {
+          "value": 1,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Consolidated Balance Sheets / Statements of Changes in Shareholders Equity: NCI",
+          "originalDocumentVerified": true
+        },
+        "avrideOptions": {
+          "value": 5.94557,
+          "unit": "million subsidiary shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 13 Avride options, outstanding at end of period",
+          "originalDocumentVerified": true
+        },
+        "avrideOptionWeightedStrike": {
+          "value": 2.1,
+          "unit": "USD/subsidiary share",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 13 Avride option weighted-average exercise price",
+          "originalDocumentVerified": true
+        },
+        "avrideRSUs": {
+          "value": 0,
+          "unit": "million subsidiary shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note 13 Avride RSU activity: 15,794 at beginning, all exercised; end —",
+          "originalDocumentVerified": true
+        }
+      },
+      "additionalEvidence": {
+        "eigenDeferredPurchaseConsideration": {
+          "value": 24.3,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "June Note3 acquisition consideration table and Note4 current other-liability table"
+        },
+        "avrideAuthorizedPool": {
+          "value": 7.926674,
+          "percentFullyDiluted": 0.2,
+          "unit": "million subsidiary shares",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note14 Avride ESOP; authorized pool represents20% fully diluted share capital"
+        },
+        "optionVolatility": {
+          "value": 0.6,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note14 annual grant pricing assumptions"
+        },
+        "riskFreeRange": {
+          "value": [
+            0.0401,
+            0.044
+          ],
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+          "locator": "Note14 annual grant pricing assumptions"
+        },
+        "convertiblePrincipal": {
+          "value": 10041.8,
+          "unit": "USD millions",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+          "locator": "Note12 convertible-debt carrying-amount table, Principal amount outstanding column, total",
+          "classification": "reported contractual principal column includes scheduled accretion; not issuance proceeds, current carrying amount or present value",
+          "sensitivityLabel": "Contractual principal stress; conversion option value excluded"
+        }
+      },
+      "materiality": {
+        "parentOptionsFreeShareMaxPercentDilution": 2.2035604962205357,
+        "avrideClaimScenarios": [
+          {
+            "reserve": 0,
+            "maximumPerShareReductionBeforeParentOptionResponse": 0.0
+          },
+          {
+            "reserve": 100,
+            "maximumPerShareReductionBeforeParentOptionResponse": 0.33427460046705854
+          },
+          {
+            "reserve": 500,
+            "maximumPerShareReductionBeforeParentOptionResponse": 1.6713730023352926
+          },
+          {
+            "reserve": 1000,
+            "maximumPerShareReductionBeforeParentOptionResponse": 3.3427460046705852
+          }
+        ],
+        "convertibleFVPremiumPerShareBeforeOptions": 41.198341683763566,
+        "syntheticPositiveEquityScenarios": [
+          {
+            "preAvrideReserveEquity": 10000,
+            "reserve100PercentOfEquity": 1.0,
+            "reserve500PercentOfEquity": 5.0,
+            "reserve1000PercentOfEquity": 10.0
+          },
+          {
+            "preAvrideReserveEquity": 30000,
+            "reserve100PercentOfEquity": 0.3333333333333333,
+            "reserve500PercentOfEquity": 1.6666666666666667,
+            "reserve1000PercentOfEquity": 3.3333333333333335
+          },
+          {
+            "preAvrideReserveEquity": 60000,
+            "reserve100PercentOfEquity": 0.16666666666666666,
+            "reserve500PercentOfEquity": 0.8333333333333334,
+            "reserve1000PercentOfEquity": 1.6666666666666667
+          }
+        ],
+        "note": "Do not infer materiality from default zero floor.100m reserve is0.33–0.39/share;1000m can be10% of10bn positive equity. Avride current fair value is genuinely unobserved."
+      },
+      "convertiblePrincipal": 10041.8
+    }
+  ],
+  "localizationPairs": [
+    [
+      "Nebius uses dated continuing operations and a separate ownership-claims model. The displayed default is a slow-transition funding stress, not management guidance or an economically validated fair-value estimate.",
+      "Nebius采用对应日期的持续经营业务与独立的权益索偿模型。显示的默认值是缓慢转型及融资压力情景，并非管理层指引或经过经济验证的公允价值估计。"
+    ],
+    [
+      "Convertible fair value replaces its carrying amount once; converted shares are not also counted. Parent RSUs and prefunded warrants are included once. Eigen participating shares are already in the reported common-share count.",
+      "可转债公允价值仅替换一次账面价值，不再重复计入转换后的股份。母公司RSU和预付认股权证仅计入一次；Eigen参与分红股份已包含在已披露普通股数量中。"
+    ],
+    [
+      "Avride employee awards use a $100m analyst reserve, not a reported fair value. Test $0m, $500m and $1,000m; these are scenarios, not a proven upper bound. Avride awards are never added to Nebius shares.",
+      "Avride员工奖励采用分析假设的1亿美元扣减，并非已披露公允价值。应测试零、5亿及10亿美元情景；这些情景不构成已证实的上限。Avride奖励不会加入Nebius股数。"
+    ],
+    [
+      "The Avride reserve changes value by at most $0.39 per annual-base share or $0.34 per June-base share for each $100m, before option allocation. A zero equity floor does not prove the uncertainty immaterial.",
+      "每增加1亿美元Avride扣减，在期权分配前，每股价值最多下降0.39美元（年度基准）或0.34美元（六月基准）。股权价值归零并不证明该不确定性不重要。"
+    ],
+    [
+      "Parent options use a Black-Scholes scenario with 60% volatility and a 4.2% risk-free rate anchored to the annual grant assumptions. Contractual life is used conservatively; June life is carried forward and the weighted strike aggregates different awards.",
+      "母公司期权采用Black-Scholes情景，波动率60%、无风险利率4.2%，参考年度授予假设。保守地使用合同期限；六月期限从年度结转，且加权行权价汇总了不同奖励。"
+    ],
+    [
+      "Negative FCFF already includes the modeled reinvestment outflow. Do not deduct the same funding need twice. The calculation assumes funding is available on fair terms; distress, financing fees and issuance below fair value can reduce existing-shareholder value further.",
+      "负自由现金流已包含模型中的再投资流出，不应重复扣减同一融资需求。计算假设可以按公允条件获得融资；财务困境、融资费用及低于公允价值发行股份可能进一步降低原股东价值。"
+    ],
+    [
+      "The dated cash and ownership bridge excludes later financing. Customer prepayments are not free revenue: the model must also fund delivery of the prepaid services.",
+      "现金与权益分配桥梁以基准日期为准，不计入后续融资。客户预付款并非免费收入；模型也必须承担履约服务所需资金。"
+    ],
+    [
+      "A staged-margin illustration reaches -15%, 5%, 12%, 18%, 22% and then 25% EBIT margin. These are analyst assumptions; revenue growth, reinvestment and discount rate stay unchanged so the effect of the faster profit transition is visible.",
+      "分阶段利润率示例将营业利润率设为-15%、5%、12%、18%、22%，之后为25%。这些是分析假设；收入增长、再投资和折现率保持不变，以显示加快盈利转型的影响。"
+    ],
+    [
+      "The 2026 revenue guidance midpoint implies about 504% growth from the 2025 annual base, above the engine’s 200% per-year limit. It is disclosed as a reference rather than silently capped or substituted into the default.",
+      "2026年收入指引中值相对2025年度基准意味着约504%的增长，超过引擎每年200%的上限。因此仅列为参考，不会暗中截断或替换默认假设。"
+    ]
+  ],
+  "perimeter": {
+    "verified": true,
+    "sourceUrls": [
+      "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+      "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm",
+      "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094568/tm2622968d1_ex99-1.htm"
+    ],
+    "locator": "Annual Note3 and15; interim Notes1,3,15; press release footnote2",
+    "continuingOperations": [
+      "Nebius AI cloud",
+      "Avride",
+      "TripleTen"
+    ],
+    "nonoperatingStakes": [
+      "ClickHouse",
+      "Toloka"
+    ],
+    "excludedHistory": "Disposed Yandex businesses; Toloka operating results reclassified to discontinued operations",
+    "caveat": "Current-business perimeter is verified; financing success and future economic profitability are assumptions, not verified facts."
+  },
+  "operatingReview": {
+    "existingDefaultTreatment": "Keep as slow-transition funding stress, do not label base fair value. Do not tune rates or growth to force positive equity.",
+    "guidance": [
+      {
+        "metric": "2026 recognized revenue",
+        "rangeUSDm": [
+          3000,
+          3400
+        ],
+        "midpointUSDm": 3200,
+        "classification": "management guidance, not reported outcome",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926059872/tm2614392d1_ex99-2.htm",
+        "locator": "Page2 FY2026 guidance; Q2 letter reaffirms metrics"
+      },
+      {
+        "metric": "2026 adjusted EBITDA margin",
+        "value": 0.4,
+        "classification": "management guidance; not EBIT margin",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926059872/tm2614392d1_ex99-2.htm",
+        "locator": "Page2"
+      },
+      {
+        "metric": "2026 exit ARR",
+        "rangeUSDm": [
+          7000,
+          9000
+        ],
+        "classification": "management guidance; last-month cloud revenue annualized, not full-year revenue",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926059872/tm2614392d1_ex99-2.htm",
+        "locator": "Page2"
+      },
+      {
+        "metric": "2026 gross customer prepayments",
+        "lowerBoundUSDm": 9000,
+        "classification": "management expectation; must not be mistaken for net working-capital release",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094568/tm2622968d1_ex99-2.htm",
+        "locator": "Capital requirements page10"
+      }
+    ],
+    "engineConstraint": {
+      "annualFY26GuidanceMidpointGrowth": 5.040015100037751,
+      "maximumSupportedYearlyGrowth": 2,
+      "action": "Do not silently cap source guidance or alter reported revenue. A complete calendar cashflow ramp needs explicit functionality beyond the present generic curve."
+    },
+    "stagedMarginSensitivity": {
+      "classification": "analyst illustration; unchanged growth, sales-capital, tax, WACC",
+      "margins": [
+        -0.15,
+        0.05,
+        0.12,
+        0.18,
+        0.22,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "rationale": "Faster profitability transition tests the effect of recent operating leverage; Q2 group adjusted EBITDA40.6% is not EBIT because D&A and SBC remain costs. Not management forecast."
+    },
+    "results": [
+      {
+        "id": "NBIS-ANNUAL-REFERENCE-2025-12-31",
+        "name": "slow",
+        "enterprise": -20612.737962800544,
+        "maxDeficit": 61672.12583182973,
+        "cashGap": 57994.025831829735,
+        "firstPositive": 10
+      },
+      {
+        "id": "NBIS-ANNUAL-REFERENCE-2025-12-31",
+        "name": "staged",
+        "enterprise": -3651.7304919828293,
+        "maxDeficit": 24635.94216470136,
+        "cashGap": 20957.84216470136,
+        "firstPositive": 10,
+        "overrides": [
+          {
+            "margin": -0.15,
+            "growth": 1,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.05,
+            "growth": 0.8916666666666666,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.12,
+            "growth": 0.7833333333333333,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.18,
+            "growth": 0.675,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.22,
+            "growth": 0.5666666666666667,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.45833333333333337,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.3500000000000001,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.2416666666666667,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.1333333333333333,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.02499999999999991,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          }
+        ]
+      },
+      {
+        "id": "NBIS-TTM-2026-06-30",
+        "name": "slow",
+        "enterprise": -20546.503859649412,
+        "maxDeficit": 69210.03375090439,
+        "cashGap": 61167.93375090439,
+        "firstPositive": 10
+      },
+      {
+        "id": "NBIS-TTM-2026-06-30",
+        "name": "staged",
+        "enterprise": -5929.485364069149,
+        "maxDeficit": 38096.21593400279,
+        "cashGap": 30054.115934002788,
+        "firstPositive": 9,
+        "overrides": [
+          {
+            "margin": -0.15,
+            "growth": 0.85,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.05,
+            "growth": 0.7583333333333333,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.12,
+            "growth": 0.6666666666666666,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.18,
+            "growth": 0.575,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.22,
+            "growth": 0.48333333333333334,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.39166666666666666,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.30000000000000004,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.20833333333333337,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.1166666666666667,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          },
+          {
+            "margin": 0.25,
+            "growth": 0.025000000000000022,
+            "taxRate": 0.25,
+            "salesCapital": 0.6,
+            "wacc": 0.155
+          }
+        ]
+      }
+    ],
+    "additionalModelNeeds": [
+      "Near-term gross capex schedule, depreciation and economic GPU replacement cycle",
+      "Net change in customer advances with matching revenue recognition and service delivery, rather than gross advances counted as free cash",
+      "Financing availability and adverse issuance scenarios; no financing proceeds added without corresponding liabilities/shares",
+      "Avride subsidiary fair value if a separate sum-of-parts valuation makes it consequential"
+    ],
+    "unverifiedPlanningScenarioNotForDefault": {
+      "calendarYears": [
+        2026,
+        2027,
+        2028,
+        2029,
+        2030,
+        2031,
+        2032,
+        2033,
+        2034,
+        2035
+      ],
+      "revenueUSDm": [
+        3200,
+        9000,
+        15000,
+        21000,
+        27000,
+        32400,
+        37260,
+        40986,
+        43445.16,
+        44531.289
+      ],
+      "EBITMargins": [
+        -0.15,
+        0.05,
+        0.12,
+        0.18,
+        0.22,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "netReinvestmentUSDm": [
+        13500,
+        15000,
+        12000,
+        10000,
+        8000,
+        6750,
+        6075,
+        4657.5,
+        3073.95,
+        1357.66125
+      ],
+      "classification": "unvalidated analyst planning scenario, not management guidance.2026 capex22.5bn, D&A1.5bn and net advance increase7.5bn are assumptions; only2026revenue midpoint is primary-guidance anchored. Not recommended as deployed default.",
+      "operatingEVUSDm": -19376.611641335752
+    }
+  },
+  "limitations": [
+    "Annual fair-value convertible premium819.3m and June12,324.7m are consequential; retaining carrying value alone materially overstates common equity.",
+    "Retain small current debt/interest balances conservatively; disclosure does not explicitly reconcile clean/dirty fair-value convention. Potential overlap <=24.5m annual/46.7m June, under0.16/share.",
+    "Avride100m reserve is a chosen allowance. No primary source establishes current award fair value or a hard upper bound; report the uncertainty and sensitivity rather than asserting it is proven immaterial.",
+    "Do not use unamortized compensation as Avride option fair value. Do not assume old14.50 RSU grant price survives2025 subsidiary reorganization unchanged.",
+    "Do not describe fixed period-end convertible fair value as intrinsic claim value across all future operating scenarios; it is a dated external claim proxy.",
+    "June Eigen24.3m purchase liability is deducted once; future employment-conditioned compensation stays in future EBIT, not separately capitalized as an additional identical claim."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "ticker": "NKE",
+  "sector": "Apparel and footwear",
+  "businessSummary": {
+    "en": "Global athletic footwear and apparel, with a recovery case for brand demand, wholesale distribution and margins.",
+    "zh": "全球运动鞋服企业；基准情景假设品牌需求、批发渠道与利润率逐步恢复。"
+  },
+  "assumptions": {
+    "growth": 0.05,
+    "targetMargin": 0.12,
+    "tax": 0.22,
+    "salesCapital": 3,
+    "wacc": 0.09,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.2,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "A gradual recovery in brand demand and distribution supports 5% initial growth and a 12% target operating margin, below the strongest historical years; recovery is a modelling judgment.",
+      "zh": "品牌需求与渠道逐步恢复，支持5%的初期增长及12%的目标营业利润率，低于历史最强年份；复苏属于模型判断。"
+    },
+    "targetMargin": {
+      "en": "A gradual recovery in brand demand and distribution supports 5% initial growth and a 12% target operating margin, below the strongest historical years; recovery is a modelling judgment.",
+      "zh": "品牌需求与渠道逐步恢复，支持5%的初期增长及12%的目标营业利润率，低于历史最强年份；复苏属于模型判断。"
+    },
+    "tax": {
+      "en": "Normalized forward operating tax assumption; historical effective tax remains reported in history. ",
+      "zh": "前瞻正常化营业税率假设；历史有效税率仍按申报保留。"
+    },
+    "salesCapital": {
+      "en": "Analyst reinvestment assumption informed by the historical book-capital proxy. Incremental sales require new operating capital; accounting acquisitions and buybacks can distort historical ratios.",
+      "zh": "依据历史账面资本代理指标设定的分析师再投资假设。新增销售需要新增经营资本；并购会计与回购可能扭曲历史比率。"
+    },
+    "wacc": {
+      "en": "Analyst required-return assumption reflecting business cyclicality and financing risk; not a quoted market measurement.",
+      "zh": "反映业务周期及融资风险的分析师必要回报假设，并非市场报价测量值。"
+    },
+    "terminalGrowth": {
+      "en": "Long-run nominal growth assumption below the discount rate; competitive growth fades as the business matures.",
+      "zh": "低于折现率的长期名义增长假设；随着业务成熟，竞争性增长逐渐放缓。"
+    },
+    "terminalROIC": {
+      "en": "Analyst mature return on new capital; preserves reinvestment needed to fund terminal growth rather than assuming growth is free.",
+      "zh": "分析师对成熟期新增资本回报率的假设；保留支持永续增长所需的再投资，不假设增长无需投入。"
+    },
+    "years": {
+      "en": "These are analyst starting assumptions, not company guidance or reported facts. Growth fades toward the terminal rate; stock-based compensation remains an expense.",
+      "zh": "这些是分析师起始假设，并非公司指引或申报事实。增长逐步收敛至永续增长率；股权薪酬仍计入费用。"
+    }
+  },
+  "sources": [
+    {
+      "title": "10-K 2026-05-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm",
+      "filedAt": "2026-07-15"
+    },
+    {
+      "title": "10-Q 2026-08-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm",
+      "filedAt": "2026-10-02"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0000320187.json",
+    "latestPeriodicAccession": "0000320187-26-000193",
+    "latestAnnualAccession": "0000320187-26-000088"
+  },
+  "limitations": [
+    {
+      "en": "unvestedRSUs: Interim filing lacks complete award balance. Latest annual nonvested count retained as explicit dilution proxy; +/-25% award sensitivity should be shown.",
+      "zh": "中期未披露完整奖励余额，沿用最近年度未归属股数，作为明确的稀释代理；应展示奖励股数上下25%的敏感度。"
+    },
+    {
+      "en": "options: Interim filing lacks full outstanding option roll-forward. Latest annual count and strike retained as proxy; annual market intrinsic value is stale and is not a current-period valuation.",
+      "zh": "中期未披露完整期权变动表，沿用最近年度期权数量及行权价；年度市场内在价值并非当前期末估值。"
+    },
+    {
+      "en": "Finance leases are described as immaterial in the annual filing. Operating leases are not treated as financial debt; a $100m omitted debt stress changes value by about $0.07 per share.",
+      "zh": "年报将融资租赁描述为不重大。经营租赁不作为金融债务；假设遗漏1亿美元债务，每股价值约变化0.07美元。"
+    }
+  ],
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  }
+}

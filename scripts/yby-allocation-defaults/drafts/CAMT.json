@@ -1,0 +1,96 @@
+{
+ "ticker": "CAMT",
+ "draftPatch": {
+  "analystConditionalAllocation": {
+   "enabled": true,
+   "ticker": "CAMT",
+   "version": "2026-10-19-explicit-claims-v1",
+   "inputs": {
+    "liquidAssets": 815.837,
+    "operatingReserve": 15.271,
+    "wholeConvert": 650,
+    "oldNoteClaim": 0,
+    "legacyUnits": 0.649397,
+    "employeeOptions": 2,
+    "financeLease": 5.324,
+    "residualClaims": 25
+   }
+  }
+ },
+ "fields": [
+  {
+   "path": "analystConditionalAllocation.inputs.liquidAssets",
+   "value": 815.837,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326003975/zk2635905.htm",
+   "locator": "Q2 2026 6-K balance sheet: cash 215.229 + short deposits and current marketable 415.135 + noncurrent marketable 185.473",
+   "note_en": "June 30 cash, deposits and marketable securities.",
+   "note_zh": "2026年6月30日现金、存款及有价证券。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.operatingReserve",
+   "value": 15.271,
+   "basis": "derived",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326003975/zk2635905.htm",
+   "locator": "3% of TTM revenue 509.019 (model default)",
+   "note_en": "Operating cash reserve at 3% of TTM revenue; a judgment.",
+   "note_zh": "按TTM收入的3%设定的运营现金储备；属判断值。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.wholeConvert",
+   "value": 650,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/analyst-conditional-allocation.js CAMT illustration (published with the model)",
+   "locator": "wholeConvert 650; filed face 500, Dec 31 2025 fair value 579.848 (not disclosed at June 30)",
+   "note_en": "Whole 2030-note value. The 6-K gives no June 30 fair value; 650 is the published illustration, above the stale Dec 31 fair value of 579.8.",
+   "note_zh": "2030年可转债整体价值。6-K未给出6月30日公允价值；650为已发表示例，高于12月31日旧公允价值579.8。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.oldNoteClaim",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326003975/zk2635905.htm",
+   "locator": "6-K June 30 balance sheet: convertible line 488.497 equals the 2030 notes only; 2026 notes (face 32.933 at Dec 31) not outstanding",
+   "note_en": "The 2026 notes are inferred settled in Q1 2026 (no settlement terms located), so no old-note claim remains.",
+   "note_zh": "2026年旧债推断已于2026年第一季度结清（未找到结算条款），故无旧债剩余债权。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.legacyUnits",
+   "value": 0.649397,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326001561/zk2634678.htm",
+   "locator": "20-F Note 15.C: 649,397 unvested RSUs at Dec 31 2025 (carried; 6-K has no award table)",
+   "note_en": "Unvested RSUs, millions; stale, some vested in H1 2026.",
+   "note_zh": "未归属RSU（百万股）；数据偏旧，部分已于2026年上半年归属。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.employeeOptions",
+   "value": 2,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/analyst-conditional-allocation.js CAMT illustration (published with the model)",
+   "locator": "20-F Note 15.B: 23,909 options at 48.31 weighted strike (carried); value 2 is the published illustration",
+   "note_en": "Option claim; the 6-K gives no June 30 intrinsic value. Count times strike supports roughly 2 only if the share price is near 132.",
+   "note_zh": "期权债权；6-K未给出6月30日内在价值。期权数量与行权价仅在股价约132美元时支持约2。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.financeLease",
+   "value": 5.324,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1109138/000117891326001561/zk2634678.htm",
+   "locator": "20-F Note 13.B finance leases: current 0.341 + noncurrent 4.983 at Dec 31 2025 (carried; 6-K has no split)",
+   "note_en": "Finance-lease liabilities.",
+   "note_zh": "融资租赁负债。"
+  },
+  {
+   "path": "analystConditionalAllocation.inputs.residualClaims",
+   "value": 25,
+   "basis": "published-illustration",
+   "sourceUrl": "dist/analyst-conditional-allocation.js CAMT illustration (published with the model)",
+   "locator": "residualClaims 25; Visual Layer consideration and retention claims are not in the 6-K",
+   "note_en": "Placeholder for tax, acquisition and capital claims that the 6-K does not quantify; a judgment.",
+   "note_zh": "6-K未量化的税务、收购及资本债权的占位值；判断值。"
+  }
+ ],
+ "summary_en": "June 30 cash and securities come from the Q2 6-K; the 2030 convertible, option and residual claims are the published illustration because the filing gives no June 30 value; RSUs and finance leases are carried from the 20-F.",
+ "summary_zh": "6月30日现金及有价证券来自第二季度6-K；因申报文件无6月30日价值，2030年可转债、期权及剩余债权采用已发表示例；RSU与融资租赁沿用20-F数据。"
+}

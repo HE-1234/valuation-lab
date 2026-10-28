@@ -1,0 +1,76 @@
+{
+  "ticker": "COST",
+  "sector": "Membership retail",
+  "businessSummary": {
+    "en": "Membership warehouse retailer with high sales volume and low merchandise margins; membership fees support profitability.",
+    "zh": "会员制仓储零售商，商品销售规模大但利润率低；会员费支持整体盈利。"
+  },
+  "assumptions": {
+    "growth": 0.07,
+    "targetMargin": 0.04,
+    "tax": 0.25,
+    "salesCapital": 5,
+    "wacc": 0.075,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.18,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "Warehouse growth, membership income and comparable sales support 7% starting growth. A 4% operating margin respects the low-margin retail model; high sales-to-capital reflects inventory turnover and supplier funding.",
+      "zh": "仓库扩张、会员收入与同店销售支持7%的起始增长。4%的营业利润率符合低利润率零售模式；较高销售资本比反映存货周转与供应商融资。"
+    },
+    "targetMargin": {
+      "en": "Warehouse growth, membership income and comparable sales support 7% starting growth. A 4% operating margin respects the low-margin retail model; high sales-to-capital reflects inventory turnover and supplier funding.",
+      "zh": "仓库扩张、会员收入与同店销售支持7%的起始增长。4%的营业利润率符合低利润率零售模式；较高销售资本比反映存货周转与供应商融资。"
+    },
+    "tax": {
+      "en": "Normalized forward operating tax assumption; historical effective tax remains reported in history. ",
+      "zh": "前瞻正常化营业税率假设；历史有效税率仍按申报保留。"
+    },
+    "salesCapital": {
+      "en": "Analyst reinvestment assumption informed by the historical book-capital proxy. Incremental sales require new operating capital; accounting acquisitions and buybacks can distort historical ratios.",
+      "zh": "依据历史账面资本代理指标设定的分析师再投资假设。新增销售需要新增经营资本；并购会计与回购可能扭曲历史比率。"
+    },
+    "wacc": {
+      "en": "Analyst required-return assumption reflecting business cyclicality and financing risk; not a quoted market measurement.",
+      "zh": "反映业务周期及融资风险的分析师必要回报假设，并非市场报价测量值。"
+    },
+    "terminalGrowth": {
+      "en": "Long-run nominal growth assumption below the discount rate; competitive growth fades as the business matures.",
+      "zh": "低于折现率的长期名义增长假设；随着业务成熟，竞争性增长逐渐放缓。"
+    },
+    "terminalROIC": {
+      "en": "Analyst mature return on new capital; preserves reinvestment needed to fund terminal growth rather than assuming growth is free.",
+      "zh": "分析师对成熟期新增资本回报率的假设；保留支持永续增长所需的再投资，不假设增长无需投入。"
+    },
+    "years": {
+      "en": "These are analyst starting assumptions, not company guidance or reported facts. Growth fades toward the terminal rate; stock-based compensation remains an expense.",
+      "zh": "这些是分析师起始假设，并非公司指引或申报事实。增长逐步收敛至永续增长率；股权薪酬仍计入费用。"
+    }
+  },
+  "sources": [
+    {
+      "title": "10-K 2026-08-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+      "filedAt": "2026-10-07"
+    },
+    {
+      "title": "10-K 2026-08-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+      "filedAt": "2026-10-07"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0000909832.json",
+    "latestPeriodicAccession": "0000909832-26-000093",
+    "latestAnnualAccession": "0000909832-26-000093"
+  },
+  "limitations": [],
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  }
+}

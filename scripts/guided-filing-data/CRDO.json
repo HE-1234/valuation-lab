@@ -1,0 +1,240 @@
+{
+ "ticker": "CRDO",
+ "name": "Credo Technology Group Holding Ltd",
+ "cik": "0001807794",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "ordinary-common",
+ "adrRatio": 1,
+ "listedUnit": "ordinary share (Nasdaq: CRDO)",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2026-05-02",
+   "label": "FY2026",
+   "form": "10-K",
+   "accession": "0001628280-26-043303",
+   "filedAt": "2026-06-15",
+   "acceptedAt": "2026-06-16T01:09:27.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+   "revenue": 1335.116,
+   "operatingIncome": 445.005,
+   "ttmComponents": null,
+   "cashAndEquivalents": 1164.952,
+   "shortTermInvestments": 278.334,
+   "longTermInvestments": 0,
+   "debtCurrent": 0,
+   "debtNoncurrent": 0,
+   "operatingLeaseLiabilities": 25.449,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 185.419,
+   "sharesDate": "2026-05-02",
+   "unvestedRSUs": 8.7,
+   "options": {
+    "count": 2.1,
+    "weightedExercisePrice": 2.24,
+    "weightedRemainingYears": 3.96,
+    "aggregateIntrinsicValue": 383.4
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "Amazon customer warrant (up to 4.1M shares at $10.74)",
+     "value": 0,
+     "basis": "fully exercised before May 2, 2026 (net 3.761M shares issued, 0.3M withheld); no warrant outstanding at period end; already in the 185.419M shares",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm Note 4 Revenue Recognition, Customer Warrant; Statement of Shareholders' Equity \"Ordinary shares issued upon exercise of Customer Warrant 3,761\""
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Statements of Operations, Revenue, year ended May 2, 2026 ($1,335,116 thousand)",
+     "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Statements of Operations, Operating income, year ended May 2, 2026 ($445,005 thousand)",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets, Cash and cash equivalents at May 2, 2026 ($1,164,952 thousand)",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets, Short-term investments at May 2, 2026 ($278,334 thousand; certificates of deposit, held-to-maturity)",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets: no noncurrent investment line; only short-term investments, ROU, goodwill, intangibles, other non-current assets $46,244k (no investments disclosed in it)"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets and Note 9/MD&A Liquidity: no borrowings, no credit facility drawn, no finance leases; only operating leases"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets: no long-term debt line item"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Note 12 Leases, present value of lease liabilities $25,449 thousand (current $4,831k in Other current liabilities + non-current $20,617k)",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets: no preferred shares issued (50,000,000 authorized, none outstanding)"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Consolidated Balance Sheets, ordinary shares issued and outstanding 185,419 thousand at May 2, 2026 (balance-sheet date; cover page shows 186,477,898 at June 8, 2026)",
+     "tag": "us-gaap:CommonStockSharesOutstanding"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Note 11 Share Incentive Plan: RSUs outstanding at May 2, 2026 = 7.2 million + PSUs outstanding = 1.5 million (8.7 million combined)"
+    },
+    "options": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm",
+     "locator": "Note 11 Share Incentive Plan, share option table, balance as of May 2, 2026: 2.1M options, WAEP $2.24, remaining term 3.96 yrs, aggregate intrinsic value $383.4M"
+    }
+   },
+   "note": "Fiscal year ended May 2, 2026 (52 weeks), audited 10-K filed 2026-06-15. No debt of any kind. Cash+ST investments = 1,443.286. Technology-license obligations are financed through financing cash flow (payments $6.6M in FY26; undiscounted remaining $22.2M at May 2, 2026 per Note 9: FY27 12.555, FY28 6.803, FY29 2.850) but their balance-sheet carrying amount is not separately disclosed (inside other current/non-current liabilities), so they are NOT included in debt; the reviewed research package treats the Q1 FY27 amount (9.495) as debt-like. Unvested awards: 7.2M RSUs + 1.5M PSUs (PSU count is at target except the 0.2M FY25 PSUs earned at 200% per Note 11; PSUs can earn 0-200%+). Post-period events in the 10-K (Note 16, subsequent events, not on this balance sheet): DustPhotonics acquired May 2026 for $770M cash + ~0.8M shares plus contingent consideration up to ~2.8M shares and $31.6M cash; CEO special PSUs (1.437M = 6 x 239,500) approved May 28, 2026. Hyperlume acquisition (Sept 2025, $92.0M cash) and Comira (Feb 2026, $35.1M cash) are in the balance sheet. ATM offering of $750M completed in FY26 (4.82M shares, $736.3M net) is in the share count."
+  },
+  "ttm": {
+   "periodEnd": "2026-08-01",
+   "label": "TTM through 2026-08-01",
+   "form": "10-Q",
+   "accession": "0001628280-26-060111",
+   "filedAt": "2026-09-02",
+   "acceptedAt": "2026-09-03T00:21:11.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+   "revenue": 1591.045,
+   "operatingIncome": 504.963,
+   "ttmComponents": {
+    "annualRevenue": 1335.116,
+    "ytdRevenue": 479.003,
+    "priorYtdRevenue": 223.074,
+    "annualOperatingIncome": 445.005,
+    "ytdOperatingIncome": 120.7,
+    "priorYtdOperatingIncome": 60.742,
+    "ytdStart": "2026-05-03",
+    "ytdEnd": "2026-08-01",
+    "priorYtdStart": "2025-05-04",
+    "priorYtdEnd": "2025-08-02"
+   },
+   "cashAndEquivalents": 466.869,
+   "shortTermInvestments": 297.389,
+   "longTermInvestments": 0,
+   "debtCurrent": 0,
+   "debtNoncurrent": 0,
+   "operatingLeaseLiabilities": 26.205,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 187.768,
+   "sharesDate": "2026-08-01",
+   "unvestedRSUs": 11.4,
+   "options": {
+    "count": 1.7,
+    "weightedExercisePrice": 2.34,
+    "weightedRemainingYears": 3.84,
+    "aggregateIntrinsicValue": 353.1
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "DustPhotonics contingent consideration - equity-classified (share earn-out)",
+     "value": 300.0,
+     "basis": "fair value recorded in equity (additional paid-in capital) at acquisition date May 28, 2026; maximum per 10-K Note 16 is up to ~2.8M ordinary shares plus $31.6M cash (April 13 announcement had said up to ~3.21M shares); milestones are undisclosed financial metrics",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm Note 5 Business Combination (\"records the estimated fair value of contingent consideration as a liability of $10.0 million and equity of $300.0 million\"); Statement of Shareholders' Equity \"Contingent consideration in connection with acquisition 300,000\"; 10-K https://www.sec.gov/Archives/edgar/data/1807794/000162828026043303/crdo-20260502.htm Note 16 Subsequent Events"
+    },
+    {
+     "name": "DustPhotonics contingent consideration - liability-classified",
+     "value": 10.0,
+     "basis": "fair value recorded as a liability at acquisition date; earn-out payable in cash and/or ordinary shares per the 10-Q (carrying amount within other current / non-current liabilities, not separately shown)",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm Note 5 Business Combination (contingent consideration $10.0 million liability); total contingent consideration $310,000 thousand in the purchase-consideration table"
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "TTM = FY2026 revenue (10-K $1,335,116k) + three months ended Aug 1, 2026 ($479,003k) - three months ended Aug 2, 2025 ($223,074k); Condensed Consolidated Statements of Operations",
+     "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "TTM = FY2026 operating income (10-K $445,005k) + Q1 FY27 ($120,700k) - Q1 FY26 ($60,742k); Condensed Consolidated Statements of Operations",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Cash and cash equivalents at Aug 1, 2026 ($466,869 thousand)",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Short-term investments at Aug 1, 2026 ($297,389 thousand)",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets: no noncurrent investment line item"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets / Liquidity: no borrowings, no finance leases; DustPhotonics $770M cash paid from cash on hand"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets: no long-term debt line item"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets Non-current operating lease liabilities $20,737k + Note 8 Other Current Liabilities, Current portion of operating lease liabilities $5,468k = $26,205k (sum of two disclosed lines; the 10-Q has no separate lease note)"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets: no noncontrolling interest line"
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets: no preferred shares outstanding"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Condensed Consolidated Balance Sheets, 187,768 thousand ordinary shares issued and outstanding at Aug 1, 2026 (cover page: 187,951,918 at Aug 25, 2026)"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Note 10 Share Incentive Plan: RSUs 8.3 million + PSUs 3.1 million outstanding at Aug 1, 2026 (11.4 million combined; PSUs include 1.437M CEO special PSUs granted May 28, 2026 per 8-K 0001628280-26-039474)"
+    },
+    "options": {
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+     "locator": "Note 10 Share Option Awards, balance exercisable at Aug 1, 2026: 1.7M, WAEP $2.34, remaining term 3.84 yrs, aggregate intrinsic value $353.1M"
+    }
+   },
+   "note": "Latest filed quarterly report on/before 2026-10-21: 10-Q for quarter ended Aug 1, 2026 (filed 2026-09-02). The only 8-K after is Oct 16 (annual meeting votes). No debt. DustPhotonics acquired May 28, 2026: cash $769.6M, 0.76M shares issued ($169.1M), replacement awards $2.5M, contingent consideration $310.0M (equity $300.0M + liability $10.0M), total purchase consideration $1,251.1M; goodwill rose to $986.4M, DTL $53.7M. Cash fell to $466.9M (acquisition). Other items to know: (1) 0.132M unvested restricted shares of a newly formed Hyperlume-related subsidiary exchangeable into Credo shares are probably outside the 187.768M count (10-Q Note 10; $146.01/share grant-date fair value); 0.132M restricted shares issued directly to the other founder are likely already in outstanding shares. (2) Technology-license obligations: undiscounted $9.495M remaining at Aug 1, 2026 (Note 9), financing-classified but carrying amount not disclosed, NOT in debt. (3) Refundable supplier capacity deposits $88.4M asset; an additional $102.4M deposit agreed after Aug 1. (4) Warrants: none outstanding; Amazon warrant fully exercised in FY26. (5) 10-Q does not give a max share count for the DustPhotonics earn-out; 10-K Note 16 says up to ~2.8M shares + $31.6M cash."
+  }
+ },
+ "notes": [
+  "Cayman Islands issuer that files 10-K/10-Q in USD (domestic filer forms). Fiscal year ends the Saturday closest to April 30.",
+  "All figures converted from USD thousands to USD millions exactly as filed.",
+  "Values cross-checked against XBRL company facts (revenue, operating income, cash, short-term investments, lease liability, cover shares) - all match.",
+  "Reviewed package (dist/data/incremental-CRDO-2026-10-18-v3) uses earnout_max_shares 3.21M from the April 13 press release; the filed 10-K Note 16 states up to ~2.8M shares plus $31.6M cash. Use the 10-K figure."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0001807794.json",
+  "latestPeriodicAccession": "0001628280-26-060111",
+  "latestAnnualAccession": "0001628280-26-043303"
+ }
+}

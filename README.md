@@ -10,7 +10,17 @@ For a loopback-only local preview, run `python3 -m http.server 8080 --bind 127.0
 
 ## Run and verify
 
-`npm test` runs engine, source-integrity, presentation and synthetic-DOM regression tests. `npm start` serves port 8080. `tests/browser_qa.py` is the integration test (requires Playwright and a launchable Chromium). Local headless browser QA was attempted but blocked by this executor's socket permissions; an escalation failed before launch due to executor setup. Do not report browser tests as passed. The public origin is accessible in the supported cloud browser. Native checks and source-driven mobile renders are recorded separately; static renders are not real-device interaction tests.
+`npm test` runs the full engine, source-integrity, presentation and synthetic-DOM regression suite **one test file at a time**. Both test commands set a 2 GiB V8 old-space heap limit per Node process and a 120-second test timeout. The heap limit is not a hard limit on total RAM: native allocations, buffers and the runner add overhead. Use Node 20.11 or newer for these flags (verified locally with Node 24.10).
+
+Prefer focused checks when changing a specific feature:
+
+```sh
+npm run test:files -- tests/guided-bases.test.mjs tests/be-addition.test.mjs
+```
+
+Always supply explicit files to `test:files`; without paths, Node discovers tests automatically. Do not run overlapping test commands or use bare `node --test`, which bypasses these limits. Run the full suite only when broad changes justify it or it is explicitly requested. Commit/push operations and publishing an unchanged, already-tested commit do not require another full run; reuse the results and check the deployed site. A timeout or heap-limit failure is a failed check, not permission to silently increase concurrency or memory.
+
+`npm start` serves port 8080. `tests/browser_qa.py` is the integration test (requires Playwright and a launchable Chromium). Local headless browser QA was attempted but blocked by this executor's socket permissions; an escalation failed before launch due to executor setup. Do not report browser tests as passed. The public origin is accessible in the supported cloud browser. Native checks and source-driven mobile renders are recorded separately; static renders are not real-device interaction tests.
 
 ## Current interface and uncertainty model
 

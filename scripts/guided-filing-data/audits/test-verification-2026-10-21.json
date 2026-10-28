@@ -1,0 +1,50 @@
+{
+  "cutoff": "2026-10-21",
+  "nodeHeapMiB": 2048,
+  "execution": "Single test file at a time, sequential; never the whole suite.",
+  "results": [
+    {
+      "file": "tests/assumption-history.test.mjs",
+      "pass": 20,
+      "fail": 0
+    },
+    {
+      "file": "tests/v7-qa-history.test.mjs",
+      "pass": 6,
+      "fail": 0
+    },
+    {
+      "file": "tests/current-data-qa.test.mjs",
+      "pass": 7,
+      "fail": 0
+    },
+    {
+      "file": "tests/guided-bases.test.mjs",
+      "pass": 5,
+      "fail": 0
+    },
+    {
+      "file": "tests/special-claims-model.test.mjs",
+      "pass": 19,
+      "fail": 0
+    },
+    {
+      "file": "tests/v8-qa-current-claims.test.mjs",
+      "pass": 2,
+      "fail": 0
+    },
+    {
+      "file": "tests/test_guided_history_builder.py",
+      "pass": 5,
+      "fail": 0
+    }
+  ],
+  "totalPass": 64,
+  "totalFail": 0,
+  "sourceValidation": "AMAT: OK\nAMD: OK\n  warn  annual.otherClaims[0] value undisclosed, not zero\n  warn  ttm.otherClaims[0] value undisclosed, not zero\n  warn  ttm.otherClaims[1] value undisclosed, not zero\nARM: OK\nASML: OK\n  warn  ttm.debtCurrent unknown; not zero-filled and may withhold valuation\nCAMT: OK\nCDNS: OK\nCEVA: OK\nCRDO: OK\nFN: OK\nKEYS: OK\nKLAC: OK\n  warn  annual.longTermInvestments unknown; not zero-filled and may withhold valuation\n  warn  ttm.longTermInvestments unknown; not zero-filled and may withhold valuation\nLRCX: OK\nMCD: OK\nMRVL: OK\n  warn  ttm.otherClaims[5] value undisclosed, not zero\nNFLX: OK\nNVMI: OK\nONTO: OK\nRMBS: OK\nSNDK: OK\nSNPS: OK\nUBER: OK\nUMC: OK\n",
+  "finalDataHashes": {
+    "dist/data/current-universe.json": "b152c93a6db9cfa08665e04745020faa39d99fc7bf56958e7a389e6c5c846d98",
+    "dist/data/company-base-cases.json": "6ed65955a04bc84050a15984a7c08605c70a5b72696c349037f1765a615012a5",
+    "dist/data/company-history.json": "5a1cc537eaabf83b0889aacaa4074cbed4426478b843576d6e7aa6a954c31d17"
+  }
+}

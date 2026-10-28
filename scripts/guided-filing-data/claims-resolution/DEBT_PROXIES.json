@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "reviewedThrough": "2026-10-21",
+  "policy": "User-authorized, explicitly labelled valuation proxies for incompletely disclosed debt components. Reported facts remain separate. Stress ranges are chosen scenarios, not confidence intervals or proven bounds.",
+  "unitPolicy": "Money in reporting-currency millions; shares in millions; per-share sensitivities hold operations, cash, other claims and share count fixed. More debt lowers per-share equity value dollar for dollar before any equity floor.",
+  "snapshotPatches": {
+    "AAPL-CURRENT-2026-06-27": {
+      "ticker": "AAPL",
+      "periodEnd": "2026-06-27",
+      "currency": "USD",
+      "reportedDebt": null,
+      "modelDebt": 85574,
+      "status": "explicit-proxy",
+      "knownBorrowings": {
+        "value": 84344,
+        "unit": "USD millions",
+        "tag": "filing:manuallyVerified",
+        "periodEnd": "2026-06-27",
+        "filedAt": "2026-07-31",
+        "accession": "0000320193-26-000020",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+        "locator": "Balance sheet: current term debt 11,007 + noncurrent term debt 71,340 + commercial paper 1,997",
+        "sourceType": "Original 10-Q financial statements",
+        "originalDocumentVerified": true
+      },
+      "missingComponent": "Same-date finance-lease liability",
+      "proxyComponents": [
+        {
+          "component": "financeLeaseLiability",
+          "value": 1230,
+          "method": "Carry last reported annual liability without implying a June measurement",
+          "source": {
+            "value": 1230.0,
+            "unit": "USD millions",
+            "tag": "us-gaap:FinanceLeaseLiability",
+            "periodEnd": "2025-09-27",
+            "filedAt": "2025-10-31",
+            "accession": "0000320193-25-000079",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-20 at 2025-09-27",
+            "sourceType": "Original 10-K financial statements",
+            "originalDocumentVerified": true
+          }
+        }
+      ],
+      "formula": "84344 reported borrowings + 1230 carried finance leases = 85574",
+      "sharesForSensitivity": 14752.925,
+      "sensitivity": {
+        "lowDebt": 84344,
+        "baseDebt": 85574,
+        "highDebt": 86804,
+        "lowDebtPerShareChange": 0.0833732971597158,
+        "highDebtPerShareChange": -0.0833732971597158,
+        "rangeBasis": "Zero to twice the last reported liability; a stress scenario, not a factual bound"
+      },
+      "note": "Debt includes a proxy: June borrowings of $84,344 million plus the last reported finance-lease liability of $1,230 million from September 2025. June lease debt is not separately disclosed. A $0–2,460 million lease scenario moves value by only ±$0.0834 per share; this range is a sensitivity, not a verified bound.",
+      "noteZh": "债务包含估算：6月已披露借款843.44亿美元，加上2025年9月最后披露的融资租赁负债12.30亿美元。6月租赁负债未单独披露。将租赁负债设为0至24.60亿美元，每股估值仅变动约正负0.0834美元；该区间是敏感性情景，并非已验证的上下限。",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+      ]
+    },
+    "AAPL-TTM-2026-06-27": {
+      "ticker": "AAPL",
+      "periodEnd": "2026-06-27",
+      "currency": "USD",
+      "reportedDebt": null,
+      "modelDebt": 85574,
+      "status": "explicit-proxy",
+      "knownBorrowings": {
+        "value": 84344,
+        "unit": "USD millions",
+        "tag": "filing:manuallyVerified",
+        "periodEnd": "2026-06-27",
+        "filedAt": "2026-07-31",
+        "accession": "0000320193-26-000020",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+        "locator": "Balance sheet: current term debt 11,007 + noncurrent term debt 71,340 + commercial paper 1,997",
+        "sourceType": "Original 10-Q financial statements",
+        "originalDocumentVerified": true
+      },
+      "missingComponent": "Same-date finance-lease liability",
+      "proxyComponents": [
+        {
+          "component": "financeLeaseLiability",
+          "value": 1230,
+          "method": "Carry last reported annual liability without implying a June measurement",
+          "source": {
+            "value": 1230.0,
+            "unit": "USD millions",
+            "tag": "us-gaap:FinanceLeaseLiability",
+            "periodEnd": "2025-09-27",
+            "filedAt": "2025-10-31",
+            "accession": "0000320193-25-000079",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+            "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-20 at 2025-09-27",
+            "sourceType": "Original 10-K financial statements",
+            "originalDocumentVerified": true
+          }
+        }
+      ],
+      "formula": "84344 reported borrowings + 1230 carried finance leases = 85574",
+      "sharesForSensitivity": 14752.925,
+      "sensitivity": {
+        "lowDebt": 84344,
+        "baseDebt": 85574,
+        "highDebt": 86804,
+        "lowDebtPerShareChange": 0.0833732971597158,
+        "highDebtPerShareChange": -0.0833732971597158,
+        "rangeBasis": "Zero to twice the last reported liability; a stress scenario, not a factual bound"
+      },
+      "note": "Debt includes a proxy: June borrowings of $84,344 million plus the last reported finance-lease liability of $1,230 million from September 2025. June lease debt is not separately disclosed. A $0–2,460 million lease scenario moves value by only ±$0.0834 per share; this range is a sensitivity, not a verified bound.",
+      "noteZh": "债务包含估算：6月已披露借款843.44亿美元，加上2025年9月最后披露的融资租赁负债12.30亿美元。6月租赁负债未单独披露。将租赁负债设为0至24.60亿美元，每股估值仅变动约正负0.0834美元；该区间是敏感性情景，并非已验证的上下限。",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+      ]
+    },
+    "META-CURRENT-2026-06-30": {
+      "ticker": "META",
+      "periodEnd": "2026-06-30",
+      "currency": "USD",
+      "reportedDebt": null,
+      "modelDebt": 84848,
+      "status": "explicit-proxy",
+      "knownBorrowings": {
+        "value": 83664,
+        "unit": "USD millions",
+        "tag": "filing:manuallyVerified",
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-07-30",
+        "accession": "0001628280-26-050705",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+        "locator": "Consolidated balance sheet: long-term debt carrying amount",
+        "sourceType": "Original 10-Q financial statements",
+        "originalDocumentVerified": true
+      },
+      "missingComponent": "Same-date finance-lease liability",
+      "proxyComponents": [
+        {
+          "component": "financeLeaseLiability",
+          "value": 1184,
+          "method": "Carry last reported annual liability without implying a June measurement",
+          "source": {
+            "value": 1184.0,
+            "unit": "USD millions",
+            "tag": "us-gaap:FinanceLeaseLiability",
+            "periodEnd": "2025-12-31",
+            "filedAt": "2026-01-29",
+            "accession": "0001628280-26-003942",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+            "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-5 at 2025-12-31",
+            "sourceType": "Original 10-K financial statements",
+            "originalDocumentVerified": true
+          }
+        }
+      ],
+      "formula": "83664 reported borrowings + 1184 carried finance leases = 84848",
+      "sharesForSensitivity": 2694.464,
+      "sensitivity": {
+        "lowDebt": 83664,
+        "baseDebt": 84848,
+        "highDebt": 86032,
+        "lowDebtPerShareChange": 0.4394194912234864,
+        "highDebtPerShareChange": -0.4394194912234864,
+        "rangeBasis": "Zero to twice the last reported liability; a stress scenario, not a factual bound",
+        "severeStress": {
+          "leaseAssumption": 9467,
+          "debt": 93131,
+          "perShareChange": -3.0740807819291702,
+          "anchor": "June gross finance-lease right-of-use assets, Note 6, 9,467. Assets are not liability evidence; this is a deliberately broad additional stress, not a claim that debt equals assets.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+        }
+      },
+      "note": "Debt includes a proxy: June borrowings of $83,664 million plus the December 2025 finance-lease liability of $1,184 million. June lease debt is not separately disclosed. A $0–2,368 million lease scenario moves value by ±$0.4394 per share. Even a $9,467 million stress assumption, equal to gross finance-lease assets rather than a liability measurement, lowers value by $3.07 per share versus the proxy.",
+      "noteZh": "债务包含估算：6月已披露借款836.64亿美元，加上2025年12月融资租赁负债11.84亿美元。6月租赁负债未单独披露。将租赁负债设为0至23.68亿美元，每股估值变动约正负0.4394美元。即使以融资租赁资产总额94.67亿美元作为压力假设，相对该估算每股估值也仅降低3.07美元；资产总额不等同于负债计量。",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+      ]
+    },
+    "META-TTM-2026-06-30": {
+      "ticker": "META",
+      "periodEnd": "2026-06-30",
+      "currency": "USD",
+      "reportedDebt": null,
+      "modelDebt": 84848,
+      "status": "explicit-proxy",
+      "knownBorrowings": {
+        "value": 83664,
+        "unit": "USD millions",
+        "tag": "filing:manuallyVerified",
+        "periodEnd": "2026-06-30",
+        "filedAt": "2026-07-30",
+        "accession": "0001628280-26-050705",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+        "locator": "Consolidated balance sheet: long-term debt carrying amount",
+        "sourceType": "Original 10-Q financial statements",
+        "originalDocumentVerified": true
+      },
+      "missingComponent": "Same-date finance-lease liability",
+      "proxyComponents": [
+        {
+          "component": "financeLeaseLiability",
+          "value": 1184,
+          "method": "Carry last reported annual liability without implying a June measurement",
+          "source": {
+            "value": 1184.0,
+            "unit": "USD millions",
+            "tag": "us-gaap:FinanceLeaseLiability",
+            "periodEnd": "2025-12-31",
+            "filedAt": "2026-01-29",
+            "accession": "0001628280-26-003942",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+            "locator": "Inline XBRL us-gaap:FinanceLeaseLiability, context c-5 at 2025-12-31",
+            "sourceType": "Original 10-K financial statements",
+            "originalDocumentVerified": true
+          }
+        }
+      ],
+      "formula": "83664 reported borrowings + 1184 carried finance leases = 84848",
+      "sharesForSensitivity": 2694.464,
+      "sensitivity": {
+        "lowDebt": 83664,
+        "baseDebt": 84848,
+        "highDebt": 86032,
+        "lowDebtPerShareChange": 0.4394194912234864,
+        "highDebtPerShareChange": -0.4394194912234864,
+        "rangeBasis": "Zero to twice the last reported liability; a stress scenario, not a factual bound",
+        "severeStress": {
+          "leaseAssumption": 9467,
+          "debt": 93131,
+          "perShareChange": -3.0740807819291702,
+          "anchor": "June gross finance-lease right-of-use assets, Note 6, 9,467. Assets are not liability evidence; this is a deliberately broad additional stress, not a claim that debt equals assets.",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+        }
+      },
+      "note": "Debt includes a proxy: June borrowings of $83,664 million plus the December 2025 finance-lease liability of $1,184 million. June lease debt is not separately disclosed. A $0–2,368 million lease scenario moves value by ±$0.4394 per share. Even a $9,467 million stress assumption, equal to gross finance-lease assets rather than a liability measurement, lowers value by $3.07 per share versus the proxy.",
+      "noteZh": "债务包含估算：6月已披露借款836.64亿美元，加上2025年12月融资租赁负债11.84亿美元。6月租赁负债未单独披露。将租赁负债设为0至23.68亿美元，每股估值变动约正负0.4394美元。即使以融资租赁资产总额94.67亿美元作为压力假设，相对该估算每股估值也仅降低3.07美元；资产总额不等同于负债计量。",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm"
+      ]
+    },
+    "ASML-TTM-2026-09-27": {
+      "ticker": "ASML",
+      "periodEnd": "2026-09-27",
+      "currency": "EUR",
+      "reportedDebt": null,
+      "modelDebt": 2735.8,
+      "status": "explicit-proxy",
+      "missingComponent": "Q3 current borrowings and updated finance-lease liability",
+      "knownBorrowings": {
+        "value": 1963,
+        "periodEnd": "2026-09-27",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+        "locator": "Q3 US GAAP balance sheet, long-term debt"
+      },
+      "proxyComponents": [
+        {
+          "component": "currentBorrowings",
+          "value": 756.3,
+          "method": "June current + June noncurrent − Q3 debt/finance-lease repayments − September noncurrent; cash movements are an approximation for carrying-value changes",
+          "inputs": {
+            "juneCurrent": 1735.3,
+            "juneNoncurrent": 1984.4,
+            "q3Repayments": 1000.4,
+            "septemberNoncurrent": 1963
+          },
+          "sourceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/statutoryinterimreport20.htm",
+            "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm"
+          ],
+          "locator": "June statutory interim report p.14 borrowings; Q3 US GAAP statements pp.4–5 debt and repayments",
+          "accountingCaveat": "June current debt is from EU-IFRS interim statements. Annual current borrowing1,681.9 and June noncurrent1,984.4 reconcile to US-GAAP borrowing disclosures; using the June current balance remains a labelled cross-basis proxy."
+        },
+        {
+          "component": "financeLeaseLiability",
+          "value": 16.5,
+          "method": "Carry annual liability",
+          "source": {
+            "value": 16.5,
+            "periodEnd": "2025-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+            "locator": "20-F Note 14 finance leases"
+          }
+        }
+      ],
+      "formula": "1,735.3 + 1,984.4 + 16.5 − 1,000.4 = 2,735.8",
+      "sharesForSensitivity": 384.878707,
+      "sensitivity": {
+        "lowDebt": 1963,
+        "baseDebt": 2735.8,
+        "highDebt": 3731.3,
+        "lowDebtPerShareChange": 2.0079053113218865,
+        "highDebtPerShareChange": -2.5865291633293706,
+        "rangeBasis": "Current borrowings zero through last reported June amount1,735.3; finance leases zero through twice16.5. Chosen stresses, not guaranteed bounds.",
+        "olderAnnualRollForwardDebt": 2713.7,
+        "olderAnnualRollForwardPerShareChange": 0.05742068760379618
+      },
+      "note": "Debt uses an explicitly estimated cash-flow bridge: June borrowings of €3,719.7 million plus €16.5 million of carried finance leases, less €1,000.4 million of Q3 repayments, gives €2,735.8 million. Hedge, currency and amortization changes are not reconciled. Testing current debt from zero to the June balance and leases from zero to twice the annual balance changes value by +€2.01/−€2.59 per share. The June share count and annual awards remain carried estimates.",
+      "noteZh": "债务使用明确标注的现金流估算：6月借款37.197亿欧元，加上沿用的融资租赁负债0.165亿欧元，再减去第三季度偿还额10.004亿欧元，得到27.358亿欧元。对冲、汇率及摊销变化尚未调节。将流动债务设为零至6月余额、租赁负债设为零至年度余额的两倍，每股估值变动为增加2.01或减少2.59欧元。股数仍沿用6月数据，奖励股数仍沿用年度数据。",
+      "sourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+        "https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/statutoryinterimreport20.htm",
+        "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/form6-kquarterlyfilings.htm"
+      ]
+    }
+  },
+  "localizationPairs": [
+    [
+      "Debt includes a proxy: June borrowings of $84,344 million plus the last reported finance-lease liability of $1,230 million from September 2025. June lease debt is not separately disclosed. A $0–2,460 million lease scenario moves value by only ±$0.0834 per share; this range is a sensitivity, not a verified bound.",
+      "债务包含估算：6月已披露借款843.44亿美元，加上2025年9月最后披露的融资租赁负债12.30亿美元。6月租赁负债未单独披露。将租赁负债设为0至24.60亿美元，每股估值仅变动约正负0.0834美元；该区间是敏感性情景，并非已验证的上下限。"
+    ],
+    [
+      "Debt includes a proxy: June borrowings of $83,664 million plus the December 2025 finance-lease liability of $1,184 million. June lease debt is not separately disclosed. A $0–2,368 million lease scenario moves value by ±$0.4394 per share. Even a $9,467 million stress assumption, equal to gross finance-lease assets rather than a liability measurement, lowers value by $3.07 per share versus the proxy.",
+      "债务包含估算：6月已披露借款836.64亿美元，加上2025年12月融资租赁负债11.84亿美元。6月租赁负债未单独披露。将租赁负债设为0至23.68亿美元，每股估值变动约正负0.4394美元。即使以融资租赁资产总额94.67亿美元作为压力假设，相对该估算每股估值也仅降低3.07美元；资产总额不等同于负债计量。"
+    ],
+    [
+      "Debt uses an explicitly estimated cash-flow bridge: June borrowings of €3,719.7 million plus €16.5 million of carried finance leases, less €1,000.4 million of Q3 repayments, gives €2,735.8 million. Hedge, currency and amortization changes are not reconciled. Testing current debt from zero to the June balance and leases from zero to twice the annual balance changes value by +€2.01/−€2.59 per share. The June share count and annual awards remain carried estimates.",
+      "债务使用明确标注的现金流估算：6月借款37.197亿欧元，加上沿用的融资租赁负债0.165亿欧元，再减去第三季度偿还额10.004亿欧元，得到27.358亿欧元。对冲、汇率及摊销变化尚未调节。将流动债务设为零至6月余额、租赁负债设为零至年度余额的两倍，每股估值变动为增加2.01或减少2.59欧元。股数仍沿用6月数据，奖励股数仍沿用年度数据。"
+    ]
+  ]
+}

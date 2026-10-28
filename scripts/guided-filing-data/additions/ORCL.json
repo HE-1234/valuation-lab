@@ -1,0 +1,328 @@
+{
+  "ticker": "ORCL",
+  "sector": "Enterprise software and cloud infrastructure",
+  "businessSummary": {
+    "en": "Enterprise databases and cloud applications, with a rapidly expanding, capital-intensive AI cloud infrastructure business.",
+    "zh": "企业数据库与云应用，以及快速扩张、资本密集的AI云基础设施业务。"
+  },
+  "assumptions": {
+    "growth": 0.18,
+    "targetMargin": 0.32,
+    "tax": 0.2,
+    "salesCapital": 0.22,
+    "wacc": 0.1,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.15,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "18% initial revenue growth is an analyst scenario supported by 17% FY2026 growth and 30% latest-quarter growth, then fades. $664bn remaining performance obligations are multi-year contracts, not current revenue or guaranteed profit.",
+      "zh": "18%的初始收入增长为分析师情景，参考2026财年17%及最近季度30%的增长，随后逐渐放缓。6,640亿美元剩余履约义务属于多年合同，并非当期收入或保证利润。"
+    },
+    "targetMargin": {
+      "en": "32% GAAP operating margin stays near the 32.1% TTM margin. Stock compensation, depreciation and operating lease expenses remain costs; AI capacity utilization and lease escalation can materially change margins.",
+      "zh": "32%的公认会计准则营业利润率接近过去12个月32.1%的水平。股权薪酬、折旧与经营租赁仍计入费用；AI产能利用率及租金上涨可能显著影响利润率。"
+    },
+    "tax": {
+      "en": "20% normalized operating tax assumption avoids treating stock-exercise tax benefits and the Ampere disposal gain as recurring operating economics. Historical effective tax is retained separately.",
+      "zh": "20%的正常化营业税率避免将行权税收优惠及Ampere出售收益视为持续经营因素。历史有效税率单独保留。"
+    },
+    "salesCapital": {
+      "en": "Capital-intensive starting assumption: $0.22 incremental revenue per $1 of net investment. FY2026 revenue increase of $9,958m divided by cash capex of $55,663m less depreciation of $7,623m is 0.207; TTM capex is $75,660m. This explicitly reflects the AI infrastructure build rather than historical software economics. Timing of capacity coming online and customer prepayments make this a scenario, not guidance.",
+      "zh": "资本密集型起始假设：每投入1美元净资本带来0.22美元新增收入。2026财年收入增加99.58亿美元，除以556.63亿美元现金资本支出减76.23亿美元折旧，得到0.207；过去12个月资本支出为756.60亿美元。该假设反映AI基础设施建设；产能投运时点与客户预付款使其属于情景而非指引。"
+    },
+    "wacc": {
+      "en": "10% analyst required return reflects AI contract concentration, execution risk and substantial debt financing; it is not a quoted market WACC.",
+      "zh": "10%的分析师必要回报率反映AI合同集中、执行风险及大量债务融资，并非市场报价的加权平均资本成本。"
+    },
+    "terminalGrowth": {
+      "en": "3% long-run nominal growth, below the discount rate, with growth fading as the infrastructure footprint matures.",
+      "zh": "3%的长期名义增长率低于折现率；基础设施成熟后增长逐步放缓。"
+    },
+    "terminalROIC": {
+      "en": "15% mature marginal return is an analyst normalization, not the recent book return. It requires eventual utilization and lower incremental capital intensity; continuing today’s build intensity indefinitely would reduce value substantially.",
+      "zh": "15%的成熟期边际资本回报率属于分析师正常化假设，并非近期账面回报。它要求最终提高产能利用率及降低新增资本强度；若当前建设强度永久持续，估值将显著下降。"
+    },
+    "years": {
+      "en": "Ten-year explicit forecast. Annual and TTM are dated conditional starting points; future financing, construction schedules and customer credit performance are scenario risks.",
+      "zh": "采用十年明确预测期。年度与过去12个月数据均为注明日期的条件性起点；未来融资、施工安排及客户信用表现属于情景风险。"
+    }
+  },
+  "sources": [
+    {
+      "title": "FY2026 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+      "filedAt": "2026-06-22"
+    },
+    {
+      "title": "Q1 FY2027 Form 10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+      "filedAt": "2026-09-11"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001341439.json",
+    "latestPeriodicAccession": "0001193125-26-389274",
+    "latestAnnualAccession": "0001193125-26-277521"
+  },
+  "limitations": [
+    {
+      "en": "The default keeps recent AI buildout intensity in the explicit forecast: sales-to-new-capital of 0.22 means about $4.55 of net reinvestment per $1 of incremental revenue. With current debt and other claims, this scenario produces negative modeled common equity, displayed at a zero floor. It is a conservative conditional scenario, not an assertion that Oracle is worthless. Post-buildout capital efficiency, customer funding and terminal assumptions materially change the result; historical book capital is contextual and is not substituted for future investment.",
+      "zh": "默认明确预测期保留近期AI建设强度：新增销售与资本比率0.22意味着每增加1美元收入需约4.55美元净再投资。结合当前债务及其他索偿，该情景得出负的模型普通股权益，并以零下限展示。这是审慎的条件性情景，并不意味着甲骨文毫无价值。建设完成后的资本效率、客户融资及永续假设会显著改变结果；历史账面资本仅作背景，不替代未来投资。"
+    },
+    {
+      "en": "August 2026 restricted cash of $2,565m is excluded from excess cash. The 141m ATM shares and $19.9bn net proceeds are already in the August balance sheet and are not added again.",
+      "zh": "2026年8月25.65亿美元受限现金不计入多余现金。1.41亿股ATM发行及199亿美元净所得已体现在8月资产负债表，不再重复加入。"
+    },
+    {
+      "en": "Short-term capex financing has no standalone reported closing balance. A conservative claim proxy assumes zero opening at FY2024 and accumulates net financing of $1,422m + $3,345m = $4,767m for May 2026 and subtracts $830m to reach $3,937m for August. The notes-payable schedule reconciles separately and excludes these cash flows. An omitted $1bn opening balance would reduce value by about $0.33/share; the full proxy is about $1.3–1.6/share.",
+      "zh": "短期资本支出融资未单列期末余额。审慎索偿代理假设2024财年期初为零，累计净融资14.22+33.45=47.67亿美元，8月再减8.30=39.37亿美元。应付票据明细独立核对，不含这些现金流。若遗漏10亿美元期初余额，估值约降低每股0.33美元；整项代理约为每股1.3至1.6美元。"
+    },
+    {
+      "en": "The 31.238285m maximum mandatory preferred-conversion shares are an explicit conservative current-value proxy for a future market-price collar; the minimum 24.99063m sensitivity is available. Preferred carrying amount of $4,954m is not also subtracted. Remaining cumulative dividends are discounted separately at a 6.5% analyst rate; nominal payments provide a sensitivity.",
+      "zh": "最多3,123.8285万股强制优先股转换股份，为未来市场价格区间采用的审慎现值代理；提供最低2,499.063万股敏感度。不会再扣除49.54亿美元优先股账面值。剩余累积股息按6.5%的分析师利率单独折现，并提供名义支付额敏感度。"
+    },
+    {
+      "en": "Annual 81m restricted awards and 21m options are carried into August because no complete interim rollforward is disclosed; 2.4m new awards were exceeded by 4m forfeitures/cancellations before vesting or exercises. Carrying annual counts is conservative, not an exact current count.",
+      "zh": "因中期未披露完整变动表，8月沿用年度8,100万份限制性奖励及2,100万份期权。240万份新增奖励少于400万份取消/没收，且未考虑归属或行权。沿用年度数量为审慎代理，并非精确当期数量。"
+    },
+    {
+      "en": "Uncommenced data-center leases are $288bn at August and purchase obligations total $34.15bn. They are future operating and investment commitments, not added mechanically to current debt. Growth, margin and reinvestment must fund the capacity; contracted revenue can fail to translate into cash if customers default or construction slips.",
+      "zh": "8月尚未开始的数据中心租赁承诺为2,880亿美元，采购义务为341.5亿美元。它们属于未来经营及投资承诺，不机械加入当期债务。增长、利润率与再投资必须支持这些产能；客户违约或施工延期可能使合同收入无法转化为现金。"
+    },
+    {
+      "en": "Net pension liability of $256m is included once and carried from May to August. Matched deferred-compensation investments and liabilities are excluded. Nonmarketable investment carrying amounts of $2.3bn/$2.4bn is a valuation proxy; a 50% haircut changes value by roughly $0.4/share.",
+      "zh": "2.56亿美元养老金净负债仅计入一次，并由5月沿用至8月。相匹配的递延薪酬投资与负债不计入。23/24亿美元非上市投资账面值为估值代理；减值50%约影响每股0.4美元。"
+    },
+    {
+      "en": "FY2017/2018 were retrospectively restated for Topic 606 and pension presentation; FY2016 opening context was not. The transition is excluded from comparable historical growth/capital ranges. History is latest-reported context, not a point-in-time backtest.",
+      "zh": "2017/2018财年按Topic606及养老金列报追溯重述，2016财年期初资料未重述。该过渡期不纳入可比增长与资本范围。历史资料为最新申报背景，不属于时点回测数据。"
+    },
+    {
+      "en": "Gross uncertain income-tax exposures and related interest/penalties total $13.2bn at May 2026. They are not all assumed immediately payable or deducted as debt; the timing and ultimate settlement remain a material tax sensitivity beyond the normalized 20% operating tax scenario.",
+      "zh": "2026年5月不确定所得税及相关利息罚款总敞口为132亿美元。未假设全部立即支付或作为债务扣除；支付时间与最终结算仍为正常化20%营业税率情景之外的重要税务敏感因素。"
+    },
+    {
+      "en": "Customer prepayment funding reserve is 4,592m for May and 15,955m for August, shown separately from debt and restricted cash. Full, half and omitted reserve scenarios expose a material cash-conversion uncertainty. The reserve is a conservative gross cash-flow accumulation, not a separately reported closing balance.",
+      "zh": "客户预付款融资储备为5月45.92亿美元、8月159.55亿美元，与债务及受限现金分开列示。提供全部、半额及不保留储备的情景，展示重要现金转化不确定性。该储备是审慎累计现金流，并非单独披露的期末余额。"
+    }
+  ],
+  "claimsPolicy": {
+    "annual": {
+      "forceOverlay": true,
+      "fixedClaims": 5571,
+      "commonEquivalentShares": 31.238285,
+      "mandatoryConversion": {
+        "minimumShares": 24.99063,
+        "maximumShares": 31.238285,
+        "dividendPresentValue": 820.6266710360389,
+        "undiscountedDividends": 893.75,
+        "conversionDate": "2029-01-15",
+        "valuationDate": "2026-05-31",
+        "preferredCarryingExcluded": 4954,
+        "preferredLiquidationAmount": 5000,
+        "quarterlyDividend": 81.25,
+        "discountRate": 0.065,
+        "paymentDates": [
+          "2026-07-15",
+          "2026-10-15",
+          "2027-01-15",
+          "2027-04-15",
+          "2027-07-15",
+          "2027-10-15",
+          "2028-01-15",
+          "2028-04-15",
+          "2028-07-15",
+          "2028-10-15",
+          "2029-01-15"
+        ],
+        "formula": "Sum(5000 * .065 /4 / (1+.065)^((paymentDate-valuationDate)/365.25)); dividend rate is a disclosed coupon but discount rate is an analyst proxy, not market yield.",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "locator": "Note10 Stockholders equity, Mandatory Convertible Preferred Stock; quarterly dividenddatesJan15/Apr15/Jul15/Oct15 throughJan15 2029."
+      },
+      "optionTranches": [
+        {
+          "shares": 5,
+          "strike": 49.37,
+          "years": 1.64,
+          "volatility": 0.51,
+          "rate": 0.038
+        },
+        {
+          "shares": 15,
+          "strike": 275.9,
+          "years": 9.35,
+          "volatility": 0.51,
+          "rate": 0.038
+        },
+        {
+          "shares": 1,
+          "strike": 184.88,
+          "years": 5,
+          "volatility": 0.51,
+          "rate": 0.038
+        }
+      ],
+      "note": {
+        "en": "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "zh": "优先股本金替换为最高强制转换稀释及单列剩余股息现值。固定索偿包括少数股权、养老金净负债及明确标注的供应商融资代理。员工期权保留500万份已归属及1,500万份预计归属；另100万份预计不归属期权仍审慎计入，采用推算184.88美元行权价与五年期限。"
+      },
+      "cautions": [
+        {
+          "en": "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August.",
+          "zh": "期权51%波动率及3.8%利率沿用2026财年授予估值假设，作为现存索偿代理。四舍五入的500万份已归属及1,500万份预计归属数量无法精确重现2,000万份小计的加权行权价。剩余100万份审慎采用184.88美元行权价，使（5×49.37+15×275.90+1×184.88）÷21=217.63；这是依据四舍五入数据的分配代理，而非单独披露的批次。8月沿用年度剩余期限。"
+        }
+      ],
+      "supplierFinancingProxy": {
+        "value": 4767,
+        "assumedOpeningBalance": 0,
+        "openingDate": "2024-05-31",
+        "components": [
+          1422,
+          3345
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+        ],
+        "formula": "Assumed zero FY2024 opening + FY2025 net financing1422 + FY2026 net financing3345 - FY2027Q1 net repayments830 when applicable",
+        "omittedOpeningSensitivity": {
+          "amount": 1000,
+          "approxPerShare": 0.3341979831663039
+        }
+      },
+      "operatingCashReserve": {
+        "amount": 4592,
+        "note": {
+          "en": "Conservative reserve for cash collected before delivery of future cloud services. Uses cumulative increases in deferred revenue from customer prepayments with a significant financing component: 4,592 in FY2026, plus 11,363 in Q1 FY2027. This is not legally restricted cash or a reported closing financing balance; earned amounts, noncash changes and FX may make the actual balance lower. No future repeat funding is assumed in the reinvestment default.",
+          "zh": "为提前收取、尚需履行未来云服务的现金保留审慎储备。采用含重大融资成分客户预付款所形成的递延收入累计增量：2026财年45.92亿美元，加2027财年第一季度113.63亿美元。这并非法律限制现金或披露的期末融资余额；已赚取收入、非现金变化及汇率可能使实际余额较低。再投资默认值不假设未来重复获得此类融资。"
+        },
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm"
+        ],
+        "locator": "Cash flow statement: Increase in deferred revenues from customer prepayments with significant financing component; Note 1 revenue recognition; net proceeds zero in FY2024 and FY2025.",
+        "components": [
+          4592
+        ],
+        "formula": "Cumulative disclosed cash-flow increases in customer prepayments with significant financing components: 4592 + 11363 for TTM, 4592 for annual."
+      }
+    },
+    "ttm": {
+      "forceOverlay": true,
+      "fixedClaims": 4617,
+      "commonEquivalentShares": 31.238285,
+      "mandatoryConversion": {
+        "minimumShares": 24.99063,
+        "maximumShares": 31.238285,
+        "dividendPresentValue": 751.8363447150316,
+        "undiscountedDividends": 812.5,
+        "conversionDate": "2029-01-15",
+        "valuationDate": "2026-08-31",
+        "preferredCarryingExcluded": 4954,
+        "preferredLiquidationAmount": 5000,
+        "quarterlyDividend": 81.25,
+        "discountRate": 0.065,
+        "paymentDates": [
+          "2026-10-15",
+          "2027-01-15",
+          "2027-04-15",
+          "2027-07-15",
+          "2027-10-15",
+          "2028-01-15",
+          "2028-04-15",
+          "2028-07-15",
+          "2028-10-15",
+          "2029-01-15"
+        ],
+        "formula": "Sum(5000 * .065 /4 / (1+.065)^((paymentDate-valuationDate)/365.25)); dividend rate is a disclosed coupon but discount rate is an analyst proxy, not market yield.",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+        "locator": "Note10 Stockholders equity, Mandatory Convertible Preferred Stock; quarterly dividenddatesJan15/Apr15/Jul15/Oct15 throughJan15 2029."
+      },
+      "optionTranches": [
+        {
+          "shares": 5,
+          "strike": 49.37,
+          "years": 1.64,
+          "volatility": 0.51,
+          "rate": 0.038
+        },
+        {
+          "shares": 15,
+          "strike": 275.9,
+          "years": 9.35,
+          "volatility": 0.51,
+          "rate": 0.038
+        },
+        {
+          "shares": 1,
+          "strike": 184.88,
+          "years": 5,
+          "volatility": 0.51,
+          "rate": 0.038
+        }
+      ],
+      "note": {
+        "en": "Preferred principal is replaced with maximum mandatory-conversion dilution plus separate remaining-dividend PV. Fixed claims include NCI, net pension and the separately flagged supplier-financing proxy. Employee option tranches retain 5m vested and 15m expected-to-vest counts; the remaining 1m not-expected-to-vest is conservatively included at an $184.88 inferred strike and a 5-year life.",
+        "zh": "优先股本金替换为最高强制转换稀释及单列剩余股息现值。固定索偿包括少数股权、养老金净负债及明确标注的供应商融资代理。员工期权保留500万份已归属及1,500万份预计归属；另100万份预计不归属期权仍审慎计入，采用推算184.88美元行权价与五年期限。"
+      },
+      "cautions": [
+        {
+          "en": "Option volatility 51% and rate 3.8% use FY2026 grant valuation assumptions as explicit proxies for outstanding claims. Rounded 5m vested and 15m expected-to-vest tranches do not reproduce the 20m subtotal weighted strike exactly. The conservative 1m residual uses strike 184.88 so (5×49.37 + 15×275.90 + 1×184.88) / 21 = 217.63; this is an allocation proxy from rounded values, not a separately reported tranche. Annual remaining lives are carried without aging at August.",
+          "zh": "期权51%波动率及3.8%利率沿用2026财年授予估值假设，作为现存索偿代理。四舍五入的500万份已归属及1,500万份预计归属数量无法精确重现2,000万份小计的加权行权价。剩余100万份审慎采用184.88美元行权价，使（5×49.37+15×275.90+1×184.88）÷21=217.63；这是依据四舍五入数据的分配代理，而非单独披露的批次。8月沿用年度剩余期限。"
+        }
+      ],
+      "supplierFinancingProxy": {
+        "value": 3937,
+        "assumedOpeningBalance": 0,
+        "openingDate": "2024-05-31",
+        "components": [
+          1422,
+          3345,
+          -830
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+        ],
+        "formula": "Assumed zero FY2024 opening + FY2025 net financing1422 + FY2026 net financing3345 - FY2027Q1 net repayments830 when applicable",
+        "omittedOpeningSensitivity": {
+          "amount": 1000,
+          "approxPerShare": 0.3188533233532668
+        }
+      },
+      "operatingCashReserve": {
+        "amount": 15955,
+        "note": {
+          "en": "Conservative reserve for cash collected before delivery of future cloud services. Uses cumulative increases in deferred revenue from customer prepayments with a significant financing component: 4,592 in FY2026, plus 11,363 in Q1 FY2027. This is not legally restricted cash or a reported closing financing balance; earned amounts, noncash changes and FX may make the actual balance lower. No future repeat funding is assumed in the reinvestment default.",
+          "zh": "为提前收取、尚需履行未来云服务的现金保留审慎储备。采用含重大融资成分客户预付款所形成的递延收入累计增量：2026财年45.92亿美元，加2027财年第一季度113.63亿美元。这并非法律限制现金或披露的期末融资余额；已赚取收入、非现金变化及汇率可能使实际余额较低。再投资默认值不假设未来重复获得此类融资。"
+        },
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+        ],
+        "locator": "Cash flow statement: Increase in deferred revenues from customer prepayments with significant financing component; Note 1 revenue recognition; net proceeds zero in FY2024 and FY2025.",
+        "components": [
+          4592,
+          11363
+        ],
+        "formula": "Cumulative disclosed cash-flow increases in customer prepayments with significant financing components: 4592 + 11363 for TTM, 4592 for annual."
+      }
+    }
+  },
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  },
+  "localizationPairs": {
+    "US GAAP; before retrospective Topic606 restatement": "美国公认会计准则；Topic606追溯重述之前",
+    "US GAAP; Topic606 latest-reported basis": "美国公认会计准则；Topic606最新申报口径",
+    "US GAAP; latest reported annual evidence": "美国公认会计准则；最新申报年度证据",
+    "Enterprise software and cloud infrastructure": "企业软件与云基础设施",
+    "Historical mapped debt uses the disclosed notes-payable and borrowings subtotal, adding separately quantified finance leases in FY2025 and FY2026. The separately modeled supplier-financing proxy is excluded from these reported historical facts.": "历史已映射债务采用已披露的应付票据及借款小计，并在2025及2026财年加入单独量化的融资租赁。单独建模的供应商融资代理不计入这些历史申报事实。",
+    "Oracle adopted Topic 606 retrospectively for FY2017 and FY2018; FY2016 opening context is not recast. FY2023 includes Cerner from its acquisition; subsequent AI capacity investment changes the business capital intensity.": "甲骨文对2017及2018财年追溯采用Topic606；2016财年期初资料未重述。2023财年自收购日起包含Cerner；随后AI产能投资改变了业务资本强度。"
+  }
+}

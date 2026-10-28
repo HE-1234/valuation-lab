@@ -7,8 +7,9 @@ import {CEVA_MESSAGES} from './ceva-messages.js';
 import {RMBS_MESSAGES} from './rmbs-messages.js';
 import {KEYS_ERROR_PAIRS} from './keys-error-pairs.js';
 import {KEYS_MESSAGES} from './keys-messages.js';
-import {ARM_ERROR_PAIRS} from './arm-error-pairs.js';
+import {ARM_ERROR_PAIRS,ARM_V3_PAIRS} from './arm-error-pairs.js';
 import {ARM_MESSAGES} from './arm-messages.js';
+import {LATEST_QUARTER_PAIRS} from './latest-quarter-evidence-data.js';
 import {SNDK_MESSAGES,SNDK_ERROR_PAIRS} from './sndk-messages.js';
 import {MRVL_MESSAGES} from './mrvl-operating.js';
 import {registerCatalog} from './i18n.js';
@@ -187,6 +188,9 @@ for(const r of incrementalRecords.filter(x=>x.identity.ticker==='UBER')){
 // NFLX is appended after existing message identities.
 for(const pair of Object.values(NFLX_MESSAGES))addKeysPair(pair);
 for(const r of incrementalRecords.filter(x=>x.identity.ticker==='NFLX')){for(const p of Object.values(r.prose))addKeysPair([p.en,p['zh-Hans']]);for(const [key,zhKey]of [['period','periodZh'],['classification','classificationZh']])if(r.annualCase.anchor[zhKey])addKeysPair([r.annualCase.anchor[key],r.annualCase.anchor[zhKey]]);}
+// ARM June 30 v3 and latest-filed-quarter evidence are appended after existing message identities.
+for(const pair of ARM_V3_PAIRS)addKeysPair(pair);
+for(const pair of LATEST_QUARTER_PAIRS)addKeysPair(pair);
 const en={},zh={},keys={};pairs.forEach(([a,b],i)=>{const key='copy'+i;en[key]=a;zh[key]=b;keys[a]='incremental.'+key;});
 registerCatalog('incremental',{en,'zh-Hans':zh});
 export const incrementalMessageKeys=Object.freeze(keys);

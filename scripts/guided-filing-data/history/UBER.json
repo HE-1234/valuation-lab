@@ -1,0 +1,2056 @@
+{
+  "ticker": "UBER",
+  "currency": "USD",
+  "accountingBasis": "US GAAP",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001543151.json",
+  "collectedAt": "2026-10-21",
+  "mappedDebt": "Exact balance-sheet borrowing rows plus separately disclosed finance/capital leases; components and filing locators preserved. Missing inputs remain null.",
+  "years": {
+    "2015": {
+      "fiscalYear": 2015,
+      "periodStart": "2015-01-01",
+      "periodEnd": "2015-12-31",
+      "accountingBasis": "US GAAP, pre-Topic 606 (unaudited selected history)",
+      "rangeEligible": false,
+      "note": "2015 is unaudited selected historical data under pre-Topic 606 standards; use only as contextual opening data.",
+      "revenue": {
+        "value": 1995,
+        "tag": null,
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: revenue 1995 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: revenue 1995 (USD millions)"
+        },
+        "reportedTableValue": 1995,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "operatingIncome": {
+        "value": -1339,
+        "tag": null,
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: operatingIncome -1339 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: operatingIncome -1339 (USD millions)"
+        },
+        "reportedTableValue": -1339,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "pretaxIncome": {
+        "value": -1603,
+        "tag": null,
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: pretaxIncome -1603 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: pretaxIncome -1603 (USD millions)"
+        },
+        "reportedTableValue": -1603,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "incomeTaxExpense": {
+        "value": -13,
+        "tag": null,
+        "periodStart": "2015-01-01",
+        "periodEnd": "2015-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: incomeTaxExpense -13 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: incomeTaxExpense -13 (USD millions)"
+        },
+        "reportedTableValue": -13,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "bookEquity": {
+        "value": -4146,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2015-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: bookEquity -4146 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: bookEquity -4146 (USD millions)"
+        },
+        "reportedTableValue": -4146,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "cashAndEquivalents": {
+        "value": 4188,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2015-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: cashAndEquivalents 4188 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: cashAndEquivalents 4188 (USD millions)"
+        },
+        "reportedTableValue": 4188,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "longTermDebtNoncurrent": {
+        "value": 1423,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2015-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: longTermDebtNoncurrent 1423 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2015 column: longTermDebtNoncurrent 1423 (USD millions)"
+        },
+        "reportedTableValue": 1423,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2015-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "note": "Selected balance-sheet data reports only noncurrent debt; current debt and finance/capital lease balances are not separately provided for this date, so exhaustive mapped debt remains unknown."
+      },
+      "mappedDebt": {
+        "value": null,
+        "periodEnd": "2015-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "note": "Selected balance-sheet data reports only noncurrent debt; current debt and finance/capital lease balances are not separately provided for this date, so exhaustive mapped debt remains unknown."
+      }
+    },
+    "2016": {
+      "fiscalYear": 2016,
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "accountingBasis": "US GAAP, Topic 606 retrospectively recast",
+      "rangeEligible": true,
+      "note": "2016 flows audited and retrospectively recast for Topic 606; balance data from S-1 selected financial data.",
+      "revenue": {
+        "value": 3845,
+        "tag": null,
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: revenue 3845 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: revenue 3845 (USD millions)"
+        },
+        "reportedTableValue": 3845,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "operatingIncome": {
+        "value": -3023,
+        "tag": null,
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: operatingIncome -3023 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: operatingIncome -3023 (USD millions)"
+        },
+        "reportedTableValue": -3023,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "pretaxIncome": {
+        "value": -3218,
+        "tag": null,
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: pretaxIncome -3218 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: pretaxIncome -3218 (USD millions)"
+        },
+        "reportedTableValue": -3218,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "incomeTaxExpense": {
+        "value": 28,
+        "tag": null,
+        "periodStart": "2016-01-01",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: incomeTaxExpense 28 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: incomeTaxExpense 28 (USD millions)"
+        },
+        "reportedTableValue": 28,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "bookEquity": {
+        "value": -4596,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2016-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: bookEquity -4596 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: bookEquity -4596 (USD millions)"
+        },
+        "reportedTableValue": -4596,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "cashAndEquivalents": {
+        "value": 6241,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2016-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: cashAndEquivalents 6241 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: cashAndEquivalents 6241 (USD millions)"
+        },
+        "reportedTableValue": 6241,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "longTermDebtNoncurrent": {
+        "value": 3087,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2016-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: longTermDebtNoncurrent 3087 (USD millions)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Selected Consolidated Financial Data pages 88\u201390, 2016 column: longTermDebtNoncurrent 3087 (USD millions)"
+        },
+        "reportedTableValue": 3087,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2016-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "note": "Selected balance-sheet data reports only noncurrent debt; current debt and finance/capital lease balances are not separately provided for this date, so exhaustive mapped debt remains unknown."
+      },
+      "mappedDebt": {
+        "value": null,
+        "periodEnd": "2016-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "note": "Selected balance-sheet data reports only noncurrent debt; current debt and finance/capital lease balances are not separately provided for this date, so exhaustive mapped debt remains unknown."
+      }
+    },
+    "2017": {
+      "revenue": {
+        "value": 7932.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 7932000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -4080.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -4080000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": -8557.0,
+        "tag": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+        "periodStart": null,
+        "periodEnd": "2017-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+        "rawValue": -8557000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 4393.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2017-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 4393000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -4575.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": -4575000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -542.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2017-01-01",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -542000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2017-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2017-12-31",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2017,
+      "periodEnd": "2017-12-31",
+      "periodStart": "2017-01-01",
+      "mappedDebt": {
+        "value": 3135,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2017-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Note 7 Long-Term Debt: total debt less unamortized discounts/issuance costs (2017: 4,014 - 879; 2018: 7,491 - 595), including current portion",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Note 7 Long-Term Debt: total debt less unamortized discounts/issuance costs (2017: 4,014 - 879; 2018: 7,491 - 595), including current portion"
+        },
+        "note": "Borrowing carrying-value proxy only. The S-1 gives capital-lease current amounts and future minimum commitments but no total recorded lease liability, so pre-2019 finance/capital leases are not estimated. Do not interpret as an exhaustive all-claims total.",
+        "formula": "Total debt principal - unamortized discount and issuance costs",
+        "components": [
+          {
+            "periodEnd": "2017-12-31",
+            "filed": "2019-04-11",
+            "accession": "0001193125-19-103850",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+            "sourceType": "SEC filed document / S-1",
+            "value": 4014,
+            "tag": null,
+            "locator": "Note 7 debt table: Total debt",
+            "originalDocumentVerified": true,
+            "reportedTableValue": 4014,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "Total debt 4014"
+            }
+          },
+          {
+            "periodEnd": "2017-12-31",
+            "filed": "2019-04-11",
+            "accession": "0001193125-19-103850",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+            "sourceType": "SEC filed document / S-1",
+            "value": -879,
+            "tag": null,
+            "locator": "Note 7 debt table: Less unamortized discount and issuance costs",
+            "originalDocumentVerified": true,
+            "reportedTableValue": -879,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "Less unamortized discount and issuance costs -879"
+            }
+          }
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm"
+        ]
+      },
+      "rangeEligible": false,
+      "note": "Pre-2019 borrowing proxy omits unquantified recorded capital-lease total; keep capital-based ratios out of assumption ranges."
+    },
+    "2018": {
+      "revenue": {
+        "value": 11270.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 11270000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -3033.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -3033000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": -7385.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": -7385000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 6406.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 6406000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 1312.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": 1312000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 283.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2018-01-01",
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 283000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 6869.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 6869000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 27.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 27000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2018,
+      "periodEnd": "2018-12-31",
+      "periodStart": "2018-01-01",
+      "mappedDebt": {
+        "value": 6896,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2018-12-31",
+        "filed": "2019-04-11",
+        "accession": "0001193125-19-103850",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Note 7 Long-Term Debt: total debt less unamortized discounts/issuance costs (2017: 4,014 - 879; 2018: 7,491 - 595), including current portion",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Note 7 Long-Term Debt: total debt less unamortized discounts/issuance costs (2017: 4,014 - 879; 2018: 7,491 - 595), including current portion"
+        },
+        "note": "Borrowing carrying-value proxy only. The S-1 gives capital-lease current amounts and future minimum commitments but no total recorded lease liability, so pre-2019 finance/capital leases are not estimated. Do not interpret as an exhaustive all-claims total.",
+        "formula": "Total debt principal - unamortized discount and issuance costs",
+        "components": [
+          {
+            "periodEnd": "2018-12-31",
+            "filed": "2019-04-11",
+            "accession": "0001193125-19-103850",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+            "sourceType": "SEC filed document / S-1",
+            "value": 7491,
+            "tag": null,
+            "locator": "Note 7 debt table: Total debt",
+            "originalDocumentVerified": true,
+            "reportedTableValue": 7491,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "Total debt 7491"
+            }
+          },
+          {
+            "periodEnd": "2018-12-31",
+            "filed": "2019-04-11",
+            "accession": "0001193125-19-103850",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm",
+            "sourceType": "SEC filed document / S-1",
+            "value": -595,
+            "tag": null,
+            "locator": "Note 7 debt table: Less unamortized discount and issuance costs",
+            "originalDocumentVerified": true,
+            "reportedTableValue": -595,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "Less unamortized discount and issuance costs -595"
+            }
+          }
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000119312519103850/d647752ds1.htm"
+        ]
+      },
+      "rangeEligible": false,
+      "note": "Pre-2019 borrowing proxy omits unquantified recorded capital-lease total; keep capital-based ratios out of assumption ranges."
+    },
+    "2019": {
+      "revenue": {
+        "value": 14147.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 14147000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -8596.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -8596000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 14190.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 14190000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 10873.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 10873000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -8433.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": -8433000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 45.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2019-01-01",
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 45000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 5707.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 5707000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 27.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2019-12-31",
+        "filed": "2020-03-02",
+        "accession": "0001543151-20-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 27000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2019,
+      "periodEnd": "2019-12-31",
+      "periodStart": "2019-01-01",
+      "mappedDebt": {
+        "value": 6042.0,
+        "periodEnd": "2019-12-31",
+        "formula": "Face balance-sheet borrowings and disclosed finance leases + current maturities embedded in accrued liabilities",
+        "components": [
+          {
+            "value": 6015.0,
+            "tag": null,
+            "periodEnd": "2019-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+            "filed": "2020-03-02",
+            "accession": "0001543151-20-000010",
+            "sourceType": "Derived from SEC filing facts",
+            "formula": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "components": [
+              {
+                "value": 5707.0,
+                "tag": null,
+                "periodEnd": "2019-12-31",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+                "filed": "2020-03-02",
+                "accession": "0001543151-20-000010",
+                "sourceType": "Derived from SEC filing facts",
+                "formula": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "components": [
+                  {
+                    "value": 5707.0,
+                    "tag": "us-gaap:LongTermDebtNoncurrent",
+                    "periodStart": null,
+                    "periodEnd": "2019-12-31",
+                    "filed": "2020-03-02",
+                    "accession": "0001543151-20-000010",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Long-term debt, net of current portion 6,869 5,707",
+                    "rawValue": 5707000000.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  }
+                ],
+                "locator": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "sourceUrls": [
+                  "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm"
+                ]
+              },
+              {
+                "value": 308.0,
+                "tag": "us-gaap:FinanceLeaseLiability",
+                "periodStart": null,
+                "periodEnd": "2019-12-31",
+                "filed": "2021-03-01",
+                "accession": "0001543151-21-000014",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+                "sourceType": "SEC standardized Company Facts / 10-K",
+                "locator": "us-gaap:FinanceLeaseLiability",
+                "rawValue": 308000000.0,
+                "rawUnit": "USD",
+                "multiplierToMillions": 1e-06
+              }
+            ],
+            "locator": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "sourceUrls": [
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm"
+            ]
+          },
+          {
+            "value": 27.0,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2019-12-31",
+            "filed": "2020-03-02",
+            "accession": "0001543151-20-000010",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/",
+            "sourceType": "SEC standardized Company Facts / 10-K",
+            "locator": "Debt note current portion included in accrued liabilities",
+            "rawValue": 27000000.0,
+            "rawUnit": "USD",
+            "multiplierToMillions": 1e-06
+          }
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/",
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315120000010/fy2019q410kfinancialst.htm"
+        ]
+      }
+    },
+    "2020": {
+      "revenue": {
+        "value": 11139.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 11139000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -4863.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -4863000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 12266.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 12266000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 5647.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 5647000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -6946.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": -6946000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -192.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2020-01-01",
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -192000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 7560.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 7560000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 27.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2020-12-31",
+        "filed": "2021-03-01",
+        "accession": "0001543151-21-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 27000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2020,
+      "periodEnd": "2020-12-31",
+      "periodStart": "2020-01-01",
+      "mappedDebt": {
+        "value": 10165.0,
+        "periodEnd": "2020-12-31",
+        "formula": "Face balance-sheet borrowings and disclosed finance leases + current maturities embedded in accrued liabilities",
+        "components": [
+          {
+            "value": 10138.0,
+            "tag": null,
+            "periodEnd": "2020-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+            "filed": "2022-02-24",
+            "accession": "0001543151-22-000008",
+            "sourceType": "Derived from SEC filing facts",
+            "formula": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "components": [
+              {
+                "value": 9841.0,
+                "tag": null,
+                "periodEnd": "2020-12-31",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+                "filed": "2022-02-24",
+                "accession": "0001543151-22-000008",
+                "sourceType": "Derived from SEC filing facts",
+                "formula": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "components": [
+                  {
+                    "value": 2281.0,
+                    "tag": "us-gaap:AvailableForSaleDebtSecuritiesAmortizedCostBasis",
+                    "periodStart": null,
+                    "periodEnd": "2020-12-31",
+                    "filed": "2022-02-24",
+                    "accession": "0001543151-22-000008",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Investments (including amortized cost of debt securities of $ 2,281 and $ \u2014 ) 9,052 11,806",
+                    "rawValue": 2281000000.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  },
+                  {
+                    "value": 7560.0,
+                    "tag": "us-gaap:LongTermDebtNoncurrent",
+                    "periodStart": null,
+                    "periodEnd": "2020-12-31",
+                    "filed": "2022-02-24",
+                    "accession": "0001543151-22-000008",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Long-term debt, net of current portion 7,560 9,276",
+                    "rawValue": 7560000000.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  }
+                ],
+                "locator": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "sourceUrls": [
+                  "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm"
+                ]
+              },
+              {
+                "value": 297.0,
+                "tag": "us-gaap:FinanceLeaseLiability",
+                "periodStart": null,
+                "periodEnd": "2020-12-31",
+                "filed": "2021-03-01",
+                "accession": "0001543151-21-000014",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+                "sourceType": "SEC standardized Company Facts / 10-K",
+                "locator": "us-gaap:FinanceLeaseLiability",
+                "rawValue": 297000000.0,
+                "rawUnit": "USD",
+                "multiplierToMillions": 1e-06
+              }
+            ],
+            "locator": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "sourceUrls": [
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/uber-20201231.htm",
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm"
+            ]
+          },
+          {
+            "value": 27.0,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2020-12-31",
+            "filed": "2021-03-01",
+            "accession": "0001543151-21-000014",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/",
+            "sourceType": "SEC standardized Company Facts / 10-K",
+            "locator": "Debt note current portion included in accrued liabilities",
+            "rawValue": 27000000.0,
+            "rawUnit": "USD",
+            "multiplierToMillions": 1e-06
+          }
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315121000014/",
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm"
+        ]
+      }
+    },
+    "2021": {
+      "revenue": {
+        "value": 17455.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 17455000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -3834.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -3834000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 14458.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 14458000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 4295.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 4295000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -1025.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": -1025000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -492.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2021-01-01",
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -492000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 9276.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 9276000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 27.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2022-02-24",
+        "accession": "0001543151-22-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 27000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2021,
+      "periodEnd": "2021-12-31",
+      "periodStart": "2021-01-01",
+      "mappedDebt": {
+        "value": 9537.0,
+        "periodEnd": "2021-12-31",
+        "formula": "Face balance-sheet borrowings and disclosed finance leases + current maturities embedded in accrued liabilities",
+        "components": [
+          {
+            "value": 9510.0,
+            "tag": null,
+            "periodEnd": "2021-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+            "filed": "2022-02-24",
+            "accession": "0001543151-22-000008",
+            "sourceType": "Derived from SEC filing facts",
+            "formula": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "components": [
+              {
+                "value": 9276.0,
+                "tag": null,
+                "periodEnd": "2021-12-31",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+                "filed": "2022-02-24",
+                "accession": "0001543151-22-000008",
+                "sourceType": "Derived from SEC filing facts",
+                "formula": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "components": [
+                  {
+                    "value": 0.0,
+                    "tag": "us-gaap:AvailableForSaleDebtSecuritiesAmortizedCostBasis",
+                    "periodStart": null,
+                    "periodEnd": "2021-12-31",
+                    "filed": "2022-02-24",
+                    "accession": "0001543151-22-000008",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Investments (including amortized cost of debt securities of $ 2,281 and $ \u2014 ) 9,052 11,806",
+                    "rawValue": 0.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  },
+                  {
+                    "value": 9276.0,
+                    "tag": "us-gaap:LongTermDebtNoncurrent",
+                    "periodStart": null,
+                    "periodEnd": "2021-12-31",
+                    "filed": "2022-02-24",
+                    "accession": "0001543151-22-000008",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Long-term debt, net of current portion 7,560 9,276",
+                    "rawValue": 9276000000.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  }
+                ],
+                "locator": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "sourceUrls": [
+                  "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm"
+                ]
+              },
+              {
+                "value": 234.0,
+                "tag": "us-gaap:FinanceLeaseLiability",
+                "periodStart": null,
+                "periodEnd": "2021-12-31",
+                "filed": "2022-02-24",
+                "accession": "0001543151-22-000008",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+                "sourceType": "SEC standardized Company Facts / 10-K",
+                "locator": "us-gaap:FinanceLeaseLiability",
+                "rawValue": 234000000.0,
+                "rawUnit": "USD",
+                "multiplierToMillions": 1e-06
+              }
+            ],
+            "locator": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "sourceUrls": [
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm"
+            ]
+          },
+          {
+            "value": 27.0,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2021-12-31",
+            "filed": "2022-02-24",
+            "accession": "0001543151-22-000008",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/",
+            "sourceType": "SEC standardized Company Facts / 10-K",
+            "locator": "Debt note current portion included in accrued liabilities",
+            "rawValue": 27000000.0,
+            "rawUnit": "USD",
+            "multiplierToMillions": 1e-06
+          }
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/",
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000008/uber-20211231.htm"
+        ]
+      }
+    },
+    "2022": {
+      "revenue": {
+        "value": 31877.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 31877000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -1832.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -1832000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 7340.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 7340000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 4208.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 4208000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -9426.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": -9426000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -181.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -181000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 9265.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 9265000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 27.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2023-02-21",
+        "accession": "0001543151-23-000010",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 27000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2022,
+      "periodEnd": "2022-12-31",
+      "periodStart": "2022-01-01",
+      "mappedDebt": {
+        "value": 9691.0,
+        "periodEnd": "2022-12-31",
+        "formula": "Face balance-sheet borrowings and disclosed finance leases + current maturities embedded in accrued liabilities",
+        "components": [
+          {
+            "value": 9664.0,
+            "tag": null,
+            "periodEnd": "2022-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+            "filed": "2024-02-15",
+            "accession": "0001543151-24-000012",
+            "sourceType": "Derived from SEC filing facts",
+            "formula": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "components": [
+              {
+                "value": 9265.0,
+                "tag": null,
+                "periodEnd": "2022-12-31",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+                "filed": "2024-02-15",
+                "accession": "0001543151-24-000012",
+                "sourceType": "Derived from SEC filing facts",
+                "formula": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "components": [
+                  {
+                    "value": 9265.0,
+                    "tag": "us-gaap:LongTermDebtNoncurrent",
+                    "periodStart": null,
+                    "periodEnd": "2022-12-31",
+                    "filed": "2024-02-15",
+                    "accession": "0001543151-24-000012",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Long-term debt, net of current portion 9,265 9,459",
+                    "rawValue": 9265000000.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  }
+                ],
+                "locator": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "sourceUrls": [
+                  "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm"
+                ]
+              },
+              {
+                "value": 399.0,
+                "tag": "us-gaap:FinanceLeaseLiability",
+                "periodStart": null,
+                "periodEnd": "2022-12-31",
+                "filed": "2023-02-21",
+                "accession": "0001543151-23-000010",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+                "sourceType": "SEC standardized Company Facts / 10-K",
+                "locator": "us-gaap:FinanceLeaseLiability",
+                "rawValue": 399000000.0,
+                "rawUnit": "USD",
+                "multiplierToMillions": 1e-06
+              }
+            ],
+            "locator": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "sourceUrls": [
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm",
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm"
+            ]
+          },
+          {
+            "value": 27.0,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2022-12-31",
+            "filed": "2023-02-21",
+            "accession": "0001543151-23-000010",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/",
+            "sourceType": "SEC standardized Company Facts / 10-K",
+            "locator": "Debt note current portion included in accrued liabilities",
+            "rawValue": 27000000.0,
+            "rawUnit": "USD",
+            "multiplierToMillions": 1e-06
+          }
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/",
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm"
+        ]
+      }
+    },
+    "2023": {
+      "revenue": {
+        "value": 37281.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 37281000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 1110.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 1110000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 11249.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 11249000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 4680.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 4680000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 2321.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": 2321000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 213.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 213000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 9459.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 9459000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 25.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2024-02-15",
+        "accession": "0001543151-24-000012",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 25000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2023,
+      "periodEnd": "2023-12-31",
+      "periodStart": "2023-01-01",
+      "mappedDebt": {
+        "value": 9962.0,
+        "periodEnd": "2023-12-31",
+        "formula": "Face balance-sheet borrowings and disclosed finance leases + current maturities embedded in accrued liabilities",
+        "components": [
+          {
+            "value": 9937.0,
+            "tag": null,
+            "periodEnd": "2023-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+            "filed": "2024-02-15",
+            "accession": "0001543151-24-000012",
+            "sourceType": "Derived from SEC filing facts",
+            "formula": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "components": [
+              {
+                "value": 9459.0,
+                "tag": null,
+                "periodEnd": "2023-12-31",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+                "filed": "2024-02-15",
+                "accession": "0001543151-24-000012",
+                "sourceType": "Derived from SEC filing facts",
+                "formula": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "components": [
+                  {
+                    "value": 9459.0,
+                    "tag": "us-gaap:LongTermDebtNoncurrent",
+                    "periodStart": null,
+                    "periodEnd": "2023-12-31",
+                    "filed": "2024-02-15",
+                    "accession": "0001543151-24-000012",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Long-term debt, net of current portion 9,265 9,459",
+                    "rawValue": 9459000000.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  }
+                ],
+                "locator": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "sourceUrls": [
+                  "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm"
+                ]
+              },
+              {
+                "value": 478.0,
+                "tag": "us-gaap:FinanceLeaseLiability",
+                "periodStart": null,
+                "periodEnd": "2023-12-31",
+                "filed": "2024-02-15",
+                "accession": "0001543151-24-000012",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+                "sourceType": "SEC standardized Company Facts / 10-K",
+                "locator": "us-gaap:FinanceLeaseLiability",
+                "rawValue": 478000000.0,
+                "rawUnit": "USD",
+                "multiplierToMillions": 1e-06
+              }
+            ],
+            "locator": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "sourceUrls": [
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm"
+            ]
+          },
+          {
+            "value": 25.0,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2023-12-31",
+            "filed": "2024-02-15",
+            "accession": "0001543151-24-000012",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/",
+            "sourceType": "SEC standardized Company Facts / 10-K",
+            "locator": "Debt note current portion included in accrued liabilities",
+            "rawValue": 25000000.0,
+            "rawUnit": "USD",
+            "multiplierToMillions": 1e-06
+          }
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/",
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm"
+        ]
+      }
+    },
+    "2024": {
+      "revenue": {
+        "value": 43978.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 43978000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 2799.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 2799000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 21558.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 21558000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 5893.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 5893000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 4125.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": 4125000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -5758.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -5758000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 8347.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 8347000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 1150.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2025-02-14",
+        "accession": "0001543151-25-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 1150000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2024,
+      "periodEnd": "2024-12-31",
+      "periodStart": "2024-01-01",
+      "mappedDebt": {
+        "value": 9807.0,
+        "periodEnd": "2024-12-31",
+        "formula": "Face balance-sheet borrowings and disclosed finance leases + current maturities embedded in accrued liabilities",
+        "components": [
+          {
+            "value": 8657.0,
+            "tag": null,
+            "periodEnd": "2024-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+            "filed": "2026-02-13",
+            "accession": "0001543151-26-000015",
+            "sourceType": "Derived from SEC filing facts",
+            "formula": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "components": [
+              {
+                "value": 8347.0,
+                "tag": null,
+                "periodEnd": "2024-12-31",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+                "filed": "2026-02-13",
+                "accession": "0001543151-26-000015",
+                "sourceType": "Derived from SEC filing facts",
+                "formula": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "components": [
+                  {
+                    "value": 8347.0,
+                    "tag": "us-gaap:LongTermDebtNoncurrent",
+                    "periodStart": null,
+                    "periodEnd": "2024-12-31",
+                    "filed": "2026-02-13",
+                    "accession": "0001543151-26-000015",
+                    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+                    "sourceType": "SEC filed document / 10-K",
+                    "locator": "Long-term debt, net of current portion 8,347 10,521",
+                    "rawValue": 8347000000.0,
+                    "rawUnit": "USD",
+                    "multiplierToMillions": 1e-06
+                  }
+                ],
+                "locator": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+                "sourceUrls": [
+                  "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+                ]
+              },
+              {
+                "value": 310.0,
+                "tag": "us-gaap:FinanceLeaseLiability",
+                "periodStart": null,
+                "periodEnd": "2024-12-31",
+                "filed": "2025-02-14",
+                "accession": "0001543151-25-000008",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+                "sourceType": "SEC standardized Company Facts / 10-K",
+                "locator": "us-gaap:FinanceLeaseLiability",
+                "rawValue": 310000000.0,
+                "rawUnit": "USD",
+                "multiplierToMillions": 1e-06
+              }
+            ],
+            "locator": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+            "sourceUrls": [
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm",
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+            ]
+          },
+          {
+            "value": 1150.0,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2024-12-31",
+            "filed": "2025-02-14",
+            "accession": "0001543151-25-000008",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/",
+            "sourceType": "SEC standardized Company Facts / 10-K",
+            "locator": "Debt note current portion included in accrued liabilities",
+            "rawValue": 1150000000.0,
+            "rawUnit": "USD",
+            "multiplierToMillions": 1e-06
+          }
+        ],
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/",
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+        ]
+      }
+    },
+    "2025": {
+      "revenue": {
+        "value": 52017.0,
+        "tag": "us-gaap:Revenues",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:Revenues",
+        "rawValue": 52017000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 5565.0,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 5565000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 27041.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 27041000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 7105.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 7105000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 5800.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "rawValue": 5800000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -4346.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -4346000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": 10521.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtNoncurrent",
+        "rawValue": 10521000000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "shortTermBorrowings": {
+        "value": 0.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:LongTermDebtCurrent",
+        "rawValue": 0.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "fiscalYear": 2025,
+      "periodEnd": "2025-12-31",
+      "periodStart": "2025-01-01",
+      "mappedDebt": {
+        "value": 10743.0,
+        "tag": null,
+        "periodEnd": "2025-12-31",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+        "filed": "2026-02-13",
+        "accession": "0001543151-26-000015",
+        "sourceType": "Derived from SEC filing facts",
+        "formula": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+        "components": [
+          {
+            "value": 10521.0,
+            "tag": null,
+            "periodEnd": "2025-12-31",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+            "filed": "2026-02-13",
+            "accession": "0001543151-26-000015",
+            "sourceType": "Derived from SEC filing facts",
+            "formula": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+            "components": [
+              {
+                "value": 10521.0,
+                "tag": "us-gaap:LongTermDebtNoncurrent",
+                "periodStart": null,
+                "periodEnd": "2025-12-31",
+                "filed": "2026-02-13",
+                "accession": "0001543151-26-000015",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+                "sourceType": "SEC filed document / 10-K",
+                "locator": "Long-term debt, net of current portion 8,347 10,521",
+                "rawValue": 10521000000.0,
+                "rawUnit": "USD",
+                "multiplierToMillions": 1e-06
+              }
+            ],
+            "locator": "Sum of separately reported interest-bearing debt rows on the consolidated balance sheet",
+            "sourceUrls": [
+              "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+            ]
+          },
+          {
+            "value": 222.0,
+            "tag": "us-gaap:FinanceLeaseLiability",
+            "periodStart": null,
+            "periodEnd": "2025-12-31",
+            "filed": "2026-02-13",
+            "accession": "0001543151-26-000015",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+            "sourceType": "SEC standardized Company Facts / 10-K",
+            "locator": "us-gaap:FinanceLeaseLiability",
+            "rawValue": 222000000.0,
+            "rawUnit": "USD",
+            "multiplierToMillions": 1e-06
+          }
+        ],
+        "locator": "Balance-sheet borrowings + disclosed finance/capital lease liabilities",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+        ]
+      }
+    }
+  },
+  "note": "FY2015 unaudited pre-Topic606 selected data is context only; FY2016 audited recast flows extend the ten-year operating history. FY2015/2016 exhaustive debt is unavailable; FY2017/2018 borrowing proxy excludes an undisclosed capital-lease total."
+}

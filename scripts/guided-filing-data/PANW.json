@@ -1,0 +1,314 @@
+{
+  "ticker": "PANW",
+  "name": "Palo Alto Networks Inc",
+  "cik": "0001327567",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2026-07-31",
+      "label": "FY2026",
+      "form": "10-K",
+      "accession": "0001327567-26-000023",
+      "filedAt": "2026-09-10",
+      "acceptedAt": "2026-09-11T00:19:53.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+      "sharesDate": "2026-07-31",
+      "ttmComponents": null,
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Statements of Operations; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Statements of Operations; us-gaap:OperatingIncomeLoss",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets; us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets, Short-term investments",
+          "originalDocumentVerified": true
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets4835 long-term investments + Note3 capped-call asset153 (outside long-term investments); no double count.",
+          "originalDocumentVerified": true
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets, CyberArk2030 convertible notes measured at FAIR VALUE1774, not principal; no extra fair-value premium.",
+          "originalDocumentVerified": true
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Lease note present value current67+noncurrent726; no material finance leases.",
+          "originalDocumentVerified": true
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets815m common outstanding; includes acquisition shares and settled old warrants.",
+          "originalDocumentVerified": true
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Share-based Compensation:17m RSUs+8m PSUs; all target PSU shares counted conservatively.",
+          "originalDocumentVerified": true
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "PSO rollforward: all remaining options exercised FY2026; ending zero. Old warrants fully settled during FY2026."
+        }
+      },
+      "convertibles": [
+        {
+          "name": "CyberArk0%2030 notes",
+          "principal": 1097,
+          "carrying": 1774,
+          "fairValue": 1774,
+          "conversionPrice": null,
+          "maturity": "2030-03-15",
+          "evidence": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+            "locator": "Note11:1250m original minus153m surrendered=1097m principal;1774m fair-value liability. Conversion delivers shares plus cash, not a simple share-only strike."
+          }
+        }
+      ],
+      "otherClaims": [
+        {
+          "name": "IBM acquisition earnout obligation",
+          "value": 206,
+          "basis": "Note3 fair-value liability116 current+90 noncurrent.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm"
+        },
+        {
+          "name": "Unfunded vested deferred compensation",
+          "value": 405,
+          "basis": "Note3 liability-classified deferred compensation5 current+400 noncurrent; vested amounts diversified into investment funds; outside unvested RSUs.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm"
+        }
+      ],
+      "options": {
+        "count": 0,
+        "weightedExercisePrice": 0,
+        "weightedRemainingYears": 0,
+        "aggregateIntrinsicValue": 0
+      },
+      "note": "All money and shares in millions. Actual outstanding shares, not the EPS weighted-average denominator. FY2026 includes CyberArk fromFeb11 and Chronosphere fromJan29, not full-year acquired-company revenue. Full-year proforma would differ.2030 notes and capped calls use paired reported fair values; do not also add conversion shares. Source filing checked for balance sheet, operating statements and claims notes. Latest periodic filing confirmed against SEC submissions through2026-10-21.",
+      "revenue": 11480.0,
+      "operatingIncome": 695.0,
+      "cashAndEquivalents": 2514.0,
+      "shortTermInvestments": 557,
+      "longTermInvestments": 4988,
+      "debtCurrent": 0,
+      "debtNoncurrent": 1774,
+      "operatingLeaseLiabilities": 793,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "unvestedRSUs": 25,
+      "sharesOutstanding": 815
+    },
+    "ttm": {
+      "periodEnd": "2026-07-31",
+      "label": "TTM through 2026-07-31",
+      "form": "10-K",
+      "accession": "0001327567-26-000023",
+      "filedAt": "2026-09-10",
+      "acceptedAt": "2026-09-11T00:19:53.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+      "sharesDate": "2026-07-31",
+      "ttmComponents": {
+        "ytdStart": "2026-08-01",
+        "ytdEnd": "2026-07-31",
+        "priorYtdStart": "2025-08-01",
+        "priorYtdEnd": "2025-07-31",
+        "annualRevenue": 11480.0,
+        "ytdRevenue": 0,
+        "priorYtdRevenue": 0,
+        "annualOperatingIncome": 695.0,
+        "ytdOperatingIncome": 0,
+        "priorYtdOperatingIncome": 0
+      },
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "TTM = annual 11480.0 + YTD 0 - prior comparable YTD 0; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "sourceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+            "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm"
+          ]
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "TTM = annual 695.0 + YTD 0 - prior comparable YTD 0; us-gaap:OperatingIncomeLoss",
+          "sourceUrls": [
+            "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+            "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm"
+          ]
+        },
+        "annualRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax 2025-08-01 to 2026-07-31"
+        },
+        "ytdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Same annual base; no later quarterly report filed."
+        },
+        "priorYtdRevenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Same annual base; no later quarterly report filed."
+        },
+        "annualOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "us-gaap:OperatingIncomeLoss 2025-08-01 to 2026-07-31"
+        },
+        "ytdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Same annual base; no later quarterly report filed."
+        },
+        "priorYtdOperatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Same annual base; no later quarterly report filed."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets; us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets, Short-term investments",
+          "originalDocumentVerified": true
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets4835 long-term investments + Note3 capped-call asset153 (outside long-term investments); no double count.",
+          "originalDocumentVerified": true
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets, CyberArk2030 convertible notes measured at FAIR VALUE1774, not principal; no extra fair-value premium.",
+          "originalDocumentVerified": true
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Lease note present value current67+noncurrent726; no material finance leases.",
+          "originalDocumentVerified": true
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Consolidated Balance Sheets and relevant notes: no separately outstanding item of this type unless otherwise noted.",
+          "originalDocumentVerified": true
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Balance Sheets815m common outstanding; includes acquisition shares and settled old warrants.",
+          "originalDocumentVerified": true
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "Share-based Compensation:17m RSUs+8m PSUs; all target PSU shares counted conservatively.",
+          "originalDocumentVerified": true
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+          "locator": "PSO rollforward: all remaining options exercised FY2026; ending zero. Old warrants fully settled during FY2026."
+        }
+      },
+      "convertibles": [
+        {
+          "name": "CyberArk0%2030 notes",
+          "principal": 1097,
+          "carrying": 1774,
+          "fairValue": 1774,
+          "conversionPrice": null,
+          "maturity": "2030-03-15",
+          "evidence": {
+            "url": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm",
+            "locator": "Note11:1250m original minus153m surrendered=1097m principal;1774m fair-value liability. Conversion delivers shares plus cash, not a simple share-only strike."
+          }
+        }
+      ],
+      "otherClaims": [
+        {
+          "name": "IBM acquisition earnout obligation",
+          "value": 206,
+          "basis": "Note3 fair-value liability116 current+90 noncurrent.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm"
+        },
+        {
+          "name": "Unfunded vested deferred compensation",
+          "value": 405,
+          "basis": "Note3 liability-classified deferred compensation5 current+400 noncurrent; vested amounts diversified into investment funds; outside unvested RSUs.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1327567/000132756726000023/panw-20260731.htm"
+        }
+      ],
+      "options": {
+        "count": 0,
+        "weightedExercisePrice": 0,
+        "weightedRemainingYears": 0,
+        "aggregateIntrinsicValue": 0
+      },
+      "note": "All money and shares in millions. Actual outstanding shares, not the EPS weighted-average denominator. Latest filed period is annual; TTM equals annual and is not a separate selectable base. FY2026 includes CyberArk fromFeb11 and Chronosphere fromJan29, not full-year acquired-company revenue. Full-year proforma would differ.2030 notes and capped calls use paired reported fair values; do not also add conversion shares. Source filing checked for balance sheet, operating statements and claims notes. Latest periodic filing confirmed against SEC submissions through2026-10-21.",
+      "revenue": 11480.0,
+      "operatingIncome": 695.0,
+      "cashAndEquivalents": 2514.0,
+      "shortTermInvestments": 557,
+      "longTermInvestments": 4988,
+      "debtCurrent": 0,
+      "debtNoncurrent": 1774,
+      "operatingLeaseLiabilities": 793,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "unvestedRSUs": 25,
+      "sharesOutstanding": 815
+    }
+  },
+  "notes": [
+    "FY2026 includes only part-year CyberArk and Chronosphere revenue despite their full acquisition balance sheets. The growth assumption includes a first-year acquisition annualization effect.",
+    "Convertible debt and its capped-call hedge use paired reported fair values. Using principal instead would raise common equity by $677m before dilution; do not add conversion shares again."
+  ],
+  "latestFilingCheck": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001327567.json",
+    "latestPeriodicAccession": "0001327567-26-000023",
+    "latestAnnualAccession": "0001327567-26-000023"
+  }
+}

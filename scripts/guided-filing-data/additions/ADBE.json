@@ -1,0 +1,96 @@
+{
+  "ticker": "ADBE",
+  "sector": "Software",
+  "businessSummary": {
+    "en": "Creative, document and enterprise marketing software subscriptions, with AI tools expanding workflows while creating new competition and inference costs.",
+    "zh": "创意、文档与企业营销软件订阅；AI工具拓展工作流程，同时带来新的竞争及推理成本。"
+  },
+  "assumptions": {
+    "growth": 0.1,
+    "targetMargin": 0.37,
+    "tax": 0.22,
+    "salesCapital": 2.5,
+    "wacc": 0.1,
+    "terminalGrowth": 0.025,
+    "terminalROIC": 0.2,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "10% initial revenue growth fading toward 2.5% is an analyst scenario anchored to FY 2025 growth 11% and first-nine-month 2026 growth 13%. Creative Cloud, Acrobat and AI monetization can expand subscriptions; competing AI products and pricing pressure limit extrapolation.",
+      "zh": "初期收入增长10%、逐步收敛至2.5%为分析情景，参考2025财年增长11%及2026财年前九个月增长13%。Creative Cloud、Acrobat及AI变现有望扩大订阅；竞争性AI产品与价格压力限制持续外推。"
+    },
+    "targetMargin": {
+      "en": "37% mature GAAP operating margin is near FY 2025 36.6% and above the first-nine-month 2026 35.4%. It retains stock compensation and acquired-intangible amortization; AI inference costs and sales investment can constrain margin expansion.",
+      "zh": "成熟期GAAP营业利润率37%，接近2025财年的36.6%，高于2026财年前九个月的35.4%。该假设保留股权薪酬及收购无形资产摊销；AI推理成本与销售投入可能限制利润率提升。"
+    },
+    "tax": {
+      "en": "22% normalized operating tax approximates the latest 23% nine-month effective rate without copying one-off tax benefits from earlier years.",
+      "zh": "22%的正常化营业税率接近最新九个月23%的有效税率，避免复制早期一次性税收利益。"
+    },
+    "salesCapital": {
+      "en": "2.5 x incremental sales to capital reflects an asset-light subscription business but preserves investment needs. Repurchases shrink accounting equity and acquisitions add goodwill, so historical book ratios are context rather than a mechanical forecast.",
+      "zh": "新增销售与资本比2.5倍反映轻资产订阅业务，同时保留投资需求。回购缩小账面权益，并购增加商誉，因此历史账面比率作为背景，而非机械预测。"
+    },
+    "wacc": {
+      "en": "10% required return is an analyst scenario for a profitable recurring-revenue software business facing AI competition, execution and pricing risks.",
+      "zh": "10%的必要回报为分析师情景，适用于盈利且具有经常性收入的软件业务，并考虑AI竞争、执行与定价风险。"
+    },
+    "terminalGrowth": {
+      "en": "Analyst long-run assumption: growth fades as the business matures and terminal reinvestment is retained. These are editable valuation scenarios, not company guidance.",
+      "zh": "分析师长期假设：业务成熟后增长逐渐放缓，保留永续期再投资。这些是可编辑的估值情景，并非公司指引。"
+    },
+    "terminalROIC": {
+      "en": "Analyst long-run assumption: growth fades as the business matures and terminal reinvestment is retained. These are editable valuation scenarios, not company guidance.",
+      "zh": "分析师长期假设：业务成熟后增长逐渐放缓，保留永续期再投资。这些是可编辑的估值情景，并非公司指引。"
+    },
+    "years": {
+      "en": "Analyst long-run assumption: growth fades as the business matures and terminal reinvestment is retained. These are editable valuation scenarios, not company guidance.",
+      "zh": "分析师长期假设：业务成熟后增长逐渐放缓，保留永续期再投资。这些是可编辑的估值情景，并非公司指引。"
+    }
+  },
+  "sources": [
+    {
+      "title": "10-K 2025-11-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000003/adbe-20251128.htm",
+      "filedAt": "2026-01-15"
+    },
+    {
+      "title": "10-Q 2026-08-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/adbe-20260828.htm",
+      "filedAt": "2026-09-22"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0000796343.json",
+    "latestPeriodicAccession": "0000796343-26-000156",
+    "latestAnnualAccession": "0000796343-26-000003"
+  },
+  "limitations": [
+    {
+      "en": "Semrush acquiredApril 28,2026 for 1.874 bn is already included in the August balance sheet, current awards and results from closing; no second purchase-price deduction. Topaz Labs 340 m was agreed but unclosed atAugust 28 and is excluded from the dated base; its gross cash commitment is about$0.84 per allocation share before acquired value.",
+      "zh": "2026年4月28日以18.74亿美元收购的Semrush已纳入8月资产负债表、当期奖励及交割后业绩，不会再次扣除收购价。Topaz Labs的3.4亿美元交易在8月28日已签约但未交割，故不纳入注明日期的基期；未考虑所购价值前，其总现金承诺约每分配股0.84美元。"
+    },
+    {
+      "en": "Private investment carrying values are not separately quantified and receive no extra asset value. The entire other-assets balance less matched plan assets is only 1.268 bn annual or 1.355 bn interim, a conservative ceiling below$3.4 per allocation share that also contains non-investment operating assets.",
+      "zh": "私人投资账面金额未单独量化，因此不增加额外资产价值。其他资产扣除匹配的计划资产后，年度仅12.68亿美元，中期13.55亿美元；这是每分配股低于3.4美元的保守上限，其中仍包括非投资经营资产。"
+    },
+    {
+      "en": "Unvested awards use full RSU vesting plus target performance shares:8.5 m annual and 13.4 m interim. Maximum 200% performance payout would add only 0.6 m shares (about 0.15% of the interim denominator). The annual 12 m net deferred-compensation funding gap is carried as a small interim proxy (~$0.03/share).",
+      "zh": "未归属奖励假设限制性股票单位全部归属，并采用目标业绩股：年度850万股、中期1340万股。最高200%的业绩发放只会额外增加60万股（约占中期分母0.15%）。年度1200万美元递延薪酬净资金缺口沿用为影响很小的中期代理（约每股0.03美元）。"
+    },
+    {
+      "en": "The FY 2024 Figma termination fee 1 bn remains in reported historical operating income; it is not projected as recurring. FY 2026 goodwill impairment 70 m and acquisition costs remain in current GAAP earnings.",
+      "zh": "2024财年Figma终止费用10亿美元保留在申报历史营业利润中，不预测为经常性费用。2026财年7000万美元商誉减值及并购费用仍保留于当期GAAP收益。"
+    }
+  ],
+  "localizationPairs": {
+    "US GAAP annual filings; latest reported comparisons": "美国GAAP年度申报；采用最新重列比较数据"
+  },
+  "assetTreatment": {
+    "excludeLongTermInvestmentsFromBridge": false,
+    "reason": null
+  }
+}

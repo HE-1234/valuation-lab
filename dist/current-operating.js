@@ -32,7 +32,7 @@ export function independentGrowthProfile(draft,path={}){
 }
 function flexibleProfileIssue(p){
  const keys=p?.schemaVersion===2?[...profileKeys,...timelineKeys]:profileKeys;
- if(typeof p!=='object'||Array.isArray(p)||![1,2].includes(p.schemaVersion)||Object.keys(p).some(k=>!keys.includes(k))||!['immediate','maintain','annual'].includes(p.mode)||!(p.mode==='immediate'?p.explicitYears===0:[3,5].includes(p.explicitYears))||!Array.isArray(p.subsequentGrowth)||p.subsequentGrowth.length!==(p.mode==='annual'?p.explicitYears-1:0)||!Array.from(p.subsequentGrowth).every(g=>finite(g)&&g>=-.5&&g<=2))return 'Choose a valid growth path: immediate fade, or 3 / 5 explicit years with finite annual growth from −50% to 200%.';
+ if(typeof p!=='object'||Array.isArray(p)||![1,2].includes(p.schemaVersion)||Object.keys(p).some(k=>!keys.includes(k))||!['immediate','maintain','annual'].includes(p.mode)||!(p.mode==='immediate'?p.explicitYears===0:[3,5].includes(p.explicitYears))||!Array.isArray(p.subsequentGrowth)||p.subsequentGrowth.length!==(p.mode==='annual'?p.explicitYears-1:0)||!Array.from(p.subsequentGrowth).every(g=>finite(g)&&g>-1))return 'Choose a valid growth path: immediate fade, or 3 / 5 explicit years with finite annual growth above −100%.';
  if(p.schemaVersion===2&&(!timelineKeys.every(k=>owns(p,k))||!boundedYear(p.marginMaturityYears)||!boundedYear(p.capitalMaturityYears)||!Number.isInteger(p.capitalHoldYears)||p.capitalHoldYears<0||p.capitalHoldYears>=p.capitalMaturityYears))return 'Independent operating timelines require margin and capital maturity years from 1 to 30, with a whole-number capital hold from zero to before capital maturity.';
  return null;
 }
@@ -168,7 +168,7 @@ export function operatingAssumptions(snapshot,draft,assumptions){
  const clean={...assumptions};delete clean[ANNUAL_GROWTH_PATH];delete clean[ANNUAL_METRIC_PATHS];
  const base=applyCapitalEfficiency(snapshot,draft,marginOperatingAssumptions(snapshot,draft,clean),clean);
  if(path===undefined&&metrics===undefined)return base;
- if(path!==undefined&&(!Array.isArray(path)||path.length!==base.years||!path.every(g=>finite(g)&&g>=-.5&&g<=2)))throw Error('Sampled annual growth path is outside supported bounds.');
+ if(path!==undefined&&(!Array.isArray(path)||path.length!==base.years||!path.every(g=>finite(g)&&g>-1)))throw Error('Sampled annual growth must stay above −100%.');
  const start=(snapshot.ebit+draft.normalizationDelta)/snapshot.revenue;
  return {...base,yearlyOverrides:Array.from({length:base.years},(_,i)=>{
   const row={...((base.yearlyOverrides?.[i])||{growth:base.growth+(base.terminalGrowth-base.growth)*i/Math.max(1,base.years-1),margin:start+(base.targetMargin-start)*(i+1)/base.years,taxRate:base.tax,salesCapital:base.salesCapital,wacc:base.wacc}),...(path?{growth:path[i]}:{})};

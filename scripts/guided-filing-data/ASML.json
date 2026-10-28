@@ -1,0 +1,243 @@
+{
+  "ticker": "ASML",
+  "name": "ASML Holding N.V.",
+  "cik": "0000937966",
+  "currency": "EUR",
+  "filerType": "foreign",
+  "shareBasis": "ordinary-share",
+  "adrRatio": 1,
+  "listedUnit": "NY-registry ordinary share (1 ordinary share, Nasdaq: ASML)",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "20-F",
+      "accession": "0001628280-26-011378",
+      "filedAt": "2026-02-25",
+      "acceptedAt": "2026-02-25T16:06:02.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+      "revenue": 32667.3,
+      "operatingIncome": 11301.4,
+      "ttmComponents": null,
+      "cashAndEquivalents": 12916.0,
+      "shortTermInvestments": 405.9,
+      "longTermInvestments": 2143.3,
+      "debtCurrent": 1681.9,
+      "debtNoncurrent": 2725.5,
+      "operatingLeaseLiabilities": 234.9,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesOutstanding": 385.417665,
+      "sharesDate": "2025-12-31",
+      "unvestedRSUs": 0.778707,
+      "options": {
+        "count": 0.010122,
+        "weightedExercisePrice": null,
+        "weightedRemainingYears": 0.31,
+        "aggregateIntrinsicValue": null
+      },
+      "convertibles": [],
+      "otherClaims": [],
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated statements of operations (US GAAP), Total net sales, year ended Dec 31 2025 (annual report p.276); US-GAAP XBRL",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated statements of operations, Income from operations, FY2025 (p.276)",
+          "tag": "us-gaap:OperatingIncomeLoss"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated balance sheets, Cash and cash equivalents, Dec 31 2025 (p.278)",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated balance sheets, Short-term investments, Dec 31 2025 (p.278)",
+          "tag": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated balance sheets: Equity investments 1,320.7 (Note 9) + Equity method investments 822.6 (Note 10) = 2,143.3; Zeiss SMT 24.9% stake is the equity-method item",
+          "tag": "us-gaap:EquitySecuritiesWithoutReadilyDeterminableFairValueAmount + us-gaap:EquityMethodInvestments"
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated balance sheets, Short-term borrowings and current portion of long-term debt 1,681.9 (= current portion of LTD 990.2 + commercial paper 691.7, Note 16)",
+          "tag": "us-gaap:LongTermDebtCurrent"
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated balance sheets, Long-term debt 2,709.0 (Note 16) + finance lease liability 16.5 (Note 14, current/non-current split not disclosed, placed here)",
+          "tag": "us-gaap:LongTermDebtNoncurrent + us-gaap:FinanceLeaseLiability"
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Note 14 Right-of-use assets and lease liabilities: total lease liabilities 251.4 (current 60.8, non-current 190.6) less finance lease 16.5 = 234.9 operating (derived subtraction)"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Cover page: 385,417,665 ordinary shares issued and outstanding at Dec 31 2025; Balance sheet equity caption (p.278)",
+          "tag": "dei:EntityCommonStockSharesOutstanding"
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Note 20 Share-based compensation, conditional shares outstanding Dec 31 2025: 331,366 EUR-denominated + 447,341 USD-denominated = 778,707 (annual report p.305)"
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Note 20 option plans: outstanding Dec 31 2025: 5,479 options (EUR, avg exercise EUR 88.52) + 4,643 options (USD, avg exercise USD 97.47) = 10,122; remaining term 0.32 / 0.30 yrs (count-weighted 0.31); intrinsic value EUR 4.6m + USD 4.5m (mixed currency, not summed)"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Consolidated balance sheets: no non-controlling interest line (total shareholders equity 19,612.2 attributable to ASML)"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Note on shareholders equity: cumulative preference shares authorised but none issued (only contingently issuable to the preference share foundation)"
+        }
+      },
+      "note": "US GAAP basis. Statements are those of the 20-F (filed with the SEC, XBRL tagged). 20-F is the ASML 2025 Annual Report based on US GAAP; page numbers refer to the annual report PDF/document. No convertibles outstanding: debt is five Eurobonds (carrying 3,682.8 incl. -57.5 swap hedge adjustment), commercial paper 691.7 and Berlin mortgage 16.4. Option weighted exercise price left null because the two tranches are in EUR and USD; intrinsic value not summed across currencies. Equity investments (1,320.7, incl. Mistral AI, unappraised book) and Zeiss equity-method (822.6) both in longTermInvestments.",
+      "accountingBasis": "US GAAP",
+      "accountingBasisZh": "\u7f8e\u56fd\u516c\u8ba4\u4f1a\u8ba1\u539f\u5219"
+    },
+    "ttm": {
+      "periodEnd": "2026-09-27",
+      "label": "TTM through 2026-09-27",
+      "form": "6-K",
+      "accession": "0001628280-26-065813",
+      "filedAt": "2026-10-14",
+      "acceptedAt": "2026-10-14T14:01:18.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/form6-kquarterlyfilings.htm",
+      "revenue": 39473.5,
+      "operatingIncome": 15217.7,
+      "ttmComponents": {
+        "annualRevenue": 32667.3,
+        "ytdRevenue": 29755.4,
+        "priorYtdRevenue": 22949.2,
+        "annualOperatingIncome": 11301.4,
+        "ytdOperatingIncome": 11786.8,
+        "priorYtdOperatingIncome": 7870.5,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-09-27",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-09-28"
+      },
+      "cashAndEquivalents": 8030.9,
+      "shortTermInvestments": 4704.2,
+      "longTermInvestments": 3368.6,
+      "debtCurrent": null,
+      "debtNoncurrent": 1979.5,
+      "operatingLeaseLiabilities": 234.9,
+      "noncontrollingInterest": 0,
+      "preferredEquity": 0,
+      "sharesOutstanding": 384.1,
+      "sharesDate": "2026-06-28",
+      "unvestedRSUs": 0.778707,
+      "options": {
+        "count": 0.010122,
+        "weightedExercisePrice": null,
+        "weightedRemainingYears": 0.31,
+        "aggregateIntrinsicValue": null
+      },
+      "convertibles": [],
+      "otherClaims": [],
+      "carriedFrom": {
+        "debtNoncurrent": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "why": "Long-term debt 1,963.0 is from the Q3 6-K; the 16.5 finance lease liability is carried from the 20-F Note 14 (6-K does not report it)."
+        },
+        "operatingLeaseLiabilities": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "why": "6-K summary balance sheet does not show lease liabilities; carried from 20-F Note 14 (251.4 total less 16.5 finance lease)."
+        },
+        "sharesOutstanding": {
+          "date": "2026-06-28",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/statutoryinterimreport20.htm",
+          "why": "No Sep 27 2026 share count is filed on the SEC. Latest SEC-filed count is 384.1m (rounded to 0.1m) at Jun 28 2026 in the Statutory Interim Report (Ex.99.4 to the 6-K of 2026-07-15), Statement of Changes in Equity. ASML bought ~2.8m shares in Q3 (Q3 slides p.11), so Sep 27 count is roughly 381.3m (derived estimate, NOT used). Cash at Sep 27 already reflects that buyback."
+        },
+        "unvestedRSUs": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "why": "6-K does not report conditional share counts; carried from 20-F Note 20 (331,366 EUR + 447,341 USD)."
+        },
+        "options": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "why": "6-K does not report options; carried from 20-F Note 20."
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Summary US GAAP Consolidated Statements of Operations, Total net sales: nine months 2026 29,755.4; nine months 2025 22,949.2; FY2025 32,667.3 from 20-F. TTM = 32,667.3 + 29,755.4 - 22,949.2 = 39,473.5. Cross-check: sum of last four quarters (Q4-25 9,718.1 + Q1 8,766.9 + Q2 9,326.5 + Q3 11,662.0) = 39,473.5"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Summary US GAAP Consolidated Statements of Operations, Income from operations: nine months 2026 11,786.8; nine months 2025 7,870.5; FY2025 11,301.4. TTM = 15,217.7 (sum of four quarters is 15,217.8 due to rounding of quarterly figures)"
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Summary US GAAP Consolidated Balance Sheets, Cash and cash equivalents, Sep 27 2026"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Summary US GAAP Consolidated Balance Sheets, Short-term investments, Sep 27 2026"
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Summary US GAAP Consolidated Balance Sheets: Equity investments 2,239.4 + Equity method investments 1,129.2 = 3,368.6, Sep 27 2026"
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Consolidated balance sheets, total current liabilities; no current borrowing split. Consolidated cash flows, repayment of debt and finance lease obligations.",
+          "note": "Current debt not separately disclosed. Prior 734.2 cash-flow bridge removed: repayments cannot establish carrying value because currency, hedge and amortization movements are not supplied."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Summary US GAAP Consolidated Balance Sheets, Long-term debt 1,963.0 at Sep 27 2026, plus finance lease 16.5 carried from 20-F Note 14"
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Carried: Note 14 Right-of-use assets and lease liabilities (251.4 - 16.5)"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/statutoryinterimreport20.htm",
+          "locator": "Condensed Consolidated Statement of Changes in Equity, Balance at June 28, 2026 (unaudited), Issued and Outstanding Shares Number 384.1 (millions)"
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Carried: Note 20 conditional shares outstanding at Dec 31 2025"
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "Carried: Note 20 option plans outstanding at Dec 31 2025"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm",
+          "locator": "Summary balance sheet has only Total shareholders equity 22,063.9, no non-controlling interest line"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+          "locator": "No preference shares issued"
+        }
+      },
+      "note": "US GAAP basis. Q3 2026 results are furnished on 6-K (Ex.99.3 summary financial statements, Ex.99.1 press release) filed 2026-10-14; period ends Sep 27 2026 (Q3) and Sep 28 2025 (prior). The 6-K balance sheet has no current debt split, no share count, no awards/options, no lease liabilities - see carriedFrom. Cash 8,030.9 + short-term investments 4,704.2 = 12,735.1 matches press release (12,735). Interim dividend EUR 1.88/share payable 2026-11-04 is not accrued. Customer advances (contract liabilities 9,300.6 non-current plus current) are operating. Current debt is null: the summary statements aggregate current liabilities and the earlier 734.2 estimate was not a filed amount. Q3 slides disclose only approximately 2.8 million repurchased shares; no exact period-end outstanding share count, so the June 28 count remains explicitly carried.",
+      "accountingBasis": "US GAAP",
+      "accountingBasisZh": "\u7f8e\u56fd\u516c\u8ba4\u4f1a\u8ba1\u539f\u5219"
+    }
+  },
+  "notes": [
+    "Money in EUR millions, US GAAP as reported in 20-F / 6-K (ASML primary basis). Annual filing: 20-F filed 2026-02-25. Latest quarterly 6-K filed 2026-10-14 (Q3 2026).",
+    "TTM balance sheet is at 2026-09-27 but current debt is derived (roll-forward) and share count is the Jun 28 2026 figure (384.1m) because no later share count is filed with the SEC; Q3 buyback of ~2.8m shares not reflected in shares.",
+    "Operating leases excluded from debt per spec; finance lease 16.5 included in noncurrent debt.",
+    "Reviewed package (dist/data/incremental-ASML-2026-10-18-v4) uses FY2025 numbers identical to this annual snapshot (cash 12,916.0, STI 405.9, current debt 1,681.9, LTD 2,709.0, shares 385.417665, conditional shares 0.778707); equity investments there are 1,320.7 and Zeiss 822.6."
+  ],
+  "reviewedThrough": "2026-10-21"
+}

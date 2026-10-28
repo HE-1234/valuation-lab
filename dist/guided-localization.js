@@ -6,8 +6,9 @@ import {registerCatalog,t,getLocale,bindText,bindAttribute} from './i18n.js';
 import en from './locales/guided.en.js';
 import zh from './locales/guided.zh-Hans.js';
 import researchProsePairs from './locales/research-prose-pairs.js';
-const english={...en,...Object.fromEntries(researchProsePairs.map(([english],index)=>['prose'+index,english]))};
-const chinese={...zh,...Object.fromEntries(researchProsePairs.map(([,chinese],index)=>['prose'+index,chinese]))};
+import guidedCasePairs from './locales/guided-case-pairs.js';
+const english={...en,...Object.fromEntries([...researchProsePairs,...guidedCasePairs].map(([english],index)=>['prose'+index,english]))};
+const chinese={...zh,...Object.fromEntries([...researchProsePairs,...guidedCasePairs].map(([,chinese],index)=>['prose'+index,chinese]))};
 registerCatalog('guided',{en:{...english,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗',comparisonAbove:'{label} is {amount} above {period}. {context}',comparisonBelow:'{label} is {amount} below {period}. {context}'},'zh-Hans':{...chinese,boundary:'{prefix}{message}{suffix}',composition:'{first}{separator}{rest}',link:'{message} ↗',comparisonAbove:'{label}比 {period} 高 {amount}。{context}',comparisonBelow:'{label}比 {period} 低 {amount}。{context}'}});
 const escapeRegExp=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const exact=new Map(),patterns=[];
@@ -54,7 +55,7 @@ export function translateGuidedMessage(value,depth=0){
  const params=Object.fromEntries(Object.entries(match.params).map(([key,text])=>[key,depth<8?translateGuidedMessage(text,depth+1):text]));
  return t(match.key,params);
 }
-const roots=new WeakMap(),attributes=['aria-label','aria-description','title','placeholder','alt'];
+const roots=new WeakMap(),attributes=['aria-label','aria-description','title','placeholder','alt','data-column-label'];
 const excluded=node=>node?.closest?.('textarea,input,script,style,[contenteditable="true"],[data-user-content],[data-i18n]');
 /** Mount once on an owned app root. Its observer sees only that root and binds
  * only complete catalog messages; a locale switch never invokes a renderer.

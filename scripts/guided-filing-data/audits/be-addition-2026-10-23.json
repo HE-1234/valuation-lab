@@ -1,0 +1,435 @@
+{
+  "cutoff": "2026-10-23",
+  "ticker": "BE",
+  "companies": 56,
+  "selectableBases": 102,
+  "historyRows": 10,
+  "records": [
+    {
+      "id": "BE-CURRENT-2025-12-31",
+      "periodEnd": "2025-12-31",
+      "filedAt": "2026-02-09",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm",
+      "revenue": 2023.994,
+      "reportedEBIT": 72.802,
+      "normalizationDelta": -40.421,
+      "modeledStartingEBIT": 32.38100000000001,
+      "cash": 2454.108,
+      "reportedDebt": 2866.8650000000002,
+      "modeledDebt": 2666.3540000000003,
+      "valuePerShare": 12.135605891496748,
+      "reportedDebtStressValuePerShare": 11.460712808741459,
+      "assumptions": {
+        "growth": 0.3,
+        "targetMargin": 0.18,
+        "tax": 0.23,
+        "salesCapital": 1.5,
+        "wacc": 0.115,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.15,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 10.037
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "BE-2025-12-31-guided-claims-v1",
+        "referenceDate": "2025-12-31",
+        "method": "option-proxy",
+        "conversionChoice": "principal-only",
+        "conversionDecisions": [
+          {
+            "name": "0% notes due November 2030",
+            "converted": false,
+            "conversionShares": 0,
+            "claimAdjustment": 57.909000000000106
+          },
+          {
+            "name": "3% Green notes due June 2029",
+            "converted": false,
+            "conversionShares": 0,
+            "claimAdjustment": 1.652000000000001
+          },
+          {
+            "name": "3% Green notes due June 2028",
+            "converted": false,
+            "conversionShares": 0,
+            "claimAdjustment": 1.492999999999995
+          }
+        ],
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 2454.108,
+        "mappedDebt": 2666.3540000000003,
+        "commonShares": 280.045459,
+        "basicShares": 280.045459,
+        "allocationShares": 292.338407,
+        "equityBeforeWarrants": 3594.5283287394473,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 237.71463443947303,
+        "additionalAssets": 0,
+        "rows": [
+          {
+            "label": "Customer-prepayment cash reserve proxy",
+            "amount": 78.207,
+            "kind": "claim"
+          },
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 12.292948,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 51.629,
+            "kind": "claim"
+          },
+          {
+            "label": "Convertible claim adjustment above carrying debt",
+            "amount": 61.0540000000001,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 46.82463443947292,
+            "kind": "claim"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Each convertible series is allocated separately between principal and conversion at its own strike; carrying debt is reversed once. Capped calls are valued by bounded intrinsic payoff at the modeled share price. Employee options use reported count, weighted strike/life and 95% volatility/4% rate analyst proxies. Annual Oracle warrant uses disclosed terms; September has no remaining warrant claim because settlement shares are already outstanding.",
+          "Intrinsic convertible/capped-call allocation omits full time value, discounting and counterparty risk. Make-whole conversion increments apply only to specified events and are excluded from ordinary continuation; all-series principal/conversion and omitted/maximal hedge sensitivities bound useful alternatives.",
+          "Reported RSU/PSU counts are assumed to vest. Conditional performance multipliers beyond disclosed outstanding units and ungranted share-pool capacity are excluded. Existing EPP derivative liability and unfunded JV commitments are deducted once at reported amounts; no new investment value is assumed for the commitments."
+        ],
+        "sources": [
+          {
+            "title": "BE · 10-K · 2025-12-31",
+            "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026006516/be-20251231.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "BE-2025-12-31-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "holder-choice",
+          "cappedCallTreatment": "intrinsic",
+          "operatingCashReserveFraction": 1
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 12.135605891496748,
+          "rawPerShare": 12.135605891496748,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 12.295778599968383,
+          "rawPerShare": 12.295778599968383,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 11.917772074796439,
+          "rawPerShare": 11.917772074796439,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 11.653438442128794,
+          "rawPerShare": 11.653438442128794,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Half customer-prepayment reserve",
+          "perShare": 12.267211836378745,
+          "rawPerShare": 12.267211836378745,
+          "changes": {
+            "operatingCashReserveFraction": 0.5
+          }
+        },
+        {
+          "label": "Customer-prepayment reserve omitted",
+          "perShare": 12.398814253237148,
+          "rawPerShare": 12.398814253237148,
+          "changes": {
+            "operatingCashReserveFraction": 0
+          }
+        },
+        {
+          "label": "Capped-call asset omitted",
+          "perShare": 12.135605891496748,
+          "rawPerShare": 12.135605891496748,
+          "changes": {
+            "cappedCallTreatment": "omit"
+          }
+        },
+        {
+          "label": "Capped-call maximum nominal payoff stress",
+          "perShare": 12.994815546069352,
+          "rawPerShare": 12.994815546069352,
+          "changes": {
+            "cappedCallTreatment": "maximum-payoff"
+          }
+        },
+        {
+          "label": "Convertible holder-choice proxy",
+          "perShare": 12.135605891496748,
+          "rawPerShare": 12.135605891496748,
+          "changes": {
+            "convertibleCase": "holder-choice"
+          }
+        },
+        {
+          "label": "Convertible principal retained",
+          "perShare": 12.135605891496748,
+          "rawPerShare": 12.135605891496748,
+          "changes": {
+            "convertibleCase": "principal-only"
+          }
+        },
+        {
+          "label": "Convertible full-share conversion",
+          "perShare": 19.793047071392696,
+          "rawPerShare": 19.793047071392696,
+          "changes": {
+            "convertibleCase": "if-converted"
+          }
+        }
+      ]
+    },
+    {
+      "id": "BE-TTM-2026-09-30",
+      "periodEnd": "2026-09-30",
+      "filedAt": "2026-10-22",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
+      "revenue": 3829.939,
+      "reportedEBIT": 567.405,
+      "normalizationDelta": -37.722,
+      "modeledStartingEBIT": 529.683,
+      "cash": 2486.702,
+      "reportedDebt": 2666.063,
+      "modeledDebt": 2516.762,
+      "valuePerShare": 30.57139277317661,
+      "reportedDebtStressValuePerShare": 30.090600790203027,
+      "assumptions": {
+        "growth": 0.3,
+        "targetMargin": 0.18,
+        "tax": 0.23,
+        "salesCapital": 1.5,
+        "wacc": 0.115,
+        "terminalGrowth": 0.03,
+        "terminalROIC": 0.15,
+        "years": 10,
+        "otherClaims": 0,
+        "otherAssets": 28.236
+      },
+      "claimsBridge": {
+        "version": "2.0.0",
+        "modelId": "BE-2026-09-30-guided-claims-v1",
+        "referenceDate": "2026-09-30",
+        "method": "option-proxy",
+        "conversionChoice": "mixed",
+        "conversionDecisions": [
+          {
+            "name": "0% notes due November 2030",
+            "converted": false,
+            "conversionShares": 0,
+            "claimAdjustment": 49.108999999999924
+          },
+          {
+            "name": "3% Green notes due June 2029",
+            "converted": true,
+            "conversionShares": 1.0925411945,
+            "claimAdjustment": -22.608
+          }
+        ],
+        "capitalBasis": "reported",
+        "classification": "Dated ownership scenario with explicit analyst proxies",
+        "cash": 2486.702,
+        "mappedDebt": 2516.762,
+        "commonShares": 295.537217,
+        "basicShares": 295.537217,
+        "allocationShares": 305.9490731945,
+        "equityBeforeWarrants": 9218.926449233275,
+        "warrantClaim": 0,
+        "warrantCount": 0,
+        "exerciseShares": 0,
+        "exerciseCash": 0,
+        "additionalClaims": 858.4259198948585,
+        "additionalAssets": 255.31175588,
+        "rows": [
+          {
+            "label": "Customer-prepayment cash reserve proxy",
+            "amount": 661.354,
+            "kind": "claim"
+          },
+          {
+            "label": "Employee awards counted as free shares",
+            "amount": 9.319315,
+            "kind": "shares"
+          },
+          {
+            "label": "Disclosed minority and acquisition claims",
+            "amount": 49.622,
+            "kind": "claim"
+          },
+          {
+            "label": "Convertible shares in conversion scenario",
+            "amount": 1.0925411945,
+            "kind": "shares"
+          },
+          {
+            "label": "Convertible claim adjustment above carrying debt",
+            "amount": 26.500999999999923,
+            "kind": "claim"
+          },
+          {
+            "label": "Parent option and conditional-award claim proxy",
+            "amount": 120.94891989485846,
+            "kind": "claim"
+          },
+          {
+            "label": "Capped-call asset scenario",
+            "amount": 255.31175588,
+            "kind": "asset"
+          }
+        ],
+        "dividends": [],
+        "warnings": [
+          "Each convertible series is allocated separately between principal and conversion at its own strike; carrying debt is reversed once. Capped calls are valued by bounded intrinsic payoff at the modeled share price. Employee options use reported count, weighted strike/life and 95% volatility/4% rate analyst proxies. Annual Oracle warrant uses disclosed terms; September has no remaining warrant claim because settlement shares are already outstanding.",
+          "Intrinsic convertible/capped-call allocation omits full time value, discounting and counterparty risk. Make-whole conversion increments apply only to specified events and are excluded from ordinary continuation; all-series principal/conversion and omitted/maximal hedge sensitivities bound useful alternatives.",
+          "Reported RSU/PSU counts are assumed to vest. Conditional performance multipliers beyond disclosed outstanding units and ungranted share-pool capacity are excluded. Existing EPP derivative liability and unfunded JV commitments are deducted once at reported amounts; no new investment value is assumed for the commitments."
+        ],
+        "sources": [
+          {
+            "title": "BE · 10-Q · 2026-09-30",
+            "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm"
+          }
+        ],
+        "inputs": {
+          "schemaVersion": 1,
+          "modelId": "BE-2026-09-30-guided-claims-v1",
+          "method": "option-proxy",
+          "employeeShareScale": 1,
+          "subsidiaryReserve": 0,
+          "convertibleCase": "holder-choice",
+          "cappedCallTreatment": "intrinsic",
+          "operatingCashReserveFraction": 1
+        }
+      },
+      "sensitivities": [
+        {
+          "label": "Option time-value proxy · all vest",
+          "perShare": 30.57139277317661,
+          "rawPerShare": 30.57139277317661,
+          "changes": {
+            "method": "option-proxy"
+          }
+        },
+        {
+          "label": "Intrinsic only · excludes time value",
+          "perShare": 30.71805298673567,
+          "rawPerShare": 30.71805298673567,
+          "changes": {
+            "method": "intrinsic"
+          }
+        },
+        {
+          "label": "All parent awards free · no exercise credit",
+          "perShare": 30.47077828119243,
+          "rawPerShare": 30.47077828119243,
+          "changes": {
+            "method": "free-awards"
+          }
+        },
+        {
+          "label": "Employee award inventory doubled",
+          "perShare": 29.680643580936074,
+          "rawPerShare": 29.680643580936074,
+          "changes": {
+            "employeeShareScale": 2
+          }
+        },
+        {
+          "label": "Half customer-prepayment reserve",
+          "perShare": 31.63623506962091,
+          "rawPerShare": 31.63623506962091,
+          "changes": {
+            "operatingCashReserveFraction": 0.5
+          }
+        },
+        {
+          "label": "Customer-prepayment reserve omitted",
+          "perShare": 32.70103487916514,
+          "rawPerShare": 32.70103487916514,
+          "changes": {
+            "operatingCashReserveFraction": 0
+          }
+        },
+        {
+          "label": "Capped-call asset omitted",
+          "perShare": 29.7492100754553,
+          "rawPerShare": 29.7492100754553,
+          "changes": {
+            "cappedCallTreatment": "omit"
+          }
+        },
+        {
+          "label": "Capped-call maximum nominal payoff stress",
+          "perShare": 30.57139277317661,
+          "rawPerShare": 30.57139277317661,
+          "changes": {
+            "cappedCallTreatment": "maximum-payoff"
+          }
+        },
+        {
+          "label": "Convertible holder-choice proxy",
+          "perShare": 30.57139277317661,
+          "rawPerShare": 30.57139277317661,
+          "changes": {
+            "convertibleCase": "holder-choice"
+          }
+        },
+        {
+          "label": "Convertible principal retained",
+          "perShare": 30.605743327737578,
+          "rawPerShare": 30.605743327737578,
+          "changes": {
+            "convertibleCase": "principal-only"
+          }
+        },
+        {
+          "label": "Convertible full-share conversion",
+          "perShare": 37.08977716046131,
+          "rawPerShare": 37.08977716046131,
+          "changes": {
+            "convertibleCase": "if-converted"
+          }
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "tests": 119,
+    "sourceValidators": 42,
+    "uiCases": 8,
+    "historyPanelChecks": 32,
+    "existingCompaniesUnchanged": 55,
+    "idempotent": true
+  }
+}

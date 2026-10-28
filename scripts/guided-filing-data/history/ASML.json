@@ -1,0 +1,1528 @@
+{
+  "ticker": "ASML",
+  "currency": "EUR",
+  "accountingBasis": "US GAAP",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000937966.json",
+  "cutoff": "2026-10-21",
+  "mappedDebt": "Noncurrent and current interest-bearing debt; excludes operating lease liabilities. Each component documents its filing mapping.",
+  "years": {
+    "2015": {
+      "bookEquity": {
+        "value": 8454.9,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2015-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2015-12-31 to 2015-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 2458.7,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2015-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2015-12-31 to 2015-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 6287.4,
+        "tag": "us-gaap:SalesRevenueNet",
+        "periodEnd": "2015-12-31",
+        "filed": "2018-02-07",
+        "accession": "0000937966-18-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/a2017integratedreportbased.htm",
+        "locator": "us-gaap:SalesRevenueNet; consolidated annual statements; 2015-01-01 to 2015-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2015-01-01"
+      },
+      "operatingIncome": {
+        "value": 1565.1,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2015-12-31",
+        "filed": "2018-02-07",
+        "accession": "0000937966-18-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/a2017integratedreportbased.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2015-01-01 to 2015-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2015-01-01"
+      },
+      "pretaxIncome": {
+        "value": 1548.6,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2015-12-31",
+        "filed": "2018-02-07",
+        "accession": "0000937966-18-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/a2017integratedreportbased.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2015-01-01 to 2015-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2015-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 161.4,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2015-12-31",
+        "filed": "2018-02-07",
+        "accession": "0000937966-18-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/a2017integratedreportbased.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2015-01-01 to 2015-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2015-01-01"
+      },
+      "fiscalYear": 2015,
+      "periodStart": "2015-01-01",
+      "periodEnd": "2015-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 1125.474,
+        "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+        "periodEnd": "2015-12-31",
+        "filed": "2017-02-08",
+        "accession": "0000937966-17-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796617000007/",
+        "locator": "Consolidated balance sheets, Long-term debt, including carrying-value hedge adjustments; us-gaap:LongTermDebtAndCapitalLeaseObligations",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 4.211,
+        "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+        "periodEnd": "2015-12-31",
+        "filed": "2017-02-08",
+        "accession": "0000937966-17-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796617000007/a20-fasml2016.htm",
+        "locator": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent; consolidated annual statements; 2015-12-31 to 2015-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 1129.685,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2015-12-31",
+        "filed": "2017-02-08",
+        "accession": "0000937966-17-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796617000007/",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 1125.474,
+            "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+            "periodEnd": "2015-12-31",
+            "filed": "2017-02-08",
+            "accession": "0000937966-17-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796617000007/",
+            "locator": "Consolidated balance sheets, Long-term debt, including carrying-value hedge adjustments; us-gaap:LongTermDebtAndCapitalLeaseObligations",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 4.211,
+            "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+            "periodEnd": "2015-12-31",
+            "filed": "2017-02-08",
+            "accession": "0000937966-17-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796617000007/a20-fasml2016.htm",
+            "locator": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent; consolidated annual statements; 2015-12-31 to 2015-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2016": {
+      "bookEquity": {
+        "value": 9972.4,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2016-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2016-12-31 to 2016-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 2906.9,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2016-12-31 to 2016-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 6875.1,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2016-01-01 to 2016-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2016-01-01"
+      },
+      "operatingIncome": {
+        "value": 1758.5,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2016-01-01 to 2016-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2016-01-01"
+      },
+      "pretaxIncome": {
+        "value": 1792.2,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2016-01-01 to 2016-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2016-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 234.4,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2016-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2016-01-01 to 2016-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2016-01-01"
+      },
+      "fiscalYear": 2016,
+      "periodStart": "2016-01-01",
+      "periodEnd": "2016-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 3071.8,
+        "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+        "periodEnd": "2016-12-31",
+        "filed": "2018-02-07",
+        "accession": "0000937966-18-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/",
+        "locator": "Consolidated balance sheets, Long-term debt, including carrying-value hedge adjustments; us-gaap:LongTermDebtAndCapitalLeaseObligations",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 247.7,
+        "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+        "periodEnd": "2016-12-31",
+        "filed": "2018-02-07",
+        "accession": "0000937966-18-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/a2017integratedreportbased.htm",
+        "locator": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent; consolidated annual statements; 2016-12-31 to 2016-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 3319.5,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2016-12-31",
+        "filed": "2018-02-07",
+        "accession": "0000937966-18-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 3071.8,
+            "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+            "periodEnd": "2016-12-31",
+            "filed": "2018-02-07",
+            "accession": "0000937966-18-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/",
+            "locator": "Consolidated balance sheets, Long-term debt, including carrying-value hedge adjustments; us-gaap:LongTermDebtAndCapitalLeaseObligations",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 247.7,
+            "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+            "periodEnd": "2016-12-31",
+            "filed": "2018-02-07",
+            "accession": "0000937966-18-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796618000007/a2017integratedreportbased.htm",
+            "locator": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent; consolidated annual statements; 2016-12-31 to 2016-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2017": {
+      "bookEquity": {
+        "value": 10691.1,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2017-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2017-12-31 to 2017-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 2259.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2017-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2017-12-31 to 2017-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 8962.7,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2017-01-01 to 2017-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2017-01-01"
+      },
+      "operatingIncome": {
+        "value": 2439.7,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2017-01-01 to 2017-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2017-01-01"
+      },
+      "pretaxIncome": {
+        "value": 2389.4,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2017-01-01 to 2017-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2017-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 306.0,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2017-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2017-01-01 to 2017-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2017-01-01"
+      },
+      "fiscalYear": 2017,
+      "periodStart": "2017-01-01",
+      "periodEnd": "2017-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 3000.1,
+        "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+        "periodEnd": "2017-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/",
+        "locator": "Consolidated balance sheets, Long-term debt, including carrying-value hedge adjustments; us-gaap:LongTermDebtAndCapitalLeaseObligations",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 25.2,
+        "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+        "periodEnd": "2017-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent; consolidated annual statements; 2017-12-31 to 2017-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 3025.3,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2017-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 3000.1,
+            "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+            "periodEnd": "2017-12-31",
+            "filed": "2019-02-06",
+            "accession": "0000937966-19-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/",
+            "locator": "Consolidated balance sheets, Long-term debt, including carrying-value hedge adjustments; us-gaap:LongTermDebtAndCapitalLeaseObligations",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 25.2,
+            "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+            "periodEnd": "2017-12-31",
+            "filed": "2019-02-06",
+            "accession": "0000937966-19-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+            "locator": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent; consolidated annual statements; 2017-12-31 to 2017-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2018": {
+      "bookEquity": {
+        "value": 11641.0,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2018-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2018-12-31 to 2018-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 3121.1,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2018-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2018-12-31 to 2018-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 10944.0,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2018-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2018-01-01 to 2018-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2018-01-01"
+      },
+      "operatingIncome": {
+        "value": 2965.3,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2018-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2018-01-01 to 2018-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2018-01-01"
+      },
+      "pretaxIncome": {
+        "value": 2937.0,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2018-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2018-01-01 to 2018-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2018-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 351.6,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2018-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2018-01-01 to 2018-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2018-01-01"
+      },
+      "fiscalYear": 2018,
+      "periodStart": "2018-01-01",
+      "periodEnd": "2018-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 3026.5,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2018-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2018-12-31 to 2018-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 0,
+        "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+        "periodEnd": "2018-12-31",
+        "filed": "2019-02-06",
+        "accession": "0000937966-19-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+        "locator": "Consolidated balance sheets, Current portion of long-term debt: dash; total current borrowing is zero, not bond face-value maturity schedule.",
+        "sourceType": "SEC filed financial statements / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 3026.5,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2018-12-31",
+        "filed": "2020-02-12",
+        "accession": "0000937966-20-000011",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 3026.5,
+            "tag": "us-gaap:LongTermDebtNoncurrent",
+            "periodEnd": "2018-12-31",
+            "filed": "2020-02-12",
+            "accession": "0000937966-20-000011",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796620000011/a2019integratedreportb.htm",
+            "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2018-12-31 to 2018-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 0,
+            "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligationsCurrent",
+            "periodEnd": "2018-12-31",
+            "filed": "2019-02-06",
+            "accession": "0000937966-19-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796619000007/a2018integratedreportbased.htm",
+            "locator": "Consolidated balance sheets, Current portion of long-term debt: dash; total current borrowing is zero, not bond face-value maturity schedule.",
+            "sourceType": "SEC filed financial statements / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2019": {
+      "bookEquity": {
+        "value": 12592.2,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2019-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2019-12-31 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 3532.3,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2019-12-31 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 11820.0,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2019-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2019-01-01 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2019-01-01"
+      },
+      "operatingIncome": {
+        "value": 2790.8,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2019-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2019-01-01 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2019-01-01"
+      },
+      "pretaxIncome": {
+        "value": 2765.8,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2019-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2019-01-01 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2019-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 191.7,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2019-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2019-01-01 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2019-01-01"
+      },
+      "fiscalYear": 2019,
+      "periodStart": "2019-01-01",
+      "periodEnd": "2019-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 3108.3,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2019-12-31 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 0.0,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2019-12-31 to 2019-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 3108.3,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2019-12-31",
+        "filed": "2021-02-10",
+        "accession": "0000937966-21-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 3108.3,
+            "tag": "us-gaap:LongTermDebtNoncurrent",
+            "periodEnd": "2019-12-31",
+            "filed": "2021-02-10",
+            "accession": "0000937966-21-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+            "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2019-12-31 to 2019-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 0.0,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2019-12-31",
+            "filed": "2021-02-10",
+            "accession": "0000937966-21-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796621000007/asml-20201231.htm",
+            "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2019-12-31 to 2019-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2020": {
+      "bookEquity": {
+        "value": 13865.4,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2020-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2020-12-31 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 6049.4,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2020-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2020-12-31 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 13978.5,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2020-01-01 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2020-01-01"
+      },
+      "operatingIncome": {
+        "value": 4051.5,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2020-01-01 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2020-01-01"
+      },
+      "pretaxIncome": {
+        "value": 4016.6,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2020-01-01 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2020-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 551.5,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2020-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2020-01-01 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2020-01-01"
+      },
+      "fiscalYear": 2020,
+      "periodStart": "2020-01-01",
+      "periodEnd": "2020-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 4662.8,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2020-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2020-12-31 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 15.4,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodEnd": "2020-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2020-12-31 to 2020-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 4678.2,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2020-12-31",
+        "filed": "2022-02-09",
+        "accession": "0000937966-22-000013",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 4662.8,
+            "tag": "us-gaap:LongTermDebtNoncurrent",
+            "periodEnd": "2020-12-31",
+            "filed": "2022-02-09",
+            "accession": "0000937966-22-000013",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+            "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2020-12-31 to 2020-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 15.4,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2020-12-31",
+            "filed": "2022-02-09",
+            "accession": "0000937966-22-000013",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796622000013/asml-20211231.htm",
+            "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2020-12-31 to 2020-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2021": {
+      "bookEquity": {
+        "value": 10140.6,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2021-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2021-12-31 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 6951.8,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2021-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2021-12-31 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 18611.0,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2021-01-01 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2021-01-01"
+      },
+      "operatingIncome": {
+        "value": 6750.1,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2021-01-01 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2021-01-01"
+      },
+      "pretaxIncome": {
+        "value": 6705.5,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2021-01-01 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2021-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 1021.4,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2021-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2021-01-01 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2021-01-01"
+      },
+      "fiscalYear": 2021,
+      "periodStart": "2021-01-01",
+      "periodEnd": "2021-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 4075.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2021-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2021-12-31 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 509.1,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodEnd": "2021-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2021-12-31 to 2021-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 4584.1,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2021-12-31",
+        "filed": "2023-02-15",
+        "accession": "0000937966-23-000014",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 4075.0,
+            "tag": "us-gaap:LongTermDebtNoncurrent",
+            "periodEnd": "2021-12-31",
+            "filed": "2023-02-15",
+            "accession": "0000937966-23-000014",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+            "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2021-12-31 to 2021-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 509.1,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2021-12-31",
+            "filed": "2023-02-15",
+            "accession": "0000937966-23-000014",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796623000014/asml-20221231.htm",
+            "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2021-12-31 to 2021-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2022": {
+      "bookEquity": {
+        "value": 8810.8,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2022-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2022-12-31 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 7268.3,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2022-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2022-12-31 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 21173.4,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2022-01-01 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2022-01-01"
+      },
+      "operatingIncome": {
+        "value": 6500.7,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2022-01-01 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2022-01-01"
+      },
+      "pretaxIncome": {
+        "value": 6456.1,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2022-01-01 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2022-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 969.9,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2022-01-01 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2022-01-01"
+      },
+      "fiscalYear": 2022,
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 3514.2,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2022-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2022-12-31 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 746.2,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodEnd": "2022-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2022-12-31 to 2022-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 4260.4,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2022-12-31",
+        "filed": "2024-02-14",
+        "accession": "0000937966-24-000008",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 3514.2,
+            "tag": "us-gaap:LongTermDebtNoncurrent",
+            "periodEnd": "2022-12-31",
+            "filed": "2024-02-14",
+            "accession": "0000937966-24-000008",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+            "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2022-12-31 to 2022-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 746.2,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2022-12-31",
+            "filed": "2024-02-14",
+            "accession": "0000937966-24-000008",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796624000008/asml-20231231.htm",
+            "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2022-12-31 to 2022-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2023": {
+      "bookEquity": {
+        "value": 13452.4,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2023-12-31 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 7004.7,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2023-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2023-12-31 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 27558.5,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2023-01-01 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2023-01-01"
+      },
+      "operatingIncome": {
+        "value": 9042.3,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2023-01-01 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2023-01-01"
+      },
+      "pretaxIncome": {
+        "value": 9083.5,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2023-01-01 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2023-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 1435.8,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2023-01-01 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2023-01-01"
+      },
+      "fiscalYear": 2023,
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 4631.5,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2023-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2023-12-31 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 0.1,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodEnd": "2023-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2023-12-31 to 2023-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 4631.6,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2023-12-31",
+        "filed": "2025-03-05",
+        "accession": "0000937966-25-000009",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+        "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 4631.5,
+            "tag": "us-gaap:LongTermDebtNoncurrent",
+            "periodEnd": "2023-12-31",
+            "filed": "2025-03-05",
+            "accession": "0000937966-25-000009",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+            "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2023-12-31 to 2023-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          },
+          {
+            "value": 0.1,
+            "tag": "us-gaap:LongTermDebtCurrent",
+            "periodEnd": "2023-12-31",
+            "filed": "2025-03-05",
+            "accession": "0000937966-25-000009",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+            "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2023-12-31 to 2023-12-31; EUR",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2024": {
+      "bookEquity": {
+        "value": 18476.8,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2024-12-31 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 12735.9,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2024-12-31 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 28262.9,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2024-01-01 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2024-01-01"
+      },
+      "operatingIncome": {
+        "value": 9022.6,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2024-01-01 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2024-01-01"
+      },
+      "pretaxIncome": {
+        "value": 9042.4,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2024-01-01 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2024-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 1680.6,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2024-01-01 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2024-01-01"
+      },
+      "fiscalYear": 2024,
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 3677.3,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2024-12-31 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 1010.3,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2024-12-31 to 2024-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 4704.5,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "Consolidated bank/bond debt plus finance-lease liability in accrued and other liabilities.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 4687.6,
+            "tag": "derived:mappedDebt",
+            "periodEnd": "2024-12-31",
+            "filed": "2026-02-25",
+            "accession": "0001628280-26-011378",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+            "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP",
+            "components": [
+              {
+                "value": 3677.3,
+                "tag": "us-gaap:LongTermDebtNoncurrent",
+                "periodEnd": "2024-12-31",
+                "filed": "2026-02-25",
+                "accession": "0001628280-26-011378",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+                "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2024-12-31 to 2024-12-31; EUR",
+                "sourceType": "SEC standardized Company Facts / 20-F",
+                "accountingBasis": "US GAAP"
+              },
+              {
+                "value": 1010.3,
+                "tag": "us-gaap:LongTermDebtCurrent",
+                "periodEnd": "2024-12-31",
+                "filed": "2026-02-25",
+                "accession": "0001628280-26-011378",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+                "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2024-12-31 to 2024-12-31; EUR",
+                "sourceType": "SEC standardized Company Facts / 20-F",
+                "accountingBasis": "US GAAP"
+              }
+            ]
+          },
+          {
+            "value": 16.9,
+            "tag": "us-gaap:FinanceLeaseLiability",
+            "periodEnd": "2024-12-31",
+            "filed": "2026-02-25",
+            "accession": "0001628280-26-011378",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+            "locator": "Note 14, total finance-lease liability included in accrued and other liabilities; added once to bank/bond debt.",
+            "sourceType": "SEC filed financial statements / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    },
+    "2025": {
+      "bookEquity": {
+        "value": 19612.2,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:StockholdersEquity; consolidated annual statements; 2025-12-31 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "cashAndEquivalents": {
+        "value": 12916.0,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue; consolidated annual statements; 2025-12-31 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "revenue": {
+        "value": 32667.3,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; consolidated annual statements; 2025-01-01 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2025-01-01"
+      },
+      "operatingIncome": {
+        "value": 11301.4,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:OperatingIncomeLoss; consolidated annual statements; 2025-01-01 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2025-01-01"
+      },
+      "pretaxIncome": {
+        "value": 11406.1,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments; consolidated annual statements; 2025-01-01 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2025-01-01"
+      },
+      "incomeTaxExpense": {
+        "value": 2013.4,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit; consolidated annual statements; 2025-01-01 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "periodStart": "2025-01-01"
+      },
+      "fiscalYear": 2025,
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "accountingBasis": "US GAAP",
+      "longTermDebtNoncurrent": {
+        "value": 2709.0,
+        "tag": "us-gaap:LongTermDebtNoncurrent",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2025-12-31 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "shortTermBorrowings": {
+        "value": 1681.9,
+        "tag": "us-gaap:LongTermDebtCurrent",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2025-12-31 to 2025-12-31; EUR",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP"
+      },
+      "mappedDebt": {
+        "value": 4407.4,
+        "tag": "derived:mappedDebt",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-02-25",
+        "accession": "0001628280-26-011378",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+        "locator": "Consolidated bank/bond debt plus finance-lease liability in accrued and other liabilities.",
+        "sourceType": "SEC standardized Company Facts / 20-F",
+        "accountingBasis": "US GAAP",
+        "components": [
+          {
+            "value": 4390.9,
+            "tag": "derived:mappedDebt",
+            "periodEnd": "2025-12-31",
+            "filed": "2026-02-25",
+            "accession": "0001628280-26-011378",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+            "locator": "Noncurrent interest-bearing borrowing and finance leases plus current interest-bearing borrowing and finance leases; operating leases excluded.",
+            "sourceType": "SEC standardized Company Facts / 20-F",
+            "accountingBasis": "US GAAP",
+            "components": [
+              {
+                "value": 2709.0,
+                "tag": "us-gaap:LongTermDebtNoncurrent",
+                "periodEnd": "2025-12-31",
+                "filed": "2026-02-25",
+                "accession": "0001628280-26-011378",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+                "locator": "us-gaap:LongTermDebtNoncurrent; consolidated annual statements; 2025-12-31 to 2025-12-31; EUR",
+                "sourceType": "SEC standardized Company Facts / 20-F",
+                "accountingBasis": "US GAAP"
+              },
+              {
+                "value": 1681.9,
+                "tag": "us-gaap:LongTermDebtCurrent",
+                "periodEnd": "2025-12-31",
+                "filed": "2026-02-25",
+                "accession": "0001628280-26-011378",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+                "locator": "us-gaap:LongTermDebtCurrent; consolidated annual statements; 2025-12-31 to 2025-12-31; EUR",
+                "sourceType": "SEC standardized Company Facts / 20-F",
+                "accountingBasis": "US GAAP"
+              }
+            ]
+          },
+          {
+            "value": 16.5,
+            "tag": "us-gaap:FinanceLeaseLiability",
+            "periodEnd": "2025-12-31",
+            "filed": "2026-02-25",
+            "accession": "0001628280-26-011378",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/937966/000162828026011378/asml-20251231.htm",
+            "locator": "Note 14, total finance-lease liability included in accrued and other liabilities; added once to bank/bond debt.",
+            "sourceType": "SEC filed financial statements / 20-F",
+            "accountingBasis": "US GAAP"
+          }
+        ]
+      }
+    }
+  },
+  "accountingBasisZh": "\u7f8e\u56fd\u516c\u8ba4\u4f1a\u8ba1\u539f\u5219",
+  "cautions": [
+    "2015\u20132017 debt uses consolidated balance-sheet carrying amounts, including hedge adjustments, instead of the bond-only debt-tag values. Finance leases are included in long-term/current debt through FY2023; FY2024\u2013FY2025 leases are in accrued and other liabilities and are added separately."
+  ],
+  "cautionsZh": [
+    "2015\u81f32017\u5e74\u7684\u503a\u52a1\u4f7f\u7528\u5408\u5e76\u8d44\u4ea7\u8d1f\u503a\u8868\u8d26\u9762\u91d1\u989d\uff08\u542b\u5957\u671f\u8c03\u6574\uff09\uff0c\u672a\u4f7f\u7528\u4ec5\u6db5\u76d6\u503a\u5238\u7684\u6807\u7b7e\u91d1\u989d\u3002\u622a\u81f32023\u8d22\u5e74\uff0c\u878d\u8d44\u79df\u8d41\u5df2\u8ba1\u5165\u6d41\u52a8\u53ca\u957f\u671f\u503a\u52a1\uff1b2024\u81f32025\u8d22\u5e74\u878d\u8d44\u79df\u8d41\u8ba1\u5165\u5e94\u8ba1\u53ca\u5176\u4ed6\u8d1f\u503a\uff0c\u5355\u72ec\u52a0\u56de\u3002"
+  ]
+}

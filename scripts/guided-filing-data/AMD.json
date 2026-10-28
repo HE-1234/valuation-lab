@@ -1,0 +1,283 @@
+{
+ "ticker": "AMD",
+ "name": "Advanced Micro Devices, Inc.",
+ "cik": "0000002488",
+ "currency": "USD",
+ "filerType": "domestic",
+ "shareBasis": "ordinary-common",
+ "adrRatio": 1,
+ "listedUnit": "common share (Nasdaq: AMD)",
+ "snapshots": {
+  "annual": {
+   "periodEnd": "2025-12-27",
+   "label": "FY2025",
+   "form": "10-K",
+   "accession": "0000002488-26-000018",
+   "filedAt": "2026-02-04",
+   "acceptedAt": "2026-02-04T04:14:52.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+   "revenue": 34639,
+   "operatingIncome": 3694,
+   "ttmComponents": null,
+   "cashAndEquivalents": 5539,
+   "shortTermInvestments": 5013,
+   "longTermInvestments": 1676,
+   "debtCurrent": 874,
+   "debtNoncurrent": 2348,
+   "operatingLeaseLiabilities": 784,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 1630.410843,
+   "sharesDate": "2026-01-30",
+   "unvestedRSUs": 35,
+   "options": {
+    "count": 2,
+    "weightedExercisePrice": 117.6,
+    "weightedRemainingYears": 4.17,
+    "aggregateIntrinsicValue": 77
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "OpenAI warrant: up to 160M shares at $0.01, exercisable through 2030-10-05",
+     "value": null,
+     "basis": "fair value NOT disclosed; 10-K states the issuance had no impact on the financial statements and no warrant shares met vesting or exercise conditions at 2025-12-27. Vests in tranches on OpenAI/affiliate AMD Instinct GPU purchase milestones (6 GW deployment, first 1 GW on MI450), specified AMD stock price targets and stock performance; each vested tranche further subject to technical and commercial conditions. To be accounted for as a liability until equity-classification conditions are met. Value is null because no fair value is disclosed; this does not imply zero economic worth (up to 160M shares is about 9.8% of shares outstanding).",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm Item 1 Business overview; Note 14 Common Stock and Stock-Based Compensation, Warrant paragraph; exhibit 4.1 to 8-K dated 2025-10-05"
+    }
+   ],
+   "carriedFrom": {},
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Statements of Operations, Net revenue, year ended December 27, 2025 (continuing operations)",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Statements of Operations, Operating income, year ended December 27, 2025",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Balance Sheets, Cash and cash equivalents, December 27, 2025",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Balance Sheets, Short-term investments, December 27, 2025",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 8: long-term investments at fair value recurring $400M (L1 $198M + L3 $202M) + non-marketable equity securities $1.1 billion (as disclosed, rounded to $0.1B) + Note 7 equity-method ATMP JV carrying value $176M; deferred compensation plan investments $257M excluded"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Balance Sheets, Current portion of long-term debt, net $874M (4.212% notes due 2026, principal $875M)",
+     "tag": "us-gaap:LongTermDebtCurrent"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Balance Sheets, Long-term debt, net of current portion $2,348M; Note 9 total principal $3,250M less $28M unamortized discount = $3,222M",
+     "tag": "us-gaap:LongTermDebtNoncurrent"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 10 Leases: present value of net minimum lease payments $784M (current $159M + long-term $625M)",
+     "tag": "us-gaap:OperatingLeaseLiability"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Cover page: 1,630,410,843 shares outstanding as of January 30, 2026 (34 days after year end); balance sheet shows 1,630M at December 27, 2025"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 14: unvested time-based RSUs 33M + unvested PRSUs 2M (target) at December 27, 2025; AMD reports these in whole millions"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Balance Sheets, complete equity section: all equity is common-parent stockholders equity; no noncontrolling-interest or mezzanine NCI class reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "December 27, 2025 December 28, 2024 (In millions, except par value amounts) ASSETS Current assets: Cash and cash equivalents $ 5,539 $ 3,787 Short-term investments 5,013 1,345 Accounts receivable, net 6,315 6,192 Inventories 7,920 5,734 Prepaid expenses and other current assets 2,160 1,991 Total current assets 26,947 19,049 Property and equipment, net 2,312 1,802 Goodwill 25,126 24,839 Acquisition-related intangibles, net 16,705 18,930 Deferred tax assets, net 384 688 Other non-current assets 5,452 3,918 Total assets $ 76,926 $ 69,226 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 2,929 $ 2,466 Accrued liabilities 5,250 4,260 Current portion of long-term debt, net 874 \u2014 Other current liabilities 402 555 Total current liabilities 9,455 7,281 Long-term debt, net of current portion 2,348 1,721 Long-term operating lease liabilities 625 491 Deferred tax liabilities 313 349 Other long-term liabilities 1,186 1,816 Commitments and contingencies (see Note 12) Stockholders\u2019 equity: Capital stock: Common stock, par value $ 0.01 ; shares authorized: 4,000 ; shares issued: 1,695 and 1,680 ; shares outstanding: 1,630 and 1,622 17 17 Additional paid-in capital 63,365 61,362 Treasury stock, at cost (shares held: 65 and 58 ) ( 7,079 ) ( 6,106 ) Retained earnings 6,699 2,364 Accumulated other comprehensive loss ( 3 ) ( 69 ) Total stockholders\u2019 equity 62,999 57,568 Total liabilities and stockholders\u2019 equity $ 76,926 $ 69,226"
+     }
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Consolidated Balance Sheets, preferred stock authorized; no shares issued or outstanding.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "December 27, 2025 December 28, 2024 (In millions, except par value amounts) ASSETS Current assets: Cash and cash equivalents $ 5,539 $ 3,787 Short-term investments 5,013 1,345 Accounts receivable, net 6,315 6,192 Inventories 7,920 5,734 Prepaid expenses and other current assets 2,160 1,991 Total current assets 26,947 19,049 Property and equipment, net 2,312 1,802 Goodwill 25,126 24,839 Acquisition-related intangibles, net 16,705 18,930 Deferred tax assets, net 384 688 Other non-current assets 5,452 3,918 Total assets $ 76,926 $ 69,226 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 2,929 $ 2,466 Accrued liabilities 5,250 4,260 Current portion of long-term debt, net 874 \u2014 Other current liabilities 402 555 Total current liabilities 9,455 7,281 Long-term debt, net of current portion 2,348 1,721 Long-term operating lease liabilities 625 491 Deferred tax liabilities 313 349 Other long-term liabilities 1,186 1,816 Commitments and contingencies (see Note 12) Stockholders\u2019 equity: Capital stock: Common stock, par value $ 0.01 ; shares authorized: 4,000 ; shares issued: 1,695 and 1,680 ; shares outstanding: 1,630 and 1,622 17 17 Additional paid-in capital 63,365 61,362 Treasury stock, at cost (shares held: 65 and 58 ) ( 7,079 ) ( 6,106 ) Retained earnings 6,699 2,364 Accumulated other comprehensive loss ( 3 ) ( 69 ) Total stockholders\u2019 equity 62,999 57,568 Total liabilities and stockholders\u2019 equity $ 76,926 $ 69,226"
+     }
+    },
+    "options": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 14, Stock Options activity table: Balance as of December 27, 2025, 2 million options outstanding; weighted-average exercise price $117.60; aggregate intrinsic value $77 million; remaining contractual life 4.17 years. Values are rounded by issuer.",
+     "originalDocumentVerified": true
+    },
+    "options.count": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 14, Stock Options activity table: Balance as of December 27, 2025, 2 million options outstanding; weighted-average exercise price $117.60; aggregate intrinsic value $77 million; remaining contractual life 4.17 years. Values are rounded by issuer.",
+     "originalDocumentVerified": true
+    }
+   },
+   "note": "FY2025 ended 2025-12-27; figures are continuing operations (ZT Manufacturing sold to Sanmina in Oct 2025 and shown as discontinued, $66M income). Counts of RSUs, PRSUs and options are rounded to whole millions by AMD. Non-marketable equity investments are disclosed only as $1.1 billion (rounded). No NCI, no preferred, no convertibles. Post year-end: $4.1B maximum-exposure data-center lease guarantee entered (Note 19, fair value not material). Operating leases not yet commenced: $1.3B. Operating lease liabilities are recorded only, not in debt."
+  },
+  "ttm": {
+   "periodEnd": "2026-06-27",
+   "label": "TTM through 2026-06-27",
+   "form": "10-Q",
+   "accession": "0000002488-26-000123",
+   "filedAt": "2026-08-05",
+   "acceptedAt": "2026-08-05T01:40:01.000Z",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+   "revenue": 41305,
+   "operatingIncome": 6488,
+   "ttmComponents": {
+    "annualRevenue": 34639,
+    "ytdRevenue": 21789,
+    "priorYtdRevenue": 15123,
+    "annualOperatingIncome": 3694,
+    "ytdOperatingIncome": 3466,
+    "priorYtdOperatingIncome": 672,
+    "ytdStart": "2025-12-28",
+    "ytdEnd": "2026-06-27",
+    "priorYtdStart": "2024-12-29",
+    "priorYtdEnd": "2025-06-28"
+   },
+   "cashAndEquivalents": 5086,
+   "shortTermInvestments": 8025,
+   "longTermInvestments": 3222,
+   "debtCurrent": 875,
+   "debtNoncurrent": 2351,
+   "operatingLeaseLiabilities": 1050,
+   "noncontrollingInterest": 0,
+   "preferredEquity": 0,
+   "sharesOutstanding": 1632.475042,
+   "sharesDate": "2026-07-29",
+   "unvestedRSUs": 35,
+   "options": {
+    "count": 2,
+    "weightedExercisePrice": 117.6,
+    "weightedRemainingYears": 4.17,
+    "aggregateIntrinsicValue": 77
+   },
+   "convertibles": [],
+   "otherClaims": [
+    {
+     "name": "OpenAI warrant: up to 160M shares at $0.01, exercisable through 2030-10-05",
+     "value": null,
+     "basis": "fair value NOT disclosed; filing states no warrant tranches had vested or become exercisable at 2026-06-27 and the warrants had no impact on the financial statements (liability-classified until equity conditions are met). Tranches tied to OpenAI GPU purchase milestones, AMD stock price targets and stock-performance thresholds, plus technical and commercial conditions. Value is null because no filing-date fair value is disclosed.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm Note 12 Common Stock and Stock-based Compensation, Warrants; MD&A overview"
+    },
+    {
+     "name": "Meta warrant: up to 160M shares at $0.01, issued February 2026 (2026-02-23), exercisable through 2031-02-23",
+     "value": null,
+     "basis": "fair value NOT disclosed; no tranches vested or exercisable at 2026-06-27; no impact on financial statements. Vests in tranches on Meta GPU purchase milestones (6 GW agreement, first 1 GW on MI450 + 6th Gen EPYC) and specified AMD stock price and/or performance conditions. Together with the OpenAI warrant up to 320M shares (about 19.6% of shares outstanding). Value is null because no filing-date fair value is disclosed.",
+     "evidence": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm Note 12 Warrants; MD&A overview; exhibit 4.1 to 8-K dated 2026-02-23 (listed in Q1 10-Q https://www.sec.gov/Archives/edgar/data/2488/000000248826000076/amd-20260328.htm)"
+    }
+   ],
+   "carriedFrom": {
+    "unvestedRSUs": {
+     "date": "2025-12-27",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "why": "10-Q has no unvested RSU/PRSU table; 33M time-based + 2M PRSU at December 27, 2025 carried"
+    },
+    "options": {
+     "date": "2025-12-27",
+     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "why": "10-Q has no option table; 2M options, $117.60 weighted exercise price, 4.17 years, $77M intrinsic value at December 27, 2025 carried"
+    }
+   },
+   "evidence": {
+    "revenue": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "TTM = FY2025 34,639 + six months ended Jun 27, 2026 21,789 - six months ended Jun 28, 2025 15,123; Condensed Consolidated Statements of Operations",
+     "tag": "us-gaap:Revenues"
+    },
+    "operatingIncome": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "TTM = FY2025 3,694 + six months 2026 3,466 - six months 2025 672; Statements of Operations",
+     "tag": "us-gaap:OperatingIncomeLoss"
+    },
+    "cashAndEquivalents": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Cash and cash equivalents, June 27, 2026",
+     "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue"
+    },
+    "shortTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Short-term investments, June 27, 2026",
+     "tag": "us-gaap:ShortTermInvestments"
+    },
+    "longTermInvestments": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Note 8: long-term investments at fair value recurring $1,220M (L1 $1,194M + L3 $26M, mostly previously non-marketable equity now public) + non-marketable equity securities $1.7 billion (as disclosed, rounded) + Note 7 equity-method investments $302M; deferred compensation plan investments $312M excluded"
+    },
+    "debtCurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Current portion of long-term debt, net $875M (4.212% notes due Sept 2026)",
+     "tag": "us-gaap:LongTermDebtCurrent"
+    },
+    "debtNoncurrent": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Long-term debt, net $2,351M; Note 9 principal $3,250M less $24M discount = $3,226M total",
+     "tag": "us-gaap:LongTermDebtNoncurrent"
+    },
+    "operatingLeaseLiabilities": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Condensed Consolidated Balance Sheets, Long-term operating lease liabilities $1,050M (noncurrent only; the 10-Q does not disclose the current portion, which was $159M at Dec 27, 2025)",
+     "tag": "us-gaap:OperatingLeaseLiabilityNoncurrent"
+    },
+    "sharesOutstanding": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Cover page: 1,632,475,042 shares outstanding as of July 29, 2026 (32 days after quarter end); balance sheet shows 1,632M at June 27, 2026"
+    },
+    "unvestedRSUs": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 14 (carried): 33M time-based RSUs + 2M PRSUs unvested at December 27, 2025"
+    },
+    "noncontrollingInterest": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Consolidated Balance Sheets, complete equity section: all equity is common-parent stockholders equity; no noncontrolling-interest or mezzanine NCI class reported.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "June 27, 2026 December 27, 2025 (In millions, except par value amounts) ASSETS Current assets: Cash and cash equivalents $ 5,086 $ 5,539 Short-term investments 8,025 5,013 Accounts receivable, net 7,281 6,315 Inventories 8,468 7,920 Prepaid expenses and other current assets 2,662 2,160 Total current assets 31,522 26,947 Property and equipment, net 3,439 2,312 Goodwill 25,470 25,126 Acquisition-related intangibles, net 15,635 16,705 Deferred tax assets 494 384 Other non-current assets 7,904 5,452 Total assets $ 84,464 $ 76,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 5,359 $ 2,929 Accrued liabilities 5,546 5,250 Current portion of long-term debt, net 875 874 Other current liabilities 301 402 Total current liabilities 12,081 9,455 Long-term debt, net 2,351 2,348 Long-term operating lease liabilities 1,050 625 Deferred tax liabilities 300 313 Other long-term liabilities 1,458 1,186 Commitments and contingencies (See Note 10) Stockholders\u2019 equity: Capital stock: Common stock, par value $ 0.01 ; shares authorized: 4,000 ; shares issued: 1,632 and 1,695 ; shares outstanding: 1,632 and 1,630 16 17 Additional paid-in capital 61,373 63,365 Treasury stock, at cost (shares held: \u2014 and 65 ) \u2014 ( 7,079 ) Retained earnings 5,909 6,699 Accumulated other comprehensive loss ( 74 ) ( 3 ) Total stockholders\u2019 equity 67,224 62,999 Total liabilities and stockholders\u2019 equity $ 84,464 $ 76,926"
+     }
+    },
+    "preferredEquity": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000123/amd-20260627.htm",
+     "locator": "Consolidated Balance Sheets, preferred stock authorized; no shares issued or outstanding.",
+     "originalDocumentVerified": true,
+     "tableEvidence": {
+      "balanceSheetExcerpt": "June 27, 2026 December 27, 2025 (In millions, except par value amounts) ASSETS Current assets: Cash and cash equivalents $ 5,086 $ 5,539 Short-term investments 8,025 5,013 Accounts receivable, net 7,281 6,315 Inventories 8,468 7,920 Prepaid expenses and other current assets 2,662 2,160 Total current assets 31,522 26,947 Property and equipment, net 3,439 2,312 Goodwill 25,470 25,126 Acquisition-related intangibles, net 15,635 16,705 Deferred tax assets 494 384 Other non-current assets 7,904 5,452 Total assets $ 84,464 $ 76,926 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 5,359 $ 2,929 Accrued liabilities 5,546 5,250 Current portion of long-term debt, net 875 874 Other current liabilities 301 402 Total current liabilities 12,081 9,455 Long-term debt, net 2,351 2,348 Long-term operating lease liabilities 1,050 625 Deferred tax liabilities 300 313 Other long-term liabilities 1,458 1,186 Commitments and contingencies (See Note 10) Stockholders\u2019 equity: Capital stock: Common stock, par value $ 0.01 ; shares authorized: 4,000 ; shares issued: 1,632 and 1,695 ; shares outstanding: 1,632 and 1,630 16 17 Additional paid-in capital 61,373 63,365 Treasury stock, at cost (shares held: \u2014 and 65 ) \u2014 ( 7,079 ) Retained earnings 5,909 6,699 Accumulated other comprehensive loss ( 74 ) ( 3 ) Total stockholders\u2019 equity 67,224 62,999 Total liabilities and stockholders\u2019 equity $ 84,464 $ 76,926"
+     }
+    },
+    "options": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 14, Stock Options activity table: Balance as of December 27, 2025, 2 million options outstanding; weighted-average exercise price $117.60; aggregate intrinsic value $77 million; remaining contractual life 4.17 years. Values are rounded by issuer.",
+     "originalDocumentVerified": true
+    },
+    "options.count": {
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+     "locator": "Note 14, Stock Options activity table: Balance as of December 27, 2025, 2 million options outstanding; weighted-average exercise price $117.60; aggregate intrinsic value $77 million; remaining contractual life 4.17 years. Values are rounded by issuer.",
+     "originalDocumentVerified": true
+    }
+   },
+   "note": "Latest filed 10-Q is Q2 2026 (period ended 2026-06-27, filed 2026-08-05). Operating lease liabilities understated by the undisclosed current portion (about $159M a year earlier; new data-center leases of $4.5B not yet commenced plus $9.5B signed after quarter end). Non-marketable equity investments $1.7B are disclosed rounded. Other post-period items: investment commitments of up to $5.0B through fiscal 2028 (Note 8), $4.1B maximum-exposure lease guarantees recorded as an immaterial credit derivative (guarantees may be issued in exchange for warrants), unconditional purchase commitments $30,276M (Note 10). Revolver now $5.0B and CP program $5.5B, both undrawn."
+  }
+ },
+ "notes": [
+  "Fiscal year ends the last Saturday of December. FY2025 = year ended 2025-12-27; TTM runs to the Q2 2026 quarter end 2026-06-27.",
+  "Flows are from continuing operations (ZT Systems manufacturing business discontinued; settled ZT contingent consideration in Oct 2025).",
+  "No convertible notes, capped calls, NCI or preferred. The two customer warrants (OpenAI Oct 2025, Meta Feb 2026; 160M shares each at $0.01) are the only material dilutive claims and none had vested by 2026-06-27.",
+  "Reviewed package (dist/data/incremental-AMD-2026-10-18-v3) was used for orientation; all figures here were taken directly from the 10-K and 10-Q."
+ ],
+ "latestFilingCheck": {
+  "cutoff": "2026-10-21",
+  "checkedAt": "2026-10-21",
+  "sourceUrl": "https://data.sec.gov/submissions/CIK0000002488.json",
+  "latestPeriodicAccession": "0000002488-26-000123",
+  "latestAnnualAccession": "0000002488-26-000018"
+ }
+}

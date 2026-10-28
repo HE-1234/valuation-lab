@@ -1,0 +1,303 @@
+{
+ "ticker": "NFLX",
+ "draftPatch": {
+  "nflxPolicy": {
+   "policy_label": "Default June 30, 2026 allocation from filed 10-Q claims; judgment inputs from the published restricted illustration",
+   "as_of": "2026-06-30",
+   "operating_cash_reserve": 3000,
+   "debt_value": 14372,
+   "option_volatility": 0.35,
+   "option_remaining_years": 4.5,
+   "option_risk_free_rate": 0.04,
+   "rsu_psu_units_multiplier": 1,
+   "income_tax_claim_reserve": 566,
+   "additional_brazil_claim_excluding_paid_729": 0,
+   "financing_interest_rate_derivative_reserve": 13.574,
+   "financing_fx_derivative_net_claim_reserve": 100,
+   "debt_valuation_basis": "face_principal_excluding_financing_derivatives",
+   "existing_unvested_award_expense_in_ebit_by_year": {
+    "2026": 25,
+    "2027": 25,
+    "2028": 10,
+    "2029": 0,
+    "2030": 0,
+    "2031": 0,
+    "2032": 0,
+    "2033": 0,
+    "2034": 0,
+    "2035": 0
+   },
+   "existing_award_remaining_expense_assumption": 60,
+   "existing_award_latest_recognition_date": "2028-12-31",
+   "retained_future_grant_cash_compensation_pct_revenue_by_year": {
+    "2026": 0.011,
+    "2027": 0.011,
+    "2028": 0.011,
+    "2029": 0.011,
+    "2030": 0.011,
+    "2031": 0.011,
+    "2032": 0.011,
+    "2033": 0.011,
+    "2034": 0.011,
+    "2035": 0.011,
+    "2036": 0.011
+   },
+   "retained_other_cash_operating_cost_pct_revenue_by_year": {
+    "2026": 0.2,
+    "2027": 0.2,
+    "2028": 0.2,
+    "2029": 0.2,
+    "2030": 0.2,
+    "2031": 0.2,
+    "2032": 0.2,
+    "2033": 0.2,
+    "2034": 0.2,
+    "2035": 0.2,
+    "2036": 0.2
+   },
+   "other_claim_reserve": 250,
+   "separate_claim_cash_by_year": {
+    "2026": 929.574,
+    "2027": 0,
+    "2028": 0,
+    "2029": 0,
+    "2030": 0,
+    "2031": 0,
+    "2032": 0,
+    "2033": 0,
+    "2034": 0,
+    "2035": 0
+   },
+   "accept_cash_fungibility_assumption": true,
+   "accept_operating_lease_and_content_treatment": true,
+   "accept_operating_hedges_embedded_no_separate_asset": true,
+   "accept_existing_award_and_future_sbc_nonoverlap": true,
+   "accept_existing_award_no_unmodeled_positive_cost_additions": true,
+   "accept_source_context_compensation_floor_convention": true,
+   "accept_financing_hedges_separate_and_assumed_closeout": true,
+   "accept_annual_funding_proxy_not_bank_cash": true,
+   "basis": "Filed June 30, 2026 10-Q: cash $9,099.232m + short-term investments $28.678m, senior-note face principal $14,372m (derivatives excluded), separate financing interest-rate derivative net liability $13.574m, 4,163.939676m common shares, 123.891603m vested options at $39.21 weighted strike, 2.012512m unvested RSU/PSU units taken at their reported count (1x). Income-tax reserve $566m is the latest filed gross unrecognized tax benefit (FY2025 10-K; the June 10-Q discloses none). Additional Brazil exposure beyond the $729m paid in H1 is assumed zero; no further amount is disclosed. Operating cash reserve $3,000m, other claims $250m, financing FX reserve $100m, option life 4.5y / volatility 35% / risk-free 4%, existing-award expense $25m/$25m/$10m to Dec 2028, retained 1.1% future-grant and 20% other cash costs, and H2 2026 cash settlement of all separate claims ($929.574m) are the published restricted illustration's analyst choices. Not a current price target."
+  }
+ },
+ "fields": [
+  {
+   "path": "nflxPolicy.debt_value",
+   "value": 14372,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "10-Q Jun 30 2026, Note 7 Debt (HTML table 25), aggregate senior-note principal, rounded USD m",
+   "note_en": "Face principal of senior notes; engine requires the face-principal convention excluding financing derivatives.",
+   "note_zh": "优先票据面值本金；引擎要求采用不含融资衍生工具的面值口径。"
+  },
+  {
+   "path": "nflxPolicy.debt_valuation_basis",
+   "value": "face_principal_excluding_financing_derivatives",
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "10-Q Jun 30 2026, Note 7 Debt",
+   "note_en": "Debt valued at filed face principal, not fair value ($14,605m) or carrying value ($14,309.306m).",
+   "note_zh": "债务按申报面值计量，而非公允价值（14,605）或账面价值（14,309.306）。"
+  },
+  {
+   "path": "nflxPolicy.financing_interest_rate_derivative_reserve",
+   "value": 13.574,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "10-Q Jun 30 2026, Note 8 Derivatives (HTML table 27): interest-rate derivative liabilities 14.934 less assets 0.236+1.124",
+   "note_en": "Reported net liability of the fair-value interest-rate hedges on the notes, reserved separately from face debt.",
+   "note_zh": "票据利率公允价值套期的申报净负债，与面值债务分开预留。"
+  },
+  {
+   "path": "nflxPolicy.rsu_psu_units_multiplier",
+   "value": 1,
+   "basis": "filed",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "10-Q Jun 30 2026, Note 10, unvested RSU/PSU balance 2,012,512",
+   "note_en": "Reported unvested RSU/PSU count used as-is (1x); the published illustration uses a 2x stress.",
+   "note_zh": "直接采用申报的未归属 RSU/PSU 数量（1 倍）；已发布示例使用 2 倍压力情景。"
+  },
+  {
+   "path": "nflxPolicy.income_tax_claim_reserve",
+   "value": 566,
+   "basis": "published-illustration",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+   "locator": "10-K Dec 31 2025, Note 11 Income Taxes, gross unrecognized tax benefits $566m",
+   "note_en": "Latest filed gross unrecognized tax benefit; the June 10-Q gives no updated amount, so this Dec 2025 figure is a stale proxy used by the illustration.",
+   "note_zh": "最近一次申报的未确认税收利益总额；六月 10-Q 未更新该数，故沿用示例所用的 2025 年 12 月旧数作为代理。"
+  },
+  {
+   "path": "nflxPolicy.additional_brazil_claim_excluding_paid_729",
+   "value": 0,
+   "basis": "explicit-zero",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "10-Q Jun 30 2026, MD&A Liquidity: $729m Brazil non-income-tax assessment payments already made in H1",
+   "note_en": "The $729m is already out of June cash; the 10-Q quantifies no further Brazil exposure. Zero is an assumption, not verified absence (same as illustration).",
+   "note_zh": "729 百万美元已从六月现金中支付；10-Q 未量化其他巴西风险。零为假设，并非证实不存在（与示例相同）。"
+  },
+  {
+   "path": "nflxPolicy.operating_cash_reserve",
+   "value": 3000,
+   "basis": "published-illustration",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "Illustrative equity policy v3 (package illustrative-equity-policy-v3.json)",
+   "note_en": "Operating liquidity kept back from the $9,127.91m June cash and investments; analyst judgment, no filed figure.",
+   "note_zh": "从六月 9,127.91 百万美元现金及投资中保留的经营流动性；属分析判断，无申报数字。"
+  },
+  {
+   "path": "nflxPolicy.other_claim_reserve",
+   "value": 250,
+   "basis": "published-illustration",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "10-Q Jun 30 2026, Note 9 Commitments and Contingencies (no accrued amount for litigation/indemnification)",
+   "note_en": "Allowance for unaccrued litigation and indemnification claims, which the filing does not quantify.",
+   "note_zh": "为申报未量化、未计提的诉讼及赔偿请求权预留。"
+  },
+  {
+   "path": "nflxPolicy.financing_fx_derivative_net_claim_reserve",
+   "value": 100,
+   "basis": "published-illustration",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm",
+   "locator": "10-Q Jun 30 2026, Note 8: financing FX hedge notional $2,934.991m; net fair value not separately disclosed",
+   "note_en": "Financing FX hedge net fair value is not disclosed separately from operating hedges; illustration reserve used.",
+   "note_zh": "融资外汇套期的净公允价值未与经营套期分开披露；沿用示例预留。"
+  },
+  {
+   "path": "nflxPolicy.option_remaining_years",
+   "value": 4.5,
+   "basis": "published-illustration",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+   "locator": "10-K Dec 31 2025 Stock Option Activity: weighted remaining term 4.79 years (June 10-Q gives none)",
+   "note_en": "June remaining option life is not filed; illustration value, close to the Dec 2025 filed 4.79 years less six months.",
+   "note_zh": "六月期权剩余期限未申报；采用示例值，接近 2025 年 12 月申报的 4.79 年减半年。"
+  },
+  {
+   "path": "nflxPolicy.option_volatility",
+   "value": 0.35,
+   "basis": "published-illustration",
+   "sourceUrl": null,
+   "locator": "Illustrative equity policy v3",
+   "note_en": "Black-Scholes volatility for the vested option block; analyst judgment.",
+   "note_zh": "已归属期权组合的 Black-Scholes 波动率；属分析判断。"
+  },
+  {
+   "path": "nflxPolicy.option_risk_free_rate",
+   "value": 0.04,
+   "basis": "published-illustration",
+   "sourceUrl": null,
+   "locator": "Illustrative equity policy v3",
+   "note_en": "Risk-free rate for the option proxy; analyst judgment.",
+   "note_zh": "期权代理估值的无风险利率；属分析判断。"
+  },
+  {
+   "path": "nflxPolicy.existing_award_remaining_expense_assumption",
+   "value": 60,
+   "basis": "published-illustration",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+   "locator": "10-K Dec 31 2025: $47m unrecognized RSU/PSU cost over 1.53 years; 10-Q Jun 30 2026: 1,245,383 units granted at $82.91",
+   "note_en": "Remaining expense of existing awards embedded in EBIT; June balance not filed. Within the $150.25m source-context envelope.",
+   "note_zh": "现有奖励已含在 EBIT 中的剩余费用；六月余额未申报。处于 150.25 百万美元来源区间之内。"
+  },
+  {
+   "path": "nflxPolicy.existing_unvested_award_expense_in_ebit_by_year",
+   "value": {
+    "2026": 25,
+    "2027": 25,
+    "2028": 10,
+    "2029": 0,
+    "2030": 0,
+    "2031": 0,
+    "2032": 0,
+    "2033": 0,
+    "2034": 0,
+    "2035": 0
+   },
+   "basis": "published-illustration",
+   "sourceUrl": null,
+   "locator": "Illustrative equity policy v3",
+   "note_en": "$25m H2 2026, $25m 2027, $10m 2028; reconciles exactly to the $60m total.",
+   "note_zh": "2026 下半年 25、2027 年 25、2028 年 10 百万美元；与 60 百万美元合计完全一致。"
+  },
+  {
+   "path": "nflxPolicy.existing_award_latest_recognition_date",
+   "value": "2028-12-31",
+   "basis": "published-illustration",
+   "sourceUrl": null,
+   "locator": "Illustrative equity policy v3",
+   "note_en": "Last date existing-award expense is recognized; must be no later than June 30, 2029.",
+   "note_zh": "现有奖励费用的最晚确认日；不得晚于 2029 年 6 月 30 日。"
+  },
+  {
+   "path": "nflxPolicy.retained_future_grant_cash_compensation_pct_revenue_by_year",
+   "value": {
+    "2026": 0.011,
+    "2027": 0.011,
+    "2028": 0.011,
+    "2029": 0.011,
+    "2030": 0.011,
+    "2031": 0.011,
+    "2032": 0.011,
+    "2033": 0.011,
+    "2034": 0.011,
+    "2035": 0.011,
+    "2036": 0.011
+   },
+   "basis": "published-illustration",
+   "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+   "locator": "10-K Dec 31 2025: SBC $368.449m / revenue $45,183.036m = 0.815% floor",
+   "note_en": "1.1% of revenue kept in EBIT for future grants, above the filed FY2025 SBC/revenue floor.",
+   "note_zh": "未来授予薪酬按收入的 1.1% 保留在 EBIT 中，高于 2025 财年申报的 SBC/收入下限。"
+  },
+  {
+   "path": "nflxPolicy.retained_other_cash_operating_cost_pct_revenue_by_year",
+   "value": {
+    "2026": 0.2,
+    "2027": 0.2,
+    "2028": 0.2,
+    "2029": 0.2,
+    "2030": 0.2,
+    "2031": 0.2,
+    "2032": 0.2,
+    "2033": 0.2,
+    "2034": 0.2,
+    "2035": 0.2,
+    "2036": 0.2
+   },
+   "basis": "published-illustration",
+   "sourceUrl": null,
+   "locator": "Illustrative equity policy v3",
+   "note_en": "20% of revenue of other cash costs already in EBIT; capacity check only, not subtracted again.",
+   "note_zh": "EBIT 中已含的其他现金成本按收入 20% 计；仅用于容量检查，不重复扣除。"
+  },
+  {
+   "path": "nflxPolicy.separate_claim_cash_by_year",
+   "value": {
+    "2026": 929.574,
+    "2027": 0,
+    "2028": 0,
+    "2029": 0,
+    "2030": 0,
+    "2031": 0,
+    "2032": 0,
+    "2033": 0,
+    "2034": 0,
+    "2035": 0
+   },
+   "basis": "derived",
+   "sourceUrl": null,
+   "locator": "566 + 0 + 250 + 13.574 + 100 = 929.574, all settled in H2 2026",
+   "note_en": "All separate claim reserves are paid in H2 2026 (hedges assumed closed July 1); schedule PV cannot exceed the reserves.",
+   "note_zh": "全部单独请求权预留在 2026 下半年支付（套期假设 7 月 1 日平仓）；计划现值不超过预留。"
+  },
+  {
+   "path": "nflxPolicy.accept_*",
+   "value": true,
+   "basis": "published-illustration",
+   "sourceUrl": null,
+   "locator": "nflxSitePolicyTemplate / illustrative policy acknowledgements",
+   "note_en": "All eight convention acknowledgements accepted, as in the site template and illustration.",
+   "note_zh": "与站点模板及示例相同，接受全部八项口径确认。"
+  }
+ ],
+ "summary_en": "June 30, 2026 allocation using the filed 10-Q cash, $14,372m face debt, rate-hedge liability, shares, options and RSU/PSU count; reserves, option inputs and award-expense schedule follow the published restricted illustration. Not a current price target.",
+ "summary_zh": "2026 年 6 月 30 日分配：采用 10-Q 申报的现金、14,372 百万美元面值债务、利率套期负债、股数、期权及 RSU/PSU 数量；各项预留、期权参数和奖励费用计划沿用已发布的受限示例。并非当前目标价。"
+}

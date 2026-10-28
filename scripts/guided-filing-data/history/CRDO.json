@@ -1,0 +1,867 @@
+{
+  "ticker": "CRDO",
+  "currency": "USD",
+  "accountingBasis": "US GAAP",
+  "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001807794.json",
+  "collectedAt": "2026-10-21",
+  "mappedDebt": "Exact balance-sheet borrowing rows plus separately disclosed finance/capital leases; components and filing locators preserved. Missing inputs remain null.",
+  "years": {
+    "2020": {
+      "revenue": {
+        "value": 53.835,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2019-05-01",
+        "periodEnd": "2020-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 53835000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 2.071,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2019-05-01",
+        "periodEnd": "2020-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 2071000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": -9.408,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2020-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": -9408000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 73.908,
+        "tag": null,
+        "periodEnd": "2020-04-30",
+        "filed": "2022-01-03",
+        "accession": "0001628280-22-000095",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022000095/credotechnologygroups-1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Audited Consolidated Balance Sheets April 30, 2020; Cash and cash equivalents 73,908 (USD thousands)",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Audited Consolidated Balance Sheets April 30, 2020; Cash and cash equivalents 73,908 (USD thousands)"
+        },
+        "reportedTableValue": 73908.0,
+        "rawUnit": "USD thousands",
+        "multiplierToMillions": 0.001
+      },
+      "pretaxIncome": {
+        "value": 2.095,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2019-05-01",
+        "periodEnd": "2020-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 2095000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 0.766,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2019-05-01",
+        "periodEnd": "2020-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 766000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2020-04-30",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2020-04-30",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2020,
+      "periodEnd": "2020-04-30",
+      "periodStart": "2019-05-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2020-04-30",
+        "filed": "2022-01-03",
+        "accession": "0001628280-22-000095",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1807794/000162828022000095/credotechnologygroups-1.htm",
+        "sourceType": "SEC filed document / S-1",
+        "locator": "Audited Consolidated Balance Sheets April 30, 2020: liabilities comprise accounts payable, accruals, tax, deferred revenue and other long-term liabilities; no debt or finance/capital lease liability. Convertible preferred shares 98,617 thousand are mezzanine equity, not borrowing.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Audited Consolidated Balance Sheets April 30, 2020: liabilities comprise accounts payable, accruals, tax, deferred revenue and other long-term liabilities; no debt or finance/capital lease liability. Convertible preferred shares 98,617 thousand are mezzanine equity, not borrowing.",
+          "debtRows": [],
+          "liabilitiesExcerpt": "Liabilities, Convertible Preferred Shares and Shareholders' Deficit Current Liabilities: Accounts payable $ 2,452 $ 3,590 Accrued compensation and benefits 532 1,549 Accrued expenses and other current liabilities 10,293 2,652 Income tax payable 752 625 Deferred revenue 4,546 4,116 Total current liabilities 18,575 12,532 Deferred tax liabilities \u2014 424 Other long-term liabilities 255 \u2014 Total liabilities 18,830 12,956 ",
+          "balanceSheetHeader": "April 30, 2020 April 30, 2021 Assets Current Assets: Cash and cash equivalents $ 73,908 $ 103,757 Accounts receivable 14,327 13,645 Inventories 2,276 7,104 Cont",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1807794/000162828022000095/credotechnologygroups-1.htm"
+        ]
+      }
+    },
+    "2021": {
+      "revenue": {
+        "value": 58.697,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2020-05-01",
+        "periodEnd": "2021-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 58697000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -25.234,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2020-05-01",
+        "periodEnd": "2021-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -25234000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": -55.431,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2021-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": -55431000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 103.757,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2021-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 103757000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -25.296,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2020-05-01",
+        "periodEnd": "2021-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -25296000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 2.215,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2020-05-01",
+        "periodEnd": "2021-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 2215000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2021-04-30",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2021-04-30",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2021,
+      "periodEnd": "2021-04-30",
+      "periodStart": "2020-05-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2021-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "Liabilities, Convertible Preferred Shares and Shareholders' Equity (Deficit) Current Liabilities: Accounts payable $ 8,487 $ 3,590 Accrued compensation and benefits 4,713 1,549 Accrued expenses and other current liabilities 12,063 3,277 Deferred revenue 1,234 4,116 Total current liabilities 26,497 12,532 Non-current operating lease liabilities 14,809 \u2014 Other non-current liabilities 220 424 Total liabilities 41,526 12,956 ",
+          "balanceSheetHeader": "April 30, 2022 April 30, 2021 Assets Current Assets: Cash and cash equivalents $ 259,322 $ 103,757 Accounts receivable 29,524 13,645 Inventories 27,337 7,104 Co",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm"
+        ]
+      }
+    },
+    "2022": {
+      "revenue": {
+        "value": 106.477,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2021-05-01",
+        "periodEnd": "2022-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 106477000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -21.968,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2021-05-01",
+        "periodEnd": "2022-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -21968000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 334.163,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2022-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 334163000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 259.322,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2022-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 259322000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -22.213,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2021-05-01",
+        "periodEnd": "2022-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -22213000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -0.037,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2021-05-01",
+        "periodEnd": "2022-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -37000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2022-04-30",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2022-04-30",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2022,
+      "periodEnd": "2022-04-30",
+      "periodStart": "2021-05-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2022-04-30",
+        "filed": "2022-06-08",
+        "accession": "0001628280-22-016593",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "Liabilities, Convertible Preferred Shares and Shareholders' Equity (Deficit) Current Liabilities: Accounts payable $ 8,487 $ 3,590 Accrued compensation and benefits 4,713 1,549 Accrued expenses and other current liabilities 12,063 3,277 Deferred revenue 1,234 4,116 Total current liabilities 26,497 12,532 Non-current operating lease liabilities 14,809 \u2014 Other non-current liabilities 220 424 Total liabilities 41,526 12,956 ",
+          "balanceSheetHeader": "April 30, 2022 April 30, 2021 Assets Current Assets: Cash and cash equivalents $ 259,322 $ 103,757 Accounts receivable 29,524 13,645 Inventories 27,337 7,104 Co",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001807794/000162828022016593/crdo-20220430.htm"
+        ]
+      }
+    },
+    "2023": {
+      "revenue": {
+        "value": 184.194,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2022-05-01",
+        "periodEnd": "2023-04-29",
+        "filed": "2023-06-23",
+        "accession": "0001628280-23-023187",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828023023187/crdo-20230429.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 184194000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -21.235,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2022-05-01",
+        "periodEnd": "2023-04-29",
+        "filed": "2023-06-23",
+        "accession": "0001628280-23-023187",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828023023187/crdo-20230429.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -21235000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 347.635,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2023-04-29",
+        "filed": "2023-06-23",
+        "accession": "0001628280-23-023187",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828023023187/crdo-20230429.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 347635000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 108.583,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2023-04-29",
+        "filed": "2023-06-23",
+        "accession": "0001628280-23-023187",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828023023187/crdo-20230429.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 108583000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -17.914,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2022-05-01",
+        "periodEnd": "2023-04-29",
+        "filed": "2023-06-23",
+        "accession": "0001628280-23-023187",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828023023187/crdo-20230429.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -17914000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": -1.367,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2022-05-01",
+        "periodEnd": "2023-04-29",
+        "filed": "2023-06-23",
+        "accession": "0001628280-23-023187",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828023023187/crdo-20230429.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": -1367000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2023-04-29",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2023-04-29",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2023,
+      "periodEnd": "2023-04-29",
+      "periodStart": "2022-05-01",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2023-04-29",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "Liabilities and Shareholders' Equity Current Liabilities: Accounts payable $ 13,417 $ 6,067 Accrued compensation and benefits 9,000 6,471 Accrued expenses and other current liabilities 18,301 14,454 Deferred revenue 3,902 4,040 Total current liabilities 44,620 31,032 Non-current operating lease liabilities 11,133 12,869 Other non-current liabilities 5,981 5,753 Total liabilities 61,734 49,654 ",
+          "balanceSheetHeader": "April 27, 2024 April 29, 2023 Assets Current Assets: Cash and cash equivalents $ 66,942 $ 108,583 Short-term investments 343,061 109,228 Accounts receivable 59,",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm"
+        ]
+      }
+    },
+    "2024": {
+      "revenue": {
+        "value": 192.97,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2023-04-30",
+        "periodEnd": "2024-04-27",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 192970000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": -37.058,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2023-04-30",
+        "periodEnd": "2024-04-27",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": -37058000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 540.198,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2024-04-27",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 540198000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 66.942,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2024-04-27",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 66942000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": -22.745,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2023-04-30",
+        "periodEnd": "2024-04-27",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": -22745000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 5.624,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2023-04-30",
+        "periodEnd": "2024-04-27",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 5624000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2024-04-27",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2024-04-27",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2024,
+      "periodEnd": "2024-04-27",
+      "periodStart": "2023-04-30",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2024-04-27",
+        "filed": "2024-06-24",
+        "accession": "0001628280-24-029629",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "Liabilities and Shareholders' Equity Current Liabilities: Accounts payable $ 13,417 $ 6,067 Accrued compensation and benefits 9,000 6,471 Accrued expenses and other current liabilities 18,301 14,454 Deferred revenue 3,902 4,040 Total current liabilities 44,620 31,032 Non-current operating lease liabilities 11,133 12,869 Other non-current liabilities 5,981 5,753 Total liabilities 61,734 49,654 ",
+          "balanceSheetHeader": "April 27, 2024 April 29, 2023 Assets Current Assets: Cash and cash equivalents $ 66,942 $ 108,583 Short-term investments 343,061 109,228 Accounts receivable 59,",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001807794/000162828024029629/crdo-20240427.htm"
+        ]
+      }
+    },
+    "2025": {
+      "revenue": {
+        "value": 436.775,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2024-04-28",
+        "periodEnd": "2025-05-03",
+        "filed": "2025-07-02",
+        "accession": "0001628280-25-033813",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828025033813/crdo-20250503.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 436775000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 37.124,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2024-04-28",
+        "periodEnd": "2025-05-03",
+        "filed": "2025-07-02",
+        "accession": "0001628280-25-033813",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828025033813/crdo-20250503.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 37124000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 681.582,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2025-05-03",
+        "filed": "2025-07-02",
+        "accession": "0001628280-25-033813",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828025033813/crdo-20250503.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 681582000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 236.328,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2025-05-03",
+        "filed": "2025-07-02",
+        "accession": "0001628280-25-033813",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828025033813/crdo-20250503.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 236328000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 54.87,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2024-04-28",
+        "periodEnd": "2025-05-03",
+        "filed": "2025-07-02",
+        "accession": "0001628280-25-033813",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828025033813/crdo-20250503.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 54870000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 2.687,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2024-04-28",
+        "periodEnd": "2025-05-03",
+        "filed": "2025-07-02",
+        "accession": "0001628280-25-033813",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828025033813/crdo-20250503.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 2687000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2025-05-03",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2025-05-03",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2025,
+      "periodEnd": "2025-05-03",
+      "periodStart": "2024-04-28",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2025-05-03",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "Liabilities and Shareholders' Equity Current liabilities: Accounts payable $ 107,345 $ 56,158 Accrued compensation and benefits 21,626 16,097 Other current liabilities 68,120 35,456 Total current liabilities 197,091 107,711 Non-current operating lease liabilities 20,617 12,693 Other non-current liabilities 14,299 7,271 Total liabilities 232,007 127,675 ",
+          "balanceSheetHeader": "May 2, 2026 May 3, 2025 Assets Current assets: Cash and cash equivalents $ 1,164,952 $ 236,328 Short-term investments 278,334 195,010 Accounts receivable 233,37",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm"
+        ]
+      }
+    },
+    "2026": {
+      "revenue": {
+        "value": 1335.116,
+        "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "periodStart": "2025-05-04",
+        "periodEnd": "2026-05-02",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "rawValue": 1335116000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "operatingIncome": {
+        "value": 445.005,
+        "tag": "us-gaap:OperatingIncomeLoss",
+        "periodStart": "2025-05-04",
+        "periodEnd": "2026-05-02",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:OperatingIncomeLoss",
+        "rawValue": 445005000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "bookEquity": {
+        "value": 2063.612,
+        "tag": "us-gaap:StockholdersEquity",
+        "periodStart": null,
+        "periodEnd": "2026-05-02",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:StockholdersEquity",
+        "rawValue": 2063612000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "cashAndEquivalents": {
+        "value": 1164.952,
+        "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "periodStart": null,
+        "periodEnd": "2026-05-02",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+        "rawValue": 1164952000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "pretaxIncome": {
+        "value": 475.435,
+        "tag": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "periodStart": "2025-05-04",
+        "periodEnd": "2026-05-02",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "rawValue": 475435000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "incomeTaxExpense": {
+        "value": 3.156,
+        "tag": "us-gaap:IncomeTaxExpenseBenefit",
+        "periodStart": "2025-05-04",
+        "periodEnd": "2026-05-02",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC standardized Company Facts / 10-K",
+        "locator": "us-gaap:IncomeTaxExpenseBenefit",
+        "rawValue": 3156000.0,
+        "rawUnit": "USD",
+        "multiplierToMillions": 1e-06
+      },
+      "longTermDebtNoncurrent": {
+        "value": null,
+        "periodEnd": "2026-05-02",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "shortTermBorrowings": {
+        "value": null,
+        "periodEnd": "2026-05-02",
+        "note": "No matching standardized SEC fact found for this annual period; no zero assumption."
+      },
+      "fiscalYear": 2026,
+      "periodEnd": "2026-05-02",
+      "periodStart": "2025-05-04",
+      "mappedDebt": {
+        "value": 0,
+        "tag": null,
+        "periodEnd": "2026-05-02",
+        "filed": "2026-06-15",
+        "accession": "0001628280-26-043303",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm",
+        "sourceType": "SEC filed document / 10-K",
+        "locator": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+        "note": "Zero separately reported borrowings verified against the filed balance sheet; operating leases are excluded. Not inferred from absence of a Company Facts tag.",
+        "originalDocumentVerified": true,
+        "tableEvidence": {
+          "rawRow": "Consolidated balance sheet, complete current and noncurrent liabilities: no borrowing or debt liability reported",
+          "debtRows": [],
+          "liabilitiesExcerpt": "Liabilities and Shareholders' Equity Current liabilities: Accounts payable $ 107,345 $ 56,158 Accrued compensation and benefits 21,626 16,097 Other current liabilities 68,120 35,456 Total current liabilities 197,091 107,711 Non-current operating lease liabilities 20,617 12,693 Other non-current liabilities 14,299 7,271 Total liabilities 232,007 127,675 ",
+          "balanceSheetHeader": "May 2, 2026 May 3, 2025 Assets Current assets: Cash and cash equivalents $ 1,164,952 $ 236,328 Short-term investments 278,334 195,010 Accounts receivable 233,37",
+          "reviewMethod": "Read consolidated balance-sheet liability schedule, including every current and noncurrent line; excluded acquisition purchase-price allocations and summarized data tables."
+        },
+        "formula": "Sum of separately reported borrowing rows after review of the full current and noncurrent liability schedule; no borrowing rows present",
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/0001807794/000162828026043303/crdo-20260502.htm"
+        ]
+      }
+    }
+  },
+  "note": "7 annual periods present in available SEC standardized annual facts; earlier pre-listing years are not fabricated."
+}

@@ -76,15 +76,19 @@ test('distributions: SD, bounds, parameters and numerical extremes reject rather
  ])assert.throws(()=>validateDriverDistribution(spec));
 });
 
+// Only arithmetic limits remain: growth and WACC above −100%, margin at most 100%, sales/capital above zero.
 test('distributions: all families enforce economic driver support while normal mean may be outside it',()=>{
- for(const [key,low,high]of [['growth',-.6,0],['growth',.9,1.1],['targetMargin',-.01,.1],['wacc',0,.1],['salesCapital',0,2]]) {
+ for(const [key,low,high]of [['growth',-1.1,0],['targetMargin',.9,1.1],['wacc',-1,.1],['salesCapital',0,2]]) {
   for(const spec of [{type:'fixed',value:low},{type:'uniform',low,high},{type:'triangular',low,mode:low,high},{type:'normal',mean:(low+high)/2,sd:.1,low,high}]) {
-   if(spec.type==='fixed'&&key==='growth'&&low===.9)continue;
+   if(spec.type==='fixed'&&key==='targetMargin'&&low===.9)continue;
    assert.throws(()=>validateDriverDistribution(spec,key),undefined,`${key} ${JSON.stringify(spec)}`);
   }
  }
  assert.doesNotThrow(()=>validateDriverDistribution({type:'normal',mean:-.1,sd:.1,low:.01,high:.2},'wacc'));
  assert.doesNotThrow(()=>validateDriverDistribution({type:'fixed',value:-.5},'growth'));
+ assert.doesNotThrow(()=>validateDriverDistribution({type:'fixed',value:-.9},'growth'));
+ assert.doesNotThrow(()=>validateDriverDistribution({type:'uniform',low:.9,high:3},'growth'));
+ assert.doesNotThrow(()=>validateDriverDistribution({type:'fixed',value:-.4},'targetMargin'));
  assert.doesNotThrow(()=>validateDriverDistribution({type:'fixed',value:1},'targetMargin'));
 });
 
@@ -106,7 +110,7 @@ test('distributions: preview and summary expose all parameters with honest under
 test('distributions: percent rates use fractions and SD scales in the same units',()=>{
  const fraction={type:'normal',mean:.1,sd:.02,low:.04,high:.15},percentage={type:'normal',mean:10,sd:2,low:4,high:15};
  for(const p of [.01,.1,.5,.9,.99])near(q(p,fraction)*100,q(p,percentage));
- assert.throws(()=>validateDriverDistribution(percentage,'growth'),/supported bounds/);
+ assert.throws(()=>validateDriverDistribution(percentage,'targetMargin'),/supported bounds/);
  const s=simulateCurrent(snap(),draft(),mixed());assert.match(s.method.inputUnits,/fractions.*0.10 = 10%/);
 });
 

@@ -1,0 +1,228 @@
+{
+  "ticker": "SNOW",
+  "sector": "Cloud data and AI software",
+  "businessSummary": {
+    "en": "Consumption-based cloud data platform for analytics, data engineering, sharing and AI applications; revenue depends on customer workload usage and competes with hyperscaler platforms.",
+    "zh": "按使用量收费的云数据平台，支持分析、数据工程、共享及AI应用；收入取决于客户工作负载使用量，并与大型云厂商平台竞争。"
+  },
+  "assumptions": {
+    "growth": 0.25,
+    "targetMargin": 0.25,
+    "tax": 0.21,
+    "salesCapital": 2.5,
+    "wacc": 0.11,
+    "terminalGrowth": 0.03,
+    "terminalROIC": 0.2,
+    "years": 10
+  },
+  "rationale": {
+    "growth": {
+      "en": "25% initial revenue growth fading toward3% is an analyst scenario below FY2026 growth29% and first-half FY2027 growth34%. Net revenue retention126% and rising AI/data workloads support expansion, but consumption optimization, competition and customer budgets limit extrapolation.",
+      "zh": "25%的初期收入增长逐步收敛至3%，为低于2026财年29%及2027财年上半年34%增长的分析情景。126%的净收入留存率及AI/数据工作负载增加支持扩张，但使用量优化、竞争及客户预算限制了外推。"
+    },
+    "targetMargin": {
+      "en": "25% mature GAAP operating margin requires a substantial transition from FY2026 −30.6% and first-half FY2027 −20.1%. It assumes stock compensation declines as a revenue share while remaining a real cost; this is a long-run profitability scenario, not current earnings or non-GAAP guidance.",
+      "zh": "25%的成熟期GAAP营业利润率要求从2026财年−30.6%及2027财年上半年−20.1%显著改善。假设股权薪酬占收入比例下降，但仍保留为真实成本；这是长期盈利情景，并非当前利润或非GAAP指引。"
+    },
+    "tax": {
+      "en": "21% normalized tax is an analyst assumption for eventual taxable profits. Current losses and deferred-tax valuation allowances do not support extrapolating the reported effective tax rate; no separate value is added for NOL tax assets.",
+      "zh": "21%的正常化税率是针对未来应税利润的分析假设。当前亏损及递延税估值准备不支持外推申报有效税率；不另加亏损结转税务资产价值。"
+    },
+    "salesCapital": {
+      "en": "2.5x incremental sales to capital reflects an asset-light platform that still funds deferred sales commissions, receivables, development and acquisition integration. IPO cash, repurchases, losses and strategic investments distort historical book-capital ratios.",
+      "zh": "新增销售与资本比2.5倍反映轻资产业务仍需投入递延销售佣金、应收款、开发及并购整合。上市现金、回购、亏损及战略投资会扭曲历史账面资本比率。"
+    },
+    "wacc": {
+      "en": "11% required return is an editable analyst scenario reflecting a loss-making competitive cloud software business, execution risk and dilution. It is not a live market-derived discount rate.",
+      "zh": "11%的必要回报为可编辑分析情景，反映亏损中的云软件业务、竞争、执行及稀释风险，并非实时市场推导折现率。"
+    },
+    "terminalGrowth": {
+      "en": "3% terminal growth is an analyst mature-business assumption, below the high-growth phase and accompanied by ongoing reinvestment.",
+      "zh": "3%的永续增长为成熟业务的分析假设，低于高速增长阶段，并保留持续再投资。"
+    },
+    "terminalROIC": {
+      "en": "20% marginal terminal return on capital assumes a durable software franchise with competition and continuing investment; it is not calibrated to negative or IPO-distorted book returns.",
+      "zh": "20%的永续期边际资本回报假设软件业务具有持续竞争力，同时考虑竞争及持续投资；不根据负值或受上市影响的账面回报校准。"
+    },
+    "years": {
+      "en": "Ten forecast years allow a gradual transition from GAAP operating losses to the assumed mature margin; timing remains a material scenario risk.",
+      "zh": "十年预测期用于从GAAP营业亏损逐步过渡至假设成熟利润率；实现时间仍是重大情景风险。"
+    }
+  },
+  "sources": [
+    {
+      "title": "Snowflake FY2026 Form10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+      "filedAt": "2026-03-20"
+    },
+    {
+      "title": "Snowflake FY2027 second-quarter Form10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000037/snow-20260731.htm",
+      "filedAt": "2026-09-04"
+    },
+    {
+      "title": "Snowflake IPO S-1, FY2019–FY2020 history",
+      "url": "https://www.sec.gov/Archives/edgar/data/1640147/000162828020013010/snowflakes-1.htm",
+      "filedAt": "2020-08-24"
+    }
+  ],
+  "freshness": {
+    "cutoff": "2026-10-21",
+    "checkedAt": "2026-10-21",
+    "sourceUrl": "https://data.sec.gov/submissions/CIK0001640147.json",
+    "latestPeriodicAccession": "0001640147-26-000037",
+    "latestAnnualAccession": "0001640147-26-000008"
+  },
+  "historicalShortfallReason": "Only eight real annual income-statement periods (FY2019–FY2026) are available from the IPO and annual filings; no earlier full-year results are invented.",
+  "limitations": [
+    {
+      "en": "Revenue and operating earnings are reported GAAP. FY2026 stock compensation was34% of revenue and first-half FY2027 was28%; future stock compensation stays in the target margin. Existing grants are allocated separately once.",
+      "zh": "收入与营业利润采用申报GAAP。2026财年股权薪酬占收入34%，2027财年上半年为28%；未来股权薪酬保留在目标利润率中。现有奖励另行分配且仅计算一次。"
+    },
+    {
+      "en": "Unvested acquisition restricted common stock0.516m annual/0.733m July is already legally issued and included in balance-sheet common outstanding. It is not added again despite exclusion from EPS until vesting. Acquisition PRSUs1.466m/1.435m use the disclosed maximum shares as a conservative vesting proxy; their immaterial reported liability is not separately deducted.",
+      "zh": "并购未归属限制性普通股年度51.6万股/7月73.3万股已法定发行并计入资产负债表普通股，不因归属前未计入每股收益而再次加入。并购业绩奖励146.6万股/143.5万股采用披露最高股数作为保守归属代理，不另扣其不重大负债。"
+    },
+    {
+      "en": "July includes an additional0.1m maximum Leadership PRSUs awarded but not yet granted under ASC718 because performance targets were unset. The filing calls vested-but-unissued RSUs immaterial; their unquantified residual is flagged and omitted.",
+      "zh": "7月另计入10万股已授予但因业绩目标未设定而尚不符合ASC718授予定义的管理层业绩奖励上限。申报称已归属但未发行RSU不重大；对未量化余额予以标记并省略。"
+    },
+    {
+      "en": "Long-term assets include strategic investments at carrying value:380.619m annual/370.178m July, alongside long-term marketable securities. Investment gains are outside operating loss; the assets are added once, with no double counting of cash equivalents. Private investment marks may differ from realizable value.",
+      "zh": "长期资产包含按账面价值计入的战略投资：年度3.80619亿美元/7月3.70178亿美元，以及长期可交易证券。投资收益不在营业亏损中，资产仅加入一次且不重复计算现金等价物。私人投资账面价值可能不同于可实现价值。"
+    },
+    {
+      "en": "Eight annual periods are available. Pre-IPO preferred capital and IPO proceeds limit historical capital comparability. No material finance leases are disclosed; immaterial undisclosed balances and an old0.231m acquisition deferred payment with no current balance are omitted rather than treated as consequential blockers.",
+      "zh": "可用年度历史为八年。上市前优先股资本与上市融资限制历史资本可比性。公司披露无重大融资租赁；省略未披露的不重大余额及无当前余额的旧并购23.1万美元递延付款，不将其作为重大阻碍。"
+    }
+  ],
+  "localizationPairs": {
+    "Only eight real annual income-statement periods (FY2019–FY2026) are available from the IPO and annual filings; no earlier full-year results are invented.": "上市及年度申报仅提供八个真实年度利润表期间（2019至2026财年），不会虚构更早的全年业绩。",
+    "Pre-IPO preferred equity and the September2020 IPO change the capital basis; this period is excluded from mature capital calibration.": "上市前优先股及2020年9月上市改变资本基础；该期间不用于成熟期资本校准。"
+  },
+  "claimsPolicy": {
+    "annual": {
+      "fixedClaims": 0,
+      "optionTranches": [
+        {
+          "name": "Employee stock options",
+          "shares": 13.766,
+          "strike": 26.56,
+          "years": 3.1,
+          "volatility": 0.55,
+          "rate": 0.04
+        }
+      ],
+      "convertibleScenarios": [
+        {
+          "name": "0% notes due 2027",
+          "carrying": 1141.299,
+          "principal": 1150,
+          "conversionShares": 7.3015799999999995,
+          "conversionPrice": 157.5,
+          "cashOnConversion": 0
+        },
+        {
+          "name": "0% notes due 2029",
+          "carrying": 1138.528,
+          "principal": 1150,
+          "conversionShares": 7.3015799999999995,
+          "conversionPrice": 157.5,
+          "cashOnConversion": 0
+        }
+      ],
+      "cappedCalls": [
+        {
+          "shares": 7.302,
+          "strike": 157.5,
+          "cap": 225,
+          "expiry": "2027-10-01",
+          "maxPayoff": 492.885,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "locator": "Note10 Capped Call Transactions: original7.302m coverage each; no disclosed material termination after immaterial2027 note conversion."
+        },
+        {
+          "shares": 7.302,
+          "strike": 157.5,
+          "cap": 225,
+          "expiry": "2029-10-01",
+          "maxPayoff": 492.885,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000008/snow-20260131.htm",
+          "locator": "Note10 Capped Call Transactions: original7.302m coverage each; no disclosed material termination after immaterial2027 note conversion."
+        }
+      ],
+      "note": {
+        "en": "Convertible notes use mutually exclusive principal and full-share-conversion scenarios, reversing carrying debt before allocation and choosing the lower common value. Both series have the same conversion price. Capped calls use intrinsic payoff at the modeled share value, bounded by225.00, rather than the195.5m historical premium. Employee options use55% volatility and4% rate analyst proxies with reported strike and remaining life.",
+        "zh": "可转债采用互斥的本金与全股份转换情景，分配前冲回账面债务并选择较低普通股价值。两系列转换价相同。封顶看涨按模型股价计算内在收益，封顶价225美元，不采用1.955亿美元历史保费。员工期权采用55%波动率及4%利率分析代理，行权价与剩余期限依申报。"
+      },
+      "cautions": [
+        {
+          "en": "Convertible and capped-call time value, discounting and counterparty risk are not fully priced by intrinsic holder-choice allocation. Principal-only, full-conversion and omitted/maximal hedge sensitivities expose this uncertainty. No note market fair-value premium is deducted on top of modeled dilution.",
+          "zh": "内在价值与持有人选择分配不能完整计入可转债及封顶看涨的时间价值、折现与对手方风险。仅本金、全转换及省略/最高对冲敏感性展示该不确定性。不会在模型稀释之外另扣债券市场公允价值溢价。"
+        }
+      ]
+    },
+    "ttm": {
+      "fixedClaims": 0,
+      "optionTranches": [
+        {
+          "name": "Employee stock options",
+          "shares": 9.277,
+          "strike": 30.74,
+          "years": 2.8,
+          "volatility": 0.55,
+          "rate": 0.04
+        }
+      ],
+      "convertibleScenarios": [
+        {
+          "name": "0% notes due 2027",
+          "carrying": 1143.899,
+          "principal": 1149.997,
+          "conversionShares": 7.3015609524,
+          "conversionPrice": 157.5,
+          "cashOnConversion": 0
+        },
+        {
+          "name": "0% notes due 2029",
+          "carrying": 1140.086,
+          "principal": 1150,
+          "conversionShares": 7.3015799999999995,
+          "conversionPrice": 157.5,
+          "cashOnConversion": 0
+        }
+      ],
+      "cappedCalls": [
+        {
+          "shares": 7.302,
+          "strike": 157.5,
+          "cap": 225,
+          "expiry": "2027-10-01",
+          "maxPayoff": 492.885,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000037/snow-20260731.htm",
+          "locator": "Note10 Capped Call Transactions: original7.302m coverage each; no disclosed material termination after immaterial2027 note conversion."
+        },
+        {
+          "shares": 7.302,
+          "strike": 157.5,
+          "cap": 225,
+          "expiry": "2029-10-01",
+          "maxPayoff": 492.885,
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1640147/000164014726000037/snow-20260731.htm",
+          "locator": "Note10 Capped Call Transactions: original7.302m coverage each; no disclosed material termination after immaterial2027 note conversion."
+        }
+      ],
+      "note": {
+        "en": "Convertible notes use mutually exclusive principal and full-share-conversion scenarios, reversing carrying debt before allocation and choosing the lower common value. Both series have the same conversion price. Capped calls use intrinsic payoff at the modeled share value, bounded by225.00, rather than the195.5m historical premium. Employee options use55% volatility and4% rate analyst proxies with reported strike and remaining life.",
+        "zh": "可转债采用互斥的本金与全股份转换情景，分配前冲回账面债务并选择较低普通股价值。两系列转换价相同。封顶看涨按模型股价计算内在收益，封顶价225美元，不采用1.955亿美元历史保费。员工期权采用55%波动率及4%利率分析代理，行权价与剩余期限依申报。"
+      },
+      "cautions": [
+        {
+          "en": "Convertible and capped-call time value, discounting and counterparty risk are not fully priced by intrinsic holder-choice allocation. Principal-only, full-conversion and omitted/maximal hedge sensitivities expose this uncertainty. No note market fair-value premium is deducted on top of modeled dilution.",
+          "zh": "内在价值与持有人选择分配不能完整计入可转债及封顶看涨的时间价值、折现与对手方风险。仅本金、全转换及省略/最高对冲敏感性展示该不确定性。不会在模型稀释之外另扣债券市场公允价值溢价。"
+        }
+      ],
+      "additionalAwardShares": 0.1
+    }
+  }
+}

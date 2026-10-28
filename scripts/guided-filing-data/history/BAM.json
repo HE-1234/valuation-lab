@@ -1,0 +1,804 @@
+{
+  "ticker": "BAM",
+  "currency": "USD",
+  "accountingBasis": "Full asset manager US GAAP;2022 predecessor contextual,2023–2025 restated full-manager comparisons.",
+  "source": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+  "collectedAt": "2026-10-21",
+  "mappedDebt": "Financialcompany equity model; manager debt retained in commonearnings and consolidatedfund borrowing not deducted twice.",
+  "years": {
+    "2022": {
+      "fiscalYear": 2022,
+      "periodStart": "2022-01-01",
+      "periodEnd": "2022-12-31",
+      "accountingBasis": "Full-year Asset Management Company predecessor, including 2022 reorganization; not the listed shell half-year",
+      "rangeEligible": false,
+      "note": "Real full-year predecessor data. The December 2022 arrangement changes capital and allocation of carried interest, so owner-return calibration excludes this year. Do not confuse this table with the separate listed-shell July–December statement.",
+      "revenue": {
+        "value": 3627,
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Total revenues",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 3627,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "96: FOR THE YEARS ENDED DECEMBER 31, (MILLIONS) 2024 2023 2022 Revenues Base management and advisory fees $ 2,957 $ 2,766 $ 2,500 Incentive fees 424 376 335 Investment income Carried interest allocations Realized 25 51 241 Unrealized (9) 348 249 Total investment income 16 399 490 Interest and dividend revenue 143 172 258 Other revenues 440 349 44 Total revenues 3,980 4,062 3,627 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits (1,154) (1,048) (700) Other operating expenses (347) (342) (236) General, administrative and other (64) (56) (81) Total compensation, operating, and general and administrative expenses (1,565) (1,446) (1,017) Carried interest allocation compensation Realized (69) (26) (61) Unrealized (24) (60) (139) Total carried interest allocation compensation (93) (86) (200) Interest expense (22) (14) (154) Total expenses (1,680) (1,546) (1,371) Other (expenses) income, net (93) (129) 1,090 Share of income from equity method investments 339 167 146 Income before taxes 2,546 2,554 3,492 Income tax expense (438) (417) (627) Net income 2,108 2,137 2,865 Net (income) loss attributable to: Redeemable non-controlling interests in consolidated funds — — (909) Preferred shares redeemable non-controlling interest 211 (262) (35) Non-controlling interest (151) (36) (6) Net income attributable to the common stockholders $ 2,168 $ 1,839 $ 1,915",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2022"
+        }
+      },
+      "operatingIncome": {
+        "value": 2410,
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Derived total revenue3627 less operating/compensation1017 and carried-interest compensation200",
+        "sourceType": "Derived from sourced SEC statement rows",
+        "originalDocumentVerified": true,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "formula": "Total revenues - compensation, operating and general expenses - carried-interest compensation",
+        "components": [
+          {
+            "field": "revenue",
+            "value": 3627,
+            "periodStart": "2022-01-01",
+            "periodEnd": "2022-12-31",
+            "filed": "2025-03-17",
+            "accession": "0001937926-25-000007",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+            "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Total revenues",
+            "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+            "originalDocumentVerified": true,
+            "reportedTableValue": 3627,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "96: FOR THE YEARS ENDED DECEMBER 31, (MILLIONS) 2024 2023 2022 Revenues Base management and advisory fees $ 2,957 $ 2,766 $ 2,500 Incentive fees 424 376 335 Investment income Carried interest allocations Realized 25 51 241 Unrealized (9) 348 249 Total investment income 16 399 490 Interest and dividend revenue 143 172 258 Other revenues 440 349 44 Total revenues 3,980 4,062 3,627 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits (1,154) (1,048) (700) Other operating expenses (347) (342) (236) General, administrative and other (64) (56) (81) Total compensation, operating, and general and administrative expenses (1,565) (1,446) (1,017) Carried interest allocation compensation Realized (69) (26) (61) Unrealized (24) (60) (139) Total carried interest allocation compensation (93) (86) (200) Interest expense (22) (14) (154) Total expenses (1,680) (1,546) (1,371) Other (expenses) income, net (93) (129) 1,090 Share of income from equity method investments 339 167 146 Income before taxes 2,546 2,554 3,492 Income tax expense (438) (417) (627) Net income 2,108 2,137 2,865 Net (income) loss attributable to: Redeemable non-controlling interests in consolidated funds — — (909) Preferred shares redeemable non-controlling interest 211 (262) (35) Non-controlling interest (151) (36) (6) Net income attributable to the common stockholders $ 2,168 $ 1,839 $ 1,915",
+              "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+              "column": "2022"
+            }
+          },
+          {
+            "field": "compensationOperatingGeneralExpenses",
+            "value": 1017,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+            "locator": "Full manager consolidated statements: total compensation, operating, and general and administrative expenses, 2022 column",
+            "filed": "2025-03-17"
+          },
+          {
+            "field": "carriedInterestCompensation",
+            "value": 200,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+            "locator": "Full manager consolidated statements: total carried interest allocation compensation, 2022 column",
+            "filed": "2025-03-17"
+          }
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm"
+        ]
+      },
+      "pretaxIncome": {
+        "value": 3492,
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Income before taxes",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 3492,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "96: FOR THE YEARS ENDED DECEMBER 31, (MILLIONS) 2024 2023 2022 Revenues Base management and advisory fees $ 2,957 $ 2,766 $ 2,500 Incentive fees 424 376 335 Investment income Carried interest allocations Realized 25 51 241 Unrealized (9) 348 249 Total investment income 16 399 490 Interest and dividend revenue 143 172 258 Other revenues 440 349 44 Total revenues 3,980 4,062 3,627 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits (1,154) (1,048) (700) Other operating expenses (347) (342) (236) General, administrative and other (64) (56) (81) Total compensation, operating, and general and administrative expenses (1,565) (1,446) (1,017) Carried interest allocation compensation Realized (69) (26) (61) Unrealized (24) (60) (139) Total carried interest allocation compensation (93) (86) (200) Interest expense (22) (14) (154) Total expenses (1,680) (1,546) (1,371) Other (expenses) income, net (93) (129) 1,090 Share of income from equity method investments 339 167 146 Income before taxes 2,546 2,554 3,492 Income tax expense (438) (417) (627) Net income 2,108 2,137 2,865 Net (income) loss attributable to: Redeemable non-controlling interests in consolidated funds — — (909) Preferred shares redeemable non-controlling interest 211 (262) (35) Non-controlling interest (151) (36) (6) Net income attributable to the common stockholders $ 2,168 $ 1,839 $ 1,915",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2022"
+        }
+      },
+      "incomeTaxExpense": {
+        "value": 627,
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Income tax expense",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 627,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "96: FOR THE YEARS ENDED DECEMBER 31, (MILLIONS) 2024 2023 2022 Revenues Base management and advisory fees $ 2,957 $ 2,766 $ 2,500 Incentive fees 424 376 335 Investment income Carried interest allocations Realized 25 51 241 Unrealized (9) 348 249 Total investment income 16 399 490 Interest and dividend revenue 143 172 258 Other revenues 440 349 44 Total revenues 3,980 4,062 3,627 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits (1,154) (1,048) (700) Other operating expenses (347) (342) (236) General, administrative and other (64) (56) (81) Total compensation, operating, and general and administrative expenses (1,565) (1,446) (1,017) Carried interest allocation compensation Realized (69) (26) (61) Unrealized (24) (60) (139) Total carried interest allocation compensation (93) (86) (200) Interest expense (22) (14) (154) Total expenses (1,680) (1,546) (1,371) Other (expenses) income, net (93) (129) 1,090 Share of income from equity method investments 339 167 146 Income before taxes 2,546 2,554 3,492 Income tax expense (438) (417) (627) Net income 2,108 2,137 2,865 Net (income) loss attributable to: Redeemable non-controlling interests in consolidated funds — — (909) Preferred shares redeemable non-controlling interest 211 (262) (35) Non-controlling interest (151) (36) (6) Net income attributable to the common stockholders $ 2,168 $ 1,839 $ 1,915",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2022"
+        }
+      },
+      "netIncomeAttributableCommon": {
+        "value": 1915,
+        "periodStart": "2022-01-01",
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Income attributable to common owners",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 1915,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "96: FOR THE YEARS ENDED DECEMBER 31, (MILLIONS) 2024 2023 2022 Revenues Base management and advisory fees $ 2,957 $ 2,766 $ 2,500 Incentive fees 424 376 335 Investment income Carried interest allocations Realized 25 51 241 Unrealized (9) 348 249 Total investment income 16 399 490 Interest and dividend revenue 143 172 258 Other revenues 440 349 44 Total revenues 3,980 4,062 3,627 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits (1,154) (1,048) (700) Other operating expenses (347) (342) (236) General, administrative and other (64) (56) (81) Total compensation, operating, and general and administrative expenses (1,565) (1,446) (1,017) Carried interest allocation compensation Realized (69) (26) (61) Unrealized (24) (60) (139) Total carried interest allocation compensation (93) (86) (200) Interest expense (22) (14) (154) Total expenses (1,680) (1,546) (1,371) Other (expenses) income, net (93) (129) 1,090 Share of income from equity method investments 339 167 146 Income before taxes 2,546 2,554 3,492 Income tax expense (438) (417) (627) Net income 2,108 2,137 2,865 Net (income) loss attributable to: Redeemable non-controlling interests in consolidated funds — — (909) Preferred shares redeemable non-controlling interest 211 (262) (35) Non-controlling interest (151) (36) (6) Net income attributable to the common stockholders $ 2,168 $ 1,839 $ 1,915",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2022"
+        }
+      },
+      "bookEquity": {
+        "value": 9508,
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Total common equity at year end",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 9508,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "98: AS AT (MILLIONS, EXCEPT SHARE AMOUNTS) Common equity Common Shares of Brookfield Asset Management ULC Net Parent Investment Common shares Common shares held in treasury Additional paid-in capital Retained earnings (deficit) Accumulated other comprehensive income Total common equity Non-controlling interest Total equity Balance at December 31, 2021 — $ 9,715 $ — $ — $ — $ — $ 156 $ 9,871 $ — $ 9,871 Net income — 1,831 — — — 84 — 1,915 6 1,921 Currency translation — (29) — — — — (3) (32) — (32) Contributions — 3,897 — — — — — 3,897 92 3,989 Distributions — (6,143) — — — — — (6,143) — (6,143) Transfer of interest 1,635,327,858 (9,271) 9,271 — — — — — — — Balance at December 31, 2022 1,635,327,858 — 9,271 — — 84 153 9,508 98 9,606 Net income — — — — — 1,839 — 1,839 36 1,875 Other comprehensive income — — — — — — 15 15 — 15 Contributions 21,771 — 1 — 122 — — 123 10 133 Distributions — — (229) — — (2,101) — (2,330) — (2,330) Transfer of interest — — (29) — — — — (29) 29 — Balance at December 31, 2023 1,635,349,629 — 9,014 — 122 (178) 168 9,126 173 9,299 Net income — — — — — 2,168 — 2,168 151 2,319 Other comprehensive loss — — — — — — (6) (6) — (6) Share subscriptions 78,775 — 3 — — — — 3 — 3 Acquisition of treasury shares (4,903,300) — — (91) — — — (91) — (91) Contributions — — — — 30 — — 30 16 46 Distributions — — — — — (2,478) — (2,478) (4) (2,482) Balance at December 31, 2024 1,630,525,104 $ — $ 9,017 $ (91) $ 152 $ (488) $ 162 $ 8,752 $ 336 $ 9,088",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2022"
+        }
+      },
+      "cashAndEquivalents": {
+        "value": 3545,
+        "periodStart": null,
+        "periodEnd": "2022-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, full Asset Management Company statements, 2022 column: Cash at year end",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 3545,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "99: FOR THE YEARS ENDED DECEMBER 31, (MILLIONS) 2024 2023 2022 Operating activities Net income $ 2,108 $ 2,137 $ 2,865 Other expenses (income), net 69 54 (1,090) Share of income from equity method investments, net of cash dividends (122) 21 22 Depreciation and amortization 14 14 13 Deferred income taxes 274 92 336 Stock-based equity awards 103 33 (48) Unrealized carried interest allocation, net 33 (288) (110) Other working capital and non-cash operating items (616) (624) (2,362) 1,863 1,439 (374) Investing activities Acquisitions Investments (1,909) (286) (363) Investments held for sale (249) — — Investments in consolidated funds (251) — — Other assets (8) (17) (13) Dispositions and distributions received Investments 385 84 2,082 Repayments from (advances to) related parties 37 (256) — (1,995) (475) 1,706 Financing activities Distributions to common stockholders (2,478) (2,101) (3,184) Issuance of non-recourse borrowings in consolidated funds 251 — — Issuance of related party loans 67 197 172 Distributions to non-controlling and redeemable non-controlling interests (52) (44) (1,328) Contributions from parent 56 — 5,155 Corporate borrowings — — (1,612) Contributions from redeemable non-controlling interests — 2 517 Issuance of tracking option 37 41 — Preferred equity issuances — 63 — (2,119) (1,842) (280) Cash and cash equivalents Change in cash and cash equivalents (2,251) (878) 1,052 Effect of exchange rate changes on cash and cash equivalents (12) — (1) Balance, beginning of year 2,667 3,545 2,494 Balance, end of year $ 404 $ 2,667 $ 3,545",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2022"
+        }
+      },
+      "mappedDebt": {
+        "value": null,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2022 arrangement repaid corporate debt and changed capital structure; industrial invested-capital mapping is not appropriate for the owner-equity model."
+      }
+    },
+    "2023": {
+      "fiscalYear": 2023,
+      "periodStart": "2023-01-01",
+      "periodEnd": "2023-12-31",
+      "accountingBasis": "US GAAP 2025reverseacquisition restated fullassetmanager; comparable2023–2025",
+      "rangeEligible": true,
+      "note": "2025annualreport retrospectively restated fullmanager. GAAP totalrevenue includes unrealizedcarry; use financialHistoryfee revenue and margin for equitymodelcalibration.",
+      "revenue": {
+        "value": 4062,
+        "tag": null,
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidated operations totalrevenues, 2023column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 4062,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2023"
+        }
+      },
+      "operatingIncome": {
+        "value": 2530,
+        "tag": null,
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "Derived from sourced SEC statement rows",
+        "locator": "Derived totalrevenues less compensation/operating/G&A less carriedinterestcompensation; noGAAP EBITlabel, 2023column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "formula": "Total revenues - compensation, operating and general expenses - carried-interest compensation",
+        "components": [
+          {
+            "field": "revenue",
+            "value": 4062,
+            "tag": null,
+            "periodStart": "2023-01-01",
+            "periodEnd": "2023-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001628280-26-013098",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "sourceType": "SEC filed annual statements",
+            "locator": "Consolidated operations totalrevenues, 2023column; restated2025fullmanager",
+            "originalDocumentVerified": true,
+            "reportedTableValue": 4062,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+              "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+              "column": "2023"
+            }
+          },
+          {
+            "field": "compensationOperatingGeneralExpenses",
+            "value": 1446,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "Full manager consolidated statements: total compensation, operating, and general and administrative expenses, 2023 column",
+            "filed": "2026-03-02"
+          },
+          {
+            "field": "carriedInterestCompensation",
+            "value": 86,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "Full manager consolidated statements: total carried interest allocation compensation, 2023 column",
+            "filed": "2026-03-02"
+          }
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm"
+        ]
+      },
+      "pretaxIncome": {
+        "value": 2554,
+        "tag": null,
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations incomebeforetax, 2023column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 2554,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2023"
+        }
+      },
+      "incomeTaxExpense": {
+        "value": 417,
+        "tag": null,
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations incometaxexpense, 2023column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 417,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2023"
+        }
+      },
+      "netIncomeAttributableCommon": {
+        "value": 1839,
+        "tag": null,
+        "periodStart": "2023-01-01",
+        "periodEnd": "2023-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations netincome attributablecommon, 2023column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 1839,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2023"
+        }
+      },
+      "bookEquity": {
+        "value": 9126,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedequitystatement totalcommonequity, 2023column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 9126,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "65: AS AT (MILLIONS, EXCEPT SHARE AMOUNTS) Shares of Brookfield Asset Management Ltd. Brookfield Asset Management Ltd. Class A common stock Class B common stock Common stock Common stock held in treasury Additional paid-in capital Retained deficit Accumulated other comprehensive income Total common equity Non-controlling interest in consolidated entities Non-controlling interest in consolidated funds Total equity Balance at December 31, 2022 1,590,175,873 21,280 $ 9,271 $ — $ — $ 84 $ 153 $ 9,508 $ 98 $ — $ 9,606 Net income — — — — — 1,839 — 1,839 36 — 1,875 Other comprehensive income — — — — — — 15 15 — — 15 Share subscriptions 813,290 — — — — — — — — — — Acquisition of treasury shares, net ( 8,234,552 ) — — — — — — — — — — Contributions — — 1 — 122 — — 123 10 — 133 Distributions — — ( 229 ) — — ( 2,101 ) — ( 2,330 ) — — ( 2,330 ) Transfer of interest — — ( 29 ) — — — — ( 29 ) 29 — — Balance at December 31, 2023 1,582,754,611 21,280 $ 9,014 $ — $ 122 $ ( 178 ) $ 168 $ 9,126 $ 173 $ — $ 9,299 Net income — — — — — 2,168 — 2,168 151 — 2,319 Other comprehensive loss — — — — — — ( 6 ) ( 6 ) — — ( 6 ) Share subscriptions 30,109,594 — 3 — — — — 3 — — 3 Acquisition of treasury shares, net 1,374,076 — — ( 91 ) — — — ( 91 ) — — ( 91 ) Contributions — — — — 30 — — 30 16 — 46 Distributions — — — — — ( 2,478 ) — ( 2,478 ) ( 4 ) — ( 2,482 ) Balance at December 31, 2024 1,614,238,281 21,280 $ 9,017 $ ( 91 ) $ 152 $ ( 488 ) $ 162 $ 8,752 $ 336 $ — $ 9,088",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2023"
+        }
+      },
+      "cashAndEquivalents": {
+        "value": 2667,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2023-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedcashflows cashatyearend, 2023column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 2667,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "67: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Operating activities Net income $ 2,398 $ 2,108 $ 2,137 Adjustments to reconcile net income to net cash from operating activities: Other expenses, net 229 69 54 Other income, net of consolidated funds ( 47 ) — — Share of income from equity method investments, net of cash distributions ( 7 ) ( 122 ) 21 Depreciation and amortization 40 14 14 Deferred income taxes 151 274 92 Stock-based equity awards 123 103 33 Unrealized carried interest allocation, net ( 301 ) 33 ( 288 ) Changes in operating assets and liabilities: Changes in investments of consolidated funds ( 467 ) ( 251 ) — Changes in other working capital and non-cash operating items ( 18 ) ( 616 ) ( 624 ) 2,101 1,612 1,439 Investing activities Acquisitions Investments ( 962 ) ( 1,909 ) ( 286 ) Acquisition of subsidiaries, net of cash acquired 6 — — Other assets ( 9 ) ( 8 ) ( 17 ) Dispositions and distributions received Investments 307 385 84 Disposition of subsidiaries, net of cash 52 — — Investments held for sale 267 ( 249 ) — Repayments from (advances to) related parties — 37 ( 256 ) ( 339 ) ( 1,744 ) ( 475 ) Financing activities Distributions to common stockholders ( 2,818 ) ( 2,478 ) ( 2,101 ) Borrowings of consolidated funds 256 251 — Distributions to non-controlling and redeemable non-controlling interests ( 216 ) ( 52 ) ( 42 ) Redemption of preferred shares redeemable non-controlling interest ( 94 ) — — Purchase of treasury shares ( 412 ) — — Corporate borrowings issuance, net 2,500 — — Deferred financing fees ( 22 ) — — Contributions from parent 12 56 — Capital raised from non-controlling interests 179 — — Preferred equity issuances 25 — 63 Issuance of related party loans — 67 197 Issuance of tracking option — 37 41 ( 590 ) ( 2,119 ) ( 1,842 ) Cash and cash equivalents Change in cash and cash equivalents 1,172 ( 2,251 ) ( 878 ) Effect of exchange rate changes on cash and cash equivalents 7 ( 12 ) — Balance, beginning of year 404 2,667 3,545 Balance, end of year $ 1,583 $ 404 $ 2,667",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2023"
+        }
+      },
+      "mappedDebt": {
+        "value": null,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "locator": "Unclassified balance sheet and fundfinancing; not an industrialEVbridge. Common-equity cashflowmodel accounts for financing and ownership in ownerprofit.",
+        "note": "Do not manufacture longterm/current debt split or usecashonlyROIC."
+      }
+    },
+    "2024": {
+      "fiscalYear": 2024,
+      "periodStart": "2024-01-01",
+      "periodEnd": "2024-12-31",
+      "accountingBasis": "US GAAP 2025reverseacquisition restated fullassetmanager; comparable2023–2025",
+      "rangeEligible": true,
+      "note": "2025annualreport retrospectively restated fullmanager. GAAP totalrevenue includes unrealizedcarry; use financialHistoryfee revenue and margin for equitymodelcalibration.",
+      "revenue": {
+        "value": 3980,
+        "tag": null,
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidated operations totalrevenues, 2024column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 3980,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2024"
+        }
+      },
+      "operatingIncome": {
+        "value": 2322,
+        "tag": null,
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "Derived from sourced SEC statement rows",
+        "locator": "Derived totalrevenues less compensation/operating/G&A less carriedinterestcompensation; noGAAP EBITlabel, 2024column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "formula": "Total revenues - compensation, operating and general expenses - carried-interest compensation",
+        "components": [
+          {
+            "field": "revenue",
+            "value": 3980,
+            "tag": null,
+            "periodStart": "2024-01-01",
+            "periodEnd": "2024-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001628280-26-013098",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "sourceType": "SEC filed annual statements",
+            "locator": "Consolidated operations totalrevenues, 2024column; restated2025fullmanager",
+            "originalDocumentVerified": true,
+            "reportedTableValue": 3980,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+              "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+              "column": "2024"
+            }
+          },
+          {
+            "field": "compensationOperatingGeneralExpenses",
+            "value": 1565,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "Full manager consolidated statements: total compensation, operating, and general and administrative expenses, 2024 column",
+            "filed": "2026-03-02"
+          },
+          {
+            "field": "carriedInterestCompensation",
+            "value": 93,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "Full manager consolidated statements: total carried interest allocation compensation, 2024 column",
+            "filed": "2026-03-02"
+          }
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm"
+        ]
+      },
+      "pretaxIncome": {
+        "value": 2546,
+        "tag": null,
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations incomebeforetax, 2024column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 2546,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2024"
+        }
+      },
+      "incomeTaxExpense": {
+        "value": 438,
+        "tag": null,
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations incometaxexpense, 2024column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 438,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2024"
+        }
+      },
+      "netIncomeAttributableCommon": {
+        "value": 2168,
+        "tag": null,
+        "periodStart": "2024-01-01",
+        "periodEnd": "2024-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations netincome attributablecommon, 2024column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 2168,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2024"
+        }
+      },
+      "bookEquity": {
+        "value": 8752,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedequitystatement totalcommonequity, 2024column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 8752,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "65: AS AT (MILLIONS, EXCEPT SHARE AMOUNTS) Shares of Brookfield Asset Management Ltd. Brookfield Asset Management Ltd. Class A common stock Class B common stock Common stock Common stock held in treasury Additional paid-in capital Retained deficit Accumulated other comprehensive income Total common equity Non-controlling interest in consolidated entities Non-controlling interest in consolidated funds Total equity Balance at December 31, 2022 1,590,175,873 21,280 $ 9,271 $ — $ — $ 84 $ 153 $ 9,508 $ 98 $ — $ 9,606 Net income — — — — — 1,839 — 1,839 36 — 1,875 Other comprehensive income — — — — — — 15 15 — — 15 Share subscriptions 813,290 — — — — — — — — — — Acquisition of treasury shares, net ( 8,234,552 ) — — — — — — — — — — Contributions — — 1 — 122 — — 123 10 — 133 Distributions — — ( 229 ) — — ( 2,101 ) — ( 2,330 ) — — ( 2,330 ) Transfer of interest — — ( 29 ) — — — — ( 29 ) 29 — — Balance at December 31, 2023 1,582,754,611 21,280 $ 9,014 $ — $ 122 $ ( 178 ) $ 168 $ 9,126 $ 173 $ — $ 9,299 Net income — — — — — 2,168 — 2,168 151 — 2,319 Other comprehensive loss — — — — — — ( 6 ) ( 6 ) — — ( 6 ) Share subscriptions 30,109,594 — 3 — — — — 3 — — 3 Acquisition of treasury shares, net 1,374,076 — — ( 91 ) — — — ( 91 ) — — ( 91 ) Contributions — — — — 30 — — 30 16 — 46 Distributions — — — — — ( 2,478 ) — ( 2,478 ) ( 4 ) — ( 2,482 ) Balance at December 31, 2024 1,614,238,281 21,280 $ 9,017 $ ( 91 ) $ 152 $ ( 488 ) $ 162 $ 8,752 $ 336 $ — $ 9,088",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2024"
+        }
+      },
+      "cashAndEquivalents": {
+        "value": 404,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2024-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedcashflows cashatyearend, 2024column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 404,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "67: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Operating activities Net income $ 2,398 $ 2,108 $ 2,137 Adjustments to reconcile net income to net cash from operating activities: Other expenses, net 229 69 54 Other income, net of consolidated funds ( 47 ) — — Share of income from equity method investments, net of cash distributions ( 7 ) ( 122 ) 21 Depreciation and amortization 40 14 14 Deferred income taxes 151 274 92 Stock-based equity awards 123 103 33 Unrealized carried interest allocation, net ( 301 ) 33 ( 288 ) Changes in operating assets and liabilities: Changes in investments of consolidated funds ( 467 ) ( 251 ) — Changes in other working capital and non-cash operating items ( 18 ) ( 616 ) ( 624 ) 2,101 1,612 1,439 Investing activities Acquisitions Investments ( 962 ) ( 1,909 ) ( 286 ) Acquisition of subsidiaries, net of cash acquired 6 — — Other assets ( 9 ) ( 8 ) ( 17 ) Dispositions and distributions received Investments 307 385 84 Disposition of subsidiaries, net of cash 52 — — Investments held for sale 267 ( 249 ) — Repayments from (advances to) related parties — 37 ( 256 ) ( 339 ) ( 1,744 ) ( 475 ) Financing activities Distributions to common stockholders ( 2,818 ) ( 2,478 ) ( 2,101 ) Borrowings of consolidated funds 256 251 — Distributions to non-controlling and redeemable non-controlling interests ( 216 ) ( 52 ) ( 42 ) Redemption of preferred shares redeemable non-controlling interest ( 94 ) — — Purchase of treasury shares ( 412 ) — — Corporate borrowings issuance, net 2,500 — — Deferred financing fees ( 22 ) — — Contributions from parent 12 56 — Capital raised from non-controlling interests 179 — — Preferred equity issuances 25 — 63 Issuance of related party loans — 67 197 Issuance of tracking option — 37 41 ( 590 ) ( 2,119 ) ( 1,842 ) Cash and cash equivalents Change in cash and cash equivalents 1,172 ( 2,251 ) ( 878 ) Effect of exchange rate changes on cash and cash equivalents 7 ( 12 ) — Balance, beginning of year 404 2,667 3,545 Balance, end of year $ 1,583 $ 404 $ 2,667",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2024"
+        }
+      },
+      "mappedDebt": {
+        "value": null,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "locator": "Unclassified balance sheet and fundfinancing; not an industrialEVbridge. Common-equity cashflowmodel accounts for financing and ownership in ownerprofit.",
+        "note": "Do not manufacture longterm/current debt split or usecashonlyROIC."
+      }
+    },
+    "2025": {
+      "fiscalYear": 2025,
+      "periodStart": "2025-01-01",
+      "periodEnd": "2025-12-31",
+      "accountingBasis": "US GAAP 2025reverseacquisition restated fullassetmanager; comparable2023–2025",
+      "rangeEligible": true,
+      "note": "2025annualreport retrospectively restated fullmanager. GAAP totalrevenue includes unrealizedcarry; use financialHistoryfee revenue and margin for equitymodelcalibration.",
+      "revenue": {
+        "value": 4817,
+        "tag": null,
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidated operations totalrevenues, 2025column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 4817,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2025"
+        }
+      },
+      "operatingIncome": {
+        "value": 2888,
+        "tag": null,
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "Derived from sourced SEC statement rows",
+        "locator": "Derived totalrevenues less compensation/operating/G&A less carriedinterestcompensation; noGAAP EBITlabel, 2025column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "formula": "Total revenues - compensation, operating and general expenses - carried-interest compensation",
+        "components": [
+          {
+            "field": "revenue",
+            "value": 4817,
+            "tag": null,
+            "periodStart": "2025-01-01",
+            "periodEnd": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001628280-26-013098",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "sourceType": "SEC filed annual statements",
+            "locator": "Consolidated operations totalrevenues, 2025column; restated2025fullmanager",
+            "originalDocumentVerified": true,
+            "reportedTableValue": 4817,
+            "rawUnit": "USD millions",
+            "multiplierToMillions": 1,
+            "tableEvidence": {
+              "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+              "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+              "column": "2025"
+            }
+          },
+          {
+            "field": "compensationOperatingGeneralExpenses",
+            "value": 1783,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "Full manager consolidated statements: total compensation, operating, and general and administrative expenses, 2025 column",
+            "filed": "2026-03-02"
+          },
+          {
+            "field": "carriedInterestCompensation",
+            "value": 146,
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+            "locator": "Full manager consolidated statements: total carried interest allocation compensation, 2025 column",
+            "filed": "2026-03-02"
+          }
+        ],
+        "sourceUrls": [
+          "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm"
+        ]
+      },
+      "pretaxIncome": {
+        "value": 2925,
+        "tag": null,
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations incomebeforetax, 2025column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 2925,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2025"
+        }
+      },
+      "incomeTaxExpense": {
+        "value": 527,
+        "tag": null,
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations incometaxexpense, 2025column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 527,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2025"
+        }
+      },
+      "netIncomeAttributableCommon": {
+        "value": 2485,
+        "tag": null,
+        "periodStart": "2025-01-01",
+        "periodEnd": "2025-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedoperations netincome attributablecommon, 2025column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 2485,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "63: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Revenues Base management and advisory fees $ 3,384 $ 2,957 $ 2,766 Incentive fees 560 424 376 Investment income Carried interest allocations Realized — 25 51 Unrealized 209 ( 9 ) 348 Total investment income 209 16 399 Interest and dividend revenue 98 143 172 Interest and dividend revenue of consolidated funds 31 — — Other revenues 535 440 349 Total revenues 4,817 3,980 4,062 Expenses Compensation, operating, and general and administrative expenses Compensation and benefits ( 1,373 ) ( 1,154 ) ( 1,048 ) Other operating expenses ( 354 ) ( 347 ) ( 342 ) General, administrative and other ( 56 ) ( 64 ) ( 56 ) Total compensation, operating, and general and administrative expenses ( 1,783 ) ( 1,565 ) ( 1,446 ) Carried interest allocation compensation Realized ( 155 ) ( 69 ) ( 26 ) Unrealized 9 ( 24 ) ( 60 ) Total carried interest allocation compensation ( 146 ) ( 93 ) ( 86 ) Interest expense ( 87 ) ( 22 ) ( 14 ) Interest expense of consolidated funds ( 28 ) — — Total expenses ( 2,044 ) ( 1,680 ) ( 1,546 ) Other expenses, net ( 297 ) ( 93 ) ( 129 ) Share of income from equity method investments 402 339 167 Other income, net of consolidated funds 47 — — Income before taxes 2,925 2,546 2,554 Income tax expense ( 527 ) ( 438 ) ( 417 ) Net income $ 2,398 $ 2,108 $ 2,137 Net loss (income) attributable to: Preferred shares redeemable non-controlling interest $ 480 $ 211 $ ( 262 ) Non-controlling interest in consolidated entities ( 369 ) ( 151 ) ( 36 ) Non-controlling interests in consolidated funds ( 24 ) — — Net income attributable to the common stockholders $ 2,485 $ 2,168 $ 1,839 Earnings per share Basic $ 1.54 $ 1.35 $ 1.16 Diluted $ 1.52 $ 1.34 $ 1.16 Weighted-average shares Basic 1,612.2 1,603.4 1,585.8 Diluted 1,628.5 1,613.6 1,590.6",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2025"
+        }
+      },
+      "bookEquity": {
+        "value": 8118,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedequitystatement totalcommonequity, 2025column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 8118,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "66: AS AT (MILLIONS, EXCEPT SHARE AMOUNTS Shares of Brookfield Asset Management Ltd. Brookfield Asset Management Ltd. Class A common stock Class B common stock Common stock Common stock held in treasury Additional paid-in capital Retained deficit Accumulated other comprehensive income Total common equity Non-controlling interest in consolidated entities Non-controlling interest in consolidated funds Total equity Balance at December 31, 2024 1,614,238,281 21,280 $ 9,017 $ ( 91 ) $ 152 $ ( 488 ) $ 162 $ 8,752 $ 336 $ — $ 9,088 Net income — — — — — 2,485 — 2,485 369 24 2,878 Other comprehensive income — — — — — — 26 26 — — 26 Share subscriptions 785,664 — 16 — ( 5 ) ( 19 ) — ( 8 ) — — ( 8 ) Acquisition of treasury shares, net ( 6,531,303 ) — — ( 428 ) — — — ( 428 ) — — ( 428 ) Contributions — — — — 151 — — 151 61 163 375 2025 Arrangement — — 120 ( 7 ) ( 144 ) — — ( 31 ) 31 — — Distributions — — — — — ( 2,827 ) — ( 2,827 ) ( 24 ) — ( 2,851 ) Deconsolidation of consolidated funds — — — — — ( 2 ) — ( 2 ) — ( 166 ) ( 168 ) Balance at December 31, 2025 1,608,492,642 21,280 $ 9,153 $ ( 526 ) $ 154 $ ( 851 ) $ 188 $ 8,118 $ 773 $ 21 $ 8,912",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2025"
+        }
+      },
+      "cashAndEquivalents": {
+        "value": 1583,
+        "tag": null,
+        "periodStart": null,
+        "periodEnd": "2025-12-31",
+        "filed": "2026-03-02",
+        "accession": "0001628280-26-013098",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "sourceType": "SEC filed annual statements",
+        "locator": "Consolidatedcashflows cashatyearend, 2025column; restated2025fullmanager",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 1583,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "67: FOR THE YEARS ENDED DECEMBER 31 (MILLIONS) 2025 2024 2023 Operating activities Net income $ 2,398 $ 2,108 $ 2,137 Adjustments to reconcile net income to net cash from operating activities: Other expenses, net 229 69 54 Other income, net of consolidated funds ( 47 ) — — Share of income from equity method investments, net of cash distributions ( 7 ) ( 122 ) 21 Depreciation and amortization 40 14 14 Deferred income taxes 151 274 92 Stock-based equity awards 123 103 33 Unrealized carried interest allocation, net ( 301 ) 33 ( 288 ) Changes in operating assets and liabilities: Changes in investments of consolidated funds ( 467 ) ( 251 ) — Changes in other working capital and non-cash operating items ( 18 ) ( 616 ) ( 624 ) 2,101 1,612 1,439 Investing activities Acquisitions Investments ( 962 ) ( 1,909 ) ( 286 ) Acquisition of subsidiaries, net of cash acquired 6 — — Other assets ( 9 ) ( 8 ) ( 17 ) Dispositions and distributions received Investments 307 385 84 Disposition of subsidiaries, net of cash 52 — — Investments held for sale 267 ( 249 ) — Repayments from (advances to) related parties — 37 ( 256 ) ( 339 ) ( 1,744 ) ( 475 ) Financing activities Distributions to common stockholders ( 2,818 ) ( 2,478 ) ( 2,101 ) Borrowings of consolidated funds 256 251 — Distributions to non-controlling and redeemable non-controlling interests ( 216 ) ( 52 ) ( 42 ) Redemption of preferred shares redeemable non-controlling interest ( 94 ) — — Purchase of treasury shares ( 412 ) — — Corporate borrowings issuance, net 2,500 — — Deferred financing fees ( 22 ) — — Contributions from parent 12 56 — Capital raised from non-controlling interests 179 — — Preferred equity issuances 25 — 63 Issuance of related party loans — 67 197 Issuance of tracking option — 37 41 ( 590 ) ( 2,119 ) ( 1,842 ) Cash and cash equivalents Change in cash and cash equivalents 1,172 ( 2,251 ) ( 878 ) Effect of exchange rate changes on cash and cash equivalents 7 ( 12 ) — Balance, beginning of year 404 2,667 3,545 Balance, end of year $ 1,583 $ 404 $ 2,667",
+          "sourceTable": "Full Asset Management Company consolidated/combined statements; separate listed-shell statements excluded.",
+          "column": "2025"
+        }
+      },
+      "mappedDebt": {
+        "value": null,
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000162828026013098/bam-20251231.htm",
+        "locator": "Unclassified balance sheet and fundfinancing; not an industrialEVbridge. Common-equity cashflowmodel accounts for financing and ownership in ownerprofit.",
+        "note": "Do not manufacture longterm/current debt split or usecashonlyROIC."
+      }
+    }
+  },
+  "openingObservations": {
+    "2021": {
+      "periodEnd": "2021-12-31",
+      "bookEquity": {
+        "value": 9871,
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, predecessor equity statement: opening 2022 common equity9871",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 9871,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "98: AS AT (MILLIONS, EXCEPT SHARE AMOUNTS) Common equity Common Shares of Brookfield Asset Management ULC Net Parent Investment Common shares Common shares held in treasury Additional paid-in capital Retained earnings (deficit) Accumulated other comprehensive income Total common equity Non-controlling interest Total equity Balance at December 31, 2021 — $ 9,715 $ — $ — $ — $ — $ 156 $ 9,871 $ — $ 9,871 Net income — 1,831 — — — 84 — 1,915 6 1,921 Currency translation — (29) — — — — (3) (32) — (32) Contributions — 3,897 — — — — — 3,897 92 3,989 Distributions — (6,143) — — — — — (6,143) — (6,143) Transfer of interest 1,635,327,858 (9,271) 9,271 — — — — — — — Balance at December 31, 2022 1,635,327,858 — 9,271 — — 84 153 9,508 98 9,606 Net income — — — — — 1,839 — 1,839 36 1,875 Other comprehensive income — — — — — — 15 15 — 15 Contributions 21,771 — 1 — 122 — — 123 10 133 Distributions — — (229) — — (2,101) — (2,330) — (2,330) Transfer of interest — — (29) — — — — (29) 29 — Balance at December 31, 2023 1,635,349,629 — 9,014 — 122 (178) 168 9,126 173 9,299 Net income — — — — — 2,168 — 2,168 151 2,319 Other comprehensive loss — — — — — — (6) (6) — (6) Share subscriptions 78,775 — 3 — — — — 3 — 3 Acquisition of treasury shares (4,903,300) — — (91) — — — (91) — (91) Contributions — — — — 30 — — 30 16 46 Distributions — — — — — (2,478) — (2,478) (4) (2,482) Balance at December 31, 2024 1,630,525,104 $ — $ 9,017 $ (91) $ 152 $ (488) $ 162 $ 8,752 $ 336 $ 9,088",
+          "column": "2021 year-end / 2022 opening",
+          "sourceTable": "Full Asset Management Company predecessor statements"
+        }
+      },
+      "cashAndEquivalents": {
+        "value": 2494,
+        "periodStart": null,
+        "periodEnd": "2021-12-31",
+        "filed": "2025-03-17",
+        "accession": "0001937926-25-000007",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1937926/000193792625000007/bam-20241231.htm",
+        "locator": "2024 annual report, predecessor cashflow statement: beginning 2022 cash2494",
+        "sourceType": "SEC annual report, full asset-management-company predecessor statements",
+        "originalDocumentVerified": true,
+        "reportedTableValue": 2494,
+        "rawUnit": "USD millions",
+        "multiplierToMillions": 1,
+        "tableEvidence": {
+          "rawRow": "99: FOR THE YEARS ENDED DECEMBER 31, (MILLIONS) 2024 2023 2022 Operating activities Net income $ 2,108 $ 2,137 $ 2,865 Other expenses (income), net 69 54 (1,090) Share of income from equity method investments, net of cash dividends (122) 21 22 Depreciation and amortization 14 14 13 Deferred income taxes 274 92 336 Stock-based equity awards 103 33 (48) Unrealized carried interest allocation, net 33 (288) (110) Other working capital and non-cash operating items (616) (624) (2,362) 1,863 1,439 (374) Investing activities Acquisitions Investments (1,909) (286) (363) Investments held for sale (249) — — Investments in consolidated funds (251) — — Other assets (8) (17) (13) Dispositions and distributions received Investments 385 84 2,082 Repayments from (advances to) related parties 37 (256) — (1,995) (475) 1,706 Financing activities Distributions to common stockholders (2,478) (2,101) (3,184) Issuance of non-recourse borrowings in consolidated funds 251 — — Issuance of related party loans 67 197 172 Distributions to non-controlling and redeemable non-controlling interests (52) (44) (1,328) Contributions from parent 56 — 5,155 Corporate borrowings — — (1,612) Contributions from redeemable non-controlling interests — 2 517 Issuance of tracking option 37 41 — Preferred equity issuances — 63 — (2,119) (1,842) (280) Cash and cash equivalents Change in cash and cash equivalents (2,251) (878) 1,052 Effect of exchange rate changes on cash and cash equivalents (12) — (1) Balance, beginning of year 2,667 3,545 2,494 Balance, end of year $ 404 $ 2,667 $ 3,545",
+          "column": "2021 year-end / 2022 opening",
+          "sourceTable": "Full Asset Management Company predecessor statements"
+        }
+      },
+      "note": "Real opening balances only, not a fabricated full 2021 income statement."
+    }
+  },
+  "notes": [
+    "Four true full annual observations:2022 predecessor contextual,2023–2025 directly comparable full-manager. No listed-shell or BN conglomerate data splice."
+  ]
+}

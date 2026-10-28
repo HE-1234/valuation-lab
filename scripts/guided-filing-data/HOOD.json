@@ -1,0 +1,252 @@
+{
+  "ticker": "HOOD",
+  "name": "Robinhood Markets, Inc.",
+  "cik": "0001783879",
+  "currency": "USD",
+  "filerType": "domestic",
+  "shareBasis": "ordinary-common",
+  "adrRatio": 1,
+  "listedUnit": "Class A common share",
+  "snapshots": {
+    "annual": {
+      "periodEnd": "2025-12-31",
+      "label": "FY2025",
+      "form": "10-K/A",
+      "accession": "0001783879-26-000029",
+      "filedAt": "2026-02-20",
+      "acceptedAt": "2026-02-21T03:01:27.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+      "revenue": 4473,
+      "operatingIncome": 2094,
+      "cashAndEquivalents": 4261,
+      "shortTermInvestments": 28,
+      "longTermInvestments": 232,
+      "debtCurrent": 602,
+      "debtNoncurrent": 0,
+      "operatingLeaseLiabilities": 221,
+      "noncontrollingInterest": 11,
+      "preferredEquity": 0,
+      "sharesOutstanding": 901.328432,
+      "unvestedRSUs": 7.646387,
+      "sharesDate": "2025-12-31",
+      "ttmComponents": null,
+      "convertibles": [],
+      "otherClaims": [
+        {
+          "name": "Pre-IPO warrants",
+          "value": null,
+          "count": 8.74,
+          "exercisePrice": 26.6,
+          "maturity": "2031-02-12",
+          "basis": "Option-like allocation at modeled equity value; not a fixed zero claim.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm Note12:8.74million warrants at$26.60."
+        }
+      ],
+      "carriedFrom": {},
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Derived net revenues4473 minus operating expenses2379; net interest remains an operating revenue; not industrial EBIT."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Note7 fair value table: equity securities owned28; excludes user fractional shares3782, stablecoin152 and clearing deposits."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Note7 fair value table: nonmarketable securities232."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Note11 Credit Card Funding Trust outstanding borrowing principal and interest602 (combined disclosed subtotal; no unsupported principal split). No revolving facility borrowings."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2025-12-31"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Balance sheet ClassA790331696 + ClassB110996736, all outstanding; treasury excluded."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Note12 RSU rollforward7646387. Restricted stock awards2049711 are already issued shares and not added twice."
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Note12 option rollforward:3033979 outstanding,$6.12 exercise,2.29years,$325m intrinsic."
+        },
+        "ttmComponents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Consolidated statements of operations: annual2025 plus sixmonths2026 minus sixmonths2025."
+        }
+      },
+      "options": {
+        "count": 3.033979,
+        "weightedExercisePrice": 6.12,
+        "weightedRemainingYears": 2.29,
+        "aggregateIntrinsicValue": 325
+      },
+      "note": "Financial company: use the sourced equity cash-flow adapter, not industrial FCFF. Customer cash, customer securities and collateral are excluded from surplus cash. Interest and recurring employee compensation remain expenses. Sources are USD millions. Financing, award and surplus-capital assumptions are explicit in additions/HOOD.json. Latest10-K/A2026-02-20 fixes formatting only and expressly leaves previously reported financial results unchanged."
+    },
+    "ttm": {
+      "periodEnd": "2026-06-30",
+      "label": "TTM through 2026-06-30",
+      "form": "10-Q",
+      "accession": "0001783879-26-000114",
+      "filedAt": "2026-07-30",
+      "acceptedAt": "2026-07-30T01:35:30.000Z",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+      "revenue": 4932,
+      "operatingIncome": 2270,
+      "cashAndEquivalents": 5362,
+      "shortTermInvestments": 484,
+      "longTermInvestments": 20,
+      "debtCurrent": 959,
+      "debtNoncurrent": 2170,
+      "operatingLeaseLiabilities": 219,
+      "noncontrollingInterest": 61,
+      "preferredEquity": 0,
+      "sharesOutstanding": 899,
+      "unvestedRSUs": 9,
+      "sharesDate": "2026-06-30",
+      "ttmComponents": {
+        "annualRevenue": 4473,
+        "ytdRevenue": 2375,
+        "priorYtdRevenue": 1916,
+        "annualOperatingIncome": 2094,
+        "ytdOperatingIncome": 985,
+        "priorYtdOperatingIncome": 809,
+        "ytdStart": "2026-01-01",
+        "ytdEnd": "2026-06-30",
+        "priorYtdStart": "2025-01-01",
+        "priorYtdEnd": "2025-06-30"
+      },
+      "convertibles": [
+        {
+          "name": "0.00% convertible senior notes2029",
+          "principal": 2200,
+          "carrying": 2170,
+          "fairValue": 2208,
+          "conversionPrice": 174.4227,
+          "conversionRatioSharesPer1000": 5.7332,
+          "maturity": "2029-10-01",
+          "principalCashSettlementRequired": true,
+          "cappedCallStrike": 174.4227,
+          "cappedCallCap": 237.8475,
+          "cappedCallPremium": 123
+        }
+      ],
+      "otherClaims": [
+        {
+          "name": "Pre-IPO warrants",
+          "value": null,
+          "count": 8.74,
+          "exercisePrice": 26.6,
+          "maturity": "2031-02-12",
+          "basis": "Option-like allocation at modeled equity value; not a fixed zero claim.",
+          "evidence": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm Note12 warrants unchanged8.74million."
+        }
+      ],
+      "carriedFrom": {
+        "options": {
+          "date": "2025-12-31",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "why": "June report omits option count; carry full annual3.033979million conservatively despite1million rounded stock-option exercises. At most0.34% share-count effect; do not claim current verified."
+        }
+      },
+      "evidence": {
+        "revenue": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "operatingIncome": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "TTM:2094+(2375-1390)-(1916-1107)=2270; netinterest retained."
+        },
+        "cashAndEquivalents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "shortTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Note8 equity securities owned484 including retained RVI investment; excludes user securities4764, stablecoin155 and regulatory collateral."
+        },
+        "longTermInvestments": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Note8 nonmarketable securities20 following RVI deconsolidation."
+        },
+        "debtCurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Note11 Credit Card Funding Trust borrowing principal and interest959, included in othercurrentliabilities; recurring operating funding."
+        },
+        "debtNoncurrent": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "June25 zero-coupon convert principal2200 less deferredissuancecost30=2170 carrying."
+        },
+        "operatingLeaseLiabilities": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "noncontrollingInterest": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "preferredEquity": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Consolidated balance sheets / statements of operations, 2026-06-30"
+        },
+        "sharesOutstanding": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Balance sheet ClassA790million +ClassB109million, stated rounded millions; ±1million aggregate rounding uncertainty (<0.12%)."
+        },
+        "unvestedRSUs": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Note12 RSU rollforward9million;1million RSAs already issued and excluded from additional dilution."
+        },
+        "options": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000029/hood-20251231.htm",
+          "locator": "Note12 option rollforward:3033979 outstanding,$6.12 exercise,2.29years,$325m intrinsic."
+        },
+        "convertibles": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Notes8/11: Level2 fairvalue2208, principal2200, carrying2170; principal cashsettled;5.7332shares/$1000; capped calls174.4227–237.8475."
+        },
+        "ttmComponents": {
+          "url": "https://www.sec.gov/Archives/edgar/data/1783879/000178387926000114/hood-20260630.htm",
+          "locator": "Consolidated statements of operations: annual2025 plus sixmonths2026 minus sixmonths2025."
+        }
+      },
+      "options": {
+        "count": 3.033979,
+        "weightedExercisePrice": 6.12,
+        "weightedRemainingYears": 2.29,
+        "aggregateIntrinsicValue": 325
+      },
+      "note": "Financial company: use the sourced equity cash-flow adapter, not industrial FCFF. Customer cash, customer securities and collateral are excluded from surplus cash. Interest and recurring employee compensation remain expenses. Sources are USD millions. Financing, award and surplus-capital assumptions are explicit in additions/HOOD.json."
+    }
+  },
+  "notes": [
+    "Use equity model; no customer-asset windfall. Annual source includes latest formatting-only10-K/A."
+  ]
+}

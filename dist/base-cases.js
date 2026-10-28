@@ -34,7 +34,8 @@ export async function fetchBaseCases({fetcher=globalThis.fetch,timeoutMs=3000}={
 
 export function researchCaseFor(library,company,raw){
  if(company?.researchImported===true||raw?.researchImported===true||!text(raw?.id)||library?.schemaVersion!==1||!object(library.companies)||!object(library.sources))return null;
- const c=library.companies[company?.ticker];
+ // A company may carry one case per financial baseline (last full year, TTM).
+ const entry=library.companies[company?.ticker],c=object(entry?.bySnapshot)&&object(entry.bySnapshot[raw.id])?entry.bySnapshot[raw.id]:entry;
  if(!object(c)||c.ticker!==company.ticker||c.snapshotId!==raw.id||!validDate(c.asOf)||!validDate(library.asOf)||c.asOf>library.asOf||!text(c.summary)||!validAssumptions(c.assumptions))return null;
  if(!object(c.rationale)||!judgmentKeys.every(k=>text(c.rationale[k])))return null;
  if(!Array.isArray(c.sourceIds)||!c.sourceIds.length||!c.sourceIds.every(id=>{const s=library.sources[id];return object(s)&&http(s.url)&&text(s.title)&&(!s.publishedAt||(validDate(s.publishedAt)&&s.publishedAt.slice(0,10)<=c.asOf.slice(0,10)));}))return null;
