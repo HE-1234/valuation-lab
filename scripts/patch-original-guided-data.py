@@ -229,6 +229,9 @@ def apply(data_dir):
         latest_meta = ROOT / 'scripts/apply-meta-latest.py'
         if latest_meta.exists():
             runpy.run_path(str(latest_meta))['apply_meta_latest'](universe, cases)
+        latest_amzn = ROOT / 'scripts/apply-amzn-latest.py'
+        if latest_amzn.exists():
+            runpy.run_path(str(latest_amzn))['apply_amzn_latest'](universe, cases)
     outputs = [(universe_path, universe),(history_path, history)]
     if cases: outputs.append((cases_path, cases))
     for path, content in outputs:

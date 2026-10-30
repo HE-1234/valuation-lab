@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "version": "2026-10-21.1",
-  "asOf": "2026-10-23",
+  "asOf": "2026-10-29",
   "classification": "Assistant-authored educational base-case judgments, not company guidance, analyst consensus, investment recommendations or price targets.",
   "units": {
     "rates": "decimal fractions",
@@ -1156,6 +1156,11 @@
       "url": "https://www.sec.gov/Archives/edgar/data/1664703/000162828026066931/be-20260930.htm",
       "publishedAt": "2026-10-22",
       "builtBy": "guided-additions-v1"
+    },
+    "AMZN-q3-release": {
+      "title": "Amazon Q3 2026 earnings release · provisional TTM",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+      "publishedAt": "2026-10-29"
     }
   },
   "companies": {
@@ -1681,11 +1686,11 @@
     "AMZN": {
       "ticker": "AMZN",
       "name": "AMAZON COM INC",
-      "snapshotId": "AMZN-TTM-2026-06-30",
-      "asOf": "2026-10-17",
+      "snapshotId": "AMZN-TTM-2026-09-30",
+      "asOf": "2026-10-29",
       "currency": "USD",
-      "classification": "assistant judgment / educational default",
-      "summary": "AWS, advertising and fulfillment efficiency raise consolidated profitability, with a heavy infrastructure bill and lower-margin retail still central.",
+      "classification": "Q3 earnings-release TTM with explicit June debt and investment proxies",
+      "summary": "September 2026 TTM revenue is $797,455m and operating income $104,366m. Existing operating assumptions continue from the updated starting period, with an explicitly provisional capital bridge.",
       "assumptions": {
         "growth": 0.14,
         "targetMargin": 0.15,
@@ -1700,7 +1705,7 @@
       },
       "rationale": {
         "growth": "14% sits between FY2025 growth of 12.4% and Q2 2026 growth of 20%. AWS and advertising support expansion, but they cannot justify applying their segment growth to all retail revenue.",
-        "targetMargin": "15% improves on 12.1% TTM as AWS/advertising mix and retail efficiency rise. It remains far below AWS segment margins because consolidated sales include substantial low-margin commerce.",
+        "targetMargin": "The existing 15% mature-margin assumption is retained. Reported September TTM operating margin is approximately 13.1%; the target remains an analyst assumption, not company guidance.",
         "tax": "24% is a normalized operating-tax assumption. Recent investment gains distort pretax income and the accounting effective rate, so those gains do not set operating cash tax.",
         "salesCapital": "0.8x requires $1.25 of net reinvestment per incremental $1 of sales. AI data centers, fulfillment and working capital keep reinvestment high even with supplier financing; early modeled FCFF can be negative.",
         "terminalROIC": "10% assumes mature capital earns approximately the cost of capital. Scale advantages are largely competed away after the explicit growth period.",
@@ -1708,37 +1713,26 @@
         "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
         "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
         "otherClaims": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment.",
-        "otherAssets": "Add 224,895 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding."
+        "otherAssets": "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio."
       },
       "reportedAnchors": [
         {
-          "classification": "reported or directly derived from reported current financials",
-          "periodEnd": "2026-06-30",
-          "publishedAt": "2026-07-31",
-          "snapshotId": "AMZN-TTM-2026-06-30",
+          "periodEnd": "2026-09-30",
+          "publishedAt": "2026-10-29",
+          "snapshotId": "AMZN-TTM-2026-09-30",
           "currency": "USD",
-          "revenue": 775680.0,
-          "operatingIncome": 93712.0,
-          "operatingMargin": 0.12081270627062707,
+          "revenue": 797455,
+          "operatingIncome": 104366,
+          "operatingMargin": 0.13087384241117053,
           "sourceIds": [
-            "AMZN-filing"
+            "AMZN-q3-release"
           ]
-        },
-        {
-          "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
-          "text": "Q2 revenue grew 20%, AWS revenue grew 37%, and TTM free cash flow was an outflow of $7.6bn. The release separately identified non-operating investment gains.",
-          "sourceIds": [
-            "AMZN-release"
-          ],
-          "publishedAt": "2026-07-30"
         }
       ],
       "sourceIds": [
+        "AMZN-q3-release",
         "AMZN-filing",
-        "AMZN-annual-filing",
-        "AMZN-release",
-        "treasury",
-        "erp-reference"
+        "AMZN-annual-filing"
       ],
       "waccBuild": {
         "asOf": "2026-10-17",
@@ -1764,219 +1758,31 @@
         "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
         "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
       },
-      "bridgePolicy": {
-        "status": "unreviewed",
-        "zeroMeansVerifiedAbsent": false,
-        "preserveExistingGates": true,
-        "note": "Review operating/finance leases, financing obligations and minority investments. Current cash is not a complete appraisal of all non-operating assets."
-      },
+      "bridgePolicy": "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
       "modelLimits": [
-        "About 93% of modeled operating value comes after year 10. The result is highly dependent on mature margins, required reinvestment and discount rates.",
-        "A single margin hides very different AWS, advertising and retail economics; net reinvestment is not the company free-cash-flow reconciliation."
+        "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+        "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+        "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+        "September common shares are 10,811m plus approximately 223m stock-based awards, totaling 11,034m using the release’s rounded figures. Weighted-average EPS shares are not used for ownership.",
+        "Existing growth, tax, reinvestment and discount-rate assumptions are retained; this update refreshes the reported starting period rather than issuing a new forecast."
       ],
       "uncertainties": [
         "AWS capacity economics and depreciation versus AI demand",
         "Retail wage, shipping and competitive pressures; investment gains are not operating earnings"
       ],
       "modelSuitability": {
-        "status": "provisional-simplified-operating-case",
+        "status": "provisional-release-with-carried-bridge",
         "economicallyValidated": false,
-        "note": "An internally checked conditional model, not proof that business assumptions will be realized."
-      },
-      "economicChecks": {
-        "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
-        "startingRevenue": 775680.0,
-        "startingModelMargin": 0.12081270627062707,
-        "firstYearRevenue": 884275.2000000001,
-        "year10Revenue": 1703974.0866059659,
-        "revenueMultiple10Years": 2.196748770892592,
-        "impliedRevenueCAGR10Years": 0.08187737649235394,
-        "firstYearNetReinvestmentToRevenue": 0.15350877192982465,
-        "negativeFCFFYears": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "firstPositiveFCFFYear": 5,
-        "terminalReinvestmentRate": 0.25,
-        "matureMarginTimesCapitalAfterTax": 0.0912,
-        "terminalROIC": 0.1,
-        "terminalValueShareOfOperatingEV": 0.931374009607243,
-        "discountSpread": 0.07500000000000001,
-        "publicPerShareResult": null,
-        "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
-        "operatingEVPositive": true
-      },
-      "stressIllustrations": [
-        {
-          "name": "lower-operating-case",
-          "classification": "analyst stress illustration, not a confidence interval",
-          "assumptions": {
-            "growth": 0.08,
-            "targetMargin": 0.1,
-            "salesCapital": 0.6400000000000001,
-            "wacc": 0.12000000000000001
-          },
-          "year10RevenueMultiple": 1.6657773060021994,
-          "negativeFCFFYears": [
-            1,
-            2,
-            3,
-            4
-          ],
-          "operatingValueRelativeToBase": 0.32397176009718304,
-          "perShareValue": null
-        },
-        {
-          "name": "higher-operating-case",
-          "classification": "analyst stress illustration, not a confidence interval",
-          "assumptions": {
-            "growth": 0.2,
-            "targetMargin": 0.18,
-            "salesCapital": 0.96,
-            "wacc": 0.085
-          },
-          "year10RevenueMultiple": 2.8675779799977277,
-          "negativeFCFFYears": [
-            1,
-            2,
-            3,
-            4
-          ],
-          "operatingValueRelativeToBase": 2.2908508659119273,
-          "perShareValue": null
-        }
-      ],
-      "bridgeEvidence": {
-        "otherAssets": {
-          "value": 224895,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Non-Marketable Investments note: convertible notes + all private equity holdings + equity-method holdings + investment warrants; all classified in Other assets",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true,
-          "note": "Add 224,895 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding."
-        },
-        "otherClaims": {
-          "value": 0,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true,
-          "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
-        }
+        "note": "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values."
       },
       "bridgeLimitations": [
-        "The $21.3 billion OpenAI commitment paid after June is not a June cash deduction or a second June investment asset. Undrawn Anthropic capacity is a future funding commitment."
+        "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+        "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+        "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+        "September common shares are 10,811m plus approximately 223m stock-based awards, totaling 11,034m using the release’s rounded figures. Weighted-average EPS shares are not used for ownership.",
+        "Existing growth, tax, reinvestment and discount-rate assumptions are retained; this update refreshes the reported starting period rather than issuing a new forecast."
       ],
-      "bridgeComponents": {
-        "longTermDebtCarrying": {
-          "value": 132224,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Debt, leases and commitments notes; longTermDebtCarrying",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        },
-        "shortTermBorrowings": {
-          "value": 325,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Debt, leases and commitments notes; shortTermBorrowings",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        },
-        "financeLeases": {
-          "value": 13451,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Debt, leases and commitments notes; financeLeases",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        },
-        "financingObligations": {
-          "value": 9315,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Debt, leases and commitments notes; financingObligations",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        },
-        "anthropicConvertibleInvestment": {
-          "value": 97900,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Non-Marketable Investments note; anthropicConvertibleInvestment; held as an asset, not an issued dilutive claim",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        },
-        "privateCompanyEquityInvestments": {
-          "value": 122300,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Non-Marketable Investments note; privateCompanyEquityInvestments; held as an asset, not an issued dilutive claim",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        },
-        "equityMethodInvestments": {
-          "value": 395,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Non-Marketable Investments note; equityMethodInvestments; held as an asset, not an issued dilutive claim",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        },
-        "investmentWarrants": {
-          "value": 4300,
-          "unit": "USD millions",
-          "tag": "filing:manuallyVerified",
-          "periodEnd": "2026-06-30",
-          "filedAt": "2026-07-31",
-          "accession": "0001018724-26-000026",
-          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
-          "locator": "Non-Marketable Investments note; investmentWarrants; held as an asset, not an issued dilutive claim",
-          "sourceType": "Original 10-Q financial statements",
-          "originalDocumentVerified": true
-        }
-      },
+      "displayLabel": "Provisional Q3 research case",
       "bySnapshot": {
         "AMZN-CURRENT-2025-12-31": {
           "ticker": "AMZN",
@@ -2218,6 +2024,316 @@
               "originalDocumentVerified": true
             }
           }
+        },
+        "AMZN-TTM-2026-06-30": {
+          "ticker": "AMZN",
+          "name": "AMAZON COM INC",
+          "snapshotId": "AMZN-TTM-2026-06-30",
+          "asOf": "2026-10-17",
+          "currency": "USD",
+          "classification": "assistant judgment / educational default",
+          "summary": "AWS, advertising and fulfillment efficiency raise consolidated profitability, with a heavy infrastructure bill and lower-margin retail still central.",
+          "assumptions": {
+            "growth": 0.14,
+            "targetMargin": 0.15,
+            "tax": 0.24,
+            "salesCapital": 0.8,
+            "wacc": 0.1,
+            "terminalGrowth": 0.025,
+            "terminalROIC": 0.1,
+            "years": 10,
+            "otherClaims": 0,
+            "otherAssets": 224895
+          },
+          "rationale": {
+            "growth": "14% sits between FY2025 growth of 12.4% and Q2 2026 growth of 20%. AWS and advertising support expansion, but they cannot justify applying their segment growth to all retail revenue.",
+            "targetMargin": "15% improves on 12.1% TTM as AWS/advertising mix and retail efficiency rise. It remains far below AWS segment margins because consolidated sales include substantial low-margin commerce.",
+            "tax": "24% is a normalized operating-tax assumption. Recent investment gains distort pretax income and the accounting effective rate, so those gains do not set operating cash tax.",
+            "salesCapital": "0.8x requires $1.25 of net reinvestment per incremental $1 of sales. AI data centers, fulfillment and working capital keep reinvestment high even with supplier financing; early modeled FCFF can be negative.",
+            "terminalROIC": "10% assumes mature capital earns approximately the cost of capital. Scale advantages are largely competed away after the explicit growth period.",
+            "wacc": "10.0% nominal USD is a rounded model estimate. Assumed beta 1.2, 10% target debt and a 1-point debt spread balance resilient diversified businesses against discretionary spending and the infrastructure funding cycle.",
+            "terminalGrowth": "2.5% nominal USD is a mature-state assumption with limited real expansion, well below the high-growth starting rate and the discount rate; it is not a company forecast.",
+            "years": "10 years is the common model horizon so company economics can be compared; rates and margins fade over this period. The number is a modeling convention, not a source fact.",
+            "otherClaims": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment.",
+            "otherAssets": "Add 224,895 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding."
+          },
+          "reportedAnchors": [
+            {
+              "classification": "reported or directly derived from reported current financials",
+              "periodEnd": "2026-06-30",
+              "publishedAt": "2026-07-31",
+              "snapshotId": "AMZN-TTM-2026-06-30",
+              "currency": "USD",
+              "revenue": 775680.0,
+              "operatingIncome": 93712.0,
+              "operatingMargin": 0.12081270627062707,
+              "sourceIds": [
+                "AMZN-filing"
+              ]
+            },
+            {
+              "classification": "reported results and explicitly labeled management outlook; not the base-case forecast",
+              "text": "Q2 revenue grew 20%, AWS revenue grew 37%, and TTM free cash flow was an outflow of $7.6bn. The release separately identified non-operating investment gains.",
+              "sourceIds": [
+                "AMZN-release"
+              ],
+              "publishedAt": "2026-07-30"
+            }
+          ],
+          "sourceIds": [
+            "AMZN-filing",
+            "AMZN-annual-filing",
+            "AMZN-release",
+            "treasury",
+            "erp-reference"
+          ],
+          "waccBuild": {
+            "asOf": "2026-10-17",
+            "currency": "USD",
+            "classification": "analyst model estimate; only riskFreeUSD is an observed input",
+            "riskFreeUSD": 0.0509,
+            "riskFreeObservationDate": "2026-10-16",
+            "riskFreeSourceId": "treasury",
+            "equityRiskPremium": 0.045,
+            "equityRiskPremiumClassification": "chosen long-run assumption; January reference is 4.23%, not a current estimate",
+            "equityRiskPremiumReferenceSourceId": "erp-reference",
+            "assumedLeveredBeta": 1.2,
+            "assumedDebtWeight": 0.1,
+            "assumedDebtSpreadUSD": 0.01,
+            "assumedExtraEquityRisk": 0,
+            "assumedCostOfEquityUSD": 0.1049,
+            "assumedPretaxCostOfDebtUSD": 0.0609,
+            "normalizedTax": 0.24,
+            "unroundedWaccUSD": 0.0990384,
+            "unroundedWaccInModelCurrency": 0.0990384,
+            "selectedWacc": 0.1,
+            "rounding": "nearest 0.5 percentage point",
+            "formula": "Ke = Rf + assumed beta × chosen ERP + extra equity risk; WACC = Ke × (1 − debt weight) + assumed Kd × (1 − tax) × debt weight",
+            "limits": "Not a live beta regression, bond yield, market-value capital structure or country-default estimate. Extra equity allowances can overlap with operating downside; stress both rather than treating precision as evidence."
+          },
+          "bridgePolicy": {
+            "status": "unreviewed",
+            "zeroMeansVerifiedAbsent": false,
+            "preserveExistingGates": true,
+            "note": "Review operating/finance leases, financing obligations and minority investments. Current cash is not a complete appraisal of all non-operating assets."
+          },
+          "modelLimits": [
+            "About 93% of modeled operating value comes after year 10. The result is highly dependent on mature margins, required reinvestment and discount rates.",
+            "A single margin hides very different AWS, advertising and retail economics; net reinvestment is not the company free-cash-flow reconciliation."
+          ],
+          "uncertainties": [
+            "AWS capacity economics and depreciation versus AI demand",
+            "Retail wage, shipping and competitive pressures; investment gains are not operating earnings"
+          ],
+          "modelSuitability": {
+            "status": "provisional-simplified-operating-case",
+            "economicallyValidated": false,
+            "note": "An internally checked conditional model, not proof that business assumptions will be realized."
+          },
+          "economicChecks": {
+            "classification": "computed consequences of assumptions; not reported outcomes or probabilities",
+            "startingRevenue": 775680.0,
+            "startingModelMargin": 0.12081270627062707,
+            "firstYearRevenue": 884275.2000000001,
+            "year10Revenue": 1703974.0866059659,
+            "revenueMultiple10Years": 2.196748770892592,
+            "impliedRevenueCAGR10Years": 0.08187737649235394,
+            "firstYearNetReinvestmentToRevenue": 0.15350877192982465,
+            "negativeFCFFYears": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "firstPositiveFCFFYear": 5,
+            "terminalReinvestmentRate": 0.25,
+            "matureMarginTimesCapitalAfterTax": 0.0912,
+            "terminalROIC": 0.1,
+            "terminalValueShareOfOperatingEV": 0.931374009607243,
+            "discountSpread": 0.07500000000000001,
+            "publicPerShareResult": null,
+            "note": "Operating math only. No cash/debt/claims/share bridge is asserted; hard gates remain. Terminal share above 100% means negative explicit-period present value, not a probability.",
+            "operatingEVPositive": true
+          },
+          "stressIllustrations": [
+            {
+              "name": "lower-operating-case",
+              "classification": "analyst stress illustration, not a confidence interval",
+              "assumptions": {
+                "growth": 0.08,
+                "targetMargin": 0.1,
+                "salesCapital": 0.6400000000000001,
+                "wacc": 0.12000000000000001
+              },
+              "year10RevenueMultiple": 1.6657773060021994,
+              "negativeFCFFYears": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "operatingValueRelativeToBase": 0.32397176009718304,
+              "perShareValue": null
+            },
+            {
+              "name": "higher-operating-case",
+              "classification": "analyst stress illustration, not a confidence interval",
+              "assumptions": {
+                "growth": 0.2,
+                "targetMargin": 0.18,
+                "salesCapital": 0.96,
+                "wacc": 0.085
+              },
+              "year10RevenueMultiple": 2.8675779799977277,
+              "negativeFCFFYears": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "operatingValueRelativeToBase": 2.2908508659119273,
+              "perShareValue": null
+            }
+          ],
+          "bridgeEvidence": {
+            "otherAssets": {
+              "value": 224895,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Non-Marketable Investments note: convertible notes + all private equity holdings + equity-method holdings + investment warrants; all classified in Other assets",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true,
+              "note": "Add 224,895 million of reported nonmarketable investment assets. Anthropic preferred stock is already within private equity; do not add it again. Billion-dollar disclosures retain their stated rounding."
+            },
+            "otherClaims": {
+              "value": 0,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Consolidated equity presentation and share-based compensation note; no separately quantified preferred equity, minority interest or outstanding option claim identified. Employee stock awards included in denominator. Finance leases included in debt or explicitly marked unknown.",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true,
+              "note": "No separately quantified additional claim was identified in the reviewed equity and award notes; reported stock awards are included in shares. This is a limited filing bridge, not a valuation of every litigation or future contractual commitment."
+            }
+          },
+          "bridgeLimitations": [
+            "The $21.3 billion OpenAI commitment paid after June is not a June cash deduction or a second June investment asset. Undrawn Anthropic capacity is a future funding commitment."
+          ],
+          "bridgeComponents": {
+            "longTermDebtCarrying": {
+              "value": 132224,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Debt, leases and commitments notes; longTermDebtCarrying",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            },
+            "shortTermBorrowings": {
+              "value": 325,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Debt, leases and commitments notes; shortTermBorrowings",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            },
+            "financeLeases": {
+              "value": 13451,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Debt, leases and commitments notes; financeLeases",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            },
+            "financingObligations": {
+              "value": 9315,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Debt, leases and commitments notes; financingObligations",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            },
+            "anthropicConvertibleInvestment": {
+              "value": 97900,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Non-Marketable Investments note; anthropicConvertibleInvestment; held as an asset, not an issued dilutive claim",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            },
+            "privateCompanyEquityInvestments": {
+              "value": 122300,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Non-Marketable Investments note; privateCompanyEquityInvestments; held as an asset, not an issued dilutive claim",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            },
+            "equityMethodInvestments": {
+              "value": 395,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Non-Marketable Investments note; equityMethodInvestments; held as an asset, not an issued dilutive claim",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            },
+            "investmentWarrants": {
+              "value": 4300,
+              "unit": "USD millions",
+              "tag": "filing:manuallyVerified",
+              "periodEnd": "2026-06-30",
+              "filedAt": "2026-07-31",
+              "accession": "0001018724-26-000026",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "locator": "Non-Marketable Investments note; investmentWarrants; held as an asset, not an issued dilutive claim",
+              "sourceType": "Original 10-Q financial statements",
+              "originalDocumentVerified": true
+            }
+          }
+        }
+      },
+      "bridgeEvidence": {
+        "otherAssets": {
+          "value": 224895,
+          "sourceDate": "2026-06-30",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+          "unit": "USD millions",
+          "classification": "carried June proxy; September composition unknown",
+          "note": "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio."
         }
       }
     },

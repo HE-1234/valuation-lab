@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "asOf": "2026-10-23",
+  "asOf": "2026-10-29",
   "retrievedAt": "2026-10-17T05:21:01.601635+00:00",
   "status": "Current filing-based research universe; no live quotes; manual bridge review required",
   "limitations": [
@@ -3037,7 +3037,7 @@
       "name": "AMAZON COM INC",
       "cik": "0001018724",
       "currency": "USD",
-      "currentSnapshotId": "AMZN-TTM-2026-06-30",
+      "currentSnapshotId": "AMZN-TTM-2026-09-30",
       "snapshots": [
         {
           "id": "AMZN-CURRENT-2025-12-31",
@@ -5820,6 +5820,555 @@
             "The $21.3 billion OpenAI commitment paid after June is not a June cash deduction or a second June investment asset. Undrawn Anthropic capacity is a future funding commitment."
           ],
           "guidedBridgeBlockers": []
+        },
+        {
+          "id": "AMZN-TTM-2026-09-30",
+          "fiscalYear": 2026,
+          "fiscalLabel": "Provisional TTM through 2026-09-30",
+          "periodStart": "2025-10-01",
+          "periodEnd": "2026-09-30",
+          "fiscalPeriodEnd": "2026-09-30",
+          "snapshotMode": "ttm",
+          "filedAt": "2026-10-29",
+          "filingDate": "2026-10-29",
+          "acceptedAt": "2026-10-29T20:05:27.000Z",
+          "availableFrom": "2026-10-29T20:05:27.000Z",
+          "form": "derived",
+          "sourceForm": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+          "sourceURL": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+          "accession": "0001018724-26-000038",
+          "currency": "USD",
+          "reportingCurrency": "USD",
+          "quoteCurrency": "USD",
+          "units": {
+            "financials": "USD millions",
+            "shares": "millions"
+          },
+          "adrRatio": 1,
+          "facts": {
+            "revenue": 797455,
+            "operatingIncome": 104366,
+            "netIncome": 134779,
+            "stockBasedCompensation": 19873,
+            "operatingCashFlow": 168300,
+            "capitalExpenditure": 215192,
+            "incomeTaxExpense": 38885,
+            "pretaxIncome": 174165,
+            "cashAndEquivalents": 55783,
+            "marketableSecuritiesCurrent": 58443,
+            "longTermDebtNoncurrent": 173125,
+            "periodEndShares": 10811,
+            "unvestedNonOptionAwards": 223,
+            "shares": 11034,
+            "debt": null,
+            "longTermDebtCurrent": null,
+            "shortTermBorrowings": null,
+            "financeLeaseLiabilityTotal": null,
+            "financingObligations": null,
+            "otherLongTermInvestments": null,
+            "researchAndDevelopment": null,
+            "dilutedShares": null,
+            "EBIT": 104366,
+            "cash": 114226
+          },
+          "factEvidence": {
+            "revenue": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                716924,
+                584069,
+                503538
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "operatingIncome": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                79975,
+                79389,
+                54998
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "netIncome": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                77670,
+                113587,
+                56478
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "operatingCashFlow": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                139514,
+                113841,
+                85055
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "incomeTaxExpense": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                19087,
+                33939,
+                14141
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "pretaxIncome": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                97311,
+                147560,
+                70706
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "capitalExpenditure": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                131819,
+                175670,
+                92297
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "stockBasedCompensation": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true
+            },
+            "cashAndEquivalents": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Consolidated Balance Sheets, September 30, 2026; Supplemental Financial Information, common shares and awards",
+              "originalDocumentVerified": true
+            },
+            "marketableSecuritiesCurrent": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Consolidated Balance Sheets, September 30, 2026; Supplemental Financial Information, common shares and awards",
+              "originalDocumentVerified": true
+            },
+            "longTermDebtNoncurrent": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Consolidated Balance Sheets, September 30, 2026; Supplemental Financial Information, common shares and awards",
+              "originalDocumentVerified": true
+            },
+            "periodEndShares": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "million shares",
+              "locator": "Consolidated Balance Sheets, September 30, 2026; Supplemental Financial Information, common shares and awards",
+              "originalDocumentVerified": true
+            },
+            "unvestedNonOptionAwards": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "million shares",
+              "locator": "Consolidated Balance Sheets, September 30, 2026; Supplemental Financial Information, common shares and awards",
+              "originalDocumentVerified": true
+            },
+            "shares": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "million shares",
+              "locator": "Consolidated Balance Sheets, September 30, 2026; Supplemental Financial Information, common shares and awards",
+              "originalDocumentVerified": true,
+              "formula": "period-end common shares + rounded stock-based awards",
+              "components": [
+                "periodEndShares",
+                "unvestedNonOptionAwards"
+              ],
+              "precision": "rounded to million shares in release"
+            },
+            "debt": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "longTermDebtCurrent": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "shortTermBorrowings": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "financeLeaseLiabilityTotal": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "financingObligations": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "otherLongTermInvestments": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "researchAndDevelopment": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "dilutedShares": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "million shares",
+              "locator": "Not separately disclosed for September in this release; no reported value is inferred.",
+              "originalDocumentVerified": true
+            },
+            "EBIT": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Supplemental Financial Information and Business Metrics; Q3 2026 TTM column; cross-checked against FY2025 + current YTD - prior YTD",
+              "originalDocumentVerified": true,
+              "formula": "annual + current YTD - comparable prior YTD",
+              "componentValues": [
+                79975,
+                79389,
+                54998
+              ],
+              "sourceUrls": [
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+                "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+              ],
+              "componentPeriods": [
+                "2025-01-01/2025-12-31",
+                "2026-01-01/2026-09-30",
+                "2025-01-01/2025-09-30"
+              ]
+            },
+            "cash": {
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+              "periodEnd": "2026-09-30",
+              "filedAt": "2026-10-29",
+              "accession": "0001018724-26-000038",
+              "sourceType": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+              "unit": "USD millions",
+              "locator": "Consolidated Balance Sheets, September 30, 2026; Supplemental Financial Information, common shares and awards",
+              "originalDocumentVerified": true,
+              "formula": "cash and equivalents + current marketable securities",
+              "components": [
+                "cashAndEquivalents",
+                "marketableSecuritiesCurrent"
+              ]
+            }
+          },
+          "missingFields": [
+            "debt",
+            "longTermDebtCurrent",
+            "shortTermBorrowings",
+            "financeLeaseLiabilityTotal",
+            "financingObligations",
+            "otherLongTermInvestments",
+            "researchAndDevelopment",
+            "dilutedShares"
+          ],
+          "revenue": 797455,
+          "EBIT": 104366,
+          "cash": 114226,
+          "debt": 199546,
+          "shares": 11034,
+          "sharesDate": "2026-09-30",
+          "sharesAsOf": "2026-09-30",
+          "coverShareDate": "2026-09-30",
+          "shareBasis": "AMZN common shares plus disclosed stock-based awards; release counts rounded to millions",
+          "cashDefinition": "September cash and equivalents of $55,783m plus current marketable securities of $58,443m total $114,226m; restricted cash is excluded.",
+          "debtDefinition": "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+          "provisionalEarningsRelease": true,
+          "provisionalBridge": true,
+          "backtestEligible": false,
+          "rawFilingSha256": "7db2112f3b602c5b9ed3886a1811b30e2fe690963f8c9feba6f880fbcf33a68f",
+          "builtBy": "amzn-q3-release-v1",
+          "reviewRequired": [
+            "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+            "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+            "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+            "September common shares are 10,811m plus approximately 223m stock-based awards, totaling 11,034m using the release’s rounded figures. Weighted-average EPS shares are not used for ownership.",
+            "Existing growth, tax, reinvestment and discount-rate assumptions are retained; this update refreshes the reported starting period rather than issuing a new forecast."
+          ],
+          "interpretationNotes": [
+            "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+            "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+            "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+            "September common shares are 10,811m plus approximately 223m stock-based awards, totaling 11,034m using the release’s rounded figures. Weighted-average EPS shares are not used for ownership.",
+            "Existing growth, tax, reinvestment and discount-rate assumptions are retained; this update refreshes the reported starting period rather than issuing a new forecast."
+          ],
+          "guidedBridgeLimitations": [
+            "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+            "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+            "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+            "September common shares are 10,811m plus approximately 223m stock-based awards, totaling 11,034m using the release’s rounded figures. Weighted-average EPS shares are not used for ownership.",
+            "Existing growth, tax, reinvestment and discount-rate assumptions are retained; this update refreshes the reported starting period rather than issuing a new forecast."
+          ],
+          "hardBlockers": [],
+          "fatalBlockers": [],
+          "valuationBlockers": [],
+          "guidedBridgeBlockers": [],
+          "guidedDebtProxy": {
+            "status": "explicit-proxy",
+            "periodEnd": "2026-09-30",
+            "reportedDebt": null,
+            "modelDebt": 199546,
+            "note": "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+            "proxyComponents": [
+              {
+                "component": "currentDebt",
+                "value": 3330,
+                "sourceDate": "2026-06-30",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+                "classification": "carried June proxy; September amount unknown"
+              },
+              {
+                "component": "shortTermBorrowings",
+                "value": 325,
+                "sourceDate": "2026-06-30",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+                "classification": "carried June proxy; September amount unknown"
+              },
+              {
+                "component": "financeLeases",
+                "value": 13451,
+                "sourceDate": "2026-06-30",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+                "classification": "carried June proxy; September amount unknown"
+              },
+              {
+                "component": "financingObligations",
+                "value": 9315,
+                "sourceDate": "2026-06-30",
+                "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+                "classification": "carried June proxy; September amount unknown"
+              }
+            ]
+          },
+          "guidedModelProxies": {
+            "otherAssets": {
+              "value": 224895,
+              "sourceDate": "2026-06-30",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "unit": "USD millions",
+              "classification": "carried June proxy; September composition unknown",
+              "note": "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio."
+            }
+          },
+          "ttmComponents": {
+            "annualRevenue": 716924,
+            "ytdRevenue": 584069,
+            "priorYtdRevenue": 503538,
+            "annualOperatingIncome": 79975,
+            "ytdOperatingIncome": 79389,
+            "priorYtdOperatingIncome": 54998,
+            "ytdStart": "2026-01-01",
+            "ytdEnd": "2026-09-30",
+            "priorYtdStart": "2025-01-01",
+            "priorYtdEnd": "2025-09-30"
+          },
+          "latestQuarterFacts": {
+            "revenue": 201944,
+            "operatingIncome": 28076,
+            "netIncome": 20685,
+            "stockBasedCompensation": 5406,
+            "incomeTaxExpense": 6180,
+            "pretaxIncome": 26869,
+            "operatingCashFlow": 42422,
+            "grossCapitalExpenditure": 77259,
+            "propertySalesAndIncentives": 1381,
+            "basicWeightedAverageShares": 10797,
+            "dilutedWeightedAverageShares": 10929
+          },
+          "latestQuarterNote": "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values."
         }
       ],
       "guidedRefreshCheck": {
@@ -5839,7 +6388,7 @@
           "accessionNumber": "0001018724-26-000026",
           "primaryDocument": "amzn-20260630.htm"
         },
-        "basesMoved": false,
+        "basesMoved": true,
         "singleAnnualBaseValid": false,
         "latestEarningsRelease": {
           "periodEnd": "2026-09-30",
@@ -5852,7 +6401,7 @@
       "guidedEarningsUpdate": {
         "title": "Amazon Q3 2026 results · released October 29",
         "note": "Q3 revenue was $201.944 billion, operating income $28.076 billion, and AWS revenue $45.984 billion. TTM revenue was $797.455 billion, operating income $104.366 billion, operating cash flow $168.300 billion, and reported free cash flow −$42.357 billion.",
-        "priorBase": "These are earnings-release figures, not a September 10-Q. The valuation retains its filed June inputs; September current debt, finance leases and the investment breakdown still need verification.",
+        "priorBase": "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values. Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities. The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
         "status": "Release evidence only; not used in this valuation.",
         "publishedAt": "2026-10-29",
         "periodEnd": "2026-09-30",
@@ -5894,21 +6443,27 @@
           "operatingIncome": 79389,
           "netIncome": 113587,
           "operatingCashFlow": 113841,
-          "grossCapitalExpenditure": 175670
+          "grossCapitalExpenditure": 175670,
+          "incomeTaxExpense": 33939,
+          "pretaxIncome": 147560
         },
         "priorYTD": {
           "revenue": 503538,
           "operatingIncome": 54998,
           "netIncome": 56478,
           "operatingCashFlow": 85055,
-          "grossCapitalExpenditure": 92297
+          "grossCapitalExpenditure": 92297,
+          "incomeTaxExpense": 14141,
+          "pretaxIncome": 70706
         },
         "annual2025": {
           "revenue": 716924,
           "operatingIncome": 79975,
           "netIncome": 77670,
           "operatingCashFlow": 139514,
-          "grossCapitalExpenditure": 131819
+          "grossCapitalExpenditure": 131819,
+          "incomeTaxExpense": 19087,
+          "pretaxIncome": 97311
         },
         "ttm": {
           "revenue": 797455,
@@ -5919,7 +6474,9 @@
           "stockBasedCompensation": 19873,
           "propertySalesAndIncentives": 4535,
           "netCapitalExpenditure": 210657,
-          "freeCashFlow": -42357
+          "freeCashFlow": -42357,
+          "incomeTaxExpense": 38885,
+          "pretaxIncome": 174165
         },
         "ttmFormula": "FY2025 + nine months 2026 - nine months 2025",
         "annualSourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
@@ -5970,8 +6527,83 @@
           "segments": "Segment Information, three months ended September 30, 2026",
           "guidance": "Financial Guidance, Fourth Quarter 2026 Guidance"
         },
-        "valuationPolicy": "Release evidence only. The filed June 30 valuation inputs and existing forecasts are retained pending the September 10-Q and a complete debt/investment bridge. Cash-flow-statement FCF is not the model FCFF. EPS weighted-average shares are not current ownership shares."
-      }
+        "valuationPolicy": "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+        "provisionalModel": {
+          "carriedDebtComponents": [
+            {
+              "component": "currentDebt",
+              "value": 3330,
+              "sourceDate": "2026-06-30",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "classification": "carried June proxy; September amount unknown"
+            },
+            {
+              "component": "shortTermBorrowings",
+              "value": 325,
+              "sourceDate": "2026-06-30",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "classification": "carried June proxy; September amount unknown"
+            },
+            {
+              "component": "financeLeases",
+              "value": 13451,
+              "sourceDate": "2026-06-30",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "classification": "carried June proxy; September amount unknown"
+            },
+            {
+              "component": "financingObligations",
+              "value": 9315,
+              "sourceDate": "2026-06-30",
+              "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+              "classification": "carried June proxy; September amount unknown"
+            }
+          ],
+          "investmentProxy": {
+            "value": 224895,
+            "sourceDate": "2026-06-30",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+            "unit": "USD millions",
+            "classification": "carried June proxy; September composition unknown",
+            "note": "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio."
+          },
+          "copy": {
+            "status": {
+              "en": "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+              "zh": "九月 TTM 使用 10 月 29 日业绩公告，并非已提交的九月 10-Q。六月债务组成及非上市投资仍作为明确的暂定代理值。年度及保留的六月情景维持原值。"
+            },
+            "debt": {
+              "en": "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+              "zh": "模型债务为 1995.46 亿美元：九月非流动债务 1731.25 亿美元，加上沿用的六月流动债务 33.30 亿美元、短期借款 3.25 亿美元、融资租赁 134.51 亿美元及融资义务 93.15 亿美元。沿用金额为假设，并非九月已报告负债。"
+            },
+            "assets": {
+              "en": "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+              "zh": "非上市投资加值 2248.95 亿美元明确沿用六月代理值，并非九月余额。未估算后续购买及估值变动。公告中的其他资产总额不视为投资组合。"
+            },
+            "shares": {
+              "en": "September common shares are 10,811m plus approximately 223m stock-based awards, totaling 11,034m using the release’s rounded figures. Weighted-average EPS shares are not used for ownership.",
+              "zh": "九月普通股为 108.11 亿股，加约 2.23 亿股股份奖励，按公告取整数据合计 110.34 亿股。每股收益加权平均股数不用于所有权分母。"
+            },
+            "cash": {
+              "en": "September cash and equivalents of $55,783m plus current marketable securities of $58,443m total $114,226m; restricted cash is excluded.",
+              "zh": "九月现金及现金等价物 557.83 亿美元加流动有价证券 584.43 亿美元，合计 1142.26 亿美元；不含受限现金。"
+            },
+            "forecast": {
+              "en": "Existing growth, tax, reinvestment and discount-rate assumptions are retained; this update refreshes the reported starting period rather than issuing a new forecast.",
+              "zh": "保留原有增长、税率、再投资及贴现率假设；本次更新报告起始期间，不重新发布预测。"
+            },
+            "summary": {
+              "en": "September 2026 TTM revenue is $797,455m and operating income $104,366m. Existing operating assumptions continue from the updated starting period, with an explicitly provisional capital bridge.",
+              "zh": "2026 年九月 TTM 收入为 7974.55 亿美元，营业利润为 1043.66 亿美元。原有经营假设从更新后的起点延续，资本衔接明确为暂定。"
+            },
+            "margin": {
+              "en": "The existing 15% mature-margin assumption is retained. Reported September TTM operating margin is approximately 13.1%; the target remains an analyst assumption, not company guidance.",
+              "zh": "保留原有 15% 成熟利润率假设。九月 TTM 已报告营业利润率约 13.1%；目标仍是分析假设，而非公司指引。"
+            }
+          }
+        }
+      },
+      "guidedOnlyResearch": true
     },
     {
       "ticker": "GOOG",

@@ -1,8 +1,5 @@
 // Generated Guided English / Simplified Chinese case prose.
 export default [
-["Amazon Q3 2026 results · released October 29", "亚马逊 2026 年第三季度业绩 · 10 月 29 日发布"],
-["Q3 revenue was $201.944 billion, operating income $28.076 billion, and AWS revenue $45.984 billion. TTM revenue was $797.455 billion, operating income $104.366 billion, operating cash flow $168.300 billion, and reported free cash flow −$42.357 billion.", "第三季度收入为 2019.44 亿美元，营业利润为 280.76 亿美元，AWS 收入为 459.84 亿美元。过去十二个月收入为 7974.55 亿美元，营业利润为 1043.66 亿美元，经营现金流为 1683.00 亿美元，已报告自由现金流为 −423.57 亿美元。"],
-["These are earnings-release figures, not a September 10-Q. The valuation retains its filed June inputs; September current debt, finance leases and the investment breakdown still need verification.", "这些是业绩公告数据，并非九月 10-Q。估值保留已申报的六月输入；九月流动债务、融资租赁及投资明细仍需核实。"],
  [
   "/ ordinary share",
   "/ 普通股"
@@ -1648,6 +1645,10 @@ export default [
   "所有母公司奖励视为免费股 · 不计行权收入"
  ],
  [
+  "Amazon Q3 2026 results · released October 29",
+  "亚马逊 2026 年第三季度业绩 · 10 月 29 日发布"
+ ],
+ [
   "An analyst reserve for subsidiary dilution; never add subsidiary shares to the parent denominator.",
   "分析师为子公司稀释预留的扣减；子公司股份不加入母公司股数分母。"
  ],
@@ -2336,6 +2337,10 @@ export default [
   "现有员工期权按模型股价采用假设全部归属的期权价值估算，仅分配一次。加权行权价与披露的剩余期限简化了各项奖励；缺失期限采用五年，50%的波动率和4%的利率为分析假设。仅内在价值及免费股份情景用于测试不确定性。不会再次扣除按市场股价披露的内在价值。"
  ],
  [
+  "Existing growth, tax, reinvestment and discount-rate assumptions are retained; this update refreshes the reported starting period rather than issuing a new forecast.",
+  "保留原有增长、税率、再投资及贴现率假设；本次更新报告起始期间，不重新发布预测。"
+ ],
+ [
   "Existing operating path",
   "现有经营路径"
  ],
@@ -2816,6 +2821,10 @@ export default [
   "模型假设与来源证据"
  ],
  [
+  "Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities.",
+  "模型债务为 1995.46 亿美元：九月非流动债务 1731.25 亿美元，加上沿用的六月流动债务 33.30 亿美元、短期借款 3.25 亿美元、融资租赁 134.51 亿美元及融资义务 93.15 亿美元。沿用金额为假设，并非九月已报告负债。"
+ ],
+ [
   "Model revenue",
   "模型收入"
  ],
@@ -3232,6 +3241,10 @@ export default [
   "暂定TTM截至2026-09-30"
  ],
  [
+  "Q3 revenue was $201.944 billion, operating income $28.076 billion, and AWS revenue $45.984 billion. TTM revenue was $797.455 billion, operating income $104.366 billion, operating cash flow $168.300 billion, and reported free cash flow −$42.357 billion.",
+  "第三季度收入为 2019.44 亿美元，营业利润为 280.76 亿美元，AWS 收入为 459.84 亿美元。过去十二个月收入为 7974.55 亿美元，营业利润为 1043.66 亿美元，经营现金流为 1683.00 亿美元，已报告自由现金流为 −423.57 亿美元。"
+ ],
+ [
   "QCOM: otherAssets = 1379 is an explicit analyst starting assumption, not a reported future outcome. See the company sources and sensitivities.",
   "QCOM：otherAssets = 1379为明确标注的分析起始假设，并非已披露的未来结果。请参阅公司来源与敏感性分析。"
  ],
@@ -3416,6 +3429,10 @@ export default [
   "单独的公司融资索偿"
  ],
  [
+  "September 2026 TTM revenue is $797,455m and operating income $104,366m. Existing operating assumptions continue from the updated starting period, with an explicitly provisional capital bridge.",
+  "2026 年九月 TTM 收入为 7974.55 亿美元，营业利润为 1043.66 亿美元。原有经营假设从更新后的起点延续，资本衔接明确为暂定。"
+ ],
+ [
   "September actual common shares and unvested awards are absent from the release. The denominator carries June 30 common shares of 2,548m plus 146.464m unvested awards, not quarterly weighted-average EPS shares. A 1% denominator change moves per-share value by approximately 1% in the opposite direction.",
   "公告未披露9月实际普通股数及未归属奖励。分母沿用6月30日25.48亿股普通股加1.46464亿股未归属奖励，不采用季度EPS加权平均股数。分母变化1%会使每股价值约反向变化1%。"
  ],
@@ -3424,8 +3441,16 @@ export default [
   "9月借款为809.22亿美元。融资租赁负债未单独披露，模型明确沿用2025年12月最后披露的11.84亿美元负债作为代理，并非9月负债计量。"
  ],
  [
+  "September cash and equivalents of $55,783m plus current marketable securities of $58,443m total $114,226m; restricted cash is excluded.",
+  "九月现金及现金等价物 557.83 亿美元加流动有价证券 584.43 亿美元，合计 1142.26 亿美元；不含受限现金。"
+ ],
+ [
   "September cash includes large customer deposits funding future deliveries; not all cash is economically idle. Growth requires substantial inventory, contract assets and manufacturing investment, so the sales-to-capital assumption and cash-reserve sensitivity matter.",
   "9月现金包含用于未来交货的大额客户预付款，并非全部属于经济上闲置现金。增长需要大量库存、合同资产及制造投资，因此销售资本比假设及现金储备敏感性重要。"
+ ],
+ [
+  "September common shares are 10,811m plus approximately 223m stock-based awards, totaling 11,034m using the release’s rounded figures. Weighted-average EPS shares are not used for ownership.",
+  "九月普通股为 108.11 亿股，加约 2.23 亿股股份奖励，按公告取整数据合计 110.34 亿股。每股收益加权平均股数不用于所有权分母。"
  ],
  [
   "September customer-consideration asset 306.500 m is prepaid share-based selling consideration, not surplus cash or an investment. Oracle cashless exercise plus incentive shares 2.154231 m is already in actual common; the old warrant is not charged again. Future amortization reduces revenue and target margins retain customer-incentive costs.",
@@ -3700,6 +3725,10 @@ export default [
   "六月之后支付的213亿美元OpenAI投资承诺既不从六月现金扣除，也不作为第二笔六月投资资产加回。未提用的Anthropic额度属于未来融资承诺。"
  ],
  [
+  "The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+  "非上市投资加值 2248.95 亿美元明确沿用六月代理值，并非九月余额。未估算后续购买及估值变动。公告中的其他资产总额不视为投资组合。"
+ ],
+ [
   "The $248m international pension deficit is included once as a separate claim and carried to July; a 50% change moves value by about $0.19 per share. Annual finance leases are disclosed as immaterial; $100m omitted debt would move value about $0.15 per share.",
   "2.48亿美元国际养老金缺口作为独立索偿计入一次，并沿用至7月；变动50%约影响每股0.19美元。年报披露融资租赁不重大；若遗漏1亿美元债务，约影响每股0.15美元。"
  ],
@@ -3788,6 +3817,14 @@ export default [
   "SK ecoplant可赎回优先股投资及提前采用ASU2020-06改变了普通股权益和可转换债务资本口径。"
  ],
  [
+  "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values.",
+  "九月 TTM 使用 10 月 29 日业绩公告，并非已提交的九月 10-Q。六月债务组成及非上市投资仍作为明确的暂定代理值。年度及保留的六月情景维持原值。"
+ ],
+ [
+  "The September TTM uses the October 29 earnings release, not a filed September 10-Q. June debt components and nonmarketable investments remain explicit provisional proxies. Annual and retained June cases keep their original values. Model debt is $199,546m: September noncurrent debt of $173,125m plus June current debt $3,330m, short-term borrowings $325m, finance leases $13,451m and financing obligations $9,315m. Those carried amounts are assumptions, not reported September liabilities. The $224,895m nonmarketable-investment addition carries June values as an explicit proxy, not a September balance. Subsequent purchases and valuation changes are not estimated. The release’s total Other assets is not treated as an investment portfolio.",
+  "九月 TTM 使用 10 月 29 日业绩公告，并非已提交的九月 10-Q。六月债务组成及非上市投资仍作为明确的暂定代理值。年度及保留的六月情景维持原值。 模型债务为 1995.46 亿美元：九月非流动债务 1731.25 亿美元，加上沿用的六月流动债务 33.30 亿美元、短期借款 3.25 亿美元、融资租赁 134.51 亿美元及融资义务 93.15 亿美元。沿用金额为假设，并非九月已报告负债。 非上市投资加值 2248.95 亿美元明确沿用六月代理值，并非九月余额。未估算后续购买及估值变动。公告中的其他资产总额不视为投资组合。"
+ ],
+ [
   "The annual 16.3 million incremental diluted-EPS shares serve as a proxy for combined option and escrow dilution, not a reported period-end award count. Zero to twice this proxy tests an effect of roughly 1% on value per share. No separate option-value deduction is applied. Already-issued restricted stock and escrow-share cancellations must not be double counted.",
   "年度摊薄每股收益所用的1630万股新增稀释股份用于估算期权与托管股份的合计稀释，并非披露的期末奖励数量。将此估算调整为零至两倍，可测试约1%的每股价值影响。不再单独扣除期权价值，也不重复计算已发行限制性股票及托管股份注销。"
  ],
@@ -3840,6 +3877,10 @@ export default [
   "分母缺失、为零或为负。"
  ],
  [
+  "The existing 15% mature-margin assumption is retained. Reported September TTM operating margin is approximately 13.1%; the target remains an analyst assumption, not company guidance.",
+  "保留原有 15% 成熟利润率假设。九月 TTM 已报告营业利润率约 13.1%；目标仍是分析假设，而非公司指引。"
+ ],
+ [
   "The filed proforma balance sheet is dated March 31, not December 31 or June 30. Its cash and debt cannot be silently combined with either selectable base. The filed June group still includes Mobility financing.",
   "申报备考资产负债表日期为3月31日，并非12月31日或6月30日。不能将其现金与债务无提示地混用于任一可选基期。6月申报集团仍包含出行业务融资。"
  ],
@@ -3886,6 +3927,10 @@ export default [
  [
   "These are analyst starting assumptions, not company guidance or reported facts. Growth fades toward the terminal rate; stock-based compensation remains an expense.",
   "这些是分析师起始假设，并非公司指引或申报事实。增长逐步收敛至永续增长率；股权薪酬仍计入费用。"
+ ],
+ [
+  "These are earnings-release figures, not a September 10-Q. The valuation retains its filed June inputs; September current debt, finance leases and the investment breakdown still need verification.",
+  "这些是业绩公告数据，并非九月 10-Q。估值保留已申报的六月输入；九月流动债务、融资租赁及投资明细仍需核实。"
  ],
  [
   "These dated financials include Mobility. A post-separation standalone SPGI quote is not comparable with this group valuation.",
