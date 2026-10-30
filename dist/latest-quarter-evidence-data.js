@@ -3,6 +3,101 @@
 const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;};
 
 export const LATEST_QUARTER_EVIDENCE=freeze({
+ AMZN:{
+  "currency": "USD",
+  "digits": 0,
+  "form": "8-K Exhibit 99.1 earnings release; September 10-Q not yet available",
+  "accession": "0001018724-26-000038",
+  "periodEnd": "2026-09-30",
+  "filed": "2026-10-29",
+  "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+  "originDate": "2026-06-30",
+  "fullQuarterlyFilingAvailable": false,
+  "balance": [
+    [
+      "Cash and cash equivalents",
+      78213,
+      55783
+    ],
+    [
+      "Current marketable securities",
+      44775,
+      58443
+    ],
+    [
+      "Long-term debt",
+      128894,
+      173125
+    ]
+  ],
+  "flows": [
+    [
+      "Q3 2026 reported revenue",
+      201944
+    ],
+    [
+      "Q3 2026 reported operating income",
+      28076
+    ],
+    [
+      "Q3 2026 AWS revenue",
+      45984
+    ],
+    [
+      "Q3 2026 AWS operating income",
+      17773
+    ],
+    [
+      "TTM revenue through September 2026",
+      797455
+    ],
+    [
+      "TTM operating income through September 2026",
+      104366
+    ],
+    [
+      "TTM operating cash flow through September 2026",
+      168300
+    ],
+    [
+      "TTM gross property and equipment purchases",
+      215192
+    ],
+    [
+      "TTM property sales and incentives",
+      4535
+    ],
+    [
+      "TTM net property and equipment purchases",
+      210657
+    ],
+    [
+      "TTM reported free cash flow",
+      -42357
+    ],
+    [
+      "Q4 2026 revenue guidance · low",
+      240000
+    ],
+    [
+      "Q4 2026 revenue guidance · high",
+      247000
+    ],
+    [
+      "Q4 2026 operating income guidance · low",
+      28500
+    ],
+    [
+      "Q4 2026 operating income guidance · high",
+      33500
+    ],
+    [
+      "FY2026 cash capital expenditure guidance · approximate",
+      220000
+    ]
+  ],
+  "note": "October 29 earnings release furnished on Form 8-K; the September 10-Q was not available at the October 29 check. Long-term debt above excludes current debt. September common shares were 10,811 million and stock-based awards approximately 223 million; EPS weighted-average shares are different. The September current debt, finance-lease total and investment breakdown remain unverified. The existing valuation and forecasts are unchanged. Reported free cash flow is operating cash flow less net property purchases, not model FCFF."
+},
  ASML:{
   currency:'EUR',digits:1,form:'6-K · Exhibit 99.3',accession:'0001628280-26-065813',periodEnd:'2026-09-27',filed:'2026-10-14',
   url:'https://www.sec.gov/Archives/edgar/data/937966/000162828026065813/financial_statementsxusx.htm',
@@ -73,6 +168,22 @@ export const LATEST_QUARTER_EVIDENCE=freeze({
 });
 
 export const LATEST_QUARTER_PAIRS=Object.freeze([
+ ["8-K Exhibit 99.1 earnings release; September 10-Q not yet available", "8-K 附件 99.1 业绩公告；九月 10-Q 尚未发布"],
+ ["Q3 2026 AWS revenue", "2026 年第三季度 AWS 收入"],
+ ["Q3 2026 AWS operating income", "2026 年第三季度 AWS 营业利润"],
+ ["TTM revenue through September 2026", "截至 2026 年九月的过去十二个月收入"],
+ ["TTM operating income through September 2026", "截至 2026 年九月的过去十二个月营业利润"],
+ ["TTM operating cash flow through September 2026", "截至 2026 年九月的过去十二个月经营现金流"],
+ ["TTM gross property and equipment purchases", "过去十二个月购置物业及设备总额"],
+ ["TTM property sales and incentives", "过去十二个月物业出售款及激励款"],
+ ["TTM net property and equipment purchases", "过去十二个月物业及设备净支出"],
+ ["TTM reported free cash flow", "过去十二个月已报告自由现金流"],
+ ["Q4 2026 revenue guidance · low", "2026 年第四季度收入指引下限"],
+ ["Q4 2026 revenue guidance · high", "2026 年第四季度收入指引上限"],
+ ["Q4 2026 operating income guidance · low", "2026 年第四季度营业利润指引下限"],
+ ["Q4 2026 operating income guidance · high", "2026 年第四季度营业利润指引上限"],
+ ["FY2026 cash capital expenditure guidance · approximate", "2026 财年现金资本支出指引（约数）"],
+ ["October 29 earnings release furnished on Form 8-K; the September 10-Q was not available at the October 29 check. Long-term debt above excludes current debt. September common shares were 10,811 million and stock-based awards approximately 223 million; EPS weighted-average shares are different. The September current debt, finance-lease total and investment breakdown remain unverified. The existing valuation and forecasts are unchanged. Reported free cash flow is operating cash flow less net property purchases, not model FCFF.", "10 月 29 日业绩公告以 8-K 附件提交；截至 10 月 29 日核查时，九月 10-Q 尚未发布。上表长期债务不含流动债务。九月普通股为 108.11 亿股，股份奖励约为 2.23 亿股；每股收益使用的加权平均股数与此不同。九月流动债务、融资租赁总额及投资明细仍待核实。现有估值及预测保持不变。已报告自由现金流是经营现金流减物业净支出，并非模型 FCFF。"],
  ['Latest filed quarter · dated evidence only','最新已提交季度 · 仅作日期证据'],
  ['Valuation origin, bridge and per-share output are unchanged. These figures are not used in the calculation.','估值起点、资本衔接及每股输出保持不变。以下数据不参与计算。'],
  ['Balance sheet','资产负债表'],['Valuation origin','估值起点'],['Latest filed','最新已提交'],['Reported results and forecast reference','已报告业绩及预测参考'],['Amount','金额'],['Filed','提交日期'],['Period end','期末'],['Latest filing','最新文件'],

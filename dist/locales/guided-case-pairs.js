@@ -1,5 +1,8 @@
 // Generated Guided English / Simplified Chinese case prose.
 export default [
+["Amazon Q3 2026 results · released October 29", "亚马逊 2026 年第三季度业绩 · 10 月 29 日发布"],
+["Q3 revenue was $201.944 billion, operating income $28.076 billion, and AWS revenue $45.984 billion. TTM revenue was $797.455 billion, operating income $104.366 billion, operating cash flow $168.300 billion, and reported free cash flow −$42.357 billion.", "第三季度收入为 2019.44 亿美元，营业利润为 280.76 亿美元，AWS 收入为 459.84 亿美元。过去十二个月收入为 7974.55 亿美元，营业利润为 1043.66 亿美元，经营现金流为 1683.00 亿美元，已报告自由现金流为 −423.57 亿美元。"],
+["These are earnings-release figures, not a September 10-Q. The valuation retains its filed June inputs; September current debt, finance leases and the investment breakdown still need verification.", "这些是业绩公告数据，并非九月 10-Q。估值保留已申报的六月输入；九月流动债务、融资租赁及投资明细仍需核实。"],
  [
   "/ ordinary share",
   "/ 普通股"
